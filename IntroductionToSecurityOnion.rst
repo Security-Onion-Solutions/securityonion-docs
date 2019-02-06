@@ -28,7 +28,7 @@ administrator or analyst to review alerts, monitor the network activity,
 and most importantly, have a willingness, passion and desire to learn.
 
 Core Components
-===============
+---------------
 
 Security Onion seamlessly weaves together three core functions:
 
@@ -113,7 +113,7 @@ HIDS:
    a successful attack.
 
 Analysis Tools
-==============
+--------------
 
 With full packet capture, IDS logs and Bro data, there is a daunting
 amount of data available at the analyst’s fingertips. Fortunately,
@@ -175,7 +175,7 @@ data:
        queries in real time.
 
 Deployment Scenarios
-====================
+--------------------
 
 | Please refer to the following for the various deployment and node
   types:
@@ -185,7 +185,7 @@ The Security Onion setup script allows you to easily configure the best
 installation scenario to suit your needs.
 
 Conclusion
-==========
+----------
 
 So we have full packet capture, Snort or Suricata rule-driven intrusion
 detection, Bro event-driven intrusion detection and OSSEC host-based
