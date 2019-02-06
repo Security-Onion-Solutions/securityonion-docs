@@ -1,6 +1,7 @@
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
+
    IntroductionToSecurityOnion
    Use-Cases
    Hardware
@@ -16,14 +17,24 @@
    Cheat-Sheet
    Conference
 
+.. _updateupgrade:
+
+.. toctree::
+   :maxdepth: 2
    :caption: Update/Upgrade
+
    Upgrade
    HWE
    Upgrading-from-14.04-to-16.04
    MySQL-Upgrade-Errors
    EOL
 
+.. _remaining:
+
+.. toctree::
+   :maxdepth: 2
    :caption: Remaining
+
    14.04.5.10
    14.04.5.11
    14.04.5.12
