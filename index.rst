@@ -79,7 +79,6 @@
    Firewall-old
    Firewall
    FIR
-   FreeNX
    FreqServer
    Full-Packet-Capture
    GRR
@@ -121,8 +120,6 @@
    Proxy
    QuickISOImage
    QuickOverview
-   README.md
-   README
    Redis
    Re‐Indexing
    Release-Notes
@@ -132,13 +129,10 @@
    Rules
    Salt
    Secure-Boot
-   Security-Onion-14.04-Release-Notes
    Security
    SensorStopsSeeingTraffic
    Services
    Sguil
-   _Sidebar
-   Snorby
    Snort
    so-import-pcap
    Squert
@@ -162,5 +156,4 @@
    VLAN-Traffic
    VMWare-Walkthrough
    Wazuh
-   WipingSnorby
    Xplico
