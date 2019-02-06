@@ -1,8 +1,11 @@
+Use Cases
+=========
+
 Security Onion is designed for many different use cases! Here are just a
 few examples.
 
 Classroom
-=========
+---------
 
 Evaluation Mode is ideal for classroom or lab environments.
 
@@ -13,14 +16,14 @@ Reboot, run Setup, and then choose Evaluation Mode.
 | https://github.com/Security-Onion-Solutions/security-onion/wiki/QuickISOImage
 
 Pcap Forensics
-==============
+--------------
 
 Need to review a pcap with original timestamps preserved? Install
 Security Onion in Evaluation Mode as described above and then run
 `so-import-pcap <so-import-pcap>`__.
 
 Production Server - Standalone
-==============================
+------------------------------
 
 Install Security Onion. Run Setup and configure network interfaces.
 Reboot, run Setup, choose Production Mode, choose New Deployment, and
@@ -30,7 +33,7 @@ enable network sensor services.
 | https://github.com/Security-Onion-Solutions/security-onion/wiki/ProductionDeployment
 
 Production Server - Distributed Deployment
-==========================================
+------------------------------------------
 
 | Install Security Onion on the master server box. Run Setup and
   configure network interfaces. Reboot, run Setup, choose Production
@@ -45,7 +48,7 @@ Production Server - Distributed Deployment
 | https://github.com/Security-Onion-Solutions/security-onion/wiki/ProductionDeployment
 
 Analyst VM
-==========
+----------
 
 Install Security Onion in a VM on your local desktop or laptop. Do NOT
 run Setup. Launch the Sguil client and connect to sguild on your
@@ -56,7 +59,7 @@ or Kibana on your Production Master Server.
 | https://github.com/Security-Onion-Solutions/security-onion/wiki/ConnectingtoSguil#directly-connecting-to-sguild-remotely
 
 Sensor sending logs to SIEM
-===========================
+---------------------------
 
 Install Security Onion on a sensor box and then configure it to send
 logs to your SIEM.
