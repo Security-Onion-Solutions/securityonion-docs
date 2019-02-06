@@ -1,5 +1,5 @@
-Overview
-========
+Introduction to Security Onion
+=======================================
 
 Network Security Monitoring (NSM) is, put simply, monitoring your
 network for security related events. It might be proactive, when used to
