@@ -53,7 +53,6 @@
    High-Performance-Tuning
    HWE
    ICMP-Anomaly-Detection
-   index
    Installation
    InstallingOnUbuntu
    IntroductionToSecurityOnion
