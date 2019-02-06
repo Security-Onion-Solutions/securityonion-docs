@@ -2,6 +2,28 @@
    :maxdepth: 2
    :caption: User Documentation
 
+   14.04.5.10
+   14.04.5.11
+   14.04.5.12
+   14.04.5.13
+   14.04.5.9
+   16.04.4.1
+   16.04.4.2
+   16.04.4.3
+   16.04.5.1
+   16.04.5.2
+   16.04.5.3
+   16.04.5.4
+   16.04.5.5
+   16.04.5.6
+   16.04.5.7
+   2013
+   2014
+   2015
+   2016
+   2017
+   2018
+   2019
    AddingLocalRules
    AF-PACKET
    Airgapped-Networks
@@ -13,17 +35,20 @@
    Autoruns
    Beats
    Best-Practices
+   BPF10
    BPF
    Bro-Fields
    Bro
    CapMe
    ChangingIPAddress
    Cheat-Sheet
+   CloudClient12.04
    CloudClient
    Conference
    ConnectingtoSguil
    CriticalStackIntelClient
    Curator
+   CustomELSAParsers
    CyberChef
    Data-Fields
    DeployingNtopng
@@ -35,22 +60,34 @@
    DomainStats
    Elastalert-Fields
    ElastAlert
+   Elastic-Alpha-to-Beta
    Elastic-Architecture
+   Elastic-Pre-Releases
+   Elastic-RC1
+   Elastic-RC2
+   Elastic-RC3
+   Elastic-RC4
    Elastic
    Elasticsearch
+   ELSAQueryTips
+   ELSA
    ELSA-to-Elastic
    Email
    EOL
    Etherpad
    FAQ
+   Firewall-old
    Firewall
    FIR
+   FreeNX
    FreqServer
    Full-Packet-Capture
    GRR
    Hardware
    Help
    High-Performance-Tuning
+   Home
+   http_agent
    HWE
    ICMP-Anomaly-Detection
    Installation
@@ -72,12 +109,14 @@
    NewDisk
    NIDS
    NTP
+   OSSECalertsToELSA
    OSSEC
    Passwords
    Pcaps
    PF_RING
    PostInstallation
    ProductionDeployment
+   ProjectHome
    Proxy
    QuickISOImage
    QuickOverview
@@ -92,10 +131,13 @@
    Rules
    Salt
    Secure-Boot
+   Security-Onion-14.04-Release-Notes
    Security
    SensorStopsSeeingTraffic
    Services
    Sguil
+   _Sidebar
+   Snorby
    Snort
    so-import-pcap
    Squert
@@ -112,9 +154,12 @@
    Trimming-PCAPs
    TroubleBooting
    Upgrade
+   Upgrading-from-12.04-to-14.04
    Upgrading-from-14.04-to-16.04
    Use-Cases
    Videos
    VLAN-Traffic
    VMWare-Walkthrough
    Wazuh
+   WipingSnorby
+   Xplico

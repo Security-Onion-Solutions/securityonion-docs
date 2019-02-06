@@ -1,0 +1,260 @@
+-  January 2015
+
+   -  `Issue 655 <../issues/655>`__: Suricata 2.0.5
+   -  `Issue 658 <../issues/658>`__: NSM: fix umask on Snort unified2
+      output
+   -  `Issue 548 <../issues/548>`__: NSM: run barnyard2 as non-root user
+   -  `Issue 649 <../issues/649>`__: nsm\_all\_del\_quick: check for
+      /etc/nsm/servertab and /etc/nsm/sensortab before trying to read
+   -  `Issue 598 <../issues/598>`__: so-snorby-wipe
+   -  `Issue 610 <../issues/610>`__: NSM: ossec\_agent alert level
+      should be configurable
+   -  `Issue 660 <../issues/660>`__: Setup: add OSSEC\_AGENT\_LEVEL to
+      /etc/nsm/securityonion.conf
+   -  `Issue 656 <../issues/656>`__: ELSA: update parser for bro\_conn
+      to parse country code
+   -  `Issue 659 <../issues/659>`__: securityonion-web-page: add ELSA
+      query for bro\_conn groupby:resp\_country\_code
+   -  `Issue 667 <../issues/667>`__: New packages for shellshock and
+      malware-traffic-analysis samples
+   -  `Issue 673 <../issues/673>`__: Suricata 2.0.6
+   -  `Issue 642 <../issues/642>`__: Update Salt packages/scripts to
+      2014.7.0
+   -  `Issue 619 <../issues/619>`__: Onionsalt: backup
+      /opt/onionsalt/pillar/top.sls
+   -  `Issue 661 <../issues/661>`__: Onionsalt: replicate
+      /usr/local/lib/snort\_dynamicrules/
+   -  `Issue 672 <../issues/672>`__: sguil-db-purge: check for
+      UNCAT\_MAX
+   -  `Issue 663 <../issues/663>`__: sosetup: sosetup.conf
+      SGUIL\_CLIENT\_PASSWORD\_1 should say Sguil/Squert/ELSA/Snorby
+   -  `Issue 664 <../issues/664>`__: sosetup: run Bro as non-root user
+   -  `Issue 666 <../issues/666>`__: sostat: run Bro as non-root user
+   -  `Issue 665 <../issues/665>`__: NSM: run Bro as non-root user
+   -  `Issue 676 <../issues/676>`__: NSM: run Sguil as non-root user
+   -  `Issue 671 <../issues/671>`__: NSM: /etc/cron.d/sensor-clean needs
+      2>&1
+
+-  February 2015
+
+   -  `Issue 668 <../issues/668>`__: ELSA: pdbtool errors
+   -  `Issue 669 <../issues/669>`__: ELSA: update parsers for Bro DNS
+      and BIND
+   -  `Issue 670 <../issues/670>`__: securityonion-web-page: add queries
+      for updated bro\_dns parser
+   -  `Issue 685 <../issues/685>`__: securityonion-web-page: update
+      links
+   -  `Issue 684 <../issues/684>`__: NSM: nsm\_server\_ps-start needs to
+      create /var/log/sguild/ if it doesn't already exist
+   -  `Issue 686 <../issues/686>`__: NSM: nsm\_server\_ps-start needs to
+      set permissions on /var/log/nsm/so-elsa/ properly
+   -  `Issue 687 <../issues/687>`__: NSM: nsm\_sensor\_ps-start should
+      set permissions on /var/log/nsm/ properly
+   -  `Issue 689 <../issues/689>`__: NSM: add USE\_DNS option to
+      ossec\_agent.conf
+   -  `Issue 688 <../issues/688>`__: ossec\_agent: add option to disable
+      DNS lookups
+   -  `Issue 680 <../issues/680>`__: Bro 2.3.2
+   -  `Issue 683 <../issues/683>`__: securityonion-et-rules: update for
+      new ISO
+   -  `Issue 632 <../issues/632>`__: ISO: add bridge-utils
+   -  `Issue 601 <../issues/601>`__: ISO: add foremost
+   -  `Issue 614 <../issues/614>`__: ISO: add
+      securityonion-samples-shellshock
+   -  `Issue 662 <../issues/662>`__: ISO: add securityonion-samples-mta
+   -  `Issue 675 <../issues/675>`__: ISO: add xfsprogs
+   -  `Issue 602 <../issues/602>`__: 12.04.5.1 ISO image
+
+-  March 2015
+
+   -  `Issue 695 <../issues/695>`__: Suricata 2.0.7
+   -  `Issue 696 <../issues/696>`__: ELSA custom menu
+   -  `Issue 691 <../issues/691>`__: NSM: chown -R
+      $BRO\_USER:$BRO\_GROUP /nsm/bro >/dev/null 2>&1
+   -  `Issue 698 <../issues/698>`__: NSM: nsm\_server\_del line 170
+      echo\_msg 0 "Deleting server: $SERVER\_NAME"
+   -  `Issue 699 <../issues/699>`__: NSM: Bro node.cfg host=localhost
+   -  `Issue 700 <../issues/700>`__: Setup: Bro node.cfg host=localhost
+   -  `Issue 702 <../issues/702>`__: Snort 2.9.7.2
+   -  `Issue 703 <../issues/703>`__: Move from Google Code to Github
+   -  `Issue 706 <../issues/706>`__: Add Josh Brower's ELSA parsers for
+      process logs and sysmon
+   -  `Issue 709 <../issues/709>`__: Add fear.nothing's ELSA parsers for
+      pfSense
+   -  `Issue 710 <../issues/710>`__: securityonion-web-page: add ELSA
+      queries for Firewall logs and Windows Processes~~
+
+-  April 2015
+
+   -  `Issue 711 <../issues/711>`__: Add "date" command to
+      /usr/bin/sguil-db-purge
+   -  `Issue 692 <../issues/692>`__: sostat: list number of ELSA buffers
+      in queue and warn if higher than 20
+   -  `Issue 701 <../issues/701>`__: sostat: include number of CPU cores
+   -  `Issue 681 <../issues/681>`__: rule-update: wipe
+      snort\_dynamicrules directory on sensor
+   -  `Issue 677 <../issues/677>`__: rule-update: create
+      /usr/local/lib/snort\_dynamicrules/ if it doesn't already exist
+   -  `Issue 678 <../issues/678>`__: rule-update:
+      /etc/cron.d/rule-update should have 2>&1
+   -  `Issue 697 <../issues/697>`__: rule-update: log snorby reference
+      table update to barnyard2-snorby.log
+   -  `Issue 679 <../issues/679>`__: rule-update: run pulledpork as
+      unprivileged user
+   -  `Issue 715 <../issues/715>`__: securityonion-rule-update:
+      sensor-only boxes running salt shouldn't try to copy
+      /etc/cron.d/rule-update
+
+-  May 2015
+
+   -  `Issue 725 <../issues/725>`__: Suricata 2.0.8
+   -  `Issue 718 <../issues/718>`__: Sphinx 2.1.9
+   -  `Issue 241 <../issues/241>`__: NSM scripts should have a timeout
+      period when stopping services
+   -  `Issue 392 <../issues/392>`__: Patch for lib-nsm-common-utils from
+      Mark Seiden
+   -  `Issue 714 <../issues/714>`__: nsm\_server\_user-disable
+   -  `Issue 705 <../issues/705>`__: ossec\_agent: improvements from
+      Brian Kellogg
+   -  `Issue 716 <../issues/716>`__: ossec\_agent: tighten regex to only
+      look for -> anchored to hostname or IP
+   -  `Issue 717 <../issues/717>`__: ossec\_agent: send alerts to sguild
+      immediately instead of waiting for next alert
+
+-  June 2015
+
+   -  `Issue 742 <../issues/742>`__: securityonion-suricata package
+      missing debian/install
+   -  `Issue 730 <../issues/730>`__: Snort 2.9.7.3
+   -  `Issue 731 <../issues/731>`__: Snort DAQ 2.0.5
+   -  `Issue 657 <../issues/657>`__: ELSA 1205
+   -  `Issue 447 <../issues/447>`__: ELSA syslog-ng.conf rewrite
+      r\_pipes
+   -  `Issue 512 <../issues/512>`__: ELSA syslog-ng.conf filter
+      f\_bro\_headers
+   -  `Issue 726 <../issues/726>`__: ELSA syslog-ng.conf - add
+      filesystem destinations
+   -  `Issue 674 <../issues/674>`__: ELSA - update bro\_notice parser to
+      parse src and dst fields
+   -  `Issue 722 <../issues/722>`__: securityonion-web-page: update HTTP
+      mime type queries for ELSA 1205
+   -  `Issue 723 <../issues/723>`__: CapMe: Update for new ELSA API
+   -  `Issue 500 <../issues/500>`__: sosetup: restart starman
+   -  `Issue 504 <../issues/504>`__: sosetup: avoid writing ELSA\_PORT
+      twice in SSH\_CONF
+   -  `Issue 547 <../issues/547>`__: sosetup: if enabling salt on a
+      sensor, check top.sls to make sure it doesn't already exist
+   -  `Issue 740 <../issues/740>`__: sosetup: sensor should use sudo to
+      restart apache on master
+   -  `Issue 741 <../issues/741>`__: sosetup: sometimes local
+      salt-minion doesn't check in with local salt-master quickly enough
+   -  `Issue 732 <../issues/732>`__: NSM: only output color codes if
+      running on a tty
+   -  `Issue 746 <../issues/746>`__: ELSA 1205 package enabled perl
+      module on non-ELSA systems
+   -  `Issue 747 <../issues/747>`__: ELSA 1205 package duplicated
+      syslog-ng.conf entries on non-ELSA systems
+   -  `Issue 748 <../issues/748>`__: ELSA 1205 package didn't add the
+      pid column to the query\_log table for upgrades
+   -  `Issue 749 <../issues/749>`__: Update tcl-tls package and replace
+      DH512 key with DH2048
+   -  `Issue 751 <../issues/751>`__: NSM: change watchdog run time to
+      avoid race condition
+   -  `Issue 744 <../issues/744>`__: sosetup: Restart Apache to activate
+      new ELSA apikey
+   -  `Issue 745 <../issues/745>`__: OSSEC 2.8.2
+
+-  July 2015
+
+   -  `Issue 733 <../issues/733>`__: 12.04.5.2 ISO image
+   -  `Issue 763 <../issues/763>`__: sostat: show last update
+   -  `Issue 761 <../issues/761>`__: securityonion-tcpudpflow: remove
+      connection\_state\_remove event handler
+   -  `Issue 760 <../issues/760>`__: ossec\_agent: Add source of syslog
+      as destination IP for Sguil alert
+   -  `Issue 769 <../issues/769>`__: sosetup: allow user to
+      enable/disable Snorby
+   -  `Issue 596 <../issues/596>`__: sosetup: sensor should stop/disable
+      Apache and Snorby worker
+   -  `Issue 693 <../issues/693>`__: sosetup: improve input validation
+      for email address
+   -  `Issue 764 <../issues/764>`__: sosetup: fix typo in sosetup.conf
+   -  `Issue 605 <../issues/605>`__: sosetup: replace tmp with mktemp
+   -  `Issue 771 <../issues/771>`__: sosetup: comment out 2 examples in
+      top.sls
+   -  `Issue 767 <../issues/767>`__: securityonion-web-page: add SSL Top
+      Subjects query
+   -  `Issue 775 <../issues/775>`__: securityonion-web-page: add
+      groupby:site to ELSA HTTP SQL Injection query
+
+-  August 2015
+
+   -  `Issue 743 <../issues/743>`__: Bro 2.4
+   -  `Issue 752 <../issues/752>`__: securityonion-bro-scripts: update
+      sensortab.bro for Bro 2.4
+   -  `Issue 753 <../issues/753>`__: securityonion-bro-scripts: update
+      shellshock module for Bro 2.4
+   -  `Issue 754 <../issues/754>`__: securityonion-bro-scripts: update
+      extract.bro for Bro 2.4
+   -  `Issue 762 <../issues/762>`__: securityonion-elsa-extras: update
+      bro\_conn parser for Bro 2.4
+   -  `Issue 765 <../issues/765>`__: securityonion-elsa-extras: update
+      bro\_intel parser for Bro 2.4
+   -  `Issue 768 <../issues/768>`__: securityonion-elsa-extras: update
+      bro\_ssl parser for Bro 2.4
+   -  `Issue 774 <../issues/774>`__: securityonion-elsa-extras: update
+      bro\_ssh parser for Bro 2.4
+   -  `Issue 773 <../issues/773>`__: securityonion-elsa-extras: add
+      Windows and Cisco parsers from Brian Kellogg
+   -  `Issue 793 <../issues/793>`__: CapMe: Update for Bro 2.4 conn.log
+   -  `Issue 766 <../issues/766>`__: Snorby 2.6.3
+   -  `Issue 784 <../issues/784>`__: Snort 2.9.7.5
+   -  `Issue 788 <../issues/788>`__: DAQ 2.0.6
+   -  `Issue 724 <../issues/724>`__: /etc/cron.d/rule-update should
+      avoid overwhelming rule sites
+   -  `Issue 791 <../issues/791>`__: sosetup: change rule-update
+      verbiage
+   -  `Issue 728 <../issues/728>`__: securityonion-libcapture-tiny-perl
+      should ``Provides: libcapture-tiny-perl``
+   -  `Issue 797 <../issues/797>`__: NSM: update SpoolDir and LogDir in
+      broctl.cfg
+   -  `Issue 799 <../issues/799>`__: NSM: add stderr redirect to stdout
+      on adduser
+   -  `Issue 800 <../issues/800>`__: Setup: update SpoolDir and LogDir
+      in broctl.cfg
+
+-  September 2015
+
+   -  `Issue 755 <../issues/755>`__: securityonion-elsa-extras: add
+      parser for Bro 2.4 mysql.log
+   -  `Issue 756 <../issues/756>`__: securityonion-elsa-extras: add
+      parser for Bro 2.4 kerberos.log
+   -  `Issue 757 <../issues/757>`__: securityonion-elsa-extras: add
+      parser for Bro 2.4 rdp.log
+   -  `Issue 758 <../issues/758>`__: securityonion-elsa-extras: add
+      parser for Bro 2.4 pe.log
+   -  `Issue 759 <../issues/759>`__: securityonion-elsa-extras: add
+      parser for Bro 2.4 sip.log
+   -  `Issue 780 <../issues/780>`__: securityonion-elsa-extras: add
+      parser for IIS logs
+   -  `Issue 782 <../issues/782>`__: securityonion-elsa-extras: update
+      sysmon parser
+   -  `Issue 776 <../issues/776>`__: securityonion-elsa-extras: set
+      version 3.3 in syslog-ng.conf
+   -  `Issue 796 <../issues/796>`__: securityonion-elsa-extras: Add
+      script to fix ELSA syslogs\_archive\_1 issue
+   -  `Issue 801 <../issues/801>`__: securityonion-web-page: add queries
+      for Bro kerberos logs
+   -  `Issue 802 <../issues/802>`__: securityonion-web-page: add queries
+      for Bro mysql logs
+   -  `Issue 803 <../issues/803>`__: securityonion-web-page: add queries
+      for Bro pe logs
+   -  `Issue 804 <../issues/804>`__: securityonion-web-page: add queries
+      for Bro rdp logs
+   -  `Issue 805 <../issues/805>`__: securityonion-web-page: add queries
+      for Bro sip logs
+   -  `Issue 794 <../issues/794>`__: securityonion-web-page: add DHCP
+      Servers query
+   -  `Issue 798 <../issues/798>`__: securityonion-web-page: add HTTP
+      sites hosting SWF
+   -  `Issue 795 <../issues/795>`__: 12.04.5.3 ISO image
