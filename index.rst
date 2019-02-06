@@ -2,23 +2,6 @@
    :maxdepth: 2
    :caption: User Documentation
 
-   16.04.4.1
-   16.04.4.2
-   16.04.4.3
-   16.04.5.1
-   16.04.5.2
-   16.04.5.3
-   16.04.5.4
-   16.04.5.5
-   16.04.5.6
-   16.04.5.7
-   2013
-   2014
-   2015
-   2016
-   2017
-   2018
-   2019
    AddingLocalRules
    AF-PACKET
    Airgapped-Networks
