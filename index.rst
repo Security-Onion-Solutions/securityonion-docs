@@ -1,7 +1,29 @@
 .. toctree::
    :maxdepth: 2
-   :caption: User Documentation
+   :caption: Getting Started
+   IntroductionToSecurityOnion
+   Use-Cases
+   Hardware
+   Release-Notes
+   Installation
+   PostInstallation
+   TimeZones
+   Services
+   IntroductionWalkthrough
+   VMWare-Walkthrough
+   Videos
+   Elastic-Architecture
+   Cheat-Sheet
+   Conference
 
+   :caption: Update/Upgrade
+   Upgrade
+   HWE
+   Upgrading-from-14.04-to-16.04
+   MySQL-Upgrade-Errors
+   EOL
+
+   :caption: Remaining
    14.04.5.10
    14.04.5.11
    14.04.5.12
@@ -41,10 +63,8 @@
    Bro
    CapMe
    ChangingIPAddress
-   Cheat-Sheet
    CloudClient12.04
    CloudClient
-   Conference
    ConnectingtoSguil
    CriticalStackIntelClient
    Curator
@@ -61,7 +81,6 @@
    Elastalert-Fields
    ElastAlert
    Elastic-Alpha-to-Beta
-   Elastic-Architecture
    Elastic-Pre-Releases
    Elastic-RC1
    Elastic-RC2
@@ -73,7 +92,6 @@
    ELSA
    ELSA-to-Elastic
    Email
-   EOL
    Etherpad
    FAQ
    Firewall-old
@@ -83,17 +101,12 @@
    FreqServer
    Full-Packet-Capture
    GRR
-   Hardware
    Help
    High-Performance-Tuning
    Home
    http_agent
-   HWE
    ICMP-Anomaly-Detection
-   Installation
    InstallingOnUbuntu
-   IntroductionToSecurityOnion
-   IntroductionWalkthrough
    Kibana
    Links
    Logstash
@@ -103,7 +116,6 @@
    MISP
    MySQLTuning
    MySQLUpdates
-   MySQL-Upgrade-Errors
    netsniff-ng
    NetworkConfiguration
    NewDisk
@@ -114,7 +126,6 @@
    Passwords
    Pcaps
    PF_RING
-   PostInstallation
    ProductionDeployment
    ProjectHome
    Proxy
@@ -124,7 +135,6 @@
    README
    Redis
    Re‐Indexing
-   Release-Notes
    RemovingASensor
    RITA
    Roadmap
@@ -134,7 +144,6 @@
    Security-Onion-14.04-Release-Notes
    Security
    SensorStopsSeeingTraffic
-   Services
    Sguil
    _Sidebar
    Snorby
@@ -149,17 +158,11 @@
    tcl
    TeamMembers
    ThirdPartyIntegration
-   TimeZones
    Tools
    Trimming-PCAPs
    TroubleBooting
-   Upgrade
    Upgrading-from-12.04-to-14.04
-   Upgrading-from-14.04-to-16.04
-   Use-Cases
-   Videos
    VLAN-Traffic
-   VMWare-Walkthrough
    Wazuh
    WipingSnorby
    Xplico
