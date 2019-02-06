@@ -1,23 +1,26 @@
+Hardware
+========
+
 32-bit vs 64-bit
-================
+----------------
 
 Security Onion only supports 64-bit hardware.
 
 UEFI Secure Boot
-================
+----------------
 
 If your hardware has UEFI Secure Boot enabled, please see `Secure
 Boot <Secure-Boot>`__.
 
 UPS
-===
+---
 
 Like most IT systems, Security Onion has databases and those databases
 don't like power outages or other ungraceful shutdowns. To avoid power
 outages and having to manually repair databases, please consider a UPS.
 
 Elastic Stack
-=============
+-------------
 
 With the introduction of the Elastic Stack, please note that the MINIMUM
 requirements are 4 CPU cores and 8GB RAM. These requirements increase as
@@ -32,7 +35,7 @@ in a RAID 10 configuration.** This includes ``/nsm/elasticsearch`` and
 ``/nsm/logstash``.
 
 Standalone Deployments
-======================
+----------------------
 
 In a standalone deployment, the master server components and the sensor
 components all run on a single box, therefore, your hardware
@@ -222,7 +225,7 @@ Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Ar
 for detailed deployment scenarios.
 
 Master server with local log storage
-====================================
+------------------------------------
 
 In an enterprise distributed deployment, a master server will store logs
 from itself and forward nodes. It can also act as a syslog destination
@@ -370,7 +373,7 @@ Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Ar
 for detailed deployment scenarios.
 
 Master server with storage nodes
-================================
+--------------------------------
 
 This deployment type utilizes storage nodes to parse and index of
 events. As a result, the hardware requirements of the master are
@@ -482,7 +485,7 @@ Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Ar
 for detailed deployment scenarios.
 
 Storage Node
-============
+------------
 
 Storage nodes increase search and retention capacity with regard to
 Elasticsearch. These nodes parse and index events, and provide the
@@ -623,7 +626,7 @@ Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Ar
 for detailed deployment scenarios.
 
 Forward Node (Sensor)
-=====================
+---------------------
 
 A forward node runs sensor components only, and forwards metadata to the
 master server. All PCAP stays local to the sensor, and is accessed
@@ -721,7 +724,7 @@ Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Ar
 for detailed deployment scenarios.
 
 Heavy Node (Sensor with ES components)
-======================================
+--------------------------------------
 
 A heavy node Runs all the sensor components AND Elastic components
 locally. This dramatically increases the hardware requirements. In this
@@ -881,14 +884,14 @@ Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Ar
 for detailed deployment scenarios.
 
 Sensor Hardware Considerations
-==============================
+------------------------------
 
 The following hardware considerations apply to sensors. If you are using
 a heavy node or standalone deployment type, please note that it will
 dramatically increase CPU/RAM/Storage requirements.
 
 Virtualization
---------------
+~~~~~~~~~~~~~~
 
 We recommend dedicated physical hardware (especially if you're
 monitoring lots of traffic) to avoid competing for resources. Sensors
@@ -896,7 +899,7 @@ can be virtualized, but you'll have to ensure that they are allocated
 sufficient resources.
 
 CPU
----
+~~~
 
 Snort, Suricata, and Bro are very CPU intensive. The more traffic you
 are monitoring, the more CPU cores you'll need. A very rough ballpark
@@ -907,7 +910,7 @@ workers, which means you'll need at least 10 CPU cores for Snort and Bro
 with additional CPU cores for netsniff-ng and/or other services.
 
 RAM
----
+~~~
 
 RAM usage is highly dependent on several variables:
 
@@ -943,7 +946,7 @@ If you're buying a new server, go ahead and max out the RAM (it's
 cheap!). As always, more is obviously better!
 
 Storage
--------
+~~~~~~~
 
 Sensors that have full packet capture enabled need LOTS of storage. For
 example, suppose you are monitoring a link that averages 50Mbps, here
@@ -962,7 +965,7 @@ have to worry about competing for resources. Local storage is most times
 the most cost efficient solution as well.
 
 NIC
----
+~~~
 
 You'll need at least two wired network interfaces: one for management
 (preferably connected to a dedicated management network) and then one or
@@ -971,7 +974,7 @@ quality network card, especially for sniffing. Most users report good
 experiences with Intel cards.
 
 Packets
--------
+~~~~~~~
 
 You need some way of getting packets into your sensor interface(s). If
 you're just evaluating Security Onion, you can replay `pcaps <Pcaps>`__.
@@ -997,7 +1000,6 @@ Here are some inexpensive tap/span solutions:
 | http://www.miarec.com/knowledge/switches-port-mirroring
 
 Enterprise Tap Solutions:
--------------------------
 
 -  `Net Optics /
    Ixia <http://www.ixiacom.com/network-visibility-products>`__
@@ -1012,6 +1014,6 @@ Enterprise Tap Solutions:
 -  `APCON <https://www.apcon.com/products>`__
 
 Further Reading
----------------
+~~~~~~~~~~~~~~~
 
 https://github.com/pevma/SEPTun
