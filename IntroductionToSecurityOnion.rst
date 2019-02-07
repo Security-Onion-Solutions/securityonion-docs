@@ -153,34 +153,19 @@ data:
    From
    https://www.elastic.co/guide/en/kibana/current/introduction.html:
 
-       Kibana is an open source analytics and visualization platform
-       designed to work with Elasticsearch. You use Kibana to search,
-       view, and interact with data stored in Elasticsearch indices. You
-       can easily perform advanced data analysis and visualize your data
-       in a variety of charts, tables, and maps.
+       Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps.
 
-       Kibana makes it easy to understand large volumes of data. Its
-       simple, browser-based interface enables you to quickly create and
-       share dynamic dashboards that display changes to Elasticsearch
-       queries in real time.
+       Kibana makes it easy to understand large volumes of data. Its simple, browser-based interface enables you to quickly create and share dynamic dashboards that display changes to Elasticsearch queries in real time.
 
 Deployment Scenarios
 --------------------
 
-| Please refer to the following for the various deployment and node
-  types:
-| :doc:`Elastic-Architecture#deployment-types`
+Please refer to the following for the various deployment and node types:
+`Deployment Types <Elastic-Architecture#deployment-types>`__
 
-The Security Onion setup script allows you to easily configure the best
-installation scenario to suit your needs.
+The Security Onion setup script allows you to easily configure the best installation scenario to suit your needs.
 
 Conclusion
 ----------
 
-So we have full packet capture, Snort or Suricata rule-driven intrusion
-detection, Bro event-driven intrusion detection and Wazuh host-based
-intrusion detection, all running out of the box once you run Security
-Onion setup. These disparate systems with various dependencies and
-complexities all run seamlessly together and would otherwise take hours,
-days or weeks to assemble and integrate on their own. What was once a
-seemingly impossible task is now as easy to install as Windows.
+So we have full packet capture, Snort or Suricata rule-driven intrusion detection, Bro event-driven intrusion detection and Wazuh host-based intrusion detection, all running out of the box once you run Security Onion setup. These disparate systems with various dependencies and complexities all run seamlessly together and would otherwise take hours, days or weeks to assemble and integrate on their own. What was once a seemingly impossible task is now as easy to install as Windows.
