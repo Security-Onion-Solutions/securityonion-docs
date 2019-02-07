@@ -1,5 +1,5 @@
-Description
-===========
+Elasticsearch
+=============
 
 From: https://www.elastic.co/products/elasticsearch
 
@@ -9,10 +9,10 @@ From: https://www.elastic.co/products/elasticsearch
     the expected and uncover the unexpected.
 
 Configuration
-=============
+-------------
 
 Shards
-------
+~~~~~~
 
 From
 https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html:
@@ -59,7 +59,7 @@ Keep in mind, old indices will retain previous shard settings, and the
 above settings will only be applied to newly created indices.
 
 Files
------
+~~~~~
 
 -  Configuration files for Elasticsearch can be found in
    ``/etc/elasticsearch/``.
@@ -79,7 +79,7 @@ You may need to adjust the value for heap size depending on your
 system's performance (running ``sudo so-elastic-restart`` after).
 
 Field limit
------------
+~~~~~~~~~~~
 
 Security Onion currently utilizes the default field limit for
 Elasticsearch indices (``1000``). If you receive error messages from
@@ -121,7 +121,7 @@ only upon index creation. Therefore, it is recommended to run the
 previously mentioned temporary command and modify the template file.
 
 Additional options
-------------------
+~~~~~~~~~~~~~~~~~~
 
 If you need to make additional directories accessible to Elasticsearch,
 or would like to specify additional options when starting Elasticsearch,
@@ -129,14 +129,14 @@ you can do so by adding these items to ``ELASTICSEARCH_OPTIONS`` in
 ``/etc/nsm/securityonion.conf``
 
 Logs
-====
+----
 
 -  Elasticsearch logs can be found in ``/var/log/elasticsearch/``.
 -  Logging configuration can be found in
    ``/etc/elasticsearch/log4j2.properties``.
 
 Distributed
-===========
+-----------
 
 Master
 ------
@@ -205,13 +205,13 @@ the Console, under "Dev Tools" in Kibana, and click the green triangle.
 Alternatively, you could submit it to Elasticsearch via a cURL command.
 
 Storage
-=======
+-------
 
 All of the data Elasticsearch collects is stored under
 ``/nsm/elasticsearch/``.
 
 Snapshots
-=========
+---------
 
 | Snapshots of the current indices can be taken and stored in a
   designated repository for archival purposes.

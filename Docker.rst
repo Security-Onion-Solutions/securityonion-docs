@@ -1,5 +1,5 @@
-Description
-===========
+Docker
+======
 
 From https://www.docker.com/what-docker:
 
@@ -13,7 +13,7 @@ From https://www.docker.com/what-docker:
     Linux-on-mainframe apps.
 
 Images
-======
+------
 
 To maintain a high level of stability, reliability, and support, our
 Elastic Docker images are based on the Docker images provided by
@@ -24,7 +24,7 @@ To leverage a common core OS layer, all of our Docker images are then
 built on CentOS 7.
 
 Registry
-========
+--------
 
 From https://docs.docker.com/registry/recipes/mirror/:
 
@@ -77,7 +77,7 @@ From here on, whenever ``soup`` checks for new images, it will pull them
 from the master server instead of Docker Hub.
 
 Sneakernet Updates
-==================
+------------------
 
 If we need to perform offline updates of Docker images, we can do so by
 by cloning the ``security-onion-docker-airgap`` script(s) at
@@ -107,7 +107,7 @@ The Docker images should now be loaded. We can verify this by running:
 ``sudo docker images``
 
 Networking
-==========
+----------
 
 Bridge
 ------
@@ -177,7 +177,7 @@ where **``vethc5ff027``** is the external interface of ``eth0`` within
 the ``so-elasticsearch`` container.
 
 Download
-========
+--------
 
 | Our Docker images are stored on Docker Hub:
 | https://hub.docker.com/u/securityonionsolutions/
@@ -191,13 +191,13 @@ securityonion-elastic package and will then run
 then download the Docker images from Docker Hub.
 
 Update
-======
+------
 
 Our ``soup`` utility for installing updates now includes support for
 updating Docker images.
 
 Security
-========
+--------
 
 | To prevent tampering, our Docker images are signed using Docker
   Notary:
@@ -211,7 +211,7 @@ Any time we download an image from Docker Hub, we also explicitly set
 Notary.
 
 VMware Tools
-============
+------------
 
 If you have VMware Tools installed and you suspend and then resume, the
 Docker interfaces will no longer have IP addresses and the Elastic stack

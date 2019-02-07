@@ -1,5 +1,5 @@
-Description
-===========
+Curator
+=======
 
 From:
 https://www.elastic.co/guide/en/elasticsearch/client/curator/5.1/about.html#about
@@ -28,7 +28,7 @@ prevent your disk from filling up. To change the limit, modify
 ``LOG_SIZE_LIMIT`` in ``/etc/nsm/securityonion.conf``.
 
 Actions
-=======
+-------
 
 Curator ``actions`` are stored in ``/etc/curator/actions``. These
 actions are run every minute from the cron jobs located in

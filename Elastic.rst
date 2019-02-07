@@ -1,3 +1,6 @@
+Elastic Stack
+=============
+
 We've completed our initial integration of the Elastic Stack
 (`Elasticsearch <Elasticsearch>`__, `Logstash <Logstash>`__, and
 `Kibana <Kibana>`__)!
@@ -16,7 +19,7 @@ high-level by viewing our `proposed architecture
 diagram <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__.
 
 Blog Posts
-==========
+----------
 
 | General Availability:
 | https://blog.securityonion.net/2018/04/security-onion-elastic-stack-general.html
@@ -55,13 +58,13 @@ Blog Posts
 | https://blog.securityonion.net/2017/03/towards-elk-on-security-onion.html
 
 Videos
-======
+------
 
 `Doug Burks - State of the
 Onion <https://www.youtube.com/watch?v=N1jmk7L4jj0&index=7&list=PLljFlTO9rB15jhnSfR6shBEskTgGbta2k>`__
 
 Hardware Requirements
-=====================
+---------------------
 
 Please note the following MINIMUM requirements for the Elastic stack:
 
@@ -69,7 +72,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
 -  8GB RAM
 
 Installation
-============
+------------
 
 | The easiest way to try the new Elastic integration is using our
   14.04.5.11 (or newer) ISO image:
@@ -107,7 +110,7 @@ Then run:
     sudo sosetup
 
 Upgrading from ELSA to Elastic
-==============================
+------------------------------
 
 For best results, we recommend performing a fresh installation, but if
 you really need to do an in-place upgrade from ELSA to Elastic, you can

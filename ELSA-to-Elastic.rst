@@ -1,5 +1,5 @@
-Introduction
-============
+ELSA to Elastic
+===============
 
 The Elastic Stack typically requires more CPU and more RAM than ELSA. In
 addition, you will most likely want SSD storage for Elastic data if at
@@ -10,7 +10,7 @@ to perform an in-place upgrade from ELSA to Elastic, this page will
 provide an overview of steps necessary.
 
 Warning
-=======
+-------
 
 The in-place upgrade process is still considered EXPERIMENTAL and so the
 usual warnings and disclaimers apply:
@@ -20,7 +20,7 @@ usual warnings and disclaimers apply:
 -  This may result in nausea, vomiting, or a burning sensation.
 
 Exporting Data from ELSA
-========================
+------------------------
 
 By default, this process does NOT export data from ELSA. If you need the
 data that is in ELSA, there is an experimental script called
@@ -32,7 +32,7 @@ cleartext logs so you can use standard command line tools such as
 ``grep``, ``awk``, and ``sed`` to search through them if necessary.
 
 Importing Data to Elastic
-=========================
+-------------------------
 
 The export script provides information on how to import the data into
 Elastic. However, please note the following caveats:
@@ -43,10 +43,10 @@ Elastic. However, please note the following caveats:
    Bro logs may not parse correctly
 
 Upgrade Process
-===============
+---------------
 
 Standalone
-----------
+~~~~~~~~~~
 
 For a single standalone box that doesn't have any separate sensor boxes
 connected to it:
@@ -73,7 +73,7 @@ Install and configure Elastic:
     sudo so-elastic-configure
 
 Distributed Deployment
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 For distributed deployments consisting of a master server and one or
 more sensor boxes, start the upgrade process with the master server.

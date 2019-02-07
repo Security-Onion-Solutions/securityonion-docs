@@ -1,4 +1,4 @@
-Description
+DomainStats
 ===========
 
 | DomainStats is based on Mark Baggett's domain\_stats.py, found at
@@ -19,10 +19,10 @@ From https://github.com/SMAPPER/docker_domain_stats:
     with large success.
 
 Configuration
-=============
+-------------
 
 Internet Access
----------------
+~~~~~~~~~~~~~~~
 
 DomainStats does whois lookups so it needs to connect outbound on port
 43 to whois servers on the Internet. If this traffic is not allowed
@@ -32,7 +32,7 @@ showing no data. In the current release, Setup will automatically
 disable DomainStats if whois lookups fail.
 
 Enabling DomainStats
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 | DomainStats is disabled by default when running ``Production Mode``
   with ``Best Practices``.
@@ -45,7 +45,7 @@ Enabling DomainStats
     sudo so-logstash-restart
 
 Updating Top-1m file
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 | \`\`\`
 | From
@@ -77,7 +77,7 @@ Updating Top-1m file
 DomainStats logs can be found in ``/var/log/domain_stats/``.
 
 Kibana
-======
+------
 
 | You can find DomainStats data by going to the Domain Stats dashboard
   in Kibana:

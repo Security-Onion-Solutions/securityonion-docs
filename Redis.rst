@@ -1,7 +1,5 @@
-|redis|
-
-Description
-===========
+Redis
+=====
 
 From: https://redis.io/
 
@@ -19,7 +17,7 @@ separate storage nodes. When you choose this option, Logstash on the
 master server outputs to redis. Storage nodes then consume from redis.
 
 Queue
-=====
+-----
 
 To see how many logs are in the redis queue:
 

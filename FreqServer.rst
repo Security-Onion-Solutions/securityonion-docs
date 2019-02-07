@@ -1,5 +1,5 @@
-Description
-===========
+FreqServer
+==========
 
 | FreqServer is based on freq.py and freq\_server.py (originally created
   by Mark Baggett).
@@ -32,7 +32,7 @@ https://isc.sans.edu/forums/diary/Continuous+Monitoring+for+Random+Strings/20451
     tables.
 
 Configuration
-=============
+-------------
 
 | For information how to modify configuration for FreqServer, consult
   the following:
@@ -51,7 +51,7 @@ Configuration
 FreqServer's logs can be found in ``/var/log/freq_server/``.
 
 Kibana
-======
+------
 
 You can find FreqServer data on the Frequency Analysis dashboard.
 

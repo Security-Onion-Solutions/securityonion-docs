@@ -1,5 +1,5 @@
-Description
-===========
+ElastAlert
+==========
 
 From
 http://elastalert.readthedocs.io/en/latest/elastalert.html#overview:
@@ -21,7 +21,7 @@ ElasticSearch, and provides an alerting mechanism with multiple output
 types, such as Slack, Email, JIRA, OpsGenie, and many more.
 
 Configuration
-=============
+-------------
 
 ElastAlert rules are stored in ``/etc/elastalert/rules/``.
 
@@ -30,7 +30,7 @@ type of "debug", which simply outputs all matches queries to a log file,
 found in ``/var/log/elastalert/elastalert_stderr.log``.
 
 Slack
------
+~~~~~
 
 To have ElastAlert send alerts to something like Slack, we can simply
 change the alert type and details for a rule like so:
@@ -42,7 +42,7 @@ change the alert type and details for a rule like so:
         slack_webhook_url: "https://hooks.slack.com/services/YOUR_WEBHOOK_URI"
 
 Email - Internal
-----------------
+~~~~~~~~~~~~~~~~
 
 To have ElastAlert send to email, we could do something like the
 following:
@@ -58,7 +58,7 @@ following:
     from_addr: "elastalert@yourcompany.com"
 
 Email - External
-----------------
+~~~~~~~~~~~~~~~~
 
 If we need to use an external email provider like Gmail, we can add
 something like the following:
@@ -83,7 +83,7 @@ In the ``smtp_auth_file.txt``, add:
     password: yourpassword   
 
 TheHive
--------
+~~~~~~~
 
 We can also send events to an instance of the TheHive, thanks to the
 addition of theHive alerter by
@@ -133,7 +133,7 @@ addition of theHive alerter by
       - ip: '{match[destination_ip]}'
 
 so-elastalert-create
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 ``so-elastalert-create`` is a tool created by `Bryant
 Treacle <https://github.com/bryant-treacle/so-elastalert-create>`__ that
@@ -143,7 +143,7 @@ questions, and eventually output an Elastalert rule file that you can
 deploy in your environment to start alerting quickly and easily.
 
 Defaults
---------
+~~~~~~~~
 
 With Security Onion's example rules, Elastalert is configured by default
 to only count the number of hits for a particular match, and will not
@@ -175,7 +175,7 @@ searching occurs as planned (for example, for 10 minutes):
 | https://github.com/Yelp/elastalert/issues/805
 
 More Information
-================
+----------------
 
 You can learn more about ElastAlert and its output types here:
 

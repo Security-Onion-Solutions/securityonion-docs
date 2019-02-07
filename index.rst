@@ -68,6 +68,26 @@ Security Onion Documentation
    Autoruns
    Syslog
 
+.. _elasticstack:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Elastic Stack
+
+   Elastic
+   Elasticsearch
+   Logstash
+   Kibana
+   ElastAlert
+   Curator
+   FreqServer
+   DomainStats
+   Docker
+   Redis
+   Data-Fields
+   Beats
+   ELSA-to-Elastic
+
 .. _remaining:
 
 .. toctree::
@@ -113,29 +133,21 @@ Security Onion Documentation
    CloudClient
    ConnectingtoSguil
    CriticalStackIntelClient
-   Curator
    CustomELSAParsers
-   Data-Fields
    DeployingNtopng
    Desktop
    DirectoryStructure
    DisablingProcesses
    DNSAnomalyDetection
-   Docker
-   DomainStats
    Elastalert-Fields
-   ElastAlert
    Elastic-Alpha-to-Beta
    Elastic-Pre-Releases
    Elastic-RC1
    Elastic-RC2
    Elastic-RC3
    Elastic-RC4
-   Elastic
-   Elasticsearch
    ELSAQueryTips
    ELSA
-   ELSA-to-Elastic
    Email
    Etherpad
    FAQ
@@ -143,7 +155,6 @@ Security Onion Documentation
    Firewall
    FIR
    FreeNX
-   FreqServer
    Full-Packet-Capture
    GRR
    Help
@@ -153,7 +164,6 @@ Security Onion Documentation
    ICMP-Anomaly-Detection
    InstallingOnUbuntu
    Links
-   Logstash
    MailingLists
    ManagingAlerts
    MetaPackages
@@ -175,7 +185,6 @@ Security Onion Documentation
    QuickOverview
    README.md
    README
-   Redis
    Re‐Indexing
    RemovingASensor
    RITA

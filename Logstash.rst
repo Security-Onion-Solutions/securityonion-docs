@@ -1,5 +1,5 @@
-Description
-===========
+Logstash
+========
 
 From https://www.elastic.co/products/logstash :
 
@@ -8,10 +8,7 @@ From https://www.elastic.co/products/logstash :
     transforms it, and then sends it to your favorite “stash".
 
 Configuration
-=============
-
-Performance
------------
+-------------
 
 pipeline.workers
 ~~~~~~~~~~~~~~~~
@@ -40,17 +37,17 @@ You may need to adjust the value depending on your system's performance
 (running ``sudo so-logstash-restart`` after).
 
 Adding New Logs or Modifying Existing Parsing
-=============================================
+---------------------------------------------
 
 Syslog-NG
----------
+~~~~~~~~~
 
 If you are parsing local log files, you may need to add these files to
 the Syslog-NG configuration in ``/etc/syslog-ng/syslog-ng.conf`` and
 restart the service.
 
 Parsing
--------
+~~~~~~~
 
 Configuration files for custom parsing can be placed in
 ``/etc/logstash/custom``. These will automatically get copied over to
@@ -62,7 +59,7 @@ Configuration files for custom parsing can be placed in
 ``sudo so-logstash-restart && sudo tail -f /var/log/logstash/logstash.log``
 
 Mapping Templates
------------------
+~~~~~~~~~~~~~~~~~
 
 Logstash loads default mapping templates for Elasticsearch to use from
 ``/etc/logstash``.
@@ -113,24 +110,24 @@ To avoid this, either remove the existing indices, wiping all data, or
 `re-index <Re‐Indexing>`__.
 
 Logging
--------
+~~~~~~~
 
 Log file settings can be adjusted in
 ``/etc/logstash/log4j2.properties``. Currently, logs are set to rollover
 daily, and configured to be deleted after 7 days.
 
 Options
--------
+~~~~~~~
 
 You can specify your own custom options to be appended to the Logstash
 startup command, by editing ``LOGSTASH_OPTIONS`` in
 ``/etc/nsm/securityonion.conf``.
 
 Queue
-=====
+-----
 
 Memory-backed
--------------
+~~~~~~~~~~~~~
 
 From:
 https://www.elastic.co/guide/en/logstash/current/persistent-queues.html
@@ -140,7 +137,7 @@ https://www.elastic.co/guide/en/logstash/current/persistent-queues.html
     these in-memory queues is fixed and not configurable.
 
 Persistent
-----------
+~~~~~~~~~~
 
 From:
 https://www.elastic.co/guide/en/logstash/current/persistent-queues.html
@@ -174,7 +171,7 @@ Queue Max Bytes
     Logstash uses whichever criteria is reached >first.
 
 Dead Letter Queue
------------------
+~~~~~~~~~~~~~~~~~
 
 If you want to check for dropped events, you can enable the dead letter
 queue. This will write all records that are not able to make it into
@@ -197,7 +194,7 @@ The dead letter queue files are located in
 | https://www.elastic.co/guide/en/logstash/current/dead-letter-queues.html
 
 Redis
------
+~~~~~
 
 When using storage nodes, Logstash on the master server outputs to
 `Redis <Redis>`__ (on the master server). Redis queues events from the
@@ -207,22 +204,22 @@ into Kibana, you may want to first check Logstash on the master, then
 the redis `queue <Redis#queue>`__.
 
 Data Fields
-===========
+-----------
 
 Logstash process Bro logs, syslog, IDS alerts, etc., formatting said
 data into many different data fields, as described on the `Data
 Fields <Data-Fields>`__ page.
 
 Log
-===
+---
 
 The Logstash log is located at ``/var/log/logstash/logstash.log``.
 
 Errors
-======
+------
 
 Read-Only
----------
+~~~~~~~~~
 
 ``[INFO ][logstash.outputs.elasticsearch] retrying failed action with response code: 403 ({"type"=>"cluster_block_exception", "reason"=>"blocked by: [FORBIDDEN/12/index read-only / allow delete (api)];"})``
 
