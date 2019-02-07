@@ -216,6 +216,5 @@ Security Onion Documentation
    Secure-Boot
    SensorStopsSeeingTraffic
    SSH
-   tcl
    TroubleBooting
    VLAN-Traffic
