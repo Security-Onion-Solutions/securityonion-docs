@@ -1,5 +1,5 @@
-16.04.5.7
-=======================
+Release Notes
+=============
 
 -  | As always, make sure you verify the downloaded ISO image:
    | https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md
