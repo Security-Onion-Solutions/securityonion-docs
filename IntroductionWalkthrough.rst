@@ -317,7 +317,7 @@ If everything looks ok, we can quickly test Sguil and Snort/Suricata
 detections. Double-click the Sguil icon on the desktop and enter your
 Sguil username and password (created during the Security Onion Setup).
 You'll be prompted to choose which network(s) to monitor: the monitored
-network interface(s) and/or OSSEC events. Choose "Select All" then
+network interface(s) and/or Wazuh events. Choose "Select All" then
 "Start SGUIL" and the Sguil client will load. You might already have
 some events showing up, but just to confirm type "curl
 http://testmyids.com" in a terminal window and you should see an event
@@ -327,8 +327,8 @@ Security Onion includes a number of useful links on the desktop in
 addition to the Security Onion application menu which provides access to
 man pages for tools included in Security Onion. The "README" icon on the
 desktop is a good starting point and will open https://localhost in a
-web browser with local links to Squert and ELSA and external links to
-additional useful Security Onion information. Sguil, Squert and ELSA all
+web browser with local links to Squert and Kibana and external links to
+additional useful Security Onion information. Sguil, Squert and Kibana all
 share the same username/password. Here's a brief description of the
 primary tools available in Security Onion for security monitoring:
 
@@ -338,11 +338,7 @@ primary tools available in Security Onion for security monitoring:
 -  Squert (http://www.squertproject.org/) - A web interface to query and
    view Sguil event data that was designed to supplement Sguil by
    providing additional context around events.
--  ELSA (http://code.google.com/p/enterprise-log-search-and-archive/) -
-   Enterprise Log Search and Archive is a distributed log archive system
-   similar to Splunk and allows for event searching and visualization of
-   all the log data Security Onion consumes, including OSSEC,
-   Snort/Suricata, and most importantly, Bro IDS.
+-  Kibana - A web interface to query Elasticsearch for Snort/Suricata/Wazuh alerts and Bro (Zeek) logs.
 
 If you want to take some time to experiment with the tools, Security
 Onion includes some sample packet capture files we can replay to
@@ -431,7 +427,7 @@ that needs your help and needs you to take these tools that have been
 harmoniously woven together with a most complex thread and learn how
 they work. Then learn to use them and teach others. I call it "crash,
 burn and learn" but it's what it's all about. Try hard to learn and
-improve and advance and share what Doug Burks and the Security Onion
+improve and advance and share what the Security Onion
 community is offering. You'll fail, but you will also have a dedicated
 and faithful group of people committed to Security Onion helping you
 succeed.

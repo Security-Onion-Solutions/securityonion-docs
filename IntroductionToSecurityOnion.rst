@@ -60,18 +60,14 @@ IDS options:
 NIDS:
 
 -  Rule-driven NIDS. For rule-driven network intrusion detection,
-   Security Onion offers the choice of Snort (http://snort.org/) or
-   Suricata (http://suricata-ids.org/). Rule-based systems look at
+   Security Onion offers the choice of Snort (https://snort.org/) or
+   Suricata (https://suricata-ids.org/). Rule-based systems look at
    network traffic for fingerprints and identifiers that match known
    malicious, anomalous or otherwise suspicious traffic. You might say
    that they’re akin to antivirus signatures for the network, but
    they’re a bit deeper and more flexible than that.
 -  Analysis-driven NIDS. For analysis-driven network intrusion
-   detection, Security Onion offers The Bro Network Security Monitor,
-   also known as Bro IDS (http://bro-ids.org/). Bro is developed and
-   maintained by the International Computer Science Institute at the
-   University of California at Berkeley and supported with National
-   Science Foundation funding. Unlike rule-based systems that look for
+   detection, Security Onion offers Bro (Zeek)(https://zeek.org/).  Unlike rule-based systems that look for
    needles in the haystack of data, Bro says, “Here’s all your data and
    this is what I’ve seen. Do with it what you will and here’s a
    framework so you can.” Bro monitors network activity and logs any
@@ -84,11 +80,7 @@ NIDS:
    Cymru’s Malware Hash Registry project.
    Beyond logging activity and traffic analyzers, the Bro framework
    provides a very extensible way to analyze network data in real time.
-   Recent integration with REN-ISAC’s Collective Intelligence Framework
-   (CIF http://csirtgadgets.org/collective-intelligence-framework/)
-   provides real-time correlation of network activity with up-to-date
-   community intelligence feeds to alert when users access known
-   malicious IPs, domains or URLs. The input framework allows you to
+   The input framework allows you to
    feed data into Bro, which can be scripted, for example, to read a
    comma delimited file of C-level employee usernames and correlate that
    against other activity, such as when they download an executable file
@@ -100,15 +92,13 @@ NIDS:
 
 HIDS:
 
--  For host-based intrusion detection, Security Onion offers OSSEC
-   (http://www.ossec.net/), a free, open source HIDS for Windows, Linux
-   and Mac OS X. When you add the OSSEC agent to endpoints on your
+-  For host-based intrusion detection, Security Onion offers Wazuh
+   (https://wazuh.com/), a free, open source HIDS for Windows, Linux
+   and Mac OS X. When you add the Wazuh agent to endpoints on your
    network, you gain invaluable visibility from endpoint to your
-   network’s exit point. OSSEC performs log analysis, file integrity
+   network’s exit point. Wazuh performs log analysis, file integrity
    checking, policy monitoring, rootkit detection, real-time alerting
-   and active response. Originally created by Daniel Cid, Trend-Micro
-   acquired OSSEC in 2009 and has continued to offer it as an open
-   source solution. As an analyst, being able to correlate host-based
+   and active response. As an analyst, being able to correlate host-based
    events with network-based events can be the difference in identifying
    a successful attack.
 
@@ -120,12 +110,12 @@ amount of data available at the analyst’s fingertips. Fortunately,
 Security Onion integrates the following tools to help make sense of this
 data:
 
--  Sguil (http://sguil.sourceforge.net/), created by Bamm Visscher
+-  Sguil (https://bammv.github.io/sguil/index.html), created by Bamm Visscher
    (@bammv), is “The Analyst Console for Network Security Monitoring.”
    It is the analyst’s right hand, providing visibility into the event
    data being collected and the context to validate the detection. Sguil
    provides a single GUI (written in tcl/tk) in which to view Snort or
-   Suricata alerts, OSSEC alerts, and Bro HTTP events. More importantly,
+   Suricata alerts, Wazuh alerts, and Bro HTTP events. More importantly,
    Sguil allows you to “pivot” directly from an alert into a packet
    capture (via Wireshark or NetworkMiner) or a transcript of the full
    session that triggered the alert. So, instead of seeing only an
@@ -179,7 +169,7 @@ Deployment Scenarios
 
 | Please refer to the following for the various deployment and node
   types:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture#deployment-types
+| :doc:`Elastic-Architecture#deployment-types`
 
 The Security Onion setup script allows you to easily configure the best
 installation scenario to suit your needs.
@@ -188,7 +178,7 @@ Conclusion
 ----------
 
 So we have full packet capture, Snort or Suricata rule-driven intrusion
-detection, Bro event-driven intrusion detection and OSSEC host-based
+detection, Bro event-driven intrusion detection and Wazuh host-based
 intrusion detection, all running out of the box once you run Security
 Onion setup. These disparate systems with various dependencies and
 complexities all run seamlessly together and would otherwise take hours,

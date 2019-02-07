@@ -26,7 +26,7 @@ Introduction
 ============
 
 This page describes how to configure email for alerting and reporting.
-Applications such as Sguil and OSSEC have their own mail configuration
+Applications such as Sguil and Wazuh have their own mail configuration
 and don't rely on a mail server in the OS itself. However, you may still
 want to install a mail server in the OS so that you can get daily emails
 from the sostat script and from Bro.
@@ -111,7 +111,7 @@ to automatically classify them if you prefer to receive emails for all
 instances of an alert. Otherwise, you may not receive alerts as
 intended.
 
-How do I configure OSSEC to send emails?
+How do I configure Wazuh to send emails?
 ----------------------------------------
 
 | Modify ``/var/ossec/etc/ossec.conf`` as follows:
@@ -123,11 +123,11 @@ How do I configure OSSEC to send emails?
 | <email\_maxperhour>100</email\_maxperhour>
 | </global>
 | 
-| Then restart OSSEC:
+| Then restart Wazuh:
 | sudo service ossec-hids-server restart
 | 
 
-You can specify the severity of an event for which OSSEC will send email
+You can specify the severity of an event for which Wazuh will send email
 alerts by specifying an appropriate value for ``email_alert_level`` in
 ``/var/ossec/etc/ossec.conf``. If you notice ``email_alert_level`` is
 not being respected for a certain rule, it may be that the option is
@@ -213,6 +213,6 @@ wiki page.
 How can I get an email alert when my sensor stops seeing traffic?
 -----------------------------------------------------------------
 
-If you configured OSSEC or Bro as shown above, they should automatically
+If you configured Wazuh or Bro as shown above, they should automatically
 do this for you. Another option can be found on the
 `SensorStopsSeeingTraffic <SensorStopsSeeingTraffic>`__ page.

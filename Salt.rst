@@ -83,7 +83,7 @@ minutes:
 
 -  NIDS rules in /etc/nsm/rules/ (Snort/Suricata/barnyard will
    automatically restart as necessary)
--  HIDS rules in /var/ossec/rules/local\_rules.xml (OSSEC will
+-  HIDS rules in /var/ossec/rules/local\_rules.xml (Wazuh will
    automatically restart as necessary)
 -  Bro scripts in /opt/bro/share/bro/policy/
 

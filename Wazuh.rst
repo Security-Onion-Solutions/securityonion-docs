@@ -4,17 +4,12 @@ Introduction
 | Wazuh has replaced OSSEC:
 | https://blog.securityonion.net/2018/10/wazuh-361-elastic-641-and-associated.html
 
-| This page is based on the original OSSEC page:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/OSSEC
-
 Description
 ===========
 
-From http://ossec.github.io/:
+From https://wazuh.com/:
 
-    OSSEC watches it all, actively monitoring all aspects of system
-    activity with file integrity monitoring, log monitoring, rootcheck,
-    and process monitoring.
+    Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
 
 Security Onion Usage
 ====================
@@ -25,10 +20,10 @@ Wazuh agents to monitor other hosts on your network as well.
 
 Additionally, you may want to:
 
--  `Configure OSSEC to send email
+-  `Configure Wazuh to send email
    notification(s) <https://github.com/Security-Onion-Solutions/security-onion/wiki/Email#how-do-i-configure-ossec-to-send-emails>`__
 
--  `Send OSSEC logs to an external syslog
+-  `Send Wazuh logs to an external syslog
    collector <https://github.com/Security-Onion-Solutions/security-onion/wiki/ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector>`__
 
 | For more information about Wazuh, please see:

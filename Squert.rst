@@ -42,7 +42,7 @@ Data Types
 Squert gives you access to the following data types:
 
 -  `NIDS <NIDS>`__ alerts
--  `HIDS <OSSEC>`__ alerts
+-  `HIDS <Wazuh>`__ alerts
 -  Asset data from PRADS (if PRADS and pads\_agent are enabled)
 -  HTTP logs from Bro (if http\_agent is enabled)
 
@@ -108,7 +108,7 @@ this, drill into an event and click on the Event ID.
 Pivoting to Kibana
 ==================
 
-Squert can pivot to `Kibana <Kibana>`__ to query Bro logs, OSSEC logs,
+Squert can pivot to `Kibana <Kibana>`__ to query Bro logs, Wazuh logs,
 syslog, etc. To do this, click an IP address, port, or signature, and
 then click Kibana. In Security Onion 14.04, Squert pivots to Kibana
 using a relative hyperlink, so it should use the same hostname or IP
