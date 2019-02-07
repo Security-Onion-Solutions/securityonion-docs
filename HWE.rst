@@ -1,12 +1,12 @@
-Introduction
-============
+HWE
+===
 
 HWE stands for Hardware Enablement and is Ubuntu's term for kernel and
 graphics driver support. Depending on which HWE stack you're running,
 you may need to upgrade it.
 
 Security Onion 14.04 ISO images and HWE stacks
-==============================================
+----------------------------------------------
 
 If you installed your system using our older Security Onion 14.04 ISO
 images (14.04.3.1, 14.04.4.4.1, or 14.04.4.2), then you're running an
@@ -17,7 +17,7 @@ image, then it already includes the 16.04 Xenial HWE stack and should
 not require any HWE upgrades.
 
 Install updates first
-=====================
+---------------------
 
 | Our first step is to install all updates using `soup <Upgrade>`__:
 | ``sudo soup``
@@ -25,7 +25,7 @@ Install updates first
 If soup prompts to reboot, please do so.
 
 Check HWE Status
-================
+----------------
 
 | Now that all updates have been installed, run ``soup`` again to see if
   your HWE stack is supported:
@@ -36,7 +36,7 @@ further action is required and you can ignore the rest of this page. If
 you got something other than that, then please continue reading!
 
 Upgrade HWE
-===========
+-----------
 
 | If ``soup`` says
   ``Please upgrade your Hardware Enablement Stack (HWE)``, then you'll
@@ -48,7 +48,7 @@ You should then reboot and run ``soup`` again to verify that it now says
 ``All updates have been installed``.
 
 Example
-=======
+-------
 
 For example, if you installed your system using our older Security Onion
 14.04 ISO images (14.04.3.1, 14.04.4.4.1, or 14.04.4.2), then you're
@@ -72,7 +72,7 @@ follows.
 #. It should now say ``All updates have been installed``.
 
 More information
-================
+----------------
 
 For more information, please see:
 

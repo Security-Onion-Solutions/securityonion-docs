@@ -1,9 +1,12 @@
+MySQL Upgrade Errors
+====================
+
 Ubuntu releases new MySQL packages periodically as needed. If you have a
 Security Onion 16.04 installation and run ``soup`` to install these new
 MySQL packages, you may see a few error messages as described below.
 
 Error messages regarding MySQL upgrade process
-==============================================
+----------------------------------------------
 
 If your installation has MySQL disabled (because you haven't yet run
 Setup or you've run Setup and chosen Forward Node or Storage Node), then
@@ -37,7 +40,7 @@ You can resolve this issue using the following one-liner:
     sudo systemctl enable mysql.service && sudo apt -f install && sudo systemctl stop mysql.service && sudo systemctl disable mysql.service
 
 Error message regarding MySQL 5.5
-=================================
+---------------------------------
 
 Older versions of soup may result in error messages regarding MySQL 5.5.
 Newer versions of soup have been updated to correct this. If you are

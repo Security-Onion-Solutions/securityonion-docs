@@ -1,12 +1,15 @@
+Upgrading from 14.04 to 16.04
+=============================
+
 Please read through this entire page before beginning!
 
 DISCLAIMERS
-===========
+-----------
 
 -  We offer no guarantees that this upgrade process will work perfectly.
 
 WARNINGS
-========
+--------
 
 -  Before upgrading production sensors, you should fully test this
    upgrade process on test sensors in a test environment that closely
@@ -22,7 +25,7 @@ WARNINGS
    before upgrading.
 
 PRE-UPGRADE NOTES
-=================
+-----------------
 
 -  If you are behind a proxy, make sure that you've `configured your
    proxy settings <Proxy>`__. In the commands below that use sudo, you
@@ -52,7 +55,7 @@ PRE-UPGRADE NOTES
    untested and unsupported.
 
 PREPARATION
-===========
+-----------
 
 -  Start with a fully configured Security Onion 14.04 (Elastic Stack)
    installation.
@@ -101,7 +104,7 @@ PREPARATION
 -  You may want to backup any other files that you've manually modified.
 
 UPGRADE FROM UBUNTU 14.04 TO UBUNTU 16.04
-=========================================
+-----------------------------------------
 
 -  | Configure Ubuntu to look for the 16.04 upgrade:
    | ``sudo sed -i 's|Prompt=never|Prompt=lts|g' /etc/update-manager/release-upgrades``
@@ -178,7 +181,7 @@ UPGRADE FROM UBUNTU 14.04 TO UBUNTU 16.04
 -  When prompted to restart, press ``Y`` to continue.
 
 ADD BACK SECURITY ONION PACKAGES
-================================
+--------------------------------
 
 -  After rebooting, log back in.
 
@@ -247,7 +250,7 @@ ADD BACK SECURITY ONION PACKAGES
    | ``sudo sguil-db-purge``
 
 CLEAN UP
-========
+--------
 
 -  Review your Snort/Suricata/Bro/other configuration for any local
    customizations that you may need to re-apply.
@@ -265,7 +268,7 @@ CLEAN UP
    | ``sudo reboot``
 
 VERIFY
-======
+------
 
 -  After rebooting, log back in.
 
@@ -285,7 +288,7 @@ VERIFY
 -  Check log files for anything out of the ordinary.
 
 MYSQL ROOT PASSWORD
-===================
+-------------------
 
 -  We will need to set a randomized root password for MySQL. We can do
    so by doing the following:
@@ -308,7 +311,7 @@ If root password is blank, set random password:
      fi
 
 OPTIONAL
-========
+--------
 
 -  | Switch to pure GNOME desktop:
    | ``sudo so-desktop-gnome``

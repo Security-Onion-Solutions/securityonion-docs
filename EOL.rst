@@ -1,3 +1,6 @@
+EOL
+===
+
 This page lists End Of Life (EOL) dates for older versions of Security
 Onion and older components.
 

@@ -1,5 +1,5 @@
-Security Onion Update Procedure
-===============================
+Updating
+========
 
 ``soup`` - Security Onion UPdate
 --------------------------------
