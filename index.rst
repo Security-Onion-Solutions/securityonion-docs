@@ -32,6 +32,18 @@ Security Onion Documentation
    MySQL-Upgrade-Errors
    EOL
 
+.. _analysttools:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Analyst Tools
+
+   Kibana
+   CapMe
+   CyberChef
+   Squert
+   Sguil
+
 .. _remaining:
 
 .. toctree::
@@ -75,7 +87,6 @@ Security Onion Documentation
    BPF
    Bro-Fields
    Bro
-   CapMe
    ChangingIPAddress
    CloudClient12.04
    CloudClient
@@ -83,7 +94,6 @@ Security Onion Documentation
    CriticalStackIntelClient
    Curator
    CustomELSAParsers
-   CyberChef
    Data-Fields
    DeployingNtopng
    Desktop
@@ -121,7 +131,6 @@ Security Onion Documentation
    http_agent
    ICMP-Anomaly-Detection
    InstallingOnUbuntu
-   Kibana
    Links
    Logstash
    MailingLists
@@ -158,12 +167,10 @@ Security Onion Documentation
    Security-Onion-14.04-Release-Notes
    Security
    SensorStopsSeeingTraffic
-   Sguil
    _Sidebar
    Snorby
    Snort
    so-import-pcap
-   Squert
    SSH
    Support
    Suricata

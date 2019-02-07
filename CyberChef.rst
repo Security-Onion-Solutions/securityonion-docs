@@ -1,5 +1,5 @@
-Description
-===========
+CyberChef
+=========
 
 From https://github.com/gchq/CyberChef :
 
@@ -21,7 +21,7 @@ From https://github.com/gchq/CyberChef :
     that the analyst is not a professional developer.
 
 Accessing
-=========
+---------
 
 To access CyberChef:
 

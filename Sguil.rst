@@ -1,5 +1,5 @@
-Description
-===========
+Sguil
+=====
 
 From http://sguil.net:
 
@@ -19,7 +19,7 @@ From http://sguil.net:
 -  Single central MySQL database
 
 Authentication
-==============
+--------------
 
 | For login information, please see:
 | https://github.com/Security-Onion-Solutions/security-onion/wiki/Passwords#sguil
@@ -28,7 +28,7 @@ Authentication
 | https://github.com/Security-Onion-Solutions/security-onion/wiki/ConnectingtoSguil
 
 Data Types
-==========
+----------
 
 -  NIDS alerts from Snort/Suricata (if snort\_agent is enabled)
 -  HIDS alerts from OSSEC (if ossec\_agent is enabled)
@@ -47,7 +47,7 @@ Data Types
    IP Lookup".
 
 Agents
-======
+------
 
 Because Sguil is written in tcl/tk, it can only utilize\ ``1024``
 sockets for receiving communication from various sensor agents
@@ -59,7 +59,7 @@ you have connected to the master server/accessed by Sguil.
 | https://groups.google.com/d/msg/security-onion/DJ5NTLEu5MY/-tDQi_1eDQAJ
 
 Management
-==========
+----------
 
 -  It is important to ensure events displayed in Sguil are regularly
    classified, or else it could cause problems with the Sguil database.
@@ -74,7 +74,7 @@ Management
    alerts <https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts#sguil-days-to-keep>`__
 
 Customize (Sguil client)
-========================
+------------------------
 
 -  resize columns by right-clicking on the column heading in the Sguil
    client.

@@ -1,5 +1,5 @@
-Description
-===========
+Squert
+======
 
 From http://www.squertproject.org/:
 
@@ -20,14 +20,14 @@ Squert is a PHP web interface to the `Sguil <Sguil>`__ database and
 works best with Chromium/Chrome browsers.
 
 Authentication
-==============
+--------------
 
 Squert authenticates against the Sguil user database, so you should be
 able to login to Squert using the same username/password you use to
 login to Sguil.
 
 Prepared Statements
-===================
+-------------------
 
 | Squert was recently updated to use prepared statements:
 | https://blog.securityonion.net/2018/01/security-advisory-for-squert.html
@@ -37,7 +37,7 @@ Prepared Statements
 | https://github.com/Security-Onion-Solutions/security-onion/wiki/MySQLTuning#table_definition_cache
 
 Data Types
-==========
+----------
 
 Squert gives you access to the following data types:
 
@@ -47,14 +47,14 @@ Squert gives you access to the following data types:
 -  HTTP logs from Bro (if http\_agent is enabled)
 
 Time Interval
-=============
+-------------
 
 The default view shows alerts from today. To show older alerts, click
 "INTERVAL", then click the 2 right arrows, set your custom date, and
 click Squert's refresh button (two circular arrows).
 
 Timeplot
-========
+--------
 
 | The timeplot at the top of the EVENTS page, represents events as they
   occur each day.
@@ -68,7 +68,7 @@ Timeplot
    hour.
 
 Toggle Options
-==============
+--------------
 
 | ``queue only``
 | Default is ``on``.
@@ -85,7 +85,7 @@ particular timeframe. If you would like to see the events as un-grouped,
 change this option to ``off``.
 
 Alerts
-======
+------
 
 The alert pane consists of several columns, explained below:
 
@@ -100,13 +100,13 @@ The alert pane consists of several columns, explained below:
 | ``% TOTAL`` - percentage of event grouping vs. entire event count
 
 Pivoting to Full Packet Capture
-===============================
+-------------------------------
 
 Squert can pivot to `CapMe <CapMe>`__ for full packet capture. To do
 this, drill into an event and click on the Event ID.
 
 Pivoting to Kibana
-==================
+------------------
 
 Squert can pivot to `Kibana <Kibana>`__ to query Bro logs, Wazuh logs,
 syslog, etc. To do this, click an IP address, port, or signature, and
@@ -115,7 +115,7 @@ using a relative hyperlink, so it should use the same hostname or IP
 address that you used to connect to Squert.
 
 Adding your own pivots
-======================
+----------------------
 
 If you're running the latest version of Squert, you can also add your
 own pivots as follows:

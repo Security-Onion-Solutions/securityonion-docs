@@ -1,5 +1,5 @@
-Description
-===========
+Kibana
+======
 
 From https://www.elastic.co/products/kibana :
 
@@ -9,7 +9,7 @@ From https://www.elastic.co/products/kibana :
     have on your quarterly numbers.
 
 Configuration
-=============
+-------------
 
 -  Configuration files for Kibana can be found in ``/etc/kibana/``.
 
@@ -19,19 +19,19 @@ Configuration
 -  Kibana logs can be found in ``/var/log/kibana/``.
 
 Pivoting
-========
+--------
 
 Kibana uses multiple hyperlinked fields to accelerate investigations and
 decision-making:
 
 Transcript
-----------
+~~~~~~~~~~
 
 When present, clicking the ``_id`` field allows an analyst to pivot to
 transcript via CapMe.
 
 Indicator Dashboard
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 When present, clicking these fields allows an analyst to pivot to the
 Indicator dashboard, where a variety of information is presented
@@ -44,7 +44,7 @@ relative to the term:value.
 | ``destination_port``
 
 Plugins
-=======
+-------
 
 To add a plugin to Kibana, you can expose the plugins directory to the
 host filesystem and then copy your plugins to that directory. For
@@ -77,7 +77,7 @@ Restart Kibana:
     sudo so-kibana-restart
 
 Search Results
-==============
+--------------
 
 Search results in the dashboards and through Discover are limited to the
 first ``10`` results for a particular query. If you don't feel like this
@@ -88,7 +88,7 @@ best to change this value incrementally to see how it affects
 performance.
 
 Search Request Timeout
-======================
+----------------------
 
 Sometimes searches can timeout in Kibana. To increase the timeout value
 to wait longer for results from Elasticsearch, we can adjust the value
