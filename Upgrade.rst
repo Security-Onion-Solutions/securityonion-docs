@@ -147,7 +147,7 @@ of:
    page <#upgrades>`__ for information on upgrading from 14.04 to 16.04.
 
 Upgrades
-========
+--------
 
 To upgrade from Security Onion 14.04 to Security Onion 16.04, please see
 `Upgrading-from-14.04-to-16.04 <Upgrading-from-14.04-to-16.04>`__.
