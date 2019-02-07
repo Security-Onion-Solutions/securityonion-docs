@@ -1,11 +1,11 @@
-/opt/samples/
-=============
+PCAPs for Testing
+=================
 
 Security Onion 16.04 comes with several pcap samples in
 ``/opt/samples/``.
 
 Links
-=====
+-----
 
 -  http://www.malware-traffic-analysis.net/
 
@@ -41,7 +41,7 @@ Links
 -  https://github.com/bro/bro/tree/master/testing/btest/Traces
 
 tcpreplay
-=========
+---------
 
 | You can use ``tcpreplay`` to replay any of these pcaps on your
   Security Onion sensor. For example, please see
@@ -50,13 +50,13 @@ tcpreplay
   console.
 
 so-replay
-=========
+---------
 
 ``so-replay`` will use ``tcpreplay`` to replay **all** pcap samples in
 ``/opt/samples`` to your sniffing interface.
 
 so-import-pcap
-==============
+--------------
 
 A drawback to using tcpreplay is that it's replaying the pcap as new
 traffic and thus the timestamps that you see in Kibana, Squert, and

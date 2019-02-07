@@ -1,3 +1,6 @@
+Best Practices
+==============
+
 Security Onion comes with the option to implement what is considered a
 set of "best practices" during setup. For many users, this is a quick
 and easy way to ensure you are configuring your deployment to disable

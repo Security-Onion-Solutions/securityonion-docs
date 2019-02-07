@@ -1,10 +1,13 @@
+Removing a Sensor
+=================
+
 There may come a time when you need to disable a sensor interface,
 delete a sensor's configuration, or get rid of an entire sensor and its
 data altogether. The steps below outline what is required to accomplish
 each objective.
 
 Disable sensor interface
-========================
+------------------------
 
 To disable a sensor interface:
 
@@ -17,21 +20,21 @@ To disable a sensor interface:
    ``sudo so-sensor-start``
 
 Delete sensor configuration
-===========================
+---------------------------
 
 -  To delete the configuration for a sensor, run
    ``/usr/sbin/nsm_sensor_del`` on the sensor box for which you wish to
    delete the configuration.
 
 Wipe sensor configuration and data
-==================================
+----------------------------------
 
 -  To completely wipe sensor configuration and data, run
    ``sudo sosetup`` on the sensor box for which you wish to wipe the
    data and configuration.
 
 Remove sensor reference from master server
-==========================================
+------------------------------------------
 
 -  | PLEASE NOTE: This step is only required if you are still running
      ELSA. ELSA is set for EOL on October 9, 2018.
@@ -54,7 +57,7 @@ Remove sensor reference from master server
 -  Delete the key from salt: ``sudo salt-key -d sensor_key_name``
 
 Remove storage node reference from Master server Elasticsearch ``_cluster/settings``
-====================================================================================
+------------------------------------------------------------------------------------
 
 From Kibana, navigate to ``Dev Tools`` and paste the following text into
 the window (modifying ``nodename`` to match the name of your node):

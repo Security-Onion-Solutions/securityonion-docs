@@ -1,10 +1,10 @@
+Metapackages
+============
+
 Security Onion consists of over 50 packages in a Launchpad PPA. You can
 install these packages individually or you can install one or more
 metapackages (groups of packages) depending on what functionality you
 need.
-
-Metapackages
-============
 
 -  | securityonion-client (about 525MB)
    | Sguil client, Wireshark, NetworkMiner, etc.

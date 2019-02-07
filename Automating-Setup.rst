@@ -1,7 +1,10 @@
+Automating Setup
+================
+
 You can automate the Setup process using ``sosetup.conf``.
 
 Starting from scratch
-=====================
+---------------------
 
 Copy the example file to your home directory:
 
@@ -23,7 +26,7 @@ Run Setup with the -f switch and the path to this file:
     sudo sosetup -f ~/sosetup.conf
 
 Using ``sosetup -w``
-====================
+--------------------
 
 | As of securityonion-setup - 20120912-0ubuntu0securityonion201,
   ``sosetup`` now supports a ``-w`` switch that allows you to answer the

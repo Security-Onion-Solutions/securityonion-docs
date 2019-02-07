@@ -1,3 +1,6 @@
+DNS Anomaly Detection
+=====================
+
 Dr. Johannes Ullrich of the SANS Internet Storm Center posted a great
 DNS Anomaly Detection script based on the query logs coming from his DNS
 server. We can do the same thing with Bro's dns.log (where Bro captures

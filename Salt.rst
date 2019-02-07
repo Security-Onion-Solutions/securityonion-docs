@@ -1,5 +1,5 @@
-What is Salt?
-=============
+Salt
+====
 
 "Salt delivers a dynamic communication bus for infrastructures that can
 be used for orchestration, remote execution, configuration management
@@ -8,14 +8,14 @@ and much more."
 http://docs.saltstack.com/
 
 What is OnionSalt?
-==================
+------------------
 
 "OnionSalt is a tool created to manage multiple Security Onion sensors."
 
 https://github.com/TOoSmOotH/onionsalt
 
 Best Practices
-==============
+--------------
 
 For the Security Onion 14.04 ISO, ``securityonion-onionsalt`` is
 pre-installed (via ``securityonion-iso syslog-ng-core``) , and Salt is
@@ -24,7 +24,7 @@ Practices <https://github.com/Security-Onion-Solutions/security-onion/wiki/Best-
 during setup.
 
 Salt and OnionSalt are optional packages
-========================================
+----------------------------------------
 
 If you choose to install Security Onion via PPA without installing
 ``securityonion-iso syslog-ng-core``, please note that Salt is totally
@@ -34,7 +34,7 @@ will change for you. Otherwise, install ``securityonion-onionsalt``
 before running setup to enable Salt for your deployment.
 
 Firewall Requirements
-=====================
+---------------------
 
 Sensors need to be able to connect to the master server on ports
 4505/tcp and 4506/tcp:
@@ -42,7 +42,7 @@ Sensors need to be able to connect to the master server on ports
 http://docs.saltstack.com/topics/tutorials/firewall.html
 
 Installation
-============
+------------
 
 For new deployments, `Best
 Practices <https://github.com/Security-Onion-Solutions/security-onion/wiki/Best-Practices>`__
@@ -57,7 +57,7 @@ For existing deployments, please see:
 `Existing Deployment <Salt#salting-an-existing-deployment>`__
 
 Checking Status
-===============
+---------------
 
 Want to verify all your sensors are up?
 
@@ -66,7 +66,7 @@ Want to verify all your sensors are up?
     sudo salt '*' test.ping
 
 Remote Execution
-================
+----------------
 
 Want to execute a command on all your sensors at once?
 
@@ -75,7 +75,7 @@ Want to execute a command on all your sensors at once?
     sudo salt '*' cmd.run 'InsertYourCommandHere'
 
 Features
-========
+--------
 
 When you install and enable securityonion-onionsalt, the following data
 will replicate from the master server out to the sensors every 15
@@ -119,7 +119,7 @@ In addition, Salt is a full configuration management system, so you can
 script anything that you want to deploy across your army of sensors.
 
 Using Salt to Install Updates Across Your Entire Deployment
-===========================================================
+-----------------------------------------------------------
 
 You can use Salt and Soup to install updates across your entire
 deployment, but please remember to always update your master server
@@ -142,7 +142,7 @@ If you experience this, you should be able to ssh to each sensor and run
 1108 <https://github.com/Security-Onion-Solutions/security-onion/issues/1108>`__.
 
 Modifying Salt config files
-===========================
+---------------------------
 
 If you need to modify the values in /etc/salt/master or
 /etc/salt/minion, please pay attention to this note at the top of each
@@ -170,7 +170,7 @@ file:
 | 
 
 Changing Minion ID
-==================
+------------------
 
 If you need to change the ID for a minion, do the following:
 
@@ -206,7 +206,7 @@ On the master machine:
     sudo salt "MINION_NAME" test.ping
 
 Salting an Existing Deployment
-==============================
+------------------------------
 
 Configure the Master Server first
 ---------------------------------

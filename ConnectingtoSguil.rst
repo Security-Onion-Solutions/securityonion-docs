@@ -1,11 +1,11 @@
-Introduction
-============
+Connecting to Sguild
+====================
 
 This article will show how to connect to the Sguil server to view
 security alerts in real-time.
 
 Connecting to Sguild from an Analyst Machine
-============================================
+--------------------------------------------
 
 | To directly connect to a Sguild server one must possess a working
   Sguil client.
@@ -30,7 +30,7 @@ Now double-click the Sguil desktop icon to launch the Sguil client.
 Then select the sensors to monitor and finally click Start Sguil.
 
 Connect to Sguild Locally (not recommended)
-===========================================
+-------------------------------------------
 
 Double-click the Sguil icon on the desktop of your SecurityOnion server.
 
@@ -41,7 +41,7 @@ After, choose which sensors you would like to monitor for this sguil
 session and then click Start Sguil.
 
 Connect Remotely via SSH w/ X11 Forwarding
-==========================================
+------------------------------------------
 
 | This method requires SSH and an X11 server installed on the machine
   from which you will be

@@ -119,6 +119,24 @@ Security Onion Documentation
    High-Performance-Tuning
    Trimming-PCAPs
 
+.. _tricksandtips:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tricks and Tips
+
+   Best-Practices
+   Salt
+   Automating-Setup
+   MetaPackages
+   DNSAnomalyDetection
+   ICMP-Anomaly-Detection
+   ConnectingtoSguil
+   Pcaps
+   RemovingASensor
+   Airgapped-Networks
+   Desktop
+
 .. _remaining:
 
 .. toctree::
@@ -148,24 +166,18 @@ Security Onion Documentation
    2018
    2019
    AF-PACKET
-   Airgapped-Networks
    Alert-Data-Fields
    Alienvault-OTX
    Analyst-VM
    Architecture-Old
-   Automating-Setup
-   Best-Practices
    BPF10
    Bro-Fields
    CloudClient12.04
    CloudClient
-   ConnectingtoSguil
    CriticalStackIntelClient
    CustomELSAParsers
    DeployingNtopng
-   Desktop
    DirectoryStructure
-   DNSAnomalyDetection
    Elastalert-Fields
    Elastic-Alpha-to-Beta
    Elastic-Pre-Releases
@@ -185,17 +197,14 @@ Security Onion Documentation
    Help
    Home
    http_agent
-   ICMP-Anomaly-Detection
    InstallingOnUbuntu
    Links
    MailingLists
-   MetaPackages
    MISP
    MySQLUpdates
    OSSECalertsToELSA
    OSSEC
    Passwords
-   Pcaps
    ProductionDeployment
    ProjectHome
    QuickISOImage
@@ -203,10 +212,8 @@ Security Onion Documentation
    README.md
    README
    Re‐Indexing
-   RemovingASensor
    RITA
    Roadmap
-   Salt
    Secure-Boot
    Security-Onion-14.04-Release-Notes
    Security
