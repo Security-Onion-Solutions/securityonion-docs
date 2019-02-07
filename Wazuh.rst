@@ -1,18 +1,18 @@
-Introduction
-============
+Wazuh
+=====
 
 | Wazuh has replaced OSSEC:
 | https://blog.securityonion.net/2018/10/wazuh-361-elastic-641-and-associated.html
 
 Description
-===========
+-----------
 
 From https://wazuh.com/:
 
     Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
 
 Security Onion Usage
-====================
+--------------------
 
 Security Onion uses Wazuh as a Host Intrusion Detection System (HIDS).
 Wazuh is monitoring and defending Security Onion itself and you can add
@@ -89,7 +89,7 @@ Automated Deployment
 | https://documentation.wazuh.com/3.7/user-manual/reference/daemons/ossec-authd.html
 
 Downloads
-=========
+---------
 
 | You can download Wazuh agents here:
 | https://documentation.wazuh.com/3.7/installation-guide/packages-list/index.html

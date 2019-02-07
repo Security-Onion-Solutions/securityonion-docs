@@ -56,6 +56,18 @@ Security Onion Documentation
    Bro
    netsniff-ng
 
+.. _hostvisibility:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Host Visibility
+
+   Beats
+   Wazuh
+   Sysmon
+   Autoruns
+   Syslog
+
 .. _remaining:
 
 .. toctree::
@@ -92,8 +104,6 @@ Security Onion Documentation
    Analyst-VM
    Architecture-Old
    Automating-Setup
-   Autoruns
-   Beats
    Best-Practices
    BPF10
    BPF
@@ -181,8 +191,6 @@ Security Onion Documentation
    so-import-pcap
    SSH
    Support
-   Syslog
-   Sysmon
    tcl
    TeamMembers
    ThirdPartyIntegration
@@ -191,6 +199,5 @@ Security Onion Documentation
    TroubleBooting
    Upgrading-from-12.04-to-14.04
    VLAN-Traffic
-   Wazuh
    WipingSnorby
    Xplico

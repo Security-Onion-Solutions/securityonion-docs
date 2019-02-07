@@ -1,5 +1,5 @@
-Description
-===========
+Autoruns
+========
 
 From https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx:
 
@@ -14,10 +14,10 @@ From https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx:
     and much more. Autoruns goes way beyond other autostart utilities.
 
 Integration
-===========
+-----------
 
 OSSEC
------
+~~~~~
 
 Currently, our Autoruns dashboard in Kibana works only with Autoruns
 logs shipped via OSSEC. If you are trying to ship Autoruns logs via
@@ -26,7 +26,7 @@ reference the ``logstash-beats-*`` indices, or view Autoruns logs via
 the ``Beats`` dashboard.
 
 Pertinax
---------
+~~~~~~~~
 
 | Josh Brower developed a great project called Pertinax to normalize
   autoruns data and integrate it into Security Onion:
@@ -39,14 +39,14 @@ Pertinax
 | https://github.com/defensivedepth/Pertinax/wiki/Reference%20Architecture
 
 AutorunsToWinEventLog
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 | Another method for integrating Autoruns into your logging
   infrastructure is AutorunsToWinEventLog:
 | https://github.com/palantir/windows-event-forwarding/tree/master/AutorunsToWinEventLog
 
 Downloads
-=========
+---------
 
 | Download Autoruns here:
 | https://download.sysinternals.com/files/Autoruns.zip

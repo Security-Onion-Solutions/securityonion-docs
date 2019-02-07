@@ -1,5 +1,5 @@
-Introduction
-============
+Beats
+=====
 
 | We can use Elastic Beats to facilitate the shipping of endpoint logs
   to Security Onion on the Elastic Stack,

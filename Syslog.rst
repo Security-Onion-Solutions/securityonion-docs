@@ -1,5 +1,5 @@
-Description
-===========
+Syslog
+======
 
 From https://syslog-ng.org:
 
@@ -8,26 +8,26 @@ From https://syslog-ng.org:
     them to log analysis tools.
 
 Usage
-=====
+-----
 
 Security Onion uses syslog-ng as its primary syslog collector and to
 send logs to `Logstash <Logstash>`__ where they are parsed and augmented
 before being written to `Elasticsearch <Elasticsearch>`__.
 
 Configuration
-=============
+-------------
 
 syslog-ng's configuration file is located at
 ``/etc/syslog-ng/syslog-ng.conf``
 
 Forwarding
-==========
+----------
 
 You can configure syslog-ng to forward Bro / Wazuh / IDS logs to
 `third-party systems <ThirdPartyIntegration>`__.
 
 More Information
-================
+----------------
 
 | For more information about syslog-ng, please see:
 | https://syslog-ng.org/

@@ -1,5 +1,5 @@
-Description
-===========
+Sysmon
+======
 
 From https://technet.microsoft.com/en-us/sysinternals/sysmon:
 
@@ -14,14 +14,14 @@ From https://technet.microsoft.com/en-us/sysinternals/sysmon:
     malware operate on your network.
 
 Integration
-===========
+-----------
 
 | Josh Brower wrote a great paper on integrating sysmon into Security
   Onion:
 | https://digital-forensics.sans.org/community/papers/gcfa/sysmon-enrich-security-onions-host-level-capabilities_10612
 
 Configuration
-=============
+-------------
 
 | SwiftOnSecurity has a great sysmon config file to use as a starting
   point:
@@ -31,7 +31,7 @@ Configuration
 | https://medium.com/@lennartkoopmann/explaining-and-adapting-tays-sysmon-configuration-27d9719a89a8#.bgzhylmn8
 
 Downloads
-=========
+---------
 
 | Download sysmon here:
 | https://download.sysinternals.com/files/Sysmon.zip
@@ -40,7 +40,7 @@ Downloads
 | https://github.com/SwiftOnSecurity/sysmon-config/raw/master/sysmonconfig-export.xml
 
 More Information
-================
+----------------
 
 | How to Go from Responding to Hunting with Sysinternals Sysmon:
 | https://onedrive.live.com/view.aspx?resid=D026B4699190F1E6!2843&ithint=file%2cpptx&app=PowerPoint&authkey\ =!AMvCRTKB\_V1J5ow
