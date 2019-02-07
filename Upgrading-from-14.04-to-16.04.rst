@@ -3,12 +3,12 @@ Upgrading from 14.04 to 16.04
 
 Please read through this entire page before beginning!
 
-DISCLAIMERS
+Disclaimers
 -----------
 
 -  We offer no guarantees that this upgrade process will work perfectly.
 
-WARNINGS
+Warnings
 --------
 
 -  Before upgrading production sensors, you should fully test this
@@ -24,7 +24,7 @@ WARNINGS
    `Elastic <https://github.com/Security-Onion-Solutions/security-onion/wiki/ELSA-to-Elastic>`__
    before upgrading.
 
-PRE-UPGRADE NOTES
+Pre-upgrade Notes
 -----------------
 
 -  If you are behind a proxy, make sure that you've `configured your
@@ -54,7 +54,7 @@ PRE-UPGRADE NOTES
    issues. Mixed-release (14.04 + 16.04) environments are currently
    untested and unsupported.
 
-PREPARATION
+Preparation
 -----------
 
 -  Start with a fully configured Security Onion 14.04 (Elastic Stack)
@@ -103,7 +103,7 @@ PREPARATION
 
 -  You may want to backup any other files that you've manually modified.
 
-UPGRADE FROM UBUNTU 14.04 TO UBUNTU 16.04
+Upgrade from Ubuntu 14.04 to Ubuntu 16.04
 -----------------------------------------
 
 -  | Configure Ubuntu to look for the 16.04 upgrade:
@@ -180,7 +180,7 @@ UPGRADE FROM UBUNTU 14.04 TO UBUNTU 16.04
 
 -  When prompted to restart, press ``Y`` to continue.
 
-ADD BACK SECURITY ONION PACKAGES
+Add back Security Onion packages
 --------------------------------
 
 -  After rebooting, log back in.
@@ -249,7 +249,7 @@ ADD BACK SECURITY ONION PACKAGES
      ``sguil-db-purge``:
    | ``sudo sguil-db-purge``
 
-CLEAN UP
+Clean Up
 --------
 
 -  Review your Snort/Suricata/Bro/other configuration for any local
@@ -267,7 +267,7 @@ CLEAN UP
 -  | Reboot:
    | ``sudo reboot``
 
-VERIFY
+Verify
 ------
 
 -  After rebooting, log back in.
@@ -287,7 +287,7 @@ VERIFY
 
 -  Check log files for anything out of the ordinary.
 
-MYSQL ROOT PASSWORD
+MySQL root password
 -------------------
 
 -  We will need to set a randomized root password for MySQL. We can do
@@ -300,7 +300,6 @@ MYSQL ROOT PASSWORD
    | ``sudo dpkg-reconfigure --frontend noninteractive mysql-server-5.7``
 
 If root password is blank, set random password:
------------------------------------------------
 
 ::
 
@@ -310,7 +309,7 @@ If root password is blank, set random password:
          '$PASSWORD';"
      fi
 
-OPTIONAL
+Optional
 --------
 
 -  | Switch to pure GNOME desktop:
