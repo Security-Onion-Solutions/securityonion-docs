@@ -1,5 +1,5 @@
-Introduction
-============
+MISP
+====
 
 | Not long ago, the MISP project announced the ability to export NIDS
   rules created from events/indicators.
@@ -11,13 +11,13 @@ to our local rules for Security Onion. To do so, we just need to follow
 the simple steps below:
 
 Warning
-=======
+-------
 
 Please keep in mind we do not officially support this integration, so
 installation is at your own risk.
 
 Installation
-============
+------------
 
 | Clone the repo:
 | ``git clone https://github.com/weslambert/securityonion-misp``

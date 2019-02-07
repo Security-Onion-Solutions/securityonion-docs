@@ -18,7 +18,7 @@ current capabilities and leverage the great work from the folks at `CERT
 Societe Generale <https://github.com/certsocietegenerale>`__.
 
 Warning
-=======
+-------
 
 | Please keep in mind we do not officially support FIR, so installation
   is at your own risk.
@@ -28,7 +28,7 @@ Warning
   (w/ Docker installed).
 
 Installation
-============
+------------
 
 To install FIR on Security Onion:
 

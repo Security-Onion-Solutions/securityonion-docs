@@ -1,4 +1,4 @@
-Introduction
+Cloud Client
 ============
 
 Many folks ask how they can use Security Onion to monitor and defend
@@ -8,15 +8,12 @@ virtual tap. This virtual tap will copy all traffic from our production
 cloud box to an OpenVPN bridge that transports the traffic to our
 Security Onion sensor where it is then analyzed.
 
-**Warning! This cloud client is considered experimental! USE AT YOUR OWN
-RISK!**
+**Warning! This cloud client is considered experimental! USE AT YOUR OWN RISK!**
 
-This guide was `originally written for Security Onion
-12.04 <CloudClient12.04>`__ and has been updated for Security Onion
-14.04, but hasn't been heavily tested yet.
+This guide was originally written for Security Onion 12.04 and has been updated for Security Onion 14.04, but hasn't been heavily tested yet.
 
 Traffic Flow and NIC offloading functions
-=========================================
+-----------------------------------------
 
 The cloud client uses ``daemonlogger`` or ``netsniff-ng`` to copy all
 packets from eth0 to tap0 (OpenVPN). OpenVPN transports the packets to
@@ -29,7 +26,7 @@ disabling NIC offloading functions on eth0 and br0 via
 ``/etc/network/interfaces`` and tap0 via ``/etc/openvpn/up.sh``.
 
 Daemonlogger vs netsniff-ng
-===========================
+---------------------------
 
 This guide is written using ``daemonlogger`` because it is more likely
 to be available on most cloud boxes. If ``netsniff-ng`` is available, it
@@ -38,7 +35,7 @@ need to change the calls from daemonlogger to netsniff-ng and translate
 the options to the equivalent netsniff-ng options.
 
 References and Thanks
-=====================
+---------------------
 
 This is based on Josh Brower's great work:
 
@@ -53,7 +50,7 @@ https://help.ubuntu.com/community/OpenVPN
 https://help.ubuntu.com/lts/serverguide/openvpn.html
 
 Security Onion Sensor
-=====================
+---------------------
 
 We start with our Security Onion sensor.
 
@@ -231,7 +228,7 @@ Verify tap0 came up:
     ifconfig
 
 Generate client certs
-=====================
+---------------------
 
 Perform the steps in this section for each cloud client you want to
 monitor.
@@ -254,7 +251,7 @@ of the cloud client you want to add):
     scp /etc/openvpn/easy-rsa/keys/ca.crt username@hostname:~/
 
 Cloud client
-============
+------------
 
 Perform the steps in this section on each cloud client you want to
 monitor.
@@ -363,7 +360,7 @@ Bounce the interface (you may lose access if connected remotely over
 ssh) or reboot the box.
 
 Check traffic
-=============
+-------------
 
 Your Security Onion sensor should now be seeing traffic from your Cloud
 Client. Verify as follows:
@@ -383,13 +380,13 @@ When you ran Setup phase 2 you configured Security Onion to monitor br0,
 so you should be getting IDS alerts and Bro logs.
 
 Hardening
-=========
+---------
 
 Once you get everything working properly, you should configure OpenVPN
 (server and client) and daemonlogger to run as a limited user.
 
 Tuning
-======
+------
 
 If your cloud box is seeing lots of traffic, daemonlogger may not be
 able to keep up, resulting in packet loss. You may need to switch to

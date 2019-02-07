@@ -10,7 +10,7 @@ current capabilities and leverage the great work from the folks at
 `Google <https://github.com/google/grr>`__.
 
 Warning
-=======
+-------
 
 | Please keep in mind we do not officially support GRR, so installation
   is at your own risk.
@@ -20,7 +20,7 @@ Warning
   (w/ Docker installed).
 
 Installation
-============
+------------
 
 To install GRR on Security Onion:
 
@@ -49,7 +49,7 @@ Also note, to access GRR by the above name you will need to:
 -  create a DNS record pointing to it.
 
 Firewall Rules
-==============
+--------------
 
 | Analyst/Web Interface:
 | ``sudo so-allow``
@@ -60,7 +60,7 @@ Firewall Rules
 | ``sudo iptables -I DOCKER-USER ! -i docker0 -o docker0 -s ClIENT_IP -p tcp --dport 8080 -j ACCEPT``
 
 Management
-==========
+----------
 
 | If you would like to add another user, aside from the default, you can
   follow the instructions here:

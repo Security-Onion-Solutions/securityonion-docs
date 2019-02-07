@@ -1,5 +1,5 @@
-Introduction
-============
+Analyst VM
+==========
 
 Full-time analysts should install Security Onion in a VM on their
 workstation. Run through the Ubuntu installer, but you do not need to
@@ -12,7 +12,7 @@ investigate pcaps without fear of impacting your production
 server/sensors.
 
 Screen Resolution
-=================
+-----------------
 
 To change the resolution of your Security Onion VM:
 
@@ -36,7 +36,7 @@ can happen if you're running VirtualBox and you'll need to install the
 VirtualBox Extensions.
 
 Ultimate Forensics VM
-=====================
+---------------------
 
 | Want an analyst VM that also includes forensics and reverse
   engineering tools from SANS SIFT and Remnux? See Brian Kellogg's

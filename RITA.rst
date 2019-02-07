@@ -23,7 +23,7 @@ fantastic job of allowing RITA to be easy to integrate with Security
 Onion.
 
 Warning
-=======
+-------
 
 Please keep in mind we do not officially support RITA, so installation
 is at your own risk.
@@ -35,7 +35,7 @@ will need to switch from JSON to TSV format by following the steps here:
 https://github.com/Security-Onion-Solutions/security-onion/wiki/Bro#tsv
 
 Installation
-============
+------------
 
 To install RITA on Security Onion:
 
@@ -52,7 +52,7 @@ To install RITA on Security Onion:
 | ``sudo service mongod start``
 
 Usage
-=====
+-----
 
 | You can then import logs with:
 | ``rita import /nsm/bro/logs dataset1``
@@ -76,7 +76,7 @@ Usage
 | ``rita --help``
 
 Configuration
-=============
+-------------
 
 If you don't want to specify your the path for your Bro logs, you'll
 want to change the value for ``ImportDirectory`` in

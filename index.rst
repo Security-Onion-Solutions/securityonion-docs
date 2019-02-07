@@ -126,7 +126,9 @@ Security Onion Documentation
    :maxdepth: 2
    :caption: Tricks and Tips
 
+   Analyst-VM
    Best-Practices
+   CloudClient
    Salt
    Automating-Setup
    MetaPackages
@@ -137,6 +139,19 @@ Security Onion Documentation
    RemovingASensor
    Airgapped-Networks
    Desktop
+
+.. _integrations:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Integrations
+
+   Alienvault-OTX
+   CriticalStackIntelClient
+   FIR
+   GRR
+   MISP
+   RITA
 
 .. _help:
 
@@ -174,36 +189,19 @@ Security Onion Documentation
    :caption: Remaining
 
    Alert-Data-Fields
-   Alienvault-OTX
-   Analyst-VM
    Architecture-Old
    Bro-Fields
-   CloudClient12.04
-   CloudClient
-   CriticalStackIntelClient
-   CustomELSAParsers
    DeployingNtopng
    DirectoryStructure
    Elastalert-Fields
-   Elastic-Alpha-to-Beta
-   Elastic-Pre-Releases
-   Elastic-RC1
-   Elastic-RC2
-   Elastic-RC3
-   Elastic-RC4
-   ELSAQueryTips
-   ELSA
    Etherpad
    Firewall-old
-   FIR
    FreeNX
    Full-Packet-Capture
-   GRR
    Home
    http_agent
    InstallingOnUbuntu
    Links
-   MISP
    MySQLUpdates
    OSSECalertsToELSA
    OSSEC
@@ -214,17 +212,10 @@ Security Onion Documentation
    README.md
    README
    Re‐Indexing
-   RITA
    Roadmap
    Secure-Boot
-   Security-Onion-14.04-Release-Notes
    SensorStopsSeeingTraffic
-   _Sidebar
-   Snorby
    SSH
    tcl
    TroubleBooting
-   Upgrading-from-12.04-to-14.04
    VLAN-Traffic
-   WipingSnorby
-   Xplico

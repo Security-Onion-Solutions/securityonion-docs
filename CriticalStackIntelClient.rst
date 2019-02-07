@@ -1,5 +1,5 @@
-Overview
-========
+Critcal Stack Intel Client
+==========================
 
 Many analysts may wish to integrate intel feeds into their existing
 network security monitoring infrastructure. While still considered
@@ -9,13 +9,13 @@ upon intel feeds as desired. The process for installing and configuring
 the client is rather straightforward, and can be completed in minutes.
 
 Install and Configure
-=====================
+---------------------
 
 | For installation steps, please see:
 | http://taosecurity.blogspot.com/2015/01/try-critical-stack-intel-client.html
 
 Profit
-======
+------
 
 Once the client is correctly installed and configured , Bro should
 create ``intel.log`` in ``/nsm/bro/logs``, and you should be able to see
