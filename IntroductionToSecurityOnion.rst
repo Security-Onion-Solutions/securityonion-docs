@@ -92,66 +92,25 @@ NIDS:
 
 HIDS:
 
--  For host-based intrusion detection, Security Onion offers Wazuh
-   (https://wazuh.com/), a free, open source HIDS for Windows, Linux
-   and Mac OS X. When you add the Wazuh agent to endpoints on your
-   network, you gain invaluable visibility from endpoint to your
-   network’s exit point. Wazuh performs log analysis, file integrity
-   checking, policy monitoring, rootkit detection, real-time alerting
-   and active response. As an analyst, being able to correlate host-based
-   events with network-based events can be the difference in identifying
-   a successful attack.
+-  For host-based intrusion detection, Security Onion offers Wazuh (https://wazuh.com/), a free, open source HIDS for Windows, Linux and Mac OS X. When you add the Wazuh agent to endpoints on your network, you gain invaluable visibility from endpoint to your network’s exit point. Wazuh performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response. As an analyst, being able to correlate host-based events with network-based events can be the difference in identifying a successful attack.
 
 Analysis Tools
 --------------
 
-With full packet capture, IDS logs and Bro data, there is a daunting
-amount of data available at the analyst’s fingertips. Fortunately,
-Security Onion integrates the following tools to help make sense of this
-data:
+With full packet capture, IDS logs and Bro data, there is a daunting amount of data available at the analyst’s fingertips. Fortunately, Security Onion integrates the following tools to help make sense of this data:
 
--  Sguil (https://bammv.github.io/sguil/index.html), created by Bamm Visscher
-   (@bammv), is “The Analyst Console for Network Security Monitoring.”
-   It is the analyst’s right hand, providing visibility into the event
-   data being collected and the context to validate the detection. Sguil
-   provides a single GUI (written in tcl/tk) in which to view Snort or
-   Suricata alerts, Wazuh alerts, and Bro HTTP events. More importantly,
-   Sguil allows you to “pivot” directly from an alert into a packet
-   capture (via Wireshark or NetworkMiner) or a transcript of the full
-   session that triggered the alert. So, instead of seeing only an
-   individual packet associated with an alert and being left with the
-   unanswerable question, “What now?” or “What happened next?,” you can
-   view all of the associated traffic and actually answer that question.
-   Additionally, Sguil allows the analyst to query all packets captured,
-   not just those involved with an alert, so you can correlate traffic
-   that may not have triggered any alerts but still could be associated
-   with malicious or undesired activity. Lastly, Sguil allows the
-   analyst to conduct reverse DNS and whois lookups of IP addresses
+-  Sguil (https://bammv.github.io/sguil/index.html), created by Bamm Visscher (@bammv), is “The Analyst Console for Network Security Monitoring.” It is the analyst’s right hand, providing visibility into the event data being collected and the context to validate the detection. Sguil provides a single GUI (written in tcl/tk) in which to view Snort or Suricata alerts, Wazuh alerts, and Bro HTTP events. More importantly, Sguil allows you to “pivot” directly from an alert into a packet capture (via Wireshark or NetworkMiner) or a transcript of the full session that triggered the alert. So, instead of seeing only an individual packet associated with an alert and being left with the unanswerable question, “What now?” or “What happened next?,” you can view all of the associated traffic and actually answer that question. Additionally, Sguil allows the analyst to query all packets captured, not just those involved with an alert, so you can correlate traffic that may not have triggered any alerts but still could be associated with malicious or undesired activity. Lastly, Sguil allows the analyst to conduct reverse DNS and whois lookups of IP addresses
    associated with alerts.
 
-   Sguil differs from other alert interfaces in that it allows
-   collaboration among analysts by allowing alerts to be commented on
-   and escalated to more senior analysts who can take action on the
-   alerts. Sguil is the primary Security Onion tool to provide the most
-   context around a given alert.
+   Sguil differs from other alert interfaces in that it allows collaboration among analysts by allowing alerts to be commented on and escalated to more senior analysts who can take action on the alerts. Sguil is the primary Security Onion tool to provide the most context around a given alert.
 
--  Squert (http://www.squertproject.org/), created by Paul Halliday
-   (@01110000), is a web application interface to the Sguil database.
-   Although it is neither meant to be a real-time (or near real-time)
-   interface nor a replacement for Sguil, it allows querying of the
-   Sguil database and provides several visualization options for the
-   data such as “time series representations, weighted and logically
-   grouped result sets” and geo-IP mapping.
+-  Squert (http://www.squertproject.org/), created by Paul Halliday (@01110000), is a web application interface to the Sguil database. Although it is neither meant to be a real-time (or near real-time) interface nor a replacement for Sguil, it allows querying of the Sguil database and provides several visualization options for the data such as “time series representations, weighted and logically grouped result sets” and geo-IP mapping.
 
--  Kibana (https://www.elastic.co/products/kibana), created by the team
-   at Elastic(@elastic).
+-  Kibana (https://www.elastic.co/products/kibana), created by the team at Elastic (@elastic).
 
-   Kibana allows us to quickly analyze and pivot between all of the
-   different data types generated by Security Onion through a "single
-   pane of glass".
+   Kibana allows us to quickly analyze and pivot between all of the different data types generated by Security Onion through a "single pane of glass".
 
-   From
-   https://www.elastic.co/guide/en/kibana/current/introduction.html:
+   From https://www.elastic.co/guide/en/kibana/current/introduction.html:
 
        Kibana is an open source analytics and visualization platform designed to work with Elasticsearch. You use Kibana to search, view, and interact with data stored in Elasticsearch indices. You can easily perform advanced data analysis and visualize your data in a variety of charts, tables, and maps.
 
@@ -161,7 +120,7 @@ Deployment Scenarios
 --------------------
 
 Please refer to the following for the various deployment and node types:
-`Deployment Types <Elastic-Architecture#deployment-types>`__
+`Deployment Types <Elastic-Architecture.html#deployment-types>`__
 
 The Security Onion setup script allows you to easily configure the best installation scenario to suit your needs.
 
