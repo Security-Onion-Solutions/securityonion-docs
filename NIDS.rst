@@ -33,8 +33,6 @@ You can analyze NIDS alerts from Snort/Suricata via:
 More Information
 ----------------
 
-| For more information about Snort, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/Snort
+- For more information about Snort, please see `Snort <Snort>`__.
 
-| For more information about Suricata, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/Suricata
+- For more information about Suricata, please see `Suricata <Suricata>`__.
