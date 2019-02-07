@@ -44,6 +44,18 @@ Security Onion Documentation
    Squert
    Sguil
 
+.. _networkvisibility:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Network Visibility
+
+   NIDS
+   Snort
+   Suricata
+   Bro
+   netsniff-ng
+
 .. _remaining:
 
 .. toctree::
@@ -86,7 +98,6 @@ Security Onion Documentation
    BPF10
    BPF
    Bro-Fields
-   Bro
    ChangingIPAddress
    CloudClient12.04
    CloudClient
@@ -139,10 +150,8 @@ Security Onion Documentation
    MISP
    MySQLTuning
    MySQLUpdates
-   netsniff-ng
    NetworkConfiguration
    NewDisk
-   NIDS
    NTP
    OSSECalertsToELSA
    OSSEC
@@ -169,11 +178,9 @@ Security Onion Documentation
    SensorStopsSeeingTraffic
    _Sidebar
    Snorby
-   Snort
    so-import-pcap
    SSH
    Support
-   Suricata
    Syslog
    Sysmon
    tcl

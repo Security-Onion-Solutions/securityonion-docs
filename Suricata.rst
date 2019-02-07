@@ -1,5 +1,5 @@
-Description
-===========
+Suricata
+========
 
 From https://suricata-ids.org:
 
@@ -9,13 +9,13 @@ From https://suricata-ids.org:
     powerful Lua scripting support for detection of complex threats.
 
 Performance
-===========
+-----------
 
 We compile Suricata with `PF\_RING <PF_RING>`__ to allow you to spin up
 multiple workers to handle more traffic.
 
 Configuration
-=============
+-------------
 
 | You can configure Suricata via suricata.yaml:
 | ``/etc/nsm/HOSTNAME-INTERFACE/suricata.yaml``
@@ -29,7 +29,7 @@ https://github.com/Security-Onion-Solutions/security-onion/wiki/Rules
 https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts
 
 Logging
-=======
+-------
 
 | If you need to troubleshoot Suricata, check the log file:
 | ``/var/log/nsm/HOSTNAME-INTERFACE/suricata.log``
@@ -37,7 +37,7 @@ Logging
   sniffing interface)
 
 More Information
-================
+----------------
 
 | For more information about Suricata, please see:
 | https://suricata-ids.org/
