@@ -27,8 +27,7 @@ Documentation Team
 ------------------
 
 If you find that some information on our wiki is incorrect or lacking,
-please feel free to write new documentation and submit via the mailing
-list. We'll post it to the wiki and give you credit.
+please feel free to submit Pull Requests via Github!
 
 Core Development
 ----------------
@@ -36,14 +35,16 @@ Core Development
 Most of our code is on github. Please feel free to submit pull requests!
 
 Thanks
-======
+------
 
-The following folks have made significant contributions to Security
-Onion. Thanks!
+The following folks have made significant contributions to Security Onion over the years. Thanks!
 
 -  Wes Lambert
 -  Mike Reeves
 -  Phil Plantamura
+-  Dustin Lee
+-  Josh Brower
+-  Kevin Branch
 -  Scott Runnels
 -  Brad Shoop
 -  Liam Randall
@@ -54,6 +55,5 @@ Onion. Thanks!
 -  Joe Hargis
 -  Dennis Distler
 -  Jon Schipp
--  Kevin Branch
 -  Josh More
 -  Jack Blanchard

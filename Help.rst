@@ -1,5 +1,7 @@
+Help
+====
+
 Having problems? Try the suggestions below.
-===========================================
 
 -  Are you running the `latest version of Security Onion <Upgrade>`__?
 -  Check the `FAQ <FAQ>`__.

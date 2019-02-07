@@ -1,3 +1,6 @@
+Security
+========
+
 If you have any security concerns regarding Security Onion or believe
 you have uncovered a vulnerability, please follow these steps:
 

@@ -137,6 +137,20 @@ Security Onion Documentation
    Airgapped-Networks
    Desktop
 
+.. _help:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Help
+
+   Support
+   Help
+   FAQ
+   Passwords
+   MailingLists
+   TeamMembers
+   Security
+
 .. _remaining:
 
 .. toctree::
@@ -188,23 +202,19 @@ Security Onion Documentation
    ELSAQueryTips
    ELSA
    Etherpad
-   FAQ
    Firewall-old
    FIR
    FreeNX
    Full-Packet-Capture
    GRR
-   Help
    Home
    http_agent
    InstallingOnUbuntu
    Links
-   MailingLists
    MISP
    MySQLUpdates
    OSSECalertsToELSA
    OSSEC
-   Passwords
    ProductionDeployment
    ProjectHome
    QuickISOImage
@@ -216,15 +226,12 @@ Security Onion Documentation
    Roadmap
    Secure-Boot
    Security-Onion-14.04-Release-Notes
-   Security
    SensorStopsSeeingTraffic
    _Sidebar
    Snorby
    so-import-pcap
    SSH
-   Support
    tcl
-   TeamMembers
    Tools
    TroubleBooting
    Upgrading-from-12.04-to-14.04
