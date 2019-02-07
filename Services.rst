@@ -1,3 +1,6 @@
+Services
+========
+
 Services are controlled by the use of Security Onion scripts
 (``so-<noun>-<verb>``) which act as wrappers to other lower-level
 scripts. These scripts are detailed below:
@@ -27,7 +30,7 @@ Restart all services:
     sudo so-restart
 
 Server services
-===============
+---------------
 
 Check status of sguild (Sguil server):
 
@@ -54,7 +57,7 @@ Restart sguild:
     sudo so-sguild-restart
 
 Sensor services
-===============
+---------------
 
 Sensor services are controlled with ``so-sensor-*``.
 

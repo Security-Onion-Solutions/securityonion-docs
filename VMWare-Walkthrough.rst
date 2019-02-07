@@ -1,3 +1,6 @@
+VMWare Walkthough
+=================
+
 Please note this walkthrough was written for the previous version of
 Security Onion (14.04). The current version of Security Onion is 16.04
 and you can follow one of the updated
@@ -5,7 +8,7 @@ and you can follow one of the updated
 guides.
 
 Overview
-========
+--------
 
 This tutorial was written to address setting up Security Onion 14.04 in
 VMWare Workstation Pro 12 (although this should be similar for most
@@ -17,7 +20,7 @@ found here:
 http://www.vmware.com/products/player/playerpro-evaluation.html
 
 Installation
-============
+------------
 
 Follow the steps below to setup a standalone machine in Evaluation Mode:
 
@@ -61,7 +64,7 @@ Follow the steps below to setup a standalone machine in Evaluation Mode:
    Display > Choose and confirm resolution.
 
 Soup
-====
+----
 
 #. Before running Setup, ensure you run "soup" to ensure you have the
    latest updates:
@@ -70,7 +73,7 @@ Soup
    next step.
 
 Setup: Phase 1
-==============
+--------------
 
 #. Click the Security Onion "Setup" icon on the desktop.
 #. You will be prompted to enter an administrative password (same one
@@ -95,7 +98,7 @@ Setup: Phase 1
    completed. Click "Yes, reboot!".
 
 Setup: Phase 2
-==============
+--------------
 
 #. After the machine reboots, click the Security Onion 'Setup" icon.
 #. You will be prompted to enter an administrative password (same one
@@ -120,7 +123,7 @@ Setup: Phase 2
    "Yes, proceed with the changes!".
 
 Post-Installation
-=================
+-----------------
 
 After setup is complete, you should be presented with several dialogs,
 offering suggestions and useful information, such as:

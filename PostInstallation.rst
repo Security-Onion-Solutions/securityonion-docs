@@ -1,5 +1,5 @@
-Check services
-==============
+After Installation
+==================
 
 -  | Verify services are running:
    | ``sudo so-status``
@@ -11,7 +11,7 @@ Check services
    Secure Boot enabled, please see `Secure Boot <Secure-Boot>`__.
 
 Tuning / Miscellaneous
-======================
+----------------------
 
 -  Check your sniffing interfaces to see if they have Receive Side
    Scaling (RSS) queues (if so, you may need to reduce to 1):
@@ -80,7 +80,7 @@ Tuning / Miscellaneous
    `PF\_RING <PF_RING>`__
 
 Optional
-========
+--------
 
 -  *Optional:* exclude unnecessary traffic from your monitoring using
    `BPF <BPF>`__.
@@ -109,7 +109,7 @@ Optional
    | ``sudo apt-get install xrdp``
 
 Learn More
-==========
+----------
 
 -  Read more about the tools contained in Security Onion:
    `Tools <Tools>`__

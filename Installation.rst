@@ -1,5 +1,5 @@
-Installation Guide
-==================
+Download/Install
+================
 
 To install Security Onion, you're going to either install our Security
 Onion ISO image **or** install a standard Ubuntu 16.04 ISO image and

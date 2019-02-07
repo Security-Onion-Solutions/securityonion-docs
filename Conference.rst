@@ -1,7 +1,8 @@
-|Security Onion Conference|
+Conference
+==========
 
 Who should attend Security Onion Conference?
-============================================
+--------------------------------------------
 
 Users of Security Onion should definitely attend! In addition, most
 talks provide value beyond just Security Onion, so folks generally
@@ -10,19 +11,19 @@ enterprise security monitoring, log management, hunting, and blue
 teaming should consider Security Onion Conference as well.
 
 Social Media
-============
+------------
 
 | The Twitter hashtag is #socAugusta:
 | https://twitter.com/search?q=socaugusta
 
 Security Onion Conference 2019
-==============================
+------------------------------
 
 Security Onion Conference 2019 is scheduled for Friday, October 4, 2019.
 Please make plans to attend!
 
 Security Onion Conference 2018
-==============================
+------------------------------
 
 `Pictures <https://blog.securityonion.net/2018/10/pictures-from-security-onion-conference.html>`__
 
@@ -56,14 +57,12 @@ Bianco <https://www.youtube.com/watch?v=A6hBoeSNJJw&index=8&list=PLljFlTO9rB16NP
 Reeves <https://www.youtube.com/watch?v=MVZ33P_tN-g&index=9&list=PLljFlTO9rB16NPfCWXTCOrYCrN2FZNDsh>`__
 
 Security Onion Conference 2017
-==============================
+------------------------------
 
 `Pictures <http://blog.securityonion.net/2017/09/pictures-from-security-onion-conference.html>`__
 
 `Security Onion Conference 2017 Video
 Playlist <https://www.youtube.com/watch?v=1AI28lFjrhU&list=PLljFlTO9rB15jhnSfR6shBEskTgGbta2k&index=1>`__
-
-|Security Onion Conference 2017|
 
 `Matt Domko - Arming Small Security Programs: Network Baseline
 Generation and Alerts with
@@ -85,7 +84,7 @@ Guys <https://www.youtube.com/watch?v=_QVhMPGtIeU&index=6&list=PLljFlTO9rB15jhnS
 Onion <https://www.youtube.com/watch?v=N1jmk7L4jj0&index=7&list=PLljFlTO9rB15jhnSfR6shBEskTgGbta2k>`__
 
 Security Onion Conference 2016
-==============================
+------------------------------
 
 `Pictures <http://blog.securityonion.net/2016/09/pictures-from-security-onion-conference.html>`__
 
@@ -132,7 +131,7 @@ Playlist <https://www.youtube.com/watch?v=ViR405l-ggg&list=PLljFlTO9rB15Tve-LhV5
 | `Video <https://www.youtube.com/watch?v=AXk-Te_lMmg&list=PLljFlTO9rB15Tve-LhV5k_5_0HH37eALe&index=9>`__
 
 Security Onion Conference 2015
-==============================
+------------------------------
 
 | Todd Heberlein - Looking Back Over a Quarter Century of Network
   Monitoring
@@ -155,7 +154,7 @@ Security Onion Conference 2015
 | https://drive.google.com/file/d/0B4apMwOBMmVUOXE0c0dDdWc1U0k/view?usp=sharing
 
 Security Onion Conference 2014
-==============================
+------------------------------
 
 | Richard Bejtlich - Keynote Speech
 | Dustin Webber - Why I Built Snorby and the Future of Security

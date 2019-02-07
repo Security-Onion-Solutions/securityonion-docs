@@ -1,5 +1,5 @@
-Why won't the ISO image boot on my machine?
-===========================================
+Booting Issues
+==============
 
 -  Did you verify the downloaded ISO image as described on the
    `Installation <Installation>`__ page?

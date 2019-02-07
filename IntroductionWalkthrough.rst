@@ -1,3 +1,6 @@
+VirtualBox Walkthrough
+======================
+
 Please note this walkthrough was written several years ago for the
 previous version of Security Onion (12.04). The current version of
 Security Onion is 16.04 and you can follow one of the updated
@@ -5,7 +8,7 @@ Security Onion is 16.04 and you can follow one of the updated
 guides.
 
 Walkthrough
-===========
+-----------
 
 Security Onion is configured to run on version 12.04 of any Ubuntu-based
 Linux server or desktop distribution, such as Ubuntu, Lubuntu, Xubuntu,

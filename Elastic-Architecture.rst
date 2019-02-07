@@ -1,8 +1,8 @@
-Introduction
+Architecture
 ============
 
 Below are several diagrams to represent the current architecture and
-deployment scenarios for Security Onion on the Elastic Stack.
+deployment scenarios for Security Onion and the Elastic Stack.
 
 High-Level Architecture Diagram
 -------------------------------
