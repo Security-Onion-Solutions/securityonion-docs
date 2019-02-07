@@ -1,4 +1,4 @@
-16.04.5.7 Release Notes
+16.04.5.7
 =======================
 
 -  | As always, make sure you verify the downloaded ISO image:
