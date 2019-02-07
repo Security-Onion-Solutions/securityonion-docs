@@ -54,6 +54,7 @@ Security Onion Documentation
    Snort
    Suricata
    Bro
+   Bro-Fields
    netsniff-ng
 
 .. _hostvisibility:
@@ -190,7 +191,6 @@ Security Onion Documentation
 
    Alert-Data-Fields
    Architecture-Old
-   Bro-Fields
    DeployingNtopng
    DirectoryStructure
    Elastalert-Fields

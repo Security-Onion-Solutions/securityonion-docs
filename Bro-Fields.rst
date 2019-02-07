@@ -1,4 +1,4 @@
-Introduction
+Bro Fields
 ============
 
 The following lists field names as they are formatted in Bro logs, then
@@ -11,7 +11,7 @@ on the right.
 **(Bro => Elastic)**
 
 #### conn.log
-=============
+-------------
 
 | ``type:bro_conn``
 | ``/etc/logstash/conf.d/1100_preprocess_bro_conn.conf``
@@ -55,7 +55,7 @@ on the right.
 | sensor\_name
 
 #### dhcp.log
-=============
+-------------
 
 | ``type:bro_dhcp``
 | ``/etc/logstash/conf.d/1101_preprocess_bro_dhcp.conf``
@@ -72,7 +72,7 @@ on the right.
 | trans\_id => transaction\_id
 
 #### dns.log
-============
+------------
 
 | ``type:bro_dns``
 | ``/etc/logstash/conf.d/1102_preprocess_bro_dns.conf``
@@ -103,7 +103,7 @@ on the right.
 | rejected
 
 #### dpd.log
-============
+------------
 
 | ``type:bro_dpd``
 | ``/etc/logstash/conf.d/1103_preprocess_bro_dpd.conf``
@@ -119,7 +119,7 @@ on the right.
 | failure\_reason
 
 #### files.log
-==============
+--------------
 
 | ``type:bro_files``
 | ``/etc/logstash/conf.d/1104_preprocess_bro_files.conf``
@@ -151,7 +151,7 @@ on the right.
 | extracted\_size
 
 #### ftp.log
-============
+------------
 
 | ``type:bro_ftp``
 | ``/etc/logstash/conf.d/1105_preprocess_bro_ftp.conf``
@@ -177,7 +177,7 @@ on the right.
 | fuid
 
 #### http.log
-=============
+-------------
 
 | ``type:bro_http``
 | ``/etc/logstash/conf.d/1106_preprocess_bro_http.conf``
@@ -213,7 +213,7 @@ on the right.
 | resp\_mime\_types
 
 #### intel.log
-==============
+--------------
 
 | ``type:bro_intel``
 | ``/etc/logstash/conf.d/1124_preprocess_bro_intel.conf``
@@ -235,7 +235,7 @@ on the right.
 | file\_desc => file\_description
 
 #### irc.log
-============
+------------
 
 | ``type:bro_irc``
 | ``/etc/logstash/conf.d/1107_preprocess_bro_irc.conf``
@@ -257,7 +257,7 @@ on the right.
 | fuid
 
 #### kerberos.log
-=================
+-----------------
 
 | ``type:bro_kerberos``
 | ``/etc/logstash/conf.d/1108_preprocess_bro_kerberos.conf``
@@ -284,7 +284,7 @@ on the right.
 | server\_cert\_fuid => server\_certificate\_fuid
 
 #### modbus.log
-===============
+---------------
 
 | ``type:bro_modbus``
 | ``/etc/logstash/conf.d/1125_preprocess_bro_modbus.conf``
@@ -299,7 +299,7 @@ on the right.
 | exception
 
 #### mysql.log
-==============
+--------------
 
 | ``type:bro_mysql``
 | ``/etc/logstash/conf.d/1121_preprocess_bro_mysql.conf``
@@ -317,7 +317,7 @@ on the right.
 | response
 
 #### notice.log
-===============
+---------------
 
 | ``type:bro_notice``
 | ``/etc/logstash/conf.d/1109_preprocess_bro_notice.conf``
@@ -350,7 +350,7 @@ on the right.
 | destination\_longitude
 
 #### pe.log
-===========
+-----------
 
 | ``type:bro_pe``
 | ``/etc/logstash/conf.d/1128_preprocess_bro_pe.conf``
@@ -374,7 +374,7 @@ on the right.
 | section\_names
 
 #### radius.log
-===============
+---------------
 
 | ``type:bro_radius``
 | ``/etc/logstash/conf.d/1127_preprocess_bro_radius.conf``
@@ -393,7 +393,7 @@ on the right.
 | logged
 
 #### rdp.log
-============
+------------
 
 | ``type:bro_rdp``
 | ``/etc/logstash/conf.d/1110_preprocess_bro_rdp.conf``
@@ -421,7 +421,7 @@ on the right.
 | encryption\_method
 
 #### rfb.log
-============
+------------
 
 | ``type:bro_rfb``
 | ``/etc/logstash/conf.d/1129_preprocess_bro_rfb.conf``
@@ -444,7 +444,7 @@ on the right.
 | height
 
 #### signatures.log
-===================
+-------------------
 
 | ``type:bro_ssl``
 | ``/etc/logstash/conf.d/1111_preprocess_bro_signatures.conf``
@@ -463,7 +463,7 @@ on the right.
 | host\_count
 
 #### sip.log
-============
+------------
 
 | ``type:bro_sip``
 | ``/etc/logstash/conf.d/1126_preprocess_bro_sip.conf``
@@ -497,7 +497,7 @@ on the right.
 | content\_type
 
 #### smtp.log
-=============
+-------------
 
 | ``type:bro_smtp``
 | ``/etc/logstash/conf.d/1112_preprocess_bro_smtp.conf``
@@ -531,7 +531,7 @@ on the right.
 | is\_webmail
 
 #### snmp.log
-=============
+-------------
 
 | ``type:bro_snmp``
 | ``/etc/logstash/conf.d/1113_preprocess_bro_snmp.conf``
@@ -553,7 +553,7 @@ on the right.
 | up\_since
 
 #### socks.log
-==============
+--------------
 
 | ``type:bro_socks``
 | ``/etc/logstash/conf.d/1122_preprocess_bro_socks.conf``
@@ -583,7 +583,7 @@ bound
 bound\_p => bound\_port
 
 #### software.log
-=================
+-----------------
 
 | ``type:bro_software``
 | ``/etc/logstash/conf.d/1114_preprocess_bro_software.conf``
@@ -601,7 +601,7 @@ bound\_p => bound\_port
 | unparsed\_version
 
 #### ssh.log
-============
+------------
 
 | ``type:bro_ssh``
 | ``/etc/logstash/conf.d/1115_preprocess_bro_ssh.conf``
@@ -631,7 +631,7 @@ bound\_p => bound\_port
 | destination\_longitude
 
 #### ssl.log
-============
+------------
 
 | ``type:bro_ssl``
 | ``/etc/logstash/conf.d/1116_preprocess_bro_ssl.conf``
@@ -693,7 +693,7 @@ certificate\_issuer
 | ja3 (if JA3 enabled)
 
 #### syslog.log
-===============
+---------------
 
 | ``type:bro_syslog``
 | ``/etc/logstash/conf.d/1117_preprocess_bro_syslog.conf``
@@ -710,7 +710,7 @@ certificate\_issuer
 | message
 
 #### tunnel.log
-===============
+---------------
 
 | ``type:bro_tunnel``
 | ``/etc/logstash/conf.d/1118_preprocess_bro_tunnel.conf``
@@ -725,7 +725,7 @@ certificate\_issuer
 | action
 
 #### weird.log
-==============
+--------------
 
 | ``type:bro_weird``
 | ``/etc/logstash/conf.d/1119_preprocess_bro_weird.conf``
@@ -738,7 +738,7 @@ certificate\_issuer
 | peer
 
 #### x509.log
-=============
+-------------
 
 | ``type:bro_x509``
 | ``/etc/logstash/conf.d/1123_preprocess_bro_x509.conf``
