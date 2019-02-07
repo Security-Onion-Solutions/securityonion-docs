@@ -161,7 +161,7 @@ Security Onion Documentation
    Tools
    so-import-pcap
 
-.. _release-notes:
+.. _releasenotes:
 
 .. toctree::
    :maxdepth: 2
