@@ -86,6 +86,8 @@ Security Onion Documentation
    Docker
    Redis
    Data-Fields
+   Alert-Data-Fields
+   Elastalert-Fields
    Beats
    ELSA-to-Elastic
 
@@ -149,9 +151,12 @@ Security Onion Documentation
 
    Alienvault-OTX
    CriticalStackIntelClient
+   Etherpad
    FIR
+   FreeNX
    GRR
    MISP
+   DeployingNtopng
    RITA
 
 .. _help:
@@ -174,6 +179,7 @@ Security Onion Documentation
    :maxdepth: 2
    :caption: Other
 
+   DirectoryStructure
    Tools
    so-import-pcap
 
@@ -189,26 +195,11 @@ Security Onion Documentation
    :maxdepth: 2
    :caption: Remaining
 
-   Alert-Data-Fields
-   Architecture-Old
-   DeployingNtopng
-   DirectoryStructure
-   Elastalert-Fields
-   Etherpad
-   Firewall-old
-   FreeNX
-   Full-Packet-Capture
-   Home
-   http_agent
-   InstallingOnUbuntu
    Links
    MySQLUpdates
    OSSECalertsToELSA
    OSSEC
-   ProductionDeployment
    ProjectHome
-   QuickISOImage
-   QuickOverview
    README.md
    README
    Re‐Indexing

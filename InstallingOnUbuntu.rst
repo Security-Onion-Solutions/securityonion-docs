@@ -1,5 +1,7 @@
+Quick Evaluation on Ubuntu
+==========================
+
 If you want to quickly evaluate Security Onion on your preferred flavor of Ubuntu 16.04 64-bit (not using our ISO image), follow these steps:
-=============================================================================================================================================
 
 #. First, check the `Hardware Requirements <Hardware>`__ page.
 #. Download the ISO image for your preferred flavor of Ubuntu 16.04,
@@ -20,9 +22,11 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
 #. Clean apt list repository:
    ``sudo rm -rf /var/lib/apt/lists/*``\ 
    ``sudo apt-get update``
+#. Install software-properties-common if necessary:
+   ``sudo apt-get -y install software-properties-common``
 #. Add the Security Onion stable repository:
-   ``sudo apt-get -y install software-properties-common``\ 
-   ``sudo add-apt-repository -y ppa:securityonion/stable``\ 
+   ``sudo add-apt-repository -y ppa:securityonion/stable``
+#. Update package list:
    ``sudo apt-get update``
 #. Install the securityonion-all metapackage:
    ``sudo apt-get -y install securityonion-all syslog-ng-core``

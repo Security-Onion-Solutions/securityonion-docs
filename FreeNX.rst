@@ -1,8 +1,8 @@
-Overview
-========
+FreeNX
+------
 
 **Note from Doug Burks: We don't really recommend or support FreeNX, but
-some folks like to use it, so here are the notes from Lance Honer. If
+some folks like to use it, so here are some older notes from Lance Honer. If
 you choose to install FreeNX, you should harden your server and `tighten
 its UFW firewall <Firewall>`__.**
 
@@ -25,7 +25,7 @@ have local access to the server e.g. working at your desktop while the
 server is in the data center.
 
 Post Installation Issues
-========================
+------------------------
 
 #. There are two issues that occur after installation, first is that due
    to a dependency between FreeNX and tk8.4 the Sguil client will fail
@@ -48,7 +48,7 @@ Post Installation Issues
 ||image3||
 
 FreeNX Server installation and fix for the first issue
-======================================================
+------------------------------------------------------
 
 After you follow Doug's instructions for installing and configuring
 Security Onion you can install the FreeNX Server in a few easy steps.
@@ -124,7 +124,7 @@ by Sguil, will launch tk8.5 and not tk8.4.
     sudo ln -sf /usr/bin/wish8.5 /etc/alternatives/wish
 
 FreeNX Client installation and fix for the second issue
-=======================================================
+-------------------------------------------------------
 
 At this point the Security Onion server is ready to go with FreeNX but
 your desktop will need the client. There are a few different clients but

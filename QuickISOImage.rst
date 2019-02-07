@@ -1,5 +1,7 @@
+Quick Evaluation using Security Onion ISO image
+===============================================
+
 If you just want to quickly evaluate Security Onion using our ISO image:
-========================================================================
 
 #. First, review the `Hardware Requirements <Hardware>`__ page.
 #. Review the `Release Notes <Release-Notes>`__ page.

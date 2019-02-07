@@ -1,3 +1,6 @@
+Etherpad
+========
+
 We can add Etherpad to Security Onion to allow us to take notes during
 investigations and share those with our team.
 

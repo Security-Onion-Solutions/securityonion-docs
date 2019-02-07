@@ -1,5 +1,5 @@
-Introduction
-============
+Elastalert Fields
+=================
 
 The following lists field names as they are formatted in Elasticsearch.
 Elastalert provides its own template to use for mapping into Elastalert,

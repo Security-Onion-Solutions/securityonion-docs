@@ -1,5 +1,7 @@
+Production Deployment
+=====================
+
 If you're going to be deploying Security Onion in production, follow these steps:
-=================================================================================
 
 Hardware Requirements
 ---------------------
@@ -250,4 +252,3 @@ and 4506.
       | ``sudo deluser $nodeuser sudo``
 
 Proceed to `PostInstallation <PostInstallation>`__
-==================================================
