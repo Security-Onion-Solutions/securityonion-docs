@@ -161,6 +161,29 @@ Security Onion Documentation
    Tools
    so-import-pcap
 
+.. _release-notes:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Release Notes
+
+   16.04.5.7
+   16.04.5.6
+   16.04.5.5
+   16.04.5.4
+   16.04.5.3
+   16.04.5.2
+   16.04.5.1
+   16.04.4.3
+   16.04.4.2
+   16.04.4.1
+   14.04.5.13
+   14.04.5.12
+   14.04.5.11
+   14.04.5.10
+   14.04.5.9
+   14.04
+
 .. _old:
 
 .. toctree::
