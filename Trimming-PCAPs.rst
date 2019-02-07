@@ -1,5 +1,5 @@
-Introduction
-============
+Trimming PCAPs
+==============
 
 PCAPs (as a data type) typically take up the most disk space on a
 Security Onion sensor, and usually aren't able to be kept for extended
@@ -28,7 +28,7 @@ volume, etc.).**
 +----------------------+-------------------+
 
 Trimming
-========
+--------
 
 We can install TrimPCAP using the following commands:
 

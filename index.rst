@@ -102,6 +102,23 @@ Security Onion Documentation
    ChangingIPAddress
    NTP
 
+.. _tuning:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Tuning
+
+   ManagingAlerts
+   Rules
+   AddingLocalRules
+   DisablingProcesses
+   BPF
+   PF_RING
+   MySQLTuning
+   NewDisk
+   High-Performance-Tuning
+   Trimming-PCAPs
+
 .. _remaining:
 
 .. toctree::
@@ -130,7 +147,6 @@ Security Onion Documentation
    2017
    2018
    2019
-   AddingLocalRules
    AF-PACKET
    Airgapped-Networks
    Alert-Data-Fields
@@ -140,7 +156,6 @@ Security Onion Documentation
    Automating-Setup
    Best-Practices
    BPF10
-   BPF
    Bro-Fields
    CloudClient12.04
    CloudClient
@@ -150,7 +165,6 @@ Security Onion Documentation
    DeployingNtopng
    Desktop
    DirectoryStructure
-   DisablingProcesses
    DNSAnomalyDetection
    Elastalert-Fields
    Elastic-Alpha-to-Beta
@@ -169,24 +183,19 @@ Security Onion Documentation
    Full-Packet-Capture
    GRR
    Help
-   High-Performance-Tuning
    Home
    http_agent
    ICMP-Anomaly-Detection
    InstallingOnUbuntu
    Links
    MailingLists
-   ManagingAlerts
    MetaPackages
    MISP
-   MySQLTuning
    MySQLUpdates
-   NewDisk
    OSSECalertsToELSA
    OSSEC
    Passwords
    Pcaps
-   PF_RING
    ProductionDeployment
    ProjectHome
    QuickISOImage
@@ -197,7 +206,6 @@ Security Onion Documentation
    RemovingASensor
    RITA
    Roadmap
-   Rules
    Salt
    Secure-Boot
    Security-Onion-14.04-Release-Notes
@@ -211,7 +219,6 @@ Security Onion Documentation
    tcl
    TeamMembers
    Tools
-   Trimming-PCAPs
    TroubleBooting
    Upgrading-from-12.04-to-14.04
    VLAN-Traffic

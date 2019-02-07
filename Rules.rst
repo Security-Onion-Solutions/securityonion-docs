@@ -1,5 +1,5 @@
-Configuration
-=============
+Managing Rules
+==============
 
 | Rulesets are chosen during setup and are specified in
   ``/etc/nsm/pulledpork/pulledpork.conf``.
@@ -9,7 +9,7 @@ Configuration
   it to be replicated).
 
 Options
-=======
+-------
 
 Security Onion offers the following choices for rulesets to be used by
 Snort/Suricata:

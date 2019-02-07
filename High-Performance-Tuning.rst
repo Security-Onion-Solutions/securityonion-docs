@@ -1,3 +1,6 @@
+High Performance Tuning
+=======================
+
 First, make sure you're following `Best Practices <Best-Practices>`__.
 
 | **Tune Disk/Memory**:

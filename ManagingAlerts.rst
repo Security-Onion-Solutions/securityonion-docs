@@ -1,7 +1,5 @@
-Originally Authored by Scott Runnels on 2012/01/18
-
-Overview
-========
+Managing Alerts
+===============
 
 Security Onion generates a lot of valuable information for you the
 second you plug it into a TAP or SPAN port. Between Bro logs, alert data
@@ -18,7 +16,7 @@ regular interventions is to ensure that you are tuning properly and
 proactively attempting to reach an acceptable level of signal to noise.
 
 Testing to make sure the IDS is working
-=======================================
+---------------------------------------
 
 Below, we'll provide a few ways we can test our IDS (Snort/Suricata) to
 make sure it is working as expected.
@@ -71,7 +69,7 @@ make sure it is working as expected.
    the message ``Security Onion - testing``
 
 Identifying overly active signatures
-====================================
+------------------------------------
 
 Given the large number of analyst tools available in Security Onion by
 default there are multiple ways to see signatures that are producing too
@@ -263,7 +261,7 @@ below outline an example of this:
 | https://taosecurity.blogspot.com/2013/02/recovering-from-suricata-gone-wild.html
 
 So what's next?
-===============
+---------------
 
 Firstly, in tuning your sensor, you must understand whether or not
 taking corrective actions on this signature will lower your overall

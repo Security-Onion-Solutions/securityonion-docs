@@ -1,5 +1,5 @@
-Introduction
-============
+Adding Local Rules
+==================
 
 Adding local rules in Security Onion is a rather straightforward
 process. However, generating custom traffic to test the alert can
@@ -7,7 +7,7 @@ sometimes be a challenge. Here, we will show you how to add the local
 rule and then use the python library scapy to trigger the alert.
 
 IPS Policy
-==========
+----------
 
 Please note if you are using a ruleset that enables an IPS policy in
 ``/etc/nsm/pulledpork/pulledpork.conf``, your local rules will be
@@ -27,7 +27,7 @@ The whole rule would then look something like:
 These policy types can be found in ``/etc/nsm/rules/downloaded.rules``.
 
 Steps
-=====
+-----
 
 -  Open ``/etc/nsm/rules/local.rules`` using your favorite text editor.
    If this is a distributed deployment, edit local.rules on your master
@@ -72,23 +72,20 @@ Steps
    | ip.dst = "192.168.200.4"
    | ip.src = "192.168.100.3"
 
-Craft the layer 3 information.
-==============================
+Craft the layer 3 information
 
 Since we specified port 7789 in our snort rule,
-===============================================
+
 
 | tcp = TCP()
 | tcp.dport = 7789
 | tcp.sport = 1234
 
 Set the playload
-================
 
 payload = "Toolsmith"
 
 Use the / operator to compose our packet and transfer it with the send() method.
-================================================================================
 
 | send(ip/tcp/payload)
 | \`\`\`

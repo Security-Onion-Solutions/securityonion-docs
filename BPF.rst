@@ -6,10 +6,10 @@ BPF
 | http://biot.com/capstats/bpf.html
 
 Configuration
-=============
+-------------
 
 Global bpf.conf
----------------
+~~~~~~~~~~~~~~~
 
 You can specify your BPF in ``/etc/nsm/rules/bpf.conf`` on your master
 server and, by default, it will apply to
@@ -23,7 +23,7 @@ as needed. Other services (such as prads and netsniff-ng) will need to
 be restarted manually for the change to take effect.
 
 Granular bpf.conf
------------------
+~~~~~~~~~~~~~~~~~
 
 Each process on each interface has its own bpf file, but by default the
 per-process bpf files are symlinked to the interface bpf and the
@@ -52,15 +52,9 @@ want to apply a BPF to NIDS (Snort/Suricata) only:
     # Restart NIDS
     sudo so-nids-restart
 
-Argus
------
-
-Currently, our argus configuration doesn't read from our global
-``bpf.conf``. You should be able to add your bpf to your ``argus.conf``
-file in ``/etc/nsm/$HOSTNAME-$INTERFACE/``.
 
 BPF Examples
-------------
+~~~~~~~~~~~~
 
 From Phillip Wang:
 
@@ -82,7 +76,7 @@ of what I've got working
     !(host xxx.xxx.xxx.xxx)
 
 VLAN
-----
+~~~~
 
 Note 2014-02-24: BPF support for VLAN filtering may be broken in certain
 3.x kernels. Please see:
@@ -117,7 +111,7 @@ Also, I'm assuming that any tools you are running will support vlan tags
 and no tags simultaneously. Bro 2.0 should work fine at least.
 
 Troubleshooting BPF using tcpdump
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 http://taosecurity.blogspot.com/2004/09/understanding-tcpdumps-d-option-have.html
 

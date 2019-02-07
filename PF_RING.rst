@@ -1,5 +1,5 @@
-Setup
-=====
+PF_RING
+=======
 
 | If you have multiple CPU cores, Setup will automatically ask you how
   many PF\_RING instances you'd like for Snort/Suricata (IDS engine
@@ -10,13 +10,13 @@ Setup
 | http://blog.securityonion.net/2016/03/securityonion-setup-20120912.html
 
 Tuning
-======
+------
 
 If you want to change the number of PF\_RING instances after running
 Setup, you can do the following.
 
 Snort/Suricata
-==============
+--------------
 
 -  Stop sensor processes:
    ``sudo nsm_sensor_ps-stop``
@@ -33,7 +33,7 @@ into suricata.yaml and then Suricata spins up the PF\_RING instances
 itself.
 
 Bro
-===
+---
 
 For Bro, you would do the following:
 
@@ -45,7 +45,7 @@ For Bro, you would do the following:
    ``sudo nsm_sensor_ps-start --only-bro``
 
 Slots
-=====
+-----
 
 If you've already run Setup and want to modify min\_num\_slots, you can
 manually create/edit /etc/modprobe.d/pf\_ring.conf.
@@ -60,7 +60,7 @@ manually create/edit /etc/modprobe.d/pf\_ring.conf.
 | ``sudo nsm_sensor_ps-start``
 
 Updating
-========
+--------
 
 Please see the `Upgrade <Upgrade>`__ page for notes on updating the
 PF\_RING kernel module.

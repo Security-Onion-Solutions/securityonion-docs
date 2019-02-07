@@ -1,4 +1,4 @@
-Disabling a process
+Disabling Processes
 ===================
 
 If you've already run Setup and want to disable a certain sensor
@@ -37,7 +37,7 @@ on one box is to use the ``sed`` command as follows:
     sudo sed -i 's|HTTP_AGENT_ENABLED="yes"|HTTP_AGENT_ENABLED="no"|g' /etc/nsm/*/sensor.conf
 
 Sguil Agent
-===========
+-----------
 
 If you use the Sguil client and want to remove the disabled agent from
 Sguil's ``Agent Status`` tab, then stop ``sguild``, set the sensor's
@@ -54,67 +54,22 @@ Sguil's ``Agent Status`` tab, then stop ``sguild``, set the sensor's
     # Restart sguild
     sudo so-sguild-start
 
-Disabling ``Xplico``
-====================
+Disabling ``Wazuh``
+-------------------
 
-Disable Xplico in /etc/nsm/securityonion.conf:
-
-::
-
-    sudo sed -i 's|XPLICO_ENABLED=yes|XPLICO_ENABLED=no|g' /etc/nsm/securityonion.conf
-
-(Optional) Remove Xplico:
+You can disable Wazuh as follows:
 
 ::
 
-    sudo apt-get purge xplico
-
-Disabling ``Snorby``
-====================
-
-#. Disable Snorby in the Apache configuration:
-
-   ::
-
-       sudo a2dissite snorby
-
-#. Reload Apache configuration:
-
-   ::
-
-       sudo service apache2 reload
-
-#. Prevent Snorby worker from starting on boot by setting
-   ``SNORBY_ENABLED=no`` in ``/etc/nsm/securityonion.conf``.
-#. Comment out the output database line in all ``barnyard2.conf`` files
-   on ALL sensors:
-
-   ::
-
-       sudo sed -i 's|output database: alert, mysql, user=root dbname=snorby host=127.0.0.1|#output database: alert, mysql, user=root dbname=snorby host=127.0.0.1|g' /etc/nsm/*/barnyard2*.conf
-
-#. Restart barnyard2 on all sensors:
-
-   ::
-
-       sudo nsm_sensor_ps-restart --only-barnyard2
-
-Disabling ``OSSEC``
-===================
-
-You can disable OSSEC as follows:
-
-::
-
-    # Stop the running OSSEC processes 
+    # Stop the running Wazuh processes 
     sudo service ossec-hids-server stop
 
     sudo update-rc.d -f ossec-hids-server disable
 
 | However, keep in mind that in addition to providing endpoint
-| visibility from OSSEC agents, the OSSEC server also monitors and
+| visibility from Wazuh agents, the Wazuh server also monitors and
 | protects the Security Onion box itself. For example, suppose that you
 | have an active adversary who is trying to compromise your Security
-| Onion box. OSSEC may see those attempts and engage ``Active Response``
+| Onion box. Wazuh may see those attempts and engage ``Active Response``
   to
 | block the attacker's IP address in the host-based firewall.

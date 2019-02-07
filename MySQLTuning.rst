@@ -1,3 +1,6 @@
+MySQL Tuning
+============
+
 As of Security Onion 16.04.4.1 MySQL (on the master server) should have
 a randomized root password set by default. You can still access MySQL
 using the following as an example of the syntax to run a command against
@@ -6,7 +9,7 @@ securityonion\_db (Sguil DB):
 ``sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'select * from event limit 10';``
 
 mysqltuner
-==========
+----------
 
 You can install and run mysqltuner to get some initial recommendations.
 
@@ -32,7 +35,7 @@ credentials:
     sudo ./mysqltuner.pl
 
 ``/etc/mysql/my.cnf`` vs ``/etc/mysql/conf.d/``
-===============================================
+-----------------------------------------------
 
 Implement mysqltuner's recommendations in ``/etc/mysql/my.cnf`` or
 create a new file in ``/etc/mysql/conf.d/`` with the changes. We
@@ -40,14 +43,14 @@ recommend ``/etc/mysql/conf.d/`` so that your changes don't get
 overwritten during MySQL package upgrades.
 
 Restart MySQL
-=============
+-------------
 
 Changes don't take effect until MySQL is restarted and you should ensure
 that Sguil and other services aren't using MySQL before shutting it
 down.
 
 Variables
-=========
+---------
 
 | The first variable that you'll probably need to tune is
   ``open-files-limit``:
@@ -61,14 +64,14 @@ for your system:
 -  ``max_connections``
 
 MySQL slow to start on boot
-===========================
+---------------------------
 
 At boot time, MySQL checks all tables, which can take a long time. If
 you wish to disable this check, comment out ``check_for_crashed_tables``
 in ``/etc/mysql/debian-start``.
 
 table\_definition\_cache
-========================
+------------------------
 
 MySQL defaults ``table_definition_cache`` to ``400``. You may want to
 increase this value if one or more of the following conditions applies
