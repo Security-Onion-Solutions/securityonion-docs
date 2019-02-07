@@ -1,5 +1,5 @@
-Setup
-=====
+AF-PACKET
+=========
 
 Starting in ``securityonion-setup - 20120912-0ubuntu0securityonion285``,
 running Setup will configure Suricata and Bro to use AF\_PACKET. (Snort

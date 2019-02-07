@@ -1,3 +1,6 @@
+Issues Resolved in 2016
+=======================
+
 -  January 2016
 -  [x] [Issue 820](../issues/820): Snort 2.9.8.0
 -  [x] [Issue 839](../issues/839): securityonion-capme needs additional

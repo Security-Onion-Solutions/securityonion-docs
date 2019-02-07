@@ -1,3 +1,6 @@
+Issues Resolved in 2018
+=======================
+
 -  January 2018
 -  [x] [Issue 1191](../issues/1191): sostat: don't show sensor stats if
    sensortab exists but is empty

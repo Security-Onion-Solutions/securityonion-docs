@@ -114,6 +114,7 @@ Security Onion Documentation
    DisablingProcesses
    BPF
    PF_RING
+   AF-PACKET
    MySQLTuning
    NewDisk
    High-Performance-Tuning
@@ -160,11 +161,11 @@ Security Onion Documentation
    Tools
    so-import-pcap
 
-.. _remaining:
+.. _old:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Remaining
+   :caption: Old
 
    2013
    2014
@@ -173,12 +174,17 @@ Security Onion Documentation
    2017
    2018
    2019
-   AF-PACKET
+
+.. _remaining:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Remaining
+
    Alert-Data-Fields
    Alienvault-OTX
    Analyst-VM
    Architecture-Old
-   BPF10
    Bro-Fields
    CloudClient12.04
    CloudClient

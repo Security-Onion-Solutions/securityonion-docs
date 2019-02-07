@@ -1,3 +1,6 @@
+Issues Resolved in 2015
+=======================
+
 -  January 2015
 
    -  `Issue 655 <../issues/655>`__: Suricata 2.0.5

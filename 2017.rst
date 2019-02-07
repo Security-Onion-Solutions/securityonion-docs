@@ -1,4 +1,5 @@
-Please note that this is all subject to change!
+Issues Resolved in 2017
+=======================
 
 -  January 2017
 -  [x] [Issue 1031](../issues/1031): Snort 2.9.9.0
