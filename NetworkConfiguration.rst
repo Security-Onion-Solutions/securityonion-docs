@@ -1,8 +1,7 @@
-Disabling the graphical ``Network Manager`` and configuring networking from the command line
-============================================================================================
+Network Configuration
+=====================
 
-If you're running Security Onion 14.04/16.04, all of this configuration will happen automatically if you choose "Yes, configure /etc/network/interfaces" in the Setup wizard.
-=============================================================================================================================================================================
+If you're running Security Onion 16.04, all of this configuration will happen automatically if you choose "Yes, configure /etc/network/interfaces" in the Setup wizard.
 
 | NOTE! You may lose network connectivity during this process! Have a
   backup plan if attempting over SSH!
@@ -19,7 +18,7 @@ If you're running Security Onion 14.04/16.04, all of this configuration will hap
 | 
 
 Management interface
-====================
+--------------------
 
 | You'll want a management interface (preferably connected to a
   dedicated management network) using either DHCP OR preferably static
@@ -27,7 +26,7 @@ Management interface
 | 
 
 Sniffing interface(s)
-=====================
+---------------------
 
 | You'll want one or more interfaces dedicated to sniffing (no IP
   address). NIC offloading functions such as ``tso``, ``gso``, and
@@ -37,7 +36,7 @@ Sniffing interface(s)
 | 
 
 Sample ``/etc/network/interfaces``
-==================================
+----------------------------------
 
 .. raw:: html
 

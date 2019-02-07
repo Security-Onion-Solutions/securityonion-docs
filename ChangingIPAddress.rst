@@ -1,5 +1,5 @@
-Introduction
-============
+Changing IP Addresses
+=====================
 
 If you need to update the IP address of your server/sensor to move it to
 a different area of your network, you need to do a few things:
@@ -8,7 +8,7 @@ a different area of your network, you need to do a few things:
 -  update NSM config files to reflect the new IP address
 
 Update the actual IP address of the management interface
-========================================================
+--------------------------------------------------------
 
 To update the actual IP address of the management interface, you have
 two options:
@@ -19,7 +19,7 @@ two options:
    /etc/network/interfaces)
 
 Update NSM config files to reflect the new IP address
-=====================================================
+-----------------------------------------------------
 
 To update NSM config files to reflect the new IP address, you have two
 options:
@@ -30,10 +30,10 @@ options:
 -  manually update the IP address as shown below
 
 Files to update when changing the IP address
-============================================
+--------------------------------------------
 
 Changing Server IP
-------------------
+~~~~~~~~~~~~~~~~~~
 
 -  /etc/nsm/HOSTNAME-INTERFACE/http\_agent.conf:
 
@@ -96,7 +96,7 @@ Changing Server IP
        master: [SERVER-IP]
 
 Automating the change of the server IP
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You may be able to use sed to update all files at once using something
 like this:

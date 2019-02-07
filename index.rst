@@ -88,6 +88,20 @@ Security Onion Documentation
    Beats
    ELSA-to-Elastic
 
+.. _customizing:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Customizing for your network
+
+   NetworkConfiguration
+   Proxy
+   Firewall
+   Email
+   ThirdPartyIntegration
+   ChangingIPAddress
+   NTP
+
 .. _remaining:
 
 .. toctree::
@@ -128,7 +142,6 @@ Security Onion Documentation
    BPF10
    BPF
    Bro-Fields
-   ChangingIPAddress
    CloudClient12.04
    CloudClient
    ConnectingtoSguil
@@ -148,11 +161,9 @@ Security Onion Documentation
    Elastic-RC4
    ELSAQueryTips
    ELSA
-   Email
    Etherpad
    FAQ
    Firewall-old
-   Firewall
    FIR
    FreeNX
    Full-Packet-Capture
@@ -170,9 +181,7 @@ Security Onion Documentation
    MISP
    MySQLTuning
    MySQLUpdates
-   NetworkConfiguration
    NewDisk
-   NTP
    OSSECalertsToELSA
    OSSEC
    Passwords
@@ -180,7 +189,6 @@ Security Onion Documentation
    PF_RING
    ProductionDeployment
    ProjectHome
-   Proxy
    QuickISOImage
    QuickOverview
    README.md
@@ -202,7 +210,6 @@ Security Onion Documentation
    Support
    tcl
    TeamMembers
-   ThirdPartyIntegration
    Tools
    Trimming-PCAPs
    TroubleBooting

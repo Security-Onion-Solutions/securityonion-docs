@@ -1,5 +1,5 @@
-Overview
-========
+NTP
+===
 
 Ubuntu configures its NTP service to pull time updates from the NTP Pool
 Project and from ntp.ubuntu.com. From ``/etc/ntp.conf``:
@@ -18,14 +18,14 @@ Project and from ntp.ubuntu.com. From ``/etc/ntp.conf``:
     server ntp.ubuntu.com
 
 Modifying
-=========
+---------
 
 You may want to change this default NTP config to use your preferred NTP
 provider. For more information, please see
 https://help.ubuntu.com/lts/serverguide/NTP.html
 
 IDS Alerts
-==========
+----------
 
 Anybody can join the NTP Pool Project and provide NTP service.
 Occasionally, somebody provides NTP service from a residential DHCP

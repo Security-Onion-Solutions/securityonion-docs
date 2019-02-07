@@ -1,11 +1,11 @@
-Introduction
-============
+Integrating with other systems
+==============================
 
 Many organizations would like to take data from Security Onion and send
 it to third party systems.
 
 Support
-=======
+-------
 
 We don't provide free support for third party systems, so this wiki page
 will be just a brief introduction to how you would accomplish this. If
@@ -13,14 +13,14 @@ you need commercial support, please see:
 https://www.securityonionsolutions.com
 
 How do I send Bro and OSSEC logs to an external syslog collector?
-=================================================================
+-----------------------------------------------------------------
 
 Configure ``/etc/syslog-ng/syslog-ng.conf`` with a new ``destination``
 to forward to your external syslog collector and then restart
 ``syslog-ng``.
 
 How do I send IDS alerts to an external system?
-===============================================
+-----------------------------------------------
 
 2 options:
 
@@ -51,17 +51,14 @@ OR
    program\_override("sguil\_alert")); };
 
 This line filters on the string “Alert Received”
-================================================
 
 filter f\_sguil { match("Alert Received"); };
 
 This line tells syslog-ng to send the data read to the IP address of 10.80.4.37, via UDP to port 514
-====================================================================================================
 
 destination d\_sguil\_udp { udp("10.80.4.37" port(514)); };
 
 This log section tells syslog-ng how to structure the previous ‘source / filter / destination’ and is what actually puts them into play
-=======================================================================================================================================
 
 | log {
 | source(s\_sguil);

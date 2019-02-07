@@ -1,5 +1,8 @@
+Email Configuration
+===================
+
 Setup now includes sosetup-email
-================================
+--------------------------------
 
 | As of `securityonion-setup -
   20120912-0ubuntu0securityonion222 <http://blog.securityonion.net/2016/07/securityonion-setup-20120912.html>`__,
@@ -16,14 +19,14 @@ the ``-f`` flag:
 ``sudo so-email -f ~/so-email.conf``
 
 Sguil client
-============
+------------
 
 Please note that the Sguil client has its own email configuration
 (separate from the Sguil server) which can be modified in
 ``/etc/sguil/sguil.conf``.
 
 Introduction
-============
+------------
 
 This page describes how to configure email for alerting and reporting.
 Applications such as Sguil and Wazuh have their own mail configuration
@@ -32,7 +35,7 @@ want to install a mail server in the OS so that you can get daily emails
 from the sostat script and from Bro.
 
 How do I configure the OS itself to send emails?
-================================================
+------------------------------------------------
 
 | Install and configure your favorite mail server. Depending on your
   needs, this could be something simple like ``nullmailer``
@@ -42,13 +45,10 @@ How do I configure the OS itself to send emails?
 | sudo apt-get install nullmailer
 
 edit /etc/mailname to hold your "from" domain name. (If you were google, you'd use "gmail.com".)
-================================================================================================
 
 edit /etc/nullmailer/adminaddr to contain the address you want mail to root to be routed to.
-============================================================================================
 
 edit /etc/nullmailer/remotes to contain the mail server to forward email to. 
-=============================================================================
 
 | 
 | Alternatively, here are some instructions for the more complex
@@ -62,7 +62,7 @@ edit /etc/nullmailer/remotes to contain the mail server to forward email to.
 | # /etc/cron.d/sostat
 
 crontab entry to run sostat and email its output
-================================================
+------------------------------------------------
 
 | 
 | SHELL=/bin/sh

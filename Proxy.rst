@@ -1,5 +1,5 @@
-Adding proxy settings to /etc/environment
-=========================================
+Proxy Configuration
+===================
 
 Put your proxy server settings in ``/etc/environment`` like this:
 
@@ -12,7 +12,7 @@ Put your proxy server settings in ``/etc/environment`` like this:
     export no_proxy="localhost,127.0.0.1"
 
 Docker
-======
+------
 
 To configure Docker proxy settings, perform the following steps:
 
@@ -50,7 +50,7 @@ Then restart Docker with:
     sudo so-elastic-start
 
 sudo
-====
+----
 
 If you're going to run something using sudo, remember to use the "-i"
 option to force it to process the environment variables. For example:
@@ -64,7 +64,7 @@ option to force it to process the environment variables. For example:
 | https://help.ubuntu.com/community/EnvironmentVariables
 
 PulledPork
-==========
+----------
 
 As of `PulledPork
 0.7.2 <http://blog.securityonion.net/2017/01/pulledpork-rule-update-and-several.html>`__,
