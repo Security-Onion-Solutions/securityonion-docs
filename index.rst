@@ -151,6 +151,15 @@ Security Onion Documentation
    TeamMembers
    Security
 
+.. _other:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Other
+
+   Tools
+   so-import-pcap
+
 .. _remaining:
 
 .. toctree::
@@ -229,10 +238,8 @@ Security Onion Documentation
    SensorStopsSeeingTraffic
    _Sidebar
    Snorby
-   so-import-pcap
    SSH
    tcl
-   Tools
    TroubleBooting
    Upgrading-from-12.04-to-14.04
    VLAN-Traffic
