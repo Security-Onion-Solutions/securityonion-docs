@@ -26,20 +26,20 @@ be alphanumeric):
 
 ::
 
-    sudo nsm_server_user-add
+    sudo so-user-add
 
 You can change passwords using the Sguil client (File --> Change
 Password) or as follows:
 
 ::
 
-    sudo nsm_server_user-passwd
+    sudo so-user-passwd
 
 You can disable accounts as follows:
 
 ::
 
-    sudo nsm_server_user-disable
+    sudo so-user-disable
 
 Squert
 ------
@@ -47,13 +47,6 @@ Squert
 Squert authenticates against the Sguil user database, so you should be
 able to login to Squert using the same username/password you use to
 login to Sguil.
-
-ELSA
-----
-
-ELSA authenticates against the Sguil user database, so you should be
-able to login to ELSA using the same username/password you use to login
-to Sguil.
 
 Kibana
 ------
