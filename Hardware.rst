@@ -9,41 +9,26 @@ Security Onion only supports 64-bit hardware.
 UEFI Secure Boot
 ----------------
 
-If your hardware has UEFI Secure Boot enabled, please see `Secure
-Boot <Secure-Boot>`__.
+If your hardware has UEFI Secure Boot enabled, please see `Secure Boot <Secure-Boot>`__.
 
 UPS
 ---
 
-Like most IT systems, Security Onion has databases and those databases
-don't like power outages or other ungraceful shutdowns. To avoid power
-outages and having to manually repair databases, please consider a UPS.
+Like most IT systems, Security Onion has databases and those databases don't like power outages or other ungraceful shutdowns. To avoid power outages and having to manually repair databases, please consider a UPS.
 
 Elastic Stack
 -------------
 
-With the introduction of the Elastic Stack, please note that the MINIMUM
-requirements are 4 CPU cores and 8GB RAM. These requirements increase as
-you monitor more traffic and consume more logs.
+With the introduction of the Elastic Stack, please note that the MINIMUM requirements are 4 CPU cores and 8GB RAM. These requirements increase as you monitor more traffic and consume more logs.
 
-Please refer to our `Architecture
-Page <Elastic-Architecture>`__
-for detailed deployment scenarios.
+Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
-**We recommend placing all Elastic storage on SSD or fast spinning disk
-in a RAID 10 configuration.** This includes ``/nsm/elasticsearch`` and
-``/nsm/logstash``.
+**We recommend placing all Elastic storage on SSD or fast spinning disk in a RAID 10 configuration.** This includes ``/nsm/elasticsearch`` and ``/nsm/logstash``.
 
 Standalone Deployments
 ----------------------
 
-In a standalone deployment, the master server components and the sensor
-components all run on a single box, therefore, your hardware
-requirements will reflect that. This deployment type is recommended for
-evaluation purposes, POCs (proof-of-concept) and small to medium size
-single sensor deployments. Although you can deploy Security Onion in
-this manner, it is recommended that you separate the backend components
-and sensor components.
+In a standalone deployment, the master server components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
 ========  ===========
 Resource  Description
@@ -53,19 +38,12 @@ RAM       Used for Logstash, Elasticsearch, disk cache for Lucene, Snort/Suricat
 Disk      Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 ========  ===========
 
-Please refer to our `Architecture
-Page <Elastic-Architecture>`__
-for detailed deployment scenarios.
+Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Master server with local log storage
 ------------------------------------
 
-In an enterprise distributed deployment, a master server will store logs
-from itself and forward nodes. It can also act as a syslog destination
-for other log sources to be indexed into Elasticsearch. An enterprise
-master server should have 8 CPU cores at a minimum, 16-128GB RAM, and
-enough disk space (multiple terabytes recommended) to meet your
-retention requirements.
+In an enterprise distributed deployment, a master server will store logs from itself and forward nodes. It can also act as a syslog destination for other log sources to be indexed into Elasticsearch. An enterprise master server should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
 
 ========  ===========
 Resource  Description
@@ -75,19 +53,12 @@ RAM       Used for Logstash, Elasticsearch, and disk cache for Lucene. The amoun
 Disk      Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 ========  ===========
 
-Please refer to our `Architecture
-Page <Elastic-Architecture>`__
-for detailed deployment scenarios.
+Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Master server with storage nodes
 --------------------------------
 
-This deployment type utilizes storage nodes to parse and index of
-events. As a result, the hardware requirements of the master are
-reduced. An enterprise master server should have 4-8 CPU cores, 8-16GB
-RAM, and 100GB to 1TB of disk space. Many folks choose to host their
-master server in their VM farm since it has lower hardware requirements
-than sensors but needs higher reliability and availability.
+This deployment type utilizes storage nodes to parse and index of events. As a result, the hardware requirements of the master are reduced. An enterprise master server should have 4-8 CPU cores, 8-16GB RAM, and 100GB to 1TB of disk space. Many folks choose to host their master server in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
 
 ========  ===========
 Resource  Description
@@ -97,16 +68,12 @@ RAM       Used for Logstash and Redis. The amount of available RAM directly impa
 Disk      Used for general purposes, as well as storing dashboards and Sguil components.
 ========  ===========
 
-Please refer to our `Architecture
-Page <Elastic-Architecture>`__
-for detailed deployment scenarios.
+Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Storage Node
 ------------
 
-Storage nodes increase search and retention capacity with regard to
-Elasticsearch. These nodes parse and index events, and provide the
-ability to scale horizontally as overall data intake increases.
+Storage nodes increase search and retention capacity with regard to Elasticsearch. These nodes parse and index events, and provide the ability to scale horizontally as overall data intake increases.
 
 ========  ===========
 Resource  Description
@@ -116,9 +83,7 @@ RAM       Used for Logstash, Elasticsearch, and disk cache for Lucene. The amoun
 Disk      Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 ========  ===========
 
-Please refer to our `Architecture
-Page <Elastic-Architecture>`__
-for detailed deployment scenarios.
+Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Forward Node (Sensor)
 ---------------------
