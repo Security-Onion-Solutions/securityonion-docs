@@ -12,12 +12,18 @@ Suricata
 ========
 
 -  Stop sensor processes:
-   ``sudo so-suricata-stop``
+
+::
+
+   sudo so-suricata-stop
 
 -  Edit ``/etc/nsm/$HOSTNAME-$INTERFACE/sensor.conf`` and change the ``IDS_LB_PROCS`` variable to desired number of cores.
 
 -  Start sensor processes:
-   ``sudo so-suricata-start``
+
+::
+
+   sudo so-suricata-start
 
 ``so-suricata-start`` automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata creates the appropriate number of AF_PACKET workers.
 
@@ -27,9 +33,15 @@ Bro
 For Bro, you would do the following:
 
 -  Stop bro:
-   ``sudo so-bro-stop``
+
+::
+
+   sudo so-bro-stop
 
 -  Edit ``/opt/bro/etc/node.cfg`` and change the ``lb_procs`` variable to the desired number of cores.
 
 -  Start bro:
-   ``sudo so-bro-start``
+
+::
+
+   sudo so-bro-start
