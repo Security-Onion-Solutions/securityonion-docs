@@ -1,5 +1,5 @@
-Introduction
-============
+Alert Data Fields
+=================
 
 Below are the fields derived from IDS alerts (Snort/Suricata), after
 being processed by Logstash:
