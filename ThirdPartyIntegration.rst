@@ -67,30 +67,4 @@ This log section tells syslog-ng how to structure the previous ‘source / filte
 | };
 | \`\`\`
 
-Please note that this option requires ``set DEBUG 2`` in
-/etc/sguild/sguild.conf.
-
-Installing FIR on Security Onion
---------------------------------
-
-Please see: `Installing FIR <FIR>`__
-
-Installing GRR on Security Onion
---------------------------------
-
-Please see: `Installing GRR <GRR>`__
-
-Installing NtopNG on Security Onion
------------------------------------
-
-Please see: `Installing NtopNG <DeployingNtopng>`__
-
-Installing RITA on Security Onion
----------------------------------
-
-Please see: `Installing RITA <RITA>`__
-
-Installing Etherpad on Security Onion
--------------------------------------
-
-Please see: `Installing Etherpad <Etherpad>`__
+Please note that this option requires ``set DEBUG 2`` in ``/etc/sguild/sguild.conf``.

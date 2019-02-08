@@ -105,7 +105,6 @@ Security Onion Documentation
    Proxy
    Firewall
    Email
-   ThirdPartyIntegration
    ChangingIPAddress
    NTP
 
@@ -163,6 +162,7 @@ Security Onion Documentation
    MISP
    DeployingNtopng
    RITA
+   ThirdPartyIntegration
 
 .. _help:
 
