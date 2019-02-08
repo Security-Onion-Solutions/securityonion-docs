@@ -46,7 +46,7 @@ this manner, it is recommended that you separate the backend components
 and sensor components.
 
 ========  ===========
-Resource  Description                                                                                                   |
+Resource  Description
 ========  ===========
 CPU       Used to parse incoming events, index incoming events, search metatadata, capture PCAP, analyze packets, and run the frontend components. As data and event consumption increases, a greater amount of CPU will be required.
 RAM       Used for Logstash, Elasticsearch, disk cache for Lucene, Snort/Suricata, Bro, Sguil, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
