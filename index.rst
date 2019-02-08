@@ -159,7 +159,6 @@ Security Onion Documentation
    CriticalStackIntelClient
    Etherpad
    FIR
-   FreeNX
    GRR
    MISP
    DeployingNtopng
