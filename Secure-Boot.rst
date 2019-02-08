@@ -11,5 +11,5 @@ Secure Boot
 | https://wiki.ubuntu.com/UEFI/SecureBoot/DKMS\ 
 | http://askubuntu.com/questions/762254/why-do-i-get-required-key-not-available-when-install-3rd-party-kernel-modules
 
-In the future, we will transition from PF\_RING to AF\_PACKET and this
+In the future, we will transition from `<PF_RING>`__ to `<AF-PACKET>`__ and this
 will no longer be an issue.
