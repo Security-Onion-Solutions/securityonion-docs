@@ -96,7 +96,7 @@ minutes:
           # Force all Salt minions to update Bro scripts
           sudo salt '*' state.highstate
           # Restart Bro
-          sudo salt '*' cmd.run 'nsm_sensor_ps-restart --only-bro'
+          sudo salt '*' cmd.run 'so-bro-restart'
 
 -  Bro intel in /opt/bro/share/bro/intel/
 

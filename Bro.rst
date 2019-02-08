@@ -110,7 +110,7 @@ Intel
       look in ``/nsm/bro/logs/current/reporter.log`` for clues.
    -  You may also want to restart Bro after making changes, by running
       the following command:
-      \ ``sudo nsm_sensor_ps-restart --only-bro``.
+      \ ``sudo so-bro-restart``.
 
 -  For more information, please see:
 
@@ -155,7 +155,7 @@ Below is an example how to do so:
    adding ``@load custom-scripts`` at the bottom of the file and saving
    the file.
 -  Restart Bro.
-   ``sudo nsm_sensor_ps-restart --only-bro``
+   ``sudo so-bro-restart``
 -  Check ``/nsm/bro/logs/current/loaded_scripts.log`` to see if your
    custom script(s) has/have been loaded.
 -  Check ``/nsm/bro/logs/current/reporter.log`` for clues if your custom

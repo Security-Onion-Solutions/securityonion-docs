@@ -19,11 +19,11 @@ Snort/Suricata
 --------------
 
 -  Stop sensor processes:
-   ``sudo nsm_sensor_ps-stop``
+   ``sudo so-sensor-stop``
 -  Edit ``/etc/nsm/$HOSTNAME-$INTERFACE/sensor.conf`` and change the
    ``IDS_LB_PROCS`` variable to desired number of cores.
 -  Start sensor processes:
-   ``sudo nsm_sensor_ps-start``
+   ``sudo so-sensor-start``
 
 If running Snort, the script automatically spawns $IDS\_LB\_PROCS
 instances of Snort (using PF\_RING), barnyard2, and snort\_agent.
@@ -38,11 +38,11 @@ Bro
 For Bro, you would do the following:
 
 -  Stop bro:
-   ``sudo nsm_sensor_ps-stop --only-bro``
+   ``sudo so-bro-stop``
 -  Edit /opt/bro/etc/node.cfg and change the lb\_procs variable to the
    desired number of cores.
 -  Start bro:
-   ``sudo nsm_sensor_ps-start --only-bro``
+   ``sudo so-bro-start``
 
 Slots
 -----
@@ -55,9 +55,9 @@ manually create/edit /etc/modprobe.d/pf\_ring.conf.
 
 | After creating/editing ``/etc/modprobe.d/pf_ring.conf``, you'll need
   to reload the PF\_RING module as follows (or just reboot):
-| ``sudo nsm_sensor_ps-stop``
+| ``sudo so-sensor-stop``
 | ``sudo rmmod pf_ring``\ 
-| ``sudo nsm_sensor_ps-start``
+| ``sudo so-sensor-start``
 
 Updating
 --------

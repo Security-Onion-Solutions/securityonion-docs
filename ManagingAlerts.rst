@@ -502,7 +502,7 @@ the alert engine:
 
 ::
 
-    sudo nsm_sensor_ps-restart --only-snort-alert 
+    sudo so-nids-restart
 
 Autocategorize events
 ---------------------

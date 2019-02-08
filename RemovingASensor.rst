@@ -45,12 +45,12 @@ Remove sensor reference from master server
 -  In MySQL database securityonion\_db, edit sensor table (you can
    simply set
    active='N'), then restart sguild.
--  Stop sguild ``sudo nsm_server_ps-stop``
+-  Stop sguild ``sudo so-sensor-stop``
 -  Show sensor entries
    ``sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'select * from sensor';``
 -  Set sensor as inactive
    ``sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e "update sensor set active='N' where sid in (<SID1>,<SID2>)";``
--  Start sguild ``sudo nsm_server_ps-start``
+-  Start sguild ``sudo so-sensor-start``
 
 -  If running salt:
 -  Remove the sensor from ``/opt/onionsalt/salt/top.sls``.

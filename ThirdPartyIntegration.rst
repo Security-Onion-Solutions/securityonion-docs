@@ -30,7 +30,7 @@ How do I send IDS alerts to an external system?
 
    ::
 
-       sudo nsm_sensor_ps-restart --only-barnyard2
+       sudo so-barnyard-restart
 
 OR
 
