@@ -13,42 +13,44 @@ If you want to change the number of PF_RING instances after running Setup, you c
 Snort/Suricata
 --------------
 
+To change the number of PF_RING instances for Snort or Suricata:
+
 -  Stop sensor processes:
 
-::
+   ::
 
-   sudo so-sensor-stop
+      sudo so-sensor-stop
 
 -  Edit ``/etc/nsm/$HOSTNAME-$INTERFACE/sensor.conf`` and change the ``IDS_LB_PROCS`` variable to desired number of cores.
 
 -  Start sensor processes:
 
-::
+   ::
 
-   sudo so-sensor-start
+      sudo so-sensor-start
 
-If running Snort, the script automatically spawns ``$IDS_LB_PROCS`` instances of Snort (using PF_RING), barnyard2, and snort_agent.
+If running Snort, ``so-sensor-start`` automatically spawns ``$IDS_LB_PROCS`` instances of Snort (using PF_RING), barnyard2, and snort_agent.
 
-If running Suricata, the script automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata spins up the PF_RING instances itself.
+If running Suricata, ``so-sensor-start`` automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata spins up the PF_RING instances itself.
 
 Bro
 ---
 
-For Bro, you would do the following:
+To change the number of PF_RING instances for Bro:
 
 -  Stop bro:
 
-::
+   ::
 
-   sudo so-bro-stop
+      sudo so-bro-stop
 
 -  Edit ``/opt/bro/etc/node.cfg`` and change the ``lb_procs`` variable to the desired number of cores.
 
 -  Start bro:
 
-::
+   ::
 
-  sudo so-bro-start
+     sudo so-bro-start
 
 Slots
 -----
