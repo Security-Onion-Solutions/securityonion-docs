@@ -13,7 +13,7 @@ Install Security Onion. Run Setup and configure network interfaces.
 Reboot, run Setup, and then choose Evaluation Mode.
 
 | For more information, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/QuickISOImage
+| `<QuickISOImage>`__
 
 Pcap Forensics
 --------------
@@ -30,7 +30,7 @@ Reboot, run Setup, choose Production Mode, choose New Deployment, and
 enable network sensor services.
 
 | For more information, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/ProductionDeployment
+| `<ProductionDeployment>`__
 
 Production Server - Distributed Deployment
 ------------------------------------------
@@ -45,7 +45,7 @@ Production Server - Distributed Deployment
   master.
 
 | For more information, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/ProductionDeployment
+| `<ProductionDeployment>`__
 
 Analyst VM
 ----------
@@ -56,7 +56,7 @@ Production Master Server. Launch the web browser and connect to Squert
 or Kibana on your Production Master Server.
 
 | For more information, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/ConnectingtoSguil#directly-connecting-to-sguild-remotely
+| `<ConnectingtoSguil#directly-connecting-to-sguild-remotely>`__
 
 Sensor sending logs to SIEM
 ---------------------------
