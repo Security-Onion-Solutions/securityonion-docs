@@ -8,18 +8,14 @@ any services that you may not need, and that would otherwise duplicate
 work and data. The **Best Practices** option not only disables these
 unnecessary services, but (assuming the appropriate packages are
 installed) enables
-`Salt <https://github.com/Security-Onion-Solutions/security-onion/wiki/Salt>`__
+`Salt <Salt>`__
 by default, to allow for ease of sensor management.
 
 **The below sections assume that you already have these services
 installed, and provide advice on how to disable them in your
 deployment.**
 
-| Disable any unnecessary services. First, Snorby should be disabled
-  since it is now considered unmaintained:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/DisablingProcesses#disabling-snorby
-
-In addition, most folks will want to disable the following services:
+Most folks will want to disable the following services:
 
 -  prads (prads creates session data and asset data, already provided by
    Bro)

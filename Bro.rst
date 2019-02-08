@@ -95,7 +95,7 @@ https://www.bro.org/sphinx-git/scripts/base/frameworks/notice/main.bro.html#type
 
 As you can see, Bro log data can provide a wealth of information to the
 analyst, all easily accessible through
-`Kibana <https://github.com/Security-Onion-Solutions/security-onion/wiki/Kibana>`__.
+`Kibana <Kibana>`__.
 
 Intel
 -----
@@ -128,7 +128,7 @@ Bro \* n
 ``/opt/bro/etc/node.cfg``
 
 We compile Bro with
-`PF\_RING <https://github.com/Security-Onion-Solutions/security-onion/wiki/PF_RING>`__
+`PF\_RING <PF_RING>`__
 so that you can spin up multiple Bro workers to handle more traffic.
 
 Custom Scripts

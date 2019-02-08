@@ -51,11 +51,11 @@ Because Sguil is written in tcl/tk, it can only utilize ``1024`` sockets for rec
 Management
 ----------
 
--  It is important to ensure events displayed in Sguil are regularly classified, or else it could cause problems with the Sguil database. Consider creating an `autocat rule <https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts#autocategorize-events>`__ to assist with this.
+-  It is important to ensure events displayed in Sguil are regularly classified, or else it could cause problems with the Sguil database. Consider creating an `autocat rule <ManagingAlerts#autocategorize-events>`__ to assist with this.
 
--  `Configure Sguil alert email notification(s) <https://github.com/Security-Onion-Solutions/security-onion/wiki/Email#how-do-i-configure-sguil-to-send-alerts-via-email>`__
+-  `Configure Sguil alert email notification(s) <Email#how-do-i-configure-sguil-to-send-alerts-via-email>`__
 
--  `Configure retention for Sguil alerts <https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts#sguil-days-to-keep>`__
+-  `Configure retention for Sguil alerts <ManagingAlerts#sguil-days-to-keep>`__
 
 Customize (Sguil client)
 ------------------------

@@ -21,7 +21,7 @@ Warnings
 
 -  If you were previously running ELSA, please ensure your system has
    been converted to
-   `Elastic <https://github.com/Security-Onion-Solutions/security-onion/wiki/ELSA-to-Elastic>`__
+   `Elastic <ELSA-to-Elastic>`__
    before upgrading.
 
 Pre-upgrade Notes

@@ -103,7 +103,7 @@ Can I run Security Onion on Raspberry Pi or some other non-x86 box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 No, we only support x86 and x86-64 architectures. Please see the
-`hardware <https://github.com/Security-Onion-Solutions/security-onion/wiki/Hardware#32-bit-vs-64-bit>`__
+`hardware <Hardware#32-bit-vs-64-bit>`__
 page.
 
 What's the difference between a ``server`` and a ``sensor``?

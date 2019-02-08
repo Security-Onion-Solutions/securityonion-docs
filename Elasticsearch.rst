@@ -236,6 +236,6 @@ and is writable by the Elasticsearch user -- a directory named
 will be able to read/write from that location).
 
 To automate the snapshotting process, you can use
-`Curator <https://github.com/Security-Onion-Solutions/security-onion/wiki/Curator>`__,
+`Curator <Curator>`__,
 in conjunction with a cron job, much like what is done today with the
 close and delete jobs.

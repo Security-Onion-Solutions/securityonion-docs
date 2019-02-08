@@ -16,7 +16,7 @@ Warning
   is at your own risk.
 | Also, please keep in mind, this integration currently only works with
   `Security Onion on the Elastic
-  stack <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic>`__
+  stack <Elastic>`__
   (w/ Docker installed).
 
 Installation

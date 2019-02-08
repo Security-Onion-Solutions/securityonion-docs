@@ -21,10 +21,10 @@ Wazuh agents to monitor other hosts on your network as well.
 Additionally, you may want to:
 
 -  `Configure Wazuh to send email
-   notification(s) <https://github.com/Security-Onion-Solutions/security-onion/wiki/Email#how-do-i-configure-ossec-to-send-emails>`__
+   notification(s) <Email#how-do-i-configure-ossec-to-send-emails>`__
 
 -  `Send Wazuh logs to an external syslog
-   collector <https://github.com/Security-Onion-Solutions/security-onion/wiki/ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector>`__
+   collector <ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector>`__
 
 | For more information about Wazuh, please see:
 | https://documentation.wazuh.com/3.7/
@@ -73,7 +73,7 @@ version 3.7.2.
 | http://ossec-docs.readthedocs.org/en/latest/manual/agent/agent-management.html#managing-agents
 
 You may need to run
-`so-allow <https://github.com/Security-Onion-Solutions/security-onion/wiki/Firewall#so-allow>`__
+`so-allow <Firewall#so-allow>`__
 to allow traffic from the IP address of your Wazuh agent(s).
 
 Maximum Number of Agents

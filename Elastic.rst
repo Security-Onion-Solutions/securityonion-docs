@@ -16,7 +16,7 @@ Each component has its own `Docker <Docker>`__ image.
 
 You can get an idea of what this whole integration might look like at a
 high-level by viewing our `proposed architecture
-diagram <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__.
+diagram <Elastic-Architecture>`__.
 
 Blog Posts
 ----------

@@ -20,7 +20,7 @@ Best Practices
 For the Security Onion 14.04 ISO, ``securityonion-onionsalt`` is
 pre-installed (via ``securityonion-iso syslog-ng-core``) , and Salt is
 configured by default when choosing `Best
-Practices <https://github.com/Security-Onion-Solutions/security-onion/wiki/Best-Practices>`__
+Practices <Best-Practices>`__
 during setup.
 
 Salt and OnionSalt are optional packages
@@ -45,7 +45,7 @@ Installation
 ------------
 
 For new deployments, `Best
-Practices <https://github.com/Security-Onion-Solutions/security-onion/wiki/Best-Practices>`__
+Practices <Best-Practices>`__
 (Production Mode) checks to see if the ``securityonion-onionsalt``
 package is installed and, if so, enables Salt by default. If choosing
 the "Custom" configuration option (Production Mode), simply answer "Yes"

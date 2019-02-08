@@ -27,7 +27,7 @@ requirements are 4 CPU cores and 8GB RAM. These requirements increase as
 you monitor more traffic and consume more logs.
 
 Please refer to our `Architecture
-Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__
+Page <Elastic-Architecture>`__
 for detailed deployment scenarios.
 
 **We recommend placing all Elastic storage on SSD or fast spinning disk
@@ -221,7 +221,7 @@ and sensor components.
 +------+------+
 
 Please refer to our `Architecture
-Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__
+Page <Elastic-Architecture>`__
 for detailed deployment scenarios.
 
 Master server with local log storage
@@ -369,7 +369,7 @@ retention requirements.
 +------+------+
 
 Please refer to our `Architecture
-Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__
+Page <Elastic-Architecture>`__
 for detailed deployment scenarios.
 
 Master server with storage nodes
@@ -481,7 +481,7 @@ than sensors but needs higher reliability and availability.
 +------+------+
 
 Please refer to our `Architecture
-Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__
+Page <Elastic-Architecture>`__
 for detailed deployment scenarios.
 
 Storage Node
@@ -622,7 +622,7 @@ ability to scale horizontally as overall data intake increases.
 +------+------+
 
 Please refer to our `Architecture
-Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__
+Page <Elastic-Architecture>`__
 for detailed deployment scenarios.
 
 Forward Node (Sensor)
@@ -720,7 +720,7 @@ through use of an agent.
 +------+------+
 
 Please refer to our `Architecture
-Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__
+Page <Elastic-Architecture>`__
 for detailed deployment scenarios.
 
 Heavy Node (Sensor with ES components)
@@ -880,7 +880,7 @@ Elasticsearch instance.
 +------+------+
 
 Please refer to our `Architecture
-Page <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture>`__
+Page <Elastic-Architecture>`__
 for detailed deployment scenarios.
 
 Sensor Hardware Considerations

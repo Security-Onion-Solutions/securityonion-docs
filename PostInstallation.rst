@@ -104,7 +104,7 @@ Optional
 -  | *Optional:* need “remote desktop” access to your Security Onion
      sensor or server? We recommend SSH X-Forwarding as shown above, but
      if you want something more rdp-like, you can install
-     `FreeNX <https://github.com/Security-Onion-Solutions/security-onion/wiki/FreeNX>`__
+     `FreeNX <FreeNX>`__
      or xrdp (please note we do NOT support either of these):
    | ``sudo apt-get install xrdp``
 

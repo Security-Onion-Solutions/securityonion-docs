@@ -106,7 +106,7 @@ configure Sguil to send email to the local mail relay.
 **Please note**: Sguil will only send email alerts for what is considers
 *new* events. Ensure you classify events within the Sguil console, or
 consider `creating an Autocat
-rule <https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts#autocategorize-events>`__
+rule <ManagingAlerts#autocategorize-events>`__
 to automatically classify them if you prefer to receive emails for all
 instances of an alert. Otherwise, you may not receive alerts as
 intended.
@@ -207,7 +207,7 @@ How do I configure Elastalert to send emails?
 ---------------------------------------------
 
 Follow the steps on the
-`Elastalert <https://github.com/Security-Onion-Solutions/security-onion/wiki/ElastAlert#email---internal>`__
+`Elastalert <ElastAlert#email---internal>`__
 wiki page.
 
 How can I get an email alert when my sensor stops seeing traffic?

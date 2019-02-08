@@ -111,4 +111,4 @@ MISP
 | If you would like to pull in NIDS rules from a MISP instance, please
   see:
 | `MISP
-  Rules <https://github.com/Security-Onion-Solutions/security-onion/wiki/MISP>`__
+  Rules <MISP>`__

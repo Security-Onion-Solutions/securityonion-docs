@@ -10,26 +10,26 @@ High-Level Architecture Diagram
 Core Components
 ---------------
 
-| **`Logstash <https://github.com/Security-Onion-Solutions/security-onion/wiki/Logstash>`__**
+| **`Logstash <Logstash>`__**
   - Parse and format logs.
-| **`Elasticsearch <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elasticsearch>`__**
+| **`Elasticsearch <Elasticsearch>`__**
   - Ingest and index logs.
-| **`Kibana <https://github.com/Security-Onion-Solutions/security-onion/wiki/Kibana>`__**
+| **`Kibana <Kibana>`__**
   - Visualize ingested log data.
 
 Auxilliary Components
 ---------------------
 
-| **`Curator <https://github.com/Security-Onion-Solutions/security-onion/wiki/Curator>`__**
+| **`Curator <Curator>`__**
   - Manage indices through scheduled maintenance.
-| **`ElastAlert <https://github.com/Security-Onion-Solutions/security-onion/wiki/ElastAlert>`__**
+| **`ElastAlert <ElastAlert>`__**
   - Query Elasticsearch and alert on user-defined anomalous behavior or
   other interesting bits of information.
-| **`FreqServer <https://github.com/Security-Onion-Solutions/security-onion/wiki/FreqServer>`__**
+| **`FreqServer <FreqServer>`__**
   -Detect DGAs and find random file names, script names, process names,
   service names, workstation names, TLS certificate subjects and issuer
   subjects, etc.
-| **`DomainStats <https://github.com/Security-Onion-Solutions/security-onion/wiki/DomainStats>`__**
+| **`DomainStats <DomainStats>`__**
   - Get additional info about a domain by providing additional context,
   such as creation time, age, reputation, etc.
 

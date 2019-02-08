@@ -4,7 +4,7 @@ VMWare Walkthough
 Please note this walkthrough was written for the previous version of
 Security Onion (14.04). The current version of Security Onion is 16.04
 and you can follow one of the updated
-`Installation <https://github.com/Security-Onion-Solutions/security-onion/wiki/Installation>`__
+`Installation <Installation>`__
 guides.
 
 Overview
@@ -182,4 +182,4 @@ Things to keep in mind
    method of forwarding that traffic to the interface to which the
    virtual adapter is bridged. This can be achieved by switch port
    mirroring (SPAN), or through the use of a
-   `tap <https://github.com/Security-Onion-Solutions/security-onion/wiki/Hardware#enterprise-tap-solutions>`__.
+   `tap <Hardware#enterprise-tap-solutions>`__.

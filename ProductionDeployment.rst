@@ -20,18 +20,18 @@ Install
 -------
 
 If deploying a
-`distributed <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture#distributed>`__
+`distributed <Elastic-Architecture#distributed>`__
 environment, you’ll need to perform the remaining steps on the server,
 as well as all forward and storage nodes, but make sure you
 install/configure the master server first. For best performance, the
 master server should be dedicated to just being a server for the other
 nodes (the master server should have no sniffing interfaces of its own).
 Please note that
-`forward <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture#forward-node>`__
+`forward <Elastic-Architecture#forward-node>`__
 and
-`heavy <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture#heavy-node>`__
+`heavy <Elastic-Architecture#heavy-node>`__
 nodes need to connect to the `master
-server <https://github.com/Security-Onion-Solutions/security-onion/wiki/Elastic-Architecture#master>`__
+server <Elastic-Architecture#master>`__
 on ports 22 and 7736. If you choose to enable salt for node management,
 nodes will need to be able to connect to the master server on ports 4505
 and 4506.
@@ -59,7 +59,7 @@ and 4506.
       put /var on a dedicated partition/disk and assign a good amount of
       disk space to it. Also see the ``DAYSTOKEEP`` instructions on the
       `Post-Installation
-      page <https://github.com/Security-Onion-Solutions/security-onion/wiki/PostInstallation>`__.
+      page <PostInstallation>`__.
    -  Forward, Heavy, and Standalone nodes store full packet captures at
       ``/nsm/sensor_data/``, so you may want to put ``/nsm`` on a
       dedicated partition/disk and assign as much disk space as possible
@@ -68,7 +68,7 @@ and 4506.
    -  For Heavy, Standalone, and Storage Nodes, it is highly recommended
       to place ``/nsm/elasticsearch`` and ``/nsm/logstash`` on SSD or
       fast spinning disk in a RAID 10 configuration. See `Hardware
-      Requirements <https://github.com/Security-Onion-Solutions/security-onion/wiki/Hardware#elastic-stack>`__
+      Requirements <Hardware#elastic-stack>`__
       for more details.
 
 #. When installation completes, reboot into your new installation and
