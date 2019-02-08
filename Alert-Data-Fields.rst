@@ -10,17 +10,17 @@ being processed by Logstash:
 | alert
 | category
 | classification
-| source\_ip
-| source\_port
-| destination\_ip
-| destination\_port
+| source_ip
+| source_port
+| destination_ip
+| destination_port
 | gid
 | host
 | priority
 | protocol
 | rev
 | rule (*added through augmentation*)
-| rule\_type
+| rule_type
 | severity
 | sid
-| Signature\_Info (*added through augmentation*)
+| Signature_Info (*added through augmentation*)
