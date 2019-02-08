@@ -10,7 +10,7 @@ on the right.
 
 **(Bro => Elastic)**
 
-#### conn.log
+conn.log
 -------------
 
 | ``type:bro_conn``
@@ -54,7 +54,7 @@ on the right.
 | respond\_country\_code
 | sensor\_name
 
-#### dhcp.log
+dhcp.log
 -------------
 
 | ``type:bro_dhcp``
@@ -71,7 +71,7 @@ on the right.
 | lease\_time
 | trans\_id => transaction\_id
 
-#### dns.log
+dns.log
 ------------
 
 | ``type:bro_dns``
@@ -102,7 +102,7 @@ on the right.
 | TTLS => ttls (removed if not available)
 | rejected
 
-#### dpd.log
+dpd.log
 ------------
 
 | ``type:bro_dpd``
@@ -118,7 +118,7 @@ on the right.
 | analyzer
 | failure\_reason
 
-#### files.log
+files.log
 --------------
 
 | ``type:bro_files``
@@ -150,7 +150,7 @@ on the right.
 | extracted\_cutoff
 | extracted\_size
 
-#### ftp.log
+ftp.log
 ------------
 
 | ``type:bro_ftp``
@@ -176,7 +176,7 @@ on the right.
 | data\_channel.resp\_h => data\_channel\_destination\_port
 | fuid
 
-#### http.log
+http.log
 -------------
 
 | ``type:bro_http``
@@ -212,7 +212,7 @@ on the right.
 | resp\_filenames
 | resp\_mime\_types
 
-#### intel.log
+intel.log
 --------------
 
 | ``type:bro_intel``
@@ -234,7 +234,7 @@ on the right.
 | file\_mime\_type => mimetype
 | file\_desc => file\_description
 
-#### irc.log
+irc.log
 ------------
 
 | ``type:bro_irc``
@@ -256,7 +256,7 @@ on the right.
 | dcc\_mime\_type
 | fuid
 
-#### kerberos.log
+kerberos.log
 -----------------
 
 | ``type:bro_kerberos``
@@ -283,7 +283,7 @@ on the right.
 | server\_cert\_subject => server\_certificate\_subject
 | server\_cert\_fuid => server\_certificate\_fuid
 
-#### modbus.log
+modbus.log
 ---------------
 
 | ``type:bro_modbus``
@@ -298,7 +298,7 @@ on the right.
 | func => function
 | exception
 
-#### mysql.log
+mysql.log
 --------------
 
 | ``type:bro_mysql``
@@ -316,7 +316,7 @@ on the right.
 | rows
 | response
 
-#### notice.log
+notice.log
 ---------------
 
 | ``type:bro_notice``
@@ -349,7 +349,7 @@ on the right.
 | destination\_latitude
 | destination\_longitude
 
-#### pe.log
+pe.log
 -----------
 
 | ``type:bro_pe``
@@ -373,7 +373,7 @@ on the right.
 | has\_debug\_data
 | section\_names
 
-#### radius.log
+radius.log
 ---------------
 
 | ``type:bro_radius``
@@ -392,7 +392,7 @@ on the right.
 | result
 | logged
 
-#### rdp.log
+rdp.log
 ------------
 
 | ``type:bro_rdp``
@@ -420,7 +420,7 @@ on the right.
 | encryption\_level
 | encryption\_method
 
-#### rfb.log
+rfb.log
 ------------
 
 | ``type:bro_rfb``
@@ -443,7 +443,7 @@ on the right.
 | width
 | height
 
-#### signatures.log
+signatures.log
 -------------------
 
 | ``type:bro_ssl``
@@ -462,7 +462,7 @@ on the right.
 | sig\_count => signature\_count
 | host\_count
 
-#### sip.log
+sip.log
 ------------
 
 | ``type:bro_sip``
@@ -496,7 +496,7 @@ on the right.
 | response\_body\_len
 | content\_type
 
-#### smtp.log
+smtp.log
 -------------
 
 | ``type:bro_smtp``
@@ -530,7 +530,7 @@ on the right.
 | fuids
 | is\_webmail
 
-#### snmp.log
+snmp.log
 -------------
 
 | ``type:bro_snmp``
@@ -552,7 +552,7 @@ on the right.
 | display\_string
 | up\_since
 
-#### socks.log
+socks.log
 --------------
 
 | ``type:bro_socks``
@@ -582,7 +582,7 @@ bound
 
 bound\_p => bound\_port
 
-#### software.log
+software.log
 -----------------
 
 | ``type:bro_software``
@@ -600,7 +600,7 @@ bound\_p => bound\_port
 | addl => version\_additional\_info
 | unparsed\_version
 
-#### ssh.log
+ssh.log
 ------------
 
 | ``type:bro_ssh``
@@ -630,7 +630,7 @@ bound\_p => bound\_port
 | destination\_latitude
 | destination\_longitude
 
-#### ssl.log
+ssl.log
 ------------
 
 | ``type:bro_ssl``
@@ -692,7 +692,7 @@ certificate\_issuer
 | validation\_status
 | ja3 (if JA3 enabled)
 
-#### syslog.log
+syslog.log
 ---------------
 
 | ``type:bro_syslog``
@@ -709,7 +709,7 @@ certificate\_issuer
 | severity
 | message
 
-#### tunnel.log
+tunnel.log
 ---------------
 
 | ``type:bro_tunnel``
@@ -724,7 +724,7 @@ certificate\_issuer
 | tunnel\_type
 | action
 
-#### weird.log
+weird.log
 --------------
 
 | ``type:bro_weird``
@@ -737,7 +737,7 @@ certificate\_issuer
 | notice
 | peer
 
-#### x509.log
+x509.log
 -------------
 
 | ``type:bro_x509``
