@@ -89,103 +89,13 @@ RAM, and 100GB to 1TB of disk space. Many folks choose to host their
 master server in their VM farm since it has lower hardware requirements
 than sensors but needs higher reliability and availability.
 
-+------+------+
-| Reso | Desc |
-| urce | ript |
-|      | ion  |
-+======+======+
-| CPU  | Used |
-|      | to   |
-|      | rece |
-|      | ive  |
-|      | inco |
-|      | ming |
-|      | even |
-|      | ts   |
-|      | and  |
-|      | plac |
-|      | e    |
-|      | them |
-|      | into |
-|      | Redi |
-|      | s.   |
-|      | Used |
-|      | to   |
-|      | run  |
-|      | all  |
-|      | the  |
-|      | fron |
-|      | t    |
-|      | end  |
-|      | web  |
-|      | comp |
-|      | onen |
-|      | ts   |
-|      | and  |
-|      | corr |
-|      | elat |
-|      | e    |
-|      | sear |
-|      | ch   |
-|      | resu |
-|      | lts  |
-|      | from |
-|      | the  |
-|      | stor |
-|      | age  |
-|      | node |
-|      | s.   |
-+------+------+
-| RAM  | Used |
-|      | for  |
-|      | Logs |
-|      | tash |
-|      | and  |
-|      | Redi |
-|      | s.   |
-|      | The  |
-|      | amou |
-|      | nt   |
-|      | of   |
-|      | avai |
-|      | labl |
-|      | e    |
-|      | RAM  |
-|      | dire |
-|      | ctly |
-|      | impa |
-|      | cts  |
-|      | the  |
-|      | size |
-|      | of   |
-|      | the  |
-|      | Redi |
-|      | s    |
-|      | queu |
-|      | e.   |
-+------+------+
-| Disk | Used |
-|      | for  |
-|      | gene |
-|      | ral  |
-|      | purp |
-|      | oses |
-|      | ,    |
-|      | as   |
-|      | well |
-|      | as   |
-|      | stor |
-|      | ing  |
-|      | dash |
-|      | boar |
-|      | ds   |
-|      | and  |
-|      | Sgui |
-|      | l    |
-|      | comp |
-|      | onen |
-|      | ts.  |
-+------+------+
+========  ===========
+Resource  Description
+========  ===========
+CPU       Used to receive incoming events and place them into Redis. Used to run all the front end web comp onents and aggregate search results from the storage nodes.
+RAM       Used for Logstash and Redis. The amount of available RAM directly impacts the size of the Redis queue.
+Disk      Used for general purposes, as well as storing dashboards and Sguil components.
+========  ===========
 
 Please refer to our `Architecture
 Page <Elastic-Architecture>`__
