@@ -187,6 +187,5 @@ Security Onion Documentation
    :caption: Other
 
    DirectoryStructure
-   Links
    Tools
    so-import-pcap

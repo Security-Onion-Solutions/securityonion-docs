@@ -1,3 +1,6 @@
+Secure Boot
+===========
+
 | Modern kernels prevent the loading of unsigned third party modules
   (like PF\_RING) if UEFI Secure Boot is enabled.
 | An example of this can be found here:
