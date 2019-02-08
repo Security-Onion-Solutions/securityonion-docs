@@ -53,18 +53,6 @@ RAM       Used for Logstash, Elasticsearch, and disk cache for Lucene. The amoun
 Disk      Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 ========  ===========
 
-CPU
-~~~
-Used to parse incoming events, index incoming events, search metadata. As consumption of data and events increases, more CPU will be required.
-
-RAM
-~~~
-Used for Logstash, Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
-
-Disk
-~~~~
-Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
-
 Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Master server with storage nodes
