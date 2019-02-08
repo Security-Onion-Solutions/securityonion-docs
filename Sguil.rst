@@ -32,28 +32,18 @@ Data Types
 
 -  NIDS alerts from Snort/Suricata (if snort\_agent is enabled)
 -  HIDS alerts from OSSEC (if ossec\_agent is enabled)
--  session data from PRADS (if PRADS and sancp\_agent are enabled)
--  asset data from PRADS (if PRADS and pads\_agent are enabled)
--  HTTP logs from Bro (if http\_agent is enabled)
 
-   .. rubric:: Pivot
-      :name: pivot
+Pivot
+-----
 
--  pivot to transcript/Wireshark/NetworkMiner by right-clicking the
-   Alert ID.
--  automatically pivot to ASCII transcript by middle-clicking the Alert
-   ID.
--  pivot to Kibana by right-clicking an IP address and choosing "Kibana
-   IP Lookup".
+-  pivot to transcript/Wireshark/NetworkMiner by right-clicking the Alert ID.
+-  automatically pivot to ASCII transcript by middle-clicking the Alert ID.
+-  pivot to Kibana by right-clicking an IP address and choosing "Kibana IP Lookup".
 
 Agents
 ------
 
-Because Sguil is written in tcl/tk, it can only utilize\ ``1024``
-sockets for receiving communication from various sensor agents
-(ossec\_agent, pcap\_agent, snort\_agent). Due to this restriction, you
-will want to keep in mind the number of sensors and sniffing interfaces
-you have connected to the master server/accessed by Sguil.
+Because Sguil is written in tcl/tk, it can only utilize ``1024`` sockets for receiving communication from various sensor agents (ossec\_agent, pcap\_agent, snort\_agent). Due to this restriction, you will want to keep in mind the number of sensors and sniffing interfaces you have connected to the master server/accessed by Sguil.
 
 | See the following for more information:
 | https://groups.google.com/d/msg/security-onion/DJ5NTLEu5MY/-tDQi_1eDQAJ
@@ -61,25 +51,17 @@ you have connected to the master server/accessed by Sguil.
 Management
 ----------
 
--  It is important to ensure events displayed in Sguil are regularly
-   classified, or else it could cause problems with the Sguil database.
-   Consider creating an `autocat
-   rule <https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts#autocategorize-events>`__
-   to assist with this.
+-  It is important to ensure events displayed in Sguil are regularly classified, or else it could cause problems with the Sguil database. Consider creating an `autocat rule <https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts#autocategorize-events>`__ to assist with this.
 
--  `Configure Sguil alert email
-   notification(s) <https://github.com/Security-Onion-Solutions/security-onion/wiki/Email#how-do-i-configure-sguil-to-send-alerts-via-email>`__
+-  `Configure Sguil alert email notification(s) <https://github.com/Security-Onion-Solutions/security-onion/wiki/Email#how-do-i-configure-sguil-to-send-alerts-via-email>`__
 
--  `Configure retention for Sguil
-   alerts <https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts#sguil-days-to-keep>`__
+-  `Configure retention for Sguil alerts <https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts#sguil-days-to-keep>`__
 
 Customize (Sguil client)
 ------------------------
 
--  resize columns by right-clicking on the column heading in the Sguil
-   client.
--  change fonts by clicking File --> Change Font from within the Sguil
-   client.
+-  resize columns by right-clicking on the column heading in the Sguil client.
+-  change fonts by clicking File --> Change Font from within the Sguil client.
 -  Sguil client settings are stored in ``/etc/sguil/sguil.conf``:
 -  | You can enable "Show Rule", "Show Packet Data", and "Display
      Detail" (respectively) by setting the following (also see
@@ -107,6 +89,8 @@ Customize (Sguil client)
     set RTPANE_PRIORITY(1) "2 3"  
     set RTPANE_PRIORITY(2) "4 5"   
 
-| ``### DNS Lookups Previously, when pivoting to transcript, the Sguil server would perform DNS lookups on the source and destination IP addresses.  That default has since been changed to increase performance and avoid unnecessary information leakage.  If you would like to re-enable DNS lookups, you can set the following in `/etc/nsm/securityonion/sguild.conf`:``
+DNS Lookups 
+-----------
+Previously, when pivoting to transcript, the Sguil server would perform DNS lookups on the source and destination IP addresses.  That default has since been changed to increase performance and avoid unnecessary information leakage.  If you would like to re-enable DNS lookups, you can set the following in `/etc/nsm/securityonion/sguild.conf`:``
 | set TRANSCRIPT\_DNS\_LOOKUP 1
 | \`\`\`
