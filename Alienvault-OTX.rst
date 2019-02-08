@@ -1,5 +1,5 @@
-Introduction
-============
+AlienVault-OTX
+==============
 
 We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__
 pulses into Security Onion and have Bro utilize them for the `Intel
@@ -8,13 +8,13 @@ leveraging `Stephen Hosom <https://github.com/hosom/bro-otx>`__'s work
 with Alienvault OTX integration.
 
 Warning
-=======
+-------
 
 Please keep in mind we do not officially support use of this script, so
 installation is at your own risk.
 
 Installation
-============
+------------
 
 In order to do begin, we will need to make sure we satisfy a few
 prerequisites:
