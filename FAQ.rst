@@ -32,7 +32,7 @@ Why does the installer crash when selecting a non-English language?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | We only support the English language at this time:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/Installation#language
+| `<Installation#language>`__
 
 Why can't I see the Continue button on the Keyboard Layout screen of the installer?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,7 +205,7 @@ Why does rule-update fail with Error 400 when running behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see
-https://github.com/Security-Onion-Solutions/security-onion/wiki/Proxy#pulledpork.
+`<Proxy#pulledpork>`__
 
 Why does rule-update fail with an error like "Error 404 when fetching s3.amazonaws.com/snort-org/www/rules/community/community-rules.tar.gz.md5"?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -120,7 +120,7 @@ Intel
 
 -  To install and configure an Alienvault OTX Connector, please see:
 
-   https://github.com/Security-Onion-Solutions/security-onion/wiki/Alienvault-OTX
+   `<Alienvault-OTX>`__
 
 Bro \* n
 --------
@@ -211,7 +211,7 @@ Email
 
 -  To configure email notifications, please see:
 
-https://github.com/Security-Onion-Solutions/security-onion/wiki/Email#how-do-i-configure-bro-to-send-emails
+`<Email#how-do-i-configure-bro-to-send-emails>`__
 
 Syslog
 ------
@@ -220,7 +220,7 @@ Syslog
 
 -  To forward Bro logs to an external syslog collector, please see:
 
-https://github.com/Security-Onion-Solutions/security-onion/wiki/ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector
+`<ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector>`__
 
 Top for Bro
 -----------

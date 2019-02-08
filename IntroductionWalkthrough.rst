@@ -289,9 +289,9 @@ cover here in more detail as a future reference.
    -  Security Onion on Github -
       https://github.com/Security-Onion-Solutions/security-onion
    -  FAQ -
-      https://github.com/Security-Onion-Solutions/security-onion/wiki/FAQ
+      `<FAQ>`__
    -  Wiki -
-      https://github.com/Security-Onion-Solutions/security-onion/wiki
+      https://securityonion.net/wiki
    -  Mailing Lists -
       https://groups.google.com/forum/?fromgroups#!forum/security-onion
    -  IRC channel - http://webchat.freenode.net/?channels=securityonion

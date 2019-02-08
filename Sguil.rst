@@ -22,10 +22,10 @@ Authentication
 --------------
 
 | For login information, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/Passwords#sguil
+| `<Passwords#sguil>`__
 
 | For information on ways to connect to Sguil/sguild, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/ConnectingtoSguil
+| `<ConnectingtoSguil>`__
 
 Data Types
 ----------

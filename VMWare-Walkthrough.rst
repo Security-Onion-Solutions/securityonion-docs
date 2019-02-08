@@ -130,12 +130,12 @@ offering suggestions and useful information, such as:
 
 -  Setup log - can be found in /var/log/nsm/sosetup.log.
 -  | IDS Alerts can be found in Sguil, Squert, and Kibana.
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki/Sguil
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki/Squert
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki/Kibana
+   | `<Sguil>`__
+   | `<Squert>`__
+   | `<Kibana>`__
 
 -  | Bro logs can be found in /nsm/bro.
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki/Bro
+   | `<Bro>`__
 
 -  Security Onion Install information can be found via sostat:
 -  "sudo sostat" - will give you detailed information about your service
@@ -154,8 +154,8 @@ offering suggestions and useful information, such as:
 -  Rules are updated every morning, however, you can manually update
    them by running "sudo rule-update".
 -  | More information about managing alerts/rules can be found here:
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki/AddingLocalRules
+   | `<ManagingAlerts>`__
+   | `<AddingLocalRules>`__
 
 -  Sensors can be tuned by modifying the files in
    /etc/nsm/[hostname-interface].
@@ -164,11 +164,11 @@ offering suggestions and useful information, such as:
      allow connections to port 22. You can run "sudo so-allow" to add
      exceptions for analysts, ossec agents, etc.
    | See the following for more information:
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki/Firewall
+   | `<Firewall>`__
 
 -  | For more information, consult the FAQ or the wiki:
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki/FAQ
-   | https://github.com/Security-Onion-Solutions/security-onion/wiki
+   | `<FAQ>`__
+   | https://securityonion.net/wiki
 
 -  | Questions or problems can be submitted to the mailing list:
    | https://groups.google.com/forum/#!forum/security-onion

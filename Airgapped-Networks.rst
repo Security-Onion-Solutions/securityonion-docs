@@ -22,4 +22,4 @@ Docker
 
 | For Docker containers, sneakernet updates can be performed by doing
   something like the following:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/Docker#sneakernet-updates
+| `<Docker#sneakernet-updates>`__

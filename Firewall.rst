@@ -53,7 +53,7 @@ should automatically add their own rules as described above.
     you can do so using the standard 'ufw' utility.
 
     For more information, please see the Firewall page on our Wiki:
-    https://github.com/Security-Onion-Solutions/security-onion/wiki/Firewall
+    https://securityonion.net/wiki/Firewall
 
     Please enter your selection (a - analyst, c - apt-cacher-ng client, l - syslog, o - ossec, or s - Security Onion sensor, etc.):
 
@@ -61,10 +61,6 @@ To view existing rules granted through the use of ``so-allow``, use the
 following command:
 
 ``so-allow-view``
-
-| If you have upgraded from Security Onion 12.04 and you receive
-  duplicate profile warnings for UFW when adding rules, please see:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/Upgrading-from-12.04-to-14.04#clean-up
 
 More ``ufw`` documentation
 --------------------------

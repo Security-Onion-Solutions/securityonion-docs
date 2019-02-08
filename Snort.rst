@@ -20,9 +20,9 @@ Configuration
 
 If you would like to configure/manage IDS rules, please see:
 
-https://github.com/Security-Onion-Solutions/security-onion/wiki/Rules
+`<Rules>`__
 
-https://github.com/Security-Onion-Solutions/security-onion/wiki/ManagingAlerts
+`<ManagingAlerts>`__
 
 Logging
 -------

@@ -34,7 +34,7 @@ Prepared Statements
 
 | If you start seeing "Prepared statement needs to be re-prepared" in
   ``/var/log/apache2/error.log``, please see the following:
-| https://github.com/Security-Onion-Solutions/security-onion/wiki/MySQLTuning#table_definition_cache
+| `<MySQLTuning#table_definition_cache>`__
 
 Data Types
 ----------

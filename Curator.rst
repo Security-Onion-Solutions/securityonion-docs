@@ -40,5 +40,5 @@ another cron job in ``/etc/cron.d`` to automate the process.
 For example, a new process for snapshotting would require a new action
 file, Elasticsearch configuration, and a cron job to automate it all:
 
--  https://github.com/Security-Onion-Solutions/security-onion/wiki/Elasticsearch#snapshots
+-  `<Elasticsearch#snapshots>`__
 -  https://www.elastic.co/guide/en/elasticsearch/client/curator/current/snapshot.html

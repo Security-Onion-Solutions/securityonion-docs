@@ -99,7 +99,7 @@ you can run sosetup:
 If you would like to install on your own preferred flavor of Ubuntu
 14.04, you can follow steps 1-11 here:
 
-https://github.com/Security-Onion-Solutions/security-onion/wiki/InstallingOnUbuntu
+`<InstallingOnUbuntu>`__
 
 Then run:
 

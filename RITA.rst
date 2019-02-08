@@ -32,7 +32,7 @@ Additionally, RITA currently only supports use of Bro logs in TSV
 format. If you ware running the latest version of Security Onion, you
 will need to switch from JSON to TSV format by following the steps here:
 
-https://github.com/Security-Onion-Solutions/security-onion/wiki/Bro#tsv
+`<Bro#tsv>`__
 
 Installation
 ------------
