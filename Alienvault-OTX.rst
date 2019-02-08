@@ -40,7 +40,9 @@ We can test our configuration by adding another piece of intel to the
 end of ``/opt/bro/share/bro/policy/bro-otx/otx.dat``.
 
 | Ex:
-| ``google.com[literal tab]Intel::DOMAIN[literal tab]Test-Google-Intel[literal tab]https://google.com[literal tab]T``
+::
+
+   google.com[literal tab]Intel::DOMAIN[literal tab]Test-Google-Intel[literal tab]https://google.com[literal tab]T
 
 As long as our syntax is correct, we should not need to restart Bro. We
 can check for errors in ``/nsm/bro/logs/current/reporter.log``.
