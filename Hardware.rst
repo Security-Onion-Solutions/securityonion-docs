@@ -123,100 +123,17 @@ for detailed deployment scenarios.
 Forward Node (Sensor)
 ---------------------
 
-A forward node runs sensor components only, and forwards metadata to the
-master server. All PCAP stays local to the sensor, and is accessed
-through use of an agent.
+A forward node runs sensor components only, and forwards metadata to the master server. All PCAP stays local to the sensor, and is accessed through use of an agent.
 
-+------+------+
-| Reso | Desc |
-| urce | ript |
-|      | ion  |
-+======+======+
-| CPU  | Used |
-|      | for  |
-|      | anal |
-|      | yzin |
-|      | g    |
-|      | and  |
-|      | stor |
-|      | ing  |
-|      | netw |
-|      | ork  |
-|      | traf |
-|      | fic. |
-|      | As   |
-|      | moni |
-|      | tore |
-|      | d    |
-|      | band |
-|      | widt |
-|      | h    |
-|      | incr |
-|      | ease |
-|      | s,   |
-|      | a    |
-|      | grea |
-|      | ter  |
-|      | amou |
-|      | nt   |
-|      | of   |
-|      | CPU  |
-|      | will |
-|      | be   |
-|      | requ |
-|      | ired |
-|      | .    |
-|      | See  |
-|      | belo |
-|      | w.   |
-+------+------+
-| RAM  | Used |
-|      | for  |
-|      | writ |
-|      | e    |
-|      | cach |
-|      | e    |
-|      | and  |
-|      | proc |
-|      | essi |
-|      | ng   |
-|      | traf |
-|      | fic. |
-+------+------+
-| Disk | Used |
-|      | for  |
-|      | stor |
-|      | age  |
-|      | of   |
-|      | PCAP |
-|      | and  |
-|      | meta |
-|      | data |
-|      | .    |
-|      | A    |
-|      | larg |
-|      | er   |
-|      | amou |
-|      | nt   |
-|      | of   |
-|      | stor |
-|      | age  |
-|      | allo |
-|      | ws   |
-|      | for  |
-|      | a    |
-|      | long |
-|      | er   |
-|      | rete |
-|      | ntio |
-|      | n    |
-|      | peri |
-|      | od   |
-+------+------+
+========  ===========
+Resource  Description
+========  ===========
+CPU       Used for analyzing and storing network traffic. As monitored bandwidth increases, a greater amount of CPU will be required . See below.
+RAM       Used for write cache and processing traffic.
+Disk      Used for storage of PCAP and metadata . A larger amount of storage allows for a longer retention period.
+========  ===========
 
-Please refer to our `Architecture
-Page <Elastic-Architecture>`__
-for detailed deployment scenarios.
+Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Heavy Node (Sensor with ES components)
 --------------------------------------
