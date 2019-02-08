@@ -91,7 +91,7 @@ Optional
 -  | *Optional:* add new Sguil user accounts with the following:
    | ``sudo so-user-add``
 
--  *Optional*, but highly recommended: configure `Email <email>`__ for
+-  *Optional*, but highly recommended: configure `Email <Email>`__ for
    alerting and reporting.
 
 -  | *Optional:* place ``/etc`` under version control. If your
@@ -103,9 +103,7 @@ Optional
 
 -  | *Optional:* need “remote desktop” access to your Security Onion
      sensor or server? We recommend SSH X-Forwarding as shown above, but
-     if you want something more rdp-like, you can install
-     `FreeNX <FreeNX>`__
-     or xrdp (please note we do NOT support either of these):
+     if you want something more rdp-like, you can install xrdp:
    | ``sudo apt-get install xrdp``
 
 Learn More

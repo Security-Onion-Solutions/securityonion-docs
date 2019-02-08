@@ -52,9 +52,13 @@ make sure it is working as expected.
 
 -  **Snort Rule**
 
-   ``alert tcp any any -> any any (msg: "Security Onion - testing"; content: "SecurityOnion"; nocase; sid:1234567;)``
+::
 
-   (Run ``rule-update`` after adding)
+   alert tcp any any -> any any (msg: "Security Onion - testing"; content: "SecurityOnion"; nocase; sid:1234567;)
+
+::
+
+   (Run ``sudo rule-update`` after adding)
 
 -  **Scapy**
 
@@ -239,23 +243,34 @@ on the master server, where sguild (the Sguil server) runs. The steps
 below outline an example of this:
 
 -  | Stop the Sguil server:
-   | ``sudo so-sguild-stop``
+::
+
+   sudo so-sguild-stop
 
 -  | List the top twenty signatures (descending) pertaining to
      uncategorized alerts (with a status of ``0``):
-   | ``sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'``
+::
+
+   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'
 
 -  | Update any records (to have a status value of ``1``) with a
      signature that contains the text ``ET INFO``:
-   | ``sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e "UPDATE event SET status=1, last_modified='2018-06-27 01:00:00', last_uid='sguil' WHERE event.status='0' and event.signature LIKE '%ET INFO%';"``
+::
+
+   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e "UPDATE event SET status=1, last_modified='2018-06-27 01:00:00', last_uid='sguil' WHERE event.status='0' and event.signature LIKE '%ET INFO%';"
 
 -  | Check again to see if our alerts have been categorized as
      ``acknowledged`` ( these should no longer be visible in the
      output):
-   | ``sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'``
+::
+
+   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'
+
 
 -  | Bring the Sguil server back up:
-   | ``sudo so-sguild-start``
+::
+
+   sudo so-sguild-start
 
 | Adapted from:
 | https://taosecurity.blogspot.com/2013/02/recovering-from-suricata-gone-wild.html
