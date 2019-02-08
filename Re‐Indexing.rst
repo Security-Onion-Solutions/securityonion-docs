@@ -1,5 +1,5 @@
-Introduction
-============
+Re-Indexing
+===========
 
 When changing mappings or index settings, we may need to re-index the
 existing indices to ensure there are no mapping conflicts.
@@ -8,9 +8,6 @@ One way to do this by using the following **experimental** example
 script:
 
 https://raw.githubusercontent.com/weslambert/securityonion-elastic-misc/master/so-elastic-reindex
-
-Re-Indexing
-===========
 
 Pull down the script to your Security Onion box:
 

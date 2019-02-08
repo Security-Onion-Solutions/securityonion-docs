@@ -20,7 +20,8 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
    generate a random password later):
    ``echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections``
 #. Clean apt list repository:
-   ``sudo rm -rf /var/lib/apt/lists/*``\ 
+   ``sudo rm -rf /var/lib/apt/lists/*``
+#. Update package list:
    ``sudo apt-get update``
 #. Install software-properties-common if necessary:
    ``sudo apt-get -y install software-properties-common``
@@ -38,6 +39,5 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
 #. Follow the prompts.
 #. Analyze alerts using the Sguil client, or open a browser to
    https://localhost where you can access ``Squert`` and ``Kibana``.
-#. Follow the `upgrade <Upgrade>`__ process.
 
 Please review the `PostInstallation <PostInstallation>`__ page.

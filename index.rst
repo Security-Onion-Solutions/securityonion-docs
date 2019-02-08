@@ -10,6 +10,9 @@ Security Onion Documentation
    Hardware
    Release-Notes
    Installation
+   QuickISOImage
+   InstallingOnUbuntu
+   ProductionDeployment
    PostInstallation
    TimeZones
    Services
@@ -90,6 +93,7 @@ Security Onion Documentation
    Elastalert-Fields
    Beats
    ELSA-to-Elastic
+   Re‐Indexing
 
 .. _customizing:
 
@@ -129,19 +133,21 @@ Security Onion Documentation
    :maxdepth: 2
    :caption: Tricks and Tips
 
+   Airgapped-Networks
    Analyst-VM
+   Automating-Setup
    Best-Practices
    CloudClient
-   Salt
-   Automating-Setup
-   MetaPackages
+   ConnectingtoSguil
+   Desktop
    DNSAnomalyDetection
    ICMP-Anomaly-Detection
-   ConnectingtoSguil
+   MetaPackages
    Pcaps
    RemovingASensor
-   Airgapped-Networks
-   Desktop
+   Salt
+   SensorStopsSeeingTraffic
+   SSH
 
 .. _integrations:
 
@@ -171,7 +177,9 @@ Security Onion Documentation
    Passwords
    MailingLists
    TeamMembers
+   Secure-Boot
    Security
+   TroubleBooting
 
 .. _other:
 
@@ -180,32 +188,6 @@ Security Onion Documentation
    :caption: Other
 
    DirectoryStructure
+   Links
    Tools
    so-import-pcap
-
-.. _old:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Old
-
-.. _remaining:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Remaining
-
-   Links
-   MySQLUpdates
-   OSSECalertsToELSA
-   OSSEC
-   ProjectHome
-   README.md
-   README
-   Re‐Indexing
-   Roadmap
-   Secure-Boot
-   SensorStopsSeeingTraffic
-   SSH
-   TroubleBooting
-   VLAN-Traffic
