@@ -38,6 +38,10 @@ RAM       Used for Logstash, Elasticsearch, disk cache for Lucene, Snort/Suricat
 Disk      Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 ========  ===========
 
+- CPU: Used to parse incoming events, index incoming events, search metatadata, capture PCAP, analyze packets, and run the frontend components. As data and event consumption increases, a greater amount of CPU will be required.
+- RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, Snort/Suricata, Bro, Sguil, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
+- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
+
 Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Master server with local log storage
