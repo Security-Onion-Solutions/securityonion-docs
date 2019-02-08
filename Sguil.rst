@@ -73,12 +73,11 @@ Customize (Sguil client)
 -  You can separate realtime alerts into separate panes, based on
    severity level, by editing ``/etc/sguil/sguil.conf`` as follows:
 
-| \`\`\`
-| #Number of RealTime Event Panes
-| #set RTPANES 1
-| set RTPANES 3
-
 ::
+
+    #Number of RealTime Event Panes
+    #set RTPANES 1
+    set RTPANES 3
 
     # Specify which priority events go into what pane   
     # According to the latest classification.config from snort,   
@@ -91,6 +90,6 @@ Customize (Sguil client)
 
 DNS Lookups 
 -----------
-Previously, when pivoting to transcript, the Sguil server would perform DNS lookups on the source and destination IP addresses.  That default has since been changed to increase performance and avoid unnecessary information leakage.  If you would like to re-enable DNS lookups, you can set the following in `/etc/nsm/securityonion/sguild.conf`:``
-| set TRANSCRIPT\_DNS\_LOOKUP 1
-| \`\`\`
+Previously, when pivoting to transcript, the Sguil server would perform DNS lookups on the source and destination IP addresses.  That default has since been changed to increase performance and avoid unnecessary information leakage.  If you would like to re-enable DNS lookups, you can set the following in `/etc/nsm/securityonion/sguild.conf`:
+
+`set TRANSCRIPT_DNS_LOOKUP 1`
