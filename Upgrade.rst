@@ -4,34 +4,25 @@ Updating
 ``soup`` - Security Onion UPdate
 --------------------------------
 
-We recommend using our ``soup`` script to update. ``Soup`` will
-automatically install **all** available package updates (from both
-Ubuntu and Security Onion) and **all** updated Docker images.
+We recommend using our ``soup`` script to update. ``Soup`` will automatically install **all** available package updates (from both Ubuntu and Security Onion) and **all** updated Docker images.
 
 ::
 
     sudo soup
 
-Please pay attention to the output of this command as it may request
-that you take specific action, such as manually restarting services.
-Also refer to the relevant blog entry for the update as there may be
-additional information there: https://blog.securityonion.net
+Please pay attention to the output of this command as it may request that you take specific action, such as manually restarting services. Also refer to the relevant blog entry for the update as there may be additional information there: https://blog.securityonion.net
 
 Snort/Suricata
 --------------
 
-Snort package upgrades will back up each of your existing snort.conf
-files to snort.conf.bak and migrate your HOME\_NET and EXTERNAL\_NET
-variables.
+Snort package upgrades will back up each of your existing snort.conf files to snort.conf.bak and migrate your ``HOME_NET`` and ``EXTERNAL_NET`` variables.
 
-Suricata package upgrades will back up each of your existing
-suricata.yaml files to suricata.yaml.bak and migrate your HOME\_NET and
-EXTERNAL\_NET variables.
+Suricata package upgrades will back up each of your existing suricata.yaml files to suricata.yaml.bak and migrate your ``HOME_NET`` and ``EXTERNAL_NET`` variables.
 
 You'll then need to do the following:
 
--  re-apply any other local customizations to your
-   snort.conf/suricata.yaml file(s)
+-  re-apply any other local customizations to your ``snort.conf``/``suricata.yaml`` file(s)
+
 -  update ruleset and restart Snort/Suricata as follows:
 
    ::
@@ -41,13 +32,24 @@ You'll then need to do the following:
 Bro
 ---
 
-Bro package upgrades will attempt to migrate your Bro config. You should
-double-check your config and see if there are any local customizations
-that you need to manually re-apply. Then restart Bro as follows:
+Bro package upgrades will attempt to migrate your Bro config. You should double-check your config and see if there are any local customizations that you need to manually re-apply. Then restart Bro as follows:
 
 ::
 
     sudo so-bro-restart
+
+Wazuh
+-----
+
+Wazuh package upgrades will back up your ossec.conf and put the new ossec.conf in place.  You'll then need to do the following:
+
+-  re-apply any other local customizations to your ``ossec.conf`` file(s)
+
+-  restart Wazuh as follows:
+
+   ::
+
+       sudo so-ossec-restart
 
 MySQL
 -----
@@ -64,12 +66,7 @@ upgrade your `HWE stack <HWE>`__.
 Initiating an update over SSH
 -----------------------------
 
-If you're updating your Security Onion box over an SSH connection and
-your connection drops, then your update process may be left in an
-inconsistent state. It is therefore recommended to run ``byobu`` so that
-your session will continue to run on the Security Onion box even if your
-connection drops. ``Byobu`` is very handy and we recommend running it
-all the time to avoid forgetting about it before an update.
+If you're updating your Security Onion box over an SSH connection and your connection drops, then your update process may be left in an inconsistent state. It is therefore recommended to run ``byobu`` so that your session will continue to run on the Security Onion box even if your connection drops. ``Byobu`` is very handy and we recommend running it all the time to avoid forgetting about it before an update.
 
 ::
 
@@ -87,12 +84,7 @@ all the time to avoid forgetting about it before an update.
 Distributed deployments
 -----------------------
 
-If you have a distributed deployment with a master server and separate
-sensor boxes and/or storage nodes, always update the master server first
-before updating other boxes. Then make sure to update the remaining
-boxes shortly thereafter. This will help to ensure that all boxes in
-your deployment are running the same code versions and help to avoid any
-incompatibilities.
+If you have a distributed deployment with a master server and separate sensor boxes and/or storage nodes, always update the master server first before updating other boxes. Then make sure to update the remaining boxes shortly thereafter. This will help to ensure that all boxes in your deployment are running the same code versions and help to avoid any incompatibilities.
 
 Using ``salt`` and ``soup`` to Update your entire Deployment
 ------------------------------------------------------------
@@ -103,34 +95,20 @@ soup <Salt#using-salt-to-install-updates-across-your-entire-deployment>`__
 Standard Ubuntu package management tools
 ----------------------------------------
 
-The ``soup`` command described above is the recommended method to
-install updates. If you instead choose to use standard Ubuntu package
-management tools to install updates, there are some caveats to be aware
-of:
+The ``soup`` command described above is the recommended method to install updates. If you instead choose to use standard Ubuntu package management tools to install updates, there are some caveats to be aware of:
 
--  Docker - Ubuntu package management tools don't update our Docker
-   images (used for the Elastic Stack currently)
+-  Docker - Ubuntu package management tools don't update our Docker images (used for the Elastic Stack currently)
 
--  MySQL - if you've already run Setup, please see the `recommended
-   procedure for updating the MySQL packages <MySQLUpdates>`__.
+-  MySQL - if you've already run Setup, please see the `recommended procedure for updating the MySQL packages <MySQLUpdates>`__.
 
--  | PF\_RING and new kernel packages
-   | You may be prompted to update your kernel packages and PF\_RING at
-     the same time. If you do so, the PF\_RING kernel module may get
-     built for your current kernel and not for the newly installed
-     kernel and upon reboot services will fail. To avoid this, you
-     should install just the PF\_RING kernel module by itself and then
-     install the kernel and any other remaining package updates. Here's
-     a one-liner that will do that:
+-  | PF_RING and new kernel packages
+   | You may be prompted to update your kernel packages and PF_RING at the same time. If you do so, the PF_RING kernel module may get built for your current kernel and not for the newly installed kernel and upon reboot services will fail. To avoid this, you should install just the PF_RING kernel module by itself and then install the kernel and any other remaining package updates. Here's a one-liner that will do that:
 
    ::
 
        sudo apt-get update ; sudo apt-get install securityonion-pfring-module ; sudo apt-get dist-upgrade
 
-   If you accidentally install both the kernel and PF\_RING packages at
-   the same time and then reboot and find out that PF\_RING services
-   (Snort and Suricata) are failing, you can reinstall the
-   ``securityonion-pfring-module`` package:
+   If you accidentally install both the kernel and PF_RING packages at the same time and then reboot and find out that PF_RING services (Snort and Suricata) are failing, you can reinstall the ``securityonion-pfring-module`` package:
 
    ::
 
