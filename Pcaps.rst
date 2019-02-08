@@ -13,7 +13,15 @@ Links
 
 -  http://www.netresec.com/?page=PcapFiles
 
+-  http://www.netresec.com/?page=MACCDC
+
 -  https://github.com/bro/bro/tree/master/testing/btest/Traces
+
+-  http://www.ll.mit.edu/mission/communications/cyber/CSTcorpora/ideval/data/
+
+-  https://wiki.wireshark.org/SampleCaptures
+
+-  https://stratosphereips.org/category/dataset.html
 
 -  http://old.honeynet.org/scans/
 
@@ -23,8 +31,6 @@ Links
 
 -  https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Public_Data_Sets
 
--  http://wiki.wireshark.org/SampleCaptures#Sample_Captures
-
 -  http://forensicscontest.com/puzzles
 
 -  https://www.evilfingers.com/repository/pcaps.php
@@ -33,21 +39,16 @@ Links
 
 -  https://github.com/markofu/hackeire/tree/master/2011/pcap
 
--  http://www.defcon.org/html/links/dc-ctf.html (You have to follow some
-   of the links, which redirect to competitor blogs but there's lots of
-   goodness).
+-  http://www.defcon.org/html/links/dc-ctf.html 
+
 -  https://archive.wrccdc.org/
+
 -  https://github.com/chrissanders/packets
--  https://github.com/bro/bro/tree/master/testing/btest/Traces
 
 tcpreplay
 ---------
 
-| You can use ``tcpreplay`` to replay any of these pcaps on your
-  Security Onion sensor. For example, please see
-| `here <http://blog.securityonion.net/2011/01/introduction-to-sguil-and-squert-part-3.html>`__
-  for a quick, easy use-case and what you should see in the Sguil
-  console.
+You can use ``tcpreplay`` to replay any of these pcaps on your Security Onion sensor. For example, please see http://blog.securityonion.net/2011/01/introduction-to-sguil-and-squert-part-3.html for a quick, easy use-case and what you should see in the Sguil console.
 
 so-replay
 ---------
