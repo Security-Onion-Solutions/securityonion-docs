@@ -74,7 +74,7 @@ Forward Node (Sensor)
 
 A forward node runs sensor components only, and forwards metadata to the master server. All PCAP stays local to the sensor, and is accessed through use of an agent.
 
-- CPU: Used for analyzing and storing network traffic. As monitored bandwidth increases, a greater amount of CPU will be required . See below.
+- CPU: Used for analyzing and storing network traffic. As monitored bandwidth increases, a greater amount of CPU will be required. See below.
 - RAM: Used for write cache and processing traffic.
 - Disk: Used for storage of PCAP and metadata . A larger amount of storage allows for a longer retention period.
 
