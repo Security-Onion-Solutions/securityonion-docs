@@ -198,8 +198,7 @@ Setup" or "Quick Setup." For this purpose, we'll use "Quick Setup" which
 will automatically configure most of your system to monitor one network
 interface. You'll first be asked "Which network interface should snort
 listen on?" Choose "eth1." You'll then be prompted for usernames and
-passwords for Sguil, Squert, ELSA and Snorby and whether or not you want
-to enable ELSA and that's it. "Advanced Setup" lets you specify whether
+passwords for Sguil, Squert, and Kibana. "Advanced Setup" lets you specify whether
 the Security Onion instance will be running as a Server, Sensor or in
 Standalone mode, which IDS engine you'd prefer (Snort or Suricata), how
 many CPU cores you want to assign to Snort/Suricata and Bro IDS, which
@@ -210,12 +209,11 @@ with the changes!" and Security Onion Setup will do the following:
 -  Set the OS timezone to UTC;
 -  Delete any existing NSM data/configuration;
 -  Create a Sguil server and user;
--  Create a Snorby user;
--  Configure Snort and Bro to monitor interface eth0;
+-  Configure Snort and Bro to monitor your selected sniffing interface;
 -  Run a single IDS process per interface;
 -  Run a single Bro process per interface; and
--  Configure ELSA as both a Log Node and Web Node.
-   It will take a minute for the setup to complete, but trust me it's a
+-  Configure the Elastic Stack.
+   It will take a few minutes for the setup to complete, but trust me it's a
    lot less time than it would take if you didn't have Security Onion
    guiding the way.
 
@@ -227,9 +225,8 @@ cover here in more detail as a future reference.
    documents changes to the system and details about what occurred
    during the setup process. If you have any suspicions that some part
    of the setup failed, this should be your first stop.
--  "You may view IDS alerts using Sguil, Squert, Snorby or ELSA (if
-   enabled)" - Sguil is a client application while Squert, Snorby and
-   ELSA are web interfaces.
+-  "You may view IDS alerts using Sguil, Squert, or Kibana (if
+   enabled)" - Sguil is a client application while Squert and Kibana are web interfaces.
 -  "Bro logs can be found in ELSA (if enabled) and the following
    location: /nsm/bro/" - Bro logs are rotated on an hourly basis and
    provide a wealth of information about the network being monitored,
@@ -311,9 +308,8 @@ deployment with the command "sudo sostat \| less" to review and monitor
 all aspects of Security Onion. It includes
 nsm\_server\|sensor\_ps-status results, network interface status, disk
 usage, network sockets, IDS rule update status, CPU usage, log archive
-size, IDS engine packet drops, pf\_ring stats, Sguil uncategorized
-events and summaries, top 50 URLs for previous day, and Snorby events
-and summaries. It provides powerful visibility into the health of
+size, IDS engine packet drops, pf\_ring stats, and Sguil uncategorized
+events and summaries. It provides powerful visibility into the health of
 Security Onion and should be adopted as part of your monitoring routine.
 
 If everything looks ok, we can quickly test Sguil and Snort/Suricata
@@ -412,10 +408,7 @@ Right-click the file and choose "Open folder" and you now have the file
 that triggered the alert. From here you can scan a copy of the file with
 whatever endpoint security product you use to see if it might have been
 detected or submit the file or check it's MD5 hash with VirusTotal to
-identify what security vendors might be detecting it. You could also use
-a CIF (Collective Intelligence Framework) server to check the MD5
-against known threats based on community intel. Or you might look into
-Cuckoo Sandbox or Razorback as an option for local automated analysis.
+identify what security vendors might be detecting it.
 
 The choice is yours but the options are available. Lack of financial
 support for network security monitoring is no longer excusable in
