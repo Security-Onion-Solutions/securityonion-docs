@@ -1,7 +1,7 @@
 Cheat Sheet
 ===========
 
-Click on the image below to view a larger version or `click here for the PDF version <https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/cheat-sheet/Security-Onion-Cheat-Sheet.jpg>`__:
+Click on the image below to view a larger version or `click here for the PDF version <https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/cheat-sheet/Security-Onion-Cheat-Sheet.pdf>`__:
 
 .. image:: images/cheat-sheet/Security-Onion-Cheat-Sheet.jpg
    :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/cheat-sheet/Security-Onion-Cheat-Sheet.jpg
