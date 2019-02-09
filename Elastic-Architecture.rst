@@ -6,6 +6,9 @@ Below are several diagrams to represent the current architecture and deployment 
 High-Level Architecture Diagram
 -------------------------------
 
+.. image:: images/elastic-architecture/elastic-architecture.png
+   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/elastic-architecture.png
+
 Core Components
 ---------------
 
