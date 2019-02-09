@@ -68,26 +68,17 @@ Please see our `HWE <HWE>`__ page.
 Why does my VMware image rename ``eth0`` to ``eth1``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Usually this happens when you clone a VM. VMware asks if you moved it
-  or copied it. If you select "copied", it will change the MAC address
-  to avoid duplication. At the next boot, Ubuntu's udev will see a new
-  MAC address and create a new network interface (eth1). To fix this:
-| sudo rm /etc/udev/rules.d/70-persistent-net.rules
-| sudo reboot
-| 
+Usually this happens when you clone a VM. VMware asks if you moved it or copied it. If you select "copied", it will change the MAC address to avoid duplication. At the next boot, Ubuntu's udev will see a new MAC address and create a new network interface (eth1). To fix this:
 
-How do I get Security Onion to recognize more than 4GB of RAM?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you have a 64-bit machine, use our 64-bit ISO image or use a 64-bit
-version of Ubuntu.
+::
+  
+   sudo rm /etc/udev/rules.d/70-persistent-net.rules
+   sudo reboot
 
 Can I run Security Onion on Raspberry Pi or some other non-x86 box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No, we only support x86 and x86-64 architectures. Please see the
-`hardware <Hardware#32-bit-vs-64-bit>`__
-page.
+No, we only support x86 and x86-64 architectures. Please see the `hardware <Hardware#32-bit-vs-64-bit>`__ page.
 
 What's the difference between a ``server`` and a ``sensor``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
