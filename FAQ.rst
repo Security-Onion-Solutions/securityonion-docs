@@ -15,7 +15,7 @@ FAQ
 | 
 | 
 
-### Install / Update / Upgrade
+Install / Update / Upgrade
 ------------------------------
 
 Why won't the ISO image boot on my machine?
@@ -54,23 +54,6 @@ Why do I get ``Snort/Suricata/Bro`` errors after upgrading the ``kernel`` and ``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `Updating <Upgrade>`__
-
-I recently updated ``barnyard`` and now I'm not getting any ``Snort`` alerts.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Some users running the Snort engine with the Snort Subscriber (Talos)
-ruleset are experiencing barnyard2 failing with errors like
-``Returned signature_id is not equal to updated signature_id``. This is
-due to some wrong entries in the database left by the previous version
-of barnyard2. One of the barnyard2 developers wrote a MySQL script to
-fix these entries and I've packaged it into a shell script called
-``so-snorby-fix-sigs`` and included it in the ``rule-update`` package.
-If you're running the Snort engine with the Snort Subscriber (Talos)
-ruleset, please run ``so-snorby-fix-sigs`` and follow the directions
-(including shutting down all barnyard2 instances before proceeding with
-the database changes).
-
-http://blog.securityonion.net/2014/06/new-securityonion-rule-update-package.html
 
 What do I need to do if I'm behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,7 +140,7 @@ What's the difference between a ``server`` and a ``sensor``?
 | 
 | 
 
-### Users / Passwords
+Users / Passwords
 ---------------------
 
 What is the password for ``root/mysql/Sguil/Squert/Kibana``?
@@ -174,7 +157,7 @@ How do I add a new user account for logging into Sguil/Squert/Kibana?
 | 
 | 
 
-### Support / Help
+Support / Help
 ------------------
 
 Where do I send questions/problems/suggestions?
@@ -198,7 +181,7 @@ Is commercial support available for Security Onion?
 | 
 | 
 
-### Error messages
+Error messages
 ------------------
 
 Why does rule-update fail with Error 400 when running behind a proxy?
@@ -375,7 +358,7 @@ Why does soup tell me I need a Secure Boot key?
 | 
 | 
 
-### IPS/IDS engines
+IPS/IDS engines
 -------------------
 
 I'm currently running ``Snort``. How do I switch to ``Suricata``?
@@ -416,7 +399,7 @@ Can Security Onion run in ``IPS`` mode?
 | 
 | 
 
-### Security Onion internals
+Security Onion internals
 ----------------------------
 
 Where can I read more about the tools contained within Security Onion?
@@ -465,7 +448,7 @@ Why do apt-get and the Update Manager show ``tcl8.5 as held back``?
 | 
 | 
 
-### Tuning
+Tuning
 ----------
 
 What do I need to tune if I'm monitoring VLAN tagged traffic?
@@ -580,7 +563,7 @@ I'm running Security Onion in a VM and the screensaver is using lots of CPU. How
 | 
 | 
 
-### ``sostat`` output
+``sostat`` output
 ---------------------
 
 What does it mean if ``sostat`` show a high number of ``Sguil Uncategorized Events``?
@@ -618,7 +601,7 @@ What does it mean if ``sostat`` show a high number of ``Sguil Uncategorized Even
 | 
 | 
 
-### Miscellaneous
+Miscellaneous
 -----------------
 
 Where can I find the version information for Security Onion?
