@@ -15,9 +15,9 @@ Please pay attention to the output of this command as it may request that you ta
 Snort/Suricata
 --------------
 
-Snort package upgrades will back up each of your existing snort.conf files to snort.conf.bak and migrate your ``HOME_NET`` and ``EXTERNAL_NET`` variables.
+Snort package upgrades will back up each of your existing ``snort.conf`` files to ``snort.conf.bak`` and migrate your ``HOME_NET`` and ``EXTERNAL_NET`` variables.
 
-Suricata package upgrades will back up each of your existing suricata.yaml files to suricata.yaml.bak and migrate your ``HOME_NET`` and ``EXTERNAL_NET`` variables.
+Suricata package upgrades will back up each of your existing ``suricata.yaml`` files to ``suricata.yaml.bak`` and migrate your ``HOME_NET`` and ``EXTERNAL_NET`` variables.
 
 You'll then need to do the following:
 
@@ -41,7 +41,7 @@ Bro package upgrades will attempt to migrate your Bro config. You should double-
 Wazuh
 -----
 
-Wazuh package upgrades will back up your ossec.conf and put the new ossec.conf in place.  You'll then need to do the following:
+Wazuh package upgrades will back up your ``ossec.conf`` and put the new ``ossec.conf`` in place.  You'll then need to do the following:
 
 -  re-apply any other local customizations to your ``ossec.conf`` file(s)
 
@@ -54,14 +54,12 @@ Wazuh package upgrades will back up your ossec.conf and put the new ossec.conf i
 MySQL
 -----
 
-If you get any errors relating to MySQL, please see
-`MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__.
+If you get any errors relating to MySQL, please see `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__.
 
 HWE
 ---
 
-If you're running an older 14.04 release, you may need to manually
-upgrade your `HWE stack <HWE>`__.
+If you're running an older 14.04 release, you may need to manually upgrade your `HWE stack <HWE>`__.
 
 Initiating an update over SSH
 -----------------------------
