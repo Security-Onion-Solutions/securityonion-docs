@@ -3,14 +3,14 @@ FAQ
 
 | 
 | 
-| `Install / Update / Upgrade <#update>`__\ 
-| `Users / Passwords <#passwords>`__\ 
-| `Support / Help <#support>`__\ 
-| `Error messages <#errors>`__\ 
-| `IPS/IDS engines <#engines>`__\ 
-| `Security Onion internals <#internals>`__\ 
+| `Install / Update / Upgrade <#install-update-upgrade>`__\ 
+| `Users / Passwords <#users-passwords>`__\ 
+| `Support / Help <#support-help>`__\ 
+| `Error messages <#error-messages>`__\ 
+| `IPS/IDS engines <#ips-ids-engines>`__\ 
+| `Security Onion internals <#security-onion-internals>`__\ 
 | `Tuning <#tuning>`__\ 
-| `sostat output <#sostat>`__\ 
+| `sostat output <#sostat-output>`__\ 
 | `Miscellaneous <#miscellaneous>`__\ 
 | 
 | 
