@@ -318,15 +318,14 @@ extraneous files. Remove any extraneous files and restart pcap\_agent:
 
     sudo so-pcap-agent-restart
 
-I'm running the Security Onion 12.04.5 ISO image and Chromium crashes and/or displays a black screen.
+Why does Chromium display a black screen and/or crash?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is a known issue with certain versions of VMware. You can either:
 
 -  go into the VM configuration and disable 3D in the video adapter
    OR
--  upgrade the VM hardware level (may require upgrading to a new version
-   of VMware)
+-  upgrade the VM hardware level (may require upgrading to a new version of VMware)
 
 Why does Bro log ``Failed to open GeoIP database`` and ``Fell back to GeoIP Country database``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -426,8 +425,7 @@ storage so that you avoid filling the disk to 100% between purges.
 I just rebooted and it looks like the services aren't starting automatically.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``/etc/init/securityonion.conf`` waits 60 seconds after boot to ensure
-network interfaces are fully initialized before starting services.
+Older versions of Security Onion waited 60 seconds after boot to ensure network interfaces are fully initialized before starting services.  Starting in 16.04, services should start automatically as soon as network interfaces are initialized.
 
 Why do apt-get and the Update Manager show ``tcl8.5 as held back``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -598,9 +596,7 @@ Miscellaneous
 Where can I find the version information for Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-With regard to Security Onion 16.04, if the machine was built with the
-Security Onion 16.04 ISO image, version information can be found in
-``/etc/PinguyBuilder.conf``.
+If the machine was built with the Security Onion 16.04 ISO image, version information can be found in ``/etc/PinguyBuilder.conf``.
 
 Where can I find interesting pcaps to replay?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -615,12 +611,7 @@ Why is Security Onion connecting to an IP address on the Internet over port 123?
 Should I backup my Security Onion box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Network Security Monitoring as a whole is considered "best effort". It
-is not a "mission critical" resource like a file server or web server.
-Since we're dealing with "big data" (potentially terabytes of full
-packet capture), backups would be prohibitively expensive. Most
-organizations don't do any backups and instead just rebuild boxes when
-necessary.
+Network Security Monitoring as a whole is considered "best effort". It is not a "mission critical" resource like a file server or web server. Since we're dealing with "big data" (potentially terabytes of full packet capture), backups would be prohibitively expensive. Most organizations don't do any backups and instead just rebuild boxes when necessary.
 
 How can I add and test local rules?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -630,12 +621,13 @@ How can I add and test local rules?
 Where can I get the source code?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| You can download the full source code for any of our packages like
-  this:
-| apt-get source PACKAGE-NAME
-| 
-| where ``PACKAGE-NAME`` is usually something like
-  ``securityonion-snort``. Here's a list of all of our packages:
+You can download the full source code for any of our packages like this:
+
+::
+
+   apt-get source PACKAGE-NAME
+
+where ``PACKAGE-NAME`` is usually something like ``securityonion-snort``. Here's a list of all of our packages:
 | https://launchpad.net/~securityonion/+archive/stable
 
 How can I remote control my Security Onion box?
@@ -645,15 +637,15 @@ How can I remote control my Security Onion box?
 | "ssh -X" - any program started in the SSH session will be displayed on
   your local desktop (requires a local X server)
 | xrdp - sudo apt-get install xrdp - requires an rdp client
-| You can use FreeNX but we don't recommend or support it
 
 Why isn't Squert showing GeoIP data properly?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| If the Squert map is not showing the country for IPs, try running the
-  following:
-| sudo /usr/bin/php -e /var/www/so/squert/.inc/ip2c.php 0'/
-| 
+If the Squert map is not showing the country for IPs, try running the following:
+
+::
+
+   sudo /usr/bin/php -e /var/www/so/squert/.inc/ip2c.php 0'/
 
 Why do I get segfaults when booting on VMware ESX?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -682,10 +674,6 @@ install it manually:
 How do I perform "X" in Ubuntu?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Security Onion is based on Ubuntu, but we don't provide community
-  support for the Ubuntu OS itself. If you have questions about Ubuntu,
-  you should check the Ubuntu website, forums, and Google.
-| 
-| 
-| `back to top <#top>`__
-|
+Security Onion is based on Ubuntu, but we don't provide community support for the Ubuntu OS itself. If you have questions about Ubuntu, you should check the Ubuntu website, forums, and Google.
+
+`back to top <#top>`__
