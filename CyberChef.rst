@@ -25,7 +25,7 @@ Accessing
 
 To access CyberChef:
 
--  go to the main web page or your Security Onion master server and
+-  go to the main web page of your Security Onion master server and
    click the CyberChef hyperlink
    OR
 -  go directly to this URL (replacing ``SecurityOnion`` with the actual
