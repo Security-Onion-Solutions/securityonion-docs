@@ -90,7 +90,7 @@ Customize (Sguil client)
 
 DNS Lookups 
 -----------
-Previously, when pivoting to transcript, the Sguil server would perform DNS lookups on the source and destination IP addresses.  That default has since been changed to increase performance and avoid unnecessary information leakage.  If you would like to re-enable DNS lookups, you can set the following in `/etc/nsm/securityonion/sguild.conf`:
+Previously, when pivoting to transcript, the Sguil server would perform DNS lookups on the source and destination IP addresses.  That default has since been changed to increase performance and avoid unnecessary information leakage.  If you would like to re-enable DNS lookups, you can set the following in ``/etc/nsm/securityonion/sguild.conf``:
 
 ::
 
