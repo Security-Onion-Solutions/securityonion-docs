@@ -32,41 +32,40 @@ You'll want one or more interfaces dedicated to sniffing (no IP address). NIC of
 Sample ``/etc/network/interfaces``
 ----------------------------------
 
-.. raw:: html
+::
 
-   <pre><code>auto lo<br>
-   iface lo inet loopback<br>
-   <br>
-   # Management interface using DHCP (not recommended due to Bro issue described above)<br>
-   auto eth0<br>
-   iface eth0 inet dhcp<br>
-   <br>
-   # OR <br>
-   <br>
-   # Management interface using STATIC IP (instead of DHCP)<br>
-   auto eth0<br>
-   iface eth0 inet static<br>
-     address 192.168.1.14<br>
-     gateway 192.168.1.1<br>
-     netmask 255.255.255.0<br>
-     network 192.168.1.0<br>
-     broadcast 192.168.1.255<br>
-     # If running Security Onion 14.04, you'll need to configure DNS here<br>
-     dns-nameservers 192.168.1.1 192.168.1.2<br>
-   <br>
-   # AND one or more of the following<br>
-   <br>
-   # Connected to TAP or SPAN port for traffic monitoring<br>
-   auto eth1<br>
-   iface eth1 inet manual<br>
-     up ifconfig $IFACE -arp up<br>
-     up ip link set $IFACE promisc on<br>
-     down ip link set $IFACE promisc off<br>
-     down ifconfig $IFACE down<br>
-     post-up for i in rx tx sg tso ufo gso gro lro; do ethtool -K $IFACE $i off; done<br>
-     # If running Security Onion 14.04, you should also disable IPv6 as follows:<br>
-     post-up echo 1 &gt; /proc/sys/net/ipv6/conf/$IFACE/disable_ipv6<br>
-   </code></pre>
+   auto lo
+   iface lo inet loopback
+   
+   # Management interface using DHCP
+   auto eth0
+   iface eth0 inet dhcp
+   
+   # OR
+   
+   # Management interface using STATIC IP (instead of DHCP)
+   auto eth0
+   iface eth0 inet static
+     address 192.168.1.14
+     gateway 192.168.1.1
+     netmask 255.255.255.0
+     network 192.168.1.0
+     broadcast 192.168.1.255
+     # If running Security Onion 14.04, you'll need to configure DNS here
+     dns-nameservers 192.168.1.1 192.168.1.2
+   
+   # AND one or more of the following
+   
+   # Connected to TAP or SPAN port for traffic monitoring
+   auto eth1
+   iface eth1 inet manual
+     up ifconfig $IFACE -arp up
+     up ip link set $IFACE promisc on
+     down ip link set $IFACE promisc off
+     down ifconfig $IFACE down
+     post-up for i in rx tx sg tso ufo gso gro lro; do ethtool -K $IFACE $i off; done
+     # If running Security Onion 14.04, you should also disable IPv6 as follows:
+     post-up echo 1 &gt; /proc/sys/net/ipv6/conf/$IFACE/disable_ipv6
 
 You may also want to set the RX buffer size in the post-up command like this:
 
