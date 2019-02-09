@@ -73,18 +73,16 @@ Steps
    
        send(ip/tcp/payload)
 
--  Check sguil for the corresponding alert
+-  Check Sguil for the corresponding alert.
 
 -  You can see that we have an alert with the IP addresses we specified and the TCP ports we specified. If you right click on the **Alert ID** column you can select "Transcript" and verify the payload we sent.
 
--  You can learn more about snort and writing snort signatures from the `Snort Manual <http://manual.snort.org/node26.html>`__
+-  You can learn more about snort and writing snort signatures from the `Snort Manual <http://manual.snort.org/node26.html>`__.
 
 -  You can learn more about scapy at  `secdev.org <http://www.secdev.org/projects/scapy/>`__ and `itgeekchronicles.co.uk <http://itgeekchronicles.co.uk/2012/05/31/scapy-guide-the-release/>`__.
 
 MISP
 ----
 
-| If you would like to pull in NIDS rules from a MISP instance, please
-  see:
-| `MISP
-  Rules <MISP>`__
+| If you would like to pull in NIDS rules from a MISP instance, please see:
+| `MISP Rules <MISP>`__
