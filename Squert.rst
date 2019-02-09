@@ -16,7 +16,7 @@ From http://www.squertproject.org/:
 | Security Onion maintains its own fork of Squert:
 | https://blog.securityonion.net/2016/09/squert-development.html
 |
-|Squert is a PHP web interface to the `Sguil <Sguil>`__ database and works best with Chromium/Chrome browsers.
+| Squert is a PHP web interface to the `Sguil <Sguil>`__ database and works best with Chromium/Chrome browsers.
 
 Authentication
 --------------
