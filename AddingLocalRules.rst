@@ -55,7 +55,7 @@ Steps
 
 - Craft the layer 3 information  Since we specified port 7789 in our snort rule:
 
-   ::
+  ::
    
        tcp = TCP()
        tcp.dport = 7789
@@ -63,13 +63,13 @@ Steps
 
 - Set the playload:
 
-   ::
+  ::
    
        payload = "Toolsmith"
 
 - Use the / operator to compose our packet and transfer it with the send() method:
 
-   ::
+  ::
    
        send(ip/tcp/payload)
 
