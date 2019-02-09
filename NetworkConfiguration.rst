@@ -71,6 +71,7 @@ Sample ``/etc/network/interfaces``
 You may also want to set the RX buffer size in the post-up command like this:
 
 ::
+
    post-up ethtool -G $IFACE rx 4096; for i in rx tx sg tso ufo gso gro lro; do ethtool -K $IFACE $i off; done
 
 Note that 4096 is just an example and your NIC may have a different maximum rx size. To determine the maximum rx setting for your NIC:
