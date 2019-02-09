@@ -10,11 +10,11 @@ High-Level Architecture Diagram
 Core Components
 ---------------
 
-| **`Logstash <Logstash>`__**
+`Logstash <Logstash>`__
   - Parse and format logs.
-| **`Elasticsearch <Elasticsearch>`__**
+`Elasticsearch <Elasticsearch>`__
   - Ingest and index logs.
-| **`Kibana <Kibana>`__**
+`Kibana <Kibana>`__
   - Visualize ingested log data.
 
 Auxilliary Components
