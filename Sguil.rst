@@ -61,7 +61,7 @@ Customize (Sguil client)
 ------------------------
 
 -  resize columns by right-clicking on the column heading in the Sguil client.
--  change fonts by clicking File --> Change Font from within the Sguil client.
+-  change fonts by clicking ``File`` --> ``Change Font`` from within the Sguil client.
 -  Sguil client settings are stored in ``/etc/sguil/sguil.conf``:
 -  | You can enable "Show Rule", "Show Packet Data", and "Display
      Detail" (respectively) by setting the following (also see
