@@ -10,7 +10,7 @@ FAQ
 | `IPS/IDS engines <#engines>`__\ 
 | `Security Onion internals <#internals>`__\ 
 | `Tuning <#tuning>`__\ 
-| ```sostat`` output <#sostat>`__\ 
+| `sostat output <#sostat>`__\ 
 | `Miscellaneous <#miscellaneous>`__\ 
 | 
 | 
