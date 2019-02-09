@@ -36,6 +36,9 @@ Detailed Data Flow Diagram
 
 (click for larger version)
 
+.. image:: images/elastic-architecture/data-flow.png
+   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/data-flow.png
+
 Deployment Types
 ----------------
 
@@ -55,17 +58,26 @@ Distributed
 -  Recommended deployment type
 -  Consists of a master server, one or more forward nodes, and one or more storage nodes.
 
+.. image:: images/elastic-architecture/distributed.png
+   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/distributed.png
+
 Heavy Distributed
 ~~~~~~~~~~~~~~~~~
 
 -  Recommended only if a standard distributed deployment is not possible.
 -  Consists of a master server, and one or more heavy nodes.
 
+.. image:: images/elastic-architecture/heavy-distributed.png
+   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/heavy-distributed.png
+
 Standalone
 ~~~~~~~~~~
 
 -  Not recommended for monitoring high-throughput links
 -  Consists of a single server running master server components, sensor, and Elastic stack components.
+
+.. image:: images/elastic-architecture/standalone.png
+   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/standalone.png
 
 Node Types
 ----------
