@@ -30,20 +30,20 @@ Authentication
 Data Types
 ----------
 
--  NIDS alerts from Snort/Suricata (if snort\_agent is enabled)
--  HIDS alerts from OSSEC (if ossec\_agent is enabled)
+-  NIDS alerts from Snort/Suricata (if snort_agent is enabled)
+-  HIDS alerts from OSSEC (if ossec_agent is enabled)
 
 Pivot
 -----
 
 -  pivot to transcript/Wireshark/NetworkMiner by right-clicking the Alert ID.
 -  automatically pivot to ASCII transcript by middle-clicking the Alert ID.
--  pivot to Kibana by right-clicking an IP address and choosing "Kibana IP Lookup".
+-  pivot to Kibana by right-clicking an IP address and choosing ``Kibana IP Lookup``.
 
 Agents
 ------
 
-Because Sguil is written in tcl/tk, it can only utilize ``1024`` sockets for receiving communication from various sensor agents (ossec\_agent, pcap\_agent, snort\_agent). Due to this restriction, you will want to keep in mind the number of sensors and sniffing interfaces you have connected to the master server/accessed by Sguil.
+Because Sguil is written in tcl/tk, it can only utilize ``1024`` sockets for receiving communication from various sensor agents (ossec_agent, pcap_agent, snort_agent). Due to this restriction, you will want to keep in mind the number of sensors and sniffing interfaces you have connected to the master server/accessed by Sguil.
 
 | See the following for more information:
 | https://groups.google.com/d/msg/security-onion/DJ5NTLEu5MY/-tDQi_1eDQAJ
