@@ -6,13 +6,13 @@ This article will show how to connect to the Sguil server to view security alert
 Connecting to Sguild from an Analyst Machine
 --------------------------------------------
 
-To directly connect to a Sguild server one must possess a working Sguil client. Sguil may not be easy or available for install on certain operating systems. Because of this I recommend installing SecurityOnion in a virtual machine on your workstation and use that to connect to sguild on your production SecurityOnion instance.
+To directly connect to a Sguild server one must possess a working Sguil client. Sguil may not be easy or available for install on certain operating systems. Because of this we recommend installing Security Onion in a virtual machine on your workstation and use that to connect to sguild on your production Security Onion instance.
 
 - Install Security Onion in a Virtual Machine and configure the network adapter to use NAT mode (easiest) by going to your VM's settings.
 
 - Now double-click the Sguil desktop icon to launch the Sguil client.
 
-- Fill in the IP address or DNS name of the SecurityOnion server and apply your credentials.
+- Fill in the IP address or DNS name of the Security Onion server and apply your credentials.
 
 - Then select the sensors to monitor and finally click ``Start Sguil``.
 
@@ -32,7 +32,7 @@ This method requires SSH and an X11 server installed on the machine from which y
 
 If you're using OSX install the XQuartz package, Windows try ciXwin, Linux and BSD family use Xorg.
 
-Connect to the SecurityOnion server via SSH while passing the X11 forwarding option ( ``-X`` ).
+Connect to the Security Onion server via SSH while passing the X11 forwarding option ( ``-X`` ).
 
 ::
 
