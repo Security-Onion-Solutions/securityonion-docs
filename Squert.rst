@@ -12,7 +12,7 @@ From http://www.squertproject.org/:
 
 | Squert was originally developed by Paul Halliday:
 | http://www.squertproject.org/
-
+|
 | Security Onion maintains its own fork of Squert:
 | https://blog.securityonion.net/2016/09/squert-development.html
 
@@ -43,12 +43,12 @@ Squert gives you access to the following data types:
 Time Interval
 -------------
 
-The default view shows alerts from today. To show older alerts, click "INTERVAL", then click the 2 right arrows, set your custom date, and click Squert's refresh button (two circular arrows).
+The default view shows alerts from today. To show older alerts, click ``INTERVAL``, then click the 2 right arrows, set your custom date, and click Squert's refresh button (two circular arrows).
 
 Timeplot
 --------
 
-| The timeplot at the top of the EVENTS page, represents events as they occur each day.
+| The timeplot at the top of the ``EVENTS`` page, represents events as they occur each day.
 | In summary, the timeplot:
 
 -  plots the raw number of events on a per minute basis.
@@ -92,7 +92,7 @@ Squert can pivot to `CapMe <CapMe>`__ for full packet capture. To do this, drill
 Pivoting to Kibana
 ------------------
 
-Squert can pivot to `Kibana <Kibana>`__ to query Bro logs, Wazuh logs, syslog, etc. To do this, click an IP address, port, or signature, and then click Kibana. In Security Onion 14.04, Squert pivots to Kibana using a relative hyperlink, so it should use the same hostname or IP address that you used to connect to Squert.
+Squert can pivot to `Kibana <Kibana>`__ to query Bro logs, Wazuh logs, syslog, etc. To do this, click an IP address, port, or signature, and then click ``Kibana``.
 
 Adding your own pivots
 ----------------------
