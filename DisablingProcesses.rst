@@ -1,22 +1,15 @@
 Disabling Processes
 ===================
 
-If you've already run Setup and want to disable a certain sensor
-service, you can simply stop the running service and then change the
-corresponding config value from ``yes`` to ``no`` to prevent it from
-restarting the next time the NSM scripts are run.
+If you've already run Setup and want to disable a certain sensor service, you can simply stop the running service and then change the corresponding config value from ``yes`` to ``no`` to prevent it from restarting the next time the NSM scripts are run.
 
-For example, suppose you access Bro's HTTP logs via ELSA, so you want to
-disable ``http_agent`` to prevent those HTTP logs from being duplicated
-into the ``Sguil`` database. You would first stop the running
-``http_agent`` service:
+For example, suppose you access Bro's HTTP logs via Kibana, so you want to disable ``http_agent`` to prevent those HTTP logs from being duplicated into the ``Sguil`` database. You would first stop the running ``http_agent`` service:
 
 ::
 
     sudo nsm_sensor_ps-stop --only-http-agent
 
-You would then edit ``/etc/nsm/$HOSTNAME-$INTERFACE/sensor.conf`` and
-change:
+You would then edit ``/etc/nsm/$HOSTNAME-$INTERFACE/sensor.conf`` and change:
 
 ::
 
@@ -28,9 +21,7 @@ to:
 
     HTTP_AGENT_ENABLED="no"
 
-to prevent ``http_agent`` from restarting the next time the NSM scripts
-are run. A quick way to do this for all ``/etc/nsm/*/sensor.conf`` files
-on one box is to use the ``sed`` command as follows:
+to prevent ``http_agent`` from restarting the next time the NSM scripts are run. A quick way to do this for all ``/etc/nsm/*/sensor.conf`` files on one box is to use the ``sed`` command as follows:
 
 ::
 
@@ -39,9 +30,7 @@ on one box is to use the ``sed`` command as follows:
 Sguil Agent
 -----------
 
-If you use the Sguil client and want to remove the disabled agent from
-Sguil's ``Agent Status`` tab, then stop ``sguild``, set the sensor's
-``active`` field to ``N`` in the database, and then restart ``sguild``:
+If you use the Sguil client and want to remove the disabled agent from Sguil's ``Agent Status`` tab, then stop ``sguild``, set the sensor's ``active`` field to ``N`` in the database, and then restart ``sguild``:
 
 ::
 
@@ -66,10 +55,4 @@ You can disable Wazuh as follows:
 
     sudo update-rc.d -f ossec-hids-server disable
 
-| However, keep in mind that in addition to providing endpoint
-| visibility from Wazuh agents, the Wazuh server also monitors and
-| protects the Security Onion box itself. For example, suppose that you
-| have an active adversary who is trying to compromise your Security
-| Onion box. Wazuh may see those attempts and engage ``Active Response``
-  to
-| block the attacker's IP address in the host-based firewall.
+However, please keep in mind that in addition to providing endpoint visibility from Wazuh agents, the Wazuh server also monitors and protects the Security Onion box itself. For example, suppose that you have an active adversary who is trying to compromise your Security Onion box. Wazuh may see those attempts and engage ``Active Response`` to block the attacker's IP address in the host-based firewall.
