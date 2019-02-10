@@ -110,7 +110,7 @@ Then restart Wazuh:
 
 ::
 
-   sudo service ossec-hids-server restart
+   sudo so-ossec-restart
 
 You can specify the severity of an event for which Wazuh will send email alerts by specifying an appropriate value for ``email_alert_level`` in ``/var/ossec/etc/ossec.conf``. If you notice ``email_alert_level`` is not being respected for a certain rule, it may be that the option is overridden by ``<options>alert_by_email</options>`` being set for a rule. You can modify this behavior in ``/var/ossec/rules/local.rules``.
 
