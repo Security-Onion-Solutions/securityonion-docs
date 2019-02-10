@@ -51,8 +51,9 @@ You can disable Wazuh as follows:
 ::
 
     # Stop the running Wazuh processes 
-    sudo service ossec-hids-server stop
+    sudo so-ossec-stop
 
+    # Disable Wazuh
     sudo update-rc.d -f ossec-hids-server disable
 
 However, please keep in mind that in addition to providing endpoint visibility from Wazuh agents, the Wazuh server also monitors and protects the Security Onion box itself. For example, suppose that you have an active adversary who is trying to compromise your Security Onion box. Wazuh may see those attempts and engage ``Active Response`` to block the attacker's IP address in the host-based firewall.
