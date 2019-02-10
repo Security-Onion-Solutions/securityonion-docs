@@ -203,7 +203,7 @@ the Security Onion instance will be running as a Server, Sensor or in
 Standalone mode, which IDS engine you'd prefer (Snort or Suricata), how
 many CPU cores you want to assign to Snort/Suricata and Bro IDS, which
 Snort/Suricata rule set you want to use, your username/passwords and
-whether you want to install ELSA. When you're done, click "Yes, proceed
+whether you want to configure the Elastic Stack. When you're done, click "Yes, proceed
 with the changes!" and Security Onion Setup will do the following:
 
 -  Set the OS timezone to UTC;
@@ -227,7 +227,7 @@ cover here in more detail as a future reference.
    of the setup failed, this should be your first stop.
 -  "You may view IDS alerts using Sguil, Squert, or Kibana (if
    enabled)" - Sguil is a client application while Squert and Kibana are web interfaces.
--  "Bro logs can be found in ELSA (if enabled) and the following
+-  "Bro logs can be found in Kibana (if enabled) and the following
    location: /nsm/bro/" - Bro logs are rotated on an hourly basis and
    provide a wealth of information about the network being monitored,
    which can be invaluable during an investigation.
