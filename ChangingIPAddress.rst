@@ -92,11 +92,10 @@ Changing Server IP
 Automating the change of the server IP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You may be able to use sed to update all files at once using something
-like this:
+You may be able to use sed to update all files at once using something like this:
 
 ::
 
-    sudo service nsm stop
+    sudo so-stop
     sudo sed -i 's|OLD.SERVER.IP.ADDR|NEW.SERVER.IP.ADDR|g' /etc/nsm/*/*agent* /etc/nsm/*/sensor.conf /root/.ssh/securityonion_ssh.conf /etc/salt/minion.d/onionsalt.conf
-    sudo service nsm start
+    sudo so-start
