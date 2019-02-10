@@ -19,8 +19,6 @@ Booting Issues
    https://groups.google.com/d/topic/security-onion/FTEecyn4uJ4/discussion\ 
    https://groups.google.com/d/topic/security-onion/UKE5-dqybQ4/discussion\ 
    https://groups.google.com/d/topic/security-onion/51JZWXZfBho/discussion\ 
--  If all else fails but standard Ubuntu 16.04 installs normally, then
-   you can always install our packages and Docker images on top of your
-   Ubuntu 16.04 installation as described on our wiki:
-   `InstallingOnUbuntu <InstallingOnUbuntu>`__\ 
-   `ProductionDeployment <ProductionDeployment>`__
+-  | If all else fails but standard Ubuntu 16.04 installs normally, then you can always install our packages and Docker images on top of your Ubuntu 16.04 installation as described on our wiki:
+   | `InstallingOnUbuntu <InstallingOnUbuntu>`__\ 
+   | `ProductionDeployment <ProductionDeployment>`__
