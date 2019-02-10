@@ -94,18 +94,23 @@ You may want to install a local mail relay on your master server, configure it t
 How do I configure Wazuh to send emails?
 ----------------------------------------
 
-| Modify ``/var/ossec/etc/ossec.conf`` as follows:
-|  <global>
-| <email\_notification>yes</email\_notification>
-| %3Cemail_to%3EYourUsername@YourDomain.com%3C/email_to%3E\ 
-| <smtp\_server>YourMailRelay.YourDomain.com</smtp\_server>
-| %3Cemail_from%3Eossec@YourDomain.com%3C/email_from%3E\ 
-| <email\_maxperhour>100</email\_maxperhour>
-| </global>
-| 
-| Then restart Wazuh:
-| sudo service ossec-hids-server restart
-| 
+Modify ``/var/ossec/etc/ossec.conf`` as follows:
+
+::
+
+   <global>
+   <email_notification>yes</email_notification>
+   <email_to>YourUsername@YourDomain.com</email_to> 
+   <smtp_server>YourMailRelay.YourDomain.com</smtp_server>
+   <email_from>ossec@YourDomain.com</email_from> 
+   <email_maxperhour>100</email_maxperhour>
+   </global>
+
+Then restart Wazuh:
+
+::
+
+   sudo service ossec-hids-server restart
 
 You can specify the severity of an event for which Wazuh will send email alerts by specifying an appropriate value for ``email_alert_level`` in ``/var/ossec/etc/ossec.conf``. If you notice ``email_alert_level`` is not being respected for a certain rule, it may be that the option is overridden by ``<options>alert_by_email</options>`` being set for a rule. You can modify this behavior in ``/var/ossec/rules/local.rules``.
 
