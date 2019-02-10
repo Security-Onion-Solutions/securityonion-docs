@@ -26,9 +26,9 @@ How do I change the timezone in Squert?
 
 -  click the time interval (labeled ``INTERVAL``)
 -  on the right side, click the two arrows pointing right
--  de-select UTC
+-  de-select ``UTC``
 -  set your timezone offset (labeled ``TZ OFFSET``)
--  click the "save TZ" button
+-  click the ``save TZ`` button
 
 Why are the timestamps in Kibana not in UTC?
 --------------------------------------------
