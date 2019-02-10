@@ -123,7 +123,7 @@ Edit ``/opt/bro/etc/broctl.cfg`` and set the following:
 
 ::
 
-   MailTo = YourUsername@YourDomain.com\ 
+   MailTo = YourUsername@YourDomain.com
    sendmail = /usr/sbin/sendmail
 
 Then update and restart Bro:
