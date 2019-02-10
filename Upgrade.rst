@@ -43,7 +43,7 @@ Wazuh
 
 Wazuh package upgrades will back up your ``ossec.conf`` and put the new ``ossec.conf`` in place.  You'll then need to do the following:
 
--  re-apply any other local customizations to your ``ossec.conf`` file(s)
+-  re-apply any other local customizations to your ``ossec.conf`` file
 
 -  restart Wazuh as follows:
 
