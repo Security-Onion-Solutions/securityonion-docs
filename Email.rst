@@ -61,7 +61,7 @@ Once you've configured your mail server and verified that it can send email prop
    SHELL=/bin/sh
    PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
    EMAIL=YourUsername@YourDomain.com\ 
-   01 12 * * * root HOSTNAME=\ ``hostname``; /usr/sbin/sostat 2>&1 \|  mail -s "$HOSTNAME stats" $EMAIL
+   01 12 * * * root HOSTNAME=$(hostname); /usr/sbin/sostat 2>&1 | mail -s "$HOSTNAME stats" $EMAIL
 
 If you don't already have the ``mail`` utility, you can try installing:
 
