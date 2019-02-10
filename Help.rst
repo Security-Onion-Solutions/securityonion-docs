@@ -31,7 +31,6 @@ Having problems? Try the suggestions below.
    -  barnyard2 ``/var/log/nsm/ { HOSTNAME-INTERFACE }/barnyard2.log``
    -  netsniff-ng
       ``/var/log/nsm/{ HOSTNAME-INTERFACE }/netsniff-ng.log``
-   -  ELSA ``/nsm/elsa/data/elsa/log/node.log``
    -  Bro ``/nsm/bro/logs/current``
    -  snort\_agent
       ``/var/log/nsm/{ HOSTNAME-INTERFACE }/snort_agent.log``
@@ -67,11 +66,8 @@ Having problems? Try the suggestions below.
 
        sudo mysqlcheck -c securityonion_db
 
--  Are you able to duplicate the problem on a fresh Security Onion
-   installation?
--  Check the `Roadmap <Roadmap>`__ to see if this is a known issue that
-   we are working on.
--  If all else fails, please send an email to our `security-onion
-   mailing list <MailingLists>`__.
+-  Are you able to duplicate the problem on a fresh Security Onion installation?
+-  Check the `Known Issues <https://github.com/Security-Onion-Solutions/security-onion/issues>`__ to see if this is a known issue that we are working on.
+-  If all else fails, please send an email to our `security-onion mailing list <MailingLists>`__.
 -  Need training or commercial support?
    https://www.securityonionsolutions.com
