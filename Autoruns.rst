@@ -19,30 +19,21 @@ Integration
 OSSEC
 ~~~~~
 
-Currently, our Autoruns dashboard in Kibana works only with Autoruns
-logs shipped via OSSEC. If you are trying to ship Autoruns logs via
-Winlogbeat, you can create a custom dashboard and visualizations that
-reference the ``logstash-beats-*`` indices, or view Autoruns logs via
-the ``Beats`` dashboard.
+Currently, our Autoruns dashboard in Kibana works only with Autoruns logs shipped via OSSEC. If you are trying to ship Autoruns logs via Winlogbeat, you can create a custom dashboard and visualizations that reference the ``logstash-beats-*`` indices, or view Autoruns logs via the ``Beats`` dashboard.
 
 Pertinax
 ~~~~~~~~
 
-| Josh Brower developed a great project called Pertinax to normalize
-  autoruns data and integrate it into Security Onion:
+| Josh Brower developed a great project called Pertinax to normalize autoruns data and integrate it into Security Onion:
 | https://github.com/defensivedepth/Pertinax/wiki/Introduction
-
-| Josh's syslog-ng patterns were merged into Security Onion here:
-| https://blog.securityonion.net/2016/08/new-elsa-packages-resolve-several-issues.html
-
+|
 | Execute autoruns and ar-normalize.ps1 as shown here:
 | https://github.com/defensivedepth/Pertinax/wiki/Reference%20Architecture
 
 AutorunsToWinEventLog
 ~~~~~~~~~~~~~~~~~~~~~
 
-| Another method for integrating Autoruns into your logging
-  infrastructure is AutorunsToWinEventLog:
+| Another method for integrating Autoruns into your logging infrastructure is AutorunsToWinEventLog:
 | https://github.com/palantir/windows-event-forwarding/tree/master/AutorunsToWinEventLog
 
 Downloads
