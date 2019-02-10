@@ -83,12 +83,6 @@ Changing Server IP
 
        SERVERNAME=[SERVER-IP]
 
--  /etc/elsa\_web.conf
-
-   ::
-
-       "pcap_url": "https://[SERVER-IP]/capme"
-
 -  /etc/salt/minion.d/onionsalt.conf
 
    ::
@@ -104,5 +98,5 @@ like this:
 ::
 
     sudo service nsm stop
-    sudo sed -i 's|OLD.SERVER.IP.ADDR|NEW.SERVER.IP.ADDR|g' /etc/nsm/*/*agent* /etc/nsm/*/sensor.conf /root/.ssh/securityonion_ssh.conf /etc/salt/minion.d/onionsalt.conf /etc/elsa_web.conf
+    sudo sed -i 's|OLD.SERVER.IP.ADDR|NEW.SERVER.IP.ADDR|g' /etc/nsm/*/*agent* /etc/nsm/*/sensor.conf /root/.ssh/securityonion_ssh.conf /etc/salt/minion.d/onionsalt.conf
     sudo service nsm start
