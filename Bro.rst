@@ -161,9 +161,7 @@ Below is an example how to do so:
 -  Check ``/nsm/bro/logs/current/reporter.log`` for clues if your custom
    script(s) is/are not working as desired.
 
-To check and see if a Bro script has fired a Notice, go to ELSA, click
-Notice, and then click "Top Notice Types". Alternatively, check for
-entries in ``/nsm/bro/logs/current/notice.log``.
+To check and see if a Bro script has fired a Notice, go to Kibana and check our ``Bro Notices`` dashboard. Alternatively, you can check for entries in ``/nsm/bro/logs/current/notice.log``.
 
 **PLEASE NOTE**: In a distributed deployment, all custom scripts created
 under ``/opt/bro/share/bro/policy/`` on a master server will be
