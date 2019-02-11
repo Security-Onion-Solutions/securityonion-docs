@@ -70,7 +70,7 @@ Restart Kibana:
 Search Results
 --------------
 
-Search results in the dashboards and through Discover are limited to the first ``10`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Management > Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance.
+Search results in the dashboards and through Discover are limited to the first ``10`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance.
 
 Search Request Timeout
 ----------------------
@@ -79,12 +79,18 @@ Sometimes searches can timeout in Kibana. To increase the timeout value to wait 
 
 For example to increase the timeout from the default of ``30`` seconds to ``90`` seconds:
 
-``sudo vi /etc/kibana/kibana.yml``
+::
+
+   sudo vi /etc/kibana/kibana.yml
 
 Add the following line:
 
-``elasticsearch.requestTimeout: 90000``
+::
 
-Restart Kibana:
+   elasticsearch.requestTimeout: 90000
 
-``sudo so-kibana-restart``
+Finally, restart Kibana:
+
+::
+
+   sudo so-kibana-restart
