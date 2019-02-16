@@ -27,31 +27,26 @@ How do I send IDS alerts to an external system?
 
 OR
 
--  | On your master server (running sguild), configure
-     ``/etc/syslog-ng/syslog-ng.conf`` with a new ``source`` to monitor
-     ``/var/log/nsm/securityonion/sguild.log`` for ``Alert Received``
-     lines and a new ``destination`` to send to your external system,
-     and then restart ``syslog-ng``. To do this modify
-     ``/etc/syslog-ng/syslog-ng.conf`` and add the following lines:
+-  On your master server (running sguild), configure ``/etc/syslog-ng/syslog-ng.conf`` with a new ``source`` to monitor ``/var/log/nsm/securityonion/sguild.log`` for ``Alert Received`` lines and a new ``destination`` to send to your external system, and then restart ``syslog-ng``. To do this modify ``/etc/syslog-ng/syslog-ng.conf`` and add the following lines:
    
-This line specifies where the sguild.log file is located, and informs syslog-ng to tail the file, the program\_override inserts the string sguil\_alert into the string:
+This line specifies where the sguild.log file is located, and informs syslog-ng to tail the file, the program_override inserts the string sguil\_alert into the string:
 
 ::
 
-   source s\_sguil { file("/var/log/nsm/securityonion/sguild.log"
-   program\_override("sguil\_alert")); };
+   source s_sguil { file("/var/log/nsm/securityonion/sguild.log"
+   program_override("sguil_alert")); };
 
 This line filters on the string “Alert Received”:
 
 ::
 
-   filter f\_sguil { match("Alert Received"); };
+   filter f_sguil { match("Alert Received"); };
 
 This line tells syslog-ng to send the data read to the IP address of 10.80.4.37, via UDP to port 514:
 
 ::
    
-   destination d\_sguil\_udp { udp("10.80.4.37" port(514)); };
+   destination d_sguil_udp { udp("10.80.4.37" port(514)); };
 
 This log section tells syslog-ng how to structure the previous ‘source / filter / destination’ and is what actually puts them into play:
 
