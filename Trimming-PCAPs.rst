@@ -9,10 +9,7 @@ our retention time by trimming them, using a special tool called
 `NETRESEC <https://www.netresec.com/>`__. Using this tool, we can trim
 the flows within PCAPs to a desired size.
 
-**Please be aware and cognizant of the fact that it may take a while to
-process a large amount of PCAPs. With this in mind, you'll want to
-consider running TrimPCAP at non-peak times (without high PCAP write
-volume, etc.).**
+**Please be aware that it may take a while to process a large amount of PCAPs. With this in mind, you'll want to consider running TrimPCAP at non-peak times (without high PCAP write volume, etc.).**
 
 | One retention schedule that could be used is as follows:
 | (http://www.netresec.com/?page=Blog&month=2017-12&post=Don%27t-Delete-PCAP-Files---Trim-Them)
@@ -39,18 +36,19 @@ We can install TrimPCAP using the following commands:
     sudo pip install repoze.lru
     sudo wget -O /opt/trimpcap.py https://www.netresec.com/?download=trimpcap
 
-Then we can run TrimPCAP, as follows (specifying a size of ``102KB`` per
-flow, iterating over all PCAPs of all ages, in all directories):
+Then we can run TrimPCAP, as follows (specifying a size of ``102KB`` per flow, iterating over all PCAPs of all ages, in all directories):
 
-``sudo /usr/bin/find /nsm/sensor_data/ -name "snort.log.??????????" -type f -exec sudo python /opt/trimpcap.py 102400 {} \;``
+::
 
-If we want to this for PCAPs older than 3 days, we can do something like
-the following:
+   sudo /usr/bin/find /nsm/sensor_data/ -name "snort.log.??????????" -type f -exec sudo python /opt/trimpcap.py 102400 {} \;
 
-``sudo /usr/bin/find /nsm/sensor_data/ -name "snort.log.??????????" -mmin +$((60*72)) -type f -exec sudo python /opt/trimpcap.py 102400 {} \;``
+If we want to this for PCAPs older than 3 days, we can do something like the following:
 
-We can then automate this using a cron job, so our PCAPs are checked
-daily.
+::
+
+   sudo /usr/bin/find /nsm/sensor_data/ -name "snort.log.??????????" -mmin +$((60*72)) -type f -exec sudo python /opt/trimpcap.py 102400 {} \;
+
+We can then automate this using a cron job, so our PCAPs are checked daily.
 
 ::
 
