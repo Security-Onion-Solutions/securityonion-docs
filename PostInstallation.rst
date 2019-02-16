@@ -12,8 +12,8 @@ After Installation
 Tuning / Miscellaneous
 ----------------------
 
--  Check your sniffing interfaces to see if they have Receive Side Scaling (RSS) queues (if so, you may need to reduce to 1):
-   http://suricata.readthedocs.io/en/latest/performance/packet-capture.html
+-  | Check your sniffing interfaces to see if they have Receive Side Scaling (RSS) queues (if so, you may need to reduce to 1):
+   | http://suricata.readthedocs.io/en/latest/performance/packet-capture.html
 
 -  | If you’re monitoring IP address ranges other than private RFC1918
      address space (192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12), you
