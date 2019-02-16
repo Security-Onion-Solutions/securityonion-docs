@@ -113,4 +113,4 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
    #. | Remove ``$nodeuser`` from the sudo group on the master server:
       | ``sudo deluser $nodeuser sudo``
 
-Proceed to `PostInstallation <PostInstallation>`__
+Proceed to `PostInstallation <PostInstallation>`__.
