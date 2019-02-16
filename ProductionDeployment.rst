@@ -43,7 +43,7 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
    ``sudo add-apt-repository -y ppa:securityonion/stable``
 #. Update:
    ``sudo apt-get update``
-#. Install the securityonion-all metapackage (or one of the more focused `metapackages <MetaPackages>`__). This could take 15 minutes or more depending on the speed of your CPU and Internet connection.
+#. Install the ``securityonion-all`` metapackage (or one of the more focused `metapackages <MetaPackages>`__). This could take 15 minutes or more depending on the speed of your CPU and Internet connection.
    ``sudo apt-get -y install securityonion-all syslog-ng-core``
 #. OPTIONAL: If you want to use `Salt <Salt>`__ to manage your deployment, also install securityonion-onionsalt. You can do this before or after Setup, but it's much easier if you do it before Setup.
    ``sudo apt-get -y install securityonion-onionsalt``
