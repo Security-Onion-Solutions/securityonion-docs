@@ -24,7 +24,7 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
    
 - Update package list:
 
- ::
+::
 
    sudo apt-get update
    
