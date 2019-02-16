@@ -4,7 +4,7 @@ High Performance Tuning
 Ubuntu Server
 -------------
 
-For best performance, we recommend starting with Ubuntu Server (no GUI) as described in our `<Production Deployment>`_ guide.
+For best performance, we recommend starting with Ubuntu Server (no GUI) and adding our Security Onion packages as described in our `<Production Deployment>`_ guide.
 
 Best Practices
 --------------
