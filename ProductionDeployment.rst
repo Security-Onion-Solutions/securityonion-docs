@@ -94,8 +94,7 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
          -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
          -  Modify ``HOME_NET`` as desired.
          -  Select ``Yes`` to proceed with your changes.
-
-      *Please note: If you chose to use one or more storage nodes with your master server, you will be able to receive IDS alerts and pull PCAPs from the forward node once setup completes, however, you will not be able to review other logs (i.e. Bro logs in Kibana) from the node until a storage node has been configured for the master server and Logstash on the storage node has initialized.*
+         - *Please note: If you chose to use one or more storage nodes with your master server, you will be able to receive IDS alerts and pull PCAPs from the forward node once setup completes, however, you will not be able to review other logs (i.e. Bro logs in Kibana) from the node until a storage node has been configured for the master server and Logstash on the storage node has initialized.*
 
       -  Heavy Node
 
