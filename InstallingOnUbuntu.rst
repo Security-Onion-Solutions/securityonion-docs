@@ -38,6 +38,6 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
    https://groups.google.com/d/msg/security-onion/ceamp2XztVI/ECPOjaIqBwAJ)
 #. Follow the prompts.
 #. Analyze alerts using the Sguil client, or open a browser to
-   https://localhost where you can access ``Squert`` and ``Kibana``.
+   https://localhost where you can access `<Squert>`__ and `<Kibana>`_.
 
 Please review the `PostInstallation <PostInstallation>`__ page.
