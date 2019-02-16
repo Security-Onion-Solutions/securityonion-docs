@@ -52,17 +52,14 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
 
    sudo apt-get -y install securityonion-all syslog-ng-core
    
-- Run the Setup wizard:
+- Run the Setup wizard (if you're using Ubuntu Server with no GUI and are doing this over SSH, you will need to forward X for this to work):
 
 ::
 
    sudo sosetup
    
-   If you're using Ubuntu Server (no GUI), then you will need to forward X for this to work:
-   https://groups.google.com/d/msg/security-onion/ceamp2XztVI/ECPOjaIqBwAJ)
-   
-- Follow the prompts.
+- Follow the prompts in the Setup wizard.
 
-- Analyze alerts using the `<Sguil>`_ client, or open a browser to https://localhost where you can access `<Squert>`__ and `<Kibana>`_.
+- Once Setup is complete, analyze IDS alerts using the `<Sguil>`_ client, or open a browser to https://localhost where you can access `<Squert>`__ and `<Kibana>`_.
 
 - Review the `PostInstallation <PostInstallation>`__ page.
