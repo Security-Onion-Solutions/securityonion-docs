@@ -1,10 +1,15 @@
 High Performance Tuning
 =======================
 
+Ubuntu Server
+-------------
+
+For best performance, we recommend starting with Ubuntu Server (no GUI) as described in our `<Production Deployment>`_ guide.
+
 Best Practices
 --------------
 
-First, make sure you're following `Best Practices <Best-Practices>`__.
+When you run Setup, make sure you choose `Best Practices <Best-Practices>`__.
 
 Disk/Memory
 -----------
@@ -24,10 +29,13 @@ https://lonesysadmin.net/2013/12/22/better-linux-disk-caching-performance-vm-dir
 Disable GUI
 -----------
 
+If you're unable to start with Ubuntu Server (no GUI) as recommended above, you can disable the GUI after the system is fully configured:
 http://askubuntu.com/questions/16371/how-do-i-disable-x-at-boot-time-so-that-the-system-boots-in-text-mode
 
-Disable Bluetooth
------------------
+Disable Unnecessary Services
+----------------------------
+
+Disable any unnecessary services.  For example, to disable bluetooth:
 
 ::
 
