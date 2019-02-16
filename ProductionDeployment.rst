@@ -110,7 +110,7 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
          -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
          -  Select ``Yes`` to proceed with your changes.
 
-   #. | Remove ``$nodeuser`` from the sudo group on the master server:
+   #. | Remove ``$nodeuser`` from the ``sudo`` group on the master server:
       | ``sudo deluser $nodeuser sudo``
 
 Proceed to `PostInstallation <PostInstallation>`__.
