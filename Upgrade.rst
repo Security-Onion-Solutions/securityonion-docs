@@ -1,7 +1,7 @@
 Updating
 ========
 
-``soup`` - ``S``ecurity ``O``nion ``Up``date
+``soup`` - **S**ecurity **O**nion **Up**date
 --------------------------------
 
 We recommend using our ``soup`` script to update. ``Soup`` will automatically install **all** available package updates (from both Ubuntu and Security Onion) and **all** updated Docker images.
