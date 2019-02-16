@@ -34,19 +34,19 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
 #. Verify that you have Internet connectivity. If necessary, configure your `proxy <Proxy>`__ settings.
 #. If you installed from the Security Onion 16.04 ISO image, run ``sudo soup``. If you get any errors relating to MySQL, please see `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__. Reboot if prompted. Skip to the Setup section below.
 #. Install all Ubuntu updates and reboot:
-   ``sudo apt-get update && sudo apt-get dist-upgrade && sudo reboot``
+   ``sudo apt update && sudo apt dist-upgrade && sudo reboot``
 #. Log back in and configure MySQL not to prompt for root password (Setup will generate a random password later):
    ``echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections``
 #. Install software-properties-common if it's not already installed:
-   ``sudo apt-get -y install software-properties-common``
+   ``sudo apt -y install software-properties-common``
 #. Add the Security Onion stable repository:
    ``sudo add-apt-repository -y ppa:securityonion/stable``
 #. Update:
-   ``sudo apt-get update``
+   ``sudo apt update``
 #. Install the ``securityonion-all`` metapackage (or one of the more focused `metapackages <MetaPackages>`__). This could take 15 minutes or more depending on the speed of your CPU and Internet connection.
-   ``sudo apt-get -y install securityonion-all syslog-ng-core``
-#. OPTIONAL: If you want to use `Salt <Salt>`__ to manage your deployment, also install securityonion-onionsalt. You can do this before or after Setup, but it's much easier if you do it before Setup.
-   ``sudo apt-get -y install securityonion-onionsalt``
+   ``sudo apt -y install securityonion-all syslog-ng-core``
+#. OPTIONAL: If you want to use `Salt <Salt>`__ to manage your deployment, also install ``securityonion-onionsalt``. You can do this before or after Setup, but it's much easier if you do it before Setup.
+   ``sudo apt -y install securityonion-onionsalt``
 #. | Update all packages:
    | ``sudo soup``
 
