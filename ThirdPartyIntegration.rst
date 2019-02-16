@@ -60,11 +60,12 @@ destination d\_sguil\_udp { udp("10.80.4.37" port(514)); };
 
 This log section tells syslog-ng how to structure the previous ‘source / filter / destination’ and is what actually puts them into play
 
-| log {
-| source(s\_sguil);
-| filter(f\_sguil);
-| destination(d\_sguil\_udp);
-| };
-| \`\`\`
+::
+
+   log {
+   source(s_sguil);
+   filter(f_sguil);
+   destination(d_sguil_udp);
+   };
 
 Please note that this option requires ``set DEBUG 2`` in ``/etc/sguild/sguild.conf``.
