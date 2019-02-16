@@ -75,48 +75,14 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
    #. Provide a username and password for the analyst user.
    #. Select ``Best Practices``.
    #. Choose your IDS ruleset.
-   #. Choose your IDS engine (Snort or Suricata).
-   #. Choose whether or not to enable sensor services:
-
-   -  Master Server
-
-   #. Do not enable sensor services.
-   #. Choose whether or not to use storage nodes for log storage.
-
-      ::
-
-          * Storage node    
-              1. Use storage node for load-balancing.    
-
-      *Please note: If you choose this option, until a storage node is
-      configured and Logstash has intialized (on the storage node), you
-      will not be able to review log data for configured forward nodes
-      in Kibana.*
-      \* Local storage
-      1. Store logs locally.
-   #. Select ``Yes`` to proceed with your changes.
-
-   -  Standalone
-
-   #. Enable sensor services
-   #. Choose whether or not to use storage nodes for log storage:
-
-      ::
-
-          * Storage node    
-               1. Use storage node for load-balancing.    
-               _Please note:  If you choose this option, until a storage node is configured and Logstash has intialized (on the storage node), you will not be able to review log data from sensor services in Kibana._
-          * Local storage     
-              1.  Store logs locally.
-
+   #. Choose your IDS engine (`<Snort>`_ or `<Suricata>`_).
+   #. Choose whether or not to enable sensor services.  If this is going to be a standalone box with no other nodes connected, you can enable sensor services. Otherwise, if this going to be a distributed deployment with multiple nodes connected, we recommend disabling sensor services on this master server.
+   #. Choose whether or not to use storage nodes for log storage.  Please note that, if you choose to use storage nodes, then until a storage node is configured and Logstash has intialized on the storage node, you will not be able to review log data for configured forward nodes.
    #. Select ``Yes`` to proceed with your changes.
 
 -  Existing
 
-   #. Provide the hostname or IP address of the master server (some
-      folks may want to specify the IP/hostname of the master server in
-      ``/etc/hosts`` and use the specified hostname during setup -- this
-      may help in the event the master server IP changes.)
+   #. Provide the hostname or IP address of the master server (some folks may want to specify the IP/hostname of the master server in ``/etc/hosts`` and use the specified hostname during setup -- this may help in the event the master server IP changes.)
    #. Provide a username to SSH to the master for the node (should have
       already been created on the master and added to the sudo group).
       Please make sure that your server has been set up and you have
