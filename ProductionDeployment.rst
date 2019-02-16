@@ -83,65 +83,32 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
 -  Existing
 
    #. Provide the hostname or IP address of the master server (some folks may want to specify the IP/hostname of the master server in ``/etc/hosts`` and use the specified hostname during setup -- this may help in the event the master server IP changes.)
-   #. Provide a username to SSH to the master for the node (should have
-      already been created on the master and added to the sudo group).
-      Please make sure that your server has been set up and you have
-      network connectivity and no firewall rules that would block this
-      traffic. Additionally, consider creating a separate SSH account on
-      the master server for each node so that if a node is ever
-      compromised, its individual account can be disabled without
-      affecting the other nodes.
-
-      *On the Master, the following or similar should have been run
-      (where ``$nodeuser`` is your specified user):*
-
-      ``sudo adduser $nodeuser && sudo adduser $nodeuser sudo``
-
-      | The new account must have a full home directory. If you do not
-        create it when you create the account, copy
-      | ``/etc/skel`` to ``/home/$nodeuser`` and do
-        ``chown -R $nodeuser:$nodeuser /home/$nodeuser``. This is needed
-        so the .ssh directory may be created to manage the connection.
-
-      *NOTE: This user should be removed from the sudo group on the
-      master server after setup*.
+   #. Provide a username to SSH to the master for the node (should have already been created on the master and added to the ``sudo`` group). Please make sure that your server has been set up and you have network connectivity and no firewall rules that would block this traffic. Additionally, consider creating a separate SSH account on the master server for each node so that if a node is ever compromised, its individual account can be disabled without affecting the other nodes.  If you need to create a user account on the Master, you can do something like the following (where ``$nodeuser`` is your specified user): ``sudo adduser $nodeuser && sudo adduser $nodeuser sudo``  The new account must have a full home directory. If you do not create it when you create the account, copy ``/etc/skel`` to ``/home/$nodeuser`` and do ``chown -R $nodeuser:$nodeuser /home/$nodeuser``. This is needed so the .ssh directory may be created to manage the connection. *NOTE: This user should be removed from the sudo group on the master server after setup*.
 
    #. Select Node Type:
 
       -  Forward Node
 
          -  Select ``Best Practices``.
-         -  Keep the default for PF\_RING min\_num\_slots, unless you
-            would like to change it.
-         -  Modify the selected sniffing interfaces if necessary --
-            otherwise, continue.
-         -  Modify HOME\_NET as desired.
+         -  Keep the default for PF_RING min_num_slots, unless you would like to change it.
+         -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
+         -  Modify ``HOME_NET`` as desired.
          -  Select ``Yes`` to proceed with your changes.
 
-      *Please note: If you chose to use one or more storage nodes with
-      your master server, you will be able to receive IDS alerts and
-      pull PCAPs from the forward node once setup completes, however,
-      you will not be able to review other logs (i.e. Bro logs in
-      Kibana) from the node until a storage node has been configured for
-      the master server and Logstash on the storage node has
-      initialized.*
+      *Please note: If you chose to use one or more storage nodes with your master server, you will be able to receive IDS alerts and pull PCAPs from the forward node once setup completes, however, you will not be able to review other logs (i.e. Bro logs in Kibana) from the node until a storage node has been configured for the master server and Logstash on the storage node has initialized.*
 
       -  Heavy Node
 
          -  Select ``Best Practices``.
-         -  Keep the default for PF\_RING min\_num\_slots, unless you
-            would like to change it.
-         -  Modify the selected sniffing interfaces if necessary --
-            otherwise, continue.
-         -  Modify HOME\_NET as desired.
-         -  Provide amount of disk space to be used for Elasticsearch to
-            store logs (default is half of available disk space).
+         -  Keep the default for PF_RING min_num_slots, unless you would like to change it.
+         -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
+         -  Modify ``HOME_NET`` as desired.
+         -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
          -  Select ``Yes`` to proceed with your changes.
 
       -  Storage Node
 
-         -  Provide amount of disk space to be used for Elasticsearch to
-            store logs (default is half of available disk space).
+         -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
          -  Select ``Yes`` to proceed with your changes.
 
    #. | Remove ``$nodeuser`` from the sudo group on the master server:
