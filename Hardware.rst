@@ -19,7 +19,7 @@ Like most IT systems, Security Onion has databases and those databases don't lik
 Elastic Stack
 -------------
 
-With the introduction of the Elastic Stack, please note that the MINIMUM requirements are 4 CPU cores and 8GB RAM. These requirements increase as you monitor more traffic and consume more logs.
+If you're going to enable the Elastic Stack, please note that the MINIMUM requirements are 4 CPU cores and 8GB RAM. These requirements increase as you monitor more traffic and consume more logs.
 
 Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
