@@ -70,7 +70,7 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
 #. Select ``Production Mode``.
 #. Select ``New`` or ``Existing`` (``New`` if this is a master or standalone, and ``Existing`` for forward, heavy, and storage nodes).
 
--  New
+-  New (Master Server or Standalone)
 
    #. Provide a username and password for the analyst user.
    #. Select ``Best Practices``.
@@ -80,7 +80,7 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
    #. Choose whether or not to use storage nodes for log storage.  Please note that, if you choose to use storage nodes, then until a storage node is configured and Logstash has intialized on the storage node, you will not be able to review log data for configured forward nodes.
    #. Select ``Yes`` to proceed with your changes.
 
--  Existing
+-  Existing (Forward Node, Heavy Node, or Storage Node)
 
    #. Provide the hostname or IP address of the master server (some folks may want to specify the IP/hostname of the master server in ``/etc/hosts`` and use the specified hostname during setup -- this may help in the event the master server IP changes.)
    #. Provide a username to SSH to the master for the node (should have already been created on the master and added to the ``sudo`` group). Please make sure that your server has been set up and you have network connectivity and no firewall rules that would block this traffic. Additionally, consider creating a separate SSH account on the master server for each node so that if a node is ever compromised, its individual account can be disabled without affecting the other nodes.  If you need to create a user account on the Master, you can do something like the following (where ``$nodeuser`` is your specified user): ``sudo adduser $nodeuser && sudo adduser $nodeuser sudo``  The new account must have a full home directory. If you do not create it when you create the account, copy ``/etc/skel`` to ``/home/$nodeuser`` and do ``chown -R $nodeuser:$nodeuser /home/$nodeuser``. This is needed so the .ssh directory may be created to manage the connection. *NOTE: This user should be removed from the sudo group on the master server after setup*.
