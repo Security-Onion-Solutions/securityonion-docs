@@ -36,7 +36,7 @@ Wipe sensor configuration and data
 Remove sensor reference from master server
 ------------------------------------------
 
--  In MySQL database ``securityonion_db``, edit ``sensor` table (you can simply set active='N'), then restart sguild.
+-  In MySQL database ``securityonion_db``, edit ``sensor`` table (you can simply set active='N'), then restart sguild.
 -  Stop sguild ``sudo so-sensor-stop``
 -  Show sensor entries:
 
