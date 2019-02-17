@@ -164,7 +164,7 @@ I submitted a message to the security-onion Google Group. Why isn't it showing u
 Is commercial support available for Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Yes, please see:
+| Yes!  Please see:
 | https://securityonionsolutions.com
 | 
 | 
@@ -178,28 +178,24 @@ Error messages
 Why does rule-update fail with Error 400 when running behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please see
-`<Proxy#pulledpork>`__
+Please see `<Proxy#pulledpork>`__
 
 Why does rule-update fail with an error like "Error 404 when fetching s3.amazonaws.com/snort-org/www/rules/community/community-rules.tar.gz.md5"?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Snort Community ruleset has moved to a different URL. You can run
-the following command to update the Snort Community URL in
-pulledpork.conf:
+The Snort Community ruleset has moved to a different URL. You can run the following command to update the Snort Community URL in ``pulledpork.conf``:
 
 ::
 
     sudo sed -i 's\rule_url=https://s3.amazonaws.com/snort-org/www/rules/community/|community-rules.tar.gz|Community\rule_url=https://snort.org/downloads/community/|community-rules.tar.gz|Community\g' /etc/nsm/pulledpork/pulledpork.conf
 
 | For more information, please see:
-| http://blog.snort.org/2015/10/are-you-getting-404-errors-attempting.html
+| https://blog.snort.org/2015/10/are-you-getting-404-errors-attempting.html
 
 Why does ``soup`` fail with an error message like "find: \`/usr/lib/python2.7/dist-packages/salt/': No such file or directory"?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is a bug in the salt packages that can manifest when skipping salt
-versions. Resolve with the following:
+This is a bug in the salt packages that can manifest when skipping salt versions. Resolve with the following:
 
 ::
 
@@ -211,7 +207,7 @@ Why does barnyard2 keep failing with errors like "Returned signature\_id is not 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Please see:
-| http://blog.securityonion.net/2014/06/new-securityonion-rule-update-package.html
+| https://blog.securityonion.net/2014/06/new-securityonion-rule-update-package.html
 
 I just updated Snort and it's now saying 'ERROR: The dynamic detection library "/usr/local/lib/snort\_dynamicrules/chat.so" version 1.0 compiled with dynamic engine library version 2.1 isn't compatible with the current dynamic engine library "/usr/lib/snort\_dynamicengine/libsf\_engine.so" version 2.4.'
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -224,56 +220,43 @@ Run the following:
 
 For more information, please see:
 
-http://blog.securityonion.net/2014/12/new-version-of-securityonion-rule.html
+https://blog.securityonion.net/2014/12/new-version-of-securityonion-rule.html
 
 I get periodic MySQL crashes and/or error code 24 "out of resources" when searching in Sguil. How do I fix that?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Recent versions of Setup should set MySQL's ``open-files-limit`` to
-  90000 to avoid this problem:
-| http://blog.securityonion.net/2014/02/new-securityonion-setup-package.html
+Modern versions of Setup should set MySQL's ``open-files-limit`` to 90000 to avoid this problem.
 
-| If you ran Setup before February 2014, you can set this manually as
-  follows.
-| 
-| First, stop sguil and mysql:
-| sudo so-sguild-stop
-| sudo service mysql stop
-| 
-| Next, edit ``/etc/mysql/my.cnf`` and add the following in the
-  ``mysqld`` section (please use hyphens not underscores):
-| open-files-limit = 90000
-| 
-| Finally, start mysql and sguil:
-| sudo service mysql start
-| sudo so-sguild-start
-| 
 | For more information, please see:
 | http://nsmwiki.org/Sguil\_FAQ#I.27m\_seeing\_error\_code\_24\_from\_MySQL.\_How\_do\_I\_fix\_that.3F
 
 Barnyard2 is failing with an error like "ERROR: sguil: Expected Confirm 13324 and got: Failed to insert 13324: mysqlexec/db server: Duplicate entry '9-13324' for key 'PRIMARY'". How do I fix this?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Sometimes, just restarting Barnyard will clear this up:
-| sudo so-barnyard-restart
-| 
+Sometimes, just restarting Barnyard will clear this up:
 
-| Other times, restarting Sguild and then restarting Barnyard will clear
-  it up:
-| sudo so-sguild-restart
-| sudo so-sensor-restart --only-barnyard2
-| 
+::
 
-| If that doesn't work, then try also restarting mysql:
-| sudo service mysql restart
-| sudo so-sguild-restart
-| sudo so-sensor-restart --only-barnyard2
-| 
+   sudo so-barnyard-restart
+ 
 
-| If that still doesn't fix it, you may have to perform MySQL surgery on
-  the database ``securityonion_db`` as described in the Sguil FAQ:
-| http://nsmwiki.org/Sguil\_FAQ#Barnyard\_dies\_at\_startup.2C\_with\_.22Duplicate\_Entry.22\_error
-| 
+Other times, restarting Sguild and then restarting Barnyard will clear it up:
+
+::
+
+   sudo so-sguild-restart
+   sudo so-sensor-restart --only-barnyard2
+
+If that doesn't work, then try also restarting mysql:
+
+::
+
+   sudo service mysql restart
+   sudo so-sguild-restart
+   sudo so-sensor-restart --only-barnyard2
+
+If that still doesn't fix it, you may have to perform MySQL surgery on the database ``securityonion_db`` as described in the Sguil FAQ:
+http://nsmwiki.org/Sguil\_FAQ#Barnyard\_dies\_at\_startup.2C\_with\_.22Duplicate\_Entry.22\_error
 
 Why do I get the following error when starting Sguil?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -493,16 +476,14 @@ I disabled some Sguil agents but they still appear in Sguil's ``Agent Status`` t
 What can I do to decrease the size of my ``securityonion_db`` (sguild) MySQL database?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| You can lower the ``DAYSTOKEEP`` setting in
-  ``/etc/nsm/securityonion.conf``.
+| You can lower the ``DAYSTOKEEP`` setting in ``/etc/nsm/securityonion.conf``.
 | Also see ``UNCAT_MAX``:
-| http://blog.securityonion.net/2015/01/new-version-of-sguil-db-purge-helps.html
+| https://blog.securityonion.net/2015/01/new-version-of-sguil-db-purge-helps.html
 
 How do I change the fonts in the Sguil client?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the Sguil client, click the ``File`` menu and then go to
-``Change Font``. You can change both the Standard and Fixed fonts.
+In the Sguil client, click the ``File`` menu and then go to ``Change Font``. You can change both the Standard and Fixed fonts.
 
 Can I be alerted when an interface stops receiving traffic?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -533,9 +514,7 @@ Then run:
 | For more information, please see:
 | http://ubuntuforums.org/showthread.php?t=1690118
 
-If you're doing a new installation, you can avoid this altogether by
-installing our packages on top of Ubuntu Server (minimal installation,
-no GUI) instead of using the Security Onion ISO image.
+If you're doing a new installation, you can avoid this altogether by installing our packages on top of Ubuntu Server (minimal installation, no GUI) instead of using the Security Onion ISO image.
 
 I'm running Security Onion in a VM and the screensaver is using lots of CPU. How do I change/disable the screensaver?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -558,12 +537,9 @@ I'm running Security Onion in a VM and the screensaver is using lots of CPU. How
 What does it mean if ``sostat`` show a high number of ``Sguil Uncategorized Events``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| ``Sguild`` has to load uncategorized events into memory when it starts
-  and it won't accept connections until that's complete.
-| You can either:
+``Sguild`` has to load uncategorized events into memory when it starts and it won't accept connections until that's complete. You can either:
 
--  wait for sguild to start up (may take a LONG time), then log into
-   Sguil, and ``F8`` LOTS of events
+-  wait for sguild to start up (may take a LONG time), then log into  Sguil, and ``F8`` LOTS of events
    OR
 -  stop sguild
 
@@ -572,18 +548,15 @@ What does it mean if ``sostat`` show a high number of ``Sguil Uncategorized Even
        sudo so-sguild-stop
 
    | and manually categorize events using ``mysql``\ 
-   | (see
-     http://taosecurity.blogspot.com/2013/02/recovering-from-suricata-gone-wild.html)
+   | (see http://taosecurity.blogspot.com/2013/02/recovering-from-suricata-gone-wild.html)
    | OR
-   | lower your ``DAYSTOKEEP`` setting in
-     ``/etc/nsm/securityonion.conf`` and run
+   | lower your ``DAYSTOKEEP`` setting in ``/etc/nsm/securityonion.conf`` and run
 
    ::
 
        sudo sguil-db-purge
 
-   To keep ``Uncategorized Events`` from getting too high, you should
-   log into Sguil/Squert on a daily/weekly basis and categorize events.
+   To keep ``Uncategorized Events`` from getting too high, you should log into Sguil/Squert on a daily/weekly basis and categorize events.
 
 | 
 | `back to top <#top>`__
@@ -634,8 +607,7 @@ How can I remote control my Security Onion box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | A few options:
-| "ssh -X" - any program started in the SSH session will be displayed on
-  your local desktop (requires a local X server)
+| "ssh -X" - any program started in the SSH session will be displayed on your local desktop (requires a local X server)
 | xrdp - sudo apt-get install xrdp - requires an rdp client
 
 Why isn't Squert showing GeoIP data properly?
@@ -650,8 +622,7 @@ If the Squert map is not showing the country for IPs, try running the following:
 Why do I get segfaults when booting on VMware ESX?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| This is a known issue with Ubuntu 10.04 and ESXi 4.1 and is unrelated
-  to Security Onion. Please see:
+| This is a known issue with Ubuntu 10.04 and ESXi 4.1 and is unrelated to Security Onion. Please see:
 | http://ubuntuforums.org/showthread.php?t=1674759
 | https://bugs.launchpad.net/ubuntu/+source/linux/+bug/659422
 
@@ -663,8 +634,7 @@ How do I run ``ntopng`` on Security Onion?
 How do I open rar files?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-We're not allowed to redistribute the unrar plugin, so you'll need to
-install it manually:
+We're not allowed to redistribute the unrar plugin, so you'll need to install it manually:
 
 ::
 
