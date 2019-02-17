@@ -25,8 +25,7 @@ https://groups.google.com/forum/#!forum/security-onion-testing
 Documentation Team
 ------------------
 
-If you find that some information on our wiki is incorrect or lacking,
-please feel free to submit Pull Requests via Github!
+If you find that some information in our Documentation is incorrect or lacking, please feel free to submit Pull Requests via Github!
 
 https://github.com/Security-Onion-Solutions/securityonion-docs
 
