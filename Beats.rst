@@ -16,12 +16,13 @@ Winlogbeat
 
 https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation.html
 
-| \*If installing Filebeat on a Linux distribution, you will want to ensure that the service is started after a reboot.
-| We can ensure this by running the following commands after install:
+*If installing Filebeat on a Linux distribution, you will want to ensure that the service is started after a reboot.  We can ensure this by running the following commands after install:
 
-``sudo update-rc.d filebeat defaults``
+::
 
-``sudo update-rc.d filebeat enable``
+   sudo update-rc.d filebeat defaults
+
+   sudo update-rc.d filebeat enable
 
 Firewall
 --------
