@@ -1,10 +1,10 @@
 Email Configuration
 ===================
 
-Setup now includes sosetup-email
---------------------------------
+so-email
+-------------
 
-As of `securityonion-setup - 20120912-0ubuntu0securityonion222 <http://blog.securityonion.net/2016/07/securityonion-setup-20120912.html>`__, the Setup package now includes a script called so-email, which will automatically configure automated server-side email for you as described below. Simply run the following command then follow the prompts:
+``so-email`` will automatically configure automated server-side email for you as described below. Simply run the following command and follow the prompts:
 
 ::
 
@@ -22,7 +22,7 @@ Sguil client
 Please note that the Sguil client has its own email configuration (separate from the Sguil server) which can be modified in
 ``/etc/sguil/sguil.conf``.
 
-Introduction
+Overview
 ------------
 
 This page describes how to configure email for alerting and reporting. Applications such as Sguil and Wazuh have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Bro.
