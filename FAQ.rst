@@ -7,7 +7,7 @@ FAQ
 | `Users / Passwords <#users-passwords>`__\ 
 | `Support / Help <#support-help>`__\ 
 | `Error messages <#error-messages>`__\ 
-| `IPS/IDS engines <#ips-ids-engines>`__\ 
+| `IDS engines <#ids-engines>`__\ 
 | `Security Onion internals <#security-onion-internals>`__\ 
 | `Tuning <#tuning>`__\ 
 | `sostat output <#sostat-output>`__\ 
@@ -307,7 +307,7 @@ Why does soup tell me I need a Secure Boot key?
 | 
 | 
 
-IPS/IDS engines
+IDS engines
 -------------------
 
 I'm currently running ``Snort``. How do I switch to ``Suricata``?
