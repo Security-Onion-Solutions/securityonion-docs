@@ -4,11 +4,7 @@ Conference
 Who should attend Security Onion Conference?
 --------------------------------------------
 
-Users of Security Onion should definitely attend! In addition, most
-talks provide value beyond just Security Onion, so folks generally
-interested in intrusion detection, network security monitoring,
-enterprise security monitoring, log management, hunting, and blue
-teaming should consider Security Onion Conference as well.
+Users of Security Onion should definitely attend! In addition, most talks provide value beyond just Security Onion, so folks generally interested in intrusion detection, network security monitoring, enterprise security monitoring, log management, hunting, and blue teaming should consider Security Onion Conference as well.
 
 Social Media
 ------------
@@ -59,7 +55,7 @@ Reeves <https://www.youtube.com/watch?v=MVZ33P_tN-g&index=9&list=PLljFlTO9rB16NP
 Security Onion Conference 2017
 ------------------------------
 
-`Pictures <http://blog.securityonion.net/2017/09/pictures-from-security-onion-conference.html>`__
+`Pictures <https://blog.securityonion.net/2017/09/pictures-from-security-onion-conference.html>`__
 
 `Security Onion Conference 2017 Video
 Playlist <https://www.youtube.com/watch?v=1AI28lFjrhU&list=PLljFlTO9rB15jhnSfR6shBEskTgGbta2k&index=1>`__
@@ -86,7 +82,7 @@ Onion <https://www.youtube.com/watch?v=N1jmk7L4jj0&index=7&list=PLljFlTO9rB15jhn
 Security Onion Conference 2016
 ------------------------------
 
-`Pictures <http://blog.securityonion.net/2016/09/pictures-from-security-onion-conference.html>`__
+`Pictures <https://blog.securityonion.net/2016/09/pictures-from-security-onion-conference.html>`__
 
 `Security Onion Conference 2016 Video
 Playlist <https://www.youtube.com/watch?v=ViR405l-ggg&list=PLljFlTO9rB15Tve-LhV5k_5_0HH37eALe>`__
