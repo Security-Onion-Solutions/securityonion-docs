@@ -16,19 +16,16 @@ Docker
 
 To configure Docker proxy settings, perform the following steps:
 
-| ``sudo -i``
-| ``mkdir /etc/systemd/system/docker.service.d``
-
 ::
 
-    cat <<EOT >> /etc/systemd/system/docker.service.d/proxy.conf 
-    [Service]
-    Environment="HTTP_PROXY=http://proxy.someplace.com:8080/" "HTTPS_PROXY=http://proxy.someplace.com:8080/" "NO_PROXY=127.0.0.1,localhost,.someplace.com"
-    EOT
-
-``systemctl daemon-reload && systemctl restart docker && exit``
-
-``sudo soup``
+   sudo -i
+   mkdir /etc/systemd/system/docker.service.d
+   cat <<EOT >> /etc/systemd/system/docker.service.d/proxy.conf 
+   [Service]
+   Environment="HTTP_PROXY=http://proxy.someplace.com:8080/" "HTTPS_PROXY=http://proxy.someplace.com:8080/" "NO_PROXY=127.0.0.1,localhost,.someplace.com"
+   EOT
+   systemctl daemon-reload && systemctl restart docker && exit
+   sudo soup
 
 ***For older versions of Security Onion on the Elastic Stack, if the above did not work, you may want to try the following:***
 
