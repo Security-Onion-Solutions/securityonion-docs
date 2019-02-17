@@ -258,33 +258,15 @@ If that doesn't work, then try also restarting mysql:
 If that still doesn't fix it, you may have to perform MySQL surgery on the database ``securityonion_db`` as described in the Sguil FAQ:
 http://nsmwiki.org/Sguil\_FAQ#Barnyard\_dies\_at\_startup.2C\_with\_.22Duplicate\_Entry.22\_error
 
-Why do I get the following error when starting Sguil?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. raw:: html
-
-   <pre><code>Application initialization failed: no display name and no $DISPLAY environment variable<br>
-   ERROR: Cannot fine the Iwidgets extension.<br>
-   The iwidgets package is part of the incr tcl extension and is<br>
-   available as a port/package most systems.<br>
-   See http://www.tcltk.com/iwidgets/ for more info.<br>
-   </code></pre>
-
-This is related to `this <#tclheldback>`__ question. See `tcl <tcl>`__.
-
 Why does Snort segfault every day at 7:01 AM?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| 7:01 AM is the time of the daily PulledPork rules update. If you're
-  running Snort with the Snort Subscriber (Talos) ruleset, this includes
-  updating the SO rules. There is a known issue when running Snort with
-  the Snort Subscriber (Talos) ruleset and updating the SO rules:
-| https://groups.google.com/d/topic/pulledpork-users/1bQDkh3AhNs/discussion
-| After updating the rules, Snort is restarted, and the segfault occurs
-  in the OLD instance of Snort (not the NEW instance). Therefore, the
-  segfault is merely a nuisance log entry and can safely be ignored.
+7:01 AM is the time of the daily PulledPork rules update. If you're running Snort with the Snort Subscriber (Talos) ruleset, this includes updating the SO rules. There is a known issue when running Snort with the Snort Subscriber (Talos) ruleset and updating the SO rules:
+https://groups.google.com/d/topic/pulledpork-users/1bQDkh3AhNs/discussion
 
-Why does the pcap\_agent log show "Error: can't read logFile: no such variable"?
+After updating the rules, Snort is restarted, and the segfault occurs in the OLD instance of Snort (not the NEW instance). Therefore, the segfault is merely a nuisance log entry and can safely be ignored.
+
+Why does the pcap_agent log show "Error: can't read logFile: no such variable"?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This usually means that there is an unexpected file in the dailylogs
@@ -313,13 +295,7 @@ This is a known issue with certain versions of VMware. You can either:
 Why does Bro log ``Failed to open GeoIP database`` and ``Fell back to GeoIP Country database``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| The GeoIP CITY database is ``not free`` and thus we cannot include it
-  in the distro. Bro fails to find it and falls back to the GeoIP
-  COUNTRY database (which is free). As long as you are seeing some
-  country codes in your conn.log, then everything should be fine. If you
-  really need the CITY database, see this thread for some options:
-| https://groups.google.com/d/topic/security-onion-testing/gtc-8ZTuCi4/discussion
-| 
+The GeoIP CITY database is ``not free`` and thus we cannot include it in the distro. Bro fails to find it and falls back to the GeoIP COUNTRY database (which is free). As long as you are seeing some country codes in your conn.log, then everything should be fine. If you really need the CITY database, see this thread for some options: https://groups.google.com/d/topic/security-onion-testing/gtc-8ZTuCi4/discussion
 
 Why does soup tell me I need a Secure Boot key?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -337,35 +313,29 @@ IPS/IDS engines
 I'm currently running ``Snort``. How do I switch to ``Suricata``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Please note that, if you're running the Snort Talos ruleset, Snort
-  Shared Object rules will not load in Suricata. Most folks who choose
-  the Suricata engine choose to run the Emerging Threats ruleset.
-| sudo so-sensor-stop
-| sudo sed -i 's\|ENGINE=snort\|ENGINE=suricata\|g'
-  /etc/nsm/securityonion.conf
-| sudo rule-update 
-| sudo so-sensor-start
-| 
+Please note that, if you're running the Snort Talos ruleset, Snort Shared Object rules will not load in Suricata. Most folks who choose the Suricata engine choose to run the Emerging Threats ruleset.
+
+::
+
+   sudo so-sensor-stop
+   sudo sed -i 's\|ENGINE=snort\|ENGINE=suricata\|g' /etc/nsm/securityonion.conf
+   sudo rule-update 
+   sudo so-sensor-start
 
 I'm currently running ``Suricata``. How do I switch to ``Snort``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. raw:: html
+::
 
-   <pre><code>sudo so-sensor-stop<br>
-   sudo sed -i 's|ENGINE=suricata|ENGINE=snort|g' /etc/nsm/securityonion.conf<br>
-   sudo rule-update<br>
-   sudo so-sensor-start<br>
-   </code></pre>
+   sudo so-sensor-stop
+   sudo sed -i 's|ENGINE=suricata|ENGINE=snort|g' /etc/nsm/securityonion.conf
+   sudo rule-update
+   sudo so-sensor-start
 
 Can Security Onion run in ``IPS`` mode?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Running Security Onion as an IPS requires manual configuration and is
-  ``not supported``.
-| I talked about this on the `Packet
-  Pushers <http://packetpushers.net/>`__ podcast:
-| http://packetpushers.net/show-95-security-onion-with-doug-burks-or-why-ids-rules-and-ips-drools/
+|Running Security Onion as an IPS requires manual configuration and is ``not supported``.
 | 
 | 
 | `back to top <#top>`__
@@ -398,12 +368,7 @@ Why are the ``timestamps`` in Kibana not in UTC?
 Why is my disk filling up?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sguil uses netsniff-ng to record full packet captures to disk. These
-pcaps are stored in ``nsm/sensor_data/$HOSTNAME-$INTERFACE/dailylogs/``.
-``/etc/cron.d/sensor-clean`` is a cronjob that runs every minute that
-should delete old pcaps when the disk reaches your defined disk usage
-threshold (90% by default). It's important to properly size your disk
-storage so that you avoid filling the disk to 100% between purges.
+Sguil uses netsniff-ng to record full packet captures to disk. These pcaps are stored in ``nsm/sensor_data/$HOSTNAME-$INTERFACE/dailylogs/``. ``/etc/cron.d/sensor-clean`` is a cronjob that runs every minute that should delete old pcaps when the disk reaches your defined disk usage threshold (90% by default). It's important to properly size your disk storage so that you avoid filling the disk to 100% between purges.
 
 I just rebooted and it looks like the services aren't starting automatically.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
