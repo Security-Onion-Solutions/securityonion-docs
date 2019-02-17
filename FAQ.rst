@@ -318,7 +318,7 @@ Please note that, if you're running the Snort Talos ruleset, Snort Shared Object
 ::
 
    sudo so-sensor-stop
-   sudo sed -i 's\|ENGINE=snort\|ENGINE=suricata\|g' /etc/nsm/securityonion.conf
+   sudo sed -i 's|ENGINE=snort|ENGINE=suricata|g' /etc/nsm/securityonion.conf
    sudo rule-update 
    sudo so-sensor-start
 
@@ -335,12 +335,11 @@ I'm currently running ``Suricata``. How do I switch to ``Snort``?
 Can Security Onion run in ``IPS`` mode?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-|Running Security Onion as an IPS requires manual configuration and is ``not supported``.
-| 
-| 
-| `back to top <#top>`__
-| 
-| 
+Running Security Onion as an IPS requires manual configuration and is ``not supported``.
+ 
+ 
+`back to top <#top>`__
+ 
 
 Security Onion internals
 ----------------------------
