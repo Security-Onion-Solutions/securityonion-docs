@@ -57,7 +57,6 @@ Security Onion Documentation
    Snort
    Suricata
    Bro
-   Bro-Fields
    netsniff-ng
 
 .. _hostvisibility:
@@ -90,6 +89,7 @@ Security Onion Documentation
    Redis
    Data-Fields
    Alert-Data-Fields
+   Bro-Fields
    Elastalert-Fields
    Beats
    ELSA-to-Elastic
