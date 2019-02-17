@@ -48,7 +48,7 @@ Links
 tcpreplay
 ---------
 
-You can use ``tcpreplay`` to replay any of these pcaps on your Security Onion sensor. For example, please see http://blog.securityonion.net/2011/01/introduction-to-sguil-and-squert-part-3.html for a quick, easy use-case and what you should see in the Sguil console.
+You can use ``tcpreplay`` to replay any of these pcaps on your Security Onion sensor. For example, please see https://blog.securityonion.net/2011/01/introduction-to-sguil-and-squert-part-3.html for a quick, easy use-case and what you should see in the Sguil console.
 
 so-replay
 ---------
