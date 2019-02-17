@@ -1,12 +1,12 @@
 Automating Setup
 ================
 
-You can automate the Setup process using ``sosetup.conf``.  There are a few example files in ``/usr/share/securityonion/``.
+You can automate the Setup process using ``sosetup.conf``.
 
 Starting from scratch
 ---------------------
 
-Copy one of the example files from ``/usr/share/securityonion/`` to your home directory:
+There are a few example files in ``/usr/share/securityonion/``.  Copy one of these example files to your home directory:
 
 ::
 
@@ -18,7 +18,7 @@ Edit your new ``sosetup.conf`` using ``nano`` or your favorite text editor:
 
     nano ~/sosetup.conf
 
-Run Setup with the -f switch and the path to this file:
+Then run Setup with the ``-f`` switch and the path to this file:
 
 ::
 
