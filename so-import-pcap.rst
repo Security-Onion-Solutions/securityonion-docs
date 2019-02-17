@@ -1,22 +1,18 @@
 so-import-pcap
 ==============
 
-``so-import-pcap`` will import one or more pcaps into Security Onion
-preserving timestamps.
+``so-import-pcap`` will import one or more pcaps into Security Onion preserving timestamps.
 
 Availability
 ------------
 
-| ``so-import-pcap`` is included by default in Security Onion Elastic
-  Stack Release Candidate 3 (RC3) and later:
-| http://blog.securityonion.net/2018/03/security-onion-elastic-stack-release.html
+| ``so-import-pcap`` is included by default in Security Onion Elastic Stack Release Candidate 3 (RC3) and later:
+| https://blog.securityonion.net/2018/03/security-onion-elastic-stack-release.html
 
 Description
 -----------
 
-``so-import-pcap`` is a quick and dirty EXPERIMENTAL script that will
-import one or more pcaps into Security Onion and preserve original
-timestamps.
+``so-import-pcap`` is a quick and dirty EXPERIMENTAL script that will import one or more pcaps into Security Onion and preserve original timestamps.
 
 It will do the following:
 
@@ -79,12 +75,9 @@ Example
 Warning
 -------
 
-Please note that so-import-pcap will make changes to your system! It
-will warn you before doing so and will prompt you to press Enter to
-continue or Ctrl-c to cancel.
+Please note that so-import-pcap will make changes to your system! It will warn you before doing so and will prompt you to press Enter to continue or Ctrl-c to cancel.
 
-If you want to bypass the "Press Enter to continue" prompt, you can do
-something like this:
+If you want to bypass the "Press Enter to continue" prompt, you can do something like this:
 
 ::
 
