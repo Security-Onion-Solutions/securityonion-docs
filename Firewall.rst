@@ -4,14 +4,8 @@ Firewall/Hardening
 Setup defaults to only allowing port 22 (ssh)
 ---------------------------------------------
 
-| As of securityonion-setup - 20120912-0ubuntu0securityonion201, Setup
-  now defaults to locking down the local ``ufw`` firewall to only
-  allowing port 22 (ssh):
-| http://blog.securityonion.net/2016/03/securityonion-setup-20120912.html
-
-There is a note at the end of Setup that tells you this and lets you
-know that, if you need to allow connections on other ports, you can run
-the new ``so-allow`` utility.
+Setup defaults to locking down the local ``ufw`` firewall to only allowing port 22 (ssh).  There is a note at the end of Setup that tells you this and lets you know that, if you need to allow connections on other ports, you can run
+the ``so-allow`` utility.
 
 Sensors automatically add their own firewall rules to the master server
 -----------------------------------------------------------------------
@@ -28,11 +22,7 @@ the sensor to connect on the following ports:
 ``so-allow``
 ------------
 
-If you need to open ports for OSSEC agents, syslog devices, or analyst
-VMs, you can run ``so-allow`` and it will walk you through this process.
-``so-allow`` also provides an option to add firewall rules for sensors
-although you shouldn't need this under normal circumstances since they
-should automatically add their own rules as described above.
+If you need to open ports for OSSEC agents, syslog devices, or analyst VMs, you can run ``so-allow`` and it will walk you through this process. ``so-allow`` also provides an option to add firewall rules for sensors although you shouldn't need this under normal circumstances since they should automatically add their own rules as described above.
 
 ::
 
@@ -57,15 +47,11 @@ should automatically add their own rules as described above.
 
     Please enter your selection (a - analyst, c - apt-cacher-ng client, l - syslog, o - ossec, or s - Security Onion sensor, etc.):
 
-To view existing rules granted through the use of ``so-allow``, use the
-following command:
-
 ``so-allow-view``
+-----------------
 
-More ``ufw`` documentation
---------------------------
+To view existing rules granted through the use of ``so-allow``, use the following command:
 
-For more information about manually adding ``ufw`` firewall rules or if
-you're still running a version of Setup older than securityonion-setup -
-20120912-0ubuntu0securityonion201, then you can reference the `original
-firewall documentation <firewall-old>`__.
+::
+
+   so-allow-view
