@@ -46,6 +46,7 @@ Security Onion Documentation
    CyberChef
    Squert
    Sguil
+   networkminer
 
 .. _networkvisibility:
 
