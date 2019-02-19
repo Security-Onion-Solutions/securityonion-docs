@@ -36,6 +36,13 @@ Logging
 | ``/var/log/nsm/HOSTNAME-INTERFACE/suricata.log``
 | (where HOSTNAME is your actual hostname and INTERFACE is your actual sniffing interface)
 
+Stats
+-----
+
+| For detailed Suricata statistics, check the stats file:
+| ``/nsm/sensor_data/HOSTNAME-INTERFACE/stats.log``
+| (where HOSTNAME is your actual hostname and INTERFACE is your actual sniffing interface)
+
 More Information
 ----------------
 
