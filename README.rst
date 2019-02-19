@@ -1,1 +1,0 @@
-# securityonion-docs
