@@ -11,6 +11,17 @@ Best Practices
 
 When you run Setup, make sure you choose `Best Practices <Best-Practices>`__.
 
+CPU Affinity/Pinning
+--------------------
+
+For best performance, CPU intensive processes like Bro and Suricata should be pinned to specific CPUs.
+
+| For Bro, use the ``pin_cpus` setting in ``/opt/bro/etc/node.cfg``:
+| https://docs.zeek.org/en/stable/configuration/#using-pf-ring
+
+| For Suricata, use the affinity settings in ``suricata.yaml``:
+| https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading
+
 Disk/Memory
 -----------
 
