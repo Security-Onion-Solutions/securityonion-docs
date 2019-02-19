@@ -7,7 +7,7 @@ Contributing
 ------------
 | If you notice any documentation is missing or incorrect, please feel free to submit a pull request (PR) to the following repo:
 | https://github.com/Security-Onion-Solutions/securityonion-docs
-|
+
 We will review the PR and merge if appropriate.
 
 Naming Convention
@@ -16,7 +16,7 @@ The end goal of this naming convention is to allow a user to easily guess and ty
 
 | For example, if I want to read more about Suricata, I should be able to type the following into my browser: 
 | https://securityonion.net/docs/suricata
-|
+
 To achieve this goal, new documentation pages should use the following naming convention:
 
 - all lowercase
