@@ -11,17 +11,11 @@ Download:
 
    wget https://raw.githubusercontent.com/weslambert/securityonion-etherpad/master/install_etherpad
 
-Make executable:
-
-::
-
-   chmod +x install_etherpad
-
 Execute:
 
 ::
 
-   sudo ./install_etherpad
+   sudo bash ./install_etherpad
 
 Follow the prompts.
 
