@@ -5,7 +5,7 @@ Security Onion Documentation
    :maxdepth: 2
    :caption: Getting Started
 
-   AboutThisDocumentation
+   about
    IntroductionToSecurityOnion
    Use-Cases
    Hardware
