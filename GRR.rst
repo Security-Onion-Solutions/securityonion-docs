@@ -71,6 +71,6 @@ Management
 
 | If you would like to add another user, aside from the default, you can follow the instructions here:
 | https://github.com/google/grr-doc/blob/master/admin.adoc#user-management
-
+|
 | For more information on the GRR Docker image, see here:
 | https://github.com/google/grr-doc/blob/master/docker.adoc
