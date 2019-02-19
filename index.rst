@@ -1,6 +1,8 @@
 Security Onion Documentation
 =======================================
 
+Welcome to the Security Onion Documentation!
+
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
