@@ -34,7 +34,7 @@ conn.log
 
 -  For more information, see:
 
-https://www.bro.org/sphinx-git/scripts/base/protocols/conn/main.bro.html#type-Conn::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-Conn::Info
 
 dns.log
 ~~~~~~~
@@ -43,7 +43,7 @@ dns.log
 
 -  For more information ,see:
 
-https://www.bro.org/sphinx-git/scripts/base/protocols/dns/main.bro.html#type-DNS::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-DNS::Info
 
 ftp.log
 ~~~~~~~
@@ -52,7 +52,7 @@ ftp.log
 
 -  For more information, see:
 
-https://www.bro.org/sphinx-git/scripts/base/protocols/ftp/info.bro.html#type-FTP::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-FTP::Info
 
 http.log
 ~~~~~~~~
@@ -61,7 +61,7 @@ http.log
 
 -  For more information, see:
 
-https://www.bro.org/sphinx-git/scripts/base/protocols/http/main.bro.html#type-HTTP::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-HTTP::Info
 
 ssl.log
 ~~~~~~~
@@ -70,7 +70,7 @@ ssl.log
 
 -  For more information, see:
 
-https://www.bro.org/sphinx-git/scripts/base/protocols/ssl/main.bro.html#type-SSL::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-SSL::Info
 
 notice.log
 ~~~~~~~~~~
@@ -79,10 +79,10 @@ notice.log
 
 -  For more information, see:
 
-https://www.bro.org/sphinx-git/scripts/base/frameworks/notice/main.bro.html#type-Notice::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-Notice::Info
 
 | ...and others, which can be researched here:
-| https://www.bro.org/sphinx-git/script-reference/log-files.html
+| https://docs.zeek.org/en/latest/script-reference/log-files.html
 
 As you can see, Bro log data can provide a wealth of information to the analyst, all easily accessible through `Kibana <Kibana>`__.
 
