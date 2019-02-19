@@ -38,17 +38,11 @@ Download the install script:
 
    wget https://raw.githubusercontent.com/activecm/rita/master/install.sh
 
-Make the installer executable:
-
-::
-
-   chmod +x install.sh
-
 Run the installer:
 
 ::
 
-   sudo ./install.sh
+   sudo bash ./install.sh
 
 Start MongoDB:
 
