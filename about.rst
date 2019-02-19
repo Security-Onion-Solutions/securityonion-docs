@@ -1,8 +1,6 @@
 About This Documentation
 ========================
 
-Welcome to the Security Onion Documentation!
-
 Formats
 -------
 
