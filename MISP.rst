@@ -19,18 +19,30 @@ installation is at your own risk.
 Installation
 ------------
 
-| Clone the repo:
-| ``git clone https://github.com/weslambert/securityonion-misp``
+Clone the repo:
 
-| Run the setup script:
-| ``sudo securityonion-misp/so-misp-setup``
+::
 
-| Update rules (if desired):
-| ``sudo rule-update``
+   git clone https://github.com/weslambert/securityonion-misp
 
-| Confirm rules in place:
-| ``grep -i misp /etc/nsm/rules/downloaded.rules``
+Run the setup script:
 
-| You should now be up and running!
-| MISP rules will be downloaded via cron-job at the interval specified
-  in ``/etc/cron.d/download-misp``.
+::
+
+   sudo securityonion-misp/so-misp-setup
+
+Update rules (if desired):
+
+::
+
+   sudo rule-update
+
+Confirm rules in place:
+
+::
+
+   grep -i misp /etc/nsm/rules/downloaded.rules
+
+You should now be up and running!
+
+MISP rules will be downloaded via cron-job at the interval specified in ``/etc/cron.d/download-misp``.
