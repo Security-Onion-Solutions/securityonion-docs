@@ -127,17 +127,14 @@ Bro \* n
 
 ``/opt/bro/etc/node.cfg``
 
-We compile Bro with
-`PF\_RING <PF_RING>`__
-so that you can spin up multiple Bro workers to handle more traffic.
+We compile Bro to support both `PF\_RING <PF_RING>`__ and `<AF-PACKET>`_ so that you can spin up multiple Bro workers to handle more traffic.  Modern versions of Setup now default to `<AF-PACKET>`_.
 
 Custom Scripts
 --------------
 
 ``/opt/bro/share/bro/site/local.bro``
 
--  You can add custom scripts in ``/opt/bro/share/bro/policy/`` and then
-   reference the scripts in ``/opt/bro/share/bro/site/local.bro``.
+-  You can add custom scripts in ``/opt/bro/share/bro/policy/`` and then reference the scripts in ``/opt/bro/share/bro/site/local.bro``.
 
 Below is an example how to do so:
 
@@ -189,9 +186,7 @@ Then test, using:
 
 ``sudo salt "SENSOR" state.highstate``
 
-You can then have Bro automatically restart upon a detected change in
-``local.bro`` from the master by modifying ``init.sls`` similar to the
-following:
+You can then have Bro automatically restart upon a detected change in ``local.bro`` from the master by modifying ``init.sls`` similar to the following:
 
 ::
 
