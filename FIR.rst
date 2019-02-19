@@ -31,17 +31,11 @@ Get the install script:
 
    sudo wget https://raw.githubusercontent.com/weslambert/securityonion-fir/master/install_fir
 
-Make the script executable:
-
-::
-
-   sudo chmod +x install_fir
-
 Run the script:
 
 ::
 
-   sudo ./install_fir
+   sudo bash ./install_fir
 
 Follow the prompts, and once finished, you should be able to navigate to FIR via ``https://domain.you.specified``. (Note this address in also referenced in ``/etc/apache2/sites-available/fir.conf``.)
 
