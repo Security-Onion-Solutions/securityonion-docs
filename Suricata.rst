@@ -32,14 +32,14 @@ If you would like to configure/manage IDS rules, please see:
 Logging
 -------
 
-| If you need to troubleshoot Suricata, check the log file:
+| If you need to troubleshoot Suricata, check ``suricata.log``:
 | ``/var/log/nsm/HOSTNAME-INTERFACE/suricata.log``
 | (where HOSTNAME is your actual hostname and INTERFACE is your actual sniffing interface)
 
 Stats
 -----
 
-| For detailed Suricata statistics, check the stats file:
+| For detailed Suricata statistics, check ``stats.log``:
 | ``/nsm/sensor_data/HOSTNAME-INTERFACE/stats.log``
 | (where HOSTNAME is your actual hostname and INTERFACE is your actual sniffing interface)
 
