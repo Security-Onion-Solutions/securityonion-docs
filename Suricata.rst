@@ -11,18 +11,17 @@ From https://suricata-ids.org:
 Performance
 -----------
 
-We compile Suricata to support both `PF\_RING <PF_RING>`__ and `<AF-PACKET>`_ to allow you to spin up multiple workers to handle more traffic.  Modern versions of Setup default to `<AF-PACKET>`.
+We compile Suricata to support both `PF\_RING <PF_RING>`__ and `<AF-PACKET>`_ to allow you to spin up multiple workers to handle more traffic.  Modern versions of Setup default to `<AF-PACKET>`_.
 
-For high traffic levels, you may want to pin Suricata to specific CPU cores using the affinity settings in suricata.yaml:
-https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading
+| For high traffic levels, you may want to pin Suricata to specific CPU cores using the affinity settings in suricata.yaml:
+| https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading
 
 Configuration
 -------------
 
 | You can configure Suricata via suricata.yaml:
 | ``/etc/nsm/HOSTNAME-INTERFACE/suricata.yaml``
-| (where HOSTNAME is your actual hostname and INTERFACE is your actual
-  sniffing interface)
+| (where HOSTNAME is your actual hostname and INTERFACE is your actual sniffing interface)
 
 If you would like to configure/manage IDS rules, please see:
 
@@ -35,8 +34,7 @@ Logging
 
 | If you need to troubleshoot Suricata, check the log file:
 | ``/var/log/nsm/HOSTNAME-INTERFACE/suricata.log``
-| (where HOSTNAME is your actual hostname and INTERFACE is your actual
-  sniffing interface)
+| (where HOSTNAME is your actual hostname and INTERFACE is your actual sniffing interface)
 
 More Information
 ----------------
