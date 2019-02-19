@@ -1,7 +1,7 @@
 About This Documentation
 ========================
 
-This documentation is published online at https://securityonion.net/docs.  If you are viewing an offline version of this documentation but have Internet access, you might want to switch to the online version to see the latest changes.
+This documentation is published online at https://securityonion.net/docs.  If you are viewing an offline version of this documentation but have Internet access, you might want to switch to the online version at https://securityonion.net/docs to see the latest version.
 
 Contributing
 ------------
