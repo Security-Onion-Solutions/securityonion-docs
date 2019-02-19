@@ -6,9 +6,9 @@ Security Onion is designed for many different use cases! Here are just a few exa
 Classroom
 ---------
 
-Evaluation Mode is ideal for classroom or lab environments.
+``Evaluation Mode`` is ideal for classroom or lab environments.
 
-Install Security Onion. Run Setup and configure network interfaces. Reboot, run Setup again, and then choose Evaluation Mode.
+Install Security Onion. Run Setup and configure network interfaces. Reboot, run Setup again, and then choose ``Evaluation Mode``.
 
 | For more information, please see:
 | `<QuickISOImage>`__
@@ -21,7 +21,7 @@ Need to review a pcap with original timestamps preserved? Install Security Onion
 Production Server - Standalone
 ------------------------------
 
-Install Security Onion. Run Setup and configure network interfaces.  Reboot, run Setup again, choose Production Mode, choose New Deployment, and enable network sensor services.
+Install Security Onion. Run Setup and configure network interfaces.  Reboot, run Setup again, choose ``Production Mode``, choose ``New Deployment``, and enable network sensor services.
 
 | For more information, please see:
 | `<ProductionDeployment>`__
@@ -29,9 +29,9 @@ Install Security Onion. Run Setup and configure network interfaces.  Reboot, run
 Production Server - Distributed Deployment
 ------------------------------------------
 
-| Install Security Onion on the master server box. Run Setup and configure network interfaces. Reboot, run Setup again, choose Production Mode, and then choose New Deployment.
+| Install Security Onion on the master server box. Run Setup and configure network interfaces. Reboot, run Setup again, choose ``Production Mode``, and then choose ``New Deployment``.
 | 
-| Install Security Onion on one or more nodes and then on each one: run Setup, configure network interfaces, reboot, run Setup again, choose Production Mode, and then choose Existing Deployment to join to master.
+| Install Security Onion on one or more nodes and then on each one: run Setup, configure network interfaces, reboot, run Setup again, choose ``Production Mode``, and then choose ``Existing Deployment`` to join to master.
 
 | For more information, please see:
 | `<ProductionDeployment>`__
@@ -39,7 +39,7 @@ Production Server - Distributed Deployment
 Analyst VM
 ----------
 
-Install Security Onion in a VM on your local desktop or laptop. Do NOT run Setup. Launch the Sguil client and connect to sguild on your Production Master Server. Launch the web browser and connect to Squert or Kibana on your Production Master Server.
+Install Security Onion in a VM on your local desktop or laptop. Do NOT run Setup. Launch the `<Sguil>`_ client and connect to sguild on your Production Master Server. Launch the web browser and connect to `<Squert>`_ or `<Kibana>`_ on your Production Master Server.
 
 | For more information, please see:
 | `<ConnectingtoSguil#directly-connecting-to-sguild-remotely>`__
