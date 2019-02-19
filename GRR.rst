@@ -23,17 +23,11 @@ Get the install script:
 
    sudo wget https://raw.githubusercontent.com/weslambert/securityonion-grr/master/install_grr
 
-Make the script executable:
-
-::
-
-   sudo chmod +x install_grr
-
 Run the script:
 
 ::
 
-   sudo ./install_grr
+   sudo bash ./install_grr
 
 Follow the prompts, and once finished, you should be able to navigate to GRR via ``https://domain.you.specified``.  (Note this address in also referenced in ``/etc/apache2/sites-available/grr.conf``.)
 
