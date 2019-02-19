@@ -1,7 +1,15 @@
 About This Documentation
 ========================
 
+Welcome to the Security Onion Documentation!
+
+Formats
+-------
+
 This documentation is published online at https://securityonion.net/docs.  If you are viewing an offline version of this documentation but have Internet access, you might want to switch to the online version at https://securityonion.net/docs to see the latest version.
+
+| This documentation is also available in PDF format:
+| https://readthedocs.org/projects/securityonion/downloads/pdf/latest/
 
 Contributing
 ------------
@@ -12,9 +20,9 @@ We will review the PR and merge if appropriate.
 
 Naming Convention
 -----------------
-The end goal of this naming convention is to allow a user to easily guess and type the URL of the documentation they want to go to.
+Our goal is to allow you to easily guess and type the URL of the documentation you want to go to.
 
-| For example, if I want to read more about Suricata, I should be able to type the following into my browser: 
+| For example, if you want to read more about Suricata, you can type the following into your browser: 
 | https://securityonion.net/docs/suricata
 
 To achieve this goal, new documentation pages should use the following naming convention:
