@@ -164,6 +164,7 @@ Security Onion Documentation
    MISP
    DeployingNtopng
    RITA
+   Strelka
    ThirdPartyIntegration
 
 .. _help:
