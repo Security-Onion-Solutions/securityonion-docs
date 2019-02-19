@@ -1,28 +1,19 @@
 Bro
 ===
 
-From https://www.bro.org/:
+From https://www.zeek.org/:
 
-    Bro is a powerful network analysis framework that is much different
-    from the typical IDS you may know. While focusing on network
-    security monitoring, Bro provides a comprehensive platform for more
-    general network traffic analysis as well.
+    Zeek is a powerful network analysis framework that is much different from the typical IDS you may know. (Zeek is the new name for the long-established Bro system. Note that parts of the system retain the "Bro" name, and it also often appears in the documentation and distributions.)
 
 Logs
 ----
 
-Bro logs are stored in ``/nsm/bro/logs``. They are consumed by
-`syslog-ng <syslog>`__, parsed and augmented by `Logstash <Logstash>`__,
-stored in `Elasticsearch <Elasticsearch>`__, and viewable in
-`Kibana <Kibana>`__.
+Bro logs are stored in ``/nsm/bro/logs``. They are consumed by `syslog-ng <syslog>`__, parsed and augmented by `Logstash <Logstash>`__, stored in `Elasticsearch <Elasticsearch>`__, and viewable in `Kibana <Kibana>`__.
 
 TSV
 ~~~
 
-By default, we configure Bro to output in JSON for higher performance
-and better parsing. We recommend that most folks leave Bro configured
-for JSON output. If you really need the traditional Bro TSV (Tab
-Separated Values) format, you can disable JSON:
+By default, we configure Bro to output in JSON for higher performance and better parsing. We recommend that most folks leave Bro configured for JSON output. If you really need the traditional Bro TSV (Tab Separated Values) format, you can disable JSON:
 
 ::
 
@@ -93,23 +84,16 @@ https://www.bro.org/sphinx-git/scripts/base/frameworks/notice/main.bro.html#type
 | ...and others, which can be researched here:
 | https://www.bro.org/sphinx-git/script-reference/log-files.html
 
-As you can see, Bro log data can provide a wealth of information to the
-analyst, all easily accessible through
-`Kibana <Kibana>`__.
+As you can see, Bro log data can provide a wealth of information to the analyst, all easily accessible through `Kibana <Kibana>`__.
 
 Intel
 -----
 
 -  You can add your own Intel to ``/opt/bro/share/bro/intel/intel.dat``.
 
-   -  When editing ``/opt/bro/share/intel/intel.dat``, ensure there are
-      no leading/trailing spaces or lines, and that only (single) tabs
-      are used as field delimiters.
-   -  If you experience an error, or do not notice
-      ``/nsm/bro/logs/current/intel.log`` being generated, try having a
-      look in ``/nsm/bro/logs/current/reporter.log`` for clues.
-   -  You may also want to restart Bro after making changes, by running
-      the following command:
+   -  When editing ``/opt/bro/share/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
+   -  If you experience an error, or do not notice ``/nsm/bro/logs/current/intel.log`` being generated, try having a look in ``/nsm/bro/logs/current/reporter.log`` for clues.
+   -  You may also want to restart Bro after making changes, by running the following command:
       \ ``sudo so-bro-restart``.
 
 -  For more information, please see:
