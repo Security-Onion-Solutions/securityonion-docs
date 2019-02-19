@@ -43,7 +43,7 @@ dns.log
 
 -  For more information ,see:
 
-https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-DNS::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/dns/main.bro.html#type-DNS::Info
 
 ftp.log
 ~~~~~~~
@@ -52,7 +52,7 @@ ftp.log
 
 -  For more information, see:
 
-https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-FTP::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/ftp/info.bro.html#type-FTP::Info
 
 http.log
 ~~~~~~~~
@@ -61,7 +61,7 @@ http.log
 
 -  For more information, see:
 
-https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-HTTP::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/http/main.bro.html#type-HTTP::Info
 
 ssl.log
 ~~~~~~~
@@ -70,7 +70,7 @@ ssl.log
 
 -  For more information, see:
 
-https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-SSL::Info
+https://docs.zeek.org/en/latest/scripts/base/protocols/ssl/main.bro.html#type-SSL::Info
 
 notice.log
 ~~~~~~~~~~
@@ -79,7 +79,7 @@ notice.log
 
 -  For more information, see:
 
-https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.bro.html#type-Notice::Info
+https://docs.zeek.org/en/latest/scripts/base/frameworks/notice/main.bro.html#type-Notice::Info
 
 | ...and others, which can be researched here:
 | https://docs.zeek.org/en/latest/script-reference/log-files.html
