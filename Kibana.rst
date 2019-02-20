@@ -25,7 +25,7 @@ Kibana uses multiple hyperlinked fields to accelerate investigations and decisio
 Transcript
 ~~~~~~~~~~
 
-When present, clicking the ``_id`` field allows an analyst to pivot to transcript via CapMe.
+When present, clicking the ``_id`` field allows an analyst to pivot to transcript via `<CapMe>`_.
 
 Indicator Dashboard
 ~~~~~~~~~~~~~~~~~~~
