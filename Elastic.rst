@@ -1,8 +1,11 @@
 Elastic Stack
 =============
 
-We've integrated the Elastic Stack (`Elasticsearch <Elasticsearch>`__, `Logstash <Logstash>`__, and
-`Kibana <Kibana>`__)!
+We've integrated the Elastic Stack:
+
+| `<Elasticsearch>`__
+| `<Logstash>`__
+| `<Kibana>`__
 
 In addition, we've added the following:
 
@@ -11,7 +14,7 @@ In addition, we've added the following:
 | `ElastAlert <ElastAlert>`__
 | `FreqServer <FreqServer>`__
 
-Each component has its own `Docker <Docker>`__ image.
+Each of the components above has its own `<Docker>`__ image.
 
 You can get an idea of what this whole integration looks like at a high-level by viewing our `architecture
 diagram <Elastic-Architecture>`__.
