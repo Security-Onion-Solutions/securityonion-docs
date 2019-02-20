@@ -55,4 +55,4 @@ The Security Onion Setup wizard allows you to easily configure the best installa
 Conclusion
 ----------
 
-So we have full packet capture, Snort or Suricata rule-driven intrusion detection, Bro event-driven intrusion detection and Wazuh host-based intrusion detection, all running out of the box once you run Security Onion setup. These disparate systems with various dependencies and complexities all run seamlessly together and would otherwise take hours, days or weeks to assemble and integrate on their own. What was once a seemingly impossible task is now as easy to install as Windows.
+So we have full packet capture, `<Snort>`_ or `<Suricata>`_ rule-driven intrusion detection, `<Bro>`_ event-driven intrusion detection and Wazuh host-based intrusion detection, all running out of the box once you run Security Onion setup. These disparate systems with various dependencies and complexities all run seamlessly together and would otherwise take hours, days or weeks to assemble and integrate on their own. What was once a seemingly impossible task is now as easy as answering a few questions.
