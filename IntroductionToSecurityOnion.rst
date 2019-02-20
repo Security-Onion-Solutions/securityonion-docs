@@ -27,6 +27,8 @@ HIDS:
 
 -  For host-based intrusion detection, Security Onion offers `<Wazuh>`_, a free, open source HIDS for Windows, Linux and Mac OS X. When you add the Wazuh agent to endpoints on your network, you gain invaluable visibility from endpoint to your network’s exit point. Wazuh performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response. As an analyst, being able to correlate host-based events with network-based events can be the difference in identifying a successful attack.
 
+In addition to the above, Security Onion can collect data via syslog or other agent transport.
+
 Analysis Tools
 --------------
 
