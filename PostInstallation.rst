@@ -1,11 +1,17 @@
 After Installation
 ==================
 
--  | Verify services are running:
-   | ``sudo so-status``
+-  Verify services are running:
+   
+   ::
+   
+      sudo so-status
 
--  | If any services are not running, try starting them:
-   | ``sudo so-start``
+-  If any services are not running, try starting them:
+
+   ::
+   
+      sudo so-start
 
 -  If you have problems with Snort/Suricata/Bro/PF_RING and have UEFI Secure Boot enabled, please see `Secure Boot <Secure-Boot>`__.
 
@@ -31,17 +37,23 @@ Tuning / Miscellaneous
      Restart the sensor processes:
    | ``sudo so-sensor-restart``
 
--  | If you have Internet access, create an IDS alert by typing the following at a terminal:
-   | ``curl http://testmyids.com``
+-  If you have Internet access, create an IDS alert by typing the following at a terminal:
 
--  As of securityonion-setup - 20120912-0ubuntu0securityonion201, Setup now defaults to only opening port 22 in the firewall. If you need to connect OSSEC agents, syslog devices, or analyst VMs, you can run the new ``so-allow`` utility which will walk you through creating firewall rules to allow these devices to connect. For more information, please see the `firewall <Firewall>`__ page.
+   ::
+   
+      curl http://testmyids.com
+
+-  Setup defaults to only opening port 22 in the firewall. If you need to connect OSSEC agents, syslog devices, or analyst VMs, you can run the ``so-allow`` utility which will walk you through creating firewall rules to allow these devices to connect. For more information, please see the `firewall <Firewall>`__ page.
 
 -  Full-time analysts should use an `Analyst VM <Analyst-VM>`__.
 
 -  Login to Sguil and review your IDS alerts. Squert and Kibana can be accessed by visiting https://YourSecurityOnionBox/ (please note the HTTPS) for additional in-depth analysis.
 
--  | Run the following to see how your sensor is coping with the load. You should check this on a daily basis to make sure your sensor is not dropping packets. Consider adding it to a cronjob and having it emailed to you (see the “configure email” link below).
-   | ``sudo sostat | less``
+-  Run the following to see how your sensor is coping with the load. You should check this on a daily basis to make sure your sensor is not dropping packets. Consider adding it to a cronjob and having it emailed to you (see the “configure email” link below).
+
+   ::
+   
+      sudo sostat | less
 
 -  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see `ManagingAlerts <ManagingAlerts>`__. You should only run the signatures you really care about.
 
@@ -51,35 +63,34 @@ Tuning / Miscellaneous
 
 -  `Disable any unneeded sensor processes <DisablingProcesses>`__\ 
 
--  Tune the number of PF\_RING instances for Snort/Suricata and Bro:
-   `PF\_RING <PF_RING>`__
+-  Tune `<PF_RING>`_ or `<AF-PACKET>`_ based on your traffic load.
 
 Optional
 --------
 
--  *Optional:* exclude unnecessary traffic from your monitoring using
-   `BPF <BPF>`__.
+-  *Optional:* exclude unnecessary traffic from your monitoring using `BPF <BPF>`__.
 
--  *Optional:* configure Ubuntu to use your preferred `NTP <NTP>`__
-   server.
+-  *Optional:* configure Ubuntu to use your preferred `NTP <NTP>`__ server.
 
--  | *Optional:* add new Sguil user accounts with the following:
-   | ``sudo so-user-add``
+-  *Optional:* add new Sguil user accounts with the following:
 
--  *Optional*, but highly recommended: configure `Email <Email>`__ for
-   alerting and reporting.
+   ::
+   
+      sudo so-user-add
 
--  | *Optional:* place ``/etc`` under version control. If your
-     organization doesn't already have a standard version control tool,
-     you can use
-     `bazaar <https://help.ubuntu.com/12.04/serverguide/bazaar.html>`__,
-     `git <http://git-scm.com/>`__, etckeeper:
-   | ``sudo apt-get install etckeeper``
+-  *Optional*, but highly recommended: configure `Email <Email>`__ for alerting and reporting.
 
--  | *Optional:* need “remote desktop” access to your Security Onion
-     sensor or server? We recommend SSH X-Forwarding as shown above, but
-     if you want something more rdp-like, you can install xrdp:
-   | ``sudo apt-get install xrdp``
+-  *Optional:* place ``/etc`` under version control. If your organization doesn't already have a standard version control tool, you can use `bazaar <https://help.ubuntu.com/12.04/serverguide/bazaar.html>`__, `git <http://git-scm.com/>`__, etckeeper:
+
+   ::
+   
+      sudo apt-get install etckeeper
+
+-  *Optional:* need “remote desktop” access to your Security Onion sensor or server? We recommend SSH X-Forwarding as shown above, but if you want something more rdp-like, you can install xrdp:
+
+   ::
+   
+      sudo apt-get install xrdp
 
 Learn More
 ----------
