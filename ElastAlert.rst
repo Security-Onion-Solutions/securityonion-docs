@@ -16,24 +16,19 @@ http://elastalert.readthedocs.io/en/latest/elastalert.html#overview:
     when that data matches certain patterns, ElastAlert is the tool for
     you.
 
-ElastAlert runs as a Docker container within Security Onion, queries
-ElasticSearch, and provides an alerting mechanism with multiple output
-types, such as Slack, Email, JIRA, OpsGenie, and many more.
+ElastAlert runs as a Docker container within Security Onion, queries ElasticSearch, and provides an alerting mechanism with multiple output types, such as Slack, Email, JIRA, OpsGenie, and many more.
 
 Configuration
 -------------
 
 ElastAlert rules are stored in ``/etc/elastalert/rules/``.
 
-Security Onion's default ElastAlert rules are configured with an output
-type of "debug", which simply outputs all matches queries to a log file,
-found in ``/var/log/elastalert/elastalert_stderr.log``.
+Security Onion's default ElastAlert rules are configured with an output type of "debug", which simply outputs all matches queries to a log file, found in ``/var/log/elastalert/elastalert_stderr.log``.
 
 Slack
 ~~~~~
 
-To have ElastAlert send alerts to something like Slack, we can simply
-change the alert type and details for a rule like so:
+To have ElastAlert send alerts to something like Slack, we can simply change the alert type and details for a rule like so:
 
 ::
 
@@ -44,8 +39,7 @@ change the alert type and details for a rule like so:
 Email - Internal
 ~~~~~~~~~~~~~~~~
 
-To have ElastAlert send to email, we could do something like the
-following:
+To have ElastAlert send to email, we could do something like the following:
 
 ::
 
@@ -60,8 +54,7 @@ following:
 Email - External
 ~~~~~~~~~~~~~~~~
 
-If we need to use an external email provider like Gmail, we can add
-something like the following:
+If we need to use an external email provider like Gmail, we can add something like the following:
 
 ::
 
@@ -85,9 +78,7 @@ In the ``smtp_auth_file.txt``, add:
 TheHive
 ~~~~~~~
 
-We can also send events to an instance of the TheHive, thanks to the
-addition of theHive alerter by
-`Nclose-ZA <https://github.com/Nclose-ZA/elastalert_hive_alerter>`__
+We can also send events to an instance of the TheHive, thanks to the addition of theHive alerter by `Nclose-ZA <https://github.com/Nclose-ZA/elastalert_hive_alerter>`__
 
 ::
 
@@ -135,34 +126,21 @@ addition of theHive alerter by
 so-elastalert-create
 ~~~~~~~~~~~~~~~~~~~~
 
-``so-elastalert-create`` is a tool created by `Bryant
-Treacle <https://github.com/bryant-treacle/so-elastalert-create>`__ that
-can be used to help ease the pain of ensuring correct syntax and
-creating Elastalert rules from scratch. It will walk you through various
-questions, and eventually output an Elastalert rule file that you can
-deploy in your environment to start alerting quickly and easily.
+``so-elastalert-create`` is a tool created by `Bryant Treacle <https://github.com/bryant-treacle/so-elastalert-create>`__ that can be used to help ease the pain of ensuring correct syntax and creating Elastalert rules from scratch. It will walk you through various questions, and eventually output an Elastalert rule file that you can deploy in your environment to start alerting quickly and easily.
 
 Defaults
 ~~~~~~~~
 
-With Security Onion's example rules, Elastalert is configured by default
-to only count the number of hits for a particular match, and will not
-return the actual log entry for which an alert was generated.
+With Security Onion's example rules, Elastalert is configured by default to only count the number of hits for a particular match, and will not return the actual log entry for which an alert was generated.
 
-This is governed by the use of ``use_count_query: true`` in each rule
-file.
+This is governed by the use of ``use_count_query: true`` in each rule file.
 
-If you would like to view the data for the match, you can simply remark
-this line in the rule file(s). Keep in mind, this may impact performance
-negatively, so testing the change in a single file at a time may be the
-best approach.
+If you would like to view the data for the match, you can simply remark this line in the rule file(s). Keep in mind, this may impact performance negatively, so testing the change in a single file at a time may be the best approach.
 
 Timeframe
 ~~~~~~~~~
 
-Keep in mind, for queries that span greater than a minute back in time,
-you may want to add the following fields to your rule to ensure
-searching occurs as planned (for example, for 10 minutes):
+Keep in mind, for queries that span greater than a minute back in time, you may want to add the following fields to your rule to ensure searching occurs as planned (for example, for 10 minutes):
 
 ::
 
@@ -177,6 +155,5 @@ searching occurs as planned (for example, for 10 minutes):
 More Information
 ----------------
 
-You can learn more about ElastAlert and its output types here:
-
-http://elastalert.readthedocs.io/en/latest/
+| You can learn more about ElastAlert and its output types here:
+| http://elastalert.readthedocs.io/en/latest/
