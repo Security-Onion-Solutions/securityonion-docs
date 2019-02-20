@@ -48,10 +48,10 @@ Once you've allowed the traffic using ``so-allow``, you can launch the `<Sguil>`
 | For more information, please see:
 | `<ConnectingtoSguil#directly-connecting-to-sguild-remotely>`__
 
-Sensor sending logs to SIEM
----------------------------
+Sending Logs to Separate SIEM
+-----------------------------
 
-Install Security Onion on a sensor box and then configure it to send logs to your SIEM.
+You can install Security Onion and then configure it to send logs to a separate SIEM.
 
 | For more information, please see:
 | `Sending logs to SIEM <ThirdPartyIntegration>`__
