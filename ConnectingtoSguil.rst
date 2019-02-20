@@ -8,7 +8,9 @@ Connecting to Sguild from an Analyst Machine
 
 To directly connect to a Sguild server one must possess a working Sguil client. Sguil may not be easy or available for install on certain operating systems. Because of this we recommend installing Security Onion in a virtual machine on your workstation and use that to connect to sguild on your production Security Onion instance.
 
-- Install Security Onion in a Virtual Machine and configure the network adapter to use NAT mode (easiest) by going to your VM's settings.
+- To connect from the Analyst VM to your production master server, you will need to run ``so-allow`` on the master server and choose the ``analyst`` option to allow the traffic through the host-based `<firewall>`_.
+
+- Install Security Onion in a Virtual Machine and configure the network adapter to use NAT mode by going to your VM's settings.
 
 - Now double-click the Sguil desktop icon to launch the Sguil client.
 
