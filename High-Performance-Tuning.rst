@@ -27,6 +27,16 @@ If you're unable to start with Ubuntu Server (no GUI) as recommended above, you 
 | For more information, please see:
 | http://askubuntu.com/questions/16371/how-do-i-disable-x-at-boot-time-so-that-the-system-boots-in-text-mode
 
+Disable Unnecessary Services
+----------------------------
+
+Disable any other unnecessary services.  For example, to disable bluetooth:
+
+::
+
+    sudo systemctl stop bluetooth.service
+    sudo systemctl disable bluetooth.service
+    
 CPU Affinity/Pinning
 --------------------
 
@@ -58,16 +68,6 @@ If you have plenty of RAM, disable swap altogether.
 
 | More information:
 | https://lonesysadmin.net/2013/12/22/better-linux-disk-caching-performance-vm-dirty_ratio/
-
-Disable Unnecessary Services
-----------------------------
-
-Disable any unnecessary services.  For example, to disable bluetooth:
-
-::
-
-    sudo systemctl stop bluetooth.service
-    sudo systemctl disable bluetooth.service
 
 Other
 -----
