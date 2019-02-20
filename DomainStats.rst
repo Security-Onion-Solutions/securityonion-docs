@@ -47,13 +47,11 @@ Enabling DomainStats
 Updating Top-1m file
 ~~~~~~~~~~~~~~~~~~~~
 
-| \`\`\`
-| From
-  https://github.com/SMAPPER/docker_domain_stats#updating-top-1m-file:
+From https://github.com/SMAPPER/docker_domain_stats#updating-top-1m-file:
 
     The docker image does not currently automatically update the
     top-1m.csv. The below example shows how to download a new top 1
-    million site list and have a domain\_stats container use it. This
+    million site list and have a domain_stats container use it. This
     could be scheduled as a cron job on your host to keep a current
     Alexa/Cisco Umbrella top-1m.csv in use.
 
@@ -70,8 +68,7 @@ Updating Top-1m file
     /tmp/top-1m.csv.zip -d /tmp && docker cp /tmp/top-1m.csv so-domainstats:/opt/domain_stats/top-1m.csv && docker restart 
     so-domainstats && rm -f /tmp/top-1m.csv* ) > /dev/null 2>&1
 
-| For information how to modify configuration for DomainStats, consult
-  the following:
+| For information how to modify configuration for DomainStats, consult the following:
 | https://github.com/SMAPPER/docker_domain_stats
 
 DomainStats logs can be found in ``/var/log/domain_stats/``.
@@ -79,8 +76,7 @@ DomainStats logs can be found in ``/var/log/domain_stats/``.
 Kibana
 ------
 
-| You can find DomainStats data by going to the Domain Stats dashboard
-  in Kibana:
+| You can find DomainStats data by going to the Domain Stats dashboard in Kibana:
 | |domain1-dns|
 
 .. |domain1-dns| image:: https://user-images.githubusercontent.com/1659467/30856291-e5c2d8e0-a285-11e7-9230-36c190329be7.PNG
