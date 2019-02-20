@@ -21,23 +21,13 @@ Tuning / Miscellaneous
 -  | Check your sniffing interfaces to see if they have Receive Side Scaling (RSS) queues (if so, you may need to reduce to 1):
    | http://suricata.readthedocs.io/en/latest/performance/packet-capture.html
 
--  | If you’re monitoring IP address ranges other than private RFC1918
-     address space (192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12), you
-     should update your sensor configuration with the correct IP ranges.
-     Sensor configuration files can be found in
-     ``/etc/nsm/$HOSTNAME-$INTERFACE/``. Modify either ``snort.conf`` or
-     ``suricata.yaml`` (depending on which IDS engine you chose during
-     ``sosetup``) and update the ``HOME_NET`` variable. (As of
-     securityonion-setup - 20120912-0ubuntu0securityonion222, Setup
-     should automatically ask you for HOME\_NET and configure these for
-     you.) You may also want to consider updating the ``EXTERNAL_NET``
-     variable. If you're running prads (you're probably not), then
-     update the ``home_nets`` variable in ``prads.conf``. Then update
-     Bro’s network configuration in ``/opt/bro/etc/networks.cfg``.
-     Restart the sensor processes:
-   | ``sudo so-sensor-restart``
+-  If you’re monitoring IP address ranges other than private RFC1918 address space (192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12), you may need to update your sensor configuration with the correct IP ranges. Modern versions of Setup should automatically ask you for ``HOME_NET`` and configure these for you, but if you need to update it later, you would do the following. Sensor configuration files can be found in ``/etc/nsm/$HOSTNAME-$INTERFACE/``. Modify either ``snort.conf`` or ``suricata.yaml`` (depending on which IDS engine you chose during ``sosetup``) and update the ``HOME_NET`` variable. You may also want to consider updating the ``EXTERNAL_NET`` variable. Then update Bro’s network configuration in ``/opt/bro/etc/networks.cfg``. Finally, restart the sensor processes:
 
--  If you have Internet access, create an IDS alert by typing the following at a terminal:
+   ::
+   
+      sudo so-sensor-restart
+
+-  If you have Internet access, you can generate an IDS alert by typing the following at a terminal:
 
    ::
    
