@@ -26,7 +26,7 @@ RSS
 ---
 
 | Check your sniffing interfaces to see if they have Receive Side Scaling (RSS) queues. If so, you may need to reduce to 1:
-| http://suricata.readthedocs.io/en/latest/performance/packet-capture.html
+| https://suricata.readthedocs.io/en/latest/performance/packet-capture.html#rss
 
 Disk/Memory
 -----------
@@ -63,6 +63,6 @@ Other
 -----
 
 | Consider adopting some of the suggestions from here:
-| http://suricata.readthedocs.io/en/latest/performance/packet-capture.html
+| https://suricata.readthedocs.io/en/latest/performance/packet-capture.html
 | https://github.com/pevma/SEPTun
 | https://github.com/pevma/SEPTun-Mark-II
