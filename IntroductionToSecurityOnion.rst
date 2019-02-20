@@ -32,7 +32,7 @@ Analysis Tools
 
 With full packet capture, IDS logs and Bro data, there is a daunting amount of data available at the analyst’s fingertips. Fortunately, Security Onion integrates the following tools to help make sense of this data:
 
--  `<Sguil>`_, created by Bamm Visscher, is “The Analyst Console for Network Security Monitoring.” It is the analyst’s right hand, providing visibility into the event data being collected and the context to validate the detection. Sguil provides a single GUI (written in tcl/tk) in which to view Snort or Suricata alerts, Wazuh alerts, and Bro HTTP events. More importantly, Sguil allows you to “pivot” directly from an alert into a packet capture (via Wireshark or NetworkMiner) or a transcript of the full session that triggered the alert. So, instead of seeing only an individual packet associated with an alert and being left with the unanswerable question, “What now?” or “What happened next?,” you can view all of the associated traffic and actually answer that question. Additionally, Sguil allows the analyst to query all packets captured, not just those involved with an alert, so you can correlate traffic that may not have triggered any alerts but still could be associated with malicious or undesired activity. Lastly, Sguil allows the analyst to conduct reverse DNS and whois lookups of IP addresses associated with alerts.  Sguil differs from other alert interfaces in that it allows collaboration among analysts by allowing alerts to be commented on and escalated to more senior analysts who can take action on the alerts.
+-  `<Sguil>`_, created by Bamm Visscher, is “The Analyst Console for Network Security Monitoring.” It is the analyst’s right hand, providing visibility into the event data being collected and the context to validate the detection. Sguil provides a single GUI (written in tcl/tk) in which to view Snort or Suricata alerts, Wazuh alerts, and Bro HTTP events. More importantly, Sguil allows you to “pivot” directly from an alert into a packet capture (via Wireshark or NetworkMiner) or a transcript of the full session that triggered the alert. So, instead of seeing only an individual packet associated with an alert and being left with the unanswerable question, “What now?” or “What happened next?,” you can view all of the associated traffic and actually answer that question. Sguil differs from other alert interfaces in that it allows collaboration among analysts by allowing alerts to be commented on and escalated to more senior analysts who can take action on the alerts.
 
 -  `<Squert>`_, originally developed by Paul Halliday, is a web application interface to the Sguil database. Although it is neither meant to be a real-time (or near real-time) interface nor a replacement for Sguil, it allows querying of the Sguil database and provides several visualization options for the data such as “time series representations, weighted and logically grouped result sets” and geo-IP mapping.
 
@@ -47,10 +47,7 @@ With full packet capture, IDS logs and Bro data, there is a daunting amount of d
 Deployment Scenarios
 --------------------
 
-Please refer to the following for the various deployment and node types:
-`Deployment Types <Elastic-Architecture.html#deployment-types>`__
-
-The Security Onion Setup wizard allows you to easily configure the best installation scenario to suit your needs.
+Analysts around the world are using Security Onion today for many different `use cases <Use-Cases>`_ and `architectures <Elastic-Architecture.html#deployment-types>`__.  The Security Onion Setup wizard allows you to easily configure the best installation scenario to suit your needs.
 
 Conclusion
 ----------
