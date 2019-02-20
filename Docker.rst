@@ -15,13 +15,10 @@ From https://www.docker.com/what-docker:
 Images
 ------
 
-To maintain a high level of stability, reliability, and support, our
-Elastic Docker images are based on the Docker images provided by
-Elastic.co. Their Docker images are built on CentOS 7:
+To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co. Their Docker images are built on CentOS 7:
 https://www.elastic.co/blog/docker-base-centos7
 
-To leverage a common core OS layer, all of our Docker images are then
-built on CentOS 7.
+To leverage a common core OS layer, all of our Docker images are then built on CentOS 7.
 
 Registry
 --------
@@ -35,41 +32,23 @@ From https://docs.docker.com/registry/recipes/mirror/:
     Docker registry. By running a local registry mirror, you can keep
     most of the redundant image fetch traffic on your local network.
 
-We can leverage the Docker registry (as a `pull-through
-cache <https://docs.docker.com/registry/recipes/mirror/>`__) with our
-Security Onion Docker images. As mentioned above, this will allow us to
-cut down on external requests and bandwidth, cache the images on a local
-server, and only pull new images when they are available.
+We can leverage the Docker registry (as a `pull-through cache <https://docs.docker.com/registry/recipes/mirror/>`__) with our Security Onion Docker images. As mentioned above, this will allow us to cut down on external requests and bandwidth, cache the images on a local server, and only pull new images when they are available.
 
-We can easily configure our Security Onion master server and sensor by
-running the following script on each machine (watch out for
-line-wrapping) :
+We can easily configure our Security Onion master server and sensor by running the following script on each machine (watch out for line-wrapping) :
 
 ::
 
    wget https://raw.githubusercontent.com/weslambert/securityonion-docker-registry/master/so-docker-registry
-   sudo ./so-docker-registry
+   sudo bash so-docker-registry
 
 The above script:
 
--  Sets up a Docker container named ``docker-registry`` on the master
-   server - this container exposes port 5000 for 127.0.0.1 (only
-   locally).
--  Configures the master server to use the ``docker-registry`` container
-   as it's proxy to pull images (``registry-mirror`` in
-   ``/etc/default/docker``).
--  Configures a sensor to use to ``docker-registry`` on the master
-   server as a proxy to pull images -- this is done through the addition
-   of a local port forward (5000) through the existing autossh tunnel
-   (``/root/.ssh/securityonion_ssh.conf``), and setting the
-   ``registry-mirror`` value for the docker client on the sensor
-   (``/etc/default/docker``)
--  Restarts Security Onion Docker containers so the latest images are
-   cached on the master and pulled to the sensor.
+-  Sets up a Docker container named ``docker-registry`` on the master server - this container exposes port 5000 for 127.0.0.1 (only locally).
+-  Configures the master server to use the ``docker-registry`` container as its proxy to pull images (``registry-mirror`` in ``/etc/default/docker``).
+-  Configures a sensor to use to ``docker-registry`` on the master server as a proxy to pull images -- this is done through the addition of a local port forward (5000) through the existing autossh tunnel (``/root/.ssh/securityonion_ssh.conf``), and setting the ``registry-mirror`` value for the docker client on the sensor (``/etc/default/docker``)
+-  Restarts Security Onion Docker containers so the latest images are cached on the master and pulled to the sensor.
 
-After the script has completed (after running on both machines), the
-newest images from the ``securityonionsolutions`` repo should be locally
-cached on the master, and already pulled to the sensor.
+After the script has completed (after running on both machines), the newest images from the ``securityonionsolutions`` repo should be locally cached on the master, and already pulled to the sensor.
 
 We can check this by running the following from the master (or sensor):
 
