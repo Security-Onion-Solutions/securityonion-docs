@@ -22,6 +22,12 @@ For best performance, CPU intensive processes like Bro and Suricata should be pi
 | For Suricata, use the affinity settings in ``suricata.yaml``:
 | https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading
 
+RSS
+---
+
+| Check your sniffing interfaces to see if they have Receive Side Scaling (RSS) queues (if so, you may need to reduce to 1):
+| http://suricata.readthedocs.io/en/latest/performance/packet-capture.html
+
 Disk/Memory
 -----------
 
@@ -57,5 +63,6 @@ Other
 -----
 
 | Consider adopting some of the suggestions from here:
+| http://suricata.readthedocs.io/en/latest/performance/packet-capture.html
 | https://github.com/pevma/SEPTun
 | https://github.com/pevma/SEPTun-Mark-II
