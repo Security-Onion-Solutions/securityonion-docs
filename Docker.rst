@@ -150,7 +150,7 @@ You should then receive some output similar to the following:
 
 ``vethc5ff027``
 
-where **``vethc5ff027``** is the external interface of ``eth0`` within the ``so-elasticsearch`` container.
+where ``vethc5ff027`` is the external interface of ``eth0`` within the ``so-elasticsearch`` container.
 
 Download
 --------
