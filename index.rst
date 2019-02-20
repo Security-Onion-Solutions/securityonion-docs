@@ -50,6 +50,7 @@ Welcome to the Security Onion Documentation!
    Squert
    Sguil
    networkminer
+   wireshark
 
 .. _networkvisibility:
 
