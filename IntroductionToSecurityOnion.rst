@@ -1,15 +1,7 @@
 Introduction
 ============
 
-Network Security Monitoring (NSM) is, put simply, monitoring your
-network for security related events. It might be proactive, when used to
-identify vulnerabilities or expiring SSL certificates, or it might be
-reactive, such as in incident response and network forensics. Whether
-you’re tracking an adversary or trying to keep malware at bay, NSM
-provides context, intelligence and situational awareness of your
-network. There are some commercial solutions that get close to what
-Security Onion provides, but very few contain the vast capabilities of
-Security Onion in one package.
+Network Security Monitoring (NSM) is, put simply, monitoring your network for security related events. It might be proactive, when used to identify vulnerabilities or expiring SSL certificates, or it might be reactive, such as in incident response and network forensics. Whether you’re tracking an adversary or trying to keep malware at bay, NSM provides context, intelligence and situational awareness of your network. Enterprise Security Monitoring (ESM) takes NSM to the next level and includes endpoint visibility and other telemetry from your enterprise. There are some commercial solutions that get close to what Security Onion provides, but very few contain the vast capabilities of Security Onion in one package.
 
 Many assume NSM is a solution they can buy to fill a gap; purchase and
 deploy solution XYZ and problem solved. The belief that you can buy an
