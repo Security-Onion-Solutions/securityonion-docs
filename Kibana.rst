@@ -38,6 +38,34 @@ When present, clicking these fields allows an analyst to pivot to the Indicator 
 | ``destination_ip``
 | ``destination_port``
 
+Search Results
+--------------
+
+Search results in the dashboards and through Discover are limited to the first ``10`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance.
+
+Search Request Timeout
+----------------------
+
+Sometimes searches can timeout in Kibana. To increase the timeout value to wait longer for results from Elasticsearch, we can adjust the value for ``elasticsearch.requestTimeout`` in ``/etc/kibana/kibana.yml`` and restart Kibana.
+
+For example to increase the timeout from the default of ``30`` seconds to ``90`` seconds:
+
+::
+
+   sudo vi /etc/kibana/kibana.yml
+
+Add the following line:
+
+::
+
+   elasticsearch.requestTimeout: 90000
+
+Finally, restart Kibana:
+
+::
+
+   sudo so-kibana-restart
+
 Plugins
 -------
 
@@ -66,31 +94,3 @@ Restart Kibana:
 ::
 
     sudo so-kibana-restart
-
-Search Results
---------------
-
-Search results in the dashboards and through Discover are limited to the first ``10`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance.
-
-Search Request Timeout
-----------------------
-
-Sometimes searches can timeout in Kibana. To increase the timeout value to wait longer for results from Elasticsearch, we can adjust the value for ``elasticsearch.requestTimeout`` in ``/etc/kibana/kibana.yml`` and restart Kibana.
-
-For example to increase the timeout from the default of ``30`` seconds to ``90`` seconds:
-
-::
-
-   sudo vi /etc/kibana/kibana.yml
-
-Add the following line:
-
-::
-
-   elasticsearch.requestTimeout: 90000
-
-Finally, restart Kibana:
-
-::
-
-   sudo so-kibana-restart
