@@ -40,14 +40,14 @@ If you have plenty of RAM, disable swap altogether.
 
 ``vm.dirty_background_ratio`` is the percentage of system memory that can be filled with “dirty” pages, or memory pages that still need to be written to disk -- before the pdflush/flush/kdmflush background processes kick in to write it to disk.
 
-More information:
-https://lonesysadmin.net/2013/12/22/better-linux-disk-caching-performance-vm-dirty_ratio/
+| More information:
+| https://lonesysadmin.net/2013/12/22/better-linux-disk-caching-performance-vm-dirty_ratio/
 
 Disable GUI
 -----------
 
-If you're unable to start with Ubuntu Server (no GUI) as recommended above, you can disable the GUI after the system is fully configured:
-http://askubuntu.com/questions/16371/how-do-i-disable-x-at-boot-time-so-that-the-system-boots-in-text-mode
+| If you're unable to start with Ubuntu Server (no GUI) as recommended above, you can disable the GUI after the system is fully configured:
+| http://askubuntu.com/questions/16371/how-do-i-disable-x-at-boot-time-so-that-the-system-boots-in-text-mode
 
 Disable Unnecessary Services
 ----------------------------
