@@ -43,7 +43,7 @@ Pivot
 Agents
 ------
 
-Because Sguil is written in tcl/tk, it can only utilize ``1024`` sockets for receiving communication from various sensor agents (ossec_agent, pcap_agent, snort_agent). Due to this restriction, you will want to keep in mind the number of sensors and sniffing interfaces you have connected to the master server/accessed by Sguil.
+Sguil can only utilize ``1024`` sockets for receiving communication from various sensor agents (such as ossec_agent, pcap_agent, and snort_agent). Due to this restriction, you will want to keep in mind the number of sensors and sniffing interfaces you have connected to the master server/accessed by Sguil.
 
 | See the following for more information:
 | https://groups.google.com/d/msg/security-onion/DJ5NTLEu5MY/-tDQi_1eDQAJ
