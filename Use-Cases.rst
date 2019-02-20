@@ -1,7 +1,7 @@
 Use Cases
 =========
 
-Security Onion is designed for many different use cases! Here are just a few examples.
+Security Onion is designed for many different use cases! When you run Setup, it will ask you if you want ``Evaluation Mode`` or ``Production Mode``.  Each of these modes presents different options that may be applicable to different use cases.  Here are just a few examples.
 
 Classroom
 ---------
