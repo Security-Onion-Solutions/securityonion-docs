@@ -78,12 +78,13 @@ Security Onion currently utilizes the default field limit for Elasticsearch indi
 Temporary
 ~~~~~~~~~
 
+If you only need to increase the field limit temporarily, you can do something like:
+
 ::
 
    curl -XPUT -H'Content-Type: application/json' localhost:9200/logstash-syslog-*/_settings -d'{ "index.mapping.total_fields.limit": 2000 }'
 
-The above command would increase the field limit for the ``logstash-syslog-*`` indice(s) to ``2000``. Keep in mind, this setting only applies to the current index, so when the index rolls over and a new one is created, your new settings will
-  not apply.
+The above command would increase the field limit for the ``logstash-syslog-*`` indice(s) to ``2000``. Keep in mind, this setting only applies to the current index, so when the index rolls over and a new one is created, your new settings will not apply.
 
 Persistent
 ~~~~~~~~~~
