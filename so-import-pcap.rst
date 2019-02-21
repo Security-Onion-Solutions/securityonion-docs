@@ -1,11 +1,6 @@
 so-import-pcap
 ==============
 
-``so-import-pcap`` will import one or more pcaps into Security Onion preserving timestamps.
-
-Description
------------
-
 ``so-import-pcap`` is a quick and dirty EXPERIMENTAL script that will import one or more pcaps into Security Onion and preserve original timestamps.
 
 It will do the following:
