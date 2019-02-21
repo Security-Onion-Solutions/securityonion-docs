@@ -42,7 +42,7 @@ Also note, to access GRR by the above name you will need to:
 Firewall Rules
 --------------
 
-Analyst/Web Interface:
+You can add firewall rules using `<so-allow>`_ and choosing the ``Analyst`` option:
 
 ::
 
