@@ -34,7 +34,7 @@ Usage
 
 Please supply at least one pcap file.
 
-For example, to import a single pcap named import.pcap:
+For example, to import a single pcap named ``import.pcap``:
 
 ::
 
