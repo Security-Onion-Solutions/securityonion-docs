@@ -3,6 +3,12 @@ Security Onion Documentation
 
 Welcome to the Security Onion Documentation!
 
+.. _tableofcontents:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Table of Contents
+   
 .. _gettingstarted:
 
 .. toctree::
