@@ -6,7 +6,7 @@ Security Onion is designed for many different use cases! When you run Setup, it 
 Classroom
 ---------
 
-``Evaluation Mode`` is ideal for classroom or lab environments.
+``Evaluation Mode`` is ideal for classroom or small lab environments.
 
 Install Security Onion. Run Setup and configure network interfaces. Reboot, run Setup again, and then choose ``Evaluation Mode``.
 
