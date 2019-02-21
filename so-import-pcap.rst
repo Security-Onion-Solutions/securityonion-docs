@@ -3,12 +3,6 @@ so-import-pcap
 
 ``so-import-pcap`` will import one or more pcaps into Security Onion preserving timestamps.
 
-Availability
-------------
-
-| ``so-import-pcap`` is included by default in Security Onion Elastic Stack Release Candidate 3 (RC3) and later:
-| https://blog.securityonion.net/2018/03/security-onion-elastic-stack-release.html
-
 Description
 -----------
 
@@ -17,37 +11,28 @@ Description
 It will do the following:
 
 -  stop and disable Curator to avoid closing old indices
--  stop and disable all active sniffing processes (Bro, Snort, Suricata,
-   and netsniff-ng)
--  stop and disable ossec\_agent
--  reconfigure and restart sguild, syslog-ng, and Logstash where
-   necessary
+-  stop and disable all active sniffing processes (Bro, Snort, Suricata, and netsniff-ng)
+-  stop and disable ossec_agent
+-  reconfigure and restart sguild, syslog-ng, and Logstash where necessary
 -  generate IDS alerts using Snort or Suricata
 -  generate Bro logs
 -  store IDS alerts and Bro logs with original timestamps
--  split traffic into separate daily pcaps and store them where sguil's
-   pcap\_agent can find them
+-  split traffic into separate daily pcaps and store them where sguil's pcap_agent can find them
 
 Requirements:
 
--  You must be running at least Security Onion Elastic Stack Release
-   Candidate 2 (14.04.5.8 ISO).
--  You must have a sniffing interface defined (you can choose Evaluation
-   Mode in the Setup wizard).
+-  You must be running at least Security Onion Elastic Stack Release Candidate 2 (14.04.5.8 ISO).
+-  You must have a sniffing interface defined (you can choose Evaluation Mode in the Setup wizard).
 
 Warnings:
 
--  Do NOT run this on a production deployment. It is designed for
-   standalone systems designated for so-import-pcap.
--  If you're running in a VM with snapshot capability, you might want to
-   take a snapshot before this program makes changes.
+-  Do NOT run this on a production deployment. It is designed for standalone systems designated for so-import-pcap.
+-  If you're running in a VM with snapshot capability, you might want to take a snapshot before this program makes changes.
 
 Reverting System Changes:
 
--  If you take a VM snapshot before this program makes changes, then
-   just revert to snapshot.
--  Otherwise, you can re-run Setup and it should overwrite all modified
-   files to revert the system to normal operation.
+-  If you take a VM snapshot before this program makes changes, then just revert to snapshot.
+-  Otherwise, you can re-run Setup and it should overwrite all modified files to revert the system to normal operation.
 
 Usage
 -----
