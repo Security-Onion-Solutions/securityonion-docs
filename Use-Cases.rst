@@ -46,7 +46,7 @@ To connect from the Analyst VM to your production master server, you will need t
 Once you've allowed the traffic using `<so-allow>`_, you can launch the `<Sguil>`_ client and connect to sguild on your production master server and/or launch the web browser and connect to `<Squert>`_ or `<Kibana>`_ on your Production Master Server.
 
 | For more information, please see:
-| `<ConnectingtoSguil#directly-connecting-to-sguild-remotely>`__
+| `<Analyst-VM>`__
 
 Sending Logs to Separate SIEM
 -----------------------------
