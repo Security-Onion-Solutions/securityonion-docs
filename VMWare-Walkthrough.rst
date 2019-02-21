@@ -157,18 +157,15 @@ offering suggestions and useful information, such as:
    | `<ManagingAlerts>`__
    | `<AddingLocalRules>`__
 
--  Sensors can be tuned by modifying the files in
-   /etc/nsm/[hostname-interface].
+-  Sensors can be tuned by modifying the files in /etc/nsm/[hostname-interface].
 
--  | NOTE: The local firewall (ufw) is locked down by default to only
-     allow connections to port 22. You can run "sudo so-allow" to add
-     exceptions for analysts, ossec agents, etc.
-   | See the following for more information:
-   | `<Firewall>`__
+-  | NOTE: The local `<firewall>`_ (ufw) is locked down by default to only allow connections to port 22. You can run `<so-allow>`__ to add exceptions for analysts, ossec agents, etc.
+   
+   ::
+   
+      sudo so-allow
 
--  | For more information, consult the FAQ or the wiki:
-   | `<FAQ>`__
-   | https://securityonion.net/wiki
+-  | For more information, consult the `<FAQ>`__ and the rest of the documentation.
 
 -  | Questions or problems can be submitted to the mailing list:
    | https://groups.google.com/forum/#!forum/security-onion
