@@ -41,10 +41,6 @@ Analyst VM
 
 If you've built a Production Server as described above, you may want to connect to it using an `Analyst VM <Analyst-VM>`_.  Install Security Onion in a VM on your local desktop or laptop. You do NOT need to run Setup in the Analyst VM since this VM won't be running any services, only applications such as `<Sguil>`_, `Wireshark <wireshark>`_, `NetworkMiner <networkminer>`_, and a web browser.
 
-To connect from the Analyst VM to your production master server, you will need to run `<so-allow>`_ on the master server and choose the ``analyst`` option to allow the traffic through the host-based `<firewall>`_.
-
-Once you've allowed the traffic using `<so-allow>`_, you can launch the `<Sguil>`_ client and connect to sguild on your production master server and/or launch the web browser and connect to `<Squert>`_ or `<Kibana>`_ on your Production Master Server.
-
 | For more information, please see:
 | `<Analyst-VM>`__
 
