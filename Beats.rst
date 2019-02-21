@@ -27,7 +27,7 @@ https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation
 Firewall
 --------
 
-To ensure a Beat is allowed to talk to Logstash on the Security Onion box, we need to run ``so-allow``, and choose the ``b`` option for ``Beats``. After choosing this option, simply provide the IP address of the machine on which the Beat is installed and press ``ENTER`` to confirm.
+To ensure a Beat is allowed to talk to Logstash on the Security Onion box, we need to run `<so-allow>`_, and choose the ``b`` option for ``Beats``. After choosing this option, simply provide the IP address of the machine on which the Beat is installed and press ``ENTER`` to confirm.
 
 Log files
 ---------
