@@ -4,7 +4,7 @@ Firewall/Hardening
 Setup defaults to only allowing port 22 (ssh)
 ---------------------------------------------
 
-Setup defaults to locking down the local ``ufw`` firewall to only allowing port 22 (ssh).  There is a note at the end of Setup that tells you this and lets you know that, if you need to allow connections on other ports, you can run the ``so-allow`` utility.
+Setup defaults to locking down the local ``ufw`` firewall to only allowing port 22 (ssh).  There is a note at the end of Setup that tells you this and lets you know that, if you need to allow connections on other ports, you can run the `<so-allow>`_ utility.
 
 Sensors automatically add their own firewall rules to the master server
 -----------------------------------------------------------------------
