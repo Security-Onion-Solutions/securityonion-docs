@@ -26,8 +26,8 @@ Setup locks down the `firewall <Firewall>`_ by default.  If you need to open por
 
     Please enter your selection (a - analyst, c - apt-cacher-ng client, l - syslog, o - ossec, or s - Security Onion sensor, etc.):
 
-``so-allow-view``
------------------
+so-allow-view
+-------------
 
 To view existing rules granted through the use of ``so-allow``, use the following command:
 
