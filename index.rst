@@ -194,4 +194,12 @@ Welcome to the Security Onion Documentation!
 
    DirectoryStructure
    Tools
+   
+.. _utilties:
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Utilities
+   
+   so-allow
    so-import-pcap
