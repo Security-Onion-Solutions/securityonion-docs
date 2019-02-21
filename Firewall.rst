@@ -1,5 +1,5 @@
-Firewall/Hardening
-==================
+Firewall
+========
 
 Setup defaults to only allowing port 22 (ssh)
 ---------------------------------------------
