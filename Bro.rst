@@ -10,10 +10,14 @@ Logs
 
 Bro logs are stored in ``/nsm/bro/logs``. They are consumed by `syslog-ng <syslog>`__, parsed and augmented by `Logstash <Logstash>`__, stored in `Elasticsearch <Elasticsearch>`__, and viewable in `Kibana <Kibana>`__.
 
+JSON
+~~~~
+By default, we configure Bro to output in JSON for higher performance and better parsing. We recommend that most folks leave Bro configured for JSON output.  If you need to parse those JSON logs from the command line, you can use `<jq>`_.
+
 TSV
 ~~~
 
-By default, we configure Bro to output in JSON for higher performance and better parsing. We recommend that most folks leave Bro configured for JSON output. If you really need the traditional Bro TSV (Tab Separated Values) format, you can disable JSON:
+If you really need the traditional Bro TSV (Tab Separated Values) format, you can disable JSON:
 
 ::
 
