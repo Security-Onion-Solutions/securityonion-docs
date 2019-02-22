@@ -208,5 +208,6 @@ Security Onion is a free and open source Linux distribution for intrusion detect
    :maxdepth: 2
    :caption: Utilities
    
+   jq
    so-allow
    so-import-pcap
