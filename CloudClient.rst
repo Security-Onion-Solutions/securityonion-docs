@@ -41,8 +41,6 @@ This is based on Josh Brower's great work:
 
 http://www.slideshare.net/DefensiveDepth/so-conference-2014
 
-http://www.sans.org/reading-room/whitepapers/detection/security-onion-cloud-client-network-security-monitoring-cloud-34335
-
 The OpenVPN configuration shown below is based on the following guides:
 
 https://help.ubuntu.com/community/OpenVPN
