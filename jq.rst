@@ -14,7 +14,7 @@ If you have `<Bro>`_ configured to write logs in json format and you want to par
 
    jq '.' /nsm/bro/logs/current/conn.log
    
-This command will parse ``/nsm/bro/logs/current/conn.log`` and then output every field of every line.
+This command will parse all of the records in ``/nsm/bro/logs/current/conn.log``.  For each of the records, it will then output every field and its value.
 
 More Information
 ----------------
