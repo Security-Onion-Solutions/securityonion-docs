@@ -1,25 +1,17 @@
 NIDS
 ====
 
-NIDS stands for Network Intrusion Detection System. It is a means of
-monitoring network traffic, looking for specific activity, and
-generating alerts.
+NIDS stands for Network Intrusion Detection System. It is a means of monitoring network traffic, looking for specific activity, and generating alerts.
 
 Usage
 -----
 
-Security Onion can run either `Snort <Snort>`__ or
-`Suricata <Suricata>`__ as its Network Intrusion Detection System
-(NIDS). When you run Setup and choose Evaluation Mode, it will
-automatically default to Snort. If you choose Production Mode, you will
-be asked to choose whether you want to run `Snort <Snort>`__ or
-`Suricata <Suricata>`__.
+Security Onion can run either `<Snort>`__ or `<Suricata>`__ as its Network Intrusion Detection System (NIDS). When you run Setup and choose Evaluation Mode, it will automatically default to Snort. If you choose Production Mode, you will be asked to choose whether you want to run `<Snort>`__ or `<Suricata>`__.
 
 Performance
 -----------
 
-In Security Onion, we compile both of these with `PF\_RING <PF_RING>`__
-for higher performance.
+In Security Onion, we compile both `<Snort>`__ and `<Suricata>`__ to support `<PF_RING>`__ for higher performance.  Suricata also supports `<AF-PACKET>` as an alternative.  Modern versions of Setup default to running `<Suricata>` in `<AF-PACKET>` mode.
 
 Analysis
 --------
@@ -30,9 +22,31 @@ You can analyze NIDS alerts from Snort/Suricata via:
 -  `Kibana <Kibana>`__
 -  `Sguil <Sguil>`__
 
+Switching from Snort to Suricata
+--------------------------------
+
+Please note that, if you’re running the Snort Talos ruleset, Snort Shared Object rules will not load in Suricata. Most folks who choose the Suricata engine choose to run the Emerging Threats ruleset.
+
+::
+
+   sudo so-sensor-stop
+   sudo sed -i 's|ENGINE=snort|ENGINE=suricata|g' /etc/nsm/securityonion.conf
+   sudo rule-update
+   sudo so-sensor-start
+
+Switching from Suricata to Snort
+--------------------------------
+
+::
+
+   sudo so-sensor-stop
+   sudo sed -i 's|ENGINE=suricata|ENGINE=snort|g' /etc/nsm/securityonion.conf
+   sudo rule-update
+   sudo so-sensor-start
+
 More Information
 ----------------
 
-- For more information about Snort, please see `Snort <Snort>`__.
+- For more information about Snort, please see `<Snort>`__.
 
-- For more information about Suricata, please see `Suricata <Suricata>`__.
+- For more information about Suricata, please see `<Suricata>`__.
