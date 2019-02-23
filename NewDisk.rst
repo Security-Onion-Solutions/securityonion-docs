@@ -12,8 +12,8 @@ Method 1: LVM (Logical Volume Management)
 | If you chose the LVM option in the Ubuntu installer, then this should be the easiest way of adding disk space:
 | https://wiki.ubuntu.com/Lvm
 
-Method 2: Mount a separate drive to ``/nsm``
---------------------------------------------
+Method 2: Mount a separate drive to /nsm
+----------------------------------------
 
 This can be done in the Ubuntu installer, or after installation is complete. If doing this after running Setup, then you'll need to copy the existing data in ``/nsm`` to the new drive using something like this:
 
@@ -121,8 +121,8 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
      
 #. Test and verify that everything works
 
-Method 3: Make ``/nsm`` a symlink to the new logging location
--------------------------------------------------------------
+Method 3: Make /nsm a symlink to the new logging location
+---------------------------------------------------------
 
 If you do this, you'll need to do something like the following to avoid AppArmor issues:
 
