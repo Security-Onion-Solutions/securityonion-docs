@@ -1,7 +1,7 @@
 GRR
 ===
 
-From: https://github.com/google/grr
+From: https://github.com/google/grr:
 
     GRR Rapid Response: remote live forensics for incident response
 
