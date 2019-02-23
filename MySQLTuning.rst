@@ -5,7 +5,7 @@ As of Security Onion 16.04.4.1 MySQL (on the master server) should have a random
 
 ::
 
-sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'select * from event limit 10';
+   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'select * from event limit 10';
 
 mysqltuner
 ----------
