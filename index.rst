@@ -119,9 +119,9 @@ Security Onion Documentation
    :maxdepth: 2
    :caption: Tuning
 
-   ManagingAlerts
    Rules
    AddingLocalRules
+   ManagingAlerts
    DisablingProcesses
    BPF
    PF_RING
