@@ -22,7 +22,7 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
 
    ::
 
-   sudo service cron restart
+     sudo service cron restart
    
 #. Stop all services
    ``sudo service nsm stop``
