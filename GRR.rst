@@ -21,7 +21,7 @@ Get the install script:
 
 ::
 
-   sudo wget https://raw.githubusercontent.com/weslambert/securityonion-grr/master/install_grr
+   wget https://raw.githubusercontent.com/weslambert/securityonion-grr/master/install_grr
 
 Run the script:
 
