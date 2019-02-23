@@ -8,53 +8,53 @@ Security Onion offers the following choices for rulesets to be used by Snort/Sur
 ET Open
 -------
 
-   -  optimized for Suricata, but available for Snort as well
-   -  **free**
+-  optimized for Suricata, but available for Snort as well
+-  **free**
 
-   | For more information, see:
-   | https://rules.emergingthreats.net/open/
+| For more information, see:
+| https://rules.emergingthreats.net/open/
 
 ET Pro (Proofpoint)
 -------------------
 
-   -  optimized for Suricata, but available for Snort as well
-   -  rules retrievable as released
-   -  license fee per sensor
+-  optimized for Suricata, but available for Snort as well
+-  rules retrievable as released
+-  license fee per sensor
 
-   | For more information, see:
-   | https://www.proofpoint.com/us/threat-insight/et-pro-ruleset
+| For more information, see:
+| https://www.proofpoint.com/us/threat-insight/et-pro-ruleset
    
 Snort Community
 ---------------
 
-   -  optimized for Snort
-   -  community-contributed rules
-   -  **free**
+-  optimized for Snort
+-  community-contributed rules
+-  **free**
 
-   | For more information, see:
-   | https://www.snort.org/downloads/#rule-downloads
-   | https://www.snort.org/faq/what-are-community-rules
+| For more information, see:
+| https://www.snort.org/downloads/#rule-downloads
+| https://www.snort.org/faq/what-are-community-rules
 
 Snort Registered
 ----------------
 
-   -  optimized for Snort
-   -  Snort SO (Shared Object) rules will only work with Snort
-   -  same rules as Snort Subscriber ruleset, except rules only retrievable after 30 days past release
-   -  **free**
+-  optimized for Snort
+-  Snort SO (Shared Object) rules will only work with Snort
+-  same rules as Snort Subscriber ruleset, except rules only retrievable after 30 days past release
+-  **free**
 
-   | For more information, see:
-   | https://www.snort.org/downloads/#rule-downloads
-   | https://snort.org/documents/registered-vs-subscriber
+| For more information, see:
+| https://www.snort.org/downloads/#rule-downloads
+| https://snort.org/documents/registered-vs-subscriber
 
 Snort Subscriber (Talos)
 ------------------------
 
-   -  optimized for Snort
-   -  Snort SO (Shared Object) rules will only work with Snort
-   -  rules retrievable as released
-   -  license fee per sensor
+-  optimized for Snort
+-  Snort SO (Shared Object) rules will only work with Snort
+-  rules retrievable as released
+-  license fee per sensor
 
-   | For more information, see:
-   | https://www.snort.org/downloads/#rule-downloads
-   | https://snort.org/documents/registered-vs-subscriber
+| For more information, see:
+| https://www.snort.org/downloads/#rule-downloads
+| https://snort.org/documents/registered-vs-subscriber
