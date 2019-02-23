@@ -38,7 +38,7 @@ We have different Installation Guides to cover various use cases. Please choose 
 Quickly Evaluating Security Onion
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you just want to **quickly evaluate** Security Onion, choose one of the following. If you're a first time user, please choose the first option.
+If you just want to **quickly evaluate** Security Onion, choose one of the following. If you're a first time user, we recommend the first option.
 
 -  `Download our Security Onion ISO image and Quickly Evaluate <QuickISOImage>`__
 
