@@ -64,7 +64,7 @@ Remove sensor reference from master server
 
 -  PLEASE NOTE: This step is only required if you are still running ELSA. ELSA reached EOL on October 9, 2018.  On the master server, edit ``/etc/elsa_web.conf``, remove the sensor from the ``peers`` section, then restart Apache (``sudo service apache2 restart``).
 
-Remove storage node reference from Master server Elasticsearch ``_cluster/settings``
+Remove storage node reference from Master server Elasticsearch _cluster/settings
 ------------------------------------------------------------------------------------
 
 From Kibana, navigate to ``Dev Tools`` and paste the following text into
