@@ -34,8 +34,8 @@ Follow the steps below to setup a standalone machine in Evaluation Mode:
 #. Specify maximum disk size (min 20GB), store as single file, click
    Next.
 #. Customize hardware:
-#. Memory – 3GB
-#. Processors – 2/1 core each
+#. Memory – 8GB or more
+#. Processors – 4 CPU cores or more
 #. Network Adapter (NAT or Bridged -- if you want to be able to access
    your Security Onion machine from other devices in the network, then
    choose Bridged, otherwise choose NAT to leave it behind the host) --
