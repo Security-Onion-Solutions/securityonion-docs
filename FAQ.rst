@@ -462,8 +462,8 @@ I'm running Security Onion in a VM and the screensaver is using lots of CPU. How
 | 
 | 
 
-``sostat`` output
----------------------
+sostat output
+-------------
 
 What does it mean if ``sostat`` show a high number of ``Sguil Uncategorized Events``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
