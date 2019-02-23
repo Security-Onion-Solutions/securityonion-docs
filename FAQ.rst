@@ -435,7 +435,7 @@ What can I do to decrease the size of my ``securityonion_db`` (sguild) MySQL dat
 How do I change the fonts in the Sguil client?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In the Sguil client, click the ``File`` menu and then go to ``Change Font``. You can change both the Standard and Fixed fonts.
+`<Sguil#customize-sguil-client>`_
 
 Can I be alerted when an interface stops receiving traffic?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -445,28 +445,7 @@ Can I be alerted when an interface stops receiving traffic?
 How do I boot Security Onion to text mode (CLI instead of GUI)?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In ``/etc/default/grub``, change this line:
-
-::
-
-    GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"
-
-to:
-
-::
-
-    GRUB_CMDLINE_LINUX_DEFAULT="text"
-
-Then run:
-
-::
-
-    sudo update-grub
-
-| For more information, please see:
-| http://ubuntuforums.org/showthread.php?t=1690118
-
-If you're doing a new installation, you can avoid this altogether by installing our packages on top of Ubuntu Server (minimal installation, no GUI) instead of using the Security Onion ISO image.
+`Disabling Desktop <Desktop>`_
 
 I'm running Security Onion in a VM and the screensaver is using lots of CPU. How do I change/disable the screensaver?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
