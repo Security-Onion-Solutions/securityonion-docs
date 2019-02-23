@@ -25,14 +25,14 @@ https://groups.google.com/forum/#!forum/security-onion-testing
 Documentation Team
 ------------------
 
-If you find that some information in our Documentation is incorrect or lacking, please feel free to submit Pull Requests via Github!
+If you find that some information in our Documentation is incorrect or lacking, please feel free to submit Pull Requests via GitHub!
 
 https://github.com/Security-Onion-Solutions/securityonion-docs
 
 Core Development
 ----------------
 
-Most of our code is on github. Please feel free to submit pull requests!
+Most of our code is on GitHub. Please feel free to submit pull requests!
 
 https://github.com/Security-Onion-Solutions
 
