@@ -14,8 +14,8 @@ Doug Burks started Security Onion in 2008 and founded Security Onion Solutions, 
 
 https://securityonionsolutions.com
 
-About This Documentation
-------------------------
+Documentation
+-------------
 
 Formats
 ~~~~~~~
