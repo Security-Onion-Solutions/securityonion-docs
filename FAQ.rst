@@ -323,7 +323,7 @@ I'm currently running ``Suricata``. How do I switch to ``Snort``?
 Can Security Onion run in ``IPS`` mode?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Running Security Onion as an IPS requires manual configuration and is ``not supported``.
+`<NIDS#NIPS>`_
  
  
 `back to top <#top>`__
