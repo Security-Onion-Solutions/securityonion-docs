@@ -14,7 +14,7 @@ When you run Setup, make sure you choose `Best Practices <Best-Practices>`__.
 Disable GUI
 -----------
 
-`Disable GUI <Desktop>`_
+If you're unable to start with Ubuntu Server (no GUI) as recommended above, you can `disable the GUI <Desktop>`_ after the system is fully configured.
 
 Disable Unnecessary Services
 ----------------------------
