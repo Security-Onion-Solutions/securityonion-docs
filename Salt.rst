@@ -1,56 +1,37 @@
 Salt
 ====
 
-"Salt delivers a dynamic communication bus for infrastructures that can
-be used for orchestration, remote execution, configuration management
-and much more."
+From https://docs.saltstack.com/en/latest/:
+   Salt is a new approach to infrastructure management built on a dynamic communication bus. Salt can be used for data-driven orchestration, remote execution for any infrastructure, configuration management for any app stack, and much more.
 
-http://docs.saltstack.com/
-
-What is OnionSalt?
+OnionSalt
 ------------------
 
-"OnionSalt is a tool created to manage multiple Security Onion sensors."
+OnionSalt is a set of Salt scripts created to manage multiple Security Onion sensors.
 
 https://github.com/TOoSmOotH/onionsalt
 
 Best Practices
 --------------
 
-For the Security Onion 14.04 ISO, ``securityonion-onionsalt`` is
-pre-installed (via ``securityonion-iso syslog-ng-core``) , and Salt is
-configured by default when choosing `Best
-Practices <Best-Practices>`__
-during setup.
+If you're using our ISO image, ``securityonion-onionsalt`` is pre-installed, and Salt is configured by default when choosing ``Production Mode`` and then `Best Practices <Best-Practices>`__ during Setup.
 
 Salt and OnionSalt are optional packages
 ----------------------------------------
 
-If you choose to install Security Onion via PPA without installing
-``securityonion-iso syslog-ng-core``, please note that Salt is totally
-optional. If you're happy with your current method of sensor management,
-then you don't have to install ``securityonion-onionsalt``, and nothing
-will change for you. Otherwise, install ``securityonion-onionsalt``
-before running setup to enable Salt for your deployment.
+If you choose to install Security Onion via PPA without installing ``securityonion-iso syslog-ng-core``, please note that Salt is totally optional. If you're happy with your current method of sensor management, then you don't have to install ``securityonion-onionsalt``, and nothing will change for you. Otherwise, install ``securityonion-onionsalt`` before running setup to enable Salt for your deployment.
 
 Firewall Requirements
 ---------------------
 
-Sensors need to be able to connect to the master server on ports
-4505/tcp and 4506/tcp:
+Sensors need to be able to connect to the master server on ports ``4505/tcp`` and ``4506/tcp``:
 
 http://docs.saltstack.com/topics/tutorials/firewall.html
 
 Installation
 ------------
 
-For new deployments, `Best
-Practices <Best-Practices>`__
-(Production Mode) checks to see if the ``securityonion-onionsalt``
-package is installed and, if so, enables Salt by default. If choosing
-the "Custom" configuration option (Production Mode), simply answer "Yes"
-at the prompt (where applicable), and setup will configure salt-master
-and/or salt-minion services and open firewall ports as necessary.
+For new deployments, `Best Practices <Best-Practices>`__ (Production Mode) checks to see if the ``securityonion-onionsalt`` package is installed and, if so, enables Salt by default. If choosing the "Custom" configuration option (Production Mode), simply answer "Yes" at the prompt (where applicable), and setup will configure salt-master and/or salt-minion services and open firewall ports as necessary.
 
 For existing deployments, please see:
 
@@ -77,19 +58,13 @@ Want to execute a command on all your sensors at once?
 Features
 --------
 
-When you install and enable securityonion-onionsalt, the following data
-will replicate from the master server out to the sensors every 15
-minutes:
+When you install and enable securityonion-onionsalt, the following data will replicate from the master server out to the sensors every 15 minutes:
 
--  NIDS rules in /etc/nsm/rules/ (Snort/Suricata/barnyard will
-   automatically restart as necessary)
--  HIDS rules in /var/ossec/rules/local\_rules.xml (Wazuh will
-   automatically restart as necessary)
+-  NIDS rules in /etc/nsm/rules/ (Snort/Suricata/barnyard will automatically restart as necessary)
+-  HIDS rules in /var/ossec/rules/local\_rules.xml (Wazuh will automatically restart as necessary)
 -  Bro scripts in /opt/bro/share/bro/policy/
 
-   -  Bro does not restart automatically, but you can easily use salt on
-      your master server to tell all your Bro instances to update and
-      restart:
+   -  Bro does not restart automatically, but you can easily use salt on your master server to tell all your Bro instances to update and restart:
 
       ::
 
@@ -100,30 +75,19 @@ minutes:
 
 -  Bro intel in /opt/bro/share/bro/intel/
 
-   -  You'll need to restart Bro as shown above if you add any intel
-      files to the default intel.dat. After that initial Bro restart,
-      Bro should be watching the intel files with the Input framework
-      which should automatically notice if the files ever change (new
-      intel is added). In many cases, you won't need to restart Bro if
-      you're just adding intel to the existing intel file(s).
+   -  You'll need to restart Bro as shown above if you add any intel files to the default intel.dat. After that initial Bro restart, Bro should be watching the intel files with the Input framework which should automatically notice if the files ever change (new intel is added). In many cases, you won't need to restart Bro if you're just adding intel to the existing intel file(s).
 
 -  user accounts and sudoers in /opt/onionsalt/pillar/users/init.sls
 -  user ssh keys in /opt/onionsalt/salt/users/keys/
 
-   -  For each user account in /opt/onionsalt/pillar/users/init.sls, you
-      can add an SSH Public Key to
-      /opt/onionsalt/salt/users/keys/USERNAME.id\_rsa.pub (replacing
-      USERNAME with the user's actual username)
+   -  For each user account in /opt/onionsalt/pillar/users/init.sls, you can add an SSH Public Key to ``/opt/onionsalt/salt/users/keys/USERNAME.id_rsa.pub`` (replacing ``USERNAME`` with the user's actual username)
 
-In addition, Salt is a full configuration management system, so you can
-script anything that you want to deploy across your army of sensors.
+In addition, Salt is a full configuration management system, so you can script anything that you want to deploy across your army of sensors.
 
 Using Salt to Install Updates Across Your Entire Deployment
 -----------------------------------------------------------
 
-You can use Salt and Soup to install updates across your entire
-deployment, but please remember to always update your master server
-first:
+You can use Salt and Soup to install updates across your entire deployment, but please remember to always update your master server first:
 
 ::
 
@@ -135,18 +99,12 @@ first:
     # If MySQL and/or kernel updates are installed, the sensors will reboot
     sudo salt '*' cmd.run 'soup -y'
 
-Also, please keep in mind that occasionally Ubuntu will release updates
-that prompt for user input which would cause that last command to hang.
-If you experience this, you should be able to ssh to each sensor and run
-``soup`` interactively. For more information, please see `Issue
-1108 <https://github.com/Security-Onion-Solutions/security-onion/issues/1108>`__.
+Also, please keep in mind that occasionally Ubuntu will release updates that prompt for user input which would cause that last command to hang. If you experience this, you should be able to ssh to each sensor and run ``soup`` interactively. For more information, please see `Issue 1108 <https://github.com/Security-Onion-Solutions/security-onion/issues/1108>`__.
 
 Modifying Salt config files
 ---------------------------
 
-If you need to modify the values in /etc/salt/master or
-/etc/salt/minion, please pay attention to this note at the top of each
-file:
+If you need to modify the values in ``/etc/salt/master`` or ``/etc/salt/minion``, please pay attention to this note at the top of each file:
 
 ::
 
@@ -164,15 +122,12 @@ file:
     # as the main minion config file).
     #default_include: minion.d/*.conf
 
-| Instead of modifying /etc/salt/master or /etc/salt/minion directly,
-  please add your custom settings in /etc/salt/master.d/``*``.conf or
-  /etc/salt/minion.d/``*``.conf, respectively.
-| 
+Instead of modifying /etc/salt/master or /etc/salt/minion directly, please add your custom settings in ``/etc/salt/master.d/*.conf`` or ``/etc/salt/minion.d/*.conf``, respectively.
 
 Changing Minion ID
 ------------------
 
-If you need to change the ID for a minion, do the following:
+If you need to change the ID for a minion, do the following.
 
 On the minion machine:
 
@@ -209,7 +164,7 @@ Salting an Existing Deployment
 ------------------------------
 
 Configure the Master Server first
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -262,7 +217,7 @@ Configure the Master Server first
     sudo salt '*' state.highstate
 
 Now configure salt-minion on a Sensor
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -287,7 +242,7 @@ Now configure salt-minion on a Sensor
     sudo service salt-minion restart
 
 Now return to the Master and accept the new minion
---------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -308,21 +263,14 @@ Now return to the Master and accept the new minion
 Maximum Event Size
 ------------------
 
-Salt-master uses a default ``max_event_size`` of **1048576** bytes (1
-`Mebibyte <https://en.wikipedia.org/wiki/Mebibyte>`__). For some
-Security Onion deployments, this may need to be change to a larger value
-to avoid receiving a ``VALUE_TRIMMED`` error (if the output of a command
-run on a minion is too large to be passed back to the master).
+Salt-master uses a default ``max_event_size`` of **1048576** bytes (1 `Mebibyte <https://en.wikipedia.org/wiki/Mebibyte>`__). For some Security Onion deployments, this may need to be change to a larger value to avoid receiving a ``VALUE_TRIMMED`` error (if the output of a command run on a minion is too large to be passed back to the master).
 
 See:
 https://docs.saltstack.com/en/latest/ref/configuration/master.html#max-event-size
 
-This setting should be changed in ``/etc/salt/master.d/onionsalt.conf``,
-as opposed to directly in /etc/salt/master.
+This setting should be changed in ``/etc/salt/master.d/onionsalt.conf``, as opposed to directly in ``/etc/salt/master``.
 
-On a distributed Security Onion deployment
-``/etc/salt/master.d/onionsalt.conf`` (on the master) should look like
-the following:
+On a distributed Security Onion deployment ``/etc/salt/master.d/onionsalt.conf`` (on the master) should look like the following:
 
 ::
 
@@ -338,7 +286,9 @@ the following:
 
 After making changes, ensure salt-master has been started/restarted:
 
-``sudo service salt-master restart``
+::
+
+   sudo service salt-master restart
 
 Additional Reading
 ------------------
