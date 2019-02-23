@@ -18,8 +18,8 @@ Security Onion is a free and open source Linux distribution for intrusion detect
    IntroductionToSecurityOnion
    Use-Cases
    Hardware
-   Release-Notes
    Installation
+   Release-Notes
    QuickISOImage
    InstallingOnUbuntu
    ProductionDeployment
