@@ -23,7 +23,7 @@ Please keep in mind we do not officially support FIR, so installation is at your
 Installation
 ------------
 
-To install FIR on Security Onion:
+To install FIR on Security Onion, use the following steps.
 
 Get the install script:
 
