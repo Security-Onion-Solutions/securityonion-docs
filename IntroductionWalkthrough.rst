@@ -25,8 +25,8 @@ the server is limited to SSH and command line, the client VM will let us
 setup remote servers and sensors graphically. It is also recommended for
 analysts to run Security Onion in a virtual machine for client access to
 ensure you have all the tools needed to manage and monitor a deployment
-in an isolated environment. You'll need a computer with at least 4GB of
-RAM (ideally 8GB) for best results. We'll use VirtualBox, a free desktop
+in an isolated environment. You'll need a computer with at least 16GB of
+RAM (so that we can dedicate at least 8GB RAM to the VM) for best results. We'll use VirtualBox, a free desktop
 virtualization tool, but the process is very similar for VMware or
 others. You can download a copy of VirtualBox for Windows, Mac OS X or
 Linux at http://www.virtualbox.org. We'll also need to download the
@@ -38,13 +38,7 @@ button. First we'll provide a name for our virtual machine ("Security
 Onion Standalone Client" for example) and specify the type ("Linux") and
 version ("Ubuntu" or "Ubuntu 64 bit"), then click "Continue." We'll next
 define how much memory we want to make available to our virtual machine.
-For a Security Onion client, you should dedicate at least 2GB RAM, but
-ideally 4GB if possible. 2GB RAM will provide decent performance for the
-Sguil client and retrieving packet captures from the server but also
-enough to run Security Onion in standalone mode for monitoring the local
-client and testing packet captures with tools like tcpreplay, but you
-could potentially experience some delays under heavy use or retrieving
-large packet captures.
+You should dedicate at least 8GB RAM to the Security Onion VM.
 
 Next we'll create a virtual hard drive for our client. Specify "Create a
 virtual hard drive now" then click "Create" to choose the hard drive
@@ -292,15 +286,8 @@ cover here in more detail as a future reference.
    -  Mailing Lists -
       https://groups.google.com/forum/?fromgroups#!forum/security-onion
    -  IRC channel - http://webchat.freenode.net/?channels=securityonion
-      At this point we have a fully functioning Security Onion
-      standalone system up and running. To confirm, open up a terminal
-      and type "sudo nsm\_sensor\_ps-status" and you should see results
-      showing the various agent and service components of Security Onion
-      with an "OK" or "FAIL" status.
-
-You can also type "sudo nsm\_server\_ps-status" to check the status of
-Sguil server. If any of the agents or server fail, a reference to the
-log file will be included that will be useful for troubleshooting.
+      
+At this point we have a fully functioning Security Onion standalone system up and running. To confirm, open up a terminal and type ``sudo so-status`` and you should see results showing the various agent and service components of Security Onion with an "OK" or "FAIL" status.
 
 A useful script to provide performance and health status of your
 Security Onion hosts is "sostat." You should run it periodically on any
