@@ -18,8 +18,7 @@ If you haven't already, please review the `Hardware <Hardware>`__ page.
 UEFI
 ----
 
-If you have a new machine with UEFI, please see:
-https://help.ubuntu.com/community/UEFI
+If you have a new machine with UEFI, please see https://help.ubuntu.com/community/UEFI.
 
 UEFI Secure Boot
 ----------------
