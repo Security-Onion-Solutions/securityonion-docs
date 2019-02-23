@@ -20,7 +20,7 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
 #. Comment out the cron job in ``/etc/cron.d/nsm-watchdog``
 #. Restart cron
 
-::
+   ::
 
    sudo service cron restart
    
