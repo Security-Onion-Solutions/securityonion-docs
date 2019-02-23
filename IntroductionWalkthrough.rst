@@ -276,7 +276,7 @@ cover here in more detail as a future reference.
    questions.
 
    -  Security Onion - https://blog.securityonion.net/
-   -  Security Onion on Github -
+   -  Security Onion on GitHub -
       https://github.com/Security-Onion-Solutions/security-onion
    -  FAQ -
       `<FAQ>`__
