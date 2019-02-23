@@ -27,10 +27,12 @@ This documentation is published online at https://securityonion.net/docs.  If yo
 
 Contributing
 ~~~~~~~~~~~~
-| If you notice any documentation is missing or incorrect, please feel free to submit a pull request (PR) to the following repo:
-| https://github.com/Security-Onion-Solutions/securityonion-docs
+We welcome your contributions to our documentation!  We will review any suggestions and apply them if appropriate.
 
-We will review the PR and merge if appropriate.
+If you notice any documentation is incorrect, you can submit corrections by clicking the ``Edit on Github`` button in the upper right corner of each page.
+
+| To submit a new page, you can submit a pull request (PR) to the following repo:
+| https://github.com/Security-Onion-Solutions/securityonion-docs
 
 Naming Convention
 ~~~~~~~~~~~~~~~~~
