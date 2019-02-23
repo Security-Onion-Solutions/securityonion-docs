@@ -24,8 +24,8 @@ Then run Setup with the ``-f`` switch and the path to this file:
 
     sudo sosetup -f ~/sosetup.conf
 
-Using ``sosetup -w``
---------------------
+sosetup -w
+----------
 
 ``sosetup`` also supports a ``-w`` switch that allows you to answer the standard Setup questions and have it write out your custom ``sosetup.conf``.  For example:
 
