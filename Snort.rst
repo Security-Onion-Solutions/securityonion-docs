@@ -22,7 +22,7 @@ If you would like to configure/manage IDS rules, please see:
 Logging
 -------
 
-If you need to troubleshoot Snort, check the Snort log file ``/var/log/nsm/HOSTNAME-INTERFACE/snortu-X.log`` (where HOSTNAME is your actual hostname, INTERFACE is your actual sniffing interface, and X represents the number of PF_RING instances).
+If you need to troubleshoot Snort, check the Snort log file ``/var/log/nsm/HOSTNAME-INTERFACE/snortu-X.log`` (where ``HOSTNAME`` is your actual hostname, ``INTERFACE`` is your actual sniffing interface, and ``X`` represents the number of PF_RING instances).
 
 More Information
 ----------------
