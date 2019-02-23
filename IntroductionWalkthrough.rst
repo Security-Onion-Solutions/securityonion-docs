@@ -1,22 +1,21 @@
 VirtualBox Walkthrough
 ======================
 
-Please note this walkthrough was written several years ago for the
-previous version of Security Onion (12.04). The current version of
-Security Onion is 16.04 and you can follow one of the updated
-`Installation <Installation>`__
-guides.
+Warning
+-------
+
+Please note this walkthrough was originally written several years ago for an older version of Security Onion (12.04) and has not been fully updated for the current version. The current version of Security Onion is 16.04 and you can follow one of the updated `Installation <Installation>`__ guides.
 
 Walkthrough
 -----------
 
-Security Onion is configured to run on version 12.04 of any Ubuntu-based
+Security Onion is configured to run on version 16.04 of any Ubuntu-based
 Linux server or desktop distribution, such as Ubuntu, Lubuntu, Xubuntu,
 and Kubuntu. Your base operating system choice really depends on
 personal preference, your hardware and how you intend to interact with
 Security Onion. If you're experienced with the flavors of Ubuntu you
 probably have already made this decision. We're going to walkthrough
-setting up the Security Onion Live Xubuntu 12.04 distribution in a
+setting up the Security Onion 16.04 distribution in a
 virtual machine (VM) and installing Security Onion using the Quick Setup
 option. Having Security Onion installed in a VM gives you an isolated
 environment which can act as a "client" for interacting with a remote
@@ -30,7 +29,7 @@ RAM (so that we can dedicate at least 8GB RAM to the VM) for best results. We'll
 virtualization tool, but the process is very similar for VMware or
 others. You can download a copy of VirtualBox for Windows, Mac OS X or
 Linux at http://www.virtualbox.org. We'll also need to download the
-Security Onion 12.04 Live distribution from the
+Security Onion 16.04 Live distribution from the
 `Download <Installation>`__ page.
 
 Once downloaded, install VirtualBox, then launch it and click the "New"
@@ -63,12 +62,12 @@ At this point, you can click "Settings" for your new virtual machine so
 we can get it configured. You might want to increase your display
 virtual memory to 128MB of RAM, but most other settings should be fine.
 We do, however, need to do a couple of things. First, mount the Security
-Onion Live 12.04 .iso file we downloaded so our virtual machine can boot
+Onion 16.04 .iso file we downloaded so our virtual machine can boot
 from it to install Linux. Click the "Storage" icon, then under
 "Controller: IDE" select the "Empty" CD icon. To the right, you'll see
 "CD/DVD Drive" with "IDE Secondary" specified with another CD icon.
 Click the icon, then select "Choose a virtual CD/DVD disk file" and
-browse to where you downloaded the Security Onion Live 12.04 .iso file,
+browse to where you downloaded the Security Onion 16.04 .iso file,
 select it then choose "Open." Next click "Network" then "Adapter 2."
 You'll need to click the checkbox to enable it then attach it to
 "Internal Network." Under the "Advanced" options, set "Promiscuous Mode"
@@ -78,7 +77,7 @@ system.
 Hit the "Start" button with your new virtual machine selected and after
 a few seconds the boot menu will load. Choose "live - boot the Live
 System" or wait and the Security Onion desktop will load. Double-click
-the "Install SecurityOnion 12.04" icon on the desktop to initiate the
+the ``Install SecurityOnion`` icon on the desktop to initiate the
 first of a handful of operating system setup screens. After language
 selection we'll see some information about our system in "Preparing to
 install SecurityOnion." Go ahead and check the box to "Download updates
