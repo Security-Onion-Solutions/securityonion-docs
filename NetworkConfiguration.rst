@@ -29,8 +29,8 @@ Sniffing interface(s)
 
 You'll want one or more interfaces dedicated to sniffing (no IP address). NIC offloading functions such as ``tso``, ``gso``, and ``gro`` should be disabled to ensure that Snort/Suricata get an accurate view of the traffic (see https://blog.securityonion.net/2011/10/when-is-full-packet-capture-not-full.html).
 
-Sample ``/etc/network/interfaces``
-----------------------------------
+Sample /etc/network/interfaces
+------------------------------
 
 ::
 
