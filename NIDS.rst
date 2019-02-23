@@ -11,7 +11,7 @@ Security Onion can run either `<Snort>`__ or `<Suricata>`__ as its Network Intru
 Performance
 -----------
 
-In Security Onion, we compile both `<Snort>`__ and `<Suricata>`__ to support `<PF_RING>`__ for higher performance.  Suricata also supports `<AF-PACKET>`_ as an alternative.  Modern versions of Setup default to running `<Suricata>` in `<AF-PACKET>`_ mode.
+In Security Onion, we compile both `<Snort>`__ and `<Suricata>`__ to support `<PF_RING>`__ for higher performance.  Suricata also supports `<AF-PACKET>`_ as an alternative.  Modern versions of Setup default to running `<Suricata>`_ in `<AF-PACKET>`_ mode.
 
 Analysis
 --------
