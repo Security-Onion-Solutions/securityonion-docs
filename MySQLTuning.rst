@@ -18,7 +18,7 @@ Install ``mysqltuner`` if you haven't already:
 
     sudo apt update && sudo apt install mysqltuner
 
-Run mysqltuner:
+Run ``mysqltuner`` with privileges:
 
 ::
 
