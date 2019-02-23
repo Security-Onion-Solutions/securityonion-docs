@@ -44,6 +44,11 @@ Switching from Suricata to Snort
    sudo rule-update
    sudo so-sensor-start
 
+NIPS
+----
+
+Security Onion is designed to be passive and so Snort and Suricata run in NIDS mode rather than NIPS (inline) mode.  Running in NIPS mode would require manual configuration and we do not recommend or support it.
+
 More Information
 ----------------
 
