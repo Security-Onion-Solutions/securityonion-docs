@@ -1,8 +1,8 @@
 Updating
 ========
 
-``soup`` - Security Onion Update
---------------------------------
+soup
+----
 
 We recommend using our ``soup`` script to update. ``Soup`` will automatically install **all** available package updates (from both Ubuntu and Security Onion) and **all** updated Docker images.
 
@@ -10,7 +10,9 @@ We recommend using our ``soup`` script to update. ``Soup`` will automatically in
 
     sudo soup
 
-Please pay attention to the output of this command as it may request that you take specific action, such as manually restarting services. Also refer to the relevant blog entry for the update as there may be additional information there: https://blog.securityonion.net
+| Please pay attention to the output of this command as it may request that you take specific action, such as manually restarting services. Also refer to the relevant blog entry for the update as there may be additional information there: 
+| https://blog.securityonion.net
+
 
 Snort/Suricata
 --------------
