@@ -1,7 +1,7 @@
 AF-PACKET
 =========
 
-Starting in ``securityonion-setup - 20120912-0ubuntu0securityonion285``, running Setup will configure Suricata and Bro to use AF_PACKET. (Snort will continue to use `PF_RING <PF_RING>`__ for load balancing until Snort 3.0 is released.)
+Modern versions of Setup will configure `<Suricata>`_ and `<Bro>`_ to use AF_PACKET instead of `<PF_RING>`_. (`<Snort>`_ will continue to use `PF_RING <PF_RING>`__ for load balancing until Snort 3.0 is released.)
 
 If you want to change the number of AF_PACKET workers after running Setup, you can do the following.
 
