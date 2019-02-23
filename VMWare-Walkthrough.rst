@@ -1,21 +1,17 @@
 VMWare Walkthough
 =================
 
-Please note this walkthrough was written for the previous version of
-Security Onion (14.04). The current version of Security Onion is 16.04
-and you can follow one of the updated
-`Installation <Installation>`__
-guides.
+Warning
+-------
+
+Please note this walkthrough was written for the previous version of Security Onion (14.04) and has not yet been fully updated for the current version. The current version of Security Onion is 16.04 and you can follow one of the updated `Installation <Installation>`__ guides.
 
 Overview
 --------
 
-This tutorial was written to address setting up Security Onion 14.04 in
-VMWare Workstation Pro 12 (although this should be similar for most
-VMWare installations).
+This tutorial was written to address setting up Security Onion 16.04 in VMWare Workstation Pro 12 (although this should be similar for most VMWare installations).
 
-If you don't have VMWare Workstation, you could also use VMWare Player,
-found here:
+If you don't have VMWare Workstation, you could also use VMWare Player, found here:
 
 http://www.vmware.com/products/player/playerpro-evaluation.html
 
@@ -54,7 +50,7 @@ Follow the steps below to setup a standalone machine in Evaluation Mode:
 #. Confirm changes and click "Install Now".
 #. From the "Where are you?" prompt, select your time zone and click
    "Continue".
-#. Drag the window to the left (Ubuntu 14.04 bug), and click "Continue".
+#. Drag the window to the left (Ubuntu installer bug), and click "Continue".
 #. Enter your name.
 #. Enter your computer’s name.
 #. Select a username and enter a password.
