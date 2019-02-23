@@ -313,24 +313,12 @@ IDS engines
 I'm currently running ``Snort``. How do I switch to ``Suricata``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please note that, if you're running the Snort Talos ruleset, Snort Shared Object rules will not load in Suricata. Most folks who choose the Suricata engine choose to run the Emerging Threats ruleset.
-
-::
-
-   sudo so-sensor-stop
-   sudo sed -i 's|ENGINE=snort|ENGINE=suricata|g' /etc/nsm/securityonion.conf
-   sudo rule-update 
-   sudo so-sensor-start
+`<NIDS#switching-from-snort-to-suricata>`_
 
 I'm currently running ``Suricata``. How do I switch to ``Snort``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
-
-   sudo so-sensor-stop
-   sudo sed -i 's|ENGINE=suricata|ENGINE=snort|g' /etc/nsm/securityonion.conf
-   sudo rule-update
-   sudo so-sensor-start
+`<NIDS#switching-from-suricata-to-snort>`_
 
 Can Security Onion run in ``IPS`` mode?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
