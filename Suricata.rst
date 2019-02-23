@@ -19,7 +19,7 @@ We compile Suricata to support both `PF\_RING <PF_RING>`__ and `<AF-PACKET>`_ to
 Configuration
 -------------
 
-You can configure Suricata via ``/etc/nsm/HOSTNAME-INTERFACE/suricata.yaml`` (where HOSTNAME is your actual hostname and INTERFACE is your actual sniffing interface).
+You can configure Suricata via ``/etc/nsm/HOSTNAME-INTERFACE/suricata.yaml`` (where ``HOSTNAME`` is your actual hostname and ``INTERFACE`` is your actual sniffing interface).
 
 If you would like to configure/manage IDS rules, please see:
 
