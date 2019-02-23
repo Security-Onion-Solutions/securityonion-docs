@@ -18,12 +18,12 @@ If you haven't already, please review the `Hardware <Hardware>`__ page.
 UEFI
 ----
 
-If you have a new machine with UEFI, please see https://help.ubuntu.com/community/UEFI.
+If your hardware has UEFI, please see https://help.ubuntu.com/community/UEFI.
 
 UEFI Secure Boot
 ----------------
 
-If your hardware has UEFI Secure Boot enabled, please see `Secure Boot <Secure-Boot>`__.
+If your hardware has ``UEFI Secure Boot`` enabled, please see `Secure Boot <Secure-Boot>`__.
 
 Language
 --------
