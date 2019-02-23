@@ -86,8 +86,8 @@ Distributed deployments
 
 If you have a distributed deployment with a master server and separate sensor boxes and/or storage nodes, always update the master server first before updating other boxes. Then make sure to update the remaining boxes shortly thereafter. This will help to ensure that all boxes in your deployment are running the same code versions and help to avoid any incompatibilities.
 
-Using ``salt`` and ``soup`` to Update your entire Deployment
-------------------------------------------------------------
+Using salt and soup to update your entire deployment
+----------------------------------------------------
 
 `salt and
 soup <Salt#using-salt-to-install-updates-across-your-entire-deployment>`__
