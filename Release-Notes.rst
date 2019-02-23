@@ -3,6 +3,7 @@ Release Notes
 
 -  | As always, make sure you verify the downloaded ISO image:
    | https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md
+   
 -  When the ISO boots, choose the default option.
 
 -  Once the live desktop appears, double-click the ``Install SecurityOnion`` icon.
@@ -26,7 +27,7 @@ Release Notes
 
 -  When choosing Evaluation Mode, the following services are enabled by default: Snort, Bro, netsniff-ng, pcap_agent, snort_agent, barnyard2.
 
--  When choosing Production Mode, you then have the option of Best Practices or Custom. Best Practices asks a smaller number of questions and chooses the services that most folks want (Snort, Bro, netsniff-ng, pcap\_agent, snort\_agent, barnyard2, salt). Custom gives you more control over your system but requires more in-depth knowledge about services and their functions.
+-  When choosing Production Mode, you then have the option of Best Practices or Custom. Best Practices asks a smaller number of questions and chooses the services that most folks want (Snort or Suricata, Bro, netsniff-ng, pcap_agent, snort_agent, barnyard2, salt). Custom gives you more control over your system but requires more in-depth knowledge about services and their functions.
 
 -  Once you've completed both phases of Setup, you should see new icons on your Desktop.
 
