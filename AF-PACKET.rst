@@ -8,7 +8,7 @@ If you want to change the number of AF_PACKET workers after running Setup, you c
 Suricata
 --------
 
-To change the number of AF_PACKET workers for Suricata:
+To change the number of AF_PACKET workers for `<Suricata>`_:
 
 -  Stop sensor processes:
 
@@ -29,9 +29,9 @@ To change the number of AF_PACKET workers for Suricata:
 Bro
 ---
 
-To change the number of AF_PACKET workers for Bro:
+To change the number of AF_PACKET workers for `<Bro>`_:
 
--  Stop bro:
+-  Stop Bro:
 
    ::
 
@@ -39,7 +39,7 @@ To change the number of AF_PACKET workers for Bro:
 
 -  Edit ``/opt/bro/etc/node.cfg`` and change the ``lb_procs`` variable to the desired number of cores.
 
--  Start bro:
+-  Start Bro:
 
    ::
 
