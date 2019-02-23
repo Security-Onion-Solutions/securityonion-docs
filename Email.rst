@@ -2,7 +2,7 @@ Email Configuration
 ===================
 
 so-email
--------------
+--------
 
 ``so-email`` will automatically configure automated server-side email for you as described below. Simply run the following command and follow the prompts:
 
@@ -23,12 +23,12 @@ Please note that the Sguil client has its own email configuration (separate from
 ``/etc/sguil/sguil.conf``.
 
 Overview
-------------
+--------
 
 This page describes how to configure email for alerting and reporting. Applications such as Sguil and Wazuh have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Bro.
 
-Configuring the Operation System to send email
-----------------------------------------------
+Operating System
+----------------
 
 Install and configure your favorite mail server. Depending on your needs, this could be something simple like ``nullmailer``  (recommended) or something more complex like ``exim4``.
 
@@ -69,8 +69,8 @@ If you don't already have the ``mail`` utility, you can try installing:
 
    sudo apt-get install mailutils
 
-Configuring Sguil to send alerts via email
-------------------------------------------
+Sguild
+------
 
 Modify ``/etc/nsm/securityonion/sguild.email`` (on the master server) as needed and restart sguild:
 
@@ -91,8 +91,8 @@ You may want to install a local mail relay on your master server, configure it t
 
 **Please note**: Sguil will only send email alerts for what is considers *new* events. Ensure you classify events within the Sguil console, or consider `creating an Autocat rule <ManagingAlerts#autocategorize-events>`__ to automatically classify them if you prefer to receive emails for all instances of an alert. Otherwise, you may not receive alerts as intended.
 
-Configuring Wazuh to send email
--------------------------------
+Wazuh
+-----
 
 Modify ``/var/ossec/etc/ossec.conf`` as follows:
 
@@ -116,8 +116,8 @@ You can specify the severity of an event for which Wazuh will send email alerts 
 
 You can also find an explanation of the alert levels at http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html.
 
-Configuring Bro to send email
------------------------------
+Bro
+---
 
 Edit ``/opt/bro/etc/broctl.cfg`` and set the following:
 
@@ -149,12 +149,12 @@ You may want to receive emails for Bro notices. To do that, add the following to
 
 Also see http://mailman.icsi.berkeley.edu/pipermail/bro/2013-December/006418.html.
 
-Configuring Elastalert to send email
-------------------------------------
+Elastalert
+----------
 
 Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
 
-Email notification for lack of traffic
---------------------------------------
+Lack of network traffic
+-----------------------
 
 If you configured Wazuh or Bro as shown above, they should automatically email you if your network sensors stop seeing traffic.  Another option can be found on the `SensorStopsSeeingTraffic <SensorStopsSeeingTraffic>`__ page.
