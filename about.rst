@@ -10,7 +10,9 @@ Security Onion is a free and open source Linux distribution for intrusion detect
 
 Security Onion Solutions, LLC
 -----------------------------
-Doug Burks started Security Onion as a free and open source project in 2008 and then founded Security Onion Solutions, LLC in 2014.  Security Onion Solutions, LLC is the only official provider of training, professional services, and hardware appliances for Security Onion.
+Doug Burks started Security Onion as a free and open source project in 2008 and then founded Security Onion Solutions, LLC in 2014.  
+
+Security Onion Solutions, LLC is the only official provider of training, professional services, and hardware appliances for Security Onion.
 
 https://securityonionsolutions.com
 
