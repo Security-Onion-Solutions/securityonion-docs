@@ -1,7 +1,7 @@
 FIR
 ===
 
-From: https://github.com/certsocietegenerale/FIR
+From: https://github.com/certsocietegenerale/FIR:
 
     FIR (Fast Incident Response) is an cybersecurity incident management
     platform designed with agility and speed in mind. It >allows for
@@ -29,7 +29,7 @@ Get the install script:
 
 ::
 
-   sudo wget https://raw.githubusercontent.com/weslambert/securityonion-fir/master/install_fir
+   wget https://raw.githubusercontent.com/weslambert/securityonion-fir/master/install_fir
 
 Run the script:
 
