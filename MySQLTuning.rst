@@ -31,8 +31,8 @@ You may also want to install ``mysqltuner`` via the following manner, given that
     wget http://mysqltuner.pl/ -O mysqltuner.pl && chmod +x mysqltuner.pl
     sudo ./mysqltuner.pl
 
-``/etc/mysql/my.cnf`` vs ``/etc/mysql/conf.d/``
------------------------------------------------
+/etc/mysql/my.cnf vs /etc/mysql/conf.d/
+---------------------------------------
 
 Implement mysqltuner's recommendations in ``/etc/mysql/my.cnf`` or create a new file in ``/etc/mysql/conf.d/`` with the changes. We recommend ``/etc/mysql/conf.d/`` so that your changes don't get overwritten during MySQL package upgrades.
 
