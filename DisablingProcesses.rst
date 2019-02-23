@@ -43,10 +43,12 @@ If you use the Sguil client and want to remove the disabled agent from Sguil's `
     # Restart sguild
     sudo so-sguild-start
 
-Disabling ``Wazuh``
--------------------
+Wazuh
+-----
 
-You can disable Wazuh as follows:
+Occasionally, folks ask about disabling Wazuh.  Please keep in mind that in addition to providing endpoint visibility from Wazuh agents, the Wazuh server also monitors and protects the Security Onion box itself. For example, suppose that you have an active adversary who is trying to compromise your Security Onion box. Wazuh may see those attempts and engage ``Active Response`` to block the attacker's IP address in the host-based firewall.
+
+If you understand all of this and still want to disable Wazuh, you can do so as follows:
 
 ::
 
@@ -56,4 +58,3 @@ You can disable Wazuh as follows:
     # Disable Wazuh
     sudo update-rc.d -f ossec-hids-server disable
 
-However, please keep in mind that in addition to providing endpoint visibility from Wazuh agents, the Wazuh server also monitors and protects the Security Onion box itself. For example, suppose that you have an active adversary who is trying to compromise your Security Onion box. Wazuh may see those attempts and engage ``Active Response`` to block the attacker's IP address in the host-based firewall.
