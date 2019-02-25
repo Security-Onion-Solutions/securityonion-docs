@@ -14,25 +14,8 @@ Security Onion Documentation
    host
    elastic
    network-customizing
-
-.. _tuning:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Tuning
-
-   Rules
-   AddingLocalRules
-   ManagingAlerts
-   DisablingProcesses
-   BPF
-   PF_RING
-   AF-PACKET
-   MySQLTuning
-   NewDisk
-   High-Performance-Tuning
-   Trimming-PCAPs
-
+   tuning
+   
 .. _tricksandtips:
 
 .. toctree::
