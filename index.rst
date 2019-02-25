@@ -7,6 +7,7 @@ Security Onion Documentation
    :maxdepth: 2
    :caption: Table of Contents
 
+   about
    introduction
    updating
    analyst
