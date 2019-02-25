@@ -13,19 +13,7 @@ Security Onion Documentation
    network
    host
    elastic
-
-.. _customizing:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Customizing for your network
-
-   NetworkConfiguration
-   Proxy
-   Firewall
-   Email
-   ChangingIPAddress
-   NTP
+   network-customizing
 
 .. _tuning:
 
