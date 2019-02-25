@@ -12,7 +12,6 @@ http://elastalert.readthedocs.io/en/latest/elastalert.html#overview:
     visualizing and querying data, but we quickly realized that it
     needed a companion tool for alerting on inconsistencies in our data.
     Out of this need, ElastAlert was created. If you have data being
-    written into Elasticsearch in near real time and want to be alerted
     when that data matches certain patterns, ElastAlert is the tool for
     you.
 
@@ -78,12 +77,12 @@ In the ``smtp_auth_file.txt``, add:
 MISP
 ~~~~~~~
 
-See `MISP <https://securityonion.readthedocs.io/en/master/MISP.html>`__
+See `<MISP>`__
 
 TheHive
 ~~~~~~~
 
-See `TheHive <https://securityonion.readthedocs.io/en/master/hive.html>`__
+See `TheHive <hive>`__
 
 
 so-elastalert-create
