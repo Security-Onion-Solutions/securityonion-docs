@@ -8,18 +8,7 @@ Security Onion Documentation
    :caption: Table of Contents
 
    introduction
-
-.. _updateupgrade:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Update/Upgrade
-
-   Upgrade
-   HWE
-   Upgrading-from-14.04-to-16.04
-   MySQL-Upgrade-Errors
-   EOL
+   updating
 
 .. _analysttools:
 
