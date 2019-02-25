@@ -9,20 +9,7 @@ Security Onion Documentation
 
    introduction
    updating
-
-.. _analysttools:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Analyst Tools
-
-   Kibana
-   CapMe
-   CyberChef
-   Squert
-   Sguil
-   networkminer
-   wireshark
+   analyst
 
 .. _networkvisibility:
 
