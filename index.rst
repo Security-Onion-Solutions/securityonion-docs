@@ -16,26 +16,8 @@ Security Onion Documentation
    network-customizing
    tuning
    tricks
+   integrations
    
-
-
-.. _integrations:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Integrations
-
-   Alienvault-OTX
-   CriticalStackIntelClient
-   Etherpad
-   FIR
-   GRR
-   MISP
-   DeployingNtopng
-   RITA
-   strelka
-   ThirdPartyIntegration
-
 .. _help:
 
 .. toctree::
