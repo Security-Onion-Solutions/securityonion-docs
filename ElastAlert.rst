@@ -75,53 +75,16 @@ In the ``smtp_auth_file.txt``, add:
     user: youremail@gmail.com
     password: yourpassword   
 
+MISP
+~~~~~~~
+
+See `MISP <https://securityonion.readthedocs.io/en/master/MISP.html>`__
+
 TheHive
 ~~~~~~~
 
-We can also send events to an instance of the TheHive, thanks to the addition of theHive alerter by `Nclose-ZA <https://github.com/Nclose-ZA/elastalert_hive_alerter>`__
+See `TheHive <https://securityonion.readthedocs.io/en/master/hive.html>`__
 
-::
-
-    es_host: elasticsearch
-    es_port: 9200
-    name: New IDS Alert!
-    type: frequency
-    index: "*:logstash-ids*"
-    num_events: 1
-    timeframe:
-        minutes: 10
-    buffer_time:
-        minutes: 10
-    allow_buffer_time_overlap: true
-
-    filter:
-    - term:
-        event_type: "snort"
-
-    alert: hivealerter
-    hive_connection:
-      hive_host: http(s)://YOUR_HIVE_INSTANCE
-      hive_port: YOUR_HIVE_INSTANCE_PORT
-      hive_apikey: APIKEY
-
-    hive_proxies:
-      http: ''
-      https: ''
-
-    hive_alert_config:
-      title: '{rule[name]} -- {match[alert]}'
-      type: 'external'
-      source: 'SecurityOnion'
-      description: '{match[message]}'
-      severity: 2
-      tags: ['elastalert, SecurityOnion']
-      tlp: 3
-      status: 'New'
-      follow: True
-
-    hive_observable_data_mapping:
-      - ip: '{match[source_ip]}'
-      - ip: '{match[destination_ip]}'
 
 so-elastalert-create
 ~~~~~~~~~~~~~~~~~~~~
