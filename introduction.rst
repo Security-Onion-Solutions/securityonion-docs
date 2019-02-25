@@ -18,7 +18,5 @@ Introduction
    Services
    IntroductionWalkthrough
    VMWare-Walkthrough
-   Videos
    Elastic-Architecture
    Cheat-Sheet
-   Conference
