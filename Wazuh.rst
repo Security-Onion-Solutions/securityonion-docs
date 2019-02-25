@@ -47,7 +47,7 @@ Adding Agents
 -------------
 
 | The Wazuh agent is cross platform and you can download agents for Windows/Unix/Linux/FreeBSD from the Wazuh website:
-| https://documentation.wazuh.com/3.7/installation-guide/packages-list/index.html
+| https://documentation.wazuh.com/3.8/installation-guide/packages-list/index.html
 
 Please note! It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.8.2, then you will want to deploy Wazuh agent version 3.8.2.
 
