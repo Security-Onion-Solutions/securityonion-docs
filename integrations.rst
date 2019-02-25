@@ -9,6 +9,7 @@ Integrations
    Etherpad
    FIR
    GRR
+   hive
    MISP
    DeployingNtopng
    RITA
