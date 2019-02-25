@@ -23,7 +23,7 @@ Additionally, you may want to:
 -  `Send Wazuh logs to an external syslog collector <ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector>`__
 
 | For more information about Wazuh, please see:
-| https://documentation.wazuh.com/3.7/
+| https://documentation.wazuh.com/3.8/
 
 Active Response
 ---------------
@@ -49,7 +49,7 @@ Adding Agents
 | The Wazuh agent is cross platform and you can download agents for Windows/Unix/Linux/FreeBSD from the Wazuh website:
 | https://documentation.wazuh.com/3.7/installation-guide/packages-list/index.html
 
-Please note! It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.7.2, then you will want to deploy Wazuh agent version 3.7.2.
+Please note! It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.8.2, then you will want to deploy Wazuh agent version 3.8.2.
 
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
 | http://ossec-docs.readthedocs.org/en/latest/manual/agent/agent-management.html#managing-agents
@@ -65,10 +65,10 @@ Automated Deployment
 --------------------
 
 | Wazuh includes ``ossec-authd``:
-| https://documentation.wazuh.com/3.7/user-manual/reference/daemons/ossec-authd.html
+| https://documentation.wazuh.com/3.8/user-manual/reference/daemons/ossec-authd.html
 
 Downloads
 ---------
 
 | You can download Wazuh agents here:
-| https://documentation.wazuh.com/3.7/installation-guide/packages-list/index.html
+| https://documentation.wazuh.com/3.8/installation-guide/packages-list/index.html
