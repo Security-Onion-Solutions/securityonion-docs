@@ -18,15 +18,7 @@ Security Onion Documentation
    tricks
    integrations
    help
-
-.. _other:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Other
-
-   DirectoryStructure
-   Tools
+   other
    
 .. _utilties:
 
