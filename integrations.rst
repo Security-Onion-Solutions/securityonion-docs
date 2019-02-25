@@ -5,7 +5,6 @@ Integrations
    :maxdepth: 2
    
    Alienvault-OTX
-   CriticalStackIntelClient
    Etherpad
    FIR
    GRR
