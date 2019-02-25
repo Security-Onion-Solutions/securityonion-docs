@@ -4,7 +4,6 @@ Introduction
 .. toctree::
    :maxdepth: 2
 
-   about
    IntroductionToSecurityOnion
    Use-Cases
    Hardware
