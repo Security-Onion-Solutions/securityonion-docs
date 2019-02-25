@@ -50,7 +50,7 @@ MISP rules will be downloaded via cron-job at the interval specified in ``/etc/c
 
 Elastalert
 ----------
-If we want to send events to TheHive based on the MISP NIDS rules we've pulled into Security Onion, we can implement and Elastalert rules like to following, filtering on the ``alert`` field for NIDS alerts:
+If we want to send events to TheHive based on the MISP NIDS rules we've pulled into Security Onion, we can implement an Elastalert rule like the following, filtering on the ``alert`` field for NIDS alerts:
 
 :: 
 
