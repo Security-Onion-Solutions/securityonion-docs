@@ -1,11 +1,11 @@
 Introduction
 ============
 
-.. _tableofcontents:
+.. _introduction:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Table of Contents
+   :caption: Introduction
 
    about
    IntroductionToSecurityOnion
