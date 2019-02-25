@@ -1,8 +1,6 @@
 Updating
 ========
 
-.. _updating:
-
 .. toctree::
    :maxdepth: 2
    :caption: Updating
