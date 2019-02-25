@@ -1,4 +1,7 @@
-.. _update:
+Updating
+========
+
+.. _updating:
 
 .. toctree::
    :maxdepth: 2
