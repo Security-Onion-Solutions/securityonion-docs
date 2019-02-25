@@ -15,28 +15,9 @@ Security Onion Documentation
    elastic
    network-customizing
    tuning
+   tricks
    
-.. _tricksandtips:
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Tricks and Tips
-
-   Airgapped-Networks
-   Analyst-VM
-   Automating-Setup
-   Best-Practices
-   CloudClient
-   ConnectingtoSguil
-   Desktop
-   DNSAnomalyDetection
-   ICMP-Anomaly-Detection
-   MetaPackages
-   Pcaps
-   RemovingASensor
-   Salt
-   SensorStopsSeeingTraffic
-   SSH
 
 .. _integrations:
 
