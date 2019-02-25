@@ -4,7 +4,7 @@ ISO Release Notes
 -  | As always, make sure you verify the downloaded ISO image:
    | https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md
    
--  When the ISO boots, choose the default option.
+-  When the ISO boots, choose the default boot menu option.
 
 -  Once the live desktop appears, double-click the ``Install SecurityOnion`` icon.
 
