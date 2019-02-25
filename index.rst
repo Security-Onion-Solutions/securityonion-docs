@@ -11,19 +11,8 @@ Security Onion Documentation
    updating
    analyst
    network
+   host
    
-.. _hostvisibility:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Host Visibility
-
-   Beats
-   Wazuh
-   Sysmon
-   Autoruns
-   Syslog
-
 .. _elasticstack:
 
 .. toctree::
