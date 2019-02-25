@@ -10,19 +10,8 @@ Security Onion Documentation
    introduction
    updating
    analyst
-
-.. _networkvisibility:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Network Visibility
-
-   NIDS
-   Snort
-   Suricata
-   Bro
-   netsniff-ng
-
+   network
+   
 .. _hostvisibility:
 
 .. toctree::
