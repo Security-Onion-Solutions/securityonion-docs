@@ -19,12 +19,6 @@ Each of the components above has its own `<Docker>`__ image.
 You can get an idea of what this whole integration looks like at a high-level by viewing our `architecture
 diagram <Elastic-Architecture>`__.
 
-Videos
-------
-
-`Doug Burks - State of the
-Onion <https://www.youtube.com/watch?v=N1jmk7L4jj0&index=7&list=PLljFlTO9rB15jhnSfR6shBEskTgGbta2k>`__
-
 Hardware Requirements
 ---------------------
 
