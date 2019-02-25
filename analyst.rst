@@ -3,7 +3,6 @@ Analyst Tools
 
 .. toctree::
    :maxdepth: 2
-   :caption: Analyst Tools
 
    Kibana
    CapMe
