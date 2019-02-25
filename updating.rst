@@ -3,7 +3,6 @@ Updating
 
 .. toctree::
    :maxdepth: 2
-   :caption: Updating
 
    Upgrade
    HWE
