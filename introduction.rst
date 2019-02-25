@@ -1,8 +1,6 @@
 Introduction
 ============
 
-.. _introduction:
-
 .. toctree::
    :maxdepth: 2
    :caption: Introduction
