@@ -18,14 +18,5 @@ Security Onion Documentation
    tricks
    integrations
    help
+   utilities
    other
-   
-.. _utilties:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Utilities
-   
-   jq
-   so-allow
-   so-import-pcap
