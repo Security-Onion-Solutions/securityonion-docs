@@ -12,30 +12,7 @@ Security Onion Documentation
    analyst
    network
    host
-   
-.. _elasticstack:
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Elastic Stack
-
-   Elastic
-   Elasticsearch
-   Logstash
-   Kibana
-   ElastAlert
-   Curator
-   FreqServer
-   DomainStats
-   Docker
-   Redis
-   Data-Fields
-   Alert-Data-Fields
-   Bro-Fields
-   Elastalert-Fields
-   Beats
-   ELSA-to-Elastic
-   Re‐Indexing
+   elastic
 
 .. _customizing:
 
