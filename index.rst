@@ -8,7 +8,8 @@ Security Onion Documentation
    :caption: Table of Contents
 
    about
-   introduction
+   IntroductionToSecurityOnion
+   getting-started
    updating
    analyst
    network
