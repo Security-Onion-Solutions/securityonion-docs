@@ -1,10 +1,9 @@
-Introduction
-============
+Getting Started
+===============
 
 .. toctree::
    :maxdepth: 2
 
-   IntroductionToSecurityOnion
    Use-Cases
    Hardware
    Installation
