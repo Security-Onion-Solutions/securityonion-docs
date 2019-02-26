@@ -12,9 +12,9 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
 - Log back in (using ``ssh -X`` if you’re installing on Ubuntu Server or a headless distro).
 - Configure ``MySQL`` not to prompt for root password (Setup will generate a random password later):
 
-::
+  ::
 
-   echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections
+    echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections
    
 - Clean apt list repository:
 
