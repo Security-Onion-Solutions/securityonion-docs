@@ -14,6 +14,7 @@ Tricks and Tips
    DNSAnomalyDetection
    ICMP-Anomaly-Detection
    MetaPackages
+   NewDisk
    Pcaps
    RemovingASensor
    Salt
