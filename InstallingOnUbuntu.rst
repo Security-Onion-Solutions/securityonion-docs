@@ -18,45 +18,45 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
    
 - Clean apt list repository:
 
-::
+  ::
 
-   sudo rm -rf /var/lib/apt/lists/*
+    sudo rm -rf /var/lib/apt/lists/*
    
 - Update package list:
 
-::
+  ::
 
-   sudo apt-get update
+    sudo apt-get update
    
 - Install software-properties-common if necessary:
 
-::
+  ::
 
-   sudo apt-get -y install software-properties-common
+    sudo apt-get -y install software-properties-common
    
 - Add the Security Onion stable repository:
 
-::
+  ::
 
-   sudo add-apt-repository -y ppa:securityonion/stable
+    sudo add-apt-repository -y ppa:securityonion/stable
    
 - Update package list:
 
-::
+  ::
 
-   sudo apt-get update
+    sudo apt-get update
    
 - Install the securityonion-all metapackage:
 
-::
+  ::
 
-   sudo apt-get -y install securityonion-all syslog-ng-core
+    sudo apt-get -y install securityonion-all syslog-ng-core
    
 - Run the Setup wizard (if you're using Ubuntu Server with no GUI and are doing this over SSH, you will need to forward X for this to work):
 
-::
+  ::
 
-   sudo sosetup
+    sudo sosetup
    
 - Follow the prompts in the Setup wizard.
 
