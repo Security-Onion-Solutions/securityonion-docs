@@ -22,3 +22,4 @@ Security Onion Documentation
    utilities
    other
    integrations
+   appendix
