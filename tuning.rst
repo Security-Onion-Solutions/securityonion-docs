@@ -12,6 +12,5 @@ Tuning
    PF_RING
    AF-PACKET
    MySQLTuning
-   NewDisk
    High-Performance-Tuning
    Trimming-PCAPs
