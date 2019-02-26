@@ -18,7 +18,7 @@ Security Onion Documentation
    network-customizing
    tuning
    tricks
-   integrations
    help
    utilities
    other
+   integrations
