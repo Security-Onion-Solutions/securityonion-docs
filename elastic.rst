@@ -19,5 +19,4 @@ Elastic Stack
    Bro-Fields
    Elastalert-Fields
    Beats
-   ELSA-to-Elastic
    Re‐Indexing
