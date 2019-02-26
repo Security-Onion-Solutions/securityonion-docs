@@ -6,8 +6,7 @@ If you just want to quickly evaluate Security Onion using our ISO image:
 #. First, review the `Hardware Requirements <Hardware>`__ page.
 #. Review the `Release Notes <Release-Notes>`__ page.
 #. `Download and verify our Security Onion ISO image <https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md>`__.
-#. Boot the ISO image.
-#. At the ISO boot menu, choose the default option.
+#. Boot the ISO image and choose the default boot menu option.
 #. Once the live desktop appears, double-click the ``Install SecurityOnion`` icon.
 #. Follow the prompts in the installer. If prompted with an ``encrypt home folder`` or ``encrypt partition`` option, **DO NOT** enable this feature. If asked about automatic updates, **DO NOT** enable automatic updates. Reboot into your new installation. Login using the username/password you specified during installation.
 #. Double-click the Setup icon. The Setup wizard will walk you through configuring ``/etc/network/interfaces`` and will then reboot.
