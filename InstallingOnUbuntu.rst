@@ -5,7 +5,7 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
 
 - Review the `Hardware Requirements <Hardware>`__ page.
 - Download the ISO image for your preferred flavor of Ubuntu 16.04 64-bit, verify the ISO image, and boot from it.
-- Follow the prompts in the installer. When prompted to ``encrypt home folder`` or ``encrypt partition`` option, **DO NOT** enable this feature. When asked about automatic updates, **DO NOT** enable automatic updates.
+- Follow the prompts in the installer. If prompted to ``encrypt home folder`` or ``encrypt partition``, **DO NOT** enable either of these. When asked about automatic updates, **DO NOT** enable automatic updates.
 - Reboot into your new installation.
 - Login using the username/password you specified during installation.
 - Verify that you have Internet connectivity. If necessary, configure your `proxy <Proxy>`__ settings.
