@@ -60,6 +60,6 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
    
 - Follow the prompts in the Setup wizard.
 
-- Once Setup is complete, analyze IDS alerts using the `<Sguil>`_ client, or open a browser to https://localhost where you can access `<Squert>`__ and `<Kibana>`_.
+- Once Setup is complete, review alerts and logs using `<Sguil>`_, `<Squert>`__, and `<Kibana>`_.
 
 - Review the `PostInstallation <PostInstallation>`__ page.
