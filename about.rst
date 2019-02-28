@@ -5,8 +5,7 @@ Security Onion
 --------------
 Security Onion is a free and open source Linux distribution for intrusion detection, enterprise security monitoring, and log management. It includes Elasticsearch, Logstash, Kibana, Snort, Suricata, Bro, Wazuh, Sguil, Squert, CyberChef, NetworkMiner, and many other security tools. The easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
 
-| For more information about Security Onion not contained in this Documentation, please see our main site:
-| https://securityonion.net
+For more information about Security Onion not contained in this Documentation, please see our community site at https://securityonion.net.
 
 Security Onion Solutions, LLC
 -----------------------------
@@ -14,7 +13,7 @@ Doug Burks started Security Onion as a free and open source project in 2008 and 
 
 Security Onion Solutions, LLC is the only official provider of training, professional services, and hardware appliances for Security Onion.
 
-https://securityonionsolutions.com
+For more information about these products and services, please see our corporate site at https://securityonionsolutions.com.
 
 Documentation
 -------------
@@ -26,6 +25,11 @@ This documentation is published online at https://securityonion.net/docs.  If yo
 
 | This documentation is also available in PDF format:
 | https://readthedocs.org/projects/securityonion/downloads/pdf/latest/
+
+Authors
+~~~~~~~
+
+Security Onion Solutions is the primary author and maintainer of this documentation.  Some content has been contributed by members of our community.  Thanks to all the folks who have contributed to this documentation over the years!
 
 Contributing
 ~~~~~~~~~~~~
