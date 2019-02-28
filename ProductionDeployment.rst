@@ -92,16 +92,16 @@ Setup
      
    Otherwise, if you are remote and logged in over ssh, you can run CLI-only Setup using ``sosetup.conf``. For more information, please see ``/usr/share/securityonion/sosetup.conf``.
 #. The Setup wizard will walk you through configuring ``/etc/network/interfaces`` and will then reboot.
-#. When prompted whether you would like to configure ``/etc/network/interfaces`` now, choose “Yes, configure
-   /etc/network/interfaces!.”
+#. When prompted whether you would like to configure ``/etc/network/interfaces`` now, choose ``Yes, configure
+   /etc/network/interfaces!``.
 #. If you have more than one network interface, you’ll be asked to specify which one should be the management interface.
 #. You’ll then be asked to choose DHCP or static addressing for the management interface. It is highly recommended you choose static.
 #. Choosing static, you’ll be prompted to enter a static IP address for your management interface, the network’s subnet mask, gateway IP address, DNS server IP addresses (separated by spaces), and your local domain.
 #. You’ll then be prompted to select any additional interfaces that will be used for sniffing/monitoring network traffic.
-#. When prompted, choose “Yes, make changes!"
+#. When prompted, choose ``Yes, make changes!``.
 #. If you need to adjust any network settings manually (e.g. ``MTU``), you may edit ``/etc/network/interfaces`` before rebooting.
-#. When ready to reboot, click "Yes, reboot!”
-#. After rebooting, log back in and start the Setup wizard again (GUI if local, sosetup.conf CLI if remote). It will detect that you have already configured ``/etc/network/interfaces`` and will walk you through the rest of the configuration.
+#. When ready to reboot, click ``Yes, reboot!``.
+#. After rebooting, log back in and start the Setup wizard again (GUI if local, ``sosetup.conf`` CLI if remote). It will detect that you have already configured ``/etc/network/interfaces`` and will walk you through the rest of the configuration.
 #. Select ``Production Mode``.
 #. Select ``New`` or ``Existing`` (``New`` if this is a master or standalone, and ``Existing`` for forward, heavy, and storage nodes).
 
