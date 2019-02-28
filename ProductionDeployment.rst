@@ -84,8 +84,12 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
 Setup
 -----
    
-#. Run the Setup wizard. If you are locally on the box, you can run the GUI:
-   ``sudo sosetup``
+#. Run the Setup wizard. If you are locally on the box, you can run the GUI by double-clicking the Desktop shortcut or running the following from a terminal:
+
+   ::
+   
+     sudo sosetup
+     
    Otherwise, if you are remote and logged in over ssh, you can run CLI-only Setup using ``sosetup.conf``. For more information, please see ``/usr/share/securityonion/sosetup.conf``.
 #. The Setup wizard will walk you through configuring ``/etc/network/interfaces`` and will then reboot.
 #. When prompted whether you would like to configure ``/etc/network/interfaces`` now, choose “Yes, configure
