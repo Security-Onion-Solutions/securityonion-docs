@@ -37,7 +37,7 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
 
   ::
   
-    sudo apt update && sudo apt dist-upgrade && sudo reboot
+     sudo apt update && sudo apt dist-upgrade && sudo reboot
     
 #. Log back in and configure MySQL not to prompt for root password (Setup will generate a random password later):
    ``echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections``
