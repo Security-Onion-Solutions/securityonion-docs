@@ -35,7 +35,7 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
 #. If you installed from the Security Onion 16.04 ISO image, run ``sudo soup``. If you get any errors relating to MySQL, please see `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__. Reboot if prompted. Skip to the Setup section below.
 #. Install all Ubuntu updates and reboot:
 
-  ::
+   ::
   
      sudo apt update && sudo apt dist-upgrade && sudo reboot
     
