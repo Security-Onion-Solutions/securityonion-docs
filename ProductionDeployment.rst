@@ -34,7 +34,11 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
 #. Verify that you have Internet connectivity. If necessary, configure your `proxy <Proxy>`__ settings.
 #. If you installed from the Security Onion 16.04 ISO image, run ``sudo soup``. If you get any errors relating to MySQL, please see `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__. Reboot if prompted. Skip to the Setup section below.
 #. Install all Ubuntu updates and reboot:
-   ``sudo apt update && sudo apt dist-upgrade && sudo reboot``
+
+  ::
+  
+    sudo apt update && sudo apt dist-upgrade && sudo reboot
+    
 #. Log back in and configure MySQL not to prompt for root password (Setup will generate a random password later):
    ``echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections``
 #. Install software-properties-common if it's not already installed:
