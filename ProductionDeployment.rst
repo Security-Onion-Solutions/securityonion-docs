@@ -40,23 +40,50 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
      sudo apt update && sudo apt dist-upgrade && sudo reboot
     
 #. Log back in and configure MySQL not to prompt for root password (Setup will generate a random password later):
-   ``echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections``
+
+   ::
+   
+     echo "debconf debconf/frontend select noninteractive" | sudo debconf-set-selections
+     
 #. Install software-properties-common if it's not already installed:
-   ``sudo apt -y install software-properties-common``
+
+   ::
+   
+     sudo apt -y install software-properties-common
+     
 #. Add the Security Onion stable repository:
-   ``sudo add-apt-repository -y ppa:securityonion/stable``
+
+   ::
+   
+     sudo add-apt-repository -y ppa:securityonion/stable
+     
 #. Update:
-   ``sudo apt update``
+
+   ::
+   
+     sudo apt update
+     
 #. Install the ``securityonion-all`` metapackage (or one of the more focused `metapackages <MetaPackages>`__). This could take 15 minutes or more depending on the speed of your CPU and Internet connection.
-   ``sudo apt -y install securityonion-all syslog-ng-core``
+
+   ::
+   
+     sudo apt -y install securityonion-all syslog-ng-core
+     
 #. OPTIONAL: If you want to use `Salt <Salt>`__ to manage your deployment, also install ``securityonion-onionsalt``. You can do this before or after Setup, but it's much easier if you do it before Setup.
-   ``sudo apt -y install securityonion-onionsalt``
-#. | Update all packages:
-   | ``sudo soup``
 
-   .. rubric:: Setup
-      :name: setup
+   ::
+   
+     sudo apt -y install securityonion-onionsalt
+     
+#. Update all packages:
 
+   ::
+   
+     sudo soup
+
+Setup
+-----
+   
 #. Run the Setup wizard. If you are locally on the box, you can run the GUI:
    ``sudo sosetup``
    Otherwise, if you are remote and logged in over ssh, you can run CLI-only Setup using ``sosetup.conf``. For more information, please see ``/usr/share/securityonion/sosetup.conf``.
