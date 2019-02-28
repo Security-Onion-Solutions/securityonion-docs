@@ -19,9 +19,6 @@ Each of the components above has its own `<Docker>`__ image.
 You can get an idea of what this whole integration looks like at a high-level by viewing our `architecture
 diagram <Elastic-Architecture>`__.
 
-Hardware Requirements
----------------------
-
 Please note the following MINIMUM requirements for the Elastic stack:
 
 -  2 CPU cores
