@@ -121,7 +121,7 @@ Setup
       -  Forward Node
 
          -  Select ``Best Practices``.
-         -  Keep the default for PF_RING min_num_slots, unless you would like to change it.
+         -  Keep the default for `<PF_RING>`_ ``min_num_slots``, unless you would like to change it.
          -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
          -  Modify ``HOME_NET`` as desired.
          -  Select ``Yes`` to proceed with your changes.
@@ -130,7 +130,7 @@ Setup
       -  Heavy Node
 
          -  Select ``Best Practices``.
-         -  Keep the default for PF_RING min_num_slots, unless you would like to change it.
+         -  Keep the default for `<PF_RING>`_ ``min_num_slots``, unless you would like to change it.
          -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
          -  Modify ``HOME_NET`` as desired.
          -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
@@ -141,7 +141,10 @@ Setup
          -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
          -  Select ``Yes`` to proceed with your changes.
 
-   #. | Remove ``$nodeuser`` from the ``sudo`` group on the master server:
-      | ``sudo deluser $nodeuser sudo``
+   #. Remove ``$nodeuser`` from the ``sudo`` group on the master server:
+   
+      ::
+      
+        sudo deluser $nodeuser sudo
 
 Proceed to `PostInstallation <PostInstallation>`__.
