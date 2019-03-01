@@ -23,7 +23,7 @@ After Installation
       
 -  Full-time analysts may want to use an `Analyst VM <Analyst-VM>`__.
 
--  Setup defaults to only opening port 22 in the `firewall <Firewall>`__. If you need to connect `<Wazuh>`_ agents, syslog devices, or analyst VMs, you can run the `<so-allow>`_ utility which will walk you through creating firewall rules to allow these devices to connect.
+-  Setup defaults to only opening port 22 in the `firewall <Firewall>`__. If you want to connect analyst VMs, `<Wazuh>`_ agents, or syslog devices, you can run the `<so-allow>`_ utility which will walk you through creating firewall rules to allow these devices to connect.
 
 -  Run the following to see how your sensor is coping with the load. You should check this on a daily basis to make sure your sensor is not dropping packets. Consider adding it to a cronjob and having it emailed to you (see the “configure email” link below).
 
