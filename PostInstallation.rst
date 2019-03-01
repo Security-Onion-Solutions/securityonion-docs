@@ -33,7 +33,7 @@ After Installation
 
 -  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the `<tuning>`__ section. 
 
--  Review and categorize alerts in `<Sguil>`_  or `<Squert>`_ every day.  Categorizing alerts and tuning rules should be an iterative process with the goal being to categorize *all* events every day.  You should only run the IDS rules you really care about.
+-  Review and categorize alerts in `<Sguil>`_  or `<Squert>`_ on a daily basis.  Categorizing alerts and tuning rules should be an iterative process with the goal being to categorize *all* events every day.  You should only run the IDS rules you really care about.
 
      
 Optional
