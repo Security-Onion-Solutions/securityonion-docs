@@ -5,7 +5,7 @@ Getting Started
    :maxdepth: 2
 
    use-cases
-   Hardware
+   hardware
    Installation
    Release-Notes
    QuickISOImage
