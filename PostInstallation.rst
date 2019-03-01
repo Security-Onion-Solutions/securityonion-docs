@@ -15,20 +15,15 @@ After Installation
 
 -  If you have problems with Snort/Suricata/Bro/PF_RING and have UEFI Secure Boot enabled, please see `Secure Boot <Secure-Boot>`__.
 
-Tuning / Miscellaneous
-----------------------
-
--  If you have Internet access, you can generate an IDS alert by typing the following at a terminal:
+-  Log into `<Sguil>`_, `<Squert>`_, and `<Kibana>`_ and verify that you have events in the interfaces.  If you don't have any IDS alerts, you can try to generate one by typing the following at a terminal (only works if you have Internet access):
 
    ::
    
       curl http://testmyids.com
+      
+-  Full-time analysts may want to use an `Analyst VM <Analyst-VM>`__.
 
 -  Setup defaults to only opening port 22 in the `firewall <Firewall>`__. If you need to connect `<Wazuh>`_ agents, syslog devices, or analyst VMs, you can run the `<so-allow>`_ utility which will walk you through creating firewall rules to allow these devices to connect.
-
--  Full-time analysts should use an `Analyst VM <Analyst-VM>`__.
-
--  Login to Sguil and review your IDS alerts. Squert and Kibana can be accessed by visiting https://YourSecurityOnionBox/ (please note the HTTPS) for additional in-depth analysis.
 
 -  Run the following to see how your sensor is coping with the load. You should check this on a daily basis to make sure your sensor is not dropping packets. Consider adding it to a cronjob and having it emailed to you (see the “configure email” link below).
 
@@ -36,9 +31,9 @@ Tuning / Miscellaneous
    
       sudo sostat | less
 
--  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see `ManagingAlerts <ManagingAlerts>`__. You should only run the signatures you really care about.
+-  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the `<tuning>`__ section. You should only run the IDS signatures you really care about.
 
--  Review and categorize events every day with the goal being to categorize all events every day. Neglecting to do so will result in database/Sguil issues as the number of uncategorized events continues to increase on a daily basis.
+-  Review and categorize alerts in Sguil/Squert every day with the goal being to categorize *all* events every day. Neglecting to do so will result in database/Sguil issues as the number of uncategorized events continues to increase on a daily basis.
 
 -  On the server running the Sguil database, set the ``DAYSTOKEEP`` variable in ``/etc/nsm/securityonion.conf`` to however many days you want to keep in your archive. The default is 30, but you may need to adjust it based on your organization’s detection/response policy and your available disk space.
 
@@ -48,12 +43,6 @@ Tuning / Miscellaneous
    
       sudo so-sensor-restart
       
--  `Disable any unneeded sensor processes <DisablingProcesses>`__.
-
--  Tune `<PF_RING>`_ or `<AF-PACKET>`_ based on your traffic load.
-
--  If your network traffic load is high, you may need to review `<High-Performance-Tuning>`_.
-
 Optional
 --------
 
