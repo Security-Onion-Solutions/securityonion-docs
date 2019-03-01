@@ -24,7 +24,7 @@ Tuning / Miscellaneous
    
       curl http://testmyids.com
 
--  Setup defaults to only opening port 22 in the `firewall <Firewall>`__. If you need to connect OSSEC agents, syslog devices, or analyst VMs, you can run the `<so-allow>`_ utility which will walk you through creating firewall rules to allow these devices to connect.
+-  Setup defaults to only opening port 22 in the `firewall <Firewall>`__. If you need to connect `<Wazuh>`_ agents, syslog devices, or analyst VMs, you can run the `<so-allow>`_ utility which will walk you through creating firewall rules to allow these devices to connect.
 
 -  Full-time analysts should use an `Analyst VM <Analyst-VM>`__.
 
