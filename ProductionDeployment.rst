@@ -15,10 +15,13 @@ Download and Verify
 | OR
 | download and verify the ISO image for your preferred flavor of Ubuntu 16.04 64-bit.
 
-Install
--------
+Distributed Deployments
+-----------------------
 
 If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, you’ll need to perform the remaining steps on the server, as well as all forward and storage nodes, but make sure you install and configure the master server first. For best performance, the master server should be dedicated to just being a server for the other nodes (the master server should have no sniffing interfaces of its own). Please note that `forward <Elastic-Architecture#forward-node>`__ and `heavy <Elastic-Architecture#heavy-node>`__ nodes need to connect to the `master server <Elastic-Architecture#master>`__ on ports ``22`` and ``7736``. If you choose to enable salt for node management, nodes will need to be able to connect to the master server on ports ``4505`` and ``4506``.
+
+Install
+-------
 
 #. Using the downloaded ISO, install the operating system. If the boot menu has a ``Boot and Install with the HWE kernel`` option, select this option.  If prompted with an ``encrypt home folder`` option, DO NOT enable this feature. If asked about ``automatic updates``, DO NOT enable automatic updates. If prompted to install any additional packages, leave ``standard system utilities`` selected and also select ``OpenSSH Server`` (openssh-server). Do NOT choose ``MySQL`` at this point. All other required dependencies will be installed automatically.
 #. When asked about partitioning, there are a few things to keep in mind:
