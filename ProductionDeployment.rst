@@ -31,6 +31,10 @@ If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, y
 
 #. When installation completes, reboot into your new installation and login with the credentials you specified during installation.
 #. If you’re running a VM, now would be a good time to snapshot it so you can revert later if you need to.
+
+Update
+------
+#. If this box is going to be a node (forward, heavy, or storage), make sure that your master server and all other nodes in your deployment are fully updated with ``sudo soup`` before adding a new node.
 #. Verify that you have Internet connectivity. If necessary, configure your `proxy <Proxy>`__ settings.
 #. If you installed from the Security Onion 16.04 ISO image, run ``sudo soup``. If you get any errors relating to MySQL, please see `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__. Reboot if prompted. Skip to the Setup section below.
 #. Install all Ubuntu updates and reboot:
@@ -117,7 +121,6 @@ Setup
 
 -  Existing (Forward Node, Heavy Node, or Storage Node)
 
-   #. Make sure that your master server and all other nodes in your deployment are fully updated with ``sudo soup`` before adding a new node.
    #. Provide the hostname or IP address of the master server (some folks may want to specify the IP/hostname of the master server in ``/etc/hosts`` and use the specified hostname during setup -- this may help in the event the master server IP changes.)
    #. Provide a username to SSH to the master for the node (should have already been created on the master and added to the ``sudo`` group). Please make sure that your server has been set up and you have network connectivity and no firewall rules that would block this traffic. Additionally, consider creating a separate SSH account on the master server for each node so that if a node is ever compromised, its individual account can be disabled without affecting the other nodes.  If you need to create a user account on the Master, you can do something like the following (where ``$nodeuser`` is your specified user): ``sudo adduser $nodeuser && sudo adduser $nodeuser sudo``  The new account must have a full home directory. If you do not create it when you create the account, copy ``/etc/skel`` to ``/home/$nodeuser`` and do ``chown -R $nodeuser:$nodeuser /home/$nodeuser``. This is needed so the .ssh directory may be created to manage the connection. *NOTE: This user should be removed from the sudo group on the master server after setup*.
 
