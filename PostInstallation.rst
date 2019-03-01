@@ -31,9 +31,13 @@ After Installation
    
       sudo sostat | less
 
--  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the `<tuning>`__ section. You should only run the IDS signatures you really care about.
+-  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the `<tuning>`__ section. 
 
--  Review and categorize alerts in Sguil/Squert every day with the goal being to categorize *all* events every day. Neglecting to do so will result in database/Sguil issues as the number of uncategorized events continues to increase on a daily basis.
+-  Review and categorize alerts in `<Sguil>`_  or `<Squert>`_ every day.  Categorizing alerts and tuning rules should be an iterative process with the goal being to categorize *all* events every day.  You should only run the IDS rules you really care about.
+
+     
+Optional
+--------
 
 -  On the server running the Sguil database, set the ``DAYSTOKEEP`` variable in ``/etc/nsm/securityonion.conf`` to however many days you want to keep in your archive. The default is 30, but you may need to adjust it based on your organization’s detection/response policy and your available disk space.
 
@@ -43,32 +47,29 @@ After Installation
    
       sudo so-sensor-restart
       
-Optional
---------
+-  exclude unnecessary traffic from your monitoring using `BPF <BPF>`__.
 
--  *Optional:* exclude unnecessary traffic from your monitoring using `BPF <BPF>`__.
+-  configure Ubuntu to use your preferred `NTP <NTP>`__ server.
 
--  *Optional:* configure Ubuntu to use your preferred `NTP <NTP>`__ server.
-
--  *Optional:* add new Sguil user accounts with the following:
+-  add new Sguil user accounts with the following:
 
    ::
    
       sudo so-user-add
 
--  *Optional*, but highly recommended: configure `Email <Email>`__ for alerting and reporting.
+-  configure `Email <Email>`__ for alerting and reporting.
 
--  *Optional:* place ``/etc`` under version control. If your organization doesn't already have a standard version control tool, you can use `bazaar <https://help.ubuntu.com/12.04/serverguide/bazaar.html>`__, `git <http://git-scm.com/>`__, etckeeper:
-
-   ::
-   
-      sudo apt-get install etckeeper
-
--  *Optional:* need “remote desktop” access to your Security Onion sensor or server? We recommend SSH X-Forwarding as shown above, but if you want something more rdp-like, you can install xrdp:
+-  place ``/etc`` under version control. If your organization doesn't already have a standard version control tool, you can use `bazaar <https://help.ubuntu.com/12.04/serverguide/bazaar.html>`__, `git <http://git-scm.com/>`__, etckeeper:
 
    ::
    
-      sudo apt-get install xrdp
+      sudo apt install etckeeper
+
+-  need “remote desktop” access to your Security Onion sensor or server? One option is SSH X-Forwarding, but if you want something more rdp-like, you can install xrdp:
+
+   ::
+   
+      sudo apt install xrdp
 
 Learn More
 ----------
