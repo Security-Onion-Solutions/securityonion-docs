@@ -39,11 +39,11 @@ After Installation
 Optional
 --------
 
--  exclude unnecessary traffic from your monitoring using `BPF <BPF>`__.
+-  Exclude unnecessary traffic from your monitoring using `BPF <BPF>`__.
 
--  configure Ubuntu to use your preferred `NTP <NTP>`__ server.
+-  Configure Ubuntu to use your preferred `NTP <NTP>`__ server.
 
--  add new Sguil user accounts with the following:
+-  Add new Sguil user accounts with the following:
 
    ::
    
@@ -57,15 +57,15 @@ Optional
    
       sudo so-sensor-restart
       
--  configure `Email <Email>`__ for alerting and reporting.
+-  Configure `Email <Email>`__ for alerting and reporting.
 
--  place ``/etc`` under version control. If your organization doesn't already have a standard version control tool, you can use `bazaar <https://help.ubuntu.com/12.04/serverguide/bazaar.html>`__, `git <http://git-scm.com/>`__, etckeeper:
+-  Place ``/etc`` under version control. If your organization doesn't already have a standard version control tool, you can use `bazaar <https://help.ubuntu.com/12.04/serverguide/bazaar.html>`__, `git <http://git-scm.com/>`__, etckeeper:
 
    ::
    
       sudo apt install etckeeper
 
--  need “remote desktop” access to your Security Onion sensor or server? One option is SSH X-Forwarding, but if you want something more rdp-like, you can install xrdp:
+-  Need “remote desktop” access to your Security Onion sensor or server? One option is SSH X-Forwarding, but if you want something more rdp-like, you can install xrdp:
 
    ::
    
