@@ -4,7 +4,7 @@ Getting Started
 .. toctree::
    :maxdepth: 2
 
-   Use-Cases
+   use-cases
    Hardware
    Installation
    Release-Notes
