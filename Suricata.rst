@@ -40,5 +40,4 @@ For detailed Suricata statistics, check ``/nsm/sensor_data/HOSTNAME-INTERFACE/st
 More Information
 ----------------
 
-| For more information about Suricata, please see:
-| https://suricata-ids.org/
+For more information about Suricata, please see https://suricata-ids.org.
