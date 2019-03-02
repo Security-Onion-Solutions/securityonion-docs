@@ -52,6 +52,6 @@ Security Onion is designed to be passive and so Snort and Suricata run in NIDS m
 More Information
 ----------------
 
-- For more information about Snort, please see `<Snort>`__.
+- For more information about Snort, please see the `<Snort>`__ section.
 
-- For more information about Suricata, please see `<Suricata>`__.
+- For more information about Suricata, please see the `<Suricata>`__ section.
