@@ -117,8 +117,7 @@ Bro \* n
 
 We compile Bro to support both `PF\_RING <PF_RING>`__ and `<AF-PACKET>`_ so that you can spin up multiple Bro workers to handle more traffic.  Modern versions of Setup now default to `<AF-PACKET>`_.
 
-| If you are monitoring high traffic levels, you may need to use the ``pin_cpus`` setting:
-| https://docs.zeek.org/en/stable/configuration/#using-pf-ring
+If you are monitoring high traffic levels, you may need to use the ``pin_cpus`` setting.  For more information, please see https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
 
 Custom Scripts
 --------------
