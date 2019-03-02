@@ -27,5 +27,4 @@ If you need to troubleshoot Snort, check the Snort log file(s) ``/var/log/nsm/HO
 More Information
 ----------------
 
-| For more information about Snort, please see:
-| https://snort.org
+For more information about Snort, please see https://snort.org.
