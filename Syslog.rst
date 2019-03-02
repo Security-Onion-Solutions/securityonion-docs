@@ -15,7 +15,7 @@ Security Onion uses syslog-ng as its primary syslog collector and to send logs t
 Configuration
 -------------
 
-syslog-ng's configuration file is located at ``/etc/syslog-ng/syslog-ng.conf``
+syslog-ng's configuration file is located at ``/etc/syslog-ng/syslog-ng.conf``.
 
 Forwarding
 ----------
