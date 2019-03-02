@@ -16,7 +16,7 @@ To change the number of AF_PACKET workers for `<Suricata>`_:
 
       sudo so-suricata-stop
 
--  Edit ``/etc/nsm/$HOSTNAME-$INTERFACE/sensor.conf`` and change the ``IDS_LB_PROCS`` variable to desired number of cores.
+-  Edit ``/etc/nsm/$HOSTNAME-$INTERFACE/sensor.conf`` and change the ``IDS_LB_PROCS`` variable to the desired number of workers.
 
 -  Start sensor processes:
 
