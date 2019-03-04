@@ -20,8 +20,3 @@ How do I change the timezone for Ubuntu?
 
 When you run our Setup wizard, it should automatically set your OS timezone to UTC. If you've already run Setup and then manually changed your timezone to non-UTC and would like to switch back to UTC, you can execute ``sudo dpkg-reconfigure tzdata``. Scroll to the bottom of the Continents list and select ``None of the above``. In the second list, select ``UTC``.
 (http://askubuntu.com/questions/138423/how-do-i-change-my-timezone-to-utc-gmt)
-
-Why are the timestamps in Kibana not in UTC?
---------------------------------------------
-
-By default, Kibana will display timestamps in the timezone of your local browser. You can force Kibana to always display timestamps in UTC/GMT by setting ``dateFormat:tz`` to ``UTC`` in Kibana (``Management`` > ``Advanced Settings``) .
