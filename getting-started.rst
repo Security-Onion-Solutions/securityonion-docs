@@ -13,7 +13,6 @@ Getting Started
    ProductionDeployment
    PostInstallation
    TimeZones
-   Services
    IntroductionWalkthrough
    VMWare-Walkthrough
    Elastic-Architecture
