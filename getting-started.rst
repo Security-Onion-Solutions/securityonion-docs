@@ -5,6 +5,7 @@ Getting Started
    :maxdepth: 2
 
    use-cases
+   architecture
    hardware
    Installation
    Release-Notes
@@ -14,5 +15,4 @@ Getting Started
    PostInstallation
    IntroductionWalkthrough
    VMWare-Walkthrough
-   Elastic-Architecture
    Cheat-Sheet
