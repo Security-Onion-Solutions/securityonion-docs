@@ -66,6 +66,11 @@ Finally, restart Kibana:
 
    sudo so-kibana-restart
 
+Timestamps
+----------
+
+By default, Kibana will display timestamps in the timezone of your local browser. If you would prefer timestamps in UTC, you can go to ``Management`` --> ``Advanced Settings`` and set ``dateFormat:tz`` to ``UTC``.
+
 Plugins
 -------
 
