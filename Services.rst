@@ -1,9 +1,13 @@
 Services
 ========
 
-Services are controlled by the use of Security Onion scripts
-(``so-<noun>-<verb>``) which act as wrappers to other lower-level
-scripts. These scripts are detailed below:
+Services are controlled by the use of Security Onion scripts (``so-<noun>-<verb>``) which act as wrappers to other lower-level scripts. You can see a list of all of these scripts with the following command:
+
+::
+
+   ls /usr/sbin/so-*
+
+These scripts are detailed below.
 
 Check status of all services:
 
@@ -28,6 +32,8 @@ Restart all services:
 ::
 
     sudo so-restart
+
+The three main categories of services are server, sensor, and elastic.
 
 Server services
 ---------------
@@ -61,14 +67,7 @@ Sensor services
 
 Sensor services are controlled with ``so-sensor-*``.
 
-List of controlled services:
-
-::
-
-    ls /usr/sbin/so-sensor-*
-
-The following examples are for Bro, but you could substitute whatever
-sensor service you're trying to control.
+The following examples are for Bro, but you could substitute whatever sensor service you're trying to control (nids, pcap, etc.).
 
 Check status of Bro:
 
@@ -93,3 +92,32 @@ Restart Bro:
 ::
 
     sudo so-bro-restart
+
+Elastic services
+----------------
+
+Elastic services are controlled with ``so-elastic-*``.
+
+Check status of the Elastic stack:
+
+::
+
+    sudo so-elastic-status
+
+Start the Elastic stack:
+
+::
+
+    sudo so-elastic-start
+
+Stop the Elastic stack:
+
+::
+
+    sudo so-elastic-stop
+
+Restart the Elastic stack:
+
+::
+
+    sudo so-elastic-restart
