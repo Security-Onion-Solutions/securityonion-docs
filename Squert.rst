@@ -45,6 +45,15 @@ Time Interval
 
 The default view shows alerts from today. To show older alerts, click ``INTERVAL``, then click the 2 right arrows, set your custom date, and click Squert's refresh button (two circular arrows).
 
+Time Zone
+---------
+
+-  click the time interval (labeled ``INTERVAL``)
+-  on the right side, click the two arrows pointing right
+-  de-select ``UTC``
+-  set your timezone offset (labeled ``TZ OFFSET``)
+-  click the ``save TZ`` button
+
 Timeplot
 --------
 
