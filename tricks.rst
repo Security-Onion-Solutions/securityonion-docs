@@ -20,3 +20,4 @@ Tricks and Tips
    Salt
    SensorStopsSeeingTraffic
    SSH
+   TimeZones
