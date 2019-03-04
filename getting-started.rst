@@ -12,7 +12,6 @@ Getting Started
    InstallingOnUbuntu
    ProductionDeployment
    PostInstallation
-   TimeZones
    IntroductionWalkthrough
    VMWare-Walkthrough
    Elastic-Architecture
