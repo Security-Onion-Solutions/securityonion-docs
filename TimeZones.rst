@@ -21,15 +21,6 @@ How do I change the timezone for Ubuntu?
 When you run our Setup wizard, it should automatically set your OS timezone to UTC. If you've already run Setup and then manually changed your timezone to non-UTC and would like to switch back to UTC, you can execute ``sudo dpkg-reconfigure tzdata``. Scroll to the bottom of the Continents list and select ``None of the above``. In the second list, select ``UTC``.
 (http://askubuntu.com/questions/138423/how-do-i-change-my-timezone-to-utc-gmt)
 
-How do I change the timezone in Squert?
----------------------------------------
-
--  click the time interval (labeled ``INTERVAL``)
--  on the right side, click the two arrows pointing right
--  de-select ``UTC``
--  set your timezone offset (labeled ``TZ OFFSET``)
--  click the ``save TZ`` button
-
 Why are the timestamps in Kibana not in UTC?
 --------------------------------------------
 
