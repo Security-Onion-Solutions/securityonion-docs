@@ -4,7 +4,7 @@ Analyst Tools
 .. toctree::
    :maxdepth: 2
 
-   Kibana
+   kibana
    CapMe
    CyberChef
    Squert
