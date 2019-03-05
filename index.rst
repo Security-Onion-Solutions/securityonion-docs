@@ -10,11 +10,11 @@ Security Onion Documentation
    about
    introduction
    getting-started
-   updating
    analyst
    network
    host
    elastic
+   updating
    network-customizing
    tuning
    tricks
