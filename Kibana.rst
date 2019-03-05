@@ -8,6 +8,10 @@ From https://www.elastic.co/products/kibana :
     getting paged at 2:00 a.m. to understanding the impact rain might
     have on your quarterly numbers.
 
+Screenshot
+----------
+.. image:: images/kibana/kibana.png
+
 Configuration
 -------------
 
