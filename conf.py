@@ -37,9 +37,9 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
     'preamble': r'''
-        \usepackage{charter}
-        \usepackage[defaultsans]{lato}
-        \usepackage{inconsolata}
+        \\usepackage{charter}
+        \\usepackage[defaultsans]{lato}
+        \\usepackage{inconsolata}
     ''',
 }
 ###########################################################################
