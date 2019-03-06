@@ -8,7 +8,7 @@ Getting Started
    architecture
    hardware
    installation
-   Release-Notes
+   release-notes
    QuickISOImage
    InstallingOnUbuntu
    ProductionDeployment
