@@ -5,7 +5,7 @@ Analyst Tools
    :maxdepth: 2
 
    kibana
-   CapMe
+   capme
    CyberChef
    Squert
    Sguil
