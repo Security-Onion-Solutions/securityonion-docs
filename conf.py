@@ -29,7 +29,7 @@ latex_documents = [
 
 # Trying to get pdftex to create PDF in 7.5x9.25 format
 latex_elements = {
-  'preamble': '\\pdfpagewidth 7.5in,\\pdfpageheight=9.25in',
+  'preamble': '\\pdfpagewidth=7.5in,\\pdfpageheight=9.25in',
 }
 
 ###########################################################################
