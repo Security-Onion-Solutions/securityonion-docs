@@ -29,10 +29,7 @@ latex_documents = [
 
 # Trying to get pdftex to create PDF in 7.5x9.25 format
 latex_elements = {
-  'preamble': r"""
-% \pdfpagewidth 7in
-% \pdfpageheight 9in
-""",
+  'preamble': '\PassOptionsToPackage{paperwidth=7in,paperheight=9in}{geometry}',
 }
 
 ###########################################################################
