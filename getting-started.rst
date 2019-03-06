@@ -7,7 +7,7 @@ Getting Started
    use-cases
    architecture
    hardware
-   Installation
+   installation
    Release-Notes
    QuickISOImage
    InstallingOnUbuntu
