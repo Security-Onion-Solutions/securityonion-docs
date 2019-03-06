@@ -6,7 +6,7 @@ Analyst Tools
 
    kibana
    capme
-   CyberChef
+   cyberchef
    Squert
    Sguil
    networkminer
