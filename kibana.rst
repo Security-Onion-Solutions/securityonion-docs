@@ -12,6 +12,10 @@ Screenshot
 ----------
 .. image:: images/kibana/kibana.png
 
+Authentication
+--------------
+If prompted for username/password, simply enter your normal Sguil/Squert/Kibana username/password.
+
 Configuration
 -------------
 
