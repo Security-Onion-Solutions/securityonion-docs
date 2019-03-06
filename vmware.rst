@@ -4,13 +4,13 @@ VMWare
 Overview
 --------
 
-In this section, we'll cover setting up Security Onion 16.04 in VMWare Workstation Pro 12 (although this should be similar for most VMWare installations).
+In this section, we'll cover creating a virtual machine (VM) for Security Onion 16.04 in VMWare Workstation Pro 12 (although this should be similar for most VMWare installations).
 
 If you don't have VMWare Workstation, you could also use VMWare Player, found here:
 
 http://www.vmware.com/products/player/playerpro-evaluation.html
 
-Installation
+Creating VM
 ------------
 
 Follow the steps below to install our Security Onion ISO image in VMware:
