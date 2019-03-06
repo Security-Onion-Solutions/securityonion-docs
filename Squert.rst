@@ -23,15 +23,6 @@ Authentication
 
 If prompted for username/password, simply enter your normal Sguil/Squert/Kibana username/password.
 
-Prepared Statements
--------------------
-
-| Squert was recently updated to use prepared statements:
-| https://blog.securityonion.net/2018/01/security-advisory-for-squert.html
-|
-| If you start seeing ``Prepared statement needs to be re-prepared`` in ``/var/log/apache2/error.log``, please see the following:
-| `<MySQLTuning#table_definition_cache>`__
-
 Data Types
 ----------
 
@@ -106,7 +97,7 @@ Squert can pivot to `Kibana <Kibana>`__ to query Bro logs, Wazuh logs, syslog, e
 Adding your own pivots
 ----------------------
 
-If you're running the latest version of Squert, you can also add your own pivots as follows:
+You can also add your own pivots as follows:
 
 -  In the upper right corner of Squert, click the Filters button.
 -  Set the type to URL.
@@ -116,3 +107,12 @@ If you're running the latest version of Squert, you can also add your own pivots
 -  Click the Update button.
 -  Close the Filters and URLs window.
 -  To test, drill into an event and click an IP address. A context menu will appear and display your new link. Click the new link and verify that it opens a new browser tab going to the site you specified and passing the IP address that you clicked on.
+
+Prepared Statements
+-------------------
+
+| Squert uses prepared statements:
+| https://blog.securityonion.net/2018/01/security-advisory-for-squert.html
+|
+| If you start seeing ``Prepared statement needs to be re-prepared`` in ``/var/log/apache2/error.log``, please see the following:
+| `<MySQLTuning#table_definition_cache>`__
