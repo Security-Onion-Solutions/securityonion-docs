@@ -8,6 +8,10 @@ CapME is a web interface that allows you to:
    helpful for dealing with gzip encoding)
 -  download a pcap
 
+Screenshot
+----------
+.. image:: images/capme/capme.png
+
 Accessing
 ---------
 
