@@ -16,4 +16,3 @@ Getting Started
    installing-on-ubuntu
    production-deployment
    post-installation
-   Cheat-Sheet
