@@ -29,7 +29,9 @@ latex_documents = [
 
 # Trying to get latex to create PDF in 7.5x9.25 format
 latex_elements = {
-    'preamble' : '\usepackage[papersize={7.5in,9.25in}]{geometry}',
+    'preamble' : r'''
+    \usepackage[papersize={7.5in,9.25in}]{geometry}
+    '''
 }
 
 
