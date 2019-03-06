@@ -31,7 +31,7 @@ latex_documents = [
 latex_elements = {
     'preamble' : r'''
     \usepackage[papersize={7.5in,9.25in}]{geometry}
-    '''
+    ''',
 }
 
 
