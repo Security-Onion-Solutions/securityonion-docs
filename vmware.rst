@@ -1,5 +1,5 @@
-VMWare Walkthough
-=================
+VMWare
+======
 
 Overview
 --------
