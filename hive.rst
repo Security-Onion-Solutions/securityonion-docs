@@ -2,7 +2,7 @@ TheHive
 =======
 
 Elastalert Rules
---------
+----------------
 
 We can send events to an instance of the TheHive, as Elastalert includes the TheHive alerter (`Nclose-ZA <https://github.com/Nclose-ZA/elastalert_hive_alerter>`__).
 
