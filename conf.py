@@ -26,6 +26,7 @@ latex_documents = [
   ('index', 'securityonion.tex', u'Security Onion Documentation',
    u'', 'manual'),
 ]
+latex_elements.preamble = '\\usepackage[papersize={7.5in,9.25in}]{geometry}'
 
 
 
