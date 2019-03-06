@@ -14,7 +14,6 @@ Getting Started
    quick-iso-image
    installing-on-ubuntu
    production-deployment
-   resolution
    post-installation
    IntroductionWalkthrough
    Cheat-Sheet
