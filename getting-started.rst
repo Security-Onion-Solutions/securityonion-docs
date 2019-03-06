@@ -9,7 +9,7 @@ Getting Started
    hardware
    installation
    release-notes
-   QuickISOImage
+   quick-iso-image
    InstallingOnUbuntu
    ProductionDeployment
    PostInstallation
