@@ -7,6 +7,7 @@ Getting Started
    use-cases
    architecture
    hardware
+   vmware
    download
    installation
    release-notes
@@ -15,5 +16,4 @@ Getting Started
    production-deployment
    post-installation
    IntroductionWalkthrough
-   VMWare-Walkthrough
    Cheat-Sheet
