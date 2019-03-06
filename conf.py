@@ -26,9 +26,11 @@ latex_documents = [
   ('index', 'securityonion.tex', u'Security Onion Documentation',
    u'', 'manual'),
 ]
-latex_elements = {
-    'preamble' : '\\usepackage[papersize={7.5in,9.25in}]{geometry}',
-}
+
+# Trying to get latex to create PDF in 7.5x9.25 format
+#latex_elements = {
+#    'preamble' : '\\usepackage[papersize={7.5in,9.25in}]{geometry}',
+#}
 
 
 
