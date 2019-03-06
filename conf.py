@@ -28,20 +28,8 @@ latex_documents = [
 ]
 
 # Trying to get latex to create PDF in 7.5x9.25 format
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-    'papersize': 'letterpaper',
 
-# The font size ('10pt', '11pt' or '12pt').
-    'pointsize': '11pt',
 
-# Additional stuff for the LaTeX preamble.
-    'preamble': r'''
-        \\usepackage{charter}
-        \\usepackage[defaultsans]{lato}
-        \\usepackage{inconsolata}
-    ''',
-}
 ###########################################################################
 #          auto-created readthedocs.org specific configuration            #
 ###########################################################################
