@@ -6,6 +6,10 @@ Hardware Requirements
 
 Security Onion only supports 64-bit hardware.
 
+UEFI
+----
+If your hardware has UEFI, please see https://help.ubuntu.com/community/UEFI.
+
 UEFI Secure Boot
 ----------------
 
