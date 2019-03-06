@@ -44,3 +44,8 @@ To change the number of AF_PACKET workers for `<Bro>`_:
    ::
 
       sudo so-bro-start
+
+tcpreplay
+---------
+
+If you try to test AF_PACKET load balancing using tcpreplay locally, please note that load balancing will not work properly and all (or most) traffic will be handled by the first worker in the AF_PACKET cluster.  If you need to test AF_PACKET load balancing properly, you can run tcpreplay on another machine connected to your AF_PACKET machine.
