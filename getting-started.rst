@@ -10,7 +10,7 @@ Getting Started
    installation
    release-notes
    quick-iso-image
-   InstallingOnUbuntu
+   installing-on-ubuntu
    ProductionDeployment
    PostInstallation
    IntroductionWalkthrough
