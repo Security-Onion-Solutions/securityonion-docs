@@ -1,6 +1,30 @@
 After Installation
 ==================
 
+Resolution
+----------
+
+To change the resolution of your Security Onion installation:
+
+-  click the ``Applications`` menu in the upper left corner
+-  click ``System Tools``
+-  click ``Setttings``
+-  click ``Displays``
+-  select your display
+-  choose your desired resolution
+-  click ``Apply``
+
+If you prefer a CLI method for changing screen resolution, you can use `xrandr`. For a list of available screen resolutions, simply execute ``xrandr``. To set the screen resolution (replace ``W`` and ``H`` with the actual Width and Height desired):
+
+::
+
+    xrandr -s WxH
+
+If you have limited screen resolution options, you may need to install the Virtual Tools for your virtualization solution. For example, this can happen if you're running VirtualBox and you'll need to install the VirtualBox Extensions.
+
+Services
+--------
+
 -  Verify services are running:
    
    ::
@@ -21,7 +45,10 @@ After Installation
    
       curl http://testmyids.com
       
--  Full-time analysts may want to use an `Analyst VM <Analyst-VM>`__.
+Other
+-----
+
+-  Full-time analysts may want to connect using a separate `Analyst VM <Analyst-VM>`__.
 
 -  Setup defaults to only opening port 22 in the `firewall <Firewall>`__. If you want to connect analyst VMs, `<Wazuh>`_ agents, or syslog devices, you can run the `<so-allow>`_ utility which will walk you through creating firewall rules to allow these devices to connect.
 
