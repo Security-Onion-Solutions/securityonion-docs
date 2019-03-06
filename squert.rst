@@ -18,6 +18,10 @@ From http://www.squertproject.org/:
 |
 | Squert is a PHP web interface to the `Sguil <Sguil>`__ database and works best with Chromium/Chrome browsers.
 
+Screenshot
+----------
+.. image:: images/squert/squert.png
+
 Authentication
 --------------
 
