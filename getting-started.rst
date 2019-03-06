@@ -12,7 +12,7 @@ Getting Started
    quick-iso-image
    installing-on-ubuntu
    production-deployment
-   PostInstallation
+   post-installation
    IntroductionWalkthrough
    VMWare-Walkthrough
    Cheat-Sheet
