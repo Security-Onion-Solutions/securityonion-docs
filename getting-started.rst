@@ -11,7 +11,7 @@ Getting Started
    release-notes
    quick-iso-image
    installing-on-ubuntu
-   ProductionDeployment
+   production-deployment
    PostInstallation
    IntroductionWalkthrough
    VMWare-Walkthrough
