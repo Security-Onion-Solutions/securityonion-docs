@@ -21,7 +21,7 @@ From http://www.squertproject.org/:
 Authentication
 --------------
 
-Squert authenticates against the Sguil user database, so you should be able to login to Squert using the same username/password you use to login to Sguil.
+If prompted for username/password, simply enter your normal Sguil/Squert/Kibana username/password.
 
 Prepared Statements
 -------------------
