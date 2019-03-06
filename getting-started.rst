@@ -7,9 +7,9 @@ Getting Started
    use-cases
    architecture
    hardware
+   download
    vmware
    virtualbox
-   download
    installation
    release-notes
    quick-iso-image
