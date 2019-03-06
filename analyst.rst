@@ -7,7 +7,7 @@ Analyst Tools
    kibana
    capme
    cyberchef
-   Squert
+   squert
    Sguil
    networkminer
    wireshark
