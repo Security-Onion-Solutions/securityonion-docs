@@ -16,6 +16,7 @@ Security Onion Documentation
    elastic
    updating
    network-customizing
+   cheat-sheet
    tuning
    tricks
    help
