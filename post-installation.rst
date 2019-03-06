@@ -4,7 +4,7 @@ After Installation
 Resolution
 ----------
 
-To change the resolution of your Security Onion installation:
+If you need to change the screen resolution of your Security Onion installation:
 
 -  click the ``Applications`` menu in the upper left corner
 -  click ``System Tools``
@@ -20,7 +20,7 @@ If you prefer a CLI method for changing screen resolution, you can use `xrandr`.
 
     xrandr -s WxH
 
-If you have limited screen resolution options, you may need to install the Virtual Tools for your virtualization solution. For example, this can happen if you're running VirtualBox and you'll need to install the VirtualBox Extensions.
+If you have limited screen resolution options and are in a virtualized environment, you may need to install the Virtual Tools for your virtualization solution. For example, this can happen if you're running VirtualBox and you can install the VirtualBox Extensions to get more resolution options.
 
 Services
 --------
