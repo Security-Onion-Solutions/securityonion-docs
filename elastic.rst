@@ -29,7 +29,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
 
    Elasticsearch
    Logstash
-   Kibana
+   kibana
    ElastAlert
    Curator
    FreqServer
