@@ -28,7 +28,9 @@ latex_documents = [
 ]
 
 # Trying to get latex to create PDF in 7.5x9.25 format
-latex_elements.preamble = '\\usepackage[paperheight=7.5in,paperwidth=9.25in]{geometry}'
+latex_elements = {
+  preamble = '\\usepackage[paperheight=7.5in,paperwidth=9.25in]{geometry}'
+}
 
 ###########################################################################
 #          auto-created readthedocs.org specific configuration            #
