@@ -8,6 +8,7 @@ Getting Started
    architecture
    hardware
    vmware
+   virtualbox
    download
    installation
    release-notes
@@ -15,5 +16,4 @@ Getting Started
    installing-on-ubuntu
    production-deployment
    post-installation
-   IntroductionWalkthrough
    Cheat-Sheet
