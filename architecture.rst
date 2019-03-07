@@ -34,10 +34,10 @@ Auxilliary Components
 Detailed Data Flow Diagram
 --------------------------
 
-(click for larger version)
-
 .. image:: images/elastic-architecture/data-flow.png
    :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/data-flow.png
+
+If you're viewing the online version of this documentation, you can click the image to zoom in.
 
 Deployment Types
 ----------------
