@@ -18,6 +18,11 @@ From http://sguil.net:
 
 -  Single central MySQL database
 
+
+Screenshot
+----------
+.. image:: images/sguil/sguil.png
+
 Authentication
 --------------
 
