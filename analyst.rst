@@ -8,6 +8,6 @@ Analyst Tools
    capme
    cyberchef
    squert
-   Sguil
+   sguil
    networkminer
    wireshark
