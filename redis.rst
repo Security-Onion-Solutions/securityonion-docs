@@ -16,6 +16,8 @@ During setup, you can choose to extend your master server storage using
 separate storage nodes. When you choose this option, Logstash on the
 master server outputs to redis. Storage nodes then consume from redis.
 
+.. image:: https://user-images.githubusercontent.com/16829864/37215984-91a348d4-2387-11e8-8c08-2e270b8fd986.png
+
 Queue
 -----
 
