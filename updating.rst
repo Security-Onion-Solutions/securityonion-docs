@@ -5,6 +5,6 @@ Updating
    :maxdepth: 2
 
    upgrade
-   HWE
+   hwe
    MySQL-Upgrade-Errors
    EOL
