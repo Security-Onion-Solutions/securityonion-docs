@@ -33,7 +33,7 @@ Stats
 
 For detailed Suricata statistics, check ``/nsm/sensor_data/HOSTNAME-INTERFACE/stats.log`` (where ``HOSTNAME`` is your actual hostname and ``INTERFACE`` is your actual sniffing interface).
 
-If you want `stats.log` to show per-thread stats (for example, to verify that load balancing is working properly), you can set `threads: yes` under the `stats:` section in `suricata.yaml` and then restart Suricata.
+If you want ``stats.log`` to show per-thread stats (for example, to verify that load balancing is working properly), you can set ``threads: yes`` under the ``stats:`` section in ``suricata.yaml`` and then restart Suricata.
 
 More Information
 ----------------
