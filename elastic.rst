@@ -31,7 +31,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
    logstash
    kibana
    elastalert
-   Curator
+   curator
    FreqServer
    DomainStats
    Docker
