@@ -6,5 +6,5 @@ Updating
 
    upgrade
    hwe
-   MySQL-Upgrade-Errors
+   mysql-upgrade-errors
    EOL
