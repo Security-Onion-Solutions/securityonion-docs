@@ -5,7 +5,7 @@ Network Visibility
    :maxdepth: 2
 
    NIDS
-      Snort
-      Suricata
+   Snort
+   Suricata
    Bro
    netsniff-ng
