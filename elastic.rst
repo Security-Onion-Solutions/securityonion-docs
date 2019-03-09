@@ -36,7 +36,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
    domainstats
    docker
    redis
-   Data-Fields
+   data-fields
    Alert-Data-Fields
    Bro-Fields
    Elastalert-Fields
