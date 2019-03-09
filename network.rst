@@ -7,5 +7,5 @@ Network Visibility
    nids
    snort
    suricata
-   Bro
+   bro
    netsniff-ng
