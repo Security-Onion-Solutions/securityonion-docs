@@ -28,7 +28,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
    :maxdepth: 2
 
    elasticsearch
-   Logstash
+   logstash
    kibana
    ElastAlert
    Curator
