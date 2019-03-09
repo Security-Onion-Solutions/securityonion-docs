@@ -5,7 +5,7 @@ Host Visibility
    :maxdepth: 2
 
    beats
-   Wazuh
+   wazuh
    Sysmon
    Autoruns
    Syslog
