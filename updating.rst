@@ -4,7 +4,7 @@ Updating
 .. toctree::
    :maxdepth: 2
 
-   Upgrade
+   upgrade
    HWE
    MySQL-Upgrade-Errors
    EOL
