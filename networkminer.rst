@@ -7,6 +7,10 @@ From https://www.netresec.com/?page=networkminer:
 
     NetworkMiner makes it easy to perform advanced Network Traffic Analysis (NTA) by providing extracted artifacts in an intuitive user interface. The way data is presented not only makes the analysis simpler, it also saves valuable time for the analyst or forensic investigator.
 
+Screenshot
+----------
+.. image:: images/networkminer/networkminer.png
+
 Usage
 -----
 
