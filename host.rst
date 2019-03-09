@@ -6,6 +6,6 @@ Host Visibility
 
    beats
    wazuh
-   Sysmon
+   sysmon
    Autoruns
    Syslog
