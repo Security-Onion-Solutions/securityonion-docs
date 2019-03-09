@@ -1,7 +1,7 @@
 Snort
 =====
 
-Snort is a Network Intrusion Detection System (NIDS). It sniffs network traffic and generates IDS alerts.
+Snort is a Network Intrusion Detection System (`<NIDS>`_). It sniffs network traffic and generates IDS alerts.
 
 Performance
 -----------
