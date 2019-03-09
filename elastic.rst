@@ -35,7 +35,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
    freqserver
    domainstats
    docker
-   Redis
+   redis
    Data-Fields
    Alert-Data-Fields
    Bro-Fields
