@@ -38,7 +38,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
    redis
    data-fields
    alert-data-fields
-   Bro-Fields
+   bro-fields
    Elastalert-Fields
    Beats
    Re‐Indexing
