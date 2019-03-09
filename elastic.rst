@@ -33,7 +33,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
    elastalert
    curator
    freqserver
-   DomainStats
+   domainstats
    Docker
    Redis
    Data-Fields
