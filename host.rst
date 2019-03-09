@@ -4,7 +4,7 @@ Host Visibility
 .. toctree::
    :maxdepth: 2
 
-   Beats
+   beats
    Wazuh
    Sysmon
    Autoruns
