@@ -6,6 +6,6 @@ Network Visibility
 
    NIDS
    Snort
-   Suricata
+   suricata
    Bro
    netsniff-ng
