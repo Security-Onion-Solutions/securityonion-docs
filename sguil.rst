@@ -62,8 +62,8 @@ Management
 
 -  `Configure retention for Sguil alerts <ManagingAlerts#sguil-days-to-keep>`__
 
-Customize (Sguil client)
-------------------------
+Customize
+---------
 
 -  resize columns by right-clicking on the column heading in the Sguil client.
 -  change fonts by clicking ``File`` --> ``Change Font`` from within the Sguil client.
