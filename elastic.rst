@@ -27,7 +27,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
 .. toctree::
    :maxdepth: 2
 
-   Elasticsearch
+   elasticsearch
    Logstash
    kibana
    ElastAlert
