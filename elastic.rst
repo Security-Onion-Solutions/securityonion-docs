@@ -34,7 +34,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
    curator
    freqserver
    domainstats
-   Docker
+   docker
    Redis
    Data-Fields
    Alert-Data-Fields
