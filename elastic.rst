@@ -32,7 +32,7 @@ Please note the following MINIMUM requirements for the Elastic stack:
    kibana
    elastalert
    curator
-   FreqServer
+   freqserver
    DomainStats
    Docker
    Redis
