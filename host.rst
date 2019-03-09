@@ -8,4 +8,4 @@ Host Visibility
    wazuh
    sysmon
    autoruns
-   Syslog
+   syslog
