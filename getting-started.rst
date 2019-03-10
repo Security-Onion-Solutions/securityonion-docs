@@ -7,6 +7,7 @@ Getting Started
    use-cases
    architecture
    hardware
+   hwe
    download
    vmware
    virtualbox
