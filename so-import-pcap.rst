@@ -16,8 +16,7 @@ It will do the following:
 
 Requirements:
 
--  You must be running at least Security Onion Elastic Stack Release Candidate 2 (14.04.5.8 ISO).
--  You must have a sniffing interface defined (you can choose Evaluation Mode in the Setup wizard).
+-  You must be running at least Security Onion 16.04.
 
 Warnings:
 
