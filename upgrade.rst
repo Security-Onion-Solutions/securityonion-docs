@@ -58,11 +58,6 @@ MySQL
 
 If you get any errors relating to MySQL, please see `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__.
 
-HWE
----
-
-If you're running an older 14.04 release, you may need to manually upgrade your `HWE stack <HWE>`__.
-
 Initiating an update over SSH
 -----------------------------
 
