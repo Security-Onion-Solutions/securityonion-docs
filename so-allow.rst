@@ -34,3 +34,7 @@ To view existing rules granted through the use of ``so-allow``, use the followin
 ::
 
    so-allow-view
+
+Wazuh Whitelist
+---------------
+If you choose the ``analyst`` option, ``so-allow`` will also add the ``analyst`` IP address to the Wazuh Whitelist.  This will prevent Wazuh Active Response from blocking the ``analyst`` IP address.
