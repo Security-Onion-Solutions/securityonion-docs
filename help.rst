@@ -4,12 +4,12 @@ Help
 .. toctree::
    :maxdepth: 2
 
-   Support
+   FAQ
    Help
    DirectoryStructure
    Tools
    Passwords
+   Support
    MailingLists
    TeamMembers
    Secure-Boot
-   FAQ
