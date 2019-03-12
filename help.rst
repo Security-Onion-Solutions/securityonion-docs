@@ -12,4 +12,3 @@ Help
    Support
    MailingLists
    TeamMembers
-   Secure-Boot
