@@ -21,7 +21,6 @@ Security Onion Documentation
    tricks
    help
    utilities
-   other
    integrations
    security
    appendix
