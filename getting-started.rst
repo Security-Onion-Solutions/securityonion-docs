@@ -11,6 +11,7 @@ Getting Started
    download
    vmware
    virtualbox
+   trouble-booting
    installation
    release-notes
    quick-iso-image
