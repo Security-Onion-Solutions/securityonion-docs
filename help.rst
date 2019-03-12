@@ -6,10 +6,10 @@ Help
 
    Support
    Help
-   FAQ
+   DirectoryStructure
+   Tools
    Passwords
    MailingLists
    TeamMembers
    Secure-Boot
-   
-   
+   FAQ
