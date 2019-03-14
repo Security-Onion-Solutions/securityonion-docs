@@ -1,5 +1,10 @@
+Setup
+=====
+
+After installing Security Onion, double-click the ``Setup`` icon on the desktop (or run ``sudo sosetup`` from a terminal) to configure your system.  In most cases, you'll run Setup to do network configuration, reboot, and then run Setup again for service configuration.
+
 Automating Setup
-================
+----------------
 
 You can automate the Setup process using ``sosetup.conf``.
 
