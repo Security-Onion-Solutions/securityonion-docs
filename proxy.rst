@@ -1,7 +1,7 @@
 Proxy Configuration
 ===================
 
-Put your proxy server settings in ``/etc/environment`` like this:
+If you need to force your Internet traffic through a proxy server, you can put your proxy server settings in ``/etc/environment`` like this:
 
 ::
 
