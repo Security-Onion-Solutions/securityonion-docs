@@ -4,7 +4,7 @@ Customizing for Your Network
 .. toctree::
    :maxdepth: 2
 
-   NetworkConfiguration
+   network-configuration
    Proxy
    Firewall
    Email
