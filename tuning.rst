@@ -13,6 +13,6 @@ To get the best performance out of Security Onion, you'll want to tune it for yo
    pf-ring
    af-packet
    performance
-   MySQLTuning
+   mysql
    Trimming-PCAPs
    DisablingProcesses
