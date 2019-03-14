@@ -18,8 +18,9 @@ Security Onion Documentation
    customizing
    tuning
    tricks
-   help
+   services
    utilities
+   help
    integrations
    security
    appendix
