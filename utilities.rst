@@ -6,5 +6,6 @@ Utilities
    
    Services
    jq
+   setup
    so-allow
    so-import-pcap
