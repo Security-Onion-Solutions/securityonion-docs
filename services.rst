@@ -9,6 +9,11 @@ Services are controlled by the use of Security Onion scripts (``so-<noun>-<verb>
 
 These scripts are detailed below.
 
+All services
+------------
+
+You can control all services with the ``so-<verb>`` scripts as follows.
+
 Check status of all services:
 
 ::
