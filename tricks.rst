@@ -6,7 +6,6 @@ Tricks and Tips
    
    Airgapped-Networks
    Analyst-VM
-   Automating-Setup
    Best-Practices
    CloudClient
    ConnectingtoSguil
