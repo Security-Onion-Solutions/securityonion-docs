@@ -20,6 +20,6 @@ https://securityonion.net/docs/suricata
 To achieve this goal, new documentation pages should use the following naming convention:
 - all lowercase
 - .rst file extension
-- ideally, the name of the page should be one simple word (for example: suricata.rst)
+- ideally, the name of the page should be one simple word (for example: `suricata.rst`)
 - try to avoid symbols
 - if symbols are required, use hyphens (NOT underscores)
