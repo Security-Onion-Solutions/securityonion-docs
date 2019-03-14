@@ -4,7 +4,7 @@ Email Configuration
 so-email
 --------
 
-``so-email`` will automatically configure automated server-side email for you as described below. Simply run the following command and follow the prompts:
+If you want to configure email, you can run ``so-email`` and it will automatically configure automated server-side email for you as described below. Simply run the following command and follow the prompts:
 
 ::
 
