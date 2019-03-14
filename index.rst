@@ -15,7 +15,7 @@ Security Onion Documentation
    host
    elastic
    updating
-   network-customizing
+   customizing
    cheat-sheet
    tuning
    tricks
