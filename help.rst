@@ -4,7 +4,7 @@ Help
 .. toctree::
    :maxdepth: 2
 
-   FAQ
+   faq
    Help
    DirectoryStructure
    Tools
