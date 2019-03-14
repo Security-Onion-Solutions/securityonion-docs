@@ -72,7 +72,7 @@ Having problems? Try the suggestions below.
    faq
    directory
    tools
-   Passwords
+   passwords
    Support
    MailingLists
    TeamMembers
