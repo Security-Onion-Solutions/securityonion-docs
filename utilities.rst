@@ -4,8 +4,8 @@ Utilities
 .. toctree::
    :maxdepth: 2
    
-   Services
    jq
+   services
    setup
    so-allow
    so-import-pcap
