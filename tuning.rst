@@ -8,7 +8,7 @@ To get the best performance out of Security Onion, you'll want to tune it for yo
    
    bpf
    rules
-   adding-local-rules
+   local-rules
    ManagingAlerts
    PF_RING
    AF-PACKET
