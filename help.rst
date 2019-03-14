@@ -70,7 +70,7 @@ Having problems? Try the suggestions below.
    :maxdepth: 2
 
    faq
-   DirectoryStructure
+   directory
    Tools
    Passwords
    Support
