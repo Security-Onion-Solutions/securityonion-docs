@@ -14,5 +14,5 @@ To get the best performance out of Security Onion, you'll want to tune it for yo
    af-packet
    performance
    mysql
-   Trimming-PCAPs
+   trimpcap
    DisablingProcesses
