@@ -1,7 +1,7 @@
 Elastic Stack
 =============
 
-We've integrated the Elastic Stack:
+Security Onion includes the Elastic Stack:
 
 | `<Elasticsearch>`__
 | `<Logstash>`__
@@ -19,11 +19,6 @@ Each of the components above has its own `<Docker>`__ image.
 You can get an idea of what this whole integration looks like at a high-level by viewing our `architecture
 diagram <Elastic-Architecture>`__.
 
-Please note the following MINIMUM requirements for the Elastic stack:
-
--  2 CPU cores
--  8GB RAM
-
 .. toctree::
    :maxdepth: 2
 
@@ -40,5 +35,4 @@ Please note the following MINIMUM requirements for the Elastic stack:
    alert-data-fields
    bro-fields
    elastalert-fields
-   beats
    re‐indexing
