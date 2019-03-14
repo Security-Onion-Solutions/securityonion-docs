@@ -75,4 +75,4 @@ Having problems? Try the suggestions below.
    passwords
    support
    mailing-lists
-   TeamMembers
+   help-wanted
