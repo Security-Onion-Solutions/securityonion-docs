@@ -52,5 +52,5 @@ To achieve this goal, new documentation pages should use the following naming co
 - all lowercase
 - ``.rst`` file extension
 - ideally, the name of the page should be one simple word (for example: ``suricata.rst``)
-- try to avoid symbols such as hyphens and underscores
-- if symbols are required, hyphens are preferred to underscores
+- try to avoid symbols if possible
+- if symbols are required, use hyphens (NOT underscores)
