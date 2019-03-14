@@ -71,7 +71,7 @@ Having problems? Try the suggestions below.
 
    faq
    directory
-   Tools
+   tools
    Passwords
    Support
    MailingLists
