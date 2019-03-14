@@ -74,5 +74,5 @@ Having problems? Try the suggestions below.
    tools
    passwords
    support
-   MailingLists
+   mailing-lists
    TeamMembers
