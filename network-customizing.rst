@@ -9,4 +9,4 @@ Customizing for Your Network
    firewall
    email
    ip
-   NTP
+   ntp
