@@ -73,6 +73,6 @@ Having problems? Try the suggestions below.
    directory
    tools
    passwords
-   Support
+   support
    MailingLists
    TeamMembers
