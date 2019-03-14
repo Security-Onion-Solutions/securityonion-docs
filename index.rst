@@ -16,7 +16,6 @@ Security Onion Documentation
    elastic
    updating
    customizing
-   cheat-sheet
    tuning
    tricks
    help
@@ -24,3 +23,4 @@ Security Onion Documentation
    integrations
    security
    appendix
+   cheat-sheet
