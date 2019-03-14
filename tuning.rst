@@ -11,7 +11,7 @@ To get the best performance out of Security Onion, you'll want to tune it for yo
    local-rules
    alerts
    pf-ring
-   AF-PACKET
+   af-packet
    High-Performance-Tuning
    MySQLTuning
    Trimming-PCAPs
