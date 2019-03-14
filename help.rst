@@ -34,12 +34,6 @@ Having problems? Try the suggestions below.
    -  Bro ``/nsm/bro/logs/current``
    -  snort\_agent
       ``/var/log/nsm/{ HOSTNAME-INTERFACE }/snort_agent.log``
-   -  argus ``/var/log/nsm/{ HOSTNAME-INTERFACE }/argus.log``
-   -  http\_agent ``/var/log/nsm/{ HOSTNAME-INTERFACE }/http_agent.log``
-   -  pads\_agent ``/var/log/nsm/{ HOSTNAME-INTERFACE }/pads_agent.log``
-   -  prads\_agent ``/var/log/nsm/{ HOSTNAME-INTERFACE }/prads.log``
-   -  sancp\_agent
-      ``/var/log/nsm/{ HOSTNAME-INTERFACE }/sancp_agent.log``
    -  Elasticsearch ``/var/log/elasticsearch/<hostname>.log``
    -  Kibana ``/var/log/kibana/kibana.log``
    -  Logstash ``/var/log/logstash/logstash.log``
@@ -50,7 +44,7 @@ Having problems? Try the suggestions below.
 
    ::
 
-       pgrep -lf autossh
+       sudo so-autossh-status
 
 -  Having trouble with MySQL? Check all databases to see if any tables
    are are marked as crashed or corrupt.
@@ -76,7 +70,6 @@ Having problems? Try the suggestions below.
    :maxdepth: 2
 
    faq
-   Help
    DirectoryStructure
    Tools
    Passwords
