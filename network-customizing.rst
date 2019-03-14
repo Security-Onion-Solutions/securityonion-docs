@@ -5,7 +5,7 @@ Customizing for Your Network
    :maxdepth: 2
 
    network-configuration
-   Proxy
+   proxy
    Firewall
    Email
    ChangingIPAddress
