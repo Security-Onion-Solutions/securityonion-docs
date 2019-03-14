@@ -1,7 +1,7 @@
 Network Configuration
 =====================
 
-If you're running Security Onion 16.04, all of this configuration will happen automatically if you choose ``Yes, configure /etc/network/interfaces`` in the Setup wizard.
+All of this configuration will happen automatically if you choose ``Yes, configure /etc/network/interfaces`` in the Setup wizard.  If for some reason you need to configure `/etc/network/interfaces` manually, you can do the following.
 
 NOTE! You may lose network connectivity during this process! Have a backup plan if attempting over SSH!
 
