@@ -8,5 +8,5 @@ Customizing for Your Network
    proxy
    firewall
    email
-   ChangingIPAddress
+   ip
    NTP
