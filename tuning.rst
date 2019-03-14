@@ -7,7 +7,7 @@ To get the best performance out of Security Onion, you'll want to tune it for yo
    :maxdepth: 2
    
    bpf
-   Rules
+   rules
    AddingLocalRules
    ManagingAlerts
    PF_RING
