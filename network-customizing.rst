@@ -7,6 +7,6 @@ Customizing for Your Network
    network-configuration
    proxy
    firewall
-   Email
+   email
    ChangingIPAddress
    NTP
