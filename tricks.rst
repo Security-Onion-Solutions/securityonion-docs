@@ -9,7 +9,7 @@ Tricks and Tips
    best-practices
    cloud-client
    connecting-to-sguil
-   Desktop
+   desktop
    dns-anomaly-detection
    ICMP-Anomaly-Detection
    MetaPackages
