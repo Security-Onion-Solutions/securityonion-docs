@@ -9,7 +9,7 @@ Integrations
    fir
    grr
    hive
-   MISP
+   misp
    DeployingNtopng
    RITA
    strelka
