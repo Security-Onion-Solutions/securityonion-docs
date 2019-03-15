@@ -1,14 +1,14 @@
 AF-PACKET
 =========
 
-Modern versions of Setup will configure `<Suricata>`_ and `<Bro>`_ to use AF_PACKET instead of `<PF_RING>`_. (`<Snort>`_ will continue to use `PF_RING <PF_RING>`__ for load balancing until Snort 3.0 is released.)
+Modern versions of Setup will configure `<Suricata>`_ and `<Bro>`_ to use AF-PACKET instead of `<PF_RING>`_. (`<Snort>`_ will continue to use `PF_RING <PF_RING>`__ for load balancing until Snort 3.0 is released.)
 
-If you want to change the number of AF_PACKET workers after running Setup, you can do the following.
+If you want to change the number of AF-PACKET workers after running Setup, you can do the following.
 
 Suricata
 --------
 
-To change the number of AF_PACKET workers for `<Suricata>`_:
+To change the number of AF-PACKET workers for `<Suricata>`_:
 
 -  Stop sensor processes:
 
@@ -24,12 +24,12 @@ To change the number of AF_PACKET workers for `<Suricata>`_:
 
       sudo so-suricata-start
 
--  ``so-suricata-start`` automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata creates the appropriate number of AF_PACKET workers.
+-  ``so-suricata-start`` automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata creates the appropriate number of AF-PACKET workers.
 
 Bro
 ---
 
-To change the number of AF_PACKET workers for `<Bro>`_:
+To change the number of AF-PACKET workers for `<Bro>`_:
 
 -  Stop Bro:
 
@@ -48,4 +48,4 @@ To change the number of AF_PACKET workers for `<Bro>`_:
 tcpreplay
 ---------
 
-If you try to test AF_PACKET load balancing using tcpreplay locally, please note that load balancing will not work properly and all (or most) traffic will be handled by the first worker in the AF_PACKET cluster.  If you need to test AF_PACKET load balancing properly, you can run tcpreplay on another machine connected to your AF_PACKET machine.
+If you try to test AF-PACKET load balancing using tcpreplay locally, please note that load balancing will not work properly and all (or most) traffic will be handled by the first worker in the AF-PACKET cluster.  If you need to test AF-PACKET load balancing properly, you can run tcpreplay on another machine connected to your AF-PACKET machine.
