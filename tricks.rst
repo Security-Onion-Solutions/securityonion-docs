@@ -12,7 +12,7 @@ Tricks and Tips
    desktop
    dns-anomaly-detection
    icmp-anomaly-detection
-   MetaPackages
+   metapackages
    NewDisk
    Pcaps
    RemovingASensor
