@@ -6,7 +6,7 @@ Integrations
    
    alienvault-otx
    etherpad
-   FIR
+   fir
    GRR
    hive
    MISP
