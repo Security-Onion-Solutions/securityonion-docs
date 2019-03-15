@@ -4,7 +4,7 @@ Tricks and Tips
 .. toctree::
    :maxdepth: 2
    
-   Airgapped-Networks
+   airgap
    Analyst-VM
    Best-Practices
    CloudClient
