@@ -5,7 +5,7 @@ Integrations
    :maxdepth: 2
    
    alienvault-otx
-   Etherpad
+   etherpad
    FIR
    GRR
    hive
