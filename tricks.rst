@@ -19,4 +19,4 @@ Tricks and Tips
    salt
    sensor-stops-seeing-traffic
    ssh
-   TimeZones
+   timezones
