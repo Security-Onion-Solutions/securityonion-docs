@@ -20,3 +20,4 @@ We don't provide free support for third party systems, so this section will be j
    ntopng
    rita
    strelka
+   syslog-output
