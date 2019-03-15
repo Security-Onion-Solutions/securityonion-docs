@@ -7,7 +7,7 @@ Integrations
    alienvault-otx
    etherpad
    fir
-   GRR
+   grr
    hive
    MISP
    DeployingNtopng
