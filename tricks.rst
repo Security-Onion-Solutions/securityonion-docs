@@ -11,7 +11,7 @@ Tricks and Tips
    connecting-to-sguil
    desktop
    dns-anomaly-detection
-   ICMP-Anomaly-Detection
+   icmp-anomaly-detection
    MetaPackages
    NewDisk
    Pcaps
