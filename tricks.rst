@@ -10,7 +10,7 @@ Tricks and Tips
    cloud-client
    connecting-to-sguil
    Desktop
-   DNSAnomalyDetection
+   dns-anomaly-detection
    ICMP-Anomaly-Detection
    MetaPackages
    NewDisk
