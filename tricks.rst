@@ -8,7 +8,7 @@ Tricks and Tips
    analyst-vm
    best-practices
    cloud-client
-   ConnectingtoSguil
+   connecting-to-sguil
    Desktop
    DNSAnomalyDetection
    ICMP-Anomaly-Detection
