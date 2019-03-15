@@ -6,7 +6,7 @@ Tricks and Tips
    
    airgap
    analyst-vm
-   Best-Practices
+   best-practices
    CloudClient
    ConnectingtoSguil
    Desktop
