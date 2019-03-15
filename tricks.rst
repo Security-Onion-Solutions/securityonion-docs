@@ -17,6 +17,6 @@ Tricks and Tips
    pcaps
    removing-a-sensor
    salt
-   SensorStopsSeeingTraffic
+   sensor-stops-seeing-traffic
    ssh
    TimeZones
