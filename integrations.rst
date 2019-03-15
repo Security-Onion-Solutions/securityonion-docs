@@ -11,6 +11,6 @@ Integrations
    hive
    misp
    ntopng
-   RITA
+   rita
    strelka
    ThirdPartyIntegration
