@@ -10,7 +10,7 @@ Integrations
    grr
    hive
    misp
-   DeployingNtopng
+   ntopng
    RITA
    strelka
    ThirdPartyIntegration
