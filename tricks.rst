@@ -14,7 +14,7 @@ Tricks and Tips
    icmp-anomaly-detection
    metapackages
    new-disk
-   Pcaps
+   pcaps
    RemovingASensor
    Salt
    SensorStopsSeeingTraffic
