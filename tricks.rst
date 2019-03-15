@@ -16,7 +16,7 @@ Tricks and Tips
    new-disk
    pcaps
    removing-a-sensor
-   Salt
+   salt
    SensorStopsSeeingTraffic
-   SSH
+   ssh
    TimeZones
