@@ -4,7 +4,7 @@ Integrations
 .. toctree::
    :maxdepth: 2
    
-   Alienvault-OTX
+   alienvault-otx
    Etherpad
    FIR
    GRR
