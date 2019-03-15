@@ -5,7 +5,7 @@ Tricks and Tips
    :maxdepth: 2
    
    airgap
-   Analyst-VM
+   analyst-vm
    Best-Practices
    CloudClient
    ConnectingtoSguil
