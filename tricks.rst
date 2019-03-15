@@ -13,7 +13,7 @@ Tricks and Tips
    dns-anomaly-detection
    icmp-anomaly-detection
    metapackages
-   NewDisk
+   new-disk
    Pcaps
    RemovingASensor
    Salt
