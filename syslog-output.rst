@@ -1,5 +1,5 @@
 Syslog Output
--------------
+=============
 
 How do I send Bro and OSSEC logs to an external syslog collector?
 -----------------------------------------------------------------
