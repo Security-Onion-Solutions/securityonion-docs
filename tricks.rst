@@ -7,7 +7,7 @@ Tricks and Tips
    airgap
    analyst-vm
    best-practices
-   CloudClient
+   cloud-client
    ConnectingtoSguil
    Desktop
    DNSAnomalyDetection
