@@ -15,7 +15,7 @@ Tricks and Tips
    metapackages
    new-disk
    pcaps
-   RemovingASensor
+   removing-a-sensor
    Salt
    SensorStopsSeeingTraffic
    SSH
