@@ -13,4 +13,4 @@ Integrations
    ntopng
    rita
    strelka
-   ThirdPartyIntegration
+   third-party-integration
