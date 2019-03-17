@@ -16,7 +16,12 @@ master_doc = 'index'
 project = u'Security Onion'
 copyright = str(datetime.now().year)
 version = 'latest'
-release = '16.04.5.6'
+import re
+# The full version, including alpha/beta/rc tags.
+release = re.sub(’^v’, ’’, os.popen(’git describe’).read().strip())
+# The short X.Y version.
+version = release
+# release = '16.04.5.6'
 exclude_patterns = ['_build']
 pygments_style = 'sphinx'
 htmlhelp_basename = 'securityonion'
