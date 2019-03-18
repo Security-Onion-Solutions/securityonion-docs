@@ -20,7 +20,7 @@ syslog-ng's configuration file is located at ``/etc/syslog-ng/syslog-ng.conf``.
 Forwarding
 ----------
 
-You can configure syslog-ng to forward Bro / Wazuh / IDS logs to `third-party systems <ThirdPartyIntegration>`__.
+You can configure syslog-ng to `forward <syslog-output>`_ Bro / Wazuh / IDS logs to external systems.
 
 More Information
 ----------------
