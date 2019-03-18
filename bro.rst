@@ -95,7 +95,7 @@ Email
 
 ``/opt/bro/etc/broctl.cfg``
 
--  To configure email notifications, please see the `Email<email#bro>`__ section.
+-  To configure email notifications, please see the `email <email#bro>`__ section.
 
 Syslog
 ------
