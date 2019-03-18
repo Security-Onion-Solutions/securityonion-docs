@@ -90,6 +90,20 @@ https://docs.zeek.org/en/latest/scripts/base/frameworks/notice/main.bro.html#typ
 
 As you can see, Bro log data can provide a wealth of information to the analyst, all easily accessible through `Kibana <Kibana>`__.
 
+Email
+-----
+
+``/opt/bro/etc/broctl.cfg``
+
+-  To configure email notifications, please see the `Email<email#bro>`__ section.
+
+Syslog
+------
+
+``/etc/syslog-ng/syslog-ng.conf``
+
+-  To forward Bro logs to an external syslog collector, please see the `<syslog-output>`__ section.
+
 Intel
 -----
 
@@ -106,9 +120,7 @@ Intel
    | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
    | https://github.com/weslambert/securityonion-misp
 
--  To install and configure an Alienvault OTX Connector, please see:
-
-   `<Alienvault-OTX>`__
+-  To install and configure an Alienvault OTX Connector, please see the `<Alienvault-OTX>`__ section.
 
 Bro \* n
 --------
@@ -187,22 +199,6 @@ You can then have Bro automatically restart upon a detected change in ``local.br
       - watch:
         - file: /opt/bro/share/bro/site/local.bro
 
-Email
------
-
-``/opt/bro/etc/broctl.cfg``
-
--  To configure email notifications, please see:
-
-`<Email#how-do-i-configure-bro-to-send-emails>`__
-
-Syslog
-------
-
-``/etc/syslog-ng/syslog-ng.conf``
-
--  To forward Bro logs to an external syslog collector, please see the section on `<syslog-output>`__.
-
 Top for Bro
 -----------
 
@@ -214,12 +210,7 @@ Top for Bro
 -  Written in Go, BroTop is a dependency-free binary that can be
    downloaded and run immediately, auto-detecting Bro log paths.
 
--  For more information about BroTop, please see:
-
-| https://github.com/criticalstack/brotop
-| 
-| For more information about Bro, please see:
-| https://www.bro.org/
+-  For more information about BroTop, please see https://github.com/criticalstack/brotop.
 
 /nsm/bro/spool/tmp
 ------------------
@@ -230,3 +221,7 @@ you can clean them up with:
 ::
 
     sudo su sguil -c '/opt/bro/bin/broctl cleanup --all'
+
+More Information
+----------------
+For more information about Bro, please see https://www.zeek.org/.
