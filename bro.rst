@@ -201,9 +201,7 @@ Syslog
 
 ``/etc/syslog-ng/syslog-ng.conf``
 
--  To forward Bro logs to an external syslog collector, please see:
-
-`<ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector>`__
+-  To forward Bro logs to an external syslog collector, please see the section on `<syslog-output>`__.
 
 Top for Bro
 -----------
