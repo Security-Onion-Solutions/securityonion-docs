@@ -21,12 +21,12 @@ Install / Update / Upgrade
 Why won't the ISO image boot on my machine?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`TroubleBooting <TroubleBooting>`__
+Please see the `TroubleBooting <TroubleBooting>`__ section.
 
 What's the recommended procedure for installing Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Installation Procedure <Installation>`__
+Please see the `Installation Procedure <Installation>`__ section.
 
 Why does the installer crash when selecting a non-English language?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -37,33 +37,27 @@ Why does the installer crash when selecting a non-English language?
 Why can't I see the Continue button on the Keyboard Layout screen of the installer?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| The Keyboard Layout screen may be larger than your screen resolution
-  and so the Continue button may be off the screen to the right like
-  this:
-| https://launchpadlibrarian.net/207213663/Screenshot_wilyi386deskmanual_2015-05-22_13%3A05%3A41.png
-| You can simply slide the window over until you see the Continue
-  button. For more information, please see:
-| https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1458039
+The Keyboard Layout screen may be larger than your screen resolution and so the Continue button may be off the screen to the right( as shown in https://launchpadlibrarian.net/207213663/Screenshot_wilyi386deskmanual_2015-05-22_13%3A05%3A41.png).  You can simply slide the window over until you see the Continue button. For more information, please see https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1458039.
 
 How do I install Security Onion updates?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Upgrade Procedure <Upgrade>`__
+Please see the `Upgrade Procedure <Upgrade>`__ section.
 
 Why do I get ``Snort/Suricata/Bro`` errors after upgrading the ``kernel`` and ``pfring`` packages?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Updating <Upgrade>`__
+Please see the `Updating <Upgrade>`__ section.
 
 What do I need to do if I'm behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Proxy Configuration <Proxy>`__
+Please see the `Proxy Configuration <Proxy>`__ section.
 
 Ubuntu is saying that my kernel has reached EOL (End Of Life). Should I update to the newer HWE stack?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please see our `HWE <HWE>`__ page.
+Please see the `HWE <HWE>`__ section.
 
 Why does my VMware image rename ``eth0`` to ``eth1``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -137,12 +131,12 @@ Users / Passwords
 What is the password for ``root/mysql/Sguil/Squert/Kibana``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Passwords <Passwords>`__
+Please see the `Passwords <Passwords>`__ section.
 
 How do I add a new user account for logging into Sguil/Squert/Kibana?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| `Adding Sguil accounts <Passwords#sguil>`__\ 
+Please see the `Adding Sguil accounts <Passwords#sguil>`__ section.\ 
 | 
 | `back to top <#top>`__
 | 
@@ -159,7 +153,7 @@ Where do I send questions/problems/suggestions?
 I submitted a message to the security-onion Google Group. Why isn't it showing up?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Moderation <MailingLists#moderation>`__
+Please see the `Moderation <MailingLists#moderation>`__ section.
 
 Is commercial support available for Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -178,7 +172,7 @@ Error messages
 Why does rule-update fail with Error 400 when running behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please see `<Proxy#pulledpork>`__
+Please see the `<Proxy#pulledpork>`__ section.
 
 Why does rule-update fail with an error like "Error 404 when fetching s3.amazonaws.com/snort-org/www/rules/community/community-rules.tar.gz.md5"?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -300,7 +294,7 @@ The GeoIP CITY database is ``not free`` and thus we cannot include it in the dis
 Why does soup tell me I need a Secure Boot key?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| `Secure Boot <Secure-Boot>`__
+Please see the `Secure Boot <Secure-Boot>`__ section.
 | 
 | 
 | `back to top <#top>`__
@@ -313,17 +307,17 @@ IDS engines
 I'm currently running ``Snort``. How do I switch to ``Suricata``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`<NIDS#switching-from-snort-to-suricata>`_
+Please see the `<NIDS#switching-from-snort-to-suricata>`_ section.
 
 I'm currently running ``Suricata``. How do I switch to ``Snort``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`<NIDS#switching-from-suricata-to-snort>`_
+Please see the `<NIDS#switching-from-suricata-to-snort>`_ section.
 
 Can Security Onion run in ``IPS`` mode?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`<NIDS#NIPS>`_
+Please see the `<NIDS#NIPS>`_ section.
  
  
 `back to top <#top>`__
@@ -335,22 +329,22 @@ Security Onion internals
 Where can I read more about the tools contained within Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Tools <Tools>`__
+Please see the `Tools <Tools>`__ section.
 
 What's the directory structure of ``/nsm``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`/nsm Directory Structure <DirectoryStructure>`__
+Please see the `/nsm Directory Structure <DirectoryStructure>`__ section.
 
 Why does Security Onion use ``UTC``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`UTC and Time Zones <TimeZones>`__
+Please see the `UTC and Time Zones <TimeZones>`__ section.
 
 Why are the ``timestamps`` in Kibana not in UTC?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`UTC and Time Zones <TimeZones>`__
+Please see the `UTC and Time Zones <TimeZones>`__ section.
 
 Why is my disk filling up?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -365,7 +359,7 @@ Older versions of Security Onion waited 60 seconds after boot to ensure network 
 Why do apt-get and the Update Manager show ``tcl8.5 as held back``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| `tcl <tcl>`__
+Please see the  `tcl <tcl>`__ section.
 | 
 | 
 | `back to top <#top>`__
@@ -378,52 +372,52 @@ Tuning
 What do I need to tune if I'm monitoring VLAN tagged traffic?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`VLAN Traffic <VLAN-Traffic>`__
+Please see the `VLAN Traffic <VLAN-Traffic>`__ section.
 
 How do I configure email for alerting and reporting?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Email <Email>`__
+Please see the `Email <Email>`__ section.
 
 How do I configure a ``BPF`` for ``Snort/Suricata/Bro/netsniff-ng/prads``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`BPF <BPF>`__
+Please see the `BPF <BPF>`__ section.
 
 How do I filter traffic?
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-`BPF <BPF>`__
+Please see the `BPF <BPF>`__ section.
 
 How do I exclude traffic?
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`BPF <BPF>`__
+Please see the `BPF <BPF>`__ section.
 
 What are the default firewall settings and how do I change them?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Firewall <Firewall>`__
+Please see the `Firewall <Firewall>`__ section.
 
 What do I need to modify in order to have the log files stored on a different mount point?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Adding a New Disk for /nsm <NewDisk>`__
+Please see the `Adding a New Disk for /nsm <NewDisk>`__ section.
 
 How do I disable the graphical ``Network Manager`` and configuring networking from the command line?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Network Configuration <NetworkConfiguration>`__
+Please see the `Network Configuration <NetworkConfiguration>`__ section.
 
 How do I enable/disable processes?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Disabling Processes <DisablingProcesses>`__
+Please see the `Disabling Processes <DisablingProcesses>`__ section.
 
 I disabled some Sguil agents but they still appear in Sguil's ``Agent Status`` tab.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Disabling Processes <DisablingProcesses#Sguil_Agent>`__
+Please see the `Disabling Processes <DisablingProcesses#Sguil_Agent>`__ section.
 
 What can I do to decrease the size of my ``securityonion_db`` (sguild) MySQL database?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -435,17 +429,17 @@ What can I do to decrease the size of my ``securityonion_db`` (sguild) MySQL dat
 How do I change the fonts in the Sguil client?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`<Sguil#customize-sguil-client>`_
+Please see the `<Sguil#customize-sguil-client>`_ section.
 
 Can I be alerted when an interface stops receiving traffic?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Interface stops receiving traffic <SensorStopsSeeingTraffic>`__
+Please see the `Interface stops receiving traffic <SensorStopsSeeingTraffic>`__ section.
 
 How do I boot Security Onion to text mode (CLI instead of GUI)?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Disabling Desktop <Desktop>`_
+Please see the `Disabling Desktop <Desktop>`_ section.
 
 I'm running Security Onion in a VM and the screensaver is using lots of CPU. How do I change/disable the screensaver?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -505,12 +499,12 @@ If the machine was built with the Security Onion 16.04 ISO image, version inform
 Where can I find interesting pcaps to replay?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Pcaps <Pcaps>`__
+Please see the `Pcaps <Pcaps>`__ section.
 
 Why is Security Onion connecting to an IP address on the Internet over port 123?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`NTP <NTP>`__
+Please see the `NTP <NTP>`__ section.
 
 Should I backup my Security Onion box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -520,7 +514,7 @@ Network Security Monitoring as a whole is considered "best effort". It is not a 
 How can I add and test local rules?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Adding local rules and testing them with scapy <AddingLocalRules>`__
+Please see the `Adding local rules and testing them with scapy <AddingLocalRules>`__ section.
 
 Where can I get the source code?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -560,7 +554,7 @@ Why do I get segfaults when booting on VMware ESX?
 How do I run ``ntopng`` on Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Deploying NtopNG <DeployingNtopng>`__
+Please see the `Deploying NtopNG <DeployingNtopng>`__ section.
 
 How do I open rar files?
 ~~~~~~~~~~~~~~~~~~~~~~~~
