@@ -98,7 +98,7 @@ You can use Salt and Soup to install updates across your entire deployment, but 
     # If MySQL and/or kernel updates are installed, the sensors will reboot
     sudo salt '*' cmd.run 'soup -y'
 
-Also, please keep in mind that occasionally Ubuntu will release updates that prompt for user input which would cause that last command to hang. If you experience this, you should be able to ssh to each sensor and run ``soup`` interactively. For more information, please see `Issue 1108 <https://github.com/Security-Onion-Solutions/security-onion/issues/1108>`__.
+Also, please keep in mind that occasionally Ubuntu will release updates that prompt for user input which would cause that last command to hang. If you experience this, you should be able to ssh to each sensor and run ``soup`` interactively. For more information, please see https://github.com/Security-Onion-Solutions/security-onion/issues/1108.
 
 Modifying Salt config files
 ---------------------------
