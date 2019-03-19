@@ -48,8 +48,7 @@ To import multiple pcaps:
 Example
 -------
 
-| For a detailed walk-through with screenshots, please see:
-| https://taosecurity.blogspot.com/2018/02/importing-pcap-into-security-onion.html
+For a detailed walk-through with screenshots, please see https://taosecurity.blogspot.com/2018/02/importing-pcap-into-security-onion.html.
 
 Warning
 -------
