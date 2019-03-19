@@ -10,7 +10,7 @@ Classroom
 
 Install Security Onion. Run Setup and configure network interfaces. Reboot, run Setup again, and then choose ``Evaluation Mode``.
 
-For more information, please see the `Quick Evaluation<QuickISOImage>`__ section.
+For more information, please see the `Quick Evaluation <QuickISOImage>`__ section.
 
 Pcap Forensics
 --------------
@@ -22,7 +22,7 @@ Production Server - Standalone
 
 Install Security Onion. Run Setup and configure network interfaces.  Reboot, run Setup again, choose ``Production Mode``, choose ``New Deployment``, and enable network sensor services.
 
-For more information, please see the `Production Deployment<ProductionDeployment>`__ section.
+For more information, please see the `Production Deployment <ProductionDeployment>`__ section.
 
 Production Server - Distributed Deployment
 ------------------------------------------
@@ -45,4 +45,4 @@ Sending Logs to Separate SIEM
 
 You can install Security Onion and then configure it to send logs to a separate SIEM.
 
-For more information, please see the `Syslog Output<syslog-output>`__ section.
+For more information, please see the `Syslog Output <syslog-output>`__ section.
