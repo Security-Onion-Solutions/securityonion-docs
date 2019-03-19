@@ -136,7 +136,7 @@ Please see the `Passwords <Passwords>`__ section.
 How do I add a new user account for logging into Sguil/Squert/Kibana?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please see the `Adding Sguil accounts <Passwords#sguil>`__ section.\ 
+| Please see the `Adding Sguil accounts <Passwords#sguil>`__ section.\ 
 | 
 | `back to top <#top>`__
 | 
@@ -158,7 +158,7 @@ Please see the `Moderation <MailingLists#moderation>`__ section.
 Is commercial support available for Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Yes!  Please see https://securityonionsolutions.com.
+| Yes!  Please see https://securityonionsolutions.com.
 | 
 | 
 | `back to top <#top>`__
