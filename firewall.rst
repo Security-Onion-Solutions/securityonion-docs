@@ -15,3 +15,7 @@ When you run Setup on a sensor-only installation, it will ssh to the master serv
 -  4505/tcp (salt)
 -  4506/tcp (salt)
 -  7736/tcp (sguil)
+
+UFW
+---
+For more information about ``ufw``, please see https://help.ubuntu.com/community/UFW.
