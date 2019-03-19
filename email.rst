@@ -84,8 +84,7 @@ You can then verify the email configuration by looking at the top of sguild's lo
 
     head -20 /var/log/nsm/securityonion/sguild.log
 
-| For more information, please see:
-| http://nsmwiki.org/Sguil\_FAQ#Can\_sguil\_page\_me\_when\_it\_sees\_a\_particular\_alert.3F
+For more information, please see http://nsmwiki.org/Sguil\_FAQ#Can\_sguil\_page\_me\_when\_it\_sees\_a\_particular\_alert.3F.
 
 You may want to install a local mail relay on your master server, configure it to relay mail to your corporate mail server, and then configure Sguil to send email to the local mail relay.
 
@@ -157,4 +156,4 @@ Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
 Lack of network traffic
 -----------------------
 
-If you configured Wazuh or Bro as shown above, they should automatically email you if your network sensors stop seeing traffic.  Another option can be found on the `SensorStopsSeeingTraffic <SensorStopsSeeingTraffic>`__ page.
+If you configured Wazuh or Bro as shown above, they should automatically email you if your network sensors stop seeing traffic.  Another option can be found in the `SensorStopsSeeingTraffic <SensorStopsSeeingTraffic>`__ section.
