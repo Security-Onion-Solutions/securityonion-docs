@@ -96,5 +96,4 @@ If you already had sensors running on these interfaces, you should restart them:
 
    sudo so-sensor-restart
 
-For more information on network configuration in Ubuntu, please see:
-https://help.ubuntu.com/community/NetworkConfigurationCommandLine/Automatic
+For more information on network configuration in Ubuntu, please see https://help.ubuntu.com/community/NetworkConfigurationCommandLine/Automatic.
