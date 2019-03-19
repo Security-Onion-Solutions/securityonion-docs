@@ -72,7 +72,7 @@ Usually this happens when you clone a VM. VMware asks if you moved it or copied 
 Can I run Security Onion on Raspberry Pi or some other non-x86 box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No, we only support x86 and x86-64 architectures. Please see the `hardware <Hardware#32-bit-vs-64-bit>`__ page.
+No, we only support 64-bit Intel/AMD architectures. Please see the `hardware <Hardware#32-bit-vs-64-bit>`__ section.
 
 What's the difference between a ``server`` and a ``sensor``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
