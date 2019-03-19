@@ -16,11 +16,11 @@ Quickly Evaluating Security Onion
 
 If you just want to **quickly evaluate** Security Onion, choose one of the following two options. If you're a first time user, we recommend the first option.
 
--  `Download our Security Onion ISO image and Quickly Evaluate <QuickISOImage>`__
+-  To quickly evaluate using **our Security Onion ISO image**, please see the `<QuickISOImage>`__ section.
 
 OR
 
--  `Quickly Evaluating Security Onion using **your preferred flavor of Ubuntu 16.04** <InstallingOnUbuntu>`__
+-  To quickly evaluate using **your preferred flavor of Ubuntu 16.04**, please see the `<InstallingOnUbuntu>`__ section.
 
 Production Deployment
 ~~~~~~~~~~~~~~~~~~~~~
