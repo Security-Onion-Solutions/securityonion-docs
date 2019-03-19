@@ -10,9 +10,7 @@ We recommend using our ``soup`` script to update. ``Soup`` will automatically in
 
     sudo soup
 
-| Please pay attention to the output of this command as it may request that you take specific action, such as manually restarting services. Also refer to the relevant blog entry for the update as there may be additional information there: 
-| https://blog.securityonion.net
-
+Please pay attention to the output of this command as it may request that you take specific action, such as manually restarting services. Also refer to the relevant blog entry for the update at https://blog.securityonion.net as there may be additional information there.
 
 Snort/Suricata
 --------------
@@ -121,4 +119,4 @@ The ``soup`` command described above is the recommended method to install update
 Upgrades
 --------
 
-To upgrade from Security Onion 14.04 to Security Onion 16.04, please see `Upgrading-from-14.04-to-16.04 <Upgrading-from-14.04-to-16.04>`__.
+To upgrade from Security Onion 14.04 to Security Onion 16.04, please see the `Upgrading-from-14.04-to-16.04 <Upgrading-from-14.04-to-16.04>`__ section.
