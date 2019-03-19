@@ -11,4 +11,4 @@ Wazuh checks your sniffing interfaces every 10 minutes. If no packets have been 
 Bro
 ---
 
-Bro will automatically email you when it stops seeing traffic on an interface. All you have to do is configure Bro per the `Email <Email>`__ page.
+Bro will automatically email you when it stops seeing traffic on an interface. All you have to do is configure Bro per the `Email <Email>`__ section.
