@@ -1,7 +1,7 @@
 Elasticsearch
 =============
 
-From: https://www.elastic.co/products/elasticsearch
+From https://www.elastic.co/products/elasticsearch:
 
     Elasticsearch is a distributed, RESTful search and analytics engine
     capable of solving a growing number of use cases. As the heart of
