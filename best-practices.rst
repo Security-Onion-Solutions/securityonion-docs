@@ -33,4 +33,4 @@ And then disable them so they don't start on reboot:
     sudo sed -i 's|ARGUS_ENABLED="yes"|ARGUS_ENABLED="no"|g' /etc/nsm/*/sensor.conf
     sudo sed -i 's|HTTP_AGENT_ENABLED="yes"|HTTP_AGENT_ENABLED="no"|g' /etc/nsm/*/sensor.conf
 
-For more information, please see `Disabling Processes <DisablingProcesses#disabling-a-process>`__.
+For more information, please see the `Disabling Processes <DisablingProcesses#disabling-a-process>`__ section.
