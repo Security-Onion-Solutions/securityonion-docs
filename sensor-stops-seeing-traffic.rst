@@ -6,8 +6,7 @@ If you want an alert when your sensor stops seeing traffic, there are a few opti
 Wazuh
 -----
 
-Wazuh checks your sniffing interfaces every 10 minutes. If no packets have been received within that 10 minute window, then Wazuh will generate an alert. This alert can be found in Sguil, Squert, and Kibana. If you'd like Wazuh to email you, then configure it for email as shown here:
-`<Email#how-do-i-configure-ossec-to-send-emails>`__
+Wazuh checks your sniffing interfaces every 10 minutes. If no packets have been received within that 10 minute window, then Wazuh will generate an alert. This alert can be found in Sguil, Squert, and Kibana. If you'd like Wazuh to email you, then configure it for email as shown in the `Email <Email>`__ section.
 
 Bro
 ---
