@@ -20,9 +20,7 @@ Project and from ntp.ubuntu.com. From ``/etc/ntp.conf``:
 Modifying
 ---------
 
-You may want to change this default NTP config to use your preferred NTP
-provider. For more information, please see
-https://help.ubuntu.com/lts/serverguide/NTP.html
+You may want to change this default NTP config to use your preferred NTP provider. For more information, please see https://help.ubuntu.com/lts/serverguide/NTP.html.
 
 IDS Alerts
 ----------
