@@ -84,5 +84,4 @@ Steps
 MISP
 ----
 
-| If you would like to pull in NIDS rules from a MISP instance, please see:
-| `MISP Rules <MISP>`__
+If you would like to pull in NIDS rules from a MISP instance, please see the `MISP Rules <MISP>`__ section.
