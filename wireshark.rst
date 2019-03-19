@@ -20,5 +20,4 @@ Alternatively, if you're using the Sguil client, you can pivot directly from an 
 More Information
 ----------------
 
-| For more information about Wireshark, please see:
-| https://www.wireshark.org/
+For more information about Wireshark, please see https://www.wireshark.org/.
