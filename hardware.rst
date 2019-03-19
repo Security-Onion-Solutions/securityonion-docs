@@ -13,7 +13,7 @@ If your hardware has UEFI, please see https://help.ubuntu.com/community/UEFI.
 UEFI Secure Boot
 ----------------
 
-If your hardware has UEFI Secure Boot enabled, please see `Secure Boot <Secure-Boot>`__.
+If your hardware has UEFI Secure Boot enabled, please see the `Secure Boot <Secure-Boot>`__ section.
 
 UPS
 ---
