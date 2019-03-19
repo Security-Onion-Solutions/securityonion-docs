@@ -6,7 +6,7 @@ This article will show how to connect to the Sguil server to view security alert
 Connecting to Sguild from an Analyst Machine
 --------------------------------------------
 
-To directly connect to a Sguild server one must possess a working Sguil client. Sguil may not be easy or available for install on certain operating systems. Because of this we recommend installing Security Onion in a virtual machine on your workstation and use that to connect to sguild on your production Security Onion instance.  For more information, please see: `<Analyst-VM>`_.
+To directly connect to a Sguild server one must possess a working Sguil client. Sguil may not be easy or available for install on certain operating systems. Because of this we recommend installing Security Onion in a virtual machine on your workstation and use that to connect to sguild on your production Security Onion instance.  For more information, please see the `<Analyst-VM>`_ section.
 
 Connect to Sguild Locally (not recommended)
 -------------------------------------------
