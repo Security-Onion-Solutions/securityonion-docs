@@ -77,16 +77,6 @@ of what I've got working
 
 VLAN
 ~~~~
-
-Note 2014-02-24: BPF support for VLAN filtering may be broken in certain
-3.x kernels. Please see:
-
-https://groups.google.com/d/topic/security-onion/DLvzwRYVdxg/discussion
-
-http://seclists.org/tcpdump/2013/q1/35
-
-https://groups.google.com/d/topic/netsniff-ng/L2Ozks6DqAE/discussion
-
 From Seth Hall regarding VLAN tags:
 
 ::
@@ -112,6 +102,7 @@ and no tags simultaneously. Bro 2.0 should work fine at least.
 
 Troubleshooting BPF using tcpdump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you need to troubleshoot BPF, you can use ``tcpdump`` as shown in the following articles.
 
 http://taosecurity.blogspot.com/2004/09/understanding-tcpdumps-d-option-have.html
 
