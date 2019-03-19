@@ -54,7 +54,7 @@ Wazuh package upgrades will back up your ``ossec.conf`` and put the new ``ossec.
 MySQL
 -----
 
-If you get any errors relating to MySQL, please see `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__.
+If you get any errors relating to MySQL, please see the `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__ section.
 
 Initiating an update over SSH
 -----------------------------
