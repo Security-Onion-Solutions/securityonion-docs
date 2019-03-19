@@ -48,7 +48,7 @@ Please note that both of these options will cause netsniff-ng to consume more RA
 Reducing Storage
 ----------------
 
-Full packet capture obviously requires lots of disk space. Trimming your pcaps can allow you to store pcap for longer periods of time. For more information, please see `Trimming PCAPs <Trimming-PCAPs>`_.
+Full packet capture obviously requires lots of disk space. Trimming your pcaps can allow you to store pcap for longer periods of time. For more information, please see the `Trimming PCAPs <Trimming-PCAPs>`_ section.
 
 More Information
 ----------------
