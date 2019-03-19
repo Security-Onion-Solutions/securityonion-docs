@@ -13,7 +13,4 @@ If you choose to use an Ubuntu image instead the Security Onion image and want t
 
 More information
 ----------------
-
-For more information, please see:
-
-https://wiki.ubuntu.com/Kernel/LTSEnablementStack
+For more information, please see https://wiki.ubuntu.com/Kernel/LTSEnablementStack.
