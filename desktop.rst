@@ -11,5 +11,4 @@ You can disable the GUI after the system is fully configured:
    sudo systemctl set-default multi-user.target
    sudo reboot
 
-| For more information, please see:
-| http://askubuntu.com/questions/16371/how-do-i-disable-x-at-boot-time-so-that-the-system-boots-in-text-mode
+For more information, please see http://askubuntu.com/questions/16371/how-do-i-disable-x-at-boot-time-so-that-the-system-boots-in-text-mode.
