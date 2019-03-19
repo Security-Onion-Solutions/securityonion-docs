@@ -34,9 +34,7 @@ Installation
 
 For new deployments, `Best Practices <Best-Practices>`__ (Production Mode) checks to see if the ``securityonion-onionsalt`` package is installed and, if so, enables Salt by default. If choosing the "Custom" configuration option (Production Mode), simply answer "Yes" at the prompt (where applicable), and setup will configure salt-master and/or salt-minion services and open firewall ports as necessary.
 
-For existing deployments, please see:
-
-`Existing Deployment <Salt#salting-an-existing-deployment>`__
+For existing deployments, please see the `Existing Deployment <Salt#salting-an-existing-deployment>`__ section.
 
 Checking Status
 ---------------
@@ -191,7 +189,7 @@ Configure the Master Server first
     # OR preferably just allow from your sensor IP addresses like this:
     # sudo ufw allow proto tcp from a.b.c.d to any port 4505,4506
     # Also see our Firewall page:
-    # https://securityonion.net/wiki/Firewall
+    # https://securityonion.net/docs/Firewall
 
     # Configure minion
     echo "master: localhost" | sudo tee -a /etc/salt/minion.d/onionsalt.conf
