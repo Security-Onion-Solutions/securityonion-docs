@@ -71,8 +71,7 @@ If you find that you need this option, you can add the following to ``/etc/nsm/s
 
     PULLEDPORK_OPTIONS="-W"
 
-For older versions of PulledPork and certain proxies (Bluecoat in particular), you may need to change from ``https`` to ``http`` in
-  ``/etc/nsm/pulledpork/pulledpork.conf``. For more information, please see:
+For older versions of PulledPork and certain proxies (Bluecoat in particular), you may need to change from ``https`` to ``http`` in ``/etc/nsm/pulledpork/pulledpork.conf``. For more information, please see:
  
 `PulledPork Issue 154 <https://code.google.com/archive/p/pulledpork/issues/154>`__
 
