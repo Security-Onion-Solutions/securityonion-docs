@@ -156,4 +156,4 @@ Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
 Lack of network traffic
 -----------------------
 
-If you configured Wazuh or Bro as shown above, they should automatically email you if your network sensors stop seeing traffic.  Another option can be found in the `SensorStopsSeeingTraffic <SensorStopsSeeingTraffic>`__ section.
+If you configured Wazuh or Bro as shown above, they should automatically email you if your network sensors stop seeing traffic.  
