@@ -73,8 +73,7 @@ If you're updating your Security Onion box over an SSH connection and your conne
 
     # you're now ready to update
 
-| For more information about ``byobu``, please see:
-| https://help.ubuntu.com/community/Byobu
+For more information about ``byobu``, please see https://help.ubuntu.com/community/Byobu.
 
 Distributed deployments
 -----------------------
@@ -122,5 +121,4 @@ The ``soup`` command described above is the recommended method to install update
 Upgrades
 --------
 
-To upgrade from Security Onion 14.04 to Security Onion 16.04, please see
-`Upgrading-from-14.04-to-16.04 <Upgrading-from-14.04-to-16.04>`__.
+To upgrade from Security Onion 14.04 to Security Onion 16.04, please see `Upgrading-from-14.04-to-16.04 <Upgrading-from-14.04-to-16.04>`__.
