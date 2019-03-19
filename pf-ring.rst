@@ -72,4 +72,4 @@ After creating/editing ``/etc/modprobe.d/pf_ring.conf``, you'll need to reload t
 Updating
 --------
 
-Please see the `Upgrade <Upgrade>`__ page for notes on updating the PF-RING kernel module.
+Please see the `Upgrade <Upgrade>`__ section for notes on updating the PF-RING kernel module.
