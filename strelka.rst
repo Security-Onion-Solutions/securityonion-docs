@@ -13,4 +13,4 @@ Please keep in mind we do not officially support Strelka, so installation is at 
 Installation
 ------------
 
-Please see: https://github.com/weslambert/securityonion-strelka
+For installation instructions, please see https://github.com/weslambert/securityonion-strelka.
