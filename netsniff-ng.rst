@@ -53,5 +53,4 @@ Full packet capture obviously requires lots of disk space. Trimming your pcaps c
 More Information
 ----------------
 
-| For more information about netsniff-ng, please see:
-| http://netsniff-ng.org/
+For more information about netsniff-ng, please see http://netsniff-ng.org/.
