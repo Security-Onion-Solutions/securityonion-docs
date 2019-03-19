@@ -158,8 +158,7 @@ Please see the `Moderation <MailingLists#moderation>`__ section.
 Is commercial support available for Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Yes!  Please see:
-| https://securityonionsolutions.com
+Yes!  Please see https://securityonionsolutions.com.
 | 
 | 
 | `back to top <#top>`__
