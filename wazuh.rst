@@ -22,8 +22,7 @@ Additionally, you may want to:
 
 -  `Send Wazuh logs to an external syslog collector <ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector>`__
 
-| For more information about Wazuh, please see:
-| https://documentation.wazuh.com/3.8/
+For more information about Wazuh, please see https://documentation.wazuh.com/3.8/.
 
 Active Response
 ---------------
