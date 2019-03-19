@@ -31,7 +31,7 @@ Install Security Onion on the master server box. Run Setup and configure network
  
 Install Security Onion on one or more nodes and then on each one: run Setup, configure network interfaces, reboot, run Setup again, choose ``Production Mode``, and then choose ``Existing Deployment`` to join to master.
 
-For more information, please see the `Production Deployment<ProductionDeployment>`__ section.
+For more information, please see the `Production Deployment <ProductionDeployment>`__ section.
 
 Analyst VM
 ----------
