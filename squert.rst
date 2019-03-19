@@ -118,5 +118,4 @@ Prepared Statements
 | Squert uses prepared statements:
 | https://blog.securityonion.net/2018/01/security-advisory-for-squert.html
 |
-| If you start seeing ``Prepared statement needs to be re-prepared`` in ``/var/log/apache2/error.log``, please see the following:
-| `<MySQLTuning#table_definition_cache>`__
+| If you start seeing ``Prepared statement needs to be re-prepared`` in ``/var/log/apache2/error.log``, please see the `<MySQLTuning#table_definition_cache>`__ section.
