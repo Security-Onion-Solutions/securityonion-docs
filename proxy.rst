@@ -53,8 +53,7 @@ If you're going to run something using sudo, remember to use the ``-i`` option t
 
     sudo -i rule-update
 
-| Alternatively, see the ``env_keep`` option under the ``sudo caveat`` section of the following page:
-| https://help.ubuntu.com/community/EnvironmentVariables
+Alternatively, see the ``env_keep`` option under the ``sudo caveat`` section of https://help.ubuntu.com/community/EnvironmentVariables.
 
 PulledPork
 ----------
@@ -72,11 +71,10 @@ If you find that you need this option, you can add the following to ``/etc/nsm/s
 
     PULLEDPORK_OPTIONS="-W"
 
-| For older versions of PulledPork and certain proxies (Bluecoat in particular), you may need to change from https to http in
+For older versions of PulledPork and certain proxies (Bluecoat in particular), you may need to change from ``https`` to ``http`` in
   ``/etc/nsm/pulledpork/pulledpork.conf``. For more information, please see:
-| 
-| `PulledPork Issue
-  154 <https://code.google.com/archive/p/pulledpork/issues/154>`__
+ 
+`PulledPork Issue 154 <https://code.google.com/archive/p/pulledpork/issues/154>`__
 
 https://groups.google.com/d/topic/security-onion/NQ-dLLPxR6A/discussion
 
