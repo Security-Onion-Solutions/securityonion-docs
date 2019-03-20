@@ -14,7 +14,7 @@ Screenshot
 
 Authentication
 --------------
-If prompted for username/password, simply enter your normal Sguil/Squert/Kibana username/password.
+If prompted for username and password, simply enter your normal Sguil/Squert/Kibana username and password.
 
 Configuration
 -------------
