@@ -16,13 +16,20 @@ Security Onion Usage
 
 Security Onion uses Wazuh as a Host Intrusion Detection System (HIDS). Wazuh is monitoring and defending Security Onion itself and you can add Wazuh agents to monitor other hosts on your network as well.
 
-Additionally, you may want to:
+Configuration
+-------------
 
--  `Configure Wazuh to send email notification(s) <Email#how-do-i-configure-ossec-to-send-emails>`__
+The main configuration file for Wazuh is ``/var/ossec/etc/ossec.conf``.
 
--  `Send Wazuh logs to an external syslog collector <ThirdPartyIntegration#how-do-i-send-bro-and-ossec-logs-to-an-external-syslog-collector>`__
+Email
+-----
 
-For more information about Wazuh, please see https://documentation.wazuh.com/3.8/.
+If you want to configure Wazuh to send email, please see the `<Email>` section.
+
+Syslog
+------
+
+If you want to send Wazuh logs to an external syslog collector, please see the `<syslog-output>` section.
 
 Active Response
 ---------------
@@ -63,7 +70,7 @@ Security Onion is configured to support a maximum number of ``14000`` Wazuh agen
 Automated Deployment
 --------------------
 
-| Wazuh includes ``ossec-authd``:
+| If you would like to automate the deployment of Wazuh agents, the Wazuh server includes ``ossec-authd``:
 | https://documentation.wazuh.com/3.8/user-manual/reference/daemons/ossec-authd.html
 
 Downloads
@@ -71,3 +78,7 @@ Downloads
 
 | You can download Wazuh agents here:
 | https://documentation.wazuh.com/3.8/installation-guide/packages-list/index.html
+
+More Information
+----------------
+For more information about Wazuh, please see https://documentation.wazuh.com/3.8/.
