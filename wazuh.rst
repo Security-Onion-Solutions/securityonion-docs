@@ -24,12 +24,12 @@ The main configuration file for Wazuh is ``/var/ossec/etc/ossec.conf``.
 Email
 -----
 
-If you want to configure Wazuh to send email, please see the `<Email>` section.
+If you want to configure Wazuh to send email, please see the `<Email>`_ section.
 
 Syslog
 ------
 
-If you want to send Wazuh logs to an external syslog collector, please see the `<syslog-output>` section.
+If you want to send Wazuh logs to an external syslog collector, please see the `<syslog-output>`_ section.
 
 Active Response
 ---------------
