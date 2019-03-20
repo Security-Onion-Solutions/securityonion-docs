@@ -1,6 +1,8 @@
 Syslog Output
 =============
 
+Please keep in mind that we don’t provide free support for third party systems, so this section will be just a brief introduction to how you would send syslog to external syslog collectors. If you need commercial support, please see https://www.securityonionsolutions.com.
+
 How do I send Bro and Wazuh logs to an external syslog collector?
 -----------------------------------------------------------------
 
