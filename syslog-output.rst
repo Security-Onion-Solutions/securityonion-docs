@@ -1,7 +1,7 @@
 Syslog Output
 =============
 
-How do I send Bro and OSSEC logs to an external syslog collector?
+How do I send Bro and Wazuh logs to an external syslog collector?
 -----------------------------------------------------------------
 
 Configure ``/etc/syslog-ng/syslog-ng.conf`` with a new ``destination`` to forward to your external syslog collector and then restart ``syslog-ng``.
