@@ -37,7 +37,7 @@ Services
    
       sudo so-start
 
--  If you have problems with Snort/Suricata/Bro/PF_RING and have UEFI Secure Boot enabled, please see the `Secure Boot <Secure-Boot>`__ section.
+-  If you have problems with Snort/Suricata/Bro/PF-RING and have UEFI Secure Boot enabled, please see the `Secure Boot <Secure-Boot>`__ section.
 
 -  Log into `<Sguil>`_, `<Squert>`_, and `<Kibana>`_ and verify that you have events in the interfaces.  If you don't have any IDS alerts, you can try to generate one by typing the following at a terminal (only works if you have Internet access):
 
