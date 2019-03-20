@@ -19,4 +19,4 @@ You can pivot to CapME from a NIDS alert in `Squert <Squert>`__ or from any log 
 Authentication
 --------------
 
-If prompted for username/password, simply enter your normal Sguil/Squert/Kibana username/password.
+If prompted for username and password, simply enter your normal Sguil/Squert/Kibana username and password.
