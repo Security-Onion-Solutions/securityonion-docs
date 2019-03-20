@@ -93,14 +93,14 @@ The ``soup`` command described above is the recommended method to install update
 
 -  MySQL - if you've already run Setup, please see the `recommended procedure for updating the MySQL packages <MySQLUpdates>`__.
 
--  | PF_RING and new kernel packages
-   | You may be prompted to update your kernel packages and PF_RING at the same time. If you do so, the PF_RING kernel module may get built for your current kernel and not for the newly installed kernel and upon reboot services will fail. To avoid this, you should install just the PF_RING kernel module by itself and then install the kernel and any other remaining package updates. Here's a one-liner that will do that:
+-  | PF-RING and new kernel packages
+   | You may be prompted to update your kernel packages and PF-RING at the same time. If you do so, the PF-RING kernel module may get built for your current kernel and not for the newly installed kernel and upon reboot services will fail. To avoid this, you should install just the PF-RING kernel module by itself and then install the kernel and any other remaining package updates. Here's a one-liner that will do that:
 
    ::
 
        sudo apt-get update ; sudo apt-get install securityonion-pfring-module ; sudo apt-get dist-upgrade
 
-   If you accidentally install both the kernel and PF_RING packages at the same time and then reboot and find out that PF_RING services (Snort and Suricata) are failing, you can reinstall the ``securityonion-pfring-module`` package:
+   If you accidentally install both the kernel and PF-RING packages at the same time and then reboot and find out that PF-RING services (Snort and Suricata) are failing, you can reinstall the ``securityonion-pfring-module`` package:
 
    ::
 
