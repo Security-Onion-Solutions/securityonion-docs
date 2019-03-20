@@ -1,6 +1,8 @@
 Appendix
 ========
 
+This appendix covers the process of upgrading older 14.04/ELSA boxes.
+
 .. toctree::
    :maxdepth: 2
 
