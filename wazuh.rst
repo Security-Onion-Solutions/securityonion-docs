@@ -1,9 +1,6 @@
 Wazuh
 =====
 
-| Wazuh has replaced OSSEC:
-| https://blog.securityonion.net/2018/10/wazuh-361-elastic-641-and-associated.html
-
 Description
 -----------
 
@@ -15,6 +12,9 @@ Security Onion Usage
 --------------------
 
 Security Onion uses Wazuh as a Host Intrusion Detection System (HIDS). Wazuh is monitoring and defending Security Onion itself and you can add Wazuh agents to monitor other hosts on your network as well.
+
+| Wazuh replaced OSSEC:
+| https://blog.securityonion.net/2018/10/wazuh-361-elastic-641-and-associated.html
 
 Configuration
 -------------
