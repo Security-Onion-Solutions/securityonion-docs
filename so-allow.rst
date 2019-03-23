@@ -1,7 +1,7 @@
 so-allow
 ========
 
-Setup locks down the `firewall <Firewall>`_ by default.  If you need to open ports for OSSEC agents, syslog devices, or analyst VMs, you can run ``so-allow`` and it will walk you through this process. ``so-allow`` also provides an option to add firewall rules for sensors although you shouldn't need this under normal circumstances since they should automatically add their own rules.
+Setup locks down the `firewall <Firewall>`_ by default.  If you need to open ports for Wazuh agents, syslog devices, or analyst VMs, you can run ``so-allow`` and it will walk you through this process. ``so-allow`` also provides an option to add firewall rules for sensors although you shouldn't need this under normal circumstances since they should automatically add their own rules.
 
 ::
 
