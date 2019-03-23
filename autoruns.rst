@@ -16,7 +16,7 @@ From https://technet.microsoft.com/en-us/sysinternals/bb963902.aspx:
 Integration
 -----------
 
-OSSEC
+Wazuh
 ~~~~~
 
 Currently, our Autoruns dashboard in Kibana works only with Autoruns logs shipped via Wazuh. If you are trying to ship Autoruns logs via Winlogbeat, you can create a custom dashboard and visualizations that reference the ``logstash-beats-*`` indices, or view Autoruns logs via the ``Beats`` dashboard.
