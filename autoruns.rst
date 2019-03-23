@@ -19,7 +19,7 @@ Integration
 OSSEC
 ~~~~~
 
-Currently, our Autoruns dashboard in Kibana works only with Autoruns logs shipped via OSSEC. If you are trying to ship Autoruns logs via Winlogbeat, you can create a custom dashboard and visualizations that reference the ``logstash-beats-*`` indices, or view Autoruns logs via the ``Beats`` dashboard.
+Currently, our Autoruns dashboard in Kibana works only with Autoruns logs shipped via Wazuh. If you are trying to ship Autoruns logs via Winlogbeat, you can create a custom dashboard and visualizations that reference the ``logstash-beats-*`` indices, or view Autoruns logs via the ``Beats`` dashboard.
 
 Pertinax
 ~~~~~~~~
