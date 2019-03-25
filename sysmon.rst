@@ -39,5 +39,7 @@ Downloads
 More Information
 ----------------
 
-| How to Go from Responding to Hunting with Sysinternals Sysmon:
+For more information about sysmon, please see https://technet.microsoft.com/en-us/sysinternals/sysmon.
+
+| Also see "How to Go from Responding to Hunting with Sysinternals Sysmon":
 | https://onedrive.live.com/view.aspx?resid=D026B4699190F1E6!2843&ithint=file%2cpptx
