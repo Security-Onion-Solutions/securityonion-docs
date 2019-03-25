@@ -27,9 +27,6 @@ Configuration
   point:
 | https://github.com/SwiftOnSecurity/sysmon-config
 
-| You may also want to read this article for additional explanation:
-| https://medium.com/@lennartkoopmann/explaining-and-adapting-tays-sysmon-configuration-27d9719a89a8#.bgzhylmn8
-
 Downloads
 ---------
 
