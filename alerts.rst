@@ -466,7 +466,7 @@ Once the correct suppression has been placed in ``threshold.conf``, restart the 
 Autocategorize events
 ---------------------
 
-The sguild server can be set to autocategorize events as it processes them. This is a great way to have sguil process the events for us as it sees them, saving us from any laborious categorization. Our current Sguil packages have an AutoCat builder in the Sguil client and in the Squert web interface.
+The sguild server can be set to autocategorize events as it processes them. This is a great way to have sguil process the events for us as it sees them, saving us from any laborious categorization. In the Sguil console, you can create an autocat by right-clicking the event status or by clicking File -> Autocat.  In Squert, you can click the Autocat icon in the upper right corner.
 
 Why is pulledpork ignoring disabled rules in downloaded.rules
 -------------------------------------------------------------
