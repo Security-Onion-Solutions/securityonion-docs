@@ -1,11 +1,9 @@
 Syslog
 ======
 
-From https://syslog-ng.org:
+From https://www.syslog-ng.com/products/open-source-log-management/:
 
-    syslog-ng allows you to flexibly collect, parse, classify, and
-    correlate logs from across your infrastructure and store or route
-    them to log analysis tools.
+    With syslog-ng, you can collect logs from any source, process them in real time and deliver them to a wide variety of destinations. syslog-ng allows you to flexibly collect, parse, classify, rewrite and correlate logs from across your infrastructure and store or route them to log analysis tools.
 
 Usage
 -----
