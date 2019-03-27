@@ -14,14 +14,6 @@ Configuration
 Shards
 ~~~~~~
 
-From
-https://www.elastic.co/guide/en/elasticsearch/reference/current/_basic_concepts.html:
-
-    Each Elasticsearch shard is a Lucene index. There is a maximum
-    number of documents you can have in a single Lucene index. As of
-    LUCENE-5843, the limit is 2,147,483,519 (= Integer.MAX\_VALUE - 128)
-    documents.
-
 Here are a few tips from
 https://www.elastic.co/blog/how-many-shards-should-i-have-in-my-elasticsearch-cluster:
 
