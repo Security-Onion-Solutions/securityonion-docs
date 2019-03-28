@@ -182,7 +182,7 @@ When using storage nodes, Logstash on the master server outputs to `Redis <Redis
 Data Fields
 -----------
 
-Logstash process Bro logs, syslog, IDS alerts, etc., formatting said data into many different data fields, as described on the `Data Fields <Data-Fields>`__ page.
+Logstash process Bro logs, syslog, IDS alerts, etc., formatting said data into many different data fields, as described in the `Data Fields <Data-Fields>`__ section.
 
 Log
 ---
