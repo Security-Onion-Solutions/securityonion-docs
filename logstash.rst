@@ -91,7 +91,7 @@ You can also test the template before restarting Logstash, by using the followin
 
 If mappings defined in the template are different than in existing indices, you will receive mapping conflicts in Kibana.
 
-To avoid this, either remove the existing indices, wiping all data, or `re-index <Re‐Indexing>`__.
+To avoid this, either remove the existing indices, wiping all data, or `re-index <re‐indexing.html>`__.
 
 Logging
 ~~~~~~~
