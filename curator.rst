@@ -2,7 +2,7 @@ Curator
 =======
 
 From:
-https://www.elastic.co/guide/en/elasticsearch/client/curator/5.1/about.html#about
+https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about
 
     Elasticsearch Curator helps you curate, or manage, your
     Elasticsearch indices and snapshots by:
