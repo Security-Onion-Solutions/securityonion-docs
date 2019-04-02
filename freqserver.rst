@@ -55,30 +55,41 @@ Kibana
 
 You can find FreqServer data on the Frequency Analysis dashboard.
 
-DNS Frequency Analysis
-----------------------
+DNS Highest Registered Domain Frequency Analysis
+------------------------------------------------
+|freq1-dns|
 
-| |freq1-dns|
-| |freq2-dns|
+DNS Parent Domain Frequency Analysis
+------------------------------------
+|freq2-dns|
 
 HTTP Frequency Analysis
 -----------------------
-
 |freq3-http|
 
-SSL Frequency Analysis
-----------------------
+SSL Certificate Common Name Frequency Analysis
+----------------------------------------------
+|freq4-ssl|
 
-| |freq4-ssl|
-| |freq5-ssl|
-| |freq6-ssl|
+SSL Certificate Server Name Frequency Analysis
+----------------------------------------------
+|freq5-ssl|
 
-X.509 Frequency Analysis
-------------------------
+SSL Certificate Issuer Name Frequency Analysis
+----------------------------------------------
+|freq6-ssl|
 
-| |freq7-x509|
-| |freq8-x509|
-| |freq9-x509|
+X.509 Certificate Common Name Frequency Analysis
+------------------------------------------------
+|freq7-x509|
+
+X.509 Certificate Issuer Organization Frequency Analysis
+--------------------------------------------------------
+|freq8-x509|
+
+X.509 Certificate Issuer Frequency Analysis
+-------------------------------------------
+|freq9-x509|
 
 .. |freq1-dns| image:: https://user-images.githubusercontent.com/1659467/30856300-e60be17a-a285-11e7-87fc-acc27665cd7e.PNG
 .. |freq2-dns| image:: https://user-images.githubusercontent.com/1659467/30856292-e5d0b186-a285-11e7-875e-7e55c4684507.PNG
