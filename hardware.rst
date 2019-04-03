@@ -155,7 +155,7 @@ You need some way of getting packets into your sensor interface(s). If you're ju
 | http://www.dual-comm.com/port-mirroring-LAN\_switch.htm
 
 | Dirt Cheap and Versatile:
-| http://www.roc-noc.com/mikrotik/routerboard/RB260GS.html
+| https://mikrotik.com/product/RB260GS
 
 | Netgear GS105E (requires Windows app for config):
 | https://www.netgear.com/support/product/GS105E.aspx
@@ -182,6 +182,7 @@ Enterprise Tap Solutions:
 -  `Garland Technologies
    Taps <https://www.garlandtechnology.com/products>`__
 -  `APCON <https://www.apcon.com/products>`__
+-  `Profitap <https://www.profitap.com>`__
 
 Further Reading
 ~~~~~~~~~~~~~~~
