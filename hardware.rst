@@ -169,6 +169,7 @@ You need some way of getting packets into your sensor interface(s). If you're ju
 | More exhaustive list of enterprise switches with port mirroring:
 | http://www.miarec.com/knowledge/switches-port-mirroring
 
+
 Enterprise Tap Solutions:
 
 -  `Net Optics /
