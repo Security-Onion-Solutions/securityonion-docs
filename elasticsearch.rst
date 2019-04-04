@@ -41,6 +41,14 @@ To see your existing shards:
 
 ::
 
+    curl localhost:9200/_cat/indices
+    
+The number of shards will be shown in the fifth column.
+
+If you want to view the detail for each of those shards:
+
+::
+
     curl localhost:9200/_cat/shards
 
 The number of shards for an index is defined in the template file for that index.  By default, there are three template files in ``/etc/logstash/``:
