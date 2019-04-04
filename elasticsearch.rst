@@ -49,7 +49,7 @@ If you want to increase shards for ``logstash-ossec``:
 
 - First, copy ``/etc/logstash/logstash-ossec-template.json`` to ``/etc/logstash/custom/``:
 
-::
+  ::
 
 sudo cp /etc/logstash/logstash-ossec-template.json to /etc/logstash/custom/
 
@@ -58,7 +58,7 @@ sudo cp /etc/logstash/logstash-ossec-template.json to /etc/logstash/custom/
 
 - Finally, restart Logstash to push the new template to Elasticsearch:
 
-::
+  ::
 
 sudo so-logstash-restart
 
