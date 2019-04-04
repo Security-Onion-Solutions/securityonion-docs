@@ -51,7 +51,7 @@ If you want to increase shards for ``logstash-ossec``:
 
   ::
 
-sudo cp /etc/logstash/logstash-ossec-template.json to /etc/logstash/custom/
+    sudo cp /etc/logstash/logstash-ossec-template.json to /etc/logstash/custom/
 
 
 - Then, update your new template in ``/etc/logstash/custom/logstash-ossec-template.json``.
@@ -60,7 +60,7 @@ sudo cp /etc/logstash/logstash-ossec-template.json to /etc/logstash/custom/
 
   ::
 
-sudo so-logstash-restart
+    sudo so-logstash-restart
 
 
 If you want to increase shards for all indices defined in ``logstash-template.json``, then you can follow a process similar to what was shown above for ``logstash-ossec``.  However, if you want to increase shard count for only one index type (example: bro), you can update the template as follows:
