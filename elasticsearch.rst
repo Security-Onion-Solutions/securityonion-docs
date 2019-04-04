@@ -68,13 +68,16 @@ If you want to increase shards for all indices defined in ``logstash-template.js
 - Then, update your new template, changing the ``index_patterns`` line to only apply to the index you care about, increasing the value of the ``order`` field from ``0`` to ``1``, and setting your ``number_of_shards``.
 - Next, we need to tell logstash to use this new template, so update the proper output file in /etc/logstash/conf.d/ and update the template value.
 - Then, we need to configure the Logstash container to be able to access the template by updating ``LOGSTASH_OPTIONS`` in ``/etc/nsm/securityonion.conf`` similar to the following:
-```
-LOGSTASH_OPTIONS="--volume /etc/logstash/logstash-bro-template.json:/logstash-bro-template.json:ro"
-```
+
+  ::
+  
+    LOGSTASH_OPTIONS="--volume /etc/logstash/logstash-bro-template.json:/logstash-bro-template.json:ro"
+
 - Finally, restart Logstash to push the new template to Elasticsearch:
-```
-sudo so-logstash-restart
-```
+
+  ::
+  
+    sudo so-logstash-restart
 
 Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
 
