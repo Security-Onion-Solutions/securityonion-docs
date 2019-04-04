@@ -43,7 +43,7 @@ To see your existing shards:
 
     curl localhost:9200/_cat/shards
 
-The number of shards is defined in the template file.  By default, there are two template files in ``/etc/logstash/``.  The first is ``logstash-ossec-template.json`` and it only applies to ``logstash-ossec`` indices.  The second template file is ``logstash-template.json`` and it applies to ``logstash-ids``, ``logstash-firewall``, ``logstash-syslog``, ``logstash-bro``, ``logstash-import``, and ``logstash-beats``.  Depending on which index you want to increase shards for, you have a few options.
+The number of shards for an index is defined in the template file for that index.  By default, there are two template files in ``/etc/logstash/``.  The first is ``logstash-ossec-template.json`` and it only applies to ``logstash-ossec`` indices.  The second template file is ``logstash-template.json`` and it applies to ``logstash-ids``, ``logstash-firewall``, ``logstash-syslog``, ``logstash-bro``, ``logstash-import``, and ``logstash-beats``.  Depending on which index you want to increase shards for, you have a few options.
 
 If you want to increase shards for ``logstash-ossec``:
 
