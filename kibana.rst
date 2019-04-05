@@ -84,26 +84,38 @@ Plugins
 
 To add a plugin to Kibana, you can expose the plugins directory to the host filesystem and then copy your plugins to that directory. For example, to load the `kbn\_network <https://github.com/dlumbrer/kbn_network>`__ plugin you can do something like the following.
 
-Create a directory in the host filesystem to store plugins:
+Create a new directory in the host filesystem called ``/nsm/kibana/plugins`` to store plugins:
 
 ::
 
     sudo mkdir -p /nsm/kibana/plugins
 
-Download plugin to that directory:
+Download your desired plugin to ``/nsm/kibana/plugins``.  For example:
 
 ::
 
-    wget -qO- https://github.com/dlumbrer/kbn_network/releases/download/6.0.X-2/network_vis.tar.gz | sudo tar xvJ -C /nsm/kibana/plugins
+    wget -qO- https://github.com/dlumbrer/kbn_network/releases/download/6.5.X-1/network_vis-6-5.tar.gz | sudo tar zxv -C /nsm/kibana/plugins
 
-Modify Kibana options to mount that directory into the container:
+Kibana now requires ``jquery.flot.log`` re-optimizing, so let's create that:
 
 ::
 
-    sudo sed -i 's|KIBANA_OPTIONS=""|KIBANA_OPTIONS="--volume /nsm/kibana/plugins:/usr/share/kibana/plugins:ro"|g' /etc/nsm/securityonion.conf
+    sudo touch /nsm/kibana/jquery.flot.log
+    
+Modify Kibana options to mount ``/nsm/kibana/plugins`` directory and ``jquery.flot.log`` into the container:
+
+::
+
+    sudo sed -i 's|^KIBANA_OPTIONS.*$|KIBANA_OPTIONS="--volume /nsm/kibana/plugins:/usr/share/kibana/plugins:ro --volume /nsm/kibana/jquery.flot.log:/usr/share/kibana/src/ui/public/flot-charts/jquery.flot.log"|g' /etc/nsm/securityonion.conf
 
 Restart Kibana:
 
 ::
 
     sudo so-kibana-restart
+
+Monitor Kibana log file for errors:
+
+::
+
+    tail -f /var/log/kibana/kibana.log
