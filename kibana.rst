@@ -92,7 +92,7 @@ Create a new directory in the host filesystem called ``/nsm/kibana/plugins`` to 
 
     sudo mkdir -p /nsm/kibana/plugins
 
-Download your desired plugin to ``/nsm/kibana/plugins``.  For example:
+Download your desired plugin and decompress it to ``/nsm/kibana/plugins``.  For example:
 
 ::
 
@@ -104,7 +104,7 @@ Kibana now requires ``jquery.flot.log`` when re-optimizing, so let's create that
 
     sudo touch /nsm/kibana/jquery.flot.log
     
-Modify Kibana options to mount ``/nsm/kibana/plugins`` directory and ``jquery.flot.log`` into the container:
+Modify ``KIBANA_OPTIONS`` in ``/etc/nsm/securityonion.conf`` to mount ``/nsm/kibana/plugins`` directory and ``jquery.flot.log`` into the container:
 
 ::
 
@@ -121,3 +121,5 @@ Monitor Kibana log file for errors:
 ::
 
     tail -f /var/log/kibana/kibana.log
+
+Kibana may take a few minutes to re-optimize.  Once that's complete, you should be able to log into Kibana and test your new plugin.
