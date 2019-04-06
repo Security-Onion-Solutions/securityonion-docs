@@ -168,21 +168,27 @@ Elasticsearch:
 If you see something like the following, you'll need to kill it and run
 ``so-autossh-start`` again:
 
-``4356  0.0  0.0   4356    92 ?        Ss   18:26   0:00 /usr/lib/autossh/autossh -M 0    -q -N -o ServerAliveInterval 60 -o ServerAliveCountMax 3 -i /root/.ssh/securityonion -L 3306:127.0.0.1:3306 -R 50000:localhost:3154 sensor@192.168.1.3``
+::
 
-| ``sudo kill -9 4356``
-| ``ps aux | grep autossh`` (verify no process)
-| ``sudo so-autossh-start``
+  4356  0.0  0.0   4356    92 ?        Ss   18:26   0:00 /usr/lib/autossh/autossh -M 0    -q -N -o ServerAliveInterval 60 -o ServerAliveCountMax 3 -i /root/.ssh/securityonion -L 3306:127.0.0.1:3306 -R 50000:localhost:3154 sensor@192.168.1.3
+
+  sudo kill -9 4356
+  ps aux | grep autossh (verify no process)
+  sudo so-autossh-start
 
 Checking again with ``ps aux | grep autossh``, we see the correct
 connection information:
 
-``17707  0.0  0.0   4356    92 ?        Ss   18:50   0:00 /usr/lib/autossh/autossh -M 0    -q -N -o ServerAliveInterval 60 -o ServerAliveCountMax 3 -i /root/.ssh/securityonion -R 172.18.0.1:50000:localhost:9300 sensor@192.168.1.3``
+::
+
+17707  0.0  0.0   4356    92 ?        Ss   18:50   0:00 /usr/lib/autossh/autossh -M 0    -q -N -o ServerAliveInterval 60 -o ServerAliveCountMax 3 -i /root/.ssh/securityonion -R 172.18.0.1:50000:localhost:9300 sensor@192.168.1.3
 
 Next we'll want to check to make sure ``$REVERSE_PORT`` was correctly
-set in /root/.ssh/securityonion\_ssh.conf:
+set in ``/root/.ssh/securityonion_ssh.conf``:
 
-``sudo cat /root/.ssh/securityonion_ssh.conf``
+::
+
+  sudo cat /root/.ssh/securityonion_ssh.conf
 
 We should get something like the following:
 
@@ -198,7 +204,7 @@ with the actual reverse port):
     transport.publish_host: 172.18.0.1
     transport.publish_port: $REVERSE_PORT.
 
-**``transport.publish_host`` should ALWAYS be set to ``172.18.0.1``**
+``transport.publish_host`` should ALWAYS be set to ``172.18.0.1``
 
 Restart Elasticsearch:
 
