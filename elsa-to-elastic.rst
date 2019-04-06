@@ -181,7 +181,7 @@ connection information:
 
 ::
 
-17707  0.0  0.0   4356    92 ?        Ss   18:50   0:00 /usr/lib/autossh/autossh -M 0    -q -N -o ServerAliveInterval 60 -o ServerAliveCountMax 3 -i /root/.ssh/securityonion -R 172.18.0.1:50000:localhost:9300 sensor@192.168.1.3
+  17707  0.0  0.0   4356    92 ?        Ss   18:50   0:00 /usr/lib/autossh/autossh -M 0    -q -N -o ServerAliveInterval 60 -o ServerAliveCountMax 3 -i /root/.ssh/securityonion -R 172.18.0.1:50000:localhost:9300 sensor@192.168.1.3
 
 Next we'll want to check to make sure ``$REVERSE_PORT`` was correctly
 set in ``/root/.ssh/securityonion_ssh.conf``:
@@ -260,7 +260,9 @@ node name and $REVERSE\_PORT you'd like to add:
 Next, we can do the following from within Kibana Dev Tools to check our
 configuration:
 
-``GET _cluster/settings``
+::
+
+  GET _cluster/settings
 
 If everything worked, then you should see the new sensor listed in the
 output.
