@@ -1,7 +1,7 @@
 Managing Rules
 ==============
 
-Rulesets are chosen during setup and are specified in ``/etc/nsm/pulledpork/pulledpork.conf``. If you change the the configuration in ``pulledpork.conf``, then you will need to run ``rule-update``.  If in a server/sensor deployment, run ``rule-update`` on the master first, then the sensor (or simply wait up to 15 minutes for it to be replicated).
+Rulesets are chosen during setup and are specified in ``/etc/nsm/pulledpork/pulledpork.conf``. If you change the configuration in ``pulledpork.conf``, then you will need to run ``rule-update``.  If in a server/sensor deployment, run ``rule-update`` on the master first, then the sensor (or simply wait up to 15 minutes for it to be replicated).
 
 Security Onion offers the following choices for rulesets to be used by Snort/Suricata.
 
