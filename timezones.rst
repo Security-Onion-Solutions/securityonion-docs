@@ -13,7 +13,7 @@ UTC and Time Zones
 
 Additionally, UTC comes in quite handy when you have sensors in different time zones and/or are trying to correlate events with other systems or teams.
 
-Kibana by default will render timestamps in the timezone of your local browser (more info below) and Squert allows you to set your timezone.
+Kibana by default will render timestamps in the timezone of your local browser and Squert allows you to set your timezone.
 
 How do I change the timezone for Ubuntu?
 ----------------------------------------
