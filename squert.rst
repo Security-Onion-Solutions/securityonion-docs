@@ -115,7 +115,4 @@ You can also add your own pivots as follows:
 Prepared Statements
 -------------------
 
-| Squert uses prepared statements:
-| https://blog.securityonion.net/2018/01/security-advisory-for-squert.html
-|
-| If you start seeing ``Prepared statement needs to be re-prepared`` in ``/var/log/apache2/error.log``, please see the `<MySQLTuning#table_definition_cache>`__ section.
+Squert uses prepared statements.  If you start seeing ``Prepared statement needs to be re-prepared`` in ``/var/log/apache2/error.log``, please see the `<MySQLTuning#table_definition_cache>`__ section.
