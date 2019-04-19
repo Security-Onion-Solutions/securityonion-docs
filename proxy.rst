@@ -27,7 +27,7 @@ To configure Docker proxy settings, perform the following steps:
    systemctl daemon-reload && systemctl restart docker && exit
    sudo soup
 
-***For older versions of Security Onion on the Elastic Stack, if the above did not work, you may want to try the following:***
+**For older versions of Security Onion on the Elastic Stack, if the above did not work, you may want to try the following:**
 
 Modify ``/etc/default/docker`` and add the appropriate proxy information, like so:
 
