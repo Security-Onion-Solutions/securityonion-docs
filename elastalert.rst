@@ -90,6 +90,13 @@ so-elastalert-create
 
 ``so-elastalert-create`` is a tool created by `Bryant Treacle <https://github.com/bryant-treacle/so-elastalert-create>`__ that can be used to help ease the pain of ensuring correct syntax and creating Elastalert rules from scratch. It will walk you through various questions, and eventually output an Elastalert rule file that you can deploy in your environment to start alerting quickly and easily.
 
+so-elastalert-test
+~~~~~~~~~~~~~~~~~~~~
+
+``so-elastalert-test`` is a wrapper script originally written by Bryant Treacle for ElastAlert's ``elastalert-test-rule`` tool.  The script allows you to test an ElastAlert rule and get results immediately. Simply run ``so-elastalert-test``, and follow the prompt(s).
+
+Please note, all options available to ``elastalert-test-rule`` are not yet included with ``so-elastalert-test``.
+
 Defaults
 ~~~~~~~~
 
@@ -119,3 +126,4 @@ More Information
 
 | You can learn more about ElastAlert and its output types here:
 | http://elastalert.readthedocs.io/en/latest/
+
