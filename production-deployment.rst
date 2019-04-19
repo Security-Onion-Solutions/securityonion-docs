@@ -39,7 +39,7 @@ Update
 ------
 #. If this box is going to be a node (forward, heavy, or storage), make sure that your master server and all other nodes in your deployment are fully updated with ``sudo soup`` before adding a new node.
 #. Verify that you have Internet connectivity. If necessary, configure your `proxy <Proxy>`__ settings.
-#. If you installed from the Security Onion 16.04 ISO image, run ``sudo soup``. If you get any errors relating to MySQL, please see the `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__ section. Reboot if prompted. Skip to the Setup section below.
+#. If you installed from the Security Onion 16.04 ISO image, run ``sudo soup`` and reboot if prompted, then skip to the Setup section below (if you get any errors relating to MySQL, please see the `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__ section). Otherwise, if you're installing on Ubuntu, continue to the next step.
 #. Install all Ubuntu updates and reboot:
 
    ::
