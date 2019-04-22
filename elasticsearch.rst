@@ -51,6 +51,7 @@ If you want to view the detail for each of those shards:
 
     curl localhost:9200/_cat/shards
 
+
 Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
 
 The number of shards for an index is defined in the template file for that index.  By default, there are three template files in ``/etc/logstash/``:
