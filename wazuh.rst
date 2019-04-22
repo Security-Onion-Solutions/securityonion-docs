@@ -58,7 +58,7 @@ Adding Agents
 Please note! It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.8.2, then you will want to deploy Wazuh agent version 3.8.2.
 
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
-| http://ossec-docs.readthedocs.org/en/latest/manual/agent/agent-management.html#managing-agents
+| https://documentation.wazuh.com/current/user-manual/agents/registering-agents/register-agent-manual.html
 
 You may need to run `<so-allow>`_ to allow traffic from the IP address of your Wazuh agent(s).
 
@@ -72,6 +72,9 @@ Automated Deployment
 
 | If you would like to automate the deployment of Wazuh agents, the Wazuh server includes ``ossec-authd``:
 | https://documentation.wazuh.com/3.8/user-manual/reference/daemons/ossec-authd.html
+
+| When using ``ossec-authd``, be sure to add a firewall exception for agents to access port ``1515/tcp`` on the Wazuh manager node:
+| ``sudo ufw allow proto tcp from agent_ip to any port 1515`` 
 
 Downloads
 ---------
