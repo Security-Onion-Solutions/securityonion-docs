@@ -47,6 +47,11 @@ https://help.ubuntu.com/community/OpenVPN
 
 https://help.ubuntu.com/lts/serverguide/openvpn.html
 
+Install Packages
+----------------
+
+If you are installing from Ubuntu 16.04, make sure you install our packages before continuing with this procedure.  For more information, please see the `Getting Started <getting-started>`__ section.
+
 Security Onion Sensor
 ---------------------
 
