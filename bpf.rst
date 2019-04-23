@@ -56,11 +56,20 @@ want to apply a BPF to NIDS (Snort/Suricata) only:
 BPF Examples
 ~~~~~~~~~~~~
 
-From Phillip Wang:
+Exclude traffic to/from a host:
 
-Just to contribute, and for others to reference, here are some examples
-of what I've got working
+::
 
+   !(host xxx.xxx.xxx.xxx)
+   
+   
+Exclude traffic from a source host to a destination port:
+
+::
+
+    !(src host xxx.xxx.xxx.xxx && dst port 161)
+    
+Combine multiple BPFs together using ``&&``, but note that the last entry has no final ``&&``:
 ::
 
     #Nothing from src host to dst port
