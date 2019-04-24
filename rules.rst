@@ -1,7 +1,7 @@
 Managing Rules
 ==============
 
-NIDS rulesets are chosen during setup and are specified in ``/etc/nsm/pulledpork/pulledpork.conf``. If you change the configuration in ``/etc/nsm/pulledpork``, then you will need to update your rules as shown in the following section.
+NIDS rulesets are chosen during setup and are specified in ``/etc/nsm/pulledpork/pulledpork.conf``. If you change any of the configuration in ``/etc/nsm/pulledpork/``, then you will need to update your rules as shown in the following section.
 
 Updating Rules
 --------------
