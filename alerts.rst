@@ -287,7 +287,7 @@ Disable the sid
 
 Security Onion uses `PulledPork <https://github.com/shirkdog/pulledpork>`__ to download new signatures every night and process them against a set list of user generated configurations.
 
-In a Server/Slave Security Onion environment, you only need to change the configuration file on the server and the rule-update script will sync with the signatures from the Server.
+In a distributed Security Onion environment, you only need to change the configuration file on the server and the rule-update script will sync with the signatures from the Server.
 
 As mentioned before, take care in disabling signatures as it can be likely that a more appropriate response is warranted.
 
@@ -307,20 +307,7 @@ As mentioned before, take care in disabling signatures as it can be likely that 
         # Disable the GPL SNMP public access udp signature
         1:2101411
 
--  Run the rule update on the master server:
-
-   ::
-
-        sudo rule-update
-
--  If you're running salt on your distributed deployment, then the
-   ruleset will replicate to your sensors automatically within 15
-   minutes. If you're not running salt, then you can run rule-update on
-   the slave machines:
-
-   ::
-
-        sudo rule-update
+-  Update rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
 
 Disable the category
 --------------------
@@ -342,9 +329,7 @@ description, we could put the following in
 
 ``pcre:ET MISC``
 
-Of course, after making changes to the file, if we want our changes to
-take effect immediately, we will need to run ``rule-update`` on the
-master server, and then on all remaining sensors.
+After making changes to the file, update your rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
 
 modifysid.conf
 --------------
@@ -358,11 +343,7 @@ won't repeat them here. Edit the modifysid.conf configuration file:
 
         sudo vi /etc/nsm/pulledpork/modifysid.conf
 
-Then run rule-update:
-
-::
-
-        sudo rule-update
+Update rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
 
 Rewrite the signature
 ---------------------
@@ -420,11 +401,7 @@ Onion, locally created rules are stored in /etc/nsm/rules/local.rules
 
           1:2101411
 
--  Run a rule update:
-
-   ::
-
-          sudo rule-update
+-  Update rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
 
 Threshold
 ---------
