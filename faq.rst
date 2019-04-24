@@ -115,8 +115,7 @@ What's the difference between a ``server`` and a ``sensor``?
 | **sensor box**\ 
 | Definition: A machine having one or more sensors that transmit to a
   central server. Does not run server processes. Pulls ruleset from
-  server box. (In some contexts, I refer to this a slave pulling rules
-  from the master.)
+  server box. 
 | Example: A machine named ``sensor1`` having sensors ``sensor1-eth0``
   and ``sensor1-eth1``.
 | 
