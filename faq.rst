@@ -293,11 +293,8 @@ Why does soup tell me I need a Secure Boot key?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `Secure Boot <Secure-Boot>`__ section.
-| 
-| 
-| `back to top <#top>`__
-| 
-| 
+ 
+ `back to top <#top>`__ 
 
 IDS engines
 -------------------
