@@ -1,7 +1,7 @@
 Network Configuration
 =====================
 
-All of this configuration will happen automatically if you choose ``Yes, configure /etc/network/interfaces`` in the Setup wizard.  If for some reason you need to configure `/etc/network/interfaces` manually, you can do the following.
+All of this configuration will happen automatically if you choose ``Yes, configure /etc/network/interfaces`` in the Setup wizard.  If for some reason you need to configure ``/etc/network/interfaces`` manually, you can do the following.
 
 NOTE! You may lose network connectivity during this process! Have a backup plan if attempting over SSH!
 
