@@ -18,7 +18,7 @@ If you have a distributed deployment with salt enabled and you run ``rule-update
 
   sudo salt '*' state.highstate
   
-If you have a distributed deployment with salt disabled, then new rules will replicate from the master to the sensors during the daily cron job.  If you don't want to wait for that daily cron job, you can force an immediate update on the sensor by logging into the sensor and running:
+If you have a distributed deployment with salt disabled and you run ``rule-update`` on your master server, then those new rules will replicate from the master to your sensors during the daily cron job.  If you don't want to wait for that daily cron job, you can force an immediate update on the sensor by logging into the sensor and running:
 
 ::
 
