@@ -313,8 +313,7 @@ Can Security Onion run in ``IPS`` mode?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `<NIDS#NIPS>`_ section.
- 
- 
+
 `back to top <#top>`__
  
 
@@ -355,11 +354,8 @@ Why do apt-get and the Update Manager show ``tcl8.5 as held back``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the  `tcl <tcl>`__ section.
-| 
-| 
-| `back to top <#top>`__
-| 
-| 
+
+`back to top <#top>`__
 
 Tuning
 ----------
@@ -478,10 +474,7 @@ What does it mean if ``sostat`` show a high number of ``Sguil Uncategorized Even
 
    To keep ``Uncategorized Events`` from getting too high, you should log into Sguil/Squert on a daily/weekly basis and categorize events.
 
-| 
-| `back to top <#top>`__
-| 
-| 
+`back to top <#top>`__ 
 
 Miscellaneous
 -----------------
