@@ -64,18 +64,13 @@ Sample /etc/network/interfaces
      down ifconfig $IFACE down
      post-up for i in rx tx sg tso ufo gso gro lro; do ethtool -K $IFACE $i off; done
      post-up echo 1 > /proc/sys/net/ipv6/conf/$IFACE/disable_ipv6
-
-You may also want to set the RX buffer size in the post-up command like this:
-
-::
-
-   post-up ethtool -G $IFACE rx 4096; for i in rx tx sg tso ufo gso gro lro; do ethtool -K $IFACE $i off; done
-
-Note that 4096 is just an example and your NIC may have a different maximum rx size. To determine the maximum rx setting for your NIC:
-
-::
-
-  ethtool -g ethX
+     # You probably don't need to enable or edit the following setting,
+     # but it is included for completeness.
+     # Note that 4096 is just an example and your NIC may have a different maximum rx size.
+     # To determine the maximum rx setting for your NIC: ethtool -g ethX
+     # Also note that increasing beyond the default may result in inconsistent traffic:
+     # https://taosecurity.blogspot.com/2019/04/troubleshooting-nsm-virtualization.html
+     # post-up ethtool -G $IFACE rx 4096
 
 | If necessary, configure DNS in ``/etc/resolv.conf``:
 | http://en.wikipedia.org/wiki/Resolv.conf
