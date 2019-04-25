@@ -51,7 +51,6 @@ Sample /etc/network/interfaces
      netmask 255.255.255.0
      network 192.168.1.0
      broadcast 192.168.1.255
-     # If running Security Onion 14.04, you'll need to configure DNS here
      dns-nameservers 192.168.1.1 192.168.1.2
    
    # AND one or more of the following
@@ -64,7 +63,6 @@ Sample /etc/network/interfaces
      down ip link set $IFACE promisc off
      down ifconfig $IFACE down
      post-up for i in rx tx sg tso ufo gso gro lro; do ethtool -K $IFACE $i off; done
-     # If running Security Onion 14.04, you should also disable IPv6 as follows:
      post-up echo 1 > /proc/sys/net/ipv6/conf/$IFACE/disable_ipv6
 
 You may also want to set the RX buffer size in the post-up command like this:
