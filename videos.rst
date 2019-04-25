@@ -35,8 +35,7 @@ Old Videos for Security Onion 12.04
 -----------------------------------
 
 Please note the videos in the Security Onion Video Playlist were created
-several years ago for the old Security Onion 12.04. These videos will be
-updated to the new Security Onion 14.04 soon.
+several years ago for the old Security Onion 12.04.
 
 `Security Onion Video
 Playlist <https://www.youtube.com/watch?v=dyLbgrdagaA&list=PLMN5wm-C5YjyieO63g8LbaiWTSJRj0DBe>`__
