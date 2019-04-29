@@ -22,10 +22,10 @@ Sguil client
 Please note that the Sguil client has its own email configuration (separate from the Sguil server) which can be modified in
 ``/etc/sguil/sguil.conf``.
 
-Overview
---------
+Manual Configuration
+--------------------
 
-This page describes how to configure email for alerting and reporting. Applications such as Sguil and Wazuh have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Bro.
+If you don't want to run ``so-email`` as described above, you can configure email manually as described in the following sections. Applications such as Sguil and Wazuh have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Bro.
 
 Operating System
 ----------------
