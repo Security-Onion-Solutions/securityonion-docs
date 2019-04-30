@@ -13,8 +13,10 @@ Update the actual IP address of the management interface
 To update the actual IP address of the management interface, you have
 two options:
 
--  manually update ``/etc/network/interfaces``\ 
+-  manually update ``/etc/network/interfaces``
+   
    OR
+
 -  re-run the ``FIRST`` phase of Setup (select ``Yes, configure /etc/network/interfaces``)
 
 Update NSM config files to reflect the new IP address
@@ -23,9 +25,10 @@ Update NSM config files to reflect the new IP address
 To update NSM config files to reflect the new IP address, you have two
 options:
 
--  re-run the ``SECOND`` phase of Setup on all server/sensors
-   **(wiping all data and config)**
+-  re-run the ``SECOND`` phase of Setup on all server/sensors **(wiping all data and config)**
+
    OR
+   
 -  manually update the IP address as shown below
 
 Files to update when changing the IP address
