@@ -15,8 +15,7 @@ two options:
 
 -  manually update ``/etc/network/interfaces``\ 
    OR
--  re-run the ``FIRST`` phase of Setup (select "Yes, configure
-   /etc/network/interfaces)
+-  re-run the ``FIRST`` phase of Setup (select ``Yes, configure /etc/network/interfaces``)
 
 Update NSM config files to reflect the new IP address
 -----------------------------------------------------
@@ -25,7 +24,7 @@ To update NSM config files to reflect the new IP address, you have two
 options:
 
 -  re-run the ``SECOND`` phase of Setup on all server/sensors
-   ``(wiping all data and config)``
+   **(wiping all data and config)**
    OR
 -  manually update the IP address as shown below
 
