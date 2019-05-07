@@ -5,7 +5,7 @@ Adding local rules in Security Onion is a rather straightforward process. Howeve
 
 -  Open ``/etc/nsm/rules/local.rules`` using your favorite text editor.  If this is a distributed deployment, edit local.rules on your master server and it will replicate to your sensors.
    
--  Let's add a simple rule that will alert on the detection of a string in a tcp session.
+-  Let's add a simple rule that will alert on the detection of a string in a tcp session:
 
    ::
 
@@ -22,7 +22,7 @@ Adding local rules in Security Onion is a rather straightforward process. Howeve
 Testing Local Rules
 -------------------
 
--  Generate some traffic to trigger the alert. To generate traffic we are going to use the python library ``scapy`` to craft packets with specific information to ensure we trigger the alert with the information we want.
+-  Generate some traffic to trigger the alert. To generate traffic we are going to use the python library ``scapy`` to craft packets with specific information to ensure we trigger the alert with the information we want:
 
    ::
 
