@@ -23,3 +23,5 @@ Fields are mapped to their proper type using template files, found in
   ``logstash-*`` indices
 | ``beats-template.json`` - mapping information for logs going into
   ``logstash-beats-*`` indices.
+| ``logstash-ossec-template.json`` - mapping information for logs going into
+  ``logstash-ossec-*`` indices.
