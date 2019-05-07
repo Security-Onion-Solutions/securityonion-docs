@@ -37,7 +37,7 @@ Steps
 
        sudo rule-update
 
--  If you built the rule correctly, then snort should be back up and running.
+-  If you built the rule correctly, then Snort/Suricata should be back up and running.
    
 -  Generate some traffic to trigger the alert. To generate traffic we are going to use the python library scapy to craft packets with specific information to ensure we trigger the alert with the information we want.
 
@@ -73,9 +73,9 @@ Steps
    
        send(ip/tcp/payload)
 
--  Check Sguil for the corresponding alert.
+-  Check Sguil/Squert/Kibana for the corresponding alert.
 
--  You can see that we have an alert with the IP addresses we specified and the TCP ports we specified. If you right click on the **Alert ID** column you can select "Transcript" and verify the payload we sent.
+-  You can see that we have an alert with the IP addresses we specified and the TCP ports we specified. If you pivot from that alert to the corresponding pcap you can verify the payload we sent.
 
 -  You can learn more about snort and writing snort signatures from the `Snort Manual <http://manual.snort.org/node26.html>`__.
 
