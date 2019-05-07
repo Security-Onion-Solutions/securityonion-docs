@@ -3,26 +3,6 @@ Adding Local Rules
 
 Adding local rules in Security Onion is a rather straightforward process. However, generating custom traffic to test the alert can sometimes be a challenge. Here, we will show you how to add the local rule and then use the python library scapy to trigger the alert.
 
-IPS Policy
-----------
-
-Please note if you are using a ruleset that enables an IPS policy in ``/etc/nsm/pulledpork/pulledpork.conf``, your local rules will be disabled. To enabled them, either revert the policy by remarking the ``ips_policy`` line (and run ``rule-update``), or add the policy type to the rules in local.rules.
-
-For example, if ``ips_policy`` was set to ``security``, you would add the following to each rule:
-
-``metadata:policy security-ips``
-
-The whole rule would then look something like:
-
-::
-
-   alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; metadata:policy security-ips; rev:1)
-
-These policy types can be found in ``/etc/nsm/rules/downloaded.rules``.
-
-Steps
------
-
 -  Open ``/etc/nsm/rules/local.rules`` using your favorite text editor.  If this is a distributed deployment, edit local.rules on your master server and it will replicate to your sensors.
    
 -  Let's add a simple rule that will alert on the detection of a string in a tcp session.
@@ -31,7 +11,7 @@ Steps
 
        alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; rev:1)     
 
--  Run rule-update (this will merge local.rules into downloaded.rules, update ``sid-msg.map``, and restart snort/suricata and barnyard):
+-  Run ``rule-update`` (this will merge ``local.rules`` into ``downloaded.rules``, update ``sid-msg.map``, and restart processes as necessary):
 
    ::
 
@@ -39,7 +19,10 @@ Steps
 
 -  If you built the rule correctly, then Snort/Suricata should be back up and running.
    
--  Generate some traffic to trigger the alert. To generate traffic we are going to use the python library scapy to craft packets with specific information to ensure we trigger the alert with the information we want.
+Testing Local Rules
+-------------------
+
+-  Generate some traffic to trigger the alert. To generate traffic we are going to use the python library ``scapy`` to craft packets with specific information to ensure we trigger the alert with the information we want.
 
    ::
 
@@ -80,6 +63,23 @@ Steps
 -  You can learn more about snort and writing snort signatures from the `Snort Manual <http://manual.snort.org/node26.html>`__.
 
 -  You can learn more about scapy at  `secdev.org <http://www.secdev.org/projects/scapy/>`__ and `itgeekchronicles.co.uk <http://itgeekchronicles.co.uk/2012/05/31/scapy-guide-the-release/>`__.
+
+IPS Policy
+----------
+
+Please note if you are using a ruleset that enables an IPS policy in ``/etc/nsm/pulledpork/pulledpork.conf``, your local rules will be disabled. To enabled them, either revert the policy by remarking the ``ips_policy`` line (and run ``rule-update``), or add the policy type to the rules in local.rules.
+
+For example, if ``ips_policy`` was set to ``security``, you would add the following to each rule:
+
+``metadata:policy security-ips``
+
+The whole rule would then look something like:
+
+::
+
+   alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; metadata:policy security-ips; rev:1)
+
+These policy types can be found in ``/etc/nsm/rules/downloaded.rules``.
 
 MISP
 ----
