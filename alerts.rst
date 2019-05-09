@@ -24,7 +24,9 @@ make sure it is working as expected.
 #. The easiest way to test might be simply accessing ``testmyids.com``
    from a machine who's traffic is being monitored:
 
-   ``curl testmyids.com``
+   ::
+   
+      curl testmyids.com
 
    We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) pop up in Sguil if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the master first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
