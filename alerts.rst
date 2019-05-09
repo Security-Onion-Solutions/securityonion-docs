@@ -43,23 +43,28 @@ make sure it is working as expected.
 
 -  **Snort Rule**
 
-::
+   ::
 
-   alert tcp any any -> any any (msg: "Security Onion - testing"; content: "SecurityOnion"; nocase; sid:1234567;)
+     alert tcp any any -> any any (msg: "Security Onion - testing"; content: "SecurityOnion"; nocase; sid:1234567;)
 
+   
    Run ``sudo rule-update`` after adding.
 
 -  **Scapy**
 
-   | ``sudo scapy``
-   | ``pkt = Ether()/IP(dst="192.168.1.30")/TCP()/"SecurityOnion"``
-     (Press ENTER)
-   | ``wrpcap("so-testing.pcap", pkt)`` (Press ENTER)
-   | ``CTRL+D``
-   | ``sudo tcpreplay -i ens34 -M10 so-testing.pcap``
+   ::
+   
+      sudo scapy
+      pkt = Ether()/IP(dst="192.168.1.30")/TCP()/"SecurityOnion"
+      wrpcap("so-testing.pcap", pkt)
+   
+   Press ``CTRL+D`` to exit scapy.  Then use tcpreplay to replay the pcap to your sniffing interface:
+   
+   ::
+   
+     sudo tcpreplay -i ens34 -M10 so-testing.pcap
 
-   If everything went as planned, an alert should pop up in Sguil with
-   the message ``Security Onion - testing``
+   If everything went as planned, an alert should pop up in Sguil with the message ``Security Onion - testing``.
 
 Identifying overly active signatures
 ------------------------------------
