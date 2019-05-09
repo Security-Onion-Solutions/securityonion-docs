@@ -34,7 +34,9 @@ make sure it is working as expected.
    replaying some of the example PCAP files present in
    ``/opt/examples/``:
 
-   ``sudo tcpreplay -i ens34 -M10 /opt/samples/*.pcap``
+   ::
+   
+      sudo tcpreplay -i ens34 -M10 /opt/samples/*.pcap
 
    Hits for various signatures should appear in Sguil.
 
