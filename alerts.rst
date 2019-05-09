@@ -47,9 +47,7 @@ make sure it is working as expected.
 
    alert tcp any any -> any any (msg: "Security Onion - testing"; content: "SecurityOnion"; nocase; sid:1234567;)
 
-::
-
-   (Run ``sudo rule-update`` after adding)
+   Run ``sudo rule-update`` after adding.
 
 -  **Scapy**
 
