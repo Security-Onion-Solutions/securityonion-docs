@@ -26,16 +26,7 @@ make sure it is working as expected.
 
    ``curl testmyids.com``
 
-   | We should see a corresponding alert
-     (``GPL ATTACK_RESPONSE id check returned root``) pop up in Sguil if
-     everything is
-   | configured correctly. If you do not see this alert, try checking to
-     see if the rule is enabled in
-   | ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try
-     enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and
-   | run ``rule-update`` (if this is a distributed deployment, update
-     the master first, run ``rule-update``, then push the
-   | changes out to the other sensor(s)).
+   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) pop up in Sguil if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the master first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
 #. If running a test or evaluation version of Security Onion, consider
    replaying some of the example PCAP files present in
