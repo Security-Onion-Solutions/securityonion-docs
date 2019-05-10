@@ -30,20 +30,16 @@ make sure it is working as expected.
 
    We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) pop up in Sguil if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the master first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
-#. If running a test or evaluation version of Security Onion, consider
-   replaying some of the example PCAP files present in
-   ``/opt/examples/``:
+#. If running a test or evaluation version of Security Onion, consider replaying some of the example PCAP files present in
+   ``/opt/samples/``:
 
    ::
    
-      sudo tcpreplay -i ens34 -M10 /opt/samples/*.pcap
+      sudo so-test
 
-   Hits for various signatures should appear in Sguil.
+   Alerts for various signatures should appear in Sguil.
 
-#. If in a production environment where you might not want to replay the
-   example PCAPs, another way to test would be to use Scapy to craft a
-   test PCAP file, in conjunction with a custom Snort rule added to
-   ``/etc/nsm/rules/local.rules``:
+#. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom Snort rule added to ``/etc/nsm/rules/local.rules``:
 
 -  **Snort Rule**
 
@@ -117,15 +113,15 @@ your database, but if you attempt to UPDATE while the various NSM
 framework tools are also accessing the database it has the potential to
 introduce corruption.
 
-| You can enter the mysql shell or issue mysql one-liner's from the
-  command line.
-| To enter the mysql shell, issue the following command
+You can enter the mysql shell or issue mysql one-liner's from the command line.
+
+To enter the mysql shell, issue the following command:
 
 ::
 
       sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db
 
-To issue commandline one-liners use the following template
+To issue commandline one-liners use the following template:
 
 ::
 
@@ -239,38 +235,39 @@ Recovering from too many alerts
 
 Sometimes we may get flooded with a barrage of alerts that make it difficult or not possible to categorize within Sguil or Squert. When this happens, we can perform mass categorization of alerts using MySQL on the master server, where sguild (the Sguil server) runs. The steps below outline an example of this:
 
--  | Stop the Sguil server:
-::
+-  Stop the Sguil server:
 
-   sudo so-sguild-stop
+   ::
 
--  | List the top twenty signatures (descending) pertaining to
-     uncategorized alerts (with a status of ``0``):
-::
+      sudo so-sguild-stop
 
-   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'
+-  List the top twenty signatures (descending) pertaining to uncategorized alerts (with a status of ``0``):
 
--  | Update any records (to have a status value of ``1``) with a
-     signature that contains the text ``ET INFO``:
-::
+   ::
 
-   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e "UPDATE event SET status=1, last_modified='2018-06-27 01:00:00', last_uid='sguil' WHERE event.status='0' and event.signature LIKE '%ET INFO%';"
+      sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'
 
--  | Check again to see if our alerts have been categorized as
-     ``acknowledged`` ( these should no longer be visible in the
+-  Update any records (to have a status value of ``1``) with a signature that contains the text ``ET INFO``:
+
+   ::
+
+      sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e "UPDATE event SET status=1, last_modified='2018-06-27 01:00:00', last_uid='sguil' WHERE event.status='0' and event.signature LIKE '%ET INFO%';"
+
+-  Check again to see if our alerts have been categorized as ``acknowledged`` ( these should no longer be visible in the
      output):
-::
 
-   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'
+   ::
+
+      sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'
 
 
--  | Bring the Sguil server back up:
-::
+-  Bring the Sguil server back up:
 
-   sudo so-sguild-start
+   ::
 
-| Adapted from:
-| https://taosecurity.blogspot.com/2013/02/recovering-from-suricata-gone-wild.html
+      sudo so-sguild-start
+
+Adapted from https://taosecurity.blogspot.com/2013/02/recovering-from-suricata-gone-wild.html.
 
 So what's next?
 ---------------
@@ -322,13 +319,17 @@ For example, if we wanted to disable the entire ET-emerging-misc
 category, we could do so by putting the following in
 ``/etc/nsm/pulledpork/disablesid.conf``:
 
-``ET-emerging-misc``
+::
+
+   ET-emerging-misc
 
 If we wanted to disable all rules with ``ET MISC`` in the rule
 description, we could put the following in
 ``/etc/nsm/pulledpork/disablesid.conf``:
 
-``pcre:ET MISC``
+::
+
+   pcre:ET MISC
 
 After making changes to the file, update your rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
 
