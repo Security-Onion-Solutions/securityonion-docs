@@ -1,7 +1,12 @@
 Use Cases
 =========
 
-Security Onion is designed for many different use cases! When you run Setup, it will ask you if you want ``Evaluation Mode`` or ``Production Mode``.  Each of these modes presents different options that may be applicable to different use cases.  Here are just a few examples.
+Security Onion is designed for many different use cases! Here are just a few examples.
+
+Pcap Forensics
+--------------
+
+One of the easiest ways to get started with Security Onion is using it to forensically analyze one or more pcap files. Just install Security Onion and then run `so-import-pcap <so-import-pcap>`__ on one or more of the pcap files in ``/opt/samples/``.
 
 Classroom
 ---------
@@ -11,11 +16,6 @@ Classroom
 Install Security Onion. Run Setup and configure network interfaces. Reboot, run Setup again, and then choose ``Evaluation Mode``.
 
 For more information, please see the `Quick Evaluation <QuickISOImage>`__ section.
-
-Pcap Forensics
---------------
-
-Need to review a pcap with original timestamps preserved? Install Security Onion in ``Evaluation Mode`` as described above and then run `so-import-pcap <so-import-pcap>`__.
 
 Production Server - Standalone
 ------------------------------
