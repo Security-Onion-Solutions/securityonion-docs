@@ -84,6 +84,11 @@ Using salt and soup to update your entire deployment
 `salt and
 soup <Salt#using-salt-to-install-updates-across-your-entire-deployment>`__
 
+Content Inspection
+------------------
+
+If your Security Onion box(es) go through a firewall, proxy, or other network security device that does content inspection, you may need to add an exception for ``ppa.launchpad.net``.
+
 Standard Ubuntu package management tools
 ----------------------------------------
 
