@@ -17,7 +17,7 @@ To check your current version of Elastic, navigate to the Management section in 
 
 Alternatively, run the following command from your master server, or Dev tools:   
 
-`curl localhost:9200`
+``curl localhost:9200``
 
 
 Installation
