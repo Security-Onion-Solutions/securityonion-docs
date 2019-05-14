@@ -3,6 +3,23 @@ Beats
 
 We can use Elastic Beats to facilitate the shipping of endpoint logs to Security Onion's Elastic Stack. Currently, testing has only been performed with Filebeat (multiple log types) and Winlogbeat (Windows Event logs).
 
+Download
+--------
+
+To download a Beat, choose the correct version from the Past Releases page:   
+
+https://www.elastic.co/downloads/past-releases   
+
+
+PLEASE NOTE: Choosing a Beat version that is greater than the Elastic version is not supported and may not work as expected.    
+
+To check your current version of Elastic, navigate to the Management section in Kibana.  The version should be displayed on the screen.    
+
+Alternatively, run the following command from your master server, or Dev tools:   
+
+`curl localhost:9200`
+
+
 Installation
 ------------
 
