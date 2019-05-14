@@ -15,10 +15,9 @@ PLEASE NOTE: Choosing a Beat version that is greater than the Elastic version is
 
 To check your current version of Elastic, navigate to the Management section in Kibana.  The version should be displayed on the screen.    
 
-Alternatively, run the following command from your master server, or Dev tools:   
+Alternatively, run the following command from your master server:
 
 ``curl localhost:9200``
-
 
 Installation
 ------------
