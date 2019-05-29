@@ -1,5 +1,5 @@
-Passwords
-=========
+Account Management
+==================
 
 OS root account
 ---------------
@@ -10,28 +10,70 @@ Like other Ubuntu-based distributions, there is no root password. Your default u
 
     sudo adduser mynewuseraccount
 
-Sguil
------
+For more details, use the OS command `man adduser`.
 
-Log into Sguil using the username and password you created in the Setup wizard.
 
-You can add accounts as follows (please note that Sguil usernames must be alphanumeric):
+Security Onion Account Management
+---------------------------------
+
+Accounts used for the management and access of SO functionality through the different applications and web interfaces are managed through the command line interface with the following commands:
+
+1. so-user-add
+2. so-user-disable
+3. so-user-list
+4. so-user-passwd
+
+
+so-user-add
+-----------
+
+You can add accounts as follows:
 
 ::
 
     sudo so-user-add
 
-You can change passwords using the Sguil client (``File`` --> ``Change Password``) or as follows:
+You will then be prompted for a user name and password.  su-user-add will automatically create an account for Sguil/Squert/Kibana.
 
-::
+so-user-disable
+---------------
 
-    sudo so-user-passwd
-
-You can disable accounts as follows:
+This command will disable an account, therefore preventing it from authenticating against Sguil/Squert/Kibana.
 
 ::
 
     sudo so-user-disable
+
+
+**NOTE:**  Once disabled, there is no way to re-enable an account at this time.
+
+so-user-list
+------------
+
+This command will display a list of active accounts which are able to authenticate against Sguil/Squert/Kibana.  Accounts that have been disabled will not be listed.
+
+::
+
+    sudo so-user-list
+
+
+so-user-passwd
+--------------
+
+This command will allow you to change the password of accounts that were created with the so-user-add command.
+
+::
+
+    sudo so-user-add
+
+
+
+Sguil
+-----
+
+Log into Sguil using the username and password you created in the Setup wizard.  As well, you can create create additional accounts by using the so-user-add command.
+
+You can change passwords using the Sguil client (``File`` --> ``Change Password``) or as follows:
 
 Squert
 ------
