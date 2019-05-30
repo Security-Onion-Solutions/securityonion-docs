@@ -12,3 +12,5 @@ In Security Onion, there are three types of accounts:
    
    passwords
    adding-accounts
+   listing-accounts
+   disabling-accounts
