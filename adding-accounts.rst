@@ -4,11 +4,11 @@ Adding Accounts
 OS
 --
 
-If you need to add a new OS user account, you can use the ``adduser`` command:
+If you need to add a new OS user account, you can use the ``adduser`` command.  For example, to add a new account called ``tom``:
 
 ::
 
-    sudo adduser mynewuseraccount
+    sudo adduser tom
 
 For more information, please see ``man adduser``.
 
