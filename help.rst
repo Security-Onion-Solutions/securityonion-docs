@@ -72,7 +72,6 @@ Having problems? Try the suggestions below.
    faq
    directory
    tools
-   passwords
    support
    mailing-lists
    help-wanted
