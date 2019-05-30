@@ -10,7 +10,7 @@ If you need to disable an OS user account, you can expire the account using ``us
 
     sudo usermod --expiredate 1 tom
 
-For more information, please see ``man passwd``.
+For more information, please see ``man passwd`` and ``man usermod``.
 
 SSO
 ---
