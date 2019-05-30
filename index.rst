@@ -15,6 +15,7 @@ Security Onion Documentation
    host
    elastic
    updating
+   accounts
    customizing
    tuning
    tricks
