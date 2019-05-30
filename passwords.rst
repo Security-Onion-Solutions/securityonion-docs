@@ -36,7 +36,7 @@ You can disable accounts as follows:
 Squert
 ------
 
-Squert authenticates against the Sguil user database, so you should be able to login to Squert using the same username and password you use to login to Sguil.
+When you access Squert, you are prompted to login using Apache Single Sign On (SSO). This SSO authenticates against the Sguil user database, so you should be able to login to Squert using the same username and password you use to login to Sguil.
 
 Kibana
 ------
