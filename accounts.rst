@@ -11,3 +11,4 @@ In Security Onion, there are three types of accounts:
    :maxdepth: 2
    
    passwords
+   adding-accounts
