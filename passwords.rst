@@ -30,12 +30,6 @@ You can change passwords using the Sguil client (``File`` --> ``Change Password`
 
     sudo so-user-passwd
 
-You can disable accounts as follows:
-
-::
-
-    sudo so-user-disable
-
 Squert
 ------
 
