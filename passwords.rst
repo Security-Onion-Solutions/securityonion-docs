@@ -8,7 +8,7 @@ When you first install Security Onion, you go through the standard Ubuntu instal
 
 ::
 
-    sudo passwd
+    passwd
     
 OS root account
 ---------------
