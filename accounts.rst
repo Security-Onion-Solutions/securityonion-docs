@@ -1,11 +1,10 @@
 Accounts
 ========
 
-In Security Onion, there are three types of accounts:
+In Security Onion, there are two main types of accounts:
 
    - operating system (OS) accounts
    - application (Sguil/Squert/Kibana) accounts
-   - database (MySQL) accounts
 
 .. toctree::
    :maxdepth: 2
