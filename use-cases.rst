@@ -12,6 +12,8 @@ One of the easiest ways to get started with Security Onion is using it to forens
 
   sudo so-import-pcap /opt/samples/mta/2019*
 
+For more information, please see the `so-import-pcap <so-import-pcap>`__ section.
+
 Classroom
 ---------
 
