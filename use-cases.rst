@@ -6,7 +6,11 @@ Security Onion is designed for many different use cases! Here are just a few exa
 Pcap Forensics
 --------------
 
-One of the easiest ways to get started with Security Onion is using it to forensically analyze one or more pcap files. Just install Security Onion and then run `so-import-pcap <so-import-pcap>`__ on one or more of the pcap files in ``/opt/samples/``.
+One of the easiest ways to get started with Security Onion is using it to forensically analyze one or more pcap files. Just install Security Onion and then run `so-import-pcap <so-import-pcap>`__ on one or more of the pcap files in ``/opt/samples/``.  For example, to import the ``2019`` pcaps in ``/opt/samples/mta/``:
+
+::
+
+  sudo so-import-pcap /opt/samples/mta/2019*
 
 Classroom
 ---------
