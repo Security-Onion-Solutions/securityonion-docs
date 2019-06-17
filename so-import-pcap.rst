@@ -31,19 +31,19 @@ Reverting System Changes:
 Usage
 -----
 
-Please supply at least one pcap file.
+Please supply the full path to at least one pcap file.
 
 For example, to import a single pcap named ``import.pcap``:
 
 ::
 
-    so-import-pcap import.pcap
+    sudo so-import-pcap /full/path/to/import.pcap
 
 To import multiple pcaps:
 
 ::
 
-    so-import-pcap import1.pcap import2.pcap
+    sudo so-import-pcap /full/path/to/import1.pcap /full/path/to/import2.pcap
 
 Example
 -------
