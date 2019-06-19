@@ -18,6 +18,9 @@ Security Onion Conference 2019
 Security Onion Conference 2019 is scheduled for Friday, October 4, 2019.
 Please make plans to attend!
 
+CFP closes on June 24!
+https://blog.securityonion.net/2019/04/security-onion-conference-2019-cfp.html
+
 Security Onion Conference 2018
 ------------------------------
 
