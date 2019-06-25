@@ -4,7 +4,7 @@ Hardware Requirements
 Architecture
 ------------
 
-Security Onion only supports standard Intel/AMD 64-bit processors.  Sorry, we do not support ARM at this time!
+Security Onion only supports x86-64 architecture (standard Intel/AMD 64-bit processors).  Sorry, we do not support ARM or other processors!
 
 UEFI
 ----
