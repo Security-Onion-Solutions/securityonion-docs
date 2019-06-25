@@ -28,16 +28,10 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
 
    ::
    
-     sudo service nsm stop
+     sudo so-stop
      sudo service syslog-ng stop
-     sudo service apache2 stop
-     sudo service mysql stop
-     
-#. Check for any ELSA perl processes which may need to be killed manually:
-
-   ::
-   
-     ps aux |grep perl
+     sudo service apache2 stop (if master server or standalone)
+     sudo service mysql stop (if master server or standalone)
      
 #. Determine your new drive's path:
 
@@ -98,10 +92,10 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
 
    ::
    
-     sudo service mysql start
-     sudo service apache2 start
+     sudo service mysql start (if master server or standalone)
+     sudo service apache2 start (if master server or standalone)
      sudo service syslog-ng start
-     sudo service nsm start
+     sudo so-start
      
 #. Uncomment the cron job in ``/etc/cron.d/nsm-watchdog``
 
@@ -130,7 +124,7 @@ Stop all services:
 
 ::
 
-  sudo service nsm stop
+  sudo so-stop
 
 Copy existing data from ``/nsm`` to new mount point:
 
@@ -190,9 +184,8 @@ The MySQL databases are stored under ``/var/lib/mysql``. We will need to move th
 
 ::
 
-  sudo service nsm stop
+  sudo so-stop
   sudo service mysql stop
-  sudo service sphinxsearch stop
 
 Now, we need to make sure all other nsm-related processes are stopped. To double-check, run ``lsof`` on the nsm mount point to list any processes that have open file descriptors. Kill everything, or nearly everything, that comes up in the list.
 
@@ -254,5 +247,4 @@ Finally, start all the processes back up:
 
   sudo service apparmor start
   sudo service mysql start
-  sudo service sphinxsearch start
-  sudo service nsm start
+  sudo so-start
