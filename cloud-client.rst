@@ -1,16 +1,20 @@
 Cloud Client
 ============
 
-Many folks ask how they can use Security Onion to monitor and defend
-their cloud environments. Most cloud environments don't provide anything
-like a tap or span port, but we can use daemonlogger or netsniff-ng as a
-virtual tap. This virtual tap will copy all traffic from our production
-cloud box to an OpenVPN bridge that transports the traffic to our
-Security Onion sensor where it is then analyzed.
+**Please Note!**
+
+This cloud client idea was developed before cloud providers offered virtual taps.  If you are able to use your cloud provider's virtual tap, please do so instead of using this cloud client workaround.  For example:
+
+https://aws.amazon.com/blogs/aws/new-vpc-traffic-mirroring/
+
+https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
 
 **Warning! This cloud client is considered experimental! USE AT YOUR OWN RISK!**
 
-This guide was originally written for Security Onion 12.04 and has been updated for Security Onion 14.04, but hasn't been heavily tested yet.
+If your cloud provides doesn't already offer a virtual tap, you can use daemonlogger or netsniff-ng as a virtual tap. This virtual tap will copy all traffic from our production cloud box to an OpenVPN bridge that transports the traffic to our
+Security Onion sensor where it is then analyzed.
+
+This guide was originally written for Security Onion 12.04 and was updated for Security Onion 14.04, but hasn't been updated or tested on 16.04.
 
 Traffic Flow and NIC offloading functions
 -----------------------------------------
