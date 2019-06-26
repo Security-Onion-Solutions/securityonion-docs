@@ -11,7 +11,7 @@ https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overv
 
 **Warning! This cloud client is considered experimental! USE AT YOUR OWN RISK!**
 
-If your cloud provides doesn't already offer a virtual tap, you can use daemonlogger or netsniff-ng as a virtual tap. This virtual tap will copy all traffic from our production cloud box to an OpenVPN bridge that transports the traffic to our
+If your cloud provider doesn't already offer a virtual tap, you can use daemonlogger or netsniff-ng as a virtual tap. This virtual tap will copy all traffic from our production cloud box to an OpenVPN bridge that transports the traffic to our
 Security Onion sensor where it is then analyzed.
 
 This guide was originally written for Security Onion 12.04 and was updated for Security Onion 14.04, but hasn't been updated or tested on 16.04.
