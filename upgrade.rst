@@ -41,15 +41,17 @@ Bro package upgrades will attempt to migrate your Bro config. You should double-
 Wazuh
 -----
 
-Wazuh package upgrades will back up your ``ossec.conf`` and put the new ``ossec.conf`` in place.  You'll then need to do the following:
+Wazuh package upgrades will back up your ``/var/ossec/etc/ossec.conf`` and put the new ``ossec.conf`` in place.  You'll then need to do the following:
 
--  re-apply any other local customizations to your ``ossec.conf`` file
+-  re-apply any other local customizations to your ``/var/ossec/etc/ossec.conf`` file
 
 -  restart Wazuh as follows:
 
    ::
 
        sudo so-ossec-restart
+       
+-  update any existing OSSEC/Wazuh agents to the Wazuh agent version matching your Wazuh server version
 
 MySQL
 -----
