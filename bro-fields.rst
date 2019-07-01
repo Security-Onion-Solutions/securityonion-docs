@@ -492,8 +492,8 @@ sip.log
 | status\_code
 | status\_msg
 | warning
-| request\_body\_length
-| response\_body\_length
+| request\_body\_len => request\_body\_length
+| response\_body\_len => response\_body\_length
 | content\_type
 
 smtp.log
