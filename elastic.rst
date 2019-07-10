@@ -36,3 +36,4 @@ diagram <Elastic-Architecture>`__.
    bro-fields
    elastalert-fields
    re‐indexing
+   elastic-features
