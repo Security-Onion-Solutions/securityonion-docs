@@ -4,7 +4,7 @@ Conference
 Who should attend Security Onion Conference?
 --------------------------------------------
 
-Users of Security Onion should definitely attend! In addition, most talks provide value beyond just Security Onion, so folks generally interested in intrusion detection, network security monitoring, enterprise security monitoring, log management, hunting, and blue teaming should consider Security Onion Conference as well.
+If you use Security Onion, then you should definitely attend! In addition, most talks provide value beyond just Security Onion, so if you're generally interested in intrusion detection, network security monitoring, enterprise security monitoring, log management, hunting, and blue teaming, then you should consider Security Onion Conference.
 
 Social Media
 ------------
