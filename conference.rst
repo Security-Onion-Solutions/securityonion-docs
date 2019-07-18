@@ -17,21 +17,28 @@ Security Onion Conference 2019
 
 Security Onion Conference 2019 is scheduled for Friday, October 4, 2019 and `registration is now open <https://socaugusta2019.eventbrite.com>`_!
 
-*Speaker Lineup*
+**Speaker Lineup**
 
-Wes Lambert - Augmenting the Onion: Facilitating Enhanced Detection and Response with Open Source Tools
+| Wes Lambert
+| *Augmenting the Onion: Facilitating Enhanced Detection and Response with Open Source Tools*
 
-Chris Sanders and Stef Rand - Creativity, Intelligence, and Security Analyst Thinking Modes
+| Chris Sanders and Stef Rand
+| *Creativity, Intelligence, and Security Analyst Thinking Modes*
 
-Josh Brower - Constructing Your Playbook within Security Onion
+| Josh Brower
+| *Constructing Your Playbook within Security Onion*
 
-Wylie Bayes - Building a Detection Lab with SecurityOnion
+| Wylie Bayes
+| *Building a Detection Lab with SecurityOnion*
 
-Bryant Treacle - Finding traffic anomalies using SSL certificates
+| Bryant Treacle
+| *Finding traffic anomalies using SSL certificates*
 
-Benjamin Klimkowski and Sean Eyre - Peeling Back the Layers: Using Security Onion to See Adversary Activity through All Phases of the Kill Chain
+| Benjamin Klimkowski and Sean Eyre
+| *Peeling Back the Layers: Using Security Onion to See Adversary Activity through All Phases of the Kill Chain*
 
-Doug Burks - State of the Onion
+| Doug Burks
+| *State of the Onion*
 
 Security Onion Conference 2018
 ------------------------------
