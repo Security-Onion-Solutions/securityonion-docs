@@ -15,11 +15,23 @@ Social Media
 Security Onion Conference 2019
 ------------------------------
 
-Security Onion Conference 2019 is scheduled for Friday, October 4, 2019.
-Please make plans to attend!
+Security Onion Conference 2019 is scheduled for Friday, October 4, 2019 and `registration is now open<https://socaugusta2019.eventbrite.com>`_!
 
-| CFP closes on June 24!
-| https://blog.securityonion.net/2019/04/security-onion-conference-2019-cfp.html
+*Speaker Lineup*
+
+Wes Lambert - Augmenting the Onion: Facilitating Enhanced Detection and Response with Open Source Tools
+
+Chris Sanders and Stef Rand - Creativity, Intelligence, and Security Analyst Thinking Modes
+
+Josh Brower - Constructing Your Playbook within Security Onion
+
+Wylie Bayes - Building a Detection Lab with SecurityOnion
+
+Bryant Treacle - Finding traffic anomalies using SSL certificates
+
+Benjamin Klimkowski and Sean Eyre - Peeling Back the Layers: Using Security Onion to See Adversary Activity through All Phases of the Kill Chain
+
+Doug Burks - State of the Onion
 
 Security Onion Conference 2018
 ------------------------------
@@ -132,8 +144,7 @@ Playlist <https://www.youtube.com/watch?v=ViR405l-ggg&list=PLljFlTO9rB15Tve-LhV5
 Security Onion Conference 2015
 ------------------------------
 
-| Todd Heberlein - Looking Back Over a Quarter Century of Network
-  Monitoring
+| Todd Heberlein - Looking Back Over a Quarter Century of Network Monitoring
 | http://www.toddheberlein.com/blog/2015/9/11/security-onion-conference-presentation
 
 | Seth Hall - Detect it Once
@@ -145,8 +156,7 @@ Security Onion Conference 2015
 | Chris Sistrunk - Industrially Hardened Security Onion Sensor
 | http://www.slideshare.net/chrissistrunk/def-con-23-nsm-101-for-ics
 
-| Josh Brower - Using Sysmon to Enrich Security Onion's Host-Level
-  Capabilities
+| Josh Brower - Using Sysmon to Enrich Security Onion's Host-Level Capabilities
 | http://defensivedepth.com/2015/09/11/socaugusta-deck-sysmon-security-onion-integration/
 
 | Chris Montgomery - Threat Intel Powered IDS
@@ -156,15 +166,13 @@ Security Onion Conference 2014
 ------------------------------
 
 | Richard Bejtlich - Keynote Speech
-| Dustin Webber - Why I Built Snorby and the Future of Security
-  Interfaces
+| Dustin Webber - Why I Built Snorby and the Future of Security Interfaces
 | Paul Halliday - SQUERT – An Open Source Web Interface for NSM Data
 | Martin Holste - ELSA
 | Mike Reeves - Scaling Security Onion to the Enterprise
 | Josh Brower - The Security Onion Cloud Client
 | Chris Sanders and Jason Smith - Using Flow Data Effectively
-| Ben Knowles - Learn Analysis and Forensics for Free\*\* with Security
-  Onion
+| Ben Knowles - Learn Analysis and Forensics for Free\*\* with Security Onion
 | Tim Krabec - Custodiet MSSP Framework
 | Scott Runnels - Contributing to Security Onion
 | Doug Burks - State of the Onion, Q&A, Closing Remarks
