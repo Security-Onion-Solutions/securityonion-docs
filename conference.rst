@@ -15,7 +15,7 @@ Social Media
 Security Onion Conference 2019
 ------------------------------
 
-Security Onion Conference 2019 is scheduled for Friday, October 4, 2019 and `registration is now open<https://socaugusta2019.eventbrite.com>`_!
+Security Onion Conference 2019 is scheduled for Friday, October 4, 2019 and `registration is now open <https://socaugusta2019.eventbrite.com>`_!
 
 *Speaker Lineup*
 
