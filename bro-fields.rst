@@ -40,6 +40,12 @@ conn.log
     REJ "Connection attempt rejected"   
     RSTO "Connection established, originator aborted (sent a RST)"   
     RSTR "Established, responder aborted"  
+    RSTOS0 "Originator sent a SYN followed by a RST, we never saw a SYN-ACK from the responder"
+    RSTRH "Responder sent a SYN ACK followed by a RST, we never saw a SYN from the (purported) originator"
+    SH "Originator sent a SYN followed by a FIN, we never saw a SYN ACK from the responder (hence the connection was 'half' open)"
+    SHR "Responder sent a SYN ACK followed by a FIN, we never saw a SYN from the originator"
+    OTH "No SYN seen, just midstream traffic (a 'partial connection' that was not later closed)"
+
 
 | local\_orig
 | local\_resp => local\_respond
