@@ -38,6 +38,11 @@ Bro package upgrades will attempt to migrate your Bro config. You should double-
 
     sudo so-bro-restart
 
+Elastic
+-------
+
+If ``soup`` upgrades the Elastic stack, it should automatically reload your Kibana dashboards.  If for some reason this fails and Kibana is not showing any dashboards, then simply run ``sudo so-elastic-configure-kibana``.
+
 Wazuh
 -----
 
