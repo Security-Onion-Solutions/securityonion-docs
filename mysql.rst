@@ -69,13 +69,13 @@ Check mysql ``table_definition cache`` (defaults to ``400``):
 
 ::
 
-    mysql -uroot -e "show global variables like 'table_definition_cache'"
+    sudo mysql --defaults-file=/etc/mysql/debian.cnf -e "show global variables like 'table_definition_cache'"
 
 Check current ``open_table_definitions`` (probably maxed out at ``table_definition_cache``):
 
 ::
 
-    mysql -uroot -e "show global status like 'open_table_definitions'"
+    sudo mysql --defaults-file=/etc/mysql/debian.cnf -e "show global status like 'open_table_definitions'"
 
 Check number of ``.frm`` files:
 
