@@ -12,8 +12,8 @@ If you need to add a new OS user account, you can use the ``adduser`` command.  
 
 For more information, please see ``man adduser``.
 
-Application
------------
+SSO
+---
 
 If you need to add a new SSO (Sguil/Squert/Kibana) account, you can use the ``so-user-add`` command (please note that SSO usernames must be alphanumeric):
 
@@ -21,4 +21,7 @@ If you need to add a new SSO (Sguil/Squert/Kibana) account, you can use the ``so
 
     sudo so-user-add
 
-If you've enabled Elastic authentication, you can manage user accounts in Kibana under Management -> Users.
+Elastic
+-------
+
+If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management -> Users.
