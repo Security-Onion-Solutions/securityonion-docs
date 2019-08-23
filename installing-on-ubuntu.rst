@@ -52,7 +52,7 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
 
     sudo apt-get -y install securityonion-all syslog-ng-core
    
-- Run the Setup wizard (if you're using Ubuntu Server with no GUI and are doing this over SSH, you will need to forward X for this to work):
+- Run the Setup wizard (you can replace ``sosetup`` with ``sosetup-minimal`` if you prefer the minimal configuration):
 
   ::
 
