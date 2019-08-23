@@ -14,12 +14,21 @@ One of the easiest ways to get started with Security Onion is using it to forens
 
 For more information, please see the `so-import-pcap <so-import-pcap>`__ section.
 
-Classroom
----------
+Evaluation
+----------
 
-``Evaluation Mode`` is ideal for classroom or small lab environments.
+``Evaluation Mode`` is ideal for classroom or small lab environments.  
 
 Install Security Onion. Run Setup and configure network interfaces. Reboot, run Setup again, and then choose ``Evaluation Mode``.
+
+For more information, please see the `Quick Evaluation <QuickISOImage>`__ section.
+
+Minimal Evaluation
+------------------
+
+If you have have a classroom or small lab environments with minimal RAM, you might want to try the ``Minimal Evaluation`` mode.  This mode gives you the bare minimum log parsing for IDS alerts and Bro logs in JSON format and thus requires less RAM than traditional Evaluation Mode.
+
+Install Security Onion. Run ``sosetup-minimal`` and configure network interfaces. Reboot, run ``sosetup-minimal`` again, and then choose ``Evaluation Mode``.
 
 For more information, please see the `Quick Evaluation <QuickISOImage>`__ section.
 
