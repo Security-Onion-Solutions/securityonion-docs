@@ -559,4 +559,8 @@ How do I perform "X" in Ubuntu?
 
 Security Onion is based on Ubuntu, but we don't provide community support for the Ubuntu OS itself. If you have questions about Ubuntu, you should check the Ubuntu website, forums, and Google.
 
+Can I connect Security Onion to Active Directory?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+We understand the appeal of Active Directory integration, but we typically recommend against joining any security infrastructure (including Security Onion) to Active Directory. The reason is that when you get an adversary inside your network, one of their first goals is going to be gaining access to Active Directory. If they get access to Active Directory, then they get access to everything connected to Active Directory. For that reason, we recommend that all security infrastructure (including Security Onion) be totally separate from Active Directory.
+
 `back to top <#top>`__
