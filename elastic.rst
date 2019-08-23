@@ -37,3 +37,4 @@ diagram <Elastic-Architecture>`__.
    elastalert-fields
    re‐indexing
    elastic-features
+   elastic-auth
