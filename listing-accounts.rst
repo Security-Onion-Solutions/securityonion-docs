@@ -22,4 +22,4 @@ To list all SSO (Sguil/Squert/Kibana) accounts, you can use the ``so-user-list``
 Elastic
 -------
 
-If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management -> Users.
+If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management --> Users.
