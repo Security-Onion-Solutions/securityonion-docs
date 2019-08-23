@@ -19,4 +19,7 @@ To list all SSO (Sguil/Squert/Kibana) accounts, you can use the ``so-user-list``
 
     sudo so-user-list
 
-If you've enabled Elastic authentication, you can manage user accounts in Kibana under Management -> Users.
+Elastic
+-------
+
+If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management -> Users.
