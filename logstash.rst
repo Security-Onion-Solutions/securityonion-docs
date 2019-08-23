@@ -212,10 +212,18 @@ Additionally, you can run the following command to allow writing to the affected
 LOGSTASH_MINIMAL
 ----------------
 
-We now have a ``LOGSTASH_MINIMAL`` mode which will offload log parsing to Elasticsearch ingest node.  This allows Logstash to run in only 200MB RAM and start instantly.  Please note that the Elasticsearch ingest node parsing currently only supports standard IDS alerts and Bro logs in JSON format.  To enable on a new installation, simply run ``sosetup-minimal``.  To enable on an existing installation, add the following to ``/etc/nsm/securityonion.conf`` and then restart Logstash:
+We now have a ``LOGSTASH_MINIMAL`` mode which will offload log parsing to Elasticsearch ingest node.  This allows Logstash to run in only 200MB RAM and start instantly.  Please note that the Elasticsearch ingest node parsing currently only supports standard IDS alerts and Bro logs in JSON format.  
+
+To enable on a new installation, simply run:
+
+::
+
+    sosetup-minimal
+    
+To enable on an existing installation, add the following to ``/etc/nsm/securityonion.conf``:
 
 ::
 
     LOGSTASH_MINIMAL="yes"
     
-    
+You should then be able to decrease your Logstash heap size and restart Logstash.
