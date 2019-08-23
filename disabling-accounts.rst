@@ -26,4 +26,4 @@ If you later need to re-enable this SSO account, you can use the ``so-user-passw
 Elastic
 -------
 
-If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management -> Users.
+If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management --> Users.
