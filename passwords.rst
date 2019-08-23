@@ -40,7 +40,7 @@ Kibana
 
 When you access Kibana, you are prompted to login using Apache Single Sign On (SSO). This SSO authenticates against the Sguil user database, so you should be able to login to Kibana using the same username and password you use to login to Sguil.
 
-If you've enabled Elastic authentication, you can manage user accounts in Kibana under Management -> Users.
+If you've enabled Elastic authentication, you can manage user accounts in Kibana under Management --> Users.
 
 MySQL
 -----
