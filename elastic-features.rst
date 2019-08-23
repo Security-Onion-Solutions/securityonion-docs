@@ -1,7 +1,7 @@
 Elastic Features
 ================
 
-Many folks have asked if they could switch from the open source version of the Elastic Stack to the Features version licensed under the Elastic license.  Here's how:
+Many folks have asked if they could switch from the open source version of the Elastic Stack to the Features version licensed under the Elastic license.  Starting with our Elastic 6.8.2 release, we have a script called ``so-elastic-features`` that will walk you through this.  If you want to do this manually, you can do the following:
 
 - First, please review the Elastic Features license:
 https://github.com/elastic/elasticsearch/blob/6.7/licenses/ELASTIC-LICENSE.txt
@@ -59,11 +59,3 @@ Security Onion continues to be free and open source and will continue to default
 
 If you switch to Elastic Features, you can remain on the BASIC license for free forever or you can choose to upgrade to a paid subscription. For more information about Elastic Features subscription levels, please see:
 https://www.elastic.co/subscriptions
-
-- How does authentication work?
-
-Authentication works the same way it does in our existing Elastic open source images.  Security Onion provides Single Sign On (SSO) using the same username and password for Sguil, Squert, and Kibana.
-
-- What about the recent Elastic announcement about security features?
-
-Elastic recently announced that security features are included for free in the Elastic Features license starting in version 6.8.0.  Since Security Onion still uses Elastic 6.7.2, those security features are not free in that version.  We will begin the process of working towards Elastic 6.8.0.
