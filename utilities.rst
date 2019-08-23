@@ -10,4 +10,3 @@ This section covers some of the main utilities in Security Onion.
    setup
    so-allow
    so-import-pcap
-   sosetup-minimal
