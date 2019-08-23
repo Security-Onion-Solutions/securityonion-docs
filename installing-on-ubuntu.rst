@@ -9,7 +9,7 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
 - Reboot into your new installation.
 - Login using the username and password you specified during installation.
 - Verify that you have Internet connectivity. If necessary, configure your `proxy <Proxy>`__ settings.
-- Log back in (using ``ssh -X`` if you’re installing on Ubuntu Server or a headless distro).
+- Log back in.
 - Configure ``MySQL`` not to prompt for root password (Setup will generate a random password later):
 
   ::
