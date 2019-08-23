@@ -26,7 +26,7 @@ For more information, please see the `Quick Evaluation <QuickISOImage>`__ sectio
 Minimal Evaluation
 ------------------
 
-If you have have a classroom or small lab environment with minimal RAM, you might want to try Minimal Evaluation mode using `<sosetup-minimal>`_.  This mode gives you the bare minimum log parsing for IDS alerts and Bro logs in JSON format.  It therefore requires less RAM than traditional Evaluation Mode.
+If you have have a classroom or small lab environment with minimal RAM, you might want to try Minimal Evaluation mode using ``sosetup-minimal``.  This mode gives you the bare minimum log parsing for IDS alerts and Bro logs in JSON format.  It therefore requires less RAM than traditional Evaluation Mode.
 
 Install Security Onion. Run ``sosetup-minimal`` and configure network interfaces. Reboot, run ``sosetup-minimal`` again, and then choose ``Evaluation Mode``.
 
