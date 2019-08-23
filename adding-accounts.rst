@@ -24,4 +24,4 @@ If you need to add a new SSO (Sguil/Squert/Kibana) account, you can use the ``so
 Elastic
 -------
 
-If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management -> Users.
+If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management --> Users.
