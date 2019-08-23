@@ -4,7 +4,7 @@ Accounts
 In Security Onion, there are two main types of accounts:
 
    - operating system (OS) accounts
-   - Single Sign On (SSO) accounts used when authenticating to Sguil, Squert, or Kibana
+   - application accounts used when authenticating to Sguil, Squert, or Kibana
 
 .. toctree::
    :maxdepth: 2
