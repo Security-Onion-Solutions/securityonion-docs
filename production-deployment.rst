@@ -97,7 +97,7 @@ Setup
    
      sudo sosetup
      
-   Otherwise, if you are remote and logged in over ssh, you can run CLI-only Setup using ``sosetup.conf``. For more information, please see ``/usr/share/securityonion/sosetup.conf``.
+   Alternatively, you can run ``sosetup-minimal`` if you prefer the minimal configuration or you can automate Setup using ``sosetup.conf``. For more information, please see ``/usr/share/securityonion/sosetup.conf``.
 #. The Setup wizard will walk you through configuring ``/etc/network/interfaces`` and will then reboot.
 #. When prompted whether you would like to configure ``/etc/network/interfaces`` now, choose ``Yes, configure
    /etc/network/interfaces!``.
@@ -108,7 +108,7 @@ Setup
 #. When prompted, choose ``Yes, make changes!``.
 #. If you need to adjust any network settings manually (e.g. ``MTU``), you may edit ``/etc/network/interfaces`` before rebooting.
 #. When ready to reboot, click ``Yes, reboot!``.
-#. After rebooting, log back in and start the Setup wizard again (GUI if local, ``sosetup.conf`` CLI if remote). It will detect that you have already configured ``/etc/network/interfaces`` and will walk you through the rest of the configuration.
+#. After rebooting, log back in and start the Setup wizard again the same as you did before. It will detect that you have already configured ``/etc/network/interfaces`` and will walk you through the rest of the configuration.
 #. Select ``Production Mode``.
 #. Select ``New`` or ``Existing`` (``New`` if this is a master or standalone, and ``Existing`` for forward, heavy, and storage nodes).
 
