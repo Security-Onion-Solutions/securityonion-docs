@@ -43,12 +43,12 @@ Run the installer:
 ::
 
    sudo bash ./install.sh
+   
+Configuration
+-------------
 
-Start MongoDB:
-
-::
-
-   sudo service mongod start
+You must set your own values for ``InternalSubnets`` in ``/etc/rita/config.yaml`` before importing
+data into RITA. See https://github.com/activecm/rita#configuration-file for more information.
 
 Usage
 -----
@@ -57,13 +57,7 @@ You can then import logs with:
 
 ::
 
-   rita import /nsm/bro/logs dataset1
-
-Then have RITA analyze the imported data:
-
-::
-
-   rita analyze
+   rita import /nsm/bro/logs/2019-09-04 dataset1
 
 To see the most visited URLs:
 
@@ -94,12 +88,6 @@ See other available commands with:
 ::
 
    rita --help
-
-Configuration
--------------
-
-If you don't want to specify your the path for your Bro logs, you'll want to change the value for ``ImportDirectory`` in
-``/etc/rita/config.yaml`` to ``/nsm/bro/logs``.
 
 | For additional information, see:
 | https://github.com/activecm/rita
