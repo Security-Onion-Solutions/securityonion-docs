@@ -26,7 +26,7 @@ This documentation is published online at https://securityonion.net/docs.  If yo
 This documentation is also available in PDF format at https://readthedocs.org/projects/securityonion/downloads/pdf/latest/.
 
 | Many folks have asked for a printed version of this documentation and it's now available for purchase!  Whether you work on airgapped networks or simply want a portable reference that doesn't require an Internet connection or batteries, this is what you've been asking for.  Thanks to Richard Bejtlich for writing the inspiring foreword!  Proceeds go to the Rural Technology Fund!
-| https://www.amazon.com/dp/179779762X
+| https://securityonion.net/book
 
 Authors
 ~~~~~~~
