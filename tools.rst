@@ -91,7 +91,7 @@ Tools
 | "Squert is a web application that is used to query and view event data stored in a Sguil database (typically IDS alert data). Squert is a visual tool that attempts to provide additional context to events through the use of metadata, time series representations and weighted and logically grouped result sets. The hope is that these views will prompt questions that otherwise may not have been asked."
 | 
 | ssldump
-| http://www.rtfm.com/ssldump/
+| https://linux.die.net/man/1/ssldump
 | "ssldump is an SSLv3/TLS network protocol analyzer. It identifies TCP connections on the chosen network interface and attempts to interpret them as SSLv3/TLS traffic. When it identifies SSLv3/TLS traffic, it decodes the records and displays them in a textual form to stdout. If provided with the appropriate keying material, it will also decrypt the connections and display the application data traffic."
 | 
 | sslsniff
