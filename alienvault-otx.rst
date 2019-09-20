@@ -11,7 +11,7 @@ Please keep in mind we do not officially support use of this script, so installa
 Installation
 ------------
 
-In order to do begin, we will need to make sure we satisfy a few prerequisites:
+In order to begin, we will need to make sure we satisfy a few prerequisites:
 
 | **Alienvault OTX API key** - can be obtained for free at:
   https://otx.alienvault.com
