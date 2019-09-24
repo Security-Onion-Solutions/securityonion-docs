@@ -28,6 +28,10 @@ Setup locks down the `firewall <Firewall>`_ by default.  If you need to open por
 
     Please enter your selection (a - analyst, c - apt-cacher-ng client, l - syslog, o - ossec, or s - Security Onion sensor, etc.):
 
+Wazuh Whitelist
+---------------
+If you choose the ``analyst`` option, ``so-allow`` will also add the ``analyst`` IP address to the Wazuh Whitelist.  This will prevent Wazuh Active Response from blocking the ``analyst`` IP address.
+
 so-allow-view
 -------------
 
@@ -36,10 +40,6 @@ To view existing rules granted through the use of ``so-allow``, use the followin
 ::
 
    so-allow-view
-
-Wazuh Whitelist
----------------
-If you choose the ``analyst`` option, ``so-allow`` will also add the ``analyst`` IP address to the Wazuh Whitelist.  This will prevent Wazuh Active Response from blocking the ``analyst`` IP address.
 
 so-disallow
 -----------
