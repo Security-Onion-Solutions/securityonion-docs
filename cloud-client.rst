@@ -9,6 +9,11 @@ https://aws.amazon.com/blogs/aws/new-vpc-traffic-mirroring/
 
 https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
 
+AWS Virtual Taps use VXLAN encoding and we now have a version of Suricata that supports decoding that VXLAN traffic:
+https://blog.securityonion.net/2019/09/suricata-415-now-available-for-security.html
+
+Zeek 3.0 includes native support for VXLAN traffic as well and that is coming soon.
+
 **Warning! This cloud client is considered experimental! USE AT YOUR OWN RISK!**
 
 If your cloud provider doesn't already offer a virtual tap, you can use daemonlogger or netsniff-ng as a virtual tap. This virtual tap will copy all traffic from our production cloud box to an OpenVPN bridge that transports the traffic to our
