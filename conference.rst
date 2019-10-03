@@ -15,7 +15,7 @@ Social Media
 Security Onion Conference 2019
 ------------------------------
 
-| Registration is now closed and there are no ticket sales at the door, but registered attendees can find more information about the event at `<https://socaugusta2019.eventbrite.com>`_.
+| Registration is now closed and there are NO ticket sales at the door, but registered attendees can find more information about the event at `<https://socaugusta2019.eventbrite.com>`_.
 | 
 | **When:**
 | Friday, October 4, 2019
