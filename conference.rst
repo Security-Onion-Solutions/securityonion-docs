@@ -45,6 +45,7 @@ Security Onion Conference 2019
 | Sweet/Unsweet Tea
 | 
 | Registration is now closed but registered attendees can find more information about the event at `<https://socaugusta2019.eventbrite.com>`_.
+| 
 
 **Speaker Lineup**
 
