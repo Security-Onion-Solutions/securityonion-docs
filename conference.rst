@@ -15,19 +15,19 @@ Social Media
 Security Onion Conference 2019
 ------------------------------
 
-| When:
+| **When:**
 | Friday, October 4, 2019
 | 8:00 AM – 5:00 PM EDT
-
-| Where:
+| 
+| **Where:**
 | Georgia Cyber Center
 | Hull-McKnight Building, Plug ‘n’ Play Room (Auditorium)
 | 100 Grace Hopper Lane
 | Augusta, GA 30901
 | Google Maps of Georgia Cyber Center: https://goo.gl/maps/tvtuC2myTMM2
 | Park in the adjacent parking deck. Parking at that deck (and only that deck) is free for attendees. Attendees will be provided one validated parking pass for that deck.
-
-| Light Breakfast (Subject to change)
+| 
+| **Light Breakfast (Subject to change)**
 | Chick-fil-A
 | Chicken Biscuit
 | Sausage Biscuit
@@ -35,16 +35,16 @@ Security Onion Conference 2019
 | Fruit
 | Lemonade
 | Orange Juice
-
-| Lunch Menu (Subject to change)
+| 
+| **Lunch Menu (Subject to change)**
 | Shane's Rib Shack
 | Chopped Pork and Chopped Chicken
 | Baked Beans
 | Green Beans
 | Peach Cobbler or Banana Pudding
 | Sweet/Unsweet Tea
-
-Registration is now closed but registered attendees can find more information about the event at `<https://socaugusta2019.eventbrite.com>`_.
+| 
+| Registration is now closed but registered attendees can find more information about the event at `<https://socaugusta2019.eventbrite.com>`_.
 
 **Speaker Lineup**
 
