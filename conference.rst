@@ -15,59 +15,22 @@ Social Media
 Security Onion Conference 2019
 ------------------------------
 
-| Registration is now closed and there are NO ticket sales at the door, but registered attendees can find more information about the event at `<https://socaugusta2019.eventbrite.com>`_.
-| 
-| **When:**
-| Friday, October 4, 2019
-| 8:00 AM – 5:00 PM EDT
-| 
-| **Where:**
-| Georgia Cyber Center
-| Hull-McKnight Building, Plug ‘n’ Play Room (Auditorium)
-| 100 Grace Hopper Lane
-| Augusta, GA 30901
-| Google Maps of Georgia Cyber Center: https://goo.gl/maps/tvtuC2myTMM2
-| Park in the adjacent parking deck. Parking at that deck (and only that deck) is free for attendees. Attendees will be provided one validated parking pass for that deck.
-| 
-| **Light Breakfast (Subject to change)**
-| Chick-fil-A
-| Chicken Biscuit
-| Sausage Biscuit
-| Buttered Biscuit
-| Fruit
-| Lemonade
-| Orange Juice
-| 
-| **Lunch Menu (Subject to change)**
-| Shane's Rib Shack
-| Chopped Pork and Chopped Chicken
-| Baked Beans
-| Green Beans
-| Peach Cobbler or Banana Pudding
-| Sweet/Unsweet Tea 
+`Security Onion Conference 2019 Video
+Playlist <https://www.youtube.com/playlist?list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa>`__
 
-**Speaker Lineup**
+`Augmenting the Onion: Facilitating Enhanced Detection and Response with Open Source Tools by Wes Lambert <https://www.youtube.com/watch?v=XcFZV5J8juo&list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa&index=2>`_
 
-| Wes Lambert
-| *Augmenting the Onion: Facilitating Enhanced Detection and Response with Open Source Tools*
+`Creativity, Intelligence, and Security Analyst Thinking Modes by Chris Sanders and Stef Rand <https://www.youtube.com/watch?v=tZxr3cHElCw&list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa&index=3>`_
 
-| Chris Sanders and Stef Rand
-| *Creativity, Intelligence, and Security Analyst Thinking Modes*
+`Constructing Your Playbook within Security Onion by Josh Brower <https://www.youtube.com/watch?v=qBXg3IUJPjY&list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa&index=4>`_
 
-| Josh Brower
-| *Constructing Your Playbook within Security Onion*
+`Building a Detection Lab with SecurityOnion by Wylie Bayes <https://www.youtube.com/watch?v=JOvWCQ-PHHY&list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa&index=5>`_
 
-| Wylie Bayes
-| *Building a Detection Lab with SecurityOnion*
+`Finding traffic anomalies using SSL certificates by Bryant Treacle <https://www.youtube.com/watch?v=-WD9BWlENwc&list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa&index=6>`_
 
-| Bryant Treacle
-| *Finding traffic anomalies using SSL certificates*
+`Peeling Back the Layers: Using Security Onion to See Adversary Activity through All Phases of the Kill Chain by Benjamin Klimkowski and Sean Eyre <https://www.youtube.com/watch?v=9ghFZf61FW4&list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa&index=7>`_
 
-| Benjamin Klimkowski and Sean Eyre
-| *Peeling Back the Layers: Using Security Onion to See Adversary Activity through All Phases of the Kill Chain*
-
-| Doug Burks
-| *State of the Onion*
+`State of the Onion by Doug Burks <https://www.youtube.com/watch?v=1B5bgH71hYc&list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa&index=8>`_
 
 Security Onion Conference 2018
 ------------------------------
