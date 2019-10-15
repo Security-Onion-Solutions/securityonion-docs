@@ -203,19 +203,6 @@ Import
 ------
 You can import Bro logs into Elasticsearch by dropping them into ``/nsm/import/bro/``.  Logstash monitors that directory as defined in ``0007_input_import.conf``.
 
-Top for Bro
------------
-
--  To view "top-like" information for Bro logs, consider using BroTop.
-
--  "Brotop lets you stream your bro logs to the browser for easy
-   debugging and a real-time glimpse into whats being processed".
-
--  Written in Go, BroTop is a dependency-free binary that can be
-   downloaded and run immediately, auto-detecting Bro log paths.
-
--  For more information about BroTop, please see https://github.com/criticalstack/brotop.
-
 /nsm/bro/spool/tmp
 ------------------
 
