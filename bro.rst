@@ -1,7 +1,7 @@
 Bro
 ===
 
-From https://www.zeek.org/:
+Bro is in the process of renaming to Zeek.  From https://www.zeek.org/:
 
     Zeek is a powerful network analysis framework that is much different from the typical IDS you may know. (Zeek is the new name for the long-established Bro system. Note that parts of the system retain the "Bro" name, and it also often appears in the documentation and distributions.)
 
@@ -198,6 +198,10 @@ You can then have Bro automatically restart upon a detected change in ``local.br
       - cwd: /
       - watch:
         - file: /opt/bro/share/bro/site/local.bro
+
+Import
+------
+You can import Bro logs into Elasticsearch by dropping them into ``/nsm/import/bro/``.  Logstash monitors that directory as defined in ``0007_input_import.conf``.
 
 Top for Bro
 -----------
