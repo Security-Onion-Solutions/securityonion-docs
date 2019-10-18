@@ -15,6 +15,8 @@ Social Media
 Security Onion Conference 2019
 ------------------------------
 
+`Pictures <https://blog.securityonion.net/2019/10/pictures-from-security-onion-conference.html>`__
+
 `Security Onion Conference 2019 Video
 Playlist <https://www.youtube.com/playlist?list=PLljFlTO9rB16UHGHbo4dTR5qzvJObEBoa>`__
 
