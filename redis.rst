@@ -25,7 +25,7 @@ To see how many logs are in the redis queue:
 
 ::
 
-    redis-cli LLEN logstash:redis
+    sudo so-redis-count
 
 If the queue is backed up and doesn't seem to be draining, try stopping
 Logstash on the master server:
@@ -38,7 +38,7 @@ Then monitor the queue to see if it drains:
 
 ::
 
-    watch 'redis-cli llen logstash:redis'
+    watch 'sudo so-redis-count'
 
 If the Redis queue looks okay, but you are still having issues with logs
 getting indexed into Elasticsearch, you will want to check the Logstash
