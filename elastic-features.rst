@@ -1,7 +1,7 @@
 Elastic Features
 ================
 
-Many folks have asked if they could switch from the open source version of the Elastic Stack to the Features version licensed under the Elastic license.  Starting with our Elastic 6.8.2 release, we have a script called ``so-elastic-features`` that will walk you through this.  If you want to do this manually, you can do the following:
+Many folks have asked if they could switch from the open source version of the Elastic Stack to the Features version licensed under the Elastic license (formerly known as X-Pack).  Starting with our Elastic 6.8.2 release, we have a script called ``so-elastic-features`` that will walk you through this.  If you want to do this manually, you can do the following:
 
 - First, please review the Elastic Features license:
 https://github.com/elastic/elasticsearch/blob/6.7/licenses/ELASTIC-LICENSE.txt
