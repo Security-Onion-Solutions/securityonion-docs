@@ -10,7 +10,7 @@ From https://www.elastic.co/products/logstash :
 Configuration
 -------------
 
-Here are a few of the settings which you may need to tune in `/etc/logstash/logstash.yml``.
+Here are a few of the settings which you may need to tune in ``/etc/logstash/logstash.yml``.
 
 pipeline.batch.size
 ~~~~~~~~~~~~~~~~~~~
