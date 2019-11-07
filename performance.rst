@@ -60,7 +60,7 @@ If you have plenty of RAM, disable swap altogether.
 
 Elastic
 -------
-You will want to make sure that each part of the pipeline is operating at maximum efficiency.  Depending on your configuration, this may include `syslog-ng <syslog>`__, `Logstash <logstash>`_, `Redis <redis>`__, and `Elasticsearch <elasticsearch>`__.  For really high volume logs, you may want to consider `LOGSTASH_MINIMAL <logstash#logstash-minimal>`__.
+You will want to make sure that each part of the pipeline is operating at maximum efficiency.  Depending on your configuration, this may include `syslog-ng <syslog>`__, `Logstash <logstash>`_, `Redis <redis>`__, and `Elasticsearch <elasticsearch>`__.  For really high volume logs, you may want to consider the `LOGSTASH_MINIMAL <logstash#logstash-minimal>`__ option.
 
 Other
 -----
