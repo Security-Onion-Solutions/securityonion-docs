@@ -58,6 +58,10 @@ If you have plenty of RAM, disable swap altogether.
 | More information:
 | https://lonesysadmin.net/2013/12/22/better-linux-disk-caching-performance-vm-dirty_ratio/
 
+Elastic
+-------
+You will want to make sure that each part of the pipeline is operating at maximum efficiency.  Depending on your configuration, this may include `syslog-ng <syslog>`__, `Logstash <logstash>`_, `Redis <redis>`__, and `Elasticsearch <elasticsearch>`__.  For really high volume logs, you may want to consider `LOGSTASH_MINIMAL <logstash#logstash-minimal>`__.
+
 Other
 -----
 
