@@ -10,6 +10,13 @@ From https://www.elastic.co/products/logstash :
 Configuration
 -------------
 
+Here are a few of the settings which you may need to tune in `/etc/logstash/logstash.yml``.
+
+pipeline.batch.size
+~~~~~~~~~~~~~~~~~~~
+
+    The maximum number of events an individual worker thread will collect from inputs before attempting to execute its filters and outputs. Larger batch sizes are generally more efficient, but come at the cost of increased memory overhead.
+    
 pipeline.workers
 ~~~~~~~~~~~~~~~~
 
@@ -18,9 +25,7 @@ pipeline.workers
     up, or that the CPU is not saturated, consider increasing this
     number to better utilize machine processing power.
 
-https://www.elastic.co/guide/en/logstash/current/logstash-settings-file.html
-
-This setting can be adjusted in ``/etc/logstash/logstash.yml``.
+For more information, please see https://www.elastic.co/guide/en/logstash/current/logstash-settings-file.html.
 
 Logstash Heap
 ~~~~~~~~~~~~~
