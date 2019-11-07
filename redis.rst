@@ -48,6 +48,6 @@ Tuning
 
 We configure redis to use 10% of your total system memory.  If you have sufficient RAM available, you might want to increase the ``maxmemory`` setting in ``/etc/redis/redis.conf``.
 
-Logstash on the master server is configured to send to redis via ``/etc/logstash/conf.d.redis.output/9999_output_redis.conf``.  For best performance, you'll want to ensure that ``batch`` is set to ``true`` and then tune the ``batch_events`` variable to find the sweet spot for your deployment.  For more information, please see https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html.
+Logstash on the master server is configured to send to redis via ``/etc/logstash/conf.d.redis.output/9999_output_redis.conf``.  For best performance, you'll want to ensure that ``batch`` is set to ``true`` and then tune the ``batch_events`` variable to find the sweet spot for your deployment.  For more information about logstash's output plugin for redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html.
 
-Logstash on storage nodes pulls from redis via ``/etc/logstash/conf.d/0900_input_redis.conf``.  For best performance, you'll want to tune ``batch_count`` and ``threads`` to find the sweet spot for your deployment.  For more information, please see https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html#plugins-inputs-redis-batch_count.
+Logstash on storage nodes pulls from redis via ``/etc/logstash/conf.d/0900_input_redis.conf``.  For best performance, you'll want to tune ``batch_count`` and ``threads`` to find the sweet spot for your deployment.  For more information about logstash's input plugin for redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html.
