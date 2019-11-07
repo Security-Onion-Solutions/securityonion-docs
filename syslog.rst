@@ -17,6 +17,10 @@ Forwarding
 ----------
 You can configure syslog-ng to `forward <syslog-output>`_ Bro / Wazuh / IDS logs to external systems.
 
+Monitoring
+----------
+Regardless of whether syslog-ng is sending to the Elastic stack or some other external system, you should check to see that syslog-ng is not dropping logs.  sostat now has a syslog-ng section that shows stats and it will also check for any dropped logs.
+
 Collection
 ----------
 syslog-ng listens on port 514 (TCP and UDP) for incoming syslog from other devices.  You may need to run `<so-allow>`__ to allow traffic from the IP address of your syslog sender.
