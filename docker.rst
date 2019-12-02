@@ -20,6 +20,8 @@ https://www.elastic.co/blog/docker-base-centos7
 
 To leverage a common core OS layer, all of our Docker images are then built on CentOS 7.
 
+Please note that in the current platform, only a few of the components are delivered via containers. The remaining components (including the configuration files for those containers) are delivered via Ubuntu packages.
+
 Registry
 --------
 
