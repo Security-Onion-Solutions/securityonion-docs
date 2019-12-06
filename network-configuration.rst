@@ -90,3 +90,8 @@ If you already had sensors running on these interfaces, you should restart them:
    sudo so-sensor-restart
 
 For more information on network configuration in Ubuntu, please see https://help.ubuntu.com/community/NetworkConfigurationCommandLine/Automatic.
+
+Wireless interfaces
+-------------------
+
+Security Onion is designed to use wired interfaces.  We don't recommend or support wireless interfaces.  If you absolutely must use a wireless interface for your management interface, you may be able to make it work by removing it from ``/etc/network/interfaces`` and restarting the network manager service.  For more information, please see https://groups.google.com/d/topic/security-onion/aC4psdszC58/discussion.
