@@ -300,10 +300,10 @@ As mentioned before, take care in disabling signatures as it can be likely that 
 
    ::
 
-        # Disable the GPL SNMP public access udp signature
+        # Disable the "GPL SNMP public access udp" signature
         1:2101411
         
-        # Disable the SURICATA HTTP unable to match response to request
+        # Disable the "SURICATA HTTP unable to match response to request" signature
         0:2221010
 
 -  Update rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
