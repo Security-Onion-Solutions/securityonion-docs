@@ -43,7 +43,7 @@ ET Pro (Proofpoint)
 
 -  optimized for Suricata, but available for Snort as well
 -  rules retrievable as released
--  license fee per sensor
+-  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
 
 | For more information, see:
 | https://www.proofpoint.com/us/threat-insight/et-pro-ruleset
@@ -77,7 +77,7 @@ Snort Subscriber (Talos)
 -  optimized for Snort
 -  Snort SO (Shared Object) rules will only work with Snort
 -  rules retrievable as released
--  license fee per sensor
+-  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
 
 | For more information, see:
 | https://www.snort.org/downloads/#rule-downloads
