@@ -295,15 +295,16 @@ As mentioned before, take care in disabling signatures as it can be likely that 
 
         sudo vi /etc/nsm/pulledpork/disablesid.conf
 
--  Append the signature you wish to disable in the format gid:sid. The
-   generator ID is most likely going to be a "1" in most cases. You can
-   check the generator ID by checking the exact signature. If a gid is
-   not listed, it is assumed to be "1".
+-  Append the signature you wish to disable in the format gid:sid. gid is the generator ID and will usually be "1". You can
+   check the generator ID by checking the exact signature. If a gid is not listed, it is assumed to be "1".  A common exception would be rules that start with "SURICATA" having a gid of "0" and Talos VRT Shared Object (compiled) rules having a gid of "3".  Here are some examples:
 
    ::
 
         # Disable the GPL SNMP public access udp signature
         1:2101411
+        
+        # Disable the SURICATA HTTP unable to match response to request
+        0:2221010
 
 -  Update rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
 
