@@ -47,6 +47,8 @@ If ``soup`` upgrades the Elastic stack, it should automatically reload your Kiba
 
     sudo so-elastic-configure-kibana
 
+If you've previously added any external Elastic components (such as filebeat, winlogbeat, etc.), be sure to upgrade them to match the version of your upgraded Elastic components.
+
 Wazuh
 -----
 
