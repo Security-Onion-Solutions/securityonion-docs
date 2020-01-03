@@ -116,7 +116,7 @@ Intel
 
 -  For more information, please see:
 
-   | https://www.bro.org/sphinx-git/frameworks/intel.html\ 
+   | https://docs.zeek.org/en/latest/frameworks/intel.html\ 
    | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
    | https://github.com/weslambert/securityonion-misp
 

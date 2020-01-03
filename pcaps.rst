@@ -15,7 +15,7 @@ Links
 
 -  http://www.netresec.com/?page=MACCDC
 
--  https://github.com/bro/bro/tree/master/testing/btest/Traces
+-  https://github.com/zeek/zeek/tree/master/testing/btest/Traces
 
 -  http://www.ll.mit.edu/mission/communications/cyber/CSTcorpora/ideval/data/
 

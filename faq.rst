@@ -105,7 +105,7 @@ What's the difference between a ``server`` and a ``sensor``?
 | **sensor**\ 
 | Definition: A set of processes listening on a network interface. The
   set of processes currently includes Snort/Suricata, netsniff-ng, and
-  bro (although this is in constant flux as we add new capabilities and
+  Zeek (although this is in constant flux as we add new capabilities and
   find better tools for existing capabilities).
 | Naming convention: ``$HOSTNAME-$INTERFACE``\ 
 | Configuration files: ``/etc/nsm/$HOSTNAME-$INTERFACE/``\ 
