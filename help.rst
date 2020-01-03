@@ -31,7 +31,7 @@ Having problems? Try the suggestions below.
    -  barnyard2 ``/var/log/nsm/ { HOSTNAME-INTERFACE }/barnyard2.log``
    -  netsniff-ng
       ``/var/log/nsm/{ HOSTNAME-INTERFACE }/netsniff-ng.log``
-   -  Bro ``/nsm/bro/logs/current``
+   -  Zeek ``/nsm/bro/logs/current``
    -  snort\_agent
       ``/var/log/nsm/{ HOSTNAME-INTERFACE }/snort_agent.log``
    -  Elasticsearch ``/var/log/elasticsearch/<hostname>.log``

@@ -44,7 +44,7 @@ How do I install Security Onion updates?
 
 Please see the `Upgrade Procedure <Upgrade>`__ section.
 
-Why do I get ``Snort/Suricata/Bro`` errors after upgrading the ``kernel`` and ``pfring`` packages?
+Why do I get ``Snort/Suricata/Zeek`` errors after upgrading the ``kernel`` and ``pfring`` packages?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `Updating <Upgrade>`__ section.
@@ -284,10 +284,10 @@ This is a known issue with certain versions of VMware. You can either:
    OR
 -  upgrade the VM hardware level (may require upgrading to a new version of VMware)
 
-Why does Bro log ``Failed to open GeoIP database`` and ``Fell back to GeoIP Country database``?
+Why does Zeek log ``Failed to open GeoIP database`` and ``Fell back to GeoIP Country database``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The GeoIP CITY database is ``not free`` and thus we cannot include it in the distro. Bro fails to find it and falls back to the GeoIP COUNTRY database (which is free). As long as you are seeing some country codes in your conn.log, then everything should be fine. If you really need the CITY database, see this thread for some options: https://groups.google.com/d/topic/security-onion-testing/gtc-8ZTuCi4/discussion
+The GeoIP CITY database is ``not free`` and thus we cannot include it in the distro. Zeek fails to find it and falls back to the GeoIP COUNTRY database (which is free). As long as you are seeing some country codes in your conn.log, then everything should be fine. If you really need the CITY database, see this thread for some options: https://groups.google.com/d/topic/security-onion-testing/gtc-8ZTuCi4/discussion
 
 Why does soup tell me I need a Secure Boot key?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -370,7 +370,7 @@ How do I configure email for alerting and reporting?
 
 Please see the `Email <Email>`__ section.
 
-How do I configure a ``BPF`` for ``Snort/Suricata/Bro/netsniff-ng/prads``?
+How do I configure a ``BPF`` for ``Snort/Suricata/Zeek/netsniff-ng/prads``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `BPF <BPF>`__ section.

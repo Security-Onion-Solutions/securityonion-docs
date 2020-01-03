@@ -3,13 +3,13 @@ DNS Anomaly Detection
 
 Dr. Johannes Ullrich of the SANS Internet Storm Center posted a great
 DNS Anomaly Detection script based on the query logs coming from his DNS
-server. We can do the same thing with Bro's dns.log (where Bro captures
+server. We can do the same thing with Zeek's dns.log (where Zeek captures
 all the DNS queries it sees on the network).
 
 Please note that this script is only intended for standalone machines
 and will not work properly on distributed deployments.
 
-This version of the script works on older installations using Bro TSV
+This version of the script works on older installations using Zeek TSV
 output:
 
 ::
@@ -36,7 +36,7 @@ output:
     echo "===================================="
     cat $SUSPECTS
 
-We've since changed Bro's default output to json (for faster Logstash
+We've since changed Zeek's default output to json (for faster Logstash
 parsing), so ``senatorhotchkiss`` on our mailing list updated the
 script, replacing ``bro-cut`` with ``jq`` as follows:
 

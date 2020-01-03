@@ -7,11 +7,11 @@ Security Onion comes with the option to implement what is considered a set of ``
 
 Most folks will want to disable the following services:
 
--  prads (prads creates session data and asset data, already provided by Bro)
+-  prads (prads creates session data and asset data, already provided by Zeek)
 -  pads_agent (not needed if prads is disabled)
 -  sancp_agent (not needed if prads is disabled)
--  argus (argus creates session data, which is already provided by Bro)
--  http_agent (duplicates Bro http.log into Sguil database, which may cause performance issues)
+-  argus (argus creates session data, which is already provided by Zeek)
+-  http_agent (duplicates Zeek http.log into Sguil database, which may cause performance issues)
 
 To do so, stop the required service/s:
 

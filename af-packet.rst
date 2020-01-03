@@ -1,7 +1,7 @@
 AF-PACKET
 =========
 
-Modern versions of Setup will configure `<Suricata>`_ and `<Bro>`_ to use AF-PACKET instead of `<PF-RING>`_. (`<Snort>`_ will continue to use `<PF-RING>`__ for load balancing until Snort 3.0 is released.)
+Modern versions of Setup will configure `<Suricata>`_ and `<Zeek>`_ to use AF-PACKET instead of `<PF-RING>`_. (`<Snort>`_ will continue to use `<PF-RING>`__ for load balancing until Snort 3.0 is released.)
 
 If you want to change the number of AF-PACKET workers after running Setup, you can do the following.
 
@@ -26,24 +26,24 @@ To change the number of AF-PACKET workers for `<Suricata>`_:
 
 -  ``so-suricata-start`` automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata creates the appropriate number of AF-PACKET workers.
 
-Bro
----
+Zeek
+----
 
-To change the number of AF-PACKET workers for `<Bro>`_:
+To change the number of AF-PACKET workers for `<Zeek>`_:
 
--  Stop Bro:
+-  Stop Zeek:
 
    ::
 
-      sudo so-bro-stop
+      sudo so-zeek-stop
 
 -  Edit ``/opt/bro/etc/node.cfg`` and change the ``lb_procs`` variable to the desired number of cores.
 
--  Start Bro:
+-  Start Zeek:
 
    ::
 
-      sudo so-bro-start
+      sudo so-zeek-start
 
 tcpreplay
 ---------

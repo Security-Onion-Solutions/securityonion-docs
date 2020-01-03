@@ -96,7 +96,7 @@ Squert can pivot to `CapMe <CapMe>`__ for full packet capture. To do this, drill
 Pivoting to Kibana
 ------------------
 
-Squert can pivot to `Kibana <Kibana>`__ to query Bro logs, Wazuh logs, syslog, etc. To do this, click an IP address, port, or signature, and then click ``Kibana``.
+Squert can pivot to `Kibana <Kibana>`__ to query Zeek logs, Wazuh logs, syslog, etc. To do this, click an IP address, port, or signature, and then click ``Kibana``.
 
 Adding your own pivots
 ----------------------

@@ -21,9 +21,9 @@ ISO Release Notes
 
 -  Setup now defaults to enabling the Elastic Stack. We recommend a BARE MINIMUM of 4 CPU cores and 8GB RAM.
 
--  When choosing Evaluation Mode, the following services are enabled by default: `<Snort>`_, `<Bro>`_, `<netsniff-ng>`_, pcap_agent, snort_agent, barnyard2.
+-  When choosing Evaluation Mode, the following services are enabled by default: `<Snort>`_, `<Zeek>`_, `<netsniff-ng>`_, pcap_agent, snort_agent, barnyard2.
 
--  When choosing Production Mode, you then have the option of Best Practices or Custom. Best Practices asks a smaller number of questions and chooses the services that most folks want (`<Snort>`_ or `<Suricata>`_, `<Bro>`_, `<netsniff-ng>`_, pcap_agent, snort_agent, barnyard2, `<salt>`_). Custom gives you more control over your system but requires more in-depth knowledge about services and their functions.
+-  When choosing Production Mode, you then have the option of Best Practices or Custom. Best Practices asks a smaller number of questions and chooses the services that most folks want (`<Snort>`_ or `<Suricata>`_, `<Zeek>`_, `<netsniff-ng>`_, pcap_agent, snort_agent, barnyard2, `<salt>`_). Custom gives you more control over your system but requires more in-depth knowledge about services and their functions.
 
 -  Once you've completed both phases of Setup, you should see new icons on your Desktop.
 

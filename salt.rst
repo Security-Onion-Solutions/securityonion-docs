@@ -61,20 +61,20 @@ When you install and enable securityonion-onionsalt, the following data will rep
 
 -  NIDS rules in /etc/nsm/rules/ (Snort/Suricata/barnyard will automatically restart as necessary)
 -  HIDS rules in /var/ossec/rules/local\_rules.xml (Wazuh will automatically restart as necessary)
--  Bro scripts in /opt/bro/share/bro/policy/
+-  Zeek scripts in /opt/bro/share/bro/policy/
 
-   -  Bro does not restart automatically, but you can easily use salt on your master server to tell all your Bro instances to update and restart:
+   -  Zeek does not restart automatically, but you can easily use salt on your master server to tell all your Zeek instances to update and restart:
 
       ::
 
-          # Force all Salt minions to update Bro scripts
+          # Force all Salt minions to update Zeek scripts
           sudo salt '*' state.highstate
-          # Restart Bro
-          sudo salt '*' cmd.run 'so-bro-restart'
+          # Restart Zeek
+          sudo salt '*' cmd.run 'so-zeek-restart'
 
--  Bro intel in /opt/bro/share/bro/intel/
+-  Zeek intel in /opt/bro/share/bro/intel/
 
-   -  You'll need to restart Bro as shown above if you add any intel files to the default intel.dat. After that initial Bro restart, Bro should be watching the intel files with the Input framework which should automatically notice if the files ever change (new intel is added). In many cases, you won't need to restart Bro if you're just adding intel to the existing intel file(s).
+   -  You'll need to restart Zeek as shown above if you add any intel files to the default intel.dat. After that initial Zeek restart, Zeek should be watching the intel files with the Input framework which should automatically notice if the files ever change (new intel is added). In many cases, you won't need to restart Zeek if you're just adding intel to the existing intel file(s).
 
 -  user accounts and sudoers in /opt/onionsalt/pillar/users/init.sls
 -  user ssh keys in /opt/onionsalt/salt/users/keys/

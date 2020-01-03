@@ -4,7 +4,7 @@ CapME
 CapME is a web interface that allows you to:
 
 -  view a pcap transcript rendered with tcpflow
--  view a pcap transcript rendered with `Bro <Bro>`__ (especially helpful for dealing with gzip encoding)
+-  view a pcap transcript rendered with `Zeek <Zeek>`__ (especially helpful for dealing with gzip encoding)
 -  download a pcap
 
 Screenshot

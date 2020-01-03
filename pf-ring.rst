@@ -1,9 +1,9 @@
 PF-RING
 =======
 
-PF-RING acts as a flow-based load balancer to allow us to spin up multiple instances of Snort/Suricata/Bro to handle more traffic than a single instance.
+PF-RING acts as a flow-based load balancer to allow us to spin up multiple instances of Snort/Suricata/Zeek to handle more traffic than a single instance.
 
-Starting in ``securityonion-setup - 20120912-0ubuntu0securityonion285``, running Setup will configure Suricata and Bro to use `<AF-PACKET>`__ instead of PF-RING.
+Starting in ``securityonion-setup - 20120912-0ubuntu0securityonion285``, running Setup will configure Suricata and Zeek to use `<AF-PACKET>`__ instead of PF-RING.
 
 Tuning
 ------
@@ -33,24 +33,24 @@ If running Snort, ``so-sensor-start`` automatically spawns ``$IDS_LB_PROCS`` ins
 
 If running Suricata, ``so-sensor-start`` automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata spins up the PF-RING instances itself.
 
-Bro
----
+Zeek
+----
 
-To change the number of PF-RING instances for Bro:
+To change the number of PF-RING instances for Zeek:
 
--  Stop bro:
+-  Stop zeek:
 
    ::
 
-      sudo so-bro-stop
+      sudo so-zeek-stop
 
 -  Edit ``/opt/bro/etc/node.cfg`` and change the ``lb_procs`` variable to the desired number of cores.
 
--  Start bro:
+-  Start zeek:
 
    ::
 
-     sudo so-bro-start
+     sudo so-zeek-start
 
 Slots
 -----

@@ -3,7 +3,7 @@ Disabling Processes
 
 If you've already run Setup and want to disable a certain sensor service, you can simply stop the running service and then change the corresponding config value from ``yes`` to ``no`` to prevent it from restarting the next time the NSM scripts are run.
 
-For example, suppose you access Bro's HTTP logs via Kibana, so you want to disable ``http_agent`` to prevent those HTTP logs from being duplicated into the ``Sguil`` database. You would first stop the running ``http_agent`` service:
+For example, suppose you access Zeek's HTTP logs via Kibana, so you want to disable ``http_agent`` to prevent those HTTP logs from being duplicated into the ``Sguil`` database. You would first stop the running ``http_agent`` service:
 
 ::
 

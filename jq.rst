@@ -8,7 +8,7 @@ From https://stedolan.github.io/jq/:
 Usage
 -----
 
-If you have `<Bro>`_ configured to write logs in JSON format and you want to parse those logs from the command line, then you can use ``jq``.  Here's a basic example:
+If you have `<Zeek>`_ configured to write logs in JSON format and you want to parse those logs from the command line, then you can use ``jq``.  Here's a basic example:
 
 ::
 

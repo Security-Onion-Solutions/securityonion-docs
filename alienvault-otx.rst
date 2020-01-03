@@ -1,7 +1,7 @@
 AlienVault-OTX
 ==============
 
-We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__ pulses into Security Onion and have Bro utilize them for the `Intel Framework <https://www.bro.org/sphinx-git/frameworks/intel.html>`__ by leveraging `Stephen Hosom <https://github.com/hosom/bro-otx>`__'s work with Alienvault OTX integration.
+We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__ pulses into Security Onion and have Zeek utilize them for the `Intel Framework <https://www.bro.org/sphinx-git/frameworks/intel.html>`__ by leveraging `Stephen Hosom <https://github.com/hosom/bro-otx>`__'s work with Alienvault OTX integration.
 
 Warning
 -------
@@ -15,7 +15,7 @@ In order to begin, we will need to make sure we satisfy a few prerequisites:
 
 | **Alienvault OTX API key** - can be obtained for free at:
   https://otx.alienvault.com
-| **Security Onion standalone/sensor** (running Bro)
+| **Security Onion standalone/sensor** (running Zeek)
 | **External internet access** - to retrieve updated pulses
   (https://otx.alienvault.com/api/v1/pulses/subscribed)
 
@@ -39,7 +39,7 @@ We can test our configuration by adding another piece of intel to the end of ``/
 
    google.com[literal tab]Intel::DOMAIN[literal tab]Test-Google-Intel[literal tab]https://google.com[literal tab]T
 
-As long as our syntax is correct, we should not need to restart Bro. We can check for errors in ``/nsm/bro/logs/current/reporter.log``.
+As long as our syntax is correct, we should not need to restart Zeek. We can check for errors in ``/nsm/bro/logs/current/reporter.log``.
 
 Let's see if we can get an intel hit by doing the following:
 
@@ -53,7 +53,7 @@ Next, we need to check ``/nsm/bro/logs/current/intel.log`` for entries in regard
 
    grep google /nsm/bro/logs/current/intel.log
 
-We should have received a Bro Notice as well, so lets check that:
+We should have received a Zeek Notice as well, so lets check that:
 
 ::
 

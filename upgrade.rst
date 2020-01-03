@@ -29,14 +29,14 @@ You'll then need to do the following:
 
        sudo rule-update
 
-Bro
----
+Zeek
+----
 
-Bro package upgrades will attempt to migrate your Bro config. You should double-check your config and see if there are any local customizations that you need to manually re-apply. Then restart Bro as follows:
+Zeek package upgrades will attempt to migrate your Zeek config. You should double-check your config and see if there are any local customizations that you need to manually re-apply. Then restart Zeek as follows:
 
 ::
 
-    sudo so-bro-restart
+    sudo so-zeek-restart
 
 Elastic
 -------

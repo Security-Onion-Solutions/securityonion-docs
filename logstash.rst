@@ -187,7 +187,7 @@ When using storage nodes, Logstash on the master server outputs to `Redis <Redis
 Data Fields
 -----------
 
-Logstash process Bro logs, syslog, IDS alerts, etc., formatting said data into many different data fields, as described in the `Data Fields <Data-Fields>`__ section.
+Logstash process Zeek logs, syslog, IDS alerts, etc., formatting said data into many different data fields, as described in the `Data Fields <Data-Fields>`__ section.
 
 Log
 ---
@@ -217,7 +217,7 @@ Additionally, you can run the following command to allow writing to the affected
 LOGSTASH_MINIMAL
 ----------------
 
-We now have a ``LOGSTASH_MINIMAL`` mode which will offload log parsing to Elasticsearch ingest node.  This allows Logstash to run in as little as 200MB RAM and start instantly.  Please note that the Elasticsearch ingest node parsing currently only supports standard IDS alerts and Bro logs in JSON format.  
+We now have a ``LOGSTASH_MINIMAL`` mode which will offload log parsing to Elasticsearch ingest node.  This allows Logstash to run in as little as 200MB RAM and start instantly.  Please note that the Elasticsearch ingest node parsing currently only supports standard IDS alerts and Zeek logs in JSON format.  
 
 To enable on a new installation, simply run through Setup using:
 

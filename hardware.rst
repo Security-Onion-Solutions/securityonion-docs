@@ -35,7 +35,7 @@ Standalone Deployments
 In a standalone deployment, the master server components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
 - CPU: Used to parse incoming events, index incoming events, search metatadata, capture PCAP, analyze packets, and run the frontend components. As data and event consumption increases, a greater amount of CPU will be required.
-- RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, Snort/Suricata, Bro, Sguil, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
+- RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, Snort/Suricata, Zeek, Sguil, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
 - Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 
 Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
@@ -108,7 +108,7 @@ We recommend dedicated physical hardware (especially if you're monitoring lots o
 CPU
 ~~~
 
-Snort, Suricata, and Bro are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per Snort instance, Suricata worker, or Bro worker. So if you have a fully saturated 1Gbps link and are running Snort and Bro, then you'll want at least 5 Snort instances and 5 Bro workers, which means you'll need at least 10 CPU cores for Snort and Bro with additional CPU cores for netsniff-ng and/or other services.
+Snort, Suricata, and Zeek are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per Snort instance, Suricata worker, or Zeek worker. So if you have a fully saturated 1Gbps link and are running Snort and Zeek, then you'll want at least 5 Snort instances and 5 Zeek workers, which means you'll need at least 10 CPU cores for Snort and Zeek with additional CPU cores for netsniff-ng and/or other services.
 
 RAM
 ~~~
@@ -122,7 +122,7 @@ RAM usage is highly dependent on several variables:
 
 For best performance, over provision RAM so that you can fully disable swap.
 
-The following RAM estimates are a rough guideline and assume that you're going to be running Snort/Suricata, Bro, and netsniff-ng (full packet capture) and want to minimize/eliminate packet loss. Your mileage may vary!
+The following RAM estimates are a rough guideline and assume that you're going to be running Snort/Suricata, Zeek, and netsniff-ng (full packet capture) and want to minimize/eliminate packet loss. Your mileage may vary!
 
 If you just want to quickly evaluate Security Onion in a VM, the bare minimum amount of RAM needed is 8GB. More is obviously better!
 

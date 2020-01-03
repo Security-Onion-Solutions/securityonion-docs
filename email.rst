@@ -25,7 +25,7 @@ Please note that the Sguil client has its own email configuration (separate from
 Manual Configuration
 --------------------
 
-If you don't want to run ``so-email`` as described above, you can configure email manually as described in the following sections. Applications such as Sguil and Wazuh have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Bro.
+If you don't want to run ``so-email`` as described above, you can configure email manually as described in the following sections. Applications such as Sguil and Wazuh have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Zeek.
 
 Operating System
 ----------------
@@ -115,8 +115,8 @@ You can specify the severity of an event for which Wazuh will send email alerts 
 
 You can also find an explanation of the alert levels at http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html.
 
-Bro
----
+Zeek
+----
 
 Edit ``/opt/bro/etc/broctl.cfg`` and set the following:
 
@@ -125,19 +125,19 @@ Edit ``/opt/bro/etc/broctl.cfg`` and set the following:
    MailTo = YourUsername@YourDomain.com
    sendmail = /usr/sbin/sendmail
 
-Then update and restart Bro:
+Then update and restart Zeek:
 
 ::
 
-   sudo so-bro-restart
+   sudo so-zeek-restart
 
-You should then start receiving hourly connection summary emails. If you don't want the connection summary emails, you can add the following to ``broctl.cfg`` and update and restart Bro as shown above:
+You should then start receiving hourly connection summary emails. If you don't want the connection summary emails, you can add the following to ``broctl.cfg`` and update and restart Zeek as shown above:
 
 ::
 
    tracesummary=
 
-You may want to receive emails for Bro notices. To do that, add the following to ``/opt/bro/share/bro/site/local.bro`` and update/restart Bro as shown above:
+You may want to receive emails for Zeek notices. To do that, add the following to ``/opt/bro/share/bro/site/local.bro`` and update/restart Zeek as shown above:
 
 ::
 
@@ -156,4 +156,4 @@ Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
 Lack of network traffic
 -----------------------
 
-If you configured Wazuh or Bro as shown above, they should automatically email you if your network sensors stop seeing traffic.  
+If you configured Wazuh or Zeek as shown above, they should automatically email you if your network sensors stop seeing traffic.  

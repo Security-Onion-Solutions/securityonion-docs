@@ -105,7 +105,7 @@ When using a ``forward node``, Elastic Stack components are not installed. Syslo
 
 Forward Nodes run the following components (Production Mode w/ Best Practices):
 
--  Bro
+-  Zeek
 -  Snort/Suricata
 -  Netsniff-NG
 -  OSSEC
@@ -119,7 +119,7 @@ When using a ``heavy node``, Security Onion implements distributed deployments u
 -  Elasticsearch
 -  Logstash
 -  Curator
--  Bro
+-  Zeek
 -  Snort/Suricata
 -  Netsniff-NG
 -  OSSEC

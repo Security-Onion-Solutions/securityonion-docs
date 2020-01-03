@@ -7,13 +7,13 @@ Directory Structure
 /nsm
 ----
 
-Backup, Bro, sensor (if configured as sensor), and server (if configured
+Backup, Zeek, sensor (if configured as sensor), and server (if configured
 as server) data.
 
 /nsm/bro
 --------
 
-Bro IDS logs.
+Zeek IDS logs.
 
 /nsm/elasticsearch
 ------------------

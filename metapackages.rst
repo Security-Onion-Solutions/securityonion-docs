@@ -11,7 +11,7 @@ Security Onion consists of over 50 packages in a Launchpad PPA. You can install 
       sudo apt install securityonion-client
 
 -  | securityonion-sensor (about 135MB)
-   | Snort, Suricata, Bro, netsniff-ng, Sguil agents, etc.
+   | Snort, Suricata, Zeek, netsniff-ng, Sguil agents, etc.
    
    ::
    

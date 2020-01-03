@@ -9,5 +9,5 @@ This section covers the various processes that Security Onion uses to analyze an
    nids
    snort
    suricata
-   bro
+   zeek
    netsniff-ng

@@ -72,31 +72,31 @@ Sensor services
 
 Sensor services are controlled with ``so-sensor-*``.
 
-The following examples are for Bro, but you could substitute whatever sensor service you're trying to control (nids, pcap, etc.).
+The following examples are for Zeek, but you could substitute whatever sensor service you're trying to control (nids, pcap, etc.).
 
-Check status of Bro:
-
-::
-
-    sudo so-bro-status
-
-Start Bro:
+Check status of Zeek:
 
 ::
 
-    sudo so-bro-start
+    sudo so-zeek-status
 
-Stop Bro:
-
-::
-
-    sudo so-bro-stop
-
-Restart Bro:
+Start Zeek:
 
 ::
 
-    sudo so-bro-restart
+    sudo so-zeek-start
+
+Stop Zeek:
+
+::
+
+    sudo so-zeek-stop
+
+Restart Zeek:
+
+::
+
+    sudo so-zeek-restart
 
 Elastic services
 ----------------

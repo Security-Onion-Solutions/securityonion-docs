@@ -8,9 +8,9 @@ Tools
 | http://www.securixlive.com/barnyard2/
 | "Barnyard2 is an open source interpreter for Snort unified2 binary output files. Its primary use is allowing Snort to write to disk in an efficient manner and leaving the task of parsing binary data into various formats to a separate process that will not cause Snort to miss network traffic."
 | 
-| Bro (Zeek)
+| Zeek (formerly known as Bro)
 | https://zeek.org/
-| "Bro is a powerful network analysis framework that is much different from the typical IDS you may know."
+| "Zeek is a powerful network analysis framework that is much different from the typical IDS you may know."
 | 
 | chaosreader
 | http://chaosreader.sourceforge.net/

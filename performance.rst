@@ -29,9 +29,9 @@ Disable any other unnecessary services.  For example, to disable bluetooth:
 CPU Affinity/Pinning
 --------------------
 
-For best performance, CPU intensive processes like Bro and Suricata should be pinned to specific CPUs.
+For best performance, CPU intensive processes like Zeek and Suricata should be pinned to specific CPUs.
 
-| For Bro, use the ``pin_cpus`` setting in ``/opt/bro/etc/node.cfg``:
+| For Zeek, use the ``pin_cpus`` setting in ``/opt/bro/etc/node.cfg``:
 | https://docs.zeek.org/en/stable/configuration/#using-pf-ring
 
 | For Suricata, use the affinity settings in ``suricata.yaml``:

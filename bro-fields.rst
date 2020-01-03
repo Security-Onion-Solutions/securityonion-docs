@@ -1,14 +1,14 @@
 Bro Fields
 ============
 
-The following lists field names as they are formatted in Bro logs, then
+The following lists field names as they are formatted in Zeek logs, then
 processed by Logstash and ingested into Elasticsearch.
 
-The original field name (from Bro) appears on the left, and if changed,
+The original field name (from Zeek) appears on the left, and if changed,
 the updated name or formatting of the field (Elasticsearch) will appear
 on the right.
 
-**(Bro => Elastic)**
+**(Zeek => Elastic)**
 
 conn.log
 -------------

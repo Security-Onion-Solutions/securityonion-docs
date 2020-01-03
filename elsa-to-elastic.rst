@@ -39,8 +39,8 @@ Elastic. However, please note the following caveats:
 
 -  this creates yet another copy of the data and so it is essential that
    you have plenty of free space
--  Logstash only has parsers for the current version of Bro, so older
-   Bro logs may not parse correctly
+-  Logstash only has parsers for the current version of Zeek, so older
+   Zeek/Bro logs may not parse correctly
 
 Upgrade Process
 ---------------

@@ -6,12 +6,12 @@ so-import-pcap
 It will do the following:
 
 -  stop and disable Curator to avoid closing old indices
--  stop and disable all active sniffing processes (Bro, Snort, Suricata, and netsniff-ng)
+-  stop and disable all active sniffing processes (Zeek, Snort, Suricata, and netsniff-ng)
 -  stop and disable ossec_agent
 -  reconfigure and restart sguild, syslog-ng, and Logstash where necessary
 -  generate IDS alerts using Snort or Suricata
--  generate Bro logs
--  store IDS alerts and Bro logs with original timestamps
+-  generate Zeek logs
+-  store IDS alerts and Zeek logs with original timestamps
 -  split traffic into separate daily pcaps and store them where sguil's pcap_agent can find them
 
 Requirements:

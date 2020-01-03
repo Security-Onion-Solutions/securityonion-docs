@@ -13,7 +13,7 @@ Warning
 -------
 
 Please keep in mind we do not officially support this integration, so installation is at your own risk.
-Additionally, the current version of MISP seems to have an issue with Bro Intel export, therefore, this particular functionailty may not work as intended ( depending on the version of MISP you are using).
+Additionally, the current version of MISP seems to have an issue with Zeek Intel export, therefore, this particular functionality may not work as intended ( depending on the version of MISP you are using).
 
 See: https://github.com/MISP/MISP/issues/4050 for more details.
 

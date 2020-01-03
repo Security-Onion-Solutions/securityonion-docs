@@ -29,7 +29,7 @@ packets from eth0 to tap0 (OpenVPN). OpenVPN transports the packets to
 the cloud sensor, where tap0 is a member of bridge br0. The standard
 Security Onion stack sniffs br0. NIC offloading functions must be
 disabled on all of these interfaces (eth0 and tap0 on cloud client, and
-tap0 and br0 on cloud sensor) to ensure that Snort, Bro, etc. all see
+tap0 and br0 on cloud sensor) to ensure that Snort, Zeek, etc. all see
 traffic as it appeared on the wire. This guide will walk you through
 disabling NIC offloading functions on eth0 and br0 via
 ``/etc/network/interfaces`` and tap0 via ``/etc/openvpn/up.sh``.
@@ -389,7 +389,7 @@ br0:
     sudo tcpdump -nnvvAi br0
 
 When you ran Setup phase 2 you configured Security Onion to monitor br0,
-so you should be getting IDS alerts and Bro logs.
+so you should be getting IDS alerts and Zeek logs.
 
 Hardening
 ---------
