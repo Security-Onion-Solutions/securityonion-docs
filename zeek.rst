@@ -27,7 +27,7 @@ and then restart Zeek:
 
 ::
 
-    sudo so-bro-restart
+    sudo so-zeek-restart
 
 Zeek monitors your network traffic and creates logs, such as:
 
@@ -112,7 +112,7 @@ Intel
    -  When editing ``/opt/bro/share/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
    -  If you experience an error, or do not notice ``/nsm/bro/logs/current/intel.log`` being generated, try having a look in ``/nsm/bro/logs/current/reporter.log`` for clues.
    -  You may also want to restart Zeek after making changes, by running the following command:
-      \ ``sudo so-bro-restart``.
+      \ ``sudo so-zeek-restart``.
 
 -  For more information, please see:
 
@@ -154,7 +154,7 @@ Below is an example how to do so:
    adding ``@load custom-scripts`` at the bottom of the file and saving
    the file.
 -  Restart Zeek.
-   ``sudo so-bro-restart``
+   ``sudo so-zeek-restart``
 -  Check ``/nsm/bro/logs/current/loaded_scripts.log`` to see if your
    custom script(s) has/have been loaded.
 -  Check ``/nsm/bro/logs/current/reporter.log`` for clues if your custom
