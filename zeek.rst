@@ -45,7 +45,7 @@ dns.log
 
 -  DNS activity
 
--  For more information ,see:
+-  For more information, see:
 
 https://docs.zeek.org/en/latest/scripts/base/protocols/dns/main.zeek.html#type-DNS::Info
 
