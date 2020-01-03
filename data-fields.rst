@@ -2,7 +2,7 @@ Data Fields
 ===========
 
 This page references the various types of data fields utilized by
-Security Onion on the Elastic Stack.
+the Elastic Stack in Security Onion.
 
 The various fields types are described below.
 
@@ -10,7 +10,7 @@ Fields
 ------
 
 | `Alert Data <Alert-Data-Fields>`__
-| `Bro <Bro-Fields>`__
+| `Zeek <Bro-Fields>`__
 | `Elastalert <Elastalert-Fields>`__
 
 Template files
