@@ -33,7 +33,7 @@ diagram <Elastic-Architecture>`__.
    redis
    data-fields
    alert-data-fields
-   bro-fields
+   zeek-fields
    elastalert-fields
    re‐indexing
    elastic-features

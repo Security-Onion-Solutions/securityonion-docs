@@ -1,5 +1,5 @@
-Bro Fields
-============
+Zeek Fields
+===========
 
 The following lists field names as they are formatted in Zeek logs, then
 processed by Logstash and ingested into Elasticsearch.
