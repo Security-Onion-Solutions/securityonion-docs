@@ -1,45 +1,36 @@
 PCAPs for Testing
 =================
 
-Security Onion 16.04 comes with several pcap samples in
-``/opt/samples/``.
+Security Onion 16.04 comes with several pcap samples in ``/opt/samples/``.
 
 Links
 -----
 
--  http://www.malware-traffic-analysis.net/
+-  https://www.malware-traffic-analysis.net/
 
--  http://digitalcorpora.org/corpora/network-packet-dumps
+-  https://digitalcorpora.org/corpora/network-packet-dumps
 
--  http://www.netresec.com/?page=PcapFiles
+-  https://www.netresec.com/?page=PcapFiles
 
--  http://www.netresec.com/?page=MACCDC
+-  https://www.netresec.com/?page=MACCDC
 
 -  https://github.com/zeek/zeek/tree/master/testing/btest/Traces
 
--  http://www.ll.mit.edu/mission/communications/cyber/CSTcorpora/ideval/data/
+-  https://www.ll.mit.edu/r-d/datasets/2000-darpa-intrusion-detection-scenario-specific-datasets
 
 -  https://wiki.wireshark.org/SampleCaptures
 
--  https://stratosphereips.org/category/dataset.html
+-  https://www.stratosphereips.org/datasets-overview
 
--  http://old.honeynet.org/scans/
-
--  http://cctf.shmoo.com/
-
--  http://ee.lbl.gov/anonymized-traces.html
+-  https://ee.lbl.gov/anonymized-traces.html
 
 -  https://redmine.openinfosecfoundation.org/projects/suricata/wiki/Public_Data_Sets
 
--  http://forensicscontest.com/puzzles
-
--  https://www.evilfingers.com/repository/pcaps.php
-
--  http://www.honeynet.org/node/504
+-  https://forensicscontest.com/puzzles
 
 -  https://github.com/markofu/hackeire/tree/master/2011/pcap
 
--  http://www.defcon.org/html/links/dc-ctf.html 
+-  https://www.defcon.org/html/links/dc-ctf.html
 
 -  https://archive.wrccdc.org/
 
@@ -53,14 +44,9 @@ You can use ``tcpreplay`` to replay any of these pcaps on your Security Onion se
 so-replay
 ---------
 
-``so-replay`` will use ``tcpreplay`` to replay **all** pcap samples in
-``/opt/samples`` to your sniffing interface.
+``so-replay`` will use ``tcpreplay`` to replay **all** pcap samples in ``/opt/samples`` to your sniffing interface.
 
 so-import-pcap
 --------------
 
-A drawback to using tcpreplay is that it's replaying the pcap as new
-traffic and thus the timestamps that you see in Kibana, Squert, and
-Sguil do not reflect the original timestamps from the pcap. To avoid
-this, a new tool was developed called
-`so-import-pcap <so-import-pcap>`__.
+A drawback to using tcpreplay is that it's replaying the pcap as new traffic and thus the timestamps that you see in Kibana, Squert, and Sguil do not reflect the original timestamps from the pcap. To avoid this, a new tool was developed called `so-import-pcap <so-import-pcap>`__.
