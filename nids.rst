@@ -44,6 +44,21 @@ Switching from Suricata to Snort
    sudo rule-update
    sudo so-sensor-start
 
+Switching from Snort to Suricata in a salted distributed environment
+--------------------------------------------------------------------
+From the Master Server, run:
+::
+
+   sudo so-sensor-stop
+   sudo sed -i 's|ENGINE=snort|ENGINE=suricata|g' /etc/nsm/securityonion.conf
+   sudo rule-update
+   sudo so-sensor-start
+   #The remaining commands assume all sensor hostnames contain "securityonionsensor"
+   sudo salt '&ast;securityonionsensor&ast;' cmd.run 'so-sensor-stop'
+   sudo salt '&ast;securityonionsensor&ast;' cmd.run 'sed -i "s|ENGINE=snort|ENGINE=suricata|g" /etc/nsm/securityonion.conf'
+   sudo salt '&ast;securityonionsensor&ast;' state.highstate
+   sudo salt '&ast;securityonionsensor&ast;' cmd.run 'so-sensor-start'   
+
 NIPS
 ----
 
