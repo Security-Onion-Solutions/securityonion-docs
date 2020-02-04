@@ -54,10 +54,10 @@ From the Master Server, run:
    sudo rule-update
    sudo so-sensor-start
    #The remaining commands assume all sensor hostnames contain "securityonionsensor"
-   sudo salt '\*securityonionsensor\*' cmd.run 'so-sensor-stop'
-   sudo salt '\*securityonionsensor\*' cmd.run 'sed -i "s|ENGINE=snort|ENGINE=suricata|g" /etc/nsm/securityonion.conf'
-   sudo salt '\*securityonionsensor\*' state.highstate
-   sudo salt '\*securityonionsensor\*' cmd.run 'so-sensor-start'   
+   sudo salt '*securityonionsensor*' cmd.run 'so-sensor-stop'
+   sudo salt '*securityonionsensor*' cmd.run 'sed -i "s|ENGINE=snort|ENGINE=suricata|g" /etc/nsm/securityonion.conf'
+   sudo salt '*securityonionsensor*' state.highstate
+   sudo salt '*securityonionsensor*' cmd.run 'so-sensor-start'   
 
 NIPS
 ----
