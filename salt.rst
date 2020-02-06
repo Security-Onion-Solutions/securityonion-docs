@@ -81,6 +81,16 @@ When you install and enable securityonion-onionsalt, the following data will rep
 
    -  For each user account in /opt/onionsalt/pillar/users/init.sls, you can add an SSH Public Key to ``/opt/onionsalt/salt/users/keys/USERNAME.id_rsa.pub`` (replacing ``USERNAME`` with the user's actual username)
 
+- Logstash custom configuration in /etc/logstash/custom/.
+   -  Logstash does not restart automatically, but you can easily use salt on your master server to tell all your Logstash instances to update and restart:
+
+      ::
+
+          # Force all Salt minions to update custom Logstash scripts
+          sudo salt '*' state.highstate
+          # Restart Logstash
+          sudo salt '*' cmd.run 'so-logstash-restart'
+   
 In addition, Salt is a full configuration management system, so you can script anything that you want to deploy across your army of sensors.
 
 Using Salt to Install Updates Across Your Entire Deployment
