@@ -84,8 +84,6 @@ You can then verify the email configuration by looking at the top of sguild's lo
 
     head -20 /var/log/nsm/securityonion/sguild.log
 
-For more information, please see http://nsmwiki.org/Sguil\_FAQ#Can\_sguil\_page\_me\_when\_it\_sees\_a\_particular\_alert.3F.
-
 You may want to install a local mail relay on your master server, configure it to relay mail to your corporate mail server, and then configure Sguil to send email to the local mail relay.
 
 **Please note**: Sguil will only send email alerts for what is considers *new* events. Ensure you classify events within the Sguil console, or consider `creating an Autocat rule <ManagingAlerts#autocategorize-events>`__ to automatically classify them if you prefer to receive emails for all instances of an alert. Otherwise, you may not receive alerts as intended.
