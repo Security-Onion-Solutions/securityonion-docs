@@ -51,6 +51,8 @@ Parsing
 
 Configuration files for custom parsing can be placed in ``/etc/logstash/custom``. These will automatically get copied over to ``/etc/logstash/conf.d`` during the starting of Logstash.
 
+Note: If you are using a distributed or heavy distributed `deployment type <architecture#deployment-types>`__, it is best practice to put your custom configuration files in the ``/etc/logstash/custom`` directory on the Master node.  The custom configuration files will then be replicated every 15 minutes or immediately if you use `Salt <Salt#features>`__ to force the replication to take place.
+
 After adding your custom configuration file(s), restart Logstash and check the log(s) for errors:
 
 ::
