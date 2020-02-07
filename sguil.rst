@@ -11,8 +11,6 @@ From http://sguil.net:
 
 -  | Developed by Bamm Visscher:
    | http://sguil.net
-   | http://nsmwiki.org/Sguil
-   | http://nsmwiki.org/Sguil_Client
 
 -  tcl/tk (not web-based)
 
