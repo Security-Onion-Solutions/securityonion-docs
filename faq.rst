@@ -219,9 +219,6 @@ I get periodic MySQL crashes and/or error code 24 "out of resources" when search
 
 Modern versions of Setup should set MySQL's ``open-files-limit`` to 90000 to avoid this problem.
 
-| For more information, please see:
-| http://nsmwiki.org/Sguil\_FAQ#I.27m\_seeing\_error\_code\_24\_from\_MySQL.\_How\_do\_I\_fix\_that.3F
-
 Barnyard2 is failing with an error like "ERROR: sguil: Expected Confirm 13324 and got: Failed to insert 13324: mysqlexec/db server: Duplicate entry '9-13324' for key 'PRIMARY'". How do I fix this?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -247,8 +244,7 @@ If that doesn't work, then try also restarting mysql:
    sudo so-sguild-restart
    sudo so-sensor-restart --only-barnyard2
 
-If that still doesn't fix it, you may have to perform MySQL surgery on the database ``securityonion_db`` as described in the Sguil FAQ:
-http://nsmwiki.org/Sguil\_FAQ#Barnyard\_dies\_at\_startup.2C\_with\_.22Duplicate\_Entry.22\_error
+If that still doesn't fix it, you may have to perform MySQL surgery on the database ``securityonion_db``.
 
 Why does Snort segfault every day at 7:01 AM?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
