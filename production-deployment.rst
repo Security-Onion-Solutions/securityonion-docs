@@ -76,7 +76,7 @@ Update
    
      sudo apt -y install securityonion-all syslog-ng-core
      
-#. OPTIONAL: If you want to use `Salt <Salt>`__ to manage your deployment, also install ``securityonion-onionsalt``. You can do this before or after Setup, but it's much easier if you do it before Setup.
+#. If you want to use `Salt <Salt>`__ to manage your deployment, also install ``securityonion-onionsalt``. You can do this before or after Setup, but it's much easier if you do it before Setup.
 
    ::
    
