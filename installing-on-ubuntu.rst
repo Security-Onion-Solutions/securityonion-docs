@@ -1,6 +1,8 @@
 Quick Evaluation on Ubuntu
 ==========================
 
+The following guide is for quick evaluation only.  If you're building a production deployment, please see the `Production Deployment <ProductionDeployment>`__ section.
+
 If you want to quickly evaluate Security Onion on your preferred flavor of Ubuntu 16.04 64-bit (not using our ISO image), follow these steps:
 
 - Review the `Hardware Requirements <Hardware>`__ page.
