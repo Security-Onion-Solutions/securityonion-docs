@@ -6,7 +6,7 @@ If you're going to be deploying Security Onion in production, please use the fol
 Hardware Requirements
 ---------------------
 
-First, check the `Hardware Requirements <Hardware>`__ page.
+First, check the `Hardware Requirements <Hardware>`__ section.
 
 Download and Verify
 -------------------
