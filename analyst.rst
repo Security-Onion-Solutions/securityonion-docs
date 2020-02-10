@@ -6,6 +6,7 @@ In this section, we'll look at different analyst tools that can be used for slic
 .. toctree::
    :maxdepth: 2
 
+   browser
    kibana
    capme
    cyberchef
