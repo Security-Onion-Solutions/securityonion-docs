@@ -51,6 +51,12 @@ If you want to quickly evaluate Security Onion on your preferred flavor of Ubunt
   ::
 
     sudo apt-get -y install securityonion-all syslog-ng-core
+    
+- If you want to use `Salt <Salt>`__ to manage your deployment, also install ``securityonion-onionsalt``. You can do this before or after Setup, but it's much easier if you do it before Setup.
+
+   ::
+   
+     sudo apt -y install securityonion-onionsalt
    
 - Run the Setup wizard (you can replace ``sosetup`` with ``sosetup-minimal`` if you prefer the minimal configuration):
 
