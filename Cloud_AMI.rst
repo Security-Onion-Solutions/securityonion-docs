@@ -110,11 +110,24 @@ A traffic mirror session defines the source of the traffic to be mirrored, based
 - In the filters section under Additional settings choose the mirror filer you want to apply to the mirrored traffic
 - Select ``Create``
 
-Verify Traffic Mirroring 
+Verify Traffic Mirroring
 ------------------------------
 
-To verify the 
+To verify the mirror session sending the correct data to the sniffing interface run the following command on the Seucity Onion instance:
 
+::
+
+    sudo tcpdump -nni <interface> 
+
+
+You should see ``VXLAN`` tagged traffic being mirrored from the interface you selected as the Mirror Source.
+
+To verify Zeek is properly decapsulating and parsing the VXLAN traffic you can verify logs are being generated in the ``/nsm/zeek/logs/current`` directory.
+
+::
+
+    ls -la /nsm/zeek/logs/current/
+     
 
 
 
