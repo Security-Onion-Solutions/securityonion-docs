@@ -94,6 +94,15 @@ A mirror filters allow you to define the traffic that is copied to in the mirror
 
 - From the VPC Dashboard select ``Mirror Filters`` under the Traffic Mirroring section in the left window pane
 - Select ``Create traffic mirror filter``
+- Add the appropriate inbound and outbound rules.  For mor details about traffic mirror filters please see: https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-filters.html
+- Select ``Create``
+
+Create Mirror Session
+-------------------------------
+
+A traffic mirror session defines the source of the traffic to be mirrored, based on traffic mirror filters, to the desired traffic mirror target.  For more details about traffic mirror sessions please see: https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-session.html
+
+- 
 
 
 
