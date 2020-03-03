@@ -110,6 +110,10 @@ A traffic mirror session defines the source of the traffic to be mirrored, based
 - In the filters section under Additional settings choose the mirror filer you want to apply to the mirrored traffic
 - Select ``Create``
 
+Verify Traffic Mirroring 
+------------------------------
+
+To verify the 
 
 
 
