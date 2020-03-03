@@ -64,6 +64,12 @@ Create Security Onion EC2 instance in Amazon Web Services (AWS)
 - Select Review and Launch
 - If promtped to select the appropriate SSH keypair that will be used to ssh into the Security Onion instance for administation. 
 - Please note that the default username for the Security-Onion-16.04 AMI is ``onion``
+- Once you have logged in, run the following commands:
+    ``sudo soup``
+    ``sudo sosetup`` (Run through both phases of setup)
+
+Create Mirror target/filter/session
+---------------------------------
 
 
 
