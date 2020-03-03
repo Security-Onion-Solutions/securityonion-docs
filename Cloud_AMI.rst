@@ -102,7 +102,13 @@ Create Mirror Session
 
 A traffic mirror session defines the source of the traffic to be mirrored, based on traffic mirror filters, to the desired traffic mirror target.  For more details about traffic mirror sessions please see: https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-session.html
 
-- 
+- From the VPS Dashboard select ``Mirror Sessions`` under the Traffic Mirroring section in the left window pane
+- Select ``Create traffic mirror session``
+- Under the Mirror source section choose interface that you want to be mirrored
+- Under the Mirror target section choose the interface or load balancer you want to send the mirrored traffic to
+- Assign a Session number under the Additional settings section for the mirror session
+- In the filters section under Additional settings choose the mirror filer you want to apply to the mirrored traffic
+- Select ``Create``
 
 
 
