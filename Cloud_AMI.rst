@@ -52,7 +52,7 @@ Create Security Onion EC2 instance in Amazon Web Services (AWS)
 - Select Security-Onion-16.04.x.x AMI
 - Choose the appropriate instance type based on the hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please visit our Hardware Requirmentmest section. 
 
-https://securityonion.readthedocs.io/en/latest/hardware.html
+    https://securityonion.readthedocs.io/en/latest/hardware.html
 
 - From the subnet drop-dow select the same subnet as the sniffing interface.
 - Under the Network interfaces section configure eth0 (management interface).
