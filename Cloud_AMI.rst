@@ -62,7 +62,8 @@ Create Security Onion EC2 instance in Amazon Web Services (AWS)
 - Select Next: Add Tags and add any additional tags for the instance.
 - Select Next: Configure Security Group and add the appropriate inboud rules
 - Select Review and Launch
-- If promtped to select the appropriate SSH keypair that will be used to ssh into the Security Onion instance for administation.  
+- If promtped to select the appropriate SSH keypair that will be used to ssh into the Security Onion instance for administation. 
+- Please note that the default username for the Security-Onion-16.04 AMI is ``onion``
 
 
 
