@@ -48,7 +48,7 @@ Create Security Onion EC2 instance in Amazon Web Services (AWS)
 
 - From the EC2 dashboard select ``Launch Instance``
 - Select the ``Community AMI's`` option in the left pane and search for ``Security-Onion-16.04`` in the search bar
-- Select ``Security-Onion-16.04.x.x`` AMI
+- Select ``Security-Onion-16.04`` AMI with the most recent build date 
 - Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please visit our Hardware Requirements section. 
 
     https://securityonion.readthedocs.io/en/latest/hardware.html
@@ -63,12 +63,21 @@ Create Security Onion EC2 instance in Amazon Web Services (AWS)
 - Select ``Review and Launch``
 - If prompted, select the appropriate SSH keypair that will be used to ssh into the Security Onion instance for administration 
 - Please note that the default username for the Security-Onion-16.04 AMI is ``onion``
-- Once you have logged in, run the following commands:
+- Once you have logged in, please do the following steps:
+    Change the hostname
+    ::
+        
+      sudo vim /etc/hostname
+    
+    Update packages
+    ::
+      
+      sudo soup
 
-::
+    Run through Both Phases of setup
+    ::
 
-    sudo soup
-    sudo sosetup
+      sudo sosetup
 
 
 Traffic Mirroring
