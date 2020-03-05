@@ -11,15 +11,14 @@ Note: This section does not cover network connectivity to the Security Onion nod
 configuring an external IP for the node’s management interface, or through the use of a VPN connection
 via OpenVPN, PfSense etc.
 
-    For an example, please see:
+For more details about vpn connections please see:
+https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6
 
-    https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6
+This guide also does not cover how to set up a VPC in AWS.
 
-    This guide also does not cover how to set up a VPC in AWS.
+For more details about setting up a VPC please see:
 
-    For an example, please see:
-
-    https://docs.aws.amazon.com/directoryservice/latest/admin- guide/gsg_create_vpc.html
+https://docs.aws.amazon.com/directoryservice/latest/admin- guide/gsg_create_vpc.html
 
 
 
