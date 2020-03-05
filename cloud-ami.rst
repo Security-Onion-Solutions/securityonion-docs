@@ -1,21 +1,26 @@
 Security Onion VPC Traffic Mirroring Configuration
 ============
 
-This section covers configuring a Security Onion 16.04 cloud image hosted in Amazon Web Services (AWS) to receive mirrored/spanned traffic from other instances hosted within an Amazon Virtual Private Cloud (VPC).    
+This section covers configuring a Security Onion 16.04 cloud image hosted in Amazon Web Services (AWS) to receive mirrored/spanned traffic from other instances hosted within an Amazon Virtual Private Cloud (VPC). 
 
-This section does not cover network connectivity to the Security Onion node. This can be achieved through
+Note:  You can only mirror traffic from an EC2 instance that is powered by the AWS Nitro system.  For a list of supported Nitro systems please see: 
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances
+
+Note: This section does not cover network connectivity to the Security Onion node. This can be achieved through
 configuring an external IP for the node’s management interface, or through the use of a VPN connection
 via OpenVPN, PfSense etc.
 
-For an example, please see:
+    For an example, please see:
 
-https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6
+    https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6
 
-This guide also does not cover how to set up a VPC in AWS.
+    This guide also does not cover how to set up a VPC in AWS.
 
-For an example, please see:
+    For an example, please see:
 
-https://docs.aws.amazon.com/directoryservice/latest/admin- guide/gsg_create_vpc.html
+    https://docs.aws.amazon.com/directoryservice/latest/admin- guide/gsg_create_vpc.html
+
 
 
 Create a Security Group for Sniffing Interface 
