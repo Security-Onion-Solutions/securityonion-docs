@@ -79,7 +79,7 @@ Create Security Onion EC2 instance in Amazon Web Services (AWS)
       
       sudo soup
 
-    Run through Both Phases of setup
+    Run through both phases of setup
     ::
 
       sudo sosetup
