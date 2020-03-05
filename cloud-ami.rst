@@ -14,7 +14,7 @@ via OpenVPN, PfSense etc.
 For more details about vpn connections please see:
 https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6
 
-This guide also does not cover how to set up a VPC in AWS.
+Note:  This guide does not cover how to set up a VPC in AWS.
 
 For more details about setting up a VPC please see:
 
