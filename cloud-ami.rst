@@ -47,7 +47,7 @@ Prior to launching the Security Onion AMI you will need to create the interface 
 - Select ``Create``
 
 
-Create Security Onion EC2 instance in Amazon Web Services (AWS)
+Create a Security Onion EC2 instance in Amazon Web Services (AWS)
 ---------------------------------
 
 - From the EC2 dashboard select ``Launch Instance``
