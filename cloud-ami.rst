@@ -18,7 +18,7 @@ Note:  This guide does not cover how to set up a VPC in AWS.
 
 For more details about setting up a VPC please see:
 
-https://docs.aws.amazon.com/directoryservice/latest/admin- guide/gsg_create_vpc.html
+https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html
 
 
 
