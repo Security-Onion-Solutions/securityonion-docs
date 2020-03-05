@@ -69,7 +69,7 @@ Create Security Onion EC2 instance in Amazon Web Services (AWS)
 - Please note that the default username for the Security-Onion-16.04 AMI is ``onion``
 - Once you have logged in, please do the following steps.
 
-    Change the hostname
+    Change the hostname (Optional)
     ::
         
       sudo vim /etc/hostname
