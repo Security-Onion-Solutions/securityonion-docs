@@ -74,7 +74,7 @@ Create Security Onion EC2 instance in Amazon Web Services (AWS)
 Traffic Mirroring
 ---------------------------------
 
-Traffic mirroring allows you to copy the traffic from an interface on an instance and send it to the sniffing interface on a sensor monitoring network traffic or a group of interfaces using a network load balancer.  For more details about AWS Traffic Mirroring please see: https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html
+Traffic mirroring allows you to copy the traffic to/from an instance and send it to the sniffing interface of a network security monitoring sensor or a group of interfaces using a network load balancer.  For more details about AWS Traffic Mirroring please see: https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html
 
 Create Mirror Target
 ---------------------------------
