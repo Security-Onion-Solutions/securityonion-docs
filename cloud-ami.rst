@@ -25,7 +25,7 @@ https://docs.aws.amazon.com/directoryservice/latest/admin- guide/gsg_create_vpc.
 Create a Security Group for Sniffing Interface 
 -----------------
 
-Security Groups act like a firewall for your Amazon EC2 instances controlling both inbound and outbound traffic. We will need to create a security group specifically for the interface we will be using to sniff the traffic.  This security group will need to be as open as possible to ensure all traffic destined to the sniffing interface will be allowed through.
+Security Groups act like a firewall for your Amazon EC2 instances controlling both inbound and outbound traffic. We will need to create a security group specifically for the interface we will be using to sniff the traffic.  This security group will need to be as open as possible to ensure all traffic destined to the sniffing interface will be allowed through.  To create a security group, follow these steps:
 
 - From the EC2 Dashboard Select ``Security Groups`` under the Network & Security sections in the left window pane.
 - Select ``Create Security Group``
@@ -38,7 +38,7 @@ Security Groups act like a firewall for your Amazon EC2 instances controlling bo
 Create Sniffing Interface
 ----------------
 
-Prior to launching the Security Onion AMI you will need to create the interface that will be used to monitor your VPC.  This interface will be attached to the Security Onion AMI as a secondary interface.  
+Prior to launching the Security Onion AMI you will need to create the interface that will be used to monitor your VPC.  This interface will be attached to the Security Onion AMI as a secondary interface.  To create a sniffing interface, follow these steps:
 
 - From the EC2 Dashboard select ``Network Interfaces`` under the Network & Security section in the left window pane. 
 - Select ``Create Network Interface``
@@ -49,6 +49,7 @@ Prior to launching the Security Onion AMI you will need to create the interface 
 
 Create a Security Onion EC2 instance in Amazon Web Services (AWS)
 ---------------------------------
+To configure a Security Onion instance, follow these steps:
 
 - From the EC2 dashboard select ``Launch Instance``
 - Select the ``Community AMI's`` option in the left pane and search for ``Security-Onion-16.04`` in the search bar
@@ -93,7 +94,7 @@ Traffic mirroring allows you to copy the traffic to/from an instance and send it
 Create Mirror Target
 ---------------------------------
 
-A mirror target in AWS refers to the destination for the mirrored traffic.  This can be a single interface or a group of interfaces using a network load balancer.  To configure a mirror target follow these steps.
+A mirror target in AWS refers to the destination for the mirrored traffic.  This can be a single interface or a group of interfaces using a network load balancer.  To configure a mirror target, follow these steps.
 
 - From the VPC dashboard select ``Mirror Targets`` under the Traffic Mirroring section in the left window pane
 - Select ``Create traffic mirror target``
@@ -103,7 +104,7 @@ A mirror target in AWS refers to the destination for the mirrored traffic.  This
 Create Mirror Filter
 ---------------------------------
 
-A mirror filter allow you to define the traffic that is copied to in the mirrored session and is useful for tuning out noisy or unwanted traffic.  To configure a mirror filter follow these steps.
+A mirror filter allows you to define the traffic that is copied to in the mirrored session and is useful for tuning out noisy or unwanted traffic.  To configure a mirror filter, follow these steps.
 
 - From the VPC dashboard select ``Mirror Filters`` under the Traffic Mirroring section in the left window pane
 - Select ``Create traffic mirror filter``
