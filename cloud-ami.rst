@@ -27,31 +27,31 @@ Create a Security Group for Sniffing Interface
 
 Security Groups act like a firewall for your Amazon EC2 instances controlling both inbound and outbound traffic. We will need to create a security group specifically for the interface we will be using to sniff the traffic.  This security group will need to be as open as possible to ensure all traffic destined to the sniffing interface will be allowed through.  To create a security group, follow these steps:
 
-- From the EC2 Dashboard Select ``Security Groups`` under the Network & Security sections in the left window pane.
-- Select ``Create Security Group``.
+- From the EC2 Dashboard Select: ``Security Groups`` under the Network & Security sections in the left window pane.
+- Select: ``Create Security Group``
 - Provide a Security Group Name and Description.
 - Select the appropriate VPC for the security group. 
-- With the inbound tab selected, Select ``Add Rule``. 
+- With the inbound tab selected, Select: ``Add Rule`` 
 - Add the appropriate inbound rules to ensure all desired traffic destined for the sniffing interface is allowed.
-- Select ``Create``.
+- Select: ``Create``
 
 Create Sniffing Interface
 ----------------
 
 Prior to launching the Security Onion AMI you will need to create the interface that will be used to monitor your VPC.  This interface will be attached to the Security Onion AMI as a secondary interface.  To create a sniffing interface, follow these steps:
 
-- From the EC2 Dashboard select ``Network Interfaces`` under the Network & Security section in the left window pane. 
-- Select ``Create Network Interface``.
+- From the EC2 Dashboard Select: ``Network Interfaces`` under the Network & Security section in the left window pane. 
+- Select: ``Create Network Interface``
 - Provide a description and choose the appropriate subnet you want to monitor.
 - Select the security Group that you created for the sniffing interface.
-- Select ``Create``.
+- Select: ``Create``
 
 
 Create a Security Onion EC2 instance in Amazon Web Services (AWS)
 ---------------------------------
 To configure a Security Onion instance, follow these steps:
 
-- From the EC2 dashboard select ``Launch Instance``.
+- From the EC2 dashboard select: ``Launch Instance``
 - Select the ``Community AMI's`` option in the left pane and search for ``Security-Onion-16.04`` in the search bar.
 - Select ``Security-Onion-16.04`` AMI with the most recent build date.
 - Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please visit our Hardware Requirements section. 
