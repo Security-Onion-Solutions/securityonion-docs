@@ -32,6 +32,8 @@ You'll then need to do the following:
 Zeek
 ----
 
+If you upgrade from Bro to Zeek, then Bro will automatically stop before Zeek is installed and so you may need to restart Zeek after the upgrade is complete.  If you upgrade from Zeek to a newer version of Zeek, Zeek will not automatically stop.
+
 Zeek package upgrades will attempt to migrate your Zeek config. You should double-check your config and see if there are any local customizations that you need to manually re-apply. Then restart Zeek as follows:
 
 ::
