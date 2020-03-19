@@ -29,7 +29,7 @@ Disable any other unnecessary services.  For example, to disable bluetooth:
 CPU Affinity/Pinning
 --------------------
 
-For best performance, CPU intensive processes like Zeek, Suricata, and Snort should be pinned to specific CPUs.  In most cases, you'll want to pin to the same CPU that your sniffing NIC is bound to.
+For best performance, CPU intensive processes like Zeek, Suricata, and Snort should be pinned to specific CPUs.  In most cases, you'll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.
 
 | For Zeek, use the ``pin_cpus`` setting in ``/opt/bro/etc/node.cfg``:
 | https://docs.zeek.org/en/stable/configuration/#using-pf-ring
