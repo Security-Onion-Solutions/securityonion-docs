@@ -29,7 +29,7 @@ Disable any other unnecessary services.  For example, to disable bluetooth:
 CPU Affinity/Pinning
 --------------------
 
-For best performance, CPU intensive processes like Zeek, Suricata, and Snort should be pinned to specific CPUs.
+For best performance, CPU intensive processes like Zeek, Suricata, and Snort should be pinned to specific CPUs.  In most cases, you'll want to pin to the same CPU that your sniffing NIC is bound to.
 
 | For Zeek, use the ``pin_cpus`` setting in ``/opt/bro/etc/node.cfg``:
 | https://docs.zeek.org/en/stable/configuration/#using-pf-ring
@@ -45,7 +45,7 @@ Starting in ``securityonion-nsmnow-admin-scripts - 20120724-0ubuntu0securityonio
 
 and then (re)starting the Snort process(es) using ``sudo so-nids-start`` or ``sudo so-nids-restart``.
 
-In the example above, the first four snort processes would be pinned to the first four odd-numbered CPU cores. If there are more Snort processes enabled via ``IDS_LB_PROCS`` than are listed in the pin config in IDS_LB_CPUS, then any processes without a CPU listed would have the default CPU affinity.  You can verify proper pinning using ``taskset -cp PID`` where PID is the actual process ID of the Snort process you are checking.
+In the example above, the first four snort processes would be pinned to the first four odd-numbered CPU cores. If there are more Snort processes enabled via ``IDS_LB_PROCS`` than are listed in the pin config in ``IDS_LB_CPUS``, then any processes without a CPU listed would have the default CPU affinity.  You can verify proper pinning using ``taskset -cp PID`` where PID is the actual process ID of the Snort process you are checking.
 
 RSS
 ---
