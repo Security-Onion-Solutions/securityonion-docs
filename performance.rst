@@ -37,6 +37,16 @@ For best performance, CPU intensive processes like Zeek and Suricata should be p
 | For Suricata, use the affinity settings in ``suricata.yaml``:
 | https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading
 
+Starting in securityonion-nsmnow-admin-scripts - 20120724-0ubuntu0securityonion226, we now have the ability to pin Snort processes.  With this package in place, you can pin Snort processes to specific CPUs by adding a line to the ``/etc/nsm/HOSTNAME-INTERFACE/sensor.conf`` file like:
+
+::
+
+    IDS_LB_CPUS=1,3,5,7
+
+and then (re)starting the Snort process(es) using ``sudo so-nids-start`` or ``sudo so-nids-restart``.
+
+In the example above, the first four snort processes would be pinned to the first four odd-numbered CPU cores. It validates the input as a number before using it, so if there are more than the specified number (eg 5), any processes without a CPU listed would have the default CPU affinity.  You can then verify proper pinning using ``taskset -cp PID`` where PID is the actual process ID of the Snort process you are checking.
+
 RSS
 ---
 
