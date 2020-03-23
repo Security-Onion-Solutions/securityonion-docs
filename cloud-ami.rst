@@ -1,5 +1,6 @@
 Security Onion VPC Traffic Mirroring Configuration
 ============
+NOTE: THE CLOUD AMI IS STILL IN TESTING.  IF IT BREAKS YOU CAN KEEP ALL THE PIECES.
 
 This section covers configuring a Security Onion 16.04 cloud image hosted in Amazon Web Services (AWS) to receive mirrored/spanned traffic from other instances hosted within an Amazon Virtual Private Cloud (VPC). 
 
