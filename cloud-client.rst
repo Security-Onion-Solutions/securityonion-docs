@@ -3,13 +3,23 @@ Cloud Client
 
 **Please Note!**
 
-This cloud client idea was developed before cloud providers offered virtual taps.  If you are able to use your cloud provider's virtual tap, please do so instead of using this cloud client workaround.  For example:
+This cloud client idea was developed before cloud providers offered virtual taps.  If you are able to use your cloud provider's virtual tap, please do so instead of using this cloud client workaround.  
+
+Amazon
+------
 
 https://aws.amazon.com/blogs/aws/new-vpc-traffic-mirroring/
 
+AWS Virtual Taps use VXLAN encoding and we now have versions of Suricata and Zeek that support decoding that VXLAN traffic.  **We recommend using our Security Onion AMI as it includes this support out of the box:**
+
+https://securityonion.net/docs/cloud-ami
+
+Microsoft Azure
+---------------
+
 https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
 
-AWS Virtual Taps use VXLAN encoding and we now have versions of Suricata and Zeek that support decoding that VXLAN traffic.  We recommend **using our `Security Onion AMI <cloud-ami>`__** as it includes this support out of the box.
+If for some reason you can't use the options above, you can try this legacy cloud client idea, but please keep in mind:
 
 **Warning! This cloud client is considered experimental! USE AT YOUR OWN RISK!**
 
