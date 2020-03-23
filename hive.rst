@@ -30,8 +30,7 @@ Simply modify the following rule as desired, and place the rule in ``/etc/elasta
     alert: hivealerter
     
     hive_connection:
-      hive_host: http(s)://YOUR_HIVE_INSTANCE
-      hive_port: YOUR_HIVE_INSTANCE_PORT
+      hive_host: http(s)://YOUR_HIVE_INSTANCE:PORT # Add port if necessary
       hive_apikey: APIKEY
 
     hive_proxies:
