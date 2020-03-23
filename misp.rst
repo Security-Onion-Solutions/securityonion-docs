@@ -72,8 +72,7 @@ If we want to send events to TheHive based on the MISP NIDS rules we've pulled i
     - "hivealerter"
 
     hive_connection:
-        hive_host:  http(s)://YOUR_HIVE_INSTANCE
-        hive_port: YOUR_HIVE_INSTANCE_PORT
+        hive_host:  http(s)://YOUR_HIVE_INSTANCE:PORT # Add port if necessary
         hive_apikey: APIKEY
     
     hive_proxies:
