@@ -1,6 +1,6 @@
 Security Onion VPC Traffic Mirroring Configuration
 ============
-NOTE: THE CLOUD AMI IS STILL IN TESTIN!  IF IT BREAKS YOU CAN KEEP ALL THE PIECES.
+NOTE: THE CLOUD AMI IS STILL IN TESTING!  IF IT BREAKS YOU CAN KEEP ALL THE PIECES.
 
 This section covers configuring a Security Onion 16.04 cloud image hosted in Amazon Web Services (AWS) to receive mirrored/spanned traffic from other instances hosted within an Amazon Virtual Private Cloud (VPC). 
 
@@ -109,7 +109,7 @@ Traffic mirroring allows you to copy the traffic to/from an instance and send it
 Create Mirror Target
 ---------------------------------
 
-A mirror target in AWS refers to the destination for the mirrored traffic.  This can be a single interface or a group of interfaces using a network load balancer.  To configure a mirror target, follow these steps.
+A mirror target in AWS refers to the destination for the mirrored traffic.  This can be a single interface or a group of interfaces using a network load balancer.  To configure a mirror target, follow these steps:
 
 - From the VPC dashboard select: ``Mirror Targets`` under the Traffic Mirroring section in the left window pane.
 - Select: ``Create traffic mirror target``
@@ -119,7 +119,7 @@ A mirror target in AWS refers to the destination for the mirrored traffic.  This
 Create Mirror Filter
 ---------------------------------
 
-A mirror filter allows you to define the traffic that is copied to in the mirrored session and is useful for tuning out noisy or unwanted traffic.  To configure a mirror filter, follow these steps.
+A mirror filter allows you to define the traffic that is copied to in the mirrored session and is useful for tuning out noisy or unwanted traffic.  To configure a mirror filter, follow these steps:
 
 - From the VPC dashboard select: ``Mirror Filters`` under the Traffic Mirroring section in the left window pane.
 - Select: ``Create traffic mirror filter``
