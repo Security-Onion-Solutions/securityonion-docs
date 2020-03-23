@@ -22,7 +22,20 @@ For more details about setting up a VPC please see:
 
 https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html
 
+################
+Getting Started 
+################
 
+**********
+Terraform 
+**********
+To quickly setup a VPC, mirror configuration, and test the Security Onion AMI using Terraform, see the following:   
+https://github.com/Security-Onion-Solutions/securityonion-cloud/tree/dev
+
+*******
+Manual 
+*******
+To setup the Security Onion AMI and VPC mirror configuration manually, use the steps below.
 
 Create a Security Group for Sniffing Interface 
 -----------------
