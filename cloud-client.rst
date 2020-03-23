@@ -9,7 +9,7 @@ https://aws.amazon.com/blogs/aws/new-vpc-traffic-mirroring/
 
 https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
 
-AWS Virtual Taps use VXLAN encoding and we now have versions of Suricata and Zeek that support decoding that VXLAN traffic.  We recommend using our `Security Onion AMI <cloud-ami>`__ as it includes this support out of the box.
+AWS Virtual Taps use VXLAN encoding and we now have versions of Suricata and Zeek that support decoding that VXLAN traffic.  We recommend **using our `Security Onion AMI <cloud-ami>`__** as it includes this support out of the box.
 
 **Warning! This cloud client is considered experimental! USE AT YOUR OWN RISK!**
 
