@@ -9,6 +9,7 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    airgap
    analyst-vm
    best-practices
+   cloud-ami
    cloud-client
    connecting-to-sguil
    desktop
