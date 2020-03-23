@@ -19,6 +19,9 @@ Microsoft Azure
 
 https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
 
+Legacy Cloud Client
+-------------------
+
 If for some reason you can't use the options above, you can try this legacy cloud client idea, but please keep in mind:
 
 **Warning! This cloud client is considered experimental! USE AT YOUR OWN RISK!**
