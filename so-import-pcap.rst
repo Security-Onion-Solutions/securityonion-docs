@@ -40,6 +40,7 @@ Installation
 ------------
 
 If you haven't already installed the latest Security Onion ISO image, here are the steps to do so:
+
 #. `Download and verify our Security Onion ISO image <https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md>`__.
 #. Boot the ISO image and choose the default boot menu option.
 #. Once the live desktop appears, double-click the ``Install SecurityOnion`` icon.
