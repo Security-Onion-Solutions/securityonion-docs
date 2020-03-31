@@ -1,5 +1,5 @@
-Installation
-============
+Use Cases
+=========
 
 Security Onion is designed for many different use cases! Here are just a few examples.
 
