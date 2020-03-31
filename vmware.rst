@@ -4,7 +4,7 @@ VMWare
 Overview
 --------
 
-In this section, we'll cover creating a virtual machine (VM) for Security Onion 16.04 in VMWare Workstation Pro 12 (although this should be similar for most VMWare installations).
+In this section, we'll cover creating a virtual machine (VM) for Security Onion 16.04 in VMWare Workstation Pro (although this should be similar for most VMWare installations).
 
 If you don't have VMWare Workstation, you could also use VMWare Player, found here:
 
@@ -21,9 +21,7 @@ Follow the steps below to install our Security Onion ISO image in VMware:
 #. Choose Linux, Ubuntu 64-Bit and click ``Next``.
 #. Specify virtual machine name and click ``Next``.
 #. Specify disk size (min 40GB), store as single file, click ``Next``.
-#. Customize hardware:
-#. Memory – 8GB or more
-#. Processors – 4 CPU cores or more
+#. Customize hardware and increase Memory (min 8GB for most use cases) and Processors (4 CPU cores for most use cases).
 #. Network Adapter (NAT or Bridged -- if you want to be able to access
    your Security Onion machine from other devices in the network, then
    choose Bridged, otherwise choose NAT to leave it behind the host) --
