@@ -24,6 +24,12 @@ Minimum Requirements
 
 Please note these are MINIMUM requirements.  If you can allocate more resources, please do so.
 
+.. warning::
+
+   Do NOT run so-import-pcap on an existing production deployment!
+   
+   It is designed for standalone systems designated for so-import-pcap.
+   
 Installation
 ------------
 
@@ -36,15 +42,10 @@ If you haven't already installed the latest Security Onion ISO image, here are t
 #. Once the installer completes, reboot into your new installation and login using the username and password you specified during installation.
 #. NOTE! It is NOT necessary to run Setup as so-import-pcap will do this automatically.
 
-.. warning::
+.. tip::
 
-   Do NOT run this on a production deployment. It is designed for standalone systems designated for so-import-pcap.
+   If you're running so-import-pcap in a VM with snapshot capability, you might want to take a snapshot before this program makes changes.
    
-   If you're running in a VM with snapshot capability, you might want to take a snapshot before this program makes changes.
-
-   If you take a VM snapshot before this program makes changes, then just revert to snapshot.
-   Otherwise, you can re-run Setup and it should overwrite all modified files to revert the system to normal operation.
-
 Usage
 -----
 
