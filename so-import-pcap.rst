@@ -1,7 +1,7 @@
 so-import-pcap
 ==============
 
-``so-import-pcap`` will import one or more pcaps into Security Onion and preserve original timestamps.
+If you just want to analyze one or more pcap files, then ``so-import-pcap`` is the quickest and easiest way to get started with Security Onion!  It will import one or more pcaps into Security Onion and preserve original timestamps.
 
 It will do the following:
 
@@ -15,19 +15,37 @@ It will do the following:
 -  store IDS alerts and Zeek logs with original timestamps
 -  split traffic into separate daily pcaps and store them where sguil's pcap_agent can find them
 
-Requirements:
+Minimum Requirements
+--------------------
 
--  You must be running at least Security Onion 16.04.
+-  50GB storage
+-  4GB RAM
+-  2 CPU cores
 
-Warnings:
+Please note these are MINIMUM requirements.  If you can allocate more resources, please do so.
+
+Warnings
+--------
 
 -  Do NOT run this on a production deployment. It is designed for standalone systems designated for so-import-pcap.
 -  If you're running in a VM with snapshot capability, you might want to take a snapshot before this program makes changes.
 
-Reverting System Changes:
+Reverting System Changes
+------------------------
 
 -  If you take a VM snapshot before this program makes changes, then just revert to snapshot.
 -  Otherwise, you can re-run Setup and it should overwrite all modified files to revert the system to normal operation.
+
+Installation
+------------
+
+If you haven't already installed the latest Security Onion ISO image, here are the steps to do so:
+#. `Download and verify our Security Onion ISO image <https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md>`__.
+#. Boot the ISO image and choose the default boot menu option.
+#. Once the live desktop appears, double-click the ``Install SecurityOnion`` icon.
+#. Follow the prompts in the installer. If prompted with an ``encrypt home folder`` or ``encrypt partition`` option, **DO NOT** enable this feature. If asked about automatic updates, **DO NOT** enable automatic updates.
+#. Once the installer completes, reboot into your new installation and login using the username and password you specified during installation.
+#. NOTE! It is NOT necessary to run Setup as so-import-pcap will do this automatically.
 
 Usage
 -----

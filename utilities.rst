@@ -10,4 +10,3 @@ This section covers some of the main utilities in Security Onion.
    setup
    so-allow
    so-elasticsearch-query
-   so-import-pcap

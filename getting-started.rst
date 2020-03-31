@@ -16,6 +16,7 @@ This section will give you an overview of different use cases for Security Onion
    trouble-booting
    installation
    release-notes
+   so-import-pcap
    quick-iso-image
    installing-on-ubuntu
    production-deployment
