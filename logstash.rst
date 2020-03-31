@@ -221,7 +221,7 @@ LOGSTASH_MINIMAL
 
 We now have a ``LOGSTASH_MINIMAL`` mode which will offload log parsing to Elasticsearch ingest node.  This allows Logstash to run in as little as 200MB RAM and start instantly.  Please note that the Elasticsearch ingest node parsing currently only supports standard IDS alerts and Zeek logs in JSON format.  
 
-To enable on a new installation, simply run through Setup using:
+Starting in ``securityonion-setup - 20120912-0ubuntu0securityonion327``, ``LOGSTASH_MINIMAL`` is enabled by default for new Production Mode deployments.  Evaluation Mode continues to default to traditional Logstash parsing.  If you want to run Evaluation Mode with ``LOGSTASH_MINIMAL``, you can run minimal Setup:
 
 ::
 
