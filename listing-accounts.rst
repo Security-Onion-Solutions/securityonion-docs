@@ -10,6 +10,14 @@ OS user accounts are stored in ``/etc/passwd``.  You can get a list of all OS ac
 
   cut -d: -f1 /etc/passwd
   
+::
+
+Furthermore, you can get a list of all OS accounts that had a UID > 1000 (not a service account) using the following command:
+
+::
+
+  cat /etc/passwd | awk -F: '$3 > 1000 {print ;}' | cut -d: -f1 
+  
 SSO
 ---
 
