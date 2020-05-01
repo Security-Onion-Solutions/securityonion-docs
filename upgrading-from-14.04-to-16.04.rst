@@ -3,26 +3,15 @@ Upgrading from 14.04 to 16.04
 
 Please read through this entire page before beginning!
 
-Disclaimers
------------
+.. warning::
 
--  We offer no guarantees that this upgrade process will work perfectly.
-
-Warnings
---------
-
--  Before upgrading production sensors, you should fully test this
-   upgrade process on test sensors in a test environment that closely
-   matches your production environment.
-
--  Argus, Pads, Prads, and ELSA are no longer supported -- these
-   software packages will be removed upon upgrade and will not be
-   supported in future releases.
-
--  If you were previously running ELSA, please ensure your system has
-   been converted to
-   `Elastic <ELSA-to-Elastic>`__
-   before upgrading.
+   -  We offer no guarantees that this upgrade process will work perfectly.
+   
+   -  Before upgrading production sensors, you should fully test this upgrade process on test sensors in a test environment that closely matches your production environment.
+   
+   -  Argus, Pads, Prads, and ELSA are no longer supported -- these software packages will be removed upon upgrade and will not be supported in future releases.
+   
+   -  If you were previously running ELSA, please ensure your system has been converted to `Elastic <ELSA-to-Elastic>`__ before upgrading.
 
 Pre-upgrade Notes
 -----------------
