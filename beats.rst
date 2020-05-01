@@ -11,7 +11,9 @@ To download a Beat, choose the correct version from the Past Releases page:
 https://www.elastic.co/downloads/past-releases   
 
 
-PLEASE NOTE: Choosing a Beat version that is greater than the Elastic version is not supported and may not work as expected.    
+.. warning::
+
+   Choosing a Beat version that is greater than the Elastic version is not supported and may not work as expected.    
 
 To check your current version of Elastic, navigate to the Management section in Kibana.  The version should be displayed on the screen.    
 
