@@ -16,10 +16,9 @@ From: https://github.com/activecm/rita
 
 We can add RITA to Security Onion to enhance its current capabilities and leverage the great work from the folks at `Active Countermeasures <https://activecountermeasures.com/>`__. They've done a fantastic job of allowing RITA to be easy to integrate with Security Onion.
 
-Warning
--------
+.. warning::
 
-Please keep in mind we do not officially support RITA, so installation is at your own risk.
+    Please keep in mind we do not officially support RITA, so installation is at your own risk.
 
 Installation
 ------------
