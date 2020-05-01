@@ -1,9 +1,9 @@
 Cloud Client
 ============
 
-**Please Note!**
+.. note::
 
-This cloud client idea was developed before cloud providers offered virtual taps.  If you are able to use your cloud provider's virtual tap, please do so instead of using this cloud client workaround.  
+    This cloud client idea was developed before cloud providers offered virtual taps.  If you are able to use your cloud provider's virtual tap, please do so instead of using this cloud client workaround.  
 
 Amazon
 ------
