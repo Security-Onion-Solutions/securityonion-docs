@@ -84,7 +84,9 @@ By default, Kibana will display timestamps in the timezone of your local browser
 Plugins
 -------
 
-Please note that we do not officially support installing plugins.  Do so at your own risk!
+.. warning::
+
+    Please note that we do not officially support installing plugins.  Do so at your own risk!
 
 To add a plugin to Kibana, you can expose the plugins directory to the host filesystem and then copy your plugins to that directory. For example, to load the `kbn\_network <https://github.com/dlumbrer/kbn_network>`__ plugin you can do something like the following.
 
