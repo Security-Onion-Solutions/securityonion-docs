@@ -27,4 +27,6 @@ Re-index all indices matching ``logstash-*``, pulling the appropriate ``refresh_
 
 The script should then progress to re-index the matching indices, and inform you when it has completed.
 
-Please note, abnormal execution of this script may result in data loss-- there are **NO GUARANTEES** this process will work perfectly for you.
+.. warning::
+
+   Abnormal execution of this script may result in data loss-- there are **NO GUARANTEES** this process will work perfectly for you.
