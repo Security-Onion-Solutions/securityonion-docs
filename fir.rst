@@ -15,10 +15,9 @@ From: https://github.com/certsocietegenerale/FIR:
 
 We can add FIR to Security Onion as a Docker container to enhance its current capabilities and leverage the great work from the folks at `CERT Societe Generale <https://github.com/certsocietegenerale>`__.
 
-Warning
--------
+.. warning::
 
-Please keep in mind we do not officially support FIR, so installation is at your own risk.
+    Please keep in mind we do not officially support FIR, so installation is at your own risk.
 
 Installation
 ------------
