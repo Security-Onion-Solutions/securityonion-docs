@@ -7,10 +7,9 @@ From: https://github.com/google/grr:
 
 We can add GRR to Security Onion as a Docker container to enhance its current capabilities and leverage the great work from the folks at `Google <https://github.com/google/grr>`__.
 
-Warning
--------
+.. warning::
 
-Please keep in mind we do not officially support GRR, so installation is at your own risk.
+    Please keep in mind we do not officially support GRR, so installation is at your own risk.
 
 Installation
 ------------
