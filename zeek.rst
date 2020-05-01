@@ -162,14 +162,9 @@ Below is an example how to do so:
 
 To check and see if a Zeek script has fired a Notice, go to Kibana and check our ``Zeek Notices`` dashboard. Alternatively, you can check for entries in ``/nsm/bro/logs/current/notice.log``.
 
-**PLEASE NOTE**: In a distributed deployment, all custom scripts created
-under ``/opt/bro/share/bro/policy/`` on a master server will be
-replicated to sensors via Salt, however, they will not be enabled, as
-``/opt/bro/share/bro/site/local.bro`` is not replicated. Therefore, you
-will either need to manually add a reference to the scripts in
-``/opt/bro/share/bro/site/local.bro``, or add additional configuration
-in ``/opt/onionsalt/salt/sensor/init.sls`` for Salt to replicate this
-information.
+.. note::
+
+    In a distributed deployment, all custom scripts created under ``/opt/bro/share/bro/policy/`` on a master server will be replicated to sensors via Salt, however, they will not be enabled, as ``/opt/bro/share/bro/site/local.bro`` is not replicated. Therefore, you will either need to manually add a reference to the scripts in ``/opt/bro/share/bro/site/local.bro``, or add additional configuration in ``/opt/onionsalt/salt/sensor/init.sls`` for Salt to replicate this information.
 
 -  Make a symlink to ``local.bro``:
 
