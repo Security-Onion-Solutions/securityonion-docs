@@ -6,8 +6,9 @@ DNS Anomaly Detection script based on the query logs coming from his DNS
 server. We can do the same thing with Zeek's dns.log (where Zeek captures
 all the DNS queries it sees on the network).
 
-Please note that this script is only intended for standalone machines
-and will not work properly on distributed deployments.
+.. note::
+
+    Please note that this script is only intended for standalone machines and will not work properly on distributed deployments.
 
 This version of the script works on older installations using Zeek TSV
 output:
