@@ -9,10 +9,9 @@ NIDS Rules
 
 We can leverage this functionality by quickly and easily setting up an automated mechanism to pull NIDS rules from a MISP instance and add them to our local rules for Security Onion. To do so, we just need to follow the simple steps below.
 
-Warning
--------
+.. warning::
 
-Please keep in mind we do not officially support this integration, so installation is at your own risk.
+   Please keep in mind we do not officially support this integration, so installation is at your own risk.
 
 Installation
 ------------
