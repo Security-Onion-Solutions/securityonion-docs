@@ -52,4 +52,6 @@ This log section tells syslog-ng how to structure the previous ‘source / filte
    destination(d_sguil_udp);
    };
 
-Please note that this option requires ``set DEBUG 2`` in ``/etc/sguild/sguild.conf``.
+.. note::
+
+   This option requires ``set DEBUG 2`` in ``/etc/sguild/sguild.conf``.
