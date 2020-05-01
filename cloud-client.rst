@@ -22,7 +22,9 @@ Legacy Cloud Client
 
 If for some reason you can't use the options above, you can try this legacy cloud client idea, but please keep in mind:
 
-**Warning! This cloud client is considered experimental! USE AT YOUR OWN RISK!**
+.. warning::
+
+    This cloud client is considered experimental! USE AT YOUR OWN RISK!
 
 If your cloud provider doesn't already offer a virtual tap, you can use daemonlogger or netsniff-ng as a virtual tap. This virtual tap will copy all traffic from our production cloud box to an OpenVPN bridge that transports the traffic to our
 Security Onion sensor where it is then analyzed.
