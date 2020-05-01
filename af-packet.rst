@@ -1,7 +1,11 @@
 AF-PACKET
 =========
 
-Modern versions of Setup will configure `<Suricata>`_ and `<Zeek>`_ to use AF-PACKET instead of `<PF-RING>`_. (`<Snort>`_ will continue to use `<PF-RING>`__ for load balancing until Snort 3.0 is released.)
+Modern versions of Setup will configure `<Suricata>`_ and `<Zeek>`_ to use AF-PACKET instead of `<PF-RING>`_. 
+
+.. note::
+
+   (`<Snort>`_ will continue to use `<PF-RING>`__ for load balancing until Snort 3.0 is released.)
 
 If you want to change the number of AF-PACKET workers after running Setup, you can do the following.
 
