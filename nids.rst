@@ -25,7 +25,9 @@ You can analyze NIDS alerts from Snort/Suricata via:
 Switching from Snort to Suricata
 --------------------------------
 
-Please note that, if you’re running the Snort Talos ruleset, Snort Shared Object rules will not load in Suricata. Most folks who choose the Suricata engine choose to run the Emerging Threats ruleset.
+.. note::
+
+   If you’re running the Snort Talos ruleset, Snort Shared Object rules will not load in Suricata. Most folks who choose the Suricata engine choose to run the Emerging Threats ruleset.
 
 ::
 
