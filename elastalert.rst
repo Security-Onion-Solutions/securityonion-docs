@@ -95,7 +95,9 @@ so-elastalert-test
 
 ``so-elastalert-test`` is a wrapper script originally written by Bryant Treacle for ElastAlert's ``elastalert-test-rule`` tool.  The script allows you to test an ElastAlert rule and get results immediately. Simply run ``so-elastalert-test``, and follow the prompt(s).
 
-Please note, all options available to ``elastalert-test-rule`` are not yet included with ``so-elastalert-test``.
+.. note::
+
+    ``so-elastalert-test`` does not yet include all options available to ``elastalert-test-rule``.
 
 Defaults
 ~~~~~~~~
