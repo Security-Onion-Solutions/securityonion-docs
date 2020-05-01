@@ -9,15 +9,14 @@ your ELSA hardware already meets these requirements and you really need
 to perform an in-place upgrade from ELSA to Elastic, this page will
 provide an overview of steps necessary.
 
-Warning
--------
+.. warning::
 
-The in-place upgrade process is still considered EXPERIMENTAL and so the
-usual warnings and disclaimers apply:
+   The in-place upgrade process is still considered EXPERIMENTAL and so the
+   usual warnings and disclaimers apply:
 
--  This is BLEEDING EDGE and TOTALLY UNSUPPORTED!
--  If this breaks your system, you get to keep both pieces!
--  This may result in nausea, vomiting, or a burning sensation.
+   -  This is BLEEDING EDGE and TOTALLY UNSUPPORTED!
+   -  If this breaks your system, you get to keep both pieces!
+   -  This may result in nausea, vomiting, or a burning sensation.
 
 Exporting Data from ELSA
 ------------------------
