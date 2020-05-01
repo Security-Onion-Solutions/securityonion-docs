@@ -129,11 +129,9 @@ The ``soup`` command described above is the recommended method to install update
    .. rubric:: Security Onion 14.04
       :name: security-onion-14.04
 
-   **Please note**: If you're still running the old Security Onion
-   14.04, ``soup`` will continue to install Ubuntu updates until Ubuntu
-   stops releasing updates for 14.04. However, there won't be any more
-   Security Onion updates for version 14.04 as all development will be
-   on version 16.04 moving forward.
+   .. note::
+   
+   If you're still running the old Security Onion 14.04, ``soup`` will continue to install Ubuntu updates until Ubuntu    stops releasing updates for 14.04. However, there won't be any more Security Onion updates for version 14.04 as all development will be on version 16.04 moving forward.
 
 Upgrades
 --------
