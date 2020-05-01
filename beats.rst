@@ -51,14 +51,14 @@ Log files
 Filebeat
 ~~~~~~~~
 
-Windows: ``C:\\Program Files\Filebeat\filebeat.log``
+Windows: ``C:\Program Files\Filebeat\filebeat.log``
 
 Linux: ``/var/log/filebeat/filebeat``
 
 Winlogbeat
 ~~~~~~~~~~
 
-``C:\\Program Files\Winlogbeat\winlogbeat.log``
+``C:\Program Files\Winlogbeat\winlogbeat.log``
 
 Default fields:
 https://www.elastic.co/guide/en/beats/winlogbeat/master/exported-fields-eventlog.html
