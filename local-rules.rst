@@ -67,7 +67,9 @@ Testing Local Rules
 IPS Policy
 ----------
 
-Please note if you are using a ruleset that enables an IPS policy in ``/etc/nsm/pulledpork/pulledpork.conf``, your local rules will be disabled. To enabled them, either revert the policy by remarking the ``ips_policy`` line (and run ``rule-update``), or add the policy type to the rules in local.rules.
+.. note::
+
+   Please note if you are using a ruleset that enables an IPS policy in ``/etc/nsm/pulledpork/pulledpork.conf``, your local rules will be disabled. To enabled them, either revert the policy by remarking the ``ips_policy`` line (and run ``rule-update``), or add the policy type to the rules in local.rules.
 
 For example, if ``ips_policy`` was set to ``security``, you would add the following to each rule:
 
