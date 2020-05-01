@@ -3,10 +3,9 @@ AlienVault-OTX
 
 We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__ pulses into Security Onion and have Zeek utilize them for the `Intel Framework <https://www.bro.org/sphinx-git/frameworks/intel.html>`__ by leveraging `Stephen Hosom <https://github.com/hosom/bro-otx>`__'s work with Alienvault OTX integration.
 
-Warning
--------
+.. warning::
 
-Please keep in mind we do not officially support use of this script, so installation is at your own risk.
+  Please keep in mind we do not officially support use of this script, so installation is at your own risk.
 
 Installation
 ------------
