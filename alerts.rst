@@ -8,12 +8,14 @@ in a very short amount of time, enough information to begin making
 identifying areas of interest and making positive changes to your
 security stance.
 
-However, Network Security Monitoring, as a practice, is not a solution
-you can plug into your network, make sure you see blinking lights and
-tell people you are "secure." It requires active intervention from an
-analyst to qualify the quantity of information presented. One of those
-regular interventions is to ensure that you are tuning properly and
-proactively attempting to reach an acceptable level of signal to noise.
+.. note::
+
+   Network Security Monitoring, as a practice, is not a solution
+   you can plug into your network, make sure you see blinking lights and
+   tell people you are "secure." It requires active intervention from an
+   analyst to qualify the quantity of information presented. One of those
+   regular interventions is to ensure that you are tuning properly and
+   proactively attempting to reach an acceptable level of signal to noise.
 
 Testing to make sure the IDS is working
 ---------------------------------------
