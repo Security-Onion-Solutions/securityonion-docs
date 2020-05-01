@@ -51,7 +51,9 @@ Parsing
 
 Configuration files for custom parsing can be placed in ``/etc/logstash/custom``. These will automatically get copied over to ``/etc/logstash/conf.d`` during the starting of Logstash.
 
-Note: If you are using a distributed or heavy distributed `deployment type <architecture#deployment-types>`__, it is best practice to put your custom configuration files in the ``/etc/logstash/custom`` directory on the Master node.  The custom configuration files will then be replicated every 15 minutes or immediately if you use `Salt <Salt#features>`__ to force the replication to take place.
+.. note::
+
+    If you are using a distributed or heavy distributed `deployment type <architecture#deployment-types>`__, it is best practice to put your custom configuration files in the ``/etc/logstash/custom`` directory on the Master node.  The custom configuration files will then be replicated every 15 minutes or immediately if you use `Salt <Salt#features>`__ to force the replication to take place.
 
 After adding your custom configuration file(s), restart Logstash and check the log(s) for errors:
 
@@ -219,7 +221,11 @@ Additionally, you can run the following command to allow writing to the affected
 LOGSTASH_MINIMAL
 ----------------
 
-We now have a ``LOGSTASH_MINIMAL`` mode which will offload log parsing to Elasticsearch ingest node.  This allows Logstash to run in as little as 200MB RAM and start instantly.  Please note that the Elasticsearch ingest node parsing currently only supports standard IDS alerts and Zeek logs in JSON format.  
+We now have a ``LOGSTASH_MINIMAL`` mode which will offload log parsing to Elasticsearch ingest node.  This allows Logstash to run in as little as 200MB RAM and start instantly.  
+
+.. note::
+
+    Elasticsearch ingest node parsing currently only supports standard IDS alerts and Zeek logs in JSON format.  
 
 Starting in ``securityonion-setup - 20120912-0ubuntu0securityonion327``, ``LOGSTASH_MINIMAL`` is enabled by default for new Production Mode deployments.  Evaluation Mode continues to default to traditional Logstash parsing.  If you want to run Evaluation Mode with ``LOGSTASH_MINIMAL``, you can run minimal Setup:
 
