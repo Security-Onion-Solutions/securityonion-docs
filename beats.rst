@@ -78,4 +78,6 @@ If you access the Beats dashboard and see logs but the visualizations have error
 Encryption
 ----------
 
-Beats communication with Elasticsearch/Logstash is ``not encrypted`` by default. If you require encryption, please consult the appropriate Elastic documentation to configure the use of TLS.
+.. note::
+
+   Beats communication with Elasticsearch/Logstash is ``not encrypted`` by default. If you require encryption, please consult the appropriate Elastic documentation to configure the use of TLS.
