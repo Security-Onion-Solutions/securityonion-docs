@@ -17,9 +17,7 @@ This section covers configuring a Security Onion 16.04 cloud image hosted in Ama
 
 .. note::
 
-    This section does not cover network connectivity to the Security Onion node. This can be achieved through
-configuring an external IP for the node’s management interface, or through the use of a VPN connection
-via OpenVPN, PfSense etc.
+    This section does not cover network connectivity to the Security Onion node. This can be achieved through configuring an external IP for the node’s management interface, or through the use of a VPN connection via OpenVPN, PfSense etc.
     
     For more details about vpn connections please see:
     
