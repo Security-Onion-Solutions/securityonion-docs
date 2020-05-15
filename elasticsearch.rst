@@ -195,7 +195,7 @@ Storage Nodes
 Removing a node from the master
 -------------------------------
 
-If you need to remove a node (such as a ``heavy node`` or a ``storage node``) from your cross cluster search configuration, send the following to Elasticsearch on your master server (replacing "node1" with the actual node you'd like to remove and noting that null must be in square brackets):
+If you need to remove a node (such as a ``heavy node`` or a ``storage node``) from your cross cluster search configuration, send the following to Elasticsearch on your master server (replacing "node1" with the actual node you'd like to remove):
 
 ::
 
