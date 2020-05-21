@@ -95,21 +95,21 @@ The Master Server runs the following components (Production Mode w/ Best Practic
 -  Curator
 -  Elastalert
 -  Redis (Only if configured to output to a storage node)
--  OSSEC
+-  Wazuh/OSSEC
 -  Sguild
 
 Forward Node
 ~~~~~~~~~~~~
 
-When using a ``forward node``, Elastic Stack components are not installed. Syslog-NG forwards all logs to Logstash on the master server via an autossh tunnel, where they are stored in Elasticsearch on the master server, or forwarded to storage node's Elasticsearch instance (if the master server has been configured to use a storage node). From there, the data can be queried through the use of cross-cluster search.
+When using a ``forward node``, Elastic Stack components are not installed. Syslog-ng forwards all logs to Logstash on the master server via an autossh tunnel, where they are stored in Elasticsearch on the master server, or forwarded to storage node's Elasticsearch instance (if the master server has been configured to use a storage node). From there, the data can be queried through the use of cross-cluster search.
 
 Forward Nodes run the following components (Production Mode w/ Best Practices):
 
--  Zeek
+-  Zeek (formerly Bro)
 -  Snort/Suricata
--  Netsniff-NG
--  OSSEC
--  Syslog-NG
+-  netsniff-ng
+-  Wazuh/OSSEC
+-  syslog-ng
 
 Heavy Node
 ~~~~~~~~~~
@@ -121,9 +121,9 @@ When using a ``heavy node``, Security Onion implements distributed deployments u
 -  Curator
 -  Zeek
 -  Snort/Suricata
--  Netsniff-NG
--  OSSEC
--  Syslog-NG (forwards logs locally to Logstash)
+-  netsniff-ng
+-  Wazuh/OSSEC
+-  syslog-ng (forwards logs locally to Logstash)
 
 Storage Node
 ~~~~~~~~~~~~
@@ -135,4 +135,4 @@ Storage Nodes run the following components (Production Mode w/ Best Practices):
 -  Elasticsearch
 -  Logstash
 -  Curator
--  OSSEC
+-  Wazuh/OSSEC
