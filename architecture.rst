@@ -116,6 +116,8 @@ Heavy Node
 
 When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the master server to query that instance (similar to ELSA distributed deployments). This is done by constructing an autossh tunnel from the heavy node to the master server, configuring reverse port forwarding to allow the master server to connect to the local Elasticsearch instance, and updating \_cluster/settings on the master server so that it will query the local Elasticsearch instance.
 
+Heavy Nodes run the following components (Production Mode w/ Best Practices):
+
 -  Elasticsearch
 -  Logstash
 -  Curator
