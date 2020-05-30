@@ -13,8 +13,9 @@ Performance
 
 We compile Suricata to support both `<PF-RING>`__ and `<AF-PACKET>`_ to allow you to spin up multiple workers to handle more traffic.  Modern versions of Setup default to `<AF-PACKET>`_.
 
-| For high traffic levels, you may want to pin Suricata to specific CPU cores using the affinity settings in ``suricata.yaml``:
-| https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading
+For high traffic levels, you may want to pin Suricata to specific CPU cores using the affinity settings in ``suricata.yaml``: https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading
+
+Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
 
 Configuration
 -------------
