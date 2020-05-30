@@ -8,7 +8,7 @@ Performance
 
 In Security Onion, we compile Snort with `<PF-RING>`__ to allow you to spin up multiple instances to handle more traffic.
 
-Starting in ``securityonion-nsmnow-admin-scripts - 20120724-0ubuntu0securityonion226``, we now have the ability to pin Snort processes.  With this package in place, you can pin Snort processes to specific CPUs by adding a line to the ``/etc/nsm/HOSTNAME-INTERFACE/sensor.conf`` file like:
+For best performance, Snort should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  Starting in ``securityonion-nsmnow-admin-scripts - 20120724-0ubuntu0securityonion226``, we now have the ability to pin Snort processes.  With this package in place, you can pin Snort processes to specific CPUs by adding a line to the ``/etc/nsm/HOSTNAME-INTERFACE/sensor.conf`` file like:
 
 ::
 
