@@ -31,11 +31,11 @@ CPU Affinity/Pinning
 
 For best performance, CPU intensive processes like Zeek, Suricata, and Snort should be pinned to specific CPUs.  In most cases, you'll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.
 
-`Snort Performance<snort.html#performance>`__
+`Snort Performance <snort.html#performance>`__
 
-`Suricata Performance<suricata.html#performance>`_
+`Suricata Performance <suricata.html#performance>`_
 
-`Zeek Performance<zeek.html#performance>`_
+`Zeek Performance <zeek.html#performance>`_
 
 RSS
 ---
