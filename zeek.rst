@@ -5,6 +5,15 @@ Zeek is formerly known as Bro.  From https://www.zeek.org/:
 
     Zeek is a powerful network analysis framework that is much different from the typical IDS you may know. (Zeek is the new name for the long-established Bro system. Note that parts of the system retain the "Bro" name, and it also often appears in the documentation and distributions.)
 
+Performance
+-----------
+
+``/opt/bro/etc/node.cfg``
+
+We compile Zeek to support both `<PF-RING>`__ and `<AF-PACKET>`_ so that you can spin up multiple Zeek workers to handle more traffic.  Modern versions of Setup now default to `<AF-PACKET>`_.
+
+If you are monitoring high traffic levels, you may need to use the ``pin_cpus`` setting.  For more information, please see https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
+
 Logs
 ----
 
@@ -121,15 +130,6 @@ Intel
    | https://github.com/weslambert/securityonion-misp
 
 -  To install and configure an Alienvault OTX Connector, please see the `<Alienvault-OTX>`__ section.
-
-Workers
--------
-
-``/opt/bro/etc/node.cfg``
-
-We compile Zeek to support both `<PF-RING>`__ and `<AF-PACKET>`_ so that you can spin up multiple Zeek workers to handle more traffic.  Modern versions of Setup now default to `<AF-PACKET>`_.
-
-If you are monitoring high traffic levels, you may need to use the ``pin_cpus`` setting.  For more information, please see https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
 
 Custom Scripts
 --------------
