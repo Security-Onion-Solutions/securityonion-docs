@@ -12,7 +12,7 @@ Performance
 
 We compile Zeek to support both `<PF-RING>`__ and `<AF-PACKET>`_ so that you can spin up multiple Zeek workers to handle more traffic.  Modern versions of Setup now default to `<AF-PACKET>`_.
 
-If you are monitoring high traffic levels, you may need to use the ``pin_cpus`` setting.  For more information, please see https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
+For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
 
 Logs
 ----
