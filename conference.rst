@@ -12,6 +12,11 @@ Social Media
 | The Twitter hashtag is #socAugusta:
 | https://twitter.com/search?q=socaugusta
 
+Security Onion Conference 2020
+------------------------------
+
+Security Onion Conference 2020 is currently scheduled for October 16, 2020. 
+
 Security Onion Conference 2019
 ------------------------------
 
