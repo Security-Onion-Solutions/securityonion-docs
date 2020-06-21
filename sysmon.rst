@@ -18,7 +18,7 @@ Integration
 
 | Josh Brower wrote a great paper on integrating sysmon into Security
   Onion:
-| https://digital-forensics.sans.org/community/papers/gcfa/sysmon-enrich-security-onions-host-level-capabilities_10612
+| https://www.sans.org/reading-room/whitepapers/forensics/sysmon-enrich-security-onion-039-s-host-level-capabilities-35837
 
 Configuration
 -------------
