@@ -10,7 +10,7 @@ From https://www.elastic.co/products/logstash :
 Configuration
 -------------
 
-Here are a few of the settings which you may need to tune in ``/opt/so/saltstack/local/pillar/minions/$MINION_$ROLE.sls under logstash_settings``.
+Here are a few of the settings which you may need to tune in ``/opt/so/saltstack/local/pillar/minions/$MINION_$ROLE.sls`` under ``logstash_settings``.
 
 ls_pipeline_batch_size
 ~~~~~~~~~~~~~~~~~~~
@@ -36,7 +36,7 @@ See
 https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops
 for more details.
 
-You may need to adjust the value depending on your system's performance (running ``sudo so-logstash-restart`` after).
+You may need to adjust the value depending on your system's performance. The changes will be applied the next time the mionin checks in. You can force it to happen immediately by running ``sudo salt-call state.apply logstash`` on the actual node or by running ``sudo salt 'MINIONNAME' state.apply logstash`` on the master.
 
 Adding New Logs or Modifying Existing Parsing
 ---------------------------------------------
