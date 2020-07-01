@@ -14,7 +14,7 @@ To change the number of AF-PACKET workers for `<Suricata>`_:
 
       sudo so-suricata-stop
 
--  Edit ``/etc/nsm/$HOSTNAME-$INTERFACE/sensor.conf`` and change the ``IDS_LB_PROCS`` variable to the desired number of workers.
+-  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``suriprocs`` variable to the desired number of workers.
 
 -  Start sensor processes:
 
@@ -35,7 +35,7 @@ To change the number of AF-PACKET workers for `<Zeek>`_:
 
       sudo so-zeek-stop
 
--  Edit ``/opt/bro/etc/node.cfg`` and change the ``lb_procs`` variable to the desired number of cores.
+-  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``bro_lbprocs`` variable to the desired number of cores.
 
 -  Start Zeek:
 
