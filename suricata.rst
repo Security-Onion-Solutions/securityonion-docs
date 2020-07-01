@@ -11,9 +11,7 @@ From https://suricata-ids.org:
 Performance
 -----------
 
-We compile Suricata to support both `<PF-RING>`__ and `<AF-PACKET>`_ to allow you to spin up multiple workers to handle more traffic.  Modern versions of Setup default to `<AF-PACKET>`_.
-
-For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
+Suricata uses `<AF-PACKET>`_ to allow you to spin up multiple workers to handle more traffic.  For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
 
 Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
 
