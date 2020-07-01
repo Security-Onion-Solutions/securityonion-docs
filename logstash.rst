@@ -10,24 +10,24 @@ From https://www.elastic.co/products/logstash :
 Configuration
 -------------
 
-Here are a few of the settings which you may need to tune in ``/etc/logstash/logstash.yml``.
+Here are a few of the settings which you may need to tune in ``/opt/so/saltstack/local/pillar/minions/$MINION_$ROLE.sls under logstash_settings``.
 
-pipeline.batch.size
+ls_pipeline_batch_size
 ~~~~~~~~~~~~~~~~~~~
 
-    The maximum number of events an individual worker thread will collect from inputs before attempting to execute its filters and outputs. Larger batch sizes are generally more efficient, but come at the cost of increased memory overhead.
+    The maximum number of events an individual worker thread will collect from inputs before attempting to execute its filters and outputs. Larger batch sizes are generally more efficient, but come at the cost of increased memory overhead. This is set to 125 by default.
     
-pipeline.workers
+ls_pipeline_workers
 ~~~~~~~~~~~~~~~~
 
     The number of workers that will, in parallel, execute the filter and
     output stages of the pipeline. If you find that events are backing
     up, or that the CPU is not saturated, consider increasing this
-    number to better utilize machine processing power.
+    number to better utilize machine processing power. By default this value is set to the number of cores in the system.
 
 For more information, please see https://www.elastic.co/guide/en/logstash/current/logstash-settings-file.html.
 
-Logstash Heap
+lsheap
 ~~~~~~~~~~~~~
 
 By default, if total available memory is 8GB or greater, the Logstash heap size in ``/etc/logstash/jvm.options`` is configured (during setup) to equal 25% of available memory, but no greater than 4GB.
@@ -41,10 +41,6 @@ You may need to adjust the value depending on your system's performance (running
 Adding New Logs or Modifying Existing Parsing
 ---------------------------------------------
 
-Syslog-NG
-~~~~~~~~~
-
-If you are parsing local log files, you may need to add these files to the Syslog-NG configuration in ``/etc/syslog-ng/syslog-ng.conf`` and restart the service.
 
 Parsing
 ~~~~~~~
