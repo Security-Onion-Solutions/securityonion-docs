@@ -13,7 +13,7 @@ If your hardware has UEFI, please see https://help.ubuntu.com/community/UEFI.
 UEFI Secure Boot
 ----------------
 
-If your hardware has UEFI Secure Boot enabled, please see the `Secure Boot <Secure-Boot>`__ section.
+If you have problems booting our ISO image, you might need to disable Secure Boot. If you can’t disable Secure Boot, then you might need to install standard CentOS 7 or Ubuntu 18.04 and then perform a network installation.
 
 UPS
 ---
