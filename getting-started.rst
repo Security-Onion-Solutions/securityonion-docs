@@ -20,4 +20,3 @@ This section will give you an overview of different use cases for Security Onion
    installing-on-ubuntu
    production-deployment
    post-installation
-   secure-boot
