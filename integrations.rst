@@ -10,7 +10,6 @@ There are many different ways that we can integrate Security Onion into other sy
    etherpad
    fir
    grr
-   hive
    misp
    ntopng
    rita
