@@ -43,9 +43,13 @@ The following folks have made significant contributions to Security Onion over t
 
 -  Wes Lambert
 -  Mike Reeves
--  Phil Plantamura
--  Dustin Lee
+-  Jason Ertel
 -  Josh Brower
+-  Josh Patterson
+-  Phil Plantamura
+-  William Wernert
+-  Bryant Treacle
+-  Dustin Lee
 -  Kevin Branch
 -  Scott Runnels
 -  Brad Shoop
