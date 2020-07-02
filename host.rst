@@ -6,6 +6,7 @@ In this section, we'll review different ways that Security Onion can collect log
 .. toctree::
    :maxdepth: 2
 
+   osquery
    beats
    wazuh
    sysmon
