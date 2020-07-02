@@ -6,8 +6,6 @@ This section covers the various processes that Security Onion uses to analyze an
 .. toctree::
    :maxdepth: 2
 
-   nids
-   snort
    suricata
    zeek
    stenographer
