@@ -10,12 +10,8 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    analyst-vm
    best-practices
    cloud-ami
-   cloud-client
-   connecting-to-sguil
-   desktop
    dns-anomaly-detection
    icmp-anomaly-detection
-   metapackages
    new-disk
    pcaps
    removing-a-sensor
