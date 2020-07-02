@@ -1,8 +1,6 @@
 PCAPs for Testing
 =================
 
-Security Onion 16.04 comes with several pcap samples in ``/opt/samples/``.
-
 Links
 -----
 
@@ -39,14 +37,9 @@ Links
 tcpreplay
 ---------
 
-You can use ``tcpreplay`` to replay any of these pcaps on your Security Onion sensor. For example, please see https://blog.securityonion.net/2011/01/introduction-to-sguil-and-squert-part-3.html for a quick, easy use-case and what you should see in the Sguil console.
-
-so-replay
----------
-
-``so-replay`` will use ``tcpreplay`` to replay **all** pcap samples in ``/opt/samples`` to your sniffing interface.
+You can use ``tcpreplay`` to replay any standard pcap to the sniffing interface of your Security Onion sensor.
 
 so-import-pcap
 --------------
 
-A drawback to using tcpreplay is that it's replaying the pcap as new traffic and thus the timestamps that you see in Kibana, Squert, and Sguil do not reflect the original timestamps from the pcap. To avoid this, a new tool was developed called `so-import-pcap <so-import-pcap>`__.
+A drawback to using tcpreplay is that it's replaying the pcap as new traffic and thus the timestamps that you see in Kibana and other interfaces do not reflect the original timestamps from the pcap. To avoid this, a new tool was developed called `so-import-pcap <so-import-pcap>`__.
