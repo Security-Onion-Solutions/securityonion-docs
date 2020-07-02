@@ -4,7 +4,7 @@ Firewall
 Setup defaults to only allowing port 22 (ssh)
 ---------------------------------------------
 
-When you run Setup, it defaults to locking down the local ``ufw`` firewall to only allowing port 22 (ssh).  There is a note at the end of Setup that tells you this and lets you know that, if you need to allow connections on other ports, you can run the `<so-allow>`_ utility.
+When you run Setup, it defaults to locking down the local firewall to only allowing port 22 (ssh).  If you need to allow connections on other ports, you can run the `<so-allow>`_ utility.
 
 Sensors automatically add their own firewall rules to the master server
 -----------------------------------------------------------------------
@@ -14,8 +14,3 @@ When you run Setup on a sensor-only installation, it will ssh to the master serv
 -  22/tcp (ssh)
 -  4505/tcp (salt)
 -  4506/tcp (salt)
--  7736/tcp (sguil)
-
-UFW
----
-For more information about ``ufw``, please see https://help.ubuntu.com/community/UFW.
