@@ -9,3 +9,4 @@ This section covers the various processes that Security Onion uses to analyze an
    suricata
    zeek
    stenographer
+   strelka
