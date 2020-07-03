@@ -16,15 +16,15 @@ Once so-allow has completed, you should be able to open your browser and connect
 
 Grafana
 -------
-Username: admin
-Password: augusta
+| Username: admin
+| Password: augusta
 
 TheHive
 -------
 Log into TheHive and add a user or change the admin account https://MASTERSERVER/thehive:
 
-Username: hiveadmin
-Password: hivechangeme
+| Username: hiveadmin  
+| Password: hivechangeme  
 
 Fleet / Osquery
 ---------------
@@ -36,8 +36,8 @@ Playbook
 --------
 If you enabled Playbook during setup, you can now login with the following credentials:
 
-Username: analyst
-Password: changeme
+| Username: analyst  
+| Password: changeme  
 
 Refer to the Playbook documentation for further details.
 
