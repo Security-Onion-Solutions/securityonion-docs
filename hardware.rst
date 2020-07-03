@@ -110,7 +110,7 @@ We recommend dedicated physical hardware (especially if you're monitoring lots o
 CPU
 ~~~
 
-Snort, Suricata, and Zeek are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per Snort instance, Suricata worker, or Zeek worker. So if you have a fully saturated 1Gbps link and are running Snort and Zeek, then you'll want at least 5 Snort instances and 5 Zeek workers, which means you'll need at least 10 CPU cores for Snort and Zeek with additional CPU cores for Stenographer and/or other services.
+Suricata and Zeek are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per Suricata worker or Zeek worker. So if you have a fully saturated 1Gbps link and are running Suricata and Zeek, then you'll want at least 5 Suricata instances and 5 Zeek workers, which means you'll need at least 10 CPU cores for Suricata and Zeek with additional CPU cores for Stenographer and/or other services.
 
 RAM
 ~~~
@@ -124,7 +124,7 @@ RAM usage is highly dependent on several variables:
 
 For best performance, over provision RAM so that you can fully disable swap.
 
-The following RAM estimates are a rough guideline and assume that you're going to be running Snort/Suricata, Zeek, and Stenographer (full packet capture) and want to minimize/eliminate packet loss. Your mileage may vary!
+The following RAM estimates are a rough guideline and assume that you're going to be running Suricata, Zeek, and Stenographer (full packet capture) and want to minimize/eliminate packet loss. Your mileage may vary!
 
 If you just want to quickly evaluate Security Onion in a VM, the bare minimum amount of RAM needed is 8GB. More is obviously better!
 
