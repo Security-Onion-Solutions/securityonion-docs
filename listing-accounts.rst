@@ -19,7 +19,7 @@ Furthermore, you can get a list of all OS accounts that had a UID > 1000 (not a 
 SSO
 ---
 
-To list all SSO (Sguil/Squert/Kibana) accounts, you can use the ``so-user-list`` command:
+To list all Security Onion Console (SOC) accounts, you can use the ``so-user-list`` command:
 
 ::
 
