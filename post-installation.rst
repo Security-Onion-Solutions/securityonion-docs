@@ -2,6 +2,7 @@ After Installation
 ==================
 
 Adjust firewall rules using so-allow
+------------------------------------
 All firewall rules for the entire deployment are managed on the master. You will want to allow your own IP address (or range) to access Security Onion as an analyst. Run the command below and select the analyst role:
 
  ::
