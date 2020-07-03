@@ -36,33 +36,11 @@ Wipe sensor configuration and data
 Remove sensor reference from master server
 ------------------------------------------
 
--  In MySQL database ``securityonion_db``, edit ``sensor`` table (you can simply set active='N'), then restart sguild.
--  Stop sguild ``sudo so-sensor-stop``
--  Show sensor entries:
-
-::
-
-   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'select * from sensor';
-   
--  Set sensor as inactive:
-
-::
-
-   sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e "update sensor set active='N' where sid in (<SID1>,<SID2>)";
-   
--  Start sguild:
-
-::
-
-   sudo so-sensor-start
-
--  If running salt, remove the sensor from ``/opt/onionsalt/salt/top.sls`` and then delete the key from salt:
+-  Remove the sensor from ``/opt/onionsalt/salt/top.sls`` and then delete the key from salt:
 
 ::
 
    sudo salt-key -d sensor_key_name
-
--  PLEASE NOTE: This step is only required if you are still running ELSA. ELSA reached EOL on October 9, 2018.  On the master server, edit ``/etc/elsa_web.conf``, remove the sensor from the ``peers`` section, then restart Apache (``sudo service apache2 restart``).
 
 Remove storage node reference from Master server Elasticsearch _cluster/settings
 ------------------------------------------------------------------------------------
