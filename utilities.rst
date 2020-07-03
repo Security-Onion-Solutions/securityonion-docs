@@ -9,4 +9,3 @@ This section covers some of the main utilities in Security Onion.
    jq
    setup
    so-allow
-   so-elasticsearch-query
