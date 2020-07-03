@@ -15,11 +15,11 @@ Community Support
 
 If you need free support, you can reach out to one of the following public communities for support.
 
-If you're using our traditional Security Onion 16.04 platform, you can reach out to our public security-onion mailing
+If you're using our older Security Onion 16.04 platform, you can reach out to our public security-onion mailing
 list:
 
 `MailingLists <MailingLists>`__
 
-If you have questions or problems relating to our new Security Onion Hybrid Hunter platform, you can reach out to our reddit community:
+If you have questions or problems relating to our new Security Onion 2.0 platform, you can reach out to our reddit community:
 
 https://www.reddit.com/r/securityonion/
