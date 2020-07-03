@@ -3,7 +3,7 @@ Release Notes
 
 Changes:
 
- - Complete overhaul of the way we handle custom and default settings and data. You will now see a default and local directory under the saltstack directory. All customizations are stored in local.
+- Complete overhaul of the way we handle custom and default settings and data. You will now see a default and local directory under the saltstack directory. All customizations are stored in local.
 - The way firewall rules are handled has been completely revamped. This will allow the user to customize firewall rules much easier.
 - Users can now change their own password in SOC.
 - Hunt now allows users to enable auto-hunt. This is a toggle which, when enabled, automatically submits a new hunt when filtering, grouping, etc.
