@@ -15,7 +15,7 @@ For more information, please see ``man adduser``.
 SSO
 ---
 
-If you need to add a new SSO (Sguil/Squert/Kibana) account, you can use the ``so-user-add`` command (please note that SSO usernames must be alphanumeric):
+If you need to add a new Security Onion Console (SOC) account, you can use the ``so-user-add`` command (please note that SSO usernames must be alphanumeric):
 
 ::
 
