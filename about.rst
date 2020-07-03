@@ -9,7 +9,7 @@ Security Onion started in 2008 and was originally based on the Ubuntu Linux dist
 
 Here are some high level system differences between Security Onion 2.0 and the older legacy versions:
  - Move from Ubuntu packages to containers
- - Support both CentOS 7 and Ubuntu 18.04 (no longer bound to Ubuntu)
+ - Support both CentOS 7 and Ubuntu 18.04
  - Change pcap collection tool from netsniff-ng to Google Stenographer
  - Upgrade to Elastic Stack 7.x and support the Elastic Common Schema (ECS)
  - Remove unsigned kernel module PF_RING and completely replace with AF_PACKET
