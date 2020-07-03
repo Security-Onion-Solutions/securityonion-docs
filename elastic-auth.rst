@@ -21,6 +21,6 @@ Once you've completed ``so-elastic-auth``, you should then:
 
 .. note::
 
-  Please note that you will continue to authenticate to Sguil, Squert, and CapMe with your traditional Sguil/Squert/CapMe account.
+  If you add new Elastic Auth accounts in the future, you will need to assign them at least the ``so_user_read_only`` role.
 
-If you add new Elastic Auth accounts in the future, you will need to assign them at least the ``so_user_read_only`` role.
+
