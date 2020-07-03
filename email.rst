@@ -19,7 +19,7 @@ To automate email setup, copy and modify the example file located at ``/usr/shar
 Manual Configuration
 --------------------
 
-If you don't want to run ``so-email`` as described above, you can configure email manually as described in the following sections. Applications such as Sguil and Wazuh have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Zeek.
+If you don't want to run ``so-email`` as described above, you can configure email manually as described in the following sections. Some applications (like Wazuh) have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Zeek.
 
 Operating System
 ----------------
