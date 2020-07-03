@@ -1,7 +1,7 @@
 Alert Data Fields
 =================
 
-Below are the fields derived from IDS alerts (Snort/Suricata), after
+Below are the fields derived from NIDS alerts (Suricata), after
 being processed by Logstash:
 
 | ``type:snort``
