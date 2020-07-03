@@ -39,13 +39,6 @@ Install Security Onion on one or more nodes and then on each one: run Setup, con
 
 For more information, please see the `Production Deployment <ProductionDeployment>`__ section.
 
-Analyst VM
-----------
-
-If you've built a Production Server as described above, you may want to connect to it using an `Analyst VM <Analyst-VM>`_.  Install Security Onion in a VM on your local desktop or laptop. You do NOT need to run Setup in the Analyst VM since this VM won't be running any services, only applications such as `<Sguil>`_, `Wireshark <wireshark>`_, `NetworkMiner <networkminer>`_, and a web browser.
-
-For more information, please see the `<Analyst-VM>`__ section.
-
 Sending Logs to Separate SIEM
 -----------------------------
 
