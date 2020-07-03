@@ -28,7 +28,6 @@ Install
 
    -  If you have more than 2TB of disk space, you will probably want to create a dedicated ``/boot`` partition at the beginning of the disk to ensure that you don’t have any Grub booting issues. Choosing the ``LVM`` option should do this automatically.
    -  Check to see if the installer allocates a large amount of space to ``/home``. If this is the case, you may want to shrink ``/home`` to give more space to ``/``.
-   -  The Sguil database on the server (doesn’t exist on other node types) can grow fairly large (100GB or more for decent-size networks). It’s stored at ``/var/lib/mysql/``, so you may want to put ``/var`` on a dedicated partition or disk and assign a good amount of disk space to it. Also see the ``DAYSTOKEEP`` instructions on the `Post-Installation page <PostInstallation>`__.
    -  Forward, Heavy, and Standalone nodes store full packet captures at ``/nsm/sensor_data/``, so you may want to put ``/nsm`` on a dedicated partition/disk and assign as much disk space as possible (1TB or more). For larger volumes you might also consider using XFS for the ``/nsm`` partition.
    -  For Heavy, Standalone, and Storage Nodes, it is highly recommended to place ``/nsm/elasticsearch`` and ``/nsm/logstash`` on SSD or fast spinning disk in a RAID 10 configuration. See `Hardware Requirements <Hardware#elastic-stack>`__ for more details.
 
