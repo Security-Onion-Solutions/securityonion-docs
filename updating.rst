@@ -7,6 +7,4 @@ In this section, we'll review how to keep Security Onion up-to-date.
    :maxdepth: 2
 
    upgrade
-   mysql-upgrade-errors
-   apt-cacher-ng
    eol
