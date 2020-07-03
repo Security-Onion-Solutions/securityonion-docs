@@ -10,13 +10,6 @@ Screenshot
 
 .. image:: images/wireshark/wireshark.png
 
-Usage
------
-
-You can launch Wireshark from the Applications menu and then open a pcap.  
-
-Alternatively, if you're using the Sguil client, you can pivot directly from an event in Sguil and send the pcap directly to Wireshark.
-
 More Information
 ----------------
 
