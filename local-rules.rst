@@ -56,7 +56,7 @@ Testing Local Rules
    
        send(ip/tcp/payload)
 
--  Check Sguil/Squert/Kibana for the corresponding alert.
+-  Check Hunt/Kibana for the corresponding alert.
 
 -  You can see that we have an alert with the IP addresses we specified and the TCP ports we specified. If you pivot from that alert to the corresponding pcap you can verify the payload we sent.
 
