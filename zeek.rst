@@ -15,7 +15,7 @@ Zeek uses `<AF-PACKET>`_ so that you can spin up multiple Zeek workers to handle
 Logs
 ----
 
-Zeek logs are stored in ``/nsm/zeek/logs``. They are consumed by `syslog-ng <syslog>`__, parsed and augmented by `Logstash <Logstash>`__, stored in `Elasticsearch <Elasticsearch>`__, and viewable in `Kibana <Kibana>`__.
+Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by filebeat or `Logstash <Logstash>`_, parsed by and stored in `Elasticsearch <Elasticsearch>`__, and viewable in `Kibana <Kibana>`__.
 
 We configure Zeek to output logs in JSON format for higher performance and better parsing. We recommend that most folks leave Zeek configured for JSON output.  If you need to parse those JSON logs from the command line, you can use `<jq>`_.
 
