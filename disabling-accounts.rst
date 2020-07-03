@@ -15,7 +15,7 @@ For more information, please see ``man passwd`` and ``man usermod``.
 SSO
 ---
 
-If you need to disable a SSO (Sguil/Squert/Kibana) account, you can use the ``so-user-disable`` command:
+If you need to disable a Security Onion Console (SOC) account, you can use the ``so-user-disable`` command:
 
 ::
 
