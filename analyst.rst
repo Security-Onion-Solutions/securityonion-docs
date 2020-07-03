@@ -7,6 +7,7 @@ In this section, we'll look at different analyst tools that can be used for slic
    :maxdepth: 2
 
    browser
+   hunt
    hive
    kibana
    cyberchef
