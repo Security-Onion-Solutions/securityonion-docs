@@ -7,19 +7,17 @@ It will do the following:
 
 -  automatically run Setup to configure the system if necessary
 -  stop and disable Curator to avoid closing old indices
--  stop and disable all active sniffing processes (Zeek, Snort, Suricata, and netsniff-ng)
--  stop and disable ossec_agent
--  reconfigure and restart sguild, syslog-ng, and Logstash where necessary
--  generate IDS alerts using Snort or Suricata
+-  stop and disable all active sniffing processes (Zeek, Suricata, and Stenographer)
+-  generate IDS alerts using Suricata
 -  generate Zeek logs
 -  store IDS alerts and Zeek logs with original timestamps
--  split traffic into separate daily pcaps and store them where sguil's pcap_agent can find them
+-  store pcaps where Security Onion Console (SOC) can find them
 
 Minimum Requirements
 --------------------
 
 -  50GB storage
--  4GB RAM
+-  8GB RAM
 -  2 CPU cores
 
 Please note these are MINIMUM requirements.  If you can allocate more resources, please do so.
@@ -30,18 +28,6 @@ Please note these are MINIMUM requirements.  If you can allocate more resources,
    
    It is designed for standalone systems designated for so-import-pcap.
    
-Installation
-------------
-
-If you haven't already installed the latest Security Onion ISO image, here are the steps to do so:
-
-#. `Download and verify our Security Onion ISO image <https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md>`__.
-#. Boot the ISO image and choose the default boot menu option.
-#. Once the live desktop appears, double-click the ``Install SecurityOnion`` icon.
-#. Follow the prompts in the installer. If prompted with an ``encrypt home folder`` or ``encrypt partition`` option, **DO NOT** enable this feature. If asked about automatic updates, **DO NOT** enable automatic updates.
-#. Once the installer completes, reboot into your new installation and login using the username and password you specified during installation.
-#. NOTE! It is NOT necessary to run Setup as so-import-pcap will do this automatically.
-
 .. tip::
 
    If you're running so-import-pcap in a VM with snapshot capability, you might want to take a snapshot before this program makes changes.
@@ -62,11 +48,6 @@ To import multiple pcaps:
 ::
 
     sudo so-import-pcap /full/path/to/import1.pcap /full/path/to/import2.pcap
-
-Example
--------
-
-For a detailed walk-through with screenshots, please see https://blog.securityonion.net/2019/06/analyze-pcaps-in-3-simple-steps-using.html.
 
 Warning
 -------
