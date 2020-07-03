@@ -13,45 +13,14 @@ Global bpf.conf
 
 You can specify your BPF in ``/etc/nsm/rules/bpf.conf`` on your master
 server and, by default, it will apply to
-Snort/Suricata/Zeek/netsniff-ng/prads on all interfaces in your entire
+Suricata/Zeek/Stenographer on all interfaces in your entire
 deployment. If you have separate sensors reporting to that master
 server, they will copy ``/etc/nsm/rules/bpf.conf`` as part of the daily
 rule-update cron job (or you can run it manually) which will also
 restart Snort/Suricata so that the BPF change will take effect. Zeek
 automatically monitors ``bpf.conf`` for changes and will update itself
-as needed. Other services (such as prads and netsniff-ng) will need to
+as needed. Other services (such as Stenographer) will need to
 be restarted manually for the change to take effect.
-
-Granular bpf.conf
-~~~~~~~~~~~~~~~~~
-
-Each process on each interface has its own bpf file, but by default the
-per-process bpf files are symlinked to the interface bpf and the
-interface bpf is then symlinked to the global ``bpf.conf``:
-
-::
-
-    lrwxrwxrwx 1 root  root     8 Jan 13 21:47 bpf-bro.conf -> bpf.conf
-    lrwxrwxrwx 1 root  root    23 Jan 13 21:47 bpf.conf -> /etc/nsm/rules/bpf.conf
-    lrwxrwxrwx 1 root  root     8 Jan 13 21:47 bpf-ids.conf -> bpf.conf
-    lrwxrwxrwx 1 root  root     8 Jan 13 21:47 bpf-pcap.conf -> bpf.conf
-    lrwxrwxrwx 1 root  root     8 Jan 13 21:47 bpf-prads.conf -> bpf.conf
-
-If you don't want your sensors to inherit ``bpf.conf`` from the master
-server and/or you need to specify a bpf per-interface or per-process,
-you can simply replace the default symlink(s) with the desired bpf
-file(s) and restart service(s) as necessary. For example, suppose you
-want to apply a BPF to NIDS (Snort/Suricata) only:
-
-::
-
-    # Remove the default NIDS BPF symlink
-    sudo rm bpf-ids.conf
-    # Create a new NIDS BPF file and add your custom BPF
-    sudo vi bpf-ids.conf
-    # Restart NIDS
-    sudo so-nids-restart
-
 
 BPF Examples
 ~~~~~~~~~~~~
