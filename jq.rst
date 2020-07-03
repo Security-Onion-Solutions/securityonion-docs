@@ -12,9 +12,9 @@ If you have `<Zeek>`_ configured to write logs in JSON format and you want to pa
 
 ::
 
-   jq '.' /nsm/bro/logs/current/conn.log
+   jq '.' /nsm/zeek/logs/current/conn.log
    
-This command will parse all of the records in ``/nsm/bro/logs/current/conn.log``.  For each of the records, it will then output every field and its value.
+This command will parse all of the records in ``/nsm/zeek/logs/current/conn.log``.  For each of the records, it will then output every field and its value.
 
 More Information
 ----------------
