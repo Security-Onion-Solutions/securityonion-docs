@@ -11,13 +11,6 @@ Screenshot
 ----------
 .. image:: images/networkminer/networkminer.png
 
-Usage
------
-
-You can launch NetworkMiner from the Applications menu and then open a pcap.  
-
-Alternatively, if you're using the Sguil client, you can pivot directly from an event in Sguil and send the pcap directly to NetworkMiner.
-
 More Information
 ----------------
 
