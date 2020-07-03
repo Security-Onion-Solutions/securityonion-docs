@@ -40,33 +40,6 @@ Restart all services:
 
 The three main categories of services are server, sensor, and elastic.
 
-Server services
----------------
-
-Check status of sguild (Sguil server):
-
-::
-
-    sudo so-sguild-status
-
-Start sguild:
-
-::
-
-    sudo so-sguild-start
-
-Stop sguild:
-
-::
-
-    sudo so-sguild-stop
-
-Restart sguild:
-
-::
-
-    sudo so-sguild-restart
-
 Sensor services
 ---------------
 
