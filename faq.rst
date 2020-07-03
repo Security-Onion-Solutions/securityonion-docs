@@ -28,51 +28,25 @@ What's the recommended procedure for installing Security Onion?
 
 Please see the `Installation Procedure <Installation>`__ section.
 
-Why does the installer crash when selecting a non-English language?
+What languages are supported?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| We only support the English language at this time:
-| `<Installation#language>`__
-
-Why can't I see the Continue button on the Keyboard Layout screen of the installer?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The Keyboard Layout screen may be larger than your screen resolution and so the Continue button may be off the screen to the right( as shown in https://launchpadlibrarian.net/207213663/Screenshot_wilyi386deskmanual_2015-05-22_13%3A05%3A41.png).  You can simply slide the window over until you see the Continue button. For more information, please see https://bugs.launchpad.net/ubuntu/+source/ubiquity/+bug/1458039.
+We only support the English language at this time.
 
 How do I install Security Onion updates?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `Upgrade Procedure <Upgrade>`__ section.
 
-Why do I get ``Snort/Suricata/Zeek`` errors after upgrading the ``kernel`` and ``pfring`` packages?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `Updating <Upgrade>`__ section.
-
 What do I need to do if I'm behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `Proxy Configuration <Proxy>`__ section.
 
-Ubuntu is saying that my kernel has reached EOL (End Of Life). Should I update to the newer HWE stack?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `HWE <HWE>`__ section.
-
-Why does my VMware image rename ``eth0`` to ``eth1``?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Usually this happens when you clone a VM. VMware asks if you moved it or copied it. If you select "copied", it will change the MAC address to avoid duplication. At the next boot, Ubuntu's udev will see a new MAC address and create a new network interface (eth1). To fix this:
-
-::
-  
-   sudo rm /etc/udev/rules.d/70-persistent-net.rules
-   sudo reboot
-
 Can I run Security Onion on Raspberry Pi or some other non-x86 box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No, we only support 64-bit Intel/AMD architectures. Please see the `hardware <Hardware#32-bit-vs-64-bit>`__ section.
+No, we only support 64-bit Intel/AMD architectures. Please see the `hardware <Hardware>`__ section.
 
 What's the difference between a ``server`` and a ``sensor``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,15 +101,15 @@ What's the difference between a ``server`` and a ``sensor``?
 Users / Passwords
 ---------------------
 
-What is the password for ``root/mysql/Sguil/Squert/Kibana``?
+What is the password?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `Passwords <Passwords>`__ section.
 
-How do I add a new user account for logging into Sguil/Squert/Kibana?
+How do I add a new user account?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Please see the `Adding Sguil accounts <Passwords#sguil>`__ section.\ 
+| Please see the `Adding accounts <Passwords#sguil>`__ section.\ 
 | 
 | `back to top <#top>`__
 | 
@@ -167,143 +141,15 @@ Is commercial support available for Security Onion?
 Error messages
 ------------------
 
-Why does rule-update fail with Error 400 when running behind a proxy?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `<Proxy#pulledpork>`__ section.
-
-Why does rule-update fail with an error like "Error 404 when fetching s3.amazonaws.com/snort-org/www/rules/community/community-rules.tar.gz.md5"?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The Snort Community ruleset has moved to a different URL. You can run the following command to update the Snort Community URL in ``pulledpork.conf``:
-
-::
-
-    sudo sed -i 's\rule_url=https://s3.amazonaws.com/snort-org/www/rules/community/|community-rules.tar.gz|Community\rule_url=https://snort.org/downloads/community/|community-rules.tar.gz|Community\g' /etc/nsm/pulledpork/pulledpork.conf
-
-| For more information, please see:
-| https://blog.snort.org/2015/10/are-you-getting-404-errors-attempting.html
-
-Why does ``soup`` fail with an error message like "find: \`/usr/lib/python2.7/dist-packages/salt/': No such file or directory"?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This is a bug in the salt packages that can manifest when skipping salt versions. Resolve with the following:
-
-::
-
-    sudo mkdir -p /usr/lib/python2.7/dist-packages/salt/
-    sudo apt-get -f install
-    sudo soup
-
-Why does barnyard2 keep failing with errors like "Returned signature\_id is not equal to updated signature\_id"?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-| Please see:
-| https://blog.securityonion.net/2014/06/new-securityonion-rule-update-package.html
-
-I just updated Snort and it's now saying 'ERROR: The dynamic detection library "/usr/local/lib/snort\_dynamicrules/chat.so" version 1.0 compiled with dynamic engine library version 2.1 isn't compatible with the current dynamic engine library "/usr/lib/snort\_dynamicengine/libsf\_engine.so" version 2.4.'
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Run the following:
-
-::
-
-    sudo rule-update
-
-For more information, please see:
-
-https://blog.securityonion.net/2014/12/new-version-of-securityonion-rule.html
-
-I get periodic MySQL crashes and/or error code 24 "out of resources" when searching in Sguil. How do I fix that?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Modern versions of Setup should set MySQL's ``open-files-limit`` to 90000 to avoid this problem.
-
-Barnyard2 is failing with an error like "ERROR: sguil: Expected Confirm 13324 and got: Failed to insert 13324: mysqlexec/db server: Duplicate entry '9-13324' for key 'PRIMARY'". How do I fix this?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Sometimes, just restarting Barnyard will clear this up:
-
-::
-
-   sudo so-barnyard-restart
- 
-
-Other times, restarting Sguild and then restarting Barnyard will clear it up:
-
-::
-
-   sudo so-sguild-restart
-   sudo so-sensor-restart --only-barnyard2
-
-If that doesn't work, then try also restarting mysql:
-
-::
-
-   sudo service mysql restart
-   sudo so-sguild-restart
-   sudo so-sensor-restart --only-barnyard2
-
-If that still doesn't fix it, you may have to perform MySQL surgery on the database ``securityonion_db``.
-
-Why does Snort segfault every day at 7:01 AM?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-7:01 AM is the time of the daily PulledPork rules update. If you're running Snort with the Snort Subscriber (Talos) ruleset, this includes updating the SO rules. There is a known issue when running Snort with the Snort Subscriber (Talos) ruleset and updating the SO rules:
-https://groups.google.com/d/topic/pulledpork-users/1bQDkh3AhNs/discussion
-
-After updating the rules, Snort is restarted, and the segfault occurs in the OLD instance of Snort (not the NEW instance). Therefore, the segfault is merely a nuisance log entry and can safely be ignored.
-
-Why does the pcap_agent log show "Error: can't read logFile: no such variable"?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This usually means that there is an unexpected file in the dailylogs
-directory. Run the following:
-
-::
-
-    ls /nsm/sensor_data/*/dailylogs/
-
-You should see a bunch of date stamped directories and you may see some
-extraneous files. Remove any extraneous files and restart pcap\_agent:
-
-::
-
-    sudo so-pcap-agent-restart
-
-Why does Chromium display a black screen and/or crash?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This is a known issue with certain versions of VMware. You can either:
-
--  go into the VM configuration and disable 3D in the video adapter
-   OR
--  upgrade the VM hardware level (may require upgrading to a new version of VMware)
-
 Why does Zeek log ``Failed to open GeoIP database`` and ``Fell back to GeoIP Country database``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The GeoIP CITY database is ``not free`` and thus we cannot include it in the distro. Zeek fails to find it and falls back to the GeoIP COUNTRY database (which is free). As long as you are seeing some country codes in your conn.log, then everything should be fine. If you really need the CITY database, see this thread for some options: https://groups.google.com/d/topic/security-onion-testing/gtc-8ZTuCi4/discussion
 
-Why does soup tell me I need a Secure Boot key?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `Secure Boot <Secure-Boot>`__ section.
-
 `back to top <#top>`__
 
 IDS engines
 -------------------
-
-I'm currently running ``Snort``. How do I switch to ``Suricata``?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `<NIDS#switching-from-snort-to-suricata>`_ section.
-
-I'm currently running ``Suricata``. How do I switch to ``Snort``?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `<NIDS#switching-from-suricata-to-snort>`_ section.
 
 Can Security Onion run in ``IPS`` mode?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -339,17 +185,7 @@ Please see the `UTC and Time Zones <TimeZones>`__ section.
 Why is my disk filling up?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Sguil uses netsniff-ng to record full packet captures to disk. These pcaps are stored in ``nsm/sensor_data/$HOSTNAME-$INTERFACE/dailylogs/``. ``/etc/cron.d/sensor-clean`` is a cronjob that runs every minute that should delete old pcaps when the disk reaches your defined disk usage threshold (90% by default). It's important to properly size your disk storage so that you avoid filling the disk to 100% between purges.
-
-I just rebooted and it looks like the services aren't starting automatically.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Older versions of Security Onion waited 60 seconds after boot to ensure network interfaces are fully initialized before starting services.  Starting in 16.04, services should start automatically as soon as network interfaces are initialized.
-
-Why do apt-get and the Update Manager show ``tcl8.5 as held back``?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the  `tcl <tcl>`__ section.
+Security Onion records full packet capture to disk. 
 
 `back to top <#top>`__
 
@@ -366,7 +202,7 @@ How do I configure email for alerting and reporting?
 
 Please see the `Email <Email>`__ section.
 
-How do I configure a ``BPF`` for ``Snort/Suricata/Zeek/netsniff-ng/prads``?
+How do I configure a ``BPF``?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `BPF <BPF>`__ section.
@@ -391,94 +227,15 @@ What do I need to modify in order to have the log files stored on a different mo
 
 Please see the `Adding a New Disk for /nsm <NewDisk>`__ section.
 
-How do I disable the graphical ``Network Manager`` and configuring networking from the command line?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `Network Configuration <NetworkConfiguration>`__ section.
-
 How do I enable/disable processes?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `Disabling Processes <DisablingProcesses>`__ section.
 
-I disabled some Sguil agents but they still appear in Sguil's ``Agent Status`` tab.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `Disabling Processes <DisablingProcesses#Sguil_Agent>`__ section.
-
-What can I do to decrease the size of my ``securityonion_db`` (sguild) MySQL database?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-| You can lower the ``DAYSTOKEEP`` setting in ``/etc/nsm/securityonion.conf``.
-| Also see ``UNCAT_MAX``:
-| https://blog.securityonion.net/2015/01/new-version-of-sguil-db-purge-helps.html
-
-How do I change the fonts in the Sguil client?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `<Sguil#customize-sguil-client>`_ section.
-
-Can I be alerted when an interface stops receiving traffic?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `Interface stops receiving traffic <SensorStopsSeeingTraffic>`__ section.
-
-How do I boot Security Onion to text mode (CLI instead of GUI)?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `Disabling Desktop <Desktop>`_ section.
-
-I'm running Security Onion in a VM and the screensaver is using lots of CPU. How do I change/disable the screensaver?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. raw:: html
-
-   <ol><li>Click Applications.<br>
-   </li><li>Click Settings.<br>
-   </li><li>Click Screensaver.<br>
-   </li><li>Screensaver Preferences window appears.  Click the Mode dropdown and select "Disable Screen Saver" or "Blank Screen Only".<br>
-   </li><li>Close the Screensaver Preferences window.<br></li></ol>
-
-| `back to top <#top>`__
-| 
-| 
-
-sostat output
--------------
-
-What does it mean if ``sostat`` show a high number of ``Sguil Uncategorized Events``?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-``Sguild`` has to load uncategorized events into memory when it starts and it won't accept connections until that's complete. You can either:
-
--  wait for sguild to start up (may take a LONG time), then log into  Sguil, and ``F8`` LOTS of events
-   OR
--  stop sguild
-
-   ::
-
-       sudo so-sguild-stop
-
-   | and manually categorize events using ``mysql``\ 
-   | (see http://taosecurity.blogspot.com/2013/02/recovering-from-suricata-gone-wild.html)
-   | OR
-   | lower your ``DAYSTOKEEP`` setting in ``/etc/nsm/securityonion.conf`` and run
-
-   ::
-
-       sudo sguil-db-purge
-
-   To keep ``Uncategorized Events`` from getting too high, you should log into Sguil/Squert on a daily/weekly basis and categorize events.
-
-`back to top <#top>`__ 
+ `back to top <#top>`__
 
 Miscellaneous
 -----------------
-
-Where can I find the version information for Security Onion?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If the machine was built with the Security Onion 16.04 ISO image, version information can be found in ``/etc/PinguyBuilder.conf``.
 
 Where can I find interesting pcaps to replay?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -499,61 +256,6 @@ How can I add and test local rules?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the `Adding local rules and testing them with scapy <AddingLocalRules>`__ section.
-
-Where can I get the source code?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-You can download the full source code for any of our packages like this:
-
-::
-
-   apt-get source PACKAGE-NAME
-
-where ``PACKAGE-NAME`` is usually something like ``securityonion-snort``. Here's a list of all of our packages:
-| https://launchpad.net/~securityonion/+archive/stable
-
-How can I remote control my Security Onion box?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-| A few options:
-| "ssh -X" - any program started in the SSH session will be displayed on your local desktop (requires a local X server)
-| xrdp - sudo apt-get install xrdp - requires an rdp client
-
-Why isn't Squert showing GeoIP data properly?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If the Squert map is not showing the country for IPs, try running the following:
-
-::
-
-   sudo /usr/bin/php -e /var/www/so/squert/.inc/ip2c.php 0'/
-
-Why do I get segfaults when booting on VMware ESX?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-| This is a known issue with Ubuntu 10.04 and ESXi 4.1 and is unrelated to Security Onion. Please see:
-| http://ubuntuforums.org/showthread.php?t=1674759
-| https://bugs.launchpad.net/ubuntu/+source/linux/+bug/659422
-
-How do I run ``ntopng`` on Security Onion?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `Deploying NtopNG <DeployingNtopng>`__ section.
-
-How do I open rar files?
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-We're not allowed to redistribute the unrar plugin, so you'll need to install it manually:
-
-::
-
-    sudo apt-get update
-    sudo apt-get install unrar
-
-How do I perform "X" in Ubuntu?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Security Onion is based on Ubuntu, but we don't provide community support for the Ubuntu OS itself. If you have questions about Ubuntu, you should check the Ubuntu website, forums, and Google.
 
 Can I connect Security Onion to Active Directory?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
