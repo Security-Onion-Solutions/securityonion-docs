@@ -13,9 +13,6 @@ Security Onion Usage
 
 Security Onion uses Wazuh as a Host Intrusion Detection System (HIDS). Wazuh is monitoring and defending Security Onion itself and you can add Wazuh agents to monitor other hosts on your network as well.
 
-| Wazuh replaced OSSEC:
-| https://blog.securityonion.net/2018/10/wazuh-361-elastic-641-and-associated.html
-
 Configuration
 -------------
 
@@ -46,8 +43,6 @@ Tuning Rules
 ------------
 
 You can add new rules and modify existing rules in ``/var/ossec/rules/local_rules.xml``.
-
-Wazuh alerts of a level of ``5`` or greater will be populated in the Sguil database, and viewable via Sguil and/or Squert. If you would like to change the level for which alerts are sent to sguild, you can modify the value for ``OSSEC_AGENT_LEVEL`` in ``/etc/nsm/securityonion.conf`` and restart NSM services.
 
 Adding Agents
 -------------
