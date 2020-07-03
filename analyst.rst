@@ -9,7 +9,4 @@ In this section, we'll look at different analyst tools that can be used for slic
    browser
    hive
    kibana
-   capme
    cyberchef
-   networkminer
-   wireshark
