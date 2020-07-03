@@ -1,8 +1,5 @@
-Updating
-========
-
 soup
-----
+====
 
 To update to the latest version of Security Onion 2.0, use the ``soup`` command:
 
