@@ -7,15 +7,6 @@ Security Onion includes the Elastic Stack:
 | `<Logstash>`__
 | `<Kibana>`__
 
-In addition, we've added the following:
-
-| `Curator <Curator>`__
-| `DomainStats <DomainStats>`__
-| `ElastAlert <ElastAlert>`__
-| `FreqServer <FreqServer>`__
-
-Each of the components above has its own `<Docker>`__ image.
-
 You can get an idea of what this whole integration looks like at a high-level by viewing our `architecture
 diagram <Elastic-Architecture>`__.
 
