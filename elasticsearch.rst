@@ -8,6 +8,8 @@ From https://www.elastic.co/products/elasticsearch:
     the Elastic Stack, it centrally stores your data so you can discover
     the expected and uncover the unexpected.
 
+In Security Onion 2.0, Elasticsearch receives unparsed logs from logstash or filebeat. It then parses and stores those logs.
+
 Configuration
 -------------
 
