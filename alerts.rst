@@ -3,7 +3,7 @@ Managing Alerts
 
 Security Onion generates a lot of valuable information for you the
 second you plug it into a TAP or SPAN port. Between Zeek logs, alert data
-from Snort/Suricata, and full packet capture from Stenographer, you have,
+from Suricata, and full packet capture from Stenographer, you have,
 in a very short amount of time, enough information to begin making
 identifying areas of interest and making positive changes to your
 security stance.
@@ -20,7 +20,7 @@ security stance.
 Testing to make sure the IDS is working
 ---------------------------------------
 
-Below, we'll provide a few ways we can test our IDS (Snort/Suricata) to
+Below, we'll provide a few ways we can test our IDS to
 make sure it is working as expected.
 
 #. The easiest way to test might be simply accessing ``testmyids.com``
@@ -32,9 +32,9 @@ make sure it is working as expected.
 
    We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in TheHive/Kibana/Hunt if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the master first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
-#. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom Snort rule added to ``/etc/nsm/rules/local.rules``:
+#. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/etc/nsm/rules/local.rules``:
 
--  **Snort Rule**
+-  **NIDS Rule**
 
    ::
 
@@ -177,7 +177,7 @@ Onion, locally created rules are stored in /etc/nsm/rules/local.rules
 
         sudo vi /etc/nsm/rules/local.rules
 
--  Snort rules are incredibly flexible, this is a bird's eye view of the
+-  NIDS rules are incredibly flexible, this is a bird's eye view of the
    rule format:
 
    ::
@@ -204,7 +204,7 @@ Onion, locally created rules are stored in /etc/nsm/rules/local.rules
 
         var OVERACTIVE [192.168.0.31,192.168.0.33,192.168.0.5,192.168.0.51]
 
--  We can plug this information into our snort rule format,
+-  We can plug this information into our NIDS rule format,
 
    ::
 
