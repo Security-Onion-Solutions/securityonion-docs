@@ -13,4 +13,4 @@ You can access full packet capture via Security Onion Console (SOC). Kibana and 
 More Information
 ----------------
 
-For more information about netsniff-ng, please see https://github.com/google/stenographer.
+For more information about stenographer, please see https://github.com/google/stenographer.
