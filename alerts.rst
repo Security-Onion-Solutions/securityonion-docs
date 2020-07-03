@@ -30,16 +30,7 @@ make sure it is working as expected.
    
       curl testmyids.com
 
-   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) pop up in Sguil if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the master first, run ``rule-update``, then push the changes out to the other sensor(s)).
-
-#. If running a test or evaluation version of Security Onion, consider replaying some of the example PCAP files present in
-   ``/opt/samples/``:
-
-   ::
-   
-      sudo so-test
-
-   Alerts for various signatures should appear in Sguil.
+   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in TheHive/Kibana/Hunt if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the master first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
 #. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom Snort rule added to ``/etc/nsm/rules/local.rules``:
 
@@ -69,157 +60,18 @@ make sure it is working as expected.
    
      sudo tcpreplay -i ens34 -M10 so-testing.pcap
 
-   If everything went as planned, an alert should pop up in Sguil with the message ``Security Onion - testing``.
+   If everything went as planned, an alert should appear in TheHive/Kibana/Hunt with the message ``Security Onion - testing``.
 
 Identifying overly active signatures
 ------------------------------------
 
-Given the large number of analyst tools available in Security Onion by
-default there are multiple ways to see signatures that are producing too
-many alerts. We'll take a look at identifying the alerts using Squert,
-Sguil, and the command line.
 
-From Squert
------------
-
-You can access the Squert interface from a web browser using the URL:
-https://IP_ADDRESS/squert/. You will need to log in using the username
-and password you set for Sguil. Click the Summary tab and then look at
-the TOP SIGNATURES section.
-
-From Sguil
-----------
-
-Sguil is a powerhouse of an interface for alerts and we since it allows
-us a more direct interaction with the database holding our alerts, we
-can gain a little bit more insight into the alerts, the associated IPs,
-and the rules in general.
-
-Here, I have logged into the sguil interface and clicked on the "CNT"
-column to sort the alerts by the number of correlated alerts.
-
-|images/managing-rules/securityonion-sguil-02.png|
-
-From the Command Line
----------------------
-
-If there are a large number of uncategorized events in the
-securityonion\_db database, sguil can have a hard time of managing the
-vast amount of data it needs to process to present a comprehensive
-overview of the alerts.
-
-At those times, it can be useful to query the database from the
-commandline. Interacting with the mysql database directly demands
-caution. Issuing SELECT queries should not have any adverse effect on
-your database, but if you attempt to UPDATE while the various NSM
-framework tools are also accessing the database it has the potential to
-introduce corruption.
-
-You can enter the mysql shell or issue mysql one-liner's from the command line.
-
-To enter the mysql shell, issue the following command:
-
-::
-
-      sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db
-
-To issue commandline one-liners use the following template:
-
-::
-
-      sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e "QUERY"
-
-Listing the top twenty signatures
----------------------------------
-
-Giving the following query to mysql will return a table much like you
-see below. Here, we are asking mysql to return the columns "signature
-and signature\_id" as well as a count of each row returned. We also want
-the output grouped by the signature message and ordered by the count
-(cnt) in descending order.
-
-::
-
-      SELECT COUNT(*) AS cnt, signature, signature_id FROM event WHERE status=0 GROUP BY signature ORDER BY cnt DESC LIMIT 20;
-
-::
-
-      +--------+----------------------------------------------------------------------------------+--------------+
-      | cnt    | signature                                                                        | signature_id |
-      +--------+----------------------------------------------------------------------------------+--------------+
-      | 900286 | GPL SNMP public access udp                                                       |      2101411 |
-      |   4709 | ET POLICY Dropbox.com Offsite File Backup in Use                                 |      2012647 |
-      |   2334 | ET POLICY GNU/Linux APT User-Agent Outbound likely related to package management |      2013504 |
-      |   1169 | GPL SHELLCODE x86 inc ebx NOOP                                                   |         1390 |
-      |    464 | ET POLICY Dropbox Client Broadcasting                                            |      2012648 |
-      |    343 | ET POLICY iTunes User Agent                                                      |      2002878 |
-      |    270 | ET POLICY Executable served from Amazon S3                                       |      2013437 |
-      |    216 | [OSSEC] New dpkg (Debian Package) installed.                                     |         2902 |
-      |    191 | ET RBN Known Russian Business Network IP TCP (214)                               |      2406426 |
-      |    188 | ET POLICY curl User-Agent Outbound                                               |      2013028 |
-      |    119 | [OSSEC] Integrity checksum changed.                                              |          550 |
-      |    106 | ET GAMES STEAM Connection (v2)                                                   |      2003089 |
-      |     84 | GPL ICMP_INFO PING *NIX                                                          |      2100366 |
-      |     69 | GPL CHAT MISC Jabber/Google Talk Outgoing Traffic                                |    100000230 |
-      |     65 | ET CHAT Google IM traffic Jabber client sign-on                                  |      2002334 |
-      |     59 | ET CHAT Google Talk (Jabber) Client Login                                        |      2002327 |
-      |     56 | [OSSEC] Attempt to login using a non-existent user                               |         5710 |
-      |     47 | ET SCAN Potential SSH Scan OUTBOUND                                              |      2003068 |
-      |     44 | ET SCAN Potential SSH Scan                                                       |      2001219 |
-      |     38 | GPL ICMP_INFO PING BSDtype                                                       |      2100368 |
-      +--------+----------------------------------------------------------------------------------+--------------+
-      20 rows in set (32.65 sec)
-
-Again we can see that the top signature is the "GPL SNMP public access
-udp" alert and here we can see there are over 900,000 uncategorized
-events. Not only will the processing of these uncategorized events slow
-our use of tools they will cost the analyst time which could be better
-used in responding to alerts of greater significance.
-
-If we're going to take action on this alert, it's best to ensure that
-these alerts are benign as part of our tuning process. See which
-machines generated these alerts can be helpful in making that decision.
-
-::
-
-      SELECT COUNT(*) AS ip_cnt, INET_NTOA(src_ip) FROM event WHERE status=0 AND signature_id=2101411 GROUP BY src_ip ORDER BY ip_cnt DESC;
-
-::
-
-      +--------+-------------------+
-      | ip_cnt | INET_NTOA(src_ip) |
-      +--------+-------------------+
-      | 824459 | 172.16.42.109     |
-      |  41643 | 172.16.42.250     |
-      |  33732 | 172.16.42.140     |
-      |    452 | 172.16.42.137     |
-      +--------+-------------------+
-      4 rows in set (9.60 sec)
-
-We can gather a little more information by using a query that also
-returns the destination IP address as well.
-
-::
-
-      SELECT COUNT(*) as ip_cnt, INET_NTOA(src_ip), INET_NTOA(dst_ip) FROM event WHERE status=0 and signature_id=2101411 GROUP BY dst_ip ORDER BY ip_cnt DESC;
-
-::
-
-      +--------+-------------------+-------------------+
-      | ip_cnt | INET_NTOA(src_ip) | INET_NTOA(dst_ip) |
-      +--------+-------------------+-------------------+
-      | 858191 | 172.16.42.109     | 192.168.0.33      |
-      |  41643 | 172.16.42.250     | 192.168.0.31      |
-      |    226 | 172.16.42.137     | 192.168.200.5     |
-      |    226 | 172.16.42.137     | 192.168.200.51    |
-      +--------+-------------------+-------------------+
-      4 rows in set (9.65 sec)
 
 Identifying rule categories
 ---------------------------
 
 Both the Snort Subscriber (Talos) and the Emerging Threats rulesets come
-with a large number of rules enabled (over 15,000 by default). You
+with a large number of rules enabled (over 20,000 by default). You
 should only run the rules necessary for your environment. So you may
 want to disable entire categories of rules that don't apply to you. Run
 the following command to get a listing of categories and the number of
@@ -232,44 +84,6 @@ rules in each:
 | Also see:
 | https://github.com/shirkdog/pulledpork/blob/master/doc/README.CATEGORIES
 
-Recovering from too many alerts
--------------------------------
-
-Sometimes we may get flooded with a barrage of alerts that make it difficult or not possible to categorize within Sguil or Squert. When this happens, we can perform mass categorization of alerts using MySQL on the master server, where sguild (the Sguil server) runs. The steps below outline an example of this:
-
--  Stop the Sguil server:
-
-   ::
-
-      sudo so-sguild-stop
-
--  List the top twenty signatures (descending) pertaining to uncategorized alerts (with a status of ``0``):
-
-   ::
-
-      sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'
-
--  Update any records (to have a status value of ``1``) with a signature that contains the text ``ET INFO``:
-
-   ::
-
-      sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e "UPDATE event SET status=1, last_modified='2018-06-27 01:00:00', last_uid='sguil' WHERE event.status='0' and event.signature LIKE '%ET INFO%';"
-
--  Check again to see if our alerts have been categorized as ``acknowledged`` ( these should no longer be visible in the
-     output):
-
-   ::
-
-      sudo mysql --defaults-file=/etc/mysql/debian.cnf -Dsecurityonion_db -e 'SELECT COUNT(signature)as count, signature FROM event WHERE status=0 GROUP BY signature ORDER BY count DESC LIMIT 20;'
-
-
--  Bring the Sguil server back up:
-
-   ::
-
-      sudo so-sguild-start
-
-Adapted from https://taosecurity.blogspot.com/2013/02/recovering-from-suricata-gone-wild.html.
 
 So what's next?
 ---------------
@@ -445,11 +259,6 @@ Once the correct suppression has been placed in ``threshold.conf``, restart the 
 
     sudo so-nids-restart
 
-Autocategorize events
----------------------
-
-The sguild server can be set to autocategorize events as it processes them. This is a great way to have sguil process the events for us as it sees them, saving us from any laborious categorization. In the Sguil console, you can create an autocat by right-clicking the event status or by clicking File -> Autocat.  In Squert, you can click the Autocat icon in the upper right corner.
-
 Why is pulledpork ignoring disabled rules in downloaded.rules
 -------------------------------------------------------------
 
@@ -474,20 +283,3 @@ If you try to disable the first two rules without disabling the third rule (whic
        1:2013411
 
 When you run ``sudo rule-update``, watch the "Setting Flowbit State..." section and you can see that if you disable all three (or however many rules share that flowbit) that the "Enabled XX flowbits" line is decrimented and all three rules should then be disabled in your ``downloaded.rules``.
-
-Sguil Days To Keep
-------------------
-
-You can configure Sguil's database retention by editing securityonion.conf and changing the ``DAYSTOKEEP`` setting (the default is 30 days):
-
-::
-
-       /etc/nsm/securityonion.conf
-
-You can also use this setting to perform a Sguil database purge by lowering the ``DAYSTOKEEP`` variable to a small number (like 7 or 1) and manually running:
-
-::
-
-       sudo sguil-db-purge
-
-.. |images/managing-rules/securityonion-sguil-02.png| image:: images/managing-rules/securityonion-sguil-02.png
