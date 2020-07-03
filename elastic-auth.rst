@@ -9,8 +9,6 @@ To enable, simply run ``so-elastic-auth`` on your master server only (or standal
 
 - enable authentication in Elasticsearch, Logstash, Kibana, Curator, and ElastAlert
 
-- find any existing user accounts in your Sguil database and create corresponding accounts in Elasticsearch with read-only privilege by default
-
 Once you've completed ``so-elastic-auth``, you should then:
 
 - log into Kibana using the ``elastic`` super-user account
