@@ -37,7 +37,7 @@ Standalone Deployments
 In a standalone deployment, the master server components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
 - CPU: Used to parse incoming events, index incoming events, search metatadata, capture PCAP, analyze packets, and run the frontend components. As data and event consumption increases, a greater amount of CPU will be required.
-- RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, Snort/Suricata, Zeek, Sguil, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
+- RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, Suricata, Zeek, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
 - Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 
 Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
@@ -60,7 +60,7 @@ This deployment type utilizes storage nodes to parse and index of events. As a r
 
 - CPU: Used to receive incoming events and place them into Redis. Used to run all the front end web comp onents and aggregate search results from the storage nodes.
 - RAM: Used for Logstash and Redis. The amount of available RAM directly impacts the size of the Redis queue.
-- Disk: Used for general purposes, as well as storing dashboards and Sguil components.
+- Disk: Used for general OS purposes and storing Kibana dashboards.
 
 Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
