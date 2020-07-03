@@ -7,10 +7,9 @@ Directory Structure
 /nsm
 ----
 
-Backup, Zeek, sensor (if configured as sensor), and server (if configured
-as server) data.
+This is where the vast majority of data will live.
 
-/nsm/bro
+/nsm/zeek
 --------
 
 Zeek IDS logs.
@@ -20,12 +19,3 @@ Zeek IDS logs.
 
 Elasticsearch data.
 
-/nsm/sensor\_data
------------------
-
-Sensor data including IDS alerts and full pcap organized by sensor name ($HOSTNAME-$INTERFACE).
-
-/nsm/server\_data
------------------
-
-Server data including IDS rulesets.
