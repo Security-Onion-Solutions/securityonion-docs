@@ -1,26 +1,53 @@
 After Installation
 ==================
 
-Resolution
-----------
+Adjust firewall rules using so-allow
+All firewall rules for the entire deployment are managed on the master. You will want to allow your own IP address (or range) to access Security Onion as an analyst. Run the command below and select the analyst role:
 
-If you need to change the screen resolution of your Security Onion installation:
+ ::
+ 
+ sudo so-allow
 
--  click the ``Applications`` menu in the upper left corner
--  click ``System Tools``
--  click ``Setttings``
--  click ``Displays``
--  select your display
--  choose your desired resolution
--  click ``Apply``
+This process can take up to a minute if a salt highstate on the master is already running.
 
-If you prefer a CLI method for changing screen resolution, you can use `xrandr`. For a list of available screen resolutions, simply execute ``xrandr``. To set the screen resolution (replace ``W`` and ``H`` with the actual Width and Height desired):
+Security Onion Console
+Once so-allow has completed, you should be able to open your browser and connect to Security Onion Console on your Security Onion installation. Login using the email address and corresponding password you specified in the installer. The Security Onion Console allows you to manage user accounts and also provides links to separate web interfaces like Kibana, Grafana, TheHive, and others.
 
-::
+Grafana
+Username: admin
+Password: augusta
 
-    xrandr -s WxH
+TheHive
+Log into TheHive and add a user or change the admin account https://MASTERSERVER/thehive:
 
-If you have limited screen resolution options and are in a virtualized environment, you may need to install the Virtual Tools for your virtualization solution. For example, this can happen if you're running VirtualBox and you can install the VirtualBox Extensions to get more resolution options.
+Username: hiveadmin
+Password: hivechangeme
+
+Fleet / Osquery
+If you selected to install Fleet during the setup, you can now login to Fleet using the email & password that you entered during the installer. You can edit the password or add a new Fleet user within Fleet itself.
+
+Osquery packages were generated during setup - you can access these under Downloads in the Security Onion Console. They are customized specifically for your Security Onion install. Before you install a package on an endpoint, use sudo so-allow on your master to configure the SO firewall to allow inbound osquery connections.
+
+Playbook
+If you enabled Playbook during setup, you can now login with the following credentials:
+
+Username: analyst
+Password: changeme
+
+Refer to the Playbook documentation for further details.
+
+Navigator
+If you enabled Navigator during setup, you can now access it - no login credentials required once you have authenticated through the Security Onion Console.
+
+Log Shipping
+You can ship your endpoint logs to Security Onion using a variety of methods including Wazuh, Osquery & Winlogbeat.
+
+Winlogbeat
+Run so-allow and select b to allow your Winlogbeat agents to send their logs to Security Onion.
+
+Navigate to the Downloads page in the Security Onion Console and download the linked Winlogbeat agent - this link will take you to the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and configure it to send logs to MASTER:5044. Transport encryption is not enabled by default.
+
+If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does not use the Elastic Sysmon module - Security Onion will do all the necessary parsing.
 
 Services
 --------
@@ -31,75 +58,16 @@ Services
    
       sudo so-status
 
--  If any services are not running, try starting them:
-
-   ::
-   
-      sudo so-start
-
--  If you have problems with Snort/Suricata/Zeek/PF-RING and have UEFI Secure Boot enabled, please see the `Secure Boot <Secure-Boot>`__ section.
-
--  Log into `<Sguil>`_, `<Squert>`_, and `<Kibana>`_ and verify that you have events in the interfaces.  If you don't have any IDS alerts, you can try to generate one by typing the following at a terminal (only works if you have Internet access):
-
-   ::
-   
-      curl http://testmyids.com
-      
 Other
 -----
 
--  Full-time analysts may want to connect using a separate `Analyst VM <Analyst-VM>`__.
-
--  Setup defaults to only opening port 22 in the `firewall <Firewall>`__. If you want to connect analyst VMs, `<Wazuh>`_ agents, or syslog devices, you can run the `<so-allow>`_ utility which will walk you through creating firewall rules to allow these devices to connect.
-
--  Run the following to see how your sensor is coping with the load. You should check this on a daily basis to make sure your sensor is not dropping packets. Consider adding it to a cronjob and having it emailed to you (see the “configure email” link below).
-
-   ::
-   
-      sudo sostat | less
+-  Full-time analysts may want to connect using a dedicated `Analyst VM <Analyst-VM>`__.
 
 -  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the `<tuning>`__ section. 
 
--  Review and categorize alerts in `<Sguil>`_  or `<Squert>`_ on a daily basis.  Categorizing alerts and tuning rules should be an iterative process with the goal being to categorize *all* events every day.  You should only run the IDS rules you really care about.
-
-     
 Optional
 --------
 
 -  Exclude unnecessary traffic from your monitoring using `BPF <BPF>`__.
 
--  Configure Ubuntu to use your preferred `NTP <NTP>`__ server.
-
--  Add new Sguil user accounts with the following:
-
-   ::
-   
-      sudo so-user-add
-
--  On the server running the Sguil database, set the ``DAYSTOKEEP`` variable in ``/etc/nsm/securityonion.conf`` to however many days you want to keep in your archive. The default is 30, but you may need to adjust it based on your organization’s detection/response policy and your available disk space.
-
--  If you’re monitoring IP address ranges other than private RFC1918 address space (192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12), you may need to update your sensor configuration with the correct IP ranges. Modern versions of Setup should automatically ask you for ``HOME_NET`` and configure these for you, but if you need to update it later, you would do the following. Sensor configuration files can be found in ``/etc/nsm/$HOSTNAME-$INTERFACE/``. Modify either ``snort.conf`` or ``suricata.yaml`` (depending on which IDS engine you chose during ``sosetup``) and update the ``HOME_NET`` variable. You may also want to consider updating the ``EXTERNAL_NET`` variable. Then update Zeek’s network configuration in ``/opt/bro/etc/networks.cfg``. Finally, restart the sensor processes:
-
-   ::
-   
-      sudo so-sensor-restart
-      
--  Configure `Email <Email>`__ for alerting and reporting.
-
--  Place ``/etc`` under version control. If your organization doesn't already have a standard version control tool, you can use `bazaar <https://help.ubuntu.com/12.04/serverguide/bazaar.html>`__, `git <http://git-scm.com/>`__, etckeeper:
-
-   ::
-   
-      sudo apt install etckeeper
-
--  Need “remote desktop” access to your Security Onion sensor or server? One option is SSH X-Forwarding, but if you want something more rdp-like, you can install xrdp:
-
-   ::
-   
-      sudo apt install xrdp
-
-Learn More
-----------
-
--  Read more about the tools contained in Security Onion:
-   `Tools <Tools>`__
+-  Configure the OS to use your preferred `NTP <NTP>`__ server.
