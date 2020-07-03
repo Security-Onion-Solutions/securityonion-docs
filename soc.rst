@@ -1,5 +1,5 @@
-Analyst Tools
-=============
+Security Onion Console
+======================
 
 In this section, we'll look at different analyst tools that can be used for slicing and dicing data coming from your network and endpoints.
 
