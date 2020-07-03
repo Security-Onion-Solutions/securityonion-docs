@@ -116,7 +116,6 @@ Setup
    #. Provide a username and password for the analyst user.
    #. Select ``Best Practices``.
    #. Choose your IDS ruleset.
-   #. Choose your IDS engine (`<Snort>`_ or `<Suricata>`_).
    #. Choose whether or not to enable sensor services.  If this is going to be a standalone box with no other nodes connected, you can enable sensor services. Otherwise, if this going to be a distributed deployment with multiple nodes connected, we recommend disabling sensor services on this master server.
    #. Choose whether or not to use storage nodes for log storage.  Please note that, if you choose to use storage nodes, then until a storage node is configured and Logstash has intialized on the storage node, you will not be able to review log data for configured forward nodes.
    #. Select ``Yes`` to proceed with your changes.
