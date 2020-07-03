@@ -17,7 +17,7 @@ Suricata/Zeek/Stenographer on all interfaces in your entire
 deployment. If you have separate sensors reporting to that master
 server, they will copy ``/etc/nsm/rules/bpf.conf`` as part of the daily
 rule-update cron job (or you can run it manually) which will also
-restart Snort/Suricata so that the BPF change will take effect. Zeek
+restart Suricata so that the BPF change will take effect. Zeek
 automatically monitors ``bpf.conf`` for changes and will update itself
 as needed. Other services (such as Stenographer) will need to
 be restarted manually for the change to take effect.
