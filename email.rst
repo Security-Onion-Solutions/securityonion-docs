@@ -16,12 +16,6 @@ To automate email setup, copy and modify the example file located at ``/usr/shar
 
    sudo so-email -f ~/so-email.conf
 
-Sguil client
-------------
-
-Please note that the Sguil client has its own email configuration (separate from the Sguil server) which can be modified in
-``/etc/sguil/sguil.conf``.
-
 Manual Configuration
 --------------------
 
@@ -68,27 +62,6 @@ If you don't already have the ``mail`` utility, you can try installing:
 ::
 
    sudo apt-get install mailutils
-
-Sguild
-------
-
-Modify ``/etc/nsm/securityonion/sguild.email`` (on the master server) as needed and restart sguild:
-
-::
-
-    sudo so-sguild-restart
-
-You can then verify the email configuration by looking at the top of sguild's log file:
-
-::
-
-    head -20 /var/log/nsm/securityonion/sguild.log
-
-You may want to install a local mail relay on your master server, configure it to relay mail to your corporate mail server, and then configure Sguil to send email to the local mail relay.
-
-.. note::
-
-   Sguil will only send email alerts for what is considers *new* events. Ensure you classify events within the Sguil console, or consider `creating an Autocat rule <ManagingAlerts#autocategorize-events>`__ to automatically classify them if you prefer to receive emails for all instances of an alert. Otherwise, you may not receive alerts as intended.
 
 Wazuh
 -----
