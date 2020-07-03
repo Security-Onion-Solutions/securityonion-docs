@@ -27,7 +27,7 @@ If you have a distributed deployment with salt disabled and you run ``rule-updat
 Rulesets
 --------
 
-Security Onion offers the following choices for rulesets to be used by Snort/Suricata.
+Security Onion offers the following choices for rulesets to be used by Suricata.
 
 ET Open
 -------
