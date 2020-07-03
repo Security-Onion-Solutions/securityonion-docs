@@ -9,7 +9,7 @@ Creating VM
 
 Launch VirtualBox and click the "New" button. First we'll provide a name for our virtual machine ("Security
 Onion" for example) and specify the type ("Linux") and
-version ("Ubuntu" or "Ubuntu 64 bit"), then click "Continue." We'll next
+version ("CentOS" or "CentOS 64 bit"), then click "Continue." We'll next
 define how much memory we want to make available to our virtual machine.
 You should dedicate at least 8GB RAM to the Security Onion VM.
 
@@ -29,18 +29,18 @@ from your hard disk image file and specify the location where you want
 the disk file to be created if other than the default location. For disk
 size, you'll want enough disk capacity for retrieving/testing packet
 captures and downloading system updates. At a minimum for a client, I
-would designate at least 40GB. Click "Create" and your Security Onion VM will be created.
+would designate at least 100GB. Click "Create" and your Security Onion VM will be created.
 
 At this point, you can click "Settings" for your new virtual machine so
 we can get it configured. You might want to increase your display
 virtual memory to 128MB of RAM, but most other settings should be fine.
 We do, however, need to do a couple of things. First, mount the Security
-Onion 16.04 ISO file so our VM can boot
+Onion ISO file so our VM can boot
 from it to install Linux. Click the "Storage" icon, then under
 "Controller: IDE" select the "Empty" CD icon. To the right, you'll see
 "CD/DVD Drive" with "IDE Secondary" specified with another CD icon.
 Click the icon, then select "Choose a virtual CD/DVD disk file" and
-browse to where you downloaded the Security Onion 16.04 ISO file,
+browse to where you downloaded the Security Onion ISO file,
 select it then choose "Open." Next click "Network" then "Adapter 2."
 You'll need to click the checkbox to enable it then attach it to
 "Internal Network." Under the "Advanced" options, set "Promiscuous Mode"
@@ -49,23 +49,6 @@ system.
 
 Hit the "Start" button with your new virtual machine selected and after
 a few seconds the boot menu will load. 
-
-VirtualBox Guest Additions
---------------------------
-At the top of your virtual machine window you'll notice menu items for
-VirtualBox. Click on your virtual machine window, then on the menu click
-"Devices" then "Install Guest Additions..." Doing so will mount the
-VirtualBox guest additions CD on your virtual machine and it will open
-the folder showing you the files now available. Click on your terminal
-window and type "cd /media/VBOX" then press the Tab key key to autofill
-the folder name and press Enter to change to that directory. To install
-the Guest Additions type:
-
-::
-
-    sudo ./VBoxLinuxAdditions.run
-
-The installation will launch and after a few minutes you'll return to the command prompt when it's complete.
 
 Snapshots
 ---------
