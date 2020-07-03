@@ -10,7 +10,7 @@ Security Onion Documentation
    about
    introduction
    getting-started
-   analyst
+   soc
    network
    host
    elastic
