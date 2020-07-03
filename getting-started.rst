@@ -17,6 +17,6 @@ This section will give you an overview of different use cases for Security Onion
    release-notes
    so-import-pcap
    quick-iso-image
-   installing-on-ubuntu
+   quick-eval-non-iso
    production-deployment
    post-installation
