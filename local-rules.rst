@@ -17,7 +17,7 @@ Adding local rules in Security Onion is a rather straightforward process. Howeve
 
        sudo rule-update
 
--  If you built the rule correctly, then Snort/Suricata should be back up and running.
+-  If you built the rule correctly, then Suricata should be back up and running.
    
 Testing Local Rules
 -------------------
@@ -36,7 +36,7 @@ Testing Local Rules
        ip.dst = "192.168.200.4"
        ip.src = "192.168.100.3"
 
-- Craft the layer 3 information  Since we specified port 7789 in our snort rule:
+- Craft the layer 3 information  Since we specified port 7789 in our rule:
 
   ::
    
@@ -59,8 +59,6 @@ Testing Local Rules
 -  Check Hunt/Kibana for the corresponding alert.
 
 -  You can see that we have an alert with the IP addresses we specified and the TCP ports we specified. If you pivot from that alert to the corresponding pcap you can verify the payload we sent.
-
--  You can learn more about snort and writing snort signatures from the `Snort Manual <http://manual.snort.org/node26.html>`__.
 
 -  You can learn more about scapy at  `secdev.org <http://www.secdev.org/projects/scapy/>`__ and `itgeekchronicles.co.uk <http://itgeekchronicles.co.uk/2012/05/31/scapy-guide-the-release/>`__.
 
