@@ -7,6 +7,8 @@ From https://www.elastic.co/products/logstash :
     that ingests data from a multitude of sources simultaneously,
     transforms it, and then sends it to your favorite “stash".
 
+In Security Onion 2.0, Logstash transports unparsed logs to Elasticsearch. Elasticsearch then parses and stores those logs.
+
 Configuration
 -------------
 
