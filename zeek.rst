@@ -21,21 +21,6 @@ JSON
 ~~~~
 By default, we configure Zeek to output in JSON for higher performance and better parsing. We recommend that most folks leave Zeek configured for JSON output.  If you need to parse those JSON logs from the command line, you can use `<jq>`_.
 
-TSV
-~~~
-
-If you really need the traditional Zeek TSV (Tab Separated Values) format, you can disable JSON:
-
-::
-
-    sudo sed -i --follow-symlinks 's|@load json-logs|#@load json-logs|g' /opt/bro/share/bro/site/local.bro
-
-and then restart Zeek:
-
-::
-
-    sudo so-zeek-restart
-
 Zeek monitors your network traffic and creates logs, such as:
 
 conn.log
