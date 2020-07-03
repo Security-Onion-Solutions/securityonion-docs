@@ -31,7 +31,7 @@ Fleet / Osquery
 ---------------
 If you selected to install Fleet during the setup, you can now login to Fleet using the email & password that you entered during the installer. You can edit the password or add a new Fleet user within Fleet itself.
 
-Osquery packages were generated during setup - you can access these under Downloads in the Security Onion Console. They are customized specifically for your Security Onion install. Before you install a package on an endpoint, use sudo so-allow on your master to configure the SO firewall to allow inbound osquery connections.
+Osquery packages were generated during setup - you can access these under Downloads in the Security Onion Console. They are customized specifically for your Security Onion install. Before you install a package on an endpoint, use ``sudo so-allow`` on your master to configure the SO firewall to allow inbound osquery connections.
 
 Playbook
 --------
@@ -52,11 +52,11 @@ You can ship your endpoint logs to Security Onion using a variety of methods inc
 
 Winlogbeat
 ----------
-Run so-allow and select b to allow your Winlogbeat agents to send their logs to Security Onion.
+Run ``sudo so-allow`` and select ``b`` to allow your Winlogbeat agents to send their logs to Security Onion.
 
-Navigate to the Downloads page in the Security Onion Console and download the linked Winlogbeat agent - this link will take you to the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and configure it to send logs to MASTER:5044. Transport encryption is not enabled by default.
+Navigate to the Downloads page in the Security Onion Console and download the linked Winlogbeat agent - this link will take you to the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and configure it to send logs to ``MASTER:5044``. Transport encryption is NOT enabled by default.
 
-If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does not use the Elastic Sysmon module - Security Onion will do all the necessary parsing.
+If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module. Security Onion will do all the necessary parsing.
 
 Services
 --------
