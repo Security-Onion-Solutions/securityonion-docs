@@ -58,7 +58,7 @@ What's the difference between a ``server`` and a ``sensor``?
 | **server** 
 | Definition: A set of processes that receive data from sensors and
   allow analysts to see and investigate that data. The set of processes
-  includes sguild, mysql, and optionally the Elastic stack
+  includes the Elastic stack
   (Elasticsearch, Logstash, Kibana) and Curator. The server is also
   responsible for ruleset management.
 | Naming convention: The collection of server processes has a server
@@ -109,7 +109,7 @@ Please see the `Passwords <Passwords>`__ section.
 How do I add a new user account?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Please see the `Adding accounts <Passwords#sguil>`__ section.\ 
+| Please see the `Adding accounts <Passwords>`__ section.\ 
 | 
 | `back to top <#top>`__
 | 
