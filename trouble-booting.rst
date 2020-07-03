@@ -12,5 +12,5 @@ Booting Issues
    18.04 64-bit ISO image or CentOS 7 64-bit ISO image and seeing if they run. If they don't, then you
    should verify your 64-bit compatibility.
 -  | If all else fails but standard CentOS 7 64-bit or Ubuntu 18.04 64-bit installs normally, then you can always install our components on top of them as described on the following pages:
-   | `InstallingOnUbuntuOrCentOS <quick-eval-non-iso>`__\ 
+   | `InstallingOnUbuntuOrCentOS <quick-eval-non-iso.html>`__\ 
    | `ProductionDeployment <ProductionDeployment>`__
