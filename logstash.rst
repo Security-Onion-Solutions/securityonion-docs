@@ -213,31 +213,3 @@ Additionally, you can run the following command to allow writing to the affected
 ::
 
    curl -XPUT -H 'Content-Type: application/json' localhost:9200/<your_index>/_settings -d'{ "index.blocks.read_only": false }'
-
-LOGSTASH_MINIMAL
-----------------
-
-We now have a ``LOGSTASH_MINIMAL`` mode which will offload log parsing to Elasticsearch ingest node.  This allows Logstash to run in as little as 200MB RAM and start instantly.  
-
-.. note::
-
-    Elasticsearch ingest node parsing currently only supports standard IDS alerts and Zeek logs in JSON format.  
-
-Starting in ``securityonion-setup - 20120912-0ubuntu0securityonion327``, ``LOGSTASH_MINIMAL`` is enabled by default for new Production Mode deployments.  Evaluation Mode continues to default to traditional Logstash parsing.  If you want to run Evaluation Mode with ``LOGSTASH_MINIMAL``, you can run minimal Setup:
-
-::
-
-    sudo sosetup-minimal
-    
-If you've already run through Setup, you can enable ``LOGSTASH_MINIMAL`` on an existing installation by adding the following to ``/etc/nsm/securityonion.conf``:
-
-::
-
-    LOGSTASH_MINIMAL="yes"
-    
-You can then optionally decrease your Logstash heap size in ``/etc/logstash/jvm.options`` and restart Logstash:
-
-::
-
-    sudo so-logstash-restart
-    
