@@ -17,8 +17,8 @@ Accessing
 
 To access CyberChef:
 
--  go to the main web page of your Security Onion master server and click the CyberChef hyperlink
+-  go to the main web page of your Security Onion management server and click the CyberChef hyperlink
    
    OR
    
--  go directly to the following URL (replacing ``SecurityOnion`` with the actual hostname or IP address of your Security Onion master server): https://SecurityOnion/cyberchef/cyberchef.htm
+-  go directly to the following URL (replacing ``SecurityOnion`` with the actual hostname or IP address of your Security Onion management server): https://SecurityOnion/cyberchef/cyberchef.htm
