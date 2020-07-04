@@ -42,11 +42,10 @@ Remove sensor reference from master server
 
    sudo salt-key -d sensor_key_name
 
-Remove storage node reference from Master server Elasticsearch _cluster/settings
+Remove search node reference from Master server Elasticsearch _cluster/settings
 ------------------------------------------------------------------------------------
 
-From Kibana, navigate to ``Dev Tools`` and paste the following text into
-the window (modifying ``nodename`` to match the name of your node):
+From Kibana, navigate to ``Dev Tools`` and paste the following text into the window (modifying ``nodename`` to match the name of your node):
 
 ::
 
