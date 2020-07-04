@@ -19,23 +19,17 @@ Evaluation
 
 ``Evaluation Mode`` is ideal for classroom or small lab environments.  
 
-Install Security Onion. Run Setup and configure network interfaces. Reboot, run Setup again, and then choose ``Evaluation Mode``.
-
 For more information, please see the `Quick Evaluation <QuickISOImage>`__ section.
 
 Production Server - Standalone
 ------------------------------
-
-Install Security Onion. Run Setup and configure network interfaces.  Reboot, run Setup again, choose ``Production Mode``, choose ``New Deployment``, and enable network sensor services.
 
 For more information, please see the `Production Deployment <ProductionDeployment>`__ section.
 
 Production Server - Distributed Deployment
 ------------------------------------------
 
-Install Security Onion on the master server box. Run Setup and configure network interfaces. Reboot, run Setup again, choose ``Production Mode``, and then choose ``New Deployment``.
- 
-Install Security Onion on one or more nodes and then on each one: run Setup, configure network interfaces, reboot, run Setup again, choose ``Production Mode``, and then choose ``Existing Deployment`` to join to master.
+Install Security Onion on the manager box. Then install Security Onion on one or more nodes and join to the manager.
 
 For more information, please see the `Production Deployment <ProductionDeployment>`__ section.
 
