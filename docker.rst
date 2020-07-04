@@ -38,7 +38,7 @@ From https://docs.docker.com/registry/recipes/mirror/:
 
 We can leverage the Docker registry (as a `pull-through cache <https://docs.docker.com/registry/recipes/mirror/>`__) with our Security Onion Docker images. As mentioned above, this will allow us to cut down on external requests and bandwidth, cache the images on a local server, and only pull new images when they are available.
 
-We can easily configure our Security Onion master server and sensor by running the following script on each machine (watch out for line-wrapping) :
+We can easily configure our Security Onion management server and sensor by running the following script on each machine (watch out for line-wrapping) :
 
 ::
 
@@ -47,20 +47,20 @@ We can easily configure our Security Onion master server and sensor by running t
 
 The above script:
 
--  Sets up a Docker container named ``docker-registry`` on the master server - this container exposes port 5000 for 127.0.0.1 (only locally).
--  Configures the master server to use the ``docker-registry`` container as its proxy to pull images (``registry-mirror`` in ``/etc/default/docker``).
--  Configures a sensor to use to ``docker-registry`` on the master server as a proxy to pull images -- this is done through the addition of a local port forward (5000) through the existing autossh tunnel (``/root/.ssh/securityonion_ssh.conf``), and setting the ``registry-mirror`` value for the docker client on the sensor (``/etc/default/docker``)
--  Restarts Security Onion Docker containers so the latest images are cached on the master and pulled to the sensor.
+-  Sets up a Docker container named ``docker-registry`` on the management server - this container exposes port 5000 for 127.0.0.1 (only locally).
+-  Configures the management server to use the ``docker-registry`` container as its proxy to pull images (``registry-mirror`` in ``/etc/default/docker``).
+-  Configures a sensor to use to ``docker-registry`` on the management server as a proxy to pull images -- this is done through the addition of a local port forward (5000) through the existing autossh tunnel (``/root/.ssh/securityonion_ssh.conf``), and setting the ``registry-mirror`` value for the docker client on the sensor (``/etc/default/docker``)
+-  Restarts Security Onion Docker containers so the latest images are cached on the management server and pulled to the sensor.
 
-After the script has completed (after running on both machines), the newest images from the ``securityonionsolutions`` repo should be locally cached on the master, and already pulled to the sensor.
+After the script has completed (after running on both machines), the newest images from the ``securityonionsolutions`` repo should be locally cached on the management server, and already pulled to the sensor.
 
-We can check this by running the following from the master (or sensor):
+We can check this by running the following from the management server (or sensor):
 
 ::
 
    curl localhost:5000/v2/_catalog
 
-From here on, whenever ``soup`` checks for new images, it will pull them from the master server instead of Docker Hub.
+From here on, whenever ``soup`` checks for new images, it will pull them from the management server instead of Docker Hub.
 
 Sneakernet Updates
 ------------------
