@@ -1,8 +1,7 @@
 Adding a new disk
 =================
 
-Before doing this in production, make sure you practice this on a
-non-production system!
+Before doing this in production, make sure you practice this on a non-production system!
 
 There are at least 3 different ways to do this:
 
@@ -30,8 +29,8 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
    
      sudo so-stop
      sudo service syslog-ng stop
-     sudo service apache2 stop (if master server or standalone)
-     sudo service mysql stop (if master server or standalone)
+     sudo service apache2 stop (if management server or standalone)
+     sudo service mysql stop (if management server or standalone)
      
 #. Determine your new drive's path:
 
@@ -92,8 +91,8 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
 
    ::
    
-     sudo service mysql start (if master server or standalone)
-     sudo service apache2 start (if master server or standalone)
+     sudo service mysql start (if management server or standalone)
+     sudo service apache2 start (if management server or standalone)
      sudo service syslog-ng start
      sudo so-start
      
