@@ -3,7 +3,7 @@ Etherpad
 
 We can add Etherpad to Security Onion to allow us to take notes during investigations and share those with our team.
 
-Simply run the following commands from a fresh Security Onion install (master server/or standalone):
+Simply run the following commands from a fresh Security Onion install (management server/or standalone):
 
 Download:
 
