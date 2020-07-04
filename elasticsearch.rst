@@ -174,30 +174,30 @@ Logs
 Distributed
 -----------
 
-Master
-------
+Management
+----------
 
-The ``master server`` runs it's own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``heavy nodes`` and ``storage nodes`` (where applicable), but not ``forward nodes``, as they do not run Elastic Stack components.
+The ``management server`` runs it's own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``heavy nodes`` and ``search nodes`` (where applicable), but not ``forward nodes``, as they do not run Elastic Stack components.
 
 Forward Nodes
 -------------
 
-When using a ``forward node``, Elastic Stack components are not enabled. Syslog-NG forwards all logs to Logstash on the master server via an autossh tunnel, where they are stored in Elasticsearch on the master server or a storage node (if the master server has been configured to use storage nodes). From there, the data can be queried through the use of cross-cluster search.
+When using a ``forward node``, Elastic Stack components are not enabled. Syslog-NG forwards all logs to Logstash on the management server via an autossh tunnel, where they are stored in Elasticsearch on the management server or a search node (if the management server has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
 
 Heavy Nodes
 -----------
 
-When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the master server to query that instance (similar to ELSA distributed deployments). This is done by constructing an autossh tunnel from the heavy node to the master server, configuring reverse port forwarding to allow the master server to connect to the local Elasticsearch instance, and updating \_cluster/settings on the master server so that it will query the local Elasticsearch instance.
+When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the management server to query that instance (similar to ELSA distributed deployments). This is done by constructing an autossh tunnel from the heavy node to the management server, configuring reverse port forwarding to allow the management server to connect to the local Elasticsearch instance, and updating \_cluster/settings on the management server so that it will query the local Elasticsearch instance.
 
-Storage Nodes
+Search Nodes
 -------------
 
-``Storage nodes`` extend the storage and processing capabilities of the master server, and run Elasticsearch, Logstash, and Curator. Just like heavy nodes, storage nodes are added to the master's cluster search configuration, so the data that resides on the nodes can be queried from the master.
+``Search nodes`` extend the storage and processing capabilities of the management server, and run Elasticsearch, Logstash, and Curator. Just like heavy nodes, search nodes are added to the management server's cluster search configuration, so the data that resides on the nodes can be queried from the management.
 
-Removing a node from the master
--------------------------------
+Removing a node from the management server
+------------------------------------------
 
-If you need to remove a node (such as a ``heavy node`` or a ``storage node``) from your cross cluster search configuration, send the following to Elasticsearch on your master server (replacing "node1" with the actual node you'd like to remove):
+If you need to remove a node (such as a ``heavy node`` or a ``search node``) from your cross cluster search configuration, send the following to Elasticsearch on your management server (replacing "node1" with the actual node you'd like to remove):
 
 ::
 
