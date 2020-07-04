@@ -44,11 +44,11 @@ Deployment Types
 
 Security Onion is built on a modified distributed client-server model. In the past, Security Onion relied solely on the use of a “sensor” (the client) and a Security Onion “server” (the server). With the inclusion of the Elastic Stack, the distributed architecture has since changed, and now includes the use of Elastic components and separate nodes for processing and storing Elastic stack data.
 
-This means that a standard distributed deployment is now comprised of the **master server**, one or more **forward nodes** (previously called a sensor -- runs sensor components), and one or more **storage nodes** (runs Elastic components). This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new storage nodes to handle more traffic or log sources.
+This means that a standard distributed deployment is now comprised of the **management server**, one or more **forward nodes** (previously called a sensor -- runs sensor components), and one or more **search nodes** (runs Elastic components). This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new search nodes to handle more traffic or log sources.
 
-There is the option to utilize only two node types -- the **master server** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
+There is the option to utilize only two node types -- the **management server** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
-Last, similar to before, users can run a **standalone**, which combines the functions of a **master server**, **forward node**, and **storage node**. The same caveats with performance apply here. This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments.
+Last, similar to before, users can run a **standalone**, which combines the functions of a **management server**, **forward node**, and **search node**. The same caveats with performance apply here. This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments.
 
 More detail about each deployment and node type can be found below.
 
@@ -56,7 +56,7 @@ Distributed
 ~~~~~~~~~~~
 
 -  Recommended deployment type
--  Consists of a master server, one or more forward nodes, and one or more storage nodes.
+-  Consists of a management server, one or more forward nodes, and one or more search nodes.
 
 .. image:: images/elastic-architecture/distributed.png
    :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/distributed.png
@@ -65,7 +65,7 @@ Heavy Distributed
 ~~~~~~~~~~~~~~~~~
 
 -  Recommended only if a standard distributed deployment is not possible.
--  Consists of a master server, and one or more heavy nodes.
+-  Consists of a management server, and one or more heavy nodes.
 
 .. image:: images/elastic-architecture/heavy-distributed.png
    :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/heavy-distributed.png
@@ -74,7 +74,7 @@ Standalone
 ~~~~~~~~~~
 
 -  Not recommended for monitoring high-throughput links
--  Consists of a single server running master server components, sensor, and Elastic stack components.
+-  Consists of a single server running management server components, sensor, and Elastic stack components.
 
 .. image:: images/elastic-architecture/standalone.png
    :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/standalone.png
@@ -82,25 +82,25 @@ Standalone
 Node Types
 ----------
 
-Master
-~~~~~~
+Management
+~~~~~~~~~~
 
-The ``master server`` runs it's own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``heavy nodes`` and ``storage nodes`` (where applicable), but not ``forward nodes``, as they do not run Elastic Stack components. An analyst connects to the server from a client workstation (typically a Security Onion virtual machine installation) to execute queries and retrieve data.
+The ``management server`` runs it's own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``heavy nodes`` and ``search nodes`` (where applicable), but not ``forward nodes``, as they do not run Elastic Stack components. An analyst connects to the server from a client workstation (typically a Security Onion virtual machine installation) to execute queries and retrieve data.
 
-The Master Server runs the following components (Production Mode w/ Best Practices):
+The Management Server runs the following components (Production Mode):
 
 -  Elasticsearch
 -  Logstash
 -  Kibana
 -  Curator
 -  Elastalert
--  Redis (Only if configured to output to a storage node)
+-  Redis (Only if configured to output to a search node)
 -  Wazuh
 
 Forward Node
 ~~~~~~~~~~~~
 
-When using a ``forward node``, Elastic Stack components are not installed. Syslog-ng forwards all logs to Logstash on the master server via an autossh tunnel, where they are stored in Elasticsearch on the master server, or forwarded to storage node's Elasticsearch instance (if the master server has been configured to use a storage node). From there, the data can be queried through the use of cross-cluster search.
+When using a ``forward node``, Elastic Stack components are not installed. Syslog-ng forwards all logs to Logstash on the management server via an autossh tunnel, where they are stored in Elasticsearch on the management server, or forwarded to search node's Elasticsearch instance (if the management server has been configured to use a search node). From there, the data can be queried through the use of cross-cluster search.
 
 Forward Nodes run the following components (Production Mode w/ Best Practices):
 
@@ -112,7 +112,7 @@ Forward Nodes run the following components (Production Mode w/ Best Practices):
 Heavy Node
 ~~~~~~~~~~
 
-When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the master server to query that instance. This is done by updating \_cluster/settings on the master server so that it will query the local Elasticsearch instance.
+When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the management server to query that instance. This is done by updating \_cluster/settings on the management server so that it will query the local Elasticsearch instance.
 
 Heavy Nodes run the following components (Production Mode w/ Best Practices):
 
@@ -124,12 +124,12 @@ Heavy Nodes run the following components (Production Mode w/ Best Practices):
 -  Stenographer
 -  Wazuh
 
-Storage Node
-~~~~~~~~~~~~
+Search Node
+~~~~~~~~~~~
 
-``Storage nodes`` extend the storage and processing capabilities of the master server. Just like heavy nodes, storage nodes are added to the master's cluster search configuration, so the data that resides on the nodes can be queried from the master.
+``Search nodes`` extend the storage and processing capabilities of the management server. Just like heavy nodes, search nodes are added to the management server's cluster search configuration, so the data that resides on the nodes can be queried from the management server.
 
-Storage Nodes run the following components (Production Mode w/ Best Practices):
+Search Nodes run the following components (Production Mode w/ Best Practices):
 
 -  Elasticsearch
 -  Logstash
