@@ -20,7 +20,6 @@ diagram <Elastic-Architecture>`__.
    curator
    freqserver
    domainstats
-   docker
    redis
    data-fields
    alert-data-fields
