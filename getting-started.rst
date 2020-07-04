@@ -8,8 +8,8 @@ This section will give you an overview of different use cases for Security Onion
 
    use-cases
    architecture
+   docker
    hardware
-   hwe
    download
    vmware
    virtualbox
