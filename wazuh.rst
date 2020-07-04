@@ -31,7 +31,7 @@ If you want to send Wazuh logs to an external syslog collector, please see the `
 Active Response
 ---------------
 
-Sometimes, Wazuh may recognize legitimate activity as potentially malicious, and engage in Active Response to block a connection. This may result in unintended consequences and/or blacklisting of trusted IPs.  To prevent this from occurring,  you can whitelist your IP address and change other settings in ``/var/ossec/etc/ossec.conf``:
+Sometimes, Wazuh may recognize legitimate activity as potentially malicious, and engage in Active Response to block a connection. This may result in unintended consequences such as blocking of trusted IPs.  To prevent this from occurring,  you can add your IP address to a safe list and change other settings in ``/var/ossec/etc/ossec.conf``:
 
 ::
 
