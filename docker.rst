@@ -18,12 +18,6 @@ Images
 To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co. Their Docker images are built on CentOS 7:
 https://www.elastic.co/blog/docker-base-centos7
 
-To leverage a common core OS layer, all of our Docker images are then built on CentOS 7.
-
-.. note::
-
-    In the current Security Onion 16.04 platform, only a few of the components are delivered via containers. The remaining components (including the configuration files for those containers) are delivered via Ubuntu packages.
-
 Registry
 --------
 
@@ -164,12 +158,7 @@ Download
 
 If you download our Security Onion ISO image, the Docker engine and these Docker images are baked right into the ISO image.
 
-If you instead use another ISO image, you will install the securityonion-elastic package and will then run ``sudo so-elastic-download`` which will install the Docker engine and then download the Docker images from Docker Hub.
-
-Update
-------
-
-Our ``soup`` utility for installing updates now includes support for updating Docker images.
+If you instead use another ISO image, our installer will download Docker images as necessary.
 
 Security
 --------
