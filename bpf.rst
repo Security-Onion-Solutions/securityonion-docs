@@ -11,16 +11,7 @@ Configuration
 Global bpf.conf
 ~~~~~~~~~~~~~~~
 
-You can specify your BPF in ``/etc/nsm/rules/bpf.conf`` on your master
-server and, by default, it will apply to
-Suricata/Zeek/Stenographer on all interfaces in your entire
-deployment. If you have separate sensors reporting to that master
-server, they will copy ``/etc/nsm/rules/bpf.conf`` as part of the daily
-rule-update cron job (or you can run it manually) which will also
-restart Suricata so that the BPF change will take effect. Zeek
-automatically monitors ``bpf.conf`` for changes and will update itself
-as needed. Other services (such as Stenographer) will need to
-be restarted manually for the change to take effect.
+You can specify your BPF in ``/etc/nsm/rules/bpf.conf`` on your management server and, by default, it will apply to Suricata/Zeek/Stenographer on all interfaces in your entire deployment. If you have separate sensors reporting to that management server, they will copy ``/etc/nsm/rules/bpf.conf`` as part of the daily rule-update cron job (or you can run it manually) which will also restart Suricata so that the BPF change will take effect. Zeek automatically monitors ``bpf.conf`` for changes and will update itself as needed. Other services (such as Stenographer) will need to be restarted manually for the change to take effect.
 
 BPF Examples
 ~~~~~~~~~~~~
@@ -76,7 +67,7 @@ undesired packets will make it though, but it should work in the example
 case that you've given.
 
 Also, I'm assuming that any tools you are running will support vlan tags
-and no tags simultaneously. Bro 2.0 should work fine at least.
+and no tags simultaneously.
 
 Troubleshooting BPF using tcpdump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
