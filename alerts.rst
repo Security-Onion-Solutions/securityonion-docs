@@ -30,7 +30,7 @@ make sure it is working as expected.
    
       curl testmyids.com
 
-   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in TheHive/Kibana/Hunt if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the master first, run ``rule-update``, then push the changes out to the other sensor(s)).
+   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in TheHive/Kibana/Hunt if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the management first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
 #. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/etc/nsm/rules/local.rules``:
 
