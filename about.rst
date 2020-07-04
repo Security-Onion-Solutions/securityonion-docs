@@ -15,6 +15,7 @@ Here are some high level system differences between Security Onion 2.0 and the o
  - Remove unsigned kernel module PF_RING and completely replace with AF_PACKET
  - Suricata completely replaces Snort. (We may elect to add Snort back after Snort 3.0 is officially released.)
  - Sguil, Squert, and capME are removed
+ - Storage Nodes are now known as Search Nodes
  - Incorporate new tech: TheHive, Strelka, support for Sigma rules, Grafana/influx (independent health monitoring/alerting), Fleet (osquery management), Playbook (detection playbook tool), Onion Hunt (hunting tool), Security Onion Console (PCAP collection tool)
 
 For more information about Security Onion not contained in this Documentation, please see our community site at https://securityonion.net.
