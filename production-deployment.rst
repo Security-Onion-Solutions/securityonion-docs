@@ -18,7 +18,7 @@ Download and Verify
 Distributed Deployments
 -----------------------
 
-If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, you’ll need to perform the remaining steps on the server, as well as all forward and storage nodes, but make sure you install and configure the master server first. For best performance, the master server should be dedicated to just being a server for the other nodes (the master server should have no sniffing interfaces of its own). Please note that `forward <Elastic-Architecture#forward-node>`__ and `heavy <Elastic-Architecture#heavy-node>`__ nodes need to connect to the `master server <Elastic-Architecture#master>`__ on ports ``22`` and ``7736``. If you choose to enable salt for node management, nodes will need to be able to connect to the master server on ports ``4505`` and ``4506``.
+If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, you’ll need to perform the remaining steps on the server, as well as all forward and search nodes, but make sure you install and configure the management server first. For best performance, the management server should be dedicated to just being a server for the other nodes (the management server should have no sniffing interfaces of its own). Please note that `forward <Elastic-Architecture#forward-node>`__ and `heavy <Elastic-Architecture#heavy-node>`__ nodes need to connect to the `management server <Elastic-Architecture#management>`__ on ports ``22`` and ``7736``. Nodes will need to be able to connect to the management server on ports ``4505`` and ``4506``.
 
 Install
 -------
@@ -29,14 +29,14 @@ Install
    -  If you have more than 2TB of disk space, you will probably want to create a dedicated ``/boot`` partition at the beginning of the disk to ensure that you don’t have any Grub booting issues. Choosing the ``LVM`` option should do this automatically.
    -  Check to see if the installer allocates a large amount of space to ``/home``. If this is the case, you may want to shrink ``/home`` to give more space to ``/``.
    -  Forward, Heavy, and Standalone nodes store full packet captures at ``/nsm/sensor_data/``, so you may want to put ``/nsm`` on a dedicated partition/disk and assign as much disk space as possible (1TB or more). For larger volumes you might also consider using XFS for the ``/nsm`` partition.
-   -  For Heavy, Standalone, and Storage Nodes, it is highly recommended to place ``/nsm/elasticsearch`` and ``/nsm/logstash`` on SSD or fast spinning disk in a RAID 10 configuration. See `Hardware Requirements <Hardware#elastic-stack>`__ for more details.
+   -  For Heavy, Standalone, and Search Nodes, it is highly recommended to place ``/nsm/elasticsearch`` and ``/nsm/logstash`` on SSD or fast spinning disk in a RAID 10 configuration. See `Hardware Requirements <Hardware#elastic-stack>`__ for more details.
 
 #. When installation completes, reboot into your new installation and login with the credentials you specified during installation.
 #. If you’re running a VM, now would be a good time to snapshot it so you can revert later if you need to.
 
 Update
 ------
-#. If this box is going to be a node (forward, heavy, or storage), make sure that your master server and all other nodes in your deployment are fully updated with ``sudo soup`` before adding a new node.
+#. If this box is going to be a node (forward, heavy, or search), make sure that your management server and all other nodes in your deployment are fully updated with ``sudo soup`` before adding a new node.
 #. Verify that you have Internet connectivity. If necessary, configure your `proxy <Proxy>`__ settings.
 #. If you installed from the Security Onion 16.04 ISO image, run ``sudo soup`` and reboot if prompted, then skip to the Setup section below (if you get any errors relating to MySQL, please see the `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__ section). Otherwise, if you're installing on Ubuntu, continue to the next step.
 #. Install all Ubuntu updates and reboot:
@@ -109,21 +109,21 @@ Setup
 #. When ready to reboot, click ``Yes, reboot!``.
 #. After rebooting, log back in and start the Setup wizard again the same as you did before. It will detect that you have already configured ``/etc/network/interfaces`` and will walk you through the rest of the configuration.
 #. Select ``Production Mode``.
-#. Select ``New`` or ``Existing`` (``New`` if this is a master or standalone, and ``Existing`` for forward, heavy, and storage nodes).
+#. Select ``New`` or ``Existing`` (``New`` if this is a management server or standalone, and ``Existing`` for forward, heavy, and search nodes).
 
--  New (Master Server or Standalone)
+-  New (Management Server or Standalone)
 
    #. Provide a username and password for the analyst user.
    #. Select ``Best Practices``.
    #. Choose your IDS ruleset.
-   #. Choose whether or not to enable sensor services.  If this is going to be a standalone box with no other nodes connected, you can enable sensor services. Otherwise, if this going to be a distributed deployment with multiple nodes connected, we recommend disabling sensor services on this master server.
-   #. Choose whether or not to use storage nodes for log storage.  Please note that, if you choose to use storage nodes, then until a storage node is configured and Logstash has intialized on the storage node, you will not be able to review log data for configured forward nodes.
+   #. Choose whether or not to enable sensor services.  If this is going to be a standalone box with no other nodes connected, you can enable sensor services. Otherwise, if this going to be a distributed deployment with multiple nodes connected, we recommend disabling sensor services on this management server.
+   #. Choose whether or not to use search nodes for log storage.  Please note that, if you choose to use search nodes, then until a search node is configured and Logstash has intialized on the search node, you will not be able to review log data for configured forward nodes.
    #. Select ``Yes`` to proceed with your changes.
 
--  Existing (Forward Node, Heavy Node, or Storage Node)
+-  Existing (Forward Node, Heavy Node, or Search Node)
 
-   #. Provide the hostname or IP address of the master server (some folks may want to specify the IP/hostname of the master server in ``/etc/hosts`` and use the specified hostname during setup -- this may help in the event the master server IP changes.)
-   #. Provide a username to SSH to the master for the node (should have already been created on the master and added to the ``sudo`` group). Please make sure that your server has been set up and you have network connectivity and no firewall rules that would block this traffic. Additionally, consider creating a separate SSH account on the master server for each node so that if a node is ever compromised, its individual account can be disabled without affecting the other nodes.  If you need to create a user account on the Master, you can do something like the following (where ``$nodeuser`` is your specified user): ``sudo adduser $nodeuser && sudo adduser $nodeuser sudo``  The new account must have a full home directory. If you do not create it when you create the account, copy ``/etc/skel`` to ``/home/$nodeuser`` and do ``chown -R $nodeuser:$nodeuser /home/$nodeuser``. This is needed so the .ssh directory may be created to manage the connection. *NOTE: This user should be removed from the sudo group on the master server after setup*.
+   #. Provide the hostname or IP address of the management server (some folks may want to specify the IP/hostname of the management server in ``/etc/hosts`` and use the specified hostname during setup -- this may help in the event the management server IP changes.)
+   #. Provide a username to SSH to the management server for the node (should have already been created on the management server and added to the ``sudo`` group). Please make sure that your server has been set up and you have network connectivity and no firewall rules that would block this traffic. Additionally, consider creating a separate SSH account on the management server for each node so that if a node is ever compromised, its individual account can be disabled without affecting the other nodes.  If you need to create a user account on the management server, you can do something like the following (where ``$nodeuser`` is your specified user): ``sudo adduser $nodeuser && sudo adduser $nodeuser sudo``  The new account must have a full home directory. If you do not create it when you create the account, copy ``/etc/skel`` to ``/home/$nodeuser`` and do ``chown -R $nodeuser:$nodeuser /home/$nodeuser``. This is needed so the .ssh directory may be created to manage the connection. *NOTE: This user should be removed from the sudo group on the management server after setup*.
 
    #. Select Node Type:
 
@@ -134,7 +134,7 @@ Setup
          -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
          -  Modify ``HOME_NET`` as desired.
          -  Select ``Yes`` to proceed with your changes.
-         - *Please note: If you chose to use one or more storage nodes with your master server, you will be able to receive IDS alerts and pull PCAPs from the forward node once setup completes, however, you will not be able to review other logs (i.e. Zeek logs in Kibana) from the node until a storage node has been configured for the master server and Logstash on the storage node has initialized.*
+         - *Please note: If you chose to use one or more search nodes with your management server, you will be able to receive IDS alerts and pull PCAPs from the forward node once setup completes, however, you will not be able to review other logs (i.e. Zeek logs in Kibana) from the node until a search node has been configured for the management server and Logstash on the search node has initialized.*
 
       -  Heavy Node
 
@@ -145,12 +145,12 @@ Setup
          -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
          -  Select ``Yes`` to proceed with your changes.
 
-      -  Storage Node
+      -  Search Node
 
          -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
          -  Select ``Yes`` to proceed with your changes.
 
-   #. Remove ``$nodeuser`` from the ``sudo`` group on the master server:
+   #. Remove ``$nodeuser`` from the ``sudo`` group on the management server:
    
       ::
       
