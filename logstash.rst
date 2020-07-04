@@ -38,7 +38,7 @@ See
 https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops
 for more details.
 
-You may need to adjust the value depending on your system's performance. The changes will be applied the next time the mionin checks in. You can force it to happen immediately by running ``sudo salt-call state.apply logstash`` on the actual node or by running ``sudo salt 'MINIONNAME' state.apply logstash`` on the master.
+You may need to adjust the value depending on your system's performance. The changes will be applied the next time the mionin checks in. You can force it to happen immediately by running ``sudo salt-call state.apply logstash`` on the actual node or by running ``sudo salt 'MINIONNAME' state.apply logstash`` on the management server.
 
 Adding New Logs or Modifying Existing Parsing
 ---------------------------------------------
@@ -51,7 +51,7 @@ Configuration files for custom parsing can be placed in ``/etc/logstash/custom``
 
 .. note::
 
-    If you are using a distributed or heavy distributed `deployment type <architecture#deployment-types>`__, it is best practice to put your custom configuration files in the ``/etc/logstash/custom`` directory on the Master node.  The custom configuration files will then be replicated every 15 minutes or immediately if you use `Salt <Salt#features>`__ to force the replication to take place.
+    If you are using a distributed or heavy distributed `deployment type <architecture#deployment-types>`__, it is best practice to put your custom configuration files in the ``/etc/logstash/custom`` directory on the management node.  The custom configuration files will then be replicated every 15 minutes or immediately if you use `Salt <Salt#features>`__ to force the replication to take place.
 
 After adding your custom configuration file(s), restart Logstash and check the log(s) for errors:
 
@@ -184,7 +184,7 @@ The dead letter queue files are located in ``/nsm/logstash/dead_letter_queue/mai
 Redis
 ~~~~~
 
-When using storage nodes, Logstash on the master server outputs to `Redis <Redis>`__ (on the master server). Redis queues events from the Logstash output (on the master) and the Logstash input on the storage node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the master, then the redis `queue <Redis#queue>`__.
+When using search nodes, Logstash on the management server outputs to `Redis <Redis>`__ (on the management server). Redis queues events from the Logstash output (on the management server) and the Logstash input on the search node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the management server, then the redis `queue <Redis#queue>`__.
 
 Data Fields
 -----------
