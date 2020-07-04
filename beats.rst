@@ -17,7 +17,7 @@ https://www.elastic.co/downloads/past-releases
 
 To check your current version of Elastic, navigate to the Management section in Kibana.  The version should be displayed on the screen.    
 
-Alternatively, run the following command from your master server:
+Alternatively, run the following command from your management server:
 
 ``curl localhost:9200``
 
