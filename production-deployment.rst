@@ -11,14 +11,14 @@ First, check the `Hardware Requirements <Hardware>`__ section.
 Download and Verify
 -------------------
 
-| `Download and verify the Security Onion ISO image <https://github.com/Security-Onion-Solutions/security-onion/blob/master/Verify_ISO.md>`__ 
+| `Download and verify the Security Onion ISO image <https://github.com/Security-Onion-Solutions/securityonion/wiki/ISO>`__ 
 | OR
-| download and verify the ISO image for your preferred flavor of Ubuntu 16.04 64-bit.
+| download and verify the ISO image for your preferred flavor of CentOS 7 64-bit or Ubuntu 18.04 64-bit.
 
 Distributed Deployments
 -----------------------
 
-If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, you’ll need to perform the remaining steps on the server, as well as all forward and search nodes, but make sure you install and configure the management server first. For best performance, the management server should be dedicated to just being a server for the other nodes (the management server should have no sniffing interfaces of its own). Please note that `forward <Elastic-Architecture#forward-node>`__ and `heavy <Elastic-Architecture#heavy-node>`__ nodes need to connect to the `management server <Elastic-Architecture#management>`__ on ports ``22`` and ``7736``. Nodes will need to be able to connect to the management server on ports ``4505`` and ``4506``.
+If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, you’ll need to perform the remaining steps on the management server, as well as all forward and search nodes, but make sure you install and configure the management server first. For best performance, the management server should be dedicated to just being a server for the other nodes (the management server should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the management server on ports ``22``, ``4505``, and ``4506``.
 
 Install
 -------
