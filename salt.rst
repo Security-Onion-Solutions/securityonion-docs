@@ -10,7 +10,7 @@ Salt is a core component of Security Onion 2.0.
 Firewall Requirements
 ---------------------
 
-Sensors need to be able to connect to the master server on ports ``4505/tcp`` and ``4506/tcp``:
+Sensors need to be able to connect to the management server on ports ``4505/tcp`` and ``4506/tcp``:
 
 http://docs.saltstack.com/topics/tutorials/firewall.html
 
