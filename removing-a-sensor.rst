@@ -33,8 +33,8 @@ Wipe sensor configuration and data
 -  To completely wipe sensor configuration and data, run ``sudo sosetup`` on the sensor box for which you wish to wipe the
    data and configuration.
 
-Remove sensor reference from master server
-------------------------------------------
+Remove sensor reference from management server
+----------------------------------------------
 
 -  Remove the sensor from ``/opt/onionsalt/salt/top.sls`` and then delete the key from salt:
 
@@ -42,8 +42,8 @@ Remove sensor reference from master server
 
    sudo salt-key -d sensor_key_name
 
-Remove search node reference from Master server Elasticsearch _cluster/settings
-------------------------------------------------------------------------------------
+Remove search node reference from management server Elasticsearch _cluster/settings
+-----------------------------------------------------------------------------------
 
 From Kibana, navigate to ``Dev Tools`` and paste the following text into the window (modifying ``nodename`` to match the name of your node):
 
