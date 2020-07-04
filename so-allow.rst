@@ -7,26 +7,17 @@ Setup locks down the `firewall <Firewall>`_ by default.  If you need to open por
 
     This program allows you to add a firewall rule to allow connections from a new IP address.
 
-    What kind of device do you want to allow?
+    Choose the role for the IP or Range you would like to add
 
-    [a] - Analyst - ports 22/tcp, 443/tcp, and 7734/tcp
+    [a] - Analyst - ports 80/tcp and 443/tcp
     [b] - Logstash Beat - port 5044/tcp
-    [c] - apt-cacher-ng client - port 3142/tcp
-    [e] - Elasticsearch REST endpoint - port 9200
-    [f] - Logstash forwarder - standard - port 6050/tcp
-    [j] - Logstash forwarder - JSON - port 6051/tcp 
-    [l] - Syslog device - port 514
-    [n] - Elasticsearch node-to-node communication - port 9300
-    [o] - OSSEC agent - port 1514
-    [s] - Security Onion sensor - 22/tcp, 4505/tcp, 4506/tcp, and 7736/tcp
+    [o] - Osquery endpoint - port 8090/tcp
+    [s] - Syslog device - 514/tcp/udp
+    [w] - Wazuh agent - port 1514/tcp/udp
+    [p] - Wazuh API - port 55000/tcp
+    [r] - Wazuh registration service - 1515/tcp
+    Please enter your selection (a - analyst, b - beats, o - osquery, w - wazuh):
 
-    If you need to add any ports other than those listed above,
-    you can do so using the standard 'ufw' utility.
-
-    For more information, please see:
-    https://securityonion.net/docs/Firewall
-
-    Please enter your selection (a - analyst, c - apt-cacher-ng client, l - syslog, o - ossec, or s - Security Onion sensor, etc.):
 
 Wazuh
 -----
