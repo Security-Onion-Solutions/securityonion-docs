@@ -8,7 +8,9 @@ From https://www.kolide.com/fleet/:
 Usage
 -----
 
-Security Onion Console (SOC) provides a link to Fleet.
+If you selected to install Fleet during the setup, you can now login to Fleet using the email & password that you entered during the installer. You can edit the password or add a new Fleet user within Fleet itself.
+
+Osquery packages were generated during setup - you can access these under Downloads in the Security Onion Console. They are customized specifically for your Security Onion install. Before you install a package on an endpoint, use ``sudo so-allow`` on your management server to configure the SO firewall to allow inbound osquery connections.
 
 More Information
 ----------------
