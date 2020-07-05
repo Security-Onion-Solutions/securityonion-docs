@@ -12,7 +12,7 @@ From https://github.com/corelight/community-id-spec:
       production of a string identifier representing a given network flow, to reduce the pivot to a 
       simple string comparison.
     
-We enable the default Community ID support in both Zeek and Suricata. For tools that don't natively support it, 
-we sponsored the development of an Elasticsearch Ingest Processor to automaticaly generate Community ID values:
+We enable the default Community ID support in both Zeek and Suricata. We also sponsored the development of Community ID support in osquery. 
+For tools that don't natively support it, we sponsored the development of an Elasticsearch Ingest Processor to automaticaly generate Community ID values:
 
 https://github.com/Security-Onion-Solutions/elasticsearch-ingest-community-id
