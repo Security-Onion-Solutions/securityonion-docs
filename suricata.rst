@@ -15,6 +15,11 @@ Suricata uses `<AF-PACKET>`_ to allow you to spin up multiple workers to handle 
 
 Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
 
+Community ID
+------------
+
+We enable Suricata's native support for Community ID.
+
 Configuration
 -------------
 
