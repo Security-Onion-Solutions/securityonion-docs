@@ -3,23 +3,14 @@ Beats
 
 We can use Elastic Beats to facilitate the shipping of endpoint logs to Security Onion's Elastic Stack. Currently, testing has only been performed with Filebeat (multiple log types) and Winlogbeat (Windows Event logs).
 
-Download
---------
+Winlogbeat
+----------
 
-To download a Beat, choose the correct version from the Past Releases page:   
+Run ``sudo so-allow`` and select ``b`` to allow your Winlogbeat agents to send their logs to Security Onion.
 
-https://www.elastic.co/downloads/past-releases   
+Navigate to the Downloads page in the Security Onion Console and download the linked Winlogbeat agent - this link will take you to the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and configure it to send logs to ``MANAGEMENT:5044``. Transport encryption is NOT enabled by default.
 
-
-.. warning::
-
-   Choosing a Beat version that is greater than the Elastic version is not supported and may not work as expected.    
-
-To check your current version of Elastic, navigate to the Management section in Kibana.  The version should be displayed on the screen.    
-
-Alternatively, run the following command from your management server:
-
-``curl localhost:9200``
+If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module. Security Onion will do all the necessary parsing.
 
 Installation
 ------------
@@ -41,11 +32,6 @@ https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation
    sudo update-rc.d filebeat defaults
 
    sudo update-rc.d filebeat enable
-
-Firewall
---------
-
-To ensure a Beat is allowed to talk to Logstash on the Security Onion box, we need to run `<so-allow>`_, and choose the ``b`` option for ``Beats``. After choosing this option, simply provide the IP address of the machine on which the Beat is installed and press ``ENTER`` to confirm.
 
 Log files
 ---------
