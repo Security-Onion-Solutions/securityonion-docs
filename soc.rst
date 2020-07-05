@@ -15,3 +15,4 @@ Most of our analyst tools are browser-based. We recommend chromium or chromium-b
    playbook
    fleet
    attack-navigator
+   grafana
