@@ -5,6 +5,12 @@ From https://thehive-project.org/:
 
     A scalable, open source and free Security Incident Response Platform, tightly integrated with MISP (Malware Information Sharing Platform), designed to make life easier for SOCs, CSIRTs, CERTs and any information security practitioner dealing with security incidents that need to be investigated and acted upon swiftly.
     
+Credentials
+-----------
+
+| Username: hiveadmin  
+| Password: hivechangeme  
+
 Usage
 -----
 
