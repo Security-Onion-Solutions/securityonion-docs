@@ -31,6 +31,16 @@ The third and final section of output is a data table that contains all search r
 
 When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. The field values on the right have plus and minus magnifying glass icons which allow you to include or exclude (respectively) those values in your query.
 
+Statistics
+----------
+
+The bottom left corner of the page shows statistics about the current query including the speed of the backend data fetch and the toal round trip time.
+
+Auto Hunt
+---------
+
+The bottom right corner of the page has a toggle for Auto Hunt. When enabled, Hunt will automatically submit your query any time you change filters, groupings, or date ranges.
+
 OQL
 ---
 
