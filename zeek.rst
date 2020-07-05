@@ -12,6 +12,11 @@ Performance
 
 Zeek uses `<AF-PACKET>`_ so that you can spin up multiple Zeek workers to handle more traffic.  For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
 
+Community ID
+------------
+
+We enable Zeek's native support for Community ID.
+
 Logs
 ----
 
