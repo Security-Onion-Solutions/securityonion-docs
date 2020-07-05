@@ -22,6 +22,7 @@ diagram <Elastic-Architecture>`__.
    domainstats
    redis
    data-fields
+   community-id
    alert-data-fields
    zeek-fields
    elastalert-fields
