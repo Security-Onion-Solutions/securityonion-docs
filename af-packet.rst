@@ -8,7 +8,7 @@ If you want to change the number of AF-PACKET workers after running Setup, you c
 Suricata
 --------
 
-To change the number of AF-PACKET workers for `<Suricata>`_:
+To change the number of AF-PACKET workers for :ref:`suricata`:
 
 -  Stop sensor processes:
 
@@ -29,7 +29,7 @@ To change the number of AF-PACKET workers for `<Suricata>`_:
 Zeek
 ----
 
-To change the number of AF-PACKET workers for `<Zeek>`_:
+To change the number of AF-PACKET workers for :ref:`zeek`:
 
 -  Stop Zeek:
 

@@ -132,7 +132,6 @@ Setup
       -  Forward Node
 
          -  Select ``Best Practices``.
-         -  Keep the default for `<PF-RING>`_ ``min_num_slots``, unless you would like to change it.
          -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
          -  Modify ``HOME_NET`` as desired.
          -  Select ``Yes`` to proceed with your changes.
@@ -141,7 +140,6 @@ Setup
       -  Heavy Node
 
          -  Select ``Best Practices``.
-         -  Keep the default for `<PF-RING>`_ ``min_num_slots``, unless you would like to change it.
          -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
          -  Modify ``HOME_NET`` as desired.
          -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
