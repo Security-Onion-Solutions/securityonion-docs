@@ -7,8 +7,8 @@ Having problems? Try the suggestions below.
 
 -  Are you running the :ref:`latest version of Security Onion <upgrade>`?
 -  Check the :ref:`faq`.
--  Search the :ref:`Security Onion Mailing List <MailingLists>`.
--  Search the documentation and mailing lists of the tools contained within Security Onion: :ref:`tools>`
+-  Search the :ref:`Security Onion Mailing List <mailing-lists>`.
+-  Search the documentation and mailing lists of the tools contained within Security Onion: :ref:`tools`
 -  Check log files in ``/opt/so/log`` or other locations for any errors or possible clues:
 
    -  Setup ``/var/log/nsm/sosetup.log``
