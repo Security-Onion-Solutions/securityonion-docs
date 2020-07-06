@@ -11,9 +11,9 @@ From https://suricata-ids.org:
 Performance
 -----------
 
-Suricata uses :ref:`af-packet` to allow you to spin up multiple workers to handle more traffic.  
+Suricata uses AF-PACKET to allow you to spin up multiple workers to handle more traffic.  
 
-To change the number of AF-PACKET workers for :ref:`suricata`:
+To change the number of Suricata workers:
 
 -  Stop sensor processes:
 
