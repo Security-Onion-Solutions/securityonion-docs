@@ -9,7 +9,7 @@ From https://www.syslog-ng.com/products/open-source-log-management/:
 
 Usage
 -----
-Security Onion uses syslog-ng as its primary syslog collector and to send logs to `Logstash <Logstash>`__ where they are parsed and augmented before being written to `Elasticsearch <Elasticsearch>`__.
+Security Onion uses syslog-ng as its primary syslog collector and to send logs to :ref:`logstash` where they are parsed and augmented before being written to :ref:`elasticsearch`.
 
 Configuration
 -------------
@@ -17,7 +17,7 @@ syslog-ng's configuration file is located at ``/etc/syslog-ng/syslog-ng.conf``.
 
 Forwarding
 ----------
-You can configure syslog-ng to `forward <syslog-output>`_ Zeek / Wazuh / IDS logs to external systems.
+You can configure syslog-ng to :ref:`forward <syslog-output>` Zeek / Wazuh / IDS logs to external systems.
 
 Monitoring
 ----------
@@ -25,7 +25,7 @@ Regardless of whether syslog-ng is sending to the Elastic stack or some other ex
 
 Collection
 ----------
-syslog-ng listens on port 514 (TCP and UDP) for incoming syslog from other devices.  You may need to run `<so-allow>`__ to allow traffic from the IP address of your syslog sender.
+syslog-ng listens on port 514 (TCP and UDP) for incoming syslog from other devices.  You may need to run :ref:`so-allow` to allow traffic from the IP address of your syslog sender.
 
 Analysis
 --------
