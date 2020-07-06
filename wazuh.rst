@@ -23,12 +23,12 @@ The main configuration file for Wazuh is ``/var/ossec/etc/ossec.conf``.
 Email
 -----
 
-If you want to configure Wazuh to send email, please see the `<Email>`_ section.
+If you want to configure Wazuh to send email, please see the :ref:`email` section.
 
 Syslog
 ------
 
-If you want to send Wazuh logs to an external syslog collector, please see the `<syslog-output>`_ section.
+If you want to send Wazuh logs to an external syslog collector, please see the :ref:`syslog-output` section.
 
 Active Response
 ---------------
@@ -59,7 +59,7 @@ Adding Agents
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
 | https://documentation.wazuh.com/current/user-manual/registering/cli/using-command-line-linux.html
 
-You may need to run `<so-allow>`_ to allow traffic from the IP address of your Wazuh agent(s).
+You may need to run :ref:`so-allow` to allow traffic from the IP address of your Wazuh agent(s).
 
 Maximum Number of Agents
 ------------------------
