@@ -1,3 +1,5 @@
+.. _ATT&CK-Navigator:
+
 ATT&CK Navigator
 ================
 
