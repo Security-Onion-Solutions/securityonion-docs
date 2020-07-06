@@ -5,15 +5,13 @@ Suricata
 
 From https://suricata-ids.org:
 
-    Suricata is a free and open source, mature, fast and robust network
-    threat detection engine. Suricata inspects the network traffic using
-    a powerful and extensive rules and signature language, and has
-    powerful Lua scripting support for detection of complex threats.
+    Suricata is a free and open source, mature, fast and robust network threat detection engine. Suricata inspects the network traffic using
+    a powerful and extensive rules and signature language, and has powerful Lua scripting support for detection of complex threats.
 
 Performance
 -----------
 
-Suricata uses `<AF-PACKET>`_ to allow you to spin up multiple workers to handle more traffic.  For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
+Suricata uses ref:`AF-PACKET` to allow you to spin up multiple workers to handle more traffic.  For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
 
 Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
 
