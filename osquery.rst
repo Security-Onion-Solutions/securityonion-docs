@@ -1,4 +1,5 @@
 .. _osquery:
+
 osquery
 =======
 
