@@ -235,4 +235,4 @@ So, if you decided to add a ``path.repo`` value of ``/backups``, Elasticsearch w
 
 (where ``/backups`` exists on the host file system and is writable by the Elasticsearch user -- a directory named ``/backups`` will be created inside the container, and the container will be able to read/write from that location).
 
-To automate the snapshotting process, you can use `Curator <Curator>`__, in conjunction with a cron job, much like what is done today with the close and delete jobs.
+To automate the snapshotting process, you can use :ref:`curator`, in conjunction with a cron job, much like what is done today with the close and delete jobs.
