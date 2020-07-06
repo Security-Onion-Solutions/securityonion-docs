@@ -1,3 +1,5 @@
+.. _Alienvault-OTX:
+
 AlienVault-OTX
 ==============
 
