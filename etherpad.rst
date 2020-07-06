@@ -23,7 +23,7 @@ Follow the prompts.
 
 You should then be able to access Etherpad at the destination defined in the setup script.
 
-Be sure to configure DNS or client hosts file(s) with the appropriate information and then run `<so-allow>`_ and allow port 443 for analysts:
+Be sure to configure DNS or client hosts file(s) with the appropriate information and then run :ref:`so-allow` and allow port 443 for analysts:
 
 ::
 
