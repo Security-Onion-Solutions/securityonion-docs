@@ -44,7 +44,9 @@ If you are shipping Sysmon logs via Winlogbeat, confirm that your Winlogbeat con
 More Information
 ----------------
 
-For more information about sysmon, please see https://technet.microsoft.com/en-us/sysinternals/sysmon.
+For more information about sysmon, please see:
+
+https://technet.microsoft.com/en-us/sysinternals/sysmon
 
 | Also see "How to Go from Responding to Hunting with Sysinternals Sysmon":
 | https://onedrive.live.com/view.aspx?resid=D026B4699190F1E6!2843&ithint=file%2cpptx
