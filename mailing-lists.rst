@@ -8,9 +8,9 @@ Check Documentation First
 
 Before sending an email to our mailing list, check to see if your question has already been answered by one of the following:
 
-`Help <Help>`__
+:ref:`help`
 
-`FAQ <FAQ>`__
+:ref:`faq`
 
 Moderation
 ----------
