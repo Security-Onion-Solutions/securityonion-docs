@@ -43,18 +43,12 @@ Also note, to access GRR by the above name you will need to:
 Firewall Rules
 --------------
 
-You can add firewall rules using `<so-allow>`_ and choosing the ``Analyst`` option:
+You can add firewall rules using :ref:`so-allow` and choosing the ``Analyst`` option:
 
 ::
 
    sudo so-allow
    
-OR
-
-::
-
-   sudo ufw allow proto tcp from REMOTE_IP to any port 443
-
 GRR Client IP:
 
 ::
