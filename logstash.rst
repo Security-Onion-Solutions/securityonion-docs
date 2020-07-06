@@ -100,7 +100,7 @@ You can also test the template before restarting Logstash, by using the followin
 
 If mappings defined in the template are different than in existing indices, you will receive mapping conflicts in Kibana.
 
-To avoid this, either remove the existing indices, wiping all data, or `re-index <re‐indexing.html>`__.
+To avoid this, either remove the existing indices, wiping all data, or :ref:`re‐indexing`.
 
 Logging
 ~~~~~~~
@@ -186,12 +186,12 @@ The dead letter queue files are located in ``/nsm/logstash/dead_letter_queue/mai
 Redis
 ~~~~~
 
-When using search nodes, Logstash on the management server outputs to `Redis <Redis>`__ (on the management server). Redis queues events from the Logstash output (on the management server) and the Logstash input on the search node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the management server, then the redis `queue <Redis#queue>`__.
+When using search nodes, Logstash on the management server outputs to :ref:`redis` (on the management server). Redis queues events from the Logstash output (on the management server) and the Logstash input on the search node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the management server, then the redis `queue <Redis#queue>`__.
 
 Data Fields
 -----------
 
-Logstash process Zeek logs, syslog, IDS alerts, etc., formatting said data into many different data fields, as described in the `Data Fields <Data-Fields>`__ section.
+Logstash process Zeek logs, syslog, IDS alerts, etc., formatting said data into many different data fields, as described in the :ref:`data-fields` section.
 
 Log
 ---
