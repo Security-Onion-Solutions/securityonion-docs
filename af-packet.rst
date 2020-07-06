@@ -3,50 +3,13 @@
 AF-PACKET
 =========
 
-If you want to change the number of AF-PACKET workers after running Setup, you can do the following.
+The following process use AF-PACKET for packet acquisition:
 
-Suricata
---------
+:ref:`stenographer`
 
-To change the number of AF-PACKET workers for :ref:`suricata`:
+:ref:`suricata`
 
--  Stop sensor processes:
-
-   ::
-
-      sudo so-suricata-stop
-
--  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``suriprocs`` variable to the desired number of workers.
-
--  Start sensor processes:
-
-   ::
-
-      sudo so-suricata-start
-
--  ``so-suricata-start`` automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata creates the appropriate number of AF-PACKET workers.
-
-Zeek
-----
-
-To change the number of AF-PACKET workers for :ref:`zeek`:
-
--  Stop Zeek:
-
-   ::
-
-      sudo so-zeek-stop
-
--  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``bro_lbprocs`` variable to the desired number of cores.
-
--  Start Zeek:
-
-   ::
-
-      sudo so-zeek-start
-
-tcpreplay
----------
+:ref:`zeek`
 
 .. warning::
 
