@@ -1,3 +1,5 @@
+.. _Cloud-AMI:
+
 Cloud AMI
 =========
 
