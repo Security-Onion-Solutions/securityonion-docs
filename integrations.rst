@@ -11,6 +11,5 @@ There are many different ways that we can integrate Security Onion into other sy
    fir
    grr
    misp
-   ntopng
    rita
    syslog-output
