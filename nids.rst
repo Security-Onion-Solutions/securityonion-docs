@@ -13,16 +13,16 @@ Security Onion 2.0 runs :ref:`Suricata`_ as its Network Intrusion Detection Syst
 Performance
 -----------
 
-:ref:`Suricata`_ leverages `<AF-PACKET>`_ for higher performance.
+:ref:`Suricata`_ leverages :ref:`af-packet` for higher performance.
 
 Analysis
 --------
 
 You can analyze NIDS alerts from Suricata via:
 
--  `Kibana <Kibana>`__
--  Hunt
--  TheHive
+-  :ref:`kibana`
+-  :ref:`hunt`
+-  :ref`hive`
 
 NIPS
 ----
