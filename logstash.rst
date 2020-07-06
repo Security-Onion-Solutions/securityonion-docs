@@ -15,12 +15,12 @@ Configuration
 Here are a few of the settings which you may need to tune in ``/opt/so/saltstack/local/pillar/minions/$MINION_$ROLE.sls`` under ``logstash_settings``.
 
 ls_pipeline_batch_size
-~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
     The maximum number of events an individual worker thread will collect from inputs before attempting to execute its filters and outputs. Larger batch sizes are generally more efficient, but come at the cost of increased memory overhead. This is set to 125 by default.
     
 ls_pipeline_workers
-~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~
 
     The number of workers that will, in parallel, execute the filter and
     output stages of the pipeline. If you find that events are backing
@@ -168,7 +168,7 @@ This can be achieved by adding the following to ``/etc/logstash/logstash.yml``:
 
 ::
 
-dead_letter_queue.enable: true
+   dead_letter_queue.enable: true
 
 and restarting Logstash:
 
