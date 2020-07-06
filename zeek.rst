@@ -12,7 +12,25 @@ Performance
 
 ``/opt/zeek/etc/node.cfg``
 
-Zeek uses :ref:`af-packet` so that you can spin up multiple Zeek workers to handle more traffic.  For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
+Zeek uses :ref:`af-packet` so that you can spin up multiple Zeek workers to handle more traffic.  
+
+To change the number of AF-PACKET workers for :ref:`zeek`:
+
+-  Stop Zeek:
+
+   ::
+
+      sudo so-zeek-stop
+
+-  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``bro_lbprocs`` variable to the desired number of cores.
+
+-  Start Zeek:
+
+   ::
+
+      sudo so-zeek-start
+      
+For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
 
 Community ID
 ------------
