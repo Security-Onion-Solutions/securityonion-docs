@@ -14,30 +14,30 @@ One of the easiest ways to get started with Security Onion is using it to forens
 
   sudo so-import-pcap /opt/samples/mta/2019*
 
-For more information, please see the `so-import-pcap <so-import-pcap>`__ section.
+For more information, please see the :ref:`so-import-pcap` section.
 
 Evaluation
 ----------
 
 ``Evaluation Mode`` is ideal for classroom or small lab environments.  
 
-For more information, please see the `Quick Evaluation <QuickISOImage>`__ section.
+For more information, please see the :ref:`quick-iso-image` section.
 
 Production Server - Standalone
 ------------------------------
 
-For more information, please see the `Production Deployment <ProductionDeployment>`__ section.
+For more information, please see the :ref:`production-deployment` section.
 
 Production Server - Distributed Deployment
 ------------------------------------------
 
 Install Security Onion on the management server. Then install Security Onion on one or more nodes and join to the management server.
 
-For more information, please see the `Production Deployment <ProductionDeployment>`__ section.
+For more information, please see the :ref:`production-deployment` section.
 
 Sending Logs to Separate SIEM
 -----------------------------
 
 You can install Security Onion and then configure it to send logs to a separate SIEM.
 
-For more information, please see the `Syslog Output <syslog-output>`__ section.
+For more information, please see the :ref:`syslog-output` section.
