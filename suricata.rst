@@ -20,7 +20,7 @@ Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerat
 Community ID
 ------------
 
-We enable Suricata's native support for Community ID.
+We enable Suricata's native support for :ref:`Community-ID`.
 
 Configuration
 -------------
