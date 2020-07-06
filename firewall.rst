@@ -6,7 +6,7 @@ Firewall
 Setup defaults to only allowing port 22 (ssh)
 ---------------------------------------------
 
-When you run Setup, it defaults to locking down the local firewall to only allowing port 22 (ssh).  If you need to allow connections on other ports, you can run the `<so-allow>`_ utility.
+When you run Setup, it defaults to locking down the local firewall to only allowing port 22 (ssh).  If you need to allow connections on other ports, you can run the :ref:`so-allow` utility.
 
 Sensors automatically add their own firewall rules to the management server
 ---------------------------------------------------------------------------
