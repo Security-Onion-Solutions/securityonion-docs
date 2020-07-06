@@ -10,7 +10,7 @@ Directory Structure
 This is where the vast majority of data will live.
 
 /nsm/zeek
---------
+---------
 
 Zeek IDS logs.
 
