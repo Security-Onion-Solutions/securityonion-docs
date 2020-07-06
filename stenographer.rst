@@ -7,6 +7,8 @@ From https://github.com/google/stenographer:
 
     Stenographer is a full-packet-capture utility for buffering packets to disk for intrusion detection and incident response purposes. It provides a high-performance implementation of NIC-to-disk packet writing, handles deleting those files as disk fills up, and provides methods for reading back specific sets of packets quickly and easily.
 
+Stenographer uses :ref:`af-packet` for packet acquisition.
+
 Analysis
 --------
 
