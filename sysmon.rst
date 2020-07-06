@@ -36,6 +36,11 @@ Downloads
 | Download SwiftOnSecurity's example sysmon config here:
 | https://github.com/SwiftOnSecurity/sysmon-config/raw/master/sysmonconfig-export.xml
 
+Winlogbeat
+----------
+
+If you are shipping Sysmon logs via Winlogbeat, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module. Security Onion will do all the necessary parsing.
+
 More Information
 ----------------
 
