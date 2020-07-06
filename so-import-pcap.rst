@@ -1,3 +1,5 @@
+.. _so-import-pcap:
+
 so-import-pcap
 ==============
 

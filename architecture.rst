@@ -1,4 +1,4 @@
-.. _Architecture:
+.. _architecture:
 
 Architecture
 ============

@@ -1,3 +1,5 @@
+.. _email:
+
 Email Configuration
 ===================
 

@@ -1,3 +1,5 @@
+.. _quick-eval-non-iso:
+
 Quick Evaluation on Ubuntu or CentOS
 ====================================
 

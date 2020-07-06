@@ -1,3 +1,5 @@
+.. _zeek-fields:
+
 Zeek Fields
 ===========
 

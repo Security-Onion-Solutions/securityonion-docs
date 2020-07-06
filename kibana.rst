@@ -1,3 +1,5 @@
+.. _kibana:
+
 Kibana
 ======
 

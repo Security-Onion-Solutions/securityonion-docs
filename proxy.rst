@@ -1,3 +1,5 @@
+.. _proxy:
+
 Proxy Configuration
 ===================
 

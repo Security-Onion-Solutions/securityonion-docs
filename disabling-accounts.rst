@@ -1,3 +1,5 @@
+.. _disabling-accounts:
+
 Disabling Accounts
 ==================
 

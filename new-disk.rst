@@ -1,3 +1,5 @@
+.. _new-disk:
+
 Adding a new disk
 =================
 

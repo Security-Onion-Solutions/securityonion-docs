@@ -1,3 +1,5 @@
+.. _directory:
+
 Directory Structure
 ===================
 

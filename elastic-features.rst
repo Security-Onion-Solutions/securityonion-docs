@@ -1,3 +1,5 @@
+.. _elastic-features:
+
 Elastic Features
 ================
 

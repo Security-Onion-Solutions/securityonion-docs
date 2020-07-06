@@ -1,3 +1,5 @@
+.. _performance:
+
 High Performance Tuning
 =======================
 

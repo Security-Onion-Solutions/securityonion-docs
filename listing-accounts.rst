@@ -1,3 +1,5 @@
+.. _listing-accounts:
+
 Listing Accounts
 ================
 

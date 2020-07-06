@@ -1,3 +1,5 @@
+.. _dns-anomaly-detection:
+
 DNS Anomaly Detection
 =====================
 

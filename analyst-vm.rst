@@ -1,4 +1,4 @@
-.. _Analyst-VM:
+.. _analyst-vm:
 
 Analyst VM
 ==========

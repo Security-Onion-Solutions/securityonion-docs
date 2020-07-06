@@ -1,4 +1,4 @@
-.. _Community-ID:
+.. _community-id:
 
 Community ID
 ============
@@ -12,7 +12,7 @@ From https://github.com/corelight/community-id-spec:
     production of a string identifier representing a given network flow, to reduce the pivot to a 
     simple string comparison.
     
-We enable the default Community ID support in both :ref:`Zeek` and :ref:`Suricata`. We also sponsored the development of Community ID support in :ref:`osquery`. 
+We enable the default Community ID support in both :ref:`zeek` and :ref:`suricata`. We also sponsored the development of Community ID support in :ref:`osquery`. 
 For tools that don't natively support Community ID, we sponsored the development of an Elasticsearch Ingest Processor to automatically generate Community ID values:
 
 https://github.com/Security-Onion-Solutions/elasticsearch-ingest-community-id

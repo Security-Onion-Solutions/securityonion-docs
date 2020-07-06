@@ -1,3 +1,5 @@
+.. _local-rules:
+
 Adding Local Rules
 ==================
 

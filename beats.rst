@@ -1,4 +1,4 @@
-.. _Beats:
+.. _beats:
 
 Beats
 =====

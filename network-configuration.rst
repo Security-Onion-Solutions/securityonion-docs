@@ -1,3 +1,5 @@
+.. _network-configuration:
+
 Network Configuration
 =====================
 

@@ -1,3 +1,5 @@
+.. _quick-iso-image:
+
 Quick Evaluation using Security Onion ISO image
 ===============================================
 

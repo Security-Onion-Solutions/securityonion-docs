@@ -1,3 +1,5 @@
+.. _pcaps:
+
 PCAPs for Testing
 =================
 

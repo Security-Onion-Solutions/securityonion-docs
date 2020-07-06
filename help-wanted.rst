@@ -1,3 +1,5 @@
+.. _help-wanted:
+
 Help Wanted
 ===========
 

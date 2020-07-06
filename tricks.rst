@@ -1,3 +1,5 @@
+.. _tricks:
+
 Tricks and Tips
 ===============
 

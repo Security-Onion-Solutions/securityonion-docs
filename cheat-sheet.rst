@@ -1,4 +1,4 @@
-.. _Cheat-Sheet:
+.. _cheat-sheet:
 
 Cheat Sheet
 ===========

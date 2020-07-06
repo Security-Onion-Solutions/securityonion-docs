@@ -1,4 +1,4 @@
-.. _AF-PACKET:
+.. _af-packet:
 
 AF-PACKET
 =========

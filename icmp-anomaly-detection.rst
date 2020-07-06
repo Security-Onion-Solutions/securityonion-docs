@@ -1,3 +1,5 @@
+.. _icmp-anomaly-detection:
+
 ICMP Anomaly Detection
 ======================
 

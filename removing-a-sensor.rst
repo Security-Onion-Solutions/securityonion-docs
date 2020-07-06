@@ -1,3 +1,5 @@
+.. _removing-a-sensor:
+
 Removing a Sensor
 =================
 

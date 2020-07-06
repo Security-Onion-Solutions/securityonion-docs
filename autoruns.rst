@@ -1,4 +1,4 @@
-.. _Autoruns:
+.. _autoruns:
 
 Autoruns
 ========

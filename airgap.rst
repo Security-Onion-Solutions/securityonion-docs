@@ -1,4 +1,4 @@
-.. _Airgap:
+.. _airgap:
 
 Airgapped Networks
 ==================

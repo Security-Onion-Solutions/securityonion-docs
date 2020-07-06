@@ -1,4 +1,4 @@
-.. _Logstash:
+.. _logstash:
 
 Logstash
 ========

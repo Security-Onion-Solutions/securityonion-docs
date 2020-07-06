@@ -1,3 +1,5 @@
+.. _sensor-stops-seeing-traffic:
+
 Sensor Stops Seeing Traffic
 ===========================
 

@@ -1,3 +1,5 @@
+.. _soc:
+
 Security Onion Console
 ======================
 

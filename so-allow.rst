@@ -1,3 +1,5 @@
+.. _so-allow:
+
 so-allow
 ========
 

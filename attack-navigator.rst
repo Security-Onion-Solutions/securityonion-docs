@@ -1,4 +1,4 @@
-.. _ATT&CK-Navigator:
+.. _attack-navigator:
 
 ATT&CK Navigator
 ================

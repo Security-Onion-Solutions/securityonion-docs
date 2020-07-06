@@ -1,4 +1,4 @@
-.. _Alienvault-OTX:
+.. _alienvault-otx:
 
 AlienVault-OTX
 ==============

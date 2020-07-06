@@ -1,3 +1,5 @@
+.. _rules:
+
 Managing Rules
 ==============
 

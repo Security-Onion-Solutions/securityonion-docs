@@ -1,4 +1,4 @@
-.. _Fleet:
+.. _fleet:
 
 Fleet
 =====

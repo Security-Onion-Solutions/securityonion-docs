@@ -1,3 +1,5 @@
+.. _post-installation:
+
 After Installation
 ==================
 

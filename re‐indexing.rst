@@ -1,3 +1,5 @@
+.. _re‐indexing:
+
 Re-Indexing
 ===========
 

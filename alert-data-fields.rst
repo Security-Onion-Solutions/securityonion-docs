@@ -1,4 +1,4 @@
-.. _Alert-Data-Fields:
+.. _alert-data-fields:
 
 Alert Data Fields
 =================

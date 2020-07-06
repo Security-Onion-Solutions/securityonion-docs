@@ -1,3 +1,5 @@
+.. _ip:
+
 Changing IP Addresses
 =====================
 

@@ -1,3 +1,5 @@
+.. _playbook:
+
 Playbook
 ========
 

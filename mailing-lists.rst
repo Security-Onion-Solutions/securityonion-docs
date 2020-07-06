@@ -1,3 +1,5 @@
+.. _mailing-lists:
+
 Mailing Lists
 =============
 

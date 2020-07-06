@@ -1,3 +1,5 @@
+.. _syslog-output:
+
 Syslog Output
 =============
 

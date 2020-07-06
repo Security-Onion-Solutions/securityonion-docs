@@ -1,4 +1,4 @@
-.. _Accounts:
+.. _accounts:
 
 Accounts
 ========

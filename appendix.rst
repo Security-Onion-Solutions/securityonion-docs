@@ -1,4 +1,4 @@
-.. _Appendix:
+.. _appendix:
 
 Appendix
 ========

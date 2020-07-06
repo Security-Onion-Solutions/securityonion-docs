@@ -1,4 +1,4 @@
-.. _Suricata:
+.. _suricata:
 
 Suricata
 ========
@@ -11,14 +11,14 @@ From https://suricata-ids.org:
 Performance
 -----------
 
-Suricata uses ref:`AF-PACKET` to allow you to spin up multiple workers to handle more traffic.  For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
+Suricata uses ref:`af-packet` to allow you to spin up multiple workers to handle more traffic.  For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
 
 Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
 
 Community ID
 ------------
 
-We enable Suricata's native support for :ref:`Community-ID`.
+We enable Suricata's native support for :ref:`community-id`.
 
 Configuration
 -------------

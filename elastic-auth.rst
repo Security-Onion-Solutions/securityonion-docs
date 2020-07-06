@@ -1,3 +1,5 @@
+.. _elastic-auth:
+
 Elastic Auth
 ============
 

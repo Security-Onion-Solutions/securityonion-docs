@@ -1,3 +1,5 @@
+.. _freqserver:
+
 FreqServer
 ==========
 

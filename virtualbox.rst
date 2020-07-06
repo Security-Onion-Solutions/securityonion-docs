@@ -1,3 +1,5 @@
+.. _virtualbox:
+
 VirtualBox
 ==========
 

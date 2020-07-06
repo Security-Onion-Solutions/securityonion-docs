@@ -1,4 +1,4 @@
-.. _About:
+.. _about:
 
 About
 =====

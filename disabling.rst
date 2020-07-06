@@ -1,3 +1,5 @@
+.. _disabling:
+
 Disabling Processes
 ===================
 

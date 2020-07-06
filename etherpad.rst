@@ -1,3 +1,5 @@
+.. _etherpad:
+
 Etherpad
 ========
 
