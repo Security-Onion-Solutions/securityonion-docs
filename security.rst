@@ -14,4 +14,4 @@ you have uncovered a vulnerability, please follow these steps:
 
 .. note::
 
-   This security address should be used only for undisclosed vulnerabilities. Dealing with fixed issues or general questions on how to use Security Onion should be handled regularly via the `security-onion Google Group <MailingLists>`__.
+   This security address should be used only for undisclosed vulnerabilities. Dealing with fixed issues or general questions on how to use Security Onion should be handled regularly via the :ref:`mailing-lists`.
