@@ -43,4 +43,4 @@ If you have plenty of RAM, disable swap altogether.
 
 Elastic
 -------
-You will want to make sure that each part of the pipeline is operating at maximum efficiency.  Depending on your configuration, this may include `Logstash <logstash>`_, `Redis <redis>`__, and `Elasticsearch <elasticsearch>`__. 
+You will want to make sure that each part of the pipeline is operating at maximum efficiency.  Depending on your configuration, this may include :ref:`logstash`, :ref:`redis`, and :ref:`elasticsearch`. 
