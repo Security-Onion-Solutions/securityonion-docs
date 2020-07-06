@@ -5,11 +5,11 @@ Help
 
 Having problems? Try the suggestions below.
 
--  Are you running the `latest version of Security Onion <Upgrade>`__?
--  Check the `FAQ <FAQ>`__.
--  Search the `Security Onion Mailing List <MailingLists>`__.
--  Search the documentation and mailing lists of the tools contained within Security Onion: `Tools <Tools>`__
--  Check log files in ``/var/log/nsm/`` or other locations for any errors or possible clues:
+-  Are you running the :ref:`latest version of Security Onion <upgrade>`?
+-  Check the :ref:`faq`.
+-  Search the :ref:`Security Onion Mailing List <MailingLists>`.
+-  Search the documentation and mailing lists of the tools contained within Security Onion: :ref:`tools>`
+-  Check log files in ``/opt/so/log`` or other locations for any errors or possible clues:
 
    -  Setup ``/var/log/nsm/sosetup.log``
    -  Suricata ``/var/log/nsm/{ HOSTNAME-INTERFACE }/suricata.log``
@@ -20,8 +20,8 @@ Having problems? Try the suggestions below.
    -  Elastalert ``/var/log/elastalert/elastalert_stderr.log``
 
 -  Are you able to duplicate the problem on a fresh Security Onion installation?
--  Check the `Known Issues <https://github.com/Security-Onion-Solutions/security-onion/issues>`__ to see if this is a known issue that we are working on.
--  If all else fails, please send an email to our `security-onion mailing list <MailingLists>`__.
+-  Check the `Known Issues <https://github.com/Security-Onion-Solutions/securityonion/issues>`__ to see if this is a known issue that we are working on.
+-  If all else fails, please send an email to our :ref:`security-onion mailing list <mailing-lists>`.
 -  Need training or commercial support?
    https://www.securityonionsolutions.com
 
