@@ -1,4 +1,4 @@
-.. _Adding_Accounts:
+.. _Adding-Accounts:
 
 Adding Accounts
 ===============
