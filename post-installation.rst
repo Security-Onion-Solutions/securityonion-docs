@@ -25,13 +25,13 @@ Services
 Other
 -----
 
--  Full-time analysts may want to connect using a dedicated `Analyst VM <Analyst-VM>`__.
+-  Full-time analysts may want to connect using a dedicated :ref:`analyst-vm`.
 
--  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the `<tuning>`__ section. 
+-  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the :ref:`tuning` section. 
 
 Optional
 --------
 
--  Exclude unnecessary traffic from your monitoring using `BPF <BPF>`__.
+-  Exclude unnecessary traffic from your monitoring using :ref:`bpf`.
 
--  Configure the OS to use your preferred `NTP <NTP>`__ server.
+-  Configure the OS to use your preferred :ref:`ntp` server.
