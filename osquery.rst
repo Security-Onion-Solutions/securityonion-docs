@@ -11,12 +11,12 @@ From https://osquery.io/:
 Fleet
 -----
 
-We include Fleet to manage your osquery deployment. For more information, please see the Fleet section.
+We include Fleet to manage your osquery deployment. For more information, please see the :ref:`Fleet` section.
 
 Community ID
 ------------
 
-We sponsored the development of Community ID support for osquery:
+We sponsored the development of :ref:`Community ID` support for osquery:
 
 https://dactiv.llc/blog/correlate-osquery-network-connections/
 
