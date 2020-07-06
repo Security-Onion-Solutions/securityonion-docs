@@ -9,13 +9,21 @@ Security Onion would like to thank the following open-source projects for their 
 
 :ref:`attack-navigator`
 
+:ref:`curator`
+
 :ref:`cyberchef`
 
 :ref:`docker`
 
+:ref:`domainstats`
+
+:ref:`elastalert`
+
 :ref:`elastic`
 
 :ref:`fleet`
+
+:ref:`freqserver`
 
 :ref:`grafana`
 
