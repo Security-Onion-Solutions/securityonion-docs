@@ -1,3 +1,5 @@
+.. _Adding_Accounts:
+
 Adding Accounts
 ===============
 
