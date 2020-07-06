@@ -8,7 +8,7 @@ If you're going to be deploying Security Onion in production, please use the fol
 Hardware Requirements
 ---------------------
 
-First, check the `Hardware Requirements <Hardware>`__ section.
+First, check the :ref:`hardware` section.
 
 Download and Verify
 -------------------
@@ -20,7 +20,7 @@ Download and Verify
 Distributed Deployments
 -----------------------
 
-If deploying a `distributed <Elastic-Architecture#distributed>`__ environment, you’ll need to perform the remaining steps on the management server, as well as all forward and search nodes, but make sure you install and configure the management server first. For best performance, the management server should be dedicated to just being a server for the other nodes (the management server should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the management server on ports ``22``, ``4505``, and ``4506``.
+If deploying a distributed environment, you’ll need to perform the remaining steps on the management server, as well as all forward and search nodes, but make sure you install and configure the management server first. For best performance, the management server should be dedicated to just being a server for the other nodes (the management server should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the management server on ports ``22``, ``4505``, and ``4506``.
 
 Install
 -------
@@ -156,4 +156,4 @@ Setup
       
         sudo deluser $nodeuser sudo
 
-Proceed to `PostInstallation <PostInstallation>`__.
+Proceed to :ref:`post-installation`.
