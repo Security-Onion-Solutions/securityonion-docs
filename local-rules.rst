@@ -86,4 +86,4 @@ These policy types can be found in ``/etc/nsm/rules/downloaded.rules``.
 MISP
 ----
 
-If you would like to pull in NIDS rules from a MISP instance, please see the `MISP Rules <MISP>`__ section.
+If you would like to pull in NIDS rules from a MISP instance, please see the :ref:`misp` section.
