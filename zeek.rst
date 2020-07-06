@@ -10,7 +10,7 @@ Zeek is formerly known as Bro.  From https://www.zeek.org/:
 Performance
 -----------
 
-``/opt/bro/etc/node.cfg``
+``/opt/zeek/etc/node.cfg``
 
 Zeek uses :ref:`af-packet` so that you can spin up multiple Zeek workers to handle more traffic.  For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
 
@@ -22,9 +22,9 @@ We enable Zeek's native support for :ref:`community-id`.
 Logs
 ----
 
-Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by filebeat or `Logstash <Logstash>`_, parsed by and stored in `Elasticsearch <Elasticsearch>`__, and viewable in `Kibana <Kibana>`__.
+Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by filebeat or :ref:`logstash`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`kibana`.
 
-We configure Zeek to output logs in JSON format for higher performance and better parsing. We recommend that most folks leave Zeek configured for JSON output.  If you need to parse those JSON logs from the command line, you can use `<jq>`_.
+We configure Zeek to output logs in JSON format for higher performance and better parsing. We recommend that most folks leave Zeek configured for JSON output.  If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
 
 Zeek monitors your network traffic and creates logs, such as:
 
@@ -85,29 +85,29 @@ https://docs.zeek.org/en/latest/scripts/base/frameworks/notice/main.zeek.html#ty
 | ...and others, which can be researched here:
 | https://docs.zeek.org/en/latest/script-reference/log-files.html
 
-As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through `Kibana <Kibana>`__.
+As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`kibana`.
 
 Email
 -----
 
-``/opt/bro/etc/broctl.cfg``
+``/opt/zeek/etc/zeekctl.cfg``
 
--  To configure email notifications, please see the `email <email#zeek>`__ section.
+-  To configure email notifications, please see the :ref:`email` section.
 
 Syslog
 ------
 
 ``/etc/syslog-ng/syslog-ng.conf``
 
--  To forward Zeek logs to an external syslog collector, please see the `<syslog-output>`__ section.
+-  To forward Zeek logs to an external syslog collector, please see the :ref:`syslog-output` section.
 
 Intel
 -----
 
--  You can add your own Intel to ``/opt/bro/share/bro/intel/intel.dat``.
+-  You can add your own Intel to ``/opt/zeek/share/zeek/intel/intel.dat``.
 
-   -  When editing ``/opt/bro/share/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
-   -  If you experience an error, or do not notice ``/nsm/bro/logs/current/intel.log`` being generated, try having a look in ``/nsm/bro/logs/current/reporter.log`` for clues.
+   -  When editing ``/opt/zeek/share/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
+   -  If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues.
    -  You may also want to restart Zeek after making changes, by running the following command:
       \ ``sudo so-zeek-restart``.
 
@@ -117,7 +117,7 @@ Intel
    | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
    | https://github.com/weslambert/securityonion-misp
 
--  To install and configure an Alienvault OTX Connector, please see the `<Alienvault-OTX>`__ section.
+-  To install and configure an Alienvault OTX Connector, please see the :ref:`alienvault-otx` section.
 
 Custom Scripts
 --------------
