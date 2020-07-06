@@ -43,7 +43,7 @@ In a standalone deployment, the management server components and the sensor comp
 Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Management server with local log storage
-------------------------------------
+----------------------------------------
 
 In an enterprise distributed deployment, a management server will store logs from itself and forward nodes. It can also act as a syslog destination for other log sources to be indexed into Elasticsearch. An enterprise management server should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
 
@@ -54,7 +54,7 @@ In an enterprise distributed deployment, a management server will store logs fro
 Please refer to our `Architecture Page <Elastic-Architecture>`__ for detailed deployment scenarios.
 
 Management server with search nodes
---------------------------------
+-----------------------------------
 
 This deployment type utilizes search nodes to parse and index events. As a result, the hardware requirements of the management are reduced. An enterprise management server should have 4-8 CPU cores, 8-16GB RAM, and 100GB to 1TB of disk space. Many folks choose to host their management server in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
 
