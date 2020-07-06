@@ -5,30 +5,32 @@ Tools
 
 Security Onion would like to thank the following open-source projects for their contribution to our community!
 
-:ref:`hive`
+:ref:`attack-navigator`
 
-:ref:`grafana`
+:ref:`cyberchef`
+
+:ref:`docker`
 
 :ref:`elastic`
 
-:ref:`suricata`
+:ref:`fleet`
 
-:ref:`zeek`
+:ref:`grafana`
 
-:ref:`wazuh`
+:ref:`hive`
+
+:ref:`osquery`
+
+:ref:`redis`
+
+:ref:`salt`
 
 :ref:`stenographer`
 
 :ref:`strelka`
 
-:ref:`osquery`
+:ref:`suricata`
 
-:ref:`fleet`
+:ref:`wazuh`
 
-:ref:`cyberchef`
-
-:ref:`attack-navigator`
-
-:ref:`redis`
-
-:ref:`salt`
+:ref:`zeek`
