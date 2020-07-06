@@ -29,7 +29,7 @@ Elastic Stack
 
    If you're going to enable the Elastic Stack, please note that the MINIMUM requirements are 4 CPU cores and 8GB RAM. These requirements increase as you monitor more traffic and consume more logs.
 
-Please refer to the :ref:`elastic-architecture` section for detailed deployment scenarios.
+Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 **We recommend placing all Elastic storage on SSD or fast spinning disk in a RAID 10 configuration.** This includes ``/nsm/elasticsearch`` and ``/nsm/logstash``.
 
@@ -42,7 +42,7 @@ In a standalone deployment, the management server components and the sensor comp
 - RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, Suricata, Zeek, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
 - Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 
-Please refer to the :ref:`elastic-architecture` section for detailed deployment scenarios.
+Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Management server with local log storage
 ----------------------------------------
@@ -53,7 +53,7 @@ In an enterprise distributed deployment, a management server will store logs fro
 - RAM: Used for Logstash, Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
 - Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 
-Please refer to the :ref:`elastic-architecture` section for detailed deployment scenarios.
+Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Management server with search nodes
 -----------------------------------
@@ -64,7 +64,7 @@ This deployment type utilizes search nodes to parse and index events. As a resul
 - RAM: Used for Logstash and Redis. The amount of available RAM directly impacts the size of the Redis queue.
 - Disk: Used for general OS purposes and storing Kibana dashboards.
 
-Please refer to the :ref:`elastic-architecture` section for detailed deployment scenarios.
+Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Search Node
 ------------
@@ -75,7 +75,7 @@ Search nodes increase search and retention capacity with regard to Elasticsearch
 - RAM: Used for Logstash, Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
 - Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 
-Please refer to the :ref:`elastic-architecture` section for detailed deployment scenarios.
+Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Forward Node (Sensor)
 ---------------------
@@ -86,7 +86,7 @@ A forward node runs sensor components only, and forwards metadata to the managem
 - RAM: Used for write cache and processing traffic.
 - Disk: Used for storage of PCAP and metadata . A larger amount of storage allows for a longer retention period.
 
-Please refer to the :ref:`elastic-architecture` section for detailed deployment scenarios.
+Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Heavy Node (Sensor with ES components)
 --------------------------------------
@@ -97,7 +97,7 @@ A heavy node Runs all the sensor components AND Elastic components locally. This
 - RAM: Used for Logstash , Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
 - Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 
-Please refer to the :ref:`elastic-architecture` section for detailed deployment scenarios.
+Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Sensor Hardware Considerations
 ------------------------------
