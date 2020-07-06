@@ -1,3 +1,5 @@
+.. _Logstash:
+
 Logstash
 ========
 
