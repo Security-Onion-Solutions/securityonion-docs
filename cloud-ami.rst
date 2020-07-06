@@ -31,23 +31,22 @@ This section covers configuring a Security Onion 16.04 cloud image hosted in Ama
     
     https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html
 
-################
 Getting Started 
-################
+###############
 
-**********
 Terraform 
-**********
+*********
 To quickly setup a VPC, mirror configuration, and test the Security Onion AMI using Terraform, see the following:   
 https://github.com/Security-Onion-Solutions/securityonion-cloud/tree/dev
 
-*******
+
 Manual 
-*******
+******
+
 To setup the Security Onion AMI and VPC mirror configuration manually, use the steps below.
 
 Create a Security Group for Sniffing Interface 
------------------
+----------------------------------------------
 
 Security Groups act like a firewall for your Amazon EC2 instances controlling both inbound and outbound traffic. We will need to create a security group specifically for the interface we will be using to sniff the traffic.  This security group will need to be as open as possible to ensure all traffic destined to the sniffing interface will be allowed through.  To create a security group, follow these steps:
 
@@ -60,7 +59,7 @@ Security Groups act like a firewall for your Amazon EC2 instances controlling bo
 - Select: ``Create``
 
 Create Sniffing Interface
-----------------
+-------------------------
 
 Prior to launching the Security Onion AMI you will need to create the interface that will be used to monitor your VPC.  This interface will be attached to the Security Onion AMI as a secondary interface.  To create a sniffing interface, follow these steps:
 
@@ -72,7 +71,8 @@ Prior to launching the Security Onion AMI you will need to create the interface 
 
 
 Create a Security Onion EC2 instance in Amazon Web Services (AWS)
----------------------------------
+-----------------------------------------------------------------
+
 To configure a Security Onion instance, follow these steps:
 
 - From the EC2 dashboard select: ``Launch Instance``
@@ -111,12 +111,12 @@ To configure a Security Onion instance, follow these steps:
 
 
 Traffic Mirroring
----------------------------------
+-----------------
 
 Traffic mirroring allows you to copy the traffic to/from an instance and send it to the sniffing interface of a network security monitoring sensor or a group of interfaces using a network load balancer.  For more details about AWS Traffic Mirroring please see: https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html
 
 Create Mirror Target
----------------------------------
+--------------------
 
 A mirror target in AWS refers to the destination for the mirrored traffic.  This can be a single interface or a group of interfaces using a network load balancer.  To configure a mirror target, follow these steps:
 
@@ -126,7 +126,7 @@ A mirror target in AWS refers to the destination for the mirrored traffic.  This
 - Select: ``Create``
 
 Create Mirror Filter
----------------------------------
+--------------------
 
 A mirror filter allows you to define the traffic that is copied to in the mirrored session and is useful for tuning out noisy or unwanted traffic.  To configure a mirror filter, follow these steps:
 
@@ -136,7 +136,7 @@ A mirror filter allows you to define the traffic that is copied to in the mirror
 - Select: ``Create``
 
 Create Mirror Session
--------------------------------
+---------------------
 
 A traffic mirror session defines the source of the traffic to be mirrored based on the selected traffic mirror filters and sends that traffic to the desired traffic mirror target.  For more details about traffic mirror sessions please see: https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-session.html
 
@@ -149,7 +149,7 @@ A traffic mirror session defines the source of the traffic to be mirrored based 
 - Select: ``Create``
 
 Verify Traffic Mirroring
-------------------------------
+------------------------
 
 To verify the mirror session is sending the correct data to the sniffing interface run the following command on the Security Onion instance:
 
@@ -165,8 +165,3 @@ To verify Zeek is properly decapsulating and parsing the VXLAN traffic you can v
 ::
 
     ls -la /nsm/zeek/logs/curent/
-     
-
-
-
-
