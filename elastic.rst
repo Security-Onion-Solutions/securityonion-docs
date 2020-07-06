@@ -5,12 +5,11 @@ Elastic Stack
 
 Security Onion includes the Elastic Stack:
 
-| `<Elasticsearch>`__
-| `<Logstash>`__
-| `<Kibana>`__
+| :ref:`elasticsearch`
+| :ref:`logstash`
+| :ref:`kibana`
 
-You can get an idea of what this whole integration looks like at a high-level by viewing our `architecture
-diagram <Elastic-Architecture>`__.
+You can get an idea of what this whole integration looks like at a high-level by reviewing the :ref:`architecture` section.
 
 .. toctree::
    :maxdepth: 2
