@@ -14,23 +14,23 @@ High-Level Architecture Diagram
 Core Components
 ---------------
 
-`Logstash <Logstash>`__
+:ref:`logstash`
   - Parse and format logs.
-`Elasticsearch <Elasticsearch>`__
+:ref:`elasticsearch`
   - Ingest and index logs.
-`Kibana <Kibana>`__
+:ref:`kibana`
   - Visualize ingested log data.
 
 Auxilliary Components
 ---------------------
 
-`Curator <Curator>`__
+:ref:`curator`
   - Manage indices through scheduled maintenance.
-`ElastAlert <ElastAlert>`__
+:ref:`elastalert`
   - Query Elasticsearch and alert on user-defined anomalous behavior or other interesting bits of information.
-`FreqServer <FreqServer>`__
+:ref:`freqserver`
   -Detect DGAs and find random file names, script names, process names, service names, workstation names, TLS certificate subjects and issuer subjects, etc.
-`DomainStats <DomainStats>`__
+:ref:`domainstats`
   - Get additional info about a domain by providing additional context, such as creation time, age, reputation, etc.
 
 Detailed Data Flow Diagram
