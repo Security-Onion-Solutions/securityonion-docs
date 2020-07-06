@@ -3,10 +3,8 @@ Elasticsearch
 
 From https://www.elastic.co/products/elasticsearch:
 
-    Elasticsearch is a distributed, RESTful search and analytics engine
-    capable of solving a growing number of use cases. As the heart of
-    the Elastic Stack, it centrally stores your data so you can discover
-    the expected and uncover the unexpected.
+    Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. 
+    As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
 In Security Onion 2.0, Elasticsearch receives unparsed logs from logstash or filebeat. It then parses and stores those logs.
 
