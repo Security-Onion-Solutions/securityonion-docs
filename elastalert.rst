@@ -79,12 +79,12 @@ In the ``smtp_auth_file.txt``, add:
 MISP
 ~~~~~~~
 
-See `<MISP>`__
+See :ref:`misp`
 
 TheHive
 ~~~~~~~
 
-See `TheHive <hive>`__
+See :ref:`<hive>`
 
 
 so-elastalert-create
