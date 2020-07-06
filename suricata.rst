@@ -25,7 +25,7 @@ Configuration
 
 You can configure Suricata via ``/etc/nsm/HOSTNAME-INTERFACE/suricata.yaml`` (where ``HOSTNAME`` is your actual hostname and ``INTERFACE`` is your actual sniffing interface).
 
-If you would like to configure/manage IDS rules, please see the `<Rules>`__ and `<ManagingAlerts>`__ sections.
+If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`managing-alerts` sections.
 
 Logging
 -------
