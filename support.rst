@@ -20,7 +20,7 @@ If you need free support, you can reach out to one of the following public commu
 If you're using our older Security Onion 16.04 platform, you can reach out to our public security-onion mailing
 list:
 
-`MailingLists <MailingLists>`__
+:ref:`mailing-lists`
 
 If you have questions or problems relating to our new Security Onion 2.0 platform, you can reach out to our reddit community:
 
