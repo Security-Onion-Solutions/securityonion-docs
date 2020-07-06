@@ -11,19 +11,15 @@ The various fields types are described below.
 Fields
 ------
 
-| `Alert Data <Alert-Data-Fields>`__
-| `Zeek <Bro-Fields>`__
-| `Elastalert <Elastalert-Fields>`__
+| :ref:`alert-data-fields`
+| :ref:`zeek-fields`
+| :ref:`elastalert-fields`
 
 Template files
 --------------
 
-Fields are mapped to their proper type using template files, found in
-``/etc/logstash/``. The current template files include:
+Fields are mapped to their proper type using template files, found in ``/etc/logstash/``. The current template files include:
 
-| ``logstash-template.json`` - mapping information for logs going into
-  ``logstash-*`` indices
-| ``beats-template.json`` - mapping information for logs going into
-  ``logstash-beats-*`` indices.
-| ``logstash-ossec-template.json`` - mapping information for logs going into
-  ``logstash-ossec-*`` indices.
+| ``logstash-template.json`` - mapping information for logs going into ``logstash-*`` indices
+| ``beats-template.json`` - mapping information for logs going into ``logstash-beats-*`` indices.
+| ``logstash-ossec-template.json`` - mapping information for logs going into ``logstash-ossec-*`` indices.
