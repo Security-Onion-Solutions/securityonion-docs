@@ -11,7 +11,7 @@ From https://osquery.io/:
 Fleet
 -----
 
-We include Fleet to manage your osquery deployment. For more information, please see the Fleet section.
+We include Fleet to manage your osquery deployment. For more information, please see the :doc:`Fleet` section.
 
 Community ID
 ------------
