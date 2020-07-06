@@ -17,7 +17,7 @@ Zeek uses `<AF-PACKET>`_ so that you can spin up multiple Zeek workers to handle
 Community ID
 ------------
 
-We enable Zeek's native support for Community ID.
+We enable Zeek's native support for :ref:`Community-ID`.
 
 Logs
 ----
