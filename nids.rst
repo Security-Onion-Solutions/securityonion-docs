@@ -8,12 +8,12 @@ NIDS stands for Network Intrusion Detection System. It is a means of monitoring 
 Usage
 -----
 
-Security Onion 2.0 runs :ref:`Suricata`_ as its Network Intrusion Detection System (NIDS). 
+Security Onion 2.0 runs :ref:`suricata` as its Network Intrusion Detection System (NIDS). 
 
 Performance
 -----------
 
-:ref:`Suricata`_ leverages :ref:`af-packet` for higher performance.
+:ref:`suricata`_ leverages :ref:`af-packet` for higher performance.
 
 Analysis
 --------
@@ -22,7 +22,7 @@ You can analyze NIDS alerts from Suricata via:
 
 -  :ref:`kibana`
 -  :ref:`hunt`
--  :ref`hive`
+-  :ref:`hive`
 
 NIPS
 ----
@@ -32,4 +32,4 @@ Security Onion is designed to be passive and so Suricata runs in NIDS mode rathe
 More Information
 ----------------
 
-- For more information about Suricata, please see the :ref:`Suricata`_ section.
+- For more information about Suricata, please see the :ref:`suricata`_ section.
