@@ -3,15 +3,12 @@ osquery
 
 From https://osquery.io/:
 
-  ::
-  
-      Osquery uses basic SQL commands to leverage a relational data-model to describe a device.
-      
+    Osquery uses basic SQL commands to leverage a relational data-model to describe a device.
       
 Fleet
 -----
 
-We include Fleet to manage your osquery deployment. For more information, please see the :doc:`Fleet` section.
+We include Fleet to manage your osquery deployment. For more information, please see the Fleet section.
 
 Community ID
 ------------
