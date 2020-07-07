@@ -18,6 +18,10 @@ Usage
 
 Security Onion Console (SOC) provides a link to TheHive. TheHive should display the highest level of alerts. You can then triage those alerts and turn them into cases if necessary. Other analysts can collaborate with you as you work to close those cases. As you are working through a case and need more context, you can pivot to Kibana or Hunt as necessary.
 
+In Kibana you can add events to TheHive by clicking on the scripted field named ``TheHive``. This will use the API to add this new event.
+
+.. image:: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_hive.png
+
 More Information
 ----------------
 
