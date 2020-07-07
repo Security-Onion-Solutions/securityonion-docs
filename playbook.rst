@@ -53,14 +53,16 @@ Every 5 minutes, ``so-playbook-sync`` runs. This script queries Playbook for all
 Quick test
 ----------
 
-Import the following Sigma and enable the Play - it alerts on bro_http events, so expect to get a number of alerts in TheHive.
+Import the following Sigma and enable the Play:
 
 https://gist.github.com/defensivedepth/3b0656569a797d86eb04068b5546b78c
+
+It alerts on Zeek HTTP events, so expect to get a number of alerts in TheHive.
 
 Log Sources
 -----------
 
-Sigma support currently extends to the following logsources in Security Onion
+Sigma support currently extends to the following log sources in Security Onion:
  - :ref:`osquery`
  - network (via :ref:`zeek` logs)
  - Windows Eventlogs + :ref:`sysmon` (via :ref:`osquery`)
