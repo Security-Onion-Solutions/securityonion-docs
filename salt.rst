@@ -44,7 +44,7 @@ The ``static.sls`` configuration file houses global configuration settings for y
 ::
 
    static:
-     hnmaster: GLOBALHOMENET - This is your home_net for you grid. Can be overridden on each sensor.
+     hnmaster: GLOBALHOMENET - This is your home_net for your grid. Can be overridden on each sensor.
      ntpserver: YOURNTPSERVER
      homenet: YOURHOMENET
      proxy: PROXYSERVER
