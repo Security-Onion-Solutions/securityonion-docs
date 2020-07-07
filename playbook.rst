@@ -6,12 +6,12 @@ Playbook
 Overview
 --------
 
-Playbook is a web application that allows you to create Detection Playbooks, which itself consists of individual plays. These plays are fully self-contained and describe the different aspects around the particular detection strategy.
+Playbook is a web application that allows you to create a Detection Playbook, which itself consists of individual plays. These plays are fully self-contained and describe the different aspects around the particular detection strategy.
 
 The key components of a play are:
 
- #. Objective & Context - what exactly are we trying to accomplish and why
- #. What are the follow-up actions required to validate and/or remediate when results are seen
+ #. Objective & Context - what exactly are we trying to accomplish and why?
+ #. What are the follow-up actions required to validate and/or remediate when results are seen?
  #. The actual query needed to implement the play's objective. In our case, the :ref:`elastalert` / :ref:`elasticsearch` configuration.
 
 Any results from a Play will generate an Alert within :ref:`hive`.
@@ -30,7 +30,7 @@ You can access Playbook by navigating to https://MANAGER/playbook and logging in
 | Username: analyst
 | Password: changeme
 
-If you need administrator access to Playbook, you can login with the following credentials - however, the Playbook UI is designed to be used with a user that has an analyst role - using an admin account will be very confusing to newcomers to Playbook, since many of the fields will now be shown and editable - it will look much more cluttered.
+If you need administrator access to Playbook, you can login with the following admin credentials. However, the Playbook UI is designed to be used with a user that has an analyst role. Using an admin account will be very confusing to newcomers to Playbook, since many of the fields will now be shown and editable and it will look much more cluttered.
 
 | Username: admin
 | Password: changeme
@@ -38,7 +38,7 @@ If you need administrator access to Playbook, you can login with the following c
 Creating a new Play
 -------------------
 
-To create a new play, click on the Sigma Editor menu link. Paste the Sigma signature into the Sigma field and then click Create. If successful, you will be redirected to the newly created Play.
+To create a new play, click on the ``Sigma Editor`` menu link. Paste the Sigma signature into the Sigma field and then click Create. If successful, you will be redirected to the newly created Play.
 
 Putting a Play into Production
 ------------------------------
@@ -48,16 +48,16 @@ When you are ready to start alerting on your Play, change the Status of the play
 Misc Notes
 ----------
 
-Every 5 minutes, ``so-playbook-sync`` runs. This script queries Playbook for all active plays, and then checks to make sure that there is an :ref:`elastalert` config & TheHive case template for each play. It also runs through the same process for inactive plays.
+Every 5 minutes, ``so-playbook-sync`` runs. This script queries Playbook for all active plays, and then checks to make sure that there is an :ref:`elastalert` config and TheHive case template for each play. It also runs through the same process for inactive plays.
 
 Quick test
 ----------
 
-Import the following Sigma and enable the Play:
+If you want to do a quick test, import the following Sigma and then enable the Play:
 
 https://gist.github.com/defensivedepth/3b0656569a797d86eb04068b5546b78c
 
-It alerts on Zeek HTTP events, so expect to get a number of alerts in TheHive.
+This play alerts on Zeek HTTP events, so expect to get a number of alerts in TheHive.
 
 Log Sources
 -----------
