@@ -20,6 +20,5 @@ Security Onion Console (SOC) provides a link to TheHive. TheHive should display 
 
 More Information
 ----------------
-For more information about TheHive, please see:
 
-https://thehive-project.org/
+For more information about TheHive, please see https://thehive-project.org/.
