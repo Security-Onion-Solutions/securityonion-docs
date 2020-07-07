@@ -39,6 +39,8 @@ Transcript
 
 When present, clicking the ``_id`` field allows an analyst to pivot to transcript via Security Onion Console (SOC).
 
+.. image:: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_pcap.png
+
 Indicator Dashboard
 ~~~~~~~~~~~~~~~~~~~
 
