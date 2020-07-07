@@ -227,7 +227,83 @@ Onion, locally created rules are stored in /etc/nsm/rules/local.rules
 Threshold
 ---------
 
-See ``/etc/nsm/rules/threshold.conf`` for more information and examples.
+You can manage threshold.conf for Suricata using Saltstack pillars. The format of the pillar file can be seen below, as well as in ``/opt/so/saltstack/local/pillar/thresholding/pillar.usage`` and ``/opt/so/saltstack/local/pillar/thresholding/pillar.example``
+
+Usage:
+
+::
+
+   thresholding:
+     sids:
+       <signature id>:
+         - threshold:
+             gen_id: <generator id>
+             type: <threshold | limit | both>
+             track: <by_src | by_dst>
+             count: <count>
+             seconds: <seconds>
+         - rate_filter:
+             gen_id: <generator id>
+             track: <by_src | by_dst | by_rule | by_both>
+             count: <count>
+             seconds: <seconds>
+             new_action: <alert | pass>
+             timeout: <seconds>
+         - suppress:
+             gen_id: <generator id>
+             track: <by_src | by_dst | by_either>
+             ip: <ip | subnet>
+             
+Example:
+
+::
+
+   thresholding:
+     sids:
+       8675309:
+         - threshold:
+             gen_id: 1
+             type: threshold
+             track: by_src
+             count: 10
+             seconds: 10
+         - threshold:
+             gen_id: 1
+             type: limit
+             track: by_dst
+             count: 100
+             seconds: 30
+         - rate_filter:
+             gen_id: 1
+             track: by_rule
+             count: 50
+             seconds: 30
+             new_action: alert
+             timeout: 30
+         - suppress:
+             gen_id: 1
+             track: by_either
+             ip: 10.10.3.7
+       11223344:
+         - threshold:
+             gen_id: 1
+             type: limit
+             track: by_dst
+             count: 10
+             seconds: 10
+         - rate_filter:
+             gen_id: 1
+             track: by_src
+             count: 50
+             seconds: 20
+             new_action: pass
+             timeout: 60
+         - suppress:
+             gen_id: 1
+             track: by_src
+             ip: 10.10.3.0/24
+             
+In order to apply the threshold to all nodes, place the pillar in ``/opt/so/saltstack/local/pillar/static.sls``. If you want to apply the threshold to a single node, place the pillar in ``/opt/so/saltstack/local/pillar/minions/<MINION_ID>.sls``
 
 Suppressions
 ------------
