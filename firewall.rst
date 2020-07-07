@@ -31,7 +31,7 @@ This is a list of hosts and networks that are allowed the analyst role. The anal
 
 beats_endpoint.sls
 ~~~~~~~~~~~~~~~~~~
-These are endpoints that are allowed to use beats to send traffic to the master.
+These are endpoints that are allowed to use beats to send traffic to the management node.
 
 - 5044
 
