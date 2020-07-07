@@ -22,6 +22,7 @@ You can get an idea of what this whole integration looks like at a high-level by
    freqserver
    domainstats
    redis
+   ingest
    data-fields
    community-id
    alert-data-fields
