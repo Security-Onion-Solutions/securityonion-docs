@@ -16,6 +16,5 @@ Security Onion Console (SOC) provides a link to ATT&CK Navigator.
 
 More Information
 ----------------
-For more information about ATT&CK Navigator, please see:
 
-https://github.com/mitre-attack/attack-navigator
+For more information about ATT&CK Navigator, please see https://github.com/mitre-attack/attack-navigator.
