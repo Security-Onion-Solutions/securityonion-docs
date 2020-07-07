@@ -13,14 +13,14 @@ Configuration
 Global BPF
 ~~~~~~~~~~
 
-You can specify your BPF in the static pillar on your master server (``/opt/so/saltstack/local/pillar/static.sls``), and by default, it will apply to all interfaces in your entire deployment.
+You can specify your BPF in the static pillar on your management node (``/opt/so/saltstack/local/pillar/static.sls``), and by default, it will apply to all interfaces in your entire deployment.
 
-If you have separate sensors reporting to that master server, they will pull down the relevant BPF as part of the every-15min Salt update, which will also restart Suricata/Steno/Zeek so that the BPF change will take effect.
+If you have separate sensors reporting to that management node, they will pull down the relevant BPF as part of the every-15min Salt update, which will also restart Suricata/Steno/Zeek so that the BPF change will take effect.
 
 Node-Specific BPF
 ~~~~~~~~~~~~~~~~~
 
-If you don’t want your sensors to inherit BPF from the master server, you can edit the minion sls file, which will override any global BPF settings set from the static pillar. (``/opt/so/saltstack/local/pillar/minions/$Hostname.sls``)
+If you don’t want your sensors to inherit BPF from the management node, you can edit the minion sls file, which will override any global BPF settings set from the static pillar. (``/opt/so/saltstack/local/pillar/minions/$Hostname.sls``)
 
 Pillar BPF Syntax
 ~~~~~~~~~~~~~~~~~
@@ -81,8 +81,7 @@ From Seth Hall regarding VLAN tags:
 
     (not (host 192.168.53.254 or host 192.168.53.60 or host 192.168.53.69 or host 192.168.53.234)) or (vlan and (not (host 192.168.53.254 or host 192.168.53.60 or host 192.168.53.69 or host 192.168.53.234)))
 
-This amazingly works if you are only using it to restrict the traffic
-passing through the filter. The basic template is…
+This amazingly works if you are only using it to restrict the traffic passing through the filter. The basic template is…
 
 ::
 
@@ -95,8 +94,7 @@ cases where this will no longer work and probably edge cases where a few
 undesired packets will make it though, but it should work in the example
 case that you've given.
 
-Also, I'm assuming that any tools you are running will support vlan tags
-and no tags simultaneously.
+Also, I'm assuming that any tools you are running will support vlan tags and no tags simultaneously.
 
 Troubleshooting BPF using tcpdump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
