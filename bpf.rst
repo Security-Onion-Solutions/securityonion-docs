@@ -26,6 +26,7 @@ Pillar BPF Syntax
 ~~~~~~~~~~~~~~~~~
 
 ::
+
    steno:
      bpf:
       - not port 80 &&
