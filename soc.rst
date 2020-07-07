@@ -18,3 +18,4 @@ Most of our analyst tools are browser-based. We recommend chromium or chromium-b
    fleet
    attack-navigator
    grafana
+   cortex
