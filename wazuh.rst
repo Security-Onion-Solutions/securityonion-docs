@@ -13,7 +13,17 @@ From https://wazuh.com/:
 Security Onion Usage
 --------------------
 
-Security Onion uses Wazuh as a Host Intrusion Detection System (HIDS). Wazuh is monitoring and defending Security Onion itself and you can add Wazuh agents to monitor other hosts on your network as well.
+Security Onion utilizes Wazuh as a Host Intrusion Detection System (HIDS) on each of the Security Onion nodes.
+
+The Wazuh components include:
+
+``manager`` - runs inside of ``so-wazuh`` Docker container and performs overall management of agents
+
+``API`` - runs inside of ``so-wazuh`` Docker container and allows for remote management of agents, querying, etc.
+
+``agent`` - runs directly on each host and monitors logs/activity and reports to ``manager``
+
+The Wazuh API runs at TCP port 55000 locally, and currently uses the default credentials of ``user:foo`` and ``password:bar`` for authentication. Keep in mind, the API port is not exposed externally by default. Therefore, firewall rules need to be in place to reach the API from another location other than the Security Onion node on which the targeted Wazuh manager is running.
 
 Configuration
 -------------
