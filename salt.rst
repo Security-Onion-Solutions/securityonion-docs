@@ -7,19 +7,19 @@ From https://docs.saltstack.com/en/latest/:
 
    Salt is a new approach to infrastructure management built on a dynamic communication bus. Salt can be used for data-driven orchestration, remote execution for any infrastructure, configuration management for any app stack, and much more.
 
-Salt is a core component of Security Onion 2.0.
+Salt is a core component of Security Onion 2.0 as it manages all processes on all nodes.
 
 Firewall Requirements
 ---------------------
 
-Sensors need to be able to connect to the management server on ports ``4505/tcp`` and ``4506/tcp``:
+Nodes need to be able to connect to the management server on ports ``4505/tcp`` and ``4506/tcp``:
 
 http://docs.saltstack.com/topics/tutorials/firewall.html
 
 Checking Status
 ---------------
 
-Want to verify all your sensors are up?
+You can use salt's ``test.ping`` to verify that all your nodes are up:
 
 ::
 
@@ -28,11 +28,11 @@ Want to verify all your sensors are up?
 Remote Execution
 ----------------
 
-Want to execute a command on all your sensors at once?
+Similarly, you can use salt's ``cmd.run`` to execute a command on all your nodes at once. For example, to check disk space on all nodes:
 
 ::
 
-    sudo salt '*' cmd.run 'InsertYourCommandHere'
+    sudo salt '*' cmd.run 'df'
 
 Configuration Layout
 --------------------
