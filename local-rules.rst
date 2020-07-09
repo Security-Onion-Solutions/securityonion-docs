@@ -5,7 +5,7 @@ Adding Local Rules
 
 Adding local rules in Security Onion is a rather straightforward process. However, generating custom traffic to test the alert can sometimes be a challenge. Here, we will show you how to add the local rule and then use the python library scapy to trigger the alert.
 
--  Open ``/etc/nsm/rules/local.rules`` using your favorite text editor.  If this is a distributed deployment, edit local.rules on your management server and it will replicate to your sensors.
+-  Open ``/etc/nsm/rules/local.rules`` using your favorite text editor.  If this is a distributed deployment, edit local.rules on your manager node and it will replicate to your sensors.
    
 -  Let's add a simple rule that will alert on the detection of a string in a tcp session:
 
