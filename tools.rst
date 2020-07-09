@@ -19,7 +19,9 @@ Security Onion would like to thank the following open-source projects for their 
 
 :ref:`elastalert`
 
-:ref:`elastic`
+:ref:`elasticsearch`
+
+:ref:`filebeat`
 
 :ref:`fleet`
 
@@ -28,6 +30,10 @@ Security Onion would like to thank the following open-source projects for their 
 :ref:`grafana`
 
 :ref:`hive`
+
+:ref:`kibana`
+
+:ref:`logstash`
 
 :ref:`osquery`
 
