@@ -3,7 +3,7 @@
 Hunt
 ====
 
-Security Onion Console (SOC) gives you access to our new Hunt interface. This interface allows you to hunt through all of the data in Elasticsearch and is highly tuned for stacking, pivoting, data expansion, and data reduction.
+:ref:`soc` gives you access to our new Hunt interface. This interface allows you to hunt through all of the data in Elasticsearch and is highly tuned for stacking, pivoting, data expansion, and data reduction.
 
 The first two elements shown are the query bar and time picker. Once you perform a query, Hunt will display the number of events found in the upper right and then render three main sections of output.
 
