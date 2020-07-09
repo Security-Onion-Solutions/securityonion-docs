@@ -10,13 +10,13 @@ There are at least 3 different ways to do this:
 Method 1: LVM (Logical Volume Management)
 -----------------------------------------
 
-| If you chose the LVM option in the Ubuntu installer, then this should be the easiest way of adding disk space:
+| If you chose the LVM option in the installer, then this should be the easiest way of adding disk space:
 | https://wiki.ubuntu.com/Lvm
 
 Method 2: Mount a separate drive to /nsm
 ----------------------------------------
 
-This can be done in the Ubuntu installer, or after installation is complete. If doing this after running Setup, then you'll need to copy the existing data in ``/nsm`` to the new drive using something like this:
+This can be done in the installer or after installation is complete. If doing this after running Setup, then you'll need to copy the existing data in ``/nsm`` to the new drive using something like this:
 
 #. Comment out the cron job in ``/etc/cron.d/nsm-watchdog``
 #. Restart cron:
@@ -30,9 +30,6 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
    ::
    
      sudo so-stop
-     sudo service syslog-ng stop
-     sudo service apache2 stop (if management server or standalone)
-     sudo service mysql stop (if management server or standalone)
      
 #. Determine your new drive's path:
 
@@ -93,9 +90,6 @@ This can be done in the Ubuntu installer, or after installation is complete. If 
 
    ::
    
-     sudo service mysql start (if management server or standalone)
-     sudo service apache2 start (if management server or standalone)
-     sudo service syslog-ng start
      sudo so-start
      
 #. Uncomment the cron job in ``/etc/cron.d/nsm-watchdog``
@@ -176,76 +170,3 @@ Start all services:
 
   sudo service nsm start
 
-Moving the MySQL Databases
---------------------------
-
-In this section, we'll cover how to move the MySQL databases containing all of your important alert and event data to another place.  This section assumes we'll be moving the databases to ``/nsm``, though, any other location will do.
-
-The MySQL databases are stored under ``/var/lib/mysql``. We will need to move this folder and its sub-contents to the destination location. First, we must stop all processes that may be writing or using the databases.
-
-::
-
-  sudo so-stop
-  sudo service mysql stop
-
-Now, we need to make sure all other nsm-related processes are stopped. To double-check, run ``lsof`` on the nsm mount point to list any processes that have open file descriptors. Kill everything, or nearly everything, that comes up in the list.
-
-::
-
-  lsof /nsm
-
-Next, let’s copy the data over to the new location leaving the original intact. You can use ``cp`` or ``rsync`` or another similar tool but be sure to preserve permissions ( -p ) and copy recursively ( -r ). Both examples are listed below, choose one:
-
-::
-
-  sudo cp -rp /var/lib/mysql /nsm
-  sudo rsync -avpr var/lib/mysql /nsm
-
-Once that’s finished, rename or backup the original just in case something goes wrong.
-
-::
-
-  sudo mv /var/lib/mysql /var/lib/mysql.bak
-
-Next, create a symbolic link from ``/var/lib/mysql`` to the new location:
-
-::
-
-  sudo ln -s /nsm/mysql /var/lib/mysql
-
-Ubuntu uses AppArmor to add an additional layer of security to running applications. We must tell apparmor about the new mysql database locations otherwise it will prevent the system from using it.
-
-::
-
-  sudo service apparmor stop
-
-Edit ``/etc/apparmor.d/usr.sbin.mysqld`` to reflect the following patch which adds the new location:
-
-::
-
-  sudo vim /etc/apparmor.d/usr.sbin.mysqld
-
-::
-
-    --- a/apparmor.d/usr.sbin.mysqld
-    +++ b/apparmor.d/usr.sbin.mysqld
-    @@ -19,8 +19,8 @@
-
-    /etc/hosts.allow r,
-    /etc/hosts.deny r,
-
-    +  /nsm/mysql/ r,
-    +  /nsm/mysql/** rwk,
-    +  /nsm/elsa/data/mysql/ r,
-    +  /nsm/elsa/data/mysql/** rwk,
-    /etc/mysql/*.pem r,
-    /etc/mysql/conf.d/ r,
-    /etc/mysql/conf.d/* r,
-
-Finally, start all the processes back up:
-
-::
-
-  sudo service apparmor start
-  sudo service mysql start
-  sudo so-start
