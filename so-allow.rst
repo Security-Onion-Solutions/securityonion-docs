@@ -3,7 +3,7 @@
 so-allow
 ========
 
-Setup locks down the :ref:`firewall` by default. Depending on what kind of installation you do, Setup may walk you through allowing your analyst IP address(es). If you need to add other analyst IP addresses or open ports for Wazuh agents, syslog devices, you can run ``sudo so-allow`` and it will walk you through this process.
+Setup locks down the :ref:`firewall` by default. Depending on what kind of installation you do, Setup may walk you through allowing your analyst IP address(es). If you need to add other analyst IP addresses or open firewall ports for agents or syslog devices, you can run ``sudo so-allow`` and it will walk you through this process.
 
   ::
   
