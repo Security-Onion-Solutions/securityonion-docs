@@ -13,14 +13,14 @@ Configuration
 Global BPF
 ~~~~~~~~~~
 
-You can specify your BPF in the static pillar on your management node (``/opt/so/saltstack/local/pillar/static.sls``), and by default, it will apply to all interfaces in your entire deployment.
+You can specify your BPF in the static pillar on your manager node (``/opt/so/saltstack/local/pillar/static.sls``), and by default, it will apply to all interfaces in your entire deployment.
 
-If you have separate sensors reporting to that management node, they will pull down the relevant BPF as part of the every-15min Salt update, which will also restart Suricata/Steno/Zeek so that the BPF change will take effect.
+If you have separate sensors reporting to that manager node, they will pull down the relevant BPF as part of the every-15min Salt update, which will also restart Suricata/Steno/Zeek so that the BPF change will take effect.
 
 Node-Specific BPF
 ~~~~~~~~~~~~~~~~~
 
-If you don’t want your sensors to inherit BPF from the management node, you can edit the minion sls file, which will override any global BPF settings set from the static pillar. (``/opt/so/saltstack/local/pillar/minions/$Hostname.sls``)
+If you don’t want your sensors to inherit BPF from the manager node, you can edit the minion sls file, which will override any global BPF settings set from the static pillar. (``/opt/so/saltstack/local/pillar/minions/$Hostname.sls``)
 
 Pillar BPF Syntax
 ~~~~~~~~~~~~~~~~~
