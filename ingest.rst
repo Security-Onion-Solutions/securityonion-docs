@@ -3,6 +3,8 @@
 Ingest
 ======
 
+Here's an overview of how logs are ingested in various deployment types.
+
 Eval
 ----
 | Core Pipeline: Filebeat [EVAL Node] --> ES Ingest [EVAL Node]
