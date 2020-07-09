@@ -1,7 +1,7 @@
 .. _soc:
 
-Security Onion Console
-======================
+Security Onion Console (SOC)
+============================
 
 Once you have run ``so-allow`` and allowed your IP address, you can then connect to Security Onion Console (SOC) and access several different analyst tools that can be used for slicing and dicing data coming from your network and endpoints.
 
