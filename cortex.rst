@@ -15,19 +15,19 @@ Credentials
 | Username: cortexeadmin  
 | Password: cortexchangeme  
 
-After logging in, change the password for the superadmin (cortexadmin) account, and configure a password for the soadmin account (SecurityOnion organization).
+After logging in, change the password for the superadmin account (``cortexadmin``), and configure a password for the ``soadmin`` account (``SecurityOnion`` organization).
 
-After specifying a password for the soadmin user, log in to Cortex with the same account. You should then be able to configure additional analyzers or details, as needed.
+After specifying a password for the ``soadmin`` user, log in to Cortex with the same account. You should then be able to configure additional analyzers or details, as needed.
 
-Note that the soadmin user already has a random API key generated upon initial setup, and that is used for integration with TheHive and SOCtopus. If you change this value, you must also change the value in /opt/so/saltstack/pillar/static.sls and re-run any applicable Salt states.
+Note that the ``soadmin`` user already has a random API key generated upon initial setup, and that is used for integration with TheHive and SOCtopus. If you change this value, you must also change the value in ``/opt/so/saltstack/local/pillar/static.sls`` and re-run any applicable Salt states.
 
 Usage
 -----
 
 In Security Onion, Cortex is set up with two default organizations:
 
- - cortex - This is a default organization that is created by Cortex for overall management.
- - SecurityOnion - This is an organization that we create to enable analyzers by default and provide integration with TheHive.
+ - ``cortex`` - This is a default organization that is created by Cortex for overall management.
+ - ``SecurityOnion`` - This is an organization that we create to enable analyzers by default and provide integration with TheHive.
 
 It is always recommended that you create your own organization, but the provided organizations should work for testing.
 
