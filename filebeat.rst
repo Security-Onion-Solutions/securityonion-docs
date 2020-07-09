@@ -18,3 +18,8 @@ Logging
 -------
 
 Filebeat's log can be found in ``/opt/so/log/filebeat/``.
+
+More Information
+----------------
+
+For more information about Filebeat, please see https://www.elastic.co/beats/filebeat.
