@@ -20,7 +20,7 @@ Download and Verify
 Distributed Deployments
 -----------------------
 
-If deploying a distributed environment, you’ll need to perform the remaining steps on the management server, as well as all forward and search nodes, but make sure you install and configure the management server first. For best performance, the management server should be dedicated to just being a server for the other nodes (the management server should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the management server on ports ``22``, ``4505``, and ``4506``.
+If deploying a distributed environment, you’ll need to perform the remaining steps on the manager node, as well as all forward and search nodes, but make sure you install and configure the manager node first. For best performance, the manager node should be dedicated to just being a server for the other nodes (the manager node should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the manager node on ports ``22``, ``4505``, and ``4506``.
 
 Install
 -------
@@ -38,7 +38,7 @@ Install
 
 Update
 ------
-#. If this box is going to be a node (forward, heavy, or search), make sure that your management server and all other nodes in your deployment are fully updated with ``sudo soup`` before adding a new node.
+#. If this box is going to be a node (forward, heavy, or search), make sure that your manager node and all other nodes in your deployment are fully updated with ``sudo soup`` before adding a new node.
 #. Verify that you have Internet connectivity. If necessary, configure your `proxy <Proxy>`__ settings.
 #. If you installed from the Security Onion 16.04 ISO image, run ``sudo soup`` and reboot if prompted, then skip to the Setup section below (if you get any errors relating to MySQL, please see the `MySQL-Upgrade-Errors <MySQL-Upgrade-Errors>`__ section). Otherwise, if you're installing on Ubuntu, continue to the next step.
 #. Install all Ubuntu updates and reboot:
@@ -111,21 +111,21 @@ Setup
 #. When ready to reboot, click ``Yes, reboot!``.
 #. After rebooting, log back in and start the Setup wizard again the same as you did before. It will detect that you have already configured ``/etc/network/interfaces`` and will walk you through the rest of the configuration.
 #. Select ``Production Mode``.
-#. Select ``New`` or ``Existing`` (``New`` if this is a management server or standalone, and ``Existing`` for forward, heavy, and search nodes).
+#. Select ``New`` or ``Existing`` (``New`` if this is a manager node or standalone, and ``Existing`` for forward, heavy, and search nodes).
 
--  New (Management Server or Standalone)
+-  New (Manager Node or Standalone)
 
    #. Provide a username and password for the analyst user.
    #. Select ``Best Practices``.
    #. Choose your IDS ruleset.
-   #. Choose whether or not to enable sensor services.  If this is going to be a standalone box with no other nodes connected, you can enable sensor services. Otherwise, if this going to be a distributed deployment with multiple nodes connected, we recommend disabling sensor services on this management server.
+   #. Choose whether or not to enable sensor services.  If this is going to be a standalone box with no other nodes connected, you can enable sensor services. Otherwise, if this going to be a distributed deployment with multiple nodes connected, we recommend disabling sensor services on this manager node.
    #. Choose whether or not to use search nodes for log storage.  Please note that, if you choose to use search nodes, then until a search node is configured and Logstash has intialized on the search node, you will not be able to review log data for configured forward nodes.
    #. Select ``Yes`` to proceed with your changes.
 
 -  Existing (Forward Node, Heavy Node, or Search Node)
 
-   #. Provide the hostname or IP address of the management server (some folks may want to specify the IP/hostname of the management server in ``/etc/hosts`` and use the specified hostname during setup -- this may help in the event the management server IP changes.)
-   #. Provide a username to SSH to the management server for the node (should have already been created on the management server and added to the ``sudo`` group). Please make sure that your server has been set up and you have network connectivity and no firewall rules that would block this traffic. Additionally, consider creating a separate SSH account on the management server for each node so that if a node is ever compromised, its individual account can be disabled without affecting the other nodes.  If you need to create a user account on the management server, you can do something like the following (where ``$nodeuser`` is your specified user): ``sudo adduser $nodeuser && sudo adduser $nodeuser sudo``  The new account must have a full home directory. If you do not create it when you create the account, copy ``/etc/skel`` to ``/home/$nodeuser`` and do ``chown -R $nodeuser:$nodeuser /home/$nodeuser``. This is needed so the .ssh directory may be created to manage the connection. *NOTE: This user should be removed from the sudo group on the management server after setup*.
+   #. Provide the hostname or IP address of the manager node (some folks may want to specify the IP/hostname of the manager node in ``/etc/hosts`` and use the specified hostname during setup -- this may help in the event the manager node IP changes.)
+   #. Provide a username to SSH to the manager node for the node (should have already been created on the manager node and added to the ``sudo`` group). Please make sure that your server has been set up and you have network connectivity and no firewall rules that would block this traffic. Additionally, consider creating a separate SSH account on the manager node for each node so that if a node is ever compromised, its individual account can be disabled without affecting the other nodes.  If you need to create a user account on the manager node, you can do something like the following (where ``$nodeuser`` is your specified user): ``sudo adduser $nodeuser && sudo adduser $nodeuser sudo``  The new account must have a full home directory. If you do not create it when you create the account, copy ``/etc/skel`` to ``/home/$nodeuser`` and do ``chown -R $nodeuser:$nodeuser /home/$nodeuser``. This is needed so the .ssh directory may be created to manage the connection. *NOTE: This user should be removed from the sudo group on the manager node after setup*.
 
    #. Select Node Type:
 
@@ -135,7 +135,7 @@ Setup
          -  Modify the selected sniffing interfaces if necessary -- otherwise, continue.
          -  Modify ``HOME_NET`` as desired.
          -  Select ``Yes`` to proceed with your changes.
-         - *Please note: If you chose to use one or more search nodes with your management server, you will be able to receive IDS alerts and pull PCAPs from the forward node once setup completes, however, you will not be able to review other logs (i.e. Zeek logs in Kibana) from the node until a search node has been configured for the management server and Logstash on the search node has initialized.*
+         - *Please note: If you chose to use one or more search nodes with your manager node, you will be able to receive IDS alerts and pull PCAPs from the forward node once setup completes, however, you will not be able to review other logs (i.e. Zeek logs in Kibana) from the node until a search node has been configured for the manager node and Logstash on the search node has initialized.*
 
       -  Heavy Node
 
@@ -150,7 +150,7 @@ Setup
          -  Provide amount of disk space to be used for Elasticsearch to store logs (default is half of available disk space).
          -  Select ``Yes`` to proceed with your changes.
 
-   #. Remove ``$nodeuser`` from the ``sudo`` group on the management server:
+   #. Remove ``$nodeuser`` from the ``sudo`` group on the manager node:
    
       ::
       
