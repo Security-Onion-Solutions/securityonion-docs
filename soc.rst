@@ -11,11 +11,11 @@ Most of our analyst tools are browser-based. We recommend chromium or chromium-b
    :maxdepth: 2
 
    hunt
-   hive
    kibana
+   grafana
    cyberchef
    playbook
    fleet
+   hive
    attack-navigator
-   grafana
    cortex
