@@ -19,4 +19,4 @@ If you've previously added any external agents (Wazuh, filebeat, winlogbeat, etc
 Distributed deployments
 -----------------------
 
-If you have a distributed deployment with a management server and separate sensor boxes and/or search nodes, always update the management server first before updating other boxes. Then make sure to update the remaining boxes shortly thereafter. This will help to ensure that all boxes in your deployment are running the same code versions and help to avoid any incompatibilities.
+If you have a distributed deployment with a manager node and separate sensor nodes and/or search nodes, always update the manager node first before updating other nodes. Then make sure to update the remaining nodes shortly thereafter. This will help to ensure that all nodes in your deployment are running the same code versions and help to avoid any incompatibilities.
