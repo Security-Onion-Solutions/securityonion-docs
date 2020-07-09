@@ -36,7 +36,7 @@ Analysis Tools
 
 With full packet capture, IDS logs and Zeek data, there is a daunting amount of data available at the analyst’s fingertips. Fortunately, Security Onion integrates the following tools to help make sense of this data:
 
-- Security Onion Console (SOC). SOC is the first thing you see when you log into Security Onion. It includes a new Hunt interface for Threat Hunting which allows you to query all of your NIDS/HIDS alerts, Zeek logs, and system logs. SOC also includes an interface for full packet capture retrieval.
+- :ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`Hunt` interface for threat hunting which allows you to query all of your NIDS/HIDS alerts, Zeek logs, and system logs. SOC also includes an interface for full packet capture retrieval.
 
 -  :ref:`hive` is the incident response interface. It displays alerts and allows you to turn them into cases where you and your fellow defenders can record your case notes and ultimately close the case. TheHive allows you to pivot to Hunt or Kibana for further context.
 
