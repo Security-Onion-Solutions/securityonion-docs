@@ -5,9 +5,7 @@ Logstash
 
 From https://www.elastic.co/products/logstash :
 
-    Logstash is an open source, server-side data processing pipeline
-    that ingests data from a multitude of sources simultaneously,
-    transforms it, and then sends it to your favorite “stash".
+    Logstash is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favorite "stash."
 
 In Security Onion 2.0, Logstash transports unparsed logs to Elasticsearch. Elasticsearch then parses and stores those logs.
 
@@ -36,30 +34,12 @@ lsheap
 
 By default, if total available memory is 8GB or greater, the Logstash heap size in ``/etc/logstash/jvm.options`` is configured (during setup) to equal 25% of available memory, but no greater than 4GB.
 
-See
-https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops
-for more details.
+See https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops for more details.
 
-You may need to adjust the value depending on your system's performance. The changes will be applied the next time the mionin checks in. You can force it to happen immediately by running ``sudo salt-call state.apply logstash`` on the actual node or by running ``sudo salt 'MINIONNAME' state.apply logstash`` on the management server.
+You may need to adjust the value depending on your system's performance. The changes will be applied the next time the minion checks in. You can force it to happen immediately by running ``sudo salt-call state.apply logstash`` on the actual node or by running ``sudo salt 'MINIONNAME' state.apply logstash`` on the management server.
 
 Adding New Logs or Modifying Existing Parsing
 ---------------------------------------------
-
-
-Parsing
-~~~~~~~
-
-Configuration files for custom parsing can be placed in ``/etc/logstash/custom``. These will automatically get copied over to ``/etc/logstash/conf.d`` during the starting of Logstash.
-
-.. note::
-
-    If you are using a distributed or heavy distributed `deployment type <architecture#deployment-types>`__, it is best practice to put your custom configuration files in the ``/etc/logstash/custom`` directory on the management node.  The custom configuration files will then be replicated every 15 minutes or immediately if you use `Salt <Salt#features>`__ to force the replication to take place.
-
-After adding your custom configuration file(s), restart Logstash and check the log(s) for errors:
-
-::
-
-   sudo so-logstash-restart && sudo tail -f /var/log/logstash/logstash.log
 
 Mapping Templates
 ~~~~~~~~~~~~~~~~~
@@ -106,12 +86,6 @@ Logging
 ~~~~~~~
 
 Log file settings can be adjusted in ``/etc/logstash/log4j2.properties``. Currently, logs are set to rollover daily, and configured to be deleted after 7 days.
-
-Options
-~~~~~~~
-
-You can specify your own custom options to be appended to the Logstash startup command, by editing ``LOGSTASH_OPTIONS`` in
-``/etc/nsm/securityonion.conf``.
 
 Queue
 -----
