@@ -15,7 +15,7 @@ Security Onion Documentation
    soc
    network
    host
-   elastic
+   logs
    updating
    accounts
    customizing
