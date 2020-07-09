@@ -36,7 +36,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Standalone Deployments
 ----------------------
 
-In a standalone deployment, the management server components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
+In a standalone deployment, the manager components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
 - CPU: Used to parse incoming events, index incoming events, search metatadata, capture PCAP, analyze packets, and run the frontend components. As data and event consumption increases, a greater amount of CPU will be required.
 - RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, Suricata, Zeek, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
@@ -44,10 +44,10 @@ In a standalone deployment, the management server components and the sensor comp
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
-Management server with local log storage
+Manager node with local log storage
 ----------------------------------------
 
-In an enterprise distributed deployment, a management server will store logs from itself and forward nodes. It can also act as a syslog destination for other log sources to be indexed into Elasticsearch. An enterprise management server should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
+In an enterprise distributed deployment, a manager node will store logs from itself and forward nodes. It can also act as a syslog destination for other log sources to be indexed into Elasticsearch. An enterprise manager node should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
 
 - CPU: Used to parse incoming events, index incoming events, search metadata. As consumption of data and events increases, more CPU will be required.
 - RAM: Used for Logstash, Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
@@ -55,10 +55,10 @@ In an enterprise distributed deployment, a management server will store logs fro
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
-Management server with search nodes
+Manager node with search nodes
 -----------------------------------
 
-This deployment type utilizes search nodes to parse and index events. As a result, the hardware requirements of the management are reduced. An enterprise management server should have 4-8 CPU cores, 8-16GB RAM, and 100GB to 1TB of disk space. Many folks choose to host their management server in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
+This deployment type utilizes search nodes to parse and index events. As a result, the hardware requirements of the manager node are reduced. An enterprise manager node should have 4-8 CPU cores, 8-16GB RAM, and 100GB to 1TB of disk space. Many folks choose to host their manager node in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
 
 - CPU: Used to receive incoming events and place them into Redis. Used to run all the front end web comp onents and aggregate search results from the search nodes.
 - RAM: Used for Logstash and Redis. The amount of available RAM directly impacts the size of the Redis queue.
@@ -80,7 +80,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Forward Node (Sensor)
 ---------------------
 
-A forward node runs sensor components only, and forwards metadata to the management server. All PCAP stays local to the sensor, and is accessed through use of an agent.
+A forward node runs sensor components only, and forwards metadata to the manager node. All PCAP stays local to the sensor, and is accessed through use of an agent.
 
 - CPU: Used for analyzing and storing network traffic. As monitored bandwidth increases, a greater amount of CPU will be required. See below.
 - RAM: Used for write cache and processing traffic.
@@ -91,7 +91,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Heavy Node (Sensor with ES components)
 --------------------------------------
 
-A heavy node Runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through Kibana, the management server queries this node's Elasticsearch instance.
+A heavy node Runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through Kibana, the manager node queries this node's Elasticsearch instance.
 
 - CPU: Used to parse incoming events, index incoming events, search metadata . As monitored bandwidth (and the amount of overall data/events) increases, a greater amount of CPU will be required.
 - RAM: Used for Logstash , Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
