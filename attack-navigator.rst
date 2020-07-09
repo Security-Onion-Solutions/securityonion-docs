@@ -12,7 +12,7 @@ From https://github.com/mitre-attack/attack-navigator:
 Usage
 -----
 
-Security Onion Console (SOC) provides a link to ATT&CK Navigator.
+:ref:`soc` provides a link to ATT&CK Navigator.
 
 More Information
 ----------------
