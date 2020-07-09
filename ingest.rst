@@ -26,16 +26,16 @@ Fleet Standalone
 | Pipeline: Filebeat [Fleet Node] --> Logstash [M | M+S] --> ES Ingest [S | M+S]
 | Logs: Osquery
 
-Management Node
----------------
-| Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [Management] --> ES Ingest [S]
+Manager Node
+------------
+| Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [Manager] --> ES Ingest [S]
 | Logs: Zeek, Suricata, Wazuh, Osquery/Fleet
 | 
-| WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [Management] --> ES Ingest [S]
+| WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [Manager] --> ES Ingest [S]
 | Logs: WEL
 
-Management + Search
--------------------
+Manager + Search
+----------------
 | Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [M+S] --> ES Ingest [M+S]
 | Logs: Zeek, Suricata, Wazuh, Osquery/Fleet
 | 
