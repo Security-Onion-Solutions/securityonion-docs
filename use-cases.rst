@@ -31,7 +31,7 @@ For more information, please see the :ref:`production-deployment` section.
 Production Server - Distributed Deployment
 ------------------------------------------
 
-Install Security Onion on the management server. Then install Security Onion on one or more nodes and join to the management server.
+Install Security Onion on the manager node. Then install Security Onion on one or more forward, search, or heavy nodes and join to the manager node.
 
 For more information, please see the :ref:`production-deployment` section.
 
