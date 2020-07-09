@@ -19,7 +19,7 @@ Kibana uses multiple hyperlinked fields to accelerate investigations and decisio
 Transcript
 ~~~~~~~~~~
 
-When present, clicking the ``_id`` field allows an analyst to pivot to transcript via :ref:`soc`.
+When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot to pcap transcript via :ref:`soc`.
 
 .. image:: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_pcap.png
 
