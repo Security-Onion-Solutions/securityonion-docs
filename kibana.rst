@@ -3,31 +3,13 @@
 Kibana
 ======
 
-From https://www.elastic.co/products/kibana :
+From https://www.elastic.co/kibana:
 
-    Kibana lets you visualize your Elasticsearch data and navigate the
-    Elastic Stack, so you can do anything from learning why you're
-    getting paged at 2:00 a.m. to understanding the impact rain might
-    have on your quarterly numbers.
+    Kibana is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. Do anything from tracking query load to understanding the way requests flow through your apps.
 
 Screenshot
 ----------
 .. image:: images/kibana/kibana.png
-
-Authentication
---------------
-If you're using our default SSO authentication, then you can login using your normal :ref:`soc` username and password.
-
-If you switch to Elastic authentication, then you will have a separate username and password to login to Kibana.  For more information, please see the :ref:`elastic-auth` section.
-
-Configuration
--------------
-
--  Configuration files for Kibana can be found in ``/etc/kibana/``.
-
--  Other configuration options for Kibana can be found in ``/etc/nsm/securityonion.conf``.
-
--  Kibana logs can be found in ``/var/log/kibana/``.
 
 Pivoting
 --------
@@ -37,25 +19,30 @@ Kibana uses multiple hyperlinked fields to accelerate investigations and decisio
 Transcript
 ~~~~~~~~~~
 
-When present, clicking the ``_id`` field allows an analyst to pivot to transcript via Security Onion Console (SOC).
+When present, clicking the ``_id`` field allows an analyst to pivot to transcript via :ref:`soc`.
 
 .. image:: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_pcap.png
 
 Indicator Dashboard
 ~~~~~~~~~~~~~~~~~~~
 
-When present, clicking these fields allows an analyst to pivot to the Indicator dashboard, where a variety of information is presented relative to the term:value.
+Several fields are hyperlinked to the Indicator dashboard to allow you to get all the information you can about a particular indicator:
 
 | ``uid``
-| ``source_ip``
-| ``source_port``
-| ``destination_ip``
-| ``destination_port``
+| ``source.ip``
+| ``source.port``
+| ``destination.ip``
+| ``destination.port``
 
 Search Results
 --------------
 
-Search results in the dashboards and through Discover are limited to the first ``10`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance.
+Search results in the dashboards and through Discover are limited to the first ``100`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance.
+
+Timestamps
+----------
+
+By default, Kibana will display timestamps in the timezone of your local browser. If you would prefer timestamps in UTC, you can go to ``Management`` --> ``Advanced Settings`` and set ``dateFormat:tz`` to ``UTC``.
 
 Search Request Timeout
 ----------------------
@@ -79,11 +66,6 @@ Finally, restart Kibana:
 ::
 
    sudo so-kibana-restart
-
-Timestamps
-----------
-
-By default, Kibana will display timestamps in the timezone of your local browser. If you would prefer timestamps in UTC, you can go to ``Management`` --> ``Advanced Settings`` and set ``dateFormat:tz`` to ``UTC``.
 
 Plugins
 -------
