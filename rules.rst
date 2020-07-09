@@ -3,28 +3,20 @@
 Managing Rules
 ==============
 
-NIDS rulesets are chosen during setup and are specified in ``/etc/nsm/pulledpork/pulledpork.conf``. If you change any of the configuration in ``/etc/nsm/pulledpork/``, then you will need to update your rules as shown in the following section.
-
 Updating Rules
 --------------
 
-To update your rules, run ``rule-update`` on your management server:
+To update your rules, run ``so rule-update`` on your management server:
 
 ::
 
-  sudo rule-update
+  sudo so-rule-update
   
-If you have a distributed deployment with salt enabled and you run ``rule-update`` on your management server, then those new rules will automatically replicate from the managements server to your sensors within 15 minutes.  If you don't want to wait 15 minutes, you can force the sensors to update immediately by running the following command on your management server:
+If you have a distributed deployment and you update the rules on your manager node, then those rules will automatically replicate from the manager node to your sensors within 15 minutes.  If you don't want to wait 15 minutes, you can force the sensors to update immediately by running the following command on your manager node:
 
 ::
 
   sudo salt '*' state.highstate
-  
-If you have a distributed deployment with salt disabled and you run ``rule-update`` on your management server, then those new rules will replicate from the management to your sensors during the daily cron job.  If you don't want to wait for that daily cron job, you can force an immediate update on the sensor by logging into the sensor and running:
-
-::
-
-  sudo rule-update
 
 Rulesets
 --------
