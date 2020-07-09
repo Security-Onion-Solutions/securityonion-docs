@@ -5,7 +5,7 @@ Elastic Auth
 
 Starting in Elastic 6.8.0, Elastic authentication is included for free in :ref:`elastic-features`.  This allows you to assign different privileges to different users in Kibana.
 
-To enable, simply run ``so-elastic-auth`` on your management server only (or standalone) and follow the prompts.  ``so-elastic-auth`` will do the following:
+To enable, simply run ``so-elastic-auth`` on your manager node only (or standalone) and follow the prompts.  ``so-elastic-auth`` will do the following:
 
 - walk you through switching to Elastic Features if necessary
 
