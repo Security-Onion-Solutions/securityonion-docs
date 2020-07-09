@@ -6,7 +6,7 @@ Managing Rules
 Updating Rules
 --------------
 
-To update your rules, run ``so rule-update`` on your management server:
+To update your rules, run ``so rule-update`` on your manager node:
 
 ::
 
