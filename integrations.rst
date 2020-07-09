@@ -9,7 +9,6 @@ There are many different ways that we can integrate Security Onion into other sy
    :maxdepth: 2
    
    alienvault-otx
-   etherpad
    fir
    grr
    misp
