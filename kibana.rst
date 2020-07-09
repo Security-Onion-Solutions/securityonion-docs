@@ -16,7 +16,7 @@ Screenshot
 
 Authentication
 --------------
-If you're using our default SSO authentication, then you can login using your normal Security Onion Console (SOC) username and password.
+If you're using our default SSO authentication, then you can login using your normal :ref:`soc` username and password.
 
 If you switch to Elastic authentication, then you will have a separate username and password to login to Kibana.  For more information, please see the :ref:`elastic-auth` section.
 
