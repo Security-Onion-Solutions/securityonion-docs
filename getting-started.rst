@@ -12,11 +12,11 @@ This section will give you an overview of different use cases for Security Onion
    architecture
    docker
    hardware
+   release-notes
    download
    vmware
    virtualbox
    trouble-booting
-   release-notes
    so-import-pcap
    quick-iso-image
    quick-eval-non-iso
