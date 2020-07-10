@@ -12,7 +12,7 @@ From https://github.com/mitre-attack/attack-navigator:
 Usage
 -----
 
-:ref:`soc` provides a link to ATT&CK Navigator.
+:ref:`soc` provides a link to ATT&CK Navigator. :ref:`playbook` can update Navigator layers.
 
 More Information
 ----------------
