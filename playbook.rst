@@ -25,7 +25,7 @@ The final piece to Playbook is automation. Once a Play is made active, the follo
 Logging in
 ----------
 
-You can access Playbook by navigating to https://MANAGER/playbook and logging in with the following credentials:
+You can access Playbook by going to :ref:`soc`, clicking the Playbook link, and then logging in with the following credentials:
 
 | Username: analyst
 | Password: changeme
