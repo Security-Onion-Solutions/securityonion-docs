@@ -14,6 +14,16 @@ If you selected to enable Fleet during the setup, you can now login to Fleet usi
 
 Custom :ref:`osquery` packages were generated for you during setup and you can find them under Downloads in :ref:`soc`. Before you install a package on an endpoint, use ``sudo so-allow`` on your manager node to configure the SO firewall to allow inbound osquery connections.
 
+Configuration
+-------------
+
+Fleet configuration can be found in ``/opt/so/conf/fleet/``.
+
+Logging
+-------
+
+Fleet logs can be found in ``/opt/so/log/fleet/``.
+
 More Information
 ----------------
 
