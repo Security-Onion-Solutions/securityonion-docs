@@ -3,10 +3,8 @@
 FreqServer
 ==========
 
-| FreqServer is based on freq.py and freq\_server.py (originally created
-  by Mark Baggett).
-| Thanks to Justin Henderson for all his work with the FreqServer docker
-  image!
+| FreqServer is based on freq.py and freq\_server.py (originally created by Mark Baggett).
+| Thanks to Justin Henderson for all his work with the FreqServer docker image!
 
 From https://github.com/sans-blue-team/freq.py:
 
@@ -22,8 +20,7 @@ From https://github.com/sans-blue-team/freq.py:
     script names, process names, service names, workstation names, TLS
     certificate subjects and issuer subjects, etc.
 
-From
-https://isc.sans.edu/forums/diary/Continuous+Monitoring+for+Random+Strings/20451/
+From https://isc.sans.edu/forums/diary/Continuous+Monitoring+for+Random+Strings/20451/
 
     Freq\_server.py is a multithreaded web based API that will allow you
     to quickly query your frequency tables. The server isn’t intended to
@@ -36,69 +33,6 @@ https://isc.sans.edu/forums/diary/Continuous+Monitoring+for+Random+Strings/20451
 Configuration
 -------------
 
-| For information how to modify configuration for FreqServer, consult
-  the following:
-| https://github.com/SMAPPER/docker_freq_server
+For information how to modify configuration for FreqServer, please see https://github.com/SMAPPER/docker_freq_server.
 
-| FreqServer is disabled by default when running ``Production Mode``
-  with ``Best Practices``.
-| You can enable it by doing the following:
-
-::
-
-    sudo sed -i 's/FREQ_SERVER_ENABLED="no"/FREQ_SERVER_ENABLED="yes"/' /etc/nsm/securityonion.conf
-    sudo so-elastic-start
-    sudo so-logstash-restart
-
-FreqServer's logs can be found in ``/var/log/freq_server/``.
-
-Kibana
-------
-
-You can find FreqServer data on the Frequency Analysis dashboard.
-
-DNS Highest Registered Domain Frequency Analysis
-------------------------------------------------
-|freq1-dns|
-
-DNS Parent Domain Frequency Analysis
-------------------------------------
-|freq2-dns|
-
-HTTP Frequency Analysis
------------------------
-|freq3-http|
-
-SSL Certificate Common Name Frequency Analysis
-----------------------------------------------
-|freq4-ssl|
-
-SSL Certificate Server Name Frequency Analysis
-----------------------------------------------
-|freq5-ssl|
-
-SSL Certificate Issuer Name Frequency Analysis
-----------------------------------------------
-|freq6-ssl|
-
-X.509 Certificate Common Name Frequency Analysis
-------------------------------------------------
-|freq7-x509|
-
-X.509 Certificate Issuer Organization Frequency Analysis
---------------------------------------------------------
-|freq8-x509|
-
-X.509 Certificate Issuer Frequency Analysis
--------------------------------------------
-|freq9-x509|
-
-.. |freq1-dns| image:: https://user-images.githubusercontent.com/1659467/30856300-e60be17a-a285-11e7-87fc-acc27665cd7e.PNG
-.. |freq2-dns| image:: https://user-images.githubusercontent.com/1659467/30856292-e5d0b186-a285-11e7-875e-7e55c4684507.PNG
-.. |freq3-http| image:: https://user-images.githubusercontent.com/1659467/30856293-e5d0d47c-a285-11e7-8c91-af45cab8276e.PNG
-.. |freq4-ssl| image:: https://user-images.githubusercontent.com/1659467/30856295-e5d1014a-a285-11e7-9dd4-19a2844dc824.PNG
-.. |freq5-ssl| image:: https://user-images.githubusercontent.com/1659467/30856296-e5d1f320-a285-11e7-8892-86f6a0f599f1.PNG
-.. |freq6-ssl| image:: https://user-images.githubusercontent.com/1659467/30856294-e5d0dd0a-a285-11e7-8186-179e52c49383.PNG
-.. |freq7-x509| image:: https://user-images.githubusercontent.com/1659467/30856297-e5e2bbc4-a285-11e7-9cc4-87781d3d7768.PNG
-.. |freq8-x509| image:: https://user-images.githubusercontent.com/1659467/30856299-e5e41500-a285-11e7-937b-dda97690c386.PNG
-.. |freq9-x509| image:: https://user-images.githubusercontent.com/1659467/30856298-e5e2f9f4-a285-11e7-9c95-b24f44199701.PNG
+FreqServer is currently disabled by default.
