@@ -7,14 +7,14 @@ Once you have run ``so-allow`` and allowed your IP address, you can then connect
 
 SOC gives you access to a variety of tools and they all complement each other very well. For example, here's one potential workflow:
 
- - open :ref:`hive` and review NIDS alerts from :ref:`suricata`
- - find an interesting alert and pivot from there to :ref:`kibana` or :ref:`hunt` for more information about the connection or the IP addresses involved from :ref:`zeek` and perhaps :ref:`sysmon` logs
- - return to :ref:`hive` and document any indicators of compromise (IOCs) found thus far
- - go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints
- - use :ref:`cyberchef` to further analyze and decode additional host artifacts
- - develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward
- - finally, return to :ref:`hive` and document the entire investigation and close the case
-
+ - Open :ref:`hive` and review NIDS alerts from :ref:`suricata`.
+ - Once you've found a NIDS alerts that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses. Pivot to :ref:`kibana` or :ref:`hunt` for more information from :ref:`zeek` or perhaps :ref:`sysmon` logs.
+ - Return to :ref:`hive` and document any indicators of compromise (IOCs) found thus far.
+ - Go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints.
+ - Use :ref:`cyberchef` to further analyze and decode additional host artifacts.
+ - Develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward.
+ - Finally, return to :ref:`hive` and document the entire investigation and close the case.
+ 
 .. toctree::
    :maxdepth: 2
 
