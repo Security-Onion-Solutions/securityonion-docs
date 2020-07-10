@@ -10,7 +10,7 @@ From https://stedolan.github.io/jq/:
 Usage
 -----
 
-If you have :ref:`zeek` configured to write logs in JSON format and you want to parse those logs from the command line, then you can use ``jq``.  Here's a basic example:
+We configure :ref:`zeek` to write logs in JSON format. If you want to parse those logs from the command line, then you can use ``jq``.  Here's a basic example:
 
 ::
 
