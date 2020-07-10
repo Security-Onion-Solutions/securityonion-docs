@@ -165,9 +165,8 @@ If you need to make additional directories accessible to Elasticsearch, or would
 Logs
 ----
 
--  Elasticsearch logs can be found in ``/var/log/elasticsearch/``.
--  Logging configuration can be found in
-   ``/etc/elasticsearch/log4j2.properties``.
+-  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
+-  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.
 
 Distributed
 -----------
