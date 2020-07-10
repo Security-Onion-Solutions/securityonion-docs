@@ -8,7 +8,7 @@ Once you have run ``so-allow`` and allowed your IP address, you can then connect
 SOC gives you access to a variety of tools and they all complement each other very well. For example, here's one potential workflow:
 
  - Open :ref:`hive` and review NIDS alerts from :ref:`suricata`.
- - Once you've found a NIDS alerts that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses. Pivot to :ref:`kibana` or :ref:`hunt` for more information from :ref:`zeek` or perhaps :ref:`sysmon` logs.
+ - Once you've found a NIDS alert that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses, so pivot to :ref:`kibana` or :ref:`hunt` for more information from :ref:`zeek` or perhaps :ref:`sysmon` logs.
  - Return to :ref:`hive` and document any indicators of compromise (IOCs) found thus far.
  - Go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints.
  - Use :ref:`cyberchef` to further analyze and decode additional host artifacts.
