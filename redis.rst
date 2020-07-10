@@ -3,7 +3,7 @@
 Redis
 =====
 
-From: https://redis.io/
+From https://redis.io/:
 
     Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs and geospatial indexes with radius queries.
 
@@ -44,3 +44,8 @@ We configure Redis to use 10% of your total system memory.  If you have sufficie
 Logstash on the manager node is configured to send to Redis.  For best performance, you'll want to ensure that ``batch`` is set to ``true`` and then tune the ``batch_events`` variable to find the sweet spot for your deployment.  For more information about logstash's output plugin for Redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html.
 
 Logstash on search nodes pulls from Redis.  For best performance, you'll want to tune ``batch_count`` and ``threads`` to find the sweet spot for your deployment.  For more information about logstash's input plugin for Redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html.
+
+More Information
+----------------
+
+For more information about Redis, please see https://redis.io/.
