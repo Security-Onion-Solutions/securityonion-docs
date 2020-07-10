@@ -22,10 +22,7 @@ ls_pipeline_batch_size
 ls_pipeline_workers
 ~~~~~~~~~~~~~~~~~~~
 
-    The number of workers that will, in parallel, execute the filter and
-    output stages of the pipeline. If you find that events are backing
-    up, or that the CPU is not saturated, consider increasing this
-    number to better utilize machine processing power. By default this value is set to the number of cores in the system.
+    The number of workers that will, in parallel, execute the filter and output stages of the pipeline. If you find that events are backing up, or that the CPU is not saturated, consider increasing this number to better utilize machine processing power. By default this value is set to the number of cores in the system.
 
 For more information, please see https://www.elastic.co/guide/en/logstash/current/logstash-settings-file.html.
 
@@ -93,23 +90,16 @@ Queue
 Memory-backed
 ~~~~~~~~~~~~~
 
-From:
-https://www.elastic.co/guide/en/logstash/current/persistent-queues.html
+From https://www.elastic.co/guide/en/logstash/current/persistent-queues.html:
 
-    By default, Logstash uses in-memory bounded queues between pipeline
-    stages (inputs → pipeline workers) to buffer events. The size of
-    these in-memory queues is fixed and not configurable.
+    By default, Logstash uses in-memory bounded queues between pipeline stages (inputs → pipeline workers) to buffer events. The size of these in-memory queues is fixed and not configurable.
 
 Persistent
 ~~~~~~~~~~
 
-From:
-https://www.elastic.co/guide/en/logstash/current/persistent-queues.html
+From https://www.elastic.co/guide/en/logstash/current/persistent-queues.html:
 
-    In order to protect against data loss during abnormal termination,
-    Logstash has a persistent queue feature which will store the
-    message queue on disk. Persistent queues provide durability of data
-    within Logstash.
+    In order to protect against data loss during abnormal termination, Logstash has a persistent queue feature which will store the message queue on disk. Persistent queues provide durability of data within Logstash.
 
 If you experience adverse effects using the default memory-backed queue, you can configure a disk-based persistent queue by un-commenting the following lines in ``/etc/logstash/logstash.yaml`` and  modifying the values as appropriate:
 
@@ -130,10 +120,7 @@ Then restart Logstash:
 Queue Max Bytes
 ~~~~~~~~~~~~~~~
 
-    The total capacity of the queue in number of bytes. Make sure the
-    capacity of your disk drive is greater than the value >you specify
-    here. If both queue.max\_events and queue.max\_bytes are specified,
-    Logstash uses whichever criteria is reached >first.
+    The total capacity of the queue in number of bytes. Make sure the capacity of your disk drive is greater than the value you specify here. If both queue.max\_events and queue.max\_bytes are specified, Logstash uses whichever criteria is reached first.
 
 Dead Letter Queue
 ~~~~~~~~~~~~~~~~~
@@ -160,7 +147,7 @@ The dead letter queue files are located in ``/nsm/logstash/dead_letter_queue/mai
 Redis
 ~~~~~
 
-When using search nodes, Logstash on the manager node outputs to :ref:`redis` (which also runs on the manager node). Redis queues events from the Logstash output (on the manager node) and the Logstash input on the search node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the manager node, then the redis `queue <Redis#queue>`__.
+When using search nodes, Logstash on the manager node outputs to :ref:`redis` (which also runs on the manager node). Redis queues events from the Logstash output (on the manager node) and the Logstash input on the search node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the manager node and then the redis `queue <Redis#queue>`__.
 
 Data Fields
 -----------
@@ -184,7 +171,7 @@ Read-Only
 
 This error is usually caused by the ``cluster.routing.allocation.disk.watermark`` (``low``,\ ``high``) being exceeded.
 
-You may want to check ``/var/log/elasticsearch/<hostname>.log`` to see specifically which indices have been marked as read-only.
+You may want to check ``/opt/so/log/elasticsearch/<hostname>.log`` to see specifically which indices have been marked as read-only.
 
 Additionally, you can run the following command to allow writing to the affected indices:
 
