@@ -45,6 +45,10 @@ Logstash on the manager node is configured to send to Redis.  For best performan
 
 Logstash on search nodes pulls from Redis.  For best performance, you'll want to tune ``batch_count`` and ``threads`` to find the sweet spot for your deployment.  For more information about logstash's input plugin for Redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html.
 
+Logging
+-------
+Redis logs can be found at ``/opt/so/log/redis/``.
+
 More Information
 ----------------
 
