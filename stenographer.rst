@@ -11,10 +11,16 @@ Stenographer uses :ref:`af-packet` for packet acquisition.
 
 Analysis
 --------
-
 You can access full packet capture via :ref:`soc`. :ref:`kibana` and :ref:`hunt` allow you to easily pivot to SOC for pcap.
+
+Configuration
+-------------
+Stenographer configuration can be found at ``/opt/so/conf/steno/``.
+
+Logging
+-------
+Stenographer logging can be found at ``/opt/so/log/stenographer/``.
 
 More Information
 ----------------
-
 For more information about stenographer, please see https://github.com/google/stenographer.
