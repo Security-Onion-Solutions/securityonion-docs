@@ -43,21 +43,19 @@ We enable Suricata's native support for :ref:`community-id`.
 Configuration
 -------------
 
-You can configure Suricata via ``/etc/nsm/HOSTNAME-INTERFACE/suricata.yaml`` (where ``HOSTNAME`` is your actual hostname and ``INTERFACE`` is your actual sniffing interface).
+You can configure Suricata in the :ref:`salt` pillar.
 
 If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`alerts` sections.
 
 Logging
 -------
 
-If you need to troubleshoot Suricata, check ``/var/log/nsm/HOSTNAME-INTERFACE/suricata.log`` (where ``HOSTNAME`` is your actual hostname and ``INTERFACE`` is your actual sniffing interface).
+If you need to troubleshoot Suricata, check ``/opt/so/log/suricata/suricata.log``.
 
 Stats
 -----
 
-For detailed Suricata statistics, check ``/nsm/sensor_data/HOSTNAME-INTERFACE/stats.log`` (where ``HOSTNAME`` is your actual hostname and ``INTERFACE`` is your actual sniffing interface).
-
-If you want ``stats.log`` to show per-thread stats (for example, to verify that load balancing is working properly), you can set ``threads: yes`` under the ``outputs: - stats:`` section in ``suricata.yaml`` and then restart Suricata.
+For detailed Suricata statistics, check ``/opt/so/log/suricata/stats.log``.
 
 More Information
 ----------------
