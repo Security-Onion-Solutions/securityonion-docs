@@ -85,7 +85,7 @@ To avoid this, either remove the existing indices, wiping all data, or :ref:`reâ
 Logging
 ~~~~~~~
 
-Log file settings can be adjusted in ``/etc/logstash/log4j2.properties``. Currently, logs are set to rollover daily, and configured to be deleted after 7 days.
+Log file settings can be adjusted in ``/opt/so/conf/logstash/etc/log4j2.properties``. Currently, logs are set to rollover daily, and configured to be deleted after 7 days.
 
 Queue
 -----
@@ -170,7 +170,7 @@ Logstash process Zeek logs, syslog, IDS alerts, etc., formatting said data into 
 Log
 ---
 
-The Logstash log is located at ``/var/log/logstash/logstash.log``.
+The Logstash log is located at ``/opt/so/log/logstash/logstash.log``.
 
 Errors
 ------
