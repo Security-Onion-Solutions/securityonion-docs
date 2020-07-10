@@ -8,7 +8,7 @@ From https://www.elastic.co/products/elasticsearch:
     Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. 
     As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
-In Security Onion 2.0, Elasticsearch receives unparsed logs from logstash or filebeat. It then parses and stores those logs.
+In Security Onion 2.0, Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`filebeat`. It then parses and stores those logs.
 
 Configuration
 -------------
@@ -109,9 +109,7 @@ Please keep in mind that old indices will retain previous shard settings and the
 Files
 ~~~~~
 
--  Configuration files for Elasticsearch can be found in ``/etc/elasticsearch/``.
-
--  Other configuration options for Elasticsearch can be found in ``/etc/nsm/securityonion.conf``.
+-  Configuration files for Elasticsearch can be found in ``/opt/so/conf/elasticsearch/``.
 
 -  By default, if total available memory is 8GB or greater, the heap size in ``/etc/elasticsearch/jvm.options`` is configured (during Setup) to equal 25% of available memory, but no greater than 25GB.
 
@@ -182,17 +180,17 @@ The ``manager node`` runs its own local copy of Elasticsearch, which manages cro
 Forward Nodes
 -------------
 
-When using a ``forward node``, Elastic Stack components are not enabled. Filebeat forwards all logs to Logstash on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
+When using a ``forward node``, Elastic Stack components are not enabled. :ref:`filebeat: forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
 
 Heavy Nodes
 -----------
 
-When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the manager node to query that instance (similar to ELSA distributed deployments). This is done by constructing an autossh tunnel from the heavy node to the manager node, configuring reverse port forwarding to allow the manager node to connect to the local Elasticsearch instance, and updating \_cluster/settings on the manager node so that it will query the local Elasticsearch instance.
+When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local Elasticsearch instance.
 
 Search Nodes
 -------------
 
-``Search nodes`` extend the storage and processing capabilities of the manager node, and run Elasticsearch, Logstash, and Curator. Just like heavy nodes, search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
+``Search nodes`` extend the storage and processing capabilities of the manager node, and run :ref:`elasticsearch`, :ref:`logstash`, and :ref:`curator`. Just like heavy nodes, search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
 
 Removing a node from the manager node
 -------------------------------------
@@ -219,7 +217,7 @@ All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
 Snapshots
 ---------
 
-Snapshots of the current indices can be taken and stored in a designated repository for archival purposes. Currently, you'll need to add something like the following to ``/etc/elasticsearch/elasticsearch.yml``:
+Snapshots of the current indices can be taken and stored in a designated repository for archival purposes. Currently, you'll need to add something like the following to ``/opt/so/conf/elasticsearch/elasticsearch.yml``:
 
 ::
 
