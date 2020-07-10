@@ -12,7 +12,7 @@ Stenographer uses :ref:`af-packet` for packet acquisition.
 Analysis
 --------
 
-You can access full packet capture via Security Onion Console (SOC). Kibana and Hunt allow you to easily pivot to SOC for pcap.
+You can access full packet capture via :ref:`soc`. :ref:`kibana` and :ref:`hunt` allow you to easily pivot to SOC for pcap.
 
 More Information
 ----------------
