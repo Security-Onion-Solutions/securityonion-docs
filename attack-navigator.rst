@@ -9,10 +9,14 @@ From https://github.com/mitre-attack/attack-navigator:
 
     The principal feature of the Navigator is the ability for users to define layers - custom views of the ATT&CK knowledge base - e.g. showing just those techniques for a particular platform or highlighting techniques a specific adversary has been known to use. Layers can be created interactively within the Navigator or generated programmatically and then visualized via the Navigator.
     
-Usage
------
+Accessing
+---------
 
-:ref:`soc` provides a link to ATT&CK Navigator. :ref:`playbook` can update Navigator layers.
+To access Navigator, log into :ref:`soc` and then click the Navigator hyperlink on the left side.
+
+Updating
+--------
+You can update Navigator layers via :ref:`playbook`.
 
 More Information
 ----------------
