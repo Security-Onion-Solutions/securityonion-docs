@@ -3,26 +3,26 @@
 Alert Data Fields
 =================
 
-Below are the fields derived from NIDS alerts (Suricata), after
-being processed by Logstash:
+:ref:`elasticsearch` receives NIDS alerts from :ref:`suricata` via :ref:`filebeat` or :ref:`logstash` and parses them using:
+| ``/opt/so/conf/elasticsearch/ingest/suricata.alert``
+| ``/opt/so/conf/elasticsearch/ingest/common``
 
-| ``type:snort``
-| ``/etc/logstash/conf.d/1033_preprocess_snort.conf``
+You can then find parsed NIDS alerts in :ref:`hunt` and :ref:`kibana` via their predefined queries and dashboards or by manually searching for:
 
-| alert
-| category
-| classification
-| source_ip
-| source_port
-| destination_ip
-| destination_port
-| gid
-| host
-| priority
-| protocol
-| rev
-| rule (*added through augmentation*)
-| rule_type
-| severity
-| sid
-| Signature_Info (*added through augmentation*)
+| ``event.module:"suricata"``
+| ``event.dataset:"alert"``
+
+Those alerts should have the following fields:
+
+| source.ip
+| source.port
+| destination.ip
+| destination.port
+| network.transport
+| rule.gid
+| rule.name
+| rule.rule
+| rule.rev
+| rule.severity
+| rule.uuid
+| rule.version
