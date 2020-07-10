@@ -3,7 +3,7 @@
 Alert Data Fields
 =================
 
-:ref:`elasticsearch` receives NIDS alerts from :ref:`suricata` via :ref:`filebeat` or :ref:`logstash` and parses them using:
+| :ref:`elasticsearch` receives NIDS alerts from :ref:`suricata` via :ref:`filebeat` or :ref:`logstash` and parses them using:
 | ``/opt/so/conf/elasticsearch/ingest/suricata.alert``
 | ``/opt/so/conf/elasticsearch/ingest/common``
 
