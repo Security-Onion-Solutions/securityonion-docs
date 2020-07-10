@@ -12,9 +12,15 @@ From https://github.com/gchq/CyberChef :
 
 Screenshot
 ----------
+
 .. image:: images/cyberchef/cyberchef.png
 
 Accessing
 ---------
 
 To access CyberChef, log into :ref:`soc` and click the CyberChef hyperlink.
+
+More Information
+----------------
+
+For more information about CyberChef, please see https://github.com/gchq/CyberChef.
