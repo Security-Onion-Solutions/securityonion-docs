@@ -18,6 +18,10 @@ Updating
 --------
 You can update Navigator layers via :ref:`playbook`.
 
+Configuration
+-------------
+Navigator configuration can be found at ``/opt/so/conf/navigator/``.
+
 More Information
 ----------------
 
