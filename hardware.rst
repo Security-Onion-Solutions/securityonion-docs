@@ -10,7 +10,7 @@ Security Onion only supports x86-64 architecture (standard Intel/AMD 64-bit proc
 
 .. warning::
 
-We do not support ARM or other processors!
+   We do not support ARM or other processors!
 
 UEFI
 ----
