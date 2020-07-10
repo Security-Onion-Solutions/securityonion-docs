@@ -3,8 +3,7 @@
 Curator
 =======
 
-From:
-https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about
+From https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about:
 
     Elasticsearch Curator helps you curate, or manage, your Elasticsearch indices and snapshots by:
 
@@ -23,3 +22,7 @@ As your disk reaches capacity, Curator starts deleting old indices to prevent yo
 Logs
 ----
 When Curator completes an action, it logs its activity in a log file found in ``/opt/so/log/curator/``.
+
+More Information
+----------------
+For more information about Curator, please see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about.
