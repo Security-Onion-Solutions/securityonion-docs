@@ -17,7 +17,6 @@ This section will give you an overview of different use cases for Security Onion
    vmware
    virtualbox
    trouble-booting
-   so-import-pcap
    quick-iso-image
    quick-eval-non-iso
    production-deployment
