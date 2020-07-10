@@ -13,6 +13,6 @@ From https://github.com/corelight/community-id-spec:
     simple string comparison.
     
 We enable the default Community ID support in both :ref:`zeek` and :ref:`suricata`. We also sponsored the development of Community ID support in :ref:`osquery`. 
-For tools that don't natively support Community ID, we sponsored the development of an Elasticsearch Ingest Processor to automatically generate Community ID values:
+For tools that don't natively support Community ID, we sponsored the development of an :ref:`elasticsearch` Ingest Processor to automatically generate Community ID values:
 
 https://github.com/Security-Onion-Solutions/elasticsearch-ingest-community-id
