@@ -3,11 +3,9 @@
 Security Onion Console (SOC)
 ============================
 
-Once you have run ``so-allow`` and allowed your IP address, you can then connect to Security Onion Console (SOC) and access several different analyst tools that can be used for slicing and dicing data coming from your network and endpoints.
+Once you have run ``so-allow`` and allowed your IP address, you can then connect to Security Onion Console (SOC) with your web browser. We recommend chromium or chromium-based browsers such as Google Chrome. Other browsers may work, but chromium-based browsers provide the best compatibility.
 
-Most of our analyst tools are browser-based. We recommend chromium or chromium-based browsers such as Google Chrome. Other browsers may work, but chromium-based browsers provide the best compatibility.
-
-There are a variety of tools here and they all complement each other very well. For example, here's one potential workflow:
+SOC gives you access to a variety of tools and they all complement each other very well. For example, here's one potential workflow:
 
  - open :ref:`hive` and review NIDS alerts from :ref:`suricata`
  - find an interesting alert and pivot from there to :ref:`kibana` or :ref:`hunt` for more information about the connection or the IP addresses involved from :ref:`zeek` and perhaps :ref:`sysmon` logs
