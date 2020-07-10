@@ -17,7 +17,9 @@ Usage
 
 .. warning::
 
-   so-import-pcap works differently on Security Onion 2.0 than it did in previous versions! Please consider this new version to be experimental!
+   so-import-pcap works differently on Security Onion 2.0 than it did in previous versions! 
+   
+   Please consider this new version to be experimental!
 
 This new version of so-import-pcap currently requires you to run through Setup first. You can choose Eval or Standalone. Once Setup completes, you can then run ``so-import-pcap`` and supply the full path to at least one pcap file.
 
