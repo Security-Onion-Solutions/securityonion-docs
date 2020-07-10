@@ -66,3 +66,7 @@ Sigma support currently extends to the following log sources in Security Onion:
  - :ref:`osquery`
  - network (via :ref:`zeek` logs)
  - Windows Eventlogs + :ref:`sysmon` (via :ref:`osquery`)
+
+Logging
+-------
+Playbook logs can be found in ``/opt/so/log/playbook/``.
