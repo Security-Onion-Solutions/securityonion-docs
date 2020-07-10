@@ -14,7 +14,7 @@ There are a variety of tools here and they all complement each other very well. 
  - return to :ref:`hive` and document any indicators of compromise (IOCs) found thus far
  - go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints
  - use :ref:`cyberchef` to further analyze and decode additional host artifacts
- - use :ref:`playbook` to develop a play that will automatically alert on IOCs moving forward
+ - develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward
  - finally, return to :ref:`hive` and document the entire investigation and close the case
 
 .. toctree::
