@@ -6,7 +6,11 @@ Hardware Requirements
 Architecture
 ------------
 
-Security Onion only supports x86-64 architecture (standard Intel/AMD 64-bit processors).  Sorry, we do not support ARM or other processors!
+Security Onion only supports x86-64 architecture (standard Intel/AMD 64-bit processors).  
+
+.. warning::
+
+We do not support ARM or other processors!
 
 UEFI
 ----
@@ -148,7 +152,7 @@ We highly recommend using local storage whenever possible! SAN/iSCSI/FibreChanne
 NIC
 ~~~
 
-You'll need at least two wired network interfaces: one for management (preferably connected to a dedicated management network) and then one or more for sniffing (connected to tap or span). Make sure you get good quality network card, especially for sniffing. Most users report good experiences with Intel cards.
+You'll need at least two wired network interfaces: one for management (preferably connected to a dedicated management network) and then one or more for sniffing (connected to tap or span). Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards.
 
 Packets
 ~~~~~~~
