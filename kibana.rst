@@ -11,6 +11,16 @@ Screenshot
 ----------
 .. image:: images/kibana/kibana.png
 
+Configuration
+-------------
+
+Kibana's configuration can be found in ``/opt/so/conf/kibana/``.
+
+Logging
+-------
+
+Kibana logs to ``/opt/so/log/kibana/kibana.log``.
+
 Pivoting
 --------
 
@@ -47,15 +57,15 @@ By default, Kibana will display timestamps in the timezone of your local browser
 Search Request Timeout
 ----------------------
 
-Sometimes searches can timeout in Kibana. To increase the timeout value to wait longer for results from Elasticsearch, we can adjust the value for ``elasticsearch.requestTimeout`` in ``/etc/kibana/kibana.yml`` and restart Kibana.
+Sometimes searches can timeout in Kibana. To increase the timeout value to wait longer for results from Elasticsearch, we can adjust the value for ``elasticsearch.requestTimeout`` in ``/opt/so/conf/kibana/etc/kibana.yml`` and restart Kibana.
 
-For example to increase the timeout from the default of ``30`` seconds to ``90`` seconds:
+For example to increase the timeout from the default of ``90`` seconds:
 
 ::
 
-   sudo vi /etc/kibana/kibana.yml
+   sudo vi /opt/so/conf/kibana/etc/kibana.yml
 
-Add the following line:
+Modify the following line:
 
 ::
 
@@ -110,6 +120,11 @@ Monitor Kibana log file for errors:
 
 ::
 
-    tail -f /var/log/kibana/kibana.log
+    tail -f /opt/so/log/kibana/kibana.log
 
 Kibana may take a few minutes to re-optimize.  Once that's complete, you should be able to log into Kibana and test your new plugin.
+
+More Information
+----------------
+
+For more information about Kibana, please see https://www.elastic.co/kibana.
