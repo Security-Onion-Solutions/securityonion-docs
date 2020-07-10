@@ -14,15 +14,15 @@ You can then find parsed NIDS alerts in :ref:`hunt` and :ref:`kibana` via their 
 
 Those alerts should have the following fields:
 
-| source.ip
-| source.port
-| destination.ip
-| destination.port
-| network.transport
-| rule.gid
-| rule.name
-| rule.rule
-| rule.rev
-| rule.severity
-| rule.uuid
-| rule.version
+| ``source.ip``
+| ``source.port``
+| ``destination.ip``
+| ``destination.port``
+| ``network.transport``
+| ``rule.gid``
+| ``rule.name``
+| ``rule.rule``
+| ``rule.rev``
+| ``rule.severity``
+| ``rule.uuid``
+| ``rule.version``
