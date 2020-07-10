@@ -10,8 +10,6 @@ Zeek is formerly known as Bro.  From https://www.zeek.org/:
 Performance
 -----------
 
-``/opt/zeek/etc/node.cfg``
-
 Zeek uses :ref:`af-packet` so that you can spin up multiple Zeek workers to handle more traffic.  
 
 To change the number of AF-PACKET workers for :ref:`zeek`:
@@ -40,9 +38,9 @@ We enable Zeek's native support for :ref:`community-id`.
 Logs
 ----
 
-Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by filebeat or :ref:`logstash`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`kibana`.
+Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`filebeat` or :ref:`logstash`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`hunt` and :ref:`kibana`.
 
-We configure Zeek to output logs in JSON format for higher performance and better parsing. We recommend that most folks leave Zeek configured for JSON output.  If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
+We configure Zeek to output logs in JSON format. If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
 
 Zeek monitors your network traffic and creates logs, such as:
 
@@ -108,14 +106,10 @@ As you can see, Zeek log data can provide a wealth of information to the analyst
 Email
 -----
 
-``/opt/zeek/etc/zeekctl.cfg``
-
 -  To configure email notifications, please see the :ref:`email` section.
 
 Syslog
 ------
-
-``/etc/syslog-ng/syslog-ng.conf``
 
 -  To forward Zeek logs to an external syslog collector, please see the :ref:`syslog-output` section.
 
