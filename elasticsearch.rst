@@ -180,7 +180,7 @@ The ``manager node`` runs its own local copy of Elasticsearch, which manages cro
 Forward Nodes
 -------------
 
-When using a ``forward node``, Elastic Stack components are not enabled. :ref:`filebeat: forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
+When using a ``forward node``, Elastic Stack components are not enabled. :ref:`filebeat` forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
 
 Heavy Nodes
 -----------
