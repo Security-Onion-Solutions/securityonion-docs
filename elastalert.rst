@@ -3,28 +3,20 @@
 ElastAlert
 ==========
 
-From
-http://elastalert.readthedocs.io/en/latest/elastalert.html#overview:
+From http://elastalert.readthedocs.io/en/latest/elastalert.html#overview:
 
-    ElastAlert is a simple framework for alerting on anomalies, spikes,
-    or other patterns of interest from data in Elasticsearch.
+    ElastAlert is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.
 
-    At Yelp, we use Elasticsearch, Logstash and Kibana for managing our
-    ever increasing amount of data and logs. Kibana is great for
-    visualizing and querying data, but we quickly realized that it
-    needed a companion tool for alerting on inconsistencies in our data.
-    Out of this need, ElastAlert was created. If you have data being
-    when that data matches certain patterns, ElastAlert is the tool for
-    you.
+    At Yelp, we use Elasticsearch, Logstash and Kibana for managing our ever increasing amount of data and logs. Kibana is great for visualizing and querying data, but we quickly realized that it needed a companion tool for alerting on inconsistencies in our data. Out of this need, ElastAlert was created. If you have data being when that data matches certain patterns, ElastAlert is the tool for you.
 
-ElastAlert runs as a Docker container within Security Onion, queries ElasticSearch, and provides an alerting mechanism with multiple output types, such as Slack, Email, JIRA, OpsGenie, and many more.
+ElastAlert queries ElasticSearch and provides an alerting mechanism with multiple output types, such as Slack, Email, JIRA, OpsGenie, and many more.
 
 Configuration
 -------------
 
-ElastAlert rules are stored in ``/etc/elastalert/rules/``.
+ElastAlert rules are stored in ``/opt/so/conf/elastalert/``.
 
-Security Onion's default ElastAlert rules are configured with an output type of "debug", which simply outputs all matches queries to a log file, found in ``/var/log/elastalert/elastalert_stderr.log``.
+Security Onion's default ElastAlert rules are configured with an output type of "debug", which simply outputs all matches queries to a log file found in ``/opt/so/log/elastalert/``.
 
 Slack
 ~~~~~
@@ -128,6 +120,4 @@ Keep in mind, for queries that span greater than a minute back in time, you may 
 More Information
 ----------------
 
-| You can learn more about ElastAlert and its output types here:
-| http://elastalert.readthedocs.io/en/latest/
-
+For more information about ElastAlert, please see http://elastalert.readthedocs.io/en/latest/.
