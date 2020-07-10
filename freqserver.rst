@@ -33,6 +33,6 @@ From https://isc.sans.edu/forums/diary/Continuous+Monitoring+for+Random+Strings/
 Configuration
 -------------
 
-For information how to modify configuration for FreqServer, please see https://github.com/SMAPPER/docker_freq_server.
+For information on how to modify configuration for FreqServer, please see https://github.com/SMAPPER/docker_freq_server.
 
 FreqServer is currently disabled by default.
