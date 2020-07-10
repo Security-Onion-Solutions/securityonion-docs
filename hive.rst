@@ -22,6 +22,14 @@ In Kibana you will see a scripted field named ``TheHive`` with a value of ``Add2
 
 .. image:: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_hive.png
 
+Configuration
+-------------
+TheHive configuration can be found in ``/opt/so/conf/thehive/``.
+
+Logging
+-------
+TheHive logging can be found at ``/opt/so/log/thehive/``.
+
 More Information
 ----------------
 
