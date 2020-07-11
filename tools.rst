@@ -9,6 +9,8 @@ Security Onion would like to thank the following open-source projects for their 
 
 :ref:`attack-navigator`
 
+:ref:`cortex`
+
 :ref:`curator`
 
 :ref:`cyberchef`
