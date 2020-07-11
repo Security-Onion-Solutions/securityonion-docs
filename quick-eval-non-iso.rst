@@ -3,7 +3,9 @@
 Quick Evaluation on Ubuntu or CentOS
 ====================================
 
-The following guide is for quick evaluation only.  If you're building a production deployment, please see the :ref:`production-deployment` section.
+.. warning::
+
+   The following guide is for quick evaluation only.  If you're building a production deployment, please see the :ref:`production-deployment` section.
 
 If you want to quickly evaluate Security Onion on Ubuntu 18.04 or CentOS 7 (not using our ISO image), follow these steps:
 
