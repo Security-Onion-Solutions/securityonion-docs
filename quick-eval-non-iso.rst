@@ -28,8 +28,8 @@ If you want to quickly evaluate Security Onion on Ubuntu 18.04 or CentOS 7 (not 
 
   ::
 
-    git clone https://github.com/Security-Onion-Solutions/securityonion-saltstack
-    cd securityonion-saltstack
+    git clone https://github.com/Security-Onion-Solutions/securityonion
+    cd securityonion
     sudo bash so-setup-network
    
 - Follow the prompts and reboot if asked to do so.
