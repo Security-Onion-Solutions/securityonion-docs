@@ -28,7 +28,7 @@ New Hardware
 ------------
 .. tip::
 
-   If you're planning to purchase new hardware for a production deployment, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed.
+   If you're planning to purchase new hardware for a production deployment, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed. Purchasing from Security Onion Solutions will save you time and effort and help to support future development of the Security Onion platform!
 
 UEFI
 ----
