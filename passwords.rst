@@ -15,7 +15,7 @@ When you first install Security Onion, you go through the standard OS installer 
 OS root account
 ---------------
 
-Your default user account should have sudo permissions. Graphical utilities requesting administrative access should prompt for password; enter your user password. Command-line utilities that require administrative access can be prefixed with ``sudo``. For example, the ``so-status`` command requires administrative access so you can run it with ``sudo`` as follows:
+Your default user account should have sudo permissions. Command-line utilities that require administrative access can be prefixed with ``sudo``. For example, the ``so-status`` command requires administrative access so you can run it with ``sudo`` as follows:
 
 ::
 
@@ -26,4 +26,4 @@ Security Onion Console
 
 Log into Security Onion Console using the username and password you created in the Setup wizard.
 
-You can change your password in :ref:`soc`.
+You can change your password in :ref:`soc` by clicking the user icon in the upper right corner and then clicking ``Settings``.
