@@ -15,6 +15,8 @@ Credentials
 | Username: cortexeadmin  
 | Password: cortexchangeme  
 
+.. image:: https://user-images.githubusercontent.com/1659467/87231233-586ea600-c383-11ea-926e-911030c47796.png
+
 After logging in, change the password for the superadmin account (``cortexadmin``), and configure a password for the ``soadmin`` account (``SecurityOnion`` organization).
 
 After specifying a password for the ``soadmin`` user, log in to Cortex with the same account. You should then be able to configure additional analyzers or details, as needed.
