@@ -7,7 +7,7 @@ from datetime import datetime
 from recommonmark.parser import CommonMarkParser
 
 extensions = [
-    'hoverxref.extension'
+    'notfound.extension',
 ]
 templates_path = ['templates', '_templates', '.templates']
 source_suffix = ['.rst', '.md']
@@ -29,18 +29,15 @@ latex_documents = [
    u'', 'manual'),
 ]
 
-hoverxref_auto_ref = True
-hoverxref_domains = ['py']
-hoverxref_roles = [
-    'option',
-    'doc',
-]
-hoverxref_role_types = {
-    'mod': 'modal',  # for Python Sphinx Domain
-    'doc': 'modal',  # for whole docs
-    'class': 'tooltip',  # for Python Sphinx Domain
-    'ref': 'tooltip',  # for hoverxref_auto_ref config
-    'confval': 'tooltip',  # for custom object
+# sphinx-notfound-page
+# https://github.com/readthedocs/sphinx-notfound-page
+notfound_context = {
+    'title': 'Page Not Found',
+    'body': '''
+<h1>Page Not Found</h1>
+<p>Sorry, we couldn't find that page.</p>
+<p>Try using the search box or go to the homepage.</p>
+''',
 }
 
 ###########################################################################
