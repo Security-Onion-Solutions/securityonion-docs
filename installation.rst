@@ -16,7 +16,7 @@ If you want to install Security Onion using our ISO image:
 #. Boot the ISO in a machine that meets the minimum hardware specs.
 #. Follow the prompts to complete the installation and reboot.
 #. Login using the user ``onion`` and the password you set.
-#. Proceed to the :ref:`use-cases` page.
+#. Proceed to the :ref:`configuration` page.
 
 Installation on Ubuntu or CentOS
 --------------------------------
@@ -41,4 +41,4 @@ If you want to install Security Onion on Ubuntu 18.04 or CentOS 7 (not using our
      cd securityonion
      sudo bash so-setup-network
    
-#. Proceed to the :ref:`use-cases` page.
+#. Proceed to the :ref:`configuration` page.
