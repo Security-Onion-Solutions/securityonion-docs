@@ -1,2 +1,1 @@
 sphinx-notfound-page
-git+https://github.com/readthedocs/sphinx-hoverxref@master
