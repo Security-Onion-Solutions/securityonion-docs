@@ -10,6 +10,11 @@ Hardware Requirements
 
 First, check the :ref:`hardware` section.
 
+Architecture
+------------
+
+Next, review the :ref:`architecture` section.
+
 Download and Verify
 -------------------
 
@@ -31,7 +36,7 @@ Install
    -  If you have more than 2TB of disk space, you will probably want to create a dedicated ``/boot`` partition at the beginning of the disk to ensure that you don’t have any Grub booting issues. Choosing the ``LVM`` option should do this automatically.
    -  Check to see if the installer allocates a large amount of space to ``/home``. If this is the case, you may want to shrink ``/home`` to give more space to ``/``.
    -  Forward, Heavy, and Standalone nodes store full packet captures at ``/nsm/sensor_data/``, so you may want to put ``/nsm`` on a dedicated partition/disk and assign as much disk space as possible (1TB or more). For larger volumes you might also consider using XFS for the ``/nsm`` partition.
-   -  For Heavy, Standalone, and Search Nodes, it is highly recommended to place ``/nsm/elasticsearch`` and ``/nsm/logstash`` on SSD or fast spinning disk in a RAID 10 configuration. See `Hardware Requirements <Hardware#elastic-stack>`__ for more details.
+   -  For Heavy, Standalone, and Search Nodes, it is highly recommended to place ``/nsm/elasticsearch`` on SSD or fast spinning disk in a RAID 10 configuration. See `Hardware Requirements <Hardware#elastic-stack>`__ for more details.
 
 #. When installation completes, reboot into your new installation and login with the credentials you specified during installation.
 #. If you’re running a VM, now would be a good time to snapshot it so you can revert later if you need to.
