@@ -6,7 +6,7 @@ Accounts
 In Security Onion, there are two main types of accounts:
 
    - operating system (OS) accounts
-   - application accounts used when authenticating to Security Onion Console (SOC), Grafana, or TheHive
+   - application accounts used when authenticating to :ref:`soc`
 
 .. toctree::
    :maxdepth: 2
