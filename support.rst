@@ -6,7 +6,7 @@ Support
 Paid Support
 ------------
 
-If you need private or priority support, please consider purchasing support or hardware appliances from Security Onion Solutions:
+If you need private or priority support, please consider purchasing hardware appliances or support from Security Onion Solutions:
 
 https://securityonionsolutions.com
 
