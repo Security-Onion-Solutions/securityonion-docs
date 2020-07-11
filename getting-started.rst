@@ -15,7 +15,7 @@ This section will give you an overview of different use cases for Security Onion
    virtualbox
    trouble-booting
    installation
-   use-cases
+   configuration
    architecture
    production-deployment
    post-installation
