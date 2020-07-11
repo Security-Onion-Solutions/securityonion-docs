@@ -54,7 +54,7 @@ With full packet capture, IDS alerts, Zeek data, and endpoint telemetry, there i
 Deployment Scenarios
 --------------------
 
-Analysts around the world are using Security Onion today for many different :ref:`use cases <use-cases>` and :ref:`architectures <architecture>`.  The Security Onion Setup wizard allows you to easily configure the best installation scenario to suit your needs.
+Analysts around the world are using Security Onion today for many different :ref:`architectures <architecture>`.  The Security Onion Setup wizard allows you to easily configure the best installation scenario to suit your needs.
 
 Conclusion
 ----------
