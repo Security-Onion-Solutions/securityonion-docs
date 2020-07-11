@@ -3,6 +3,10 @@
 Quick Evaluation using Security Onion ISO image
 ===============================================
 
+.. warning::
+
+   The following guide is for quick evaluation only.  If you're building a production deployment, please see the :ref:`production-deployment` section.
+   
 If you just want to quickly evaluate Security Onion using our ISO image:
 
 #. Review the `Hardware Requirements <Hardware>`__ and `Release Notes <Release-Notes>`__ pages.
