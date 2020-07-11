@@ -3,7 +3,11 @@
 PCAP
 ====
 
-:ref:`soc` gives you access to our new PCAP interface. This interface allows you to access your full packet capture. You can pivot to PCAP from :ref:`hunt` or from :ref:`kibana` **or** you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. Once :ref:`soc` has located the stream, it will show a high level overview of the packets.
+:ref:`soc` gives you access to our new PCAP interface. This interface allows you to access your full packet capture. You can pivot to PCAP from :ref:`hunt` or from :ref:`kibana`. Alernatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
+
+.. image:: https://user-images.githubusercontent.com/1659467/87230100-5a346b80-c37b-11ea-8c72-71c1c2234261.png
+
+Once :ref:`soc` has located the stream, it will show a high level overview of the packets.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87229786-25bfb000-c379-11ea-8121-890bca6b889f.png
 
