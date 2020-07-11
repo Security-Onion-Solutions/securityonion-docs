@@ -28,10 +28,12 @@ Changes:
 - Updated URLs for pivot fields in Kibana.
 - Instances of hive renamed to thehive.
 
-Known Issues:
+.. warning::
 
-- The Hunt feature is currently considered "Preview" and although very useful in its current state, not everything works. We wanted to get this out as soon as possible to get the feedback from you! Let us know what you want to see! Let us know what you think we should call it!
-- You cannot pivot to PCAP from Suricata alerts in Kibana or Hunt.
-- Navigator is currently not working when using hostname to access SOC. IP mode works correctly.
-- Due to the move to ECS, the current Playbook plays may not alert correctly at this time.
-- The osquery MacOS package does not install correctly.
+  Known Issues:
+
+  - The Hunt feature is currently considered "Preview" and although very useful in its current state, not everything works. We wanted to get this out as soon as possible to get the feedback from you! Let us know what you want to see! Let us know what you think we should call it!
+  - You cannot pivot to PCAP from Suricata alerts in Kibana or Hunt.
+  - Navigator is currently not working when using hostname to access SOC. IP mode works correctly.
+  - Due to the move to ECS, the current Playbook plays may not alert correctly at this time.
+  - The osquery MacOS package does not install correctly.
