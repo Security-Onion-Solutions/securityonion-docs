@@ -9,6 +9,7 @@ This section will give you an overview of different use cases for Security Onion
    :maxdepth: 2
 
    hardware
+   architecture
    release-notes
    download
    vmware
@@ -16,6 +17,4 @@ This section will give you an overview of different use cases for Security Onion
    trouble-booting
    installation
    configuration
-   architecture
-   production-deployment
    post-installation
