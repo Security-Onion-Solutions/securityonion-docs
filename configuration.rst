@@ -12,7 +12,7 @@ Now that you've installed Security Onion, it's time to configure it! Security On
 Evaluation
 ----------
 
-The ``EVAL`` option allows you to quickly and easily evaluate Security Onion. It works well for classroom or small lab environments. Evaluation is **not** designed for production usage.
+The Evaluation option allows you to quickly and easily evaluate Security Onion. It works well for classroom or small lab environments. Evaluation is **not** designed for production usage. Choose ``EVAL``, follow the prompts, and then proceed to the :ref:`post-installation` section.
 
 Production Server - Standalone
 ------------------------------
