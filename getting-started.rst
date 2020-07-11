@@ -14,8 +14,7 @@ This section will give you an overview of different use cases for Security Onion
    vmware
    virtualbox
    trouble-booting
-   quick-iso-image
-   quick-eval-non-iso
+   installation
    use-cases
    architecture
    production-deployment
