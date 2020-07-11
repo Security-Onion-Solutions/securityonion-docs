@@ -5,7 +5,7 @@ After Installation
 
 Adjust firewall rules using so-allow
 ------------------------------------
-Depending on what kind of installation you did, Setup may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to allow other IP addresses, you can manually run :ref:`so-allow`.
+Depending on what kind of installation you did, :ref:`Setup` may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to allow other IP addresses, you can manually run :ref:`so-allow`.
 
 Services
 --------
