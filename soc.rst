@@ -3,7 +3,9 @@
 Security Onion Console (SOC)
 ============================
 
-Once you have run ``so-allow`` and allowed your IP address, you can then connect to Security Onion Console (SOC) with your web browser. We recommend chromium or chromium-based browsers such as Google Chrome. Other browsers may work, but chromium-based browsers provide the best compatibility. Depending on the options you chose in the installer, connect to the IP address or hostname of your Security Onion installation and then login using the email address and password that you specified. Once you've logged in, you can now access analyst tools like :ref:`hunt`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, :ref:`thehive`, and :ref:`attack-navigator`.
+Once you've run ``so-allow`` and allowed your IP address, you can then connect to Security Onion Console (SOC) with your web browser. We recommend chromium or chromium-based browsers such as Google Chrome. Other browsers may work, but chromium-based browsers provide the best compatibility. 
+
+Depending on the options you chose in the installer, connect to the IP address or hostname of your Security Onion installation and then login using the email address and password that you specified. Once logged in, you can now access analyst tools like :ref:`hunt`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, :ref:`thehive`, and :ref:`attack-navigator`.
 
 .. tip::
 
