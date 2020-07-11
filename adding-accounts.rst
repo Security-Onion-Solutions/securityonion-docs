@@ -17,7 +17,7 @@ For more information, please see ``man adduser``.
 SSO
 ---
 
-If you need to add a new Security Onion Console (SOC) account, you can use the ``so-user-add`` command and specifying the user's email address. For example, to add a new account for ``tom@example.com``:
+If you need to add a new Security Onion Console (SOC) account, you can use the ``so-user-add`` command and specify the user's email address. For example, to add a new account for ``tom@example.com``:
 
 ::
 
