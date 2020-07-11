@@ -14,7 +14,7 @@ If you need to add a new OS user account, you can use the ``adduser`` command.  
 
 For more information, please see ``man adduser``.
 
-SSO
+SOC
 ---
 
 If you need to add a new Security Onion Console (SOC) account, you can use the ``so-user-add`` command and specify the user's email address. For example, to add a new account for ``tom@example.com``:
