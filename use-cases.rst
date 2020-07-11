@@ -7,7 +7,7 @@ Security Onion is designed for many different use cases! Here are just a few exa
 
 .. tip::
 
-  If this is your first time using Security Onion and you just want to try it out, we recommend installing our Security Onion ISO image in in a virtual machine and selecting the Evaluation option as it's the quickest and easiest way to get started.
+  If this is your first time using Security Onion and you just want to try it out, we recommend the Evaluation option as it's the quickest and easiest way to get started.
 
 Evaluation
 ----------
