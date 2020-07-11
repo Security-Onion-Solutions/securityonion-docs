@@ -7,7 +7,6 @@ from datetime import datetime
 from recommonmark.parser import CommonMarkParser
 
 extensions = [
-    'notfound.extension',
     'hoverxref.extension'
 ]
 templates_path = ['templates', '_templates', '.templates']
