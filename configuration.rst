@@ -19,14 +19,20 @@ Production Server - Standalone
 
 Standalone is similar to Evaluation in that it only requires a single box, but Standalone is more ready for production usage. 
 
-For more information, please review the :ref:`architecture` section and then follow the :ref:`production-deployment` section.
+Choose ``STANDALONE``, follow the prompts, and then proceed to the :ref:`post-installation` section.
 
 Production Server - Distributed Deployment
 ------------------------------------------
 
-Install Security Onion on the manager node. Then install Security Onion on one or more forward, search, or heavy nodes and join to the manager node.
+If deploying a distributed environment, you’ll need to perform the remaining steps on the manager node, as well as all forward and search nodes, but make sure you install and configure the manager node first. For best performance, the manager node should be dedicated to just being a server for the other nodes (the manager node should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the manager node on ports ``22``, ``4505``, and ``4506``.
 
-For more information, please review the :ref:`architecture` section and then follow the :ref:`production-deployment` section.
+Build the manager by following the prompts. Save the ``soremote`` password so that you can join nodes to the grid.
+
+Build search nodes and join them to the manager node using the ``soremote`` password.
+
+Build forward nodes and join them to the manager node using the ``soremote`` password.
+
+Proceed to the :ref:`post-installation` section.
 
 Sending Logs to Separate SIEM
 -----------------------------
