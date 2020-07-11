@@ -3,7 +3,7 @@
 Installation using Security Onion ISO image
 ===========================================
 
-If you just want to quickly evaluate Security Onion using our ISO image:
+If you want to install Security Onion using our ISO image:
 
 #. Review the `Hardware Requirements <Hardware>`__ and `Release Notes <Release-Notes>`__ pages.
 #. `Download and verify our Security Onion ISO image <https://github.com/Security-Onion-Solutions/securityonion/wiki/ISO>`__.
