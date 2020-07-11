@@ -3,7 +3,7 @@
 Use Cases
 =========
 
-Security Onion is designed for many different use cases! Here are just a few examples.
+Now that you've installed Security Onion, it's time to configure it! Security Onion is designed for many different use cases. Here are just a few examples.
 
 .. tip::
 
