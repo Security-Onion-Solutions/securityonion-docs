@@ -3,25 +3,7 @@
 Email Configuration
 ===================
 
-so-email
---------
-
-If you want to configure email, you can run ``so-email`` and it will automatically configure automated server-side email for you as described below. Simply run the following command and follow the prompts:
-
-::
-
-   sudo so-email
-
-To automate email setup, copy and modify the example file located at ``/usr/share/securityonion/so-email.conf``, then run ``so-email`` with the ``-f`` flag:
-
-::
-
-   sudo so-email -f ~/so-email.conf
-
-Manual Configuration
---------------------
-
-If you don't want to run ``so-email`` as described above, you can configure email manually as described in the following sections. Some applications (like Wazuh) have their own mail configuration and don't rely on a mail server in the OS itself. However, you may still want to install a mail server in the OS so that you can get daily emails from the sostat script and from Zeek.
+Some applications rely on having a mail server in the OS itself and other applications (like Wazuh) have their own mail configuration and so they don't rely on a mail server in the OS itself.
 
 Operating System
 ----------------
@@ -131,4 +113,4 @@ Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
 Lack of network traffic
 -----------------------
 
-If you configured Wazuh or Zeek as shown above, they should automatically email you if your network sensors stop seeing traffic.  
+If you configured Zeek as shown above, they should automatically email you if your network sensors stop seeing traffic.  
