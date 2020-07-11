@@ -12,7 +12,7 @@ Salt is a core component of Security Onion 2.0 as it manages all processes on al
 Firewall Requirements
 ---------------------
 
-Nodes need to be able to connect to the manager node on ports ``4505/tcp`` and ``4506/tcp``:
+In a distributed deployment, the manager node controls all other nodes via salt. These other nodes are referred to as minions and they need to be able to connect to the manager node on ports ``4505/tcp`` and ``4506/tcp``:
 
 http://docs.saltstack.com/topics/tutorials/firewall.html
 
