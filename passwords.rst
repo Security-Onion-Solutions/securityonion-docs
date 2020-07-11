@@ -26,4 +26,4 @@ Security Onion Console
 
 Log into Security Onion Console using the username and password you created in the Setup wizard.
 
-You can change your password in Security Onion Console.
+You can change your password in :ref:`soc`.
