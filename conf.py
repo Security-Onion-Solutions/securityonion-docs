@@ -42,10 +42,6 @@ notfound_context = {
 }
 
 hoverxref_auto_ref = True
-hoverxref_roles = [
-    'option',
-    'doc',
-]
 
 ###########################################################################
 #          auto-created readthedocs.org specific configuration            #
