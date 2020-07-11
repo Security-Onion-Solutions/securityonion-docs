@@ -13,7 +13,7 @@ From https://github.com/gchq/CyberChef :
 Screenshot
 ----------
 
-.. image:: images/cyberchef/cyberchef.png
+.. image:: https://user-images.githubusercontent.com/1659467/87230242-9c11e180-c37c-11ea-90a2-e956771f3466.png
 
 Accessing
 ---------
