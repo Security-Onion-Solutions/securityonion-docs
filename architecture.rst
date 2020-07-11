@@ -44,9 +44,7 @@ If you're viewing the online version of this documentation, you can click the im
 Deployment Types
 ----------------
 
-Security Onion is built on a modified distributed client-server model. In the past, Security Onion relied solely on the use of a “sensor” (the client) and a Security Onion “server” (the server). With the inclusion of the Elastic Stack, the distributed architecture has since changed, and now includes the use of Elastic components and separate nodes for processing and storing Elastic stack data.
-
-This means that a standard distributed deployment is now comprised of the **manager node**, one or more **forward nodes** (previously called a sensor -- runs sensor components), and one or more **search nodes** (runs Elastic components). This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new search nodes to handle more traffic or log sources.
+A standard distributed deployment includes a **manager node**, one or more **forward nodes** (previously called a sensor -- runs sensor components), and one or more **search nodes** (runs Elastic components). This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new search nodes to handle more traffic or log sources.
 
 There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
@@ -111,10 +109,24 @@ Forward Nodes run the following components:
 -  Stenographer
 -  Wazuh
 
+Search Node
+~~~~~~~~~~~
+
+When using a ``search node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Search Node``, it will create a local Elasticsearch instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local Elasticsearch instance.
+
+``Search nodes`` primarily collect logs from other nodes and store them for searching.
+
+Search Nodes run the following components:
+
+-  Elasticsearch
+-  Logstash
+-  Curator
+-  Wazuh
+
 Heavy Node
 ~~~~~~~~~~
 
-When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local Elasticsearch instance.
+Similar to search nodes, heavy nodes extend the storage and processing capabilities of the manager node. However, heavy nodes also perform sensor duties and thus have lower performance overall.
 
 Heavy Nodes run the following components:
 
@@ -124,16 +136,4 @@ Heavy Nodes run the following components:
 -  Zeek
 -  Suricata
 -  Stenographer
--  Wazuh
-
-Search Node
-~~~~~~~~~~~
-
-``Search nodes`` extend the storage and processing capabilities of the manager node. Just like heavy nodes, search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
-
-Search Nodes run the following components:
-
--  Elasticsearch
--  Logstash
--  Curator
 -  Wazuh
