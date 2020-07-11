@@ -42,7 +42,6 @@ notfound_context = {
 }
 
 hoverxref_auto_ref = True
-hoverxref_domains = ['py']
 hoverxref_roles = [
     'option',
     'doc',
