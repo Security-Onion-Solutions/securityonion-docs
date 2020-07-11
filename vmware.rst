@@ -15,7 +15,7 @@ In this section, we'll cover creating a virtual machine (VM) for our Security On
 Workstation Pro
 ---------------
 
-Follow the steps below to create a VM in VMware Workstation Pro for our Security Onion ISO image:
+VMware Workstation is available for many different host operating systems, including Windows and several popular Linux distros. Follow the steps below to create a VM in VMware Workstation Pro for our Security Onion ISO image:
 
 #. From the VMware main window, select File >> New Virtual Machine.
 #. Select Typical installation >> Click ``Next``.
