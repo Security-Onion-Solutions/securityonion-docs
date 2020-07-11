@@ -14,8 +14,6 @@ Evaluation
 
 The ``EVAL`` option allows you to quickly and easily evaluate Security Onion. It works well for classroom or small lab environments. Evaluation is **not** designed for production usage.
 
-For more information, please see the :ref:`quick-iso-image` section.
-
 Production Server - Standalone
 ------------------------------
 
