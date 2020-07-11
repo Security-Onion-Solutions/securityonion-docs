@@ -26,7 +26,7 @@ The minimum specs for running Security Onion 2.0 in EVAL mode are:
 
 Production Deployments
 ----------------------
-Security Onion 2.0 is a new platform with more features than previous versions of Security Onion. These additional result in higher hardware requirements. For best results, we recommend purchasing new hardware to meet the new requirements.
+Security Onion 2.0 is a new platform with more features than previous versions of Security Onion. These additional features result in higher hardware requirements. For best results, we recommend purchasing new hardware to meet the new requirements.
 
 .. tip::
 
