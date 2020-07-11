@@ -5,6 +5,10 @@ Use Cases
 
 Security Onion is designed for many different use cases! Here are just a few examples.
 
+.. tip::
+
+  If this is your first time using Security Onion, we recommend starting with Evaluation Mode in a virtual machine using our Security Onion ISO image as it's the quickest and easiest way to get started.
+
 Evaluation
 ----------
 
