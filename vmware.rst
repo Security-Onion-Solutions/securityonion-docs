@@ -35,7 +35,7 @@ Fusion
 
 VMware Fusion is available for Mac OS. For more information about VMware Fusion, please see https://www.vmware.com/products/fusion.html.
 
-Follow the steps below to install to create a VM in VMware Fusion for our Security Onion ISO image:
+Follow the steps below to create a VM in VMware Fusion for our Security Onion ISO image:
 
 #. From the VMware Fusion main window, click ``File`` and then click ``New``.
 #. ``Select the Installation Method`` appears. Click ``Install from disc or image`` and click ``Continue``.
@@ -45,9 +45,11 @@ Follow the steps below to install to create a VM in VMware Fusion for our Securi
 #. ``Finish`` screen appears. Click the ``Customize Settings`` button.
 #. ``Save As`` screen appears. Give the VM a name and click the ``Save`` button.
 #. ``Settings`` window appears. Click ``Processors & Memory``.
-#. ``Processors & Memory`` screen appears. Increase the number of processors to at least ``4`` and memory to at least 12GB depending on your use case. Click the ``Add Device...`` button.
+#. ``Processors & Memory`` screen appears. Increase the number of processors to at least ``4`` and memory to at least ``12GB`` depending on your use case. Click the ``Add Device...`` button.
 #. ``Add Device`` screen appears. Click ``Network Adapter`` and click the ``Add...`` button.
-#. ``Network Adapter 2`` screen appears. This will be the sniffing (monitor) interface. Select your desired network adapter configuration.
+#. ``Network Adapter 2`` screen appears. This will be the sniffing (monitor) interface. Select your desired network adapter configuration. Click the ``Show All`` button.
+#. ``Settings`` screen appears. Click ``Hard Disk (SCSI)``.
+#. ``Hard Disk (SCSI)`` screen appears. Increase the disk size to at least ``100GB`` depending on your use case. Click the ``Apply`` button.
 #. Close the ``Settings`` window.
 #. At the window for your new VM, click the ``Play`` button to power on the virtual machine.
 #. Follow the installation steps for your desired installation type in the :ref:`use-cases` section.
