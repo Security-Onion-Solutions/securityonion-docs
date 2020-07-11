@@ -21,10 +21,10 @@ Your default user account should have sudo permissions. Command-line utilities t
 
     sudo so-status
 
-Security Onion Console
-----------------------
+Security Onion Console (SOC)
+----------------------------
 
-Log into Security Onion Console using the username and password you created in the Setup wizard.
+Log into :ref:`soc` using the username and password you created in the Setup wizard.
 
 You can change your password in :ref:`soc` by clicking the user icon in the upper right corner and then clicking ``Settings``:
 
