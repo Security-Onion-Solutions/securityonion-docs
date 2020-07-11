@@ -14,10 +14,6 @@ If you want to quickly evaluate Security Onion on Ubuntu 18.04 or CentOS 7 (not 
 - Follow the prompts in the installer.
 - Reboot into your new installation.
 - Login using the username and password you specified during installation.
-- Verify that you have Internet connectivity. If necessary, configure your :ref:`proxy` settings.
-- Log back in.
-
-   
 - If using CentOS 7 Minimal, install `git`:
 
   ::
@@ -32,6 +28,6 @@ If you want to quickly evaluate Security Onion on Ubuntu 18.04 or CentOS 7 (not 
     cd securityonion
     sudo bash so-setup-network
    
-- Follow the prompts and reboot if asked to do so.
+- Choose the ``EVAL`` option and then follow the prompts to configure your system.
 
-- Review the :ref:`post-installation` page.
+- Proceed to the :ref:`post-installation` page.
