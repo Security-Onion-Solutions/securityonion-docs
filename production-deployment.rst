@@ -34,6 +34,10 @@ Install
 
 Follow the appropriate installation guide but do NOT select the ``EVAL`` option. Instead, select one of the appropriate production roles.
 
+:ref:`quick-iso-image`
+
+:ref:`quick-eval-non-iso`
+
 Build the manager by following the prompts. Save the ``soremote`` password so that you can join nodes to the grid.
 
 Build storage nodes and join them to the manager node using the ``soremote`` password.
