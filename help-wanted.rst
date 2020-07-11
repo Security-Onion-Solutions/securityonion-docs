@@ -13,7 +13,7 @@ We need more folks to help spread the word about Security Onion by blogging, twe
 Support Team
 ------------
 
-If you'd like help out other Security Onion users, please join the security-onion mailing list and/or IRC channel and start answering questions!
+If you'd like help out other Security Onion users, please join the security-onion mailing list and/or reddit and start answering questions!
 
 https://groups.google.com/forum/#!forum/security-onion
 
