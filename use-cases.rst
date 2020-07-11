@@ -8,12 +8,14 @@ Security Onion is designed for many different use cases! Here are just a few exa
 Evaluation
 ----------
 
-``Evaluation Mode`` is ideal for classroom or small lab environments.  
+``Evaluation Mode`` is ideal for classroom or small lab environments. Evaluation is not designed for production usage.
 
 For more information, please see the :ref:`quick-iso-image` section.
 
 Production Server - Standalone
 ------------------------------
+
+Standalone is similar to Evaluation in that it only requires a single box, but Standalone is more rready for production usage. 
 
 For more information, please see the :ref:`production-deployment` section.
 
