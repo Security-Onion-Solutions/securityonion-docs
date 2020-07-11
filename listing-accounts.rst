@@ -18,7 +18,7 @@ Furthermore, you can get a list of all OS accounts that had a UID > 1000 (not a 
 
   cat /etc/passwd | awk -F: '$3 > 1000 {print ;}' | cut -d: -f1 
   
-SSO
+SOC
 ---
 
 To list all :ref:`soc` accounts, you can use the ``so-user`` command with the ``list`` option:
