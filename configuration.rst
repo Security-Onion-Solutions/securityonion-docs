@@ -1,7 +1,7 @@
-.. _use-cases:
+.. _configuration:
 
-Use Cases
-=========
+Configuration
+=============
 
 Now that you've installed Security Onion, it's time to configure it! Security Onion is designed for many different use cases. Here are just a few examples.
 
@@ -19,14 +19,14 @@ Production Server - Standalone
 
 Standalone is similar to Evaluation in that it only requires a single box, but Standalone is more ready for production usage. 
 
-For more information, please see the :ref:`production-deployment` section.
+For more information, please review the :ref:`architecture` section and then follow the :ref:`production-deployment` section.
 
 Production Server - Distributed Deployment
 ------------------------------------------
 
 Install Security Onion on the manager node. Then install Security Onion on one or more forward, search, or heavy nodes and join to the manager node.
 
-For more information, please see the :ref:`production-deployment` section.
+For more information, please review the :ref:`architecture` section and then follow the :ref:`production-deployment` section.
 
 Sending Logs to Separate SIEM
 -----------------------------
