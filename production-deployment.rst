@@ -40,7 +40,7 @@ Follow the appropriate installation guide but do NOT select the ``EVAL`` option.
 
 Build the manager by following the prompts. Save the ``soremote`` password so that you can join nodes to the grid.
 
-Build storage nodes and join them to the manager node using the ``soremote`` password.
+Build search nodes and join them to the manager node using the ``soremote`` password.
 
 Build forward nodes and join them to the manager node using the ``soremote`` password.
 
