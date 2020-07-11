@@ -51,13 +51,13 @@ Please include the following details where you can:
 
 - If network install, did you install from Ubuntu 18.04 or CentOS 7?
 
-- Install type. ex. eval, standalone, etc
+- Install type. ex. eval, standalone, forward node, search node, etc
 
 - Does so-status show all services running?
 
 - Do you get any failures when you run ``salt-call state.highstate``?
 
-- Explain your issue. ex. Install fails when I select X.
+- Explain your issue. For example: ``Installation fails when I select this series of options...``
 
 Security-Onion mailing list
 ---------------------------
