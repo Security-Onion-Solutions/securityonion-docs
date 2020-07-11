@@ -6,7 +6,7 @@ Hardware Requirements
 Architecture
 ------------
 
-Security Onion only supports x86-64 architecture (standard Intel/AMD 64-bit processors).  
+Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit processors).
 
 .. warning::
 
@@ -14,7 +14,7 @@ Security Onion only supports x86-64 architecture (standard Intel/AMD 64-bit proc
 
 Minimum Specs
 -------------
-The minimum specs for running Security Onion 2.0 in EVAL mode are:
+The minimum specs for running Security Onion 2.0 are:
 
  - 12GB RAM
  - 4 CPU cores
@@ -22,7 +22,7 @@ The minimum specs for running Security Onion 2.0 in EVAL mode are:
 
 .. note::
 
-   These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
+   These minimum specs are for EVAL mode with minimum services running. These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
 
 Production Deployments
 ----------------------
