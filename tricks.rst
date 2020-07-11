@@ -12,6 +12,7 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    analyst-vm
    best-practices
    cloud-ami
+   docker
    dns-anomaly-detection
    icmp-anomaly-detection
    new-disk
