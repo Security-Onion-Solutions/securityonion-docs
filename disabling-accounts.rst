@@ -17,15 +17,12 @@ For more information, please see ``man passwd`` and ``man usermod``.
 SSO
 ---
 
-If you need to disable a Security Onion Console (SOC) account, you can use the ``so-user-disable`` command:
+If you need to disable a :ref:`soc` account, you can use the ``so-user`` command with the ``delete`` option and the user's email address. For example, to disable the account for ``tom@example.com``:
 
 ::
 
-    sudo so-user-disable
+    sudo so-user delete tom@example.com
 
-If you later need to re-enable this SSO account, you can use the ``so-user-passwd`` command to reset the password which will automatically re-enable the account.
+Alternatively, you can log into the :ref:`soc` interface, click ``Adminstration``, click ``Users``, and then click the ``X`` (delete) button:
 
-Elastic
--------
-
-If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management --> Users.
+.. image:: https://user-images.githubusercontent.com/1659467/87231781-15fb9800-c388-11ea-890b-d82a998326f7.png
