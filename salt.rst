@@ -7,7 +7,7 @@ From https://docs.saltstack.com/en/latest/:
 
    Salt is a new approach to infrastructure management built on a dynamic communication bus. Salt can be used for data-driven orchestration, remote execution for any infrastructure, configuration management for any app stack, and much more.
 
-Salt is a core component of Security Onion 2.0 as it manages all processes on all nodes. In a distributed deployment, the manager node controls all other nodes via salt. These other nodes are referred to as minions.
+Salt is a core component of Security Onion 2.0 as it manages all processes on all nodes. In a distributed deployment, the manager node controls all other nodes via salt. These non-manager nodes are referred to as salt minions.
 
 Firewall Requirements
 ---------------------
