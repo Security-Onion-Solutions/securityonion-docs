@@ -28,7 +28,7 @@ VMware Workstation is available for many different host operating systems, inclu
 #. Add >> Network Adapter (Bridged) - this will be the sniffing (monitor) interface.
 #. Click ``Close``.
 #. Click ``Finish``.
-#. Power on the virtual machine and then follow the installation steps for your desired installation type in the :ref:`use-cases` section.
+#. Power on the virtual machine and then follow the installation steps for your desired installation type in the :ref:`installation` section.
 
 Fusion
 ------
