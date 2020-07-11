@@ -25,6 +25,7 @@ Depending on the options you chose in the installer, connect to the IP address o
    :maxdepth: 2
 
    hunt
+   pcap
    kibana
    grafana
    cyberchef
