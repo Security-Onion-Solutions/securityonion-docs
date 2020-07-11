@@ -12,6 +12,18 @@ Security Onion only supports x86-64 architecture (standard Intel/AMD 64-bit proc
 
    We do not support ARM or any other non-x86-64 processors!
 
+Minimum Specs
+-------------
+The minimum specs for running Security Onion 2.0 in EVAL mode are:
+
+ - 12GB RAM
+ - 4 CPU cores
+ - 100GB storage
+
+.. note::
+
+   These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
+
 UEFI
 ----
 If your hardware has UEFI, please see https://help.ubuntu.com/community/UEFI.
@@ -29,13 +41,9 @@ Like most IT systems, Security Onion has databases and those databases don't lik
 Elastic Stack
 -------------
 
-.. note::
-
-   If you're going to enable the Elastic Stack, please note that the MINIMUM requirements are 4 CPU cores and 8GB RAM. These requirements increase as you monitor more traffic and consume more logs.
-
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
-**We recommend placing all Elastic storage on SSD or fast spinning disk in a RAID 10 configuration.** This includes ``/nsm/elasticsearch`` and ``/nsm/logstash``.
+**We recommend placing all Elastic storage (``/nsm/elasticsearch``) on SSD or fast spinning disk in a RAID 10 configuration.**
 
 Standalone Deployments
 ----------------------
