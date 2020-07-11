@@ -8,7 +8,6 @@ This section will give you an overview of different use cases for Security Onion
 .. toctree::
    :maxdepth: 2
 
-   use-cases
    hardware
    release-notes
    download
@@ -17,6 +16,7 @@ This section will give you an overview of different use cases for Security Onion
    trouble-booting
    quick-iso-image
    quick-eval-non-iso
+   use-cases
    architecture
    production-deployment
    post-installation
