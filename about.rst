@@ -5,8 +5,10 @@ About
 
 Security Onion
 --------------
-Security Onion is a free and open source Linux distribution for intrusion detection, enterprise security monitoring, and log management. It includes :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, :ref:`wazuh`, :ref:`cyberchef`, :ref:`hive`, :ref:`playbook`, :ref:`fleet` and many other security tools. The easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
+Security Onion is a free and open source Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, :ref:`wazuh`, :ref:`cyberchef`, :ref:`hive`, :ref:`playbook`, :ref:`fleet` and many other security tools. The easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
 
+Security Onion 2.0
+------------------
 Security Onion started in 2008 and was originally based on the Ubuntu Linux distribution. Throughout the years, the Security Onion version tracked the version of Ubuntu it was based on. For example, the last major version of Security Onion was based on Ubuntu 16.04 and so it was called Security Onion 16.04. Security Onion is now container based and thus no longer limited to just Ubuntu. To signify this change, Security Onion now has its own versioning scheme and the current version of this new platform is Security Onion 2.0.
 
 Here are some high level system differences between Security Onion 2.0 and the older legacy versions:
