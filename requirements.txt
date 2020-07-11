@@ -1,2 +1,2 @@
 sphinx-hoverxref
-notfound
+sphinx-notfound-page
