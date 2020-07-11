@@ -21,13 +21,12 @@ Furthermore, you can get a list of all OS accounts that had a UID > 1000 (not a 
 SSO
 ---
 
-To list all Security Onion Console (SOC) accounts, you can use the ``so-user-list`` command:
+To list all :ref:`soc` accounts, you can use the ``so-user`` command with the ``list`` option:
 
 ::
 
-    sudo so-user-list
+    sudo so-user list
 
-Elastic
--------
+Alternatively, you can get a list of users in :ref:`soc` by clicking Administration and then Users:
 
-If you've enabled Elastic authentication, you can manage Elastic user accounts in Kibana under Management --> Users.
+.. image:: https://user-images.githubusercontent.com/1659467/87231705-6a524800-c387-11ea-975b-0899fd3b4f12.png
