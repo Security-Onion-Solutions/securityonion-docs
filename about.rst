@@ -36,6 +36,10 @@ For more information about these products and services, please see our company s
 Documentation
 -------------
 
+.. warning::
+
+   We've started updating this documentation for the new Security Onion 2.0. However, please note that this is a work in progress. Many pages have not been updated yet and thus may be incorrect or missing information.
+   
 Formats
 ~~~~~~~
 
