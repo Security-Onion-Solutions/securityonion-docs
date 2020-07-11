@@ -41,8 +41,6 @@ notfound_context = {
 ''',
 }
 
-hoverxref_auto_ref = True
-
 ###########################################################################
 #          auto-created readthedocs.org specific configuration            #
 ###########################################################################
