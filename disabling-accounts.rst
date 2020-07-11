@@ -14,7 +14,7 @@ If you need to disable an OS user account, you can expire the account using ``us
 
 For more information, please see ``man passwd`` and ``man usermod``.
 
-SSO
+SOC
 ---
 
 If you need to disable a :ref:`soc` account, you can use the ``so-user`` command with the ``delete`` option and the user's email address. For example, to disable the account for ``tom@example.com``:
