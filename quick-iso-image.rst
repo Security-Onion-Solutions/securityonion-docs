@@ -14,5 +14,5 @@ If you just want to quickly evaluate Security Onion using our ISO image:
 #. Boot the ISO in a machine that meets the minimum hardware specs.
 #. Follow the prompts to complete the installation and reboot.
 #. Login using the user ``onion`` and the password you set.
-#. Follow the prompts to configure your system.
+#. Choose the ``EVAL`` option and then follow the prompts to configure your system.
 #. Proceed to the `Post Installation <PostInstallation>`__ page.
