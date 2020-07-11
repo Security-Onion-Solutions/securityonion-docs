@@ -6,7 +6,7 @@ Passwords
 OS user account
 ---------------
 
-When you first install Security Onion, you go through the standard OS installer and create a user account for yourself.  If you need to change your user password, you can use the ``passwd`` command:
+When you first install Security Onion, you create a standard OS user account for yourself.  If you need to change your OS user password, you can use the ``passwd`` command:
 
 ::
 
