@@ -30,10 +30,10 @@ Start a new thread instead of replying to an old one
 
 Please search the mailing list to see if you can find similar issues that may help you. However, please do not reply to old threads with your new issue. Instead, please start a new thread and provide a hyperlink to the related discussion at https://groups.google.com/forum/#!forum/security-onion.
 
-Avoid generic Ubuntu questions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Avoid generic OS questions
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Security Onion is based on Ubuntu. Quite often, folks ask the Security Onion mailing list for help with Ubuntu issues not strictly related to Security Onion. In order to keep the signal-to-noise ratio as high as possible, the Security Onion mailing list should only be used for questions directly relating to Security Onion itself. If you have questions about Ubuntu, you should check the Ubuntu website, forums, and Google.
+Security Onion is based on a standard Linux distribution. Quite often, folks ask the Security Onion mailing list for help with Linux issues not strictly related to Security Onion. In order to keep the signal-to-noise ratio as high as possible, the Security Onion mailing list should only be used for questions directly relating to Security Onion itself. If you have questions about Linux, you should search Google for other forums or relevant information.
 
 Provide sufficient technical info
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,24 +41,23 @@ Provide sufficient technical info
 | In order to be as effective and efficient as possible, please consider the following when posing your question/problem to the group:
 | http://www.chiark.greenend.org.uk/~sgtatham/bugs.html
 
-Include sostat-redacted output
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Prefix the subject of your post with [2.0] so that we know that you're asking about Security Onion 2.0
 
-Please run the following command:
+Please include the following details where you can:
 
-::
+- Exact version. ex. 2.0.0
 
-    sudo sostat-redacted
+- Install source. Did you install from our Security Onion ISO image or did you perform a network installation?
 
-There will be a lot of output, so you may need to increase your terminal's scroll buffer OR redirect the output of the command to a file:
+- If network install, did you install from Ubuntu 18.04 or CentOS 7?
 
-::
+- Install type. ex. eval, standalone, etc
 
-    sudo sostat-redacted > sostat-redacted.txt 2>&1
+- Does so-status show all services running?
 
-``sostat-redacted`` will automatically redact any IPv4/IPv6/MAC addresses, but there may be additional sensitive info that you still need to redact manually.
+- Do you get any failures when you run ``salt-call state.highstate``?
 
-Attach the output to your email in plain text format (.txt) OR use a service like http://pastebin.com.
+- Explain your issue. ex. Install fails when I select X.
 
 Security-Onion mailing list
 ---------------------------
