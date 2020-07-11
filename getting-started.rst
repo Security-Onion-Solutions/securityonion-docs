@@ -9,8 +9,6 @@ This section will give you an overview of different use cases for Security Onion
    :maxdepth: 2
 
    use-cases
-   architecture
-   docker
    hardware
    release-notes
    download
@@ -19,5 +17,6 @@ This section will give you an overview of different use cases for Security Onion
    trouble-booting
    quick-iso-image
    quick-eval-non-iso
+   architecture
    production-deployment
    post-installation
