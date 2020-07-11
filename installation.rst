@@ -5,7 +5,7 @@ Installation
 
 .. tip::
 
-  If this is your first time using Security Onion and you just want to try it out, we recommend installing our Security Onion ISO image as it's the quickest and easiest way to get started.
+  We recommend using our Security Onion ISO image as it's the quickest and easiest method.
   
 Installation using Security Onion ISO Image
 -------------------------------------------
