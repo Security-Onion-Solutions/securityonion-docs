@@ -14,6 +14,8 @@ Accessing
 
 To access Navigator, log into :ref:`soc` and then click the Navigator hyperlink on the left side.
 
+.. image:: https://user-images.githubusercontent.com/1659467/87230321-56a1e400-c37d-11ea-861e-4c08b91e740c.png
+
 Updating
 --------
 You can update Navigator layers via :ref:`playbook`.
