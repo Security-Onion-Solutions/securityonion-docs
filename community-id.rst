@@ -21,3 +21,10 @@ https://dactiv.llc/blog/correlate-osquery-network-connections/
 For tools that don't natively support Community ID, we sponsored the development of an :ref:`elasticsearch` Ingest Processor to automatically generate Community ID values:
 
 https://github.com/Security-Onion-Solutions/elasticsearch-ingest-community-id
+
+More Information
+----------------
+
+.. seealso::
+
+    For more information about Community ID, please see https://github.com/corelight/community-id-spec.
