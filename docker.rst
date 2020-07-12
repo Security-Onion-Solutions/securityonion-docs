@@ -5,14 +5,7 @@ Docker
 
 From https://www.docker.com/what-docker:
 
-    Docker is the world’s leading software container platform.
-    Developers use Docker to eliminate “works on my machine” problems
-    when collaborating on code with co-workers. Operators use Docker to
-    run and manage apps side-by-side in isolated containers to get
-    better compute density. Enterprises use Docker to build agile
-    software delivery pipelines to ship new features faster, more
-    securely and with confidence for both Linux, Windows Server, and
-    Linux-on-mainframe apps.
+    Docker is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Operators use Docker to run and manage apps side-by-side in isolated containers to get better compute density. Enterprises use Docker to build agile software delivery pipelines to ship new features faster, more securely and with confidence for both Linux, Windows Server, and Linux-on-mainframe apps.
 
 Images
 ------
@@ -25,12 +18,7 @@ Registry
 
 From https://docs.docker.com/registry/recipes/mirror/:
 
-    If you have multiple instances of Docker running in your environment
-    (e.g., multiple physical or virtual machines, all running the Docker
-    daemon), each time one of them requires an image that it doesn’t
-    have it will go out to the internet and fetch it from the public
-    Docker registry. By running a local registry mirror, you can keep
-    most of the redundant image fetch traffic on your local network.
+    If you have multiple instances of Docker running in your environment (e.g., multiple physical or virtual machines, all running the Docker daemon), each time one of them requires an image that it doesn’t have it will go out to the internet and fetch it from the public Docker registry. By running a local registry mirror, you can keep most of the redundant image fetch traffic on your local network.
 
 We can leverage the Docker registry (as a `pull-through cache <https://docs.docker.com/registry/recipes/mirror/>`__) with our Security Onion Docker images. As mentioned above, this will allow us to cut down on external requests and bandwidth, cache the images on a local server, and only pull new images when they are available.
 
@@ -98,7 +86,7 @@ Networking
 Bridge
 ------
 
-By default, Docker configures it's bridge with an IP of ``172.17.0.1``.
+By default, Docker configures its bridge with an IP of ``172.17.0.1``.
 
 https://docs.docker.com/engine/userguide/networking/#default-networks
 
