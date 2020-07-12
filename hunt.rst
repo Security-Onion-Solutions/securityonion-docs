@@ -69,8 +69,10 @@ Onion Query Language (OQL) starts with standard `Lucene query syntax <https://lu
 Videos
 ------
 
-To see Hunt in action, check out these Youtube videos:
+.. seealso::
 
-https://www.youtube.com/watch?v=Y-nZInToH8s
+  To see Hunt in action, check out these Youtube videos:
 
-https://www.youtube.com/watch?v=Is2shLAOyJs
+  https://www.youtube.com/watch?v=Y-nZInToH8s
+
+  https://www.youtube.com/watch?v=Is2shLAOyJs
