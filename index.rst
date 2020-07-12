@@ -24,7 +24,6 @@ Security Onion Documentation
    services
    utilities
    help
-   integrations
    security
    appendix
    cheat-sheet
