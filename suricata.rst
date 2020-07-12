@@ -60,4 +60,6 @@ For detailed Suricata statistics, check ``/opt/so/log/suricata/stats.log``.
 More Information
 ----------------
 
-For more information about Suricata, please see https://suricata-ids.org.
+.. seealso::
+
+    For more information about Suricata, please see https://suricata-ids.org.
