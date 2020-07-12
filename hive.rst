@@ -35,4 +35,6 @@ TheHive logging can be found at ``/opt/so/log/thehive/``.
 More Information
 ----------------
 
-For more information about TheHive, please see https://thehive-project.org/.
+.. seealso::
+
+    For more information about TheHive, please see https://thehive-project.org/.
