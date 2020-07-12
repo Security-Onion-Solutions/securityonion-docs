@@ -41,8 +41,10 @@ AutorunsToWinEventLog
 Downloads
 ---------
 
-| Download Autoruns here:
-| https://download.sysinternals.com/files/Autoruns.zip
-|
-| Download ar-normalize.ps1 here:
-| https://raw.githubusercontent.com/defensivedepth/Pertinax/master/normalize/ar-normalize.ps1
+.. seealso::
+
+    | Download Autoruns here:
+    | https://download.sysinternals.com/files/Autoruns.zip
+    |
+    | Download ar-normalize.ps1 here:
+    | https://raw.githubusercontent.com/defensivedepth/Pertinax/master/normalize/ar-normalize.ps1
