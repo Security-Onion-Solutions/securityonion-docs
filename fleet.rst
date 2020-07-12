@@ -29,6 +29,8 @@ Fleet logs can be found in ``/opt/so/log/fleet/``.
 More Information
 ----------------
 
-For more information about osquery, please see the :ref:`osquery` section.
+.. seealso::
 
-For more information about Fleet, please see https://www.kolide.com/fleet/.
+    For more information about osquery, please see the :ref:`osquery` section.
+
+    For more information about Fleet, please see https://www.kolide.com/fleet/.
