@@ -60,3 +60,10 @@ The ``static.sls`` configuration file houses global configuration settings for y
    sensor:
      interface: bond0
      mainip: IPADDRESS of the Sensor
+
+More Information
+----------------
+
+.. seealso::
+
+    For more information about Salt, please see https://docs.saltstack.com/en/latest/.
