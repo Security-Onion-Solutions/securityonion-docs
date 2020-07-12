@@ -3,9 +3,9 @@
 BPF
 ===
 
-| BPF stands for Berkeley Packet Filter:
-| https://en.wikipedia.org/wiki/Berkeley_Packet_Filter
-| http://biot.com/capstats/bpf.html
+BPF stands for Berkeley Packet Filter. From https://en.wikipedia.org/wiki/Berkeley_Packet_Filter:
+
+   BPF supports filtering packets, allowing a userspace process to supply a filter program that specifies which packets it wants to receive. For example, a tcpdump process may want to receive only packets that initiate a TCP connection. BPF returns only packets that pass the filter that the process supplies. This avoids copying unwanted packets from the operating system kernel to the process, greatly improving performance.
 
 Configuration
 -------------
@@ -105,3 +105,11 @@ http://taosecurity.blogspot.com/2004/09/understanding-tcpdumps-d-option-have.htm
 http://taosecurity.blogspot.com/2004/12/understanding-tcpdumps-d-option-part-2.html
 
 http://taosecurity.blogspot.com/2008/12/bpf-for-ip-or-vlan-traffic.html
+
+More Information
+----------------
+
+.. seealso::
+
+   | https://en.wikipedia.org/wiki/Berkeley_Packet_Filter
+   | http://biot.com/capstats/bpf.html
