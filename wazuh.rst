@@ -87,4 +87,7 @@ Automated Deployment
 
 More Information
 ----------------
-For more information about Wazuh, please see https://documentation.wazuh.com/3.9/.
+
+.. seealso::
+
+    For more information about Wazuh, please see https://documentation.wazuh.com/3.9/.
