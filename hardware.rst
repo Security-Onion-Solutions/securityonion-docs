@@ -22,7 +22,7 @@ The minimum specs for running Security Onion 2.0 are:
 
 .. note::
 
-   These minimum specs are for EVAL mode with minimum services running. These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
+   These minimum specs are for EVAL mode with minimal services running. These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
 
 Production Deployments
 ----------------------
