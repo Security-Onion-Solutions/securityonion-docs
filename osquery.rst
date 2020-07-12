@@ -41,4 +41,6 @@ https://dactiv.llc/blog/correlate-osquery-network-connections/
 More Information
 ----------------
 
-For more information about osquery, please see https://osquery.io/.
+.. seealso::
+
+    For more information about osquery, please see https://osquery.io/.
