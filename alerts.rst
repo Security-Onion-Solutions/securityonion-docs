@@ -3,36 +3,24 @@
 Managing Alerts
 ===============
 
-Security Onion generates a lot of valuable information for you the
-second you plug it into a TAP or SPAN port. Between Zeek logs, alert data
-from Suricata, and full packet capture from Stenographer, you have,
-in a very short amount of time, enough information to begin making
-identifying areas of interest and making positive changes to your
-security stance.
+Security Onion generates a lot of valuable information for you the second you plug it into a TAP or SPAN port. Between Zeek logs, alert data from Suricata, and full packet capture from Stenographer, you have, in a very short amount of time, enough information to begin making identifying areas of interest and making positive changes to your security stance.
 
 .. note::
 
-   Network Security Monitoring, as a practice, is not a solution
-   you can plug into your network, make sure you see blinking lights and
-   tell people you are "secure." It requires active intervention from an
-   analyst to qualify the quantity of information presented. One of those
-   regular interventions is to ensure that you are tuning properly and
-   proactively attempting to reach an acceptable level of signal to noise.
+   Network Security Monitoring, as a practice, is not a solution you can plug into your network, make sure you see blinking lights and tell people you are "secure." It requires active intervention from an analyst to qualify the quantity of information presented. One of those regular interventions is to ensure that you are tuning properly and proactively attempting to reach an acceptable level of signal to noise.
 
 Testing to make sure the IDS is working
 ---------------------------------------
 
-Below, we'll provide a few ways we can test our IDS to
-make sure it is working as expected.
+Below, we'll provide a few ways we can test our IDS to make sure it is working as expected.
 
-#. The easiest way to test might be simply accessing ``testmyids.com``
-   from a machine who's traffic is being monitored:
+#. The easiest way to test might be simply accessing ``testmyids.com`` from a machine who's traffic is being monitored:
 
    ::
    
       curl testmyids.com
 
-   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in TheHive/Kibana/Hunt if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the management first, run ``rule-update``, then push the changes out to the other sensor(s)).
+   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the management first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
 #. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/etc/nsm/rules/local.rules``:
 
@@ -124,7 +112,7 @@ As mentioned before, take care in disabling signatures as it can be likely that 
         # Disable the "SURICATA HTTP unable to match response to request" signature
         0:2221010
 
--  Update rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
+-  Update rules as shown in the :ref:`rules` section.
 
 Disable the category
 --------------------
@@ -150,7 +138,7 @@ description, we could put the following in
 
    pcre:ET MISC
 
-After making changes to the file, update your rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
+After making changes to the file, update your rules as shown in the :ref:`rules` section.
 
 modifysid.conf
 --------------
@@ -164,7 +152,7 @@ won't repeat them here. Edit the modifysid.conf configuration file:
 
         sudo vi /etc/nsm/pulledpork/modifysid.conf
 
-Update rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
+Update rules as shown in the :ref:`rules` section.
 
 Rewrite the signature
 ---------------------
@@ -222,7 +210,7 @@ Onion, locally created rules are stored in /etc/nsm/rules/local.rules
 
           1:2101411
 
--  Update rules as shown in the `Updating Rules <https://securityonion.readthedocs.io/en/latest/rules.html#updating-rules>`_ section.
+-  Update rules as shown in the :ref:`rules` section.
 
 Threshold
 ---------
