@@ -36,4 +36,6 @@ It is always recommended that you create your own organization, but the provided
 More Information
 ----------------
 
-For more information about Cortex, please see https://github.com/TheHive-Project/Cortex.
+.. seealso::
+
+    For more information about Cortex, please see https://github.com/TheHive-Project/Cortex.
