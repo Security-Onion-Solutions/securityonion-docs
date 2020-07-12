@@ -7,31 +7,19 @@ Security Onion VPC Traffic Mirroring Configuration
 
 .. warning::
 
-    THE CLOUD AMI IS STILL IN TESTING!  IF IT BREAKS YOU CAN KEEP ALL THE PIECES.
+    THE CLOUD AMI IS STILL IN TESTING!  IF IT BREAKS, YOU GET TO KEEP ALL THE PIECES!
 
 This section covers configuring a Security Onion cloud image hosted in Amazon Web Services (AWS) to receive mirrored/spanned traffic from other instances hosted within an Amazon Virtual Private Cloud (VPC). 
 
-.. note::
+.. attention::
 
-    You can only mirror traffic from an EC2 instance that is powered by the AWS Nitro system.  For a list of supported Nitro systems please see: 
-    
-    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances
+    You can only mirror traffic from an EC2 instance that is powered by the AWS Nitro system.  For a list of supported Nitro systems, please see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances.
 
 .. note::
 
-    This section does not cover network connectivity to the Security Onion node. This can be achieved through configuring an external IP for the node’s management interface, or through the use of a VPN connection via OpenVPN, PfSense etc.
-    
-    For more details about vpn connections please see:
-    
-    https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6
+    This section does not cover network connectivity to the Security Onion node. This can be achieved through configuring an external IP for the node’s management interface, or through the use of a VPN connection via OpenVPN, pfSense etc. For more details about VPN connections, please see https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6.
 
-.. note::
-
-    This guide does not cover how to set up a VPC in AWS.
-    
-    For more details about setting up a VPC please see:
-    
-    https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html
+    This guide does not cover how to set up a VPC in AWS. For more details about setting up a VPC, please see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html.
 
 Getting Started 
 ###############
