@@ -127,4 +127,6 @@ Kibana may take a few minutes to re-optimize.  Once that's complete, you should 
 More Information
 ----------------
 
-For more information about Kibana, please see https://www.elastic.co/kibana.
+.. seealso::
+
+    For more information about Kibana, please see https://www.elastic.co/kibana.
