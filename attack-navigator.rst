@@ -27,4 +27,6 @@ Navigator configuration can be found at ``/opt/so/conf/navigator/``.
 More Information
 ----------------
 
-For more information about ATT&CK Navigator, please see https://github.com/mitre-attack/attack-navigator.
+.. seealso::
+
+    For more information about ATT&CK Navigator, please see https://github.com/mitre-attack/attack-navigator.
