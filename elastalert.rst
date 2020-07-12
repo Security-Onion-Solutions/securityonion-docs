@@ -120,4 +120,6 @@ Keep in mind, for queries that span greater than a minute back in time, you may 
 More Information
 ----------------
 
-For more information about ElastAlert, please see http://elastalert.readthedocs.io/en/latest/.
+.. seealso::
+
+    For more information about ElastAlert, please see http://elastalert.readthedocs.io/en/latest/.
