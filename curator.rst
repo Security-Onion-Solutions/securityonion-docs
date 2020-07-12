@@ -25,4 +25,7 @@ When Curator completes an action, it logs its activity in a log file found in ``
 
 More Information
 ----------------
-For more information about Curator, please see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about.
+
+.. seealso::
+
+    For more information about Curator, please see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about.
