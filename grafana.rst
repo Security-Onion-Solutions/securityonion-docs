@@ -18,4 +18,7 @@ Grafana configuration can be found in ``/opt/so/conf/grafana/etc/``.
 
 More Information
 ----------------
-For more information about Grafana, please see https://grafana.com/.
+
+.. seealso::
+
+  For more information about Grafana, please see https://grafana.com/.
