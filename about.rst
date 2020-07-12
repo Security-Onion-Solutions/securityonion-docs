@@ -29,7 +29,9 @@ Security Onion Solutions, LLC
 -----------------------------
 Doug Burks started Security Onion as a free and open source project in 2008 and then founded Security Onion Solutions, LLC in 2014.  
 
-Security Onion Solutions, LLC is the only official provider of training, professional services, and hardware appliances for Security Onion.
+.. note::
+
+   Security Onion Solutions, LLC is the only official provider of training, professional services, and hardware appliances for Security Onion.
 
 For more information about these products and services, please see our company site at https://securityonionsolutions.com.
 
