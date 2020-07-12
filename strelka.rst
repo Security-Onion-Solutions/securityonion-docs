@@ -10,3 +10,10 @@ From https://github.com/target/strelka:
 Configuration
 -------------
 Strelka configuration can be found at ``/opt/so/conf/strelka/``.
+
+More Information
+----------------
+
+.. seealso::
+
+    For more information about Strelka, please see https://github.com/target/strelka.
