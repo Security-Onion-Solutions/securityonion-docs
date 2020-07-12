@@ -23,4 +23,7 @@ Stenographer logging can be found at ``/opt/so/log/stenographer/``.
 
 More Information
 ----------------
-For more information about stenographer, please see https://github.com/google/stenographer.
+
+.. seealso::
+
+    For more information about stenographer, please see https://github.com/google/stenographer.
