@@ -52,4 +52,6 @@ Redis logs can be found at ``/opt/so/log/redis/``.
 More Information
 ----------------
 
-For more information about Redis, please see https://redis.io/.
+.. seealso::
+
+    For more information about Redis, please see https://redis.io/.
