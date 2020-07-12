@@ -68,10 +68,7 @@ To configure a Security Onion instance, follow these steps:
 - From the EC2 dashboard select: ``Launch Instance``
 - Select the ``Community AMI's`` option in the left pane and search for ``Security-Onion-2.0`` in the search bar.
 - Select the ``Security-Onion-2.0`` AMI with the most recent build date.
-- Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please visit our Hardware Requirements section. 
-
-    https://securityonion.readthedocs.io/en/latest/hardware.html
-
+- Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please visit our :ref:`hardware` section.
 - From the subnet drop-down menu select the same subnet as the sniffing interface.
 - Under the Network interfaces section configure the eth0 (management) interface.
 - Under the Network interfaces section select: ``Add Device`` to attach the previously created sniffing interface to the instance.
