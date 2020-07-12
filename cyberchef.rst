@@ -23,4 +23,6 @@ To access CyberChef, log into :ref:`soc` and click the CyberChef hyperlink.
 More Information
 ----------------
 
-For more information about CyberChef, please see https://github.com/gchq/CyberChef.
+.. seealso::
+
+    For more information about CyberChef, please see https://github.com/gchq/CyberChef.
