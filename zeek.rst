@@ -138,4 +138,7 @@ TODO: add information here
 
 More Information
 ----------------
-For more information about Zeek, please see https://www.zeek.org/.
+
+.. seealso::
+
+    For more information about Zeek, please see https://www.zeek.org/.
