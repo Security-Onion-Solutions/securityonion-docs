@@ -21,4 +21,6 @@ This command will parse all of the records in ``/nsm/zeek/logs/current/conn.log`
 More Information
 ----------------
 
-For more information about ``jq``, please see https://stedolan.github.io/jq/.
+.. seealso::
+
+    For more information about ``jq``, please see https://stedolan.github.io/jq/.
