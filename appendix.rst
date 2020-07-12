@@ -18,6 +18,10 @@ This appendix covers the process of upgrading from the old Security Onion 16.04 
  
 For the reasons listed above, we recommend that most users procure new hardware and perform a fresh installation of Security Onion 2.0.
 
+.. tip::
+
+   If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open source platform!
+
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following:
 
  - perform an in-place upgrade from Ubuntu 16.04 to Ubuntu 18.04 using standard Ubuntu procedures
