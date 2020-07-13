@@ -12,3 +12,5 @@ Setup will configure Security Onion services and has options for a variety of :r
 .. image:: https://user-images.githubusercontent.com/1659467/87334336-7b789180-c50c-11ea-94e0-0c5aded8799d.png
 
 .. image:: https://user-images.githubusercontent.com/1659467/87334404-9519d900-c50c-11ea-89e7-80a5b70fc683.png
+
+.. image:: https://user-images.githubusercontent.com/1659467/87334452-a8c53f80-c50c-11ea-9661-602ae7047183.png
