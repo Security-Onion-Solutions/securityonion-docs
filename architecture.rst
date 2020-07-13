@@ -3,66 +3,33 @@
 Architecture
 ============
 
-Below are several diagrams to represent the current architecture and deployment scenarios for Security Onion and the Elastic Stack.
+Evaluation
+----------
+The simplest architecture is EVAL. All components run on one box. Filebeat collects logs and sends them directly to Elasticsearch. Evaluation mode is **not** designed for production usage.
 
-High-Level Architecture Diagram
--------------------------------
+.. image:: https://user-images.githubusercontent.com/1659467/87348176-4bd48400-c522-11ea-8a59-338180605f38.png
 
-.. image:: images/elastic-architecture/elastic-architecture.png
-   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/elastic-architecture.png
+Standalone
+----------
+Standalone is similar to EVAL in that all components run on one box. However, instead of Filebeat sending logs directly to Elasticsearch, it sends them to Logstash. This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
-Core Components
----------------
+-  Not recommended for monitoring high-throughput links
+-  Consists of a single server running manager node components, sensor, and Elastic stack components.
 
-:ref:`logstash`
-  - Parse and format logs.
-:ref:`elasticsearch`
-  - Ingest and index logs.
-:ref:`kibana`
-  - Visualize ingested log data.
-
-Auxilliary Components
----------------------
-
-:ref:`curator`
-  - Manage indices through scheduled maintenance.
-:ref:`elastalert`
-  - Query Elasticsearch and alert on user-defined anomalous behavior or other interesting bits of information.
-:ref:`freqserver`
-  -Detect DGAs and find random file names, script names, process names, service names, workstation names, TLS certificate subjects and issuer subjects, etc.
-:ref:`domainstats`
-  - Get additional info about a domain by providing additional context, such as creation time, age, reputation, etc.
-
-Detailed Data Flow Diagram
---------------------------
-
-.. image:: images/elastic-architecture/data-flow.png
-   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/data-flow.png
-
-If you're viewing the online version of this documentation, you can click the image to zoom in.
-
-Deployment Types
-----------------
-
-A standard distributed deployment includes a **manager node**, one or more **forward nodes** (previously called a sensor -- runs sensor components), and one or more **search nodes** (runs Elastic components). This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new search nodes to handle more traffic or log sources.
-
-There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
-
-Last, similar to before, users can run a **standalone**, which combines the functions of a **manager node**, **forward node**, and **search node**. The same caveats with performance apply here. This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments.
-
-More detail about each deployment and node type can be found below.
+.. image:: https://user-images.githubusercontent.com/1659467/87348334-8a6a3e80-c522-11ea-8719-08a13ebde978.png
 
 Distributed
-~~~~~~~~~~~
+-----------
+
+A standard distributed deployment includes a **manager node**, one or more **forward nodes** (previously called a sensor -- runs sensor components), and one or more **search nodes** (runs Elastic components). This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new search nodes to handle more traffic or log sources.
 
 -  Recommended deployment type
 -  Consists of a manager node, one or more forward nodes, and one or more search nodes.
 
 .. image:: images/elastic-architecture/distributed.png
    :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/distributed.png
-
-Heavy Distributed
-~~~~~~~~~~~~~~~~~
+   
+There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
 -  Recommended only if a standard distributed deployment is not possible.
 -  Consists of a manager node, and one or more heavy nodes.
@@ -70,14 +37,6 @@ Heavy Distributed
 .. image:: images/elastic-architecture/heavy-distributed.png
    :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/heavy-distributed.png
 
-Standalone
-~~~~~~~~~~
-
--  Not recommended for monitoring high-throughput links
--  Consists of a single server running manager node components, sensor, and Elastic stack components.
-
-.. image:: images/elastic-architecture/standalone.png
-   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/standalone.png
 
 Node Types
 ----------
@@ -137,3 +96,17 @@ Heavy Nodes run the following components:
 -  Suricata
 -  Stenographer
 -  Wazuh
+
+High-Level Architecture Diagram
+-------------------------------
+
+.. image:: images/elastic-architecture/elastic-architecture.png
+   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/elastic-architecture.png
+
+Detailed Data Flow Diagram
+--------------------------
+
+.. image:: images/elastic-architecture/data-flow.png
+   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/data-flow.png
+
+If you're viewing the online version of this documentation, you can click the image to zoom in.
