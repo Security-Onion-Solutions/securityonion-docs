@@ -5,16 +5,13 @@ Architecture
 
 Evaluation
 ----------
-The simplest architecture is EVAL. All components run on one box. Filebeat collects logs and sends them directly to Elasticsearch. Evaluation mode is **not** designed for production usage.
+The simplest architecture is ``Evaluation``. All components run on one box. Filebeat collects logs and sends them directly to Elasticsearch where they are parsed and indexed. Evaluation mode is **not** designed for production usage.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87348176-4bd48400-c522-11ea-8a59-338180605f38.png
 
 Standalone
 ----------
-Standalone is similar to EVAL in that all components run on one box. However, instead of Filebeat sending logs directly to Elasticsearch, it sends them to Logstash. This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
-
--  Not recommended for monitoring high-throughput links
--  Consists of a single server running manager node components, sensor, and Elastic stack components.
+Standalone is similar to EVAL in that all components run on one box. However, instead of Filebeat sending logs directly to Elasticsearch, it sends them to Logstash which then transports them to Elasticsearch. This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87348334-8a6a3e80-c522-11ea-8719-08a13ebde978.png
 
