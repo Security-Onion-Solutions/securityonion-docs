@@ -3,7 +3,7 @@
 Setup
 =====
 
-Setup will configure Security Onion services and has options for a variety of :ref:`configurations <configuration>`. The following screenshots are from an EVAL installation with all services enabled. Your screens make look a little different depending on what options you choose.
+Setup will configure Security Onion services and has options for a variety of :ref:`configurations <configuration>`. The following screenshots are from an EVAL installation with all services enabled. Your screens may be different depending on what options you choose.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87330029-f5f1e300-c505-11ea-8a8d-2a5cbf0eeeed.png
 
