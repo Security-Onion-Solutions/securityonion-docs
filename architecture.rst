@@ -11,7 +11,9 @@ The simplest architecture is ``Evaluation``. All components run on one box. File
 
 Standalone
 ----------
-Standalone is similar to EVAL in that all components run on one box. However, instead of Filebeat sending logs directly to Elasticsearch, it sends them to Logstash which then transports them to Elasticsearch. This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
+``Standalone`` is similar to ``Evaluation`` in that all components run on one box. However, instead of Filebeat sending logs directly to Elasticsearch, it sends them to Logstash which then transports them to Elasticsearch. Elasticsearch then parses and indexes the logs. 
+
+This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87348334-8a6a3e80-c522-11ea-8719-08a13ebde978.png
 
