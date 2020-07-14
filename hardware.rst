@@ -35,7 +35,9 @@ Security Onion 2.0 is a new platform with more features than previous versions o
 NIC
 ---
 
-You'll need at least one wired network interface dedicated to management (preferably connected to a dedicated management network). If you plan to sniff network traffic from a tap or span port, then you will need an additional network interface dedicated to sniffing. Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
+You'll need at least one wired network interface dedicated to management (preferably connected to a dedicated management network). We recommend using static IP addresses where possible.
+
+If you plan to sniff network traffic from a tap or span port, then you will need an additional network interface dedicated to sniffing. Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
 
 Security Onion is not designed for wireless interfaces. You may be able to make them work, but they are not officially supported.
 
