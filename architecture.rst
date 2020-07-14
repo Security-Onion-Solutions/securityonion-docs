@@ -5,13 +5,13 @@ Architecture
 
 Evaluation
 ----------
-The simplest architecture is ``Evaluation``. All components run on one box. Filebeat collects logs and sends them directly to Elasticsearch where they are parsed and indexed. Evaluation mode is **not** designed for production usage.
+The simplest architecture is ``Evaluation``. All components run on one box. Filebeat collects logs and sends them directly to Elasticsearch where they are parsed and indexed. Evaluation mode is designed for quick installations to temporarily test out Security Onion. It is **not** designed for production usage at all.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87348176-4bd48400-c522-11ea-8a59-338180605f38.png
 
 Standalone
 ----------
-``Standalone`` is similar to ``Evaluation`` in that all components run on one box. However, instead of Filebeat sending logs directly to Elasticsearch, it sends them to Logstash which then transports them to Elasticsearch. Elasticsearch then parses and indexes the logs. 
+``Standalone`` is similar to ``Evaluation`` in that all components run on one box. However, instead of :ref:`filebeat` sending logs directly to :ref:`elasticsearch`, it sends them to :ref:`logstash` which then transports them to :ref:`elasticsearch`. :ref:`elasticsearch` then parses and indexes the logs. 
 
 This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
