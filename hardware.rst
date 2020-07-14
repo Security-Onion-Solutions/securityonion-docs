@@ -37,9 +37,11 @@ NIC
 
 You'll need at least one wired network interface dedicated to management (preferably connected to a dedicated management network). We recommend using static IP addresses where possible.
 
-If you plan to sniff network traffic from a tap or span port, then you will need an additional network interface dedicated to sniffing. Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
+If you plan to sniff network traffic from a tap or span port, then you will need one or more interfaces dedicated to sniffing (no IP address). The installer will automatically disable NIC offloading functions such as ``tso``, ``gso``, and ``gro`` on sniffing interfaces to ensure that Suricata and Zeek get an accurate view of the traffic.
 
-Security Onion is not designed for wireless interfaces. You may be able to make them work, but they are not officially supported.
+Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
+
+Security Onion is designed to use wired interfaces.  You may be able to make wireless interfaces work, but we don't recommend or support it.
 
 UEFI
 ----
