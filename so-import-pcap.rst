@@ -9,7 +9,7 @@ It will do the following:
 
 -  generate IDS alerts using :ref:`suricata`
 -  generate network metadata using :ref:`zeek`
--  store IDS alerts and network metadata with original timestamps
+-  store IDS alerts and network metadata in :ref:`elasticsearch` with original timestamps
 -  store pcaps where :ref:`soc` can find them
 
 Usage
