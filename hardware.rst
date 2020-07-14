@@ -32,6 +32,13 @@ Security Onion 2.0 is a new platform with more features than previous versions o
 
    If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open source platform!
 
+NIC
+---
+
+You'll need at least one wired network interface for management (preferably connected to a dedicated management network). If you plan to sniff network traffic from a tap or span port, then you will need an addition network interface dedicated to sniffing. Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
+
+Security Onion is not designed for wireless interfaces. You may be able to make them work, but they are not officially supported.
+
 UEFI
 ----
 If your hardware has UEFI, please see https://help.ubuntu.com/community/UEFI.
@@ -164,11 +171,6 @@ Storage
 Sensors that have full packet capture enabled need LOTS of storage. For example, suppose you are monitoring a link that averages 50Mbps, here are some quick calculations: 50Mb/s = 6.25 MB/s = 375 MB/minute = 22,500 MB/hour = 540,000 MB/day. So you're going to need about 540GB for one day's worth of pcaps (multiply this by the number of days you want to keep on disk for investigative/forensic purposes). The more disk space you have, the more PCAP retention you'll have for doing investigations after the fact. Disk is cheap, get all you can!
 
 We highly recommend using local storage whenever possible! SAN/iSCSI/FibreChannel/NFS can be made to work, but they increase complexity, points of failure, and have serious performance implications. By using local storage, you keep everything self-contained and you don't have to worry about competing for resources. Local storage is most times the most cost efficient solution as well.
-
-NIC
-~~~
-
-You'll need at least two wired network interfaces: one for management (preferably connected to a dedicated management network) and then one or more for sniffing (connected to tap or span). Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards.
 
 Packets
 ~~~~~~~
