@@ -7,9 +7,9 @@ so-import-pcap
 
 It will do the following:
 
--  generate IDS alerts using Suricata
--  generate Zeek logs
--  store IDS alerts and Zeek logs with original timestamps
+-  generate IDS alerts using :ref:`suricata`
+-  generate network metadata using :ref:`zeek`
+-  store IDS alerts and network metadata with original timestamps
 -  store pcaps where :ref:`soc` can find them
 
 Usage
