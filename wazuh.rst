@@ -23,12 +23,12 @@ The Wazuh components include:
 
 ``agent`` - runs directly on each host and monitors logs/activity and reports to ``manager``
 
-The Wazuh API runs at TCP port 55000 locally, and currently uses the default credentials of ``user:foo`` and ``password:bar`` for authentication. Keep in mind, the API port is not exposed externally by default. Therefore, firewall rules need to be in place to reach the API from another location other than the Security Onion node on which the targeted Wazuh manager is running.
+The Wazuh API runs at TCP port ``55000`` locally, and currently uses the default credentials of ``user:foo`` and ``password:bar`` for authentication. Keep in mind, the API port is not exposed externally by default. Therefore, firewall rules need to be in place to reach the API from another location other than the Security Onion node on which the targeted Wazuh manager is running.
 
 Configuration
 -------------
 
-The main configuration file for Wazuh is ``/var/ossec/etc/ossec.conf``.
+The main configuration file for Wazuh is ``/opt/so/wazuh/etc/ossec.conf``.
 
 Email
 -----
@@ -43,7 +43,7 @@ If you want to send Wazuh logs to an external syslog collector, please see the :
 Active Response
 ---------------
 
-Sometimes, Wazuh may recognize legitimate activity as potentially malicious, and engage in Active Response to block a connection. This may result in unintended consequences such as blocking of trusted IPs.  To prevent this from occurring,  you can add your IP address to a safe list and change other settings in ``/var/ossec/etc/ossec.conf``:
+Sometimes, Wazuh may recognize legitimate activity as potentially malicious, and engage in Active Response to block a connection. This may result in unintended consequences such as blocking of trusted IPs.  To prevent this from occurring,  you can add your IP address to a safe list and change other settings in ``/opt/so/wazuh/etc/ossec.conf``:
 
 ::
 
@@ -90,4 +90,4 @@ More Information
 
 .. seealso::
 
-    For more information about Wazuh, please see https://documentation.wazuh.com/3.9/.
+    For more information about Wazuh, please see https://documentation.wazuh.com/3.10/.
