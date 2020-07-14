@@ -50,7 +50,7 @@ If you don't already have the ``mail`` utility, you can try installing:
 Wazuh
 -----
 
-Modify ``/var/ossec/etc/ossec.conf`` as follows:
+Modify ``/opt/so/wazuh/etc/ossec.conf`` as follows:
 
 ::
 
@@ -66,16 +66,16 @@ Then restart Wazuh:
 
 ::
 
-   sudo so-ossec-restart
+   sudo so-wazuh-restart
 
-You can specify the severity of an event for which Wazuh will send email alerts by specifying an appropriate value for ``email_alert_level`` in ``/var/ossec/etc/ossec.conf``. If you notice ``email_alert_level`` is not being respected for a certain rule, it may be that the option is overridden by ``<options>alert_by_email</options>`` being set for a rule. You can modify this behavior in ``/var/ossec/rules/local.rules``.
+You can specify the severity of an event for which Wazuh will send email alerts by specifying an appropriate value for ``email_alert_level`` in ``/opt/so/wazuh/etc/ossec.conf``. If you notice ``email_alert_level`` is not being respected for a certain rule, it may be that the option is overridden by ``<options>alert_by_email</options>`` being set for a rule. You can modify this behavior in ``/opt/so/wazuh/etc/rules/local_rules.xml``.
 
 You can also find an explanation of the alert levels at http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html.
 
 Zeek
 ----
 
-Edit ``/opt/bro/etc/broctl.cfg`` and set the following:
+Edit ``/opt/so/conf/zeek/zeekctl.cfg`` and set the following:
 
 ::
 
@@ -88,13 +88,13 @@ Then update and restart Zeek:
 
    sudo so-zeek-restart
 
-You should then start receiving hourly connection summary emails. If you don't want the connection summary emails, you can add the following to ``broctl.cfg`` and update and restart Zeek as shown above:
+You should then start receiving hourly connection summary emails. If you don't want the connection summary emails, you can add the following to ``zeekctl.cfg`` and update and restart Zeek as shown above:
 
 ::
 
    tracesummary=
 
-You may want to receive emails for Zeek notices. To do that, add the following to ``/opt/bro/share/bro/site/local.bro`` and update/restart Zeek as shown above:
+You may want to receive emails for Zeek notices. To do that, add the following to ``/opt/so/conf/zeek/local.zeek`` and then update/restart Zeek as shown above:
 
 ::
 
