@@ -43,18 +43,12 @@ If you want to send Wazuh logs to an external syslog collector, please see the :
 Active Response
 ---------------
 
-Sometimes, Wazuh may recognize legitimate activity as potentially malicious, and engage in Active Response to block a connection. This may result in unintended consequences such as blocking of trusted IPs.  To prevent this from occurring,  you can add your IP address to a safe list and change other settings in ``/opt/so/wazuh/etc/ossec.conf``:
-
-::
-
-   <global>
-   <white_list>desired_ip</white_list>
-   </global>
+Sometimes, Wazuh may recognize legitimate activity as potentially malicious and engage in Active Response to block a connection. This may result in unintended consequences such as blocking of trusted IPs.  To prevent this from occurring, you can add your IP address to a safe list and change other settings in ``/opt/so/wazuh/etc/ossec.conf`` in the `` <!-- Active response -->`` section. :ref:`so-allow` does this for your automatically when you allow analyst connections.
 
 Tuning Rules
 ------------
 
-You can add new rules and modify existing rules in ``/var/ossec/rules/local_rules.xml``.
+You can add new rules and modify existing rules in ``/opt/so/wazuh/etc/rules/local_rules.xml``.
 
 Adding Agents
 -------------
@@ -79,11 +73,9 @@ Security Onion is configured to support a maximum number of ``14000`` Wazuh agen
 Automated Deployment
 --------------------
 
-| If you would like to automate the deployment of Wazuh agents, the Wazuh server includes ``ossec-authd``:
-| https://documentation.wazuh.com/3.9/user-manual/reference/daemons/ossec-authd.html
+If you would like to automate the deployment of Wazuh agents, the Wazuh server includes ``ossec-authd``. You can read more about ``ossec-authd`` at https://documentation.wazuh.com/3.10/user-manual/reference/daemons/ossec-authd.html.
 
-| When using ``ossec-authd``, be sure to add a firewall exception for agents to access port ``1515/tcp`` on the Wazuh manager node:
-| ``sudo ufw allow proto tcp from agent_ip to any port 1515`` 
+When using ``ossec-authd``, be sure to add a firewall exception for agents to access port ``1515/tcp`` on the Wazuh manager node by running :ref:`so-allow` and choosing the ``r`` option.
 
 More Information
 ----------------
