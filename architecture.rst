@@ -25,7 +25,7 @@ A standard distributed deployment includes a **manager node**, one or more **for
 -  Recommended deployment type
 -  Consists of a manager node, one or more forward nodes, and one or more search nodes.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87590237-75251980-c6b4-11ea-9696-87fbae1fd744.png
+.. image:: images/elastic-architecture/distributed.png
    
 There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
