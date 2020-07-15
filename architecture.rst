@@ -30,7 +30,7 @@ A standard distributed deployment includes a **manager node**, one or more **for
 There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
 -  Recommended only if a standard distributed deployment is not possible.
--  Consists of a manager node, and one or more heavy nodes.
+-  Consists of a manager node and one or more heavy nodes.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87586170-24122700-c6ae-11ea-882c-c8423de49b1c.png
 
