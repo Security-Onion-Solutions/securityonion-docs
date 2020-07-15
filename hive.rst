@@ -32,6 +32,10 @@ Logging
 -------
 TheHive logging can be found at ``/opt/so/log/thehive/``.
 
+Severity
+--------
+Currently, alerts sent to TheHive are hardcoded to severity 2. We are working on an :ref:`elastalert` tweak to set the correct severity.
+
 More Information
 ----------------
 
