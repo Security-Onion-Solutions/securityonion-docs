@@ -25,8 +25,8 @@ A standard distributed deployment includes a **manager node**, one or more **for
 -  Recommended deployment type
 -  Consists of a manager node, one or more forward nodes, and one or more search nodes.
 
-.. image:: images/elastic-architecture/distributed.png
-   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/distributed.png
+.. image:: https://user-images.githubusercontent.com/1659467/87535583-bd691b00-c665-11ea-9dcc-073cd8f42406.png
+   :target: https://user-images.githubusercontent.com/1659467/87535583-bd691b00-c665-11ea-9dcc-073cd8f42406.png
    
 There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
