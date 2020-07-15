@@ -32,9 +32,7 @@ There is the option to utilize only two node types -- the **manager node** and o
 -  Recommended only if a standard distributed deployment is not possible.
 -  Consists of a manager node, and one or more heavy nodes.
 
-.. image:: images/elastic-architecture/heavy-distributed.png
-   :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/master/images/elastic-architecture/heavy-distributed.png
-
+.. image:: https://user-images.githubusercontent.com/1659467/87586170-24122700-c6ae-11ea-882c-c8423de49b1c.png
 
 Node Types
 ----------
