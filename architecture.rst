@@ -15,7 +15,8 @@ Standalone
 
 This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87348334-8a6a3e80-c522-11ea-8719-08a13ebde978.png
+.. image:: https://user-images.githubusercontent.com/1659467/87536022-69126b00-c666-11ea-987d-1d0340b62307.png
+   :target: https://user-images.githubusercontent.com/1659467/87536022-69126b00-c666-11ea-987d-1d0340b62307.png
 
 Distributed
 -----------
