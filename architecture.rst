@@ -7,7 +7,8 @@ Evaluation
 ----------
 The simplest architecture is ``Evaluation``. All components run on one box. :ref:`filebeat` collects logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for quick installations to temporarily test out Security Onion. It is **not** designed for production usage at all.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87348176-4bd48400-c522-11ea-8a59-338180605f38.png
+.. image:: https://user-images.githubusercontent.com/1659467/87536226-c3abc700-c666-11ea-9f67-c20f237e2b3a.png
+   :target: https://user-images.githubusercontent.com/1659467/87536226-c3abc700-c666-11ea-9f67-c20f237e2b3a.png
 
 Standalone
 ----------
