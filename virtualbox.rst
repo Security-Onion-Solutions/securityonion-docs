@@ -16,6 +16,8 @@ At this point, you can click "Settings" for your new virtual machine so we can g
 
 Hit the "Start" button with your new virtual machine selected and after a few seconds the boot menu will load. 
 
-Snapshots
----------
-You'll notice two icons on the top right in VirtualBox Manager when you select your virtual machine: Details and Snapshots. Click "Snapshots" then click the camera icon and give your snapshot a name and description. Once we have a snapshot, we'll be able to make changes to the system and revert those changes back to the state we are preserving.
+Follow the installation steps for your desired installation type in the :ref:`installation` section.
+
+.. tip::
+
+  You'll notice two icons on the top right in VirtualBox Manager when you select your virtual machine: Details and Snapshots. Click "Snapshots" then click the camera icon and give your snapshot a name and description. Once we have a snapshot, we'll be able to make changes to the system and revert those changes back to the state we are preserving.
