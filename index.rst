@@ -26,4 +26,3 @@ Security Onion Documentation
    help
    security
    appendix
-   cheat-sheet
