@@ -15,18 +15,17 @@ Thanks to ``senatorhotchkiss`` on our mailing list for updating the original scr
 
     #!/bin/bash
 
-    export PATH=/opt/bro/bin:$PATH
-    BRO_LOGS="/nsm/bro/logs"
+    ZEEK_LOGS="/nsm/zeek/logs"
     TODAY=`date +%Y-%m-%d`
     YESTERDAY=`date -d yesterday +%Y-%m-%d`
-    OLD_DIRS=`ls $BRO_LOGS |egrep -v "current|stats|$TODAY|$YESTERDAY"`
+    OLD_DIRS=`ls $ZEEK_LOGS | grep "20*-*" | egrep -v "current|stats|$TODAY|$YESTERDAY"`
     TMPDIR=/tmp
     OLDLOG=$TMPDIR/oldlog
     NEWLOG=$TMPDIR/newlog
     SUSPECTS=$TMPDIR/suspects
 
-    for DIR in $OLD_DIRS; do zcat $BRO_LOGS/$DIR/dns* | jq '{"id.resp_p"},{"query"}' ; done  | grep -v "^5353" | awk '{print $2}' | sort | uniq -c | sort -k2 > $OLDLOG
-    zcat $BRO_LOGS/$YESTERDAY/dns* | jq '{"id.resp_p"},{"query"}' | grep -v "^5353" | awk '{print $2}' | sort | uniq -c | sort -k2 > $NEWLOG
+    for DIR in $OLD_DIRS; do zcat $ZEEK_LOGS/$DIR/dns* | jq '{"id.resp_p"},{"query"}' ; done  | grep -v "^5353" | awk '{print $2}' | sort | uniq -c | sort -k2 > $OLDLOG
+    zcat $ZEEK_LOGS/$YESTERDAY/dns* | jq '{"id.resp_p"},{"query"}' | grep -v "^5353" | awk '{print $2}' | sort | uniq -c | sort -k2 > $NEWLOG
     join -1 2 -2 2  -a 2 $OLDLOG $NEWLOG | egrep -v '.* [0-9]+ [0-9]+$' | sort -nr -k2 | head -50 > $SUSPECTS
 
     echo
@@ -34,5 +33,6 @@ Thanks to ``senatorhotchkiss`` on our mailing list for updating the original scr
     echo "Top 50 First Time Seen DNS queries:"
     echo "===================================="
     cat $SUSPECTS
+
 
 Another option to consider might be :ref:`elastalert` and its ``new_term`` rule.
