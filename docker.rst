@@ -7,8 +7,28 @@ From https://www.docker.com/what-docker:
 
     Docker is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Operators use Docker to run and manage apps side-by-side in isolated containers to get better compute density. Enterprises use Docker to build agile software delivery pipelines to ship new features faster, more securely and with confidence for both Linux, Windows Server, and Linux-on-mainframe apps.
 
-Images
-------
+Download
+--------
+
+| Our Docker images are stored on Docker Hub:
+| https://hub.docker.com/u/securityonion/
+
+If you download our Security Onion ISO image, the Docker engine and these Docker images are baked right into the ISO image.
+
+If you instead use another ISO image, our installer will download Docker images as necessary.
+
+Security
+--------
+
+| To prevent tampering, our Docker images are signed using Docker Notary:
+| https://docs.docker.com/notary/getting_started/
+
+Any time we push an image to Docker Hub, we explicitly set ``--disable-content-trust=false`` to sign the image using Docker Notary.
+
+Any time we download an image from Docker Hub, we also explicitly set ``--disable-content-trust=false`` to verify that signature using Docker Notary.
+
+Elastic
+-------
 
 To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co. Their Docker images are built on CentOS 7:
 https://www.elastic.co/blog/docker-base-centos7
@@ -19,40 +39,6 @@ Registry
 The manager node runs a Docker registry. From https://docs.docker.com/registry/recipes/mirror/:
 
     If you have multiple instances of Docker running in your environment (e.g., multiple physical or virtual machines, all running the Docker daemon), each time one of them requires an image that it doesn’t have it will go out to the internet and fetch it from the public Docker registry. By running a local registry mirror, you can keep most of the redundant image fetch traffic on your local network.
-
-Sneakernet Updates
-------------------
-
-If we need to perform offline updates of Docker images, we can do so by cloning the ``security-onion-docker-airgap`` script(s) at https://github.com/weslambert/securityonion-docker-airgap:
-
-::
-
-   git clone https://github.com/weslambert/securityonion-docker-airgap
-   cd securityonion-docker-airgap
-
-The script(s) should be run first on a machine with internet access -- Docker images will be downloaded and saved to a single ``images.tar`` file.
-
-::
-
-   sudo ./so-elastic-airgap
-
-Choose the ``Save`` option.
-
-From there, the ``securityonion-docker-airgap`` directory (including the ``images.tar`` file) should be copied to the destination machine.
-
-Once there, change into the ``securityonion-docker-airgap`` directory:
-
-::
-
-   cd securityonion-docker-airgap
-
-Run the ``so-elastic-airgap`` script, and choose the ``Load`` option.
-
-The Docker images should now be loaded. We can verify this by running:
-
-::
-
-   sudo docker images
 
 Networking
 ----------
@@ -113,26 +99,6 @@ You should then receive some output similar to the following:
 ``vethc5ff027``
 
 where ``vethc5ff027`` is the external interface of ``eth0`` within the ``so-elasticsearch`` container.
-
-Download
---------
-
-| Our Docker images are stored on Docker Hub:
-| https://hub.docker.com/u/securityonion/
-
-If you download our Security Onion ISO image, the Docker engine and these Docker images are baked right into the ISO image.
-
-If you instead use another ISO image, our installer will download Docker images as necessary.
-
-Security
---------
-
-| To prevent tampering, our Docker images are signed using Docker Notary:
-| https://docs.docker.com/notary/getting_started/
-
-Any time we push an image to Docker Hub, we explicitly set ``--disable-content-trust=false`` to sign the image using Docker Notary.
-
-Any time we download an image from Docker Hub, we also explicitly set ``--disable-content-trust=false`` to verify that signature using Docker Notary.
 
 VMware Tools
 ------------
