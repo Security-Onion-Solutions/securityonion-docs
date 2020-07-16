@@ -3,17 +3,12 @@
 ICMP Anomaly Detection
 ======================
 
-At Security Onion Conference 2016, Eric Conrad shared some IDS rules for
-detecting unusual ICMP echo requests/replies and identifying C2 channels
-that may utilize ICMP tunneling for covert communication.
+At Security Onion Conference 2016, Eric Conrad shared some IDS rules for detecting unusual ICMP echo requests/replies and identifying C2 channels that may utilize ICMP tunneling for covert communication.
 
 Usage
 -----
 
-We can add the rules to ``/etc/nsm/rules/local.rules`` and the variables
-to ``snort.conf`` and/or ``suricata.yaml`` so that we can gain better
-insight into ICMP echoes or replies over a certain size, containing
-particularly suspicious content, etc.
+We can add the rules to ``/opt/so/rules/nids/local.rules`` and the variables to ``suricata.yaml`` so that we can gain better insight into ICMP echoes or replies over a certain size, containing particularly suspicious content, etc.
 
 Presentation
 ------------
