@@ -8,44 +8,7 @@ Some applications rely on having a mail server in the OS itself and other applic
 Operating System
 ----------------
 
-Install and configure your favorite mail server. Depending on your needs, this could be something simple like ``nullmailer``  (recommended) or something more complex like ``exim4``.
-
-Here are some ``nullmailer`` instructions provided by Michael Iverson:
-
-::
-
-   sudo apt-get install nullmailer
-
-   # edit /etc/mailname to hold your "from" domain name. (If you were google, you'd use "gmail.com".)
-
-   # edit /etc/nullmailer/adminaddr to contain the address you want mail to root to be routed to.
-
-   # edit /etc/nullmailer/remotes to contain the mail server to forward email to. 
-
-Alternatively, here are some instructions for the more complex ``exim4``:
-
-::
-
-   sudo apt-get -y install mailutils
-   sudo dpkg-reconfigure exim4-config
-
-Once you've configured your mail server and verified that it can send email properly, you might want to create a daily cronjob to execute ``/usr/sbin/sostat`` and email you the output:
-
-::
-
-   # /etc/cron.d/sostat
-   crontab entry to run sostat and email its output
-   ------------------------------------------------
-   SHELL=/bin/sh
-   PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-   EMAIL=YourUsername@YourDomain.com\ 
-   01 12 * * * root HOSTNAME=$(hostname); /usr/sbin/sostat 2>&1 | mail -s "$HOSTNAME stats" $EMAIL
-
-If you don't already have the ``mail`` utility, you can try installing:
-
-::
-
-   sudo apt-get install mailutils
+You can install and configure your favorite mail server. Depending on your needs, this could be something simple like ``nullmailer`` or something more complex like ``exim4``.
 
 Wazuh
 -----
