@@ -13,7 +13,7 @@ You can install and configure your favorite mail server. Depending on your needs
 Wazuh
 -----
 
-Modify ``/opt/so/wazuh/etc/ossec.conf`` as follows:
+If you want Wazuh to send email, you can modify ``/opt/so/wazuh/etc/ossec.conf`` as follows:
 
 ::
 
