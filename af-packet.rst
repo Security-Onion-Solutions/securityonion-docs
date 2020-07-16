@@ -19,4 +19,7 @@ The following processes use AF-PACKET for packet acquisition:
 
 More Information
 ----------------
-For more information about AF-PACKET, please see https://www.kernel.org/doc/Documentation/networking/packet_mmap.txt.
+
+.. seealso::
+
+   For more information about AF-PACKET, please see https://www.kernel.org/doc/Documentation/networking/packet_mmap.txt.
