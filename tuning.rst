@@ -12,5 +12,4 @@ To get the best performance out of Security Onion, you'll want to tune it for yo
    rules
    local-rules
    alerts
-   af-packet
    performance
