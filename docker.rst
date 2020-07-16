@@ -16,35 +16,9 @@ https://www.elastic.co/blog/docker-base-centos7
 Registry
 --------
 
-From https://docs.docker.com/registry/recipes/mirror/:
+The manager node runs a Docker registry. From https://docs.docker.com/registry/recipes/mirror/:
 
     If you have multiple instances of Docker running in your environment (e.g., multiple physical or virtual machines, all running the Docker daemon), each time one of them requires an image that it doesn’t have it will go out to the internet and fetch it from the public Docker registry. By running a local registry mirror, you can keep most of the redundant image fetch traffic on your local network.
-
-We can leverage the Docker registry (as a `pull-through cache <https://docs.docker.com/registry/recipes/mirror/>`__) with our Security Onion Docker images. As mentioned above, this will allow us to cut down on external requests and bandwidth, cache the images on a local server, and only pull new images when they are available.
-
-We can easily configure our Security Onion manager node and sensor by running the following script on each machine (watch out for line-wrapping) :
-
-::
-
-   wget https://raw.githubusercontent.com/weslambert/securityonion-docker-registry/master/so-docker-registry
-   sudo bash so-docker-registry
-
-The above script:
-
--  Sets up a Docker container named ``docker-registry`` on the manager node - this container exposes port 5000 for 127.0.0.1 (only locally).
--  Configures the manager node to use the ``docker-registry`` container as its proxy to pull images (``registry-mirror`` in ``/etc/default/docker``).
--  Configures a sensor to use to ``docker-registry`` on the manager node as a proxy to pull images -- this is done through the addition of a local port forward (5000) through the existing autossh tunnel (``/root/.ssh/securityonion_ssh.conf``), and setting the ``registry-mirror`` value for the docker client on the sensor (``/etc/default/docker``)
--  Restarts Security Onion Docker containers so the latest images are cached on the manager node and pulled to the sensor.
-
-After the script has completed (after running on both machines), the newest images from the ``securityonionsolutions`` repo should be locally cached on the manager node, and already pulled to the sensor.
-
-We can check this by running the following from the manager node (or sensor):
-
-::
-
-   curl localhost:5000/v2/_catalog
-
-From here on, whenever ``soup`` checks for new images, it will pull them from the manager node instead of Docker Hub.
 
 Sneakernet Updates
 ------------------
@@ -144,7 +118,7 @@ Download
 --------
 
 | Our Docker images are stored on Docker Hub:
-| https://hub.docker.com/u/securityonionsolutions/
+| https://hub.docker.com/u/securityonion/
 
 If you download our Security Onion ISO image, the Docker engine and these Docker images are baked right into the ISO image.
 
