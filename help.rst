@@ -9,11 +9,11 @@ Having problems? Try the suggestions below.
 -  Check the :ref:`faq`.
 -  Search the :ref:`Security Onion Mailing List <mailing-lists>`.
 -  Search the documentation and mailing lists of the tools contained within Security Onion: :ref:`tools`
--  Check log files in ``/opt/so/log`` or other locations for any errors or possible clues:
+-  Check log files in ``/opt/so/log/`` or other locations for any errors or possible clues:
 
    -  Setup ``/root/sosetup.log``
    -  Suricata ``/opt/so/log/suricata/suricata.log``
-   -  Zeek ``/nsm/zeek/logs/current``
+   -  Zeek ``/nsm/zeek/logs/current/``
    -  Elasticsearch ``/opt/so/log/elasticsearch/<hostname>.log``
    -  Kibana ``/opt/so/log/kibana/kibana.log``
    -  Logstash ``/opt/so/log/logstash/logstash.log``
