@@ -13,16 +13,9 @@ We need more folks to help spread the word about Security Onion by blogging, twe
 Support Team
 ------------
 
-If you'd like help out other Security Onion users, please join the security-onion mailing list and/or reddit and start answering questions!
+If you'd like help out other Security Onion users, please join the forum and start answering questions!
 
-https://groups.google.com/forum/#!forum/security-onion
-
-Testing/QA Team
----------------
-
-If you'd like to do testing/QA, please join the security-onion-testing mailing list.
-
-https://groups.google.com/forum/#!forum/security-onion-testing
+https://www.reddit.com/r/securityonion/
 
 Documentation Team
 ------------------
