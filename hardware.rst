@@ -3,8 +3,8 @@
 Hardware Requirements
 =====================
 
-Architecture
-------------
+CPU Architecture
+----------------
 
 Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit processors).
 
