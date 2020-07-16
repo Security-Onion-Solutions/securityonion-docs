@@ -3,7 +3,7 @@
 Installation
 ============
 
-Once you have a machine ready for installation, you'll need to decide how you're going to install Security Onion. You can install using our Security Onion ISO image (based on CentOS 7) **or** you can manually install standard Ubuntu 18.04 or CentOS 7 and then install our components on top.
+Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on CentOS 7) **or** installing standard CentOS 7 or Ubuntu 18.04 and then installing our components on top.
 
 .. tip::
 
