@@ -40,7 +40,7 @@ Confirm rules in place:
 
 ::
 
-   grep -i misp /etc/nsm/rules/downloaded.rules
+   grep -i misp /opt/so/rules/nids/all.rules
 
 You should now be up and running!
 
