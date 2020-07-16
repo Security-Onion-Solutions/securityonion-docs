@@ -20,9 +20,9 @@ Below, we'll provide a few ways we can test our IDS to make sure it is working a
    
       curl testmyids.com
 
-   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/etc/nsm/rules/downloaded.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the management first, run ``rule-update``, then push the changes out to the other sensor(s)).
+   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the management first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
-#. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/etc/nsm/rules/local.rules``:
+#. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/opt/so/rules/nids/local.rules``:
 
 -  **NIDS Rule**
 
@@ -60,16 +60,11 @@ Identifying overly active signatures
 Identifying rule categories
 ---------------------------
 
-Both the Snort Subscriber (Talos) and the Emerging Threats rulesets come
-with a large number of rules enabled (over 20,000 by default). You
-should only run the rules necessary for your environment. So you may
-want to disable entire categories of rules that don't apply to you. Run
-the following command to get a listing of categories and the number of
-rules in each:
+Both the Snort Subscriber (Talos) and the Emerging Threats rulesets come with a large number of rules enabled (over 20,000 by default). You should only run the rules necessary for your environment. So you may want to disable entire categories of rules that don't apply to you. Run the following command to get a listing of categories and the number of rules in each:
 
 ::
 
-    cut -d\" -f2 /etc/nsm/rules/downloaded.rules | grep -v "^$" | grep -v "^#" | awk '{print $1, $2}'|sort |uniq -c |sort -nr
+    cut -d\" -f2 /opt/so/rules/nids/all.rules | grep -v "^$" | grep -v "^#" | awk '{print $1, $2}'|sort |uniq -c |sort -nr
 
 | Also see:
 | https://github.com/shirkdog/pulledpork/blob/master/doc/README.CATEGORIES
@@ -89,7 +84,7 @@ There are multiple ways to handle overly productive signatures and we'll try to 
 Disable the sid
 ---------------
 
-Security Onion uses `PulledPork <https://github.com/shirkdog/pulledpork>`__ to download new signatures every night and process them against a set list of user generated configurations.
+Security Onion uses ``idstools`` to download new signatures every night and process them against a set list of user generated configurations.
 
 In a distributed Security Onion environment, you only need to change the configuration file on the server and the rule-update script will sync with the signatures from the Server.
 
@@ -101,8 +96,7 @@ As mentioned before, take care in disabling signatures as it can be likely that 
 
         sudo vi /etc/nsm/pulledpork/disablesid.conf
 
--  Append the signature you wish to disable in the format gid:sid. gid is the generator ID and will usually be "1". You can
-   check the generator ID by checking the exact signature. If a gid is not listed, it is assumed to be "1".  A common exception would be rules that start with "SURICATA" having a gid of "0" and Talos VRT Shared Object (compiled) rules having a gid of "3".  Here are some examples:
+-  Append the signature you wish to disable in the format gid:sid. gid is the generator ID and will usually be "1". You can check the generator ID by checking the exact signature. If a gid is not listed, it is assumed to be "1".  A common exception would be rules that start with "SURICATA" having a gid of "0" and Talos VRT Shared Object (compiled) rules having a gid of "3".  Here are some examples:
 
    ::
 
@@ -117,22 +111,15 @@ As mentioned before, take care in disabling signatures as it can be likely that 
 Disable the category
 --------------------
 
-In ``/etc/nsm/pulledpork/disablesid.conf``, instead of providing a sid,
-we can use a PCRE (Perl-compatible regular expression) or refer to the
-rule category (found in the header above the rule grouping in
-``/etc/nsm/rules/downloaded.rules``).
+In ``/etc/nsm/pulledpork/disablesid.conf``, instead of providing a sid, we can use a PCRE (Perl-compatible regular expression) or refer to the rule category (found in the header above the rule grouping in ``/opt/so/rules/nids/all.rules``).
 
-For example, if we wanted to disable the entire ET-emerging-misc
-category, we could do so by putting the following in
-``/etc/nsm/pulledpork/disablesid.conf``:
+For example, if we wanted to disable the entire ET-emerging-misc category, we could do so by putting the following in ``/etc/nsm/pulledpork/disablesid.conf``:
 
 ::
 
    ET-emerging-misc
 
-If we wanted to disable all rules with ``ET MISC`` in the rule
-description, we could put the following in
-``/etc/nsm/pulledpork/disablesid.conf``:
+If we wanted to disable all rules with ``ET MISC`` in the rule description, we could put the following in ``/etc/nsm/pulledpork/disablesid.conf``:
 
 ::
 
@@ -143,10 +130,7 @@ After making changes to the file, update your rules as shown in the :ref:`rules`
 modifysid.conf
 --------------
 
-PulledPork's modifysid.conf will allow you to write modifications to
-rules that are applied every time PulledPork downloads the latest
-ruleset. There are several examples in the modifysid.conf file, so we
-won't repeat them here. Edit the modifysid.conf configuration file:
+PulledPork's modifysid.conf will allow you to write modifications to rules that are applied every time PulledPork downloads the latest ruleset. There are several examples in the modifysid.conf file, so we won't repeat them here. Edit the modifysid.conf configuration file:
 
 ::
 
@@ -157,38 +141,29 @@ Update rules as shown in the :ref:`rules` section.
 Rewrite the signature
 ---------------------
 
-In some cases, you may not want to use Pulledpork's modifysid.conf, but
-instead create a copy of the rule and disable the original. In Security
-Onion, locally created rules are stored in /etc/nsm/rules/local.rules
+In some cases, you may not want to use Pulledpork's modifysid.conf, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in ``/opt/so/rules/nids/local.rules``.
 
--  Edit the /etc/nsm/rules/local.rules file:
+-  Edit the ``/opt/so/rules/nids/local.rules`` file using ``vi`` or your favorite text editor:
 
    ::
 
-        sudo vi /etc/nsm/rules/local.rules
+        sudo vi /opt/so/rules/nids/local.rules
 
--  NIDS rules are incredibly flexible, this is a bird's eye view of the
-   rule format:
+-  NIDS rules are incredibly flexible, this is a bird's eye view of the rule format:
 
    ::
 
         Action Protocol SrcIP SrcPort Direction DestIP DestPort (rule options)
 
--  Here is the rule that has been generating so many alerts on our
-   sensor(s)
+-  Here is the rule that has been generating so many alerts on our sensor(s)
 
    ::
 
-        macphisto@SecOnion-Dev:~$ grep -i "GPL SNMP public access udp" /etc/nsm/rules/downloaded.rules 
+        macphisto@SecOnion-Dev:~$ grep -i "GPL SNMP public access udp" /opt/so/rules/nids/all.rules
          alert udp $EXTERNAL_NET any -> $HOME_NET 161 (msg:"GPL SNMP public access udp"; content:"public"; fast_pattern:only; reference:bugtraq,2112; reference:bugtraq,4088; reference:bugtraq,4089; reference:cve,1999-0517; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:2101411; rev:11;)
 
--  We can rewrite the rule so it's a little less active. We will rewrite
-   the rule to ignore this kind of alert if the destination is any of
-   the hosts we've identified.
--  For starters let's create some variables in
-   /etc/nsm/rules/local.rules to define the traffic. First we're going
-   to define a variable for our called overactive hosts called
-   OVERACTIVE
+-  We can rewrite the rule so it's a little less active. We will rewrite the rule to ignore this kind of alert if the destination is any of the hosts we've identified.
+-  For starters let's create some variables in ``/opt/so/rules/nids/local.rules`` to define the traffic. First we're going to define a variable for our called overactive hosts called OVERACTIVE
 
    ::
 
@@ -200,11 +175,8 @@ Onion, locally created rules are stored in /etc/nsm/rules/local.rules
 
         alert udp $HOME_NET any -> !$OVERACTIVE any (msg:"GPL SNMP public access udp"; content:"public"; fast_pattern:only; reference:bugtraq,2112; reference:bugtraq,4088; reference:bugtraq,4089; reference:cve,1999-0517; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:9001411; rev:1;)
 
--  We also gave the alert a unique signature id (sid) by bumping it into
-   the 90,000,000 range and set the revision to 1.
--  Now that we have a signature that will generate alerts a little more
-   selectively, we need to disable the original signature. Like above,
-   we edit the disablesid.conf file and add:
+-  We also gave the alert a unique signature id (sid) by bumping it into the 90,000,000 range and set the revision to 1.
+-  Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. Like above, we edit the disablesid.conf file and add:
 
    ::
 
@@ -325,8 +297,8 @@ Once the correct suppression has been placed in ``threshold.conf``, restart the 
 
     sudo so-nids-restart
 
-Why is pulledpork ignoring disabled rules in downloaded.rules
--------------------------------------------------------------
+Why is idstools ignoring disabled rules
+---------------------------------------
 
 If your syntax is correct, you are likely trying to disable a rule that has flowbits set. For a quick primer on flowbits see http://blog.snort.org/2011/05/resolving-flowbit-dependancies.html and section 3.6.10 of the Snort Manual (http://www.snort.org/docs).
 
@@ -348,4 +320,4 @@ If you try to disable the first two rules without disabling the third rule (whic
        1:2013410
        1:2013411
 
-When you run ``sudo rule-update``, watch the "Setting Flowbit State..." section and you can see that if you disable all three (or however many rules share that flowbit) that the "Enabled XX flowbits" line is decrimented and all three rules should then be disabled in your ``downloaded.rules``.
+When you run ``sudo so-rule-update``, watch the "Setting Flowbit State..." section and you can see that if you disable all three (or however many rules share that flowbit) that the "Enabled XX flowbits" line is decrimented and all three rules should then be disabled in your ``all.rules``.
