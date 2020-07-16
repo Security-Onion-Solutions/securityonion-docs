@@ -8,6 +8,7 @@ This section covers the various processes that Security Onion uses to analyze an
 .. toctree::
    :maxdepth: 2
 
+   af-packet
    suricata
    zeek
    stenographer
