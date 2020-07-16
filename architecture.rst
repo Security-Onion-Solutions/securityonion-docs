@@ -20,7 +20,7 @@ This type of deployment is typically used for testing, labs, POCs, or **very** l
 Distributed
 -----------
 
-A standard distributed deployment includes a **manager node**, one or more **forward nodes** (previously called a sensor -- runs sensor components), and one or more **search nodes** (runs Elastic components). This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new search nodes to handle more traffic or log sources.
+A standard distributed deployment includes a **manager node**, one or more **forward nodes** running network sensor components, and one or more **search nodes** running Elastic search components. This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new search nodes to handle more traffic or log sources.
 
 -  Recommended deployment type
 -  Consists of a manager node, one or more forward nodes, and one or more search nodes.
@@ -44,39 +44,39 @@ The ``manager node`` runs its own local copy of Elasticsearch, which manages cro
 
 The manager node runs the following components:
 
--  Elasticsearch
--  Logstash
--  Kibana
--  Curator
--  Elastalert
--  Redis (Only if configured to output to a search node)
--  Wazuh
+-  :ref:`elasticsearch`
+-  :ref:`logstash`
+-  :ref:`kibana`
+-  :ref:`curator`
+-  :ref:`elastalert`
+-  :ref:`redis` (Only if configured to output to a search node)
+-  :ref:`wazuh`
 
 Forward Node
 ~~~~~~~~~~~~
 
-When using a ``forward node``, Elastic Stack components are not installed. Syslog-ng forwards all logs to Logstash on the manager node via an autossh tunnel, where they are stored in Elasticsearch on the manager node, or forwarded to search node's Elasticsearch instance (if the manager node has been configured to use a search node). From there, the data can be queried through the use of cross-cluster search.
+When using a ``forward node``, Elastic Stack components are not installed. :ref:`filebeat` forwards all logs to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). From there, the data can be queried through the use of cross-cluster search.
 
 Forward Nodes run the following components:
 
--  Zeek (formerly Bro)
--  Suricata
--  Stenographer
--  Wazuh
+-  :ref:`zeek`
+-  :ref:`suricata`
+-  :ref:`stenographer`
+-  :ref:`wazuh`
 
 Search Node
 ~~~~~~~~~~~
 
-When using a ``search node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Search Node``, it will create a local Elasticsearch instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local Elasticsearch instance.
+When using a ``search node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Search Node``, it will create a local :ref:`elasticsearch` instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local :ref:`elasticsearch` instance.
 
 ``Search nodes`` primarily collect logs from other nodes and store them for searching.
 
 Search Nodes run the following components:
 
--  Elasticsearch
--  Logstash
--  Curator
--  Wazuh
+-  :ref:`elasticsearch`
+-  :ref:`logstash`
+-  :ref:`curator`
+-  :ref:`wazuh`
 
 Heavy Node
 ~~~~~~~~~~
@@ -85,10 +85,10 @@ Similar to search nodes, heavy nodes extend the storage and processing capabilit
 
 Heavy Nodes run the following components:
 
--  Elasticsearch
--  Logstash
--  Curator
--  Zeek
--  Suricata
--  Stenographer
--  Wazuh
+-  :ref:`elasticsearch`
+-  :ref:`logstash`
+-  :ref:`curator`
+-  :ref:`zeek`
+-  :ref:`suricata`
+-  :ref:`stenographer`
+-  :ref:`wazuh`
