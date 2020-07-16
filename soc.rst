@@ -7,7 +7,8 @@ Once you've run ``so-allow`` and allowed your IP address, you can then connect t
 
 Depending on the options you chose in the installer, connect to the IP address or hostname of your Security Onion installation. Then login using the email address and password that you specified in the installer. Once logged in, you'll see links on the left side for analyst tools like :ref:`hunt`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, :ref:`hive`, and :ref:`attack-navigator`. :ref:`hunt` and :ref:`pcap` are native to SOC itself. The remaining tools are external and will spawn separate browser tabs.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87225965-c359b600-c35e-11ea-8944-87f359b203e3.png
+.. image:: images/analyst.png
+      :target: _images/analyst.png
 
 .. tip::
 
