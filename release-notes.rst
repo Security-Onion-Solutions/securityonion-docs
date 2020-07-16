@@ -3,6 +3,8 @@
 Release Notes
 =============
 
+Having reviewed the standard hardware requirements in the previous section, please review the notes for this release.
+
 Changes:
 
 - Complete overhaul of the way we handle custom and default settings and data. You will now see a default and local directory under the saltstack directory. All customizations are stored in local.
