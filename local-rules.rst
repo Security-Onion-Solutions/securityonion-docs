@@ -5,7 +5,7 @@ Adding Local Rules
 
 Adding local rules in Security Onion is a rather straightforward process. However, generating custom traffic to test the alert can sometimes be a challenge. Here, we will show you how to add the local rule and then use the python library scapy to trigger the alert.
 
--  Open ``/etc/nsm/rules/local.rules`` using your favorite text editor.  If this is a distributed deployment, edit local.rules on your manager node and it will replicate to your sensors.
+-  Open ``/opt/so/rules/nids/local.rules`` using your favorite text editor.  If this is a distributed deployment, edit local.rules on your manager node and it will replicate to your sensors.
    
 -  Let's add a simple rule that will alert on the detection of a string in a tcp session:
 
@@ -13,7 +13,7 @@ Adding local rules in Security Onion is a rather straightforward process. Howeve
 
        alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; rev:1)     
 
--  Run ``rule-update`` (this will merge ``local.rules`` into ``downloaded.rules``, update ``sid-msg.map``, and restart processes as necessary):
+-  Run ``so-rule-update`` (this will merge ``local.rules`` into ``all.rules``, update ``sid-msg.map``, and restart processes as necessary):
 
    ::
 
@@ -81,7 +81,7 @@ The whole rule would then look something like:
 
    alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; metadata:policy security-ips; rev:1)
 
-These policy types can be found in ``/etc/nsm/rules/downloaded.rules``.
+These policy types can be found in ``/opt/so/rules/nids/all.rules``.
 
 MISP
 ----
