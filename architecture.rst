@@ -3,6 +3,8 @@
 Architecture
 ============
 
+If you're going to deploy Security Onion, you should first decide on what type of deployment you want. This could be anything from a temporary Evaluation installation in a small virtual machine on your personal laptop all the way to a large scalable enterprise deployment consisting of a master node, multiple search nodes, and lots of forward nodes. This section will discuss what those different deployment types look like from an architecture perspective.
+
 Evaluation
 ----------
 The simplest architecture is ``Evaluation``. All components run on one box. :ref:`filebeat` collects logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for quick installations to temporarily test out Security Onion. It is **not** designed for production usage at all.
