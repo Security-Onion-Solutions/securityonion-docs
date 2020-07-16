@@ -8,8 +8,8 @@ This section will give you an overview of different use cases for Security Onion
 .. toctree::
    :maxdepth: 2
 
-   hardware
    architecture
+   hardware
    release-notes
    download
    vmware
