@@ -10,6 +10,7 @@ Evaluation
 The simplest architecture is ``Evaluation``. All components run on one box. :ref:`filebeat` collects logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for quick installations to temporarily test out Security Onion. It is **not** designed for production usage at all.
 
 .. image:: images/elastic-architecture/eval.png
+   :target: images/elastic-architecture/eval.png
 
 Standalone
 ----------
@@ -18,6 +19,7 @@ Standalone
 This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
 .. image:: images/elastic-architecture/standalone.png
+   :target: images/elastic-architecture/standalone.png
 
 Distributed
 -----------
@@ -28,13 +30,15 @@ A standard distributed deployment includes a **manager node**, one or more **for
 -  Consists of a manager node, one or more forward nodes, and one or more search nodes.
 
 .. image:: images/elastic-architecture/distributed.png
-   
+   :target: images/elastic-architecture/distributed.png
+
 There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
 -  Recommended only if a standard distributed deployment is not possible.
 -  Consists of a manager node and one or more heavy nodes.
 
 .. image:: images/elastic-architecture/heavy-distributed.png
+   :target: images/elastic-architecture/heavy-distributed.png
 
 Node Types
 ----------
