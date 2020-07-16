@@ -9,7 +9,7 @@ This section covers the various processes that Security Onion uses to analyze an
    :maxdepth: 2
 
    af-packet
+   stenographer
    suricata
    zeek
-   stenographer
    strelka
