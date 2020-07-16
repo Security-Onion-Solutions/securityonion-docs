@@ -3,6 +3,8 @@
 Hardware Requirements
 =====================
 
+The :ref:`architecture` section should have helped you determine how many machines you will need for your deployment. This section will help you determine what kind of hardware specs each of those machines will need.
+
 CPU Architecture
 ----------------
 
