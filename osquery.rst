@@ -10,7 +10,7 @@ From https://osquery.io/:
 Fleet
 -----
 
-We include Fleet to manage your osquery deployment. For more information, please see the :ref:`fleet` section.
+Security Onion includes Fleet to manage your osquery deployment. For more information, please see the :ref:`fleet` section.
 
 Kibana
 ------
