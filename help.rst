@@ -32,5 +32,5 @@ Having problems? Try the suggestions below.
    directory
    tools
    support
-   mailing-lists
+   community-help
    help-wanted
