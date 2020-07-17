@@ -1,7 +1,10 @@
 .. _services:
 
+Services
+========
+
 All Services
-============
+------------
 
 You can control all services with the ``so-<verb>`` scripts as follows.
 
@@ -30,7 +33,7 @@ Restart all services:
     sudo so-restart
     
 Individual Services
-===================
+-------------------
 
 Individual services are controlled by the use of Security Onion scripts in the form of ``so-<noun>-<verb>``. You can see a list of all of these scripts with the following command:
 
