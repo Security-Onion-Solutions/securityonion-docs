@@ -26,7 +26,7 @@ This dashboard gives an overview of the osquery logs in the system. It should wo
 Community ID
 ------------
 
-We sponsored the development of Community ID support for osquery:
+We sponsored the development of :ref:`community-id` support for osquery:
 
 https://dactiv.llc/blog/correlate-osquery-network-connections/
 
