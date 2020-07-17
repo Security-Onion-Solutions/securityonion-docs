@@ -9,6 +9,5 @@ This section covers some of the main utilities in Security Onion.
    :maxdepth: 2
    
    jq
-   setup
    so-allow
    so-import-pcap
