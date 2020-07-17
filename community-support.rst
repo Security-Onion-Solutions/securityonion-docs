@@ -1,7 +1,7 @@
-.. _community-help:
+.. _community-support:
 
-Community Help
-==============
+Community Support
+=================
 
 Check Documentation First
 -------------------------
