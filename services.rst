@@ -35,13 +35,13 @@ Restart all services:
 Individual Services
 -------------------
 
-Individual services are controlled by the use of Security Onion scripts in the form of ``so-<noun>-<verb>``. You can see a list of all of these scripts with the following command:
+You can control individual services with the ``so-<noun>-<verb>`` scripts. You can see a list of all of these scripts with the following command:
 
 ::
 
    ls /usr/sbin/so-*-*
 
-The following examples are for Zeek, but you could substitute whatever sensor service you're trying to control (nids, pcap, etc.).
+The following examples are for Zeek, but you could substitute whatever sensor service you're trying to control (logstash, pcap, etc.).
 
 Check status of Zeek:
 
