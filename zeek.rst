@@ -35,6 +35,36 @@ Community ID
 
 We enable Zeek's native support for :ref:`community-id`.
 
+Email
+-----
+
+-  To configure email notifications, please see the :ref:`email` section.
+
+Syslog
+------
+
+-  To forward Zeek logs to an external syslog collector, please see the :ref:`syslog-output` section.
+
+Intel
+-----
+
+-  You can add your own Intel to ``/opt/so/conf/zeek/policy/intel/``.
+
+   -  When editing ``/opt/so/conf/zeek/policy/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
+   -  If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues.
+   -  You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
+
+-  For more information, please see:
+
+   | https://docs.zeek.org/en/latest/frameworks/intel.html\ 
+   | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
+   | https://github.com/weslambert/securityonion-misp
+
+Custom Scripts
+--------------
+
+Custom scripts can be added to ``/opt/so/conf/zeek/``.
+
 Logs
 ----
 
@@ -101,37 +131,7 @@ https://docs.zeek.org/en/latest/scripts/base/frameworks/notice/main.zeek.html#ty
 | ...and others, which can be researched here:
 | https://docs.zeek.org/en/latest/script-reference/log-files.html
 
-As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`kibana`.
-
-Email
------
-
--  To configure email notifications, please see the :ref:`email` section.
-
-Syslog
-------
-
--  To forward Zeek logs to an external syslog collector, please see the :ref:`syslog-output` section.
-
-Intel
------
-
--  You can add your own Intel to ``/opt/so/conf/zeek/policy/intel/``.
-
-   -  When editing ``/opt/so/conf/zeek/policy/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
-   -  If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues.
-   -  You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
-
--  For more information, please see:
-
-   | https://docs.zeek.org/en/latest/frameworks/intel.html\ 
-   | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
-   | https://github.com/weslambert/securityonion-misp
-
-Custom Scripts
---------------
-
-Custom scripts can be added to ``/opt/so/conf/zeek/``.
+As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`hunt` or :ref:`kibana`.
 
 More Information
 ----------------
