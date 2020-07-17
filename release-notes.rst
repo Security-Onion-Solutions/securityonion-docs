@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-Having reviewed the standard hardware requirements in the previous section, please review the notes for this release.
+Having reviewed the :ref:`hardware`, please review the notes for this release.
 
 Changes:
 
