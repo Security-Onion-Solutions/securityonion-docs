@@ -18,10 +18,10 @@ Security Onion Documentation
    logs
    updating
    accounts
+   services
    customizing
    tuning
    tricks
-   services
    utilities
    help
    security
