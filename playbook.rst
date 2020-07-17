@@ -27,17 +27,28 @@ The final piece to Playbook is automation. Once a Play is made active, the follo
 Getting Started
 ----------
 
-You can access Playbook by logging into :ref:`soc`, and clicking the Playbook link.
+You can access Playbook by logging into :ref:`soc`, and clicking the Playbook link. You will see 500+ Plays already created - these have been imported from the Sigma Community repostory of rules: https://github.com/Neo23x0/sigma/tree/master/rules
 
 Creating a new Play
 -------------------
 
-To create a new play, click on the ``Sigma Editor`` menu link. Paste the Sigma signature into the Sigma field and then click Create. If successful, you will be redirected to the newly created Play.
+Plays are based on Sigma rules - from https://github.com/Neo23x0/sigma:
+
+    Sigma is a generic and open signature format that allows you to describe relevant log events in a straightforward manner. The rule format is very flexible, easy to write and applicable to any type of log file. The main purpose of this project is to provide a structured form in which researchers or analysts can describe their once developed detection methods and make them shareable with others.
+
+To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a sample Sigma rule or paste one into the Sigma field and click ``Convert``. This will convert the Sigma into a query that you can use in Hunt or Kibana to confirm that it will work for your target log.  
+
+Once you are ready to create the Play, click ``Create Play``. If the Play creation is successful, you will be redirected to the newly created Play. 
+
+Editing a new Play
+-------------------
+
+Click on ``Edit`` to edit a Play. There will only be a few fields that you can modify - to make edits to the others (``Title``, ``Description``, etc), you will need to edit the Sigma inside the Sigma field. Keep in mind that the Sigma is YAML formatted, so if you have major edits to make it is recommended to lint it and/or ``Convert`` it through the Sigma Editor to confirm that it is formatted correctly. Once you save your changes, Playbook will update the rest of the fields to match your edits, including regenerating the Elastalert rule as needed.
 
 Putting a Play into Production
 ------------------------------
 
-When you are ready to start alerting on your Play, change the Status of the play to Active. This will create :ref:`hive` case template & the :ref:`elastalert` config. When results are found, an alert is created in :ref:`hive` - this alert will be linked to the Play as well as the case template.
+When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. When results are found, any high or critical severity results will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within Hunt or Kibana.
 
 User Accounts
 ------------------------------
