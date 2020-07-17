@@ -39,7 +39,7 @@ Plays are based on Sigma rules - from https://github.com/Neo23x0/sigma:
 
 To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a sample Sigma rule or paste one into the Sigma field and click ``Convert``. This will convert the Sigma into a query that you can use in :ref:`hunt` or :ref:`kibana` to confirm that it will work for your target log.  
 
-Once you are ready to create the Play, click ``Create Play``. If the Play creation is successful, you will be redirected to the newly created Play. 
+Once you are ready to create the Play, click ``Create Play From Sigma``. If the Play creation is successful, you will be redirected to the newly created Play. 
 
 Editing a Play
 -------------------
