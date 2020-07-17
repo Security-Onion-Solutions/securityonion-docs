@@ -1,18 +1,7 @@
 .. _services:
 
-Services
-========
-
-Services are controlled by the use of Security Onion scripts (``so-<noun>-<verb>``) which act as wrappers to other lower-level scripts. You can see a list of all of these scripts with the following command:
-
-::
-
-   ls /usr/sbin/so-*
-
-These scripts are detailed below.
-
-All services
-------------
+All Services
+============
 
 You can control all services with the ``so-<verb>`` scripts as follows.
 
@@ -39,13 +28,15 @@ Restart all services:
 ::
 
     sudo so-restart
+    
+Individual Services
+===================
 
-The three main categories of services are server, sensor, and elastic.
+Individual services are controlled by the use of Security Onion scripts in the form of ``so-<noun>-<verb>``. You can see a list of all of these scripts with the following command:
 
-Sensor services
----------------
+::
 
-Sensor services are controlled with ``so-sensor-*``.
+   ls /usr/sbin/so-*-*
 
 The following examples are for Zeek, but you could substitute whatever sensor service you're trying to control (nids, pcap, etc.).
 
@@ -72,32 +63,5 @@ Restart Zeek:
 ::
 
     sudo so-zeek-restart
+    
 
-Elastic services
-----------------
-
-Elastic services are controlled with ``so-elastic-*``.
-
-Check status of the Elastic stack:
-
-::
-
-    sudo so-elastic-status
-
-Start the Elastic stack:
-
-::
-
-    sudo so-elastic-start
-
-Stop the Elastic stack:
-
-::
-
-    sudo so-elastic-stop
-
-Restart the Elastic stack:
-
-::
-
-    sudo so-elastic-restart
