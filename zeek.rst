@@ -48,9 +48,9 @@ Syslog
 Intel
 -----
 
--  You can add your own Intel to ``/opt/so/conf/zeek/policy/intel/``.
+-  You can add your own Intel to ``/opt/so/saltstack/local/salt/zeek/policy/intel/intel.dat``.
 
-   -  When editing ``/opt/so/conf/zeek/policy/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
+   -  When editing ``/opt/so/saltstack/local/salt/zeek/policy/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only a single tab is used to separate field.
    -  If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues.
    -  You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
 
