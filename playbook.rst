@@ -6,11 +6,11 @@ Playbook
 Overview
 --------
 
-Playbook is a web application that allows you to create a Detection Playbook, which itself consists of individual plays. These plays are fully self-contained and describe the different aspects around the particular detection strategy.
+Playbook is a web application available for installation on Manager nodes. Playbook allows you to create a ``Detection Playbook``, which itself consists of individual Plays. These Plays are fully self-contained and describe the different aspects around a particular detection strategy.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87230271-c5cb0880-c37c-11ea-8a36-24cabf137ed2.png
 
-The key components of a play are:
+The key components of a Play are:
 
  #. Objective & Context - what exactly are we trying to accomplish and why?
  #. What are the follow-up actions required to validate and/or remediate when results are seen?
@@ -40,7 +40,7 @@ To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a
 
 Once you are ready to create the Play, click ``Create Play``. If the Play creation is successful, you will be redirected to the newly created Play. 
 
-Editing a new Play
+Editing a Play
 -------------------
 
 Click on ``Edit`` to edit a Play. There will only be a few fields that you can modify - to make edits to the others (``Title``, ``Description``, etc), you will need to edit the Sigma inside the Sigma field. Keep in mind that the Sigma is YAML formatted, so if you have major edits to make it is recommended to lint it and/or ``Convert`` it through the Sigma Editor to confirm that it is formatted correctly. Once you save your changes, Playbook will update the rest of the fields to match your edits, including regenerating the Elastalert rule as needed.
@@ -48,14 +48,19 @@ Click on ``Edit`` to edit a Play. There will only be a few fields that you can m
 Putting a Play into Production
 ------------------------------
 
-When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. When results are found, any high or critical severity results will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within Hunt or Kibana.
+When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatially update the Elastalert configuration and TheHive case template
+
+Viewing Playbook Alerts
+------------------------------
+
+When results from your Plays are found (via Elastalert), any high or critical severity results will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within Hunt or Kibana.
 
 User Accounts
 ------------------------------
 
-By default, once a user has authenticated through SOC, they have can access Playbook without having to login again to the app itself - this anonymous access has the permissions of the analyst role. If you need your team to login with individual user accounts, you can disable this anonymous access and create new user accounts and add them to the analyst group - this will give them all the relevant permissions.
+By default, once a user has authenticated through SOC they can access Playbook without having to login again to the app itself - this anonymous access has the permissions of the analyst role. If you need your team to login with individual user accounts, you can disable this anonymous access and create new user accounts and add them to the analyst group which will give them all the relevant permissions.
 
-If you need administrator access to Playbook, you can login with the following admin credentials. However, the Playbook UI is designed to be used with a user that has an analyst role. Using an admin account will be very confusing to newcomers to Playbook, since many of the fields will now be shown and editable and it will look much more cluttered.
+If you need administrator access to Playbook, you can login with the following admin credentials. However, the Playbook UI is designed to be used with a user that has an analyst role. Using an admin account will be very confusing to newcomers to Playbook, since many of the fields will now be shown/editable and it will look much more cluttered.
 
 | Username: admin
 | Password: changeme
