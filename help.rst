@@ -21,9 +21,7 @@ Having problems? Try the suggestions below.
 
 -  Are you able to duplicate the problem on a fresh Security Onion installation?
 -  Check the `Known Issues <https://github.com/Security-Onion-Solutions/securityonion/issues>`__ to see if this is a known issue that we are working on.
--  If all else fails, please send an email to our :ref:`security-onion mailing list <mailing-lists>`.
--  Need training or commercial support?
-   https://www.securityonionsolutions.com
+-  If all else fails, please reach out for :ref:`support`.
 
 .. toctree::
    :maxdepth: 2
