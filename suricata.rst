@@ -64,7 +64,7 @@ To enable thresholding for SIDS, reference the example pillar at https://github.
 
 To view the acceptable syntax, view the file located at https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.usage. 
 
-This pillar can be added to either the static or minion pillar file.
+This pillar can be added to :ref:`salt` in either the static or minion pillar file.
 
 More Information
 ----------------
