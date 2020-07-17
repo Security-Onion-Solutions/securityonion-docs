@@ -16,7 +16,7 @@ The key components of a Play are:
  #. What are the follow-up actions required to validate and/or remediate when results are seen?
  #. The actual query needed to implement the play's objective. In our case, the :ref:`elastalert` / :ref:`elasticsearch` configuration.
 
-Any high or critical severity results from a Play will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within Hunt or Kibana.
+Any high or critical severity results from a Play will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within :ref:`hunt` or :ref:`kibana`.
 
 The final piece to Playbook is automation. Once a Play is made active, the following happens:
 
@@ -27,7 +27,7 @@ The final piece to Playbook is automation. Once a Play is made active, the follo
 Getting Started
 ----------
 
-You can access Playbook by logging into :ref:`soc`, and clicking the Playbook link. You will see 500+ Plays already created - these have been imported from the Sigma Community repostory of rules: https://github.com/Neo23x0/sigma/tree/master/rules
+You can access Playbook by logging into :ref:`soc` and clicking the Playbook link. You will see over 500 plays already created that have been imported from the Sigma Community repostory of rules at https://github.com/Neo23x0/sigma/tree/master/rules.
 
 Creating a new Play
 -------------------
@@ -36,7 +36,7 @@ Plays are based on Sigma rules - from https://github.com/Neo23x0/sigma:
 
     Sigma is a generic and open signature format that allows you to describe relevant log events in a straightforward manner. The rule format is very flexible, easy to write and applicable to any type of log file. The main purpose of this project is to provide a structured form in which researchers or analysts can describe their once developed detection methods and make them shareable with others.
 
-To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a sample Sigma rule or paste one into the Sigma field and click ``Convert``. This will convert the Sigma into a query that you can use in Hunt or Kibana to confirm that it will work for your target log.  
+To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a sample Sigma rule or paste one into the Sigma field and click ``Convert``. This will convert the Sigma into a query that you can use in :ref:`hunt` or :ref:`kibana` to confirm that it will work for your target log.  
 
 Once you are ready to create the Play, click ``Create Play``. If the Play creation is successful, you will be redirected to the newly created Play. 
 
@@ -48,12 +48,12 @@ Click on ``Edit`` to edit a Play. There will only be a few fields that you can m
 Putting a Play into Production
 ------------------------------
 
-When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatially update the Elastalert configuration and TheHive case template
+When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatially update the Elastalert configuration and TheHive case template.
 
 Viewing Playbook Alerts
 ------------------------------
 
-When results from your Plays are found (via Elastalert), any high or critical severity results will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within Hunt or Kibana.
+When results from your Plays are found (via :ref:`elastalert`), any high or critical severity results will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within :ref:`hunt` or :ref:`kibana`.
 
 User Accounts
 ------------------------------
@@ -69,7 +69,7 @@ If you need administrator access to Playbook, you can login with the following a
 Misc Notes
 ----------
 
-Every 5 minutes, ``so-playbook-sync`` runs. This script queries Playbook for all active plays, and then checks to make sure that there is an :ref:`elastalert` config and TheHive case template for each play. It also runs through the same process for inactive plays.
+Every 5 minutes, ``so-playbook-sync`` runs. This script queries Playbook for all active plays, and then checks to make sure that there is an :ref:`elastalert` config and :ref:`hive` case template for each play. It also runs through the same process for inactive plays.
 
 Log Sources
 -----------
