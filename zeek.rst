@@ -116,12 +116,11 @@ Syslog
 Intel
 -----
 
--  You can add your own Intel to ``/opt/zeek/share/zeek/intel/intel.dat``.
+-  You can add your own Intel to ``/opt/so/conf/zeek/policy/intel/``.
 
-   -  When editing ``/opt/zeek/share/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
+   -  When editing ``/opt/so/conf/zeek/policy/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only (single) tabs are used as field delimiters.
    -  If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues.
-   -  You may also want to restart Zeek after making changes, by running the following command:
-      \ ``sudo so-zeek-restart``.
+   -  You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
 
 -  For more information, please see:
 
@@ -129,12 +128,10 @@ Intel
    | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
    | https://github.com/weslambert/securityonion-misp
 
--  To install and configure an Alienvault OTX Connector, please see the :ref:`alienvault-otx` section.
-
 Custom Scripts
 --------------
 
-TODO: add information here
+Custom scripts can be added to ``/opt/so/conf/zeek/``.
 
 More Information
 ----------------
