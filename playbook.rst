@@ -9,6 +9,7 @@ Overview
 Playbook is a web application available for installation on Manager nodes. Playbook allows you to create a ``Detection Playbook``, which itself consists of individual Plays. These Plays are fully self-contained and describe the different aspects around a particular detection strategy.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87230271-c5cb0880-c37c-11ea-8a36-24cabf137ed2.png
+ :target: https://user-images.githubusercontent.com/1659467/87230271-c5cb0880-c37c-11ea-8a36-24cabf137ed2.png
 
 The key components of a Play are:
 
