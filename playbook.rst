@@ -44,7 +44,9 @@ Once you are ready to create the Play, click ``Create Play``. If the Play creati
 Editing a Play
 -------------------
 
-Click on ``Edit`` to edit a Play. There will only be a few fields that you can modify - to make edits to the others (``Title``, ``Description``, etc), you will need to edit the Sigma inside the Sigma field. Keep in mind that the Sigma is YAML formatted, so if you have major edits to make it is recommended to lint it and/or ``Convert`` it through the Sigma Editor to confirm that it is formatted correctly. Once you save your changes, Playbook will update the rest of the fields to match your edits, including regenerating the Elastalert rule as needed.
+Click on ``Edit`` to edit a Play. There will only be a few fields that you can modify - to make edits to the others (``Title``, ``Description``, etc), you will need to edit the Sigma inside the Sigma field. Keep in mind that the Sigma is YAML formatted, so if you have major edits to make it is recommended to lint it and/or ``Convert`` it through the Sigma Editor to confirm that it is formatted correctly. Be sure to remove the prepended and postpended Playbook-specific syntax highlighting before linting/converting - ``{{collapse(View Sigma) <pre><code class="yaml">`` and ``</code></pre>}}``.
+
+Once you save your changes, Playbook will update the rest of the fields to match your edits, including regenerating the Elastalert rule if needed.
 
 Putting a Play into Production
 ------------------------------
