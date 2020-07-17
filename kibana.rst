@@ -10,6 +10,7 @@ From https://www.elastic.co/kibana:
 Screenshot
 ----------
 .. image:: https://user-images.githubusercontent.com/1659467/87230185-168e3180-c37c-11ea-90a5-57c9d2f34f7b.png
+    :target: https://user-images.githubusercontent.com/1659467/87230185-168e3180-c37c-11ea-90a5-57c9d2f34f7b.png
 
 Configuration
 -------------
@@ -32,6 +33,7 @@ Transcript
 When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot to pcap transcript via :ref:`pcap`.
 
 .. image:: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_pcap.png
+    :target: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_pcap.png
 
 Indicator Dashboard
 ~~~~~~~~~~~~~~~~~~~
