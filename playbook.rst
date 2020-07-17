@@ -55,15 +55,6 @@ Misc Notes
 
 Every 5 minutes, ``so-playbook-sync`` runs. This script queries Playbook for all active plays, and then checks to make sure that there is an :ref:`elastalert` config and TheHive case template for each play. It also runs through the same process for inactive plays.
 
-Quick test
-----------
-
-If you want to do a quick test, import the following Sigma and then enable the Play:
-
-https://gist.github.com/defensivedepth/3b0656569a797d86eb04068b5546b78c
-
-This play alerts on Zeek HTTP events, so expect to get a number of alerts in TheHive.
-
 Log Sources
 -----------
 
