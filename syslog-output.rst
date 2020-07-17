@@ -3,6 +3,10 @@
 Syslog Output
 =============
 
-Please keep in mind that we don’t provide free support for third party systems, so this section will be just a brief introduction to how you would send syslog to external syslog collectors. If you need commercial support, please see https://www.securityonionsolutions.com.
+If you want to send logs to an external system, you can configure :ref:`logstash` to output to syslog.
 
-TODO: document how to configure logstash to send to external syslog
+.. seealso::
+
+   For more information about Logstash's syslog output plugin, please see https://www.elastic.co/guide/en/logstash/current/plugins-outputs-syslog.html.
+
+Please keep in mind that we don’t provide free support for third party systems.
