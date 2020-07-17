@@ -36,7 +36,7 @@ Suppose you want :ref:`stenographer` to not record full packet capture for port 
 Quoting
 ~~~~~~~
 
-YAML rules apply and so if the bpf's first character is a reserved YAML character such as ``[] {} > | * & ! % # ` @ ,``, then you will need to enclose the entire line in double quotes. For example:
+YAML rules apply and so if you want to use a reserved YAML character such as ``[] {} > | * & ! % # ` @ ,``, then you may need to enclose the entire line in double quotes. For example:
 
 ::
 
