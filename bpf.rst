@@ -22,56 +22,40 @@ Node-Specific BPF
 
 If you don’t want your sensors to inherit BPF from the manager node, you can edit the minion sls file, which will override any global BPF settings set from the static pillar. (``/opt/so/saltstack/local/pillar/minions/$Hostname.sls``)
 
-Pillar BPF Syntax
-~~~~~~~~~~~~~~~~~
+Simple Example
+~~~~~~~~~~~~~~
+
+Suppose you want :ref:`stenographer` to not record full packet capture for port 443:
 
 ::
 
-   steno:
-     bpf:
-      - not port 80 &&
-      - not port 443 &&
-      - not port 134
-
-   zeek:
+    steno:
      bpf:
       - not port 443
 
-   nids:
+Quoting
+~~~~~~~
+
+If your BPF contains special characters like ``!`` you will need to enclose the entire line in double quotes. For example:
+
+::
+
+    steno:
      bpf:
-      - not port 443
+      - "!(port 443)"
+      
+Multiple Conditions
+~~~~~~~~~~~~~~~~~~~
 
-
-BPF Examples
-~~~~~~~~~~~~
-
-Exclude traffic to/from a host:
-
-::
-
-   !(host xxx.xxx.xxx.xxx)
-   
-   
-Exclude traffic from a source host to a destination port:
+If your BPF contains multiple conditions you can put them on multiple lines and join them with ``&&`` but make sure the final condition has no ``&&`` at the end. For example:
 
 ::
 
-    !(src host xxx.xxx.xxx.xxx && dst port 161)
-    
-Combine multiple BPFs together using ``&&``, but note that the last entry has no final ``&&``:
-::
-
-    #Nothing from src host to dst port
-    !(src host xxx.xxx.xxx.xxx && dst port 161) &&
-
-    #Nothing from src host to dst host and dst port
-    !(src host xxx.xxx.xxx.xxx && dst host xxx.xxx.xxx.xxx && dst port 80) &&
-
-    #Nothing to or from:
-    !(host xxx.xxx.xxx.xxx) &&
-
-    #Last entry has no final &&
-    !(host xxx.xxx.xxx.xxx)
+    nids:
+     bpf:
+      - not host 192.168.1.2 &&
+      - not host 192.168.1.3 &&
+      - not host 192.168.1.4
 
 VLAN
 ~~~~
