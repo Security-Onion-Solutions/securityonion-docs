@@ -27,13 +27,13 @@ Check out the :ref:`trouble-booting` section.
 
 **Once I've booted the ISO image, how do I install it?**
 
-See the :ref:`installation` section.
+The :ref:`installation` section has steps for our Security Onion ISO image and for standard CentOS 7 and Ubuntu 18.04 ISO images.
 
 **After installation, how do I configure Security Onion?**
 
-See the :ref:`configuration` section.
+The :ref:`configuration` section covers many different use cases.
 
-**What next?**
+**Is there anything I need to do after configuration?**
 
 See the :ref:`post-installation` section.
 
