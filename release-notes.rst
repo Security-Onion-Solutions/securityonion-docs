@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-Having reviewed the :ref:`hardware`, please review the notes for this release.
+Before downloading, please review the notes for this release.
 
 Changes:
 
