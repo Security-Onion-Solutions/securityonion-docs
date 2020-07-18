@@ -13,7 +13,7 @@ If you use our Security Onion ISO image, it will automatically partition your di
 LVM
 ---
 
-For most use cases, we recommend using Logical Volume Management (LVM). This will allow you to more easily change your partitioning in the future if you need to. Please note that our current Security Onion ISO image does not use LVM, but we plan to incorporate that in the future.
+You may want to consider Logical Volume Management (LVM) as it will allow you to more easily change your partitioning in the future if you need to. Please note that our current Security Onion ISO image does not use LVM, but we plan to incorporate that in the future.
 
 /nsm
 ----
@@ -28,4 +28,4 @@ Wazuh is currently installed to ``/opt/so/wazuh``. If you plan to deploy lots of
 Other
 -----
 
-If you install using a standard CentOS 7 or Ubuntu 18.04 ISO, then they may try to dedicate a large amount of space to ``/home``. You may need to adjust this to ensure that it is not overly large and wasting valuable disk space.
+If you install using a standard CentOS 7 or Ubuntu 18.04 ISO, then those installers may try to dedicate a large amount of space to ``/home``. You may need to adjust this to ensure that it is not overly large and wasting valuable disk space.
