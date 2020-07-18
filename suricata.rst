@@ -29,8 +29,6 @@ To change the number of Suricata workers:
 
       sudo so-suricata-start
 
--  ``so-suricata-start`` automatically copies ``$IDS_LB_PROCS`` into ``suricata.yaml`` and then Suricata creates the appropriate number of AF-PACKET workers.
-
 For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
 
 Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
