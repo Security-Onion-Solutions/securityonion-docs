@@ -9,38 +9,6 @@ Having downloaded your desired ISO according to the :ref:`download` section, it'
 
   For most use cases, we recommend using our Security Onion ISO image as it's the quickest and easiest method.
 
-.. _partitioning:
-
-Partitioning
-------------
-
-If you're installing Security Onion for a production deployment, you'll want to pay close attention to partitioning to make sure you don't fill up a partition at some point.
-
-ISO
-~~~
-
-If you use our Security Onion ISO image, it will automatically partition your disk for you.
-
-LVM
-~~~
-
-For most use cases, we recommend using Logical Volume Management (LVM). This will allow you to more easily change your partitioning in the future if you need to. Please note that our current Security Onion ISO image does not use LVM, but we plan to incorporate that in the future.
-
-/nsm
-~~~~
-
-The vast majority of data will be written to ``/nsm``, so you'll want to dedicate the vast majority of your disk space to that partition.
-
-Wazuh
-~~~~~
-
-Wazuh is currently installed to ``/opt/so/wazuh``. If you plan to deploy lots of Wazuh agents and collect lots of Wazuh logs, you will want to ensure that this directory has plenty of space. One option may include mounting that directory as a dedicated partition.
-
-Other
-~~~~~
-
-If you install using a standard CentOS 7 or Ubuntu 18.04 ISO, then they may try to dedicate a large amount of space to ``/home``. You may need to adjust this to ensure that it is not overly large and wasting valuable disk space.
-
 Installation using Security Onion ISO Image
 -------------------------------------------
 If you want to install Security Onion using our ISO image:
