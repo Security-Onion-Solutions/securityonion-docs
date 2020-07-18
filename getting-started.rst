@@ -7,7 +7,7 @@ If you're ready to get started with Security Onion, you probably have lots of qu
 
 **How many machines do I need?**
 
-This could be anywhere from one machine to thousands of machines.  The :ref:`architecture` section will help you decide.
+Depending on your use case, this could be anywhere from one machine to thousands of machines.  The :ref:`architecture` section will help you decide.
 
 **What kind of hardware does each of those machines need?**
 
