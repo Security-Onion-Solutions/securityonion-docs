@@ -5,37 +5,37 @@ Getting Started
 
 If you're ready to get started with Security Onion, you probably have lots of questions:
 
-How many machines do I need?
+**How many machines do I need?**
 
-This could be anywhere from 1 to 1000.  The :ref:`architecture` section will help you decide.
+*This could be anywhere from one machine to thousands of machines.  The :ref:`architecture` section will help you decide.*
 
-What kind of hardware does each of those machines need?
+**What kind of hardware does each of those machines need?**
 
-This could be anything from a small virtual machine to a large rack mount server with lots of CPU cores, lots of RAM, and lots of storage. The :ref:`hardware` section provides further details.
+*This could be anything from a small virtual machine to a large rack mount server with lots of CPU cores, lots of RAM, and lots of storage. The :ref:`hardware` section provides further details.*
 
-Which ISO image should I download?
+**Which ISO image should I download?**
 
-You can download our Security Onion ISO image or a standard CentOS 7 or Ubuntu 18.04 ISO image. We recommend our Security Onion ISO image for most use cases, but you should review the :ref:`partitioning`, :ref:`release-notes`, and :ref:`download` sections for more information.
+*You can download our Security Onion ISO image or a standard CentOS 7 or Ubuntu 18.04 ISO image. We recommend our Security Onion ISO image for most use cases, but you should review the :ref:`partitioning`, :ref:`release-notes`, and :ref:`download` sections for more information.*
 
-If I just want to try Security Onion in a virtual machine, how do I create a virtual machine?
+**If I just want to try Security Onion in a virtual machine, how do I create a virtual machine?**
 
-See the :ref:`vmware` and :ref:`virtualbox` sections.
+*See the :ref:`vmware` and :ref:`virtualbox` sections.*
 
-What if I have trouble booting the ISO image?
+**What if I have trouble booting the ISO image?**
 
-Check out the :ref:`trouble-booting` section.
+*Check out the :ref:`trouble-booting` section.*
 
-Once I've booted the ISO image, how do I install it?
+**Once I've booted the ISO image, how do I install it?**
 
-See the :ref:`installation` section.
+*See the :ref:`installation` section.*
 
-After installation, how do I configure Security Onion?
+**After installation, how do I configure Security Onion?**
 
-See the :ref:`configuration` section.
+*See the :ref:`configuration` section.*
 
-What next?
+**What next?**
 
-See the :ref:`post-installation` section.
+*See the :ref:`post-installation` section.*
 
 .. toctree::
    :maxdepth: 2
