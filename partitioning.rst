@@ -3,7 +3,7 @@
 Partitioning
 ============
 
-If you're installing Security Onion for a production deployment, you'll want to pay close attention to partitioning to make sure you don't fill up a partition at some point.
+Now that you understand :ref:`hardware`, we should next discuss partitioning as that may have an impact on which ISO image you choose to download. If you're installing Security Onion for a production deployment, you'll want to pay close attention to partitioning to make sure you don't fill up a partition at some point.
 
 ISO
 ---
