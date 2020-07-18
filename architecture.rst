@@ -24,7 +24,7 @@ This type of deployment is typically used for testing, labs, POCs, or **very** l
 Distributed
 -----------
 
-A standard distributed deployment includes a **manager node**, one or more **forward nodes** running network sensor components, and one or more **search nodes** running Elastic search components. This architecture is ideal; while it may cost more upfront, this architecture provides for greater scalability and performance down the line, as one can simply "snap in" new search nodes to handle more traffic or log sources.
+A standard distributed deployment includes a **manager node**, one or more **forward nodes** running network sensor components, and one or more **search nodes** running Elastic search components. This architecture may cost more upfront, but it provides for greater scalability and performance, as you can simply add more nodes to handle more traffic or log sources.
 
 -  Recommended deployment type
 -  Consists of a manager node, one or more forward nodes, and one or more search nodes.
