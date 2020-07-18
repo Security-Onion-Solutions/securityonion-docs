@@ -7,7 +7,7 @@ Having downloaded your desired ISO according to the :ref:`download` section, it'
 
 .. tip::
 
-  We **highly** recommend using our Security Onion ISO image as it's the quickest and easiest method **and** it ensures that things like partitioning are done correctly.
+  For most use cases, We recommend using our Security Onion ISO image as it's the quickest and easiest method.
   
 Installation using Security Onion ISO Image
 -------------------------------------------
