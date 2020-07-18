@@ -5,6 +5,10 @@ Download
 
 Now that you've reviewed the :ref:`release-notes` in the previous section, you're ready to download Security Onion! You can either download our Security Onion ISO image (based on CentOS 7) **or** download a standard CentOS 7 64-bit or Ubuntu 18.04 ISO image and then add our Security Onion components. **Please keep in mind that we only support CentOS 7 and Ubuntu 18.04**.
 
+.. tip::
+
+  For most use cases, we recommend using our Security Onion ISO image as it's the quickest and easiest method.
+  
 .. warning::
 
    **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or whether you're starting with an CentOS/Ubuntu ISO image, you should ALWAYS verify the downloaded ISO image.
