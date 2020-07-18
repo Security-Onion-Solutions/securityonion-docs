@@ -10,12 +10,12 @@ This section will give you an overview of different use cases for Security Onion
 
    architecture
    hardware
+   partitioning
    release-notes
    download
    vmware
    virtualbox
    trouble-booting
-   partitioning
    installation
    configuration
    post-installation
