@@ -3,14 +3,20 @@
 soup
 ====
 
-To update to the latest version of Security Onion 2.0, use the ``soup`` command:
+As we make updates to Security Onion, we publish blog posts to https://blog.securityonion.net. You'll want to review these blog posts for any relevant information about the individual updates.
+
+Once you're ready to install an update, use the ``soup`` command:
 
 ::
 
     sudo soup
 
-Please pay attention to the output of this command as it may request that you take specific action, such as manually restarting services. Also refer to the relevant blog entry for the update at https://blog.securityonion.net as there may be additional information there.
+Please pay attention to the output of this command as it may request that you take specific action, such as manually restarting services. 
 
+.. warning::
+
+    Please note that ``soup`` only updates Security Onion components and does NOT update the underlying operating system (OS). There is an option during :ref:`Configuration` to automatically update the OS packages.
+    
 Agents
 ------
 
