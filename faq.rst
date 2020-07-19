@@ -173,11 +173,6 @@ What do I need to modify in order to have the log files stored on a different mo
 
 Please see the `Adding a New Disk for /nsm <NewDisk>`__ section.
 
-How do I enable/disable processes?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Please see the `Disabling Processes <DisablingProcesses>`__ section.
-
  `back to top <#top>`__
 
 Miscellaneous
