@@ -8,7 +8,7 @@ Now that you understand :ref:`hardware`, we should next discuss disk partitionin
 ISO
 ---
 
-If you use our Security Onion ISO image, it will automatically partition your disk for you.
+If you use our Security Onion ISO image, it will automatically partition your disk for you. If you instead use CentOS 7 or Ubuntu 18.04, you may want to manually modify their default partition layout.
 
 LVM
 ---
