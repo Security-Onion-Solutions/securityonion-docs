@@ -191,26 +191,28 @@ Since ``zeek:zeekctl`` is a dictionary with dictionary values, we do not need to
 
 Below is a list of items that can be customized with pillar settings:
 
-Filebeat:
- Inputs and the output can be customized for filebeat. An example of the filebeat pillar can be see. at https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/filebeat/pillar.example
- Any inputs that are added the pillar definition, will be in addition to the default defined inputs. In order to prevent a Zeek log from being used as input, the brologs:enabled pillar will need to be modified. Find the default definition at, https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/brologs.sls. Copy the contents of this file and place it in either the static or minion pillar file depending on if you want the changes to be global or specific to that individual node. If there is a log file that you would like to disable, move that entry from the enabled list to the disabled list. Be sure to follow the proper indentation for YAML.
- 
-Firewall: 
+Filebeat
+~~~~~~~~
+Inputs and the output can be customized for filebeat. An example of the filebeat pillar can be see. at https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/filebeat/pillar.example
 
+Any inputs that are added the pillar definition, will be in addition to the default defined inputs. In order to prevent a Zeek log from being used as input, the brologs:enabled pillar will need to be modified. Find the default definition at, https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/brologs.sls. Copy the contents of this file and place it in either the static or minion pillar file depending on if you want the changes to be global or specific to that individual node. If there is a log file that you would like to disable, move that entry from the enabled list to the disabled list. Be sure to follow the proper indentation for YAML.
+ 
+Firewall
+~~~~~~~~
 Much of information and functionality that follows is handled with :ref:`so-allow` or so-firewall, but could help provide a better understanding of what those two scripts are doing under the hood.
 
 The firewall state and pillars were designed around the idea of creating port groups and host groups and creating an allow rule by assigning a port group to a host group. A node that has a port group / host group combination assigned to it, will allow the hosts in that group to connect to those ports on that node. There are many default rules that have already been assigned and they can be viewed here: 
- 
-  Default port groups: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/portgroups.yaml
-  
-  Default host groups: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/hostgroups.yaml
-  
-  Default port group assignments: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/assigned_hostgroups.map.yaml
-  
+
+Default port groups: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/portgroups.yaml
+
+Default host groups: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/hostgroups.yaml
+
+Default port group assignments: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/assigned_hostgroups.map.yaml
+
 During setup, the files from securityonion/files/firewall/ (https://github.com/Security-Onion-Solutions/securityonion/tree/master/files/firewall), are copied to the local directory located at ``/opt/so/saltstack/local/salt/firewall/``. Once setup is complete and ``so-allow`` or ``so-firewall`` are called in the future, they modify the appropriate yaml files that are located under ``/opt/so/saltstack/local/salt/firewall/``. Since these yaml files are under ``/opt/so/saltstack/local/`` they will not be changed during a code update.
  
-IDS Tools:
-
+IDS Tools
+~~~~~~~~~
 To enable or disable SIDS for Suricata, the ``idstools`` pillar can be used. The same concept applies to the ``idstools`` pillar being placed in static or the minion pillar file if you want the setting to be global or specific to the node.  
  
 If SID 1234 is commented out and you want to enable it, add the following to the appropriate static or minion pillar file:
@@ -231,16 +233,16 @@ If SID 4321 is noisy, you can disable it as follows:
        disabled:
          - 4321
 
-Suricata:
-
+Suricata
+~~~~~~~~
 For Suricata, the ability to manage ``suricata.yaml`` has been provided. The defaults for this have been defined in https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/suricata/defaults.yaml. Under ``suricata:config``, the pillar structure follows the same YAML structure of the ``suricata.yaml`` file. For some of the settings to modify here, we have simplified the pillar configuration by placing the option in the sensor pillar instead of the Suricata pillar. These options are: ``HOMENET``, ``default-packet-size``, and the CPU affinity settings for pinning the processes to CPU cores or how many processes to run.
 
-Thresholding: 
-
+Thresholding
+~~~~~~~~~~~~
 To enable thresholding for SIDS, reference the example pillar at ``/opt/so/saltstack/default/pillar/thresholding/pillar.example``. To view the acceptable syntax, view the file located at ``/opt/so/saltstack/default/pillar/thresholding/pillar.usage``. This pillar can be added to either the static or minion pillar file.
 
-Zeek:
-
+Zeek
+~~~~
 For Zeek, the ability to manage ``local.zeek``, ``node.cfg`` and ``zeekctl.cfg`` have been provided.
  
 ``local.zeek``: The allowed options for this file are ``@load``, ``@load-sigs`` and ``redef``. An example of configuring this pillar can be seen in the example above. 
