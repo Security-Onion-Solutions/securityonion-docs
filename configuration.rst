@@ -24,9 +24,9 @@ Choose ``STANDALONE``, follow the prompts, and then proceed to the :ref:`post-in
 Production Server - Distributed Deployment
 ------------------------------------------
 
-If deploying a distributed environment, you’ll need to perform the remaining steps on the manager node, as well as all forward and search nodes, but make sure you install and configure the manager node first. For best performance, the manager node should be dedicated to just being a server for the other nodes (the manager node should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the manager node on ports ``22``, ``4505``, and ``4506``.
+If deploying a distributed environment, install and configure the manager node first and then join the other nodes to it. For best performance, the manager node should be dedicated to just being a manager for the other nodes (the manager node should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the manager node on ports ``22``, ``4505``, and ``4506``.
 
-Build the manager by following the prompts. Save the ``soremote`` password so that you can join nodes to the grid.
+Build the manager by following the prompts. Save the ``soremote`` password so that you can join nodes to the manager.
 
 Build search nodes and join them to the manager node using the ``soremote`` password.
 
