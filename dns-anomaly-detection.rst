@@ -7,7 +7,7 @@ Dr. Johannes Ullrich of the SANS Internet Storm Center posted a great DNS Anomal
 
 .. note::
 
-    Please note that this script is only intended for standalone machines and will not work properly on distributed deployments.
+    Please note that the following script is only intended for standalone machines and will not work properly on distributed deployments. Another option which might work better :ref:`elastalert` and its ``new_term`` rule.
 
 Thanks to ``senatorhotchkiss`` on our mailing list for updating the original script to replace ``bro-cut`` with ``jq``:
 
@@ -35,4 +35,3 @@ Thanks to ``senatorhotchkiss`` on our mailing list for updating the original scr
     cat $SUSPECTS
 
 
-Another option to consider might be :ref:`elastalert` and its ``new_term`` rule.
