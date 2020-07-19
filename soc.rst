@@ -14,9 +14,9 @@ Depending on the options you chose in the installer, connect to the IP address o
 
    SOC gives you access to a variety of tools and they all complement each other very well. For example, here's one potential workflow:
 
-     - Open :ref:`hive` and review NIDS alerts from :ref:`suricata`.
-     - Once you've found a NIDS alert that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses, so pivot to :ref:`kibana` or :ref:`hunt` for more information from :ref:`zeek` or perhaps :ref:`sysmon` logs.
-     - Return to :ref:`hive` and document any indicators of compromise (IOCs) found thus far.
+     - Open :ref:`hive` and review alerts.
+     - Once you've found an alert that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses, so pivot to :ref:`hunt` or :ref:`kibana` for more information.
+     - Return to :ref:`hive` and document any indicators of compromise (IOCs) found in the previous step.
      - Go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints.
      - Use :ref:`cyberchef` to further analyze and decode additional host artifacts.
      - Develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward.
