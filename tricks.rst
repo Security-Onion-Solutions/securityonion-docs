@@ -17,6 +17,5 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    new-disk
    pcaps
    removing-a-sensor
-   salt
    syslog-output
    timezones
