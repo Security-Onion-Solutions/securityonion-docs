@@ -41,9 +41,17 @@ Tuning
 
 We configure Redis to use 10% of your total system memory.  If you have sufficient RAM available, you might want to increase the ``maxmemory`` setting in ``/opt/so/conf/redis/etc/redis.conf``.
 
-Logstash on the manager node is configured to send to Redis.  For best performance, you'll want to ensure that ``batch`` is set to ``true`` and then tune the ``batch_events`` variable to find the sweet spot for your deployment.  For more information about logstash's output plugin for Redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html.
+Logstash on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``batch_events`` variable to find the sweet spot for your deployment.
 
-Logstash on search nodes pulls from Redis.  For best performance, you'll want to tune ``batch_count`` and ``threads`` to find the sweet spot for your deployment.  For more information about logstash's input plugin for Redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html.
+.. seealso::
+
+    For more information about logstash's output plugin for Redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html.
+
+Logstash on search nodes pulls from Redis.  For best performance, you may want to tune ``batch_count`` and ``threads`` to find the sweet spot for your deployment. 
+
+.. seealso::
+
+    For more information about logstash's input plugin for Redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html.
 
 Logging
 -------
