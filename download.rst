@@ -15,4 +15,4 @@ Now that you've reviewed the :ref:`release-notes` in the previous section, you'r
 
 -  If downloading our Security Onion 2.0 ISO image, please verify using these instructions:
    https://github.com/Security-Onion-Solutions/securityonion/wiki/ISO
--  If downloading an Ubuntu or CentOS ISO image, please verify using their instructions.
+-  If downloading an Ubuntu or CentOS ISO image, please verify that ISO image using whatever instructions they provide.
