@@ -11,7 +11,6 @@ FAQ
 | `IDS engines <#ids-engines>`__\ 
 | `Security Onion internals <#security-onion-internals>`__\ 
 | `Tuning <#tuning>`__\ 
-| `sostat output <#sostat-output>`__\ 
 | `Miscellaneous <#miscellaneous>`__\ 
 | 
 | 
