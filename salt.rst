@@ -198,14 +198,19 @@ Filebeat:
 Firewall: 
   Much of information and functionality that follows is handled with :ref:`so-allow` or so-firewall, but could help provide a better understanding of what those two scripts are doing under the hood.
  The firewall state and pillars were designed around the idea of creating port groups and host groups and creating an allow rule by assigning a port group to a host group. A node that has a port group / host group combination assigned to it, will allow the hosts in that group to connect to those ports on that node. There are many default rules that have already been assigned, they can be viewed here: 
+ 
   Default port groups: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/portgroups.yaml
+  
   Default host groups: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/hostgroups.yaml
+  
   Default port group assignments: https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/firewall/assigned_hostgroups.map.yaml
+  
  During setup, the files from securityonion/files/firewall/ (https://github.com/Security-Onion-Solutions/securityonion/tree/master/files/firewall), are copied to the local directory located at: /opt/so/saltstack/local/salt/firewall/. Once setup is complete and so-allow or so-firewall are called in the future, they modify the appropriate yaml files that are located under /opt/so/saltstack/local/salt/firewall/. Since these yaml files are under /opt/so/saltstack/local/ they will not be changed during a code update.
  
 IDS Tools:
- To enable or disable SIDS for Suricata, the idstools pillar can be used. The same concept applies to the idstools pillar being placed in stats or the minion pillar file if you want the setting to be global or specific to the node.  
- If the SID 1234 commented out, that you want to enable it, add the following to the appropriate static or minion pillar file:
+ To enable or disable SIDS for Suricata, the ``idstools`` pillar can be used. The same concept applies to the ``idstools`` pillar being placed in static or the minion pillar file if you want the setting to be global or specific to the node.  
+ 
+ If SID 1234 is commented out and you want to enable it, add the following to the appropriate static or minion pillar file:
  
 ::
 
@@ -214,7 +219,7 @@ IDS Tools:
        enabled:
          - 1234
 
-If there is a SID, 4321, that is noisy, it can be commented out with the following:
+If SID 4321 is noisy, you can disable it as follows:
 
 ::
 
@@ -233,7 +238,9 @@ Zeek:
  For Zeek, the ability to manage ``local.zeek``, ``node.cfg`` and ``zeekctl.cfg`` have been provided.
  
  ``local.zeek``: The allowed options for this file are ``@load``, ``@load-sigs`` and ``redef``. An example of configuring this pillar can be seen in the example above. 
+ 
  ``node.cfg``: The pillar items to modify this file are located under the sensor pillar in the minion pillar file. The options that can be customized in the file include: ``interface``, ``lb_procs``, ``pin_cpus``, and ``af_packet_buffer_size``.
+ 
  ``zeekctl.cfg``: An example of customizing this can be seen above. The allowed options can be seen in https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/zeek/files/zeekctl.cfg.jinja.
 
 More Information
