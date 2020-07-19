@@ -19,7 +19,7 @@ Depending on the options you chose in the installer, connect to the IP address o
      - Return to :ref:`hive` and document any indicators of compromise (IOCs) found in the previous step.
      - Go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints.
      - Use :ref:`cyberchef` to further analyze and decode additional host artifacts.
-     - Develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward.
+     - Develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward and update your coverage in :ref:`attack-navigator`.
      - Finally, return to :ref:`hive` and document the entire investigation and close the case.
  
 .. toctree::
