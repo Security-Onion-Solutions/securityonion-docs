@@ -224,16 +224,17 @@ If there is a SID, 4321, that is noisy, it can be commented out with the followi
          - 4321
 
 Suricata:
- For Suricata, the ability to manage suricata.yaml has been provided. The defaults for this have been defined in https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/suricata/defaults.yaml. Under suricata:config, the pillar structure follows the same YAML structure of the suricata.yaml file. For some of the settings to modify here, we have simplified the pillar configuration by placing the option in the sensor pillar instead of the Suricata pillar. These options are, HOMENET, default-packet-size, and the CPU affinity settings for pinning the processes to CPU cores or how many processes to run.
+ For Suricata, the ability to manage ``suricata.yaml`` has been provided. The defaults for this have been defined in https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/suricata/defaults.yaml. Under ``suricata:config``, the pillar structure follows the same YAML structure of the ``suricata.yaml`` file. For some of the settings to modify here, we have simplified the pillar configuration by placing the option in the sensor pillar instead of the Suricata pillar. These options are: ``HOMENET``, ``default-packet-size``, and the CPU affinity settings for pinning the processes to CPU cores or how many processes to run.
 
 Thresholding: 
-  To enable thresholding for SIDS, reference the example pillar at /opt/so/saltstack/default/pillar/thresholding/pillar.example. To view the acceptable syntax, view the file located at /opt/so/saltstack/default/pillar/thresholding/pillar.usage. This pillar can be added to either the static or minion pillar file.
+  To enable thresholding for SIDS, reference the example pillar at ``/opt/so/saltstack/default/pillar/thresholding/pillar.example``. To view the acceptable syntax, view the file located at ``/opt/so/saltstack/default/pillar/thresholding/pillar.usage``. This pillar can be added to either the static or minion pillar file.
 
 Zeek:
- For Zeek, the ability to mange local.zeek, node.cfg and zeekctl.cfg have been provided
- local.zeek: The allowed options for this file are @load, @load-sigs and redef. An example of configuring this pillar can be seen in the example above. 
- node.cfg: The pillar items to modify this file are located under the sensor pillar in the minion pillar file. The options that can be customized in the file include: interface, lb_procs, pin_cpus, and af_packet_buffer_size.
- zeekctl.cfg: An example of customizing this can be seen above. The allowed options can be see in https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/zeek/files/zeekctl.cfg.jinja.
+ For Zeek, the ability to manage ``local.zeek``, ``node.cfg`` and ``zeekctl.cfg`` have been provided.
+ 
+ ``local.zeek``: The allowed options for this file are ``@load``, ``@load-sigs`` and ``redef``. An example of configuring this pillar can be seen in the example above. 
+ ``node.cfg``: The pillar items to modify this file are located under the sensor pillar in the minion pillar file. The options that can be customized in the file include: ``interface``, ``lb_procs``, ``pin_cpus``, and ``af_packet_buffer_size``.
+ ``zeekctl.cfg``: An example of customizing this can be seen above. The allowed options can be seen in https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/zeek/files/zeekctl.cfg.jinja.
 
 More Information
 ----------------
