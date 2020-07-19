@@ -3,7 +3,7 @@
 Getting Started
 ===============
 
-If you're ready to get started with Security Onion, you probably have lots of questions:
+If you're ready to get started with Security Onion, you may have questions like:
 
 **How many machines do I need?**
 
