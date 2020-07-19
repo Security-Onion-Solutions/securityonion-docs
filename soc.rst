@@ -15,7 +15,7 @@ Depending on the options you chose in the installer, connect to the IP address o
    SOC gives you access to a variety of tools and they all complement each other very well. For example, here's one potential workflow:
 
      - Open :ref:`hive` and review alerts.
-     - Once you've found an alert that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses, so pivot to :ref:`hunt` or :ref:`kibana` for more information.
+     - Once you've found an alert that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses, so pivot to :ref:`hunt` or :ref:`kibana` for more information. If any of those additional logs look interesting, you might then want to pivot to :ref:`pcap` to look at the full packet capture for that stream.
      - Return to :ref:`hive` and document any indicators of compromise (IOCs) found in the previous step.
      - Go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints.
      - Use :ref:`cyberchef` to further analyze and decode additional host artifacts.
