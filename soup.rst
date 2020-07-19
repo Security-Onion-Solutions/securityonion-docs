@@ -1,4 +1,4 @@
-.. _upgrade:
+.. _soup:
 
 soup
 ====
