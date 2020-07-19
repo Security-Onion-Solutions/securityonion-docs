@@ -9,7 +9,7 @@ Configuration files are stored in ``/opt/so/conf/``.
 
 /opt/so/log
 -----------
-Service logs are stored in ``/opt/so/log/``.
+Debug logs are stored in ``/opt/so/log/``.
 
 /opt/so/rules
 -------------
@@ -25,16 +25,16 @@ Wazuh configuration and rules are stored in ``/opt/so/wazuh/``.
 
 /nsm
 ----
-
-This is where the vast majority of data is stored.
+The vast majority of data is stored in ``/nsm/``.
 
 /nsm/zeek
 ---------
-
-Zeek IDS logs.
+:ref:`zeek` writes its protocol logs to ``/nsm/zeek/``.
 
 /nsm/elasticsearch
 ------------------
+:ref:`elasticsearch` stores its data in ``/nsm/elasticsearch/``.
 
-Elasticsearch data.
-
+/nsm/pcap
+---------
+:ref:`stenographer` stores full packet capture in ``/nsm/pcap/``.
