@@ -13,15 +13,15 @@ Debug logs are stored in ``/opt/so/log/``.
 
 /opt/so/rules
 -------------
-ElastAlert and NIDS rules are stored in ``/opt/so/rules/``.
+:ref:`elastalert` and :ref:`suricata` rules are stored in ``/opt/so/rules/``.
 
 /opt/so/saltstack/local
 -----------------------
-Custom salt settings can be added to ``/opt/so/saltstack/local/``.
+Custom :ref:`salt` settings can be added to ``/opt/so/saltstack/local/``.
 
 /opt/so/wazuh
 -------------
-Wazuh configuration and rules are stored in ``/opt/so/wazuh/``.
+:ref:`wazuh` configuration and rules are stored in ``/opt/so/wazuh/``.
 
 /nsm
 ----
