@@ -161,7 +161,7 @@ Please see the :ref:`firewall` section.
 What do I need to modify in order to have the log files stored on a different mount point?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please see the :ref:`newdisk` section.
+Please see the :ref:`new-disk` section.
 
  `back to top <#top>`__
 
