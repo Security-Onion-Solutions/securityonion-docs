@@ -34,15 +34,7 @@ In addition to the above, Security Onion can collect data via syslog or other ag
 Analysis Tools
 --------------
 
-With full packet capture, IDS alerts, Zeek data, and endpoint telemetry, there is an incredible amount of data available at your fingertips. Fortunately, Security Onion tightly integrates the following tools to help make sense of this data:
-
-TheHive
-~~~~~~~
-
-.. image:: https://user-images.githubusercontent.com/1659467/87230310-2d815380-c37d-11ea-9af8-a89a43afe0ef.png
-   :target: https://user-images.githubusercontent.com/1659467/87230310-2d815380-c37d-11ea-9af8-a89a43afe0ef.png
-
-:ref:`hive` is the incident response interface. It displays alerts and allows you to turn them into cases where you and your fellow defenders can record your case notes and ultimately close the case. TheHive allows you to pivot to Hunt or Kibana for further context.
+With full packet capture, IDS alerts, Zeek data, and endpoint telemetry, there is an incredible amount of data available at your fingertips. Fortunately, Security Onion tightly integrates the following tools to help make sense of this data.
 
 Security Onion Console (SOC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,7 +42,15 @@ Security Onion Console (SOC)
 .. image:: https://user-images.githubusercontent.com/1659467/87226371-4da31980-c361-11ea-8583-728f6d553884.png
    :target: https://user-images.githubusercontent.com/1659467/87226371-4da31980-c361-11ea-8583-728f6d553884.png
 
-:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`Hunt` interface for threat hunting which allows you to query all of your NIDS/HIDS alerts, Zeek logs, and system logs. SOC also includes an interface for full packet capture retrieval.
+:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`Hunt` interface for threat hunting which allows you to query all of your NIDS/HIDS alerts, :ref:`zeek` logs, and system logs. SOC also includes an interface for full packet capture (:ref:`pcap`) retrieval.
+
+TheHive
+~~~~~~~
+
+.. image:: https://user-images.githubusercontent.com/1659467/87230310-2d815380-c37d-11ea-9af8-a89a43afe0ef.png
+   :target: https://user-images.githubusercontent.com/1659467/87230310-2d815380-c37d-11ea-9af8-a89a43afe0ef.png
+
+:ref:`hive` is the incident response interface. It displays alerts and allows you to turn them into cases where you and your fellow defenders can record your case notes and ultimately close the case. TheHive allows you to pivot to :ref:`hunt` or :ref:`kibana` for further context.
 
 Kibana
 ~~~~~~
