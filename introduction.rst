@@ -3,9 +3,6 @@
 Introduction
 ============
 
-.. image:: images/network.png
-   :target: _images/network.png
-
 .. image:: images/network-horiz.png
    :target: _images/network-horiz.png
 
