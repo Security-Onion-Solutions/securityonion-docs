@@ -34,7 +34,7 @@ In addition to the above, Security Onion can collect data via syslog or other ag
 Analysis Tools
 --------------
 
-With full packet capture, IDS alerts, Zeek data, and endpoint telemetry, there is a daunting amount of data available at the analyst’s fingertips. Fortunately, Security Onion tightly integrates the following tools to help make sense of this data:
+With full packet capture, IDS alerts, Zeek data, and endpoint telemetry, there is an incredible amount of data available at your fingertips. Fortunately, Security Onion tightly integrates the following tools to help make sense of this data:
 
 TheHive
 ~~~~~~~
