@@ -17,9 +17,11 @@ To access Navigator, log into :ref:`soc` and then click the Navigator hyperlink 
 .. image:: https://user-images.githubusercontent.com/1659467/87230321-56a1e400-c37d-11ea-861e-4c08b91e740c.png
     :target: https://user-images.githubusercontent.com/1659467/87230321-56a1e400-c37d-11ea-861e-4c08b91e740c.png
 
-Updating
+Default Layer - Playbook
 --------
-You can update Navigator layers via :ref:`playbook`.
+The default layer is titled ``Playbook`` and is automatically updated when a Play from :ref:`playbook` is made active/inactive. This allows you to see your Detection Playbook coverage across the ATT&CK framework.
+
+Right-clicking any Technique and selecting ``View Related Plays`` will open Playbook with a pre-filtered view of any plays that are tagged with the selected Technique.
 
 Configuration
 -------------
