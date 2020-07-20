@@ -48,8 +48,9 @@ The following folks have made significant contributions to Security Onion over t
 -  Kevin Branch
 -  Scott Runnels
 -  Brad Shoop
--  Liam Randall
 -  Paul Halliday
+-  Seth Hall
+-  Liam Randall
 -  Eric Ooi
 -  Lawrence Abrams
 -  Mark Hillick
