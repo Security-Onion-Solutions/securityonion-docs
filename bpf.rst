@@ -59,19 +59,20 @@ If your BPF contains multiple conditions you can put them on multiple lines and 
 
 VLAN
 ~~~~
-From Seth Hall regarding VLAN tags:
 
-::
-
-    (not (host 192.168.53.254 or host 192.168.53.60 or host 192.168.53.69 or host 192.168.53.234)) or (vlan and (not (host 192.168.53.254 or host 192.168.53.60 or host 192.168.53.69 or host 192.168.53.234)))
-
-This amazingly works if you are only using it to restrict the traffic passing through the filter. The basic template is…
+If you have traffic that has VLAN tags, you can craft a BPF as follows:
 
 ::
 
     <your filter> and (vlan and <your filter>)
 
-Once the ``vlan`` tag is included in the filter, all subsequent expressions to the right are shifted by four bytes so you need to duplicate the filter on both sides of the vlan keyword. There are edge cases where this will no longer work and probably edge cases where a few undesired packets will make it though, but it should work in the example case that you've given.
+Notice that you must include your filter on both sides of the vlan tag.
+
+For example:
+
+::
+
+    (not (host 192.168.1.2 or host 192.168.1.3 or host 192.168.1.4)) or (vlan and (not (host 192.168.1.2 or host 192.168.1.3 or host 192.168.1.4)))
 
 .. warning::
 
