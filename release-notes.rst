@@ -26,16 +26,22 @@ Changes:
 - Elastic nodes are now "hot" by default, making it easier to add a warm node later
 - so-allow now runs at the end of an install so users can enable access right away
 - Alert severities across Wazuh, Suricata and Playbook (Sigma) have been standardized and copied to event.severity:
+
   - 1-Low / 2-Medium / 3-High / 4-Critical
+  
 - Initial implementation of alerting queues:
+
   - Low & Medium alerts are accessible through Kibana & Hunt
   - High & Critical alerts are accessible through Kibana, Hunt and sent to TheHive for immediate analysis
+  
 - ATT&CK Navigator is now a statically-hosted site in the nginx container
 - Playbook
+
   - All Sigma rules in the community repo (500+) are now imported and kept up to date
   - Initial implementation of automated testing when a Play's detection logic has been edited (i.e., Unit Testing)
   - Updated UI Theme
   - Once authenticated through SOC, users can now access Playbook with analyst permissions without login
+  
 - Kolide Launcher has been updated to include the ability to pass arbitrary flags - new functionality sponsored by SOS
 - Fixed issue with Wazuh authd registration service port not being correctly exposed
 - Added option for exposure of Elasticsearch REST API (port 9200) to so-allow for easier external querying/integration with other tools
