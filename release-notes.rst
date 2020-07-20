@@ -5,37 +5,42 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
+Security Onion 2.0.0 RC1 is here! This version requires a fresh install, but there is good news - we have brought back :ref:`soup`! From now on, you should be able to run :ref:`soup` on the manager to upgrade your environment to RC2 and beyond!
+
 Changes:
 
-- Complete overhaul of the way we handle custom and default settings and data. You will now see a default and local directory under the saltstack directory. All customizations are stored in local.
-- The way firewall rules are handled has been completely revamped. This will allow the user to customize firewall rules much easier.
-- Users can now change their own password in SOC.
-- Hunt now allows users to enable auto-hunt. This is a toggle which, when enabled, automatically submits a new hunt when filtering, grouping, etc.
-- Title bar now reflects current Hunt query. This will assist users in locating a previous query from their browser history.
-- Zeek 3.0.7
-- Elastic 7.7.1
-- Suricata can now be used for meta data generation.
-- Suricata eve.json has been moved to /nsm to align with storage of other data.
-- Suricata will now properly rotate its logs.
-- Grafana dashboards now work properly in standalone mode.
-- Kibana Dashboard updates including osquery, community_id.
-- New Elasticsearch Ingest processor to generate community_id from any log that includes the required fields.
-- Community_id generated for additional logs: Zeek HTTP/SMTP/ , Sysmon shipped with Osquery or Winlogbeat.
-- Major streamlining of Fleet setup & configuration - no need to run a secondary setup script anymore.
-- Fleet Standalone node now includes the ability to set a FQDN to point osquery endpoints to.
-- Distributed installs now support ingesting Windows Eventlogs via Winlogbeat - includes full parsing support for Sysmon.
-- SOC Downloads section now includes a link to the supported version of Winlogbeat.
-- Basic syslog ingestion capability now included.
-- Elasticsearch index name transition fixes for various components.
-- Updated URLs for pivot fields in Kibana.
-- Instances of hive renamed to thehive.
-
-.. warning::
-
-  Known Issues:
-
-  - The Hunt feature is currently considered "Preview" and although very useful in its current state, not everything works. We wanted to get this out as soon as possible to get the feedback from you! Let us know what you want to see! Let us know what you think we should call it!
-  - You cannot pivot to PCAP from Suricata alerts in Kibana or Hunt.
-  - Navigator is currently not working when using hostname to access SOC. IP mode works correctly.
-  - Due to the move to ECS, the current Playbook plays may not alert correctly at this time.
-  - The osquery MacOS package does not install correctly.
+- Re-branded 2.0 to give it a fresh look
+- All documentation has moved to our docs site
+- soup is alive! Note: This tool only updates Security Onion components. Please use the built-in OS update process to keep the OS and other components up to date.
+- so-import-pcap is back! See the docs here.
+- Fixed issue with so-features-enable
+- Users can now pivot to PCAP from Suricata alerts
+- ISO install now prompts users to create an admin/sudo user instead of using a default account name
+- The web email & password set during setup is now used to create the initial accounts for TheHive, Cortex, and Fleet
+- Fixed issue with disk cleanup
+- Changed the default permissions for /opt/so to keep non-priviledged users from accessing salt and related files
+- Locked down access to certain SSL keys
+- Suricata logs now compress after they roll over
+- Users can now easily customize shard counts per index
+- Improved Elastic ingest parsers including Windows event logs and Sysmon logs shipped with WinLogbeat and Osquery (ECS)
+- Elastic nodes are now "hot" by default, making it easier to add a warm node later
+- so-allow now runs at the end of an install so users can enable access right away
+- Alert severities across Wazuh, Suricata and Playbook (Sigma) have been standardized and copied to event.severity:
+  - 1-Low / 2-Medium / 3-High / 4-Critical
+- Initial implementation of alerting queues:
+  - Low & Medium alerts are accessible through Kibana & Hunt
+  - High & Critical alerts are accessible through Kibana, Hunt and sent to TheHive for immediate analysis
+- ATT&CK Navigator is now a statically-hosted site in the nginx container
+- Playbook
+  - All Sigma rules in the community repo (500+) are now imported and kept up to date
+  - Initial implementation of automated testing when a Play's detection logic has been edited (i.e., Unit Testing)
+  - Updated UI Theme
+  - Once authenticated through SOC, users can now access Playbook with analyst permissions without login
+- Kolide Launcher has been updated to include the ability to pass arbitrary flags - new functionality sponsored by SOS
+- Fixed issue with Wazuh authd registration service port not being correctly exposed
+- Added option for exposure of Elasticsearch REST API (port 9200) to so-allow for easier external querying/integration with other tools
+- Added option to so-allow for external Strelka file uploads (e.g., via strelka-fileshot)
+- Added default YARA rules for Strelka -- default rules are maintained by Florian Roth and pulled from https://github.com/Neo23x0/signature-base
+- Added the ability to use custom Zeek scripts
+- Renamed "master server" to "manager node"
+- Improved unification of Zeek and Strelka file data
