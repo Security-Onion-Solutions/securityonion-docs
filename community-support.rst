@@ -59,8 +59,8 @@ Please include the following details where you can:
 
 - Explain your issue. For example: ``Installation fails when I select this series of options...``
 
-Security-Onion mailing list
----------------------------
+Forum
+-----
 
 Once you've read and understand all of the above, you can post your question to the forum:
 
