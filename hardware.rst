@@ -20,7 +20,7 @@ The minimum specs for running Security Onion 2.0 are:
 
  - 12GB RAM
  - 4 CPU cores
- - 100GB storage available for ``/nsm``
+ - 200GB storage
 
 .. note::
 
