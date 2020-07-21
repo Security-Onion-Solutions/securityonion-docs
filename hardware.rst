@@ -69,7 +69,7 @@ In a standalone deployment, the manager components and the sensor components all
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Manager node with local log storage
-----------------------------------------
+-----------------------------------
 
 In an enterprise distributed deployment, a manager node will store logs from itself and forward nodes. It can also act as a syslog destination for other log sources to be indexed into Elasticsearch. An enterprise manager node should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
 
@@ -80,7 +80,7 @@ In an enterprise distributed deployment, a manager node will store logs from its
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Manager node with search nodes
------------------------------------
+------------------------------
 
 This deployment type utilizes search nodes to parse and index events. As a result, the hardware requirements of the manager node are reduced. An enterprise manager node should have 4-8 CPU cores, 8-16GB RAM, and 100GB to 1TB of disk space. Many folks choose to host their manager node in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
 
@@ -91,9 +91,9 @@ This deployment type utilizes search nodes to parse and index events. As a resul
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Search Node
-------------
+-----------
 
-Search nodes increase search and retention capacity with regard to Elasticsearch. These nodes parse and index events, and provide the ability to scale horizontally as overall data intake increases.
+Search nodes increase search and retention capacity with regard to Elasticsearch. These nodes parse and index events, and provide the ability to scale horizontally as overall data intake increases. Search nodes should have at least 4-8 CPU cores, 8-64GB RAM, and 100GB of disk space or more depending on your logging requirements.
 
 - CPU: Used to parse incoming events and index incoming events. As consumption of data and events increases, more CPU will be required.
 - RAM: Used for Logstash, Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
