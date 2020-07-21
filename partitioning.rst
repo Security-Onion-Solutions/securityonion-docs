@@ -25,6 +25,11 @@ Wazuh
 
 Wazuh is currently installed to ``/opt/so/wazuh``. If you plan to deploy lots of Wazuh agents and collect lots of Wazuh logs, you will want to ensure that this directory has plenty of space. One option may include mounting that directory as a dedicated partition.
 
+Docker
+------
+
+Docker images are currently written to ``/var/lib/docker/``. The current set of Docker images uses 26GB on disk. If you're planning a production deployment, you should plan on having enough space for another set of those Docker images for in-place updates.
+
 Other
 -----
 
