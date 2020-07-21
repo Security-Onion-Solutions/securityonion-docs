@@ -7,6 +7,10 @@ Before downloading, please review the notes for this release.
 
 Security Onion 2.0.0 RC1 is here! This version requires a fresh install, but there is good news - we have brought back :ref:`soup`! From now on, you should be able to run :ref:`soup` on the manager to upgrade your environment to RC2 and beyond!
 
+Known Issues:
+
+- so-import-pcap currently doesn't check for sudo. If you get any errors, try running with sudo.
+
 Changes:
 
 - Re-branded 2.0 to give it a fresh look
