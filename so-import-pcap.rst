@@ -20,8 +20,10 @@ Usage
    so-import-pcap works differently on Security Onion 2.0 than it did in previous versions! 
    
    Please consider this new version to be experimental!
+   
+   Also, don't forget that so-import-pcap requires sudo!
 
-This new version of so-import-pcap currently requires you to run through Setup first. You can choose Eval or Standalone. Once Setup completes, you can then run ``so-import-pcap`` and supply the full path to at least one pcap file.
+This new version of so-import-pcap currently requires you to run through Setup first. You can choose Eval or Standalone. Once Setup completes, you can then run ``sudo so-import-pcap`` and supply the full path to at least one pcap file.
 
 For example, to import a single pcap named ``import.pcap``:
 
