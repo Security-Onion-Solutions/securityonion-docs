@@ -26,7 +26,7 @@ The final piece to Playbook is automation. Once a Play is made active, the follo
  - :ref:`attack-navigator` layer is updated to reflect current coverage
 
 Getting Started
-----------
+---------------
 
 You can access Playbook by logging into :ref:`soc` and clicking the Playbook link. You will see over 500 plays already created that have been imported from the Sigma Community repostory of rules at https://github.com/Neo23x0/sigma/tree/master/rules.
 
@@ -42,7 +42,7 @@ To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a
 Once you are ready to create the Play, click ``Create Play From Sigma``. If the Play creation is successful, you will be redirected to the newly created Play. 
 
 Editing a Play
--------------------
+--------------
 
 Click on ``Edit`` to edit a Play. There will only be a few fields that you can modify - to make edits to the others (``Title``, ``Description``, etc), you will need to edit the Sigma inside the Sigma field. Keep in mind that the Sigma is YAML formatted, so if you have major edits to make it is recommended to lint it and/or ``Convert`` it through the Sigma Editor to confirm that it is formatted correctly. Be sure to remove the prepended and postpended Playbook-specific syntax highlighting before linting/converting - ``{{collapse(View Sigma) <pre><code class="yaml">`` and ``</code></pre>}}``.
 
@@ -51,15 +51,15 @@ Once you save your changes, Playbook will update the rest of the fields to match
 Putting a Play into Production
 ------------------------------
 
-When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatially update the Elastalert configuration and TheHive case template.
+When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatically update the :ref:`elastalert` configuration and :ref:`hive` case template.
 
 Viewing Playbook Alerts
-------------------------------
+-----------------------
 
 When results from your Plays are found (via :ref:`elastalert`), any high or critical severity results will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within :ref:`hunt` or :ref:`kibana`.
 
 User Accounts
-------------------------------
+-------------
 
 By default, once a user has authenticated through SOC they can access Playbook without having to login again to the app itself - this anonymous access has the permissions of the analyst role. If you need your team to login with individual user accounts, you can disable this anonymous access and create new user accounts and add them to the analyst group which will give them all the relevant permissions.
 
