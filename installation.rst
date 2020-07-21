@@ -17,7 +17,7 @@ If you want to install Security Onion using our ISO image:
 #. `Download and verify our Security Onion ISO image <https://github.com/Security-Onion-Solutions/securityonion/wiki/ISO>`__.
 #. Boot the ISO in a machine that meets the minimum hardware specs.
 #. Follow the prompts to complete the installation and reboot.
-#. Login using the user ``onion`` and the password you set.
+#. Login using the username and password you set in the installer.
 #. Proceed to the :ref:`configuration` section.
 
 Installation on Ubuntu or CentOS
