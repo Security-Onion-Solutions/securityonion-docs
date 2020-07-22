@@ -63,8 +63,9 @@ We welcome your contributions to our documentation!  We will review any suggesti
 
 If you are accessing the online version of the documentation and notice that a particular page has incorrect information, you can submit corrections by clicking the ``Edit on GitHub`` button in the upper right corner of each page.
 
-| To submit a new page, you can submit a pull request (PR) to the following repo:
-| https://github.com/Security-Onion-Solutions/securityonion-docs
+To submit a new page, you can submit a pull request (PR) to the 2.0 branch of the ``securityonion-docs`` repo at https://github.com/Security-Onion-Solutions/securityonion-docs.
+
+Pages are written in RST format and you can find several RST guides on the Internet including https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html.
 
 Naming Convention
 ~~~~~~~~~~~~~~~~~
