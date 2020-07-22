@@ -54,3 +54,28 @@ osquery_endpoint.sls
 
 storage_nodes.sls
 ~~~~~~~~~~~~~~~~~
+
+Advanced Firewall Customization
+-------------------------------
+
+.. warning::
+
+  Please review the salt section to understand pillars and templates. Modifying these values outside of so-allow or so-firewall could lead to problems accessing your existing hosts. This is an advanced case and you should never need to modify these files. An example of why you would ever modify these templates is if you were adding some sort of agent to the hosts in your grid that are not part of Security Onion. This would allow you to open the ports needed to the hosts that required access. 
+
+Port Groups
+~~~~~~~~~~~
+Port groups are a way of grouping together ports similar to a firewall port/service alias. For example it you had a web server you could include 80 and 443 tcp into an alias or in this case a port group. 
+
+Default port groups: /opt/so/saltstack/local/salt/firewall/portgroup.local.yaml
+
+Host Groups
+~~~~~~~~~~~
+Host groups is similar to port groups but for sotring lists of hosts.  
+
+Default host groups: /opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml
+
+Port Group Assignments
+~~~~~~~~~~~~~~~~~~~~~~
+Port group assignments are the way you map host groups to port groups to complete the rule.  
+
+Default port group assignments: /opt/so/saltstack/local/salt/firewall/assigned_hostgroups.local.map.yaml
