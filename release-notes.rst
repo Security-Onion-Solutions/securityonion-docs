@@ -5,13 +5,21 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2.0.0 RC1 is here! This version requires a fresh install, but there is good news - we have brought back :ref:`soup`! From now on, you should be able to run :ref:`soup` on the manager to upgrade your environment to RC2 and beyond!
+Security Onion 2.0.1 RC1 is here! This version requires a fresh install, but there is good news - we have brought back :ref:`soup`! From now on, you should be able to run :ref:`soup` on the manager to upgrade your environment to RC2 and beyond!
 
 Known Issues:
 
 - so-import-pcap currently doesn't check for sudo. If you get any errors, try running with sudo.
 
-Changes:
+2.0.1 Changes:
+
+- Security Fix: variables.txt from ISO install stays on disk for 10 days. https://github.com/Security-Onion-Solutions/securityonion/issues/1067
+- Security Fix: Remove user values from static.sls. https://github.com/Security-Onion-Solutions/securityonion/issues/1068
+- Fix distributed deployment sensor interval issue allowing PCAP. https://github.com/Security-Onion-Solutions/securityonion/issues/1059
+- Support for passwords that start with special characters. https://github.com/Security-Onion-Solutions/securityonion/issues/1058
+- Minor soup updates.
+
+2.0.0 Changes:
 
 - Re-branded 2.0 to give it a fresh look
 - All documentation has moved to our docs site
