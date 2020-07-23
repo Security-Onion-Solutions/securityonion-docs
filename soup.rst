@@ -11,7 +11,7 @@ Once you're ready to install an update, use the ``soup`` command:
 
     sudo soup
 
-Please pay attention to the output of this command as it may request that you take specific action, such as manually restarting services. 
+Please pay attention to the output of this command as ``soup`` may update itself and then ask you to run it again or it may request that you take other actions. 
 
 .. warning::
 
