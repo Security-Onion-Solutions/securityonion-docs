@@ -14,15 +14,19 @@ Known Issues:
 
 2.0.2 Changes:
 
-| - Sensoroni fails on 2.0.1 ISO EVAL installation #1089
-| https://github.com/Security-Onion-Solutions/securityonion/issues/1089
+- Sensoroni fails on 2.0.1 ISO EVAL installation #1089
+  https://github.com/Security-Onion-Solutions/securityonion/issues/1089
 
 2.0.1 Changes:
 
-- Security Fix: variables.txt from ISO install stays on disk for 10 days. https://github.com/Security-Onion-Solutions/securityonion/issues/1067
-- Security Fix: Remove user values from static.sls. https://github.com/Security-Onion-Solutions/securityonion/issues/1068
-- Fix distributed deployment sensor interval issue allowing PCAP. https://github.com/Security-Onion-Solutions/securityonion/issues/1059
-- Support for passwords that start with special characters. https://github.com/Security-Onion-Solutions/securityonion/issues/1058
+- Security Fix: variables.txt from ISO install stays on disk for 10 days
+  https://github.com/Security-Onion-Solutions/securityonion/issues/1067
+- Security Fix: Remove user values from static.sls
+  https://github.com/Security-Onion-Solutions/securityonion/issues/1068
+- Fix distributed deployment sensor interval issue allowing PCAP
+  https://github.com/Security-Onion-Solutions/securityonion/issues/1059
+- Support for passwords that start with special characters
+  https://github.com/Security-Onion-Solutions/securityonion/issues/1058
 - Minor soup updates.
 
 2.0.0 Changes:
