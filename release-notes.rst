@@ -8,6 +8,7 @@ Before downloading, please review the notes for this release.
 Security Onion 2.0 Release Candidate 1 (RC1) is here!
 
 This is our first Release Candidate, so we're getting closer to a final release, but we're not quite there yet. Please be reminded of the usual pre-release warnings and disclaimers:
+
 - If this breaks your system, you get to keep both pieces!
 - This is a work in progress and is in constant flux.
 - This configuration may change drastically over time leading up to the final release.
