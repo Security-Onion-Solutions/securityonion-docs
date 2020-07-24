@@ -3,6 +3,10 @@
 Managing Alerts
 ===============
 
+.. warning::
+
+   This page has not been updated for 2.0 yet! We'll get it updated soon.
+   
 Security Onion generates a lot of valuable information for you the second you plug it into a TAP or SPAN port. Between Zeek logs, alert data from Suricata, and full packet capture from Stenographer, you have, in a very short amount of time, enough information to begin making identifying areas of interest and making positive changes to your security stance.
 
 .. note::
