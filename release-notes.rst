@@ -23,7 +23,7 @@ Known Issues
 ------------
 
 - :ref:`so-import-pcap` currently doesn't check for sudo. If you get any errors, try running with sudo.
-- Docker images and SOC Sensors tab may still show 2.0.0 even after upgrading to 2.0.2.
+- Docker images and :ref:`soc` may still show 2.0.0 even after upgrading to 2.0.2.
 
 2.0.2 Changes
 -------------
