@@ -26,3 +26,7 @@ If you need to disable a :ref:`soc` account, you can use the ``so-user`` command
 Alternatively, you can log into the :ref:`soc` interface, click ``Adminstration``, click ``Users``, and then click the ``X`` (delete) button:
 
 .. image:: https://user-images.githubusercontent.com/1659467/87231781-15fb9800-c388-11ea-890b-d82a998326f7.png
+
+TheHive
+-------
+To see all :ref:`hive` accounts, log into :ref:`hive` and then click ``Admin`` and ``Users`` to access the User management screen. Then click the ``Lock`` button for the user account you want to disable.
