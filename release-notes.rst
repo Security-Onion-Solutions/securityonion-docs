@@ -5,7 +5,16 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2.0 RC1 is here!
+Security Onion 2.0 Release Candidate 1 (RC1) is here!
+
+This is our first Release Candidate, so we're getting closer to a final release, but we're not quite there yet. Please be reminded of the usual pre-release warnings and disclaimers:
+- If this breaks your system, you get to keep both pieces!
+- This is a work in progress and is in constant flux.
+- This configuration may change drastically over time leading up to the final release.
+- Do NOT run this on a system that you care about!
+- Do NOT run this on a system that has data that you care about!
+- This script should only be run on a TEST box with TEST data!
+- Use of this script may result in nausea, vomiting, or a burning sensation.
 
 Known Issues:
 
