@@ -39,7 +39,7 @@ All configuration changes take place in pillar files. You should never need to m
       node_route_type: hot
 
 
-``/opt/so/saltstack/local/pillar/statis.sls``
+``/opt/so/saltstack/local/pillar/static.sls``
 
 ::
 
@@ -138,10 +138,8 @@ The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar
 
 Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
 
-Files
-~~~~~
-
--  Configuration files for Elasticsearch can be found in ``/opt/so/conf/elasticsearch/``.
+Heap Size
+~~~~~~~~~
 
 -  By default, if total available memory is 8GB or greater, the heap size in ``/etc/elasticsearch/jvm.options`` is configured (during Setup) to equal 25% of available memory, but no greater than 25GB.
 
@@ -149,7 +147,7 @@ Files
 | https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops
 | https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size.html
 
-You may need to adjust the value for heap size depending on your system's performance (running ``sudo so-elastic-restart`` after).
+You may need to adjust the value for heap size depending on your system's performance. This can be modified in ``/opt/so/saltstack/local/minions/$minion.sls``
 
 Field limit
 ~~~~~~~~~~~
