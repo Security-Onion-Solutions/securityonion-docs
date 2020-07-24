@@ -11,7 +11,7 @@ Once you're ready to install an update, use the ``soup`` command:
 
     sudo soup
 
-If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then update :ref:`salt` and the :ref:``docker`` images.
+If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then update :ref:`salt` and the :ref:`docker` images.
 
 .. warning::
 
