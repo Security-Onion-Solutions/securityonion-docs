@@ -22,6 +22,11 @@ Logging
 
 Kibana logs to ``/opt/so/log/kibana/kibana.log``.
 
+Dashboards
+----------
+
+We've included the old 16.04 dashboards in case you have any old 16.04 data. The new 2.0 dashboards are all named with the ``Security Onion`` prefix and they should be used for any new data going forward. Please note that the layout and workflow of these dashboards has changed since 16.04. The log panel is no longer included at the bottom of every dashboard as this was causing performance problems for many deployments. If you need to access the raw logs, you can either pivot to the ``Indicator`` dashboard or you can pin your query and then pivot to the ``Discover`` tab.
+
 Pivoting
 --------
 
@@ -38,7 +43,7 @@ When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot 
 Indicator Dashboard
 ~~~~~~~~~~~~~~~~~~~
 
-Several fields are hyperlinked to the Indicator dashboard to allow you to get all the information you can about a particular indicator:
+Several fields are hyperlinked to the Indicator dashboard to allow you to get all the information you can about a particular indicator. Here are just a few:
 
 | ``uid``
 | ``source.ip``
