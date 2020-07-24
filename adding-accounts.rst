@@ -26,4 +26,4 @@ If you need to add a new :ref:`soc` account, you can use the ``so-user-add`` com
 TheHive
 -------
 
-If you need to add a new :ref:`hive` account, log into :ref:`hive` with your existing account and then click ``Admin`` and ``Users`` to access the ``User management`` screen. Then click the ``Add user`` button and follow the prompts.
+If you need to add a new :ref:`hive` account, log into :ref:`hive` with your existing account and then click ``Admin`` and ``Users`` to access the ``User management`` screen. Then click the ``Add user`` button and follow the prompts. Once the user has been created, you can then set their password.
