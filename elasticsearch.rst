@@ -19,42 +19,28 @@ https://github.com/Security-Onion-Solutions/elasticsearch-ingest-community-id
 Configuration
 -------------
 
-Shards
-~~~~~~
+Pillar Files
+~~~~~~~~~~~~
 
-Here are a few tips from https://www.elastic.co/blog/how-many-shards-should-i-have-in-my-elasticsearch-cluster:
+All configuration changes take place in pillar files. You should never need to modify a config file directly. There are two places that hold pillar settings for elasticsearch. The pillars are:
 
-    TIP: Avoid having very large shards as this can negatively affect the cluster's ability to recover from failure. There is no fixed limit on how large shards can be, but a shard size of 50GB is often quoted as a limit that has been seen to work for a variety of use-cases.
-
-    TIP: Small shards result in small segments, which increases overhead. Aim to keep the average shard size between a few GB and a few tens of GB. For use-cases with time-based data, it is common to see shards between 20GB and 40GB in size.
-
-    TIP: The number of shards you can hold on a node will be proportional to the amount of heap you have available, but there is no fixed limit enforced by Elasticsearch. A good rule-of-thumb is to ensure you keep the number of shards per node below 20 to 25 per GB heap it has configured. A node with a 30GB heap should therefore have a maximum of 600-750 shards, but the further below this limit you can keep it the better. This will generally help the cluster stay in good health.
-
-To see your existing shards:
+``/opt/so/saltstack/local/pillar/minions/$minion.sls``
 
 ::
 
-    curl localhost:9200/_cat/indices
-    
-The number of shards will be shown in the fifth column.
+    elasticsearch:
+      mainip: 10.66.166.22
+      mainint: eth0
+      esheap: 4066m
+      esclustername: {{ grains.host }}
+      node_type: search
+      es_port: 9200
+      log_size_limit: 3198
+      node_route_type: hot
 
-If you want to view the detail for each of those shards:
 
-::
+``/opt/so/saltstack/local/pillar/statis.sls``
 
-    curl localhost:9200/_cat/shards
-
-
-Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
-
-The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar/static.sls``
-
-Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
-
-Files
-~~~~~
-
--  Configuration files for Elasticsearch can be found in ``/opt/so/conf/elasticsearch/``.
 ::
 
     elasticsearch:
@@ -119,6 +105,43 @@ Files
           close: 365
           delete: 45
 
+
+Shards
+~~~~~~
+
+Here are a few tips from https://www.elastic.co/blog/how-many-shards-should-i-have-in-my-elasticsearch-cluster:
+
+    TIP: Avoid having very large shards as this can negatively affect the cluster's ability to recover from failure. There is no fixed limit on how large shards can be, but a shard size of 50GB is often quoted as a limit that has been seen to work for a variety of use-cases.
+
+    TIP: Small shards result in small segments, which increases overhead. Aim to keep the average shard size between a few GB and a few tens of GB. For use-cases with time-based data, it is common to see shards between 20GB and 40GB in size.
+
+    TIP: The number of shards you can hold on a node will be proportional to the amount of heap you have available, but there is no fixed limit enforced by Elasticsearch. A good rule-of-thumb is to ensure you keep the number of shards per node below 20 to 25 per GB heap it has configured. A node with a 30GB heap should therefore have a maximum of 600-750 shards, but the further below this limit you can keep it the better. This will generally help the cluster stay in good health.
+
+To see your existing shards:
+
+::
+
+    curl localhost:9200/_cat/indices
+    
+The number of shards will be shown in the fifth column.
+
+If you want to view the detail for each of those shards:
+
+::
+
+    curl localhost:9200/_cat/shards
+
+
+Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
+
+The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar/static.sls``
+
+Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
+
+Files
+~~~~~
+
+-  Configuration files for Elasticsearch can be found in ``/opt/so/conf/elasticsearch/``.
 
 -  By default, if total available memory is 8GB or greater, the heap size in ``/etc/elasticsearch/jvm.options`` is configured (during Setup) to equal 25% of available memory, but no greater than 25GB.
 
