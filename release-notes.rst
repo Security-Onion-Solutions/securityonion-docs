@@ -15,7 +15,7 @@ Known Issues:
 2.0.2 Changes:
 
 | - Sensoroni fails on 2.0.1 ISO EVAL installation #1089
-|   https://github.com/Security-Onion-Solutions/securityonion/issues/1089
+| https://github.com/Security-Onion-Solutions/securityonion/issues/1089
 
 2.0.1 Changes:
 
