@@ -30,3 +30,7 @@ To list all :ref:`soc` accounts, you can use the ``so-user`` command with the ``
 Alternatively, you can get a list of users in :ref:`soc` by clicking ``Administration`` and then ``Users``:
 
 .. image:: https://user-images.githubusercontent.com/1659467/87231705-6a524800-c387-11ea-975b-0899fd3b4f12.png
+
+TheHive
+-------
+To see all :ref:`hive` accounts, log into :ref:`hive` and then click ``Admin`` and ``Users`` to access the User management screen.
