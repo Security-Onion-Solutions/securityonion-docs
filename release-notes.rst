@@ -10,31 +10,26 @@ Security Onion 2.0 RC1 is here!
 Known Issues:
 
 - :ref:`so-import-pcap` currently doesn't check for sudo. If you get any errors, try running with sudo.
-- Docker images and SOC Sensor tab may still show 2.0.0 even after upgrading to 2.0.2
+- Docker images and SOC Sensors tab may still show 2.0.0 even after upgrading to 2.0.2
 
 2.0.2 Changes:
 
-- Sensoroni fails on 2.0.1 ISO EVAL installation #1089
-
-  https://github.com/Security-Onion-Solutions/securityonion/issues/1089
-
+- | Sensoroni fails on 2.0.1 ISO EVAL installation #1089
+  | https://github.com/Security-Onion-Solutions/securityonion/issues/1089
+  
 2.0.1 Changes:
 
-- Security Fix: variables.txt from ISO install stays on disk for 10 days
-
-  https://github.com/Security-Onion-Solutions/securityonion/issues/1067
+- | Security Fix: variables.txt from ISO install stays on disk for 10 days
+  | https://github.com/Security-Onion-Solutions/securityonion/issues/1067
   
-- Security Fix: Remove user values from static.sls
-
-  https://github.com/Security-Onion-Solutions/securityonion/issues/1068
+- | Security Fix: Remove user values from static.sls
+  | https://github.com/Security-Onion-Solutions/securityonion/issues/1068
   
-- Fix distributed deployment sensor interval issue allowing PCAP
-
-  https://github.com/Security-Onion-Solutions/securityonion/issues/1059
+- | Fix distributed deployment sensor interval issue allowing PCAP
+  | https://github.com/Security-Onion-Solutions/securityonion/issues/1059
   
-- Support for passwords that start with special characters
-
-  https://github.com/Security-Onion-Solutions/securityonion/issues/1058
+- | Support for passwords that start with special characters
+  | https://github.com/Security-Onion-Solutions/securityonion/issues/1058
   
 - Minor soup updates.
 
