@@ -47,53 +47,7 @@ If you want to view the detail for each of those shards:
 
 Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
 
-The number of shards for an index is defined in the template file for that index.  By default, there are three template files in ``/etc/logstash/``:
-
-- ``beats-template.json`` applies to ``logstash-beats`` indices
-
-- ``logstash-ossec-template.json`` applies to ``logstash-ossec`` indices
-
-- ``logstash-template.json`` applies to ``logstash-ids``, ``logstash-firewall``, ``logstash-syslog``, ``logstash-bro``, ``logstash-import``, and ``logstash-beats``.  
-
-Depending on which index you want to increase shards for, you have a few options.
-
-If you want to increase shards for ``logstash-beats`` or ``logstash-ossec``:
-
-- First, copy the template to ``/etc/logstash/custom/``.  For example:
-
-  ::
-
-    sudo cp /etc/logstash/logstash-ossec-template.json to /etc/logstash/custom/
-
-
-- Then, update your new template in ``/etc/logstash/custom/``.
-
-- Finally, restart Logstash to push the new template to Elasticsearch:
-
-  ::
-
-    sudo so-logstash-restart
-
-
-If you want to increase shards for all indices defined in ``logstash-template.json``, then you can follow a process similar to what was shown above.  However, if you want to increase shard count for only one index type (example: bro), you can update the template as follows:
-
-- First, copy ``/etc/logstash/logstash-template.json`` and give it a name based on the index (example: ``logstash-bro-template.json``).
-
-- Then, update your new template, changing the ``index_patterns`` line to only apply to the index you care about, increasing the value of the ``order`` field from ``0`` to ``1``, and setting your ``number_of_shards``.
-
-- Next, we need to tell Logstash to use this new template, so update the proper output file in ``/etc/logstash/conf.d/`` and update the template value.
-
-- Then, we need to configure the Logstash container to be able to access the template by updating ``LOGSTASH_OPTIONS`` in ``/etc/nsm/securityonion.conf`` similar to the following:
-
-  ::
-  
-    LOGSTASH_OPTIONS="--volume /etc/logstash/logstash-bro-template.json:/logstash-bro-template.json:ro"
-
-- Finally, restart Logstash to push the new template to Elasticsearch:
-
-  ::
-  
-    sudo so-logstash-restart
+The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar/static.sls``
 
 Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
 
