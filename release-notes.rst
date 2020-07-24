@@ -16,8 +16,8 @@ Security Onion 2.0 Release Candidate 1 (RC1) is here!
   - This configuration may change drastically over time leading up to the final release.
   - Do NOT run this on a system that you care about!
   - Do NOT run this on a system that has data that you care about!
-  - This script should only be run on a TEST box with TEST data!
-  - Use of this script may result in nausea, vomiting, or a burning sensation.
+  - This should only be run on a TEST box with TEST data!
+  - May result in nausea, vomiting, or a burning sensation.
 
 Known Issues
 ------------
