@@ -15,7 +15,7 @@ Once :ref:`soc` has located the stream, it will show a high level overview of th
 
 If there are many packets in the stream, you can use the ``LOAD MORE`` button, ``Rows per page`` setting, and arrows to navigate through the list of packets. 
 
-You can drill into individual rows to see the actual payload data. There are buttons at the top of the table that control what data is displayed in the individual rows. By enabling ``Show all packet data`` and disabling ``HEX``, we can get an ASCII transcript.
+You can drill into individual rows to see the actual payload data. There are buttons at the top of the table that control what data is displayed in the individual rows. By disabling ``Show all packet data`` and ``HEX``, we can get an ASCII transcript.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87229921-391f4b00-c37a-11ea-834c-8454cb047a03.png
   :target: https://user-images.githubusercontent.com/1659467/87229921-391f4b00-c37a-11ea-834c-8454cb047a03.png
