@@ -17,8 +17,13 @@ For more information, please see ``man adduser``.
 SOC
 ---
 
-If you need to add a new Security Onion Console (SOC) account, you can use the ``so-user-add`` command and specify the user's email address. For example, to add a new account for ``tom@example.com``:
+If you need to add a new :ref:`soc` account, you can use the ``so-user-add`` command and specify the user's email address. For example, to add a new account for ``tom@example.com``:
 
 ::
 
     sudo so-user-add tom@example.com
+
+TheHive
+-------
+
+If you need to add a new :ref:`hive` account, log into :ref:`hive` with your existing account and then click ``Admin`` and ``Users`` to access the ``User management`` screen. Then click the ``Add user`` button and follow the prompts.
