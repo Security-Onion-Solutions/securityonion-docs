@@ -5,11 +5,11 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2.0.1 RC1 is here! This version requires a fresh install, but there is good news - we have brought back :ref:`soup`! From now on, you should be able to run :ref:`soup` on the manager to upgrade your environment to RC2 and beyond!
+Security Onion 2.0 RC1 is here!
 
 Known Issues:
 
-- so-import-pcap currently doesn't check for sudo. If you get any errors, try running with sudo.
+- :ref:`so-import-pcap` currently doesn't check for sudo. If you get any errors, try running with sudo.
 - Docker images and SOC Sensor tab may still show 2.0.0 even after upgrading to 2.0.2
 
 2.0.2 Changes:
@@ -40,6 +40,7 @@ Known Issues:
 
 2.0.0 Changes:
 
+- This version requires a fresh install, but there is good news - we have brought back :ref:`soup`! From now on, you should be able to run :ref:`soup` on the manager to upgrade your environment to RC2 and beyond!
 - Re-branded 2.0 to give it a fresh look
 - All documentation has moved to our docs site
 - soup is alive! Note: This tool only updates Security Onion components. Please use the built-in OS update process to keep the OS and other components up to date.
