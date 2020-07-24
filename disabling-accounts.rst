@@ -29,4 +29,4 @@ Alternatively, you can log into the :ref:`soc` interface, click ``Adminstration`
 
 TheHive
 -------
-To see all :ref:`hive` accounts, log into :ref:`hive` and then click ``Admin`` and ``Users`` to access the User management screen. Then click the ``Lock`` button for the user account you want to disable.
+Log into :ref:`hive` and then click ``Admin`` and ``Users`` to access the User management screen. Then click the ``Lock`` button for the user account you want to disable.
