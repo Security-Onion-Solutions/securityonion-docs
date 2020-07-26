@@ -76,8 +76,12 @@ For example:
 
 .. warning::
 
-   Please note that :ref:`zeek` currently does not see VLAN tags when using :ref:`af-packet`.
-
+   Please note that :ref:`zeek` and :ref:`stenographer` currently do not see VLAN tags due to the way that :ref:`af-packet` works:
+   
+   https://github.com/J-Gras/zeek-af_packet-plugin/issues/9
+   
+   https://github.com/google/stenographer/issues/211
+   
 Troubleshooting BPF using tcpdump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 If you need to troubleshoot BPF, you can use ``tcpdump`` as shown in the following articles.
