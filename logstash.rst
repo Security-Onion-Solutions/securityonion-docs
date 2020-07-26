@@ -38,51 +38,7 @@ You may need to adjust the value depending on your system's performance. The cha
 Adding New Logs or Modifying Existing Parsing
 ---------------------------------------------
 
-Mapping Templates
-~~~~~~~~~~~~~~~~~
-
-Logstash loads default mapping templates for Elasticsearch to use from ``/etc/logstash``.
-
-The three templates currently being used include:
-
-``logstash-template.json`` - applies to ``logstash-*`` indices
-
-``logstash-ossec-template.json`` - applies to ``logstash-ossec-*`` indices
-
-``beats-template.json`` - applies to ``logstash-beats-*`` indices
-
-Currently, new fields that do not match the template are stored in Elasticsearch, however, they are not indexed, unless provided in a mapping template.
-
-If sending in custom logs to Security Onion that may not match existing fields for existing indices, it is recommended to create a dedicated index for the log source, as well as define a mapping template and output file for the custom log source.
-
-To make sure Logstash can read the custom template:
-
-#. Place the template in ``/etc/logstash/custom``.
-#. Make sure the template is added to ``LOGSTASH_OPTIONS`` in ``/etc/nsm/securityonion.conf``:
-   ``LOGSTASH_OPTIONS="--volume /etc/logstash/testme-template.json:/testme-template.json:ro"``
-#. Make sure the custom template is referenced in the appropriate output file (place the output file in ``/etc/logstash/custom``, then modify it.).
-#. Restart Logstash.
-
-You can check to see if templates are loaded by typing something like the following at a command prompt:
-
-::
-
-   sudo so-elasticsearch-template-list
-
-You can also test the template before restarting Logstash, by using the following command:
-
-::
-
-   sudo so-elasticsearch-template-add
-
-If mappings defined in the template are different than in existing indices, you will receive mapping conflicts in Kibana.
-
-To avoid this, either remove the existing indices, wiping all data, or :ref:`re‐indexing`.
-
-Logging
-~~~~~~~
-
-Log file settings can be adjusted in ``/opt/so/conf/logstash/etc/log4j2.properties``. Currently, logs are set to rollover daily, and configured to be deleted after 7 days.
+Since Logstash no longer parses logs in Security Onion 2.0, modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
 
 Queue
 -----
@@ -149,15 +105,10 @@ Redis
 
 When using search nodes, Logstash on the manager node outputs to :ref:`redis` (which also runs on the manager node). Redis queues events from the Logstash output (on the manager node) and the Logstash input on the search node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the manager node and then the redis `queue <Redis#queue>`__.
 
-Data Fields
------------
-
-Logstash process Zeek logs, syslog, IDS alerts, etc., formatting said data into many different data fields, as described in the :ref:`data-fields` section.
-
 Log
 ---
 
-The Logstash log is located at ``/opt/so/log/logstash/logstash.log``.
+The Logstash log file is located at ``/opt/so/log/logstash/logstash.log``. Log file settings can be adjusted in ``/opt/so/conf/logstash/etc/log4j2.properties``. Currently, logs are set to rollover daily, and configured to be deleted after 7 days.
 
 Errors
 ------
