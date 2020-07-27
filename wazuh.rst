@@ -25,6 +25,12 @@ The Wazuh components include:
 
 The Wazuh API runs at TCP port ``55000`` locally, and currently uses the default credentials of ``user:foo`` and ``password:bar`` for authentication. Keep in mind, the API port is not exposed externally by default. Therefore, firewall rules need to be in place to reach the API from another location other than the Security Onion node on which the targeted Wazuh manager is running.
 
+Since the manager runs inside a Docker container, many of the Wazuh binaries that you might want to run will need to be run inside the Docker container. For example, to run `agent_upgrade`:
+
+::
+
+    sudo docker exec -it so-wazuh /var/ossec/bin/agent_upgrade
+
 Configuration
 -------------
 
@@ -58,7 +64,7 @@ Adding Agents
 
 .. note::
 
-    It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.9.5, then you will want to deploy Wazuh agent version 3.9.5.
+    It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.10.2, then you will want to deploy Wazuh agent version 3.10.2.
 
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
 | https://documentation.wazuh.com/current/user-manual/registering/cli/using-command-line-linux.html
