@@ -10,8 +10,8 @@ From https://wazuh.com/:
 
     Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
 
-Security Onion Usage
---------------------
+Usage
+-----
 
 Security Onion utilizes Wazuh as a Host Intrusion Detection System (HIDS) on each of the Security Onion nodes.
 
