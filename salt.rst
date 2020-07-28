@@ -239,7 +239,7 @@ For :ref:`suricata`, the ability to manage ``suricata.yaml`` has been provided. 
 
 Thresholding
 ~~~~~~~~~~~~
-To enable thresholding for SIDs, reference the example pillar at ``/opt/so/saltstack/default/pillar/thresholding/pillar.example``. To view the acceptable syntax, view the file located at ``/opt/so/saltstack/default/pillar/thresholding/pillar.usage``. This pillar can be added to either the static or minion pillar file.
+To enable thresholding for SIDs, reference the example pillar at ``/opt/so/saltstack/default/pillar/thresholding/pillar.example``. To view the acceptable syntax, view the file located at ``/opt/so/saltstack/default/pillar/thresholding/pillar.usage``. This pillar can be added to either the static pillar file (``/opt/so/saltstack/local/pillar/static.sls``) or minion pillar file (``/opt/so/saltstack/pillar/minions/<minionid>.sls``).
 
 Zeek
 ~~~~
