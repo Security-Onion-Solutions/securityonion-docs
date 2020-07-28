@@ -8,7 +8,16 @@ From https://www.elastic.co/products/elasticsearch:
     Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. 
     As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
+Parsing
+-------
+
 In Security Onion 2.0, Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`filebeat`. It then parses and stores those logs.
+
+Parsers are stored in ``/opt/so/conf/elasticsearch/ingest/``. 
+
+.. seealso::
+
+    For more about Elasticsearch ingest parsing, please see https://www.elastic.co/guide/en/elasticsearch/reference/master/ingest.html.
 
 Community ID
 ------------
