@@ -55,7 +55,7 @@ Here are some of the items that can be customized with pillar settings:
  
 :ref:`firewall`
  
-:ref:`rules`
+:ref:`alerts`
 
 :ref:`suricata`
 
