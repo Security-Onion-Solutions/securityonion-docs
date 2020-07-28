@@ -94,23 +94,27 @@ In a distributed Security Onion environment, you only need to change the configu
 
 As mentioned before, take care in disabling signatures as it can be likely that a more appropriate response is warranted.
 
--  Edit the disablesid.conf configuration file:
+To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the static pillar file (``/opt/so/saltstack/local/pillar/static.sls``).
+ 
+If SID 1234 is commented out and you want to enable it, add the following to the static pillar file:
+ 
+::
 
-   ::
+   idstools:
+     sids:
+       enabled:
+         - 1234
 
-        sudo vi /etc/nsm/pulledpork/disablesid.conf
+If SID 4321 is noisy, you can disable it as follows:
 
--  Append the signature you wish to disable in the format gid:sid. gid is the generator ID and will usually be "1". You can check the generator ID by checking the exact signature. If a gid is not listed, it is assumed to be "1".  A common exception would be rules that start with "SURICATA" having a gid of "0" and Talos VRT Shared Object (compiled) rules having a gid of "3".  Here are some examples:
+::
 
-   ::
+   idstools:
+     sids:
+       disabled:
+         - 4321
 
-        # Disable the "GPL SNMP public access udp" signature
-        1:2101411
-        
-        # Disable the "SURICATA HTTP unable to match response to request" signature
-        0:2221010
-
--  Update rules as shown in the :ref:`rules` section.
+Then update rules as shown in the :ref:`rules` section.
 
 Disable the category
 --------------------
