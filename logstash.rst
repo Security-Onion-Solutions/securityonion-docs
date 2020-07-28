@@ -12,7 +12,7 @@ In Security Onion 2.0, Logstash transports unparsed logs to :ref:`elasticsearch`
 Configuration
 -------------
 
-Here are a few of the settings which you may need to tune in ``/opt/so/saltstack/local/pillar/minions/$MINION_$ROLE.sls`` under ``logstash_settings``.
+You can configure Logstash using :ref:`salt`. Here are a few of the settings which you may need to tune in ``/opt/so/saltstack/local/pillar/minions/$MINION_$ROLE.sls`` under ``logstash_settings``.
 
 ls_pipeline_batch_size
 ~~~~~~~~~~~~~~~~~~~~~~
