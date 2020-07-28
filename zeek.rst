@@ -135,7 +135,15 @@ As you can see, Zeek log data can provide a wealth of information to the analyst
 
 Configuration
 -------------
-You can modify the Zeek configuration via :ref:`salt`. Here is an example of how we would modify ``local.zeek``. We can see the default pillar assignments used for ``local.zeek`` in ``/opt/so/saltstack/default/pillar/zeek/init.sls``. This file should never be modified as it could be updated in the future and any modification made would be overwritten. The static or minion pillar files should be used for making changes as they are stored in ``/opt/so/saltstack/local/``, and that directory isn’t overwritten during a Security Onion code update.
+You can use :ref:`salt` to manage Zeek's ``local.zeek``, ``node.cfg`` and ``zeekctl.cfg``:
+ 
+``local.zeek``: The allowed options for this file are ``@load``, ``@load-sigs`` and ``redef``. An example of configuring this pillar can be seen below. 
+ 
+``node.cfg``: The pillar items to modify this file are located under the sensor pillar in the minion pillar file. The options that can be customized in the file include: ``interface``, ``lb_procs``, ``pin_cpus``, and ``af_packet_buffer_size``.
+ 
+``zeekctl.cfg``: An example of customizing this can be seen below. The allowed options can be seen in https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/zeek/files/zeekctl.cfg.jinja.
+
+Here is an example of how we would modify ``local.zeek``. We can see the default pillar assignments used for ``local.zeek`` in ``/opt/so/saltstack/default/pillar/zeek/init.sls``. This file should never be modified as it could be updated in the future and any modification made would be overwritten. The static or minion pillar files should be used for making changes as they are stored in ``/opt/so/saltstack/local/``, and that directory isn’t overwritten during a Security Onion code update.
 
 ::
 
