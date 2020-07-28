@@ -79,3 +79,11 @@ Port Group Assignments
 Port group assignments are the way you map host groups to port groups to complete the rule.  
 
 Default port group assignments: /opt/so/saltstack/local/salt/firewall/assigned_hostgroups.local.map.yaml
+
+More Information
+~~~~~~~~~~~~~~~~
+Much of information and functionality that follows is handled with :ref:`so-allow` or so-firewall, but could help provide a better understanding of what those two scripts are doing under the hood.
+
+The firewall state and pillars were designed around the idea of creating port groups and host groups and creating an allow rule by assigning a port group to a host group. A node that has a port group / host group combination assigned to it, will allow the hosts in that group to connect to those ports on that node. There are many default rules that have already been assigned and they can be viewed here: 
+
+During setup, the files from securityonion/files/firewall/ (https://github.com/Security-Onion-Solutions/securityonion/tree/master/files/firewall), are copied to the local directory located at ``/opt/so/saltstack/local/salt/firewall/``. Once setup is complete and ``so-allow`` or ``so-firewall`` are called in the future, they modify the appropriate yaml files that are located under ``/opt/so/saltstack/local/salt/firewall/``. Since these yaml files are under ``/opt/so/saltstack/local/`` they will not be changed during a code update.
