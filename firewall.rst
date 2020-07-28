@@ -20,7 +20,7 @@ When you run Setup on a sensor-only installation, it will ssh to the manager nod
 Managing
 --------
 
-Managing firewall rules for all devices can be done from the manager node. There are specific roles with firewall rules associated with each role. Some things have multiple roles for instance any type of node is automatically added to the minions.sls so that the salt communication can take place. So for a storage node you will see the IP show up in minions.sls as well as storage_nodes.sls.
+Managing firewall rules for all devices can be done from the manager node. There are specific roles with firewall rules associated with each role. Some things have multiple roles for instance any type of node is automatically added to the ``minions.sls`` so that the salt communication can take place. So for a storage node you will see the IP show up in ``minions.sls`` as well as ``storage_nodes.sls``.
 
 analyst.sls
 ~~~~~~~~~~~
@@ -60,30 +60,30 @@ Advanced Firewall Customization
 
 .. warning::
 
-  Please review the salt section to understand pillars and templates. Modifying these values outside of so-allow or so-firewall could lead to problems accessing your existing hosts. This is an advanced case and you should never need to modify these files. An example of why you would ever modify these templates is if you were adding some sort of agent to the hosts in your grid that are not part of Security Onion. This would allow you to open the ports needed to the hosts that required access. 
+  Please review the :ref:`salt` section to understand pillars and templates. Modifying these values outside of :ref:`so-allow` or ``so-firewall`` could lead to problems accessing your existing hosts. This is an advanced case and you most likely won't never need to modify these files. An example of why you might modify these templates is if you were adding some sort of agent to the hosts in your grid that are not part of Security Onion. This would allow you to open the ports needed to the hosts that required access. 
 
 Port Groups
 ~~~~~~~~~~~
-Port groups are a way of grouping together ports similar to a firewall port/service alias. For example it you had a web server you could include 80 and 443 tcp into an alias or in this case a port group. 
+Port groups are a way of grouping together ports similar to a firewall port/service alias. For example if you had a web server you could include 80 and 443 tcp into an alias or in this case a port group. 
 
-Default port groups: /opt/so/saltstack/local/salt/firewall/portgroup.local.yaml
+Default port groups: ``/opt/so/saltstack/local/salt/firewall/portgroup.local.yaml``
 
 Host Groups
 ~~~~~~~~~~~
-Host groups is similar to port groups but for sotring lists of hosts.  
+Host groups is similar to port groups but for storing lists of hosts.  
 
-Default host groups: /opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml
+Default host groups: ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``
 
 Port Group Assignments
 ~~~~~~~~~~~~~~~~~~~~~~
 Port group assignments are the way you map host groups to port groups to complete the rule.  
 
-Default port group assignments: /opt/so/saltstack/local/salt/firewall/assigned_hostgroups.local.map.yaml
+Default port group assignments: ``/opt/so/saltstack/local/salt/firewall/assigned_hostgroups.local.map.yaml``
 
 More Information
 ~~~~~~~~~~~~~~~~
-Much of information and functionality that follows is handled with :ref:`so-allow` or so-firewall, but could help provide a better understanding of what those two scripts are doing under the hood.
+Much of information and functionality that follows is handled with :ref:`so-allow` or ``so-firewall``, but could help provide a better understanding of what those two scripts are doing under the hood.
 
-The firewall state and pillars were designed around the idea of creating port groups and host groups and creating an allow rule by assigning a port group to a host group. A node that has a port group / host group combination assigned to it, will allow the hosts in that group to connect to those ports on that node. There are many default rules that have already been assigned and they can be viewed here: 
+The firewall state and pillars were designed around the idea of creating port groups and host groups and creating an allow rule by assigning a port group to a host group. A node that has a port group / host group combination assigned to it will allow the hosts in that group to connect to those ports on that node.
 
 During setup, the files from securityonion/files/firewall/ (https://github.com/Security-Onion-Solutions/securityonion/tree/master/files/firewall), are copied to the local directory located at ``/opt/so/saltstack/local/salt/firewall/``. Once setup is complete and ``so-allow`` or ``so-firewall`` are called in the future, they modify the appropriate yaml files that are located under ``/opt/so/saltstack/local/salt/firewall/``. Since these yaml files are under ``/opt/so/saltstack/local/`` they will not be changed during a code update.
