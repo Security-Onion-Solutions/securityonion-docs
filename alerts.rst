@@ -15,8 +15,9 @@ Security Onion generates a lot of valuable information for you the second you pl
    
 There are three alerting engines within Security Onion: Suricata, Wazuh and Playbook (Sigma). Though each engine uses its own severity level system, Security Onion converts that to a standardized alert severity: 
 
-``event.severity: 1,2,3,4``
-``event.severity_label: low,medium,high,critical``
+``event.severity: 1,2,3,4``  
+
+``event.severity_label: low,medium,high,critical``  
 
 All alerts are viewable in Hunt or Kibana. Security Onion addtionally creates alerts in TheHive for ``high`` and ``critical`` severity alerts for more immediate attention.
 
