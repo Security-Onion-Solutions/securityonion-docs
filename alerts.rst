@@ -96,7 +96,7 @@ As mentioned before, take care in disabling signatures as it can be likely that 
 
 To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/pillar/minions/<minionid>.sls``).
  
-If SID 1234 is commented out and you want to enable it, add the following to the minion pillar file:
+If SID 1234 is commented out and you want to enable it, set the following in the `idstools` section of the minion pillar file:
  
 ::
 
