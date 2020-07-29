@@ -90,7 +90,7 @@ Disable the sid
 
 Security Onion uses ``idstools`` to download new signatures every night and process them against a set list of user generated configurations.
 
-In a distributed Security Onion environment, you only need to change the configuration on the server and the rule-update script will sync with the signatures from the Server.
+In a distributed Security Onion environment, you only need to change the configuration on the manager and then all other nodes will get the updated rules automatically.
 
 As mentioned before, take care in disabling signatures as it can be likely that a more appropriate response is warranted.
 
