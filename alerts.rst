@@ -94,9 +94,9 @@ In a distributed Security Onion environment, you only need to change the configu
 
 As mentioned before, take care in disabling signatures as it can be likely that a more appropriate response is warranted.
 
-To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the static pillar file (``/opt/so/saltstack/local/pillar/static.sls``).
+To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/pillar/minions/<minionid>.sls``).
  
-If SID 1234 is commented out and you want to enable it, add the following to the static pillar file:
+If SID 1234 is commented out and you want to enable it, add the following to the minion pillar file:
  
 ::
 
@@ -114,7 +114,7 @@ If SID 4321 is noisy, you can disable it as follows:
        disabled:
          - 4321
 
-Then update rules as shown in the :ref:`rules` section.
+Then run ``sudo salt-call state.highstate`` to update the ``idstools`` config. Finally, update rules as shown in the :ref:`rules` section.
 
 Disable the category
 --------------------
