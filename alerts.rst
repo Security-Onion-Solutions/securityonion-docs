@@ -114,42 +114,17 @@ If SID 4321 is noisy, you can disable it as follows:
        disabled:
          - 4321
 
-Then run ``sudo salt-call state.highstate`` to update the ``idstools`` config. Finally, update rules as shown in the :ref:`rules` section.
+Then run ``sudo salt-call state.highstate`` to update the config.
 
-Disable the category
---------------------
-
-In ``/etc/nsm/pulledpork/disablesid.conf``, instead of providing a sid, we can use a PCRE (Perl-compatible regular expression) or refer to the rule category (found in the header above the rule grouping in ``/opt/so/rules/nids/all.rules``).
-
-For example, if we wanted to disable the entire ET-emerging-misc category, we could do so by putting the following in ``/etc/nsm/pulledpork/disablesid.conf``:
-
-::
-
-   ET-emerging-misc
-
-If we wanted to disable all rules with ``ET MISC`` in the rule description, we could put the following in ``/etc/nsm/pulledpork/disablesid.conf``:
-
-::
-
-   pcre:ET MISC
-
-After making changes to the file, update your rules as shown in the :ref:`rules` section.
-
-modifysid.conf
+Modify the SID
 --------------
 
-PulledPork's modifysid.conf will allow you to write modifications to rules that are applied every time PulledPork downloads the latest ruleset. There are several examples in the modifysid.conf file, so we won't repeat them here. Edit the modifysid.conf configuration file:
-
-::
-
-        sudo vi /etc/nsm/pulledpork/modifysid.conf
-
-Update rules as shown in the :ref:`rules` section.
+``/opt/so/saltstack/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then run ``sudo salt-call state.highstate`` to update the config.
 
 Rewrite the signature
 ---------------------
 
-In some cases, you may not want to use Pulledpork's modifysid.conf, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in ``/opt/so/rules/nids/local.rules``.
+In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in ``/opt/so/rules/nids/local.rules``.
 
 -  Edit the ``/opt/so/rules/nids/local.rules`` file using ``vi`` or your favorite text editor:
 
@@ -184,13 +159,13 @@ In some cases, you may not want to use Pulledpork's modifysid.conf, but instead 
         alert udp $HOME_NET any -> !$OVERACTIVE any (msg:"GPL SNMP public access udp"; content:"public"; fast_pattern:only; reference:bugtraq,2112; reference:bugtraq,4088; reference:bugtraq,4089; reference:cve,1999-0517; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:9001411; rev:1;)
 
 -  We also gave the alert a unique signature id (sid) by bumping it into the 90,000,000 range and set the revision to 1.
--  Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. Like above, we edit the disablesid.conf file and add:
+-  Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. Like above, we edit the minion pillar and add the following to the ``idstools - sids - disabled`` section:
 
    ::
 
-          1:2101411
+          - 2101411
 
--  Update rules as shown in the :ref:`rules` section.
+-  Then run ``sudo salt-call state.highstate`` to update the config
 
 Threshold
 ---------
