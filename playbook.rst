@@ -17,7 +17,7 @@ The key components of a Play are:
  #. What are the follow-up actions required to validate and/or remediate when results are seen?
  #. The actual query needed to implement the Play's objective. In our case, the :ref:`elastalert` / :ref:`elasticsearch` configuration.
 
-Any high or critical severity results from a Play will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within :ref:`hunt` or :ref:`kibana`.
+Any results from a Play (low, medium, high, critical severity) are available to view within :ref:`hunt` or :ref:`kibana`. High or critical severity results from a Play will generate an Alert within :ref:`hive`.
 
 The final piece to Playbook is automation. Once a Play is made active, the following happens:
 
