@@ -12,6 +12,13 @@ Security Onion generates a lot of valuable information for you the second you pl
 .. note::
 
    Network Security Monitoring, as a practice, is not a solution you can plug into your network, make sure you see blinking lights and tell people you are "secure." It requires active intervention from an analyst to qualify the quantity of information presented. One of those regular interventions is to ensure that you are tuning properly and proactively attempting to reach an acceptable level of signal to noise.
+   
+There are three alerting engines within Security Onion: Suricata, Wazuh and Playbook (Sigma). Though each engine uses its own severity level system, Security Onion converts that to a standardized alert severity: 
+
+``event.severity: 1,2,3,4``
+``event.severity_label: low,medium,high,critical``
+
+All alerts are viewable in Hunt or Kibana. Security Onion addtionally creates alerts in TheHive for ``high`` and ``critical`` severity alerts for more immediate attention.
 
 Testing to make sure the IDS is working
 ---------------------------------------
