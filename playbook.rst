@@ -80,7 +80,7 @@ Log Sources
 Sigma support currently extends to the following log sources in Security Onion:
  - :ref:`osquery`
  - network (via :ref:`zeek` logs)
- - Windows Eventlogs + :ref:`sysmon` (via :ref:`osquery`)
+ - Windows Eventlogs and :ref:`sysmon` (shipped with :ref:`osquery` or winglobeat)
 
 Logging
 -------
