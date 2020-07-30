@@ -124,7 +124,16 @@ If SID 4321 is noisy, you can disable it as follows:
        disabled:
          - 4321
 
-Then run ``sudo salt-call state.highstate`` to update the config.
+Then run ``sudo salt-call state.apply idstools`` to update the config.
+
+If you want to disable multiple rules at one time, you can use a regular expression, but make sure you enclose the full entry in single quotes like this:
+
+::
+
+   idstools:
+     sids:
+       disabled:
+         - 're:hearbleed'
 
 Modify the SID
 --------------
