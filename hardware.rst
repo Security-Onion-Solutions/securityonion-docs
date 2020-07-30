@@ -60,7 +60,7 @@ Elastic Stack
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
-**We recommend placing all Elastic storage (``/nsm/elasticsearch``) on SSD or fast spinning disk in a RAID 10 configuration.**
+**We recommend placing all Elastic storage (/nsm/elasticsearch) on SSD or fast spinning disk in a RAID 10 configuration.**
 
 Standalone Deployments
 ----------------------
