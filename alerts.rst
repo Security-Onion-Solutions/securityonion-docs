@@ -124,7 +124,7 @@ If you want to disable multiple rules at one time, you can use a regular express
    idstools:
      sids:
        disabled:
-         - 're:hearbleed'
+         - 're:heartbleed'
 
 Modify the SID
 --------------
