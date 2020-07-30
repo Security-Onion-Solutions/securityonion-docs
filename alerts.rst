@@ -126,15 +126,6 @@ If SID 4321 is noisy, you can disable it as follows:
 
 Then run ``sudo salt-call state.highstate`` to update the config.
 
-GID is optional and ``idstools`` will assume it to be ``1`` if omitted. If you need to specify a GID other than ``1``, you can prefix the SID with the GID and a colon like this:
-
-::
-
-   idstools:
-     sids:
-       disabled:
-         - 1:4321
-
 Modify the SID
 --------------
 
