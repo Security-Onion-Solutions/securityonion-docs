@@ -28,10 +28,10 @@ Known Issues
 2.0.3 Changes
 -------------
 
-- Resolved an issue with large drives and the ISO install.  
-- Modified ISO installation to use Logical Volume Management (LVM) for disk partitioning.
-- Updated Elastic Stack components to version 7.8.1.
-- Updated Zeek to version 3.0.8.
+- Resolved an issue with large drives and the ISO install  
+- Modified ISO installation to use Logical Volume Management (LVM) for disk partitioning
+- Updated Elastic Stack components to version 7.8.1
+- Updated Zeek to version 3.0.8
 
 2.0.2 Changes
 -------------
@@ -54,7 +54,7 @@ Known Issues
 - | Support for passwords that start with special characters
   | https://github.com/Security-Onion-Solutions/securityonion/issues/1058
   
-- Minor soup updates.
+- Minor soup updates
 
 2.0.0 Changes
 -------------
@@ -62,8 +62,8 @@ Known Issues
 - This version requires a fresh install, but there is good news - we have brought back :ref:`soup`! From now on, you should be able to run :ref:`soup` on the manager to upgrade your environment to RC2 and beyond!
 - Re-branded 2.0 to give it a fresh look
 - All documentation has moved to our docs site
-- soup is alive! Note: This tool only updates Security Onion components. Please use the built-in OS update process to keep the OS and other components up to date.
-- so-import-pcap is back! See the docs here.
+- soup is alive! Note: This tool only updates Security Onion components. Please use the built-in OS update process to keep the OS and other components up to date
+- so-import-pcap is back! See the docs here
 - Fixed issue with so-features-enable
 - Users can now pivot to PCAP from Suricata alerts
 - ISO install now prompts users to create an admin/sudo user instead of using a default account name
