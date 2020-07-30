@@ -106,7 +106,7 @@ As mentioned before, take care in disabling signatures as it can be likely that 
 
 To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/pillar/minions/<minionid>.sls``).
  
-If SID 1234 is commented out and you want to enable it, set the following in the `idstools` section of the minion pillar file:
+If SID 1234 is commented out and you want to enable it, set the following in the ``idstools`` section of the minion pillar file:
  
 ::
 
@@ -125,6 +125,15 @@ If SID 4321 is noisy, you can disable it as follows:
          - 4321
 
 Then run ``sudo salt-call state.highstate`` to update the config.
+
+GID is optional and ``idstools`` will assume it to be ``1`` if omitted. If you need to specify a GID other than ``1``, you can prefix the SID with the GID and a colon like this:
+
+::
+
+   idstools:
+     sids:
+       disabled:
+         - 1:4321
 
 Modify the SID
 --------------
