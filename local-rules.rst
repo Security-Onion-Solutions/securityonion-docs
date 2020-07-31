@@ -11,7 +11,7 @@ Adding Local Rules
 
        alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root 2"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:7000000; rev:1;)
        
--  Run ``salt-call state.highstate`` to merge ``/opt/so/saltstack/local/salt/idstools/localrules/`` into ``/opt/so/rules/nids/local.rules`` and restart processes as necessary:
+-  Run ``salt-call state.highstate`` to merge the ``/opt/so/saltstack/local/salt/idstools/localrules/`` directory into ``/opt/so/rules/nids/local.rules`` and restart processes as necessary:
 
    ::
 
