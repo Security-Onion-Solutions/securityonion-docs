@@ -13,7 +13,7 @@ If you use our Security Onion ISO image, it will automatically partition your di
 LVM
 ---
 
-You may want to consider Logical Volume Management (LVM) as it will allow you to more easily change your partitioning in the future if you need to. Please note that our current Security Onion ISO image does not use LVM, but we plan to incorporate that in the future.
+You may want to consider Logical Volume Management (LVM) as it will allow you to more easily change your partitioning in the future if you need to. As of Security Onion 2.0.3, our Security Onion ISO image uses LVM by default.
 
 /nsm
 ----
