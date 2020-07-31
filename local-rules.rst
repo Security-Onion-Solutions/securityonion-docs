@@ -3,7 +3,7 @@
 Adding Local Rules
 ==================
 
--  You can add rules in the ``/opt/so/saltstack/local/salt/idstools/localrules/`` directory on your manager.
+-  You can add rules in the ``/opt/so/saltstack/local/salt/idstools/localrules/`` directory on your manager. If you have existing rules files, you can copy them to this directory. Otherwise, just create a new file in this directory.
    
 -  Let's add a simple rule that's really just a copy of the traditional ``id check returned root`` rule:
 
