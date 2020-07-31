@@ -104,7 +104,7 @@ In a distributed Security Onion environment, you only need to change the configu
 
 As mentioned before, take care in disabling signatures as it can be likely that a more appropriate response is warranted.
 
-To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/pillar/minions/<minionid>.sls``).
+To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``).
  
 If SID 4321 is noisy, you can disable it as follows:
 
@@ -129,7 +129,7 @@ If you want to disable multiple rules at one time, you can use a regular express
 Modify the SID
 --------------
 
-``/opt/so/saltstack/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then run ``sudo salt-call state.apply idstools`` to update the config.
+``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then run ``sudo salt-call state.apply idstools`` to update the config.
 
 Rewrite the signature
 ---------------------
