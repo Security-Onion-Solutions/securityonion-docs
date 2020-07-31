@@ -11,11 +11,11 @@ Adding Local Rules
 
        alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; rev:1;)     
 
--  Run ``so-rule-update`` to merge ``/opt/so/saltstack/local/salt/idstools/localrules/`` into ``/opt/so/rules/nids/local.rules`` and restart processes as necessary:
+-  Run ``salt-call state.highstate`` to merge ``/opt/so/saltstack/local/salt/idstools/localrules/`` into ``/opt/so/rules/nids/local.rules`` and restart processes as necessary:
 
    ::
 
-       sudo so-rule-update
+       sudo salt-call state.highstate
 
 -  If you built the rule correctly, then Suricata should be back up and running.
    
