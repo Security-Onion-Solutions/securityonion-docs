@@ -9,8 +9,6 @@ From https://redis.io/:
 
 During setup, you can choose to extend your manager node storage using separate search nodes. When you choose this option, Logstash on the manager node outputs to Redis. Search nodes then consume from Redis.
 
-.. image:: https://user-images.githubusercontent.com/16829864/37215984-91a348d4-2387-11e8-8c08-2e270b8fd986.png
-
 Queue
 -----
 
