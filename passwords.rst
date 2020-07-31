@@ -34,4 +34,4 @@ TheHive
 -------
 Log into :ref:`hive` using the username and password you created in the Setup wizard.
 
-You can change your password in :ref:thehive` by clicking the user icon in the upper right corner, clicking ``Settings``. Then click ``Update password`` and follow the prompts.
+You can change your password in :ref:`hive` by clicking the user icon in the upper right corner, clicking ``Settings``. Then click ``Update password`` and follow the prompts.
