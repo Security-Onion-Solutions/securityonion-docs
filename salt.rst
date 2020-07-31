@@ -43,7 +43,7 @@ Many of the options that are configurable in Security Onion 2.0 are done via pil
 
 Static pillar file: This is the pillar file that can be used to make global pillar assignments to the nodes. It is located at ``/opt/so/saltstack/local/pillar/static.sls``.
 
-Minion pillar file: This is the minion specific pillar file that contains pillar definitions for that node. Any definitions made here will override anything defined in other pillar files, including global. This is located at ``/opt/so/saltstack/pillar/minions/<minionid>.sls``.
+Minion pillar file: This is the minion specific pillar file that contains pillar definitions for that node. Any definitions made here will override anything defined in other pillar files, including global. This is located at ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``.
 
 Default pillar file: This is the pillar file located under ``/opt/so/saltstack/default/pillar/``. Files here should not be modified as changes would be lost during a code update.
 
