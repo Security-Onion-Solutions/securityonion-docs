@@ -3,9 +3,7 @@
 Adding Local Rules
 ==================
 
-Adding local rules in Security Onion is a rather straightforward process. However, generating custom traffic to test the alert can sometimes be a challenge. Here, we will show you how to add the local rule and then use the python library scapy to trigger the alert.
-
--  Open ``/opt/so/rules/nids/local.rules`` using your favorite text editor.  If this is a distributed deployment, edit local.rules on your manager node and it will replicate to your sensors.
+-  You can add rules in ``/opt/so/saltstack/local/salt/idstools/localrules/`` on your manager.
    
 -  Let's add a simple rule that will alert on the detection of a string in a tcp session:
 
@@ -13,16 +11,18 @@ Adding local rules in Security Onion is a rather straightforward process. Howeve
 
        alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; rev:1)     
 
--  Run ``so-rule-update`` (this will merge ``local.rules`` into ``all.rules``, update ``sid-msg.map``, and restart processes as necessary):
+-  Run ``so-rule-update`` to merge ``/opt/so/saltstack/local/salt/idstools/localrules/`` into ``/opt/so/rules/nids/local.rules`` and restart processes as necessary:
 
    ::
 
-       sudo rule-update
+       sudo so-rule-update
 
 -  If you built the rule correctly, then Suricata should be back up and running.
    
 Testing Local Rules
 -------------------
+
+Adding local rules in Security Onion is a rather straightforward process. However, generating custom traffic to test the alert can sometimes be a challenge. Here, we will show you how to add the local rule and then use the python library scapy to trigger the alert.
 
 -  Generate some traffic to trigger the alert. To generate traffic we are going to use the python library ``scapy`` to craft packets with specific information to ensure we trigger the alert with the information we want:
 
@@ -58,30 +58,11 @@ Testing Local Rules
    
        send(ip/tcp/payload)
 
--  Check Hunt/Kibana for the corresponding alert.
+-  Check :ref:`hunt` or :ref:`kibana` for the corresponding alert.
 
 -  You can see that we have an alert with the IP addresses we specified and the TCP ports we specified. If you pivot from that alert to the corresponding pcap you can verify the payload we sent.
 
 -  You can learn more about scapy at  `secdev.org <http://www.secdev.org/projects/scapy/>`__ and `itgeekchronicles.co.uk <http://itgeekchronicles.co.uk/2012/05/31/scapy-guide-the-release/>`__.
-
-IPS Policy
-----------
-
-.. note::
-
-   Please note if you are using a ruleset that enables an IPS policy in ``/etc/nsm/pulledpork/pulledpork.conf``, your local rules will be disabled. To enabled them, either revert the policy by remarking the ``ips_policy`` line (and run ``rule-update``), or add the policy type to the rules in local.rules.
-
-For example, if ``ips_policy`` was set to ``security``, you would add the following to each rule:
-
-``metadata:policy security-ips``
-
-The whole rule would then look something like:
-
-::
-
-   alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; metadata:policy security-ips; rev:1)
-
-These policy types can be found in ``/opt/so/rules/nids/all.rules``.
 
 MISP
 ----
