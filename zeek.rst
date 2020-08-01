@@ -38,27 +38,23 @@ We enable Zeek's native support for :ref:`community-id`.
 Email
 -----
 
--  To configure email notifications, please see the :ref:`email` section.
+To configure email notifications, please see the :ref:`email` section.
 
 Syslog
 ------
 
--  To forward Zeek logs to an external syslog collector, please see the :ref:`syslog-output` section.
+To forward Zeek logs to an external syslog collector, please see the :ref:`syslog-output` section.
 
 Intel
 -----
 
--  You can add your own Intel to ``/opt/so/saltstack/local/salt/zeek/policy/intel/intel.dat``.
+You can add your own Intel to ``/opt/so/saltstack/local/salt/zeek/policy/intel/intel.dat``. When writing this file, ensure there are no leading/trailing spaces or lines, and that only a single tab is used to separate fields. If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues. You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
 
-   -  When editing ``/opt/so/saltstack/local/salt/zeek/policy/intel/intel.dat``, ensure there are no leading/trailing spaces or lines, and that only a single tab is used to separate field.
-   -  If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues.
-   -  You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
+For more information, please see:
 
--  For more information, please see:
-
-   | https://docs.zeek.org/en/latest/frameworks/intel.html\ 
-   | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
-   | https://github.com/weslambert/securityonion-misp
+| https://docs.zeek.org/en/latest/frameworks/intel.html\ 
+| http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
+| https://github.com/weslambert/securityonion-misp
 
 Custom Scripts
 --------------
