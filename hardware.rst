@@ -87,7 +87,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Manager node with search nodes
 ------------------------------
 
-This deployment type utilizes search nodes to parse and index events. As a result, the hardware requirements of the manager node are reduced. An enterprise manager node should have 4-8 CPU cores, 8-16GB RAM, and 100GB to 1TB of disk space. Many folks choose to host their manager node in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
+This deployment type utilizes search nodes to parse and index events. As a result, the hardware requirements of the manager node are reduced. An enterprise manager node should have at least 4-8 CPU cores, 16GB RAM, and 200GB to 1TB of disk space. Many folks choose to host their manager node in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
 
 - CPU: Used to receive incoming events and place them into Redis. Used to run all the front end web comp onents and aggregate search results from the search nodes.
 - RAM: Used for Logstash and Redis. The amount of available RAM directly impacts the size of the Redis queue.
@@ -98,7 +98,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Search Node
 -----------
 
-Search nodes increase search and retention capacity with regard to Elasticsearch. These nodes parse and index events, and provide the ability to scale horizontally as overall data intake increases. Search nodes should have at least 4-8 CPU cores, 8-64GB RAM, and 100GB of disk space or more depending on your logging requirements.
+Search nodes increase search and retention capacity with regard to Elasticsearch. These nodes parse and index events, and provide the ability to scale horizontally as overall data intake increases. Search nodes should have at least 4-8 CPU cores, 16-64GB RAM, and 200GB of disk space or more depending on your logging requirements.
 
 - CPU: Used to parse incoming events and index incoming events. As consumption of data and events increases, more CPU will be required.
 - RAM: Used for Logstash, Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
