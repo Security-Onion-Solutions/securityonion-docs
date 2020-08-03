@@ -49,10 +49,10 @@ Example
 
 Here's an example of how our current Security Onion ISO image partitions a 1TB disk:
 
-- 500MB /boot partition at the beginning of the drive
-- the remainder of the drive is an LVM volume that is then partitioned as follows:
+- 500MB ``/boot`` partition at the beginning of the drive
+- the remainder of the drive is an ``LVM`` volume that is then partitioned as follows:
 
-  - 630GB /nsm
-  - 300GB /
-  - 2GB /tmp
-  - 8GB swap
+  - 630GB ``/nsm``
+  - 300GB ``/``
+  - 2GB ``/tmp``
+  - 8GB ``swap``
