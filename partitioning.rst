@@ -7,7 +7,7 @@ Now that you understand :ref:`hardware`, we should next discuss disk partitionin
 
 Minimum Storage
 ---------------
-As the :ref:`hardware` section mentions, the MINIMUM requirement is 200GB storage. This is to allow 100GB for /nsm and 100GB for the rest of /.
+As the :ref:`hardware` section mentions, the MINIMUM requirement is 200GB storage. This is to allow 100GB for ``/nsm`` and 100GB for the rest of ``/``.
 
 ISO
 ---
