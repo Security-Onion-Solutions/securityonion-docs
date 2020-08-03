@@ -3,7 +3,11 @@
 Partitioning
 ============
 
-Now that you understand :ref:`hardware`, we should next discuss disk partitioning. If you're installing Security Onion for a production deployment, you'll want to pay close attention to partitioning to make sure you don't fill up a partition at some point.
+Now that you understand :ref:`hardware`, we should next discuss disk partitioning. If you're installing Security Onion for a production deployment, you'll want to pay close attention to partitioning to make sure you don't fill up a partition at some point. 
+
+Minimum Storage
+---------------
+As the :ref:`hardware` page mentions, the MINIMUM requirement is 200GB storage. This is to allow 100GB for /nsm and 100GB for the rest of /.
 
 ISO
 ---
@@ -18,12 +22,17 @@ You may want to consider Logical Volume Management (LVM) as it will allow you to
 /nsm
 ----
 
-The vast majority of data will be written to ``/nsm``, so you'll want to dedicate the vast majority of your disk space to that partition.
+The vast majority of data will be written to ``/nsm``, so you'll want to dedicate the vast majority of your disk space to that partition. You'll want at least 100GB.
+
+/
+-
+
+/ (the root partition) currently contains ``/opt/so/wazuh/`` and ``/var/lib/docker/`` (more on those below) and thus you'll want at least 100GB.
 
 Wazuh
 -----
 
-Wazuh is currently installed to ``/opt/so/wazuh``. If you plan to deploy lots of Wazuh agents and collect lots of Wazuh logs, you will want to ensure that this directory has plenty of space. One option may include mounting that directory as a dedicated partition.
+Wazuh is currently installed to ``/opt/so/wazuh/``. If you plan to deploy lots of Wazuh agents and collect lots of Wazuh logs, you will want to ensure that this directory has plenty of space. One option may include mounting that directory as a dedicated partition.
 
 Docker
 ------
@@ -42,6 +51,7 @@ Here's an example of how our current Security Onion ISO image partitions a 1TB d
 
 - 500MB /boot partition at the beginning of the drive
 - the remainder of the drive is an LVM volume that is then partitioned as follows:
+
   - 630GB /nsm
   - 300GB /
   - 2GB /tmp
