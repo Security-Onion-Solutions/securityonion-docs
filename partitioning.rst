@@ -34,3 +34,15 @@ Other
 -----
 
 If you install using a standard CentOS 7 or Ubuntu 18.04 ISO, then those installers may try to dedicate a large amount of space to ``/home``. You may need to adjust this to ensure that it is not overly large and wasting valuable disk space.
+
+Example
+-------
+
+Here's an example of how our current Security Onion ISO image partitions a 1TB disk:
+
+- 500MB /boot partition at the beginning of the drive
+- the remainder of the drive is an LVM volume that is then partitioned as follows:
+  - 630GB /nsm
+  - 300GB /
+  - 2GB /tmp
+  - 8GB swap
