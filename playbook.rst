@@ -39,6 +39,8 @@ Plays are based on Sigma rules - from https://github.com/Neo23x0/sigma:
 
 To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a sample Sigma rule or paste one into the Sigma field and click ``Convert``. This will convert the Sigma into a query that you can use in :ref:`hunt` or :ref:`kibana` to confirm that it will work for your target log.  
 
+Refer to Log Sources & Field Names for details around what field names to use in the Sigma etc.
+
 Once you are ready to create the Play, click ``Create Play From Sigma``. If the Play creation is successful, you will be redirected to the newly created Play. 
 
 Editing a Play
@@ -52,6 +54,8 @@ Putting a Play into Production
 ------------------------------
 
 When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatically update the :ref:`elastalert` configuration and :ref:`hive` case template.
+
+The Elastalert rules are located under ``/opt/so/rules/elastalert/playbook/<PlayID>.yml``. Elastalert rules created by Playbook will run every 3 minutes, with a ``buffer_time`` of 5 minutes.
 
 Viewing Playbook Alerts
 -----------------------
@@ -74,13 +78,21 @@ Misc Notes
 
 Every 5 minutes, ``so-playbook-sync`` runs. This script queries Playbook for all active plays, and then checks to make sure that there is an :ref:`elastalert` config and :ref:`hive` case template for each play. It also runs through the same process for inactive plays.
 
-Log Sources
+Log Sources & Field Names
 -----------
 
 Sigma support currently extends to the following log sources in Security Onion:
  - :ref:`osquery`
  - network (via :ref:`zeek` logs)
  - Windows Eventlogs and :ref:`sysmon` (shipped with :ref:`osquery` or winglobeat)
+
+The pre-loaded Plays depend on Sysmon and Windows Eventlogs shipped with winlogbeat or osquery.
+
+For best compability, use the following Sigma Taxonmy:
+ - Process Creation: https://github.com/Neo23x0/sigma/wiki/Taxonomy#process-creation-events
+ - Network: https://github.com/Neo23x0/sigma/wiki/Taxonomy#specific
+ 
+The current Security Onion Sigmac field mappings can be found here: https://github.com/Security-Onion-Solutions/securityonion-image/blob/master/so-soctopus/so-soctopus/playbook/securityonion-baseline.yml
 
 Logging
 -------
