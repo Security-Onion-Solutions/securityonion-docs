@@ -1,17 +1,17 @@
 Changing IP Addresses
 =====================
 
-If you need to update the IP address of your server/sensor to move it to
-a different area of your network, you need to do a few things:
+If you need to update the IP address of your server/sensor to move it to a different area of your network, you need to do a few things:
 
 -  update the actual IP address of the management interface
 -  update NSM config files to reflect the new IP address
 
+You may also need to update your SSH key configuration.
+
 Update the actual IP address of the management interface
 --------------------------------------------------------
 
-To update the actual IP address of the management interface, you have
-two options:
+To update the actual IP address of the management interface, you have two options:
 
 -  manually update ``/etc/network/interfaces``
    
@@ -22,8 +22,7 @@ two options:
 Update NSM config files to reflect the new IP address
 -----------------------------------------------------
 
-To update NSM config files to reflect the new IP address, you have two
-options:
+To update NSM config files to reflect the new IP address, you have two options:
 
 -  re-run the ``SECOND`` phase of Setup on all server/sensors **(wiping all data and config)**
 
