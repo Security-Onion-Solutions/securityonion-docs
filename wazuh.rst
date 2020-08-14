@@ -60,14 +60,14 @@ Adding Agents
 -------------
 
 | The Wazuh agent is cross platform and you can download agents for Windows/Unix/Linux/FreeBSD from the Wazuh website:
-| https://documentation.wazuh.com/3.9/installation-guide/packages-list/index.html
+| https://documentation.wazuh.com/3.10/installation-guide/packages-list/index.html
 
 .. note::
 
     It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.10.2, then you will want to deploy Wazuh agent version 3.10.2.
 
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
-| https://documentation.wazuh.com/current/user-manual/registering/cli/using-command-line-linux.html
+| https://documentation.wazuh.com/3.10/user-manual/registering/cli/using-command-line-linux.html
 
 You may need to run :ref:`so-allow` to allow traffic from the IP address of your Wazuh agent(s).
 
