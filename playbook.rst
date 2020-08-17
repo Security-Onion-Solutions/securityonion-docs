@@ -44,10 +44,10 @@ Refer to Log Sources & Field Names for details around what field names to use in
 Once you are ready to create the Play, click ``Create Play From Sigma``. If the Play creation is successful, you will be redirected to the newly created Play - it will have a status of ``Draft``.
 
 The lifecycle of a Play is as follows: 
-1) Draft (Initial state) 
-2) Active (In Production) 
-3) Inactive (Temporarily moved out of production)
-4) Archived (Play has been superseded/retired)
+1) Draft (Initial state)  
+2) Active (In Production)  
+3) Inactive (Temporarily moved out of production)  
+4) Archived (Play has been superseded/retired)  
 
 A Play can also have the status of Disabled, which means that it is broken in some way and should not be made Active.
 
