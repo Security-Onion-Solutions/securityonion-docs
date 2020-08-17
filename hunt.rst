@@ -57,7 +57,7 @@ When you click the down arrow to expand a row in the Events table, it will show 
 Statistics
 ----------
 
-The bottom left corner of the page shows statistics about the current query including the speed of the backend data fetch and the toal round trip time.
+The bottom left corner of the page shows statistics about the current query including the speed of the backend data fetch and the total round trip time.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87226518-37498d80-c362-11ea-9414-e18df4cddd43.png
   :target: https://user-images.githubusercontent.com/1659467/87226518-37498d80-c362-11ea-9414-e18df4cddd43.png
