@@ -37,11 +37,20 @@ Plays are based on Sigma rules - from https://github.com/Neo23x0/sigma:
 
     Sigma is a generic and open signature format that allows you to describe relevant log events in a straightforward manner. The rule format is very flexible, easy to write and applicable to any type of log file. The main purpose of this project is to provide a structured form in which researchers or analysts can describe their once developed detection methods and make them shareable with others.
 
+The lifecycle of a Play is as follows: 
+
+1) Draft (Initial state) 
+2) Active (In Production) 
+3) Inactive (Temporarily moved out of production)
+4) Archived (Play has been superseded/retired)
+
+A Play can also have the status of Disabled, which means that it is broken in some way and should not be made Active.
+
 To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a sample Sigma rule or paste one into the Sigma field and click ``Convert``. This will convert the Sigma into a query that you can use in :ref:`hunt` or :ref:`kibana` to confirm that it will work for your target log.  
 
 Refer to Log Sources & Field Names for details around what field names to use in the Sigma etc.
 
-Once you are ready to create the Play, click ``Create Play From Sigma``. If the Play creation is successful, you will be redirected to the newly created Play. 
+Once you are ready to create the Play, click ``Create Play From Sigma``. If the Play creation is successful, you will be redirected to the newly created Play - it will have a status of ``Draft``.
 
 Editing a Play
 --------------
