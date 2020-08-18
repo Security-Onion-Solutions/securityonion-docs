@@ -28,7 +28,7 @@ Known Issues
 2.1.0 Changes
 -------------
 
-- Moved static.sls to global.sls to better align with its functionality
+- Moved static.sls to global.sls to align the name with the functionality
 - Event pipeline now is completely encrypted in transport
 
 
