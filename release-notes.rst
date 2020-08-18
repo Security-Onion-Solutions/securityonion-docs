@@ -5,7 +5,7 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2.0 Release Candidate 1 (RC1) is here!
+Security Onion 2.1 Release Candidate 2 (RC2) is here!
 
 .. warning::
 
@@ -24,6 +24,13 @@ Known Issues
 
 - :ref:`so-import-pcap` currently doesn't check for sudo. If you get any errors, try running with sudo.
 - Docker images and :ref:`soc` may still show 2.0.0 even after upgrading to 2.0.3.
+
+2.1.0 Changes
+-------------
+
+- Moved static.sls to global.sls to better align with its functionality
+- Event pipeline now is completely encrypted in transport
+
 
 2.0.3 Changes
 -------------
