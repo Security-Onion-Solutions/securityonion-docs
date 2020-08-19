@@ -9,7 +9,7 @@ Security Onion 2.1 Release Candidate 2 (RC2) is here!
 
 .. warning::
 
-  This is our first Release Candidate, so we're getting closer to a final release, but we're not quite there yet. Please be reminded of the usual pre-release warnings and disclaimers:
+  This is our second Release Candidate, so we're getting closer to a final release, but we're not quite there yet. Please be reminded of the usual pre-release warnings and disclaimers:
 
   - If this breaks your system, you get to keep both pieces!
   - This is a work in progress and is in constant flux.
