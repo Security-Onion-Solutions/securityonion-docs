@@ -23,12 +23,19 @@ Known Issues
 ------------
 
 - You cannot add NEW nodes with the RC1 ISO once your grid has been updated to RC2. This has to do with changes to the setup script for RC2.
+- Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log - This will be fixed in Osquery 4.5
 
 2.1.0 Changes
 -------------
 
 - Moved static.sls to global.sls to align the name with the functionality
 - Event pipeline now is completely encrypted in transport
+- Playbook
+  - Elastalert now runs active Plays every 3 minutes
+  - Changed default rule-update config to only import Windows rules from the Sigma Community repo
+  - Lots of bug fixes & stability improvements
+- Ingest Node parsing updates for Osquery and Winlogbeat - implemented single pipeline for Windows eventlogs & sysmon logs
+- Upgraded Osquery to 4.4 and re-enabled auto-updates
 
 
 2.0.3 Changes
