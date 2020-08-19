@@ -22,8 +22,7 @@ Security Onion 2.1 Release Candidate 2 (RC2) is here!
 Known Issues
 ------------
 
-- :ref:`so-import-pcap` currently doesn't check for sudo. If you get any errors, try running with sudo.
-- Docker images and :ref:`soc` may still show 2.0.0 even after upgrading to 2.0.3.
+- You cannot add NEW nodes with the RC1 ISO once your grid has been updated to RC2. This has to do with changes to the setup script for RC2.
 
 2.1.0 Changes
 -------------
