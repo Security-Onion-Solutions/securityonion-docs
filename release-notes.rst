@@ -31,6 +31,7 @@ Known Issues
 - Moved static.sls to global.sls to align the name with the functionality
 - Event pipeline now is completely encrypted in transport
 - Playbook
+
   - Elastalert now runs active Plays every 3 minutes
   - Changed default rule-update config to only import Windows rules from the Sigma Community repo
   - Lots of bug fixes & stability improvements
