@@ -7,8 +7,8 @@ Hunt
 
 The first two elements shown are the query bar and time picker. Once you perform a query, Hunt will display the number of events found in the upper right and then render three main sections of output.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87226371-4da31980-c361-11ea-8583-728f6d553884.png
-  :target: https://user-images.githubusercontent.com/1659467/87226371-4da31980-c361-11ea-8583-728f6d553884.png
+.. image:: https://user-images.githubusercontent.com/1659467/90804454-3eac7100-e2e8-11ea-9cd3-d0f5cc5640fe.png
+  :target: https://user-images.githubusercontent.com/1659467/90804454-3eac7100-e2e8-11ea-9cd3-d0f5cc5640fe.png
 
 Query Bar
 ---------
