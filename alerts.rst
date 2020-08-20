@@ -256,7 +256,7 @@ Example:
              track: by_src
              ip: 10.10.3.0/24
              
-In order to apply the threshold to all nodes, place the pillar in ``/opt/so/saltstack/local/pillar/static.sls``. If you want to apply the threshold to a single node, place the pillar in ``/opt/so/saltstack/local/pillar/minions/<MINION_ID>.sls``
+In order to apply the threshold to all nodes, place the pillar in ``/opt/so/saltstack/local/pillar/global.sls``. If you want to apply the threshold to a single node, place the pillar in ``/opt/so/saltstack/local/pillar/minions/<MINION_ID>.sls``
 
 Suppressions
 ------------

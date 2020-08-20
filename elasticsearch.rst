@@ -46,7 +46,7 @@ All configuration changes take place in pillar files. You should never need to m
       node_route_type: hot
 
 
-``/opt/so/saltstack/local/pillar/static.sls``
+``/opt/so/saltstack/local/pillar/global.sls``
 
 ::
 
@@ -141,7 +141,7 @@ If you want to view the detail for each of those shards:
 
 Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
 
-The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar/static.sls``. You can adjust shard counts for each index individually to meet your needs. The next time the node checks in it will apply the settings automatically.
+The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar/global.sls``. You can adjust shard counts for each index individually to meet your needs. The next time the node checks in it will apply the settings automatically.
 
 Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
 

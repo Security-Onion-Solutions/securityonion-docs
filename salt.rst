@@ -41,7 +41,7 @@ Configuration
 
 Many of the options that are configurable in Security Onion 2.1 are done via pillar assignments in either the static or minion pillar files. Pillars are a Saltstack concept, formatted typically in YAML, that can be used to parameterize states via templating. Saltstack states are used to ensure the state of objects on a minion. In many of the use cases below, we are providing the ability to modify a configuration file by editing either the static or minion pillar file.
 
-Static pillar file: This is the pillar file that can be used to make global pillar assignments to the nodes. It is located at ``/opt/so/saltstack/local/pillar/static.sls``.
+Static pillar file: This is the pillar file that can be used to make global pillar assignments to the nodes. It is located at ``/opt/so/saltstack/local/pillar/global.sls``.
 
 Minion pillar file: This is the minion specific pillar file that contains pillar definitions for that node. Any definitions made here will override anything defined in other pillar files, including global. This is located at ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``.
 
