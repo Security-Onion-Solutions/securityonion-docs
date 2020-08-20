@@ -13,7 +13,7 @@ Configuration
 Global BPF
 ~~~~~~~~~~
 
-You can specify your BPF in the static pillar on your manager node (``/opt/so/saltstack/local/pillar/static.sls``), and by default, it will apply to all interfaces in your entire deployment.
+You can specify your BPF in the static pillar on your manager node (``/opt/so/saltstack/local/pillar/static.sls``), and by default, it will apply to all interfaces in your entire deployment. If there is no BPF configuration already in the file, you can append it to the bottom of the file.
 
 If you have separate sensors reporting to that manager node, they will pull down the relevant BPF as part of the Salt update that runs every 15 minutes and then restart Suricata/Steno/Zeek so that the BPF change will take effect.
 
