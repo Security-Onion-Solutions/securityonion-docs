@@ -49,7 +49,7 @@ Follow the steps below to create a VM in VMware Fusion for our Security Onion IS
 #. ``Add Device`` screen appears. Click ``Network Adapter`` and click the ``Add...`` button.
 #. ``Network Adapter 2`` screen appears. This will be the sniffing (monitor) interface. Select your desired network adapter configuration. Click the ``Show All`` button.
 #. ``Settings`` screen appears. Click ``Hard Disk (SCSI)``.
-#. ``Hard Disk (SCSI)`` screen appears. Increase the disk size to at least ``100GB`` depending on your use case. Click the ``Apply`` button.
+#. ``Hard Disk (SCSI)`` screen appears. Increase the disk size to at least ``200GB`` depending on your use case. Click the ``Apply`` button.
 #. Close the ``Settings`` window.
 #. At the window for your new VM, click the ``Play`` button to power on the virtual machine.
 #. Follow the installation steps for your desired installation type in the :ref:`installation` section.
