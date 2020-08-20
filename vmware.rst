@@ -22,7 +22,7 @@ VMware Workstation is available for many different host operating systems, inclu
 #. Installer disc image file >> SO ISO file path >> Click ``Next``.
 #. Choose Linux, CentOS 7 64-Bit and click ``Next``.
 #. Specify virtual machine name and click ``Next``.
-#. Specify disk size (minimum 100GB), store as single file, click ``Next``.
+#. Specify disk size (minimum 200GB), store as single file, click ``Next``.
 #. Customize hardware and increase Memory (minimum 12GB for most use cases) and Processors (minimum 4 CPU cores for most use cases).
 #. Network Adapter (NAT or Bridged -- if you want to be able to access your Security Onion machine from other devices in the network, then choose Bridged, otherwise choose NAT to leave it behind the host) -- in this tutorial, this will be the management interface.
 #. Add >> Network Adapter (Bridged) - this will be the sniffing (monitor) interface.
