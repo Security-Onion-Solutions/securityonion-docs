@@ -45,7 +45,7 @@ Documentation
 Formats
 ~~~~~~~
 
-This documentation is published online at https://securityonion.net/docs.  If you are viewing an offline version of this documentation but have Internet access, you might want to switch to the online version at https://securityonion.net/docs to see the latest version.
+This documentation is published online at https://securityonion.net/docs/2.1.  If you are viewing an offline version of this documentation but have Internet access, you might want to switch to the online version at https://securityonion.net/docs/2.1 to see the latest version.
 
 This documentation is also available in PDF format at https://readthedocs.org/projects/securityonion/downloads/pdf/2.1/.
 
