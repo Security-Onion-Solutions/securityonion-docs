@@ -29,9 +29,9 @@ Known Issues
 2.1.0 Changes
 -------------
 
-- Introduced Import node type. This node is somewhat similar to a standalone node, except it doesn't require a monitor interface nor does it sniff network traffic. Is can be used to replay PCAPs to be viewed in Hunt or Kibana.
+- Introduced Import node type. This node is somewhat similar to an Evaluation installation, except it doesn't require a monitor interface nor does it sniff live network traffic. It's ideal for running so-import-pcap to import pcap files and viewing the resulting logs in Hunt or Kibana.
 - Moved static.sls to global.sls to align the name with the functionality
-- Event pipeline now is completely encrypted in transport
+- Traffic between nodes in a distributed deployment is now fully encrypted
 - Playbook
 
   - Elastalert now runs active Plays every 3 minutes
