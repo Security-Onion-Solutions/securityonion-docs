@@ -13,8 +13,8 @@ From https://github.com/gchq/CyberChef :
 Screenshot
 ----------
 
-.. image:: https://user-images.githubusercontent.com/1659467/90805752-102f9580-e2ea-11ea-8add-5dc3dda569f2.png
-  :target: https://user-images.githubusercontent.com/1659467/90805752-102f9580-e2ea-11ea-8add-5dc3dda569f2.png
+.. image:: https://user-images.githubusercontent.com/1659467/90805988-67ce0100-e2ea-11ea-9dfc-98aabadc86c3.png
+  :target: https://user-images.githubusercontent.com/1659467/90805988-67ce0100-e2ea-11ea-9dfc-98aabadc86c3.png
 
 Accessing
 ---------
