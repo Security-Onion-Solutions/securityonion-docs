@@ -27,17 +27,12 @@ The vast majority of data will be written to ``/nsm``, so you'll want to dedicat
 /
 -
 
-``/`` (the root partition) currently contains ``/opt/so/wazuh/`` and ``/var/lib/docker/`` (more on those below) and thus you'll want at least 100GB.
-
-Wazuh
------
-
-Wazuh is currently installed to ``/opt/so/wazuh/``. If you plan to deploy lots of Wazuh agents and collect lots of Wazuh logs, you will want to ensure that this directory has plenty of space. One option may include mounting that directory as a dedicated partition.
+``/`` (the root partition) currently contains ``/var/lib/docker/`` (more on those below) and thus you'll want at least 100GB.
 
 Docker
 ------
 
-Docker images are currently written to ``/var/lib/docker/``. The current set of Docker images uses 26GB on disk. If you're planning a production deployment, you should plan on having enough space for another set of those Docker images for in-place updates.
+Docker images are currently written to ``/var/lib/docker/``. The current set of Docker images uses 27GB on disk. If you're planning a production deployment, you should plan on having enough space for another set of those Docker images for in-place updates.
 
 Other
 -----
