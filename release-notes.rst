@@ -40,8 +40,8 @@ Known Issues
 - Ingest Node parsing updates for Osquery and Winlogbeat - implemented single pipeline for Windows eventlogs & sysmon logs
 - Upgraded Osquery to 4.4 and re-enabled auto-updates
 - Upgraded to Salt 3001.1
+- Upgraded Wazuh to 3.13.1
 - Hunt interface now shows the timezone being used for the selected date range
-
 
 2.0.3 Changes
 -------------
