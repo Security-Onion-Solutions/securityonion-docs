@@ -24,10 +24,12 @@ Known Issues
 
 - You cannot add NEW nodes with the RC1 ISO once your grid has been updated to RC2. This has to do with changes to the setup script for RC2.
 - Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log - This will be fixed in Osquery 4.5
+- When running soup to upgrade from RC1 to RC2, there is a Salt error that occurs during the final highstate. This error is to due with the patch_os_schedule and can be ignored. It will not occur again in subsequent highstates.
 
 2.1.0 Changes
 -------------
 
+- Introduced Import node type. This node is somewhat similar to a standalone node, except it doesn't require a monitor interface nor does it sniff network traffic. Is can be used to replay PCAPs to be viewed in Hunt or Kibana.
 - Moved static.sls to global.sls to align the name with the functionality
 - Event pipeline now is completely encrypted in transport
 - Playbook
@@ -37,7 +39,7 @@ Known Issues
   - Lots of bug fixes & stability improvements
 - Ingest Node parsing updates for Osquery and Winlogbeat - implemented single pipeline for Windows eventlogs & sysmon logs
 - Upgraded Osquery to 4.4 and re-enabled auto-updates
-- Hunt interface now shows the timezone being used for the selected date range
+- Upgraded to Salt 3001.1
 
 
 2.0.3 Changes
