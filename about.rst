@@ -9,9 +9,9 @@ Security Onion is a free and open source Linux distribution for threat hunting, 
 
 .. note::
 
-   Security Onion started in 2008 and was originally based on the Ubuntu Linux distribution. Throughout the years, the Security Onion version tracked the version of Ubuntu it was based on. For example, the last major version of Security Onion was based on Ubuntu 16.04 and so it was called Security Onion 16.04. Security Onion is now container based and thus no longer limited to just Ubuntu. To signify this change, Security Onion now has its own versioning scheme and the current version of this new platform is Security Onion 2.0.
+   Security Onion started in 2008 and was originally based on the Ubuntu Linux distribution. Throughout the years, the Security Onion version tracked the version of Ubuntu it was based on. For example, the last major version of Security Onion was based on Ubuntu 16.04 and so it was called Security Onion 16.04. Security Onion is now container based and thus no longer limited to just Ubuntu. To signify this change, Security Onion now has its own versioning scheme and the current version of this new platform is Security Onion 2.1.
 
-   Here are some high level system differences between Security Onion 2.0 and the older legacy versions:
+   Here are some high level system differences between Security Onion 2.1 and the older legacy versions:
 
     - Move from Ubuntu packages to containers
     - Support both CentOS 7 and Ubuntu 18.04
@@ -40,7 +40,7 @@ Documentation
 
 .. warning::
 
-   We've started updating this documentation for the new Security Onion 2.0. However, please note that this is a work in progress. Many pages have not been updated yet and thus may have incorrect or missing information.
+   We've started updating this documentation for the new Security Onion 2.1. However, please note that this is a work in progress. Many pages have not been updated yet and thus may have incorrect or missing information.
    
 Formats
 ~~~~~~~
@@ -63,7 +63,7 @@ We welcome your contributions to our documentation!  We will review any suggesti
 
 If you are accessing the online version of the documentation and notice that a particular page has incorrect information, you can submit corrections by clicking the ``Edit on GitHub`` button in the upper right corner of each page.
 
-To submit a new page, you can submit a pull request (PR) to the 2.0 branch of the ``securityonion-docs`` repo at https://github.com/Security-Onion-Solutions/securityonion-docs.
+To submit a new page, you can submit a pull request (PR) to the 2.1 branch of the ``securityonion-docs`` repo at https://github.com/Security-Onion-Solutions/securityonion-docs.
 
 Pages are written in RST format and you can find several RST guides on the Internet including https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html.
 

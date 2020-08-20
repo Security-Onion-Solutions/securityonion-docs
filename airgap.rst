@@ -5,7 +5,7 @@ Airgapped Networks
 
 .. warning::
 
-   This page has not been updated for 2.0 yet! We'll get it updated soon.
+   This page has not been updated for 2.1 yet! We'll get it updated soon.
    
 Some organizations have airgapped networks with no connection to the Internet. Security Onion works fine on these airgapped networks, although it may be missing some updates due to lack of Internet connection.
 

@@ -16,7 +16,7 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 
 Minimum Specs
 -------------
-The minimum specs for running Security Onion 2.0 are:
+The minimum specs for running Security Onion 2.1 are:
 
  - 12GB RAM
  - 4 CPU cores
@@ -28,7 +28,7 @@ The minimum specs for running Security Onion 2.0 are:
 
 Production Deployments
 ----------------------
-Security Onion 2.0 is a new platform with more features than previous versions of Security Onion. These additional features result in higher hardware requirements. For best results, we recommend purchasing new hardware to meet the new requirements.
+Security Onion 2.1 is a new platform with more features than previous versions of Security Onion. These additional features result in higher hardware requirements. For best results, we recommend purchasing new hardware to meet the new requirements.
 
 .. tip::
 

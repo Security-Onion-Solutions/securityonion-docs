@@ -11,7 +11,7 @@ From https://www.elastic.co/products/elasticsearch:
 Parsing
 -------
 
-In Security Onion 2.0, Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`filebeat`. Elasticsearch then parses and stores those logs. Parsers are stored in ``/opt/so/conf/elasticsearch/ingest/``. 
+In Security Onion 2.1, Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`filebeat`. Elasticsearch then parses and stores those logs. Parsers are stored in ``/opt/so/conf/elasticsearch/ingest/``. 
 
 .. seealso::
 
