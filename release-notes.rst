@@ -37,6 +37,7 @@ Known Issues
   - Lots of bug fixes & stability improvements
 - Ingest Node parsing updates for Osquery and Winlogbeat - implemented single pipeline for Windows eventlogs & sysmon logs
 - Upgraded Osquery to 4.4 and re-enabled auto-updates
+- Hunt interface now shows the timezone being used for the selected date range
 
 
 2.0.3 Changes
