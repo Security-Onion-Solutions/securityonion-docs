@@ -48,8 +48,9 @@ Known Issues
 - Upgraded to Salt 3001.1
 - Upgraded Wazuh to 3.13.1
 - Hunt interface now shows the timezone being used for the selected date range
-- Fixed Cortex initialization so that TheHive integration and initial user set is correctly configured.
+- Fixed Cortex initialization so that TheHive integration and initial user set is correctly configured
 - Improved management of TheHive/Cortex credentials
+- SOC now allows for arbitrary, time-bounded PCAP job creation, with optional filtering by host and port
 
 2.0.3 Changes
 -------------
