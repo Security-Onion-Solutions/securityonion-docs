@@ -22,19 +22,19 @@ Security Onion 2.1 Release Candidate 2 (RC2) is here!
 Known Issues
 ------------
 
-- You cannot add NEW nodes with the RC1 ISO once your grid has been updated to RC2. This has to do with changes to the setup script for RC2.
-- Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log - This will be fixed in Osquery 4.5
-- When running soup to upgrade from RC1 to RC2, there is a Salt error that occurs during the final highstate. This error is to due with the patch_os_schedule and can be ignored. It will not occur again in subsequent highstates
-- When Search Nodes are upgraded from RC1 to RC2 there is a chance there will be a race condition where certificates are missing. This will show errors in the manager log to the remote node. To fix this run the following on the search node that is having the issue:
+- Once you update your grid to RC2, you can only add new nodes using the RC2 setup script. Previous installers won't work due to changes to the setup script for RC2.
+- Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
+- When running soup to upgrade from RC1 to RC2, there is a Salt error that occurs during the final highstate. This error is related to the patch_os_schedule and can be ignored as it will not occur again in subsequent highstates.
+- When Search Nodes are upgraded from RC1 to RC2, there is a chance of a race condition where certificates are missing. This will show errors in the manager log to the remote node. To fix this run the following on the search node that is having the issue:
 
-  - Stop elasticsearch - sudo so-elasticsearch-stop
-  - Run the SSL state - sudo salt-call state.apply ssl
-  - Restart elasticsearch - sudo so-elasticsearch-restart 
+  - Stop elasticsearch - ``sudo so-elasticsearch-stop``
+  - Run the SSL state - ``sudo salt-call state.apply ssl``
+  - Restart elasticsearch - ``sudo so-elasticsearch-restart``
 
 2.1.0 Changes
 -------------
 
-- Introduced Import node type. This node is somewhat similar to an Evaluation installation, except it doesn't require a monitor interface nor does it sniff live network traffic. It's ideal for running so-import-pcap to import pcap files and viewing the resulting logs in Hunt or Kibana.
+- Introduced Import node type ideal for running so-import-pcap to import pcap files and view the resulting logs in Hunt or Kibana
 - Moved static.sls to global.sls to align the name with the functionality
 - Traffic between nodes in a distributed deployment is now fully encrypted
 - Playbook
