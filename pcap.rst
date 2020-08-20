@@ -10,8 +10,8 @@ PCAP
 
 Once :ref:`soc` has located the stream, it will show a high level overview of the packets.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87229786-25bfb000-c379-11ea-8121-890bca6b889f.png
-  :target: https://user-images.githubusercontent.com/1659467/87229786-25bfb000-c379-11ea-8121-890bca6b889f.png
+.. image:: https://user-images.githubusercontent.com/1659467/90805160-43255980-e2e9-11ea-83a0-ec36848c1b22.png
+  :target: https://user-images.githubusercontent.com/1659467/90805160-43255980-e2e9-11ea-83a0-ec36848c1b22.png
 
 If there are many packets in the stream, you can use the ``LOAD MORE`` button, ``Rows per page`` setting, and arrows to navigate through the list of packets. 
 
