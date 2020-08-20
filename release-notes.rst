@@ -34,6 +34,7 @@ Known Issues
 2.1.0 Changes
 -------------
 
+- Fixed an issue where the console was timing out and making it appear that the installer was hung
 - Introduced Import node type ideal for running so-import-pcap to import pcap files and view the resulting logs in Hunt or Kibana
 - Moved static.sls to global.sls to align the name with the functionality
 - Traffic between nodes in a distributed deployment is now fully encrypted
