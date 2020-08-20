@@ -38,21 +38,21 @@ Group Metrics
 
 The middle section of output is the Group Metrics section and it's a data table that allows you to stack (aggregate) arbitrary fields. The Group Metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. Values in the Group Metrics table have plus and minus magnifying glass icons to the left which allow you to include or exclude (respectively) those values in your query. The default Fetch Limit is ``10`` so if you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87226473-f6ea0f80-c361-11ea-941d-4b82b7795cd7.png
-  :target: https://user-images.githubusercontent.com/1659467/87226473-f6ea0f80-c361-11ea-941d-4b82b7795cd7.png
+.. image:: https://user-images.githubusercontent.com/1659467/90804568-6c91b580-e2e8-11ea-8f7b-c83ab30c000b.png
+  :target: https://user-images.githubusercontent.com/1659467/90804568-6c91b580-e2e8-11ea-8f7b-c83ab30c000b.png
 
 Events
 ------
 
 The third and final section of output is a data table that contains all search results and allows you to drill into individual search results as necessary. Clicking the table headers allows you to sort ascending or descending. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. Next to that arrow is two pcap links that allow you to pivot to the :ref:`PCAP` web interface to access your full packet capture. Click the first pcap link to use the current window or use the second pcap link to open pcap in a new window. To the right of the pcap links is the ``Timestamp`` field. Next, a few standard fields are shown: ``source.ip``, ``source.port``, ``destination.ip``, ``destination.port``, ``log.id.uid`` (Zeek unique identifier), ``network.community_id`` (Community ID), and ``event.dataset``. Values in these fields have plus and minus magnifying glass icons to the left which allow you to include or exclude (respectively) those values in your query. The default Fetch Limit for the Events table is ``100`` so if you need to see more than 100 events, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87226485-09fcdf80-c362-11ea-8f8d-e28cd112047f.png
+.. image:: https://user-images.githubusercontent.com/1659467/90804664-8af7b100-e2e8-11ea-9750-4037c50b5b4c.png
   :target: https://user-images.githubusercontent.com/1659467/87226485-09fcdf80-c362-11ea-8f8d-e28cd112047f.png
 
 When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. The field values on the right have plus and minus magnifying glass icons which allow you to include or exclude (respectively) those values in your query.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87226504-2436bd80-c362-11ea-8aab-1543739e9eb8.png
-  :target: https://user-images.githubusercontent.com/1659467/87226504-2436bd80-c362-11ea-8aab-1543739e9eb8.png
+.. image:: https://user-images.githubusercontent.com/1659467/90804774-ac589d00-e2e8-11ea-82f0-d2aed9e72e6b.png
+  :target: https://user-images.githubusercontent.com/1659467/90804774-ac589d00-e2e8-11ea-82f0-d2aed9e72e6b.png
 
 Statistics
 ----------
@@ -65,10 +65,10 @@ The bottom left corner of the page shows statistics about the current query incl
 Auto Hunt
 ---------
 
-The bottom right corner of the page has a toggle for Auto Hunt. When enabled, Hunt will automatically submit your query any time you change filters, groupings, or date ranges.
+The bottom right corner of the page has a toggle for Auto Hunt which default to enabled. When enabled, Hunt will automatically submit your query any time you change filters, groupings, or date ranges.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87226525-46c8d680-c362-11ea-978d-c0e6f0c6b608.png
-  :target: https://user-images.githubusercontent.com/1659467/87226525-46c8d680-c362-11ea-978d-c0e6f0c6b608.png
+.. image:: https://user-images.githubusercontent.com/1659467/90804819-c0040380-e2e8-11ea-881c-b545d43b5939.png
+  :target: https://user-images.githubusercontent.com/1659467/90804819-c0040380-e2e8-11ea-881c-b545d43b5939.png
 
 OQL
 ---
