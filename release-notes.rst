@@ -48,6 +48,8 @@ Known Issues
 - Upgraded to Salt 3001.1
 - Upgraded Wazuh to 3.13.1
 - Hunt interface now shows the timezone being used for the selected date range
+- Fixed Cortex initialization so that TheHive integration and initial user set is correctly configured.
+- Improved management of TheHive/Cortex credentials
 
 2.0.3 Changes
 -------------
