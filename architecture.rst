@@ -5,9 +5,14 @@ Architecture
 
 If you're going to deploy Security Onion, you should first decide on what type of deployment you want. This could be anything from a temporary Evaluation installation in a small virtual machine on your personal laptop all the way to a large scalable enterprise deployment consisting of a master node, multiple search nodes, and lots of forward nodes. This section will discuss what those different deployment types look like from an architecture perspective.
 
+Import
+------
+
+The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import a pcap using :ref:`so-import-pcap`. When you run :ref:`so-import-pcap`, it analyzes the pcap using Suricata and Zeek and the resulting logs are picked up by :ref:`filebeat` and sent to :ref:`elasticsearch` where they are parsed and indexed. You can then view those logs in :ref:`soc`.
+
 Evaluation
 ----------
-The simplest architecture is ``Evaluation``. All components run on one box. :ref:`filebeat` collects logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for quick installations to temporarily test out Security Onion. It is **not** designed for production usage at all.
+The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`filebeat` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for quick installations to temporarily test out Security Onion. It is **not** designed for production usage at all.
 
 .. image:: images/elastic-architecture/eval.png
    :target: _images/eval.png
