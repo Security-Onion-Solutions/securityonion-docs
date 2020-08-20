@@ -22,7 +22,7 @@ Security Onion 2.1 Release Candidate 2 (RC2) is here!
 Known Issues
 ------------
 
-- Once you update your grid to RC2, you can only add new nodes using the RC2 setup script. Previous installers won't work due to changes to the setup script for RC2.
+- Once you update your grid to RC2, any new nodes that join the grid must be RC2 so if you try to join a new RC1 node it will fail. For best results, use the latest RC2 ISO (or RC2 installer from github) when joining to an RC2 grid.
 - Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
 - When running soup to upgrade from RC1 to RC2, there is a Salt error that occurs during the final highstate. This error is related to the patch_os_schedule and can be ignored as it will not occur again in subsequent highstates.
 - When Search Nodes are upgraded from RC1 to RC2, there is a chance of a race condition where certificates are missing. This will show errors in the manager log to the remote node. To fix this run the following on the search node that is having the issue:
