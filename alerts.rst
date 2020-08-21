@@ -34,13 +34,13 @@ Below, we'll provide a few ways we can test our IDS to make sure it is working a
    
       curl testmyids.com
 
+   We could also test for additional hits with a utility called tmNIDS, running the tool in interactive mode:
+
+      curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
+    
    We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the management first, run ``rule-update``, then push the changes out to the other sensor(s)).
 
 #. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/opt/so/rules/nids/local.rules``:
-
-We could also test for additional hits with a utility called tmNIDS, running the tool in interactive mode:
-
-      curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
 
 
 -  **NIDS Rule**
