@@ -19,6 +19,10 @@ In Security Onion, Cortex is set up with two default organizations:
  - ``cortex`` - This is a default organization that is created by Cortex for overall management.
  - ``SecurityOnion`` - This is an organization that we create to enable analyzers by default and provide integration with TheHive.
 
+Users initially authenticate to Cortex via the username and password supplied during setup.  Once authenticated to the Cortex organization, users will possess `superadmin` privileges, capabable of managing all organizations, users, etc.
+
+From here, users should create an additonal user for the `SecurityOnion` organization, or create their own ogranization/users if they wish to log into Cortex and manage analyzers and responders.
+
 It is always recommended that you create your own organization, but the provided organizations should work for testing.
 
 More Information
