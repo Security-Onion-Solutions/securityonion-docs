@@ -38,6 +38,11 @@ Below, we'll provide a few ways we can test our IDS to make sure it is working a
 
 #. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/opt/so/rules/nids/local.rules``:
 
+We could also test for additional hits with a utility called tmNIDS, running the tool in interactive mode:
+
+      curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
+
+
 -  **NIDS Rule**
 
    ::
@@ -48,27 +53,7 @@ Below, we'll provide a few ways we can test our IDS to make sure it is working a
    
    ::
    
-      sudo rule-update
-
--  **Scapy**
-
-   ::
-   
-      sudo scapy
-      pkt = Ether()/IP(dst="192.168.1.30")/TCP()/"SecurityOnion"
-      wrpcap("so-testing.pcap", pkt)
-   
-   Press ``CTRL+D`` to exit scapy.  Then use tcpreplay to replay the pcap to your sniffing interface:
-   
-   ::
-   
-     sudo tcpreplay -i ens34 -M10 so-testing.pcap
-
-   If everything went as planned, an alert should appear in TheHive/Kibana/Hunt with the message ``Security Onion - testing``.
-
-Identifying overly active signatures
-------------------------------------
-
+      sudo so-rule-update
 
 
 Identifying rule categories
