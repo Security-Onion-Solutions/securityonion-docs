@@ -60,7 +60,7 @@ The manager node runs the following components:
 -  :ref:`kibana`
 -  :ref:`curator`
 -  :ref:`elastalert`
--  :ref:`redis` (Only if configured to output to a search node)
+-  :ref:`redis`
 -  :ref:`wazuh`
 
 Forward Node
