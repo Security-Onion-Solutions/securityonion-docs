@@ -6,13 +6,13 @@ Listing Accounts
 OS
 --
 
-OS user accounts are stored in ``/etc/passwd``.  You can get a list of all OS accounts using the following command:
+Operating System (OS) user accounts are stored in ``/etc/passwd``.  You can get a list of all OS accounts using the following command:
 
 ::
 
   cut -d: -f1 /etc/passwd
   
-Furthermore, you can get a list of all OS accounts that had a UID > 1000 (not a service account) using the following command:
+If you want a list of user accounts (not service accounts), then you can filter ``/etc/passwd`` for accounts with a UID greater than 1000 like this:
 
 ::
 
