@@ -19,10 +19,6 @@ Debug logs are stored in ``/opt/so/log/``.
 -----------------------
 Custom :ref:`salt` settings can be added to ``/opt/so/saltstack/local/``.
 
-/opt/so/wazuh
--------------
-:ref:`wazuh` configuration and rules are stored in ``/opt/so/wazuh/``.
-
 /nsm
 ----
 The vast majority of data is stored in ``/nsm/``.
@@ -38,3 +34,7 @@ The vast majority of data is stored in ``/nsm/``.
 /nsm/pcap
 ---------
 :ref:`stenographer` stores full packet capture in ``/nsm/pcap/``.
+
+/nsm/wazuh
+-------------
+All :ref:`wazuh` files are stored in ``/nsm/wazuh/``. For convenience, we have placed symlinks for Wazuh config at ``/opt/so/conf/wazuh`` (linked to `/nsm/wazuh/etc`) and Wazuh rules at ``/opt/so/rules/hids`` (``local_rules.xml`` links to ``/nsm/wazuh/etc/rules/local_rules.xml`` and ``ruleset`` links to ``/nsm/wazuh/ruleset``).
