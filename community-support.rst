@@ -15,7 +15,7 @@ Before posting for help, check to see if your question has already been answered
 Moderation
 ----------
 
-Please keep in mind that our forums are moderated, so your message will have to be approved before it is published. If at first you don't see your post appear, there is no need to re-submit. It has been queued and will be approved if appropriate.
+If at first you don't see your post appear, it may have been queued for approval by the forum moderators. There is no need to re-submit your post. It will be reviewed and then approved if appropriate.
 
 Etiquette
 ---------
