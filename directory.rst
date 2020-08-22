@@ -37,4 +37,4 @@ The vast majority of data is stored in ``/nsm/``.
 
 /nsm/wazuh
 -------------
-All :ref:`wazuh` files are stored in ``/nsm/wazuh/``. For convenience, we have placed symlinks for Wazuh config at ``/opt/so/conf/wazuh`` (linked to `/nsm/wazuh/etc`) and Wazuh rules at ``/opt/so/rules/hids`` (``local_rules.xml`` links to ``/nsm/wazuh/etc/rules/local_rules.xml`` and ``ruleset`` links to ``/nsm/wazuh/ruleset``).
+All :ref:`wazuh` files are stored in ``/nsm/wazuh/``. For convenience, we have placed symlinks for Wazuh config at ``/opt/so/conf/wazuh/`` (linked to ``/nsm/wazuh/etc``) and Wazuh rules at ``/opt/so/rules/hids/`` (``local_rules.xml`` links to ``/nsm/wazuh/etc/rules/local_rules.xml`` and ``ruleset`` links to ``/nsm/wazuh/ruleset``).
