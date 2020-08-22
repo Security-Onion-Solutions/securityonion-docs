@@ -13,4 +13,3 @@ This section covers how to customize Security Onion for your environment.
    email
    ip
    ntp
-   cortex
