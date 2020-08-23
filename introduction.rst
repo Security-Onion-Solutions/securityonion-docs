@@ -39,8 +39,8 @@ With full packet capture, IDS alerts, Zeek data, and endpoint telemetry, there i
 Security Onion Console (SOC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://user-images.githubusercontent.com/1659467/87226371-4da31980-c361-11ea-8583-728f6d553884.png
-   :target: https://user-images.githubusercontent.com/1659467/87226371-4da31980-c361-11ea-8583-728f6d553884.png
+.. image:: https://user-images.githubusercontent.com/1659467/90804454-3eac7100-e2e8-11ea-9cd3-d0f5cc5640fe.png
+  :target: https://user-images.githubusercontent.com/1659467/90804454-3eac7100-e2e8-11ea-9cd3-d0f5cc5640fe.png
 
 :ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`Hunt` interface for threat hunting which allows you to query all of your NIDS/HIDS alerts, :ref:`zeek` logs, and system logs. SOC also includes an interface for full packet capture (:ref:`pcap`) retrieval.
 
