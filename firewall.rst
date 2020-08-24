@@ -24,7 +24,7 @@ Managing firewall rules for all devices can be done from the manager node. There
 
 analyst.sls
 ~~~~~~~~~~~
-This is a list of hosts and networks that are allowed the analyst role. The analyst role allows connectivity to the sensor to use the web interface. Please note that 80 just forwards to 443 and no communication with the console is unencrypted.
+This is a list of hosts and networks that are allowed the analyst role. The analyst role allows connectivity to the sensor to use the web interface. Please note that 80 just redirects to 443 and no communication with the console is unencrypted.
 
 - 80/tcp
 - 443/tcp
