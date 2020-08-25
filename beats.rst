@@ -12,6 +12,8 @@ Run ``sudo so-allow`` and select ``b`` to allow your Winlogbeat agents to send t
 
 Navigate to the Downloads page in the Security Onion Console and download the linked Winlogbeat agent - this link will take you to the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and configure it to send logs to port ``5044`` on your management node. Please note that transport encryption is NOT enabled by default.
 
+Please make sure that Winlogbeat is NOT configured to load dashboards into Kibana.
+
 If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module. Security Onion will do all the necessary parsing.
 
 Installation
