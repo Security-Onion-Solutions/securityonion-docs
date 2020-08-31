@@ -16,12 +16,12 @@ Now that you've installed Security Onion, it's time to configure it! Security On
 Import
 ------
 
-One of the easiest ways to get started with Security Onion is using it to forensically analyze one or more pcap files. Just install Security Onion in Import mode and then run `so-import-pcap <so-import-pcap>`__ and give it the full path to one or more pcap files. For more information, please see the `so-import-pcap <so-import-pcap>`__ section.
+One of the easiest ways to get started with Security Onion is using it to forensically analyze one or more pcap files. Just install Security Onion in ``Import`` mode and then run `so-import-pcap <so-import-pcap>`__ giving it the full path to one or more pcap files. For more information, please see the `so-import-pcap <so-import-pcap>`__ section.
 
 Evaluation
 ----------
 
-The Evaluation option allows you to quickly and easily evaluate Security Onion. It works well for classroom or small lab environments. Evaluation is **not** designed for production usage. Choose ``EVAL``, follow the prompts (see screenshots below), and then proceed to the :ref:`post-installation` section.
+``Evaluation Mode`` is ideal for classroom or small lab environments.  Evaluation is **not** designed for production usage. Choose ``EVAL``, follow the prompts (see screenshots below), and then proceed to the :ref:`post-installation` section.
 
 Production Server - Standalone
 ------------------------------
