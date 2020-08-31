@@ -11,7 +11,7 @@ From https://github.com/target/strelka:
 
 Configuration
 -------------
-Strelka configuration can be found at ``/opt/so/conf/strelka/``.
+Strelka reads its configuration from ``/opt/so/conf/strelka/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
 
 More Information
 ----------------
