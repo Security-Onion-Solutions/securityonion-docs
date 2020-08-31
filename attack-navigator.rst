@@ -25,7 +25,7 @@ Right-clicking any Technique and selecting ``View Related Plays`` will open Play
 
 Configuration
 -------------
-Navigator configuration can be found at ``/opt/so/conf/navigator/``.
+Navigator reads its configuration from ``/opt/so/conf/navigator/``. However, please keep in mind that if you make any changes here they may be overwritten since the config is managed with :ref:`salt`.
 
 More Information
 ----------------
