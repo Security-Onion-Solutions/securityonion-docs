@@ -84,53 +84,6 @@ Finally, restart Kibana:
 
    sudo so-kibana-restart
 
-Plugins
--------
-
-.. warning::
-
-    Please note that we do not officially support installing plugins.  Do so at your own risk!
-
-To add a plugin to Kibana, you can expose the plugins directory to the host filesystem and then copy your plugins to that directory. For example, to load the `kbn\_network <https://github.com/dlumbrer/kbn_network>`__ plugin you can do something like the following.
-
-Create a new directory in the host filesystem called ``/nsm/kibana/plugins`` to store plugins:
-
-::
-
-    sudo mkdir -p /nsm/kibana/plugins
-
-Download your desired plugin and decompress it to ``/nsm/kibana/plugins``.  For example:
-
-::
-
-    wget -qO- https://github.com/dlumbrer/kbn_network/releases/download/6.5.X-1/network_vis-6-5.tar.gz | sudo tar zxv -C /nsm/kibana/plugins
-
-Kibana now requires ``jquery.flot.log`` when re-optimizing, so let's create that:
-
-::
-
-    sudo touch /nsm/kibana/jquery.flot.log
-    
-Modify ``KIBANA_OPTIONS`` in ``/etc/nsm/securityonion.conf`` to mount ``/nsm/kibana/plugins`` directory and ``jquery.flot.log`` into the container:
-
-::
-
-    sudo sed -i 's|^KIBANA_OPTIONS.*$|KIBANA_OPTIONS="--volume /nsm/kibana/plugins:/usr/share/kibana/plugins:ro --volume /nsm/kibana/jquery.flot.log:/usr/share/kibana/src/ui/public/flot-charts/jquery.flot.log"|g' /etc/nsm/securityonion.conf
-
-Restart Kibana:
-
-::
-
-    sudo so-kibana-restart
-
-Monitor Kibana log file for errors:
-
-::
-
-    tail -f /opt/so/log/kibana/kibana.log
-
-Kibana may take a few minutes to re-optimize.  Once that's complete, you should be able to log into Kibana and test your new plugin.
-
 More Information
 ----------------
 
