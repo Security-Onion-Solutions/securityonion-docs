@@ -34,3 +34,5 @@ To import multiple pcaps:
 ::
 
     sudo so-import-pcap /full/path/to/import1.pcap /full/path/to/import2.pcap
+
+If you don't already have some pcap files to import, see :ref:`pcaps` for a list of sites where you can download sample pcaps.
