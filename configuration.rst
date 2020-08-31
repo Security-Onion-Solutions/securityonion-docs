@@ -26,9 +26,7 @@ Evaluation
 Production Server - Standalone
 ------------------------------
 
-Standalone is similar to Evaluation in that it only requires a single box, but Standalone is more ready for production usage. 
-
-Choose ``STANDALONE``, follow the prompts, and then proceed to the :ref:`post-installation` section.
+Standalone is similar to Evaluation in that it only requires a single box, but Standalone is more ready for production usage. Choose ``STANDALONE``, follow the prompts, and then proceed to the :ref:`post-installation` section.
 
 Production Server - Distributed Deployment
 ------------------------------------------
