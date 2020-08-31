@@ -5,6 +5,11 @@ Ingest
 
 Here's an overview of how logs are ingested in various deployment types.
 
+Import
+------
+| Core Pipeline: Filebeat [IMPORT Node] --> ES Ingest [IMPORT Node]
+| Logs: Zeek, Suricata
+
 Eval
 ----
 | Core Pipeline: Filebeat [EVAL Node] --> ES Ingest [EVAL Node]
