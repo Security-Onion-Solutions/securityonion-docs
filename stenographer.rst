@@ -19,7 +19,7 @@ You can access full packet capture via :ref:`soc`. :ref:`kibana` and :ref:`hunt`
 
 Configuration
 -------------
-Stenographer configuration can be found at ``/opt/so/conf/steno/``.
+Stenographer reads its configuration from ``/opt/so/conf/steno/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
 
 Logging
 -------
