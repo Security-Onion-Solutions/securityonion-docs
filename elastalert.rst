@@ -76,7 +76,7 @@ See :ref:`misp`
 TheHive
 ~~~~~~~
 
-See :ref:`<hive>`
+See :ref:`hive`
 
 
 so-elastalert-create
