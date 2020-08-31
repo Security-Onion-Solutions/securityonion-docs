@@ -22,7 +22,7 @@ In Kibana you will see a scripted field named ``TheHive`` with a value of ``Add2
 
 Configuration
 -------------
-TheHive configuration can be found in ``/opt/so/conf/thehive/``.
+TheHive reads its configuration from ``/opt/so/conf/thehive/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
 
 Logging
 -------
