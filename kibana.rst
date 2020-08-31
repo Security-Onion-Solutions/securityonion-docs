@@ -15,7 +15,7 @@ Screenshot
 Configuration
 -------------
 
-Kibana's configuration can be found in ``/opt/so/conf/kibana/``.
+Kibana's configuration can be found in ``/opt/so/conf/kibana/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/kibana/``, they may be overwritten at the next salt update.
 
 Logging
 -------
@@ -60,29 +60,6 @@ Timestamps
 ----------
 
 By default, Kibana will display timestamps in the timezone of your local browser. If you would prefer timestamps in UTC, you can go to ``Management`` --> ``Advanced Settings`` and set ``dateFormat:tz`` to ``UTC``.
-
-Search Request Timeout
-----------------------
-
-Sometimes searches can timeout in Kibana. To increase the timeout value to wait longer for results from Elasticsearch, we can adjust the value for ``elasticsearch.requestTimeout`` in ``/opt/so/conf/kibana/etc/kibana.yml`` and restart Kibana.
-
-For example to increase the timeout from the default of ``90`` seconds:
-
-::
-
-   sudo vi /opt/so/conf/kibana/etc/kibana.yml
-
-Modify the following line:
-
-::
-
-   elasticsearch.requestTimeout: 90000
-
-Finally, restart Kibana:
-
-::
-
-   sudo so-kibana-restart
 
 More Information
 ----------------
