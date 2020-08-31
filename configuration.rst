@@ -7,12 +7,17 @@ Now that you've installed Security Onion, it's time to configure it! Security On
 
 .. tip::
 
-  If this is your first time using Security Onion and you just want to try it out, we recommend the Evaluation option as it's the quickest and easiest way to get started.
+  If this is your first time using Security Onion and you just want to try it out, we recommend the Import option as it's the quickest and easiest way to get started.
 
 .. warning::
 
   If you use DHCP and your IP address changes, this can cause problems. If you want to use DHCP, make sure that you have a DHCP reservation so that your IP address does not change. Otherwise, use a static IP address to be safe.
   
+Import
+------
+
+One of the easiest ways to get started with Security Onion is using it to forensically analyze one or more pcap files. Just install Security Onion in Import mode and then run `so-import-pcap <so-import-pcap>`__ and give it the full path to one or more pcap files. For more information, please see the `so-import-pcap <so-import-pcap>`__ section.
+
 Evaluation
 ----------
 
