@@ -15,7 +15,7 @@ By default, you will be viewing Grafana as an anonymous user. If you want to mak
 
 Configuration
 -------------
-Grafana configuration can be found in ``/opt/so/conf/grafana/etc/``.
+Grafana configuration can be found in ``/opt/so/conf/grafana/etc/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/grafana/etc/``, they may be overwritten at the next salt update.
 
 More Information
 ----------------
