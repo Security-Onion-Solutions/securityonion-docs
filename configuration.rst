@@ -9,10 +9,6 @@ Now that you've installed Security Onion, it's time to configure it! Security On
 
   If this is your first time using Security Onion and you just want to try it out, we recommend the Evaluation option as it's the quickest and easiest way to get started.
 
-.. note::
-
-  If you install directly in a console (rather than an SSH session), the console may timeout causing the install to appear to hang. If this happens, simply press an arrow key on your keyboard to wake the console up.
-  
 .. warning::
 
   If you use DHCP and your IP address changes, this can cause problems. If you want to use DHCP, make sure that you have a DHCP reservation so that your IP address does not change. Otherwise, use a static IP address to be safe.
