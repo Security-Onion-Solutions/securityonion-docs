@@ -16,7 +16,13 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 
 Minimum Specs
 -------------
-The minimum specs for running Security Onion 2.1 are:
+If you just want to import a pcap using :ref:`so-import-pcap`, then you can configure Security Onion 2.1 as an Import Node with the following minimum specs:
+
+ - 4GB RAM
+ - 2 CPU cores
+ - 200GB storage
+
+For all other configurations, the minimum specs for running Security Onion 2.1:
 
  - 12GB RAM
  - 4 CPU cores
