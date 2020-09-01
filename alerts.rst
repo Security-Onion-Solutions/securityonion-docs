@@ -85,11 +85,7 @@ Disable the sid
 
 Security Onion uses ``idstools`` to download new signatures every night and process them against a set list of user generated configurations.
 
-In a distributed Security Onion environment, you only need to change the configuration on the manager and then all other nodes will get the updated rules automatically.
-
-As mentioned before, take care in disabling signatures as it can be likely that a more appropriate response is warranted.
-
-To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``).
+To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``). In a distributed Security Onion environment, you only need to change the configuration in the manager pillar and then all other nodes will get the updated rules automatically.
  
 If SID 4321 is noisy, you can disable it as follows:
 
