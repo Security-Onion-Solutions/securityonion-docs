@@ -139,7 +139,7 @@ You can use :ref:`salt` to manage Zeek's ``local.zeek``, ``node.cfg`` and ``zeek
  
 ``zeekctl.cfg``: An example of customizing this can be seen below. The allowed options can be seen in https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/zeek/files/zeekctl.cfg.jinja.
 
-Here is an example of how we would modify ``local.zeek``. We can see the default pillar assignments used for ``local.zeek`` in ``/opt/so/saltstack/default/pillar/zeek/init.sls``. This file should never be modified as it could be updated in the future and any modification made would be overwritten. The static or minion pillar files should be used for making changes as they are stored in ``/opt/so/saltstack/local/``, and that directory isn’t overwritten during a Security Onion code update.
+Here is an example of how we would modify ``local.zeek``. We can see the default pillar assignments used for ``local.zeek`` in ``/opt/so/saltstack/default/pillar/zeek/init.sls``. This file should never be modified as it could be updated in the future and any modification made would be overwritten. The global or minion pillar files should be used for making changes as they are stored in ``/opt/so/saltstack/local/``, and that directory isn’t overwritten during a Security Onion code update.
 
 ::
 
@@ -201,7 +201,7 @@ Here is an example of how we would modify ``local.zeek``. We can see the default
 
 In this file, there are two keys under zeek, ``zeekctl`` and ``local``. We will be using ``zeek:local`` for this example since we are modifying the ``zeek.local`` file. We will address ``zeek:zeekctl`` in another example where we modify the ``zeekctl.cfg`` file. 
 
-Under ``zeek:local``, there are three keys: ``@load``, ``@load-sigs``, and ``redef``. In the pillar definition, ``@load`` and ``@load-sigs`` are wrapped in quotes due to the ``@`` character. Under each of the keys, there is a list of  items that will be added to the ``local.zeek`` file with the appropriate directive of either ``@load``, ``@load-sigs`` or ``redef``. In order to modify either of the lists, the entire list must redefined in either the static or minion pillar file.
+Under ``zeek:local``, there are three keys: ``@load``, ``@load-sigs``, and ``redef``. In the pillar definition, ``@load`` and ``@load-sigs`` are wrapped in quotes due to the ``@`` character. Under each of the keys, there is a list of  items that will be added to the ``local.zeek`` file with the appropriate directive of either ``@load``, ``@load-sigs`` or ``redef``. In order to modify either of the lists, the entire list must redefined in either the global or minion pillar file.
 
 If we have a node where ``protocols/ssh/detect-bruteforcing`` is generating a lot of noise and we want to tell Zeek to stop loading that script, we would do the following. Since we just want to turn it off for that specific node, we would open ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``. At the bottom, we would append the following:
 
@@ -241,7 +241,7 @@ If we have a node where ``protocols/ssh/detect-bruteforcing`` is generating a lo
          - securityonion/communityid
          - securityonion/file-extraction
 
-We redefined the ``@load`` list in the minion pillar file, but we left out the ```protocols/ssh/detect-bruteforcing``. This will override the value defined in the ``/opt/so/saltstack/default/pillar/zeek/init.sls`` and the static pillar file if it is defined there, and prevent the script from being added to the ``local.zeek`` file. If we wanted to add a script to be loaded, then we would add out script to the list. Since we aren’t changing ``@load-sigs`` or ``redef``, then we do not need to add them here. Once the file is saved, and the node checks in the with manager, the ``local.zeek`` file will be updated and the ``so-zeek`` docker container will be restarted.
+We redefined the ``@load`` list in the minion pillar file, but we left out the ```protocols/ssh/detect-bruteforcing``. This will override the value defined in the ``/opt/so/saltstack/default/pillar/zeek/init.sls`` and the global pillar file if it is defined there, and prevent the script from being added to the ``local.zeek`` file. If we wanted to add a script to be loaded, then we would add out script to the list. Since we aren’t changing ``@load-sigs`` or ``redef``, then we do not need to add them here. Once the file is saved, and the node checks in the with manager, the ``local.zeek`` file will be updated and the ``so-zeek`` docker container will be restarted.
 
 Let's see an example of how we would modify the ``zeekctl.cfg`` file. From the example above, we know that the default pillar values are set for zeek in ``/opt/so/saltstack/default/pillar/zeek/init.sls``. The default pillar values for ``zeekctl.cfg`` are as follows:
 
@@ -267,7 +267,7 @@ Let's see an example of how we would modify the ``zeekctl.cfg`` file. From the e
 
 For anything not defined here, Zeek will use its own defaults. The options that are allowed to be managed with the pillar can be found at https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/zeek/files/zeekctl.cfg.jinja.
 
-In order to add or modify an option in ``zeekctl``, we will need to modify either the ``static`` or ``minion`` pillar file. For example, if we wanted to turn log compression off and change the timeout for Broker communication events to 20 seconds globally, we would add the following to the static pillar file.
+In order to add or modify an option in ``zeekctl``, we will need to modify either the ``global`` or ``minion`` pillar file. For example, if we wanted to turn log compression off and change the timeout for Broker communication events to 20 seconds globally, we would add the following to the global pillar file.
 
 ::
 
