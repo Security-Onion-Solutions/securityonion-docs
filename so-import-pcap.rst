@@ -21,9 +21,9 @@ Usage
    
    Please consider this new version to be experimental!
    
-This new version of so-import-pcap requires you to run through Setup first. You can choose an Import Node for a minimal configuration suitable for so-import-pcap. Once Setup completes, you can then run ``sudo so-import-pcap`` and supply the full path to at least one pcap file.
+This new version of so-import-pcap requires you to run through Setup and choose a configuration that includes sensor services (like Import, Eval, or Standalone). The quickest and easiest option is to choose Import Node which gives you the minimal services necessary to import a pcap and view the resulting logs in :ref:`hunt` or :ref:`kibana`.
 
-For example, to import a single pcap named ``import.pcap``:
+Once Setup completes, you can then run ``sudo so-import-pcap`` and supply the full path to at least one pcap file. For example, to import a single pcap named ``import.pcap``:
 
 ::
 
