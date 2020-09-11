@@ -36,10 +36,12 @@ The first section of output contains a Most Occurences visualization, a timeline
 Group Metrics
 -------------
 
-The middle section of output is the Group Metrics section and it's a data table that allows you to stack (aggregate) arbitrary fields. The Group Metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. Values in the Group Metrics table have plus and minus magnifying glass icons to the left which allow you to include or exclude (respectively) those values in your query. The third magnifying glass starts a new query for just the value itself. The default Fetch Limit is ``10`` so if you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
+The middle section of output is the Group Metrics section and it's a data table that allows you to stack (aggregate) arbitrary fields. The Group Metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. Clicking a value in the Group Metrics table brings up a menu of actions for that value. The plus and minus magnifying glass icons to the left allow you to include or exclude (respectively) those values in your query. The third magnifying glass starts a new query for just the value itself. The ``G`` and ``VT`` on the right end of the actions menu look up the value at Google and VirusTotal (respectively).
 
-.. image:: https://user-images.githubusercontent.com/1659467/92962698-55ee0280-f43f-11ea-9e19-4a15d0dd4560.png
-  :target: https://user-images.githubusercontent.com/1659467/92962698-55ee0280-f43f-11ea-9e19-4a15d0dd4560.png
+The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
+
+.. image:: https://user-images.githubusercontent.com/1659467/92963676-d9f4ba00-f440-11ea-9357-ab783743190d.png
+  :target: https://user-images.githubusercontent.com/1659467/92963676-d9f4ba00-f440-11ea-9357-ab783743190d.png
 
 Events
 ------
