@@ -6,7 +6,7 @@ VMWare
 Overview
 --------
 
-In this section, we'll cover creating a virtual machine (VM) for our Security Onion 2.1 ISO image in VMware Workstation Pro and VMware Fusion. These steps should be fairly similar for most VMware installations. If you don't already have VMware, you can download VMware Workstation Player from http://www.vmware.com/products/player/playerpro-evaluation.html.
+In this section, we'll cover creating a virtual machine (VM) for our Security Onion 2.2 ISO image in VMware Workstation Pro and VMware Fusion. These steps should be fairly similar for most VMware installations. If you don't already have VMware, you can download VMware Workstation Player from http://www.vmware.com/products/player/playerpro-evaluation.html.
 
 .. note::
 

@@ -17,7 +17,7 @@ Usage
 
 .. warning::
 
-   so-import-pcap works differently on Security Onion 2.1 than it did in previous versions! 
+   so-import-pcap works differently on Security Onion 2.2 than it did in previous versions! 
    
    Please consider this new version to be experimental!
    

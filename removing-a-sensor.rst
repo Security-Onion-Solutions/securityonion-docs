@@ -5,7 +5,7 @@ Removing a Sensor
 
 .. warning::
 
-   This page has not been updated for 2.1 yet! We'll get it updated soon.
+   This page has not been updated for 2.2 yet! We'll get it updated soon.
    
 There may come a time when you need to disable a sensor interface, delete a sensor's configuration, or get rid of an entire sensor and its data altogether. The steps below outline what is required to accomplish each objective.
 

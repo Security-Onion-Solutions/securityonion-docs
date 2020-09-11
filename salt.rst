@@ -9,7 +9,7 @@ From https://docs.saltstack.com/en/latest/:
 
 .. note::
 
-   Salt is a core component of Security Onion 2.1 as it manages all processes on all nodes. In a distributed deployment, the manager node controls all other nodes via salt. These non-manager nodes are referred to as salt minions.
+   Salt is a core component of Security Onion 2.2 as it manages all processes on all nodes. In a distributed deployment, the manager node controls all other nodes via salt. These non-manager nodes are referred to as salt minions.
 
 Firewall Requirements
 ---------------------
@@ -39,7 +39,7 @@ Similarly, you can use salt's ``cmd.run`` to execute a command on all your nodes
 Configuration
 -------------
 
-Many of the options that are configurable in Security Onion 2.1 are done via pillar assignments in either the global or minion pillar files. Pillars are a Saltstack concept, formatted typically in YAML, that can be used to parameterize states via templating. Saltstack states are used to ensure the state of objects on a minion. In many of the use cases below, we are providing the ability to modify a configuration file by editing either the global or minion pillar file.
+Many of the options that are configurable in Security Onion 2.2 are done via pillar assignments in either the global or minion pillar files. Pillars are a Saltstack concept, formatted typically in YAML, that can be used to parameterize states via templating. Saltstack states are used to ensure the state of objects on a minion. In many of the use cases below, we are providing the ability to modify a configuration file by editing either the global or minion pillar file.
 
 Global pillar file: This is the pillar file that can be used to make global pillar assignments to the nodes. It is located at ``/opt/so/saltstack/local/pillar/global.sls``.
 

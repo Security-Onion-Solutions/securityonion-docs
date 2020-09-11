@@ -5,11 +5,11 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2.1 Release Candidate 2 (RC2) is here!
+Security Onion 2.2 Release Candidate 2 (RC3) is here!
 
 .. warning::
 
-  This is our second Release Candidate, so we're getting closer to a final release, but we're not quite there yet. Please be reminded of the usual pre-release warnings and disclaimers:
+  This is our third Release Candidate, so we're getting closer to a final release, but we're not quite there yet. Please be reminded of the usual pre-release warnings and disclaimers:
 
   - If this breaks your system, you get to keep both pieces!
   - This is a work in progress and is in constant flux.

@@ -41,11 +41,11 @@ Provide sufficient technical info
 | In order to be as effective and efficient as possible, please consider the following when posing your question/problem to the group:
 | http://www.chiark.greenend.org.uk/~sgtatham/bugs.html
 
-- Prefix the subject of your post with [2.1] so that we know that you're asking about Security Onion 2.1
+- Prefix the subject of your post with [2.2] so that we know that you're asking about Security Onion 2.2
 
 Please include the following details where you can:
 
-- Exact version. ex. 2.1.0
+- Exact version. ex. 2.2.0
 
 - Install source. Did you install from our Security Onion ISO image or did you perform a network installation?
 
