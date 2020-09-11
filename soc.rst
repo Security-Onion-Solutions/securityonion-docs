@@ -39,5 +39,4 @@ Once logged in, you'll see links on the left side for analyst tools like :ref:`h
    playbook
    fleet
    hive
-   cortex
    attack-navigator
