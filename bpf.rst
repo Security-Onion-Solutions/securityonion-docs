@@ -64,7 +64,7 @@ If you have traffic that has VLAN tags, you can craft a BPF as follows:
 
 ::
 
-    <your filter> and (vlan and <your filter>)
+    <your filter> or (vlan and <your filter>)
 
 Notice that you must include your filter on both sides of the vlan tag.
 
