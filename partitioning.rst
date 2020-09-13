@@ -32,7 +32,7 @@ The vast majority of data will be written to ``/nsm``, so you'll want to dedicat
 /
 -
 
-``/`` (the root partition) currently contains ``/var/lib/docker/`` (more on those below) and thus you'll want at least 100GB.
+``/`` (the root partition) currently contains ``/var/lib/docker/`` (more on that below) and thus you'll want at least 100GB.
 
 Docker
 ------
