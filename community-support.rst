@@ -6,11 +6,7 @@ Community Support
 Check Documentation First
 -------------------------
 
-Before posting for help, check to see if your question has already been answered by one of the following:
-
-:ref:`help`
-
-:ref:`faq`
+Before posting for help, check to see if your question has already been answered in the :ref:`help` or :ref:`faq` sections.
 
 Moderation
 ----------
