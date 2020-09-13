@@ -3,7 +3,7 @@
 Architecture
 ============
 
-If you're going to deploy Security Onion, you should first decide on what type of deployment you want. This could be anything from a temporary Evaluation installation in a small virtual machine on your personal laptop all the way to a large scalable enterprise deployment consisting of a master node, multiple search nodes, and lots of forward nodes. This section will discuss what those different deployment types look like from an architecture perspective.
+If you're going to deploy Security Onion, you should first decide on what type of deployment you want. This could be anything from a temporary Evaluation installation in a small virtual machine on your personal laptop all the way to a large scalable enterprise deployment consisting of a manager node, multiple search nodes, and lots of forward nodes. This section will discuss what those different deployment types look like from an architecture perspective.
 
 Import
 ------
