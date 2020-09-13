@@ -5,7 +5,7 @@ Directory Structure
 
 /opt/so/conf
 ------------
-Configuration files are stored in ``/opt/so/conf/``.
+Applications read their configuration from ``/opt/so/conf/``. However, please keep in mind that most config files are managed with :ref:`salt`, so if you manually modify those config files, your changes may be overwritten at the next Salt update.
 
 /opt/so/log
 -----------
