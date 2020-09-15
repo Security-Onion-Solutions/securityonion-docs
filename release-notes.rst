@@ -40,6 +40,9 @@ Known Issues
 - Docker has been updated to the latest version
 - IDSTools has been re-worked and should be easier to modify
 - The so-* tools have been added to the default path so you can now tab complete
+- so-status can now be run from a manager node to get the status of a remote node. Run salt <target> so.status
+- We now prevent states from running on a node that it shouldn't. For example, trying to run salt-call state.apply elasticsearch on a sensor node will now be prevented
+- Put in measures to recover automatically if the Salt mine gets corrupted
 
 
 2.1.0 Changes
