@@ -22,6 +22,7 @@ Security Onion 2.2 Release Candidate 2 (RC3) is here!
 Known Issues
 ------------
 
+- Installing in VMware Fusion using Fusion's internal DNS server may result in Setup incorrectly claiming that the installation failed. To avoid this, configure the VM to bypass Fusion's internal DNS server and go directly to an upstream DNS server instead. https://github.com/Security-Onion-Solutions/securityonion/issues/1333
 - Once you update your grid to RC3, any new nodes that join the grid must be RC3 so if you try to join an older node it will fail. For best results, use the latest RC3 ISO (or RC3 installer from github) when joining to an RC3 grid.
 - Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
 - When running soup to upgrade from older versions to RC3, there is a Salt error that may occur during the final highstate. This error is related to the patch_os_schedule and can be ignored as it should not occur again in subsequent highstates.
