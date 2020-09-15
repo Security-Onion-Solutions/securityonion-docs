@@ -3,7 +3,7 @@
 Airgapped Networks
 ==================
 
-Secuirty Onion is commited to allowing users to run a full install on networks that do not have Internet access. Starting in RC3, users will see an option to specify that the install is airgapped. The install will then make the appropriate midifications to the install to make this work properly. 
+Secuirty Onion is commited to allowing users to run a full install on networks that do not have Internet access. Starting in RC3, users will see an option to specify that the install is airgapped. The install will then make the appropriate modifications to the install to make this work properly. 
 
 
 Key Differences
