@@ -34,7 +34,12 @@ Known Issues
 2.2.0 Changes
 -------------
 
-- Airgap is now an option during install. 
+- Airgap is now an option during install
+- Playbook now works properly when installed in airgap mode
+- Zeek has been upgraded to 3.0.10 to address a recent security issue
+- Docker has been updated to the latest version
+- IDSTools has been re-worked and should be easier to modify
+- The so-* tools have been added to the default path so you can now tab complete
 
 
 2.1.0 Changes
