@@ -51,8 +51,8 @@ Known Issues
   - Google search for the value
   - Analyze the value on VirusTotal.com
 - Minor bug fixes to the user interface relating to most-recently used queries, tooltips, and more.
-- Automatically add users to Fleet and TheHive, in addition to SOC, when using the `so-user-add` command
-- Introduced `so-user-disable` and `so-user-enable` commands which allows administrators to lock out users that are no longer permitted to use Security Onion
+- Automatically add users to Fleet and TheHive, in addition to SOC, when using the ``so-user-add`` command
+- Introduced ``so-user-disable`` and ``so-user-enable`` commands which allows administrators to lock out users that are no longer permitted to use Security Onion
 - Added icon to Users list in SOC representing their active or locked out status
 - Removed User delete action from SOC interface in favor of disabling users for audit purposes
 - Prune old PCAP job data from sensors once the results are streamed back to the manager node
