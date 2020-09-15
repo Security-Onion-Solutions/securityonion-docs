@@ -59,6 +59,9 @@ Known Issues
 - Prune old PCAP job data from sensors once the results are streamed back to the manager node
 - Hunt filtering to a specific value will search across all fields instead of only the field that was originally clicked
 - Limiting PCAP jobs to extract at most 2GB from a sensor to avoid users accidentally requesting unreasonably large PCAP via the web interface
+- `so-test` is back - run it to easily replay PCAPs and verify that all the components are working as expected
+- New subfield (.security) based on the new community-driven analyzer from @neu5ron - https://github.com/neu5ron/es_stk
+- Playbook now uses the new .security subfield for case-insensitive wildcard searches
 
 
 2.1.0 Changes
