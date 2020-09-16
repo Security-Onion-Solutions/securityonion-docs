@@ -11,7 +11,7 @@ Starting in Security Onion 2.2, the ``so-analyst`` script will install a full GN
 
  sudo ~/SecurityOnion/setup/so-analyst
  
-Otherwise, if you installed standard CentOS/Ubuntu and then cloned our github repo, then it's most likely:
+Otherwise, if you installed standard CentOS/Ubuntu and then cloned our github repo, then you can run ``so-analyst`` from your git clone directory like this:
 
 ::
 
