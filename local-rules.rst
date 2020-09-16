@@ -9,7 +9,7 @@ Adding local rules in Security Onion is a rather straightforward process. Howeve
 
    ::
 
-       alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; sid:9000547; rev:1)     
+       alert tcp any any -> $HOME_NET 7789 (msg: "Vote for Security Onion Toolsmith Tool of 2011!"; reference: url,http://holisticinfosec.blogspot.com/2011/12/choose-2011-toolsmith-tool-of-year.html; content: "toolsmith"; flow:to_server; nocase; classtype:misc-attack; sid:9000547; rev:1)     
 
 -  Run ``rule-update`` (this will merge ``local.rules`` into ``downloaded.rules``, update ``sid-msg.map``, and restart processes as necessary):
 
