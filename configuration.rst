@@ -5,7 +5,7 @@ Configuration
 
 Now that you've installed Security Onion, it's time to configure it!
 
-.. info::
+.. note::
 
   Setup uses keyboard navigation and you can use arrow keys to move around. Certain screens may provide a list and ask you to select one or more items from that list. You can use the space bar to select items and the Enter key to proceed to the next screen.
 
@@ -13,7 +13,7 @@ Now that you've installed Security Onion, it's time to configure it!
 
   If you use DHCP and your IP address changes, this can cause problems. If you want to use DHCP, make sure that you have a DHCP reservation so that your IP address does not change. Otherwise, use a static IP address to be safe.
   
-Security Onion is designed for many different use cases. Here are just a few examples.
+Security Onion is designed for many different use cases. Here are just a few examples!
  
 .. tip::
 
