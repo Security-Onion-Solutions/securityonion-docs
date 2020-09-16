@@ -21,3 +21,7 @@ Follow the installation steps for your desired installation type in the :ref:`in
 .. tip::
 
   You'll notice two icons on the top right in VirtualBox Manager when you select your virtual machine: Details and Snapshots. Click "Snapshots" then click the camera icon and give your snapshot a name and description. Once we have a snapshot, we'll be able to make changes to the system and revert those changes back to the state we are preserving.
+
+Guest Additions
+---------------
+If you want to install VirtualBox Guest Additions, please see https://wiki.centos.org/HowTos/Virtualization/VirtualBox/CentOSguest.
