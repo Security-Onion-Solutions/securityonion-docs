@@ -37,6 +37,7 @@ Known Issues
 
 - Setup now includes an option for airgap installations
 - Playbook now works properly when installed in airgap mode
+- Added so-analyst script to create an analyst workstation with GNOME desktop, Chromium browser, Wireshark, and NetworkMiner
 - Upgraded Zeek to version 3.0.10 to address a recent security issue
 - Upgraded Docker to latest version
 - Re-worked IDSTools to make it easier to modify
