@@ -10,6 +10,7 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    
    airgap
    analyst-vm
+   networkminer
    cloud-ami
    docker
    dns-anomaly-detection
