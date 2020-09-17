@@ -9,9 +9,6 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    :maxdepth: 2
    
    airgap
-   analyst-vm
-   wireshark
-   networkminer
    cloud-ami
    docker
    dns-anomaly-detection
