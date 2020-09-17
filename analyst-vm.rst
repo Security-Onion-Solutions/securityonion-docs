@@ -28,5 +28,5 @@ To connect from the Analyst VM to your manager node, you will need to run :ref:`
 .. toctree::
    :maxdepth: 2
    
-   wireshark
    networkminer
+   wireshark
