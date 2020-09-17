@@ -5,7 +5,7 @@ Analyst VM
 
 Full-time analysts may want to create a dedicated Analyst VM. This allows you to investigate pcaps and other potentially malicious artifacts without fear of impacting your Security Onion deployment or your workstation.
 
-Starting in Security Onion 2.2, the ``so-analyst`` script will install a full GNOME desktop environment including Chromium web browser, Wireshark, NetworkMiner, and other analyst tools. 
+Starting in Security Onion 2.2, the ``so-analyst`` script will install a full GNOME desktop environment including Chromium web browser, Wireshark, :ref:`networkminer`, and other analyst tools. 
 
 .. note::
 
