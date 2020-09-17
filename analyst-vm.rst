@@ -18,3 +18,5 @@ Otherwise, if you installed standard CentOS/Ubuntu and then cloned our github re
  sudo ~/securityonion/setup/so-analyst
 
 To connect from the Analyst VM to your manager node, you will need to run :ref:`so-allow` on the manager node and choose the ``analyst`` option to allow the traffic through the host-based :ref:`firewall`.
+
+Note that networking may need to be manually configured prior to running the so-analyst script.
