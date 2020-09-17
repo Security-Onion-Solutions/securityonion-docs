@@ -13,6 +13,7 @@ Security Onion Documentation
    introduction
    getting-started
    soc
+   analyst-vm
    network
    host
    logs
