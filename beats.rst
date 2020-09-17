@@ -5,6 +5,10 @@ Beats
 
 We can use Elastic Beats to facilitate the shipping of endpoint logs to Security Onion's Elastic Stack. Currently, testing has only been performed with Filebeat (multiple log types) and Winlogbeat (Windows Event logs).
 
+.. note::
+
+   In order to receive logs from Beats, Security Onion must be running Logstash. Evaluation Mode does not run Logstash, so you'll need Standalone or a full Distributed Deployment.
+
 Winlogbeat
 ----------
 
