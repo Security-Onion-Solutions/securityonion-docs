@@ -9,16 +9,27 @@ We can use Elastic Beats to facilitate the shipping of endpoint logs to Security
 
    In order to receive logs from Beats, Security Onion must be running Logstash. Evaluation Mode and Import Mode do not run Logstash, so you'll need Standalone or a full Distributed Deployment.
 
+Encryption
+----------
+
+.. warning::
+
+   Beats communication with Logstash is ``not encrypted`` by default. If you require encryption, please consult the appropriate Elastic documentation to configure the use of TLS.
+   
+so-allow
+--------
+
+Run ``sudo so-allow`` and select ``b`` to allow your Beats agents to send their logs to Logstash port 5044/tcp.
+
 Winlogbeat
 ----------
 
-Run ``sudo so-allow`` and select ``b`` to allow your Winlogbeat agents to send their logs to Security Onion.
+Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and then configure it as follows:
 
-Navigate to the Downloads page in the Security Onion Console and download the linked Winlogbeat agent - this link will take you to the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and configure it to send logs to port ``5044`` on your management node. Please note that transport encryption is NOT enabled by default.
-
-Please make sure that Winlogbeat is NOT configured to load dashboards into Kibana.
-
-If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module. Security Onion will do all the necessary parsing.
+* disable the Elasticsearch output
+* make sure that Winlogbeat is NOT configured to load dashboards into Kibana
+* enable the logstash output and configure it to send logs to port ``5044`` on your management node
+* If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module as Security Onion will do all the necessary parsing
 
 Installation
 ------------
@@ -70,10 +81,3 @@ If you access the Beats dashboard and see logs but the visualizations have error
 -  Click ``Index Patterns``.
 -  Click ``logstash-beats-*``.
 -  Click the circular arrows in the upper right to refresh the field list.
-
-Encryption
-----------
-
-.. note::
-
-   Beats communication with Elasticsearch/Logstash is ``not encrypted`` by default. If you require encryption, please consult the appropriate Elastic documentation to configure the use of TLS.
