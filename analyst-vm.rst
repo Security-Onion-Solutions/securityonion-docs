@@ -11,7 +11,7 @@ Starting in Security Onion 2.2, the ``so-analyst`` script will install a full GN
 
  ``so-analyst`` currently downloads packages from the Internet, so you will need to ensure that networking is configured before running ``so-analyst``.
 
-If you installed using our ISO image:
+If you installed using our Security Onion 2.2 (or higher) ISO image:
 
 ::
 
