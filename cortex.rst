@@ -14,7 +14,7 @@ Usage
 
 .. image:: https://user-images.githubusercontent.com/1659467/87231233-586ea600-c383-11ea-926e-911030c47796.png
 
-Log into the Cortex web interface at ``/cortex`` (at the IP address or hostname of your Security Onion installation).
+Log into the Cortex web interface at ``/cortex`` (at the IP address or hostname of your Security Onion installation) using the same credentials that you use to log into :ref:`hive`.
 
 In Security Onion, Cortex is set up with two default organizations:
 
