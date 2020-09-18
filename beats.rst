@@ -7,7 +7,7 @@ We can use Elastic Beats to facilitate the shipping of endpoint logs to Security
 
 .. note::
 
-   In order to receive logs from Beats, Security Onion must be running Logstash. Evaluation Mode does not run Logstash, so you'll need Standalone or a full Distributed Deployment.
+   In order to receive logs from Beats, Security Onion must be running Logstash. Evaluation Mode and Import Mode do not run Logstash, so you'll need Standalone or a full Distributed Deployment.
 
 Winlogbeat
 ----------
