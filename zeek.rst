@@ -20,7 +20,7 @@ To change the number of AF-PACKET workers for :ref:`zeek`:
 
       sudo so-zeek-stop
 
--  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``bro_lbprocs`` variable to the desired number of cores.
+-  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``zeek_lbprocs`` variable to the desired number of cores.
 
 -  Start Zeek:
 
