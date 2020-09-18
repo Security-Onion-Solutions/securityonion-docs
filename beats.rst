@@ -73,11 +73,6 @@ https://www.elastic.co/guide/en/beats/winlogbeat/master/exported-fields-eventlog
 Data
 ----
 
-Beats data can be viewed via the ``Beats`` dashboard, (or through the selection of the ``*:logstash-beats-*`` index pattern in ``Discover``) in Kibana.
+In :ref:`kibana`, you can find Beats data on the ``Host`` dashboard or by searching for ``_index:"*:so-beats-*`` in Discover.
 
-If you access the Beats dashboard and see logs but the visualizations have errors, you may need to refresh the ``logstash-beats-*`` field list as follows:
-
--  On the sidebar on the left, click ``Management``.
--  Click ``Index Patterns``.
--  Click ``logstash-beats-*``.
--  Click the circular arrows in the upper right to refresh the field list.
+In :ref:`hunt`, you can find Beats data by searching for ``_index:"*:so-beats-*``.
