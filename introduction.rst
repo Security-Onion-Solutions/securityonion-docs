@@ -63,8 +63,8 @@ Kibana
 CyberChef
 ~~~~~~~~~
 
-.. image:: https://user-images.githubusercontent.com/1659467/90805988-67ce0100-e2ea-11ea-9dfc-98aabadc86c3.png
-  :target: https://user-images.githubusercontent.com/1659467/90805988-67ce0100-e2ea-11ea-9dfc-98aabadc86c3.png
+.. image:: https://user-images.githubusercontent.com/1659467/92968146-90a86880-f448-11ea-9b38-a893620b30d1.png
+  :target: https://user-images.githubusercontent.com/1659467/92968146-90a86880-f448-11ea-9b38-a893620b30d1.png
 
 :ref:`cyberchef` allows you decode, decompress, and analyze artifacts.
 
