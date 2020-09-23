@@ -104,6 +104,18 @@ For best compability, use the following Sigma Taxonmy:
  
 The current Security Onion Sigmac field mappings can be found here: https://github.com/Security-Onion-Solutions/securityonion-image/blob/master/so-soctopus/so-soctopus/playbook/securityonion-baseline.yml
 
+Adding Additional Rulesets
+-----------
+
+As previously mentioned, the pre-loaded Plays come from the community Sigma repository (https://github.com/Neo23x0/sigma/tree/master/rules). The default config is to only pull in the Windows rules. The rest of the rules from the community repository can be pulled in by editing ``/opt/so/conf/soctopus/SOCtopus.conf`` and adding one ore more of the following to ``playbook_rulesets = windows``, comma seperated:
+
+``application,apt,cloud,compliance,generic,linux,network,proxy,web``
+
+These are based on the top level directories from the Sigma community repository rule's folder.
+
+Next, restart SOCtopus (``so-soctopus-restart``) and have Playbook pull in the new rules with ``so-playbook-ruleupdate`` - this can take a few minutes to complete if pulling in a large amount of new rules.
+
+
 Logging
 -------
 Playbook logs can be found in ``/opt/so/log/playbook/``.
