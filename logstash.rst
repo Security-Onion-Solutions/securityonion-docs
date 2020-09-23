@@ -49,7 +49,7 @@ If you are parsing local log files, you may need to add these files to the Syslo
 Parsing
 ~~~~~~~
 
-Configuration files for custom parsing can be placed in ``/etc/logstash/custom``. These will automatically get copied over to ``/etc/logstash/conf.d`` during the starting of Logstash.
+Configuration files for custom parsing can be placed in ``/etc/logstash/custom/``. These will automatically get copied over to the appropriate ``/etc/logstash/conf.d*`` directory during the starting of Logstash.
 
 .. note::
 
@@ -60,6 +60,10 @@ After adding your custom configuration file(s), restart Logstash and check the l
 ::
 
    sudo so-logstash-restart && sudo tail -f /var/log/logstash/logstash.log
+   
+.. warning::
+
+    Please note that if you delete or rename config files in ``/etc/logstash/custom/`` then you'll need to also delete the old files in the appopriate ``/etc/logstash/conf.d*`` directories. Otherwise the old config files will remain in ``/etc/logstash/conf.d*`` and still be parsed for the actual Logstash configuration.
 
 Mapping Templates
 ~~~~~~~~~~~~~~~~~
