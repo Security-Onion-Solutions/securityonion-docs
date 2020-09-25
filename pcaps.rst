@@ -36,6 +36,23 @@ Links
 
 -  https://github.com/chrissanders/packets
 
+Downloading
+-----------
+
+You can download pcaps from the link above using a standard web browser or from the command line using a tool like ``wget`` or ``curl``. Here are some examples:
+
+To download the pcap from https://www.malware-traffic-analysis.net/2020/09/16/index.html using wget:
+
+::
+
+  wget https://www.malware-traffic-analysis.net/2020/09/16/2020-09-16-Qakbot-infection-traffic.pcap.zip
+
+To download a pcap from https://www.netresec.com/?page=MACCDC:
+
+::
+
+  wget https://download.netresec.com/pcap/maccdc-2012/maccdc2012_00000.pcap.gz
+
 tcpreplay
 ---------
 
