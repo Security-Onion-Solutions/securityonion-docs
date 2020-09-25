@@ -39,7 +39,7 @@ Links
 Downloading
 -----------
 
-You can download pcaps from the link above using a standard web browser or from the command line using a tool like ``wget`` or ``curl``. Here are some examples:
+You can download pcaps from the link above using a standard web browser or from the command line using a tool like ``wget`` or ``curl``. Here are some examples.
 
 To download the pcap from https://www.malware-traffic-analysis.net/2020/09/16/index.html using wget:
 
