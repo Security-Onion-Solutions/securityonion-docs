@@ -23,6 +23,7 @@ Updating
    - mount -t iso9660 -o loop /home/user/securityonion-2.3.0.iso /tmp/sotemp
    - cp /tmp/sotemp/SecurityOnion/salt/common/tools/sbin/soup /opt/so/saltstack/default/salt/common/tools/sbin/
    - salt-call state.apply common
+   - umount /tmp/sotemp
    - soup
     
 Soup will automatically detect that you are upgrading an airgap install and will ask for the location of the upgrade disk. This can be done by burning the disk and putting it in the DVD drive, burning a USB stick like any standard ISO, or simply just copying the ISO file to the airgapped manager. 
