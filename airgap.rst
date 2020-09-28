@@ -16,6 +16,7 @@ Updating
 .. note::
 
    If upgrading from RC3 there is an extra step that needs to take place to copy over the proper version of soup in order to complete the update. To accomplish this you need to run the following commands:
+   
    - mkdir -p /tmp/sotemp  
    If using a DVD with the image burned to it:  
    - sudo mount /dev/cdrom /tmp/sotemp  
