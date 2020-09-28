@@ -13,4 +13,16 @@ By selecting ``Airgap`` as an install option, a couple of things happen that are
 Updating
 --------
 
-Starting with GA, airgap installs will use :ref:`soup` to update the environment. :ref:`soup` will be able to automatically detect that it is an airgap install. It will require the user to mount the newest install ISO on the Manager so that :ref:`soup` has access to the files located there. It will copy over all of the latest docker images, OS RPMs, and Security Onion code, and then perform the upgrade. This will reduce the complexity from previous versions and help promote frequent updates for airgap installs.
+.. note::
+
+   If upgrading from RC3 there is an extra step that needs to take place to copy over the proper version of soup in order to complete the update. To accomplish this you need to run the following commands:
+   - mkdir -p /tmp/sotemp
+   If using a DVD with the image burned to it:
+   - mount /dev/cdrom /tmp/sotemp
+   If using an ISO file:
+   - mount -t iso9660 -o loop /home/user/securityonion-2.3.0.iso /tmp/sotemp
+   - cp /tmp/sotemp/SecurityOnion/salt/common/tools/sbin/soup /opt/so/saltstack/default/salt/common/tools/sbin/
+   - salt-call state.apply common
+   - soup
+    
+Soup will automatically detect that you are upgrading an airgap install and will ask for the location of the upgrade disk. This can be done by burning the disk and putting it in the DVD drive, burning a USB stick like any standard ISO, or simply just copying the ISO file to the airgapped manager. 
