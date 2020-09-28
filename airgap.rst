@@ -17,14 +17,12 @@ Updating
 
    If upgrading from RC3 there is an extra step that needs to take place to copy over the proper version of soup in order to complete the update. To accomplish this you need to run the following commands:
    
-   - mkdir -p /tmp/sotemp  
-   If using a DVD with the image burned to it:  
-   - sudo mount /dev/cdrom /tmp/sotemp  
-   If using an ISO file:  
-   - sudo mount -t iso9660 -o loop /home/user/securityonion-2.3.0.iso /tmp/sotemp  
-   - sudo cp /tmp/sotemp/SecurityOnion/salt/common/tools/sbin/soup /opt/so/saltstack/default/salt/common/tools/sbin/   
-   - sudo salt-call state.apply common  
-   - sudo umount /tmp/sotemp  
-   - sudo soup  
+   - ``mkdir -p /tmp/sotemp`` 
+   - If using a DVD with the image burned to it: ``sudo mount /dev/cdrom /tmp/sotemp``
+   - If using an ISO file: ``sudo mount -t iso9660 -o loop /home/user/securityonion-2.3.0.iso /tmp/sotemp``
+   - ``sudo cp /tmp/sotemp/SecurityOnion/salt/common/tools/sbin/soup /opt/so/saltstack/default/salt/common/tools/sbin/``
+   - ``sudo salt-call state.apply common``
+   - ``sudo umount /tmp/sotemp``
+   - ``sudo soup``
     
 Soup will automatically detect that you are upgrading an airgap install and will ask for the location of the upgrade disk. This can be done by burning the disk and putting it in the DVD drive, burning a USB stick like any standard ISO, or simply just copying the ISO file to the airgapped manager. 
