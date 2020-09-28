@@ -7,7 +7,7 @@ From https://www.elastic.co/products/logstash :
 
     Logstash is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favorite "stash."
 
-In Security Onion 2.2, Logstash transports unparsed logs to :ref:`elasticsearch`. :ref:`elasticsearch` then parses and stores those logs.
+In Security Onion 2, Logstash transports unparsed logs to :ref:`elasticsearch`. :ref:`elasticsearch` then parses and stores those logs.
 
 Configuration
 -------------
@@ -38,7 +38,7 @@ You may need to adjust the value depending on your system's performance. The cha
 Adding New Logs or Modifying Existing Parsing
 ---------------------------------------------
 
-Since Logstash no longer parses logs in Security Onion 2.2, modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
+Since Logstash no longer parses logs in Security Onion 2, modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
 
 Queue
 -----

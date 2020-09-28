@@ -3,20 +3,20 @@
 Appendix
 ========
 
-This appendix covers the process of upgrading from the old Security Onion 16.04 to the new Security Onion 2.2.
+This appendix covers the process of upgrading from the old Security Onion 16.04 to the new Security Onion 2.
 
 .. warning::
 
-   Security Onion 2.2 is a MAJOR architectural change, so please note the following:
+   Security Onion 2 is a MAJOR architectural change, so please note the following:
 
-   - Security Onion 2.2 has higher hardware requirements, so you should check that your hardware meets those requirements. 
-   - Once you've upgraded from Ubuntu 16.04 to Ubuntu 18.04, you will essentially do a new installation of Security Onion 2.2 on top of Ubuntu 18.04.  Very little data will be retained during the upgrade!
-   - There will be no way to migrate application accounts from 16.04 to 2.2.
-   - There will be no way to migrate sguild data from 16.04 to 2.2.
+   - Security Onion 2 has higher hardware requirements, so you should check that your hardware meets those requirements. 
+   - Once you've upgraded from Ubuntu 16.04 to Ubuntu 18.04, you will essentially do a new installation of Security Onion 2 on top of Ubuntu 18.04.  Very little data will be retained during the upgrade!
+   - There will be no way to migrate application accounts from Security Onion 16.04 to Security Onion 2.
+   - There will be no way to migrate sguild data from Security Onion 16.04 to Security Onion 2.
    - You may need to purge pcap to make free space for the upgrade process. Any pcap remaining after the upgrade can only be accessed via tcpdump.
-   - We do not provide any guarantees that the upgrade process will work! If the upgrade fails, be prepared to perform a fresh installation of Security Onion 2.2.
+   - We do not provide any guarantees that the upgrade process will work! If the upgrade fails, be prepared to perform a fresh installation of Security Onion 2.
  
-For the reasons listed above, we recommend that most users procure new hardware and perform a fresh installation of Security Onion 2.2.
+For the reasons listed above, we recommend that most users procure new hardware and perform a fresh installation of Security Onion 2.
 
 .. tip::
 

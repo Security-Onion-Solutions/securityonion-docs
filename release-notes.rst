@@ -5,7 +5,7 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2.2 Release Candidate 3 (RC3) is here!
+Security Onion 2.3 is here!
 
 .. warning::
 
