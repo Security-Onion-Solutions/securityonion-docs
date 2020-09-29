@@ -13,7 +13,7 @@ Usage
 .. image:: https://user-images.githubusercontent.com/1659467/87230310-2d815380-c37d-11ea-9af8-a89a43afe0ef.png
     :target: https://user-images.githubusercontent.com/1659467/87230310-2d815380-c37d-11ea-9af8-a89a43afe0ef.png
 
-:ref:`soc` provides a link to TheHive. TheHive should display the highest level of alerts. You can then triage those alerts and turn them into cases if necessary. Other analysts can collaborate with you as you work to close those cases. As you are working through a case and need more context, you can pivot to Kibana or Hunt as necessary.
+As you are working in :ref:`alerts`, :ref:`hunt`, or :ref:`kibana`, you may find alerts or logs that are interesting enough to send to TheHive and create a case. Other analysts can collaborate with you as you work to close that case.
 
 In Kibana you will see a scripted field named ``TheHive`` with a value of ``Add2Hive``. This will use the API to add this new event to :ref:`hive`.
 
@@ -22,14 +22,17 @@ In Kibana you will see a scripted field named ``TheHive`` with a value of ``Add2
 
 Configuration
 -------------
+
 TheHive reads its configuration from ``/opt/so/conf/thehive/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
 
 Logging
 -------
+
 TheHive logging can be found at ``/opt/so/log/thehive/``.
 
 Severity
 --------
+
 Currently, alerts sent to TheHive are hardcoded to severity 2. We are working on an :ref:`elastalert` tweak to set the correct severity.
 
 More Information
