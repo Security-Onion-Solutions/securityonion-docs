@@ -21,10 +21,10 @@ Query Bar
 ---------
 The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. If you want to send your current Alerts query to :ref:`hunt`, you can click the crosshair icon to the right of the query bar.
 
-Under the query bar, you'll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click its corresponding bubble to remove it and run a new search.
-
 .. image:: https://user-images.githubusercontent.com/1659467/94588282-b491e980-0251-11eb-92e5-b024e3b211eb.png
   :target: https://user-images.githubusercontent.com/1659467/94588282-b491e980-0251-11eb-92e5-b024e3b211eb.png
+
+Under the query bar, you'll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click its corresponding bubble to remove it and run a new search.
 
 You can click the dropdown box to select other queries which will group by other fields.
 
