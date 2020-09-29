@@ -31,7 +31,7 @@ Starting in version 2.3, :ref:`soup` will automatically detect that you are upgr
 
       sudo mount /dev/cdrom /tmp/sotemp
    
-Otherwise, if using an ISO file:
+   Otherwise, if using an ISO file:
 
    ::
 
