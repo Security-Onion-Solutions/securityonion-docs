@@ -11,7 +11,7 @@ Alerts
 Toggles
 -------
 
-The top of the page has toggles for ``Acknowledged`` and ``Escalated``. 
+The top of the page has toggles for ``Acknowledged`` and ``Escalated``:
 
 .. image:: https://user-images.githubusercontent.com/1659467/94587683-ed7d8e80-0250-11eb-951d-282ba76932f7.png
   :target: https://user-images.githubusercontent.com/1659467/94587683-ed7d8e80-0250-11eb-951d-282ba76932f7.png
