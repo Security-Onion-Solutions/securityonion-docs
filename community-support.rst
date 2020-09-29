@@ -37,8 +37,6 @@ Provide sufficient technical info
 | In order to be as effective and efficient as possible, please consider the following when posing your question/problem to the group:
 | http://www.chiark.greenend.org.uk/~sgtatham/bugs.html
 
-- Prefix the subject of your post with [2.3] so that we know that you're asking about Security Onion 2.3
-
 Please include the following details where you can:
 
 - Exact version. ex. 2.3.0
