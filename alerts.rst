@@ -11,11 +11,14 @@ Alerts
 Toggles
 -------
 
-The top of the page has toggles for ``Acknowledged`` and ``Escalated``. Enabling the ``Acknowledged`` toggle will only show alerts that have previously been acknowledged by an analyst. Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst.
+The top of the page has toggles for ``Acknowledged`` and ``Escalated``. 
 
 .. image:: https://user-images.githubusercontent.com/1659467/94587683-ed7d8e80-0250-11eb-951d-282ba76932f7.png
   :target: https://user-images.githubusercontent.com/1659467/94587683-ed7d8e80-0250-11eb-951d-282ba76932f7.png
 
+- Enabling the ``Acknowledged`` toggle will only show alerts that have previously been acknowledged by an analyst. 
+
+- Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst.
 
 Query Bar
 ---------
