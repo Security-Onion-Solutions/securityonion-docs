@@ -37,7 +37,7 @@ You can click the dropdown box to select other queries which will group by other
 Time Picker
 -----------
 
-By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen. You can use the default relative time or click the clock icon to change to absolute time.
+By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen.
 
 .. image:: https://user-images.githubusercontent.com/1659467/94587826-20c01d80-0251-11eb-8fa3-2e73a0763981.png
   :target: https://user-images.githubusercontent.com/1659467/94587826-20c01d80-0251-11eb-8fa3-2e73a0763981.png
