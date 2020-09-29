@@ -16,7 +16,7 @@ If you have a distributed deployment and you update the rules on your manager no
 
 ::
 
-  sudo salt '*' state.highstate
+  sudo salt \* state.highstate
 
 Rulesets
 --------
