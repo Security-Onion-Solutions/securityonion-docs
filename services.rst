@@ -3,38 +3,6 @@
 Services
 ========
 
-All Services
-------------
-
-You can control all services with the ``so-<verb>`` scripts as follows.
-
-Check status of all services:
-
-::
-
-    sudo so-status
-
-Start all services:
-
-::
-
-    sudo so-start
-
-Stop all services:
-
-::
-
-    sudo so-stop
-
-Restart all services:
-
-::
-
-    sudo so-restart
-    
-Individual Services
--------------------
-
 You can control individual services with the ``so-<noun>-<verb>`` scripts. You can see a list of all of these scripts with the following command:
 
 ::
