@@ -3,7 +3,7 @@
 Alerts
 ======
 
-:ref:`soc` gives you access to our new Alerts interface. This interface allows you to quickly get an overview of the alerts that Security Onion is generating and quickly drill down into details, pivot to :ref:`pcap` or :ref:`hunt`, and escalate alerts to :ref:`hive`.
+:ref:`soc` gives you access to our new Alerts interface. This interface allows you to get an overview of the alerts that Security Onion is generating and quickly drill down into details, pivot to :ref:`pcap` or :ref:`hunt`, and escalate alerts to :ref:`hive`.
 
 Toggles
 -------
