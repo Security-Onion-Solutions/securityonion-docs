@@ -60,4 +60,4 @@ Forum
 
 Once you've read and understand all of the above, you can post your question to the forum:
 
-https://www.reddit.com/r/securityonion/
+https://securityonion.net/discuss
