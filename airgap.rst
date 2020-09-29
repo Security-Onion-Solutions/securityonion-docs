@@ -15,6 +15,9 @@ Updating
 
 Starting in version 2.3, :ref:`soup` will automatically detect that you are upgrading an airgap install and will ask for the location of the upgrade disk. This can be done by burning the disk and putting it in the DVD drive, burning a USB stick like any standard ISO, or simply copying the ISO file to the airgapped manager. 
 
+Updating from RC3
+-----------------
+
 .. note::
 
    If upgrading from RC3 there is an extra step that needs to take place to copy over the proper version of soup in order to complete the update. To accomplish this you need to run the following commands.
