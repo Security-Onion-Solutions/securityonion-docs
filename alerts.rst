@@ -39,7 +39,7 @@ Clicking a value in the table brings up a menu of actions for that value. The pl
 You can adjust the ``Rows per page`` setting in the bottom right and use the left and right arrow icons to page through the table.
 
 Grouped View
-------------
+~~~~~~~~~~~~
 
 By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then clicking the down arrow icon allows you to drilldown into that value which switches to the detailed view.
 
@@ -47,7 +47,7 @@ By default, alerts are grouped by whatever criteria is selected in the query bar
   :target: 
 
 Detailed View
--------------
+~~~~~~~~~~~~~
 
 If you click a value in the grouped view and then click the down arrow icon on the quick bar, it will drill down to the detailed view. This is a data table that contains all search results and allows you to then drill into individual search results as necessary. Clicking the table headers allows you to sort ascending or descending. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. To the right of that arrow is the ``Timestamp`` field. Next, a few standard fields are shown: ``source.ip``, ``source.port``, ``destination.ip``, ``destination.port``, ``log.id.uid`` (Zeek unique identifier), ``network.community_id`` (Community ID), and ``event.dataset``. Depending on what kind of data you're looking at, there may be some additional data-specific fields as well. 
 
