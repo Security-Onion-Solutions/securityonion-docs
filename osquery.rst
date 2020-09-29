@@ -15,7 +15,7 @@ Security Onion includes Kolide Fleet to manage your osquery deployment. For more
 Agents
 ------
 
-To deploy osquery agents, go to the SOC Downloads page and download the osquery agent. When installed, that agent will automatically connect to the manager.
+To deploy an osquery agent, go to the :ref:`soc` Downloads page and download the osquery agent. Use :ref:`so-allow` to allow port ``8090`` from the osquery agent to the manager. Then install the osquery agent and it will then check into the manager and start showing up in :ref:`fleet`.
 
 Hunt or Kibana
 --------------
