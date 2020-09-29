@@ -25,7 +25,7 @@ You can use salt's ``test.ping`` to verify that all your nodes are up:
 
 ::
 
-    sudo salt '*' test.ping
+    sudo salt \* test.ping
 
 Remote Execution
 ----------------
@@ -34,7 +34,7 @@ Similarly, you can use salt's ``cmd.run`` to execute a command on all your nodes
 
 ::
 
-    sudo salt '*' cmd.run 'df'
+    sudo salt \* cmd.run 'df'
 
 Configuration
 -------------
