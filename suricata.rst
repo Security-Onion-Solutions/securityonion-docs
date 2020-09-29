@@ -43,7 +43,7 @@ Configuration
 
 You can configure Suricata's ``suricata.yaml`` using :ref:`salt`. The defaults for this have been defined in https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/suricata/defaults.yaml. Under ``suricata:config``, the pillar structure follows the same YAML structure of the ``suricata.yaml`` file. For some of the settings to modify here, we have simplified the pillar configuration by placing the option in the sensor pillar instead of the Suricata pillar. These options are: ``HOMENET``, ``default-packet-size``, and the CPU affinity settings for pinning the processes to CPU cores or how many processes to run.
 
-If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`alerts` sections.
+If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`managing-alerts` sections.
 
 Thresholding
 ------------

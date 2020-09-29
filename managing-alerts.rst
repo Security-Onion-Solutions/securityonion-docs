@@ -1,4 +1,4 @@
-.. _alerts:
+.. _managing-alerts:
 
 Managing Alerts
 ===============
