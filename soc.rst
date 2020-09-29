@@ -10,7 +10,7 @@ Depending on the options you chose in the installer, connect to the IP address o
 .. image:: https://user-images.githubusercontent.com/1659467/92961918-17a41380-f43e-11ea-8e41-668c16b80cbf.png
   :target: https://user-images.githubusercontent.com/1659467/92961918-17a41380-f43e-11ea-8e41-668c16b80cbf.png
 
-Once logged in, you'll see links on the left side for analyst tools like :ref:`hunt`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, :ref:`hive`, and :ref:`attack-navigator`. While :ref:`hunt` and :ref:`pcap` are native to SOC itself, the remaining tools are external and will spawn separate browser tabs.
+Once logged in, you'll see links on the left side for analyst tools like :ref:`alerts`, :ref:`hunt`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, :ref:`hive`, and :ref:`attack-navigator`. While :ref:`hunt` and :ref:`pcap` are native to SOC itself, the remaining tools are external and will spawn separate browser tabs.
 
 .. image:: images/analyst.png
   :target: _images/analyst.png
@@ -20,9 +20,9 @@ Once logged in, you'll see links on the left side for analyst tools like :ref:`h
    SOC gives you access to a variety of tools and they all complement each other very well. For example, here's one potential workflow:
 
      - Check :ref:`grafana` to make sure your system is healthy.
-     - Open :ref:`hive` and review alerts.
-     - Once you've found an alert that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses, so pivot to :ref:`hunt` or :ref:`kibana` for more information. If any of those additional logs look interesting, you might then want to pivot to :ref:`pcap` to look at the full packet capture for that stream.
-     - Return to :ref:`hive` and document any indicators of compromise (IOCs) found in the previous step.
+     - Open :ref:`alerts` and review alerts.
+     - Once you've found an alert that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses, so pivot to :ref:`hunt` for more information. If any of those additional logs look interesting, you might then want to pivot to :ref:`pcap` to look at the full packet capture for that stream.
+     - Send alert to :ref:`hive` and document any indicators of compromise (IOCs) found in the previous step.
      - Go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints.
      - Use :ref:`cyberchef` to further analyze and decode additional host artifacts.
      - Develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward and update your coverage in :ref:`attack-navigator`.
