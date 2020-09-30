@@ -51,8 +51,8 @@ Logstash on search nodes pulls from Redis.  For best performance, you may want t
 
     For more information about logstash's input plugin for Redis, please see https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html.
 
-Logging
--------
+Diagnostic Logging
+------------------
 Redis logs can be found at ``/opt/so/log/redis/``.
 
 More Information
