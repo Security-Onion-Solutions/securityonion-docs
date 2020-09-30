@@ -25,7 +25,7 @@ The Wazuh components include:
 
 The Wazuh API runs at TCP port ``55000`` locally, and currently uses the default credentials of ``user:foo`` and ``password:bar`` for authentication. Keep in mind, the API port is not exposed externally by default. Therefore, firewall rules need to be in place to reach the API from another location other than the Security Onion node on which the targeted Wazuh manager is running.
 
-Since the manager runs inside a Docker container, many of the Wazuh binaries that you might want to run will need to be run inside the Docker container. For example, to run `agent_upgrade`:
+Since the manager runs inside a Docker container, many of the Wazuh binaries that you might want to run will need to be run inside the Docker container. For example, to run ``agent_upgrade``:
 
 ::
 
