@@ -42,7 +42,7 @@ Security Onion Console (SOC)
 .. image:: https://user-images.githubusercontent.com/1659467/94588147-8ca28600-0251-11eb-810c-ed4848ab16dc.png
   :target: https://user-images.githubusercontent.com/1659467/94588147-8ca28600-0251-11eb-810c-ed4848ab16dc.png
 
-:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`Hunt` interface for threat hunting which allows you to query all of your NIDS/HIDS alerts, :ref:`zeek` logs, and system logs. SOC also includes an interface for full packet capture (:ref:`pcap`) retrieval.
+:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`alerts` interface which allows you to see all of your NIDS/HIDS alerts and also a new :ref:`Hunt` interface for threat hunting which allows you to query not only your NIDS/HIDS alerts but also :ref:`zeek` logs and system logs. SOC also includes an interface for full packet capture (:ref:`pcap`) retrieval.
 
 TheHive
 ~~~~~~~
