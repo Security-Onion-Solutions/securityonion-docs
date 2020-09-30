@@ -54,8 +54,8 @@ To view the acceptable syntax, view the file located at https://github.com/Secur
 
 This pillar can be added to :ref:`salt` in either the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) or minion pillar file (``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``).
 
-Logging
--------
+Diagnostic Logging
+------------------
 
 If you need to troubleshoot Suricata, check ``/opt/so/log/suricata/suricata.log``.
 
