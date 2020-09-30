@@ -31,8 +31,8 @@ Under the query bar, you'll notice colored bubbles that represent the individual
 
 You can click the dropdown box to select other queries which will group by other fields.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94587759-0c7c2080-0251-11eb-9ae6-b4926a571adc.png
-  :target: https://user-images.githubusercontent.com/1659467/94587759-0c7c2080-0251-11eb-9ae6-b4926a571adc.png
+.. image:: https://user-images.githubusercontent.com/1659467/94735429-bf737980-0338-11eb-8ccf-d3e5759afddd.png
+  :target: https://user-images.githubusercontent.com/1659467/94735429-bf737980-0338-11eb-8ccf-d3e5759afddd.png
   
 Time Picker
 -----------
@@ -60,18 +60,18 @@ Grouped View
 
 By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then clicking the down arrow icon allows you to drilldown into that value which switches to the detailed view.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94587954-49e0ae00-0251-11eb-8f3d-1dbbd8da87c8.png
-  :target: https://user-images.githubusercontent.com/1659467/94587954-49e0ae00-0251-11eb-8f3d-1dbbd8da87c8.png
+.. image:: https://user-images.githubusercontent.com/1659467/94735876-648e5200-0339-11eb-856f-ed6fbf4d422c.png
+  :target: https://user-images.githubusercontent.com/1659467/94735876-648e5200-0339-11eb-856f-ed6fbf4d422c.png
 
 Detailed View
 ~~~~~~~~~~~~~
 
 If you click a value in the grouped view and then click the down arrow icon on the quick bar, it will drill down to the detailed view. This shows all search results and allows you to then drill into individual search results as necessary. Clicking the table headers allows you to sort ascending or descending. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. To the right of that arrow is the ``Timestamp`` field. Next, a few standard fields are shown: ``source.ip``, ``source.port``, ``destination.ip``, ``destination.port``, ``log.id.uid`` (Zeek unique identifier), ``network.community_id`` (Community ID), and ``event.dataset``. Depending on what kind of data you're looking at, there may be some additional data-specific fields as well. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/94588013-5ebd4180-0251-11eb-8256-1e1194e35079.png
-  :target: https://user-images.githubusercontent.com/1659467/94588013-5ebd4180-0251-11eb-8256-1e1194e35079.png
+.. image:: https://user-images.githubusercontent.com/1659467/94735614-06616f00-0339-11eb-893b-e5b9fbb067b3.png
+  :target: https://user-images.githubusercontent.com/1659467/94735614-06616f00-0339-11eb-893b-e5b9fbb067b3.png
 
 When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the action menu to refine your search or pivot to other pages. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/94588079-74cb0200-0251-11eb-9dc9-6926b2f4d1f5.png
-  :target: https://user-images.githubusercontent.com/1659467/94588079-74cb0200-0251-11eb-9dc9-6926b2f4d1f5.png
+.. image:: https://user-images.githubusercontent.com/1659467/94735733-314bc300-0339-11eb-8cb5-d867d54c3a13.png
+  :target: https://user-images.githubusercontent.com/1659467/94735733-314bc300-0339-11eb-8cb5-d867d54c3a13.png
