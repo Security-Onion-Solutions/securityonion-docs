@@ -21,9 +21,9 @@ Configuration
 -------------
 Stenographer reads its configuration from ``/opt/so/conf/steno/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
 
-Logging
--------
-Stenographer logging can be found at ``/opt/so/log/stenographer/``.
+Diagnostic Logging
+------------------
+Diagnostic logging for Stenographer can be found at ``/opt/so/log/stenographer/``.
 
 More Information
 ----------------
