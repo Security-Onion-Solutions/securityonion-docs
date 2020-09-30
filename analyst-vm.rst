@@ -17,7 +17,7 @@ If you installed using our Security Onion 2.2 (or higher) ISO image:
 
  sudo ~/SecurityOnion/setup/so-analyst
  
-Otherwise, if you installed standard CentOS/Ubuntu and then cloned our github repo, then you can run ``so-analyst`` from your git clone directory like this:
+Otherwise, if you installed standard CentOS 7 and then cloned our github repo, then you can run ``so-analyst`` from your git clone directory like this:
 
 ::
 
