@@ -22,8 +22,8 @@ Configuration
 
 Fleet configuration can be found in ``/opt/so/conf/fleet/``.
 
-Logging
--------
+Diagnostic Logging
+------------------
 
 Fleet logs can be found in ``/opt/so/log/fleet/``.
 

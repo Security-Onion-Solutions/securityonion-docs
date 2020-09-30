@@ -199,8 +199,8 @@ Additional options
 
 If you need to make additional directories accessible to Elasticsearch, or would like to specify additional options when starting Elasticsearch, you can do so by adding these items to ``ELASTICSEARCH_OPTIONS`` in ``/etc/nsm/securityonion.conf``
 
-Logs
-----
+Diagnostic Logging
+------------------
 
 -  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
 -  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.

@@ -116,6 +116,6 @@ These are based on the top level directories from the Sigma community repository
 Next, restart SOCtopus (``so-soctopus-restart``) and have Playbook pull in the new rules with ``so-playbook-ruleupdate`` - this can take a few minutes to complete if pulling in a large amount of new rules.
 
 
-Logging
--------
+Diagnostic Logging
+------------------
 Playbook logs can be found in ``/opt/so/log/playbook/``.

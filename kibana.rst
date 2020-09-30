@@ -17,8 +17,8 @@ Configuration
 
 Kibana's configuration can be found in ``/opt/so/conf/kibana/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/kibana/``, they may be overwritten at the next salt update.
 
-Logging
--------
+Diagnostic Logging
+------------------
 
 Kibana logs to ``/opt/so/log/kibana/kibana.log``.
 

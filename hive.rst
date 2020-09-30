@@ -25,8 +25,8 @@ Configuration
 
 TheHive reads its configuration from ``/opt/so/conf/thehive/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
 
-Logging
--------
+Diagnostic Logging
+------------------
 
 TheHive logging can be found at ``/opt/so/log/thehive/``.
 
