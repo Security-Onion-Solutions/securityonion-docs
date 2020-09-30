@@ -60,14 +60,14 @@ Adding Agents
 -------------
 
 | The Wazuh agent is cross platform and you can download agents for Windows/Unix/Linux/FreeBSD from the Wazuh website:
-| https://documentation.wazuh.com/3.10/installation-guide/packages-list/index.html
+| https://documentation.wazuh.com/3.13/installation-guide/packages-list/index.html
 
 .. note::
 
-    It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.10.2, then you will want to deploy Wazuh agent version 3.10.2.
+    It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.13.1, then you will want to deploy Wazuh agent version 3.13.1.
 
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
-| https://documentation.wazuh.com/3.10/user-manual/registering/cli/using-command-line-linux.html
+| https://documentation.wazuh.com/3.13/user-manual/registering/cli/using-command-line-linux.html
 
 You may need to run :ref:`so-allow` to allow traffic from the IP address of your Wazuh agent(s).
 
@@ -79,7 +79,7 @@ Security Onion is configured to support a maximum number of ``14000`` Wazuh agen
 Automated Deployment
 --------------------
 
-If you would like to automate the deployment of Wazuh agents, the Wazuh server includes ``ossec-authd``. You can read more about ``ossec-authd`` at https://documentation.wazuh.com/3.10/user-manual/reference/daemons/ossec-authd.html.
+If you would like to automate the deployment of Wazuh agents, the Wazuh server includes ``ossec-authd``. You can read more about ``ossec-authd`` at https://documentation.wazuh.com/3.13/user-manual/reference/daemons/ossec-authd.html.
 
 When using ``ossec-authd``, be sure to add a firewall exception for agents to access port ``1515/tcp`` on the Wazuh manager node by running :ref:`so-allow` and choosing the ``r`` option.
 
@@ -88,4 +88,4 @@ More Information
 
 .. seealso::
 
-    For more information about Wazuh, please see https://documentation.wazuh.com/3.10/.
+    For more information about Wazuh, please see https://documentation.wazuh.com/3.13/.
