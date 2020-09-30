@@ -64,7 +64,7 @@ Custom scripts can be added to ``/opt/so/conf/zeek/``.
 Logs
 ----
 
-Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`filebeat` or :ref:`logstash`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`hunt` and :ref:`kibana`.
+Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`filebeat`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`hunt` and :ref:`kibana`.
 
 We configure Zeek to output logs in JSON format. If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
 
