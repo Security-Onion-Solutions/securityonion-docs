@@ -39,10 +39,20 @@ With full packet capture, IDS alerts, Zeek data, and endpoint telemetry, there i
 Security Onion Console (SOC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`alerts` interface which allows you to see all of your NIDS/HIDS alerts.
+
 .. image:: https://user-images.githubusercontent.com/1659467/94588147-8ca28600-0251-11eb-810c-ed4848ab16dc.png
   :target: https://user-images.githubusercontent.com/1659467/94588147-8ca28600-0251-11eb-810c-ed4848ab16dc.png
 
-:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`alerts` interface which allows you to see all of your NIDS/HIDS alerts and also a new :ref:`Hunt` interface for threat hunting which allows you to query not only your NIDS/HIDS alerts but also :ref:`zeek` logs and system logs. SOC also includes an interface for full packet capture (:ref:`pcap`) retrieval.
+:ref:`soc` also includes a new :ref:`Hunt` interface for threat hunting which allows you to query not only your NIDS/HIDS alerts but also :ref:`zeek` logs and system logs. 
+
+.. image:: https://user-images.githubusercontent.com/1659467/94722974-0dcb4d00-0326-11eb-804b-c999aed5a142.png
+  :target: https://user-images.githubusercontent.com/1659467/94722974-0dcb4d00-0326-11eb-804b-c999aed5a142.png
+
+:ref:`soc` also includes an interface for full packet capture (:ref:`pcap`) retrieval.
+
+.. image:: https://user-images.githubusercontent.com/1659467/92967522-6a35fd80-f447-11ea-8fbd-27c0bd952704.png
+  :target: https://user-images.githubusercontent.com/1659467/92967522-6a35fd80-f447-11ea-8fbd-27c0bd952704.png
 
 TheHive
 ~~~~~~~
