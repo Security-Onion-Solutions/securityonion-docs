@@ -5,33 +5,39 @@ Hunt
 
 :ref:`soc` gives you access to our new Hunt interface. This interface allows you to hunt through all of the data in Elasticsearch and is highly tuned for stacking, pivoting, data expansion, and data reduction.
 
-The first two elements shown are the query bar and time picker. Once you perform a query, Hunt will display the number of events found in the upper right and then render three main sections of output.
+.. image:: https://user-images.githubusercontent.com/1659467/94722974-0dcb4d00-0326-11eb-804b-c999aed5a142.png
+  :target: https://user-images.githubusercontent.com/1659467/94722974-0dcb4d00-0326-11eb-804b-c999aed5a142.png
 
-.. image:: https://user-images.githubusercontent.com/1659467/92962246-afa1fd00-f43e-11ea-8e83-b4c62a622350.png
-  :target: https://user-images.githubusercontent.com/1659467/92962246-afa1fd00-f43e-11ea-8e83-b4c62a622350.png
+Auto Hunt
+---------
+
+The top of the page has a toggle for Auto Hunt which defaults to enabled. When enabled, Hunt will automatically submit your query any time you change filters, groupings, or date ranges.
+
+.. image:: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
+  :target: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
 
 Query Bar
 ---------
 The easiest way to get started is to click the query drop down box and select one of the pre-defined queries. These pre-defined queries cover most of the major data types that you would expect to see in a Security Onion deployment: NIDS alerts from Suricata, HIDS alerts from Wazuh, protocol metadata logs from Zeek or Suricata, endpoint logs, and firewall logs. Each of the entries in the drop down list will show the actual query followed by a description of what that query does.
 
-.. image:: https://user-images.githubusercontent.com/1659467/92962511-07406880-f43f-11ea-9b59-eea274903ad5.png
-  :target: https://user-images.githubusercontent.com/1659467/92962511-07406880-f43f-11ea-9b59-eea274903ad5.png
+.. image:: https://user-images.githubusercontent.com/1659467/94723168-5256e880-0326-11eb-8952-37804962d526.png
+  :target: https://user-images.githubusercontent.com/1659467/94723168-5256e880-0326-11eb-8952-37804962d526.png
 
 Time Picker
 -----------
 
 By default, Hunt searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen. You can use the default relative time or click the clock icon to change to absolute time.
 
-.. image:: https://user-images.githubusercontent.com/1659467/92962580-26d79100-f43f-11ea-8b87-838b8e3b5be4.png
-  :target: https://user-images.githubusercontent.com/1659467/92962580-26d79100-f43f-11ea-8b87-838b8e3b5be4.png
+.. image:: https://user-images.githubusercontent.com/1659467/94723208-64388b80-0326-11eb-959b-5ecfcd51fb9c.png
+  :target: https://user-images.githubusercontent.com/1659467/94723208-64388b80-0326-11eb-959b-5ecfcd51fb9c.png
 
 Visualization
 -------------
 
 The first section of output contains a Most Occurences visualization, a timeline visualization, and a Fewest Occurences visualization. Bar charts are clickable, so you can click a value to update your search criteria. Aggregation defaults to 10 values, so Most Occurences is the Top 10 and Fewest Occurences is the Bottom 10 (long tail). The number of aggregation values is controlled by the Fetch Limit setting in the Group Metrics section.
 
-.. image:: https://user-images.githubusercontent.com/1659467/92962656-440c5f80-f43f-11ea-84a8-c0f66e80e27a.png
-  :target: https://user-images.githubusercontent.com/1659467/92962656-440c5f80-f43f-11ea-84a8-c0f66e80e27a.png
+.. image:: https://user-images.githubusercontent.com/1659467/94723255-74506b00-0326-11eb-872f-9229e8efd9ac.png
+  :target: https://user-images.githubusercontent.com/1659467/94723255-74506b00-0326-11eb-872f-9229e8efd9ac.png
 
 Group Metrics
 -------------
@@ -42,8 +48,8 @@ Clicking a value in the Group Metrics table brings up a menu of actions for that
 
 The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: https://user-images.githubusercontent.com/1659467/92963676-d9f4ba00-f440-11ea-9357-ab783743190d.png
-  :target: https://user-images.githubusercontent.com/1659467/92963676-d9f4ba00-f440-11ea-9357-ab783743190d.png
+.. image:: https://user-images.githubusercontent.com/1659467/94723375-a5c93680-0326-11eb-9f0e-3d53bbc1f516.png
+  :target: https://user-images.githubusercontent.com/1659467/94723375-a5c93680-0326-11eb-9f0e-3d53bbc1f516.png
 
 Events
 ------
@@ -54,13 +60,13 @@ Clicking a value in the Events table brings up a menu of actions for that value.
 
 The default Fetch Limit for the Events table is ``100``. If you need to see more than 100 events, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: https://user-images.githubusercontent.com/1659467/92964083-85057380-f441-11ea-929a-72ec0b34dad2.png
-  :target: https://user-images.githubusercontent.com/1659467/92964083-85057380-f441-11ea-929a-72ec0b34dad2.png
+.. image:: https://user-images.githubusercontent.com/1659467/94723424-bbd6f700-0326-11eb-85fc-1bd8fac2b228.png
+  :target: https://user-images.githubusercontent.com/1659467/94723424-bbd6f700-0326-11eb-85fc-1bd8fac2b228.png
 
 When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the action menu to refine your search or pivot to other pages. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/92965293-8899fa00-f443-11ea-8407-79a81c0e1401.png
-  :target: https://user-images.githubusercontent.com/1659467/92965293-8899fa00-f443-11ea-8407-79a81c0e1401.png
+.. image:: https://user-images.githubusercontent.com/1659467/94723523-e032d380-0326-11eb-831b-2968560b36f0.png
+  :target: https://user-images.githubusercontent.com/1659467/94723523-e032d380-0326-11eb-831b-2968560b36f0.png
 
 Statistics
 ----------
@@ -69,14 +75,6 @@ The bottom left corner of the page shows statistics about the current query incl
 
 .. image:: https://user-images.githubusercontent.com/1659467/92963000-ca28a600-f43f-11ea-99ff-9a69604b03d0.png
   :target: https://user-images.githubusercontent.com/1659467/92963000-ca28a600-f43f-11ea-99ff-9a69604b03d0.png
-
-Auto Hunt
----------
-
-The bottom right corner of the page has a toggle for Auto Hunt which defaults to enabled. When enabled, Hunt will automatically submit your query any time you change filters, groupings, or date ranges.
-
-.. image:: https://user-images.githubusercontent.com/1659467/92963052-d9a7ef00-f43f-11ea-9efe-dad3f29393f1.png
-  :target: https://user-images.githubusercontent.com/1659467/92963052-d9a7ef00-f43f-11ea-9efe-dad3f29393f1.png
 
 OQL
 ---
