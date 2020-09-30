@@ -37,7 +37,7 @@ If the Redis queue looks okay, but you are still having issues with logs getting
 Tuning
 ------
 
-We configure Redis to use 10% of your total system memory.  If you have sufficient RAM available, you might want to increase the ``maxmemory`` setting in ``/opt/so/conf/redis/etc/redis.conf``.
+We configure Redis to use 10% of your total system memory.  If you have sufficient RAM available, you may want to increase the ``maxmemory`` setting in ``/opt/so/conf/redis/etc/redis.conf``. However, please note that the file is managed with :ref:`salt` which means that you'll need to copy ``/opt/so/saltstack/default/salt/redis/etc/redis.conf`` to ``/opt/so/saltstack/local/salt/redis/etc/redis.conf``, make your changes there, and then have :ref:`salt` update ``/opt/so/conf/redis/etc/redis.conf``.
 
 Logstash on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``batch_events`` variable to find the sweet spot for your deployment.
 
