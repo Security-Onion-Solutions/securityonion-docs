@@ -20,7 +20,7 @@ Once logged in, you'll see links on the left side for analyst tools like :ref:`a
    SOC gives you access to a variety of tools and they all complement each other very well. For example, here's one potential workflow:
 
      - Check :ref:`grafana` to make sure your system is healthy.
-     - Open :ref:`alerts` and review alerts.
+     - Open :ref:`alerts` and review unacknowledged alerts.
      - Once you've found an alert that you want to investigate, you might want to expand your search and look for additional logs relating to the source and destination IP addresses, so pivot to :ref:`hunt` for more information. If any of those additional logs look interesting, you might then want to pivot to :ref:`pcap` to look at the full packet capture for that stream.
      - Send alert to :ref:`hive` and document any indicators of compromise (IOCs) found in the previous step.
      - Go to :ref:`fleet` and perform a wider search for those IOCs across all :ref:`osquery` endpoints.
