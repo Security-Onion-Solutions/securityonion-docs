@@ -49,12 +49,12 @@ If you want to send Wazuh logs to an external syslog collector, please see the :
 Active Response
 ---------------
 
-Sometimes, Wazuh may recognize legitimate activity as potentially malicious and engage in Active Response to block a connection. This may result in unintended consequences such as blocking of trusted IPs.  To prevent this from occurring, you can add your IP address to a safe list and change other settings in ``/opt/so/wazuh/etc/ossec.conf`` in the `` <!-- Active response -->`` section. :ref:`so-allow` does this for you automatically when you allow analyst connections.
+Sometimes, Wazuh may recognize legitimate activity as potentially malicious and engage in Active Response to block a connection. This may result in unintended consequences such as blocking of trusted IPs.  To prevent this from occurring, you can add your IP address to a safe list and change other settings in ``/opt/so/conf/wazuh/ossec.conf`` in the `` <!-- Active response -->`` section. :ref:`so-allow` does this for you automatically when you allow analyst connections.
 
 Tuning Rules
 ------------
 
-You can add new rules and modify existing rules in ``/opt/so/wazuh/etc/rules/local_rules.xml``.
+You can add new rules and modify existing rules in ``/opt/so/rules/hids/local_rules.xml``.
 
 Adding Agents
 -------------
