@@ -17,13 +17,13 @@ Alerting Engines & Severity
 ---------------------------------------
 There are three alerting engines within Security Onion: :ref:`suricata`, :ref:`wazuh` and :ref:`playbook` (Sigma). Though each engine uses its own severity level system, Security Onion converts that to a standardized alert severity: 
 
-``event.severity``: 4 == ``event.severity_label: critical``
+``event.severity``: ``4`` ==> ``event.severity_label``: ``critical``
 
-``event.severity``: 3 == ``event.severity_label: high``
+``event.severity``: ``3`` ==> ``event.severity_label``: ``high``
 
-``event.severity``: 2 == ``event.severity_label: medium``
+``event.severity``: ``2`` ==> ``event.severity_label``: ``medium``
 
-``event.severity``: 1 == ``event.severity_label: low``
+``event.severity``: ``1`` ==> ``event.severity_label``: ``low``
 
 All alerts are viewable in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`.
 
