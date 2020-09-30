@@ -67,7 +67,7 @@ Adding Agents
     It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.13.1, then you will want to deploy Wazuh agent version 3.13.1.
 
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
-| https://documentation.wazuh.com/3.13/user-manual/registering/cli/using-command-line-linux.html
+| https://documentation.wazuh.com/3.13/user-manual/registering/command-line-registration.html
 
 You may need to run :ref:`so-allow` to allow traffic from the IP address of your Wazuh agent(s).
 
