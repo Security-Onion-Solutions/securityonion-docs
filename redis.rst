@@ -37,7 +37,7 @@ If the Redis queue looks okay, but you are still having issues with logs getting
 Tuning
 ------
 
-We configure Redis to use 10% of your total system memory.  If you have sufficient RAM available, you may want to increase the ``redis_maxmemory`` setting in ``/opt/so/saltstack/local/pillar/global.sls``. This value is in Megabytes so to set it to 8 gigs of ram you would set it to 8192.
+We configure Redis to use 10% of your total system memory.  If you have sufficient RAM available, you may want to increase the ``redis_maxmemory`` setting in ``/opt/so/saltstack/local/pillar/global.sls``. This value is in Megabytes so to set it to use 8 gigs of ram you would set the value to 8192.
 
 Logstash on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``batch_events`` variable to find the sweet spot for your deployment.
 
