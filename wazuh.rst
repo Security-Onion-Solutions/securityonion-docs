@@ -34,7 +34,7 @@ Since the manager runs inside a Docker container, many of the Wazuh binaries tha
 Configuration
 -------------
 
-The main configuration file for Wazuh is ``/opt/so/wazuh/etc/ossec.conf``.
+The main configuration file for Wazuh is ``/opt/so/conf/wazuh/ossec.conf``.
 
 Email
 -----
