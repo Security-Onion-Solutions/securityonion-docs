@@ -11,7 +11,7 @@ Now that you've reviewed the :ref:`release-notes` in the previous section, you'r
   
 .. warning::
 
-   **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or whether you're starting with a CentOS or Ubuntu ISO image, you should ALWAYS verify the downloaded ISO image to ensure it hasn't been tampered with or corrupted during download.
+   **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or a standard CentOS or Ubuntu ISO image, you should ALWAYS verify the downloaded ISO image to ensure it hasn't been tampered with or corrupted during download.
 
 -  If downloading our Security Onion 2.3 ISO image, you can find the download link and verification instructions here:
    https://github.com/Security-Onion-Solutions/securityonion/blob/master/VERIFY_ISO.md
