@@ -57,7 +57,7 @@ Security Onion Console (SOC)
 TheHive
 ~~~~~~~
 
-:ref:`hive` is the case management interface. As you are working in :ref:`alerts`, :ref:`hunt`, or :ref:`kibana`, you may find alerts or logs that are interesting enough to send to TheHive and create a case. Other analysts can collaborate with you as you work to close that case.
+:ref:`hive` is the case management interface. As you are working in :ref:`alerts`, :ref:`hunt`, or :ref:`kibana`, you may find alerts or logs that are interesting enough to send to :ref:`hive` and create a case. Other analysts can collaborate with you as you work to close that case.
 
 .. image:: https://user-images.githubusercontent.com/1659467/94850514-07f06d00-03f5-11eb-8071-6e45d82feec7.png
   :target: https://user-images.githubusercontent.com/1659467/94850514-07f06d00-03f5-11eb-8071-6e45d82feec7.png
