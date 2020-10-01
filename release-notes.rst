@@ -7,26 +7,13 @@ Before downloading, please review the notes for this release.
 
 Security Onion 2.3 is here!
 
-.. warning::
-
-  This is our third Release Candidate, so we're getting closer to a final release, but we're not quite there yet. Please be reminded of the usual pre-release warnings and disclaimers:
-
-  - If this breaks your system, you get to keep both pieces!
-  - This is a work in progress and is in constant flux.
-  - This configuration may change drastically over time leading up to the final release.
-  - Do NOT run this on a system that you care about!
-  - Do NOT run this on a system that has data that you care about!
-  - This should only be run on a TEST box with TEST data!
-  - May result in nausea, vomiting, or a burning sensation.
-
 Known Issues
 ------------
 
-- Installing in VMware Fusion using Fusion's internal DNS server may result in Setup incorrectly claiming that the installation failed. To avoid this, configure the VM to bypass Fusion's internal DNS server and go directly to an upstream DNS server instead. https://github.com/Security-Onion-Solutions/securityonion/issues/1333
-- Once you update your grid to RC3, any new nodes that join the grid must be RC3 so if you try to join an older node it will fail. For best results, use the latest RC3 ISO (or RC3 installer from github) when joining to an RC3 grid.
+- Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to an 2.3 grid.
 - Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
-- When running soup to upgrade from older versions to RC3, there is a Salt error that may occur during the final highstate. This error is related to the patch_os_schedule and can be ignored as it should not occur again in subsequent highstates.
-- When Search Nodes are upgraded from older versions to RC3, there is a chance of a race condition where certificates are missing. This will show errors in the manager log to the remote node. To fix this run the following on the search node that is having the issue:
+- When running soup to upgrade from older versions to 2.3, there is a Salt error that may occur during the final highstate. This error is related to the patch_os_schedule and can be ignored as it should not occur again in subsequent highstates.
+- When Search Nodes are upgraded from older versions to 2.3, there is a chance of a race condition where certificates are missing. This will show errors in the manager log to the remote node. To fix this run the following on the search node that is having the issue:
 
   - Stop elasticsearch - ``sudo so-elasticsearch-stop``
   - Run the SSL state - ``sudo salt-call state.apply ssl``
