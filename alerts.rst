@@ -51,7 +51,7 @@ The remainder of the page is a data table that starts in the grouped view and ca
 
 - Clicking the bell icon acknowledges an alert. That alert can then be seen by selecting the ``Acknowledged`` toggle at the top of the page. In the ``Acknowledged`` view, clicking the bell icon removes the acknowledgement.
 
-- Clicking the blue exclamation icon escalates the alert to :ref:`hive` and creates a case. The case can then be seen in :ref:`hive` interface. If you need to find that original escalated alert in the Alerts page, you can enable both the ``Acknowledged`` toggle and the ``Escalated`` toggle.
+- Clicking the blue exclamation icon escalates the alert to :ref:`hive` and creates a case. The case can then be seen in :ref:`hive` interface. If you need to find that original escalated alert in the Alerts page, you can enable the ``Escalated`` toggle (which will automatically enable the ``Acknowledged`` toggle as well).
 
 - Clicking a value in the table brings up a menu of actions for that value. The plus and minus magnifying glass icons to the left allow you to include or exclude (respectively) those values in your query. If present, the down arrow icon allows you to drill into that value (more on that in the next section). The groupby icon allows to add that particular field as a groupby in the query. The crosshair icon starts a new search for the value in :ref:`hunt`. The ``G`` and ``VT`` on the right end of the actions menu look up the value at Google and VirusTotal (respectively).
 
