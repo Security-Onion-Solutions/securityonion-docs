@@ -10,8 +10,8 @@ From https://thehive-project.org/:
 Usage
 -----
 
-.. image:: https://user-images.githubusercontent.com/1659467/87230310-2d815380-c37d-11ea-9af8-a89a43afe0ef.png
-    :target: https://user-images.githubusercontent.com/1659467/87230310-2d815380-c37d-11ea-9af8-a89a43afe0ef.png
+.. image:: https://user-images.githubusercontent.com/1659467/94850514-07f06d00-03f5-11eb-8071-6e45d82feec7.png
+  :target: https://user-images.githubusercontent.com/1659467/94850514-07f06d00-03f5-11eb-8071-6e45d82feec7.png
 
 As you are working in :ref:`alerts`, :ref:`hunt`, or :ref:`kibana`, you may find alerts or logs that are interesting enough to send to TheHive and create a case. Other analysts can collaborate with you as you work to close that case.
 
@@ -29,11 +29,6 @@ Diagnostic Logging
 ------------------
 
 TheHive logging can be found at ``/opt/so/log/thehive/``.
-
-Severity
---------
-
-Currently, alerts sent to TheHive are hardcoded to severity 2. We are working on an :ref:`elastalert` tweak to set the correct severity.
 
 More Information
 ----------------
