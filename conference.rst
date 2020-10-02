@@ -15,7 +15,13 @@ Social Media
 Security Onion Conference 2020
 ------------------------------
 
-Security Onion Conference 2020 is currently scheduled for October 16, 2020. 
+Security Onion Conference 2020 will be held on October 16, 2020 as a virtual event! 
+
+We're going to make some major announcements, so you don't want to miss this!
+
+Registration for Security Onion Conference 2020 is now open and it's FREE!
+
+https://securityonionconference2020.eventbrite.com/
 
 Security Onion Conference 2019
 ------------------------------
