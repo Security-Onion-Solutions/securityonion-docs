@@ -6,12 +6,6 @@ Who should attend Security Onion Conference?
 
 If you use Security Onion, then you should definitely make plans to attend Security Onion Conference! Even if you don't use Security Onion, most talks provide value beyond just Security Onion itself.  So if you're generally interested in things like intrusion detection, network security monitoring, enterprise security monitoring, log management, hunting, and blue teaming, then you should consider attending Security Onion Conference!
 
-Social Media
-------------
-
-| The Twitter hashtag is #socAugusta:
-| https://twitter.com/search?q=socaugusta
-
 Security Onion Conference 2020
 ------------------------------
 
