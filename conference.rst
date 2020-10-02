@@ -13,7 +13,7 @@ Security Onion Conference 2020 will be held on October 16, 2020 as a virtual eve
 
 We're going to make some major announcements, so you don't want to miss this!
 
-Registration for Security Onion Conference 2020 is now open and it's FREE!
+Registration is now open and it's FREE!
 
 https://securityonionconference2020.eventbrite.com/
 
