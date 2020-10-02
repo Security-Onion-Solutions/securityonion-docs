@@ -8,16 +8,16 @@ Who should attend Security Onion Conference?
 
 If you use Security Onion, then you should definitely make plans to attend Security Onion Conference! Even if you don't use Security Onion, most talks provide value beyond just Security Onion itself.  So if you're generally interested in things like intrusion detection, network security monitoring, enterprise security monitoring, log management, hunting, and blue teaming, then you should consider attending Security Onion Conference!
 
-Social Media
-------------
-
-| The Twitter hashtag is #socAugusta:
-| https://twitter.com/search?q=socaugusta
-
 Security Onion Conference 2020
 ------------------------------
 
-Security Onion Conference 2020 is currently scheduled for October 16, 2020. 
+Security Onion Conference 2020 will be held on October 16, 2020 as a virtual event! 
+
+We're going to make some major announcements, so you don't want to miss this!
+
+Registration is now open and it's FREE!
+
+https://securityonionconference2020.eventbrite.com/
 
 Security Onion Conference 2019
 ------------------------------
