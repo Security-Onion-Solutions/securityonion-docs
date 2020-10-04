@@ -19,4 +19,6 @@ Screenshot
 More Information
 ----------------
 
-For more information about Wireshark, please see https://www.wireshark.org/.
+.. seealso::
+
+    For more information about Wireshark, please see https://www.wireshark.org/.
