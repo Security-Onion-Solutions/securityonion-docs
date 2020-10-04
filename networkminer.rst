@@ -20,4 +20,6 @@ Screenshot
 More Information
 ----------------
 
-For more information about NetworkMiner, please see https://www.netresec.com/?page=networkminer.
+.. seealso::
+
+    For more information about NetworkMiner, please see https://www.netresec.com/?page=networkminer.
