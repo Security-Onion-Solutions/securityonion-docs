@@ -38,7 +38,7 @@ Alternatively, you could also test for additional hits with a utility called ``t
 
       curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
     
-We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`alerts`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``.
+If everything is working correctly, you should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`alerts`, :ref:`kibana`, or :ref:`hunt`. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``.
 
 Identifying rule categories
 ---------------------------
