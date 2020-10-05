@@ -3,11 +3,7 @@
 Managing Alerts
 ===============
 
-.. warning::
-
-   This page has not been fully updated for Security Onion 2 yet! We'll get it updated soon.
-   
-Security Onion generates a lot of valuable information for you the second you plug it into a TAP or SPAN port. Between Zeek logs, alert data from Suricata, and full packet capture from Stenographer, you have, in a very short amount of time, enough information to begin making identifying areas of interest and making positive changes to your security stance.
+Security Onion generates a lot of valuable information for you the second you plug it into a TAP or SPAN port. Between :ref:`zeek` logs, alert data from :ref:`suricata`, and full packet capture from :ref:`stenographer`, you have enough information to begin making identifying areas of interest and making positive changes to your security stance.
 
 .. note::
 
@@ -36,13 +32,13 @@ Below, we'll provide a few ways we can test our IDS to make sure it is working a
 
    ::
    
-      curl testmyids.com
+      curl testmynids.org/uid/index.html
 
    We could also test for additional hits with a utility called tmNIDS, running the tool in interactive mode:
 
       curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
     
-   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``. If it is not enabled, try enabling it via ``/etc/nsm/pulledpork/enablesid.conf`` and run ``rule-update`` (if this is a distributed deployment, update the management first, run ``rule-update``, then push the changes out to the other sensor(s)).
+   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``.
 
 #. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/opt/so/rules/nids/local.rules``:
 
@@ -114,7 +110,11 @@ If you want to disable multiple rules at one time, you can use a regular express
 Modify the SID
 --------------
 
-``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then run ``sudo salt-call state.apply idstools`` to update the config.
+``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then update the config:
+
+::
+
+   sudo salt-call state.apply idstools
 
 Rewrite the signature
 ---------------------
@@ -127,45 +127,23 @@ In some cases, you may not want to use the modify option above, but instead crea
 
         sudo vi /opt/so/rules/nids/local.rules
 
--  NIDS rules are incredibly flexible, this is a bird's eye view of the rule format:
-
-   ::
-
-        Action Protocol SrcIP SrcPort Direction DestIP DestPort (rule options)
-
--  Here is the rule that has been generating so many alerts on our sensor(s)
-
-   ::
-
-        macphisto@SecOnion-Dev:~$ grep -i "GPL SNMP public access udp" /opt/so/rules/nids/all.rules
-         alert udp $EXTERNAL_NET any -> $HOME_NET 161 (msg:"GPL SNMP public access udp"; content:"public"; fast_pattern:only; reference:bugtraq,2112; reference:bugtraq,4088; reference:bugtraq,4089; reference:cve,1999-0517; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:2101411; rev:11;)
-
--  We can rewrite the rule so it's a little less active. We will rewrite the rule to ignore this kind of alert if the destination is any of the hosts we've identified.
--  For starters let's create some variables in ``/opt/so/rules/nids/local.rules`` to define the traffic. First we're going to define a variable for our called overactive hosts called OVERACTIVE
-
-   ::
-
-        var OVERACTIVE [192.168.0.31,192.168.0.33,192.168.0.5,192.168.0.51]
-
--  We can plug this information into our NIDS rule format,
-
-   ::
-
-        alert udp $HOME_NET any -> !$OVERACTIVE any (msg:"GPL SNMP public access udp"; content:"public"; fast_pattern:only; reference:bugtraq,2112; reference:bugtraq,4088; reference:bugtraq,4089; reference:cve,1999-0517; reference:cve,2002-0012; reference:cve,2002-0013; classtype:attempted-recon; sid:9001411; rev:1;)
-
--  We also gave the alert a unique signature id (sid) by bumping it into the 90,000,000 range and set the revision to 1.
--  Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. Like above, we edit the minion pillar and add the following to the ``idstools - sids - disabled`` section:
+- Paste the rule. You may want to bump the SID into the 90,000,000 range and set the revision to 1.
+-  Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. As shown above, we edit the minion pillar and add the following to the ``idstools - sids - disabled`` section:
 
    ::
 
           - 2101411
 
--  Then run ``sudo salt-call state.highstate`` to update the config
+-  Finally, update the config:
+
+   ::
+   
+      sudo salt-call state.highstate
 
 Threshold
 ---------
 
-You can manage threshold.conf for Suricata using Saltstack pillars. The format of the pillar file can be seen below, as well as in ``/opt/so/saltstack/local/pillar/thresholding/pillar.usage`` and ``/opt/so/saltstack/local/pillar/thresholding/pillar.example``
+You can manage threshold.conf for :ref:`suricata` using Saltstack pillars. The format of the pillar file can be seen below, as well as in ``/opt/so/saltstack/local/pillar/thresholding/pillar.usage`` and ``/opt/so/saltstack/local/pillar/thresholding/pillar.example``
 
 Usage:
 
