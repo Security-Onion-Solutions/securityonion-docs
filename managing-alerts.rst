@@ -121,20 +121,16 @@ Rewrite the signature
 
 In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in ``/opt/so/rules/nids/local.rules``.
 
--  Edit the ``/opt/so/rules/nids/local.rules`` file using ``vi`` or your favorite text editor:
+- Edit the ``/opt/so/rules/nids/local.rules`` file using ``vi`` or your favorite text editor:
 
    ::
 
         sudo vi /opt/so/rules/nids/local.rules
 
 - Paste the rule. You may want to bump the SID into the 90,000,000 range and set the revision to 1.
--  Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. As shown above, we edit the minion pillar and add the following to the ``idstools - sids - disabled`` section:
+- Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. As shown above, we edit the minion pillar and add the SID to the ``idstools - sids - disabled`` section.
 
-   ::
-
-          - 2101411
-
--  Finally, update the config:
+- Finally, update the config:
 
    ::
    
