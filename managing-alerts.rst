@@ -3,7 +3,7 @@
 Managing Alerts
 ===============
 
-Security Onion generates a lot of valuable information for you the second you plug it into a TAP or SPAN port. Between :ref:`zeek` logs, alert data from :ref:`suricata`, and full packet capture from :ref:`stenographer`, you have enough information to begin making identifying areas of interest and making positive changes to your security stance.
+Security Onion generates a lot of valuable information for you the second you plug it into a TAP or SPAN port. Between :ref:`zeek` logs, alert data from :ref:`suricata`, and full packet capture from :ref:`stenographer`, you have enough information to begin identifying areas of interest and making positive changes to your security stance.
 
 .. note::
 
