@@ -34,6 +34,8 @@ The easiest way to test that our IDS is working as expected might be to simply a
 
 Alternatively, you could also test for additional hits with a utility called ``tmNIDS``, running the tool in interactive mode:
 
+  ::
+
       curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
     
 We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``.
