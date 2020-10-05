@@ -26,7 +26,7 @@ All alerts are viewable in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`.
 Testing to make sure the IDS is working
 ---------------------------------------
 
-The easiest way to test to make sure that our IDS is working as expected might be to simply accessing http://testmynids.org/uid/index.html from a machine that is being monitored by Security Onion. You can do so via the command line using ``curl``:
+The easiest way to test that our IDS is working as expected might be to simply access http://testmynids.org/uid/index.html from a machine that is being monitored by Security Onion. You can do so via the command line using ``curl``:
 
    ::
    
