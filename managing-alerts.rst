@@ -26,35 +26,17 @@ All alerts are viewable in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`.
 Testing to make sure the IDS is working
 ---------------------------------------
 
-Below, we'll provide a few ways we can test our IDS to make sure it is working as expected.
-
-#. The easiest way to test might be simply accessing ``testmyids.com`` from a machine who's traffic is being monitored:
+The easiest way to test to make sure that our IDS is working as expected might be to simply accessing http://testmynids.org/uid/index.html from a machine that is being monitored by Security Onion. You can do so via the command line using ``curl``:
 
    ::
    
       curl testmynids.org/uid/index.html
 
-   We could also test for additional hits with a utility called tmNIDS, running the tool in interactive mode:
+Alternatively, you could also test for additional hits with a utility called ``tmNIDS``, running the tool in interactive mode:
 
       curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
     
-   We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``.
-
-#. If in a production environment where you might not want to replay the example PCAPs, another way to test would be to use Scapy to craft a test PCAP file, in conjunction with a custom NIDS rule added to ``/opt/so/rules/nids/local.rules``:
-
-
--  **NIDS Rule**
-
-   ::
-
-     alert tcp any any -> any any (msg: "Security Onion - testing"; content: "SecurityOnion"; nocase; sid:1234567;)
-
-   Now update your ruleset:
-   
-   ::
-   
-      sudo so-rule-update
-
+We should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`hive`, :ref:`kibana`, and/or :ref:`hunt` if everything is configured correctly. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``.
 
 Identifying rule categories
 ---------------------------
