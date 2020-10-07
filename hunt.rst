@@ -5,8 +5,8 @@ Hunt
 
 :ref:`soc` gives you access to our new Hunt interface. This interface allows you to hunt through all of the data in Elasticsearch and is highly tuned for stacking, pivoting, data expansion, and data reduction.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94722974-0dcb4d00-0326-11eb-804b-c999aed5a142.png
-  :target: https://user-images.githubusercontent.com/1659467/94722974-0dcb4d00-0326-11eb-804b-c999aed5a142.png
+.. image:: https://user-images.githubusercontent.com/1659467/95373696-56957f80-08ab-11eb-9ccd-4b8632bd7470.png
+  :target: https://user-images.githubusercontent.com/1659467/95373696-56957f80-08ab-11eb-9ccd-4b8632bd7470.png
 
 Auto Hunt
 ---------
@@ -48,8 +48,8 @@ Clicking a value in the Group Metrics table brings up a menu of actions for that
 
 The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94723375-a5c93680-0326-11eb-9f0e-3d53bbc1f516.png
-  :target: https://user-images.githubusercontent.com/1659467/94723375-a5c93680-0326-11eb-9f0e-3d53bbc1f516.png
+.. image:: https://user-images.githubusercontent.com/1659467/95373861-93fa0d00-08ab-11eb-81ab-3ed116b41687.png
+  :target: https://user-images.githubusercontent.com/1659467/95373861-93fa0d00-08ab-11eb-81ab-3ed116b41687.png
 
 Events
 ------
@@ -60,13 +60,13 @@ Clicking a value in the Events table brings up a menu of actions for that value.
 
 The default Fetch Limit for the Events table is ``100``. If you need to see more than 100 events, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94723424-bbd6f700-0326-11eb-85fc-1bd8fac2b228.png
-  :target: https://user-images.githubusercontent.com/1659467/94723424-bbd6f700-0326-11eb-85fc-1bd8fac2b228.png
+.. image:: https://user-images.githubusercontent.com/1659467/95373967-c146bb00-08ab-11eb-9899-01adb43d8a90.png
+  :target: https://user-images.githubusercontent.com/1659467/95373967-c146bb00-08ab-11eb-9899-01adb43d8a90.png
 
 When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the action menu to refine your search or pivot to other pages. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/94723523-e032d380-0326-11eb-831b-2968560b36f0.png
-  :target: https://user-images.githubusercontent.com/1659467/94723523-e032d380-0326-11eb-831b-2968560b36f0.png
+.. image:: https://user-images.githubusercontent.com/1659467/95374133-f5ba7700-08ab-11eb-8d59-470f0dc56ecf.png
+  :target: https://user-images.githubusercontent.com/1659467/95374133-f5ba7700-08ab-11eb-8d59-470f0dc56ecf.png
 
 Statistics
 ----------
