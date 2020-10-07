@@ -8,6 +8,11 @@ From https://suricata-ids.org:
     Suricata is a free and open source, mature, fast and robust network threat detection engine. Suricata inspects the network traffic using
     a powerful and extensive rules and signature language, and has powerful Lua scripting support for detection of complex threats.
 
+Community ID
+------------
+
+Security Onion enables Suricata's native support for :ref:`community-id`.
+
 Performance
 -----------
 
@@ -32,11 +37,6 @@ To change the number of Suricata workers:
 For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
 
 Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
-
-Community ID
-------------
-
-We enable Suricata's native support for :ref:`community-id`.
 
 Configuration
 -------------
