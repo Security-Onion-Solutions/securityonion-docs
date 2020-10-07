@@ -15,10 +15,15 @@ Usage
 
 As you are working in :ref:`alerts`, :ref:`hunt`, or :ref:`kibana`, you may find alerts or logs that are interesting enough to send to TheHive and create a case. Other analysts can collaborate with you as you work to close that case.
 
-In Kibana you will see a scripted field named ``TheHive`` with a value of ``Add2Hive``. This will use the API to add this new event to :ref:`hive`.
+In :ref:`alerts` and :ref:`hunt`, you can use the blue triangle with an exclamation point to escalate to TheHive.
 
-.. image:: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_hive.png
-    :target: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_hive.png
+.. image:: https://user-images.githubusercontent.com/1659467/95380455-c9572880-08b4-11eb-8821-cee23b97d85e.png
+  :target: https://user-images.githubusercontent.com/1659467/95380455-c9572880-08b4-11eb-8821-cee23b97d85e.png
+  
+In Kibana you will see a scripted field named ``Push to TheHive`` with a value of ``Click to create a case in TheHive``. This will use the API to add this new event to :ref:`hive`.
+
+.. image:: https://user-images.githubusercontent.com/1659467/95380261-7da47f00-08b4-11eb-954a-613d1291ecb0.png
+  :target: https://user-images.githubusercontent.com/1659467/95380261-7da47f00-08b4-11eb-954a-613d1291ecb0.png
 
 Configuration
 -------------
