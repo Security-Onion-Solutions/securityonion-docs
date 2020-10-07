@@ -7,6 +7,11 @@ Zeek is formerly known as Bro.  From https://www.zeek.org/:
 
     Zeek is a powerful network analysis framework that is much different from the typical IDS you may know. (Zeek is the new name for the long-established Bro system. Note that parts of the system retain the "Bro" name, and it also often appears in the documentation and distributions.)
 
+Community ID
+------------
+
+Security Onion enables Zeek's native support for :ref:`community-id`.
+
 Performance
 -----------
 
@@ -29,11 +34,6 @@ To change the number of AF-PACKET workers for :ref:`zeek`:
       sudo so-zeek-start
       
 For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
-
-Community ID
-------------
-
-We enable Zeek's native support for :ref:`community-id`.
 
 Email
 -----
