@@ -20,6 +20,6 @@ list:
 
 `MailingLists <MailingLists>`__
 
-If you have questions or problems relating to our new Security Onion Hybrid Hunter platform, you can reach out to our reddit community:
+If you have questions or problems relating to our new Security Onion 2 platform, you can reach out to our reddit community:
 
 https://www.reddit.com/r/securityonion/
