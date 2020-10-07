@@ -37,8 +37,8 @@ Transcript
 
 When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot to pcap transcript via :ref:`pcap`.
 
-.. image:: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_pcap.png
-    :target: https://github.com/Security-Onion-Solutions/securityonion/wiki/images/kibana_pcap.png
+.. image:: https://user-images.githubusercontent.com/1659467/95374942-f69fd880-08ac-11eb-9b77-586149721146.png
+  :target: https://user-images.githubusercontent.com/1659467/95374942-f69fd880-08ac-11eb-9b77-586149721146.png
 
 Indicator Dashboard
 ~~~~~~~~~~~~~~~~~~~
