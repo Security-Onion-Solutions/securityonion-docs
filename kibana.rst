@@ -12,11 +12,6 @@ Screenshot
 .. image:: https://user-images.githubusercontent.com/1659467/95374575-81cc9e80-08ac-11eb-95ac-b2f1caf37461.png
   :target: https://user-images.githubusercontent.com/1659467/95374575-81cc9e80-08ac-11eb-95ac-b2f1caf37461.png
 
-Configuration
--------------
-
-Kibana's configuration can be found in ``/opt/so/conf/kibana/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/kibana/``, they may be overwritten at the next salt update.
-
 Diagnostic Logging
 ------------------
 
@@ -65,6 +60,11 @@ Timestamps
 ----------
 
 By default, Kibana will display timestamps in the timezone of your local browser. If you would prefer timestamps in UTC, you can go to ``Management`` --> ``Advanced Settings`` and set ``dateFormat:tz`` to ``UTC``.
+
+Configuration
+-------------
+
+Kibana's configuration can be found in ``/opt/so/conf/kibana/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/kibana/``, they may be overwritten at the next salt update.
 
 More Information
 ----------------
