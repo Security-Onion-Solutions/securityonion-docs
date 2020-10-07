@@ -15,7 +15,8 @@ NetworkMiner is a part of our :ref:`analyst-vm` installation.
 
 Screenshot
 ----------
-.. image:: images/networkminer/networkminer.png
+.. image:: https://user-images.githubusercontent.com/1659467/95370689-277d0f00-08a7-11eb-9fd5-8330c603377d.png
+  :target: https://user-images.githubusercontent.com/1659467/95370689-277d0f00-08a7-11eb-9fd5-8330c603377d.png
 
 More Information
 ----------------
