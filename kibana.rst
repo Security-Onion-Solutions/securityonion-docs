@@ -35,7 +35,7 @@ Kibana uses multiple hyperlinked fields to accelerate investigations and decisio
 Transcript
 ~~~~~~~~~~
 
-When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot to pcap transcript via :ref:`pcap`.
+When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot to pcap transcript via :ref:`pcap`. You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards. You can also find the ``_id`` field by drilling into a row in the log panel.
 
 .. image:: https://user-images.githubusercontent.com/1659467/95374942-f69fd880-08ac-11eb-9b77-586149721146.png
   :target: https://user-images.githubusercontent.com/1659467/95374942-f69fd880-08ac-11eb-9b77-586149721146.png
@@ -54,7 +54,7 @@ Several fields are hyperlinked to the Indicator dashboard to allow you to get al
 Search Results
 --------------
 
-Search results in the dashboards and through Discover are limited to the first ``100`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance.
+Search results in the dashboards and through Discover are limited to the first ``10`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Stack Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance for your deployment.
 
 Timestamps
 ----------
