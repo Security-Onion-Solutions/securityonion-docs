@@ -12,7 +12,7 @@ From https://github.com/corelight/community-id-spec:
     production of a string identifier representing a given network flow, to reduce the pivot to a 
     simple string comparison.
     
-Security Onion enables the default Community ID support in both :ref:`zeek` and :ref:`suricata`. 
+Security Onion enables the native Community ID support in both :ref:`zeek` and :ref:`suricata`. 
 
 We sponsored the development of Community ID support in :ref:`osquery`:
 
