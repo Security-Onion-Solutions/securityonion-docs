@@ -39,7 +39,7 @@ With full packet capture, IDS alerts, Zeek data, and endpoint telemetry, there i
 Security Onion Console (SOC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`alerts` interface which allows you to see all of your NIDS/HIDS alerts.
+:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`alerts` interface which allows you to see all of your NIDS and HIDS alerts.
 
 .. image:: https://user-images.githubusercontent.com/1659467/95372830-213c6200-08aa-11eb-99ba-0aea7a3330de.png
   :target: https://user-images.githubusercontent.com/1659467/95372830-213c6200-08aa-11eb-99ba-0aea7a3330de.png
