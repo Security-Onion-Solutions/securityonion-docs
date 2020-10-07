@@ -35,7 +35,7 @@ Kibana uses multiple hyperlinked fields to accelerate investigations and decisio
 Transcript
 ~~~~~~~~~~
 
-When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot to full packet capture via :ref:`pcap`. You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards:
+When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot to full packet capture via our :ref:`pcap` interface. You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards:
 
 .. image:: https://user-images.githubusercontent.com/1659467/95376132-9c077c00-08ae-11eb-9675-8bddb3d20719.png
   :target: https://user-images.githubusercontent.com/1659467/95376132-9c077c00-08ae-11eb-9675-8bddb3d20719.png
