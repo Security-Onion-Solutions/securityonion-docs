@@ -24,12 +24,12 @@ Run ``sudo so-allow`` and select ``b`` to allow your Beats agents to send their 
 Winlogbeat
 ----------
 
-Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and then configure it as follows:
+Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if necessary. Then configure ``winlogbeat.yml`` as follows:
 
-* disable the Elasticsearch output
-* make sure that Winlogbeat is NOT configured to load dashboards into Kibana
-* enable the logstash output and configure it to send logs to port ``5044`` on your management node
-* If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module as Security Onion will do all the necessary parsing
+* Disable the Elasticsearch output.
+* Make sure that Winlogbeat is NOT configured to load dashboards into Kibana.
+* Enable the logstash output and configure it to send logs to port ``5044`` on your management node.
+* If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module as Security Onion will do all the necessary parsing.
 
 Installation
 ------------
