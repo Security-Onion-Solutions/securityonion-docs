@@ -59,12 +59,6 @@ Then run:
 
     sudo salt-call state.highstate
 
-If you have a distributed deployment and need to restart Suricata on your sensors, then you can do:
-
-::
-
-    sudo salt \*_sensor cmd.run 'so-suricata-restart'
-    
 Some of the settings normally found in ``suricata.yaml`` can be found in the sensor pillar instead of the Suricata pillar. These options are: ``HOMENET``, ``default-packet-size``, and the CPU affinity settings for pinning the processes to CPU cores or how many processes to run.
 
 If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`managing-alerts` sections.
