@@ -17,7 +17,4 @@ Fields
 Template files
 --------------
 
-Fields are mapped to their proper type using template files found in ``/opt/so/conf/logastash/etc/``. The current template files include:
-
-| ``so-common-template.json`` - mapping information for logs going into ``so-*`` indices
-| ``so-zeek-template.json`` - mapping information for logs going into ``so-zeek-*`` indices.
+Fields are mapped to their proper type using template files found in ``/opt/so/conf/elasticsearch/templates/``.
