@@ -25,4 +25,4 @@ For the reasons listed above, we recommend that most users procure new hardware 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following:
 
  - perform an in-place upgrade from Ubuntu 16.04 to Ubuntu 18.04 using standard Ubuntu procedures
- - once you have completed the Ubuntu 18.04 upgrade, follow the Ubuntu 18.04 instructions in the Installation Guide
+ - once you have completed the Ubuntu 18.04 upgrade, follow the Ubuntu 18.04 instructions in the :ref:`installation` section.
