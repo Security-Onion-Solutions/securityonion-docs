@@ -15,7 +15,7 @@ Support Team
 
 If you'd like help out other Security Onion users, please join the forum and start answering questions!
 
-https://www.reddit.com/r/securityonion/
+https://github.com/Security-Onion-Solutions/securityonion/discussions
 
 Documentation Team
 ------------------
