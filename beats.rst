@@ -19,7 +19,7 @@ Encryption
 so-allow
 --------
 
-Run ``sudo so-allow`` and select ``b`` to allow your Beats agents to send their logs to Logstash port 5044/tcp.
+Run ``sudo so-allow`` and select the ``b`` option to allow your Beats agents to send their logs to Logstash port ``5044/tcp``.
 
 Winlogbeat
 ----------
