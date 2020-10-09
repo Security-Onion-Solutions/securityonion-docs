@@ -3,7 +3,7 @@
 Hunt
 ====
 
-:ref:`soc` gives you access to our new Hunt interface. This interface allows you to hunt through all of the data in Elasticsearch and is highly tuned for stacking, pivoting, data expansion, and data reduction.
+:ref:`soc` gives you access to our new Hunt interface. This interface allows you to hunt through all of the data in :ref:`elasticsearch` and is highly tuned for stacking, pivoting, data expansion, and data reduction.
 
 .. image:: https://user-images.githubusercontent.com/1659467/95373696-56957f80-08ab-11eb-9ccd-4b8632bd7470.png
   :target: https://user-images.githubusercontent.com/1659467/95373696-56957f80-08ab-11eb-9ccd-4b8632bd7470.png
@@ -18,7 +18,7 @@ The top of the page has a toggle for Auto Hunt which defaults to enabled. When e
 
 Query Bar
 ---------
-The easiest way to get started is to click the query drop down box and select one of the pre-defined queries. These pre-defined queries cover most of the major data types that you would expect to see in a Security Onion deployment: NIDS alerts from Suricata, HIDS alerts from Wazuh, protocol metadata logs from Zeek or Suricata, endpoint logs, and firewall logs. Each of the entries in the drop down list will show the actual query followed by a description of what that query does.
+The easiest way to get started is to click the query drop down box and select one of the pre-defined queries. These pre-defined queries cover most of the major data types that you would expect to see in a Security Onion deployment: NIDS alerts from :ref:`suricata`, HIDS alerts from :ref:`wazuh`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs. Each of the entries in the drop down list will show the actual query followed by a description of what that query does.
 
 .. image:: https://user-images.githubusercontent.com/1659467/94723168-5256e880-0326-11eb-8952-37804962d526.png
   :target: https://user-images.githubusercontent.com/1659467/94723168-5256e880-0326-11eb-8952-37804962d526.png
