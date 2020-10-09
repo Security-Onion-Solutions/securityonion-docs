@@ -15,7 +15,7 @@ Stenographer writes full packet capture to ``/nsm/pcap/``.
 
 Analysis
 --------
-You can access full packet capture via :ref:`soc`. :ref:`kibana` and :ref:`hunt` allow you to easily pivot to SOC for pcap.
+You can access full packet capture via :ref:`soc`. :ref:`alerts`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` page.
 
 Configuration
 -------------
