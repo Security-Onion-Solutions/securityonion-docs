@@ -5,19 +5,39 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2.3 is here!
+Security Onion is now generally avilable and is at version 2.3!
 
 Known Issues
 ------------
 
-- Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to an 2.3 grid.
-- Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
-- When running soup to upgrade from older versions to 2.3, there is a Salt error that may occur during the final highstate. This error is related to the patch_os_schedule and can be ignored as it should not occur again in subsequent highstates.
+- It is still possible to update your grid from any release candidate to 2.3 but if this is a true production deployment, we recommend a fresh image and install
+- Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to an 2.3 grid
+- Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5
+- When running soup to upgrade from older versions to 2.3, there is a Salt error that may occur during the final highstate. This error is related to the patch_os_schedule and can be ignored as it should not occur again in subsequent highstates
 - When Search Nodes are upgraded from older versions to 2.3, there is a chance of a race condition where certificates are missing. This will show errors in the manager log to the remote node. To fix this run the following on the search node that is having the issue:
 
   - Stop elasticsearch - ``sudo so-elasticsearch-stop``
   - Run the SSL state - ``sudo salt-call state.apply ssl``
   - Restart elasticsearch - ``sudo so-elasticsearch-restart``
+
+2.3.0 Changes
+-------------
+
+- New "Alerts" queue for reviewing all alerts for acknowledgement or escalation. You can then send the alerts to The Hive in a new case  
+- The Hive no longer recieves alerts directly. We made this change due to user feedback and our own internal testing. The Hive would just get too cluttered with alerts making it impossible to effectively manage the events. Alerts allows you to slice and dice the alerts like you can in Hunt  
+- ISO install now works for UEFI as well as Secure Boot    
+- Airgap grids can now be updated using the latest ISO. Please read this documentation carefully    
+- Suricata is now at 5.0.4     
+- Zeek is at 3.0.11    
+- Google Stenographer has been updated to the latest version     
+- soup will now attempt to clean up old dockers to free up space    
+- Users can now customize Hunt actions via the hunt.actions.json file  
+- You can now modify the queries you want to display in the dropdown via hunt.queries.json  
+- The eventfields that get displayed based on the serach can now be cutomized via hunt.eventfields.json.
+- Alerts have similar json files where you can customize how you want to see things and start with alerts.function.json  
+- Read more about customizing SOC here  
+
+
 
 2.2.0 Changes
 -------------
