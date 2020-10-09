@@ -12,10 +12,12 @@ Zeek logs are sent to Elasticsearch where they are parsed using ingest parsing. 
 | id.resp_h => destination.ip
 | id.resp_p => destination.port
 
-The remaining fields in each log are specific to the log type. To see how the fields are mapped for a specific Zeek log, take a look at its ingest parser:
+The remaining fields in each log are specific to the log type. To see how the fields are mapped for a specific Zeek log, take a look at its ingest parser.
+
+You can find ingest parsers in your local filesystem at ``/opt/so/saltstack/default/salt/elasticsearch/files/ingest`` or you can find them online at:
 
 https://github.com/Security-Onion-Solutions/securityonion/tree/master/salt/elasticsearch/files/ingest
 
-For example, suppose you want to know how the Zeek conn.log is parsed:
+For example, suppose you want to know how the Zeek conn.log is parsed. You could take a look at ``/opt/so/saltstack/default/salt/elasticsearch/files/ingest/zeek.conn`` or view it online at:
 
 https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest/zeek.conn
