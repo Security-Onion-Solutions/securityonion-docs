@@ -9,6 +9,8 @@ From https://github.com/target/strelka:
 
 :ref:`zeek` extracts files from network traffic to ``/nsm/zeek/extracted/complete/``. Strelka then analyzes those files and they end up in ``/nsm/strelka/processed/``.
 
+You can find Strelka logs in :ref:`hunt` and :ref:`kibana`.
+
 Configuration
 -------------
 Strelka reads its configuration from ``/opt/so/conf/strelka/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
