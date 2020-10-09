@@ -24,7 +24,9 @@ Run ``sudo so-allow`` and select ``b`` to allow your Beats agents to send their 
 Winlogbeat
 ----------
 
-Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version. Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if necessary. Then configure ``winlogbeat.yml`` as follows:
+Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version. Please note that the hyperlink simply points to the standard Winlogbeat download from the Elastic site.
+
+Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if necessary. Then configure ``winlogbeat.yml`` as follows:
 
 * Disable the Elasticsearch output.
 * Make sure that Winlogbeat is NOT configured to load dashboards into Kibana.
