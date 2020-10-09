@@ -3,12 +3,12 @@
 PCAP
 ====
 
-:ref:`soc` gives you access to our new PCAP interface. This interface allows you to access your full packet capture. You can pivot to PCAP from :ref:`hunt` or from :ref:`kibana`. Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
+:ref:`soc` gives you access to our new PCAP interface. This interface allows you to access your full packet capture. You can pivot to PCAP from :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
 
 .. image:: https://user-images.githubusercontent.com/1659467/92967744-cb5dd100-f447-11ea-9621-4c477d6a7e3a.png
   :target: https://user-images.githubusercontent.com/1659467/92967744-cb5dd100-f447-11ea-9621-4c477d6a7e3a.png
 
-Once :ref:`soc` has located the stream, it will show a high level overview of the packets.
+Security Onion will then locate the stream and render a high level overview of the packets.
 
 .. image:: https://user-images.githubusercontent.com/1659467/92967522-6a35fd80-f447-11ea-8fbd-27c0bd952704.png
   :target: https://user-images.githubusercontent.com/1659467/92967522-6a35fd80-f447-11ea-8fbd-27c0bd952704.png
