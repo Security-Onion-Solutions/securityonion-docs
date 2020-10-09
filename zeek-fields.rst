@@ -22,7 +22,7 @@ For example, suppose you want to know how the Zeek conn.log is parsed. You could
 
 https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest/zeek.conn
 
-You'll see that ``zeek.conn`` then calls the ``zeek.common`` pipeline (``/opt/so/conf/elasticsearch/ingest/zeek.conn``):
+You'll see that ``zeek.conn`` then calls the ``zeek.common`` pipeline (``/opt/so/conf/elasticsearch/ingest/zeek.common``):
 
 https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest/zeek.common
 
