@@ -20,10 +20,10 @@ conn.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | proto => protocol
 | service
 | duration
@@ -70,10 +70,10 @@ dhcp.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | mac
 | assigned\_ip
 | lease\_time
@@ -87,10 +87,10 @@ dns.log
 
 | ts = > timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | proto => protocol
 | trans\_id => transaction\_id
 | rtt
@@ -118,10 +118,10 @@ dpd.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | proto => protocol
 | analyzer
 | failure\_reason
@@ -135,7 +135,7 @@ files.log
 | ts => timestamp
 | fuid
 | tx\_hosts => file\_ip
-| rx\_hosts => destination\_ip
+| rx\_hosts => destination.ip
 | conn\_uids => connection\_uids
 | source
 | depth
@@ -166,10 +166,10 @@ ftp.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | user => ftp\_username
 | password
 | command => ftp\_command
@@ -179,9 +179,9 @@ ftp.log
 | reply\_code
 | reply\_msg => reply\_message
 | data\_channel.passive => data\_channel\_passive
-| data\_channel.orig\_h => data\_channel\_source\_ip
-| data\_channel.resp\_h => data\_channel\_destination\_ip
-| data\_channel.resp\_h => data\_channel\_destination\_port
+| data\_channel.orig\_h => data\_channel\_source.ip
+| data\_channel.resp\_h => data\_channel\_destination.ip
+| data\_channel.resp\_h => data\_channel\_destination.port
 | fuid
 
 http.log
@@ -192,10 +192,10 @@ http.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | trans\_depth
 | method
 | host => virtual\_host
@@ -228,10 +228,10 @@ intel.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | seen.indicator => indicator
 | seen.indicator\_type => indicator\_type
 | seen.where => seen\_where
@@ -250,10 +250,10 @@ irc.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | nick
 | user => irc\_username
 | command => irc\_command
@@ -272,10 +272,10 @@ kerberos.log
 
 | timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | request\_type
 | client
 | service
@@ -299,10 +299,10 @@ modbus.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | func => function
 | exception
 
@@ -314,10 +314,10 @@ mysql.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | cmd => mysql\_command
 | arg => mysql\_argument
 | success => mysql\_success
@@ -332,10 +332,10 @@ notice.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | fuid
 | mime => file\_mime\_type
 | desc => file\_description
@@ -343,8 +343,8 @@ notice.log
 | note => note
 | msg => msg
 | sub => sub\_msg
-| src => source\_ip
-| dst => destination\_ip
+| src => source.ip
+| dst => destination.ip
 | p
 | n
 | peer\_descr => peer\_description
@@ -389,10 +389,10 @@ radius.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | username => radius\_username
 | mac
 | remote\_ip
@@ -408,10 +408,10 @@ rdp.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | cookie
 | result
 | security\_protocol
@@ -436,10 +436,10 @@ rfb.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | client\_major\_version
 | client\_minor\_version
 | server\_major\_version
@@ -459,10 +459,10 @@ signatures.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | note
 | sig\_id => signature\_id
 | event\_msg => event\_message
@@ -478,10 +478,10 @@ sip.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | trans\_depth
 | method
 | uri
@@ -512,10 +512,10 @@ smtp.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | trans\_depth
 | helo
 | mailfrom => mail\_from
@@ -546,10 +546,10 @@ snmp.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | duration
 | version
 | community
@@ -568,10 +568,10 @@ socks.log
 
 | timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | version
 | user
 | password
@@ -597,8 +597,8 @@ software.log
 | ``/etc/logstash/conf.d/1114_preprocess_bro_software.conf``
 
 | ts => timestamp
-| host => source\_ip
-| host\_p => source\_port
+| host => source.ip
+| host\_p => source.port
 | software\_type
 | name
 | major => version\_major
@@ -616,10 +616,10 @@ ssh.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | version
 | auth\_success => authentication\_success
 | auth\_attempts => authentication\_attempts
@@ -646,10 +646,10 @@ ssl.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | version
 | cipher
 | curve
@@ -708,10 +708,10 @@ syslog.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | proto => protocol
 | facility
 | severity
@@ -725,10 +725,10 @@ tunnel.log
 
 | ts => timestamp
 | uid
-| id.orig\_h => source\_ip
-| id.orig\_p => source\_port
-| id.resp\_h => destination\_ip
-| id.resp\_p => destination\_port
+| id.orig\_h => source.ip
+| id.orig\_p => source.port
+| id.resp\_h => destination.ip
+| id.resp\_p => destination.port
 | tunnel\_type
 | action
 
@@ -786,15 +786,15 @@ Pivot Fields
 The following fields are formatted as a URL within Kibana, so we can
 easily pivot from them to the Indicator dashboard by clicking on them:
 
-| destination\_ip
-| destination\_port
+| destination.ip
+| destination.port
 | file\_ip
 | indicator
 | orig\_fuids
 | query
 | resp\_fuids
 | server\_name
-| source\_ip
-| source\_port
+| source.ip
+| source.port
 | uid
 | virtual\_host
