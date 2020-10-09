@@ -7,6 +7,8 @@ Zeek is formerly known as Bro.  From https://www.zeek.org/:
 
     Zeek is a powerful network analysis framework that is much different from the typical IDS you may know. (Zeek is the new name for the long-established Bro system. Note that parts of the system retain the "Bro" name, and it also often appears in the documentation and distributions.)
 
+Zeek logs are sent to :ref:`elasticsearch` for parsing and storage and can then be found in :ref:`hunt` and :ref:`kibana`.
+
 Community ID
 ------------
 
