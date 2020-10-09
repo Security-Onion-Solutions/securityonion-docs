@@ -5,16 +5,16 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion is now generally avilable and is at version 2.3!
+Security Onion is now generally available and is at version 2.3!
 
 Known Issues
 ------------
 
-- It is still possible to update your grid from any release candidate to 2.3 but if this is a true production deployment, we recommend a fresh image and install
-- Please be patient as we update our documentation. We have made a concerted effort to update as much as possbile but we are sure there are things that might be incorrect or ommited. If you see something incorrect or think something you want to do should be documented, please start a | Github discussion | https://securityonion.net/discuss 
-- Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to an 2.3 grid
-- Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5
-- When running soup to upgrade from older versions to 2.3, there is a Salt error that may occur during the final highstate. This error is related to the patch_os_schedule and can be ignored as it should not occur again in subsequent highstates
+- It is still possible to update your grid from any release candidate to 2.3 but if this is a true production deployment, we recommend a fresh image and install.
+- Please be patient as we update our documentation. We have made a concerted effort to update as much as possible but some things still may be incorrect or ommited. If you have questions or feedback, please start a discussion at https://securityonion.net/discuss.
+- Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to an 2.3 grid.
+- Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
+- When running soup to upgrade from older versions to 2.3, there is a Salt error that may occur during the final highstate. This error is related to the patch_os_schedule and can be ignored as it should not occur again in subsequent highstates.
 - When Search Nodes are upgraded from older versions to 2.3, there is a chance of a race condition where certificates are missing. This will show errors in the manager log to the remote node. To fix this run the following on the search node that is having the issue:
 
   - Stop elasticsearch - ``sudo so-elasticsearch-stop``
