@@ -3,70 +3,31 @@
 Zeek Fields
 ===========
 
-The following lists field names as they are formatted in Zeek logs, then
-processed by Logstash and ingested into Elasticsearch.
+Zeek logs are sent to Elasticsearch where they are parsed using ingest parsing. Most Zeek logs have a few standard fields and they are parsed as follows:
 
-The original field name (from Zeek) appears on the left, and if changed,
-the updated name or formatting of the field (Elasticsearch) will appear
-on the right.
+| ts => @timestamp
+| uid => log.id.uid
+| id.orig_h => source.ip
+| id.orig_p => source.port
+| id.resp_h => destination.ip
+| id.resp_p => destination.port
 
-**(Zeek => Elastic)**
+The remaining fields in each log are specific to the log type. Rather than enumerate all of those here, we will link to the ingest parsers themselves which show the fields are parsed.
 
 conn.log
--------------
+--------
 
-| ``type:bro_conn``
-| ``/etc/logstash/conf.d/1100_preprocess_bro_conn.conf``
+``event.dataset:conn``
 
-| ts => timestamp
-| uid
-| id.orig\_h => source.ip
-| id.orig\_p => source.port
-| id.resp\_h => destination.ip
-| id.resp\_p => destination.port
-| proto => protocol
-| service
-| duration
-| orig\_bytes => original\_bytes
-| resp\_bytes => respond\_bytes
-| conn\_state => connection\_state => connection\_state\_description
+``/opt/so/saltstack/default/salt/elasticsearch/files/ingest/zeek.conn``
 
-::
-
-    Dictionary
-    S0 "Connection attempt seen, no reply"   
-    S1 "Connection established, not terminated"   
-    S2 "Connection established and close attempt by originator seen (but no reply from responder)"   
-    S3 "Connection established and close attempt by responder seen (but no reply from originator)"   
-    SF "Normal SYN/FIN completion"   
-    REJ "Connection attempt rejected"   
-    RSTO "Connection established, originator aborted (sent a RST)"   
-    RSTR "Established, responder aborted"  
-    RSTOS0 "Originator sent a SYN followed by a RST, we never saw a SYN-ACK from the responder"
-    RSTRH "Responder sent a SYN ACK followed by a RST, we never saw a SYN from the (purported) originator"
-    SH "Originator sent a SYN followed by a FIN, we never saw a SYN ACK from the responder (hence the connection was 'half' open)"
-    SHR "Responder sent a SYN ACK followed by a FIN, we never saw a SYN from the originator"
-    OTH "No SYN seen, just midstream traffic (a 'partial connection' that was not later closed)"
-
-
-| local\_orig
-| local\_resp => local\_respond
-| missed\_bytes
-| history
-| orig\_pkts => original\_packets
-| orig\_ip\_bytes => original\_ipbytes
-| resp\_pkts => respond\_packets
-| resp\_ip\_bytes => respond\_ipbytes
-| tunnel\_parents
-| original\_country\_code
-| respond\_country\_code
-| sensor\_name
+https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest/zeek.conn
 
 dhcp.log
--------------
+--------
 
-| ``type:bro_dhcp``
-| ``/etc/logstash/conf.d/1101_preprocess_bro_dhcp.conf``
+| ``event.dataset:dhcp``
+| ``/opt/so/saltstack/default/salt/elasticsearch/files/ingest/zeek.dhcp``
 
 | ts => timestamp
 | uid
@@ -74,10 +35,10 @@ dhcp.log
 | id.orig\_p => source.port
 | id.resp\_h => destination.ip
 | id.resp\_p => destination.port
-| mac
-| assigned\_ip
-| lease\_time
-| trans\_id => transaction\_id
+| mac => host.mac
+| assigned\_ip => dhcp.assigned_ip
+| lease\_time => dhcp.lease_time
+| trans\_id => dhcp.transaction_id
 
 dns.log
 ------------
