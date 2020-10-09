@@ -11,7 +11,7 @@ From https://www.netresec.com/?page=networkminer:
 
 Usage
 -----
-NetworkMiner is a part of our :ref:`analyst-vm` installation.
+NetworkMiner is a part of our :ref:`analyst-vm` installation. ``so-analyst-install`` automatically registers NetworkMiner as a pcap handler, so if you download a pcap file from :ref:`pcap`, you can simply click on it to open in NetworkMiner.
 
 Screenshot
 ----------
