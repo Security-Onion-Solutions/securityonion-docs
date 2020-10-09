@@ -12,5 +12,4 @@ This section covers how to customize Security Onion for your environment.
    proxy
    firewall
    email
-   ip
    ntp
