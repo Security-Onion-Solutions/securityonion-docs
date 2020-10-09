@@ -20,7 +20,7 @@ Custom :ref:`osquery` packages were generated for you during setup and you can f
 Configuration
 -------------
 
-Fleet configuration can be found in ``/opt/so/conf/fleet/``.
+Fleet configuration can be found in ``/opt/so/conf/fleet/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
 
 Diagnostic Logging
 ------------------
