@@ -3,4 +3,4 @@
 Syslog
 ======
 
-If you need to collect syslog from other devices, you can configure :ref:`filebeat` or :ref:`logstash` with a syslog input and then allow the port through the firewall.
+If you want to collect syslog from other devices, you'll need to run :ref:`so-allow` and then choose the ``syslog`` option to allow the port through the firewall.
