@@ -24,21 +24,17 @@ Known Issues
 2.3.0 Changes
 -------------
 
-- New "Alerts" queue for reviewing all alerts for acknowledgement or escalation. You can then send the alerts to The Hive in a new case  
-- The Hive no longer recieves alerts directly. We made this change due to user feedback and our own internal testing. The Hive would just get too cluttered with alerts making it impossible to effectively manage the events. Alerts allows you to slice and dice the alerts like you can in Hunt  
-- ISO install now works for UEFI as well as Secure Boot    
-- Airgap grids can now be updated using the latest ISO. Please read this documentation carefully    
-- Suricata is now at 5.0.4     
-- Zeek is at 3.0.11    
-- Google Stenographer has been updated to the latest version     
-- soup will now attempt to clean up old dockers to free up space    
-- Users can now customize Hunt actions via the hunt.actions.json file  
-- You can now modify the queries you want to display in the dropdown via hunt.queries.json  
-- The eventfields that get displayed based on the serach can now be cutomized via hunt.eventfields.json.
-- Alerts have similar json files where you can customize how you want to see things and start with alerts.function.json  
-- Read more about customizing SOC here  
-
-
+- New :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. :ref:`hive` no longer receives alerts directly.
+- ISO install now works for UEFI as well as Secure Boot.
+- Airgap grids can now be updated using the latest ISO. Please read this documentation carefully. 
+- :ref:`suricata` has been updated to version 5.0.4.
+- :ref:`zeek` has been updated to version 3.0.11.
+- :ref:`stenographer` has been updated to the latest version.
+- :ref:`soup` will now attempt to clean up old docker images to free up space.
+- Users can now customize :ref:`hunt` actions via the ``hunt.actions.json`` file.
+- You can now modify the queries you want to display in the dropdown via ``hunt.queries.json``.
+- The eventfields that get displayed based on the search can now be cutomized via ``hunt.eventfields.json``.
+- :ref:`alerts` has similar json files where you can customize how you want to see things.
 
 2.2.0 Changes
 -------------
