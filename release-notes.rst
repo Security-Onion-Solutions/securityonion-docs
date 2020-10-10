@@ -25,16 +25,18 @@ Known Issues
 -------------
 
 - New :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. Please note that :ref:`hive` no longer receives alerts directly.
-- ISO install now works for UEFI as well as Secure Boot.
+- Our Security Onion ISO now works for UEFI as well as Secure Boot.
 - :ref:`airgap` deployments can now be updated using the latest ISO. Please read this documentation carefully. 
 - :ref:`suricata` has been updated to version 5.0.4.
 - :ref:`zeek` has been updated to version 3.0.11.
 - :ref:`stenographer` has been updated to the latest version.
 - :ref:`soup` will now attempt to clean up old docker images to free up space.
-- Users can now customize :ref:`hunt` actions via the ``hunt.actions.json`` file.
-- You can now modify the queries you want to display in the dropdown via ``hunt.queries.json``.
-- The eventfields that get displayed based on the search can now be cutomized via ``hunt.eventfields.json``.
-- :ref:`alerts` has similar json files where you can customize how you want to see things.
+- :ref:`hunt` actions can be customized via ``hunt.actions.json``.
+- :ref:`hunt` queries can be customized via ``hunt.queries.json``.
+- :ref:`hunt` event fields can be customized via ``hunt.eventfields.json``.
+- :ref:`alerts` actions can be customized via ``alerts.actions.json``.
+- :ref:`alerts` queries can be customized via ``alerts.queries.json``.
+- :ref:`alerts` event fields can be customized via ``alerts.eventfields.json``.
 
 2.2.0 Changes
 -------------
