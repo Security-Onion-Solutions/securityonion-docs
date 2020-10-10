@@ -1,7 +1,7 @@
 .. _airgap:
 
-Airgapped Networks
-==================
+Airgap
+======
 
 Security Onion is commited to allowing users to run a full install on networks that do not have Internet access. Starting in 2.x RC3, users will see an option to specify that the install is airgapped. The installer will then make the appropriate modifications to make this work properly.
 
