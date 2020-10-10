@@ -24,7 +24,7 @@ Known Issues
 2.3.0 Changes
 -------------
 
-- New :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. :ref:`hive` no longer receives alerts directly.
+- New :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. Please note that :ref:`hive` no longer receives alerts directly.
 - ISO install now works for UEFI as well as Secure Boot.
 - Airgap grids can now be updated using the latest ISO. Please read this documentation carefully. 
 - :ref:`suricata` has been updated to version 5.0.4.
