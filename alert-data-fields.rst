@@ -9,8 +9,11 @@ Alert Data Fields
 | ``/opt/so/conf/elasticsearch/ingest/common``
 
 You can find these online at:
+
 https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest/suricata.alert
+
 https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest/common_nids
+
 https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest/common
 
 You can find parsed NIDS alerts in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana` via their predefined queries and dashboards or by manually searching for:
