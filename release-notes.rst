@@ -10,7 +10,7 @@ Security Onion is now generally available and is at version 2.3!
 Known Issues
 ------------
 
-- It is still possible to update your grid from any release candidate to 2.3 but if this is a true production deployment, we recommend a fresh image and install.
+- It is still possible to update your grid from any release candidate to 2.3. However, if you have a true production deployment, then we recommend a fresh image and install for best results.
 - Please be patient as we update our documentation. We have made a concerted effort to update as much as possible but some things still may be incorrect or ommited. If you have questions or feedback, please start a discussion at https://securityonion.net/discuss.
 - Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to an 2.3 grid.
 - Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
