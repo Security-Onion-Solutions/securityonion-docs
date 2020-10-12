@@ -19,7 +19,7 @@ Usage
 
    so-import-pcap works differently on Security Onion 2 than it did in previous versions! 
       
-This new version of so-import-pcap requires you to run through Setup and choose a configuration that supports so-import-pcap. This includes Import Node and other nodes that include sensor services like Eval and Standalone. The quickest and easiest option is to choose Import Node which gives you the minimal services necessary to import a pcap and view the resulting logs in :ref:`hunt` or :ref:`kibana`.
+This new version of so-import-pcap requires you to run through Setup and choose a configuration that supports so-import-pcap. This includes Import Node and other nodes that include sensor services like Eval and Standalone. The quickest and easiest option is to choose Import Node which gives you the minimal services necessary to import a pcap. so-import-pcap then provides a hyperlink for you to view all alerts and logs in :ref:`hunt`. You can also find NIDS alerts in :ref:`alerts` and all logs in :ref:`kibana`.
 
 Once Setup completes, you can then run ``sudo so-import-pcap`` and supply the full path to at least one pcap file. For example, to import a single pcap named ``import.pcap``:
 
