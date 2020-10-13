@@ -12,7 +12,7 @@ Known Issues
 
 - It is still possible to update your grid from any release candidate to 2.3. However, if you have a true production deployment, then we recommend a fresh image and install for best results.
 - Please be patient as we update our documentation. We have made a concerted effort to update as much as possible but some things still may be incorrect or ommited. If you have questions or feedback, please start a discussion at https://securityonion.net/discuss.
-- Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to an 2.3 grid.
+- Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to a 2.3 grid.
 - Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
 - When running soup to upgrade from older versions to 2.3, there is a Salt error that may occur during the final highstate. This error is related to the patch_os_schedule and can be ignored as it should not occur again in subsequent highstates.
 - When Search Nodes are upgraded from older versions to 2.3, there is a chance of a race condition where certificates are missing. This will show errors in the manager log to the remote node. To fix this run the following on the search node that is having the issue:
@@ -24,7 +24,8 @@ Known Issues
 2.3.0 Changes
 -------------
 
-- We have a new :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. Please note that :ref:`hive` no longer receives alerts directly.
+- We have a new :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. Please note that :ref:`hive` no longer receives alerts directly. 
+- Kibana no longer presents the option to create alerts from events, but instead allows creation of cases from events.
 - Our Security Onion ISO now works for UEFI as well as Secure Boot.
 - :ref:`airgap` deployments can now be updated using the latest ISO. Please read this documentation carefully. 
 - :ref:`suricata` has been updated to version 5.0.4.
@@ -37,6 +38,8 @@ Known Issues
 - :ref:`alerts` actions can be customized via ``alerts.actions.json``.
 - :ref:`alerts` queries can be customized via ``alerts.queries.json``.
 - :ref:`alerts` event fields can be customized via ``alerts.eventfields.json``.
+- This help documentation is now viewable offline for airgap installations.
+- The script `so-user-add` will now validate the password is acceptable before attempting to create the user.
 
 2.2.0 Changes
 -------------
