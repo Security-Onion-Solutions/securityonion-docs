@@ -7,7 +7,7 @@ Security Onion VPC Traffic Mirroring Configuration
 
 .. warning::
 
-    THE CLOUD AMI IS STILL IN TESTING!  IF IT BREAKS, YOU GET TO KEEP ALL THE PIECES!
+    THE CLOUD AMI IS NOT YET AVAILABLE BUT IS COMING SOON!
 
 This section covers configuring a Security Onion cloud image hosted in Amazon Web Services (AWS) to receive mirrored/spanned traffic from other instances hosted within an Amazon Virtual Private Cloud (VPC). 
 
@@ -66,8 +66,7 @@ Create a Security Onion EC2 instance in Amazon Web Services (AWS)
 To configure a Security Onion instance, follow these steps:
 
 - From the EC2 dashboard select: ``Launch Instance``
-- Select the ``Community AMI's`` option in the left pane and search for ``Security-Onion-2.3`` in the search bar.
-- Select the ``Security-Onion-2.3`` AMI with the most recent build date.
+- Search the AWS Marketplace for ``Security Onion`` and make sure you get the latest version of our official AMI.
 - Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please visit our :ref:`hardware` section.
 - From the subnet drop-down menu select the same subnet as the sniffing interface.
 - Under the Network interfaces section configure the eth0 (management) interface.
