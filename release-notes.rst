@@ -40,6 +40,7 @@ Known Issues
 - :ref:`alerts` event fields can be customized via ``alerts.eventfields.json``.
 - This help documentation is now viewable offline for airgap installations.
 - The script `so-user-add` will now validate the password is acceptable before attempting to create the user.
+- :ref:`playbook` and :ref:`grafana` no longer use static passwords for their admin accounts.
 
 2.2.0 Changes
 -------------
