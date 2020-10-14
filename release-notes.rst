@@ -41,6 +41,8 @@ Known Issues
 - This help documentation is now viewable offline for airgap installations.
 - The script `so-user-add` will now validate the password is acceptable before attempting to create the user.
 - :ref:`playbook` and :ref:`grafana` no longer use static passwords for their admin accounts.
+- :ref:`analyst-vm` now comes with NetworkMiner 2.6 installed
+
 
 2.2.0 Changes
 -------------
