@@ -31,6 +31,12 @@ You can change your password in :ref:`soc` by clicking the user icon in the uppe
 .. image:: https://user-images.githubusercontent.com/1659467/95574537-17764400-09fb-11eb-80ff-15ce9e9de16d.png
   :target: https://user-images.githubusercontent.com/1659467/95574537-17764400-09fb-11eb-80ff-15ce9e9de16d.png
 
+If you've forgotten your SOC password, you can reset it using the ``so-user`` command:
+
+::
+
+    so-user update username@example.com
+    
 TheHive
 -------
 Log into :ref:`hive` using the username and password you created in the Setup wizard.
