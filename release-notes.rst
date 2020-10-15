@@ -11,9 +11,8 @@ Known Issues
 ------------
 
 - It is still possible to update your grid from any release candidate to 2.3. However, if you have a true production deployment, then we recommend a fresh image and install for best results.
-- In 2.3.0 we made some changes to data types in the elastic index templates. This will cause some errors in Kibana around field conflicts. You can address this in 3 ways:
+- In 2.3.0 we made some changes to data types in the elastic index templates. This will cause some errors in Kibana around field conflicts. You can address this in 2 ways:
 
-  - Re-Image and start fresh from 2.3.0
   - Delete all the data on the ES nodes preserving all of your other settings suchs as BPFs by running ``sudo so-elastic-clear`` on all the search nodes
   - Re-Index the data. This is not a quick process but you can find more information at https://docs.securityonion.net/en/2.3/elasticsearch.html#re-indexing
 - Please be patient as we update our documentation. We have made a concerted effort to update as much as possible but some things still may be incorrect or ommited. If you have questions or feedback, please start a discussion at https://securityonion.net/discuss.
