@@ -134,8 +134,10 @@ Other examples: https://netplan.io/examples/
    Don't reboot yet!
 
 Install Security Onion 2:
-::
-   Skip to step 7, detailed here: https://docs.securityonion.net/en/2.3/installation.html#installation-on-ubuntu-or-centos
+
+Skip to step 7, detailed here: 
+   
+   https://docs.securityonion.net/en/2.3/installation.html#installation-on-ubuntu-or-centos
  
 Post-Installation:
 
