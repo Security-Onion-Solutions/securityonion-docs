@@ -64,6 +64,7 @@ You may be interactively prompted to provide an answer to the following question
 
 AFTER UPGRADING TO 18.04:
 
+Copy/paste the following:
 ::
 
    sudo service apache2 stop && \
@@ -137,7 +138,7 @@ Install Security Onion 2:
 
 Skip to step 7, detailed here: 
    
-   https://docs.securityonion.net/en/2.3/installation.html#installation-on-ubuntu-or-centos
+https://docs.securityonion.net/en/2.3/installation.html#installation-on-ubuntu-or-centos
  
 Post-Installation:
 
