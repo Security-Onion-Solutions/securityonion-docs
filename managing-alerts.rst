@@ -82,7 +82,7 @@ If SID 4321 is noisy, you can disable it as follows:
        disabled:
          - 4321
 
-Then run ``sudo salt-call state.apply idstools`` to update the config.
+Then, from the manager run ``sudo salt $SENSORNAME_$ROLE state.apply idstools`` to update the config.
 
 If you want to disable multiple rules at one time, you can use a regular expression, but make sure you enclose the full entry in single quotes like this:
 
@@ -98,9 +98,11 @@ Modify the SID
 
 ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then update the config:
 
-::
+- From the manager, run:
 
-   sudo salt-call state.apply idstools
+  ::
+
+    salt $SENSORNAME_$ROLE state.apply idstools
 
 Rewrite the signature
 ---------------------
@@ -116,11 +118,11 @@ In some cases, you may not want to use the modify option above, but instead crea
 - Paste the rule. You may want to bump the SID into the 90,000,000 range and set the revision to 1.
 - Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. As shown above, we edit the minion pillar and add the SID to the ``idstools - sids - disabled`` section.
 
-- Finally, update the config:
+- Finally, from the manager, update the config on the remote node:
 
-   ::
-   
-      sudo salt-call state.highstate
+  ::
+
+    salt $SENSORNAME_$ROLE state.highstate
 
 Threshold
 ---------

@@ -49,7 +49,7 @@ Please include the following details where you can:
 
 - Does so-status show all services running?
 
-- Do you get any failures when you run ``salt-call state.highstate``?
+- Do you get any failures when you run ``salt-call state.highstate`` from the node?
 
 - Explain your issue. For example: ``Installation fails when I select this series of options...``
 

@@ -60,11 +60,11 @@ For example, suppose you want to change Suricata's ``EXTERNAL_NET`` setting from
           address-groups:
             EXTERNAL_NET: "!$HOME_NET"
             
-Then run:
+From the manager, then run:
 
 ::
 
-    sudo salt-call state.highstate
+    sudo salt $SENSORNAME_$ROLE state.highstate
 
 Some of the settings normally found in ``suricata.yaml`` can be found in the sensor pillar instead of the Suricata pillar. These options are: ``HOMENET``, ``default-packet-size``, and the CPU affinity settings for pinning the processes to CPU cores or how many processes to run.
 

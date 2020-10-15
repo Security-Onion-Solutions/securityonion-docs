@@ -33,7 +33,7 @@ By default, if total available memory is 8GB or greater, the Logstash heap size 
 
 For more information, please see https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops.
 
-You may need to adjust the value depending on your system's performance. The changes will be applied the next time the minion checks in. You can force it to happen immediately by running ``sudo salt-call state.apply logstash`` on the actual node or by running ``sudo salt 'MINIONNAME' state.apply logstash`` on the manager node.
+You may need to adjust the value depending on your system's performance. The changes will be applied the next time the minion checks in. You can force it to happen immediately by running ``sudo salt-call state.apply logstash`` on the actual node or by running ``sudo salt $SENSORNAME_$ROLE state.apply logstash`` on the manager node.
 
 Adding New Logs or Modifying Existing Parsing
 ---------------------------------------------
