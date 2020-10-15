@@ -270,3 +270,10 @@ So, if you decided to add a ``path.repo`` value of ``/backups``, Elasticsearch w
 (where ``/backups`` exists on the host file system and is writable by the Elasticsearch user -- a directory named ``/backups`` will be created inside the container, and the container will be able to read/write from that location).
 
 To automate the snapshotting process, you can use :ref:`curator`, in conjunction with a cron job, much like what is done today with the close and delete jobs.
+
+Re-indexing
+-----------
+Re-indexing may need to occur if field data types have changed and conflicts arise.  This process can be VERY time-consuming, and we only recommend this if keeping data is absolutely critical.  For more information on re-indexing, see:
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
+
