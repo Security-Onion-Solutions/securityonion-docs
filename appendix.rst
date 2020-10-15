@@ -26,7 +26,7 @@ If you have reviewed all of the warnings above and still want to attempt an in-p
 
 .. warning::
 
-   PLEASE ENSURE YOU HAVE LOCAL ACCESS TO THE MACHINE BEING UPGRADED.  FAILURE TO DO SO COULD RESULT IN AN UNSUCCESSFUL UPGRADE, REQUIRING A CLEAN INSTALL. 
+   Please ensure you have local access to the machine being upgraded (console/DRAC/IPMI).  Failure to do so could result in an unsuccessful upgrade, requiring a clean installation of Security Onion 2. 
 
 ``sudo soup``
 
@@ -55,7 +55,7 @@ You may be interactively prompted to provide an answer to the following question
 ::
 
    Non-superusers capture PCAP -> No
-   login.defs -> Install pkg maintainer's version
+   login.defs -> Install package maintainer's version
    grub -> Choose to keep local version
    sshd_config -> Choose to keep local version
    syslog-ng.conf -> Choose to keep local version
@@ -131,10 +131,19 @@ Other examples: https://netplan.io/examples/
 
 .. warning::
 
-   DON'T REBOOT YET!
+   Don't reboot yet!
 
 Install Security Onion 2:
 ::
    Skip to step 7, detailed here: https://docs.securityonion.net/en/2.3/installation.html#installation-on-ubuntu-or-centos
+ 
+Post-Installation:
 
+While the files will still reside disk, config files/settings will NOT be migrated to the appropriate format/locations for Security Onion 2.
+
+Example configuration may include:
+
+- IDS Rule Oinkcode/Thresholds/Disablements (``/etc/nsm/rules/threshold.conf``, ``/etc/nsm/pulledpork``)
+- Custom Logstash config (``/etc/logstash/custom``)
+- Custom Zeek scripts or BPFs (``/opt/zeek/share/zeek/policy``, ``/etc/nsm/rules/bpf.conf``)
 
