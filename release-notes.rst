@@ -20,6 +20,11 @@ Known Issues
   - Stop elasticsearch - ``sudo so-elasticsearch-stop``
   - Run the SSL state - ``sudo salt-call state.apply ssl``
   - Restart elasticsearch - ``sudo so-elasticsearch-restart``
+- If you are upgrading from RC1 you might see errors around registry:2 missing. This error does not break the actual upgrade. To fix run the following on the manager: 
+
+  - Stop the Docker registry - ``sudo docker stop so-dockerregistry``
+  - Remove the container - ``sudo docker rm so-dockerregistry``
+  - Run the registry state = ``sudo salt-call state.apply registry``
 - When upgrading from a previous version, you may run into a message regarding field conflicts in Kibana as a result of data types being changed for certain fields when upgrading. You can either delete the affected indices, or reindex (not recommended, unless absolutely necessary).  See https://docs.securityonion.net/en/2.3/elasticsearch.html#re-indexing for more details. 
 
 2.3.0 Changes
