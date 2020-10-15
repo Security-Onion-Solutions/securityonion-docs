@@ -11,6 +11,11 @@ Known Issues
 ------------
 
 - It is still possible to update your grid from any release candidate to 2.3. However, if you have a true production deployment, then we recommend a fresh image and install for best results.
+- In 2.3.0 we made some changes to data types in the elastic index templates. This will cause some errors in Kibana around field conflicts. You can address this in 3 ways:
+
+  - Re-Image and start fresh from 2.3.0
+  - Delete all the data on the ES nodes preserving all of your other settings suchs as BPFs by running ``sudo so-elastic-clear`` on all the search nodes
+  - Re-Index the data. This is not a quick process but you can find more information at https://docs.securityonion.net/en/2.3/elasticsearch.html#re-indexing
 - Please be patient as we update our documentation. We have made a concerted effort to update as much as possible but some things still may be incorrect or ommited. If you have questions or feedback, please start a discussion at https://securityonion.net/discuss.
 - Once you update your grid to 2.3, any new nodes that join the grid must be 2.3 so if you try to join an older node it will fail. For best results, use the latest 2.3 ISO (or 2.3 installer from github) when joining to a 2.3 grid.
 - Shipping Windows Eventlogs with Osquery will fail intermittently with utf8 errors logged in the Application log. This is scheduled to be fixed in Osquery 4.5.
@@ -20,12 +25,12 @@ Known Issues
   - Stop elasticsearch - ``sudo so-elasticsearch-stop``
   - Run the SSL state - ``sudo salt-call state.apply ssl``
   - Restart elasticsearch - ``sudo so-elasticsearch-restart``
-- If you are upgrading from RC1 you might see errors around registry:2 missing. This error does not break the actual upgrade. To fix run the following on the manager: 
+- If you are upgrading from RC1 you might see errors around registry:2 missing. This error does not break the actual upgrade. To fix, run the following on the manager: 
 
   - Stop the Docker registry - ``sudo docker stop so-dockerregistry``
   - Remove the container - ``sudo docker rm so-dockerregistry``
   - Run the registry state = ``sudo salt-call state.apply registry``
-- When upgrading from a previous version, you may run into a message regarding field conflicts in Kibana as a result of data types being changed for certain fields when upgrading. You can either delete the affected indices, or reindex (not recommended, unless absolutely necessary).  See https://docs.securityonion.net/en/2.3/elasticsearch.html#re-indexing for more details. 
+
 
 2.3.0 Changes
 -------------
