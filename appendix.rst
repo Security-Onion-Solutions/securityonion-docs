@@ -24,5 +24,117 @@ For the reasons listed above, we recommend that most users procure new hardware 
 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following:
 
- - perform an in-place upgrade from Ubuntu 16.04 to Ubuntu 18.04 using standard Ubuntu procedures
- - once you have completed the Ubuntu 18.04 upgrade, follow the Ubuntu 18.04 instructions in the :ref:`installation` section.
+.. warning::
+
+   PLEASE ENSURE YOU HAVE LOCAL ACCESS TO THE MACHINE BEING UPGRADED.  FAILURE TO DO SO COULD RESULT IN AN UNSUCCESSFUL UPGRADE, REQUIRING A CLEAN INSTALL. 
+
+``sudo soup``
+
+``sudo reboot`` 
+
+
+Copy/paste the folowing:
+
+::
+
+   sudo rm /etc/apt/sources.list.d/securityonion-ubuntu-stable-xenial.list && \    
+   sudo so-stop && \  
+   sudo service syslog-ng stop && \
+   sudo service mysql stop && \
+   sudo service salt-minion stop && \
+   sudo docker system prune -a -f && \
+   sudo sed -i 's|PREV="pre-.*$|PREV="pre-upgrade-to-18.04"|g' && \ /var/lib/dpkg/info/securityonion-bro.preinst && \
+   sudo /var/lib/dpkg/info/securityonion-bro.preinst install && \ 
+   sudo apt install update-manager-core -y && \
+   sudo sed -i 's|Prompt=never|Prompt=lts|g' /etc/update-manager/release-upgrades && \
+   sudo pkill xscreensaver && \
+   sudo do-release-upgrade -y`
+
+You may be interactively prompted to provide an answer to the following questions or similar during the upgrade:
+
+::
+
+   Non-superusers capture PCAP -> No
+   login.defs -> Install pkg maintainer's version
+   grub -> Choose to keep local version
+   sshd_config -> Choose to keep local version
+   syslog-ng.conf -> Choose to keep local version
+   
+``sudo reboot``
+
+AFTER UPGRADING TO 18.04:
+
+::
+
+   sudo service apache2 stop && \
+   sudo systemctl disable apache2.service && \
+   sudo service mysql stop && \
+   sudo systemctl disable mysql.service && \
+   sudo ntpdate -u time.nist.gov && \ 
+   sudo apt autoremove -f -y && \ 
+   for i in $(dpkg -l | grep securityonion | awk '{print $2}'); do sudo apt remove $i -y -f --purge; done && \
+   sudo mv /etc/salt/ /etc/salt_pre_upgrade && \
+   sudo mv /var/ossec /var/ossec_pre_upgrade && \ 
+   sudo apt purge salt-* -y && \
+   sudo sed -i 's/^*/#/' /etc/cron.d/salt-update && \
+   sudo apt install netplan.io -y && \
+   sudo apt purge -y ifupdown && \
+   sudo rm /etc/network/interfaces* && \
+   sudo mv /nsm/zeek/spool/ /nsm/zeek/old_spool && \
+   sudo mv /nsm/zeek/logs/stats/ /nsm/zeek/logs/old_stats
+
+
+On Distributed Manager - also do the following for Redis:
+::
+
+   sudo systemctl stop redis.service && \
+   sudo systemctl disable redis.service && \
+   sudo apt purge redis -y
+
+Apply netplan for the managemnt interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``):
+
+If using DHCP (not recommended)
+
+::
+   
+   network:
+     version: 2
+     renderer: networkd
+     ethernets:
+       ens18:
+         dhcp4: true
+
+
+If using static IP:
+::
+
+   network:
+     version: 2
+     renderer: networkd
+     ethernets:
+       ens18:
+         addresses:
+           - 10.10.10.2/24
+         gateway4: 10.10.10.1
+         nameservers:
+           search: [mydomain]
+           addresses: [10.10.10.1, 1.1.1.1]
+
+
+Other examples: https://netplan.io/examples/
+
+``sudo netplan apply`` (may disconnect after this command, so ensure local access is available)
+
+``sudo reboot``
+
+``sudo nmcli con delete "Wired connection 1"`` (delete for later use as bond interface)
+
+.. warning::
+
+   DON'T REBOOT YET!
+
+Install Security Onion 2:
+::
+   Skip to step 7, detailed here: https://docs.securityonion.net/en/2.3/installation.html#installation-on-ubuntu-or-centos
+
+
