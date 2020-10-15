@@ -20,6 +20,7 @@ Known Issues
   - Stop elasticsearch - ``sudo so-elasticsearch-stop``
   - Run the SSL state - ``sudo salt-call state.apply ssl``
   - Restart elasticsearch - ``sudo so-elasticsearch-restart``
+- When upgrading from a previous version, you may run into a message regarding field conflicts in Kibana as a result of data types being changed for certain fields when upgrading. You can either delete the affected indices, or reindex (not recommended, unless absolutely necessary).  See https://docs.securityonion.net/en/2.3/elasticsearch.html#re-indexing for more details. 
 
 2.3.0 Changes
 -------------
@@ -41,7 +42,8 @@ Known Issues
 - This help documentation is now viewable offline for airgap installations.
 - The script `so-user-add` will now validate the password is acceptable before attempting to create the user.
 - :ref:`playbook` and :ref:`grafana` no longer use static passwords for their admin accounts.
-- :ref:`analyst-vm` now comes with NetworkMiner 2.6 installed
+- :ref:`analyst-vm` now comes with NetworkMiner 2.6 installed.
+- :ref:`strelka` YARA matches now generate alerts that can be viewed through the Alerts interface .
 
 
 2.2.0 Changes
