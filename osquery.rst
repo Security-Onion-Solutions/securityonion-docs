@@ -17,8 +17,8 @@ Agents
 
 To deploy an osquery agent to an endpoint, go to the :ref:`soc` Downloads page and download the proper osquery agent for the operating system of that endpoint. Use :ref:`so-allow` to allow the osquery agent to connect to port ``8090`` on the manager. Then install the osquery agent and it should check into the manager and start showing up in :ref:`fleet`.
 
-To regenerate packages, run the following (it will take up to 5 minutes to rebuild the packages):
- ``salt-call state.apply fleet.event_gen-packages``
+To regenerate packages, run the following on the Manager (it will take up to 5 minutes to rebuild the packages):
+ ``sudo salt-call state.apply fleet.event_gen-packages``
 
 Hunt or Kibana
 --------------
