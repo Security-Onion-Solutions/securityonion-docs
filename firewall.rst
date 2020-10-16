@@ -8,14 +8,15 @@ Setup defaults to only allowing port 22 (ssh)
 
 When you run Setup, it defaults to locking down the local firewall to only allowing port 22 (ssh).  If you need to allow connections on other ports, you can run the :ref:`so-allow` utility.
 
-Sensors automatically add their own firewall rules to the manager node
-----------------------------------------------------------------------
+Nodes automatically add their own firewall rules to the manager
+---------------------------------------------------------------
 
-When you run Setup on a sensor-only installation, it will ssh to the manager node and add new firewall rules to the manager node to allow the sensor to connect on the following ports:
+When you add a new node to your grid, the node will ssh to the manager node and add new firewall rules to the manager node to allow the sensor to connect on the following ports:
 
 -  22/tcp (ssh)
 -  4505/tcp (salt)
 -  4506/tcp (salt)
+-  5644/tcp (filebeat --> logstash)
 
 Managing
 --------
