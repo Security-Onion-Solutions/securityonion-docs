@@ -33,7 +33,7 @@ If you have reviewed all of the warnings above and still want to attempt an in-p
 ``sudo reboot`` 
 
 
-Copy/paste the folowing:
+Copy and paste the following:
 
 ::
 
@@ -64,7 +64,7 @@ You may be interactively prompted to provide an answer to the following question
 
 AFTER UPGRADING TO 18.04:
 
-Copy/paste the following:
+Copy and paste the following:
 ::
 
    sudo service apache2 stop && \
@@ -92,7 +92,7 @@ On Distributed Manager - also do the following for Redis:
    sudo systemctl disable redis.service && \
    sudo apt purge redis -y
 
-Apply netplan for the managemnt interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``):
+Apply netplan for the management interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``):
 
 If using DHCP (not recommended)
 
