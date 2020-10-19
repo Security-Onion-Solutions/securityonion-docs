@@ -70,7 +70,7 @@ Performance testing is still ongoing; initial testing has shown that on a lightl
 Viewing Playbook Alerts
 -----------------------
 
-When results from your Plays are found (via :ref:`elastalert`), any high or critical severity results will generate an Alert within :ref:`hive`. Low and medium severity results are available to view within :ref:`hunt` or :ref:`kibana`.
+When results from your Plays are found (ie alerts), they are available to view within :ref:`alerts`.
 
 User Accounts
 -------------
@@ -103,7 +103,14 @@ The current Security Onion Sigmac field mappings can be found here: https://gith
 Adding Additional Rulesets
 -----------
 
-As previously mentioned, the pre-loaded Plays come from the community Sigma repository (https://github.com/Neo23x0/sigma/tree/master/rules). The default config is to only pull in the Windows rules. The rest of the rules from the community repository can be pulled in by editing ``/opt/so/conf/soctopus/SOCtopus.conf`` and adding one ore more of the following to ``playbook_rulesets = windows``, comma seperated:
+As previously mentioned, the pre-loaded Plays come from the community Sigma repository (https://github.com/Neo23x0/sigma/tree/master/rules). The default config is to only pull in the Windows rules. The rest of the rules from the community repository can be pulled in by editing a pillar value under ``/opt/so/saltstack/local/pillar/global.sls``
+
+soctopus:
+  playbook:
+    rulesets:
+      - windows
+      
+ Add one or more of the following:
 
 ``application,apt,cloud,compliance,generic,linux,network,proxy,web``
 
