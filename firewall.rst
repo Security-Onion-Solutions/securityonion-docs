@@ -63,81 +63,52 @@ This is where many default named hostgroups get populated with IPs that are spec
 This is where host group and port group associations would be made to create custom host group and port group assignements that would apply to all nodes of a certain role type in the grid.
 
 
-
 Managing
 --------
 
 Managing firewall rules, for all devices, should be done from the manager node using either :ref:`so-allow`, ``so-firewall`` or, for advanced cases, manually editing the yaml files.
 
 
+Examples
+--------
 
+Allow hosts to send syslog to a sensor node.
+############################################
 
+By default, if you use ``so-allow`` to add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. If we want to allow a host or group of hosts to send syslog to a sensor, then we can do the following:
 
+1. Create a new host group that will contain the IPs of the hosts that you want to allow to connect to the sensor. This will add the host group to ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``. If the host group already exists, you can skip to step 2. From the manager run:
 
+  ::
 
-analyst.sls
-~~~~~~~~~~~
-This is a list of hosts and networks that are allowed the analyst role. The analyst role allows connectivity to the sensor to use the web interface. Please note that 80 just redirects to 443 and no communication with the console is unencrypted.
+    sudo so-firewall addhostgroup <GROUP_NAME>
 
-- 80/tcp
-- 443/tcp
+2. Add the desired IPs to the host group. This will add the IPs to the host group in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``.
 
-beats_endpoint.sls
-~~~~~~~~~~~~~~~~~~
-These are endpoints that are allowed to use beats to send traffic to the manager node.
+  ::
 
-- 5044
+    sudo so-firewall includehost <GROUP_NAME> <IP>
 
-forward_nodes.sls
-~~~~~~~~~~~~~~~~~
-Forward nodes or sensors
+3. Since we reused the syslog port group that is already defined, we don't need to create a new port group. Now we have to build the association between the host group and the syslog port group and assign that to our sensor node. Add the following to the sensor minion pillar file located at ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls``
 
-- 5044
-- 6379
+  ::
 
-minions.sls
-~~~~~~~~~~~
-- 4505
-- 4506
-- 8086
+    firewall:
+      assigned_hostgroups:
+        chain:
+          DOCKER-USER:
+            hostgroups:
+              syslogtosensor1:
+                portgroups:
+                  - portgroups.syslog
 
-osquery_endpoint.sls
-~~~~~~~~~~~~~~~~~~~~
-- 8080
+4. Now that the configuration is in place, you can either wait for the sensor to sync with Salt running on the manager, or you can force it to update its firewall by running the following from the manager:
 
-storage_nodes.sls
-~~~~~~~~~~~~~~~~~
+  ::
 
-Advanced Firewall Customization
--------------------------------
+    salt <HOSTNAME>_<ROLE> state.apply firewall
+
 
 .. warning::
 
   Please review the :ref:`salt` section to understand pillars and templates. Modifying these values outside of :ref:`so-allow` or ``so-firewall`` could lead to problems accessing your existing hosts. This is an advanced case and you most likely won't never need to modify these files.
-  An example of why you might modify these templates is if you were adding some sort of agent to the hosts in your grid that are not part of Security Onion. This would allow you to open the ports needed to the hosts that required access. 
-
- 
-
-- Default port groups: ``/opt/so/saltstack/default/salt/firewall/portgroups.yaml``
-This file contains the port groups that we have defined to be used across all the Security Onion node types. You will find that many of the aliases under firewall:aliases:ports
-
-- Local port groups: ``/opt/so/saltstack/local/salt/firewall/portgroups.local.yaml``
-
-Host Groups
-~~~~~~~~~~~
-Host groups is similar to port groups but for storing lists of hosts.  
-
-Default host groups: ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``
-
-Port Group Assignments
-~~~~~~~~~~~~~~~~~~~~~~
-Port group assignments are the way you map host groups to port groups to complete the rule.  
-
-Default port group assignments: ``/opt/so/saltstack/local/salt/firewall/assigned_hostgroups.local.map.yaml``
-
-More Information
-~~~~~~~~~~~~~~~~
-Much of information and functionality that follows is handled with :ref:`so-allow` or ``so-firewall``, but could help provide a better understanding of what those two scripts are doing under the hood.
-
-During setup, the files from securityonion/files/firewall/ (https://github.com/Security-Onion-Solutions/securityonion/tree/master/files/firewall), are copied to the local directory located at ``/opt/so/saltstack/local/salt/firewall/``.
-Once setup is complete and ``so-allow`` or ``so-firewall`` are called in the future, they modify the appropriate yaml files that are located under ``/opt/so/saltstack/local/salt/firewall/``. Since these yaml files are under ``/opt/so/saltstack/local/`` they will not be changed during a code update.
