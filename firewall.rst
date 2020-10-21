@@ -3,7 +3,6 @@
 Firewall
 ========
 
-
 Function
 --------
 The firewall state is designed to function with the idea of creating port groups and host groups, each with their own alias or name, and assiocating the two in order to create an allow rule. A node that has a port group and host group association assigned to it will allow those hosts to connect to those ports on that node.
@@ -23,51 +22,39 @@ to the manager, using the soremote account, and add itself to the appropriate ho
 There are two directories that contain the yaml files for the firewall configuration.
 
 ``/opt/so/saltstack/default/firewall``
-
 This is where the default firewall rules are located. The files in this directory should not be modified as they could possibly be overwritten during a soup update in the event we update those files.
 
 ``/opt/so/saltstack/default/salt/firewall/portgroups.yaml``
-
 This is where the default port groups are defined. 
 
 .. image:: https://user-images.githubusercontent.com/17089008/96641876-5a85c080-12f3-11eb-90e3-0ac3d2dc9b8b.png
   :target: https://user-images.githubusercontent.com/17089008/96641876-5a85c080-12f3-11eb-90e3-0ac3d2dc9b8b.png
 
-
 ``/opt/so/saltstack/default/salt/firewall/hostgroups.yaml``
-
 This is where the default hostgroups are defined. There isn't much in here other than anywhere, dockernet, localhost and self.
 
 ``/opt/so/saltstack/default/salt/firewall/assigned_hostgroups.map.yaml``
-
-This is where the default allow rules come together and pair hostgroups and portgroups and assign that pairing to a node based on its role in the grid. In the image below, we can see how we define some rules for an eval node. 
+This is where the default allow rules come together and pair hostgroups and portgroups and assign that pairing to a node based on its role in the grid. In the image below, we can see how we define some rules for an eval node.
 
 .. image:: https://user-images.githubusercontent.com/17089008/96641900-62456500-12f3-11eb-94bc-2b6874f3f4f7.png
   :target: https://user-images.githubusercontent.com/17089008/96641900-62456500-12f3-11eb-94bc-2b6874f3f4f7.png
 
-
 ``/opt/so/saltstack/local/salt/firewall``
-
 This is the directory where the firewall rules specific to your grid are located.
 
 ``/opt/so/saltstack/local/salt/firewall/portgroups.local.yaml``
-
 This is where custom port groups are defined.
 
 ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``
-
 This is where many default named hostgroups get populated with IPs that are specific to your environment. When you run :ref:`so-allow` or ``so-firewall``, it modifies this file to include the IP provided in the proper hostgroup. Some node types get their IP assigned to multiple host groups
 
 ``/opt/so/saltstack/local/salt/firewall/assigned_hostgroups.local.map.yaml``
-
 This is where host group and port group associations would be made to create custom host group and port group assignements that would apply to all nodes of a certain role type in the grid.
-
 
 Managing
 --------
 
 Managing firewall rules, for all devices, should be done from the manager node using either :ref:`so-allow`, ``so-firewall`` or, for advanced cases, manually editing the yaml files.
-
 
 Examples
 --------
@@ -75,7 +62,7 @@ Examples
 Allow hosts to send syslog to a sensor node.
 ############################################
 
-By default, if you use ``so-allow`` to add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. If we want to allow a host or group of hosts to send syslog to a sensor, then we can do the following:
+By default, if you use :ref:`so-allow` to add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. If we want to allow a host or group of hosts to send syslog to a sensor, then we can do the following:
 
 1. Create a new host group that will contain the IPs of the hosts that you want to allow to connect to the sensor. This will add the host group to ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``. If the host group already exists, you can skip to step 2. From the manager run:
 
