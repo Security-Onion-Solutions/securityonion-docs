@@ -7,7 +7,7 @@ This page lists End Of Life (EOL) dates for older versions of Security Onion and
 
 .. warning::
 
-  Once Security Onion 2 reaches General Availability (GA), we will announce a 6-month EOL window for Security Onion 16.04.
+  Security Onion 16.04 reaches EOL in April 2021: https://blog.securityonion.net/2020/10/6-month-eol-notice-for-security-onion.html
 
 | Security Onion 14.04 reached EOL on November 30, 2018:
 | https://blog.securityonion.net/2018/06/6-month-eol-notice-for-security-onion.html

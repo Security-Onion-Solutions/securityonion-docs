@@ -12,13 +12,33 @@ Fleet
 
 Security Onion includes Kolide Fleet to manage your osquery deployment. For more information, please see the :ref:`fleet` section.
 
-Agents
+Agents - Deployment
 ------
 
 To deploy an osquery agent to an endpoint, go to the :ref:`soc` Downloads page and download the proper osquery agent for the operating system of that endpoint. Use :ref:`so-allow` to allow the osquery agent to connect to port ``8090`` on the manager. Then install the osquery agent and it should check into the manager and start showing up in :ref:`fleet`.
 
+Osquery will attempt to connect to the Manager via the Manager's IP or Hostname - whichever was selected during the Manager setup. If the hostname is used, the endpoints need to be able to resolve that hostname to the Manager's IP. See this value by running the following command on the Manager:  ``sudo salt-call pillar.get global:url_base``. If this value ever changes, the osquery packages under Downloads will need to be regenerated.
+
+All the packages (except for the macOS PKG) are customized for the specific Grid they were downloaded from, and include all the necessary configuration to connect to that Grid. The macOS package is a stock Launcher package, and will require additional configuration once it has been deployed.
+
+Agents - Updating
+------
+Security Onion uses Kolide Launcher - Launcher is a management wrapper around Osquery which allows for a simpler configuration as well as auto-updates of Launcher & Osquery from the Kolide TUF service. Launcher will check every hour to see if an update is available - if there is, it will download it and install it. This is the default configuration, but can be changed within the osquery Flags file.
+
+In an airgap environment where the endpoints do not have Internet access, updated Osquery packages can be downloaded from the Security Onion Console and used to update the endpoints. Osquery packages are periodically updated on the Manager, as new versions of Osquery are released. 
+
+
+Agents - Troubleshooting
+------
+
+Agent logs on Windows endpoints can be found under the Application channel in the Windows Eventlog - source is Launcher.
+
+
+Agents - Regenerating Install Packages
+------
 To regenerate packages, run the following on the Manager (it will take up to 5 minutes to rebuild the packages):
- ``sudo salt-call state.apply fleet.event_gen-packages``
+ ``sudo salt-call state.apply fleet.event_gen-packages`
+
 
 Hunt or Kibana
 --------------
