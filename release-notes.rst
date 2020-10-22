@@ -13,7 +13,8 @@ Security Onion is now generally available and is at version 2.3.1!
 - Fixed a SOC issue in airgap mode that was preventing people from logging in.
 - Downloading Elastic features images will now download the correct images.
 - /nsm will properly display disk usage on the standalone Grafana dashboard.
-- The manager node now has syslog listener enabled by default. 
+- The manager node now has syslog listener enabled by default (you'll still need to allow syslog traffic through the firewall of course).
+- Fixed an issue when creating host groups with so-firewall.
 
 
 Known Issues
