@@ -5,30 +5,15 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion is now generally available and is at version 2.3!
+Security Onion is now generally available and is at version 2.3.1!
 
-2.3.0 Changes
+2.3.1 Changes
 -------------
 
-- We have a new :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. Please note that :ref:`hive` no longer receives alerts directly. 
-- Kibana no longer presents the option to create alerts from events, but instead allows creation of cases from events.
-- Our Security Onion ISO now works for UEFI as well as Secure Boot.
-- :ref:`airgap` deployments can now be updated using the latest ISO. Please read this documentation carefully. 
-- :ref:`suricata` has been updated to version 5.0.4.
-- :ref:`zeek` has been updated to version 3.0.11.
-- :ref:`stenographer` has been updated to the latest version.
-- :ref:`soup` will now attempt to clean up old docker images to free up space.
-- :ref:`hunt` actions can be customized via ``hunt.actions.json``.
-- :ref:`hunt` queries can be customized via ``hunt.queries.json``.
-- :ref:`hunt` event fields can be customized via ``hunt.eventfields.json``.
-- :ref:`alerts` actions can be customized via ``alerts.actions.json``.
-- :ref:`alerts` queries can be customized via ``alerts.queries.json``.
-- :ref:`alerts` event fields can be customized via ``alerts.eventfields.json``.
-- This help documentation is now viewable offline for airgap installations.
-- The script `so-user-add` will now validate the password is acceptable before attempting to create the user.
-- :ref:`playbook` and :ref:`grafana` no longer use static passwords for their admin accounts.
-- :ref:`analyst-vm` now comes with NetworkMiner 2.6 installed.
-- :ref:`strelka` YARA matches now generate alerts that can be viewed through the Alerts interface .
+- Fixed a SOC issue in airgap mode that was preventing people from logging in.
+- Downloading Elastic features images will now download the correct images.
+- /nsm will properly display disk usage on the standalone Grafana dashboard.
+- The manager node now has syslog listener enabled by default. 
 
 
 Known Issues
@@ -53,6 +38,30 @@ Known Issues
   - Stop the Docker registry - ``sudo docker stop so-dockerregistry``
   - Remove the container - ``sudo docker rm so-dockerregistry``
   - Run the registry state - ``sudo salt-call state.apply registry``
+  
+  
+2.3.0 Changes
+-------------
+
+- We have a new :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. Please note that :ref:`hive` no longer receives alerts directly. 
+- Kibana no longer presents the option to create alerts from events, but instead allows creation of cases from events.
+- Our Security Onion ISO now works for UEFI as well as Secure Boot.
+- :ref:`airgap` deployments can now be updated using the latest ISO. Please read this documentation carefully. 
+- :ref:`suricata` has been updated to version 5.0.4.
+- :ref:`zeek` has been updated to version 3.0.11.
+- :ref:`stenographer` has been updated to the latest version.
+- :ref:`soup` will now attempt to clean up old docker images to free up space.
+- :ref:`hunt` actions can be customized via ``hunt.actions.json``.
+- :ref:`hunt` queries can be customized via ``hunt.queries.json``.
+- :ref:`hunt` event fields can be customized via ``hunt.eventfields.json``.
+- :ref:`alerts` actions can be customized via ``alerts.actions.json``.
+- :ref:`alerts` queries can be customized via ``alerts.queries.json``.
+- :ref:`alerts` event fields can be customized via ``alerts.eventfields.json``.
+- This help documentation is now viewable offline for airgap installations.
+- The script `so-user-add` will now validate the password is acceptable before attempting to create the user.
+- :ref:`playbook` and :ref:`grafana` no longer use static passwords for their admin accounts.
+- :ref:`analyst-vm` now comes with NetworkMiner 2.6 installed.
+- :ref:`strelka` YARA matches now generate alerts that can be viewed through the Alerts interface .
 
 
 2.2.0 Changes
