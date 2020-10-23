@@ -24,15 +24,6 @@ This section covers configuring a Security Onion cloud image hosted in Amazon We
 Getting Started 
 ###############
 
-Terraform 
-*********
-To quickly setup a VPC, mirror configuration, and test the Security Onion AMI using Terraform, see the following:   
-https://github.com/Security-Onion-Solutions/securityonion-cloud/tree/dev
-
-
-Manual 
-******
-
 To setup the Security Onion AMI and VPC mirror configuration manually, use the steps below.
 
 Create a Security Group for Sniffing Interface 
