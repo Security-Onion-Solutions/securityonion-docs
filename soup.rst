@@ -26,3 +26,8 @@ Distributed deployments
 -----------------------
 
 If you have a distributed deployment with a manager node and separate sensor nodes and/or search nodes, you **only** need to run ``soup`` on the manager. Once ``soup`` has completed, other nodes should update themselves at the next :ref:`salt` highstate (typically within 15 minutes).
+
+Airgap
+------
+
+If you have an airgap deployment, please see the :ref:`airgap` section for further information.
