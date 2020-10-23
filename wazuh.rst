@@ -66,6 +66,12 @@ Adding Agents
 
     It is important to ensure that you download the agent that matches the version of your Wazuh server. For example, if your Wazuh server is version 3.13.1, then you will want to deploy Wazuh agent version 3.13.1.
 
+You can verify the version of your current Wazuh server using the following command:
+
+::
+
+    sudo docker exec -it so-wazuh dpkg -l |grep wazuh
+    
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
 | https://documentation.wazuh.com/3.13/user-manual/registering/command-line-registration.html
 
