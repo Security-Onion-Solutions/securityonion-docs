@@ -10,7 +10,7 @@ Security Onion is now generally available and is at version 2.3.2!
 2.3.2 Changes
 -------------
 
-- Elastic components upgraded to 7.9.3.
+- Elastic components have been upgraded to 7.9.3.
 - Fixed an issue where curator was unable to delete a closed index.
 - Cheat sheet is now available for airgap installs.
 
