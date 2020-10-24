@@ -20,6 +20,8 @@ In :ref:`alerts` and :ref:`hunt`, you can use the blue triangle with an exclamat
 .. image:: https://user-images.githubusercontent.com/1659467/95380455-c9572880-08b4-11eb-8821-cee23b97d85e.png
   :target: https://user-images.githubusercontent.com/1659467/95380455-c9572880-08b4-11eb-8821-cee23b97d85e.png
   
+Clicking the escalate button will escalate the data from the row as it is displayed. This means that if you're looking at an aggregated view, you will get limited details in the resulting escalated case. If you want more details to be included in the case, then first drill into the aggregation and escalate one of the individual items in that aggregation.
+  
 In Kibana you will see a scripted field named ``Push to TheHive`` with a value of ``Click to create a case in TheHive``. This will use the API to add this new event to :ref:`hive`.
 
 .. image:: https://user-images.githubusercontent.com/1659467/95380261-7da47f00-08b4-11eb-954a-613d1291ecb0.png
