@@ -74,7 +74,7 @@ You can verify the version of your current Wazuh server using the following comm
     
 | Once you've installed the Wazuh agent on the host(s) to be monitored, then perform the steps defined here:
 | https://documentation.wazuh.com/3.13/user-manual/registering/command-line-registration.html
-|
+
 Please keep in mind that when you run ``manage_agents`` you will need to do so inside the ``so-wazuh`` container like this:
 
 ::
