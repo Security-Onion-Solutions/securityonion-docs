@@ -29,7 +29,7 @@ Since the manager runs inside a Docker container, many of the Wazuh binaries tha
 
 ::
 
-    sudo docker exec -it so-wazuh /var/ossec/bin/agent_upgrade
+    sudo so-wazuh-agent-upgrade
 
 Configuration
 -------------
@@ -79,7 +79,7 @@ Please keep in mind that when you run ``manage_agents`` you will need to do so i
 
 ::
 
-    sudo docker exec -it so-wazuh /var/ossec/bin/manage_agents
+    sudo so-wazuh-agent-manage
     
 You also may need to run :ref:`so-allow` to allow traffic from the IP address of your Wazuh agent(s).
 
