@@ -52,13 +52,15 @@ This dashboard gives an overview of the osquery logs in the system. As long as t
 Shipping Windows Eventlogs
 --------------
 
-Windows Eventlogs from the local Windows system can be shipped with osquery to Security Onion. Current parsing support extends to core Windows Eventlog channels (``Security``,``Application``,``System``) as well as Sysmon under the default channel location. These logs will show up in Security Onion as ``event.dataset: windows_eventlog`` or ``event.dataset: sysmon``.
+Windows Eventlogs from the local Windows system can be shipped with osquery to Security Onion. Current parsing support extends to core Windows Eventlog channels ( ``Security`` , ``Application`` , ``System`` ) as well as Sysmon under the default channel location. These logs will show up in Security Onion as ``event.dataset: windows_eventlog`` or ``event.dataset: sysmon``.
 
 - Confirm that you can successfully live query the logs: ``SELECT * FROM windows_events limit 10;``
 
 - Save a new query: ``SELECT * FROM windows_events;``
 
 - Add the new query to a query pack that targets a Windows host - how often it should run depends on log volume on the local host; start off with 180 seconds, differential logging.
+
+Please refer to the osquery documentation for further information on osquery Evented tables: https://osquery.readthedocs.io/en/stable/development/pubsub-framework/#the-pub-sub-evented-data-framework-of-osquery
 
 
 Community ID
