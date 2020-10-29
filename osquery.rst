@@ -39,7 +39,6 @@ Agents - Regenerating Install Packages
 To regenerate packages, run the following on the Manager (it will take up to 5 minutes to rebuild the packages):
  ``sudo salt-call state.apply fleet.event_gen-packages`
 
-
 Hunt or Kibana
 --------------
 
@@ -49,6 +48,18 @@ Kibana Dashboard: Host Data --> Modules/Osquery
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This dashboard gives an overview of the osquery logs in the system. As long as the default osquery configuration is used, this dashboard should work out of the box regardless of how you schedule or name your queries and packs.
+
+Shipping Windows Eventlogs
+--------------
+
+Windows Eventlogs from the local Windows system can be shipped with osquery to Security Onion. Current parsing support extends to core Windows Eventlog channels (``Security``,``Application``,``System``) as well as Sysmon under the default channel location. These logs will show up in Security Onion as ``event.dataset: windows_eventlog`` or ``event.dataset: sysmon``.
+
+- Confirm that you can successfully live query the logs: ``SELECT * FROM windows_events limit 10;``
+
+- Save a new query: ``SELECT * FROM windows_events;``
+
+- Add the new query to a query pack that targets a Windows host - how often it should run depends on log volume on the local host; start off with 180 seconds, differential logging.
+
 
 Community ID
 ------------
