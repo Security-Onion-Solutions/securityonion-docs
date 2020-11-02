@@ -47,7 +47,8 @@ All custom logstash pipeline configurations should be places in /opt/so/saltstac
 
 If you are modifying/adding a new manager pipeline add the following to your global.sls files
 
-  ::
+::
+
 logstash:
   pipelines:
     manager:
@@ -59,7 +60,8 @@ logstash:
         
 If you are modifying/adding a new search pipeline add the folowing to global.sls
 
-  ::
+::
+
 logstash:
   pipelines:
     search:
@@ -77,7 +79,8 @@ logstash:
 
 both:
 
-  ::
+::
+
 logstash:
   pipelines:
     manager:
