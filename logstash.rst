@@ -38,7 +38,77 @@ You may need to adjust the value depending on your system's performance. The cha
 Adding New Logs or Modifying Existing Parsing
 ---------------------------------------------
 
+Customizing Parsing
+~~~~~~~~~~~~~~~~~~~
+
 Since Logstash no longer parses logs in Security Onion 2, modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
+
+All custom logstash pipeline configurations should be places in /opt/so/saltstack/local/salt/logstash/pipelines/config/custom. 
+
+If you are modifying/adding a new manager pipeline add the following to your global.sls files
+
+  ::
+logstash:
+  pipelines:
+    manager:
+      config:
+        - so/0009_input_beats.conf      
+        - so/0010_input_hhbeats.conf
+        - so/9999_output_redis.conf.jinja
+        - custom/9999_output_custom.jinja
+        
+If you are modifying/adding a new search pipeline add the folowing to global.sls
+
+  ::
+logstash:
+  pipelines:
+    search:
+      config:
+        - so/0900_input_redis.conf.jinja
+        - so/9000_output_zeek.conf.jinja
+        - so/9002_output_import.conf.jinja
+        - so/9034_output_syslog.conf.jinja
+        - so/9100_output_osquery.conf.jinja
+        - so/9400_output_suricata.conf.jinja
+        - so/9500_output_beats.conf.jinja
+        - so/9600_output_ossec.conf.jinja
+        - so/9700_output_strelka.conf.jinja
+        - custom/9701_output_custom.jinja
+
+both:
+
+  ::
+logstash:
+  pipelines:
+    manager:
+      config:
+        - so/0009_input_beats.conf      
+        - so/0010_input_hhbeats.conf
+        - so/9999_output_redis.conf.jinja
+        - custom/9999_output_custom.jinja
+    search:
+      config:
+        - so/0900_input_redis.conf.jinja
+        - so/9000_output_zeek.conf.jinja
+        - so/9002_output_import.conf.jinja
+        - so/9034_output_syslog.conf.jinja
+        - so/9100_output_osquery.conf.jinja
+        - so/9400_output_suricata.conf.jinja
+        - so/9500_output_beats.conf.jinja
+        - so/9600_output_ossec.conf.jinja
+        - so/9700_output_strelka.conf.jinja
+        - custom/9701_output_custom.jinja
+
+
+Forwarding Events to an External Destination
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To forward events to an external destination create a new custom configuration file. Clone event and match on the output. We recommend using either the http or tcp output plugin. At this time we only support the default bundled Logstash output plugins.
+
+Adding Legacy Logstash Parsers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you want to add a legacy Logstash parser (not recommended) then you can copy the file to local. Once the file is in local you can add the proper value to the global.sls as the example above with - custom/9701_output_custom.jinja.
 
 Queue
 -----
