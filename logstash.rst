@@ -43,7 +43,7 @@ Customizing Parsing
 
 Since Logstash no longer parses logs in Security Onion 2, modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
 
-All custom logstash pipeline configurations should be places in /opt/so/saltstack/local/salt/logstash/pipelines/config/custom. 
+All custom logstash pipeline configurations should be placed in /opt/so/saltstack/local/salt/logstash/pipelines/config/custom. 
 
 If you are modifying/adding a new manager pipeline add the following to your global.sls files
 
