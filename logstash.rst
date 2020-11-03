@@ -43,64 +43,64 @@ Customizing Parsing
 
 Since Logstash no longer parses logs in Security Onion 2, modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
 
-All custom logstash pipeline configurations should be placed in /opt/so/saltstack/local/salt/logstash/pipelines/config/custom. 
+All custom logstash pipeline configurations should be placed in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom``. 
 
-If you are modifying/adding a new manager pipeline add the following to your global.sls files
+If you are modifying or adding a new manager pipeline, then add the following to your ``global.sls`` file:
 
 ::
 
-logstash:
-  pipelines:
-    manager:
-      config:
-        - so/0009_input_beats.conf      
-        - so/0010_input_hhbeats.conf
-        - so/9999_output_redis.conf.jinja
-        - custom/9999_output_custom.jinja
+    logstash:
+      pipelines:
+        manager:
+          config:
+            - so/0009_input_beats.conf      
+            - so/0010_input_hhbeats.conf
+            - so/9999_output_redis.conf.jinja
+            - custom/9999_output_custom.jinja
         
-If you are modifying/adding a new search pipeline add the folowing to global.sls
+If you are modifying or adding a new search pipeline, then add the following to ``global.sls``:
 
 ::
 
-logstash:
-  pipelines:
-    search:
-      config:
-        - so/0900_input_redis.conf.jinja
-        - so/9000_output_zeek.conf.jinja
-        - so/9002_output_import.conf.jinja
-        - so/9034_output_syslog.conf.jinja
-        - so/9100_output_osquery.conf.jinja
-        - so/9400_output_suricata.conf.jinja
-        - so/9500_output_beats.conf.jinja
-        - so/9600_output_ossec.conf.jinja
-        - so/9700_output_strelka.conf.jinja
-        - custom/9701_output_custom.jinja
+    logstash:
+      pipelines:
+        search:
+          config:
+            - so/0900_input_redis.conf.jinja
+            - so/9000_output_zeek.conf.jinja
+            - so/9002_output_import.conf.jinja
+            - so/9034_output_syslog.conf.jinja
+            - so/9100_output_osquery.conf.jinja
+            - so/9400_output_suricata.conf.jinja
+            - so/9500_output_beats.conf.jinja
+            - so/9600_output_ossec.conf.jinja
+            - so/9700_output_strelka.conf.jinja
+            - custom/9701_output_custom.jinja
 
 both:
 
 ::
 
-logstash:
-  pipelines:
-    manager:
-      config:
-        - so/0009_input_beats.conf      
-        - so/0010_input_hhbeats.conf
-        - so/9999_output_redis.conf.jinja
-        - custom/9999_output_custom.jinja
-    search:
-      config:
-        - so/0900_input_redis.conf.jinja
-        - so/9000_output_zeek.conf.jinja
-        - so/9002_output_import.conf.jinja
-        - so/9034_output_syslog.conf.jinja
-        - so/9100_output_osquery.conf.jinja
-        - so/9400_output_suricata.conf.jinja
-        - so/9500_output_beats.conf.jinja
-        - so/9600_output_ossec.conf.jinja
-        - so/9700_output_strelka.conf.jinja
-        - custom/9701_output_custom.jinja
+    logstash:
+      pipelines:
+        manager:
+          config:
+            - so/0009_input_beats.conf      
+            - so/0010_input_hhbeats.conf
+            - so/9999_output_redis.conf.jinja
+            - custom/9999_output_custom.jinja
+        search:
+          config:
+            - so/0900_input_redis.conf.jinja
+            - so/9000_output_zeek.conf.jinja
+            - so/9002_output_import.conf.jinja
+            - so/9034_output_syslog.conf.jinja
+            - so/9100_output_osquery.conf.jinja
+            - so/9400_output_suricata.conf.jinja
+            - so/9500_output_beats.conf.jinja
+            - so/9600_output_ossec.conf.jinja
+            - so/9700_output_strelka.conf.jinja
+            - custom/9701_output_custom.jinja
 
 
 Forwarding Events to an External Destination
