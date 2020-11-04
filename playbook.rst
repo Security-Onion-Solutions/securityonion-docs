@@ -61,11 +61,11 @@ Once you save your changes, Playbook will update the rest of the fields to match
 Putting a Play into Production
 ------------------------------
 
-When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template & the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatically update the :ref:`elastalert` configuration and :ref:`hive` case template.
+When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template and the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatically update the :ref:`elastalert` configuration and :ref:`hive` case template.
 
 The Elastalert rules are located under ``/opt/so/rules/elastalert/playbook/<PlayID>.yml``. Elastalert rules created by Playbook will run every 3 minutes, with a ``buffer_time`` of 15 minutes.
 
-Performance testing is still ongoing; initial testing has shown that on a lightly-used Standalone install with 16GB of RAM (4GB allocated to the Elasticsearch Heap), 300 Plays can be active without issues. 
+Performance testing is still ongoing. Initial testing has shown that on a lightly-used Standalone install with 16GB of RAM (4GB allocated to the Elasticsearch Heap), 300 Plays can be active without issues. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` play as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
 
 Viewing Playbook Alerts
 -----------------------
@@ -82,7 +82,7 @@ If you need administrator access to Playbook, you can login as ``admin`` with th
 Misc Notes
 ----------
 
-Every 5 minutes, ``so-playbook-sync`` runs. This script queries Playbook for all active plays, and then checks to make sure that there is an :ref:`elastalert` config and :ref:`hive` case template for each play. It also runs through the same process for inactive plays.
+``so-playbook-sync`` runs every 5 minutes. This script queries Playbook for all active plays and then checks to make sure that there is an :ref:`elastalert` config and :ref:`hive` case template for each play. It also runs through the same process for inactive plays.
 
 There is currently a bug when it comes to disabling plays. If you disable plays in the web interface but they continue to run, you may need to manually delete the yaml files in ``/opt/so/rules/elastalert/playbook/``. Then restart ElastAlert as follows:
 
