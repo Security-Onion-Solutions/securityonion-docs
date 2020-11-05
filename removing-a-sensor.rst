@@ -41,11 +41,12 @@ Wipe sensor configuration and data
 
 Remove sensor reference from manager node
 -----------------------------------------
-
--  Remove the sensor from ``/opt/onionsalt/salt/top.sls`` and then delete the key from salt:
-
+-  List all keys:
 ::
+   sudo salt-key
 
+-  Remove the sensor by deleting its key from salt:
+::
    sudo salt-key -d sensor_key_name
 
 Remove search node reference from manager node Elasticsearch _cluster/settings
