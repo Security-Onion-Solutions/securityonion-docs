@@ -9,7 +9,7 @@ There may come a time when you need to remove a node from your distributed deplo
 
    sudo salt-key
 
-Then remove the sensor by deleting its key from salt (replacing ``sensor_key_name`` with the actual name):
+Then remove the sensor by deleting its key from :ref:`salt` (replacing ``sensor_key_name`` with the actual name):
 
 ::
 
