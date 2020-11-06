@@ -9,16 +9,16 @@ There may come a time when you need to remove a node from your distributed deplo
 
    sudo salt-key
 
-Then remove the sensor by deleting its key from :ref:`salt` (replacing ``sensor_key_name`` with the actual name):
+Then remove the node by deleting its key from :ref:`salt` (replacing ``nodename`` with the actual node name):
 
 ::
 
-   sudo salt-key -d sensor_key_name
+   sudo salt-key -d nodename
 
 Remove search node
 ------------------
 
-If you are removing a search node, you will want to remove it from cross cluster search. In :ref:`kibana`, navigate to ``Dev Tools`` and paste the following text into the window (modifying ``nodename`` to match the name of your node):
+If you are removing a search node, you will want to remove it from cross cluster search. In :ref:`kibana`, navigate to ``Dev Tools`` and paste the following text into the window (replacing ``nodename`` with the actual node name):
 
 ::
 
