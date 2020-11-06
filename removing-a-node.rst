@@ -3,7 +3,7 @@
 Removing a Node
 ===============
 
-There may come a time when you need to remove a node from your distributed deployment. To do this, log into your manager and list all salt keys:
+There may come a time when you need to remove a node from your distributed deployment. To do this, log into your manager and list all :ref:`salt` keys:
 
 ::
 
