@@ -15,6 +15,6 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    icmp-anomaly-detection
    new-disk
    pcaps
-   removing-a-sensor
+   removing-a-node
    syslog-output
    timezones
