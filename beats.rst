@@ -28,9 +28,9 @@ Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat 
 
 Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if necessary. Then configure ``winlogbeat.yml`` as follows:
 
-* Disable the Elasticsearch output.
-* Make sure that Winlogbeat is NOT configured to load dashboards into Kibana.
-* Enable the logstash output and configure it to send logs to port ``5044`` on your management node.
+* Make sure that the ``setup.dashboards.enabled`` setting is commented out or disabled.
+* Disable the ``output.elasticsearch`` output.
+* Enable the ``output.logstash`` output and configure it to send logs to port ``5044`` on your management node.
 * If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module as Security Onion will do all the necessary parsing.
 
 Installation
