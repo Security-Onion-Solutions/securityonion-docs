@@ -22,7 +22,7 @@ Download the installation script:
 
 ::
 
-   wget https://raw.githubusercontent.com/weslambert/securityonion-otx/master/securityonion-otx
+   wget https://raw.githubusercontent.com/weslambert/securityonion-otx/16.04/securityonion-otx
 
 Run the script:
 
