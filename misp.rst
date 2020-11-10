@@ -34,7 +34,7 @@ Update rules (if desired):
 
 ::
 
-   sudo rule-update
+   sudo so-rule-update
 
 Confirm rules in place:
 
