@@ -20,7 +20,7 @@ Clone the repo:
 
 ::
 
-   git clone https://github.com/weslambert/securityonion-misp
+   git clone -b 16.04 https://github.com/weslambert/securityonion-misp
 
 Run the setup script:
 
