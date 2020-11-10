@@ -6,7 +6,7 @@ MISP
 NIDS Rules
 ----------
 
-| Not long ago, the MISP project announced the ability to export NIDS rules created from events/indicators:
+| The MISP project provides the ability to export NIDS rules created from events/indicators:
 | https://www.circl.lu/doc/misp/automation/#get-eventsnids-nids-rules-export
 
 We can leverage this functionality by quickly and easily setting up an automated mechanism to pull NIDS rules from a MISP instance and add them to our local rules for Security Onion. To do so, we just need to follow the simple steps below.
