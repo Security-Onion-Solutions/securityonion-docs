@@ -105,11 +105,11 @@ Heavy Nodes run the following components:
 -  :ref:`wazuh`
 
 Fleet Standalone Node
-~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
-A Fleet Standalone Node is ideal when there are a large amount of osquery endpoints deployed - it reduces the amount of overhead on the manager node by transferring the workload associated with managing osquery endpoints to a dedicated system. It is also useful for off-network osquery endpoints that do not have  remote access to the Manager node; it can be deployed to the DMZ and TCP/8090 made accessible to your off-network osquery endpoints.
+A Fleet Standalone Node is ideal when there are a large amount of osquery endpoints deployed. It reduces the amount of overhead on the manager node by transferring the workload associated with managing osquery endpoints to a dedicated system. It is also useful for off-network osquery endpoints that do not have  remote access to the Manager node as it can be deployed to the DMZ and TCP/8090 made accessible to your off-network osquery endpoints.
 
-If the Manager Node was originally setup with Fleet, your grid will automatically switch over to using the Fleet Standalone Node instead - a grid can only have one Fleet instance active at a time.
+If the Manager Node was originally setup with Fleet, your grid will automatically switch over to using the Fleet Standalone Node instead as a grid can only have one Fleet instance active at a time.
 
 Fleet Standalone Nodes run the following components:
 
