@@ -40,39 +40,19 @@ The manager node runs a Docker registry. From https://docs.docker.com/registry/r
 
     If you have multiple instances of Docker running in your environment (e.g., multiple physical or virtual machines, all running the Docker daemon), each time one of them requires an image that it doesn’t have it will go out to the internet and fetch it from the public Docker registry. By running a local registry mirror, you can keep most of the redundant image fetch traffic on your local network.
 
-Networking
-----------
-
-Bridge
-------
+Networking and Bridging
+-----------------------
 
 By default, Docker configures its bridge with an IP of ``172.17.0.1``.
 
 https://docs.docker.com/engine/userguide/networking/#default-networks
 
-For many folks this is fine, but what if we actually use the the ``172.17.0.0/16`` range within our internal network(s)?  This results in a **conflict** when trying to assign IP addresses to interfaces and trying to route outside of the host.
+For many folks this is fine, but what if we actually use the the ``172.17.0.0/16`` range within our internal network(s)?  This results in a **conflict** when trying to assign IP addresses to interfaces and trying to route outside of the host. 
 
-A simple solution to this is to do the following:
+It is currently possible to change this at install time. Once you change this default docker network you **MUST** configure all nodes in the grid to use this range:
 
-| Create the following file - ``/etc/docker/daemon.json``.
-| Inside of the file, place the following:
-
-::
-
-    {
-      "bip": "your_docker_bridge_ip/netmask"
-    }   
-
-Restart Docker:
-
-::
-
-   sudo service docker restart
-
-Running ``netstat -rn`` should show that the range for the ``docker0`` bridge has changed.
-
-| For more information/options, see:
-| https://docs.docker.com/engine/userguide/networking/default_network/custom-docker0/
+| During setup choose change docker network range.  
+| Enter your desired address range. You do not need the /24 at the end.  
 
 Containers
 ----------
