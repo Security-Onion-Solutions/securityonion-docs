@@ -39,9 +39,19 @@ ET Pro (Proofpoint)
 -  rules retrievable as released
 -  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
 
+To enable ET Pro in an already installed grid modify the /opt/so/saltstack/local/pillar/minions/<manager.sls>  
+
+::
+
+  idstools:
+    config:
+      ruleset: 'ETPRO'
+      oinkcode: 'MYOINKCODE'
+
 | For more information, see:
-| https://www.proofpoint.com/us/threat-insight/et-pro-ruleset
-   
+| https://www.proofpoint.com/us/threat-insight/et-pro-ruleset  
+
+
 Snort Community
 ---------------
 
