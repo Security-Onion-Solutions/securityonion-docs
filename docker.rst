@@ -51,8 +51,8 @@ For many folks this is fine, but what if we actually use the the ``172.17.0.0/16
 
 It is currently possible to change this at install time. Once you change this default docker network you **MUST** configure all nodes in the grid to use this range:
 
-   | During setup choose change docker network range.  
-   | Enter your desired address range. You do not need the /24 at the end.  
+- During setup choose change docker network range.  
+- Enter your desired address range. You do not need the /24 at the end.  
     
 Containers
 ----------
