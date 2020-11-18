@@ -11,7 +11,11 @@ Security Onion is now generally available and is at version 2.3.2!
 -------------
 
 - UEFI installs with multiple disks should work as intended now.
-- Osquery installers have been updated to  osquery 4.5.1
+- Telegraf scripts will now make sure they are not already running before execution.
+- You are now prompted during setup if you want to change the docker IP range. If you change this it needs to be the same on all nodes in the grid.
+- Soup will now download the new containers before stopping anything. If anything fails it will now exit and leave the grid at the current version.
+- All containers are now hosted on quay.io to prevent pull limitations. We are now using GPG keys to determine if the image is from Security Onion.
+- Osquery installers have been updated to osquery 4.5.1
 - Fix for bug where Playbook was not removing the Elastalert rules for inactive Plays
 
 
