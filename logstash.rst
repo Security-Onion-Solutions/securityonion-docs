@@ -29,7 +29,7 @@ For more information, please see https://www.elastic.co/guide/en/logstash/curren
 lsheap
 ~~~~~~~~~~~~~
 
-By default, if total available memory is 8GB or greater, the Logstash heap size in ``/etc/logstash/jvm.options`` is configured (during setup) to equal 25% of available memory, but no greater than 4GB.
+If total available memory is 8GB or greater, Setup sets the Logstash heap size to 25% of available memory, but no greater than 4GB.
 
 For more information, please see https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops.
 
@@ -126,25 +126,9 @@ From https://www.elastic.co/guide/en/logstash/current/persistent-queues.html:
 Persistent
 ~~~~~~~~~~
 
-From https://www.elastic.co/guide/en/logstash/current/persistent-queues.html:
+If you experience adverse effects using the default memory-backed queue, you might consider a disk-based persistent queue. From https://www.elastic.co/guide/en/logstash/current/persistent-queues.html:
 
     In order to protect against data loss during abnormal termination, Logstash has a persistent queue feature which will store the message queue on disk. Persistent queues provide durability of data within Logstash.
-
-If you experience adverse effects using the default memory-backed queue, you can configure a disk-based persistent queue by un-commenting the following lines in ``/etc/logstash/logstash.yaml`` and  modifying the values as appropriate:
-
-::
-
-    #queue.type: persisted
-    #queue.max_bytes: 1gb
-
-Then restart Logstash:
-
-::
-
-   sudo so-logstash-restart
-
-| More information:
-| https://www.elastic.co/guide/en/logstash/current/persistent-queues.html
 
 Queue Max Bytes
 ~~~~~~~~~~~~~~~
@@ -156,7 +140,7 @@ Dead Letter Queue
 
 If you want to check for dropped events, you can enable the dead letter queue. This will write all records that are not able to make it into Elasticsearch into a sequentially-numbered file (for each start/restart of Logstash).
 
-This can be achieved by adding the following to ``/etc/logstash/logstash.yml``:
+This can be achieved by adding the following to the Logstash configuration:
 
 ::
 
