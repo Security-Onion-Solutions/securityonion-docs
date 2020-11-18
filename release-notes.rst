@@ -41,6 +41,7 @@ Security Onion is now generally available and is at version 2.3.2!
 - Now explicitly preventing the use of a dollar sign ($) character in web user passwords during setup.
 - Cortex container will now restart properly if the SO host was not gracefully shutdown.
 - Added syslog plugin to the logstash container; this is not in-use by default but available for those users that choose to use it.
+- Winlogbeat download package is now available from the SOC Downloads interface.
 
 Known Issues
 ------------
