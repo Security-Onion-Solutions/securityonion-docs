@@ -12,6 +12,11 @@ Security Onion is now generally available and is at version 2.3.2!
 
 - UEFI installs with multiple disks should work as intended now.
 
+Known Issues
+------------
+
+- Salt minions might need to be restarted after upgrade.
+
 2.3.2 Changes
 -------------
 
