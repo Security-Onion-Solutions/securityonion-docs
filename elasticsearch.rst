@@ -152,7 +152,7 @@ If total available memory is 8GB or greater, Setup configures the heap size to b
 
 | For more information, please see:
 | https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops
-| https://www.elastic.co/guide/en/elasticsearch/reference/current/heap-size.html
+| https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#heap-size-settings
 
 Field limit
 ~~~~~~~~~~~
