@@ -21,7 +21,7 @@ Security Onion is now generally available and is at version 2.3.2!
 - Resolved issue with Navigator layer(s) not loading correctly.
 - Wazuh authd is now started by default on port 1515/tcp.
 - Wazuh API default credentials are now removed after setup.  Scripts have been added for API user management.
-- Upgraded Salt to 3002.1 due to CVEs.
+- Upgraded Salt to 3002.2 due to CVEs.
 - If salt-minion is unable to apply states after the defined threshold, we assume salt-minion is in a bad state and the salt-minion service will be restarted.
 - Fixed bug that prevented mysql from installing for Fleet if Playbook wasn't also installed.
 - so-status will now show STARTING or WAIT_START, instead of ERROR, if so-status is run before a salt highstate has started or finished for the first time after system startup
