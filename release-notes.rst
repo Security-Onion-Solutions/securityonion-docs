@@ -11,6 +11,9 @@ Security Onion is now generally available and is at version 2.3.2!
 -------------
 
 - UEFI installs with multiple disks should work as intended now.
+- Osquery installers have been updated to  osquery 4.5.1
+- Fix for bug where Playbook was not removing the Elastalert rules for inactive Plays
+
 
 Known Issues
 ------------
