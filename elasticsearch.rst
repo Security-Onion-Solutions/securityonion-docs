@@ -148,7 +148,7 @@ Please keep in mind that old indices will retain previous shard settings and the
 Heap Size
 ~~~~~~~~~
 
-By default, if total available memory is 8GB or greater, the heap size is configured (during Setup) to equal 25% of available memory, but no greater than 25GB. You may need to adjust the value for heap size depending on your system's performance. This can be modified in ``/opt/so/saltstack/local/pillar/minions/$minion.sls``.
+If total available memory is 8GB or greater, Setup configures the heap size to be 25% of available memory, but no greater than 25GB. You may need to adjust the value for heap size depending on your system's performance. This can be modified in ``/opt/so/saltstack/local/pillar/minions/$minion.sls``.
 
 | For more information, please see:
 | https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops
