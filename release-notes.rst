@@ -33,6 +33,8 @@ Security Onion is now generally available and is at version 2.3.2!
 - Acknowledging (and Escalating) alerts did not consistently remove the alert from the visible list; this has been corrected.
 - Escalating alerts that have a rule.case_template field defined will automatically assign that case template to the case generated in TheHive.
 - Alerts and Hunt interface quick action bar has been converted into a vertical menu to improve quick action option clarity. Related changes also eliminated the issues that occurred when the quick action bar was appearing to the left of the visible browser area.
+- Updated Go to newer version to fix a timezone, daylight savings time (DST) issue that resulted in Alerts and Hunt interfaces not consistently showing results.
+- Improved Hunt and Alert table sorting.
 - Alerts interface now allows absolute time searches.
 - Alerts interface 'Hunt' quick action is now working as intended.
 - Alerts interface 'Ack' icon tooltip has been changed from 'Dismiss' to 'Acknowledge' for consistency.
@@ -42,6 +44,8 @@ Security Onion is now generally available and is at version 2.3.2!
 - Cortex container will now restart properly if the SO host was not gracefully shutdown.
 - Added syslog plugin to the logstash container; this is not in-use by default but available for those users that choose to use it.
 - Winlogbeat download package is now available from the SOC Downloads interface.
+- Upgraded Kratos authentication system.
+- Added new Reset Defaults button to the SOC Profile Settings interface which allows users to reset all local browser SOC customizations back to their defaults. This includes things like default sort column, sort order, items per page, etc.
 
 Known Issues
 ------------
