@@ -26,7 +26,10 @@ Security Onion is now generally available and is at version 2.3.2!
 - Fixed bug that prevented mysql from installing for Fleet if Playbook wasn't also installed.
 - so-status will now show STARTING or WAIT_START, instead of ERROR, if so-status is run before a salt highstate has started or finished for the first time after system startup
 - Stenographer can now be disabled on a sensor node by setting the pillar steno:enabled:false in it's minion.sls file or globally if set in the global.sls file
-
+- Added :code:`so-ssh-harden` script that runs the commands listed in https://docs.securityonion.net/en/2.3/ssh.html
+- NGINX now redirects the browser to the hostname/IP address/FQDN based on :code:`global:url_base`
+- MySQL state now waits for MySQL server to respond to a query before completeing
+- Added Analyst option to network installs
 
 Known Issues
 ------------
