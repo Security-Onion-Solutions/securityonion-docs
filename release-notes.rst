@@ -21,11 +21,20 @@ Security Onion is now generally available and is at version 2.3.2!
 - Resolved issue with Navigator layer(s) not loading correctly.
 - Wazuh authd is now started by default on port 1515/tcp.
 - Wazuh API default credentials are now removed after setup.  Scripts have been added for API user management.
+- Upgraded Salt to 3002.1 due to CVEs.
+- If salt-minion is unable to apply states after the defined threshold, we assume salt-minion is in a bad state and the salt-minion service will be restarted.
+- Fixed bug that prevented mysql from installing for Fleet if Playbook wasn't also installed.
+- so-status will now show STARTING or WAIT_START, instead of ERROR, if so-status is run before a salt highstate has started or finished for the first time after system startup
+- Stenographer can now be disabled on a sensor node by setting the pillar steno:enabled:false in it's minion.sls file or globally if set in the global.sls file
+
 
 Known Issues
 ------------
 
-- Salt minions might need to be restarted after upgrade.
+- Following the Salt minion upgrade on remote nodes, the salt-minion service may not restart properly. If this occurs, you can ssh to the minion and run ```sudo systemctl restart salt-minion```. If you do not want to connect to each node and manually restart the salt-minion, the new salt-minon watch process will restart it automatically after 1 hour.
+
+- During soup, you may see the following during the first highstate run, it can be ignored: ```Rendering SLS '<some_sls_name_here>' failed: Jinja variable 'list object' has no attribute 'values'```. The second highstate will complete without that error.
+    
 
 2.3.2 Changes
 -------------
