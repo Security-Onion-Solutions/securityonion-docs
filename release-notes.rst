@@ -30,6 +30,17 @@ Security Onion is now generally available and is at version 2.3.2!
 - NGINX now redirects the browser to the hostname/IP address/FQDN based on :code:`global:url_base`
 - MySQL state now waits for MySQL server to respond to a query before completeing
 - Added Analyst option to network installs
+- Acknowledging (and Escalating) alerts did not consistently remove the alert from the visible list; this has been corrected.
+- Escalating alerts that have a rule.case_template field defined will automatically assign that case template to the case generated in TheHive.
+- Alerts and Hunt interface quick action bar has been converted into a vertical menu to improve quick action option clarity. Related changes also eliminated the issues that occurred when the quick action bar was appearing to the left of the visible browser area.
+- Alerts interface now allows absolute time searches.
+- Alerts interface 'Hunt' quick action is now working as intended.
+- Alerts interface 'Ack' icon tooltip has been changed from 'Dismiss' to 'Acknowledge' for consistency.
+- Hunt interface bar charts will now show the quick action menu when clicked instead of assuming the click was intended to add an include filter.
+- Hunt interface quick action will now cast a wider net on field searches.
+- Now explicitly preventing the use of a dollar sign ($) character in web user passwords during setup.
+- Cortex container will now restart properly if the SO host was not gracefully shutdown.
+- Added syslog plugin to the logstash container; this is not in-use by default but available for those users that choose to use it.
 
 Known Issues
 ------------
