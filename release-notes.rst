@@ -17,7 +17,10 @@ Security Onion is now generally available and is at version 2.3.2!
 - All containers are now hosted on quay.io to prevent pull limitations. We are now using GPG keys to determine if the image is from Security Onion.
 - Osquery installers have been updated to osquery 4.5.1
 - Fix for bug where Playbook was not removing the Elastalert rules for inactive Plays
-
+- Exifdata reported by Strelka is now constrained to a single multi-valued field to prevent mapping explosion (scan.exiftool). 
+- Resolved issue with Navigator layer(s) not loading correctly.
+- Wazuh authd is now started by default on port 1515/tcp.
+- Wazuh API default credentials are now removed after setup.  Scripts have been added for API user management.
 
 Known Issues
 ------------
