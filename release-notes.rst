@@ -7,6 +7,11 @@ Before downloading, please review the notes for this release.
 
 Security Onion is now generally available and is at version 2.3.2!
 
+2.3.10 Changes
+-------------
+
+- UEFI installs with multiple disks should work as intended now.
+
 2.3.2 Changes
 -------------
 
