@@ -5,7 +5,7 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion is now generally available and is at version 2.3.2!
+Security Onion is now generally available and is at version 2.3.10!
 
 2.3.10 Changes
 -------------
