@@ -173,7 +173,7 @@ The above command would increase the field limit for the ``logstash-syslog-*`` i
 Persistent
 ~~~~~~~~~~
 
-If you need this change to be persistent, you can modify the ``settings`` stanza for the matched indices in ``/etc/logstash/logstash-template.json``.
+If you need this change to be persistent, you can modify the ``settings`` stanza for the matched indices in the template:
 
 ::
 
