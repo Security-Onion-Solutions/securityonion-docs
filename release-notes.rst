@@ -5,7 +5,7 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion is now generally available and is at version 2.3.10!
+Security Onion 2 is now generally available and is at version 2.3.10!
 
 2.3.10 Changes
 -------------
@@ -24,14 +24,14 @@ Security Onion is now generally available and is at version 2.3.10!
 - Upgraded Salt to 3002.2 due to CVEs.
 - If salt-minion is unable to apply states after the defined threshold, we assume salt-minion is in a bad state and the salt-minion service will be restarted.
 - Fixed bug that prevented mysql from installing for Fleet if Playbook wasn't also installed.
-- so-status will now show STARTING or WAIT_START, instead of ERROR, if so-status is run before a salt highstate has started or finished for the first time after system startup
-- Stenographer can now be disabled on a sensor node by setting the pillar steno:enabled:false in it's minion.sls file or globally if set in the global.sls file
-- Added :code:`so-ssh-harden` script that runs the commands listed in https://docs.securityonion.net/en/2.3/ssh.html
-- NGINX now redirects the browser to the hostname/IP address/FQDN based on :code:`global:url_base`
-- MySQL state now waits for MySQL server to respond to a query before completeing
+- so-status will now show ``STARTING`` or ``WAIT_START``, instead of ``ERROR`` if so-status is run before a salt highstate has started or finished for the first time after system startup
+- Stenographer can now be disabled on a sensor node by setting the pillar ``steno:enabled:false`` in its ``minion.sls`` file or globally if set in the ``global.sls`` file
+- Added ``so-ssh-harden`` script that runs the commands listed in https://docs.securityonion.net/en/2.3/ssh.html
+- NGINX now redirects the browser to the hostname/IP address/FQDN based on ``global:url_base``
+- MySQL state now waits for MySQL server to respond to a query before completing
 - Added Analyst option to network installs
 - Acknowledging (and Escalating) alerts did not consistently remove the alert from the visible list; this has been corrected.
-- Escalating alerts that have a rule.case_template field defined will automatically assign that case template to the case generated in TheHive.
+- Escalating alerts that have a ``rule.case_template`` field defined will automatically assign that case template to the case generated in TheHive.
 - Alerts and Hunt interface quick action bar has been converted into a vertical menu to improve quick action option clarity. Related changes also eliminated the issues that occurred when the quick action bar was appearing to the left of the visible browser area.
 - Updated Go to newer version to fix a timezone, daylight savings time (DST) issue that resulted in Alerts and Hunt interfaces not consistently showing results.
 - Improved Hunt and Alert table sorting.
@@ -50,9 +50,9 @@ Security Onion is now generally available and is at version 2.3.10!
 Known Issues
 ------------
 
-- Following the Salt minion upgrade on remote nodes, the salt-minion service may not restart properly. If this occurs, you can ssh to the minion and run ```sudo systemctl restart salt-minion```. If you do not want to connect to each node and manually restart the salt-minion, the new salt-minon watch process will restart it automatically after 1 hour.
+- Following the Salt minion upgrade on remote nodes, the salt-minion service may not restart properly. If this occurs, you can ssh to the minion and run ``sudo systemctl restart salt-minion``. If you do not want to connect to each node and manually restart the salt-minion, the new salt-minon watch process will restart it automatically after 1 hour.
 
-- During soup, you may see the following during the first highstate run, it can be ignored: ```Rendering SLS '<some_sls_name_here>' failed: Jinja variable 'list object' has no attribute 'values'```. The second highstate will complete without that error.
+- During soup, you may see the following during the first highstate run, it can be ignored: ``Rendering SLS '<some_sls_name_here>' failed: Jinja variable 'list object' has no attribute 'values'``. The second highstate will complete without that error.
     
 
 2.3.2 Changes
