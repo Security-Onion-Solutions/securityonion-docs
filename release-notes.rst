@@ -53,6 +53,8 @@ Known Issues
 - Following the Salt minion upgrade on remote nodes, the salt-minion service may not restart properly. If this occurs, you can ssh to the minion and run ``sudo systemctl restart salt-minion``. If you do not want to connect to each node and manually restart the salt-minion, the new salt-minon watch process will restart it automatically after 1 hour.
 
 - During soup, you may see the following during the first highstate run, it can be ignored: ``Rendering SLS '<some_sls_here>' failed: Jinja variable 'list object' has no attribute 'values'``. The second highstate will complete without that error.
+
+- During install or soup, there is a false positive failure condition that can occur. It is caused by ``[ERROR   ] Failed to add job <job_name> to schedule.``. This error indicates that Salt was unable to add a job to a schedule. If you see this in setup or soup log, it can be confirmed if this is false positive or not by running ``salt-call schedule.list`` on the node that saw the error. If the job isn't in the schedule list, run ``salt-call state.highstate`` and check if the job was added after it completes.
     
 
 2.3.2 Changes
