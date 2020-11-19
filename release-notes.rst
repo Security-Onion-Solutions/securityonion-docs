@@ -50,7 +50,7 @@ Security Onion 2 is now generally available and is at version 2.3.10!
 Known Issues
 ------------
 
-- Following the Salt minion upgrade on remote nodes, the salt-minion service may not restart properly. If this occurs, you can ssh to the minion and run ``sudo systemctl restart salt-minion``. If you do not want to connect to each node and manually restart the salt-minion, the new salt-minon watch process will restart it automatically after 1 hour.
+- For Ubuntu, non master nodes, you may need to ssh to each node and run ``salt-call state.highstate`` in order initiate the update. To verify if this needs to be done on remote nodes, from the master, run ``salt \* pkg.version salt-minion`` after 30 minutes following the initial soup update. If the node does not return that is it running Salt 3002.2, then the node will need to manually be highstated locally from the node.
 
 - During soup, you may see the following during the first highstate run, it can be ignored: ``Rendering SLS '<some_sls_here>' failed: Jinja variable 'list object' has no attribute 'values'``. The second highstate will complete without that error.
 
