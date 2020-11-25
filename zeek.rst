@@ -64,7 +64,8 @@ For more information, please see:
 Custom Scripts
 --------------
 
-Custom scripts can be added to ``/opt/so/conf/zeek/policy/custom/<$custom-module>``.
+Custom scripts can be added to ``/opt/so/conf/zeek/policy/custom/<$custom-module>`` on the manager.  We would then need to change the configuration for local.zeek:
+https://docs.securityonion.net/en/latest/zeek.html#configuration
 
 Logs
 ----
