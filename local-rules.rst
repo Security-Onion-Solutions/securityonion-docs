@@ -3,7 +3,7 @@
 Adding Local Rules
 ==================
 
-You can add rules in ``/opt/so/saltstack/local/salt/idstools/localrules/local.rules`` on your manager. Within 15 minutes, :ref:`salt` should then merge them into ``/opt/so/rules/nids/local.rules`` and restart processes as necessary. You can force this to happen immediately:
+You can add rules in ``/opt/so/saltstack/local/salt/idstools/localrules/local.rules`` on your manager. Within 15 minutes, :ref:`salt` should then merge them into ``/opt/so/rules/nids/all.rules`` and restart processes as necessary. You can force this to happen immediately:
 
 - From the manager:
 
