@@ -101,8 +101,8 @@ Custom scripts can be added to ``/opt/so/conf/zeek/policy/custom/<$custom-module
       - securityonion/bpfconf
       - securityonion/communityid
       - securityonion/file-extraction
-      - **custom/$module-name**
-
+      - *custom/$module-name*
+      
 One the configuration has been updated, Zeek can be restarted with `so-zeek-restart` on applicable nodes to pick up the changes.  Finally, ``/nsm/zeek/logs/current/loaded_scripts.log`` can be checked to ensure the new module has been loaded.
 
 Ex.
