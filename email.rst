@@ -13,7 +13,7 @@ You can install and configure your favorite mail server. Depending on your needs
 Wazuh
 -----
 
-If you want Wazuh to send email, you can modify ``/opt/so/wazuh/etc/ossec.conf`` as follows:
+If you want Wazuh to send email, you can modify ``/opt/so/conf/wazuh/ossec.conf`` as follows:
 
 ::
 
@@ -31,7 +31,7 @@ Then restart Wazuh:
 
    sudo so-wazuh-restart
 
-You can specify the severity of an event for which Wazuh will send email alerts by specifying an appropriate value for ``email_alert_level`` in ``/opt/so/wazuh/etc/ossec.conf``. If you notice ``email_alert_level`` is not being respected for a certain rule, it may be that the option is overridden by ``<options>alert_by_email</options>`` being set for a rule. You can modify this behavior in ``/opt/so/wazuh/etc/rules/local_rules.xml``.
+You can specify the severity of an event for which Wazuh will send email alerts by specifying an appropriate value for ``email_alert_level`` in ``/opt/so/conf/wazuh/ossec.conf``. If you notice ``email_alert_level`` is not being respected for a certain rule, it may be that the option is overridden by ``<options>alert_by_email</options>`` being set for a rule. You can modify this behavior in ``/opt/so/conf/wazuh/rules/local_rules.xml``.
 
 You can also find an explanation of the alert levels at http://ossec-docs.readthedocs.io/en/latest/manual/rules-decoders/rule-levels.html.
 
