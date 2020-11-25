@@ -64,7 +64,7 @@ For more information, please see:
 Custom Scripts
 --------------
 
-Custom scripts can be added to ``/opt/so/conf/zeek/``.
+Custom scripts can be added to ``/opt/so/conf/zeek/policy/custom/<$custom-module>``.
 
 Logs
 ----
