@@ -11,7 +11,7 @@ Stenographer uses :ref:`af-packet` for packet acquisition.
 
 Output
 ------
-Stenographer writes full packet capture to ``/nsm/pcap/``.
+Stenographer writes full packet capture to ``/nsm/pcap/``. It will automatically start purging old data once the partition reaches 90%.
 
 Analysis
 --------
