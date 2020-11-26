@@ -3,25 +3,17 @@
 Adding Local Rules
 ==================
 
-You can add rules in ``/opt/so/saltstack/local/salt/idstools/local.rules`` on your manager. Within 15 minutes, :ref:`salt` should then merge them into ``/opt/so/rules/nids/all.rules`` and restart processes as necessary. You can force this to happen immediately:
-
-- From the manager:
+You can add rules in ``/opt/so/saltstack/local/salt/idstools/local.rules`` on your manager. Within 15 minutes, :ref:`salt` should then copy those rules into ``/opt/so/rules/nids/local.rules``. The next run of ``idstools`` should then merge ``/opt/so/rules/nids/local.rules`` into ``/opt/so/rules/nids/all.rules`` which is what :ref:`suricata` reads from. If you don't want to wait for these automatic processes, you can run them manually from the manager:
 
   ::
 
-    salt $SENSORNAME_$ROLE state.apply suricata
-
-or
-
-- From the node:
-
-  ::
-
-    salt-call state.apply suricata
+    sudo salt-call state.highstate
+    sudo so-rule-update
+    sudo salt $SENSORNAME_$ROLE state.apply suricata
 
 For example:
    
--  Let's add a simple rule that's really just a copy of the traditional ``id check returned root`` rule:
+-  Let's add a simple rule to ``/opt/so/saltstack/local/salt/idstools/local.rules`` that's really just a copy of the traditional ``id check returned root`` rule:
 
    ::
 
@@ -31,7 +23,19 @@ For example:
 
    ::
 
-       sudo salt $SENSORNAME_$ROLE state.highstate
+       sudo salt-call state.highstate
+       
+-  Update rules:
+
+   ::
+   
+       sudo so-rule-update
+       
+-  Restart Suricata:
+
+   ::
+   
+       sudo salt $SENSORNAME_$ROLE state.apply suricata
 
 -  If you built the rule correctly, then Suricata should be back up and running.
 
