@@ -3,7 +3,7 @@
 Adding Local Rules
 ==================
 
-You can add rules in ``/opt/so/saltstack/local/salt/idstools/local.rules`` on your manager. Within 15 minutes, :ref:`salt` should then copy those rules into ``/opt/so/rules/nids/local.rules``. The next run of ``idstools`` should then merge ``/opt/so/rules/nids/local.rules`` into ``/opt/so/rules/nids/all.rules`` which is what :ref:`suricata` reads from. If you don't want to wait for these automatic processes, you can run them manually from the manager:
+You can add rules in ``/opt/so/saltstack/local/salt/idstools/local.rules`` on your manager. Within 15 minutes, :ref:`salt` should then copy those rules into ``/opt/so/rules/nids/local.rules``. The next run of ``idstools`` should then merge ``/opt/so/rules/nids/local.rules`` into ``/opt/so/rules/nids/all.rules`` which is what :ref:`suricata` reads from. If you don't want to wait for these automatic processes, you can run them manually from the manager (replacing ``$SENSORNAME_$ROLE`` as necessary):
 
   ::
 
@@ -31,7 +31,7 @@ For example:
    
        sudo so-rule-update
        
--  Restart Suricata:
+-  Restart Suricata (replacing ``$SENSORNAME_$ROLE`` as necessary):
 
    ::
    
