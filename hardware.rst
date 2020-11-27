@@ -97,7 +97,7 @@ Manager node with search nodes
 
 This deployment type utilizes search nodes to parse and index events. As a result, the hardware requirements of the manager node are reduced. An enterprise manager node should have at least 4-8 CPU cores, 16GB RAM, and 200GB to 1TB of disk space. Many folks choose to host their manager node in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
 
-- CPU: Used to receive incoming events and place them into Redis. Used to run all the front end web comp onents and aggregate search results from the search nodes.
+- CPU: Used to receive incoming events and place them into Redis. Used to run all the front end web components and aggregate search results from the search nodes.
 - RAM: Used for Logstash and Redis. The amount of available RAM directly impacts the size of the Redis queue.
 - Disk: Used for general OS purposes and storing Kibana dashboards.
 
