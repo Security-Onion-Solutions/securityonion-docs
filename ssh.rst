@@ -5,9 +5,15 @@ SSH
 
 Security Onion uses the latest SSH packages. It does not modify the default SSH configuration in ``/etc/ssh/sshd_config`` or manage it in any way with :ref:`salt`. This allows you to add any PAM modules or enable two factor authentication (2FA) of your choosing. 
 
-For distributed deployments, nodes only connect to the manager via SSH when they initially join the grid. If you enable 2FA, you will need to disable 2FA for the ``soremote`` account. The ``soremote`` account can be disabled when you are not adding any nodes to the grid.
+Distributed Deployments
+-----------------------
 
-Some organizations require the removal of certain ciphers and algorithms from sshd. An easy way to do this is by running the following commands and then restarting ``sshd``:
+For distributed deployments, nodes only connect to the manager via SSH when they initially join the grid. That initial connection is done using the ``soremote`` account. If you enable 2FA for SSH, you will need to disable 2FA for the ``soremote`` account. The ``soremote`` account can be disabled when you are not adding any nodes to the grid.
+
+Hardening
+---------
+
+Some organizations require the removal of certain ciphers and algorithms from sshd. Starting in Security Onion 2.3.10, we have a tool that will do this for you. Simply run ``so-ssh-harden`` and then reload the sshd config and verify that you can connect via ssh properly. Alternatively, you can manually modify your ``sshd_config`` as follows:
 
 ::
 
