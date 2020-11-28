@@ -30,6 +30,10 @@ Diagnostic Logging
 ------------------
 Diagnostic logging for Stenographer can be found at ``/opt/so/log/stenographer/``.
 
+Disabling
+---------
+If you need to disable Stenographer, you can set the :ref:`salt` pillar ``steno:enabled:false`` in the ``global.sls`` or in the sensor's ``minion.sls`` file.
+
 More Information
 ----------------
 
