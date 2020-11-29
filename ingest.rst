@@ -21,7 +21,7 @@ Eval
 Standalone
 ----------
 | Core Pipeline: Filebeat [SA Node] --> Logstash [SA Node] --> Redis [SA Node] <--> Logstash [SA Node] --> ES Ingest [SA Node]
-| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet
+| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 | 
 | WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [SA Node] --> Redis [SA Node] <--> Logstash [SA Node] --> ES Ingest [SA Node]
 | Logs: WEL, Sysmon
@@ -34,7 +34,7 @@ Fleet Standalone
 Manager Node
 ------------
 | Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [Manager] --> ES Ingest [S]
-| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet
+| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 | 
 | WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [Manager] --> ES Ingest [S]
 | Logs: WEL
@@ -42,7 +42,7 @@ Manager Node
 Manager + Search
 ----------------
 | Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [M+S] --> ES Ingest [M+S]
-| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet
+| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 | 
 | Pipeline: Filebeat [M+S] --> Logstash [M+S] --> ES Ingest [M+S]
 | Logs: Local Wazuh, Osquery/Fleet
@@ -53,14 +53,14 @@ Manager + Search
 Heavy
 -----
 | Pipeline: Filebeat [Heavy Node] --> Logstash [Heavy] --> ES Ingest [Heavy] 
-| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet
+| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 
 Search
 ------
 | Pipeline: Redis [Search] --> Logstash [Search] --> ES Ingest [Search] 
-| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet
+| Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 
 Forward
 -------
 | Pipeline: Filebeat [Forward] --> Logstash [M | M+S] --> ES Ingest [S | M+S]
-| Logs: Zeek, Suricata, Wazuh
+| Logs: Zeek, Suricata, Wazuh, syslog
