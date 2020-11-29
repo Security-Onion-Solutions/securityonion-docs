@@ -35,17 +35,17 @@ For more information, please see https://www.elastic.co/guide/en/elasticsearch/g
 
 You may need to adjust the value depending on your system's performance. The changes will be applied the next time the minion checks in. You can force it to happen immediately by running ``sudo salt-call state.apply logstash`` on the actual node or by running ``sudo salt $SENSORNAME_$ROLE state.apply logstash`` on the manager node.
 
-Adding New Logs or Modifying Existing Parsing
----------------------------------------------
-
-Customizing Parsing
-~~~~~~~~~~~~~~~~~~~
+Parsing
+-------
 
 Since Logstash no longer parses logs in Security Onion 2, modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
 
-All custom logstash pipeline configurations should be placed in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom``. 
+Adding New Logs
+---------------
 
-If you are modifying or adding a new manager pipeline, then add the following to your ``global.sls`` file:
+If you want to add a new log to the list of logs that are sent to Elasticsearch for parsing, you can update the logstash pipeline configurations by adding to ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom/``. 
+
+If you are modifying or adding a new ``manager`` pipeline, then add the following to your ``global.sls`` file:
 
 ::
 
@@ -58,7 +58,7 @@ If you are modifying or adding a new manager pipeline, then add the following to
             - so/9999_output_redis.conf.jinja
             - custom/9999_output_custom.jinja
         
-If you are modifying or adding a new search pipeline, then add the following to ``global.sls``:
+If you are modifying or adding a new ``search`` pipeline, then add the following to ``global.sls``:
 
 ::
 
@@ -102,16 +102,15 @@ both:
             - so/9700_output_strelka.conf.jinja
             - custom/9701_output_custom.jinja
 
+Logstash Parsing
+----------------
+
+If you want to add a legacy Logstash parser (not recommended) then you can copy the file to ``local``. Once the file is in ``local`` you can add the proper value to the ``global.sls`` as in the example above with ``- custom/9701_output_custom.jinja``.
 
 Forwarding Events to an External Destination
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------
 
-To forward events to an external destination create a new custom configuration file. Clone event and match on the output. We recommend using either the http or tcp output plugin. At this time we only support the default bundled Logstash output plugins.
-
-Adding Legacy Logstash Parsers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you want to add a legacy Logstash parser (not recommended) then you can copy the file to local. Once the file is in local you can add the proper value to the global.sls as the example above with - custom/9701_output_custom.jinja.
+To forward events to an external destination, create a new custom configuration file. Clone the event and match on the output. We recommend using either the ``http`` or ``tcp`` output plugin. At this time we only support the default bundled Logstash output plugins.
 
 Queue
 -----
