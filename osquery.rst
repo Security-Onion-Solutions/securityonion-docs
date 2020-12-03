@@ -65,9 +65,11 @@ Windows Eventlogs from the local Windows system can be shipped with osquery to S
 
 - Confirm that you can successfully live query the logs: ``SELECT * FROM windows_events limit 10;``
 
-- Save a new query: ``SELECT * FROM windows_events;``
+- Save a new query: Query -> Manage Queries -> Create New Query ``SELECT * FROM windows_events;`` -> Save
 
-- Add the new query to a query pack that targets a Windows host - how often it should run depends on log volume on the local host; start off with 180 seconds, differential logging.
+- Add the new query to a query pack that targets a Windows host - how often it should run depends on log volume on the local host; start off with 180 seconds, differential logging: Packs -> Manage Packs -> Select + Edit Pack (Modify Targets for Windows only if needed, Modify Logging options as needed)
+
+- Save pack + Enable pack, if needed.
 
 Please refer to the osquery documentation for further information on osquery Evented tables: https://osquery.readthedocs.io/en/stable/development/pubsub-framework/#the-pub-sub-evented-data-framework-of-osquery
 
