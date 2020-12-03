@@ -13,13 +13,6 @@ Purchasing from Security Onion Solutions helps to fund further development of th
 Community Support
 -----------------
 
-If you need free support, you can reach out to one of the following public communities for support.
-
-If you're using our traditional Security Onion 16.04 platform, you can reach out to our public security-onion mailing
-list:
+If you need free support for Security Onion 16.04, you can reach out to our public security-onion mailing list:
 
 `MailingLists <MailingLists>`__
-
-If you have questions or problems relating to our new Security Onion 2 platform, you can reach out to our reddit community:
-
-https://www.reddit.com/r/securityonion/
