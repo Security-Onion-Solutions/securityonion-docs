@@ -6,7 +6,7 @@ Onion and older components.
 
 .. warning::
 
-  Security Onion 16.04 reaches EOL in April 2021: https://blog.securityonion.net/2020/10/6-month-eol-notice-for-security-onion.html
+  Ubuntu 16.04 reaches EOL in April 2021 and so therefore Security Onion 16.04 does as well. We will not provide any support for Security Onion 16.04 after April 16, 2021.  Please plan to upgrade or replace any existing 16.04 systems before then. If you have existing installations of Security Onion 16.04, you can upgrade to Security Onion 2: https://docs.securityonion.net/en/2.3/appendix.html
   
 | Security Onion 14.04 reached EOL on November 30, 2018:
 | https://blog.securityonion.net/2018/06/6-month-eol-notice-for-security-onion.html
