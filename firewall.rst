@@ -3,10 +3,10 @@
 Firewall
 ========
 
-When configuring network-based firewalls, you'll want to take into consideration the communication/ports required for nodes to talk to one another. 
-
 Node Communication
 --------
+When configuring network-based firewalls, you'll want to take into consideration the communication/ports required for nodes to talk to one another. 
+
 All nodes to manager:
 
 - 3142 (Apt-cacher-ng) (if manager proxy enabled)
