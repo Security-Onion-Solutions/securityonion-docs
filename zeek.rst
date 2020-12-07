@@ -115,6 +115,8 @@ Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`filebeat
 
 We configure Zeek to output logs in JSON format. If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
 
+If you want to specify what Zeek logs are ingested, you can use :ref:`so-zeek-logs`.
+
 Zeek monitors your network traffic and creates logs, such as:
 
 conn.log
