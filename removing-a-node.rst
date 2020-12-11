@@ -14,6 +14,12 @@ Then remove the node by deleting its key from :ref:`salt` (replacing ``nodename`
 ::
 
    sudo salt-key -d nodename
+   
+Remove the node from Grafana, by removing the reference in ``/opt/so/saltstack/local/pillar/data/sensorstab.sls``, and the file in ``/opt/so/conf/grafana/grafana_dashboards/sensor_nodes/ <hostname>-Node.json`` on the manager, then restart Grafana with:
+
+:: 
+
+  sudo so-grafana-restart
 
 Remove search node
 ------------------
