@@ -29,20 +29,20 @@ Those files will be then be placed in ``/opt/so/conf/grafana/etc/files`` on the 
 
 ::
 
-grafana:
-  config:
-    smtp:
-      enabled: true
-      host: smtphost.mydomain:25
-      user: myuser
-      # If the password contains # or ; you have to wrap it with triple quotes wrapped by single quotes. Ex '"""#password;"""'
-      password: mypassword
-#      cert_file: /etc/grafana/config/files/smtp_cert_file.crt
-#      key_file: /etc/grafana/config/files/smtp_key_file.key
-#      skip_verify: false
-      from_address: admin@grafana.localhost
-      from_name: Grafana
-#      ehlo_identity: dashboard.example.com
+  grafana:
+    config:
+      smtp:
+        enabled: true
+        host: smtphost.mydomain:25
+        user: myuser
+        # If the password contains # or ; you have to wrap it with triple quotes wrapped by single quotes. Ex '"""#password;"""'
+        password: mypassword
+  #      cert_file: /etc/grafana/config/files/smtp_cert_file.crt
+  #      key_file: /etc/grafana/config/files/smtp_key_file.key
+  #      skip_verify: false
+        from_address: admin@grafana.localhost
+        from_name: Grafana
+  #      ehlo_identity: dashboard.example.com
 
 More Information
 ----------------
