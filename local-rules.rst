@@ -48,6 +48,8 @@ For example:
 YARA
 ----
 
+Default YARA rules are provided from Florian Roth's `signature-base` Github repo at https://github.com/Neo23x0/signature-base.
+
 Local Rules:
 ~~~~~~~~~~~
 
