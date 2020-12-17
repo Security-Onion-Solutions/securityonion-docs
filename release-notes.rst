@@ -42,6 +42,7 @@ Upcoming 2.3.20 Changes
 - PCAP Add Job form now retains previous job details for quickly adding additional jobs. A new Clear button now exists at the bottom of this form to clear out these fields and forget the previous job details.
 - PCAP Add Job form now allows users to perform arbitrary PCAP lookups of imported PCAP data (data imported via the `so-import-pcap` script.)
 - Downloads page now allows direct download of Wazuh agents for Linux, Mac, and Windows from the manager, and shows the current version of Wazuh and Elastic running in Security Onion.
+- PCAP job interface has added additional job filter criteria when expanding the job filter details.
 - Upgraded authentication backend to latest Kratos 0.5.5.
 - SOC Rows-per-Page dropdown values had a possibility of getting truncated. This is now fixed.
 - Several Hunt errors are now more descriptive, particularly those around malformed queries.
