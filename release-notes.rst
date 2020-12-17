@@ -10,7 +10,12 @@ Security Onion 2 is now generally available and is at version 2.3.10!
 Upcoming 2.3.20 Changes
 -------------
 
-- You will notice "Sensors" in SOC has been changed to "Grid". You can now see all machines connected to the grid and their IP address. It will also tell you if it is online. You can customize the description field in the minion's sls file.
+- The Sensors interface has been renamed to Grid. This interfaces includes all nodes now, not just forward nodes.
+- Grid interface now includes the status of the node. The status currently shows either Online (blue) or Offline (orange). If a node does not checkin on time then it will be marked as Offline.
+- Grid interface now includes the IP and Role of each node in the grid. 
+- Grid interface includes a new Filter search input to filter the visible list of grid nodes to a desired subset. As an example, typing in "sensor" will hide all nodes except forward nodes in the grid.
+- The Grid description field can now be customized via the local minion pillar file for each node.
+- SOC will not draw attention to an unhealth situation within the grid or with the connection between the user's browser and the manager node. For example, when the Grid has at least one Offline node the SOC interface will show an exlclamation mark in front of the browser tab's title and an exclamation mark next to the Grid menu option in SOC. Additionally, the favicon will show an orange marker in the top-right corner (not supported in Safari). Additionally, if the user's web browser is unable to communicate with the manager the unhealth indicators appear along with a message at the top of SOC that states there is a connection problem.
 - Docker has been updated to the latest version.
 - Docker should be more reliable now as we are now managing daemon.json
 - You can now install Elastic in a traditional cluster. When setting up the manager select Advanced and follow the prompts. Replicas are controlled in global.sls.
@@ -34,20 +39,18 @@ Upcoming 2.3.20 Changes
 - The ES instance for TheHive had been updated to elastic 7.
 - Hunt and Alert quick action menu has been refactored into submenus.
 - New clipboard quick actions now allow for copying fields or entire events to the clipboard.
-- PCAP _Add Job_ form now retains previous job details for quickly adding additional jobs. A new Clear button now exists at the bottom of this form to clear out these fields and forget the previous job details.
-- PCAP _Add Job_ form now allows users to perform arbitrary PCAP lookups of imported PCAP data (data imported via the `so-import-pcap` script.)
+- PCAP Add Job form now retains previous job details for quickly adding additional jobs. A new Clear button now exists at the bottom of this form to clear out these fields and forget the previous job details.
+- PCAP Add Job form now allows users to perform arbitrary PCAP lookups of imported PCAP data (data imported via the `so-import-pcap` script.)
 - Downloads page now allows direct download of Wazuh agents for Linux, Mac, and Windows from the manager, and shows the current version of Wazuh and Elastic running in Security Onion.
 - Upgraded authentication backend to latest Kratos 0.5.5.
-- Grid interface (formerly Sensors interface) now includes the IP and Role of each node in the grid. 
-- Grid interface includes a new Filter search input to filter the visible list of grid nodes to a desired subset. As an example, typing in "sensor" will hide all nodes except forward nodes in the grid.
 - SOC Rows-per-Page dropdown values had a possibility of getting truncated. This is now fixed.
 - Several Hunt errors are now more descriptive, particularly those around malformed queries.
 - SOC Error banner has been improved to avoid showing raw HTML syntax, making connection and server-side errors more readable.
-- Hunt and Alters interfaces will now allow pivoting to PCAP from a group of results if the grouped results contain a network.community_id field.
-- New quick action _Correlate_ will now pivot to a new Hunt search for all events that can be correlated by at least one of various event IDs.
+- Hunt and Alerts interfaces will now allow pivoting to PCAP from a group of results if the grouped results contain a network.community_id field.
+- New quick action Correlate will now pivot to a new Hunt search for all events that can be correlated by at least one of various event IDs.
 - Fixed bug that caused some Hunt queries to not group correctly without a .keyword suffix. This has been correct so that the .keyword suffix is no longer necessary on those groupby terms.
-- PCAP interface loses formatting and color coding when opening multiple PCAP tabs.
-- Alerts interface now has a _Refresh_ button that allows users to refresh the current alerts view without refreshing the entire SOC application.
+- Fixed issue where PCAP interface loses formatting and color coding when opening multiple PCAP tabs.
+- Alerts interface now has a Refresh button that allows users to refresh the current alerts view without refreshing the entire SOC application.
 - Hunt and Alerts interfaces now have an auto-refresh dropdown that will automatically refresh the current view at the selected frequency.
 - The `so-elastalert-test` script has been refactored to work with Security Onion 2.3
 - Logstash image now includes Kafka plugins.
