@@ -60,6 +60,7 @@ Upcoming 2.3.20 Changes
 - On distrubuted node installs, setup will compare the version currently being installed to the manager (>=2.3.20), pull the correct version from the manager if there is a mismatch, and run that version.
 - Setup will gather any errors found during a failed install into /root/errors.log for easy copy/paste and debugging.
 - Selecting Suricata as the metadata engine no longer results in the install failing.
+- so-rule-update now accepts arguments to idstools.  For example, ``so-rule-update -f`` will force idstools to pull rules, ignoring the default 15-minute pull limit. 
 
 
 
