@@ -5,7 +5,7 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2 is now generally available and is at version 2.3.10!
+Security Onion 2 is now generally available and is at version 2.3.20!
 
 Upcoming 2.3.20 Changes
 -------------
@@ -13,10 +13,10 @@ Upcoming 2.3.20 Changes
 - The Sensors interface has been renamed to Grid. This interface now includes all Security Onion nodes.
 - Grid interface now includes the status of the node. The status currently shows either Online (blue) or Offline (orange). If a node does not check-in on time then it will be marked as Offline.
 - Grid interface now includes the IP and Role of each node in the grid. 
-- Grid interface includes a new Filter search input to filter the visible list of grid nodes to a desired subset. As an example, typing in "sensor" will hide all nodes except forward nodes in the grid.
+- Grid interface includes a new Filter search input to filter the visible list of grid nodes to a desired subset. As an example, typing in "sensor" will hide all nodes except those that behave as a sensor.
 - The Grid description field can now be customized via the local minion pillar file for each node.
 - SOC will now draw attention to an unhealthy situation within the grid or with the connection between the user's browser and the manager node. For example, when the Grid has at least one Offline node the SOC interface will show an exclamation mark in front of the browser tab's title and an exclamation mark next to the Grid menu option in SOC. Additionally, the favicon will show an orange marker in the top-right corner (not supported in Safari). Additionally, if the user's web browser is unable to communicate with the manager the unhealth indicators appear along with a message at the top of SOC that states there is a connection problem.
-- Docker has been updated to the latest version.
+- The version of Docker shipped with the ISO has been updated to community edition 19.03.14-3.
 - Docker should be more reliable now as Salt is now managing daemon.json.
 - You can now install Elastic in a traditional cluster. When setting up the manager select Advanced and follow the prompts. Replicas are controlled in global.sls.
 - You can now use Hot and Warm routing with Elastic in a traditional cluster. You can change the box.type in the minion's sls file. You will need to create a curator job to re-tag the indexes based on your criteria.
