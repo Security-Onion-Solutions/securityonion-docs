@@ -7,6 +7,31 @@ Before downloading, please review the notes for this release.
 
 Security Onion 2 is now generally available and is at version 2.3.10!
 
+Upcoming 2.3.20 Changes
+-------------
+
+- You will notice "Sensors" in SOC has been changed to "Grid". You can now see all machines connected to the grid and their IP address. It will also tell you if it is online. You can customize the description field in the minion's sls file.
+- Docker has been updated to the latest version.
+- Docker should be more reliable now as we are now managing daemon.json
+- You can now install Elastic in a traditional cluster. When setting up the manager select Advanced and follow the prompts. Replicas are controlled in global.sls.
+- You can now use Hot and Warm routing with Elastic in a traditional cluster. You can change the box.type in the minion's sls file. You will need to create a curator job to re-tag the indexes based on your criteria.
+- soup has been refactored. You will need to run it a few times to get all the changes properly. We are working on making this even easier in the future.
+- soup now knows you are running features and will grab the correct containers.
+- Telegraf has been updated to version 1.16.3.
+- Grafana has been updated to 7.3.4 to resolve some XSS vulnerabilities.
+- Grafana graphs have been changed to graphs vs guages so alerting can be set up. 
+- Grafana is now completely pillarized allowing you to customize alerts as well as making it customizable for email/slack/etc. See the docs.
+- Yara rules should properly install now on network installs. Previously you had to wait for the automated job to place them in the correct location.
+- Strelka backend will not stop itself any more. The default behavior was to shutdown when no files needed to be processed. Salt would then come and restart it on the next highstate.
+- Several changes to the setup script to improve install reliability.
+- Starting in 2.3.20, a minion install will pull the setup files from the manager so that the version matches. This will allow appliances shipped with 2.3.20 to be installable on a 2.3.30 grid in the future. This will also allow an appliance shipped with 2.3.30 to be installable on a 2.3.20 grid etc.
+- Airgap now supports the import node type.
+- Custom Zeek file extraction values in the pillar now work properly.
+- Thehive has been updated to support Elastic 7.
+- The ES instance for Thehive had been updated to elastic 7.
+
+
+
 2.3.10 Changes
 -------------
 
