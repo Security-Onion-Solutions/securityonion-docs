@@ -5,51 +5,48 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2 is now generally available and is at version 2.3.20!
+Security Onion 2 is now generally available and is at version 2.3.10!
 
 Upcoming 2.3.20 Changes
 -------------
 
+- soup has been refactored. You will need to run it a few times to get all the changes properly. We are working on making this even easier in the future.
+- soup now has awareness of Elastic Features and now downloads the appropriate Docker containers.
 - The Sensors interface has been renamed to Grid. This interface now includes all Security Onion nodes.
 - Grid interface now includes the status of the node. The status currently shows either Online (blue) or Offline (orange). If a node does not check-in on time then it will be marked as Offline.
 - Grid interface now includes the IP and Role of each node in the grid. 
 - Grid interface includes a new Filter search input to filter the visible list of grid nodes to a desired subset. As an example, typing in "sensor" will hide all nodes except those that behave as a sensor.
 - The Grid description field can now be customized via the local minion pillar file for each node.
-- SOC will now draw attention to an unhealthy situation within the grid or with the connection between the user's browser and the manager node. For example, when the Grid has at least one Offline node the SOC interface will show an exclamation mark in front of the browser tab's title and an exclamation mark next to the Grid menu option in SOC. Additionally, the favicon will show an orange marker in the top-right corner (not supported in Safari). Additionally, if the user's web browser is unable to communicate with the manager the unhealth indicators appear along with a message at the top of SOC that states there is a connection problem.
-- The version of Docker shipped with the ISO has been updated to community edition 19.03.14-3.
+- SOC will now draw attention to an unhealthy situation within the grid or with the connection between the user's browser and the manager node. For example, when the Grid has at least one Offline node the SOC interface will show an exclamation mark in front of the browser tab's title and an exclamation mark next to the Grid menu option in SOC. Additionally, the favicon will show an orange marker in the top-right corner (dynamic favicons not supported in Safari). Additionally, if the user's web browser is unable to communicate with the manager the unhealth indicators appear along with a message at the top of SOC that states there is a connection problem.
+- Docker has been upgraded to the latest version.
 - Docker should be more reliable now as Salt is now managing daemon.json.
 - You can now install Elastic in a traditional cluster. When setting up the manager select Advanced and follow the prompts. Replicas are controlled in global.sls.
 - You can now use Hot and Warm routing with Elastic in a traditional cluster. You can change the box.type in the minion's sls file. You will need to create a curator job to re-tag the indexes based on your criteria.
-- soup has been refactored. You will need to run it a few times to get all the changes properly. We are working on making this even easier in the future.
-- soup now knows you are running Elastic features and will grab the correct containers.
 - Telegraf has been updated to version 1.16.3.
 - Grafana has been updated to 7.3.4 to resolve some XSS vulnerabilities.
 - Grafana graphs have been changed to graphs vs guages so alerting can be set up. 
-- Grafana is now completely pillarized allowing you to customize alerts as well as making it customizable for email/slack/etc. See the docs.
-- Yara rules should properly install now on network installs. Previously, you had to wait for the automated job to place them in the correct location.
+- Grafana is now completely pillarized, allowing users to customize alerts and making it customizable for email, Slack, etc. See the docs here: https://securityonion.net/docs/grafana
+- Yara rules now should properly install on non-airgap installs. Previously, users had to wait for an automated job to place them in the correct location.
 - Strelka backend will not stop itself any more. Previously, its behavior was to shut itself down after fifteen minutes and wait for Salt to restart it to look for work before shutting down again.
-- Strelka rules are now updated during the initial installation of Security Onion.
 - Strelka daily rule updates are now logged to `/nsm/strelka/log/yara-update.log`
 - Several changes to the setup script to improve install reliability.
-- Starting in 2.3.20, a minion install will pull the setup files from the manager so that the version matches. This will allow appliances shipped with 2.3.20 to be installable on a 2.3.30 grid in the future. This will also allow an appliance shipped with 2.3.30 to be installable on a 2.3.20 grid etc.
 - Airgap now supports the import node type.
 - Custom Zeek file extraction values in the pillar now work properly.
 - TheHive has been updated to support Elastic 7.
 - Cortex image now includes whois package to correct an issue with the CERTatPassiveDNS analyzer.
-- The ES instance for TheHive had been updated to Elastic 7.
 - Hunt and Alert quick action menu has been refactored into submenus.
 - New clipboard quick actions now allow for copying fields or entire events to the clipboard.
 - PCAP Add Job form now retains previous job details for quickly adding additional jobs. A new Clear button now exists at the bottom of this form to clear out these fields and forget the previous job details.
-- PCAP Add Job form now allows users to perform arbitrary PCAP lookups of imported PCAP data (data imported via the `so-import-pcap` script.)
+- PCAP Add Job form now allows users to perform arbitrary PCAP lookups of imported PCAP data (data imported via the `so-import-pcap` script).
 - Downloads page now allows direct download of Wazuh agents for Linux, Mac, and Windows from the manager, and shows the version of Wazuh and Elastic installed with Security Onion.
 - PCAP job interface now shows additional job filter criteria when expanding the job filter details.
 - Upgraded authentication backend to Kratos 0.5.5.
-- SOC tables with the "Rows per Page" dropdown was sometimes showing truncated page counts. This is now fixed.
+- SOC tables with the "Rows per Page" dropdown no longer show truncated page counts.
 - Several Hunt errors are now more descriptive, particularly those around malformed queries.
 - SOC Error banner has been improved to avoid showing raw HTML syntax, making connection and server-side errors more readable.
 - Hunt and Alerts interfaces will now allow pivoting to PCAP from a group of results if the grouped results contain a network.community_id field.
 - New "Correlate" quick action will pivot to a new Hunt search for all events that can be correlated by at least one of various event IDs.
-- Fixed bug that caused some Hunt queries to not group correctly without a .keyword suffix. This has been correct so that the .keyword suffix is no longer necessary on those groupby terms.
+- Fixed bug that caused some Hunt queries to not group correctly without a .keyword suffix. This has been corrected so that the .keyword suffix is no longer necessary on those groupby terms.
 - Fixed issue where PCAP interface loses formatting and color coding when opening multiple PCAP tabs.
 - Alerts interface now has a Refresh button that allows users to refresh the current alerts view without refreshing the entire SOC application.
 - Hunt and Alerts interfaces now have an auto-refresh dropdown that will automatically refresh the current view at the selected frequency.
@@ -58,7 +55,7 @@ Upcoming 2.3.20 Changes
 - Wazuh agent registration process has been improved to support slower hardware and networks.
 - An Elasticsearch ingest pipeline has been added for suricata.ftp_data.
 - Elasticsearch's indices.query.bool.max_clause_count value has been increased to accommodate a slightly larger number of fields (1024 -> 1500) when querying using a wildcard.
-- On distributed node installs, setup will compare the version currently being installed to the manager (>=2.3.20), pull the correct Security Onion version from the manager if there is a mismatch, and run that version.
+- On nodes being added to an existing grid, setup will compare the version currently being installed to the manager (>=2.3.20), pull the correct Security Onion version from the manager if there is a mismatch, and run that version.
 - Setup will gather any errors found during a failed install into /root/errors.log for easy copy/paste and debugging.
 - Selecting Suricata as the metadata engine no longer results in the install failing.
 - so-rule-update now accepts arguments to idstools.  For example, ``so-rule-update -f`` will force idstools to pull rules, ignoring the default 15-minute pull limit. 
