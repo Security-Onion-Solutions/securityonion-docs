@@ -21,16 +21,17 @@ Upcoming 2.3.20 Changes
 - Grafana has been updated to 7.3.4 to resolve some XSS vulnerabilities.
 - Grafana graphs have been changed to graphs vs guages so alerting can be set up. 
 - Grafana is now completely pillarized allowing you to customize alerts as well as making it customizable for email/slack/etc. See the docs.
-- Yara rules should properly install now on network installs. Previously you had to wait for the automated job to place them in the correct location.
-- Strelka backend will not stop itself any more. The default behavior was to shutdown when no files needed to be processed. Salt would then come and restart it on the next highstate.
+- Yara rules should properly install now on network installs. Previously, you had to wait for the automated job to place them in the correct location.
+- Strelka backend will not stop itself any more. Previously, its default behavior was to shut itself down after fifteen minutes, then Salt would then come and restart it on the next highstate.
 - Strelka rules are now updated during the initial installation of Security Onion.
 - Strelka daily rule updates are now logged to `/nsm/strelka/log/yara-update.log`
 - Several changes to the setup script to improve install reliability.
 - Starting in 2.3.20, a minion install will pull the setup files from the manager so that the version matches. This will allow appliances shipped with 2.3.20 to be installable on a 2.3.30 grid in the future. This will also allow an appliance shipped with 2.3.30 to be installable on a 2.3.20 grid etc.
 - Airgap now supports the import node type.
 - Custom Zeek file extraction values in the pillar now work properly.
-- Thehive has been updated to support Elastic 7.
-- The ES instance for Thehive had been updated to elastic 7.
+- TheHive has been updated to support Elastic 7.
+- Cortex image now includes whois package to correct an issue with the CERTatPassiveDNS analyzer.
+- The ES instance for TheHive had been updated to elastic 7.
 - Hunt and Alert quick action menu has been refactored into submenus.
 - New clipboard quick actions now allow for copying fields or entire events to the clipboard.
 - PCAP _Add Job_ form now retains previous job details for quickly adding additional jobs. A new Clear button now exists at the bottom of this form to clear out these fields and forget the previous job details.
@@ -49,8 +50,10 @@ Upcoming 2.3.20 Changes
 - Alerts interface now has a _Refresh_ button that allows users to refresh the current alerts view without refreshing the entire SOC application.
 - Hunt and Alerts interfaces now have an auto-refresh dropdown that will automatically refresh the current view at the selected frequency.
 - The `so-elastalert-test` script has been refactored to work with Security Onion 2.3
-- Logstash image now includes Kafka plugins
+- Logstash image now includes Kafka plugins.
 - Wazuh agent registration process has been improved to support slower hardware and networks.
+- An Elasticsearch ingest pipeline has been added for suricata.ftp_data.
+- Elasticsearch's indices.query.bool.max_clause_count value has been increased to accomodate a slightly larger number of fields (1024 -> 1500) when querying using a wildcard.
 
 
 2.3.10 Changes
