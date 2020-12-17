@@ -16,20 +16,41 @@ Upcoming 2.3.20 Changes
 - You can now install Elastic in a traditional cluster. When setting up the manager select Advanced and follow the prompts. Replicas are controlled in global.sls.
 - You can now use Hot and Warm routing with Elastic in a traditional cluster. You can change the box.type in the minion's sls file. You will need to create a curator job to re-tag the indexes based on your criteria.
 - soup has been refactored. You will need to run it a few times to get all the changes properly. We are working on making this even easier in the future.
-- soup now knows you are running features and will grab the correct containers.
+- soup now knows you are running Elastic features and will grab the correct containers.
 - Telegraf has been updated to version 1.16.3.
 - Grafana has been updated to 7.3.4 to resolve some XSS vulnerabilities.
 - Grafana graphs have been changed to graphs vs guages so alerting can be set up. 
 - Grafana is now completely pillarized allowing you to customize alerts as well as making it customizable for email/slack/etc. See the docs.
 - Yara rules should properly install now on network installs. Previously you had to wait for the automated job to place them in the correct location.
 - Strelka backend will not stop itself any more. The default behavior was to shutdown when no files needed to be processed. Salt would then come and restart it on the next highstate.
+- Strelka rules are now updated during the initial installation of Security Onion.
+- Strelka daily rule updates are now logged to `/nsm/strelka/log/yara-update.log`
 - Several changes to the setup script to improve install reliability.
 - Starting in 2.3.20, a minion install will pull the setup files from the manager so that the version matches. This will allow appliances shipped with 2.3.20 to be installable on a 2.3.30 grid in the future. This will also allow an appliance shipped with 2.3.30 to be installable on a 2.3.20 grid etc.
 - Airgap now supports the import node type.
 - Custom Zeek file extraction values in the pillar now work properly.
 - Thehive has been updated to support Elastic 7.
 - The ES instance for Thehive had been updated to elastic 7.
-
+- Hunt and Alert quick action menu has been refactored into submenus.
+- New clipboard quick actions now allow for copying fields or entire events to the clipboard.
+- PCAP _Add Job_ form now retains previous job details for quickly adding additional jobs. A new Clear button now exists at the bottom of this form to clear out these fields and forget the previous job details.
+- PCAP _Add Job_ form now allows users to perform arbitrary PCAP lookups of imported PCAP data (data imported via the `so-import-pcap` script.)
+- Downloads page now allows direct download of Wazuh agents for Linux, Mac, and Windows from the manager, and shows the current version of Wazuh and Elastic running in Security Onion.
+- Upgraded authentication backend to latest Kratos 0.5.5.
+- Grid interface (formerly Sensors interface) now includes the IP and Role of each node in the grid. 
+- Grid interface includes a new Filter search input to filter the visible list of grid nodes to a desired subset. As an example, typing in "sensor" will hide all nodes except forward nodes in the grid.
+- SOC Rows-per-Page dropdown values had a possibility of getting truncated. This is now fixed.
+- Several Hunt errors are now more descriptive, particularly those around malformed queries.
+- SOC Error banner has been improved to avoid showing raw HTML syntax, making connection and server-side errors more readable.
+- Hunt and Alters interfaces will now allow pivoting to PCAP from a group of results if the grouped results contain a network.community_id field.
+- New quick action _Correlate_ will now pivot to a new Hunt search for all events that can be correlated by at least one of various event IDs.
+- Fixed bug that caused some Hunt queries to not group correctly without a .keyword suffix. This has been correct so that the .keyword suffix is no longer necessary on those groupby terms.
+- PCAP interface loses formatting and color coding when opening multiple PCAP tabs.
+- Alerts interface now has a _Refresh_ button that allows users to refresh the current alerts view without refreshing the entire SOC application.
+- Hunt and Alerts interfaces now have an auto-refresh dropdown that will automatically refresh the current view at the selected frequency.
+- The `so-elastalert-test` script has been refactored to work with Security Onion 2.3
+- Logstash image now includes Kafka plugins
+- Wazuh agent registration process has been improved to support slower hardware and networks.
 
 
 2.3.10 Changes
