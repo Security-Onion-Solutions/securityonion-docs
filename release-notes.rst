@@ -10,7 +10,7 @@ Security Onion 2 is now generally available and is at version 2.3.10!
 Upcoming 2.3.20 Changes
 -------------
 
-- soup has been refactored. You will need to run it a few times to get all the changes properly. We are working on making this even easier in the future.
+- soup has been refactored. You will need to run it a few times to get all the changes properly. We are working on making this even easier for future releases.
 - soup now has awareness of Elastic Features and now downloads the appropriate Docker containers.
 - The Sensors interface has been renamed to Grid. This interface now includes all Security Onion nodes.
 - Grid interface now includes the status of the node. The status currently shows either Online (blue) or Offline (orange). If a node does not check-in on time then it will be marked as Offline.
