@@ -57,6 +57,10 @@ Upcoming 2.3.20 Changes
 - Wazuh agent registration process has been improved to support slower hardware and networks.
 - An Elasticsearch ingest pipeline has been added for suricata.ftp_data.
 - Elasticsearch's indices.query.bool.max_clause_count value has been increased to accomodate a slightly larger number of fields (1024 -> 1500) when querying using a wildcard.
+- On distrubuted node installs, setup will compare the version currently being installed to the manager (>=2.3.20), pull the correct version from the manager if there is a mismatch, and run that version.
+- Setup will gather any errors found during a failed install into /root/errors.log for easy copy/paste and debugging.
+- Selecting Suricata as the metadata engine no longer results in the install failing.
+
 
 
 2.3.10 Changes
