@@ -29,7 +29,7 @@ Configuring Encryption for Beats
 Using the Beats default port 5044 with encryption
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Copy 0009_input_beats.conf to the local directory: 
+Copy 0009_input_beats.conf to the local directory: 
 ::
 
     cp /opt/so/saltstack/default/salt/logstash/pipeline/config/0009_input_beats.conf /opt/so/saltstack/local/salt/logstash/pipelines/config/
