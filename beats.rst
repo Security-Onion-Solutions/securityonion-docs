@@ -14,12 +14,40 @@ Encryption
 
 .. warning::
 
-   Beats communication with Logstash is ``not encrypted`` by default. If you require encryption, please consult the appropriate Elastic documentation to configure the use of TLS.
+   Beats communication with Logstash is ``not encrypted`` by default. If you require encryption, you will need to manually configure it.
    
 so-allow
 --------
 
 Run ``sudo so-allow`` and select the ``b`` option to allow your Beats agents to send their logs to Logstash port ``5044/tcp``.
+
+Configuring Encryption for Beats
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   There are a few considerations when enabling encryption for Beats. If you enable it on the default port then all connections on 5044 will be required to use encryption. The other option is to create a custom port for encryption and send only encrypted beats to that port.  
+   
+Using the Beats default port 5044 with encryption
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Copy 0009_input_beats.conf to the local directory: 
+::
+
+    cp /opt/so/saltstack/default/salt/logstash/pipeline/config/0009_input_beats.conf /opt/so/saltstack/local/salt/logstash/pipelines/config/
+    
+Copy your certificates over. You will need a cert from the ca that you are signing the cert from as well as the cert and key. Place them in the /opt/so/conf/logstash/etc/certs/ directory.
+    
+::
+    
+    input {
+      beats {
+        port => "5044"
+        ssl => true
+        ssl_certificate_authorities => ["/usr/share/logstash/myca.crt"]
+        ssl_certificate => "/usr/share/logstash/certs/mybeats.crt"
+        ssl_key => "/usr/share/logstash/certs/mybeats.key"
+        tags => [ "beat-ext" ]
+      }
+    }
 
 Winlogbeat
 ----------
