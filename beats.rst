@@ -57,17 +57,19 @@ Encryption
 Configuring Encryption for Beats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   There are a few considerations when enabling encryption for Beats. If you enable it on the default port then all connections on 5044 will be required to use encryption. The other option is to create a custom port for encryption and send only encrypted beats to that port.  
+There are a few considerations when enabling encryption for Beats. If you enable it on the default port then all connections on 5044 will be required to use encryption. The other option is to create a custom port for encryption and send only encrypted beats to that port.  
    
 Using the Beats default port 5044 with encryption
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Copy 0009_input_beats.conf to the local directory: 
+Copy 0009_input_beats.conf to the local directory:
+
 ::
 
     cp /opt/so/saltstack/default/salt/logstash/pipeline/config/0009_input_beats.conf /opt/so/saltstack/local/salt/logstash/pipelines/config/
     
 Copy your certificates to the proper directory on the manager. You will need a cert from the ca that you are signing the cert from, as well as the cert and key.
+
 ::
 
     cp myca.crt /opt/so/conf/logstash/certs/
