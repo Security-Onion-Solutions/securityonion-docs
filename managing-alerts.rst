@@ -98,6 +98,13 @@ Modify the SID
 
 ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then update the config:
 
+::
+
+   idstools:
+     sids:
+       modify:
+         - '2019401 "seconds \d+" "seconds 3600"'
+
 - From the manager, run:
 
   ::
