@@ -9,17 +9,50 @@ We can use Elastic Beats to facilitate the shipping of endpoint logs to Security
 
    In order to receive logs from Beats, Security Onion must be running Logstash. Evaluation Mode and Import Mode do not run Logstash, so you'll need Standalone or a full Distributed Deployment.
 
+so-allow
+--------
+
+Run ``sudo so-allow`` and select the ``b`` option to allow your Beats agents to send their logs to Logstash port ``5044/tcp``.
+
+Winlogbeat
+----------
+
+Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version. Please note that the hyperlink simply points to the standard Winlogbeat download from the Elastic site.
+
+Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if necessary. Then configure ``winlogbeat.yml`` as follows:
+
+* Make sure that the ``setup.dashboards.enabled`` setting is commented out or disabled.
+* Disable the ``output.elasticsearch`` output.
+* Enable the ``output.logstash`` output and configure it to send logs to port ``5044`` on your management node.
+* If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module as Security Onion will do all the necessary parsing.
+
+Installation
+------------
+
+To install a Beat, follow the instructions provided for the respective Beat, with the exception of loading the index template, as Security Onion uses its own template file to manage Beats fields.
+
+Filebeat
+
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation.html
+
+Winlogbeat
+
+https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation.html
+
+If installing Filebeat on a Linux distribution, you will want to ensure that the service is started after a reboot.  We can ensure this by running the following commands after install:
+
+::
+
+   sudo update-rc.d filebeat defaults
+
+   sudo update-rc.d filebeat enable
+
 Encryption
 ----------
 
 .. warning::
 
    Beats communication with Logstash is ``not encrypted`` by default. If you require encryption, you will need to manually configure it.
-   
-so-allow
---------
-
-Run ``sudo so-allow`` and select the ``b`` option to allow your Beats agents to send their logs to Logstash port ``5044/tcp``.
 
 Configuring Encryption for Beats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,39 +88,6 @@ Next make your config look like the one below. Note that the paths are not the s
         tags => [ "beat-ext" ]
       }
     }
-
-Winlogbeat
-----------
-
-Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version. Please note that the hyperlink simply points to the standard Winlogbeat download from the Elastic site.
-
-Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if necessary. Then configure ``winlogbeat.yml`` as follows:
-
-* Make sure that the ``setup.dashboards.enabled`` setting is commented out or disabled.
-* Disable the ``output.elasticsearch`` output.
-* Enable the ``output.logstash`` output and configure it to send logs to port ``5044`` on your management node.
-* If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module as Security Onion will do all the necessary parsing.
-
-Installation
-------------
-
-To install a Beat, follow the instructions provided for the respective Beat, with the exception of loading the index template, as Security Onion uses its own template file to manage Beats fields.
-
-Filebeat
-
-https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation.html
-
-Winlogbeat
-
-https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation.html
-
-If installing Filebeat on a Linux distribution, you will want to ensure that the service is started after a reboot.  We can ensure this by running the following commands after install:
-
-::
-
-   sudo update-rc.d filebeat defaults
-
-   sudo update-rc.d filebeat enable
 
 Log files
 ---------
