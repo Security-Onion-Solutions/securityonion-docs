@@ -5,9 +5,9 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2 is now generally available and is at version 2.3.20!
+Security Onion 2 is now generally available and is at version 2.3.21!
 
-2.3.20 Changes
+2.3.21 Changes
 -------------
 
 - soup has been refactored. You will need to run it a few times to get all the changes properly. We are working on making this even easier for future releases.
