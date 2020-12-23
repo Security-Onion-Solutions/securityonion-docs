@@ -10,22 +10,14 @@ From https://www.docker.com/what-docker:
 Download
 --------
 
-| Our Docker images are stored on Docker Hub:
-| https://hub.docker.com/u/securityonion/
-
 If you download our Security Onion ISO image, the Docker engine and these Docker images are baked right into the ISO image.
 
-If you instead use another ISO image, our installer will download Docker images as necessary.
+If you instead use another ISO image, our installer will download Docker images from quay.io as necessary.
 
 Security
 --------
 
-| To prevent tampering, our Docker images are signed using Docker Notary:
-| https://docs.docker.com/notary/getting_started/
-
-Any time we push an image to Docker Hub, we explicitly set ``--disable-content-trust=false`` to sign the image using Docker Notary.
-
-Any time we download an image from Docker Hub, we also explicitly set ``--disable-content-trust=false`` to verify that signature using Docker Notary.
+To prevent tampering, our Docker images are signed using GPG keys. :ref:`soup` verifies GPG signature any time Docker images are updated.
 
 Elastic
 -------
