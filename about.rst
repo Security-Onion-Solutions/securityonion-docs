@@ -42,6 +42,11 @@ Documentation
 
    We've started updating this documentation for Security Onion 2. However, please note that this is a work in progress. Many pages have not been updated yet and thus may have incorrect or missing information.
    
+License
+~~~~~~~
+
+This documentation is licensed under CC BY 4.0. You can read more about this license at https://creativecommons.org/licenses/by/4.0/.
+
 Formats
 ~~~~~~~
 
