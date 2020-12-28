@@ -18,6 +18,12 @@ For more information about these products and services, please see our corporate
 Documentation
 -------------
 
+
+License
+~~~~~~~
+
+This documentation is licensed under CC BY 4.0. You can read more about this license at https://creativecommons.org/licenses/by/4.0/.
+
 Formats
 ~~~~~~~
 
