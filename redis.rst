@@ -7,7 +7,7 @@ From https://redis.io/:
 
     Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs and geospatial indexes with radius queries.
 
-During setup, you can choose to extend your manager node storage using separate search nodes. When you choose this option, Logstash on the manager node outputs to Redis. Search nodes then consume from Redis.
+On Standalone (non-Eval) installations and distributed deployments, Logstash on the manager node outputs to Redis. Search nodes can then consume from Redis.
 
 Queue
 -----
