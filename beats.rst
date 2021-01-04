@@ -72,9 +72,9 @@ Copy your certificates to the proper directory on the manager. You will need a c
 
 ::
 
-    cp myca.crt /opt/so/conf/logstash/certs/
-    cp mybeats.crt /opt/so/conf/logstash/certs/
-    cp mybeats.key /opt/so/conf/logstash/certs/
+    cp myca.crt /opt/so/conf/logstash/etc/certs/
+    cp mybeats.crt /opt/so/conf/logstash/etc/certs/
+    cp mybeats.key /opt/so/conf/logstash/etc/certs/
     
 Next make your config look like the one below. Note that the paths are not the same due to docker.
         
