@@ -40,7 +40,7 @@ Security Onion Console (SOC)
 :ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`alerts` interface which allows you to see all of your NIDS and HIDS alerts.
 
 .. image:: images/alerts.png
-  :target: images/alerts.png
+  :target: _images/alerts.png
 
 :ref:`soc` also includes a new :ref:`Hunt` interface for threat hunting which allows you to query not only your NIDS/HIDS alerts but also :ref:`zeek` logs and system logs. 
 
