@@ -12,8 +12,8 @@ You can pivot to PCAP from :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. Altern
 
 Security Onion will then locate the stream and render a high level overview of the packets.
 
-.. image:: https://user-images.githubusercontent.com/1659467/92967522-6a35fd80-f447-11ea-8fbd-27c0bd952704.png
-  :target: https://user-images.githubusercontent.com/1659467/92967522-6a35fd80-f447-11ea-8fbd-27c0bd952704.png
+.. image:: images/pcap.png
+  :target: _images/pcap.png
 
 If there are many packets in the stream, you can use the ``LOAD MORE`` button, ``Rows per page`` setting, and arrows to navigate through the list of packets. 
 
