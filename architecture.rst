@@ -15,6 +15,8 @@ Evaluation
 The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`filebeat` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for quick installations to temporarily test out Security Onion. It is **not** designed for production usage at all.
 
 .. image:: images/eval.png
+   :align: center
+   :width: 600
    :target: _images/eval.png
 
 Standalone
@@ -24,6 +26,8 @@ Standalone
 This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
 .. image:: images/standalone.png
+   :align: center
+   :width: 600
    :target: _images/standalone.png
 
 Distributed
@@ -45,6 +49,8 @@ There is the option to utilize only two node types -- the **manager node** and o
 -  Consists of a manager node and one or more heavy nodes.
 
 .. image:: images/heavy-distributed.png
+   :align: center
+   :width: 600
    :target: _images/heavy-distributed.png
 
 Node Types

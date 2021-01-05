@@ -53,7 +53,7 @@ The remainder of the page is a data table that starts in the grouped view and ca
 
 - Clicking the blue exclamation icon escalates the alert to :ref:`hive` and creates a case. The case can then be seen in :ref:`hive` interface. If you need to find that original escalated alert in the Alerts page, you can enable the ``Escalated`` toggle (which will automatically enable the ``Acknowledged`` toggle as well).
 
-- Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites Google and VirusTotal.
+- Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
 
 - You can adjust the ``Rows per page`` setting in the bottom right and use the left and right arrow icons to page through the table.
 
