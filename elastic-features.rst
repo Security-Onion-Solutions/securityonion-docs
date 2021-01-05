@@ -3,46 +3,11 @@
 Elastic Features
 ================
 
-Many folks have asked if they could switch from the open source version of the Elastic Stack to the Features version licensed under the Elastic license (formerly known as X-Pack).  Starting with our Elastic 6.8.2 release, we have a script called ``so-elastic-features`` that will walk you through this.  If you want to do this manually, you can do the following:
+Many folks have asked if they could switch from the open source version of the Elastic Stack to the Features version licensed under the Elastic license (formerly known as X-Pack). You can do this as follows:
 
-- First, please review the Elastic Features license (https://github.com/elastic/elasticsearch/blob/6.7/licenses/ELASTIC-LICENSE.txt).
+- First, please review the Elastic Features license (https://github.com/elastic/elasticsearch/blob/master/licenses/ELASTIC-LICENSE.txt).
 
-- Next, you should make sure that all updates have been installed:
-  
-  ::
-  
-    sudo soup
-
-- If soup prompts to reboot, please do so.  
-
-- Verify that everything is working properly before continuing.
-
-- Edit ``/etc/nsm/elasticdownload.conf`` using your favorite text editor and change ``DOCKERHUB`` from ``securityonionsolutions`` to ``securityonionsolutionselas``:
-
-  ::
-  
-    DOCKERHUB="securityonionsolutionselas"
-
-- Run soup again to download the new Docker images for Elastic Features:
-
-  ::
-  
-    sudo soup
-    
-- Once soup has downloaded the new Docker images, it should restart your Docker containers.
-
-- Kibana should now have some new features on the left side.
-
-
-Screenshots
------------
-
-.. image:: images/elastic-features/soup.PNG
-   :target: https://1.bp.blogspot.com/-aOuXFcoXA4c/XO1dUjcqKvI/AAAAAAAAFoc/seV68i3iQqUf6WVybNjNEknCqkmTehz8wCLcBGAs/s1600/soup.PNG
-
-
-.. image:: images/elastic-features/kibana.PNG
-   :target: https://1.bp.blogspot.com/-7pUYxEBgnKo/XO1dYt11uoI/AAAAAAAAFog/3vEhERc5v0cwHl7K57CLzcnge46pfAznQCLcBGAs/s1600/kibana.PNG
+- Run ``sudo so-features-enable`` and follow the prompts.
 
 Q&A
 ---
@@ -50,7 +15,7 @@ Q&A
 - Is Elastic Features open source?
 
 No, it is not open source.  It is licensed under the Elastic license:
-https://github.com/elastic/elasticsearch/blob/6.7/licenses/ELASTIC-LICENSE.txt
+https://github.com/elastic/elasticsearch/blob/master/licenses/ELASTIC-LICENSE.txt
 
 - What does this mean for Security Onion licensing?
 
