@@ -35,7 +35,8 @@ A standard distributed deployment includes a **manager node**, one or more **for
 -  Consists of a manager node, one or more forward nodes, and one or more search nodes.
 
 .. image:: images/distributed.png
-   :width: 500
+   :align: center
+   :width: 600
    :target: _images/distributed.png
 
 There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
