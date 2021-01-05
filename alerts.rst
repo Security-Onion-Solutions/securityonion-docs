@@ -53,14 +53,14 @@ The remainder of the page is a data table that starts in the grouped view and ca
 
 - Clicking the blue exclamation icon escalates the alert to :ref:`hive` and creates a case. The case can then be seen in :ref:`hive` interface. If you need to find that original escalated alert in the Alerts page, you can enable the ``Escalated`` toggle (which will automatically enable the ``Acknowledged`` toggle as well).
 
-- Clicking a value in the table brings up a menu of actions for that value. The plus and minus magnifying glass icons to the left allow you to include or exclude (respectively) those values in your query. If present, the down arrow icon allows you to drill into that value (more on that in the next section). The groupby icon allows to add that particular field as a groupby in the query. The crosshair icon starts a new search for the value in :ref:`hunt`. The ``G`` and ``VT`` on the right end of the actions menu look up the value at Google and VirusTotal (respectively).
+- Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites Google and VirusTotal.
 
 - You can adjust the ``Rows per page`` setting in the bottom right and use the left and right arrow icons to page through the table.
 
 Grouped View
 ~~~~~~~~~~~~
 
-By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then clicking the down arrow icon allows you to drilldown into that value which switches to the detailed view.
+By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then selecting the Drilldown option allows you to drill down into that value which switches to the detailed view.
 
 .. image:: images/alerts-grouped.png
   :target: _images/alerts-grouped.png
@@ -68,12 +68,12 @@ By default, alerts are grouped by whatever criteria is selected in the query bar
 Detailed View
 ~~~~~~~~~~~~~
 
-If you click a value in the grouped view and then click the down arrow icon on the quick bar, it will drill down to the detailed view. This shows all search results and allows you to then drill into individual search results as necessary. Clicking the table headers allows you to sort ascending or descending. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. To the right of that arrow is the ``Timestamp`` field. Next, a few standard fields are shown: ``rule.name``, ``event.severity_label``, ``source.ip``, ``source.port``, ``destination.ip``, and ``destination.port``. Depending on what kind of data you're looking at, there may be some additional data-specific fields as well. 
+If you click a value in the grouped view and then select the Drilldown option, the display will switch to the detailed view. This shows all search results and allows you to then drill into individual search results as necessary. Clicking the table headers allows you to sort ascending or descending. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. To the right of that arrow is the ``Timestamp`` field. Next, a few standard fields are shown: ``rule.name``, ``event.severity_label``, ``source.ip``, ``source.port``, ``destination.ip``, and ``destination.port``. Depending on what kind of data you're looking at, there may be some additional data-specific fields as well. 
 
 .. image:: images/alerts-detailed.png
   :target: _images/alerts-detailed.png
 
-When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the action menu to refine your search or pivot to other pages. 
+When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
 
 .. image:: images/alerts-expanded.png
   :target: _images/alerts-expanded.png
