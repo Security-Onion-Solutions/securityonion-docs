@@ -7,8 +7,8 @@ PCAP
 
 You can pivot to PCAP from :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/92967744-cb5dd100-f447-11ea-9621-4c477d6a7e3a.png
-  :target: https://user-images.githubusercontent.com/1659467/92967744-cb5dd100-f447-11ea-9621-4c477d6a7e3a.png
+.. image:: images/pcap-add-job.png
+  :target: _images/pcap-add-job.png
 
 Security Onion will then locate the stream and render a high level overview of the packets.
 
