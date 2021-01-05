@@ -23,8 +23,6 @@ Security Onion is a free and open source Linux distribution for threat hunting, 
     - Storage Nodes are now known as Search Nodes
     - Incorporate new tech: TheHive, Strelka, support for Sigma rules, Grafana/influx (independent health monitoring/alerting), Fleet (osquery management), Playbook (detection playbook tool), Onion Hunt (hunting tool), Security Onion Console (PCAP collection tool)
 
-For more information about Security Onion not contained in this Documentation, please see our community site at https://securityonion.net.
-
 Security Onion Solutions, LLC
 -----------------------------
 Doug Burks started Security Onion as a free and open source project in 2008 and then founded Security Onion Solutions, LLC in 2014.  
