@@ -13,7 +13,7 @@ For distributed deployments, nodes only connect to the manager via SSH when they
 Hardening
 ---------
 
-Some organizations require the removal of certain ciphers and algorithms from sshd. Starting in Security Onion 2.3.10, we have a tool that will do this for you. Simply run ``so-ssh-harden`` and then reload the sshd config and verify that you can connect via ssh properly. Alternatively, you can manually modify your ``sshd_config`` as follows:
+Some organizations require the removal of certain ciphers and algorithms from sshd. Starting in Security Onion 2.3.10, we have a tool that will do this for you. Simply run ``so-ssh-harden`` and then verify that you can connect via ssh properly. Alternatively, you can manually modify your ``sshd_config`` as follows:
 
 ::
 
