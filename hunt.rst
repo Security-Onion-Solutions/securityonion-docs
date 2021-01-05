@@ -5,8 +5,8 @@ Hunt
 
 :ref:`soc` gives you access to our new Hunt interface. This interface allows you to hunt through all of the data in :ref:`elasticsearch` and is highly tuned for stacking, pivoting, data expansion, and data reduction.
 
-.. image:: https://user-images.githubusercontent.com/1659467/95373696-56957f80-08ab-11eb-9ccd-4b8632bd7470.png
-  :target: https://user-images.githubusercontent.com/1659467/95373696-56957f80-08ab-11eb-9ccd-4b8632bd7470.png
+.. image:: images/hunt.png
+  :target: _images/hunt.png
 
 Auto Hunt
 ---------
