@@ -29,8 +29,8 @@ To list all :ref:`soc` accounts, you can use the ``so-user`` command with the ``
 
 Alternatively, you can get a list of users in :ref:`soc` by clicking ``Administration`` and then ``Users``:
 
-.. image:: https://user-images.githubusercontent.com/1659467/95574989-ea766100-09fb-11eb-8900-6fc7c48ee59e.png
-  :target: https://user-images.githubusercontent.com/1659467/95574989-ea766100-09fb-11eb-8900-6fc7c48ee59e.png
+.. image:: images/users.png
+  :target: _images/users.png
 
 TheHive
 -------
