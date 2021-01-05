@@ -66,7 +66,7 @@ The manager node runs the following components:
 Forward Node
 ~~~~~~~~~~~~
 
-When using a ``forward node``, Elastic Stack components are not installed. :ref:`filebeat` forwards all logs to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). From there, the data can be queried through the use of cross-cluster search.
+A ``forward node`` is a sensor that forwards all logs via :ref:`filebeat` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). From there, the data can be queried through the use of cross-cluster search.
 
 Forward Nodes run the following components:
 
