@@ -17,8 +17,8 @@ Analysis
 --------
 You can access full packet capture via :ref:`pcap`:
 
-.. image:: https://user-images.githubusercontent.com/1659467/92967656-a49f9a80-f447-11ea-9923-e0beaf39487d.png
-  :target: https://user-images.githubusercontent.com/1659467/92967656-a49f9a80-f447-11ea-9923-e0beaf39487d.png
+.. image:: images/pcap-transcript.png
+  :target: _images/pcap-transcript.png
 
 :ref:`alerts`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` page.
 

@@ -19,7 +19,7 @@ If there are many packets in the stream, you can use the ``LOAD MORE`` button, `
 
 You can drill into individual rows to see the actual payload data. There are buttons at the top of the table that control what data is displayed in the individual rows. By disabling ``Show all packet data`` and ``HEX``, we can get an ASCII transcript.
 
-.. image:: https://user-images.githubusercontent.com/1659467/92967656-a49f9a80-f447-11ea-9923-e0beaf39487d.png
-  :target: https://user-images.githubusercontent.com/1659467/92967656-a49f9a80-f447-11ea-9923-e0beaf39487d.png
+.. image:: images/pcap-transcript.png
+  :target: _images/pcap-transcript.png
 
 Finally, you can also download the pcap by clicking the button on the right side of the table header.
