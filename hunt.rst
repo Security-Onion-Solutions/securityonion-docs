@@ -48,8 +48,8 @@ Clicking a value in the Group Metrics table brings up a context menu of actions 
 
 The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: https://user-images.githubusercontent.com/1659467/95373861-93fa0d00-08ab-11eb-81ab-3ed116b41687.png
-  :target: https://user-images.githubusercontent.com/1659467/95373861-93fa0d00-08ab-11eb-81ab-3ed116b41687.png
+.. image:: images/hunt-group-metrics.png
+  :target: _images/hunt-group-metrics.png
 
 Events
 ------
@@ -60,13 +60,13 @@ Clicking a value in the Events table brings up a context menu of actions for tha
 
 The default Fetch Limit for the Events table is ``100``. If you need to see more than 100 events, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: https://user-images.githubusercontent.com/1659467/95373967-c146bb00-08ab-11eb-9899-01adb43d8a90.png
-  :target: https://user-images.githubusercontent.com/1659467/95373967-c146bb00-08ab-11eb-9899-01adb43d8a90.png
+.. image:: images/hunt-events.png
+  :target: _images/hunt-events.png
 
-When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the action menu to refine your search or pivot to other pages. 
+When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/95374133-f5ba7700-08ab-11eb-8d59-470f0dc56ecf.png
-  :target: https://user-images.githubusercontent.com/1659467/95374133-f5ba7700-08ab-11eb-8d59-470f0dc56ecf.png
+.. image:: images/hunt-expanded.png
+  :target: _images/hunt-expanded.png
 
 Statistics
 ----------
