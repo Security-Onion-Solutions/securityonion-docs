@@ -62,18 +62,18 @@ Grouped View
 
 By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then clicking the down arrow icon allows you to drilldown into that value which switches to the detailed view.
 
-.. image:: https://user-images.githubusercontent.com/1659467/95372958-492bc580-08aa-11eb-97d4-cc395e4b3d8b.png
-  :target: https://user-images.githubusercontent.com/1659467/95372958-492bc580-08aa-11eb-97d4-cc395e4b3d8b.png
+.. image:: images/alerts-grouped.png
+  :target: _images/alerts-grouped.png
 
 Detailed View
 ~~~~~~~~~~~~~
 
 If you click a value in the grouped view and then click the down arrow icon on the quick bar, it will drill down to the detailed view. This shows all search results and allows you to then drill into individual search results as necessary. Clicking the table headers allows you to sort ascending or descending. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. To the right of that arrow is the ``Timestamp`` field. Next, a few standard fields are shown: ``rule.name``, ``event.severity_label``, ``source.ip``, ``source.port``, ``destination.ip``, and ``destination.port``. Depending on what kind of data you're looking at, there may be some additional data-specific fields as well. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/95373059-6cef0b80-08aa-11eb-9b60-8d97dcf41105.png
-  :target: https://user-images.githubusercontent.com/1659467/95373059-6cef0b80-08aa-11eb-9b60-8d97dcf41105.png
+.. image:: images/alerts-detailed.png
+  :target: _images/alerts-detailed.png
 
 When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the action menu to refine your search or pivot to other pages. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/94837877-c9ea4d80-03e2-11eb-9e0f-11692c681d44.png
-  :target: https://user-images.githubusercontent.com/1659467/94837877-c9ea4d80-03e2-11eb-9e0f-11692c681d44.png
+.. image:: images/alerts-expanded.png
+  :target: _images/alerts-expanded.png
