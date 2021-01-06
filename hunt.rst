@@ -92,7 +92,7 @@ Next, we need to edit ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.
 
 ::
 
-  ,{ "name": "AbuseIPDB", "description": "AbuseIPDB", "icon": "fa-external-link-alt", "target": "_blank","links": [ "https://www.abuseipdb.com/check/{value}" ]}
+  ,{ "name": "AbuseIPDB", "description": "Search for this value at AbuseIPDB", "icon": "fa-external-link-alt", "target": "_blank","links": [ "https://www.abuseipdb.com/check/{value}" ]}
 
 
 Finally, restart SOC to make the changes take effect:
