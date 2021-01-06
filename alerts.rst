@@ -23,10 +23,12 @@ The top of the page has toggles for ``Acknowledged`` and ``Escalated``:
 Automatic Refresh Interval
 --------------------------
 
-To the right of the toggles is the Automatic Refresh Interval setting. When enabled, the Alerts page will automatically refresh at the time interval you select.
+To the right of the toggles is the Automatic Refresh Interval setting:
 
 .. image:: images/soc-automatic-refresh-interval.png
   :target: _images/soc-automatic-refresh-interval.png
+
+When enabled, the Alerts page will automatically refresh at the time interval you select.
 
 Query Bar
 ---------
