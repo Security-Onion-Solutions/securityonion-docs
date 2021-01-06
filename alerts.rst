@@ -77,3 +77,28 @@ When you click the down arrow to expand a row in the Events table, it will show 
 
 .. image:: images/alerts-expanded.png
   :target: _images/alerts-expanded.png
+
+Context Menu
+------------
+
+Clicking a value in the page brings up a context menu that allows you to refine your search, start a new search, or even pivot to external sites like Google and VirusTotal. If you'd like to add additional external sites, you can do so by copying ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json`` and then adding new entries. 
+
+For example, suppose we want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, we need to copy ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json``:
+
+::
+
+  sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json /opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json
+
+
+Next, we need to edit ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json`` using our favorite text editor and insert the following as the next to last line of the file:
+
+::
+
+  { "name": "AbuseIPDB", "description": "AbuseIPDB", "icon": "fa-external-link-alt", "target": "_blank","links": [ "https://www.abuseipdb.com/check/{value}" ]}
+
+
+Finally, restart SOC to make the changes take effect:
+
+::
+
+  sudo so-soc-restart
