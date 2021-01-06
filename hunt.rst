@@ -121,17 +121,17 @@ The ``Clipboard`` sub-menu has several options that allow you to copy selected d
 Actions
 ~~~~~~
 
-The ``Actions`` sub-menu has several different options.
+The ``Actions`` sub-menu has several different options:
 
-Clicking the ``Hunt`` option will start a new search for the selected value and will aggregate the results by ``event.module`` and ``event.dataset`` to give you a good overview of what types of data are available for that indicator.
+- Clicking the ``Hunt`` option will start a new search for the selected value and will aggregate the results by ``event.module`` and ``event.dataset`` to give you a good overview of what types of data are available for that indicator.
 
-Clicking the ``Correlate`` option will find related logs based on Community ID, uid, fuid, etc.
+- Clicking the ``Correlate`` option will find related logs based on Community ID, uid, fuid, etc.
 
-Clicking the ``PCAP`` option will pivot to the :ref:`pcap` interface to retrieve full packet capture for the selected stream.
+- Clicking the ``PCAP`` option will pivot to the :ref:`pcap` interface to retrieve full packet capture for the selected stream.
 
-Clicking the ``Google`` option will search Google for the selected value.
+- Clicking the ``Google`` option will search Google for the selected value.
 
-Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
+- Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
 
 If you'd like to add your own custom actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` and then add new entries.
 
