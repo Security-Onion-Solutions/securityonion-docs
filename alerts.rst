@@ -91,7 +91,7 @@ When you click the arrow to expand a row in the Events table, it will show all o
 Context Menu
 ------------
 
-Clicking a value in the page brings up a context menu that allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. If you'd like to add additional external sites, you can do so by copying ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json`` and then adding new entries. 
+Clicking a value in the page brings up a context menu that allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. If you'd like to add your own custom actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json`` and then add new entries.
 
 For example, suppose we want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, we need to copy ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json``:
 
