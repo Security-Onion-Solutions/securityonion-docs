@@ -75,7 +75,7 @@ The default Fetch Limit for the Events table is ``100``. If you need to see more
 .. image:: images/hunt-events.png
   :target: _images/hunt-events.png
 
-When you click the down arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
+When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
 
 .. image:: images/hunt-expanded.png
   :target: _images/hunt-expanded.png
@@ -91,7 +91,7 @@ The bottom left corner of the page shows statistics about the current query incl
 Context Menu
 ------------
 
-Clicking a value in the page brings up a context menu that allows you to refine your search, start a new search, or even pivot to external sites like Google and VirusTotal. If you'd like to add additional external sites, you can do so by copying ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` and then adding new entries. 
+Clicking a value in the page brings up a context menu that allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. If you'd like to add additional external sites, you can do so by copying ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` and then adding new entries. 
 
 For example, suppose we want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, we need to copy ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json``:
 
