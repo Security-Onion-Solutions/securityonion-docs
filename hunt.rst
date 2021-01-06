@@ -16,6 +16,14 @@ The top of the page has a toggle for Auto Hunt which defaults to enabled. When e
 .. image:: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
   :target: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
 
+Automatic Refresh Interval
+--------------------------
+
+To the right of the Auto Hunt toggle is the Automatic Refresh Interval setting. When enabled, Hunt will automatically refresh your query at the time interval you select.
+
+.. image:: images/soc-automatic-refresh-interval.png
+  :target: _images/soc-automatic-refresh-interval.png
+
 Query Bar
 ---------
 The easiest way to get started is to click the query drop down box and select one of the pre-defined queries. These pre-defined queries cover most of the major data types that you would expect to see in a Security Onion deployment: NIDS alerts from :ref:`suricata`, HIDS alerts from :ref:`wazuh`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs. Each of the entries in the drop down list will show the actual query followed by a description of what that query does.

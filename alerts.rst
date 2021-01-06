@@ -20,6 +20,14 @@ The top of the page has toggles for ``Acknowledged`` and ``Escalated``:
 
 - Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst to :ref:`hive`.
 
+Automatic Refresh Interval
+--------------------------
+
+To the right of the toggles is the Automatic Refresh Interval setting. When enabled, the Alerts page will automatically refresh at the time interval you select.
+
+.. image:: images/soc-automatic-refresh-interval.png
+  :target: _images/soc-automatic-refresh-interval.png
+
 Query Bar
 ---------
 The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. If you want to send your current Alerts query to :ref:`hunt`, you can click the crosshair icon to the right of the query bar.
