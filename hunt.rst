@@ -76,6 +76,31 @@ The bottom left corner of the page shows statistics about the current query incl
 .. image:: https://user-images.githubusercontent.com/1659467/92963000-ca28a600-f43f-11ea-99ff-9a69604b03d0.png
   :target: https://user-images.githubusercontent.com/1659467/92963000-ca28a600-f43f-11ea-99ff-9a69604b03d0.png
 
+Context Menu
+------------
+
+Clicking a value in the page brings up a context menu that allows you to refine your search, start a new search, or even pivot to external sites like Google and VirusTotal. If you'd like to add additional external sites, you can do so by copying ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` and then adding new entries. 
+
+For example, suppose we want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, we need to copy ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json``:
+
+::
+
+  sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json /opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json
+
+
+Next, we need to edit ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` using our favorite text editor and insert the following as the next to last line of the file:
+
+::
+
+  { "name": "AbuseIPDB", "description": "AbuseIPDB", "icon": "fa-external-link-alt", "target": "_blank","links": [ "https://www.abuseipdb.com/check/{value}" ]}
+
+
+Finally, restart SOC to make the changes take effect:
+
+::
+
+  sudo so-soc-restart
+
 OQL
 ---
 
