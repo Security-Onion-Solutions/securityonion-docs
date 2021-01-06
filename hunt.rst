@@ -116,10 +116,12 @@ Clicking the ``Group By`` option will update the existing query and aggregate th
 Clipboard
 ~~~~~~~~~
 
-Clicking one of the ``Clipboard`` options allows you to copy specific data to your clipboard.
+The ``Clipboard`` sub-menu has several options that allow you to copy selected data to your clipboard in different ways.
 
 Actions
-~~~~~~~
+~~~~~~
+
+The ``Actions`` sub-menu has several different options.
 
 Clicking the ``Hunt`` option will start a new search for the selected value and will aggregate the results by ``event.module`` and ``event.dataset`` to give you a good overview of what types of data are available for that indicator.
 
