@@ -11,18 +11,22 @@ Hunt
 Auto Hunt
 ---------
 
-The top of the page has a toggle for Auto Hunt which defaults to enabled. When enabled, Hunt will automatically submit your query any time you change filters, groupings, or date ranges.
+The top of the page has a toggle for Auto Hunt which defaults to enabled:
 
 .. image:: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
   :target: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
 
+When enabled, Hunt will automatically submit your query any time you change filters, groupings, or date ranges.
+
 Automatic Refresh Interval
 --------------------------
 
-To the right of the Auto Hunt toggle is the Automatic Refresh Interval setting. When enabled, Hunt will automatically refresh your query at the time interval you select.
+To the right of the Auto Hunt toggle is the Automatic Refresh Interval setting: 
 
 .. image:: images/soc-automatic-refresh-interval.png
   :target: _images/soc-automatic-refresh-interval.png
+
+When enabled, Hunt will automatically refresh your query at the time interval you select.
 
 Query Bar
 ---------
