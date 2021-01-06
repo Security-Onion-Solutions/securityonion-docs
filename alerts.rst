@@ -94,32 +94,32 @@ Context Menu
 Clicking a value in the page brings up a context menu that allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. 
 
 Include
-~~~~~~
+~~~~~~~
 
 Clicking the ``Include`` option will add the selected value to your existing search to only show search results that include that value.
 
 Exclude
-~~~~~~
+~~~~~~~
 
 Clicking the ``Exclude`` option will exclude the selected value from your existing search results.
 
 Only
-~~~
+~~~~
 
 Clicking the ``Only`` option will start a new search for the selected value and retain any existing groupby terms.
 
 Group By
-~~~~~~~
+~~~~~~~~
 
 Clicking the ``Group By`` option will update the existing query and aggregate the results based on the selected field.
 
 Clipboard
-~~~~~~~~
+~~~~~~~~~
 
 Clicking one of the ``Clipboard`` options allows you to copy specific data to your clipboard.
 
 Actions
-~~~~~~
+~~~~~~~
 
 Clicking the ``Hunt`` option will start a new search for the selected value and will aggregate the results by ``event.module`` and ``event.dataset``.
 
