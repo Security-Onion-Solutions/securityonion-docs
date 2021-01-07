@@ -10,7 +10,12 @@ Depending on the options you chose in the installer, connect to the IP address o
 .. image:: images/login.png
   :target: _images/login.png
 
-Once logged in, you'll see links on the left side for analyst tools like :ref:`alerts`, :ref:`hunt`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, :ref:`hive`, and :ref:`attack-navigator`. While :ref:`alerts`, :ref:`hunt`, and :ref:`pcap` are native to SOC itself, the remaining tools are external and will spawn separate browser tabs.
+Once logged in, you'll notice the user menu in the upper right corner:
+
+.. image:: images/soc-user-menu.png
+  :target: _images/soc-user-menu.png
+
+On the left side of the page, you'll see links for analyst tools like :ref:`alerts`, :ref:`hunt`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, :ref:`hive`, and :ref:`attack-navigator`. While :ref:`alerts`, :ref:`hunt`, and :ref:`pcap` are native to SOC itself, the remaining tools are external and will spawn separate browser tabs.
 
 .. image:: images/analyst.png
   :target: _images/analyst.png
