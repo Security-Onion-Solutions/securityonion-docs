@@ -39,6 +39,9 @@ On the left side of the page, you'll see links for analyst tools like :ref:`aler
    alerts
    hunt
    pcap
+   grid
+   downloads
+   administration
    kibana
    grafana
    cyberchef
