@@ -97,10 +97,12 @@ Search Nodes run the following components:
 -  :ref:`curator`
 -  :ref:`wazuh`
 
-Master Search
-~~~~~~~~~~~~~
+Manager Search
+~~~~~~~~~~~~~~
 
-A ``master search`` node is both a master node and a search node at the same time. It runs the following components:
+A ``manager search`` node is both a manager node and a search node at the same time. Since it is parsing, indexing, and searching data, it has higher hardware requirements than a normal manager node. 
+
+A ``manager search`` node runs the following components:
 
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
