@@ -97,6 +97,19 @@ Search Nodes run the following components:
 -  :ref:`curator`
 -  :ref:`wazuh`
 
+Master Search
+~~~~~~~~~~~~~
+
+A ``master search`` node is both a master node and a search node at the same time. It runs the following components:
+
+-  :ref:`elasticsearch`
+-  :ref:`logstash`
+-  :ref:`kibana`
+-  :ref:`curator`
+-  :ref:`elastalert`
+-  :ref:`redis`
+-  :ref:`wazuh`
+
 Heavy Node
 ~~~~~~~~~~
 
