@@ -8,7 +8,7 @@ Grid
 .. image:: images/grid.png
   :target: _images/grid.png
 
-If any nodes are disconnected, they will be shown as follows:
+If any nodes are disconnected, they will be shown as ``Offline``:
 
 .. image:: images/grid-error.png
   :target: _images/grid-error.png
