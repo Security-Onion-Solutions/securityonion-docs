@@ -4,7 +4,7 @@ Firewall
 ========
 
 Node Communication
---------
+------------------
 When configuring network-based firewalls, you'll want to take into consideration the communication/ports required for nodes to talk to one another. 
 
 All nodes to manager:
@@ -23,22 +23,22 @@ Search nodes from/to manager:
 - 9300 (Node-to-node for Elasticsearch)
 - 9696 (Redis)
 
+Port Groups
+-----------
+
+Port groups are a way of grouping together ports similar to a firewall port/service alias. For example if you had a web server you could include 80 and 443 tcp into an alias or in this case a port group.
+
+Host Groups
+-----------
+
+Host groups are similar to port groups but for storing lists of hosts that will be allowed to connect to the associated port groups.
 
 Function
 --------
+
 The firewall state is designed to function with the idea of creating port groups and host groups, each with their own alias or name, and associating the two in order to create an allow rule. A node that has a port group and host group association assigned to it will allow those hosts to connect to those ports on that node.
-The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node using either :ref:`so-allow`, ``so-firewall`` or manually editing the yaml files. When setup is run on a new node, it will SSH
-to the manager, using the soremote account, and add itself to the appropriate host groups. All node types are added to the minion host group to allow Salt communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
 
-.. glossary::
-
-  Port Groups
-
-    Port groups are a way of grouping together ports similar to a firewall port/service alias. For example if you had a web server you could include 80 and 443 tcp into an alias or in this case a port group.
-
-  Host Groups
-
-    Host groups is similar to port groups but for storing lists of hosts that will be allowed to connect to the associated port groups.
+The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node using either :ref:`so-allow`, ``so-firewall`` or manually editing the yaml files. When setup is run on a new node, it will SSH to the manager using the ``soremote`` account, and add itself to the appropriate host groups. All node types are added to the minion host group to allow Salt communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
 
 There are two directories that contain the yaml files for the firewall configuration.
 
