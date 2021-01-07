@@ -192,11 +192,6 @@ Then restart Logstash:
 
 Please note that the change to the field limit will not occur immediately -- only upon index creation. Therefore, it is recommended to run the previously mentioned temporary command and modify the template file.
 
-Additional options
-~~~~~~~~~~~~~~~~~~
-
-If you need to make additional directories accessible to Elasticsearch, or would like to specify additional options when starting Elasticsearch, you can do so by adding these items to ``ELASTICSEARCH_OPTIONS`` in ``/etc/nsm/securityonion.conf``
-
 Diagnostic Logging
 ------------------
 
@@ -247,27 +242,6 @@ Storage
 -------
 
 All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
-
-Snapshots
----------
-
-Snapshots of the current indices can be taken and stored in a designated repository for archival purposes. Currently, you'll need to add something like the following to ``/opt/so/conf/elasticsearch/elasticsearch.yml``:
-
-::
-
-   path.repo: <your file path here>
-
-keeping in mind that the above file path is relative to the container's view of the filesystem.
-
-So, if you decided to add a ``path.repo`` value of ``/backups``, Elasticsearch would be looking for the file path ``/backups`` inside of the container. To achieve parity with what is present on the host's filesystem and make that directory accessible to the Elasticsearch Docker container, you'll want to add something like the following to ELASTICSEARCH_OPTIONS in ``/etc/nsm/securityonion.conf``:
-
-::
-
-   ELASTICSEARCH_OPTIONS="-v /backups:/backups" 
-
-(where ``/backups`` exists on the host file system and is writable by the Elasticsearch user -- a directory named ``/backups`` will be created inside the container, and the container will be able to read/write from that location).
-
-To automate the snapshotting process, you can use :ref:`curator`, in conjunction with a cron job, much like what is done today with the close and delete jobs.
 
 Re-indexing
 -----------
