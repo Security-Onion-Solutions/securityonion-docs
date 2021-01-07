@@ -59,7 +59,7 @@ Node Types
 Management
 ~~~~~~~~~~
 
-The ``manager node`` runs its own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``heavy nodes`` and ``search nodes`` (where applicable), but not ``forward nodes``, as they do not run Elastic Stack components. An analyst connects to the server from a client workstation (typically a Security Onion virtual machine installation) to execute queries and retrieve data.
+The ``manager node`` runs its own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for heavy nodes and search nodes (where applicable), but not forward nodes (since they do not run Elasticsearch). An analyst connects to the manager node from a client workstation (typically a Security Onion virtual machine installation) to execute queries and retrieve data.
 
 The manager node runs the following components:
 
@@ -88,7 +88,7 @@ Search Node
 
 When using a ``search node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Search Node``, it will create a local :ref:`elasticsearch` instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local :ref:`elasticsearch` instance.
 
-``Search nodes`` primarily collect logs from other nodes and store them for searching.
+Search nodes pull logs from the :ref:`redis` queue on the manager node and then parse and index those logs. When a user queries the manager node, the manager node then queries the storage nodes, and they return search results.
 
 Search Nodes run the following components:
 
@@ -102,7 +102,7 @@ Manager Search
 
 A ``manager search`` node is both a manager node and a search node at the same time. Since it is parsing, indexing, and searching data, it has higher hardware requirements than a normal manager node. 
 
-A ``manager search`` node runs the following components:
+A manager search node runs the following components:
 
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
