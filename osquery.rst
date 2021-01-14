@@ -21,6 +21,20 @@ Osquery will attempt to connect to the Manager via the Manager's IP or Hostname 
 
 All the packages (except for the macOS PKG) are customized for the specific Grid they were downloaded from, and include all the necessary configuration to connect to that Grid. The macOS package is a stock Launcher package, and will require additional configuration once it has been deployed.
 
+For macOS deployments, install the package and then configure the following:
+
+ - Update ``/etc/so-launcher/secret`` with the Fleet enroll secret. This can be found by running the following on the Manager:
+ 
+ ::
+
+    sudo salt-call pillar.get secrets:fleet_enroll-secret
+ 
+ - Update ``/etc/so-launcher/launcher.flags`` - change the hostname to your Manager hostname, and change the port from ``443`` to ``8090``
+  
+ - Update ``/etc/so-launcher/roots.pem`` with the contents from the following file (on your Manager): ``/etc/ssl/certs/intca.crt``
+ 
+ At this point, osquery should connect up to Fleet within a couple minutes - if not, try to manually restart the osquery agent on the macOS endpoint.
+
 Agents - Updating
 -----------------
 
