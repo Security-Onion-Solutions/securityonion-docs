@@ -3,6 +3,7 @@
 DomainStats
 ===========
 
+| Note: DomainStats currently is not included in Security Onion 2.
 | DomainStats is based on Mark Baggett's domain\_stats.py, found at
   https://github.com/MarkBaggett/domain_stats.
 | Thanks to Justin Henderson for all his work with the DomainStats
