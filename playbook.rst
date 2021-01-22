@@ -17,12 +17,12 @@ The key components of a Play are:
  #. What are the follow-up actions required to validate and/or remediate when results are seen?
  #. The actual query needed to implement the Play's objective. In our case, the :ref:`elastalert` / :ref:`elasticsearch` configuration.
 
-Any results from a Play (low, medium, high, critical severity) are available to view within :ref:`hunt` or :ref:`kibana`. High or critical severity results from a Play will generate an Alert within :ref:`hive`.
+Any results from a Play (low, medium, high, critical severity) are available to view within :ref:`hunt` or :ref:`kibana`. High or critical severity results from a Play will generate an Alert within the Security Onion Console :ref:`alerts` interface.
 
 The final piece to Playbook is automation. Once a Play is made active, the following happens:
 
  - The required :ref:`elastalert` config is put into production
- - Case Template for :ref:`hive` is created
+ - Case Template for :ref:`hive` is created (for escalations from the Alerts interface)
  - :ref:`attack-navigator` layer is updated to reflect current coverage
 
 Getting Started
