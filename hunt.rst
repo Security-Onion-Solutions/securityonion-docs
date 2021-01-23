@@ -154,6 +154,8 @@ Finally, restart SOC to make the changes take effect:
 ::
 
   sudo so-soc-restart
+  
+Once you've verifed that your change works as intended, you may want to make the same change in ``alerts.actions.json`` for :ref:`alerts`.
 
 OQL
 ---
