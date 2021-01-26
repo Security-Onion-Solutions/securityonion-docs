@@ -66,8 +66,7 @@ Copy 0009_input_beats.conf to the local directory:
 
 ::
 
-    cp /opt/so/saltstack/default/salt/logstash/pipeline/config/0009_input_beats.conf /opt/so/saltstack/local/salt/logstash/pipelines/config/
-    
+    cp /opt/so/saltstack/default/salt/logstash/pipelines/config/so/0009_input_beats.conf /opt/so/saltstack/local/salt/logstash/pipelines/config/so/0009_input_beats.conf    
 Copy your certificates to the proper directory on the manager. You will need a cert from the ca that you are signing the cert from, as well as the cert and key.
 
 ::
