@@ -16,7 +16,7 @@ At this point, you can click "Settings" for your new virtual machine so we can g
 
 Hit the "Start" button with your new virtual machine selected and after a few seconds the boot menu will load. 
 
-Follow the installation steps for your desired installation type in the :ref:`installation` section. Once installation is complete, you may need to manually eject the virtual CD or change the boot order so that the VM boots from the virtual hard drive.
+Follow the installation steps for your desired installation type in the :ref:`installation` section.
 
 .. tip::
 
