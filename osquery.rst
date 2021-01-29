@@ -34,6 +34,11 @@ For macOS deployments, install the package and then configure the following:
  - Update ``/etc/so-launcher/roots.pem`` with the contents from the following file (on your Manager): ``/etc/ssl/certs/intca.crt``
  
  At this point, osquery should connect up to Fleet within a couple minutes - if not, try to manually restart the osquery agent on the macOS endpoint.
+ 
+ ::
+ 
+  sudo launchctl kickstart -k system/com.so-launcher.launcher
+
 
 Agents - Updating
 -----------------
