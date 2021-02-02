@@ -25,7 +25,7 @@ Use the following format for Stenographer (steno), Suricata (nids) and Zeek (zee
      bpf:
       - "Your BPF Here"
       
-     nids:
+    nids:
      bpf:
       - "Your BPF Here"
       
