@@ -17,6 +17,23 @@ You can specify your BPF in the global pillar on your manager node (``/opt/so/sa
 
 If you have separate sensors reporting to that manager node, they will pull down the relevant BPF as part of the Salt update that runs every 15 minutes and then restart Suricata/Steno/Zeek so that the BPF change will take effect.
 
+Use the following format for Stenographer (steno), Suricata (nids) and Zeek (zeek):
+
+::
+
+steno:
+ bpf:
+  - "Your BPF Here"
+
+nids:
+ bpf:
+  - "Your BPF Here"
+
+zeek:
+ bpf:
+  - "Your BPF Here"
+
+
 Node-Specific BPF
 ~~~~~~~~~~~~~~~~~
 
