@@ -21,17 +21,17 @@ Use the following format for Stenographer (steno), Suricata (nids) and Zeek (zee
 
 ::
 
-steno:
- bpf:
-  - "Your BPF Here"
-
-nids:
- bpf:
-  - "Your BPF Here"
-
-zeek:
- bpf:
-  - "Your BPF Here"
+    steno:
+     bpf:
+      - "Your BPF Here"
+      
+     nids:
+     bpf:
+      - "Your BPF Here"
+      
+    zeek:
+     bpf:
+      - "Your BPF Here"
 
 
 Node-Specific BPF
