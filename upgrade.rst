@@ -43,7 +43,13 @@ Zeek package upgrades will attempt to migrate your Zeek config. You should doubl
 Elastic
 -------
 
-If ``soup`` upgrades the Elastic stack, and you then try to login to Kibana and it says ``Kibana server is not ready yet`` even after waiting a few minutes for Kibana to fully initialize, then check ``/var/log/kibana/kibana.log``. If the log says something like ``Another Kibana instance appears to be migrating the index. Waiting for that migration to complete. If no other Kibana instance is attempting migrations, you can get past this message by deleting index .kibana_6 and restarting Kibana``, then you can do the following (replacing ``.kibana_6`` with whatever index was mentioned in your Kibana log):
+If ``soup`` upgrades the Elastic stack, and you then try to login to Kibana and it says ``Kibana server is not ready yet`` even after waiting a few minutes for Kibana to fully initialize, then check ``/var/log/kibana/kibana.log``. You may see something like:
+
+::
+
+    Another Kibana instance appears to be migrating the index. Waiting for that migration to complete. If no other Kibana instance is attempting migrations, you can get past this message by deleting index .kibana_6 and restarting Kibana
+    
+If that's the case, then you can do the following (replacing ``.kibana_6`` with the actual index name that was mentioned in your Kibana log):
 
 ::
 
