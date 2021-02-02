@@ -43,7 +43,15 @@ Zeek package upgrades will attempt to migrate your Zeek config. You should doubl
 Elastic
 -------
 
-If ``soup`` upgrades the Elastic stack, it should automatically reload your Kibana dashboards.  If for some reason this fails and Kibana is not showing any dashboards, then simply run:
+If ``soup`` upgrades the Elastic stack, and you then try to login to Kibana and it says ``Kibana server is not ready yet`` even after waiting a few minutes for Kibana to fully initialize, then check ``/var/log/kibana/kibana.log``. If the log says something like ``Another Kibana instance appears to be migrating the index. Waiting for that migration to complete. If no other Kibana instance is attempting migrations, you can get past this message by deleting index .kibana_6 and restarting Kibana``, then you can do the following (replacing ``.kibana_6`` with whatever index was mentioned in your Kibana log):
+
+::
+
+    curl -XDELETE localhost:9200/.kibana_6
+
+    sudo so-kibana-restart
+
+Once you're logged into Kibana, check your Kibana dashboards. If they weren't reloaded automatically, you can manually reload them:
 
 ::
 
