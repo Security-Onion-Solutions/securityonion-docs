@@ -9,7 +9,6 @@ There are many different ways that we can integrate Security Onion into other sy
    alienvault-otx
    etherpad
    fir
-   grr
    hive
    misp
    ntopng
