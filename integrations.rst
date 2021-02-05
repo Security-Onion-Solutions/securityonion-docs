@@ -10,6 +10,5 @@ There are many different ways that we can integrate Security Onion into other sy
    
    alienvault-otx
    fir
-   grr
    misp
    rita
