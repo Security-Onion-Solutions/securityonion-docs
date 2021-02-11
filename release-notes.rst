@@ -7,6 +7,17 @@ Before downloading, please review the notes for this release.
 
 Security Onion 2 is now generally available and is at version 2.3.21!
 
+Upcoming 2.3.30 Changes
+-----------------------
+
+- Suricata is now at version 6.0.1
+- Elastic components have been upgraded to 7.10.2. This is the last version that uses the Apache license.
+- so-sensor-clean will no longer spawn multiple instances and use a ton of system resources.
+- Elastalert now can be custommized via a pillar. 
+- New script that allows the user to easily add interfaces to the bond for monitoring.
+- All fields during the setup are now validated to prevent errrors causing the setup to fail.
+- There have been several changes to improve install reliability. Many install steps have had their validation processes reworked to ensure that required tasks have been completed before moving on to the next step of the install. This was the primary benefit of us focussing on different automated install scenarios.   
+
 2.3.21 Changes
 -------------
 
