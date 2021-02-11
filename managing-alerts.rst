@@ -136,6 +136,10 @@ Threshold
 
 You can manage threshold.conf for :ref:`suricata` using :ref:`salt` pillars. The format of the pillar file can be seen below, as well as in ``/opt/so/saltstack/local/pillar/thresholding/pillar.usage`` and ``/opt/so/saltstack/local/pillar/thresholding/pillar.example``
 
+.. note::
+
+   The siganture id must be unique. If you have multiple entries for the same sid it will cause an error in salt resulting in all of the nodes in your grid to error out when checking in. 
+
 Usage:
 
 ::
