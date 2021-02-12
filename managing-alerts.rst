@@ -138,7 +138,7 @@ You can manage threshold.conf for :ref:`suricata` using :ref:`salt` pillars. The
 
 .. note::
 
-   The siganture id must be unique. If you have multiple entries for the same sid it will cause an error in salt resulting in all of the nodes in your grid to error out when checking in. 
+   The signature id (sid) must be unique. If you have multiple entries for the same sid, it will cause an error in salt resulting in all of the nodes in your grid to error out when checking in. 
 
 Usage:
 
