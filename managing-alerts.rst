@@ -105,7 +105,7 @@ Modify the SID
        modify:
          - '2019401 "seconds \d+" "seconds 3600"'
 
-If you need to modify a part of a rule that contains a special character, such as a $ in variable names, the special character needs to be escapted in the ``search`` part of the modify string. See the example below:
+If you need to modify a part of a rule that contains a special character, such as a $ in variable names, the special character needs to be escaped in the ``search`` part of the modify string. For example:
 
 ::
 
