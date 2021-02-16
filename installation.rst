@@ -19,6 +19,7 @@ If you want to install Security Onion using our ISO image:
 #. Follow the prompts to complete the installation and reboot.
 #. You may need to eject the ISO image or change the boot order of the machine to boot from the newly installed OS.
 #. Login using the username and password you set in the installer.
+#. Security Onion Setup will automatically start. If for some reason you have to exit Setup and need to restart it, you can log out of your account and then log back in and it should automatically start. If that doesn't work, you can manually run ``sudo SecurityOnion/setup/so-setup iso``.
 #. Proceed to the :ref:`configuration` section.
 
 Installation on Ubuntu or CentOS
