@@ -11,12 +11,34 @@ Upcoming 2.3.30 Changes
 -----------------------
 
 - Suricata is now at version 6.0.1
+- Many improvements to Suricata meta data parsing.
+- Suricata will now extract files from the network and send them to Strelka if you choose it as your meta data source. You can add additional mime types here.
+- It is now possible to filter Suricata events from being written to the logs. This is a new Suricata 6 feature. We have included some examples here.
+- The Kratos docker container will no longer try and lookup localhost.
+- You can now use VPN via wireguard or openvpn. Please make sure you select the interface your tunnel is using as your management address. We will continue to refine the VPN process. 
 - Elastic components have been upgraded to 7.10.2. This is the last version that uses the Apache license.
+- Machine learning is now disabled by default when using Elastic Features. This was causing issues preventing ES from starting properly.
 - so-sensor-clean will no longer spawn multiple instances and use a ton of system resources.
+- Suricata eve.json logs will now be cleaned up after 7 days. This can be changed via the pillar setting.
+- The automated backup script on the manager now backs up all keys along with the salt configurations. It also only keeps 7 days now. Previously it would write them every day and not clean them up.
+- Strelka logs are now being rotated properly. 
 - Elastalert now can be custommized via a pillar. 
 - New script that allows the user to easily add interfaces to the bond for monitoring.
 - All fields during the setup are now validated to prevent errrors causing the setup to fail.
-- There have been several changes to improve install reliability. Many install steps have had their validation processes reworked to ensure that required tasks have been completed before moving on to the next step of the install. This was the primary benefit of us focussing on different automated install scenarios.   
+- There have been several changes to improve install reliability. Many install steps have had their validation processes reworked to ensure that required tasks have been completed before moving on to the next step of the install. This was the primary benefit of us focussing on different automated install scenarios.
+- Users are now warned if they try and set "securityonion" as their hostname. 
+- The ISO should now identify xvda devices as install targets.
+- At the end of the first stage of the ISO setup, the drive should properly unmount.
+- The text selection of choosing Suriacata vs Zeek for meta data is now more descriptive.
+- The logic for properly setting the LOG_SIZE_LIMIT variable has been improved.
+- When installing on Ubuntu, setup will now wait for cloud init to complete before trying to start the install of packages.
+- The firewall state will now run considerably faster. 
+- ICMP timestamps are now disabled.
+- Copyright dates on all Security Onion specific files have been updated.
+- so-test should now work properly.
+- CyberChef has now been updated to the latest version. 
+- The zeek packet loss script is now more accurate.
+
 
 2.3.21 Changes
 -------------
