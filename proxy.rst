@@ -26,4 +26,4 @@ If you're going to run something using sudo, remember to use the ``-i`` option t
 
 ::
 
-    sudo -i rule-update
+    sudo -i so-rule-update
