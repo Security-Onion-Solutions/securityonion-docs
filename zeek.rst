@@ -252,7 +252,7 @@ In this file, there are two keys under zeek, ``zeekctl`` and ``local``. We will 
 
 Under ``zeek:local``, there are three keys: ``@load``, ``@load-sigs``, and ``redef``. In the pillar definition, ``@load`` and ``@load-sigs`` are wrapped in quotes due to the ``@`` character. Under each of the keys, there is a list of  items that will be added to the ``local.zeek`` file with the appropriate directive of either ``@load``, ``@load-sigs`` or ``redef``. In order to modify either of the lists, the entire list must redefined in either the global or minion pillar file.
 
-If we have a node where ``protocols/ssh/detect-bruteforcing`` is generating a lot of noise and we want to tell Zeek to stop loading that script, we would do the following. Since we just want to turn it off for that specific node, we would open ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``. At the bottom, we would append the following:
+If we have a node where ``protocols/ssh/detect-bruteforcing`` is generating a lot of noise and we want to tell Zeek to stop loading that script, we would do the following. Since we just want to turn it off for that specific node, we would open ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``. At the bottom, we would append the following:
 
 ::
 
