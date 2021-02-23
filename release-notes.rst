@@ -29,7 +29,7 @@ Upcoming 2.3.30 Changes
 - Users are now warned if they try and set "securityonion" as their hostname. 
 - The ISO should now identify xvda devices as install targets.
 - At the end of the first stage of the ISO setup, the ISO device should properly unmount/eject.
-- The text selection of choosing Suriacata vs Zeek for meta data is now more descriptive.
+- The text selection of choosing Suricata vs Zeek for meta data is now more descriptive.
 - The logic for properly setting the LOG_SIZE_LIMIT variable has been improved.
 - When installing on Ubuntu, setup will now wait for cloud init to complete before trying to start the install of packages.
 - The firewall state will now run considerably faster. 
@@ -45,7 +45,7 @@ Upcoming 2.3.30 Changes
 - Import installations in airgapped environments is now available.
 - The so-mysql container will now show "healthy" when viewing the `docker ps` output.
 - Corrected Soctopus configuration to use private IPs instead of public IPs, allowing network communications to succeed within the grid.
-- Correlation action in Hunt now groups the OR filters toegether to ensure subsequent user-added filters are correctly ANDed to the entire OR group.
+- Correlation action in Hunt now groups the OR filters together to ensure subsequent user-added filters are correctly ANDed to the entire OR group.
 - Add support to `so-firewall` script to display existing port groups and host groups.
 
 2.3.21 Changes
