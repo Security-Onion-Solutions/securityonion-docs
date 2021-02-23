@@ -22,7 +22,7 @@ Upcoming 2.3.30 Changes
 - Suricata eve.json logs will now be cleaned up after 7 days. This can be changed via the pillar setting.
 - The automated backup script on the manager now backs up all keys along with the salt configurations. It also only keeps 7 days now. Previously it would write them every day and not clean them up.
 - Strelka logs are now being rotated properly. 
-- Elastalert now can be custommized via a pillar. 
+- Elastalert now can be customized via a pillar. 
 - Introduced new script `so-monitor-add` that allows the user to easily add interfaces to the bond for monitoring.
 - All user input fields, prompted during setup, will have some validation performed to give up-front feedback if an entered value is invalid.
 - There have been several changes to improve install reliability. Many install steps have had their validation processes reworked to ensure that required tasks have been completed before moving on to the next step of the install.
