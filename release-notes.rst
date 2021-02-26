@@ -11,14 +11,14 @@ Upcoming 2.3.30 Changes
 -----------------------
 
 - Zeek is now at version 3.0.13.
+- CyberChef is now at version 9.27.2. 
+- Elastic components have been upgraded to 7.10.2. This is the last version that uses the Apache license.
 - Suricata is now at version 6.0.1.
 - Suricata metadata parsing is now vastly improved.
 - If you choose Suricata for metadata parsing, it will now extract files from the network and send them to Strelka. You can add additional mime types here: https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules
 - It is now possible to filter Suricata events from being written to the logs. This is a new Suricata 6 feature. We have included some examples here: https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules
 - The Kratos docker container will now perform DNS lookups locally before reaching out to the network DNS provider.
 - Network configuration is now more compatible with manually configured OpenVPN or Wireguard VPN interfaces. 
-- Elastic components have been upgraded to 7.10.2. This is the last version that uses the Apache license.
-- Machine learning is now disabled by default when using Elastic Features. This was causing issues preventing ES from starting properly.
 - so-sensor-clean will no longer spawn multiple instances.
 - Suricata eve.json logs will now be cleaned up after 7 days. This can be changed via the pillar setting.
 - The automated backup script on the manager now backs up all keys along with the salt configurations. Backup retention is now set to 7 days.
@@ -27,7 +27,7 @@ Upcoming 2.3.30 Changes
 - Introduced new script `so-monitor-add` that allows the user to easily add interfaces to the bond for monitoring.
 - Setup now validates all user input fields to give up-front feedback if an entered value is invalid.
 - There have been several changes to improve install reliability. Many install steps have had their validation processes reworked to ensure that required tasks have been completed before moving on to the next step of the install.
-- Users are now warned if they try and set "securityonion" as their hostname. 
+- Users are now warned if they try to set "securityonion" as their hostname. 
 - The ISO should now identify xvda and nvme devices as install targets.
 - At the end of the first stage of the ISO setup, the ISO device should properly unmount and eject.
 - The text selection of choosing Suricata vs Zeek for metadata is now more descriptive.
@@ -37,7 +37,6 @@ Upcoming 2.3.30 Changes
 - ICMP timestamps are now disabled.
 - Copyright dates on all Security Onion specific files have been updated.
 - `so-tcpreplay` (and indirectly `so-test`) should now work properly.
-- CyberChef has been updated to the latest version. 
 - The Zeek packet loss script is now more accurate.
 - Grafana now includes an estimated EPS graph for events ingested on the manager.
 - Updated Elastalert to release `0.2.4-alt2` based on the https://github.com/jertel/elastalert alt branch.
@@ -46,11 +45,14 @@ Upcoming 2.3.30 Changes
 - Grid interface will properly show "Search" as the node type instead of "so-node".
 - Import node now supports airgap environments.
 - The so-mysql container will now show "healthy" when viewing the `docker ps` output.
-- Corrected Soctopus configuration to use private IPs instead of public IPs, allowing network communications to succeed within the grid.
-- Correlation action in Hunt now groups the OR filters together to ensure subsequent user-added filters are correctly ANDed to the entire OR group.
+- The Soctopus configuration now uses private IPs instead of public IPs, allowing network communications to succeed within the grid.
+- The Correlate action in Hunt now groups the OR filters together to ensure subsequent user-added filters are correctly ANDed to the entire OR group.
 - Add support to `so-firewall` script to display existing port groups and host groups.
 - Hive init during Setup will now properly check for a running ES instance and will retry connectivity checks to TheHive before proceeding.
 - Changes to the .security analyzer yields more accurate query results when using Playbook.
+- Several Hunt queries have been updated.
+- The pfSense firewall log parser has been updated to improve compatibility.
+- Kibana dashboard hyperlinks have been updated for faster navigation.
 
 2.3.21 Changes
 -------------
