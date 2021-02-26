@@ -43,12 +43,12 @@ Copy and paste the following:
    sudo service mysql stop && \
    sudo service salt-minion stop && \
    sudo docker system prune -a -f && \
-   sudo sed -i 's|PREV="pre-.*$|PREV="pre-upgrade-to-18.04"|g' && \ /var/lib/dpkg/info/securityonion-bro.preinst && \
+   sudo sed -i 's|PREV="pre-.*$|PREV="pre-upgrade-to-18.04"|g' /var/lib/dpkg/info/securityonion-bro.preinst && \
    sudo /var/lib/dpkg/info/securityonion-bro.preinst install && \ 
    sudo apt install update-manager-core -y && \
    sudo sed -i 's|Prompt=never|Prompt=lts|g' /etc/update-manager/release-upgrades && \
    sudo pkill xscreensaver && \
-   sudo do-release-upgrade -y`
+   sudo do-release-upgrade
 
 You may be interactively prompted to provide an answer to the following questions or similar during the upgrade:
 
@@ -59,6 +59,12 @@ You may be interactively prompted to provide an answer to the following question
    grub -> Choose to keep local version
    sshd_config -> Choose to keep local version
    syslog-ng.conf -> Choose to keep local version
+   
+   
+If doing this over ssh:
+   sudo apt install openssh-server   
+   
+   NOTE: Keep in mind if you did this so you can decide to remove after installation/upgrade
    
 ``sudo reboot``
 
@@ -91,6 +97,10 @@ On Distributed Manager - also do the following for Redis:
    sudo systemctl stop redis.service && \
    sudo systemctl disable redis.service && \
    sudo apt purge redis -y
+   
+Remove all left-over unneeded packages:
+
+   sudo apt autoremove -y
 
 Apply netplan for the management interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``):
 
