@@ -12,11 +12,11 @@ Upcoming 2.3.30 Changes
 
 - Zeek is now at version 3.0.13.
 - Suricata is now at version 6.0.1.
-- Suricata meta data parsing is now vastly improved.
-- If you choose Suricata for meta data parsing, it will now extract files from the network and send them to Strelka. You can add additional mime types here.
+- Suricata metadata parsing is now vastly improved.
+- If you choose Suricata for metadata parsing, it will now extract files from the network and send them to Strelka. You can add additional mime types here: https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules
 - It is now possible to filter Suricata events from being written to the logs. This is a new Suricata 6 feature. We have included some examples here: https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules
 - The Kratos docker container will now perform DNS lookups locally before reaching out to the network DNS provider.
-- You can now use VPN via wireguard or openvpn. 
+- Network configuration is now more compatible with manually configured OpenVPN or Wireguard VPN interfaces. 
 - Elastic components have been upgraded to 7.10.2. This is the last version that uses the Apache license.
 - Machine learning is now disabled by default when using Elastic Features. This was causing issues preventing ES from starting properly.
 - so-sensor-clean will no longer spawn multiple instances.
@@ -30,7 +30,7 @@ Upcoming 2.3.30 Changes
 - Users are now warned if they try and set "securityonion" as their hostname. 
 - The ISO should now identify xvda and nvme devices as install targets.
 - At the end of the first stage of the ISO setup, the ISO device should properly unmount and eject.
-- The text selection of choosing Suricata vs Zeek for meta data is now more descriptive.
+- The text selection of choosing Suricata vs Zeek for metadata is now more descriptive.
 - The logic for properly setting the LOG_SIZE_LIMIT variable has been improved.
 - When installing on Ubuntu, Setup will now wait for cloud init to complete before trying to start the install of packages.
 - The firewall state runs considerably faster now. 
