@@ -49,6 +49,7 @@ Upcoming 2.3.30 Changes
 - Correlation action in Hunt now groups the OR filters together to ensure subsequent user-added filters are correctly ANDed to the entire OR group.
 - Add support to `so-firewall` script to display existing port groups and host groups.
 - Hive init during setup will now properly check for a running ES instance and will retry connectivity checks to TheHive before proceeding.
+- Changes to the .security analyzer yields more accurate query results when using Playbook
 
 2.3.21 Changes
 -------------
