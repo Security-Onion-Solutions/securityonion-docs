@@ -47,6 +47,7 @@ Upcoming 2.3.30 Changes
 - Corrected Soctopus configuration to use private IPs instead of public IPs, allowing network communications to succeed within the grid.
 - Correlation action in Hunt now groups the OR filters together to ensure subsequent user-added filters are correctly ANDed to the entire OR group.
 - Add support to `so-firewall` script to display existing port groups and host groups.
+- Hive init during setup will now properly check for a running ES instance and will retry connectivity checks to TheHive before proceeding.
 
 2.3.21 Changes
 -------------
