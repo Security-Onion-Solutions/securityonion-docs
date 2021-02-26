@@ -28,9 +28,15 @@ If you have reviewed all of the warnings above and still want to attempt an in-p
 
    Please ensure you have local access to the machine being upgraded (console/DRAC/IPMI).  Failure to do so could result in an unsuccessful upgrade, requiring a clean installation of Security Onion 2. 
 
-``sudo soup``
+Make sure that Security Onion 16.04 is fully up-to-date:
+::
 
-``sudo reboot`` 
+   sudo soup
+
+Reboot:
+::
+
+   sudo reboot
 
 
 Copy and paste the following:
@@ -61,16 +67,17 @@ You may be interactively prompted to provide an answer to the following question
    syslog-ng.conf -> Choose to keep local version
    
    
-If doing this over ssh:
+At the end of release upgrade process, you will be prompted to reboot. Do NOT reboot yet, as you will most likely need to re-install openssh-server:
+::
+
    sudo apt install openssh-server   
    
-   NOTE: Keep in mind if you did this so you can decide to remove after installation/upgrade
+Reboot:
+::
    
-``sudo reboot``
+   sudo reboot
 
-AFTER UPGRADING TO 18.04:
-
-Copy and paste the following:
+After upgrading to Ubuntu 18.04 and rebooting, copy and paste the following:
 ::
 
    sudo service apache2 stop && \
@@ -83,12 +90,12 @@ Copy and paste the following:
    sudo mv /etc/salt/ /etc/salt_pre_upgrade && \
    sudo mv /var/ossec /var/ossec_pre_upgrade && \ 
    sudo apt purge salt-* -y && \
-   sudo sed -i 's/^*/#/' /etc/cron.d/salt-update && \
    sudo apt install netplan.io -y && \
    sudo apt purge -y ifupdown && \
    sudo rm /etc/network/interfaces* && \
    sudo mv /nsm/zeek/spool/ /nsm/zeek/old_spool && \
-   sudo mv /nsm/zeek/logs/stats/ /nsm/zeek/logs/old_stats
+   sudo mv /nsm/zeek/logs/stats/ /nsm/zeek/logs/old_stats && \
+   sudo sed -i 's/^*/#/' /etc/cron.d/salt-update
 
 
 On Distributed Manager - also do the following for Redis:
@@ -99,12 +106,13 @@ On Distributed Manager - also do the following for Redis:
    sudo apt purge redis -y
    
 Remove all left-over unneeded packages:
+::
 
    sudo apt autoremove -y
 
-Apply netplan for the management interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``):
+Apply netplan for the management interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``).
 
-If using DHCP (not recommended)
+If using DHCP (NOT recommended):
 
 ::
    
@@ -134,11 +142,20 @@ If using static IP:
 
 Other examples: https://netplan.io/examples/
 
-``sudo netplan apply`` (may disconnect after this command, so ensure local access is available)
+Apply the netplan configuration (may disconnect after this command, so ensure local access is available):
+::
 
-``sudo reboot``
+   sudo netplan apply
 
-``sudo nmcli con delete "Wired connection 1"`` (delete for later use as bond interface)
+Reboot:
+::
+
+   sudo reboot
+
+Delete "Wired connection 1" for later use as bond interface:
+::
+
+   sudo nmcli con delete "Wired connection 1"
 
 .. warning::
 
