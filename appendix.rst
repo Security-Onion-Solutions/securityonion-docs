@@ -20,15 +20,15 @@ For the reasons listed above, we recommend that most users procure new hardware 
 
 .. tip::
 
-   If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open source platform!
+   If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion 2 pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open source platform!
 
-If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following:
+If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following.
 
 .. warning::
 
-   Please ensure you have local access to the machine being upgraded (console/DRAC/IPMI).  Failure to do so could result in an unsuccessful upgrade, requiring a clean installation of Security Onion 2. 
+   Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc.  Failure to do so could result in an unsuccessful upgrade, requiring a clean installation of Security Onion 2. 
 
-Make sure that Security Onion 16.04 is fully up-to-date:
+First, make sure that Security Onion 16.04 is fully up-to-date:
 ::
 
    sudo soup
@@ -39,8 +39,7 @@ Reboot:
    sudo reboot
 
 
-Copy and paste the following:
-
+Copy and paste the following to begin the upgrade to Ubuntu 18.04:
 ::
 
    sudo rm /etc/apt/sources.list.d/securityonion-ubuntu-stable-xenial.list && \    
@@ -57,7 +56,6 @@ Copy and paste the following:
    sudo do-release-upgrade
 
 You may be interactively prompted to provide an answer to the following questions or similar during the upgrade:
-
 ::
 
    Non-superusers capture PCAP -> No
@@ -67,7 +65,7 @@ You may be interactively prompted to provide an answer to the following question
    syslog-ng.conf -> Choose to keep local version
    
    
-At the end of release upgrade process, you will be prompted to reboot. Do NOT reboot yet, as you will most likely need to re-install openssh-server:
+At the end of the Ubuntu 18.04 upgrade process, you will be prompted to reboot. Do NOT reboot yet, as you will most likely need to re-install openssh-server:
 ::
 
    sudo apt install openssh-server   
@@ -77,7 +75,7 @@ Reboot:
    
    sudo reboot
 
-After upgrading to Ubuntu 18.04 and rebooting, copy and paste the following:
+After rebooting, copy and paste the following:
 ::
 
    sudo service apache2 stop && \
@@ -98,7 +96,7 @@ After upgrading to Ubuntu 18.04 and rebooting, copy and paste the following:
    sudo sed -i 's/^*/#/' /etc/cron.d/salt-update
 
 
-On Distributed Manager - also do the following for Redis:
+If you are upgrading a distributed deployment, do the following on the manager:
 ::
 
    sudo systemctl stop redis.service && \
@@ -113,7 +111,6 @@ Remove all left-over unneeded packages:
 Apply netplan for the management interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``).
 
 If using DHCP (NOT recommended):
-
 ::
    
    network:
@@ -169,7 +166,7 @@ https://docs.securityonion.net/en/2.3/installation.html#installation-on-ubuntu-o
  
 Post-Installation:
 
-While the files will still reside disk, config files/settings will NOT be migrated to the appropriate format/locations for Security Onion 2.
+While the files will still reside on disk, config files and settings will NOT be migrated to the appropriate format/locations for Security Onion 2.
 
 Example configuration may include:
 
