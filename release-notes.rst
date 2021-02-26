@@ -12,7 +12,7 @@ Upcoming 2.3.30 Changes
 
 - Zeek is now at version 3.0.13.
 - CyberChef is now at version 9.27.2. 
-- Elastic components have been upgraded to 7.10.2. This is the last version that uses the Apache license.
+- Elastic components are now at version 7.10.2. This is the last version that uses the Apache license.
 - Suricata is now at version 6.0.1.
 - Suricata metadata parsing is now vastly improved.
 - If you choose Suricata for metadata parsing, it will now extract files from the network and send them to Strelka. You can add additional mime types here: https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules
