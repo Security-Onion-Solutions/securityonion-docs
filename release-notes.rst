@@ -13,9 +13,9 @@ Upcoming 2.3.30 Changes
 - Suricata is now at version 6.0.1
 - Many improvements to Suricata meta data parsing.
 - Suricata will now extract files from the network and send them to Strelka if you choose it as your meta data source. You can add additional mime types here.
-- It is now possible to filter Suricata events from being written to the logs. This is a new Suricata 6 feature. We have included some examples here.
+- It is now possible to filter Suricata events from being written to the logs. This is a new Suricata 6 feature. We have included some examples here: https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules
 - The Kratos docker container will perform DNS lookups locally first, before reaching out to the network DNS provider.
-- You can now use VPN via wireguard or openvpn. Please make sure you select the interface your tunnel is using as your management address. We will continue to refine the VPN process. 
+- You can now use VPN via wireguard or openvpn. 
 - Elastic components have been upgraded to 7.10.2. This is the last version that uses the Apache license.
 - Machine learning is now disabled by default when using Elastic Features. This was causing issues preventing ES from starting properly.
 - so-sensor-clean will no longer spawn multiple instances and use a ton of system resources.
@@ -27,7 +27,7 @@ Upcoming 2.3.30 Changes
 - All user input fields, prompted during setup, will have some validation performed to give up-front feedback if an entered value is invalid.
 - There have been several changes to improve install reliability. Many install steps have had their validation processes reworked to ensure that required tasks have been completed before moving on to the next step of the install.
 - Users are now warned if they try and set "securityonion" as their hostname. 
-- The ISO should now identify xvda devices as install targets.
+- The ISO should now identify xvda and nvme devices as install targets.
 - At the end of the first stage of the ISO setup, the ISO device should properly unmount/eject.
 - The text selection of choosing Suricata vs Zeek for meta data is now more descriptive.
 - The logic for properly setting the LOG_SIZE_LIMIT variable has been improved.
@@ -38,6 +38,7 @@ Upcoming 2.3.30 Changes
 - `so-tcpreplay` (and indirectly `so-test`) should now work properly.
 - CyberChef has now been updated to the latest version. 
 - The zeek packet loss script is now more accurate.
+- Grafana now includes an estimated EPS graph for events ingested on the manager.
 - Updated Elastalert to release `0.2.4-alt2` based on the https://github.com/jertel/elastalert alt branch.
 - Pivots from Alerts/Hunts to action links will properly URI encode values.
 - Hunt timeline graph will properly scale the data point interval based on the search date range.
