@@ -108,7 +108,7 @@ Remove all left-over unneeded packages:
 
    sudo apt autoremove -y
 
-Apply netplan for the management interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``).
+Apply netplan for the management interface in ``/etc/netplan/netplan.yaml`` (create the file and ensure that the extension is ``.yaml``). In the following examples, make sure to replace ``ens18`` with your actual management interface and replace all IP address information with your actual addresses.
 
 If using DHCP (NOT recommended):
 ::
@@ -137,7 +137,7 @@ If using static IP:
            addresses: [10.10.10.1, 1.1.1.1]
 
 
-Other examples: https://netplan.io/examples/
+For more netplan examples, please see: https://netplan.io/examples/
 
 Apply the netplan configuration (may disconnect after this command, so ensure local access is available):
 ::
