@@ -68,40 +68,41 @@ Custom scripts can be added to ``/opt/so/conf/zeek/policy/custom/<$custom-module
 
 ::
 
-  local:
-    '@load':
-      - misc/loaded-scripts
-      - tuning/defaults
-      - misc/capture-loss
-      - misc/stats
-      - frameworks/software/vulnerable
-      - frameworks/software/version-changes
-      - protocols/ftp/software
-      - protocols/smtp/software
-      - protocols/ssh/software
-      - protocols/http/software
-      - protocols/dns/detect-external-names
-      - protocols/ftp/detect
-      - protocols/conn/known-hosts
-      - protocols/conn/known-services
-      - protocols/ssl/known-certs
-      - protocols/ssl/validate-certs
-      - protocols/ssl/log-hostcerts-only
-      - protocols/ssh/geo-data
-      - protocols/ssh/detect-bruteforcing
-      - protocols/ssh/interesting-hostnames
-      - protocols/http/detect-sqli
-      - frameworks/files/hash-all-files
-      - frameworks/files/detect-MHR
-      - policy/frameworks/notice/extend-email/hostnames
-      - ja3
-      - hassh
-      - intel
-      - cve-2020-0601
-      - securityonion/bpfconf
-      - securityonion/communityid
-      - securityonion/file-extraction
-      - *custom/$module-name*
+  zeek:
+    local:
+      '@load':
+        - misc/loaded-scripts
+        - tuning/defaults
+        - misc/capture-loss
+        - misc/stats
+        - frameworks/software/vulnerable
+        - frameworks/software/version-changes
+        - protocols/ftp/software
+        - protocols/smtp/software
+        - protocols/ssh/software
+        - protocols/http/software
+        - protocols/dns/detect-external-names
+        - protocols/ftp/detect
+        - protocols/conn/known-hosts
+        - protocols/conn/known-services
+        - protocols/ssl/known-certs
+        - protocols/ssl/validate-certs
+        - protocols/ssl/log-hostcerts-only
+        - protocols/ssh/geo-data
+        - protocols/ssh/detect-bruteforcing
+        - protocols/ssh/interesting-hostnames
+        - protocols/http/detect-sqli
+        - frameworks/files/hash-all-files
+        - frameworks/files/detect-MHR
+        - policy/frameworks/notice/extend-email/hostnames
+        - ja3
+        - hassh
+        - intel
+        - cve-2020-0601
+        - securityonion/bpfconf
+        - securityonion/communityid
+        - securityonion/file-extraction
+        - *custom/$module-name*
       
 One the configuration has been updated, Zeek can be restarted with `so-zeek-restart` on applicable nodes to pick up the changes.  Finally, ``/nsm/zeek/logs/current/loaded_scripts.log`` can be checked to ensure the new module has been loaded.
 
