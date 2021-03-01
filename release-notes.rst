@@ -5,10 +5,10 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2 is now generally available and is at version 2.3.21!
+Security Onion 2 is now generally available and is at version 2.3.30!
 
-Upcoming 2.3.30 Changes
------------------------
+2.3.30 Changes
+-------------
 
 - Zeek is now at version 3.0.13.
 - CyberChef is now at version 9.27.2. 
