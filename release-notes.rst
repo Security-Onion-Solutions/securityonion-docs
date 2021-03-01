@@ -14,7 +14,7 @@ Security Onion 2 is now generally available and is at version 2.3.30!
 - CyberChef is now at version 9.27.2. 
 - Elastic components are now at version 7.10.2. This is the last version that uses the Apache license.
 - Suricata is now at version 6.0.1.
-- Saltstack is now at version 3002.5
+- Salt is now at version 3002.5
 - Suricata metadata parsing is now vastly improved.
 - If you choose Suricata for metadata parsing, it will now extract files from the network and send them to Strelka. You can add additional mime types here: https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules
 - It is now possible to filter Suricata events from being written to the logs. This is a new Suricata 6 feature. We have included some examples here: https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules
