@@ -53,6 +53,10 @@ Security Onion 2 is now generally available and is at version 2.3.30!
 - Several Hunt queries have been updated.
 - The pfSense firewall log parser has been updated to improve compatibility.
 - Kibana dashboard hyperlinks have been updated for faster navigation.
+- Added a new ``so-rule`` script to make it easier to disable, enable, and modify SIDs.
+- Added a new ``so-monitor-add`` script to add new interfaces to the sensor bond (bond0).
+- ISO now gives the option to just configure the network during setup.
+
 
 2.3.21 Changes
 -------------
