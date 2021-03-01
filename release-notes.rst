@@ -22,6 +22,7 @@ Security Onion 2 is now generally available and is at version 2.3.30!
 - Network configuration is now more compatible with manually configured OpenVPN or Wireguard VPN interfaces. 
 - so-sensor-clean will no longer spawn multiple instances.
 - Suricata eve.json logs will now be cleaned up after 7 days. This can be changed via the pillar setting.
+- Fixed a security issue where the backup directory had improper file permissions. 
 - The automated backup script on the manager now backs up all keys along with the salt configurations. Backup retention is now set to 7 days.
 - Strelka logs are now being rotated properly. 
 - Elastalert can now be customized via a pillar. 
