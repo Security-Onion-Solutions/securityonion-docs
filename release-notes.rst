@@ -25,7 +25,7 @@ Security Onion 2 is now generally available and is at version 2.3.30!
 - The automated backup script on the manager now backs up all keys along with the salt configurations. Backup retention is now set to 7 days.
 - Strelka logs are now being rotated properly. 
 - Elastalert can now be customized via a pillar. 
-- Introduced new script `so-monitor-add` that allows the user to easily add interfaces to the bond for monitoring.
+- Introduced new script ``so-monitor-add`` that allows the user to easily add interfaces to the bond for monitoring.
 - Setup now validates all user input fields to give up-front feedback if an entered value is invalid.
 - There have been several changes to improve install reliability. Many install steps have had their validation processes reworked to ensure that required tasks have been completed before moving on to the next step of the install.
 - Users are now warned if they try to set "securityonion" as their hostname. 
@@ -55,7 +55,6 @@ Security Onion 2 is now generally available and is at version 2.3.30!
 - The pfSense firewall log parser has been updated to improve compatibility.
 - Kibana dashboard hyperlinks have been updated for faster navigation.
 - Added a new ``so-rule`` script to make it easier to disable, enable, and modify SIDs.
-- Added a new ``so-monitor-add`` script to add new interfaces to the sensor bond (bond0).
 - ISO now gives the option to just configure the network during setup.
 
 
