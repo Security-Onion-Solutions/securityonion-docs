@@ -23,40 +23,46 @@ Single Node Grid
 
 For simple, low-volume production monitoring, a single node grid can be used. EBS must be used for Elastic data storage if used for production purposes. Single node grids cannot use ephemeral instance storage without being at risk of losing Elastic data. However, for temporary evaluation installations, where there is little concern for data loss, ephemeral instance storage should be used. 
 
-Below is the minimum suggested single-node instance size for standalone and evaluation installations (choose one, not both):
+Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both).
 
-- Standalone
-  t3a.xlarge
-  200GB EBS (Optimized) gp2
+Standalone:
+- Quantity: 1
+- t3a.xlarge
+- 200GB EBS (Optimized) gp2
 
-- Evaluation
-  t3a.2xlarge
-  100GB EBS (Optimized) gp2
-  100GB Instance Storage (SSD/NVMe)
+Evaluation
+- Quantity: 1
+- Type: t3a.2xlarge
+- Storage: 100GB EBS (Optimized) gp2
+- Storage: 100GB Instance Storage (SSD/NVMe)
   
 Distributed Grid
 ----------------
 
 For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes must be used in this architecture. This is required due to the use of ephemeral instance storage for Elastic data storage, where each of the search nodes retains a replica of another search node, for disaster recovery.
 
-Below is the minimum suggested distributed grid instance sizes:
+Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements.
 
-- (1) VPN Node 
-  t3a.micro (Nitro eligible)
-  50GB EBS (Optimized) gp2
+VPN Node
+- Quantity: 1
+- Type: t3a.micro (Nitro eligible)
+- Storage: 50GB EBS (Optimized) gp2
   
-- (1) Manager
-  m5a.large
-  300GB EBS (Optimized) gp2
+Manager
+- Quantity: 1
+- Type: m5a.large
+- Storage: 300GB EBS (Optimized) gp2
   
-- (2) Search Nodes
-  m5ad.xlarge
-  200GB EBS (Optimized) gp2
-  150GB Instance Storage (SSD/NVMe)
+Search Nodes
+- Quantity: 2 or more
+- Type: m5ad.xlarge
+- Storage: 200GB EBS (Optimized) gp2
+- Storage: 150GB Instance Storage (SSD/NVMe)
   
-- (1) Sensor monitoring the VPN ingress
-  c5a.xlarge
-  500GB EBS (Optimized) gp2
+Sensor monitoring the VPN ingres
+- Quantity: 1
+- Type: c5a.xlarge
+- Storage: 500GB EBS (Optimized) gp2
 
 Getting Started 
 ###############
