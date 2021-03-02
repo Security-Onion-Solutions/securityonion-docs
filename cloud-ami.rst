@@ -102,6 +102,9 @@ Prior to launching the Security Onion AMI you will need to create the interface 
 Create Security Onion Instances
 ###############################
 
+Instance Creation
+-----------------
+
 To configure a Security Onion instance (repeat for each node in a distributed grid), follow these steps:
 
 - From the EC2 dashboard select: ``Launch Instance``
