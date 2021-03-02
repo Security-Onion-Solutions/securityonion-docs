@@ -58,6 +58,11 @@ Security Onion 2 is now generally available and is at version 2.3.30!
 - Added a new ``so-rule`` script to make it easier to disable, enable, and modify SIDs.
 - ISO now gives the option to just configure the network during setup.
 
+Known Issues
+------------
+
+Heavy Nodes are currently not compatible with Elastic true clustering:
+https://github.com/Security-Onion-Solutions/securityonion/issues/3226
 
 2.3.21 Changes
 -------------
