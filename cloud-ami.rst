@@ -1,25 +1,62 @@
 .. _cloud-ami:
 
-Cloud AMI
-=========
+AWS Cloud AMI
+=============
 
-Security Onion VPC Traffic Mirroring Configuration
-
-.. warning::
-
-    THE CLOUD AMI IS NOT YET AVAILABLE BUT IS COMING SOON!
-
-This section covers configuring a Security Onion cloud image hosted in Amazon Web Services (AWS) to receive mirrored/spanned traffic from other instances hosted within an Amazon Virtual Private Cloud (VPC). 
-
-.. tip::
-
-    You can only mirror traffic from an EC2 instance that is powered by the AWS Nitro system.  For a list of supported Nitro systems, please see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances.
+COMING SOON!
 
 .. note::
 
-    This section does not cover network connectivity to the Security Onion node. This can be achieved through configuring an external IP for the node’s management interface, or through the use of a VPN connection via OpenVPN, pfSense etc. For more details about VPN connections, please see https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6.
+This section does not cover network connectivity to the Security Onion node. This can be achieved through configuring an external IP for the node’s management interface, or through the use of a VPN connection via OpenVPN. For more details about VPN connections, please see https://medium.com/@svfusion/setup-site-to-site-vpn-to-aws-with-pfsense-1cac16623bd6.
 
-    This section does not cover how to set up a VPC in AWS. For more details about setting up a VPC, please see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html.
+.. note::
+
+This section does not cover how to set up a VPC in AWS. For more details about setting up a VPC, please see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html.
+
+Requirements
+############
+
+Before proceeding, determine the grid architecture desired. Choose from a single-node grid versus a distributed, multi-node grid. Additionally, determine if the lower latency of ephemeral instance storage is needed (typically when there is high-volume of traffic being monitored, which is most production scenarios), or if network-based storage, EBS, can be used for increased redundancy.
+
+Single Node Grid
+----------------
+
+For simple, low-volume production monitoring, a single node grid can be used. EBS must be used for Elastic data storage if used for production purposes. Single node grids cannot use ephemeral instance storage without being at risk of losing Elastic data. However, for temporary evaluation installations, where there is little concern for data loss, ephemeral instance storage should be used. 
+
+Below is the minimum suggested single-node instance size for standalone and evaluation installations (choose one, not both):
+
+- Standalone
+  t3a.xlarge
+  200GB EBS (Optimized) gp2
+
+- Evaluation
+  t3a.2xlarge
+  100GB EBS (Optimized) gp2
+  100GB Instance Storage (SSD/NVMe)
+  
+Distributed Grid
+----------------
+
+For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes must be used in this architecture. This is required due to the use of ephemeral instance storage for Elastic data storage, where each of the search nodes retains a replica of another search node, for disaster recovery.
+
+Below is the minimum suggested distributed grid instance sizes:
+
+- (1) VPN Node 
+  t3a.micro (Nitro eligible)
+  50GB EBS (Optimized) gp2
+  
+- (1) Manager
+  m5a.large
+  300GB EBS (Optimized) gp2
+  
+- (2) Search Nodes
+  m5ad.xlarge
+  200GB EBS (Optimized) gp2
+  150GB Instance Storage (SSD/NVMe)
+  
+- (1) Sensor monitoring the VPN ingress
+  c5a.xlarge
+  500GB EBS (Optimized) gp2
 
 Getting Started 
 ###############
@@ -29,7 +66,7 @@ To setup the Security Onion AMI and VPC mirror configuration, use the steps belo
 Create a Security Group for Sniffing Interface 
 ----------------------------------------------
 
-Security Groups act like a firewall for your Amazon EC2 instances controlling both inbound and outbound traffic. We will need to create a security group specifically for the interface we will be using to sniff the traffic.  This security group will need to be as open as possible to ensure all traffic destined to the sniffing interface will be allowed through.  To create a security group, follow these steps:
+Security Groups act like a firewall for your Amazon EC2 instances controlling both inbound and outbound traffic. You will need to create a security group specifically for the interface that you will be using to sniff the traffic.  This security group will need to be as open as possible to ensure all traffic destined to the sniffing interface will be allowed through.  To create a security group, follow these steps:
 
 - From the EC2 Dashboard Select: ``Security Groups`` under the Network & Security sections in the left window pane.
 - Select: ``Create Security Group``
@@ -54,43 +91,105 @@ Prior to launching the Security Onion AMI you will need to create the interface 
 Create a Security Onion EC2 instance in Amazon Web Services (AWS)
 -----------------------------------------------------------------
 
-To configure a Security Onion instance, follow these steps:
+To configure a Security Onion instance (repeat for each node in a distributed grid), follow these steps:
 
 - From the EC2 dashboard select: ``Launch Instance``
-- Search the AWS Marketplace for ``Security Onion`` and make sure you get the latest version of our official AMI.
-- Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please visit our :ref:`hardware` section.
+- Search the AWS Marketplace for ``Security Onion`` and make sure you get the latest version of the Security Onion 2 official AMI.
+- Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please review the AWS Requirements section above.
 - From the subnet drop-down menu select the same subnet as the sniffing interface.
 - Under the Network interfaces section configure the eth0 (management) interface.
-- Under the Network interfaces section select: ``Add Device`` to attach the previously created sniffing interface to the instance.
-- From the Network Interface drop-down menu for eth1 choose the sniffing interface you created for this instance.  Please note if you have multiple interfaces listed you can verify the correct interface by navigating to the Network Interfaces section in the EC2 Dashboard.
+- (Distributed "Sensor" node or Single-Node grid only) Under the Network interfaces section select: ``Add Device`` to attach the previously created sniffing interface to the instance.
+- (Distributed "Sensor" node or Single-Node grid only) From the Network Interface drop-down menu for eth1 choose the sniffing interface you created for this instance.  Please note if you have multiple interfaces listed you can verify the correct interface by navigating to the Network Interfaces section in the EC2 Dashboard.
 - Select: ``Next: Add Storage`` and configure the volume settings.
 - Select: ``Next: Add Tags`` and add any additional tags for the instance.
 - Select: ``Next: Configure Security Group`` and add the appropriate inbound rules.
 - Select: ``Review and Launch``
 - If prompted, select the appropriate SSH keypair that will be used to ssh into the Security Onion instance for administration 
-- The default username for the Security-Onion-2.3 AMI is: ``onion``
-- Once you have logged in, please do the following steps.
+- The default username for the Security Onion 2 AMI is: ``onion``
 
-    Change the hostname (Optional):
-    ::
-        
-      sudo vim /etc/hostname
-    
-    Update packages:
-    ::
-      
-      sudo soup
+Prepare Nodes with Ephemeral Storage
+------------------------------------
 
-    Run through both phases of setup:
-    ::
+For distributed search nodes, or an evaluation node if using ephemeral storage, SSH into the node and cancel out of the setup. Prepare the ephemeral partition by executing the following command:
 
-      sudo sosetup
+::
+    sudo so-prepare-fs
+
+By default, this command expects the ephemeral device to be located at ``/dev/nvme1n1`` and will mount that device at ``/nsm/elasticsearch``. To override either of those two defaults, specify them as arguments. For example:
+
+::
+	sudo so-prepare-fs /dev/nvme3n0 /nsm
+
+Restart the Security Onion setup by running the following command:
+
+::
+	cd /securityonion
+	sudo ./so-network-setup
+
+Manager Setup
+-------------
+
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. For distributed manager nodes using ephemeral storage, if you would like to use traditional Elasticsearch clustering, select Advanced and answer Yes. Continue instructions below for applicable nodes.
+
+Distributed Manager Nodes using Traditional Elasticsearch Clustering:
+
+For distributed manager nodes using ephemeral storage that chose to use traditional Elasticsearch clustering, make the following changes in ``/opt/so/saltstack/local/pillar/global.sls``:
+
+::
+    replicas: 1 
+
+Then, restart logstash
+
+::
+    sudo so-logstash-restart
+
+Next, fix elastalert indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online. To do this, run the following command:
+
+::
+    curl -X PUT "localhost:9200/elastalert*/_settings?pretty" -H 'Content-Type: application/json' -d '{"index" : { "Number_of_replicas" : 1 }}'
+
+All Distributed Manager Nodes:
+
+For distributed manager nodes, if connecting sensors through the VPN instance, add the following to the ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``:
+
+Run ``so-firewall includehost minion <inside interface of your VPN concentrator>``. Ex:
+
+::
+	so-firewall includehost minion 10.99.1.10
+
+Run ``so-firewall includehost sensor <inside interface of your VPN concentrator>``. Ex:
+
+::
+	so-firewall --apply includehost sensor 10.99.1.10
+
+At this time your Manager is ready for remote minions to start connecting.
+
+Search Node Install
+-------------------
+
+Follow standard Security Onion search node installation, answering the setup prompts as applicable. If you are using ephemeral storage be sure to first prepare the instance as directed earlier in this section.
+
+AWS Sensor Install
+------------------
+
+SSH into the sensor node and run through setup to set this node up as a sensor. Choose eth0 as the main interface and eth1 as the monitoring interface.
+
+Remote Sensor Install
+---------------------
+
+Setup the VPN (out of scope for this guide) and connect the sensor node to the VPN.
+When prompted to choose the management interface, select the VPN tunnel interface, such as tun0. Use the internal IP address of the manager inside AWS when prompted for the manager IP.
 
 
-Traffic Mirroring
------------------
+AWS Traffic Mirroring
+#####################
 
 Traffic mirroring allows you to copy the traffic to/from an instance and send it to the sniffing interface of a network security monitoring sensor or a group of interfaces using a network load balancer.  For more details about AWS Traffic Mirroring please see: https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html
+
+.. tip::
+
+    You can only mirror traffic from an EC2 instance that is powered by the AWS Nitro system.  For a list of supported Nitro systems, please see https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#ec2-nitro-instances.
+
 
 Create Mirror Target
 --------------------
@@ -128,7 +227,7 @@ A traffic mirror session defines the source of the traffic to be mirrored based 
 Verify Traffic Mirroring
 ------------------------
 
-To verify the mirror session is sending the correct data to the sniffing interface run the following command on the Security Onion instance:
+To verify the mirror session is sending the correct data to the sniffing interface run the following command on the Security Onion AWS Sensor instance:
 
 ::
 
