@@ -26,11 +26,13 @@ For simple, low-volume production monitoring, a single node grid can be used. EB
 Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both).
 
 Standalone:
+
 - Quantity: 1
 - t3a.xlarge
 - 200GB EBS (Optimized) gp2
 
 Evaluation
+
 - Quantity: 1
 - Type: t3a.2xlarge
 - Storage: 100GB EBS (Optimized) gp2
@@ -44,22 +46,26 @@ For high volume production monitoring, choose a multi-node grid architecture. At
 Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements.
 
 VPN Node
+
 - Quantity: 1
 - Type: t3a.micro (Nitro eligible)
 - Storage: 50GB EBS (Optimized) gp2
   
 Manager
+
 - Quantity: 1
 - Type: m5a.large
 - Storage: 300GB EBS (Optimized) gp2
   
 Search Nodes
+
 - Quantity: 2 or more
 - Type: m5ad.xlarge
 - Storage: 200GB EBS (Optimized) gp2
 - Storage: 150GB Instance Storage (SSD/NVMe)
   
 Sensor monitoring the VPN ingres
+
 - Quantity: 1
 - Type: c5a.xlarge
 - Storage: 500GB EBS (Optimized) gp2
@@ -119,16 +125,19 @@ Prepare Nodes with Ephemeral Storage
 For distributed search nodes, or an evaluation node if using ephemeral storage, SSH into the node and cancel out of the setup. Prepare the ephemeral partition by executing the following command:
 
 ::
+
     sudo so-prepare-fs
 
 By default, this command expects the ephemeral device to be located at ``/dev/nvme1n1`` and will mount that device at ``/nsm/elasticsearch``. To override either of those two defaults, specify them as arguments. For example:
 
 ::
+
 	sudo so-prepare-fs /dev/nvme3n0 /nsm
 
 Restart the Security Onion setup by running the following command:
 
 ::
+
 	cd /securityonion
 	sudo ./so-network-setup
 
@@ -142,16 +151,19 @@ Distributed Manager Nodes using Traditional Elasticsearch Clustering:
 For distributed manager nodes using ephemeral storage that chose to use traditional Elasticsearch clustering, make the following changes in ``/opt/so/saltstack/local/pillar/global.sls``:
 
 ::
+
     replicas: 1 
 
 Then, restart logstash
 
 ::
+
     sudo so-logstash-restart
 
 Next, fix elastalert indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online. To do this, run the following command:
 
 ::
+
     curl -X PUT "localhost:9200/elastalert*/_settings?pretty" -H 'Content-Type: application/json' -d '{"index" : { "Number_of_replicas" : 1 }}'
 
 All Distributed Manager Nodes:
@@ -161,11 +173,13 @@ For distributed manager nodes, if connecting sensors through the VPN instance, a
 Run ``so-firewall includehost minion <inside interface of your VPN concentrator>``. Ex:
 
 ::
+
 	so-firewall includehost minion 10.99.1.10
 
 Run ``so-firewall includehost sensor <inside interface of your VPN concentrator>``. Ex:
 
 ::
+
 	so-firewall --apply includehost sensor 10.99.1.10
 
 At this time your Manager is ready for remote minions to start connecting.
