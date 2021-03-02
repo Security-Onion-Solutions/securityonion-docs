@@ -28,8 +28,8 @@ Listed below are the minimum suggested single-node instance quantities, sizes, a
 Standalone:
 
 - Quantity: 1
-- t3a.xlarge
-- 200GB EBS (Optimized) gp2
+- Type: t3a.xlarge
+- Storage: 200GB EBS (Optimized) gp2
 
 Evaluation
 
@@ -70,8 +70,8 @@ Sensor monitoring the VPN ingres
 - Type: c5a.xlarge
 - Storage: 500GB EBS (Optimized) gp2
 
-Getting Started 
-###############
+Create Monitoring Interface 
+###########################
 
 To setup the Security Onion AMI and VPC mirror configuration, use the steps below.
 
@@ -99,9 +99,8 @@ Prior to launching the Security Onion AMI you will need to create the interface 
 - Select the security Group that you created for the sniffing interface.
 - Select: ``Create``
 
-
-Create a Security Onion EC2 instance in Amazon Web Services (AWS)
------------------------------------------------------------------
+Create Security Onion Instances
+###############################
 
 To configure a Security Onion instance (repeat for each node in a distributed grid), follow these steps:
 
@@ -142,11 +141,33 @@ Restart the Security Onion setup by running the following command:
 	sudo ./so-network-setup
 
 Manager Setup
--------------
+#############
+
+If this is an ephemeral evaluation node, ensure the node has been prepared as described in the preceding section. 
 
 After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. For distributed manager nodes using ephemeral storage, if you would like to use traditional Elasticsearch clustering, select Advanced and answer Yes. Continue instructions below for applicable nodes.
 
-Distributed Manager Nodes using Traditional Elasticsearch Clustering:
+All Distributed Manager Nodes
+-----------------------------
+
+For distributed manager nodes, if connecting sensors through the VPN instance, add the following to the ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``:
+
+Run ``so-firewall includehost minion <inside interface of your VPN concentrator>``. Ex:
+
+::
+
+	so-firewall includehost minion 10.99.1.10
+
+Run ``so-firewall includehost sensor <inside interface of your VPN concentrator>``. Ex:
+
+::
+
+	so-firewall --apply includehost sensor 10.99.1.10
+
+At this time your Manager is ready for remote minions to start connecting.
+
+Distributed Manager Nodes using Traditional Elasticsearch Clustering
+--------------------------------------------------------------------
 
 For distributed manager nodes using ephemeral storage that chose to use traditional Elasticsearch clustering, make the following changes in ``/opt/so/saltstack/local/pillar/global.sls``:
 
@@ -166,39 +187,22 @@ Next, fix elastalert indices so that they have a replica. This will cause them t
 
     curl -X PUT "localhost:9200/elastalert*/_settings?pretty" -H 'Content-Type: application/json' -d '{"index" : { "Number_of_replicas" : 1 }}'
 
-All Distributed Manager Nodes:
 
-For distributed manager nodes, if connecting sensors through the VPN instance, add the following to the ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``:
-
-Run ``so-firewall includehost minion <inside interface of your VPN concentrator>``. Ex:
-
-::
-
-	so-firewall includehost minion 10.99.1.10
-
-Run ``so-firewall includehost sensor <inside interface of your VPN concentrator>``. Ex:
-
-::
-
-	so-firewall --apply includehost sensor 10.99.1.10
-
-At this time your Manager is ready for remote minions to start connecting.
-
-Search Node Install
--------------------
+Search Node Setup
+#################
 
 Follow standard Security Onion search node installation, answering the setup prompts as applicable. If you are using ephemeral storage be sure to first prepare the instance as directed earlier in this section.
 
-AWS Sensor Install
-------------------
+AWS Sensor Setup
+################
 
-SSH into the sensor node and run through setup to set this node up as a sensor. Choose eth0 as the main interface and eth1 as the monitoring interface.
+SSH into the sensor node and run through setup to set this node up as a sensor. Choose ``eth0`` as the main interface and ``eth1`` as the monitoring interface.
 
-Remote Sensor Install
----------------------
+Remote Sensor Setup
+###################
 
 Setup the VPN (out of scope for this guide) and connect the sensor node to the VPN.
-When prompted to choose the management interface, select the VPN tunnel interface, such as tun0. Use the internal IP address of the manager inside AWS when prompted for the manager IP.
+When prompted to choose the management interface, select the VPN tunnel interface, such as ``tun0``. Use the internal IP address of the manager inside AWS when prompted for the manager IP.
 
 
 AWS Traffic Mirroring
