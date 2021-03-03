@@ -58,11 +58,10 @@ Security Onion 2 is now generally available and is at version 2.3.30!
 - Added a new ``so-rule`` script to make it easier to disable, enable, and modify SIDs.
 - ISO now gives the option to just configure the network during setup.
 
-Known Issues
-------------
+2.3.30 Known Issues
+-------------------
 
-Heavy Nodes are currently not compatible with Elastic true clustering:
-https://github.com/Security-Onion-Solutions/securityonion/issues/3226
+- Heavy Nodes are currently not compatible with Elastic true clustering: https://github.com/Security-Onion-Solutions/securityonion/issues/3226
 
 2.3.21 Changes
 -------------
@@ -159,8 +158,8 @@ https://github.com/Security-Onion-Solutions/securityonion/issues/3226
 - Upgraded Kratos authentication system.
 - Added new Reset Defaults button to the SOC Profile Settings interface which allows users to reset all local browser SOC customizations back to their defaults. This includes things like default sort column, sort order, items per page, etc.
 
-Known Issues
-------------
+2.3.10 Known Issues
+-------------------
 
 - For Ubuntu, non master nodes, you may need to ssh to each node and run ``salt-call state.highstate`` in order initiate the update. To verify if this needs to be done on remote nodes, from the master, run ``salt \* pkg.version salt-minion`` after 30 minutes following the initial soup update. If the node does not return that is it running Salt 3002.2, then the node will need to manually be highstated locally from the node to complete the update.
 
@@ -189,8 +188,8 @@ Known Issues
 - Fixed an issue when creating host groups with so-firewall.
 
 
-Known Issues
-------------
+2.3.1 Known Issues
+------------------
 
 - It is still possible to update your grid from any release candidate to 2.3. However, if you have a true production deployment, then we recommend a fresh image and install for best results.
 - In 2.3.0 we made some changes to data types in the elastic index templates. This will cause some errors in Kibana around field conflicts. You can address this in 2 ways:
