@@ -36,3 +36,29 @@ log_size_limit
 --------------
 
 ``soup`` will check your ``log_size_limit`` values to see if they are over the recommended values. If so, it will ask you to update the values in ``/opt/so/saltstack/local/pillar/minions/``. When updating these files, please update any and all instances of ``log_size_limit`` as it may exist as ``elasticsearch:log_size_limit`` or ``manager:log_size_limit``.
+
+Errors
+------
+
+When running ``soup``, you may see errors like:
+
+::
+
+    local:
+        Data failed to compile:
+    ----------
+        Rendering SLS 'base:common' failed: Jinja variable 'list object' has no attribute 'values'
+        
+and/or
+
+::
+
+    Status: Downloaded newer image for quay.io/securityonion/so-acng:2.3.30
+    quay.io/securityonion/so-acng:2.3.30
+      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                     Dload  Upload   Total   Spent    Left  Speed
+    100   543  100   543    0     0   1412      0 --:--:-- --:--:-- --:--:--  1414
+    There is a problem downloading the so-acng:2.3.30 image. Details: 
+    gpg: Signature made Thu 18 Feb 2021 02:26:10 PM UTC using RSA key ID FE507013 gpg: BAD signature from "Security Onion Solutions, LLC <info@securityonionsolutions.com>"
+    
+If you see these errors, it most likely means that a salt highstate process was already running when ``soup`` began. You can wait a few minutes and then try ``soup`` again. Alternatively, you can run ``sudo salt-call state.highstate`` and wait for it to complete before running ``soup`` again.
