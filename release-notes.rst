@@ -62,6 +62,7 @@ Security Onion 2 is now generally available and is at version 2.3.30!
 -------------------
 
 - Heavy Nodes are currently not compatible with Elastic true clustering: https://github.com/Security-Onion-Solutions/securityonion/issues/3226
+- Custom Kibana settings are not being applied properly on upgrades: https://github.com/Security-Onion-Solutions/securityonion/issues/3254
 
 2.3.21 Changes
 -------------
