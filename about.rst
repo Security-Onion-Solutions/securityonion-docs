@@ -5,7 +5,7 @@ About
 
 Security Onion
 --------------
-Security Onion is a free and open source Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes :ref:`hive`, :ref:`playbook` and Sigma, :ref:`fleet` and :ref:`osquery`, :ref:`cyberchef`, :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, :ref:`wazuh`, and many other security tools. Security Onion has been downloaded over 1 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
+Security Onion is a free and open source Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes :ref:`hive`, :ref:`playbook` and Sigma, :ref:`fleet` and :ref:`osquery`, :ref:`cyberchef`, :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, :ref:`wazuh`, and many other security tools. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
 
 .. note::
 
@@ -18,10 +18,10 @@ Security Onion is a free and open source Linux distribution for threat hunting, 
     - Change pcap collection tool from netsniff-ng to Google Stenographer
     - Upgrade to Elastic Stack 7.x and support the Elastic Common Schema (ECS)
     - Remove unsigned kernel module PF_RING and completely replace with AF_PACKET
-    - Suricata completely replaces Snort. (We may elect to add Snort back after Snort 3.0 is officially released.)
+    - Suricata completely replaces Snort (we may elect to add Snort 3.0 at some point in the future)
     - Sguil, Squert, and capME are removed
     - Storage Nodes are now known as Search Nodes
-    - Incorporate new tech: TheHive, Strelka, support for Sigma rules, Grafana/influx (independent health monitoring/alerting), Fleet (osquery management), Playbook (detection playbook tool), Onion Hunt (hunting tool), Security Onion Console (PCAP collection tool)
+    - Incorporate new tech: :ref:`hive`, :ref:`strelka`, support for Sigma rules, Grafana/influx (independent health monitoring/alerting), :ref:`fleet` (osquery management), :ref:`playbook` (detection playbook tool), :ref:`hunt` (hunting tool), :ref:`soc`
 
 Security Onion Solutions, LLC
 -----------------------------
