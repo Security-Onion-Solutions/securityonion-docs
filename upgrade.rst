@@ -4,7 +4,7 @@ Updating
 soup
 ----
 
-We recommend using our ``soup`` script to update. ``Soup`` will automatically install **all** available package updates (from both Ubuntu and Security Onion) and **all** updated Docker images.
+We recommend using our ``soup`` script to update. ``soup`` will automatically install **all** available package updates (from both Ubuntu and Security Onion) and **all** updated Docker images.
 
 ::
 
