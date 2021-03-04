@@ -84,7 +84,7 @@ Starting in 2.3.30, we have a new utility called ``so-rule`` which will allow yo
      enabled             Manage and list enabled rules (add, remove, list)
      modify              Manage and list modified rules (add, remove, list)
 
-So to list the current disabled rules, we could run ``so-rule disabled list``:
+To list the current disabled rules, we could run ``so-rule disabled list``:
 
 ::
 
