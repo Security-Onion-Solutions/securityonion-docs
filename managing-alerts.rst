@@ -43,6 +43,8 @@ If everything is working correctly, you should see a corresponding alert (``GPL 
    ::
    
       grep 2100498 /opt/so/rules/nids/all.rules
+      
+You can also test using :ref:`so-test`.
 
 Identifying rule categories
 ---------------------------
