@@ -66,16 +66,4 @@ If you see these errors, it most likely means that a salt highstate process was 
 Kibana
 ------
 
-After ``soup`` completes, if :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for :ref:`kibana` to fully initialize, then check ``/opt/so/log/kibana/kibana.log``. You may see something like:
-
-::
-
-    Another Kibana instance appears to be migrating the index. Waiting for that migration to complete. If no other Kibana instance is attempting migrations, you can get past this message by deleting index .kibana_6 and restarting Kibana
-    
-If that's the case, then you can do the following (replacing ``.kibana_6`` with the actual index name that was mentioned in your :ref:`kibana` log):
-
-::
-
-    curl -XDELETE localhost:9200/.kibana_6
-
-    sudo so-kibana-restart
+After ``soup`` completes, if :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for :ref:`kibana` to fully initialize, then take a look at the Diagnostic Logging section of the :ref:`kibana` page.
