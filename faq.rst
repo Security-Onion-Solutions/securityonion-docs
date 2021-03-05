@@ -186,7 +186,7 @@ Network Security Monitoring as a whole is considered "best effort". It is not a 
 How can I add and test local rules?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please see the `Adding local rules and testing them with scapy <AddingLocalRules>`__ section.
+Please see the :ref:`local-rules` section.
 
 Can I connect Security Onion to Active Directory or LDAP?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
