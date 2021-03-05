@@ -3,7 +3,11 @@
 so-test
 ============
 
-``so-test`` will replay some pcap samples to your sniffing interface. ISO/airgap installs should already have the ``so-tcpreplay`` Docker image needed for this. However, if you installed using a network install then ``so-test`` will have to download ``so-tcpreplay`` from the Internet.
+``so-test`` will replay some pcap samples to your sniffing interface. 
+
+.. warning::
+
+  You will need to have Internet access in order to download the pcap samples.
 
 ::
 
