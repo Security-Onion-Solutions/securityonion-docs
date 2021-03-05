@@ -66,4 +66,4 @@ If you see these errors, it most likely means that a salt highstate process was 
 Kibana
 ------
 
-After ``soup`` completes, if :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for :ref:`kibana` to fully initialize, then take a look at the Diagnostic Logging section of the :ref:`kibana` page.
+After ``soup`` completes, if :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then take a look at the Diagnostic Logging section of the :ref:`kibana` page.
