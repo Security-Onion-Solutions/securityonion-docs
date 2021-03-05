@@ -35,7 +35,7 @@ If you have an airgap deployment, please see the :ref:`airgap` section for furth
 log_size_limit
 --------------
 
-``soup`` will check your ``log_size_limit`` values to see if they are over the recommended values. If so, it will ask you to update the values in ``/opt/so/saltstack/local/pillar/minions/``. When updating these files, please update any and all instances of ``log_size_limit`` as it may exist as ``elasticsearch:log_size_limit`` or ``manager:log_size_limit``.
+``soup`` will check your :ref:`elasticsearch` ``log_size_limit`` values to see if they are over the recommended values. If so, it will ask you to update the values in ``/opt/so/saltstack/local/pillar/minions/``. When updating these files, please update any and all instances of ``log_size_limit`` as it may exist as ``elasticsearch:log_size_limit`` or ``manager:log_size_limit``.
 
 Errors
 ------
