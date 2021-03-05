@@ -62,3 +62,20 @@ and/or
     gpg: Signature made Thu 18 Feb 2021 02:26:10 PM UTC using RSA key ID FE507013 gpg: BAD signature from "Security Onion Solutions, LLC <info@securityonionsolutions.com>"
     
 If you see these errors, it most likely means that a salt highstate process was already running when ``soup`` began. You can wait a few minutes and then try ``soup`` again. Alternatively, you can run ``sudo salt-call state.highstate`` and wait for it to complete before running ``soup`` again.
+
+Kibana
+------
+
+After ``soup`` completes, if Kibana says ``Kibana server is not ready yet`` even after waiting a few minutes for Kibana to fully initialize, then check ``/opt/so/log/kibana/kibana.log``. You may see something like:
+
+::
+
+    Another Kibana instance appears to be migrating the index. Waiting for that migration to complete. If no other Kibana instance is attempting migrations, you can get past this message by deleting index .kibana_6 and restarting Kibana
+    
+If that's the case, then you can do the following (replacing ``.kibana_6`` with the actual index name that was mentioned in your Kibana log):
+
+::
+
+    curl -XDELETE localhost:9200/.kibana_6
+
+    sudo so-kibana-restart
