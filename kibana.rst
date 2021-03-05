@@ -12,6 +12,17 @@ Screenshot
 .. image:: https://user-images.githubusercontent.com/1659467/95374575-81cc9e80-08ac-11eb-95ac-b2f1caf37461.png
   :target: https://user-images.githubusercontent.com/1659467/95374575-81cc9e80-08ac-11eb-95ac-b2f1caf37461.png
 
+Dashboards
+----------
+
+We've included the old 16.04 dashboards in case you have any old 16.04 data. The new Security Onion 2 dashboards are all named with the ``Security Onion`` prefix and they should be used for any new data going forward.
+
+If you ever need to reload dashboards, you can run the following command on your manager:
+
+::
+
+    so-kibana-config-load
+    
 Pivoting
 --------
 
@@ -74,17 +85,6 @@ If that's the case, then you can do the following (replacing ``.kibana_6`` with 
     curl -XDELETE localhost:9200/.kibana_6
 
     sudo so-kibana-restart
-
-Dashboards
-----------
-
-We've included the old 16.04 dashboards in case you have any old 16.04 data. The new Security Onion 2 dashboards are all named with the ``Security Onion`` prefix and they should be used for any new data going forward.
-
-If you ever need to reload dashboards, you can run the following command on your manager:
-
-::
-
-    so-kibana-config-load
 
 More Information
 ----------------
