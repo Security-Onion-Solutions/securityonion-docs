@@ -12,36 +12,6 @@ Screenshot
 .. image:: https://user-images.githubusercontent.com/1659467/95374575-81cc9e80-08ac-11eb-95ac-b2f1caf37461.png
   :target: https://user-images.githubusercontent.com/1659467/95374575-81cc9e80-08ac-11eb-95ac-b2f1caf37461.png
 
-Diagnostic Logging
-------------------
-
-Kibana logs to ``/opt/so/log/kibana/kibana.log``.
-
-If you try to access Kibana and it says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then check ``/opt/so/log/kibana/kibana.log``. You may see something like:
-
-::
-
-    Another Kibana instance appears to be migrating the index. Waiting for that migration to complete. If no other Kibana instance is attempting migrations, you can get past this message by deleting index .kibana_6 and restarting Kibana
-    
-If that's the case, then you can do the following (replacing ``.kibana_6`` with the actual index name that was mentioned in your :ref:`kibana` log):
-
-::
-
-    curl -XDELETE localhost:9200/.kibana_6
-
-    sudo so-kibana-restart
-
-Dashboards
-----------
-
-We've included the old 16.04 dashboards in case you have any old 16.04 data. The new Security Onion 2 dashboards are all named with the ``Security Onion`` prefix and they should be used for any new data going forward.
-
-If you ever need to reload dashboards, you can run the following command on your manager:
-
-::
-
-    so-kibana-config-load
-
 Pivoting
 --------
 
@@ -85,6 +55,36 @@ Configuration
 -------------
 
 Kibana's configuration can be found in ``/opt/so/conf/kibana/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/kibana/``, they may be overwritten at the next salt update.
+
+Diagnostic Logging
+------------------
+
+Kibana logs to ``/opt/so/log/kibana/kibana.log``.
+
+If you try to access Kibana and it says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then check ``/opt/so/log/kibana/kibana.log``. You may see something like:
+
+::
+
+    Another Kibana instance appears to be migrating the index. Waiting for that migration to complete. If no other Kibana instance is attempting migrations, you can get past this message by deleting index .kibana_6 and restarting Kibana
+    
+If that's the case, then you can do the following (replacing ``.kibana_6`` with the actual index name that was mentioned in the log):
+
+::
+
+    curl -XDELETE localhost:9200/.kibana_6
+
+    sudo so-kibana-restart
+
+Dashboards
+----------
+
+We've included the old 16.04 dashboards in case you have any old 16.04 data. The new Security Onion 2 dashboards are all named with the ``Security Onion`` prefix and they should be used for any new data going forward.
+
+If you ever need to reload dashboards, you can run the following command on your manager:
+
+::
+
+    so-kibana-config-load
 
 More Information
 ----------------
