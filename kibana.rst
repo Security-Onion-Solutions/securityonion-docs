@@ -85,6 +85,12 @@ If that's the case, then you can do the following (replacing ``.kibana_6`` with 
     curl -XDELETE localhost:9200/.kibana_6
 
     sudo so-kibana-restart
+    
+If you then are able to login to Kibana but your dashboards don't look right, you can reload them as follows:
+
+::
+
+    so-kibana-config-load
 
 More Information
 ----------------
