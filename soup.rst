@@ -72,7 +72,7 @@ When you run ``soup`` on the manager here is the process:
 
 - Checks to see if this is running on a manager.
 - Checks to see if the grid is in :ref:`airgap` mode. If so, it will then ask for the location of the ISO or mount point.
-- Checks to see if we're running the latest version of :ref:`soup`. If not, it will put the latest in the correct place and ask you to re-run :ref:`soup`.
+- Checks to see if we're running the latest version of ``soup``. If not, it will put the latest in the correct place and ask you to re-run ``soup``.
 - Compares the installed version with what is available on github or the ISO image.
 - Checks to see if :ref:`salt` needs to be updated (more on this later).
 - Downloads the new :ref:`docker` images or, if airgap, copies them from the ISO image.
