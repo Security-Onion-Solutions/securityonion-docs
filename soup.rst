@@ -68,6 +68,14 @@ Distributed deployments
 
 If you have a distributed deployment with a manager node and separate sensor nodes and/or search nodes, you **only** need to run ``soup`` on the manager. Once ``soup`` has completed, other nodes should update themselves at the next :ref:`salt` highstate (typically within 15 minutes).
 
+.. warning::
+
+    Just because the update completed on the manager does NOT mean the upgrade is complete on other nodes in the grid. Do not manually restart anything until you know that all the search/heavy nodes in your deployment are updated. This is even more important if you are using true clustering for :ref:`elasticsearch`.
+
+    Each minion is on a random 15 minute check-in period and things like network bandwidth can be a factor in how long the actual upgrade takes. If you have a heavy node on a slow link, it is going to take a while to get the containers to it. Depending on what changes happened between the versions, :ref:`elasticsearch` might not be able to talk to said heavy node until the update is complete. This will definitely be the case when upgrading to 2.3.40 because of the way the basic license SSL works.
+
+    If it looks like you're missing data after the upgrade, please avoid restarting services and instead make sure at least one search node has completed its upgrade. The best way to do this is to run ``sudo salt-call state.highstate`` from a search node and make sure there are no errors. Typically if it works on one node it will work on the rest. Forward nodes are less complex and will update as they check in so you can monitor those from the grid section of SOC.
+    
 When you run ``soup`` on the manager here is the process:
 
 - Checks to see if this is running on a manager.
@@ -87,10 +95,4 @@ When you run ``soup`` on the manager here is the process:
 - Issues a command to all minions to update :ref:`salt` if necessary. This is important to note as it takes time to to update the :ref:`salt` minion on all minions. If the minion doesn't respond for whatever reason, it will not be upgraded at this time. This is not an issue because the first thing that gets checked when a minion talks to the master is if :ref:`salt` needs to be updated and will apply the update if it does.
 - Nodes connect back to the manager and actually perform the upgrade to the new version.
 
-.. warning::
 
-    Just because the update completed on the manager does NOT mean the upgrade is complete on other nodes in the grid. Do not manually restart anything until you know that all the search/heavy nodes in your deployment are updated. This is even more important if you are using true clustering for :ref:`elasticsearch`.
-
-    Each minion is on a random 15 minute check-in period and things like network bandwidth can be a factor in how long the actual upgrade takes. If you have a heavy node on a slow link, it is going to take a while to get the containers to it. Depending on what changes happened between the versions, :ref:`elasticsearch` might not be able to talk to said heavy node until the update is complete. This will definitely be the case when upgrading to 2.3.40 because of the way the basic license SSL works.
-
-    If it looks like you're missing data after the upgrade, please avoid restarting services and instead make sure at least one search node has completed its upgrade. The best way to do this is to run ``sudo salt-call state.highstate`` from a search node and make sure there are no errors. Typically if it works on one node it will work on the rest. Forward nodes are less complex and will update as they check in so you can monitor those from the grid section of SOC.
