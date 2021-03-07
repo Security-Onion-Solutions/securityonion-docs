@@ -70,11 +70,11 @@ If you have a distributed deployment with a manager node and separate sensor nod
 
 .. warning::
 
-    Just because the update completed on the manager does NOT mean the upgrade is complete on other nodes in the grid. Do not manually restart anything until you know that all the search/heavy nodes in your deployment are updated. This is even more important if you are using true clustering for :ref:`elasticsearch`.
+    Just because the update completed on the manager does NOT mean the upgrade is complete on other nodes in the grid. Do not manually restart anything until you know that all the search/heavy nodes in your deployment are updated. This is especially important if you are using true clustering for :ref:`elasticsearch`.
 
     Each minion is on a random 15 minute check-in period and things like network bandwidth can be a factor in how long the actual upgrade takes. If you have a heavy node on a slow link, it is going to take a while to get the containers to it. Depending on what changes happened between the versions, :ref:`elasticsearch` might not be able to talk to said heavy node until the update is complete. This will definitely be the case when upgrading to 2.3.40 because of the way the basic license SSL works.
 
-    If it looks like you're missing data after the upgrade, please avoid restarting services and instead make sure at least one search node has completed its upgrade. The best way to do this is to run ``sudo salt-call state.highstate`` from a search node and make sure there are no errors. Typically if it works on one node it will work on the rest. Forward nodes are less complex and will update as they check in so you can monitor those from the grid section of SOC.
+    If it looks like you're missing data after the upgrade, please avoid restarting services and instead make sure at least one search node has completed its upgrade. The best way to do this is to run ``sudo salt-call state.highstate`` from a search node and make sure there are no errors. Typically if it works on one node it will work on the rest. Forward nodes are less complex and will update as they check in so you can monitor those from the :ref:`grid` section of :ref:`soc`.
     
 When you run ``soup`` on the manager here is the process:
 
