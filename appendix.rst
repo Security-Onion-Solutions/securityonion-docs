@@ -39,7 +39,7 @@ Reboot:
    sudo reboot
 
 
-Copy and paste the following to begin the upgrade to Ubuntu 18.04:
+Copy and paste the following into a termainl to prepare for the upgrade process:
 ::
 
    sudo rm /etc/apt/sources.list.d/securityonion-ubuntu-stable-xenial.list && \    
@@ -52,7 +52,11 @@ Copy and paste the following to begin the upgrade to Ubuntu 18.04:
    sudo /var/lib/dpkg/info/securityonion-bro.preinst install && \ 
    sudo apt install update-manager-core -y && \
    sudo sed -i 's|Prompt=never|Prompt=lts|g' /etc/update-manager/release-upgrades && \
-   sudo pkill xscreensaver && \
+   sudo pkill xscreensaver
+   
+Initiate the upgrade from Ubuntu 16.04 to Ubuntu 18.04:
+::
+   
    sudo do-release-upgrade
 
 You may be interactively prompted to provide an answer to the following questions or similar during the upgrade:
