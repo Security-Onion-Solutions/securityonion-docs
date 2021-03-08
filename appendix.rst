@@ -46,7 +46,7 @@ Copy and paste the following into a terminal to prepare for the upgrade process:
    sudo so-stop && \  
    sudo service syslog-ng stop && \
    sudo service mysql stop && \
-   sudo service salt-minion stop && \
+   sudo service salt-minion stop ; \
    sudo docker system prune -a -f && \
    sudo sed -i 's|PREV="pre-.*$|PREV="pre-upgrade-to-18.04"|g' /var/lib/dpkg/info/securityonion-bro.preinst && \
    sudo /var/lib/dpkg/info/securityonion-bro.preinst install && \ 
