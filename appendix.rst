@@ -39,7 +39,7 @@ Reboot:
    sudo reboot
 
 
-Copy and paste the following into a termainl to prepare for the upgrade process:
+Copy and paste the following into a terminal to prepare for the upgrade process:
 ::
 
    sudo rm /etc/apt/sources.list.d/securityonion-ubuntu-stable-xenial.list && \    
