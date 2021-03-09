@@ -8,7 +8,7 @@ If you're going to deploy Security Onion, you should first decide on what type o
 Import
 ------
 
-The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import a pcap using :ref:`so-import-pcap`. When you run :ref:`so-import-pcap`, it analyzes the pcap using Suricata and Zeek and the resulting logs are picked up by :ref:`filebeat` and sent to :ref:`elasticsearch` where they are parsed and indexed. You can then view those logs in :ref:`soc`.
+The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import a pcap using :ref:`so-import-pcap`. When you run :ref:`so-import-pcap`, it analyzes the pcap using :ref:`suricata` and :ref:`zeek` and the resulting logs are picked up by :ref:`filebeat` and sent to :ref:`elasticsearch` where they are parsed and indexed. You can then view those logs in :ref:`soc`.
 
 Evaluation
 ----------
@@ -130,10 +130,10 @@ Heavy Nodes run the following components:
 Fleet Standalone Node
 ~~~~~~~~~~~~~~~~~~~~~
 
-A Fleet Standalone Node is ideal when there are a large amount of osquery endpoints deployed. It reduces the amount of overhead on the manager node by transferring the workload associated with managing osquery endpoints to a dedicated system. It is also useful for off-network osquery endpoints that do not have  remote access to the Manager node as it can be deployed to the DMZ and TCP/8090 made accessible to your off-network osquery endpoints.
+A :ref:`fleet` Standalone Node is ideal when there are a large amount of osquery endpoints deployed. It reduces the amount of overhead on the manager node by transferring the workload associated with managing osquery endpoints to a dedicated system. It is also useful for off-network osquery endpoints that do not have  remote access to the Manager node as it can be deployed to the DMZ and TCP/8090 made accessible to your off-network osquery endpoints.
 
-If the Manager Node was originally setup with Fleet, your grid will automatically switch over to using the Fleet Standalone Node instead as a grid can only have one Fleet instance active at a time.
+If the Manager Node was originally setup with :ref:`fleet`, your grid will automatically switch over to using the :ref:`fleet` Standalone Node instead as a grid can only have one :ref:`fleet` instance active at a time.
 
-Fleet Standalone Nodes run the following components:
+:ref:`fleet` Standalone Nodes run the following components:
 
 -  :ref:`fleet`
