@@ -3,7 +3,7 @@
 Homenet
 =======
 
-Currently homenet is only used for Suricata, but could be used for other tools in the future.
+Currently homenet is only used for :ref:`suricata`, but could be used for other tools in the future.
 
 Configuration
 -------------
@@ -33,7 +33,7 @@ In order to define a per node homenet, it can be defined in the minion pillar fi
     uniqueid: 1602623674
     hnsensor: 10.0.0.0/8
 
-In order to sync the configuration change with the node, we can either wait for the node to automatically highstate on the predefined interval, or we can force for it. Since this homenet only applies to Suricata, we can apply the suricata state to the node.
+In order to sync the configuration change with the node, we can either wait for the node to automatically highstate on the predefined interval, or we can force for it. Since this homenet only applies to :ref:`suricata`, we can apply the suricata state to the node.
 
 - From the manager:
 
@@ -55,5 +55,5 @@ More Information
 
 .. seealso::
 
-    For more information about Suricata, such as defining other address groups or ports groups please see :ref:`suricata`.
+    For more information about :ref:`suricata`, such as defining other address groups or ports groups, please see :ref:`suricata`.
 

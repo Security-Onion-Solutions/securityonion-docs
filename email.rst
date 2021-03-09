@@ -45,19 +45,19 @@ Edit ``/opt/so/conf/zeek/zeekctl.cfg`` and set the following:
    MailTo = YourUsername@YourDomain.com
    sendmail = /usr/sbin/sendmail
 
-Then update and restart Zeek:
+Then update and restart :ref:`zeek`:
 
 ::
 
    sudo so-zeek-restart
 
-You should then start receiving hourly connection summary emails. If you don't want the connection summary emails, you can add the following to ``zeekctl.cfg`` and update and restart Zeek as shown above:
+You should then start receiving hourly connection summary emails. If you don't want the connection summary emails, you can add the following to ``zeekctl.cfg`` and update and restart :ref:`zeek` as shown above:
 
 ::
 
    tracesummary=
 
-You may want to receive emails for Zeek notices. To do that, add the following to ``/opt/so/conf/zeek/local.zeek`` and then update/restart Zeek as shown above:
+You may want to receive emails for :ref:`zeek` notices. To do that, add the following to ``/opt/so/conf/zeek/local.zeek`` and then update/restart :ref:`zeek` as shown above:
 
 ::
 
@@ -76,4 +76,4 @@ Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
 Lack of network traffic
 -----------------------
 
-If you configured Zeek as shown above, they should automatically email you if your network sensors stop seeing traffic.  
+If you configured :ref:`zeek` as shown above, they should automatically email you if your network sensors stop seeing traffic.  

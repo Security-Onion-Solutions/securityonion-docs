@@ -18,7 +18,7 @@ Performance
 Analysis
 --------
 
-You can analyze NIDS alerts from Suricata via:
+You can analyze NIDS alerts from :ref:`suricata` via:
 
 -  :ref:`kibana`
 -  :ref:`hunt`
@@ -27,9 +27,9 @@ You can analyze NIDS alerts from Suricata via:
 NIPS
 ----
 
-Security Onion is designed to be passive and so Suricata runs in NIDS mode rather than NIPS (inline) mode.  Running in NIPS mode would require manual configuration and we do not recommend or support it.
+Security Onion is designed to be passive and so :ref:`suricata` runs in NIDS mode rather than NIPS (inline) mode.  Running in NIPS mode would require manual configuration and we do not recommend or support it.
 
 More Information
 ----------------
 
-- For more information about Suricata, please see the :ref:`suricata`_ section.
+- For more information about :ref:`suricata`, please see the :ref:`suricata`_ section.

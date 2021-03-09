@@ -35,13 +35,13 @@ For example:
    
        sudo so-rule-update
        
--  Restart Suricata (replacing ``$SENSORNAME_$ROLE`` as necessary):
+-  Restart :ref:`suricata` (replacing ``$SENSORNAME_$ROLE`` as necessary):
 
    ::
    
        sudo salt $SENSORNAME_$ROLE state.apply suricata
 
--  If you built the rule correctly, then Suricata should be back up and running.
+-  If you built the rule correctly, then :ref:`suricata` should be back up and running.
 
 -  You can then run ``curl http://testmynids.org/uid/index.html`` on the node to generate traffic which should cause this rule to alert (and the original rule that it was copied from, if it is enabled).
 

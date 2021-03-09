@@ -21,12 +21,12 @@ If you have a distributed deployment and you update the rules on your manager no
 Rulesets
 --------
 
-Security Onion offers the following choices for rulesets to be used by Suricata.
+Security Onion offers the following choices for rulesets to be used by :ref:`suricata`.
 
 ET Open
 -------
 
--  optimized for Suricata, but available for Snort as well
+-  optimized for :ref:`suricata`, but available for Snort as well
 -  **free**
 
 | For more information, see:
@@ -35,7 +35,7 @@ ET Open
 ET Pro (Proofpoint)
 -------------------
 
--  optimized for Suricata, but available for Snort as well
+-  optimized for :ref:`suricata`, but available for Snort as well
 -  rules retrievable as released
 -  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
 

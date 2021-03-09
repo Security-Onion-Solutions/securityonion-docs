@@ -50,7 +50,7 @@ NIC
 
 You'll need at least one wired network interface dedicated to management (preferably connected to a dedicated management network). We recommend using static IP addresses where possible.
 
-If you plan to sniff network traffic from a tap or span port, then you will need one or more interfaces dedicated to sniffing (no IP address). The installer will automatically disable NIC offloading functions such as ``tso``, ``gso``, and ``gro`` on sniffing interfaces to ensure that Suricata and Zeek get an accurate view of the traffic.
+If you plan to sniff network traffic from a tap or span port, then you will need one or more interfaces dedicated to sniffing (no IP address). The installer will automatically disable NIC offloading functions such as ``tso``, ``gso``, and ``gro`` on sniffing interfaces to ensure that :ref:`suricata` and :ref:`zeek` get an accurate view of the traffic.
 
 Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
 
@@ -76,7 +76,7 @@ In a standalone deployment, the manager components and the sensor components all
 This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
 - CPU: Used to parse incoming events, index incoming events, search metatadata, capture PCAP, analyze packets, and run the frontend components. As data and event consumption increases, a greater amount of CPU will be required.
-- RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, Suricata, Zeek, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
+- RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, :ref:`suricata`, :ref:`zeek`, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
 - Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
@@ -149,7 +149,7 @@ We recommend dedicated physical hardware (especially if you're monitoring lots o
 CPU
 ~~~
 
-Suricata and Zeek are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per Suricata worker or Zeek worker. So if you have a fully saturated 1Gbps link and are running Suricata and Zeek, then you'll want at least 5 Suricata instances and 5 Zeek workers, which means you'll need at least 10 CPU cores for Suricata and Zeek with additional CPU cores for Stenographer and/or other services.
+:ref:`suricata` and :ref:`zeek` are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per :ref:`suricata` worker or :ref:`zeek` worker. So if you have a fully saturated 1Gbps link and are running :ref:`suricata` and :ref:`zeek`, then you'll want at least 5 :ref:`suricata` instances and 5 :ref:`zeek` workers, which means you'll need at least 10 CPU cores for :ref:`suricata` and :ref:`zeek` with additional CPU cores for :ref:`stenographer` and/or other services.
 
 RAM
 ~~~
@@ -163,7 +163,7 @@ RAM usage is highly dependent on several variables:
 
 For best performance, over provision RAM so that you can fully disable swap.
 
-The following RAM estimates are a rough guideline and assume that you're going to be running Suricata, Zeek, and Stenographer (full packet capture) and want to minimize/eliminate packet loss. Your mileage may vary!
+The following RAM estimates are a rough guideline and assume that you're going to be running :ref:`suricata`, :ref:`zeek`, and :ref:`stenographer` (full packet capture) and want to minimize/eliminate packet loss. Your mileage may vary!
 
 If you just want to quickly evaluate Security Onion in a VM, the bare minimum amount of RAM needed is 12GB. More is obviously better!
 
