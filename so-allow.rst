@@ -23,4 +23,4 @@ Security Onion locks down the :ref:`firewall` by default. Depending on what kind
 
 Wazuh
 -----
-If you choose the ``analyst`` option, ``so-allow`` will also add the ``analyst`` IP address to the Wazuh safe list.  This will prevent Wazuh Active Response from blocking the ``analyst`` IP address.
+If you choose the ``analyst`` option, ``so-allow`` will also add the ``analyst`` IP address to the :ref:`wazuh` safe list.  This will prevent :ref:`wazuh` Active Response from blocking the ``analyst`` IP address.

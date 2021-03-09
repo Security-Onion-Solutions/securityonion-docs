@@ -3,7 +3,7 @@
 Email Configuration
 ===================
 
-Some applications rely on having a mail server in the OS itself and other applications (like Wazuh) have their own mail configuration and so they don't rely on a mail server in the OS itself.
+Some applications rely on having a mail server in the OS itself and other applications (like :ref:`wazuh`) have their own mail configuration and so they don't rely on a mail server in the OS itself.
 
 Operating System
 ----------------
@@ -13,7 +13,7 @@ You can install and configure your favorite mail server. Depending on your needs
 Wazuh
 -----
 
-If you want Wazuh to send email, you can modify ``/opt/so/conf/wazuh/ossec.conf`` as follows:
+If you want :ref:`wazuh` to send email, you can modify ``/opt/so/conf/wazuh/ossec.conf`` as follows:
 
 ::
 
@@ -25,13 +25,13 @@ If you want Wazuh to send email, you can modify ``/opt/so/conf/wazuh/ossec.conf`
    <email_maxperhour>100</email_maxperhour>
    </global>
 
-Then restart Wazuh:
+Then restart :ref:`wazuh`:
 
 ::
 
    sudo so-wazuh-restart
 
-You can specify the severity of an event for which Wazuh will send email alerts by specifying an appropriate value for ``email_alert_level`` in ``/opt/so/conf/wazuh/ossec.conf``. If you notice ``email_alert_level`` is not being respected for a certain rule, it may be that the option is overridden by ``<options>alert_by_email</options>`` being set for a rule. You can modify this behavior in ``/opt/so/conf/wazuh/rules/local_rules.xml``.
+You can specify the severity of an event for which :ref:`wazuh` will send email alerts by specifying an appropriate value for ``email_alert_level`` in ``/opt/so/conf/wazuh/ossec.conf``. If you notice ``email_alert_level`` is not being respected for a certain rule, it may be that the option is overridden by ``<options>alert_by_email</options>`` being set for a rule. You can modify this behavior in ``/opt/so/conf/wazuh/rules/local_rules.xml``.
 
 You can also find an explanation of the alert levels at https://www.ossec.net/docs/manual/rules-decoders/rule-levels.html.
 
