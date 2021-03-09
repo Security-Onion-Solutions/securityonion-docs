@@ -320,6 +320,42 @@ Example:
              
 In order to apply the threshold to all nodes, place the pillar in ``/opt/so/saltstack/local/pillar/global.sls``. If you want to apply the threshold to a single node, place the pillar in ``/opt/so/saltstack/local/pillar/minions/<MINION_ID>.sls``
 
+Please note that :ref:`suricata` 6 has a 64-character limitation on the IP field in a threshold. You can read more about this at https://redmine.openinfosecfoundation.org/issues/4377.
+
+For example, the following threshold IP exceeds the 64-character limit:
+
+::
+
+   thresholding:
+     sids:
+       2012454:
+         - suppress:
+             gen_id: 1
+             track: by_dst
+             ip: 1.1.1.1,2.2.2.2,3.3.3.3,4.4.4.4,5.5.5.5,6.6.6.6,7.7.7.7,8.8.8.8,9.9.9.9,10.10.10.10,11.11.11.11
+
+This results in the following error in the :ref:`suricata` log:
+
+::
+
+   <Error> - [ERRCODE: SC_ERR_PCRE_COPY_SUBSTRING(325)] - pcre_copy_substring failed
+
+The solution is to break the ``ip`` field into multiple entries like this:
+
+::
+
+   thresholding:
+     sids:
+       2012454:
+         - suppress:
+             gen_id: 1
+             track: by_dst
+             ip: 1.1.1.1,2.2.2.2,3.3.3.3,4.4.4.4,5.5.5.5,6.6.6.6,7.7.7.7,8.8.8.8
+         - suppress:
+             gen_id: 1
+             track: by_dst
+             ip: 9.9.9.9,10.10.10.10,11.11.11.11
+
 Suppressions
 ------------
 
