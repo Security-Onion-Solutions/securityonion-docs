@@ -86,14 +86,17 @@ Starting in 2.3.30, we have a new utility called ``so-rule`` which will allow yo
      enabled             Manage and list enabled rules (add, remove, list)
      modify              Manage and list modified rules (add, remove, list)
 
-To list the current disabled rules, we could run ``so-rule disabled list``:
+Disable the SID
+---------------
+
+We can use ``so-rule`` to modify an existing rule. For example, suppose we want to disable SID 2100498. We can start by listing any currently disabled rules:
 
 ::
 
    sudo so-rule disabled list
    No rules disabled.
 
-Suppose we want to disable SID 2100498:
+Next, let's disable SID 2100498:
 
 ::
 
@@ -109,14 +112,14 @@ Once that completes, we can then verify that 2100498 is now disabled with ``so-r
    Disabled rules:
      - 2100498
 
-If you can't or don't want to run ``so-rule``, then you can manually modify pillars as described in the next few sections.
+Finally, we can check that 2100498 is commented out in ``/opt/so/rules/nids/all.rules``:
 
-Disable the SID
----------------
+::
 
-Security Onion uses ``idstools`` to download new signatures every night and process them against a set list of user generated configurations.
+   grep 2100498 /opt/so/rules/nids/all.rules 
+   # alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
 
-To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``). In a distributed Security Onion environment, you only need to change the configuration in the manager pillar and then all other nodes will get the updated rules automatically.
+If you can't run ``so-rule``, then you can modify configuration manually. Security Onion uses ``idstools`` to download new signatures every night and process them against a set list of user generated configurations. To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``). In a distributed Security Onion environment, you only need to change the configuration in the manager pillar and then all other nodes will get the updated rules automatically.
  
 If SID 4321 is noisy, you can disable it as follows:
 
@@ -141,7 +144,54 @@ If you want to disable multiple rules at one time, you can use a regular express
 Modify the SID
 --------------
 
-``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then update the config:
+We can use ``so-rule`` to modify an existing rule. For example, suppose that we want to modify SID 2100498 and replace any instances of "returned root" with "returned root test". We can start by listing any rules that are currently modified:
+
+::
+
+   sudo so-rule modify list
+   No rules currently modified.
+
+Let's first check the syntax for the ``add`` option:
+
+::
+
+   sudo so-rule modify add -h
+   usage: so-rule modify add [-h] [--apply] SID|REGEX SEARCH_TERM REPLACE_TERM
+
+   positional arguments:
+     SID|REGEX     A valid SID (ex: "4321") or regular expression pattern (ex:
+                   "re:heartbleed|spectre")
+     SEARCH_TERM   A quoted regex search term (ex: "\$EXTERNAL_NET")
+     REPLACE_TERM  The text to replace the search term with
+
+   optional arguments:
+     -h, --help    show this help message and exit
+     --apply       After updating rule configuration, apply the idstools state.
+
+Now that we understand the syntax, let's add our modification:
+
+::
+
+   sudo so-rule modify add 2100498 "returned root" "returned root test"
+   Configuration updated. Would you like to apply your changes now? (y/N) y
+   Applying idstools state...
+
+Once the command completes, we can verify that our modification has been added:
+
+::
+
+   sudo so-rule modify list
+   Modified rules + modifications:
+     - 2100498 "returned root" "returned root test"
+
+Finally, we can check the modified rule in ``/opt/so/rules/nids/all.rules``:
+
+::
+
+   grep 2100498 /opt/so/rules/nids/all.rules 
+   alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root test"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
+
+If you can't run ``so-rule``, you can modify configuration manually. ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then update the config:
 
 ::
 
