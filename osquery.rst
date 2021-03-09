@@ -10,7 +10,7 @@ From https://osquery.io/:
 Fleet
 -----
 
-Security Onion includes Kolide Fleet to manage your osquery deployment. For more information, please see the :ref:`fleet` section.
+Security Onion includes Kolide :ref:`fleet` to manage your osquery deployment. For more information, please see the :ref:`fleet` section.
 
 Agents - Deployment
 -------------------
@@ -23,7 +23,7 @@ All the packages (except for the macOS PKG) are customized for the specific Grid
 
 For macOS deployments, install the package and then configure the following:
 
- - Update ``/etc/so-launcher/secret`` with the Fleet enroll secret. This can be found by running the following on the Manager:
+ - Update ``/etc/so-launcher/secret`` with the :ref:`fleet` enroll secret. This can be found by running the following on the Manager:
  
  ::
 
@@ -33,7 +33,7 @@ For macOS deployments, install the package and then configure the following:
   
  - Update ``/etc/so-launcher/roots.pem`` with the contents from the following file (on your Manager): ``/etc/ssl/certs/intca.crt``
  
- At this point, osquery should connect up to Fleet within a couple minutes - if not, try to manually restart the osquery agent on the macOS endpoint:
+ At this point, osquery should connect up to :ref:`fleet` within a couple minutes - if not, try to manually restart the osquery agent on the macOS endpoint:
  
  ::
  
