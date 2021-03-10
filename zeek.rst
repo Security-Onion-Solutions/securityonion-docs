@@ -64,7 +64,7 @@ For more information, please see:
 Custom Scripts
 --------------
 
-Custom scripts can be added to ``/opt/so/conf/zeek/policy/custom/<$custom-module>`` on the manager.  Once the script module is created, the configuration for ``local.zeek`` will need to be updated.  In Security Onion 2, this configuration is abstracted into a SaltStack pillar.  For example, we would copy ``/opt/so/saltstack/default/pillar/zeek/init.sls`` to ``/opt/so/saltstack/local/pillar/zeek/init.sls``, and add our custom module to be loaded by Zeek (alternatively, the pillar could be modified in the ``global.sls`` file.  More details can be found here here: https://docs.securityonion.net/en/latest/zeek.html#configuration):
+Custom scripts can be added to ``/opt/so/saltstack/local/salt/zeek/policy/<$custom-module>`` on the manager.  Once the script module is created, the configuration for ``local.zeek`` will need to be updated.  In Security Onion 2, this configuration is abstracted into a SaltStack pillar.  For example, we would copy ``/opt/so/saltstack/default/pillar/zeek/init.sls`` to ``/opt/so/saltstack/local/pillar/zeek/init.sls``, and add our custom module to be loaded by Zeek (alternatively, the pillar could be modified in the ``global.sls`` file.  More details can be found here here: https://docs.securityonion.net/en/latest/zeek.html#configuration):
 
 ::
 
@@ -104,10 +104,11 @@ Custom scripts can be added to ``/opt/so/conf/zeek/policy/custom/<$custom-module
         - securityonion/file-extraction
         - *custom/$module-name*
       
-One the configuration has been updated, Zeek can be restarted with `so-zeek-restart` on applicable nodes to pick up the changes.  Finally, ``/nsm/zeek/logs/current/loaded_scripts.log`` can be checked to ensure the new module has been loaded.
+One the configuration has been updated, Zeek can be restarted with ``sudo so-zeek-restart`` on applicable nodes to pick up the changes.  Finally, ``/nsm/zeek/logs/current/loaded_scripts.log`` can be checked to ensure the new module has been loaded. For example:
 
-Ex.
-``grep mynewmodule /nsm/zeek/logs/current/loaded_scripts.log``
+::
+
+    grep mynewmodule /nsm/zeek/logs/current/loaded_scripts.log
 
 Logs
 ----
