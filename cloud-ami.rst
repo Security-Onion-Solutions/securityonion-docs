@@ -64,7 +64,7 @@ Search Nodes
 - Storage: 200GB EBS (Optimized) gp2
 - Storage: 150GB Instance Storage (SSD/NVMe)
   
-Sensor monitoring the VPN ingres
+Sensor monitoring the VPN ingress
 
 - Quantity: 1
 - Type: c5a.xlarge
