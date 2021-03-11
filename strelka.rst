@@ -11,8 +11,8 @@ From https://github.com/target/strelka:
 
 You can find Strelka logs in :ref:`hunt` and :ref:`kibana`. Here's an example of Strelka logs in :ref:`hunt`:
 
-.. image:: https://user-images.githubusercontent.com/1659467/95659529-b11f1d80-0aef-11eb-91d3-f700d6ee5314.png
-  :target: https://user-images.githubusercontent.com/1659467/95659529-b11f1d80-0aef-11eb-91d3-f700d6ee5314.png
+.. image:: images/strelka.png
+  :target: _images/strelka.png
 
 Configuration
 -------------
