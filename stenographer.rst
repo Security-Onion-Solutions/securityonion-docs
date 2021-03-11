@@ -22,6 +22,14 @@ You can access full packet capture via :ref:`pcap`:
 
 :ref:`alerts`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` page.
 
+Alternatively, you can access packet capture from the command line via ``stenoread`` as follows (replacing "yourBPFhere" with your actual BPF):
+
+::
+
+    sudo docker exec -it so-steno stenoread "yourBPFhere" -w /var/log/stenographer/new.pcap
+
+You can then find the resulting pcap file in ``/opt/so/log/stenographer/`` in the host filesystem.
+
 Configuration
 -------------
 Stenographer reads its configuration from ``/opt/so/conf/steno/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
