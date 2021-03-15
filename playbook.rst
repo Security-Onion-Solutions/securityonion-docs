@@ -65,12 +65,31 @@ When you are ready to start alerting on your Play, change the Status of the play
 
 The Elastalert rules are located under ``/opt/so/rules/elastalert/playbook/<PlayID>.yml``. Elastalert rules created by Playbook will run every 3 minutes, with a ``buffer_time`` of 15 minutes.
 
-Performance testing is still ongoing. Initial testing has shown that on a lightly-used Standalone install with 16GB of RAM (4GB allocated to the Elasticsearch Heap), 300 Plays can be active without issues. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` play as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
+Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` play as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
 
 Viewing Playbook Alerts
 -----------------------
 
 When results from your Plays are found (ie alerts), they are available to view within :ref:`alerts`.
+
+Tuning Plays
+------------------------------
+
+As Plays are based off of Sigma, you will need to edit the Sigma of the Play to account for local configurations that generate false positives.
+
+For instance, let's say you are seeing a large amount of ``Non Interactive PowerShell`` alerts. Drilling down into the alerts, it appears to be a legitimate execution of CompatTelRunner.exe. This can be tuned out by doing the follwoing:
+
+- Copy the Sigma from the Play (found under the Sigma field) and pasting it into the left pane under "Create New Play".
+- Click on "Convert" to make sure that it converted correctly.
+- Add ``CompatTelRunner.exe`` under the filter clause and Convert it again to make sure it worked.
+- Copy and paste the edited sigma back to the Play under the Sigma field (drop it in between <pre><code class="yaml"> and </code></pre> tags
+- Finally, click "Submit" - Playbook will take care of the rest.
+
+You can edit the Sigma right there in the Sigma field in the Play, but it is not a YAML editor and sometimes it is easier to edit using a YAML editor.
+
+One caveat - if there is ever an update for that Sigma rule from the Sigma rules repo, your changes will get overritten - we are working on solutions for that & a way to make edits / tuning a bit easier.
+
+Lastly - if you are seeing legitimate executions that are not unique to your environment, you might consider submitting a PR to the rule in the Sigma repo. (https://github.com/SigmaHQ/sigma/tree/master/rules)
 
 User Accounts
 -------------
