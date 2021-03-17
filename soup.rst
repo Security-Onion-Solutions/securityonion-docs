@@ -15,7 +15,7 @@ If necessary, ``soup`` will update itself and then ask you to run ``soup`` again
 
 .. warning::
 
-    Please note that ``soup`` only updates Security Onion components and does NOT update the underlying operating system (OS). There is an option during :ref:`Configuration` to automatically update the OS packages.
+    Please note that ``soup`` only updates Security Onion components and does NOT update the underlying operating system (OS). There is an option during :ref:`Configuration` to automatically update the OS packages. If you did not enable this option, then you will want to manually update the OS on periodic basis and you will want to ensure that the OS is fully updated before running ``soup``.
     
 Agents
 ------
