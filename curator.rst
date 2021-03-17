@@ -19,7 +19,7 @@ Curator defaults to closing indices older than 30 days. To modify this, change `
 
 As your disk reaches capacity, Curator starts deleting old indices to prevent your disk from filling up. To change the limit, modify ``log_size_limit`` in ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``.
 
-New configurations should be stored in ``/opt/so/saltstack/local/salt/curator/files/action`` and will be copied into ``/opt/so/conf/curator/action/``.
+New configurations should be added in ``/opt/so/saltstack/local/salt/curator/files/action/`` and will be copied into ``/opt/so/conf/curator/action/``.
 
 Logs
 ----
