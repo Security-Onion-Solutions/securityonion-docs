@@ -31,7 +31,7 @@ Installation on Ubuntu or CentOS
 --------------------------------
 If you want to install Security Onion on CentOS 7 or Ubuntu 18.04 (**not** using our Security Onion ISO image), follow these steps:
 
-#. Review the :ref:`hardware` section.
+#. Review the :ref:`hardware` and :ref:`release-notes` sections.
 #. Download the ISO image for your preferred flavor of Ubuntu 18.04 64-bit or CentOS 7 64-bit, verify the ISO image, and boot from it.
 #. Follow the prompts in the installer. If you're building a production deployment, you'll probably want to use LVM and dedicate most of your disk space to ``/nsm`` as discussed in the :ref:`partitioning` section.
 #. Reboot into your new installation.
