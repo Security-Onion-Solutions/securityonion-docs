@@ -3,7 +3,7 @@
 soup
 ====
 
-When we release a new version of Security Onion, we update :ref:`release-notes` and publish a blog post to https://blog.securityonion.net. You'll want to review these for any relevant information about the individual updates.
+When we release a new version of Security Onion, we update the :ref:`release-notes` section and publish a blog post to https://blog.securityonion.net. You'll want to review these for any relevant information about the individual updates.
 
 Once you're ready to install an update, use the ``soup`` command:
 
