@@ -8,7 +8,7 @@ Full-time analysts may want to create a dedicated Analyst VM. This allows you to
 .. image:: images/analyst-vm.png
   :target: _images/analyst-vm.png
 
-Starting in Security Onion 2.3, the ``so-analyst-install`` script will install a full GNOME desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools. ``so-analyst-install`` is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst VM itself.
+The ``so-analyst-install`` script will install a full GNOME desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools. ``so-analyst-install`` is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst VM itself.
 
 .. note::
 
