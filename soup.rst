@@ -76,9 +76,9 @@ If you have a distributed deployment with a manager node and separate sensor nod
 
     If it looks like you're missing data after the upgrade, please avoid restarting services and instead make sure at least one search node has completed its upgrade. The best way to do this is to run ``sudo salt-call state.highstate`` from a search node and make sure there are no errors. Typically if it works on one node it will work on the rest. Forward nodes are less complex and will update as they check in so you can monitor those from the :ref:`grid` section of :ref:`soc`.
     
-When you run ``soup`` on the manager here is the process:
+When you run ``soup`` on the manager, it does the following:
 
-- Checks to see if this is running on a manager.
+- Checks to see if it is running on a manager.
 - Checks to see if the grid is in :ref:`airgap` mode. If so, it will then ask for the location of the ISO or mount point.
 - Checks to see if we're running the latest version of ``soup``. If not, it will put the latest in the correct place and ask you to re-run ``soup``.
 - Compares the installed version with what is available on github or the ISO image.
