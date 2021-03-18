@@ -5,7 +5,7 @@ About
 
 Security Onion
 --------------
-Security Onion is a free and open source Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes :ref:`hive`, :ref:`playbook` and Sigma, :ref:`fleet` and :ref:`osquery`, :ref:`cyberchef`, :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, :ref:`wazuh`, and many other security tools. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
+Security Onion is a free and open Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes :ref:`hive`, :ref:`playbook` and Sigma, :ref:`fleet` and :ref:`osquery`, :ref:`cyberchef`, :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, :ref:`wazuh`, and many other security tools. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
 
 .. note::
 
@@ -25,7 +25,7 @@ Security Onion is a free and open source Linux distribution for threat hunting, 
 
 Security Onion Solutions, LLC
 -----------------------------
-Doug Burks started Security Onion as a free and open source project in 2008 and then founded Security Onion Solutions, LLC in 2014.  
+Doug Burks started Security Onion as a free and open project in 2008 and then founded Security Onion Solutions, LLC in 2014.  
 
 .. important::
 
