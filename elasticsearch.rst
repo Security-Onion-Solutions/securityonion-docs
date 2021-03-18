@@ -109,8 +109,8 @@ All configuration changes take place in pillar files. You should never need to m
         so-zeek:
           shards: 5
           warm: 7
-          close: 365
-          delete: 45
+          close: 45
+          delete: 365
 
 
 Shards
