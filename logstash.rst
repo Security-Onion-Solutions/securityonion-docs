@@ -142,7 +142,7 @@ For example, to forward all Zeek events from the ``dns`` dataset, we could use a
 
     When using the ``tcp`` output plugin, if the destination host/port is down, it will cause the Logstash pipeline to be blocked.  To avoid this behavior, try using the other output options, or consider having forwarded logs use a separate Logstash pipeline.
     
-    Also keep in mind, when forwarding logs from the manager, Suricata's ``dataset`` value will still be set to ``common``, as the events have not yet been process by the Ingest Node configuration.
+    Also keep in mind, when forwarding logs from the manager, Suricata's ``dataset`` value will still be set to ``common``, as the events have not yet been processed by the Ingest Node configuration.
     
 Copy ``/opt/so/saltstack/default/pillar/logstash/manager.sls`` to ``/opt/so/saltstack/local/pillar/logstash/manager.sls``, and append your newly created file to the list of config files used for the ``manager`` pipeline:
 
