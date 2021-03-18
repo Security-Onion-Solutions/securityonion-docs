@@ -112,7 +112,7 @@ Forwarding Events to an External Destination
 
 Please keep in mind that we don't provide free support for third party systems, so this section will be just a brief introduction to how you would send syslog to external syslog collectors. If you need commercial support, please see https://www.securityonionsolutions.com.
 
-To forward events to an external destination, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom`` to clone the events and match the cloned events in the output. We recommend using either the ``http``,``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
+To forward events to an external destination, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom`` to clone the events and match the cloned events in the output. We recommend using either the ``http``, ``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
 
 For example, to forward all Zeek events from the ``dns`` dataset, we could use a configuration like the following:
 
