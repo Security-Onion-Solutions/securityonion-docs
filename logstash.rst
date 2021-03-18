@@ -110,7 +110,45 @@ If you want to add a legacy Logstash parser (not recommended) then you can copy 
 Forwarding Events to an External Destination
 --------------------------------------------
 
-To forward events to an external destination, create a new custom configuration file. Clone the event and match on the output. We recommend using either the ``http`` or ``tcp`` output plugin. At this time we only support the default bundled Logstash output plugins.
+Please keep in mind that we don't provide free support for third party systems, so this section will be just a brief introduction to how you would send syslog to external syslog collectors. If you need commercial support, please see https://www.securityonionsolutions.com.
+
+To forward events to an external destination, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom`` to clone the events and match the cloned events in the output. We recommend using either the ``http``,``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
+
+For example, to forward all Zeek events from the ``dns`` dataset, we could use a configuration like the following:
+
+::
+
+            filter {
+              if [module] =~ "zeek" and [dataset] =~ "dns" {
+                clone {
+                    id => "clone_zeek_dns_events"
+                    clones => ["zeek-dns-clone"]
+                    add_tag => [ "clone" ]
+                }
+              }
+            }
+            output {
+              if "clone" in [tags] {
+                tcp {
+                  id => "cloned_events_out"
+                  host => "192.168.x.x"
+                  port => 1001
+                  codec => "json_lines"
+                }
+              }
+            }
+
+.. warning::
+
+    When using the ``tcp`` output plugin, if the destination host/port is down, it will cause the Logstash pipeline to be blocked.  To avoid this behavior, try using the other output options, or consider having forwarded logs use a separate Logstash pipeline.
+    
+Copy ``/opt/so/saltstack/default/pillar/logstash/manager.sls`` to ``/opt/so/saltstack/local/pillar/logstash/manager.sls``, and append your newly created file to the list of config files used for the ``manager`` pipeline:
+
+``- custom/myfile.conf``
+
+Restart Logstash on the manager with ``so-logstash-restart``.
+
+Monitor events flowing through the output with ``curl -s localhost:9600/_node/stats | jq .pipelines.manager``.
 
 Queue
 -----
