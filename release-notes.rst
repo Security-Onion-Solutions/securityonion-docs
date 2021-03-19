@@ -5,7 +5,53 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-Security Onion 2 is now generally available and is at version 2.3.30!
+2.3.40 Changes
+--------------
+
+- FEATURE: Add option for HTTP Method Specification/POST to Hunt/Alerts Actions `#2904 <https://github.com/Security-Onion-Solutions/securityonion/issues/2904>`_
+- FEATURE: Add option to configure proxy for various tools used during setup + persist the proxy configuration `#529 <https://github.com/Security-Onion-Solutions/securityonion/issues/529>`_
+- FEATURE: Alerts/Hunt - Provide method for base64-encoding pivot value `#1749 <https://github.com/Security-Onion-Solutions/securityonion/issues/1749>`_
+- FEATURE: Allow users to customize links in SOC `#1248 <https://github.com/Security-Onion-Solutions/securityonion/issues/1248>`_
+- FEATURE: Display user who requested PCAP in SOC `#2775 <https://github.com/Security-Onion-Solutions/securityonion/issues/2775>`_
+- FEATURE: Make SOC browser app connection timeouts adjustable `#2408 <https://github.com/Security-Onion-Solutions/securityonion/issues/2408>`_
+- FEATURE: Move to FleetDM `#3483 <https://github.com/Security-Onion-Solutions/securityonion/issues/3483>`_
+- FEATURE: Reduce field cache expiration from 1d to 5m, and expose value as a salt pillar `#3537 <https://github.com/Security-Onion-Solutions/securityonion/issues/3537>`_
+- FEATURE: Refactor docker_clean salt state to use loop w/ inspection instead of hardcoded image list `#3113 <https://github.com/Security-Onion-Solutions/securityonion/issues/3113>`_
+- FEATURE: Run so-ssh-harden during setup `#1932 <https://github.com/Security-Onion-Solutions/securityonion/issues/1932>`_
+- FEATURE: SOC should only display links to tools that are enabled `#1643 <https://github.com/Security-Onion-Solutions/securityonion/issues/1643>`_
+- FEATURE: Update Sigmac Osquery Field Mappings `#3137 <https://github.com/Security-Onion-Solutions/securityonion/issues/3137>`_
+- FEATURE: User must accept the Elastic licence during setup `#3233 <https://github.com/Security-Onion-Solutions/securityonion/issues/3233>`_
+- FEATURE: soup should output more guidance for distributed deployments at the end `#3340 <https://github.com/Security-Onion-Solutions/securityonion/issues/3340>`_
+- FEATURE: soup should provide some initial information and then prompt the user to continue `#3486 <https://github.com/Security-Onion-Solutions/securityonion/issues/3486>`_
+- FIX: Add cronjob for so-suricata-eve-clean script `#3515 <https://github.com/Security-Onion-Solutions/securityonion/issues/3515>`_
+- FIX: Change Elasticsearch heap formula `#1686 <https://github.com/Security-Onion-Solutions/securityonion/issues/1686>`_
+- FIX: Create a post install version loop in soup `#3102 <https://github.com/Security-Onion-Solutions/securityonion/issues/3102>`_
+- FIX: Custom Kibana settings are not being applied properly on upgrades `#3254 <https://github.com/Security-Onion-Solutions/securityonion/issues/3254>`_
+- FIX: Hunt query issues with quotes `#3320 <https://github.com/Security-Onion-Solutions/securityonion/issues/3320>`_
+- FIX: IP Addresses don't work with .security `#3327 <https://github.com/Security-Onion-Solutions/securityonion/issues/3327>`_
+- FIX: Improve DHCP leases query in Hunt `#3395 <https://github.com/Security-Onion-Solutions/securityonion/issues/3395>`_
+- FIX: Improve Setup verbiage `#3422 <https://github.com/Security-Onion-Solutions/securityonion/issues/3422>`_
+- FIX: Improve Suricata DHCP logging and parsing `#3397 <https://github.com/Security-Onion-Solutions/securityonion/issues/3397>`_
+- FIX: Keep RELATED,ESTABLISHED rules at the top of iptables chains `#3288 <https://github.com/Security-Onion-Solutions/securityonion/issues/3288>`_
+- FIX: Populate http.status_message field `#3408 <https://github.com/Security-Onion-Solutions/securityonion/issues/3408>`_
+- FIX: Remove "types removal" deprecation messages from elastic log. `#3345 <https://github.com/Security-Onion-Solutions/securityonion/issues/3345>`_
+- FIX: Reword + fix formatting on ES data storage prompt `#3205 <https://github.com/Security-Onion-Solutions/securityonion/issues/3205>`_
+- FIX: SMTP shoud read SNMP on Kibana SNMP view `#3413 <https://github.com/Security-Onion-Solutions/securityonion/issues/3413>`_
+- FIX: Sensors can temporarily show offline while processing large PCAP jobs `#3279 <https://github.com/Security-Onion-Solutions/securityonion/issues/3279>`_
+- FIX: Soup should log to the screen as well as to a file `#3467 <https://github.com/Security-Onion-Solutions/securityonion/issues/3467>`_
+- FIX: Strelka port 57314 not immediately relinquished upon restart `#3457 <https://github.com/Security-Onion-Solutions/securityonion/issues/3457>`_
+- FIX: Switch SOC to pull from fieldcaps API due to field caching changes in Kibana 7.11 `#3502 <https://github.com/Security-Onion-Solutions/securityonion/issues/3502>`_
+- FIX: Syntax error in /etc/sysctl.d/99-reserved-ports.conf `#3308 <https://github.com/Security-Onion-Solutions/securityonion/issues/3308>`_
+- FIX: Telegraf hardcoded to use https and is not aware of elasticsearch features `#2061 <https://github.com/Security-Onion-Solutions/securityonion/issues/2061>`_
+- FIX: Zeek Index Close and Delete Count for curator `#3274 <https://github.com/Security-Onion-Solutions/securityonion/issues/3274>`_
+- FIX: so-cortex-user-add and so-cortex-user-enable use wrong pillar value for api key `#3388 <https://github.com/Security-Onion-Solutions/securityonion/issues/3388>`_
+- FIX: so-rule does not completely apply change `#3289 <https://github.com/Security-Onion-Solutions/securityonion/issues/3289>`_
+- FIX: soup should recheck disk space after it tries to clean up. `#3235 <https://github.com/Security-Onion-Solutions/securityonion/issues/3235>`_
+- UPGRADE: Elastic 7.11.2 `#3389 <https://github.com/Security-Onion-Solutions/securityonion/issues/3389>`_
+- UPGRADE: Suricata 6.0.2 `#3217 <https://github.com/Security-Onion-Solutions/securityonion/issues/3217>`_
+- UPGRADE: Zeek 4 `#3216 <https://github.com/Security-Onion-Solutions/securityonion/issues/3216>`_
+- UPGRADE: Zeek container to use Python 3 `#1113 <https://github.com/Security-Onion-Solutions/securityonion/issues/1113>`_
+- UPGRADE: docker-ce to latest `#3493 <https://github.com/Security-Onion-Solutions/securityonion/issues/3493>`_
 
 2.3.30 Changes
 -------------
