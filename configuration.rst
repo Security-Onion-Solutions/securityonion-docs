@@ -37,7 +37,7 @@ Standalone is similar to Evaluation in that it only requires a single box, but S
 Production Server - Distributed Deployment
 ------------------------------------------
 
-If deploying a distributed environment, install and configure the manager node first and then join the other nodes to it. For best performance, the manager node should be dedicated to just being a manager for the other nodes (the manager node should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the manager node on ports ``22``, ``4505``, and ``4506``.
+If deploying a distributed environment, install and configure the manager node first and then join the other nodes to it. For best performance, the manager node should be dedicated to just being a manager for the other nodes (the manager node should have no sniffing interfaces of its own). Please note that all nodes will need to be able to connect to the manager node on several ports and the manager will need to connect to search nodes and heavy nodes. You'll need to make sure that any network firewalls have firewall rules to allow this traffic as defined in the :ref:`firewall` section.
 
 Build the manager by following the prompts. Save the ``soremote`` password so that you can join nodes to the manager.
 
