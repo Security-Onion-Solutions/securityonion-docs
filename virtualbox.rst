@@ -3,7 +3,7 @@
 VirtualBox
 ==========
 
-In this section, we'll cover installing Security Onion on VirtualBox.  You'll need a computer with at least 16GB of RAM (so that we can dedicate at least 12GB RAM to the VM) for best results. You can download a copy of VirtualBox for Windows, Mac OS X, or Linux at http://www.virtualbox.org. 
+In this section, we'll cover installing Security Onion on VirtualBox.  For best results, you'll need a computer with at least 16GB of RAM so that we can dedicate at least 12GB RAM to the VM. You can download a copy of VirtualBox for Windows, Mac OS X, or Linux at http://www.virtualbox.org. 
 
 Creating VM
 -----------
