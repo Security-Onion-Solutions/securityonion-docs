@@ -56,7 +56,7 @@ Before downloading, please review the notes for this release.
 2.3.40 Known Issues
 -------------------
 
-- There was a typo in the Zeek index close and delete settings. We've fixed this for new installs in https://github.com/Security-Onion-Solutions/securityonion/issues/3274. If your deployment is over a month old, you may want to review these settings in ``/opt/so/saltstack/local/pillar/global.sls`` and modify them as necessary.
+- There was a typo in the Zeek index close and delete settings. We've fixed this for new installs in https://github.com/Security-Onion-Solutions/securityonion/issues/3274. If your deployment is over a month old, you may want to review these settings in ``/opt/so/saltstack/local/pillar/global.sls`` and modify them as necessary. This is being tracked in https://github.com/Security-Onion-Solutions/securityonion/issues/3575.
 
 2.3.30 Changes
 -------------
