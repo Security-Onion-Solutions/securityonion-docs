@@ -5,7 +5,7 @@ AWS Cloud AMI
 
 .. warning::
 
-    Existing Security Onion AMI installations should use the ``soup`` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer AMI from the AWS Marketplace could cause loss of data and require full grid re-installation.
+    Existing Security Onion AMI installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer AMI from the AWS Marketplace could cause loss of data and require full grid re-installation.
     
 .. note::
 
