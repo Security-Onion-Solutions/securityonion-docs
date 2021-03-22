@@ -53,6 +53,11 @@ Before downloading, please review the notes for this release.
 - UPGRADE: Zeek container to use Python 3 `#1113 <https://github.com/Security-Onion-Solutions/securityonion/issues/1113>`_
 - UPGRADE: docker-ce to latest `#3493 <https://github.com/Security-Onion-Solutions/securityonion/issues/3493>`_
 
+2.3.40 Known Issues
+-------------------
+
+- There was a typo in the Zeek index close and delete settings. We've fixed this for new installs in https://github.com/Security-Onion-Solutions/securityonion/issues/3274. If your deployment is over a month old, you may want to review these settings in ``/opt/so/saltstack/local/pillar/global.sls`` and modify them as necessary.
+
 2.3.30 Changes
 -------------
 
