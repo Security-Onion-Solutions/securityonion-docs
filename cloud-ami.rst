@@ -180,18 +180,23 @@ For distributed manager nodes using ephemeral storage that chose to use traditio
 
     replicas: 1 
 
-Then, restart logstash
+Then, restart logstash:
 
 ::
 
     sudo so-logstash-restart
 
-Next, fix elastalert indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online. To do this, run the following command:
+Next, fix elastalert indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online. If you're running Security Onion 2.3.30, run the following command:
 
 ::
 
     curl -X PUT "localhost:9200/elastalert*/_settings?pretty" -H 'Content-Type: application/json' -d '{"index" : { "Number_of_replicas" : 1 }}'
 
+If instead you're running Security Onion 2.3.40 or higher, run the following command:
+
+::
+
+    curl -k -X PUT "https://localhost:9200/elastalert*/_settings?pretty" -H 'Content-Type: application/json' -d '{"index" : { "Number_of_replicas" : 1 }}'
 
 Search Node Setup
 #################

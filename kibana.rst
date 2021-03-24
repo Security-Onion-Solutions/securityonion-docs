@@ -82,7 +82,7 @@ If that's the case, then you can do the following (replacing ``.kibana_6`` with 
 
 ::
 
-    curl -XDELETE localhost:9200/.kibana_6
+    curl -k -XDELETE https://localhost:9200/.kibana_6
 
     sudo so-kibana-restart
     

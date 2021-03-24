@@ -128,7 +128,7 @@ To see your existing shards:
 
 ::
 
-    curl localhost:9200/_cat/indices
+    curl -k https://localhost:9200/_cat/indices
     
 The number of shards will be shown in the fifth column.
 
@@ -136,7 +136,7 @@ If you want to view the detail for each of those shards:
 
 ::
 
-    curl localhost:9200/_cat/shards
+    curl -k https://localhost:9200/_cat/shards
 
 
 Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
@@ -166,7 +166,7 @@ If you only need to increase the field limit temporarily, you can do something l
 
 ::
 
-   curl -XPUT -H'Content-Type: application/json' localhost:9200/logstash-syslog-*/_settings -d'{ "index.mapping.total_fields.limit": 2000 }'
+   curl -k -XPUT -H'Content-Type: application/json' https://localhost:9200/logstash-syslog-*/_settings -d'{ "index.mapping.total_fields.limit": 2000 }'
 
 The above command would increase the field limit for the ``logstash-syslog-*`` indice(s) to ``2000``. Keep in mind, this setting only applies to the current index, so when the index rolls over and a new one is created, your new settings will not apply.
 
