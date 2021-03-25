@@ -95,7 +95,7 @@ If you then are able to login to Kibana but your dashboards don't look right, yo
 Features
 --------
 
-Starting in Security Onion 2.3.40, Elastic Features are enabled by default. If you had previously enabled Elastic Features and then upgrade to Security Onion 2.3.40 or higher, you may notice some features missing in Kibana. You can enable or disable features as necessary by clicking the "D" in the upper left corner, then click "Manage Spaces", then click "Default". For more information, please see https://www.elastic.co/guide/en/kibana/master/xpack-spaces.html#spaces-control-feature-visibility.
+Starting in Security Onion 2.3.40, Elastic Features are enabled by default. If you had previously enabled Elastic Features and then upgrade to Security Onion 2.3.40 or higher, you may notice some features missing in Kibana. You can enable or disable features as necessary by clicking the main menu in the upper left corner, then click "Stack Management", then click "Spaces", then click "Default". For more information, please see https://www.elastic.co/guide/en/kibana/master/xpack-spaces.html#spaces-control-feature-visibility.
 
 More Information
 ----------------
