@@ -162,7 +162,15 @@ Delete "Wired connection 1" for later use as bond interface:
 
    Don't reboot yet!
 
-Install Security Onion 2 by following the steps to install on Ubuntu in the :ref:`installation` section starting at step 7.
+Download the Security Onion 2 repo:
+
+::
+
+   git clone https://github.com/Security-Onion-Solutions/securityonion
+   cd securityonion
+   sudo bash so-setup-network
+   
+Follow the steps in the :ref:`configuration` section.
 
 Post-Installation:
 
