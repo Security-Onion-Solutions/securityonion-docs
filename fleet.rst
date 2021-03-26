@@ -15,7 +15,7 @@ If you selected to enable Fleet during the setup, you can now login to Fleet usi
 .. image:: images/fleet.png
   :target: _images/fleet.png
 
-Custom :ref:`osquery` packages were generated for you during setup and you can find them under Downloads in :ref:`soc`. Before you install a package on an endpoint, use :ref:`sudo so-allow` on your manager node to configure the firewall to allow inbound osquery connections.
+Custom :ref:`osquery` packages were generated for you during setup and you can find them under Downloads in :ref:`soc`. Before you install a package on an endpoint, use :ref:`so-allow` on your manager node to configure the firewall to allow inbound osquery connections.
 
 Configuration
 -------------
