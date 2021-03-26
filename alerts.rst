@@ -158,5 +158,7 @@ Finally, restart SOC to make the changes take effect:
 Once you've verifed that your change works as intended, you may want to make the same change in ``hunt.actions.json`` for :ref:`hunt`.
 
 Here are some other customization options for Alerts actions:
+
 https://github.com/Security-Onion-Solutions/securityonion/issues/1749
+
 https://github.com/Security-Onion-Solutions/securityonion/issues/2904
