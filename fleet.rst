@@ -12,8 +12,8 @@ Usage
 
 If you selected to enable Fleet during the setup, you can now login to Fleet using the email address and password that you entered during the installer. You can edit the password or add a new Fleet user within Fleet itself.
 
-.. image:: https://user-images.githubusercontent.com/1659467/87230293-fe6ae200-c37c-11ea-8de2-3138202107ca.png
-    :target: https://user-images.githubusercontent.com/1659467/87230293-fe6ae200-c37c-11ea-8de2-3138202107ca.png
+.. image:: images/fleet.png
+  :target: _images/fleet.png
 
 Custom :ref:`osquery` packages were generated for you during setup and you can find them under Downloads in :ref:`soc`. Before you install a package on an endpoint, use ``sudo so-allow`` on your manager node to configure the SO firewall to allow inbound osquery connections.
 
