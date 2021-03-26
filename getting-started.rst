@@ -6,6 +6,7 @@ Getting Started
 If you're ready to get started with Security Onion, you may have questions like:
 
 **What license(s) apply to Security Onion?**
+
 Security Onion is a free and open platform. See the :ref:`license` section.
 
 **How many machines do I need?**
