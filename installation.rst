@@ -5,7 +5,7 @@ Installation
 
 .. note::
 
-  If you want to deploy in Amazon AWS using our AMI, please see :ref:`cloud-ami`.
+  If you want to deploy in Amazon AWS using our AMI, please see the :ref:`cloud-ami` section.
 
 Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on CentOS 7) **or** installing standard CentOS 7 or Ubuntu 18.04 and then installing our components on top.
 
