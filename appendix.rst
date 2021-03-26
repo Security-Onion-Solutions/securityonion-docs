@@ -162,12 +162,8 @@ Delete "Wired connection 1" for later use as bond interface:
 
    Don't reboot yet!
 
-Install Security Onion 2:
+Install Security Onion 2 by following the steps to install on Ubuntu in the :ref:`installation` section starting at step 7.
 
-Skip to step 7, detailed here: 
-   
-https://docs.securityonion.net/en/2.3/installation.html#installation-on-ubuntu-or-centos
- 
 Post-Installation:
 
 While the files will still reside on disk, config files and settings will NOT be migrated to the appropriate format/locations for Security Onion 2.
