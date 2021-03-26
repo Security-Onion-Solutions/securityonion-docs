@@ -22,3 +22,6 @@ Some organizations require the removal of certain ciphers and algorithms from ss
   sshd -T | grep "^macs" | sed -e "s/\(hmac-sha2-512,\|umac-128@openssh.com,\|hmac-sha2-256,\|umac-64@openssh.com,\|hmac-sha1,\|hmac-sha1-etm@openssh.com,\|umac-64-etm@openssh.com,\|hmac-sha1\)//g" >> /etc/ssh/sshd_config
   sshd -T | grep "^hostkeyalgorithms" | sed "s|ecdsa-sha2-nistp256,||g" | sed "s|ssh-rsa,||g" >> /etc/ssh/sshd_config
 
+.. warning::
+
+  Any time you modify ``sshd_config``, there is a possibility of a syntax error preventing ssh from starting correctly which would then prevent you from accessing remotely. Please exercise caution in editing the file and have a backup method of accessing the box just in case.
