@@ -11,7 +11,7 @@ Security Onion is a free and open Linux distribution for threat hunting, enterpr
 
    Security Onion started in 2008 and was originally based on the Ubuntu Linux distribution. Throughout the years, the Security Onion version tracked the version of Ubuntu it was based on. For example, the last major version of Security Onion was based on Ubuntu 16.04 and so it was called Security Onion 16.04. Security Onion is now container based and thus no longer limited to just Ubuntu. To signify this change, Security Onion now has its own versioning scheme and this new platform is Security Onion 2.
 
-   Here are some high level system differences between Security Onion 2 and the older legacy versions:
+Here are some high level system differences between Security Onion 2 and the older legacy versions:
 
     - Move from Ubuntu packages to containers
     - Support both CentOS 7 and Ubuntu 18.04
