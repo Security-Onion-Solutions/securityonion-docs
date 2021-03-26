@@ -3,6 +3,10 @@
 Installation
 ============
 
+.. note::
+
+  If you want to deploy in Amazon AWS using our AMI, please see :ref:`cloud-ami`.
+
 Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on CentOS 7) **or** installing standard CentOS 7 or Ubuntu 18.04 and then installing our components on top.
 
 .. tip::
@@ -51,8 +55,3 @@ If you want to install Security Onion on CentOS 7 or Ubuntu 18.04 (**not** using
      sudo bash so-setup-network
    
 #. Proceed to the :ref:`configuration` section.
-
-Installation on AWS using AMI
------------------------------
-
-If you want to deploy in Amazon AWS using our AMI, please see :ref:`cloud-ami`.
