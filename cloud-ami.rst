@@ -23,7 +23,7 @@ Before proceeding, determine the grid architecture desired. Choose from a single
 Single Node Grid
 ----------------
 
-For simple, low-volume production monitoring, a single node grid can be used. EBS must be used for Elastic data storage if used for production purposes. Single node grids cannot use ephemeral instance storage without being at risk of losing Elastic data. However, for temporary evaluation installations, where there is little concern for data loss, ephemeral instance storage should be used. 
+For simple, low-volume production monitoring, a single node grid can be used. EBS must be used for :ref:`elasticsearch` data storage if used for production purposes. Single node grids cannot use ephemeral instance storage without being at risk of losing :ref:`elasticsearch` data. However, for temporary evaluation installations, where there is little concern for data loss, ephemeral instance storage should be used. 
 
 Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both).
 
@@ -43,7 +43,7 @@ Evaluation
 Distributed Grid
 ----------------
 
-For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes must be used in this architecture. This is required due to the use of ephemeral instance storage for Elastic data storage, where each of the search nodes retains a replica of another search node, for disaster recovery.
+For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes must be used in this architecture. This is required due to the use of ephemeral instance storage for :ref:`elasticsearch` data storage, where each of the search nodes retains a replica of another search node, for disaster recovery.
 
 Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements.
 
@@ -150,7 +150,7 @@ Manager Setup
 
 If this is an ephemeral evaluation node, ensure the node has been prepared as described in the preceding section. 
 
-After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. For distributed manager nodes using ephemeral storage, if you would like to use traditional Elasticsearch clustering, select Advanced and answer Yes. Continue instructions below for applicable nodes.
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. For distributed manager nodes using ephemeral storage, if you would like to use traditional :ref:`elasticsearch` clustering, select Advanced and answer Yes. Continue instructions below for applicable nodes.
 
 All Distributed Manager Nodes
 -----------------------------
@@ -174,19 +174,19 @@ At this time your Manager is ready for remote minions to start connecting.
 Distributed Manager Nodes using Traditional Elasticsearch Clustering
 --------------------------------------------------------------------
 
-For distributed manager nodes using ephemeral storage that chose to use traditional Elasticsearch clustering, make the following changes in ``/opt/so/saltstack/local/pillar/global.sls``:
+For distributed manager nodes using ephemeral storage that chose to use traditional :ref:`elasticsearch` clustering, make the following changes in ``/opt/so/saltstack/local/pillar/global.sls``:
 
 ::
 
     replicas: 1 
 
-Then, restart logstash:
+Then, restart :ref:`logstash`:
 
 ::
 
     sudo so-logstash-restart
 
-Next, fix elastalert indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online. If you're running Security Onion 2.3.30, run the following command:
+Next, fix :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online. If you're running Security Onion 2.3.30, run the following command:
 
 ::
 
@@ -270,7 +270,7 @@ To verify the mirror session is sending the correct data to the sniffing interfa
 
 You should see ``VXLAN`` tagged traffic being mirrored from the interface you selected as the Mirror Source.
 
-To verify Zeek is properly decapsulating and parsing the VXLAN traffic you can verify logs are being generated in the ``/nsm/zeek/logs/current`` directory:
+To verify :ref:`zeek` is properly decapsulating and parsing the VXLAN traffic you can verify logs are being generated in the ``/nsm/zeek/logs/current`` directory:
 
 ::
 
