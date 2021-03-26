@@ -79,6 +79,13 @@ To view the acceptable syntax, view the file located at https://github.com/Secur
 
 This pillar can be added to :ref:`salt` in either the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) or minion pillar file (``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``).
 
+Metadata
+--------
+
+If you choose Suricata for metadata and find that some metadata is unnecessary, you can filter out metadata by writing rules. We have included some examples at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules.
+
+If you choose Suricata for metadata, it will extract files from the network and send them to Strelka. You can add additional mime types as shown at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules.
+
 Diagnostic Logging
 ------------------
 
