@@ -3,7 +3,7 @@
 Tools
 =====
 
-Security Onion would like to thank the following open-source projects for their contribution to our community!
+Security Onion would like to thank the following projects for their contribution to our community!
 
 (listed alphabetically)
 
