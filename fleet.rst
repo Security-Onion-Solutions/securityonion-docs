@@ -3,9 +3,9 @@
 Fleet
 =====
 
-From https://www.kolide.com/fleet/:
+From https://fleetdm.com/:
 
-    Expand osquery capabilities from a single machine to your entire fleet. Query dynamic sets of hosts, and watch the data stream in for immediate analysis and investigation. Export results for a closer look in your favorite tools.
+    Ask questions about your servers, containers, and laptops running Linux, Windows, and macOS. Quickly deploy osquery and scale your fleet to 50,000+ devices on top of a stable core technology.
     
 Usage
 -----
@@ -34,4 +34,4 @@ More Information
 
     For more information about osquery, please see the :ref:`osquery` section.
 
-    For more information about Fleet, please see https://www.kolide.com/fleet/.
+    For more information about Fleet, please see https://fleetdm.com/.
