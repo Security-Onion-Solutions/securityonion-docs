@@ -36,6 +36,8 @@ On the left side of the page, you'll see links for analyst tools like :ref:`aler
      - Develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward and update your coverage in :ref:`attack-navigator`.
      - Finally, return to :ref:`hive` and document the entire investigation and close the case.
  
+If you'd like to modify these side links, please see https://github.com/Security-Onion-Solutions/securityonion/issues/1248.
+
 .. toctree::
    :maxdepth: 2
 
