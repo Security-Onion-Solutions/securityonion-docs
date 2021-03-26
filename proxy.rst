@@ -3,6 +3,8 @@
 Proxy Configuration
 ===================
 
+Starting in Security Onion 2.3.40, Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. Otherwise, if you need to configure manually, please continue reading.
+
 If you need to force your Internet traffic through a proxy server, you can put your proxy server settings in ``/etc/environment`` like this:
 
 ::
