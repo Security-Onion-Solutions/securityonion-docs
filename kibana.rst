@@ -9,8 +9,8 @@ From https://www.elastic.co/kibana:
 
 Screenshot
 ----------
-.. image:: https://user-images.githubusercontent.com/1659467/95374575-81cc9e80-08ac-11eb-95ac-b2f1caf37461.png
-  :target: https://user-images.githubusercontent.com/1659467/95374575-81cc9e80-08ac-11eb-95ac-b2f1caf37461.png
+.. image:: images/kibana.png
+  :target: _images/kibana.png
 
 Dashboards
 ----------
