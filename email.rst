@@ -76,4 +76,4 @@ Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
 Lack of network traffic
 -----------------------
 
-If you configured :ref:`zeek` as shown above, they should automatically email you if your network sensors stop seeing traffic.  
+If you configured :ref:`zeek` for email as shown above, it should automatically email you if your network sensors stop seeing traffic.  
