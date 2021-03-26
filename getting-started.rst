@@ -49,5 +49,6 @@ See the :ref:`post-installation` section.
    virtualbox
    trouble-booting
    installation
+   cloud-ami
    configuration
    post-installation
