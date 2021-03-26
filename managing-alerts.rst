@@ -71,7 +71,7 @@ There are multiple ways to handle overly productive signatures and we'll try to 
 so-rule
 -------
 
-Starting in 2.3.30, we have a new utility called ``so-rule`` which will allow you to disable, enable, or modify rules. Run ``so-rule`` without any options to see the help output:
+Starting in 2.3.30, we have a new utility called ``so-rule`` which will allow you to disable, enable, or modify NIDS rules. Run ``so-rule`` without any options to see the help output:
 
 ::
 
@@ -89,7 +89,7 @@ Starting in 2.3.30, we have a new utility called ``so-rule`` which will allow yo
 Disable the SID
 ---------------
 
-We can use ``so-rule`` to modify an existing rule. For example, suppose we want to disable SID 2100498. We can start by listing any currently disabled rules:
+We can use ``so-rule`` to modify an existing NIDS rule. For example, suppose we want to disable SID 2100498. We can start by listing any currently disabled rules:
 
 ::
 
@@ -144,7 +144,7 @@ If you want to disable multiple rules at one time, you can use a regular express
 Modify the SID
 --------------
 
-We can use ``so-rule`` to modify an existing rule. For example, suppose that we want to modify SID 2100498 and replace any instances of "returned root" with "returned root test". We can start by listing any rules that are currently modified:
+We can use ``so-rule`` to modify an existing NIDS rule. For example, suppose that we want to modify SID 2100498 and replace any instances of "returned root" with "returned root test". We can start by listing any rules that are currently modified:
 
 ::
 
