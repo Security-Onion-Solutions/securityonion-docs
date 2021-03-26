@@ -3,6 +3,9 @@
 AWS Cloud AMI
 =============
 
+If you would like to deploy Security Onion in AWS, we have an AMI that is already built for you:
+https://securityonion.net/aws/?ref=_ptnr_soc_docs_210326
+
 .. warning::
 
     Existing Security Onion AMI installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer AMI from the AWS Marketplace could cause loss of data and require full grid re-installation.
