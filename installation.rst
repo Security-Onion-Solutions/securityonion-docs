@@ -51,3 +51,8 @@ If you want to install Security Onion on CentOS 7 or Ubuntu 18.04 (**not** using
      sudo bash so-setup-network
    
 #. Proceed to the :ref:`configuration` section.
+
+Installation on AWS using AMI
+-----------------------------
+
+If you want to deploy in Amazon AWS using our AMI, please see :ref:`cloud-ami`.
