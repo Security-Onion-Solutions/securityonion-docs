@@ -11,5 +11,6 @@ This section covers some of the main utilities in Security Onion.
    jq
    so-allow
    so-import-pcap
+   so-monitor-add
    so-test
    so-zeek-logs
