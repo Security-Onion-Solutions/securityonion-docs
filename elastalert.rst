@@ -14,7 +14,7 @@ ElastAlert queries ElasticSearch and provides an alerting mechanism with multipl
 Configuration
 -------------
 
-ElastAlert rules are stored in ``/opt/so/conf/elastalert/``.
+ElastAlert rules are stored in ``/opt/so/rules/elastalert/``.
 
 Security Onion's default ElastAlert rules are configured with an output type of "debug", which simply outputs all matches queries to a log file found in ``/opt/so/log/elastalert/``.
 
