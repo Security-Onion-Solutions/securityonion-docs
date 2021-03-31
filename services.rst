@@ -3,7 +3,7 @@
 Services
 ========
 
-You can control individual services with the ``so-<noun>-<verb>`` scripts. You can see a list of all of these scripts with the following command:
+You can control individual services with the ``so-<component>-<verb>`` scripts. You can see a list of all of these scripts with the following command:
 
 ::
 
