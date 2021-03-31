@@ -58,7 +58,7 @@ Before downloading, please review the notes for this release.
 
 - There was a typo in the Zeek index close and delete settings. We've fixed this for new installs in https://github.com/Security-Onion-Solutions/securityonion/issues/3274. If your deployment has more than 45 days of open Zeek indices, you may want to review these settings in ``/opt/so/saltstack/local/pillar/global.sls`` and modify them as necessary. This is being tracked in https://github.com/Security-Onion-Solutions/securityonion/issues/3575.
 - If you had previously enabled Elastic Features and then upgrade to Security Onion 2.3.40 or higher, you may notice some features missing in Kibana. You can enable or disable features as necessary by clicking the main menu in the upper left corner, then click “Stack Management”, then click “Spaces”, then click “Default”. For more information, please see https://www.elastic.co/guide/en/kibana/master/xpack-spaces.html#spaces-control-feature-visibility.
-- If you upgrade to 2.3.40 and then :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then take a look at the Diagnostic Logging section of the :ref:`kibana` page.
+- If you upgrade to 2.3.40 and then :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then take a look at the Diagnostic Logging section of the :ref:`kibana` section.
 
 2.3.30 Changes
 -------------
