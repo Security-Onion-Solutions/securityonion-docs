@@ -82,9 +82,12 @@ This pillar can be added to :ref:`salt` in either the global pillar file (``/opt
 Metadata
 --------
 
-If you choose Suricata for metadata and find that some metadata is unnecessary, you can filter out metadata by writing rules. We have included some examples at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules.
+Depending on what options you choose in Setup, it may ask if you want to use :ref:`zeek` or :ref:`suricata` for metadata. If you choose :ref:`suricata` and later find that some metadata is unnecessary, you can filter out the unnecessary metadata by writing rules. We have included some examples at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules.
 
-If you choose Suricata for metadata, it will extract files from the network and send them to Strelka. You can add additional mime types as shown at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules.
+File Extraction
+---------------
+
+If you choose Suricata for metadata, it will extract files from network traffic and :ref:`strelka` will then analyze those extracted files. If you would like to extract additional file types, then you can add file types as shown at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules.
 
 Diagnostic Logging
 ------------------
