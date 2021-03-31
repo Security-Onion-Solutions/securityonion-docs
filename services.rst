@@ -7,7 +7,7 @@ You can control individual services with the ``so-<noun>-<verb>`` scripts. You c
 
 ::
 
-   ls /usr/sbin/so-*-*
+   ls /usr/sbin/so-*
 
 The following examples are for :ref:`zeek`, but you could substitute whatever service you're trying to control (:ref:`logstash`, :ref:`elasticsearch`, etc.).
 
