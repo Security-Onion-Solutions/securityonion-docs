@@ -125,6 +125,46 @@ By default, if you use :ref:`so-allow` to add a host to the syslog hostgroup, th
     salt <HOSTNAME>_<ROLE> state.apply firewall
 
 
+Modify a default port group.
+############################
+In this example, we will be extending the default nginx port group to include port 8086 for a standalone node. By default, only the analyst hostgroup is allowed access to the nginx ports. At the end of this example IPs in the analyst host group, will be able to connect to 80, 443 and 8086 on our standalone node.
+
+All the following will need to be run from the manager.
+
+1. Add the custom nginx port group.
+
+  ::
+
+    so-firewall addportgroup nginx
+
+2. Add the required ports to the port group. In this step we are redefining the nginx port group, so be sure to include the default ports as well if you want to keep them.
+
+  ::
+
+    sudo so-firewall addport nginx tcp 80
+    sudo so-firewall addport nginx tcp 443
+    sudo so-firewall addport nginx tcp 8086
+
+3. Associate this port group redefinition to a node. Add the following to the minion's sls file located at ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls``
+
+  ::
+
+    firewall:
+      assigned_hostgroups:
+        chain:
+          DOCKER-USER:
+            hostgroups:
+              analyst:
+                portgroups:
+                  - portgroups.nginx
+
+4. Apply the firewall state to the node, or wait for the highstate to run for the changes to happen automatically.
+
+  ::
+
+    sudo salt-call state.apply firewall
+
+
 .. warning::
 
   Please review the :ref:`salt` section to understand pillars and templates. Modifying these values outside of :ref:`so-allow` or ``so-firewall`` could lead to problems accessing your existing hosts. This is an advanced case and you most likely won't never need to modify these files.
