@@ -30,4 +30,5 @@ If you're going to run something using sudo, remember to use the ``-i`` option t
 
     sudo -i so-rule-update
 
-It won't work if you do a ``sudo su -`` followed by a ``so-rule-update``.
+.. warning::
+    Using ``sudo su -`` will ignore ``/etc/environment``, instead use ``sudo su`` if you need to operate as root.
