@@ -49,6 +49,10 @@ Default pillar file: This is the pillar file located under ``/opt/so/saltstack/d
 
 Local pillar file: This is the pillar file under ``/opt/so/saltstack/local/pillar/``. These are the files that will need to be changed in order to customize nodes.
 
+.. warning::
+
+   Salt sls files are in YAML format. When editing these files, please be very careful to respect YAML syntax, especially whitespace. For more information, please see https://docs.saltproject.io/en/latest/topics/troubleshooting/yaml_idiosyncrasies.html.
+   
 Here are some of the items that can be customized with pillar settings:
 
 :ref:`filebeat`
