@@ -320,6 +320,10 @@ Example:
              
 In order to apply the threshold to all nodes, place the pillar in ``/opt/so/saltstack/local/pillar/global.sls``. If you want to apply the threshold to a single node, place the pillar in ``/opt/so/saltstack/local/pillar/minions/<MINION_ID>.sls``
 
+.. warning::
+
+   Salt sls files are in YAML format. When editing these files, please be very careful to respect YAML syntax, especially whitespace. For more information, please see https://docs.saltproject.io/en/latest/topics/troubleshooting/yaml_idiosyncrasies.html.
+   
 Please note that :ref:`suricata` 6 has a 64-character limitation on the IP field in a threshold. You can read more about this at https://redmine.openinfosecfoundation.org/issues/4377.
 
 For example, the following threshold IP exceeds the 64-character limit:
