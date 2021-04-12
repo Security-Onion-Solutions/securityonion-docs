@@ -50,6 +50,9 @@ What connectivity does Secutiy Onion need to stay up to date?
 - www.snort.org (Paid snort ruleset)  
 - github.com (Strelka and Sigma rules updates)  
 - notary.kolide.co (osquery agent update)  
+- download.docker.com (Docker packages - Ubuntu only)
+- repo.saltstack.com (Salt packages - Ubuntu only)
+- packages.wazuh.com (Wazuh packages - Ubuntu only)    
 
 What do I need to do if I'm behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
