@@ -38,7 +38,7 @@ How do I install Security Onion updates?
 
 Please see the :ref:`soup` section.
 
-What connectivity does Secutiy Onion need to stay up to date?
+What connectivity does Security Onion need to stay up to date?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Ubuntu PPAs (Ubuntu Updates)  
