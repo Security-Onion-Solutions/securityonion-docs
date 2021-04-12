@@ -142,7 +142,7 @@ Please see the :ref:`timezones` section.
 Why is my disk filling up?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Security Onion records full packet capture to disk. 
+Security Onion records full packet capture to disk via :ref:`stenographer`. 
 
 `back to top <#top>`__
 
