@@ -38,6 +38,19 @@ How do I install Security Onion updates?
 
 Please see the :ref:`soup` section.
 
+What connectivity does Secutiy Onion need to stay up to date?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Ubuntu PPAs (Ubuntu Updates)  
+- repo.securityonion.net (CentOS Updates)   
+- raw.githubusercontent.com (Security Onion public key)   
+- sigs.securityonion.net (Signature files for Security Onion containers)  
+- ghcr.io (Container downloads)  
+- rules.emergingthreatspro.com (ET IDS rules)  
+- www.snort.org (Paid snort ruleset)  
+- github.com (Strelka and Sigma rules updates)  
+- notary.kolide.co (osquery agent update)  
+
 What do I need to do if I'm behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
