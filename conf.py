@@ -26,7 +26,6 @@ html_theme = 'sphinx_rtd_theme'
 html_logo = 'images/so-logo.svg'
 html_theme_options = {
     'logo_only': True,
-    'navigation_depth': 5,
 }
 file_insertion_enabled = False
 latex_documents = [
