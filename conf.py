@@ -24,9 +24,6 @@ pygments_style = 'sphinx'
 htmlhelp_basename = 'securityonion'
 html_theme = 'sphinx_rtd_theme'
 html_logo = 'images/so-logo.svg'
-html_theme_options = {
-    'logo_only': True,
-}
 file_insertion_enabled = False
 latex_documents = [
   ('index', 'securityonion.tex', u'Security Onion Documentation',
