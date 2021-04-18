@@ -17,7 +17,7 @@ If you instead use another ISO image, our installer will download Docker images 
 Security
 --------
 
-To prevent tampering, our Docker images are signed using GPG keys. :ref:`soup` verifies GPG signature any time Docker images are updated.
+To prevent tampering, our Docker images are signed using GPG keys. :ref:`soup` verifies GPG signatures any time Docker images are updated.
 
 Elastic
 -------
