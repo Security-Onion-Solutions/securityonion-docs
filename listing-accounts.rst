@@ -12,11 +12,11 @@ Operating System (OS) user accounts are stored in ``/etc/passwd``.  You can get 
 
   cut -d: -f1 /etc/passwd
   
-If you want a list of user accounts (not service accounts), then you can filter ``/etc/passwd`` for accounts with a UID greater than 1000 like this:
+If you want a list of user accounts (not service accounts), then you can filter ``/etc/passwd`` for accounts with a UID greater than 999 like this:
 
 ::
 
-  cat /etc/passwd | awk -F: '$3 > 1000 {print ;}' | cut -d: -f1 
+  cat /etc/passwd | awk -F: '$3 > 999 {print ;}' | cut -d: -f1 
   
 SOC
 ---
