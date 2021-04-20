@@ -3,11 +3,11 @@
 DNS Anomaly Detection
 =====================
 
-Dr. Johannes Ullrich of the SANS Internet Storm Center posted a great DNS Anomaly Detection script based on the query logs coming from his DNS server. We can do the same thing with Zeek's dns.log (where Zeek captures all the DNS queries it sees on the network).
+Dr. Johannes Ullrich of the SANS Internet Storm Center posted a great DNS Anomaly Detection script based on the query logs coming from his DNS server. We can do the same thing with :ref:`zeek`'s dns.log (where :ref:`zeek` captures all the DNS queries it sees on the network).
 
 .. note::
 
-    Please note that the following script is only intended for standalone machines and will not work properly on distributed deployments. Another option which might work better :ref:`elastalert` and its ``new_term`` rule.
+    Please note that the following script is only intended for standalone machines and will not work properly on distributed deployments. Another option which might work better is :ref:`elastalert` and its ``new_term`` rule.
 
 Thanks to ``senatorhotchkiss`` on our mailing list for updating the original script to replace ``bro-cut`` with ``jq``:
 
