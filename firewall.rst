@@ -93,7 +93,7 @@ Allow hosts to send syslog to a sensor node
 
 By default, if you use :ref:`so-allow` to add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. If we want to allow a host or group of hosts to send syslog to a sensor, then we can do the following:
 
-1. Create a new host group that will contain the IPs of the hosts that you want to allow to connect to the sensor. This will add the host group to ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``. If the host group already exists, you can skip to step 2. From the manager run:
+1. Create a new host group that will contain the IPs of the hosts that you want to allow to connect to the sensor. This will add the host group to ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``. If the host group already exists, you can skip to step 2. Run the following on the manager:
 
   ::
 
@@ -105,7 +105,7 @@ By default, if you use :ref:`so-allow` to add a host to the syslog hostgroup, th
 
     sudo so-firewall includehost <GROUP_NAME> <IP>
 
-3. Since we reused the syslog port group that is already defined, we don't need to create a new port group. Now we have to build the association between the host group and the syslog port group and assign that to our sensor node. Add the following to the sensor minion pillar file located at ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls``
+3. Since we reused the syslog port group that is already defined, we don't need to create a new port group. Now we have to build the association between the host group and the syslog port group and assign that to our sensor node. Add the following to the sensor minion pillar file located at ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls``:
 
   ::
 
@@ -131,13 +131,13 @@ In this example, we will be extending the default nginx port group to include po
 
 All the following will need to be run from the manager.
 
-1. Add the custom nginx port group.
+1. Add the custom nginx port group:
 
   ::
 
     sudo so-firewall addportgroup nginx
 
-2. Add the required ports to the port group. In this step we are redefining the nginx port group, so be sure to include the default ports as well if you want to keep them.
+2. Add the required ports to the port group. In this step we are redefining the nginx port group, so be sure to include the default ports as well if you want to keep them:
 
   ::
 
@@ -145,7 +145,7 @@ All the following will need to be run from the manager.
     sudo so-firewall addport nginx tcp 443
     sudo so-firewall addport nginx tcp 8086
 
-3. Associate this port group redefinition to a node. Add the following to the minion's sls file located at ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls``
+3. Associate this port group redefinition to a node. Add the following to the minion's sls file located at ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls``:
 
   ::
 
@@ -158,7 +158,7 @@ All the following will need to be run from the manager.
                 portgroups:
                   - portgroups.nginx
 
-4. Apply the firewall state to the node, or wait for the highstate to run for the changes to happen automatically.
+4. Apply the firewall state to the node, or wait for the highstate to run for the changes to happen automatically:
 
   ::
 
