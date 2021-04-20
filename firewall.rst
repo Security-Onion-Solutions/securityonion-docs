@@ -122,7 +122,7 @@ By default, if you use :ref:`so-allow` to add a host to the syslog hostgroup, th
 
   ::
 
-    salt <HOSTNAME>_<ROLE> state.apply firewall
+    sudo salt <HOSTNAME>_<ROLE> state.apply firewall
 
 
 Modify a default port group
@@ -135,7 +135,7 @@ All the following will need to be run from the manager.
 
   ::
 
-    so-firewall addportgroup nginx
+    sudo so-firewall addportgroup nginx
 
 2. Add the required ports to the port group. In this step we are redefining the nginx port group, so be sure to include the default ports as well if you want to keep them.
 
