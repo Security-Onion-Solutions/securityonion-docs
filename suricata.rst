@@ -41,10 +41,16 @@ To change the number of Suricata workers:
 
       sudo so-suricata-start
 
-For best performance, Suricata processes should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to. You can use the affinity settings in ``suricata.yaml`` as shown in https://suricata.readthedocs.io/en/latest/configuration/suricata-yaml.html#threading.
+.. seealso::
 
-Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
+    For other tuning considerations, please see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
 
+For best performance, Suricata should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  
+
+.. seealso::
+
+    For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see https://github.com/brokenscripts/cpu_pinning.
+    
 To pin Suricata workers to specific CPUs:
 
 - Stop sensor processes:
