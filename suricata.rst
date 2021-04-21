@@ -62,8 +62,7 @@ To pin Suricata workers to specific CPUs:
        - <cpu_2>  
        - <cpu_3> 
 
-- Note: To avoid inconsistant Suricata workers being allocated, ensure ``suriprocs`` is removed from under ``sensor:`` or is equivlent to the number of cpu cores being pinned. 
-
+- Note: To avoid inconsistent Suricata workers being allocated, ensure ``suriprocs`` is removed from under ``sensor:`` or is equivalent to the number of cpu cores being pinned. 
 
 - Start sensor processes:
 
