@@ -40,6 +40,31 @@ To change the number of AF-PACKET workers for :ref:`zeek`:
       
 For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
 
+To pin Zeek workers to specific CPUs:
+
+- Stop sensor processes:
+
+  ::
+
+     sudo so-zeek-stop
+       
+- Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and add the following under ``sensor:`` 
+
+  ::
+  
+     zeek_pins:  
+       - <cpu_1>  
+       - <cpu_2>  
+       - <cpu_3> 
+
+- Note: To avoid inconsistent Zeek workers being allocated, ensure ``zeek_lbprocs`` is removed from under ``sensor:`` or is equivalent to the number of cpu cores being pinned. 
+
+- Start sensor processes:
+
+  ::
+  
+     sudo so-zeek-start
+
 Email
 -----
 
