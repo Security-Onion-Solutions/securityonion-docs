@@ -45,6 +45,32 @@ For best performance, Suricata processes should be pinned to specific CPUs. In m
 
 Also see https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html.
 
+To pin Suricata workers to specific CPUs:
+
+- Stop sensor processes:
+
+  ::
+
+     sudo so-suricata-stop
+       
+- Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and add the following under ``sensor:`` 
+
+  ::
+  
+     suripins:  
+       - <cpu_1>  
+       - <cpu_2>  
+       - <cpu_3> 
+
+- Note: To avoid inconsistant Suricata workers being allocated, ensure ``suriprocs`` is removed from under ``sensor:`` or is equivlent to the number of cpu cores being pinned. 
+
+
+- Start sensor processes:
+
+  ::
+  
+     sudo so-suricata-start
+     
 Configuration
 -------------
 
