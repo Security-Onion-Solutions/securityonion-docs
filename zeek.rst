@@ -38,7 +38,8 @@ To change the number of AF-PACKET workers for :ref:`zeek`:
 
       sudo so-zeek-start
       
-For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
+For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  See the following for an in-depth overview, as well as how to determine NUMA domains using ``lscpu`` and ``lstopo``.
+| https://github.com/brokenscripts/cpu_pinning
 
 To pin Zeek workers to specific CPUs:
 
