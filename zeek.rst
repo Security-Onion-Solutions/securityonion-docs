@@ -38,7 +38,24 @@ To change the number of AF-PACKET workers for :ref:`zeek`:
 
       sudo so-zeek-start
       
-For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to the same CPU that your sniffing NIC is bound to.  You can do this using the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.
+For best performance, Zeek should be pinned to specific CPUs.  CPUs can be pinned in one of 2 methods, locally in the Zeek configuration or from the manager through salt files.  Locally within Zeek you can use the ``pin_cpus`` setting as shown at https://docs.zeek.org/en/stable/configuration/#using-pf-ring.  Set CPU pinning within ``/opt/so/conf/zeek/node.cfg`` on a node running Zeek using ``pin_cpus`` in the following format:
+::
+
+  pin_cpus=1,2,11,12
+  
+It is also possible to set CPU pinning using ``zeek_pins`` within the salt files, this should only be added to salt files for roles which are running zeek, such as a Sensor Role.  When setting CPU pinning the ``zeek_lbprocs`` should match the number of pinned CPUS. Set CPU pinning in the salt files using ``zeek_pins`` in following method:
+
+::
+   
+   sensor:
+     zeek_pins:
+       - 1
+       - 2
+       - 11
+       - 12  
+
+In most cases, you’ll want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  See the following for an in-depth overview, as well as how to determine NUMA domains using ``lscpu`` and ``lstopo``.
+| https://github.com/brokenscripts/cpu_pinning
 
 Email
 -----
