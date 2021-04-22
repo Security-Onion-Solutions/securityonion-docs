@@ -5,6 +5,61 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
+2.3.50 Changes
+----------------
+
+- FEATURE: Add EPS Stats for Filebeat `#3872 <https://github.com/Security-Onion-Solutions/securityonion/issues/3872>`_
+- FEATURE: Add copy-to-clipboard quick action menu option for copying a single field and value as 'field:value' `#3937 <https://github.com/Security-Onion-Solutions/securityonion/issues/3937>`_
+- FEATURE: Add raid and so-status monitoring to SOC grid page `#3584 <https://github.com/Security-Onion-Solutions/securityonion/issues/3584>`_
+- FEATURE: Add so-status to telegraf script executions and return a value `#3582 <https://github.com/Security-Onion-Solutions/securityonion/issues/3582>`_
+- FEATURE: Add zeekctl wrapper script `#3441 <https://github.com/Security-Onion-Solutions/securityonion/issues/3441>`_
+- FEATURE: Allow users to set an optional description for the node during setup `#2404 <https://github.com/Security-Onion-Solutions/securityonion/issues/2404>`_
+- FEATURE: Initial implementation of enhanced websocket management `#3691 <https://github.com/Security-Onion-Solutions/securityonion/issues/3691>`_
+- FEATURE: Combine proxy + package update questions into one menu `#3807 <https://github.com/Security-Onion-Solutions/securityonion/issues/3807>`_
+- FEATURE: Configure NTP in Setup `#3053 <https://github.com/Security-Onion-Solutions/securityonion/issues/3053>`_
+- FEATURE: Logstash pipeline stats wrapper `#3531 <https://github.com/Security-Onion-Solutions/securityonion/issues/3531>`_
+- FEATURE: Need a way to have Hunt/Alerts perform groupbys that can optionally include event's that don't have a match for a group `#2347 <https://github.com/Security-Onion-Solutions/securityonion/issues/2347>`_
+- FEATURE: Osquery WEL - Differentiate between Event & Ingest Timestamp `#3858 <https://github.com/Security-Onion-Solutions/securityonion/issues/3858>`_
+- FEATURE: Provide customizable Login page banner content using markdown format `#3659 <https://github.com/Security-Onion-Solutions/securityonion/issues/3659>`_
+- FEATURE: Provide customizable Overview tab content using markdown format `#3601 <https://github.com/Security-Onion-Solutions/securityonion/issues/3601>`_
+- FEATURE: Redirect expired login form back to login page instead of showing error `#3690 <https://github.com/Security-Onion-Solutions/securityonion/issues/3690>`_
+- FEATURE: Redirect to login when session expires `#3222 <https://github.com/Security-Onion-Solutions/securityonion/issues/3222>`_
+- FEATURE: Show final selected options menu at the end of install `#3197 <https://github.com/Security-Onion-Solutions/securityonion/issues/3197>`_
+- FEATURE: Show node and overall grid EPS on Grid Page `#3823 <https://github.com/Security-Onion-Solutions/securityonion/issues/3823>`_
+- FEATURE: Telegraf should check for additional metrics if it is running on an appliance `#2716 <https://github.com/Security-Onion-Solutions/securityonion/issues/2716>`_
+- FEATURE: VIM YAML Syntax Highlighting `#3966 <https://github.com/Security-Onion-Solutions/securityonion/issues/3966>`_
+- FEATURE: allow for salt-minion start to be delayed on system start `#3543 <https://github.com/Security-Onion-Solutions/securityonion/issues/3543>`_
+- FEATURE: check manager services (salt-master, so-status) during setup on a node `#1978 <https://github.com/Security-Onion-Solutions/securityonion/issues/1978>`_
+- FEATURE: soup should check for OS updates `#3489 <https://github.com/Security-Onion-Solutions/securityonion/issues/3489>`_
+- FIX: Alerts Total Found value should update when acknowledging or escalating `#2494 <https://github.com/Security-Onion-Solutions/securityonion/issues/2494>`_
+- FIX: Alerts severity sort order `#1741 <https://github.com/Security-Onion-Solutions/securityonion/issues/1741>`_
+- FIX: Change bro packet loss to be once per 2 minutes vs 30s `#3583 <https://github.com/Security-Onion-Solutions/securityonion/issues/3583>`_
+- FIX: Check Zeek index close and delete settings for existing deployments `#3575 <https://github.com/Security-Onion-Solutions/securityonion/issues/3575>`_
+- FIX: Firewall rules added via pillar only applies last hostgroup of the defined chain `#3709 <https://github.com/Security-Onion-Solutions/securityonion/issues/3709>`_
+- FIX: Hunt not properly escaping special characters in Windows sysmon logs. `#3648 <https://github.com/Security-Onion-Solutions/securityonion/issues/3648>`_
+- FIX: Hunt query for HTTP EXE downloads should work for both Zeek and Suricata `#3753 <https://github.com/Security-Onion-Solutions/securityonion/issues/3753>`_
+- FIX: Incorrect retry syntax in CA and SSL states `#3948 <https://github.com/Security-Onion-Solutions/securityonion/issues/3948>`_
+- FIX: Playbook Alert/Hunt showing incorrect timestamp `#2071 <https://github.com/Security-Onion-Solutions/securityonion/issues/2071>`_
+- FIX: Properly handle unauthorized responses during API requests from SOC app `#2908 <https://github.com/Security-Onion-Solutions/securityonion/issues/2908>`_
+- FIX: Reformat date/time on Grid and PCAP pages to enable sorting `#2686 <https://github.com/Security-Onion-Solutions/securityonion/issues/2686>`_
+- FIX: Rename Fleet link in SOC to FleetDM `#3569 <https://github.com/Security-Onion-Solutions/securityonion/issues/3569>`_
+- FIX: Suricata compress script should send it's output to /dev/null `#3917 <https://github.com/Security-Onion-Solutions/securityonion/issues/3917>`_
+- FIX: Suricata cpu-affinity not being set if suriprocs is defined in minion pillar file. `#3926 <https://github.com/Security-Onion-Solutions/securityonion/issues/3926>`_
+- FIX: TheHive Case Creation from Kibana Failure `#3870 <https://github.com/Security-Onion-Solutions/securityonion/issues/3870>`_
+- FIX: WEL Shipping via Wazuh broken `#3857 <https://github.com/Security-Onion-Solutions/securityonion/issues/3857>`_
+- FIX: Zeek Intel not working `#3850 <https://github.com/Security-Onion-Solutions/securityonion/issues/3850>`_
+- FIX: ingest.timestamp should be date type `#3629 <https://github.com/Security-Onion-Solutions/securityonion/issues/3629>`_
+- FIX: nmcli error during setup on Ubuntu + AMI `#3598 <https://github.com/Security-Onion-Solutions/securityonion/issues/3598>`_
+- FIX: salt upgrade failure with versionlock `#3501 <https://github.com/Security-Onion-Solutions/securityonion/issues/3501>`_
+- FIX: setup tries to connect to url used for proxy test even if the user chooses not to set one up `#3784 <https://github.com/Security-Onion-Solutions/securityonion/issues/3784>`_
+- FIX: so-playbook-sync should only have one instance running `#3568 <https://github.com/Security-Onion-Solutions/securityonion/issues/3568>`_
+- FIX: so-ssh-harden needs improvement `#3600 <https://github.com/Security-Onion-Solutions/securityonion/issues/3600>`_
+- FIX: soup does not update /etc/soversion on distributed nodes `#3602 <https://github.com/Security-Onion-Solutions/securityonion/issues/3602>`_
+- UPGRADE: Elastalert to 0.2.4-alt3 `#3947 <https://github.com/Security-Onion-Solutions/securityonion/issues/3947>`_
+- UPGRADE: Salt 3003 `#3854 <https://github.com/Security-Onion-Solutions/securityonion/issues/3854>`_
+- UPGRADE: Upgrade Grafana to 7.5.4 `#3916 <https://github.com/Security-Onion-Solutions/securityonion/issues/3916>`_
+- UPGRADE: Upgrade external dependencies used by SOC `#3545 <https://github.com/Security-Onion-Solutions/securityonion/issues/3545>`_
+
 2.3.40 Changes
 --------------
 
