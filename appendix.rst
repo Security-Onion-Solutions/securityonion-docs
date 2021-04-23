@@ -162,6 +162,12 @@ Delete "Wired connection 1" for later use as bond interface:
 
    Don't reboot yet!
 
+Remove an old Docker configuration option:
+
+::
+
+   rm /etc/profile.d/securityonion-docker.sh 
+   
 Download the Security Onion 2 repo:
 
 ::
