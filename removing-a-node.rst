@@ -24,7 +24,13 @@ Remove the node from Grafana, by removing the reference in ``/opt/so/saltstack/l
 Remove search node
 ------------------
 
-If you are removing a search node, you will want to remove it from cross cluster search. In :ref:`kibana`, navigate to ``Dev Tools`` and paste the following text into the window (replacing ``nodename`` with the actual node name):
+If you are removing a search node, you will want to remove it from cross cluster search. To do so, you'll need to update that search node's settings in `_cluster/settings` and make sure that any settings are set to `null`. So you might want to start by doing the following query via curl:
+
+::
+
+   curl -sk https://localhost:9200/_cluster/settings
+   
+Then based on that output, update `_cluster/settings` by sending that node section back but with all settings set to `null`. You could use curl again or use :ref:`kibana`'s ``Dev Tools`` and paste something like the following text into the window (replacing ``nodename`` with the actual node name and adding any other settings as necessary):
 
 ::
 
@@ -42,4 +48,7 @@ If you are removing a search node, you will want to remove it from cross cluster
       }  
     }
 
-Click the play button to send the request to :ref:`elasticsearch`.
+
+.. seealso::
+
+   For more information, please see https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-remote-clusters.html#configure-remote-clusters-dynamic.
