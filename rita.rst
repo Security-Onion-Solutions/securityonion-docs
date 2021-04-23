@@ -37,7 +37,7 @@ Run the installer:
 
 ::
 
-   sudo bash ./install.sh --disable-bro
+   sudo bash ./install.sh --disable-zeek
 
 Configuration
 -------------
@@ -52,7 +52,7 @@ You can then import logs with:
 
 ::
 
-   rita import /nsm/bro/logs/2019-09-04 dataset1
+   rita import /nsm/zeek/logs/2019-09-04 dataset1
 
 To see long connections, type:
 
