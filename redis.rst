@@ -39,7 +39,7 @@ Tuning
 
 We configure Redis to use 812MB of your total system memory.  If you have sufficient RAM available, you may want to increase the ``redis_maxmemory`` setting in ``/opt/so/saltstack/local/pillar/global.sls``. This value is in Megabytes so to set it to use 8 gigs of ram you would set the value to 8192.
 
-Logstash on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``batch_events`` variable to find the sweet spot for your deployment.
+Logstash on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``ls_pipeline_batch_size`` variable to find the sweet spot for your deployment.
 
 .. seealso::
 
