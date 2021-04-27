@@ -65,6 +65,19 @@ Here are some of the items that can be customized with pillar settings:
 
 :ref:`zeek`
 
+Salt Minion Startup Options
+---------------------------
+
+Currently, the salt-minion service startup is delayed by 30 seconds. This was implemented to avoid some issues that we have seen regarding Salt states that used the ip_interfaces grain to grab the management interface IP.
+
+If you need to increase this delay, it can be done using the ``salt:minion:service_start_delay`` pillar. This can be done in the minion pillar file if you want the delay for just that minion, or it can be done in the ``global.sls`` file if it should be applied to all minions.
+
+::
+
+  salt:
+    minion:
+      service_start_delay: 60 # in seconds.
+
 More Information
 ----------------
 
