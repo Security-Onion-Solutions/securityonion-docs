@@ -60,6 +60,11 @@ Before downloading, please review the notes for this release.
 - UPGRADE: Upgrade Grafana to 7.5.4 `#3916 <https://github.com/Security-Onion-Solutions/securityonion/issues/3916>`_
 - UPGRADE: Upgrade external dependencies used by SOC `#3545 <https://github.com/Security-Onion-Solutions/securityonion/issues/3545>`_
 
+2.3.50 Known Issues
+-------------------
+
+- If you had previously enabled Elastic Features and then upgrade to Security Onion 2.3.50 or higher, you may notice some features missing in Kibana. You can enable or disable features as necessary by clicking the main menu in the upper left corner, then click “Stack Management”, then click “Spaces”, then click “Default”. For more information, please see https://www.elastic.co/guide/en/kibana/master/xpack-spaces.html#spaces-control-feature-visibility.
+
 2.3.40 Changes
 --------------
 
