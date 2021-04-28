@@ -5,6 +5,11 @@ NTP
 
 Depending on how you installed, the underlying operating system may be configured to pull time updates from the NTP Pool Project and perhaps others as a fallback. You may want to change this default NTP config to use your preferred NTP provider. If you're using our Security Onion ISO image, this can be set in ``/etc/chrony.conf``.
 
+Starting in Security Onion 2.3.50, Setup will ask if you want to configure NTP:
+
+.. image:: images/ntp.png
+  :target: _images/ntp.png
+
 IDS Alerts
 ----------
 
