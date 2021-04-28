@@ -13,9 +13,12 @@ Once you're ready to install an update, use the ``soup`` command:
 
 If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then update :ref:`salt` and the :ref:`docker` images.
 
-.. warning::
+OS Updates
+----------
 
-    Please note that ``soup`` only updates Security Onion components and does NOT update the underlying operating system (OS). There is an option during :ref:`Configuration` to automatically update the OS packages. If you did not enable this option, then you will want to manually update the OS periodically and you will want to ensure that the OS is fully updated before running ``soup``.
+There is an option during :ref:`Configuration` to automatically install OS updates.
+
+Starting in Security Onion 2.3.50, ``soup`` will check for missing OS updates and ask if you want to install them.
     
 Agents
 ------
