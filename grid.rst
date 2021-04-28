@@ -10,7 +10,7 @@ Grid
 
 This page includes a few different EPS (events per second) measurements:
 
-- EPS (also shown as Production EPS) is how much a node is producing. This is taken from the number of events out in filebeat.
+- EPS (also shown as Production EPS) is how much a node is producing. This is taken from the number of events out in ref:`filebeat`.
 
 - Consumption EPS is how much a search node is consuming. 
 
