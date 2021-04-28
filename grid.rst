@@ -7,3 +7,12 @@ Grid
 
 .. image:: images/grid.png
   :target: _images/grid.png
+
+This page includes a few different EPS (events per second) measurements:
+
+- EPS (also shown as Production EPS) is how much a node is producing. This is taken from the number of events out in filebeat.
+
+- Consumption EPS is how much a search node is consuming. 
+
+- Grid EPS in the upper right corner is the sum of all Consumption EPS measurements in the entire grid.
+
