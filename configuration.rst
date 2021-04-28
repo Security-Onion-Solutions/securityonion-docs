@@ -123,3 +123,14 @@ The following screenshots are from an ``IMPORT`` installation. Your screens may 
 .. image:: images/setup-23.png
   :target: _images/setup-23.png
 
+.. image:: images/setup-24.png
+  :target: _images/setup-24.png
+
+.. image:: images/setup-25.png
+  :target: _images/setup-25.png
+
+.. image:: images/setup-26.png
+  :target: _images/setup-26.png
+
+.. image:: images/setup-27.png
+  :target: _images/setup-27.png
