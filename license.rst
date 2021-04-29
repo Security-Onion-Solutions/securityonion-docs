@@ -10,10 +10,8 @@ Security Onion is a free and open platform. The vast majority of software includ
 
 .. seealso::
 
-   You can find the full text of the Elastic License at:
+   | You can find the full text of the Elastic License at:
+   | https://www.elastic.co/licensing/elastic-license
    
-   https://www.elastic.co/licensing/elastic-license
-   
-   For more information about the Elastic license change, please see:
-   
-   https://securityonion.net/elastic-license
+   | For more information about the Elastic license change, please see:
+   | https://securityonion.net/elastic-license
