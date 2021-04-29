@@ -8,8 +8,8 @@ Security Onion is a free and open platform. The vast majority of software includ
 .. image:: images/elastic-license.png
   :target: _images/elastic-license.png
 
-You can read more about the Elastic License at https://www.elastic.co/licensing/elastic-license.
-
 .. seealso::
 
+   You can find the full text of the Elastic License at https://www.elastic.co/licensing/elastic-license.
+   
    For more information about the Elastic license change, please see https://securityonion.net/elastic-license.
