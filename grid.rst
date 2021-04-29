@@ -3,7 +3,7 @@
 Grid
 ====
 
-:ref:`soc` gives you access to our new Grid interface. This interface allows you to quickly check the status of all nodes in your grid. This page includes a few different EPS (events per second) measurements:
+:ref:`soc` gives you access to our new Grid interface. This interface allows you to quickly check the status of all nodes in your grid. It also includes a few different EPS (events per second) measurements:
 
 - EPS (also shown as Production EPS) is how much a node is producing. This is taken from the number of events out in :ref:`filebeat`.
 
