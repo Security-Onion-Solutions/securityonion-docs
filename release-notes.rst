@@ -64,6 +64,7 @@ Before downloading, please review the notes for this release.
 -------------------
 
 - If you had previously enabled Elastic Features and then upgrade to Security Onion 2.3.50 or higher, you may notice some features missing in Kibana. You can enable or disable features as necessary by clicking the main menu in the upper left corner, then click “Stack Management”, then click “Spaces”, then click “Default”. For more information, please see https://www.elastic.co/guide/en/kibana/master/xpack-spaces.html#spaces-control-feature-visibility.
+- If you have node names in mixed case (rather than all lower case), the Grid page may show the nodes as being in the ``Fault`` state. This is a cosmetic issue and will be fixed in the next release. If you'd like to fix it manually, see https://github.com/Security-Onion-Solutions/securityonion/discussions/4035.
 
 2.3.40 Changes
 --------------
