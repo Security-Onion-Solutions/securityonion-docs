@@ -249,3 +249,9 @@ Re-indexing may need to occur if field data types have changed and conflicts ari
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
 
+More Information
+----------------
+
+.. seealso::
+
+    For more information about Elasticsearch, please see https://www.elastic.co/products/elasticsearch.

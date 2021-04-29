@@ -55,5 +55,5 @@ More Information
 
 .. seealso::
 
-    For more information about :ref:`suricata`, such as defining other address groups or ports groups, please see :ref:`suricata`.
+    For more information about :ref:`suricata`, such as defining other address groups or ports groups, please see the :ref:`suricata` section.
 

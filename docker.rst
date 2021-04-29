@@ -12,7 +12,7 @@ Download
 
 If you download our Security Onion ISO image, the Docker engine and these Docker images are baked right into the ISO image.
 
-If you instead use another ISO image, our installer will download Docker images from quay.io as necessary.
+If you instead use another ISO image, our installer will download Docker images from ghcr.io as necessary.
 
 Security
 --------
@@ -115,3 +115,10 @@ Kibana
 Zeek
 ~~~~
 | ``so-bro`` - REQ - Zeek app
+
+More Information
+----------------
+
+.. seealso::
+
+    For more information about Docker, please see https://www.docker.com/what-docker.

@@ -27,4 +27,5 @@ More Information
 
 .. seealso::
 
-    For more information about Community ID, please see https://github.com/corelight/community-id-spec.
+    | For more information about Community ID, please see:
+    | https://github.com/corelight/community-id-spec

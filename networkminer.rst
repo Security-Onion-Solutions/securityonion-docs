@@ -23,4 +23,5 @@ More Information
 
 .. seealso::
 
-    For more information about NetworkMiner, please see https://www.netresec.com/?page=networkminer.
+    | For more information about NetworkMiner, please see:
+    | https://www.netresec.com/?page=networkminer
