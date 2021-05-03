@@ -39,23 +39,20 @@ On the left side of the page, you'll see links for analyst tools like :ref:`aler
 Customization
 -------------
 
-If you'd like to modify the links on the left side, you can create a new file called ``/opt/so/saltstack/local/salt/soc/files/soc/tools.json`` and then create your desired list of links as follows:
+When you first log into SOC, you'll land on the main SOC Overview page. The content of this page is stored in the ``motd.md`` file, which uses the common Markdown (.md) format. Visit markdownguide.org to learn more about the simple Markdown format. To customize this content, copy ``motd.md`` as follows and then edit ``/opt/so/saltstack/local/salt/soc/files/soc/motd.md`` using your favorite text editor:
 
 ::
 
-	[
-	  { "name": "toolKibana",    "description": "toolKibanaHelp",    "icon": "fa-external-link-alt", "target": "so-kibana",    "link": "/kibana/" },
-	  { "name": "toolGrafana",   "description": "toolGrafanaHelp",   "icon": "fa-external-link-alt", "target": "so-grafana",   "link": "/grafana/d/so_overview" },
-	  { "name": "toolCyberchef", "description": "toolCyberchefHelp", "icon": "fa-external-link-alt", "target": "so-cyberchef", "link": "/cyberchef/" },
-	  { "name": "toolPlaybook",  "description": "toolPlaybookHelp",  "icon": "fa-external-link-alt", "target": "so-playbook",  "link": "/playbook/projects/detection-playbooks/issues/" },
-	  { "name": "toolFleet",     "description": "toolFleetHelp",     "icon": "fa-external-link-alt", "target": "so-fleet",     "link": "/fleet/" },
-	  { "name": "toolTheHive",   "description": "toolTheHiveHelp",   "icon": "fa-external-link-alt", "target": "so-thehive",   "link": "/thehive/" },
-	  { "name": "toolNavigator", "description": "toolNavigatorHelp", "icon": "fa-external-link-alt", "target": "so-navigator", "link": "/navigator/" },
+	sudo cp /opt/so/saltstack/default/salt/soc/files/soc/motd.md /opt/so/saltstack/local/salt/soc/files/soc/
 
-	  { "name": "My Custom Tool", "description": "Some tooltip to show more helpful information", "icon": "fa-external-link-alt", "target": "so-customtool", "link": "https://some.custom.tool.invalid/path?params" }
-	]
+You can also customize the links on the left side. To do so, copy ``tools.json`` as follows and then edit ``/opt/so/saltstack/local/salt/soc/files/soc/tools.json`` using your favorite text editor:
 
-Then restart SOC:
+::
+
+	sudo cp /opt/so/saltstack/default/salt/soc/files/soc/tools.json /opt/so/saltstack/local/salt/soc/files/soc/
+
+
+Once all customizations are complete, you can then restart SOC to make the changes take effect:
 
 ::
 
