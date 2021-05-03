@@ -157,8 +157,32 @@ Finally, restart SOC to make the changes take effect:
 
 Once you've verifed that your change works as intended, you may want to make the same change in ``hunt.actions.json`` for :ref:`hunt`.
 
-Here are some other customization options for Alerts actions:
+You can also create background actions that don't necessarily result in the user being taken to a new page or tab. For example, if you want to have a new action submit a case to JIRA, you would define it as a background POST action. When it completes the POST, it will show an auto-fading message in SOC telling you that the action completed. Alternatively, instead of the auto-fading message you can have it pop a new tab (or redirect SOC tab) to JIRA. Because of CORS restrictions, SOC can't expect to have visibility into the result of the background POST so there is no attempt to parse the response of any background action, other than the status code/text from the request's response.
 
-https://github.com/Security-Onion-Solutions/securityonion/issues/1749
+Here is an example of a background action that submits a javascript fetch to a remote resource and then optionally shows the user a second URL:
 
-https://github.com/Security-Onion-Solutions/securityonion/issues/2904
+::
+
+  { 
+    "name": "My Background Action", 
+    "description": "Something wonderful!", 
+    "icon": "fa-star", 
+    "target": "_blank", 
+    "links": [
+      "http://somewhere.invalid/?somefield={:client.ip|base64}"
+    ],
+    "background": true, 
+    "method": "POST", 
+    "options": { 
+      "mode": "no-cors", 
+      "headers": { 
+        "header1": "header1value",
+        "header2:" "header2value" 
+      }
+    }, 
+    "body": "something={value|base64}",
+    "backgroundSuccessLink": "https://securityonion.net?code={responseCode}&text={responseStatus}",
+    "backgroundFailureLink": "https://google.com?q={error}"
+  },
+  
+The ``options`` object is the same options object that will be passed into the Javascript ``fetch()`` method. You can read more about that at `<https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>`_.
