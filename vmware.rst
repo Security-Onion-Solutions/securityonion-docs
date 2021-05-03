@@ -1,6 +1,6 @@
 .. _vmware:
 
-VMWare
+VMware
 ======
 
 Overview
