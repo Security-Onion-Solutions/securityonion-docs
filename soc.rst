@@ -36,7 +36,30 @@ On the left side of the page, you'll see links for analyst tools like :ref:`aler
      - Develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward and update your coverage in :ref:`attack-navigator`.
      - Finally, return to :ref:`hive` and document the entire investigation and close the case.
  
-If you'd like to modify these side links, please see https://github.com/Security-Onion-Solutions/securityonion/issues/1248.
+Customization
+-------------
+
+If you'd like to modify the links on the left side, you can create a new file called ``/opt/so/saltstack/local/salt/soc/files/soc/tools.json`` and then create your desired list of links as follows:
+
+::
+
+	[
+	  { "name": "toolKibana",    "description": "toolKibanaHelp",    "icon": "fa-external-link-alt", "target": "so-kibana",    "link": "/kibana/" },
+	  { "name": "toolGrafana",   "description": "toolGrafanaHelp",   "icon": "fa-external-link-alt", "target": "so-grafana",   "link": "/grafana/d/so_overview" },
+	  { "name": "toolCyberchef", "description": "toolCyberchefHelp", "icon": "fa-external-link-alt", "target": "so-cyberchef", "link": "/cyberchef/" },
+	  { "name": "toolPlaybook",  "description": "toolPlaybookHelp",  "icon": "fa-external-link-alt", "target": "so-playbook",  "link": "/playbook/projects/detection-playbooks/issues/" },
+	  { "name": "toolFleet",     "description": "toolFleetHelp",     "icon": "fa-external-link-alt", "target": "so-fleet",     "link": "/fleet/" },
+	  { "name": "toolTheHive",   "description": "toolTheHiveHelp",   "icon": "fa-external-link-alt", "target": "so-thehive",   "link": "/thehive/" },
+	  { "name": "toolNavigator", "description": "toolNavigatorHelp", "icon": "fa-external-link-alt", "target": "so-navigator", "link": "/navigator/" },
+
+	  { "name": "My Custom Tool", "description": "Some tooltip to show more helpful information", "icon": "fa-external-link-alt", "target": "so-customtool", "link": "https://some.custom.tool.invalid/path?params" }
+	]
+
+Then restart SOC:
+
+::
+
+	sudo so-soc-restart
 
 .. toctree::
    :maxdepth: 2
