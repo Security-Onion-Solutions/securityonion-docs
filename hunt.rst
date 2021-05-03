@@ -168,6 +168,16 @@ OQL
 
 Onion Query Language (OQL) starts with standard `Lucene query syntax <https://lucene.apache.org/core/2_9_4/queryparsersyntax.html>`_ and then allows you to add optional segments that control what Hunt does with the results from the query. The ``groupby`` segment tells Hunt to group by (aggregate) a particular field. So, for example, if you want to group by destination IP address, you can add ``| groupby destination.ip`` to your search (assuming it didn't already have a groupby statement). The ``groupby`` segment supports multiple aggregations so you can add more fields that you want to group by, separating those fields with spaces. For example, to group by destination IP address and then destination port, you could use ``| groupby destination.ip destination.port``.
 
+By default, grouping by a particular field won't show any values if that field is missing:
+
+.. image:: images/hunt-groupby-default.png
+  :target: _images/hunt-groupby-default.png
+
+If you would like to include missing values, add an asterisk after the field name:
+
+.. image:: images/hunt-groupby-asterisk.png
+  :target: _images/hunt-groupby-asterisk.png
+
 Videos
 ------
 
