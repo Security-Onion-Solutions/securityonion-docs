@@ -31,8 +31,6 @@ The easiest way to download pcaps for testing is our :ref:`so-test` tool. Altern
 
 -  https://www.defcon.org/html/links/dc-ctf.html
 
--  https://archive.wrccdc.org/
-
 -  https://github.com/chrissanders/packets
 
 You can download pcaps from the link above using a standard web browser or from the command line using a tool like ``wget`` or ``curl``. Here are some examples.
