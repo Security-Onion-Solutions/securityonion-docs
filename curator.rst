@@ -30,4 +30,5 @@ More Information
 
 .. seealso::
 
-    For more information about Curator, please see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about.
+    | For more information about Curator, please see:
+    | https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about.
