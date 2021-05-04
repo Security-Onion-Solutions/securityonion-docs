@@ -119,7 +119,7 @@ Sigma support currently extends to the following log sources in Security Onion:
 
 The pre-loaded Plays depend on Sysmon and Windows Eventlogs shipped with winlogbeat or osquery.
 
-For best compability, use the following Sigma Taxonmy:
+For best compatibility, use the following Sigma Taxonomy:
  - Process Creation: https://github.com/Neo23x0/sigma/wiki/Taxonomy#process-creation-events
  - Network: https://github.com/Neo23x0/sigma/wiki/Taxonomy#specific
  
