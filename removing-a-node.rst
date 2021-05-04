@@ -3,7 +3,12 @@
 Removing a Node
 ===============
 
-There may come a time when you need to remove a node from your distributed deployment. To do this, log into your manager and list all :ref:`salt` keys:
+There may come a time when you need to remove a node from your distributed deployment. To do this, you'll need to remove the node's configuration from a few different components.
+
+Salt
+----
+
+First, log into your manager and list all :ref:`salt` keys:
 
 ::
 
@@ -20,7 +25,7 @@ Remove the node from any ``.sls`` files in ``/opt/so/saltstack/local/pillar/data
 Grafana
 -------
 
-Remove the node's json file from the appropriate subdirectory under ``/opt/so/conf/grafana/grafana_dashboards/`` on the manager, and then restart Grafana with:
+Remove the node's json file from the appropriate subdirectory under ``/opt/so/conf/grafana/grafana_dashboards/`` on the manager.  Then restart Grafana with:
 
 :: 
 
