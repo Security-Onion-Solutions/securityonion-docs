@@ -20,9 +20,8 @@ In Security Onion 2, Elasticsearch receives unparsed logs from :ref:`logstash` o
     
 Community ID
 ------------
-For logs that don’t natively support :ref:`community-id`, we sponsored the development of an Elasticsearch Ingest Processor to automatically generate Community ID values:
-
-https://github.com/Security-Onion-Solutions/elasticsearch-ingest-community-id
+| For logs that don’t natively support :ref:`community-id`, we sponsored the development of an Elasticsearch Ingest Processor to automatically generate Community ID values:
+| https://github.com/Security-Onion-Solutions/elasticsearch-ingest-community-id
 
 Configuration
 -------------
