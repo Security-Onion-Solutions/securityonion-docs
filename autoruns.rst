@@ -40,4 +40,4 @@ More Information
 .. seealso::
 
     | For more information about Autoruns, please see:
-    | https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns.
+    | https://docs.microsoft.com/en-us/sysinternals/downloads/autoruns
