@@ -14,15 +14,21 @@ Then remove the node by deleting its key from :ref:`salt` (replacing ``nodename`
 ::
 
    sudo salt-key -d nodename
-   
-Remove the node from Grafana, by removing the reference in ``/opt/so/saltstack/local/pillar/data/sensorstab.sls``, and the file in ``/opt/so/conf/grafana/grafana_dashboards/sensor_nodes/ <hostname>-Node.json`` on the manager, then restart Grafana with:
+
+Remove the node from any ``.sls`` files in ``/opt/so/saltstack/local/pillar/data/``.
+
+Grafana
+-------
+
+Remove the node's json file from the appropriate subdirectory under ``/opt/so/conf/grafana/grafana_dashboards/`` on the manager, and then restart Grafana with:
 
 :: 
 
   sudo so-grafana-restart
 
-Remove search node
-------------------
+
+Cross Cluster Search
+--------------------
 
 If you are removing a search node, you will want to remove it from cross cluster search. To do so, you'll need to update that search node's settings in ``_cluster/settings`` and make sure that any settings are set to ``null``. So you might want to start by doing the following query via curl:
 
