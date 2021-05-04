@@ -103,12 +103,6 @@ Misc Notes
 
 ``so-playbook-sync`` runs every 5 minutes. This script queries Playbook for all active plays and then checks to make sure that there is an :ref:`elastalert` config and :ref:`hive` case template for each play. It also runs through the same process for inactive plays.
 
-There is currently a bug when it comes to disabling plays. If you disable plays in the web interface but they continue to run, you may need to manually delete the yaml files in ``/opt/so/rules/elastalert/playbook/``. Then restart ElastAlert as follows:
-
-::
-
- sudo so-elastalert-restart --force
-
 Log Sources & Field Names
 -----------
 
