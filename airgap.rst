@@ -3,7 +3,7 @@
 Airgap
 ======
 
-Security Onion is commited to allowing users to run a full install on networks that do not have Internet access. Starting in 2.x RC3, users will see an option to specify that the install is airgapped. The installer will then make the appropriate modifications to make this work properly.
+Security Onion is commited to allowing users to run a full install on networks that do not have Internet access. Setup will ask if you want to configure the installation for airgap and will then make the appropriate modifications to make this work properly.
 
 Key Differences
 ---------------
@@ -13,7 +13,7 @@ By selecting ``Airgap`` as an install option, a couple of things happen that are
 Updating
 --------
 
-Starting in version 2.3, :ref:`soup` will automatically detect that you are upgrading an airgap install and will ask for the location of the upgrade disk. This can be done by burning the disk and putting it in the DVD drive, burning a USB stick like any standard ISO, or simply copying the ISO file to the airgapped manager. 
+When you run :ref:`soup` on an airgap install, it will ask for the location of the upgrade disk. You can burn the latest ISO image to a DVD and insert it in the DVD drive, flash the ISO image to a USB drive and insert that USB drive, or simply copy the ISO file itself to the airgapped manager. 
 
 Updating from RC3
 -----------------
