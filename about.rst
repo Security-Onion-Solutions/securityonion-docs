@@ -38,7 +38,7 @@ Documentation
 
 .. warning::
 
-   We've started updating this documentation for Security Onion 2. However, please note that this is a work in progress. Many pages have not been updated yet and thus may have incorrect or missing information.
+   Documentation is always a work in progress and some documentation may be missing or incorrect. Please let us know if you notice any issues.
    
 License
 ~~~~~~~
