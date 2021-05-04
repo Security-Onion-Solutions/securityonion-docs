@@ -15,7 +15,8 @@ In Security Onion 2, Elasticsearch receives unparsed logs from :ref:`logstash` o
 
 .. seealso::
 
-    For more about Elasticsearch ingest parsing, please see https://www.elastic.co/guide/en/elasticsearch/reference/master/ingest.html.
+    | For more about Elasticsearch ingest parsing, please see:
+    | https://www.elastic.co/guide/en/elasticsearch/reference/master/ingest.html
     
 Community ID
 ------------
@@ -245,13 +246,15 @@ All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
 
 Re-indexing
 -----------
-Re-indexing may need to occur if field data types have changed and conflicts arise.  This process can be VERY time-consuming, and we only recommend this if keeping data is absolutely critical.  For more information on re-indexing, see:
+Re-indexing may need to occur if field data types have changed and conflicts arise.  This process can be VERY time-consuming, and we only recommend this if keeping data is absolutely critical.  
 
-https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
+| For more information about re-indexing, please see:
+| https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
 
 More Information
 ----------------
 
 .. seealso::
 
-    For more information about Elasticsearch, please see https://www.elastic.co/products/elasticsearch.
+    | For more information about Elasticsearch, please see:
+    | https://www.elastic.co/products/elasticsearch
