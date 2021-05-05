@@ -99,13 +99,10 @@ For example:
    
 Troubleshooting BPF using tcpdump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-If you need to troubleshoot BPF, you can use ``tcpdump`` as shown in the following articles.
-
-http://taosecurity.blogspot.com/2004/09/understanding-tcpdumps-d-option-have.html
-
-http://taosecurity.blogspot.com/2004/12/understanding-tcpdumps-d-option-part-2.html
-
-http://taosecurity.blogspot.com/2008/12/bpf-for-ip-or-vlan-traffic.html
+| If you need to troubleshoot BPF, you can use ``tcpdump`` as shown in the following articles:
+| http://taosecurity.blogspot.com/2004/09/understanding-tcpdumps-d-option-have.html
+| http://taosecurity.blogspot.com/2004/12/understanding-tcpdumps-d-option-part-2.html
+| http://taosecurity.blogspot.com/2008/12/bpf-for-ip-or-vlan-traffic.html
 
 More Information
 ----------------
