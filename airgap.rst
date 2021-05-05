@@ -10,8 +10,8 @@ Key Differences
 
 By selecting ``Airgap`` as an install option, a couple of things happen that are different than a normal install with Internet access. First, all CentOS repos are removed and replaced with a new repo that runs on the manager. During the install, all of the necessary RPMs are copied from the ISO to a new repo located in ``/nsm/repo/``. All devices in the grid will now use this repo for updates to packages. Another difference is the latest ET Open rules from Emerging Threats are copied to ``/nsm/repo/rules/`` so that the manager can access them. This allows users to use the standard SO process for managing SIDS etc. Finally, yara rules for :ref:`strelka` are copied to ``/nsm/repo/rules/strelka/`` so that :ref:`strelka` has the latest and greatest rules for static file analysis.
 
-Updating
---------
+Security Onion Version Updates
+------------------------------
 
 When you run :ref:`soup` on an airgap install, it will ask for the location of the upgrade disk. You can do one of the following:
 
@@ -20,6 +20,11 @@ When you run :ref:`soup` on an airgap install, it will ask for the location of t
 - flash the ISO image to a USB drive and insert that USB drive
 
 - simply copy the ISO file itself to the airgapped manager
+
+Security Onion Hotfixes
+-----------------------
+
+Starting in Security Onion 2.3.60, airgap users will see a couple of new commands for applying hotfixes (smaller updates in between full version updates). The first command ``so-airgap-hotfixdownload`` will be run from a computer with Internet access. This will download the hotfix and drop it into a tarball that you will then need to sneakernet over to your airgapped manager. Once you have copied that ``sohotfix.tar`` to a location on the manager you will run ``so-airgap-hotfixapply /path/to/sohotfix.tar`` and it will apply the hotfix.
 
 Updating from RC3
 -----------------
