@@ -3,18 +3,18 @@
 soup
 ====
 
-Security Onion Version Updates
-------------------------------
-
-When we release a new version of Security Onion, we update the :ref:`release-notes` section and publish a blog post to https://blog.securityonion.net. You'll want to review these for any relevant information about the individual updates.
-
-Once you're ready to install an update, use the ``soup`` command:
+``SOUP`` stands for ``Security Onion UPdater``.  To install updates, run the ``soup`` command:
 
 ::
 
     sudo soup
 
-If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then update :ref:`salt` and the :ref:`docker` images.
+If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then check for other updates.
+
+Security Onion Version Updates
+------------------------------
+
+When we release a new version of Security Onion, we update the :ref:`release-notes` section and publish a blog post to https://blog.securityonion.net. You'll want to review these for any relevant information about the individual updates. For a full version update, soup will update :ref:`salt` code and all :ref:`docker` images. It will also update the Security Onion version in ``/etc/soversion``.
 
 Security Onion Hotfixes
 -----------------------
