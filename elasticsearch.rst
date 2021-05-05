@@ -217,26 +217,9 @@ Heavy Nodes
 When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local Elasticsearch instance.
 
 Search Nodes
--------------
+------------
 
 ``Search nodes`` extend the storage and processing capabilities of the manager node, and run :ref:`elasticsearch`, :ref:`logstash`, and :ref:`curator`. Just like heavy nodes, search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
-
-Removing a node from the manager node
--------------------------------------
-
-If you need to remove a node (such as a ``heavy node`` or a ``search node``) from your cross cluster search configuration, send the following to Elasticsearch on your manager node (replacing ``node1`` with the actual node you'd like to remove):
-
-::
-
-    PUT _cluster/settings
-    {
-    "persistent": {
-    "search": {
-    "remote": {
-    "node1": {
-    "seeds": null}}}}}
-
-You can simply copy/paste the above code (modifying as necessary) into the Console, under "Dev Tools" in Kibana, and click the green triangle. Alternatively, you could submit it to Elasticsearch via a cURL command.
 
 Storage
 -------
