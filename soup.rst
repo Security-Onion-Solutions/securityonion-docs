@@ -3,7 +3,7 @@
 soup
 ====
 
-``SOUP`` stands for ``Security Onion UPdater``.  To install updates, run the ``soup`` command:
+``soup`` stands for ``Security Onion UPdater``.  To install updates, run the ``soup`` command:
 
 ::
 
@@ -14,7 +14,9 @@ If necessary, ``soup`` will update itself and then ask you to run ``soup`` again
 Security Onion Version Updates
 ------------------------------
 
-When we release a new version of Security Onion, we update the :ref:`release-notes` section and publish a blog post to https://blog.securityonion.net. You'll want to review these for any relevant information about the individual updates. If ``soup`` finds a full version update, then it will update :ref:`salt` code and all :ref:`docker` images. It will also update the Security Onion version in ``/etc/soversion``.
+When we release a new version of Security Onion, we update the :ref:`release-notes` section and publish a blog post to https://blog.securityonion.net. You'll want to review these for any relevant information about the individual updates. 
+
+If ``soup`` finds a full version update, then it will update :ref:`salt` code and all :ref:`docker` images. It will also update the Security Onion version in ``/etc/soversion``.
 
 Security Onion Hotfixes
 -----------------------
