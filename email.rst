@@ -10,6 +10,11 @@ Operating System
 
 You can install and configure your favorite mail server. Depending on your needs, this could be something simple like ``nullmailer`` or something more complex like ``exim4``.
 
+Elastalert
+----------
+
+Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
+
 Wazuh
 -----
 
@@ -67,11 +72,6 @@ You may want to receive emails for :ref:`zeek` notices. To do that, add the foll
    }
 
 Also see http://mailman.icsi.berkeley.edu/pipermail/bro/2013-December/006418.html.
-
-Elastalert
-----------
-
-Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
 
 Lack of network traffic
 -----------------------
