@@ -322,7 +322,8 @@ In order to apply the threshold to all nodes, place the pillar in ``/opt/so/salt
 
 .. warning::
 
-   Salt sls files are in YAML format. When editing these files, please be very careful to respect YAML syntax, especially whitespace. For more information, please see https://docs.saltproject.io/en/latest/topics/troubleshooting/yaml_idiosyncrasies.html.
+   | Salt sls files are in YAML format. When editing these files, please be very careful to respect YAML syntax, especially whitespace. For more information, please see:
+   | https://docs.saltproject.io/en/latest/topics/troubleshooting/yaml_idiosyncrasies.html
    
 Please note that :ref:`suricata` 6 has a 64-character limitation on the IP field in a threshold. You can read more about this at https://redmine.openinfosecfoundation.org/issues/4377.
 
@@ -380,7 +381,7 @@ Let's look at the following rules using:
 
        alert tcp $HOME_NET any -> $EXTERNAL_NET !1433 (msg:"ET TROJAN Bancos.DV MSSQL CnC Connection Outbound"; flow:to_server,established; flowbits:isset,ET.MSSQL; content:"|49 00 B4 00 4D 00 20 00 54 00 48 00 45 00 20 00 4D 00 41 00 53 00 54 00 45 00 52 00|"; classtype:trojan-activity; sid:2013411; rev:1;)
 
-If you try to disable the first two rules without disabling the third rule (which has "flowbits:isset...) the third rule could never fire due to one of the first two rules needing to fire first. Pulled Pork (helpfully) resolves all of your flowbit dependencies, and in this case, is "re-enabling" that rule for you on the fly. Disabling all three of those rules by adding the following to disablesid.conf has the obvious negative effect of disabling all three of the rules:
+If you try to disable the first two rules without disabling the third rule (which has "flowbits:isset...) the third rule could never fire due to one of the first two rules needing to fire first. idstools (helpfully) resolves all of your flowbit dependencies, and in this case, is "re-enabling" that rule for you on the fly. Disabling all three of those rules by adding the following to disablesid.conf has the obvious negative effect of disabling all three of the rules:
 
 ::
 
