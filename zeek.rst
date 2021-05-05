@@ -84,8 +84,7 @@ Intel
 
 You can add your own intel to ``/opt/so/saltstack/local/salt/zeek/policy/intel/intel.dat`` on the manager and then run ``sudo salt $SENSORNAME_$ROLE state.highstate``. When writing this file, ensure there are no leading/trailing spaces or lines, and that only a single tab is used to separate fields. If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues. You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
 
-For more information, please see:
-
+| For more information, please see:
 | https://docs.zeek.org/en/latest/frameworks/intel.html\ 
 | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
 | https://github.com/weslambert/securityonion-misp
