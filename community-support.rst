@@ -56,6 +56,5 @@ Please include the following details where you can:
 Forum
 -----
 
-Once you've read and understand all of the above, you can post your question to the community support forum:
-
-https://github.com/Security-Onion-Solutions/securityonion/discussions
+| Once you've read and understand all of the above, you can post your question to the community support forum:
+| https://securityonion.net/discuss
