@@ -135,14 +135,14 @@ The ``Actions`` sub-menu has several different options:
 
 If you'd like to add your own custom actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` and then add new entries.
 
-For example, suppose we want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, we need to copy ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json``:
+For example, suppose you want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, copy ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json``:
 
 ::
 
   sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json /opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json
 
 
-Next, we need to edit ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` using our favorite text editor and insert the following as the next to last line of the file:
+Next, edit ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` using your favorite text editor and insert the following as the next to last line of the file:
 
 ::
 
