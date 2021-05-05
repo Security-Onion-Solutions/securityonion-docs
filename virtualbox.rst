@@ -24,4 +24,5 @@ Follow the installation steps for your desired installation type in the :ref:`in
 
 Guest Additions
 ---------------
-If you want to install VirtualBox Guest Additions, please see https://wiki.centos.org/HowTos/Virtualization/VirtualBox/CentOSguest.
+| If you want to install VirtualBox Guest Additions, please see:
+| https://wiki.centos.org/HowTos/Virtualization/VirtualBox/CentOSguest
