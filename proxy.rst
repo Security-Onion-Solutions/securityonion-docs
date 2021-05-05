@@ -9,17 +9,17 @@ There is no way to set a global proxy on Linux, but several tools will route the
 
 ::
 
-    export http_proxy=<proxy_url>
-    export https_proxy=$http_proxy
-    export ftp_proxy=$http_proxy
-    export no_proxy="localhost, 127.0.0.1, <management_ip>, <hostname>"
+    http_proxy=<proxy_url>
+    https_proxy=<proxy_url>
+    ftp_proxy=<proxy_url>
+    no_proxy="localhost, 127.0.0.1, <management_ip>, <hostname>"
     
 Where:
-    ``proxy_url`` is the url of the proxy server. (For example, ``http://10.0.0.2:3128`` or ``https://user:password@your.proxy.url``)
+    ``<proxy_url>`` is the url of the proxy server. (For example, ``http://10.0.0.2:3128`` or ``https://user:password@your.proxy.url``)
     
-    ``management_ip`` is the IP address of the Security Onion box.
+    ``<management_ip>`` is the IP address of the Security Onion box.
     
-    ``hostname`` is the hostname of the Security Onion box.
+    ``<hostname>`` is the hostname of the Security Onion box.
    
 .. note::
     You may also need to include the IP address and hostname of the manager in the no_proxy variable above if configuring the proxy on a forward node.
