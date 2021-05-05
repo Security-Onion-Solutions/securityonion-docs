@@ -201,18 +201,3 @@ However, if you add an asterisk after the ``network.protocol`` field name, Hunt 
 
 .. image:: images/hunt-groupby-asterisk.png
   :target: _images/hunt-groupby-asterisk.png
-
-Videos
-------
-
-.. seealso::
-
-  To see Hunt in action, check out these Youtube videos:
-  
-  https://www.youtube.com/watch?v=TZ96aBEVhFU
-  
-  https://www.youtube.com/watch?v=0bwwZyedqdA
-
-  https://www.youtube.com/watch?v=Is2shLAOyJs
-
-  https://www.youtube.com/watch?v=Y-nZInToH8s
