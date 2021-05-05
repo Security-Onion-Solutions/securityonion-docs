@@ -33,13 +33,13 @@ In order to define a per node homenet, it can be defined in the minion pillar fi
     uniqueid: 1602623674
     hnsensor: 10.0.0.0/8
 
-In order to sync the configuration change with the node, we can either wait for the node to automatically highstate on the predefined interval, or we can force for it. Since this homenet only applies to :ref:`suricata`, we can apply the suricata state to the node.
+In order to sync the configuration change with the node, we can either wait for the node to automatically highstate on the predefined interval, or we can force it. Since this homenet only applies to :ref:`suricata`, we can apply the ``suricata`` state to the node.
 
 - From the manager:
 
   ::
 
-    salt $SENSORNAME_$ROLE state.apply suricata
+    sudo salt $SENSORNAME_$ROLE state.apply suricata
 
 or
 
@@ -47,7 +47,7 @@ or
 
   ::
 
-    salt-call state.apply suricata
+    sudo salt-call state.apply suricata
 
 
 More Information
