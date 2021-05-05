@@ -389,4 +389,4 @@ If you try to disable the first two rules without disabling the third rule (whic
        1:2013410
        1:2013411
 
-When you run ``sudo so-rule-update``, watch the "Setting Flowbit State..." section and you can see that if you disable all three (or however many rules share that flowbit) that the "Enabled XX flowbits" line is decrimented and all three rules should then be disabled in your ``all.rules``.
+When you run ``sudo so-rule-update``, watch the "Setting Flowbit State..." section and you can see that if you disable all three (or however many rules share that flowbit) that the "Enabled XX flowbits" line is decremented and all three rules should then be disabled in your ``all.rules``.
