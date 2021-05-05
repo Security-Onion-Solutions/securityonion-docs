@@ -14,9 +14,8 @@ From https://docs.saltstack.com/en/latest/:
 Firewall Requirements
 ---------------------
 
-Salt minions must be able to connect to the manager node on ports ``4505/tcp`` and ``4506/tcp``:
-
-https://docs.saltproject.io/en/getstarted/system/communication.html
+| Salt minions must be able to connect to the manager node on ports ``4505/tcp`` and ``4506/tcp``:
+| https://docs.saltproject.io/en/getstarted/system/communication.html
 
 Checking Status
 ---------------
