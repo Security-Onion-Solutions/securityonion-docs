@@ -22,4 +22,5 @@ More Information
 
 .. seealso::
 
-   For more information about AF-PACKET, please see https://www.kernel.org/doc/Documentation/networking/packet_mmap.txt.
+   | For more information about AF-PACKET, please see:
+   | https://www.kernel.org/doc/Documentation/networking/packet_mmap.txt
