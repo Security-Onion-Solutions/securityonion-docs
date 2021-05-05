@@ -55,15 +55,15 @@ Local pillar file: This is the pillar file under ``/opt/so/saltstack/local/pilla
    
 Here are some of the items that can be customized with pillar settings:
 
-:ref:`filebeat`
+- :ref:`filebeat`
  
-:ref:`firewall`
+- :ref:`firewall`
  
-:ref:`managing-alerts`
+- :ref:`managing-alerts`
 
-:ref:`suricata`
+- :ref:`suricata`
 
-:ref:`zeek`
+- :ref:`zeek`
 
 Salt Minion Startup Options
 ---------------------------
