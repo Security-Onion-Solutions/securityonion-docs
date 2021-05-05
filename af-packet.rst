@@ -11,11 +11,11 @@ AF-PACKET is built into the Linux kernel and includes fanout capabilities enabli
 
 The following processes use AF-PACKET for packet acquisition:
 
-:ref:`stenographer`
+- :ref:`stenographer`
 
-:ref:`suricata`
+- :ref:`suricata`
 
-:ref:`zeek`
+- :ref:`zeek`
 
 More Information
 ----------------
