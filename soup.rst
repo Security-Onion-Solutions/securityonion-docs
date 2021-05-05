@@ -3,6 +3,9 @@
 soup
 ====
 
+Security Onion Version Updates
+------------------------------
+
 When we release a new version of Security Onion, we update the :ref:`release-notes` section and publish a blog post to https://blog.securityonion.net. You'll want to review these for any relevant information about the individual updates.
 
 Once you're ready to install an update, use the ``soup`` command:
@@ -13,6 +16,18 @@ Once you're ready to install an update, use the ``soup`` command:
 
 If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then update :ref:`salt` and the :ref:`docker` images.
 
+Security Onion Hotfixes
+-----------------------
+
+Starting in Security Onion 2.3.50, ``soup`` can check for Security Onion hotfixes. Hotfixes will typically include updates to the :ref:`salt` code and small configuration changes that do not warrant a full release. This does not include Docker images since that would require a full release. 
+
+After applying a hotfix, you may notice that the Security Onion version in ``/etc/soversion`` stays the same. The application of the hotfix is tracked on the manager in the ``/etc/sohotfix`` file.
+
+Airgap
+------
+
+If you have an airgap deployment, please see the :ref:`airgap` section for further information.
+
 OS Updates
 ----------
 
@@ -20,22 +35,10 @@ There is an option during :ref:`Configuration` to automatically install OS updat
 
 Starting in Security Onion 2.3.50, ``soup`` will check for missing OS updates and ask if you want to install them.
     
-Hotfixes
---------
-
-Starting in Security Onion 2.3.50, ``soup`` can check for hotfixes. Hotfixes will typically include updates to the :ref:`salt` code and small configuration changes that do not warrant a full release. This does not include Docker images since that would require a full release. 
-
-After applying a hotfix, you may notice that the Security Onion version in ``/etc/soversion`` stays the same. The application of the hotfix is tracked on the manager in the ``/etc/sohotfix`` file.
-
 Agents
 ------
 
 If you've previously added any external agents (:ref:`wazuh`, :ref:`beats`, etc.), be sure to upgrade them to match the version of your upgraded components.
-
-Airgap
-------
-
-If you have an airgap deployment, please see the :ref:`airgap` section for further information.
 
 Errors
 ------
