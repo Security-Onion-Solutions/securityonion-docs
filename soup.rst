@@ -23,7 +23,9 @@ Starting in Security Onion 2.3.50, ``soup`` will check for missing OS updates an
 Hotfixes
 --------
 
-Starting in Security Onion 2.3.50, ``soup`` can check for hotfixes. Hotfixes will typically include updates to the :ref:`salt` code and small configuration changes that we want to get out to you without having to do a full release. Any changes to Docker images will follow our normal release process and the version number will change. You will notice that the version numbers after a hotfix has been applied stays the same. The application of the hotfix is tracked on the manager in the ``/etc/sohotfix`` file.
+Starting in Security Onion 2.3.50, ``soup`` can check for hotfixes. Hotfixes will typically include updates to the :ref:`salt` code and small configuration changes that do not warrant a full release. This does not include Docker images since that would require a full release. 
+
+After applying a hotfix, you may notice that the Security Onion version in ``/etc/soversion`` stays the same. The application of the hotfix is tracked on the manager in the ``/etc/sohotfix`` file.
 
 Agents
 ------
