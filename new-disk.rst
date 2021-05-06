@@ -50,4 +50,4 @@ Restart services:
 Method 3: Make /nsm a symlink to the new logging location
 ---------------------------------------------------------
 
-Another option is to make ``/nsm`` a symbolic link to the new logging location. If doing this after installation, you will need to stop services, move data, and then restart services. Certain services like AppArmor may need special configuration to handle the symlink.
+A variation on Method 2 is to make ``/nsm`` a symbolic link to the new logging location. Certain services like AppArmor may need special configuration to handle the symlink.
