@@ -26,7 +26,7 @@ Stop services:
   sudo systemctl disable salt-minion
   sudo reboot
 
-That should prevent most things from starting. If it is a manager you will need to do ``sudo service docker stop`` after the reboot.
+That should prevent most things from starting. If performing this on a manager you will need to do ``sudo service docker stop`` after the reboot.
 
 Move the data:
 
@@ -36,7 +36,7 @@ Move the data:
   sudo mkdir /nsm
   # add your new file system to mount to /nsm in /etc/fstab
   sudo mount -a
-  # make sure it's mounted correctly then run:
+  # make sure it's mounted correctly before continuing!
   sudo mv /nsm.old/* /nsm/
   sudo rm -rf /nsm.old
   
