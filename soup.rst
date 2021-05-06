@@ -9,7 +9,7 @@ soup
 
     sudo soup
 
-If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then check for other updates.
+If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then check for other updates. This includes Security Onion version updates, Security Onion hotfixes, and operating system (OS) updates.
 
 Security Onion Version Updates
 ------------------------------
@@ -25,18 +25,18 @@ Starting in Security Onion 2.3.50, ``soup`` can check for Security Onion hotfixe
 
 After applying a hotfix, you may notice that the Security Onion version in ``/etc/soversion`` stays the same. The application of the hotfix is tracked on the manager in the ``/etc/sohotfix`` file.
 
-Airgap
-------
-
-If you have an airgap deployment, please see the :ref:`airgap` section for further information.
-
 OS Updates
 ----------
 
 There is an option during :ref:`Configuration` to automatically install OS updates.
 
 Starting in Security Onion 2.3.50, ``soup`` will check for missing OS updates and ask if you want to install them.
-    
+
+Airgap
+------
+
+If you have an airgap deployment, please see the :ref:`airgap` section for further information.
+
 Agents
 ------
 
