@@ -3,9 +3,17 @@
 Firewall
 ========
 
+This section will cover both network firewalls outside of Security Onion and the host-based firewall built into Security Onion.
+
+Network Firewalls
+-----------------
+
+This first sub-section will discuss network firewalls outside of Security Onion.
+
 Internet Communication
-----------------------
-When configuring network-based firewalls for Internet-connected deployments (non-airgap), you'll want to ensure that nodes can connect outbound to the following:
+~~~~~~~~~~~~~~~~~~~~~~
+
+When configuring network firewalls for Internet-connected deployments (non-airgap), you'll want to ensure that nodes can connect outbound to the following:
 
 - repo.securityonion.net (CentOS Updates)   
 - raw.githubusercontent.com (Security Onion public key)   
@@ -21,8 +29,9 @@ When configuring network-based firewalls for Internet-connected deployments (non
 - packages.wazuh.com (Wazuh packages - Ubuntu only) 
 
 Node Communication
-------------------
-When configuring network-based firewalls, you'll want to take into consideration the communication/ports required for nodes to talk to one another. 
+~~~~~~~~~~~~~~~~~~
+
+When configuring network firewalls for distributed deployments, you'll want to take into consideration the communication/ports required for nodes to talk to one another. 
 
 All nodes to manager:
 
@@ -39,6 +48,11 @@ Search nodes from/to manager:
 
 - 9300 (Node-to-node for Elasticsearch)
 - 9696 (Redis)
+
+Host Firewall
+-------------
+
+The remainder of this section will cover the host firewall built into Security Onion.
 
 Port Groups
 -----------
