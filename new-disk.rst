@@ -3,9 +3,11 @@
 Adding a new disk
 =================
 
-Before doing this in production, make sure you practice this on a non-production system!
+If you ever need to add a new disk to expand your ``/nsm`` partition, there are at least 3 different ways to do this. 
 
-There are at least 3 different ways to do this:
+.. warning::
+
+  Before doing this in production, make sure you practice this on a non-production system!
 
 Method 1: LVM (Logical Volume Management)
 -----------------------------------------
