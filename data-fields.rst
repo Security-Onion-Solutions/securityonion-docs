@@ -5,7 +5,13 @@ Data Fields
 
 This page references the various types of data fields utilized by the Elastic Stack in Security Onion.
 
-The various fields types are described below.
+ECS
+---
+
+We've begun transitioning to Elastic Common Schema (ECS). This is a work-in-progress and will continue as time goes on.
+
+| For more information about ECS, please see:
+| https://www.elastic.co/guide/en/ecs/current/ecs-reference.html
 
 Fields
 ------
