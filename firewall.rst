@@ -31,7 +31,7 @@ When configuring network firewalls for Internet-connected deployments (non-airga
 Node Communication
 ~~~~~~~~~~~~~~~~~~
 
-When configuring network firewalls for distributed deployments, you'll want to take into consideration the communication/ports required for nodes to talk to one another. 
+When configuring network firewalls for distributed deployments, you'll want to ensure that nodes can connect as shown below. 
 
 All nodes to manager:
 
