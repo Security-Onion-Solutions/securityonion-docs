@@ -21,7 +21,7 @@ If ``soup`` finds a full version update, then it will update :ref:`salt` code an
 Security Onion Hotfixes
 -----------------------
 
-Starting in Security Onion 2.3.50, ``soup`` can check for Security Onion hotfixes. Hotfixes will typically include updates to the :ref:`salt` code and small configuration changes that do not warrant a full version update. This does not include Docker images since that would require a version update. 
+Starting in Security Onion 2.3.50, ``soup`` can check for Security Onion hotfixes. Hotfixes typically include updates to the :ref:`salt` code and small configuration changes that do not warrant a full version update. This does not include Docker images since that would require a full version update. 
 
 After applying a hotfix, you may notice that the Security Onion version in ``/etc/soversion`` stays the same. The application of the hotfix is tracked on the manager in the ``/etc/sohotfix`` file.
 
