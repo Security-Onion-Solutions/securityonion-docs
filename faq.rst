@@ -21,7 +21,7 @@ Install / Update / Upgrade
 Why won't the ISO image boot on my machine?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please see the `TroubleBooting <TroubleBooting>`__ section.
+Please see the :ref:`trouble-booting` section.
 
 What's the recommended procedure for installing Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -41,18 +41,7 @@ Please see the :ref:`soup` section.
 What connectivity does Security Onion need to stay up to date?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- Ubuntu PPAs (Ubuntu Updates)  
-- repo.securityonion.net (CentOS Updates)   
-- raw.githubusercontent.com (Security Onion public key)   
-- sigs.securityonion.net (Signature files for Security Onion containers)  
-- ghcr.io (Container downloads)  
-- rules.emergingthreatspro.com (ET IDS rules)  
-- www.snort.org (Paid snort ruleset)  
-- github.com (Strelka and Sigma rules updates)  
-- notary.kolide.co (osquery agent update)  
-- download.docker.com (Docker packages - Ubuntu only)
-- repo.saltstack.com (Salt packages - Ubuntu only)
-- packages.wazuh.com (Wazuh packages - Ubuntu only)    
+Please see the :ref:`firewall` section.
 
 What do I need to do if I'm behind a proxy?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
