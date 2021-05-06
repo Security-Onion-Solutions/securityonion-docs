@@ -3,6 +3,23 @@
 Firewall
 ========
 
+Internet Communication
+----------------------
+When configuring network-based firewalls for Internet-connected deployments (non-airgap), you'll want to ensure that nodes can connect outbound to the following:
+
+- repo.securityonion.net (CentOS Updates)   
+- raw.githubusercontent.com (Security Onion public key)   
+- sigs.securityonion.net (Signature files for Security Onion containers)  
+- ghcr.io (Container downloads)  
+- rules.emergingthreatspro.com (Emerging Threats IDS rules)  
+- www.snort.org (Paid Snort Talos ruleset)  
+- github.com (Strelka and Sigma rules updates)  
+- notary.kolide.co (osquery agent update)  
+- Ubuntu PPAs (OS Updates - Ubuntu only)  
+- download.docker.com (Docker packages - Ubuntu only)
+- repo.saltstack.com (Salt packages - Ubuntu only)
+- packages.wazuh.com (Wazuh packages - Ubuntu only) 
+
 Node Communication
 ------------------
 When configuring network-based firewalls, you'll want to take into consideration the communication/ports required for nodes to talk to one another. 
