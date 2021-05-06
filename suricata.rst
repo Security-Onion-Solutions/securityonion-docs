@@ -78,6 +78,11 @@ To pin Suricata workers to specific CPUs:
   
      sudo so-suricata-start
      
+HOME_NET
+--------
+
+To configure HOME_NET, please see the :ref:`homenet` section. 
+
 Configuration
 -------------
 
