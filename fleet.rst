@@ -45,7 +45,7 @@ Then login using a valid username and password:
 
     ./fleetctl login
 
-| fleetctl documentation can be found here:
+| ``fleetctl`` documentation can be found here:
 | https://github.com/fleetdm/fleet/blob/master/docs/1-Using-Fleet/2-fleetctl-CLI.md
 
 
