@@ -29,19 +29,24 @@ Fleet logs can be found in ``/opt/so/log/fleet/``.
 
 
 fleetctl
-------------------
+--------
 
-fleetctl is a commandline utility that allows you to manager your Fleet instance, as well as run live queries from the cli.
+``fleetctl`` is a command-line utility that allows you to manage your Fleet instance and run live queries from the cli.
 
-If using fleetctl from the Manager and Fleet is enabled on the Manager, first set the fleetctl login configuration:
+If using ``fleetctl`` from the Manager and Fleet is enabled on the Manager, first set the ``fleetctl`` login configuration:
 
-``./fleetctl config set --address https://localhost:8080 --url-prefix fleet --tls-skip-verify``
+::
+
+    ./fleetctl config set --address https://localhost:8080 --url-prefix fleet --tls-skip-verify
 
 Then login using a valid username and password:
 
-``./fleetctl login``
+::
 
-fleetctl documentation can be found here:  https://github.com/fleetdm/fleet/blob/master/docs/1-Using-Fleet/2-fleetctl-CLI.md
+    ./fleetctl login
+
+| fleetctl documentation can be found here:
+| https://github.com/fleetdm/fleet/blob/master/docs/1-Using-Fleet/2-fleetctl-CLI.md
 
 
 More Information
