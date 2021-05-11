@@ -369,19 +369,23 @@ A suppression rule allows you to make some finer grained decisions about certain
 Why is idstools ignoring disabled rules
 ---------------------------------------
 
-If your syntax is correct, you are likely trying to disable a rule that has flowbits set. For a quick primer on flowbits see http://blog.snort.org/2011/05/resolving-flowbit-dependancies.html and section 3.6.10 of the Snort Manual (http://www.snort.org/docs).
+idstools may seem like it is ignoring your disabled rules request if you try to disable a rule that has flowbits set. For a quick primer on flowbits, see https://blog.snort.org/2011/05/resolving-flowbit-dependancies.html.
 
-Let's look at the following rules using:
+For example, consider the following rules that reference the ``ET.MSSQL`` flowbit:
 
 ::
 
        alert tcp $HOME_NET any -> $EXTERNAL_NET !1433 (msg:"ET POLICY Outbound MSSQL Connection to Non-Standard Port - Likely Malware"; flow:to_server,established; content:"|12 01 00|"; depth:3; content:"|00 00 00 00 00 00 15 00 06 01 00 1b 00 01 02 00 1c 00|"; distance:1; within:18; content:"|03 00|"; distance:1; within:2; content:"|00 04 ff 08 00 01 55 00 00 00|"; distance:1; within:10; flowbits:set,ET.MSSQL; classtype:bad-unknown; sid:2013409; rev:3;)
 
+::
+
        alert tcp $HOME_NET any -> $EXTERNAL_NET 1433 (msg:"ET POLICY Outbound MSSQL Connection to Standard port (1433)"; flow:to_server,established; content:"|12 01 00|"; depth:3; content:"|00 00 00 00 00 00 15 00 06 01 00 1b 00 01 02 00 1c 00|"; distance:1; within:18; content:"|03 00|"; distance:1; within:2; content:"|00 04 ff 08 00 01 55 00 00 00|"; distance:1; within:10; flowbits:set,ET.MSSQL; classtype:bad-unknown; sid:2013410; rev:4;)
+
+::
 
        alert tcp $HOME_NET any -> $EXTERNAL_NET !1433 (msg:"ET TROJAN Bancos.DV MSSQL CnC Connection Outbound"; flow:to_server,established; flowbits:isset,ET.MSSQL; content:"|49 00 B4 00 4D 00 20 00 54 00 48 00 45 00 20 00 4D 00 41 00 53 00 54 00 45 00 52 00|"; classtype:trojan-activity; sid:2013411; rev:1;)
 
-If you try to disable the first two rules without disabling the third rule (which has "flowbits:isset...) the third rule could never fire due to one of the first two rules needing to fire first. idstools (helpfully) resolves all of your flowbit dependencies, and in this case, is "re-enabling" that rule for you on the fly. Disabling all three of those rules by adding the following to disablesid.conf has the obvious negative effect of disabling all three of the rules:
+If you try to disable the first two rules without disabling the third rule (which has ``flowbits:isset,ET.MSSQL``) the third rule could never fire due to one of the first two rules needing to fire first. idstools helpfully resolves all of your flowbit dependencies, and in this case, is "re-enabling" that rule for you on the fly. Disabling all three of those rules by adding the following to ``disablesid.conf`` has the obvious negative effect of disabling all three of the rules:
 
 ::
 
