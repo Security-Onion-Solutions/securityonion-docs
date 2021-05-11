@@ -371,15 +371,21 @@ Why is idstools ignoring disabled rules
 
 idstools may seem like it is ignoring your disabled rules request if you try to disable a rule that has flowbits set. For a quick primer on flowbits, see https://blog.snort.org/2011/05/resolving-flowbit-dependancies.html.
 
-For example, consider the following rules that reference the ``ET.MSSQL`` flowbit:
+For example, consider the following rules that reference the ``ET.MSSQL`` flowbit.
+
+First rule:
 
 ::
 
        alert tcp $HOME_NET any -> $EXTERNAL_NET !1433 (msg:"ET POLICY Outbound MSSQL Connection to Non-Standard Port - Likely Malware"; flow:to_server,established; content:"|12 01 00|"; depth:3; content:"|00 00 00 00 00 00 15 00 06 01 00 1b 00 01 02 00 1c 00|"; distance:1; within:18; content:"|03 00|"; distance:1; within:2; content:"|00 04 ff 08 00 01 55 00 00 00|"; distance:1; within:10; flowbits:set,ET.MSSQL; classtype:bad-unknown; sid:2013409; rev:3;)
 
+Second rule:
+
 ::
 
        alert tcp $HOME_NET any -> $EXTERNAL_NET 1433 (msg:"ET POLICY Outbound MSSQL Connection to Standard port (1433)"; flow:to_server,established; content:"|12 01 00|"; depth:3; content:"|00 00 00 00 00 00 15 00 06 01 00 1b 00 01 02 00 1c 00|"; distance:1; within:18; content:"|03 00|"; distance:1; within:2; content:"|00 04 ff 08 00 01 55 00 00 00|"; distance:1; within:10; flowbits:set,ET.MSSQL; classtype:bad-unknown; sid:2013410; rev:4;)
+
+Third rule:
 
 ::
 
