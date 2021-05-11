@@ -369,7 +369,7 @@ A suppression rule allows you to make some finer grained decisions about certain
 Why is idstools ignoring disabled rules
 ---------------------------------------
 
-idstools may seem like it is ignoring your disabled rules request if you try to disable a rule that has flowbits set. For a quick primer on flowbits, see https://blog.snort.org/2011/05/resolving-flowbit-dependancies.html.
+``idstools`` may seem like it is ignoring your disabled rules request if you try to disable a rule that has flowbits set. For a quick primer on flowbits, see https://blog.snort.org/2011/05/resolving-flowbit-dependancies.html.
 
 For example, consider the following rules that reference the ``ET.MSSQL`` flowbit.
 
