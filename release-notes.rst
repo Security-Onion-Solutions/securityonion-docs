@@ -5,6 +5,13 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
+2.3.51 Changes
+----------------
+
+- FIX: Mixed case sensor hostnames lead to incomplete PCAP jobs `#4220 <https://github.com/Security-Onion-Solutions/securityonion/issues/4220>`_
+- FIX: Reconcile InfluxDB/Grafana containers in certain setup modes `#4207 <https://github.com/Security-Onion-Solutions/securityonion/issues/4207>`_
+- FIX: Turn down log level for Salt States and Zeek `#4231 <https://github.com/Security-Onion-Solutions/securityonion/issues/4231>`_
+
 2.3.50 Changes
 ----------------
 
