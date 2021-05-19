@@ -17,6 +17,10 @@ Now that you've reviewed the :ref:`release-notes` in the previous section, you'r
    https://github.com/Security-Onion-Solutions/securityonion/blob/master/VERIFY_ISO.md
 -  If downloading an Ubuntu or CentOS ISO image, please verify that ISO image using whatever instructions they provide.
 
+.. warning::
+
+   If you download our ISO image and then scan it with antivirus, it is possible that one or more of the files included in the ISO image may generate false positives. For example, Windows Defender may flag ``SecurityOnion\agrules\strelka\yara\thor-webshells.yar`` as a backdoor when it is really just a Yara ruleset that looks for backdoors.
+   
 .. seealso::
 
   If you're going to create a bootable USB from one of the ISO images above, there are many ways to do that.  One popular choice that seems to work well for many folks is Balena Etcher which can be downloaded at https://www.balena.io/etcher/.
