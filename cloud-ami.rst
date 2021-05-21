@@ -34,13 +34,13 @@ Standalone:
 
 - Quantity: 1
 - Type: t3a.xlarge
-- Storage: 200GB EBS (Optimized) gp2
+- Storage: 200GB EBS (Optimized) gp3
 
 Evaluation
 
 - Quantity: 1
 - Type: t3a.2xlarge
-- Storage: 100GB EBS (Optimized) gp2
+- Storage: 100GB EBS (Optimized) gp3
 - Storage: 100GB Instance Storage (SSD/NVMe)
   
 Distributed Grid
@@ -54,26 +54,26 @@ VPN Node
 
 - Quantity: 1
 - Type: t3a.micro (Nitro eligible)
-- Storage: 50GB EBS (Optimized) gp2
+- Storage: 50GB EBS (Optimized) gp3
   
 Manager
 
 - Quantity: 1
 - Type: m5a.large
-- Storage: 300GB EBS (Optimized) gp2
+- Storage: 300GB EBS (Optimized) gp3
   
 Search Nodes
 
 - Quantity: 2 or more
 - Type: m5ad.xlarge
-- Storage: 200GB EBS (Optimized) gp2
+- Storage: 200GB EBS (Optimized) gp3
 - Storage: 150GB Instance Storage (SSD/NVMe)
   
 Sensor monitoring the VPN ingress
 
 - Quantity: 1
 - Type: c5a.xlarge
-- Storage: 500GB EBS (Optimized) gp2
+- Storage: 500GB EBS (Optimized) gp3
 
 Create Monitoring Interface 
 ###########################
