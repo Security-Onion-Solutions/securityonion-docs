@@ -54,7 +54,7 @@ Sometimes, Wazuh may recognize legitimate activity as potentially malicious and 
 Tuning Rules
 ------------
 
-You can add new rules and modify existing rules in ``/opt/so/rules/hids/local_rules.xml``.
+You can add new rules in ``/opt/so/rules/hids/local_rules.xml``. You can also modify existing rules by copying the rule to ``/opt/so/rules/hids/local_rules.xml``, making your changes, and adding ``overwrite="yes"`` as shown at https://documentation.wazuh.com/current/learning-wazuh/replace-stock-rule.html.
 
 Adding Agents
 -------------
