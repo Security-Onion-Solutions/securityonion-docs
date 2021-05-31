@@ -19,7 +19,7 @@ What is being backed up?
 Kibana Customizations
 ---------------------
 
-Kibana customizations are located in the ``.kibana`` indices. Periodic snapshots of this data will preserve them in caes of failure. You can also utilize true elastic clustering to add replicas to ensure quick recovery.
+Kibana customizations are located in the ``.kibana`` indices. Periodic snapshots of this data will preserve them in case of failure. You can also utilize true elastic clustering to add replicas to ensure quick recovery.
 
 Elastic Data
 ------------
