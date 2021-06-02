@@ -23,6 +23,8 @@ If you ever need to reload dashboards, you can run the following command on your
 
     so-kibana-config-load
     
+If you try to modify a default dashboard, your change will get overwritten. Instead of modifying, copy the desired dashboard and edit the copy.
+
 Pivoting
 --------
 
