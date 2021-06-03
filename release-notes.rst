@@ -5,6 +5,13 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
+2.3.52 Changes
+----------------
+
+- FIX: packetloss.sh can cause Zeek to segfault `#4398 <https://github.com/Security-Onion-Solutions/securityonion/issues/4398>`_
+- FIX: soup now generates repo tarball with correct folder structure `#4368 <https://github.com/Security-Onion-Solutions/securityonion/issues/4368>`_
+- UPGRADE: Zeek 4.0.2 `#4395 <https://github.com/Security-Onion-Solutions/securityonion/issues/4395>`_
+
 2.3.51 Changes
 ----------------
 
