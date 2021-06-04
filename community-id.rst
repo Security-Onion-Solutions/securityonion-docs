@@ -14,9 +14,8 @@ From https://github.com/corelight/community-id-spec:
     
 Security Onion enables the native Community ID support in both :ref:`zeek` and :ref:`suricata`. 
 
-We sponsored the development of Community ID support in :ref:`osquery`:
-
-https://dactiv.llc/blog/correlate-osquery-network-connections/
+| We sponsored the development of Community ID support in :ref:`osquery`:
+| https://webcache.googleusercontent.com/search?q=cache:RGB6YUatH0gJ:https://dactiv.llc/blog/correlate-osquery-network-connections/+&cd=1&hl=en&ct=clnk&gl=us
 
 For tools that don't natively support Community ID, we sponsored the development of an :ref:`elasticsearch` Ingest Processor to automatically generate Community ID values:
 
