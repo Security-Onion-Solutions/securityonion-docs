@@ -114,7 +114,7 @@ Please keep in mind that we don't provide free support for third party systems, 
 
 Original Event Forwarding
 -------------------------
-To forward events to an external destination with minimal modifications to the original event, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom`` to clone the events and match the cloned events in the output. We recommend using either the ``http``, ``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
+To forward events to an external destination with minimal modifications to the original event, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom/`` to clone the events and match the cloned events in the output. We recommend using either the ``http``, ``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
 
 For example, to forward all Zeek events from the ``dns`` dataset, we could use a configuration like the following:
 
@@ -144,7 +144,7 @@ For example, to forward all Zeek events from the ``dns`` dataset, we could use a
 
     When using the ``tcp`` output plugin, if the destination host/port is down, it will cause the Logstash pipeline to be blocked.  To avoid this behavior, try using the other output options, or consider having forwarded logs use a separate Logstash pipeline.
     
-    Also keep in mind, when forwarding logs from the manager, Suricata's ``dataset`` value will still be set to ``common``, as the events have not yet been processed by the Ingest Node configuration.
+    Also keep in mind that when forwarding logs from the manager, Suricata's ``dataset`` value will still be set to ``common``, as the events have not yet been processed by the Ingest Node configuration.
     
 Copy ``/opt/so/saltstack/default/pillar/logstash/manager.sls`` to ``/opt/so/saltstack/local/pillar/logstash/manager.sls``, and append your newly created file to the list of config files used for the ``manager`` pipeline:
 
@@ -156,13 +156,15 @@ Monitor events flowing through the output with ``curl -s localhost:9600/_node/st
 
 Modified Event Forwarding
 --------------------------
-To forward events to an external destination AFTER they have traversed all of the data pipelines used by Security Onion, perform the same steps as above, but instead of adding your reference for your Logstash output to the ``manager.sls``, add it to the ``search.sls``, and restart services on the search nodes with something like:
+To forward events to an external destination AFTER they have traversed all of the data pipelines used by Security Onion, perform the same steps as above, but instead of adding the reference for your Logstash output to ``manager.sls``, add it to ``search.sls`` instead, and then restart services on the search nodes with something like:
 
-sudo salt "*_search*" cmd.run "so-logstash-restart"
+::
+
+    sudo salt "*_search*" cmd.run "so-logstash-restart"
 
 Monitor events flowing through the output with ``curl -s localhost:9600/_node/stats | jq .pipelines.search`` on the search nodes.
 
-Keep in mind, events will be forwarded from all applicable search nodes, as opposed to just the manager.
+Please keep in mind that events will be forwarded from all applicable search nodes, as opposed to just the manager.
 
 Queue
 -----
