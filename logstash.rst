@@ -112,7 +112,9 @@ Forwarding Events to an External Destination
 
 Please keep in mind that we don't provide free support for third party systems, so this section will be just a brief introduction to how you would send syslog to external syslog collectors. If you need commercial support, please see https://www.securityonionsolutions.com.
 
-To forward events to an external destination, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom`` to clone the events and match the cloned events in the output. We recommend using either the ``http``, ``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
+Original Event Forwarding
+-------------------------
+To forward events to an external destination with minimal modifications to the original event, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom`` to clone the events and match the cloned events in the output. We recommend using either the ``http``, ``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
 
 For example, to forward all Zeek events from the ``dns`` dataset, we could use a configuration like the following:
 
@@ -151,6 +153,16 @@ Copy ``/opt/so/saltstack/default/pillar/logstash/manager.sls`` to ``/opt/so/salt
 Restart Logstash on the manager with ``so-logstash-restart``.
 
 Monitor events flowing through the output with ``curl -s localhost:9600/_node/stats | jq .pipelines.manager``.
+
+Modified Event Forwarding
+--------------------------
+To forward events to an external destination AFTER they have traversed all of the data pipelines used by Security Onion, perform the same steps as above, but instead of adding your reference for your Logstash output to the ``manager.sls``, add it to the ``search.sls``, and restart services on the search nodes with something like:
+
+sudo salt "*_search*" cmd.run "so-logstash-restart"
+
+Monitor events flowing through the output with ``curl -s localhost:9600/_node/stats | jq .pipelines.search`` on the search nodes.
+
+Keep in mind, events will be forwarded from all applicable search nodes, as opposed to just the manager.
 
 Queue
 -----
