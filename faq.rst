@@ -134,7 +134,7 @@ Why is my disk filling up?
 Security Onion records full packet capture to disk via :ref:`stenographer`.
 
 Additionally, if you are running version 2.3.40 on a standalone installation or a combined manager/search node, please see `this announcement
-<https://github.com/Security-Onion-Solutions/securityonion/discussions/3738>`.
+<https://github.com/Security-Onion-Solutions/securityonion/discussions/3738>`_.
 
 `back to top <#top>`__
 
