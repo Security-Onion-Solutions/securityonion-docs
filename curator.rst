@@ -23,18 +23,13 @@ Creating Actions
 ----------------
 New action files should be added in ``/opt/so/saltstack/local/salt/curator/files/action/``, owned by ``curator:socore``, and will be copied into ``/opt/so/conf/curator/action/``.
 
-Script file
------------
-
-The creation of the script file tells Salt what to run in order to run your curator job. This file must be placed in ``/opt/so/saltstack/local/salt/curator/files/bin/``. 
+Next, the script file tells Salt what to run in order to run your Curator job must be created for the new action. This script file must be placed in ``/opt/so/saltstack/local/salt/curator/files/bin/``. 
 See ``/opt/so/saltstack/default/salt/curator/files/bin/`` for examples of script files, copy one over to modify if needed.
 
-Saltstack file
---------------
-
 Next, the Saltstack configuration file for the Curator (``init.sls``) must be modified. This file is located at ``/opt/so/saltstack/local/salt/curator`` and will copy files over as well as set up the cronjob.
-Create a backup of this file by copying it to a safe directory. Then, copy the default file located at ``/opt/so/saltstack/default/salt/curator/init.sls`` to the location of the current file and run a ``diff`` against the two ``init.sls``. Inside this file that was just copied over, the "cur" and "cron" sections must be added for your Curator job along with anything included in the ``diff`` command.
-Either copy one of the existing sections and modify it, or use these examples, courtesy of user gebhard73 in `discussion #4492
+Create a backup of this file by copying it to a safe directory. Then, copy the default file located at ``/opt/so/saltstack/default/salt/curator/init.sls`` to the location of the current file and run a ``diff`` against the two ``init.sls``. Inside this file that was just copied over, the "cur" and "cron" sections must be added for your Curator job along with anything included in the ``diff`` command. Do not edit the original file in the directory.
+
+To add the new Curator job, copy one of the existing sections and modify it, or use these examples, courtesy of user gebhard73 in `discussion #4492
 <https://github.com/Security-Onion-Solutions/securityonion/discussions/4492>`_: 
 
 For the "cur" section...
