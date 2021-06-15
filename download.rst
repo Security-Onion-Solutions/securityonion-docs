@@ -19,7 +19,7 @@ Now that you've reviewed the :ref:`release-notes` in the previous section, you'r
 
 .. warning::
 
-   If you download our ISO image and then scan it with antivirus, it is possible that one or more of the files included in the ISO image may generate false positives. For example, Windows Defender may flag ``SecurityOnion\agrules\strelka\yara\thor-webshells.yar`` as a backdoor when it is really just a Yara ruleset that looks for backdoors. As another example, McAfee may detect ``default_exe.exe`` (part of :ref:`strelka`) as ``Artemis!EE468A4B1F55``
+   If you download our ISO image and then scan it with antivirus, it is possible that one or more of the files included in the ISO image may generate false positives. For example, Windows Defender may flag ``SecurityOnion\agrules\strelka\yara\thor-webshells.yar`` (part of :ref:`strelka`) as a backdoor when it is really just a Yara ruleset that looks for backdoors. As another example, McAfee may detect ``default_exe.exe`` (another part of :ref:`strelka`) as ``Artemis!EE468A4B1F55``
    
 .. seealso::
 
