@@ -86,3 +86,21 @@ Snort Subscriber (Talos)
 | For more information, see:
 | https://www.snort.org/downloads/#rule-downloads
 | https://snort.org/documents/registered-vs-subscriber
+
+Other
+------------------------
+
+- not officially managed/supported by Security Onion
+- license fee may or may not apply
+
+To add other remotely-accessible rulesets, add an entry under ``urls`` for the ruleset URL in ``/opt/so/saltstack/local/pillar/minions/<manager.sls>``:
+
+::
+
+  idstools:
+    config:
+      ...primary rulset...
+      ...primary ruleset oinkcode...
+      urls:
+        - https://ruleseturlhere
+
