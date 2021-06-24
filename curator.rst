@@ -21,17 +21,27 @@ As your disk reaches capacity, Curator starts deleting old indices to prevent yo
 
 Creating Actions
 ----------------
-New action files should be added in ``/opt/so/saltstack/local/salt/curator/files/action/``, owned by ``curator:socore``, and will be copied into ``/opt/so/conf/curator/action/``.
+If you would like to create a custom Curator action, you will need to create a Curator action file and corresponding script file and then update Curator's state file.
 
-Next, the script file tells Salt what to run in order to run your Curator job must be created for the new action. This script file must be placed in ``/opt/so/saltstack/local/salt/curator/files/bin/``. 
-See ``/opt/so/saltstack/default/salt/curator/files/bin/`` for examples of script files, copy one over to modify if needed.
+Curator action file
+~~~~~~~~~~~~~~~~~~~
+You can add the action file to ``/opt/so/saltstack/local/salt/curator/files/action/``. Make sure the file ownership is ``curator:socore``. The file will automatically get copied into ``/opt/so/conf/curator/action/``.
 
-Next, the Saltstack configuration file for the Curator (``init.sls``) must be modified. This file is located at ``/opt/so/saltstack/local/salt/curator`` and will copy files over as well as set up the cronjob.
-Create a backup of this file by copying it to a safe directory. Then, copy the default file located at ``/opt/so/saltstack/default/salt/curator/init.sls`` to the location of the current file and run a ``diff`` against the two ``init.sls``. Inside this file that was just copied over, the "cur" and "cron" sections must be added for your Curator job along with anything included in the ``diff`` command. Do not edit the original file in the directory.
+Script file
+~~~~~~~~~~~
+The script file is what actually executes Curator and specifies the action file. This script file must be placed in ``/opt/so/saltstack/local/salt/curator/files/bin/``. See ``/opt/so/saltstack/default/salt/curator/files/bin/`` for examples of script files and copy one over to modify if needed.
 
-To add the new Curator job, copy one of the existing sections and modify it, or use these examples:
+State file
+~~~~~~~~~~
+Next, Curator's state file (``init.sls``) must be modified. This will be located at ``/opt/so/saltstack/local/salt/curator/`` and will copy files and create the cron job. 
 
-For the "cur" section...
+If ``/opt/so/saltstack/local/salt/curator/init.sls`` does not already exist, you can copy ``/opt/so/saltstack/default/salt/curator/init.sls`` to ``/opt/so/saltstack/local/salt/curator/init.sls`` and modify as shown below.
+
+If ``/opt/so/saltstack/local/salt/curator/init.sls`` does already exist, create a backup of the file by copying it to a safe directory. Then, copy the default file located at ``/opt/so/saltstack/default/salt/curator/init.sls`` to the location of the current file and run a ``diff`` against the two ``init.sls`` files. Inside this file that was just copied over, the "cur" and "cron" sections must be added for your Curator job along with anything included in the ``diff`` output. Do not edit the original file in the directory.
+
+To add the new Curator job, copy and modify one of the existing sections or use these examples:
+
+For the "cur" section:
 ::
   cur<custom-name>:
     file.managed:
@@ -41,7 +51,7 @@ For the "cur" section...
       - group: 939
       - mode: 755
 
-For the "cron" section...
+For the "cron" section:
 ::
   so-curator<custom-name>:
    cron.present:
@@ -53,11 +63,11 @@ For the "cron" section...
      - month: '*'
      - dayweek: '*'
 
-This particular cron section will run the task every minute. After this, restart the curator with ``so-curator-restart`` and note any errors. Changes are not errors.
+This particular cron section will run the task every minute. After this, restart Curator with ``sudo so-curator-restart`` and note any errors (changes are not errors).
 
-To confirm that the job was added correctly, run ``crontab -l`` and look for the new task's cronjob. 
+To confirm that the job was added correctly, run ``crontab -l`` and look for the new task's cron job. 
 
-If the task's cronjob does not show up, there were errors during the restart process. You must fix those errors for the cronjob to be created.
+If the task's cron job does not show up, then there may have been errors during the restart process. You must fix those errors for the cron job to be created.
 
 Logs
 ----
