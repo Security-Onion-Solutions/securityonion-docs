@@ -74,7 +74,7 @@ The default allow rules for each node are defined by its role (manager, searchno
 
 There are two directories that contain the yaml files for the firewall configuration.
 
-``/opt/so/saltstack/default/firewall``
+``/opt/so/saltstack/default/salt/firewall``
 
 This is where the default firewall rules are located. The files in this directory should not be modified as they could possibly be overwritten during a soup update in the event we update those files.
 
