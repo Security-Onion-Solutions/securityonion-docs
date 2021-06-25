@@ -5,6 +5,45 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
+2.3.60 Changes
+----------------
+
+- FEATURE: Ability to change default SOC timezone instead of using browser's timezone `#4261 <https://github.com/Security-Onion-Solutions/securityonion/issues/4261>`_
+- FEATURE: Add SOC database to the backups `#3748 <https://github.com/Security-Onion-Solutions/securityonion/issues/3748>`_
+- FEATURE: Add so-elasticsearch-query tool `#4437 <https://github.com/Security-Onion-Solutions/securityonion/issues/4437>`_
+- FEATURE: Create a new Quick Drilldown option in SOC `#4469 <https://github.com/Security-Onion-Solutions/securityonion/issues/4469>`_
+- FEATURE: Display Security Onion version number in so-setup `#3348 <https://github.com/Security-Onion-Solutions/securityonion/issues/3348>`_
+- FEATURE: Elastic Auth `#1423 <https://github.com/Security-Onion-Solutions/securityonion/issues/1423>`_
+- FEATURE: Implement retention policy for InfluxDB `#3264 <https://github.com/Security-Onion-Solutions/securityonion/issues/3264>`_
+- FEATURE: New Grafana dashboards for InfluxDB RPs `#4609 <https://github.com/Security-Onion-Solutions/securityonion/issues/4609>`_
+- FEATURE: Pillarize Filebeat Modules `#3859 <https://github.com/Security-Onion-Solutions/securityonion/issues/3859>`_
+- FEATURE: Pivot from Alerts/Hunt to CyberChef `#4081 <https://github.com/Security-Onion-Solutions/securityonion/issues/4081>`_
+- FEATURE: Pivot from SOC PCAP to CyberChef `#1596 <https://github.com/Security-Onion-Solutions/securityonion/issues/1596>`_
+- FEATURE: Support adjustable SOC session timeout `#4586 <https://github.com/Security-Onion-Solutions/securityonion/issues/4586>`_
+- FIX: Add a prompt when soup requires the path or cdrom device to be input `#3551 <https://github.com/Security-Onion-Solutions/securityonion/issues/3551>`_
+- FIX: Add event_data to Elasticsearch template(s) `#4012 <https://github.com/Security-Onion-Solutions/securityonion/issues/4012>`_
+- FIX: Allow for spaces in password on kickstart script (ISO)  `#1079 <https://github.com/Security-Onion-Solutions/securityonion/issues/1079>`_
+- FIX: Change Acknowledge, Escalate, and expandEvent buttons from title to tooltip `#4497 <https://github.com/Security-Onion-Solutions/securityonion/issues/4497>`_
+- FIX: Disallow so-suricata-start from running on the manager node `#2977 <https://github.com/Security-Onion-Solutions/securityonion/issues/2977>`_
+- FIX: Fail curl requests if the remote server responds with a failing status code `#4266 <https://github.com/Security-Onion-Solutions/securityonion/issues/4266>`_
+- FIX: Implement error handling for soup `#3220 <https://github.com/Security-Onion-Solutions/securityonion/issues/3220>`_
+- FIX: Improve PCAP job lookup performance by providing a tighter time range `#4320 <https://github.com/Security-Onion-Solutions/securityonion/issues/4320>`_
+- FIX: Improve administrative username password prompt to prevent backspacing into text (ISO) `#3099 <https://github.com/Security-Onion-Solutions/securityonion/issues/3099>`_
+- FIX: Improve soup for older installs `#4617 <https://github.com/Security-Onion-Solutions/securityonion/issues/4617>`_
+- FIX: Include secure HTTP headers in nginx responses `#4267 <https://github.com/Security-Onion-Solutions/securityonion/issues/4267>`_
+- FIX: Increase default search and proxy timeouts to 5 minutes `#4321 <https://github.com/Security-Onion-Solutions/securityonion/issues/4321>`_
+- FIX: Move sensoroni state out of the * block of top.sls and into each node type block `#3559 <https://github.com/Security-Onion-Solutions/securityonion/issues/3559>`_
+- FIX: OS passwords including special characters like $ and ! `#4249 <https://github.com/Security-Onion-Solutions/securityonion/issues/4249>`_
+- FIX: Prevent so-thehive-cortex from continuing to build if an issue is encountered installing Python packages `#4032 <https://github.com/Security-Onion-Solutions/securityonion/issues/4032>`_
+- FIX: Setup should not prompt for node description when running import or eval `#4004 <https://github.com/Security-Onion-Solutions/securityonion/issues/4004>`_
+- FIX: Trying to delete old pcap job results in error `#4528 <https://github.com/Security-Onion-Solutions/securityonion/issues/4528>`_
+- FIX: Websocket session cleanup overly aggressive `#4598 <https://github.com/Security-Onion-Solutions/securityonion/issues/4598>`_
+- FIX: so-user should support spaces in passwords for Fleet and TheHive users `#4460 <https://github.com/Security-Onion-Solutions/securityonion/issues/4460>`_
+- FIX: zeek leaving post-terminate crash logs on every shutdown `#4461 <https://github.com/Security-Onion-Solutions/securityonion/issues/4461>`_
+- UPGRADE: Elastic to 7.13 `#4313 <https://github.com/Security-Onion-Solutions/securityonion/issues/4313>`_
+- UPGRADE: Kratos to 0.6.3-alpha.1 `#4282 <https://github.com/Security-Onion-Solutions/securityonion/issues/4282>`_
+- UPGRADE: Redmine 4.2 (For Playbook) `#4159 <https://github.com/Security-Onion-Solutions/securityonion/issues/4159>`_
+
 2.3.52 Changes
 ----------------
 
