@@ -8,6 +8,11 @@ From https://www.elastic.co/products/elasticsearch:
     Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. 
     As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
+Authentication
+--------------
+
+Starting in Security Onion 2.3.60, we will support Elastic authentication. This means that you will authenticate to Elasticsearch using the same username and password that you use for :ref:`soc`. New installations will automatically enable Elastic auth. If you have an existing installation and would like to enable Elastic auth, you can run ``sudo so-elastic-auth true``.
+
 Parsing
 -------
 
