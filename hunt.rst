@@ -31,7 +31,7 @@ When enabled, Hunt will automatically refresh your query at the time interval yo
 Time Zone
 ---------
 
-Hunt will try to detect your local time zone via your browser. Starting in Security Onion 2.3.60, you can manually specify your time zone.
+Hunt will try to detect your local time zone via your browser. Starting in Security Onion 2.3.60, you can manually specify your time zone if necessary.
 
 Query Bar
 ---------
