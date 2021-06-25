@@ -30,6 +30,11 @@ To the right of the toggles is the Automatic Refresh Interval setting:
 
 When enabled, the Alerts page will automatically refresh at the time interval you select.
 
+Time Zone
+---------
+
+Alerts will try to detect your local time zone via your browser. Starting in Security Onion 2.3.60, you can manually specify your time zone.
+
 Query Bar
 ---------
 The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. If you want to send your current Alerts query to :ref:`hunt`, you can click the crosshair icon to the right of the query bar.
