@@ -33,7 +33,7 @@ When enabled, the Alerts page will automatically refresh at the time interval yo
 Time Zone
 ---------
 
-Alerts will try to detect your local time zone via your browser. Starting in Security Onion 2.3.60, you can manually specify your time zone.
+Alerts will try to detect your local time zone via your browser. Starting in Security Onion 2.3.60, you can manually specify your time zone if necessary.
 
 Query Bar
 ---------
