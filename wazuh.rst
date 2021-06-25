@@ -54,20 +54,17 @@ Sometimes, Wazuh may recognize legitimate activity as potentially malicious and 
 Tuning Rules
 ------------
 
-You can add new rules in ``/opt/so/rules/hids/local_rules.xml``. You can also modify existing rules by copying the rule to ``/opt/so/rules/hids/local_rules.xml``, making your changes, and adding ``overwrite="yes"`` as shown at https://documentation.wazuh.com/current/user-manual/ruleset/custom.html#changing-an-existing-rule.
+You can add new rules in ``/opt/so/rules/hids/local_rules.xml``. You can also modify existing rules by copying the rule to ``/opt/so/rules/hids/local_rules.xml``, making your changes, and adding ``overwrite="yes"`` as shown at https://documentation.wazuh.com/current/user-manual/ruleset/custom.html#changing-an-existing-rule. To suppress a Wazuh alert, you can add the rule and include ``noalert="1"`` in the ``rule`` section. 
 
-Tuning Alerts
--------------
+The overall process would be as follows:
 
-To supress or modify Wazuh alerts, first you would need to add rule you want to supress as explained in Tunning section of the :ref:`wazuh` page and add then add the ``noalert="1"`` to the `rule` header tag.
+1. First, find the existing rule in ``/opt/so/rules/hids/ruleset/rules/``.
+2. Copy the rule to ``/opt/so/rules/hids/local_rules.xml``.
+3. Put the rule inside ``<group> </group>`` tags and give it a name.
+4. Update the ``<rule>`` section to include ``noalert="1"`` along with ``overwrite="yes"``.
+5. Finally, restart Wazuh with ``sudo so-wazuh-restart``.
 
 Here is an example to suppress "Windows Logon Success" and "Windows User Logoff" alerts:
-
-1. First you need to find a rules in ``/opt/so/rules/hids/ruleset/rules``.
-2. Copy rules to the ``/opt/so/rules/hids/local_rules.xml``.
-3. Put rules inside ``<group> </group>`` tags and give it some name.
-4. To the <rule> header tags add ``noalert="1"`` along with ``overwrite="yes"``.
-5. Restart Wazuh with ``so-wazuh-restart``.
 
    ::
    
