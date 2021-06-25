@@ -32,8 +32,8 @@ Before downloading, please review the notes for this release.
 - FIX: Improve soup for older installs `#4617 <https://github.com/Security-Onion-Solutions/securityonion/issues/4617>`_
 - FIX: Include secure HTTP headers in nginx responses `#4267 <https://github.com/Security-Onion-Solutions/securityonion/issues/4267>`_
 - FIX: Increase default search and proxy timeouts to 5 minutes `#4321 <https://github.com/Security-Onion-Solutions/securityonion/issues/4321>`_
-- FIX: Move sensoroni state out of the * block of top.sls and into each node type block `#3559 <https://github.com/Security-Onion-Solutions/securityonion/issues/3559>`_
 - FIX: OS passwords including special characters like $ and ! `#4249 <https://github.com/Security-Onion-Solutions/securityonion/issues/4249>`_
+- FIX: Prevent highstate failure during soup `#3559 <https://github.com/Security-Onion-Solutions/securityonion/issues/3559>`_
 - FIX: Prevent so-thehive-cortex from continuing to build if an issue is encountered installing Python packages `#4032 <https://github.com/Security-Onion-Solutions/securityonion/issues/4032>`_
 - FIX: Setup should not prompt for node description when running import or eval `#4004 <https://github.com/Security-Onion-Solutions/securityonion/issues/4004>`_
 - FIX: Trying to delete old pcap job results in error `#4528 <https://github.com/Security-Onion-Solutions/securityonion/issues/4528>`_
