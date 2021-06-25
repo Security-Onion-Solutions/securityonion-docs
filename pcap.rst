@@ -22,6 +22,6 @@ You can drill into individual rows to see the actual payload data. There are but
 .. image:: images/pcap-transcript.png
   :target: _images/pcap-transcript.png
 
-Finally, you can also download the pcap by clicking the button on the right side of the table header.
+You can also download the pcap by clicking the button on the right side of the table header.
 
 Starting in Security Onion 2.3.60, you can select text with your mouse and then use the context menu to send that selected text to :ref:`cyberchef`, Google, or other destinations defined in the actions list.
