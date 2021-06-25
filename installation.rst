@@ -20,7 +20,7 @@ If you want to install Security Onion using our ISO image:
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
 #. `Download and verify our Security Onion ISO image <https://github.com/Security-Onion-Solutions/securityonion/blob/master/VERIFY_ISO.md>`__.
 #. Boot the ISO in a machine that meets the minimum hardware specs.
-#. Follow the prompts to complete the installation and reboot. Please note that when creating your OS password, there is currently an issue with spaces and special characters like ``$`` and ``!``, so avoid those characters for now.
+#. Follow the prompts to complete the installation and reboot. Please note that when creating your OS password, there is currently an issue with spaces and special characters like ``$`` and ``!``, so avoid those characters for now. This issue is scheduled to be resolved in Security Onion 2.3.60.
 #. You may need to eject the ISO image or change the boot order of the machine to boot from the newly installed OS.
 #. Login using the username and password you set in the installer.
 #. Security Onion Setup will automatically start. If for some reason you have to exit Setup and need to restart it, you can log out of your account and then log back in and it should automatically start. If that doesn't work, you can manually run it as follows:
