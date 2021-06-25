@@ -12,6 +12,11 @@ Screenshot
 .. image:: images/kibana.png
   :target: _images/kibana.png
 
+Auth
+----
+
+Starting in Security Onion 2.3.60, new installations will automatically enable Elastic auth. This means that you will authenticate to Kibana using the same username and password that you use for :ref:`soc`. If you have an existing installation and would like to enable Elastic auth, you can run ``sudo so-elastic-auth true``.
+
 Dashboards
 ----------
 
