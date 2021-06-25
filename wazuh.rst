@@ -91,7 +91,7 @@ Here is an example to suppress "Windows Logon Success" and "Windows User Logoff"
 
 .. note::
 
-   This will not remove alerts that were generated before applying new rules, and also this will only suppress alerts, but not the logs too. You will still receive logs for this events in Kibana.
+   This will not remove existing alerts that were generated before applying the new rule. Also note that this only suppresses the alert and not the underlying log.
 
 Adding Agents
 -------------
