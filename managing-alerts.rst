@@ -23,46 +23,6 @@ There are three alerting engines within Security Onion: :ref:`suricata`, :ref:`w
 
 All alerts are viewable in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`.
 
-Wazuh Alerts Tuning
----------------------------
-
-To supress or modify Wazuh alerts, first you would need to add rule you want to supress as explained in Tunning section of the :ref:`wazuh` page and add then add the ``noalert="1"`` to the `rule` header tag.
-
-Here is an example to suppress "Windows Logon Success" and "Windows User Logoff" alerts:
-
-1. First you need to find a rules in ``/opt/so/rules/hids/ruleset/rules``.
-2. Copy rules to the ``/opt/so/rules/hids/local_rules.xml``.
-3. Put rules inside ``<group> </group>`` tags and give it some name.
-4. To the <rule> header tags add ``noalert="1"`` along with ``overwrite="yes"``.
-5. Restart Wazuh with ``so-wazuh-restart``.
-
-   ::
-   
-      <group name="customrules,">
-        <rule id="60106" level="3" noalert="1" overwrite="yes">
-          <if_sid>60103</if_sid>
-          <field name="win.system.eventID">^528$|^540$|^673$|^4624$|^4769$</field>
-          <description>Windows Logon Success</description>
-          <options>no_full_log</options>
-          <mitre>
-            <id>T1078</id>
-          </mitre>
-          <group>authentication_success,pci_dss_10.2.5,gpg13_7.1,gpg13_7.2,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
-        </rule>
-
-        <rule id="60137" level="3" noalert="1" overwrite="yes">
-          <if_sid>60103</if_sid>
-          <field name="win.system.eventID">^538$|^551$|^4634$|^4647$</field>
-          <description>Windows User Logoff</description>
-          <options>no_full_log</options>
-          <group>pci_dss_10.2.5,gdpr_IV_32.2,hipaa_164.312.b,nist_800_53_AU.14,nist_800_53_AC.7,tsc_CC6.8,tsc_CC7.2,tsc_CC7.3,</group>
-        </rule>
-      </group>
-
-.. note::
-
-   This will not remove alerts that were generated before applying new rules, and also this will only suppress alerts, but not the logs too. You will still receive logs for this events in Kibana.
-
 NIDS Testing
 ------------
 
