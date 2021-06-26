@@ -13,7 +13,7 @@ New installations of Security Onion 2.3.60 and later will automatically enable E
 Existing Installations
 ----------------------
 
-If you have an older installation that you've upgraded to Security Onion 2.3.60 or later and would like to enable Elastic auth, you can do so as shown in the Enabling section below. After manually enabling Elastic auth, each :ref:`soc` user will need to reset their password inside of :ref:`soc` and this will update their username and password in Elastic.
+If you have an older installation that you've upgraded to Security Onion 2.3.60 or later and would like to enable Elastic auth, you can do so as shown in the Enabling section below. After manually enabling Elastic auth, each user will need to reset their password inside of :ref:`soc` as shown in the :ref:`passwords` section and this will update their username and password in Elastic.
 
 Usage
 -----
