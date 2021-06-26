@@ -8,6 +8,11 @@ From https://www.elastic.co/products/elasticsearch:
     Elasticsearch is a distributed, RESTful search and analytics engine capable of solving a growing number of use cases. 
     As the heart of the Elastic Stack, it centrally stores your data so you can discover the expected and uncover the unexpected.
 
+Querying
+--------
+
+You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. You can also query Elasticsearch using curl. Starting in Security Onion 2.3.60, you can also use :ref:`so-elasticsearch-query`.
+
 Authentication
 --------------
 
