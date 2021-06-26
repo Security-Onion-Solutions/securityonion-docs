@@ -10,12 +10,12 @@ Usage
 
 ::
 
-so-elasticsearch-query <PATH> [ARGS,...]
+   so-elasticsearch-query <PATH> [ARGS,...]
 
 Where:
 
-   PATH represents the elastic function being requested.
-   ARGS is used to specify additional, optional curl parameters.
+- PATH represents the elastic function being requested.
+- ARGS is used to specify additional, optional curl parameters.
 
 Examples
 --------
