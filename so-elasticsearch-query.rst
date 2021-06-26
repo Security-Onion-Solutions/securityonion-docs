@@ -3,7 +3,7 @@
 so-elasticsearch-query
 ======================
 
-Starting in Security Onion 2.3.60, so-elasticsearch-query submits a cURL request to the local Security Onion Elasticsearch host.
+Starting in Security Onion 2.3.60, you can use ``so-elasticsearch-query`` to submit a cURL request to the local Security Onion Elasticsearch host from the command line.
 
 Usage
 -----
