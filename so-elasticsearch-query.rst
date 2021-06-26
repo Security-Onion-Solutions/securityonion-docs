@@ -23,5 +23,7 @@ Examples
 ::
 
    so-elasticsearch-query /
+   
+::
 
    so-elasticsearch-query '*:so-*/_search' -d '{"query": {"match_all": {}},"size": 1}' | jq
