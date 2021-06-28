@@ -53,5 +53,16 @@ If you want to install Security Onion on CentOS 7 or Ubuntu 18.04 (**not** using
      git clone https://github.com/Security-Onion-Solutions/securityonion
      cd securityonion
      sudo bash so-setup-network
-   
+     
 #. Proceed to the :ref:`configuration` section.
+
+#. NOTE: If any interfaces intended to be used for monitoring were automatically configured via DHCP during Ubuntu installation, setup will prompt for these devices to unmanaged. The following steps will be required to ensure the devices are managed by `nmcli`:
+
+  - Remove interface declarations from /etc/netplan/netplan.yml
+  ::
+   
+    sudo netplan apply
+    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+    sudo service network-manager restart
+    
+  - Re-run setup  
