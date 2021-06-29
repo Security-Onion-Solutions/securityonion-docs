@@ -8,6 +8,8 @@ Hunt
 .. image:: images/hunt.png
   :target: _images/hunt.png
 
+Starting in Security Onion 2.3.60, some of the options at the top of the screen are in a new Options drop-down menu.
+
 Auto Hunt
 ---------
 
