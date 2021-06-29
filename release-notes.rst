@@ -25,6 +25,7 @@ Before downloading, please review the notes for this release.
 - FIX: Allow for spaces in password on kickstart script (ISO)  `#1079 <https://github.com/Security-Onion-Solutions/securityonion/issues/1079>`_
 - FIX: Change Acknowledge, Escalate, and expandEvent buttons from title to tooltip `#4497 <https://github.com/Security-Onion-Solutions/securityonion/issues/4497>`_
 - FIX: Disallow so-suricata-start from running on the manager node `#2977 <https://github.com/Security-Onion-Solutions/securityonion/issues/2977>`_
+- FIX: Ensure fixed PCAP files are readable by Suricata during so-import-pcap execution `#4636 <https://github.com/Security-Onion-Solutions/securityonion/issues/4636>`_
 - FIX: Fail curl requests if the remote server responds with a failing status code `#4266 <https://github.com/Security-Onion-Solutions/securityonion/issues/4266>`_
 - FIX: Implement error handling for soup `#3220 <https://github.com/Security-Onion-Solutions/securityonion/issues/3220>`_
 - FIX: Improve PCAP job lookup performance by providing a tighter time range `#4320 <https://github.com/Security-Onion-Solutions/securityonion/issues/4320>`_
