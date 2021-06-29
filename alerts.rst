@@ -8,6 +8,8 @@ Alerts
 .. image:: images/alerts.png
   :target: _images/alerts.png
   
+Starting in Security Onion 2.3.60, some of the options at the top of the screen are in a new Options drop-down menu.
+
 Toggles
 -------
 
