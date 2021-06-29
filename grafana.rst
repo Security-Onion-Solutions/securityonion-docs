@@ -13,7 +13,10 @@ On a distributed deployment, you will default to the manager dashboard. There ar
 .. image:: https://user-images.githubusercontent.com/1659467/97081308-9361b600-15cf-11eb-890d-585efb58e6aa.png
   :target: https://user-images.githubusercontent.com/1659467/97081308-9361b600-15cf-11eb-890d-585efb58e6aa.png
 
-Starting in Security Onion 2.3.60, some graphs have dotted lines that show previous data that has been downsampled. Also, high-resolution data in Grafana will be purged after 30 days, leaving just the low-resolution data. If you want to purge old data, you can run ``so-influxdb-clean``.
+Security Onion 2.3.60 Changes
+-----------------------------
+
+Starting in Security Onion 2.3.60, some Grafana graphs have dotted lines that show previous data that has been downsampled. Also, high-resolution data in Grafana will be purged after 30 days, leaving just the downsampled low-resolution data. If you want to purge old data, you can run ``so-influxdb-clean``.
 
 Accounts
 --------
