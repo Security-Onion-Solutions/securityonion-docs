@@ -29,7 +29,7 @@ To enable Elastic auth, run ``so-elastic-auth`` with the ``true`` option:
 
 ::
 
-   so-elastic-auth true
+   sudo so-elastic-auth true
    
 Disabling
 ---------
@@ -38,4 +38,4 @@ To disable Elastic auth, run ``so-elastic-auth`` with the ``false`` option:
 
 ::
 
-   so-elastic-auth false
+   sudo so-elastic-auth false
