@@ -24,7 +24,7 @@ Starting in Security Onion 2.3.60, we will support official Filebeat modules. Yo
 Example 1: AWS Cloudtrail Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you would like to parse AWS Cloudtrail logs using the Filebeat ``cloudtrail`` module, you can add something like the following to a minion pillar (for example, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls`` :
+If you would like to parse AWS Cloudtrail logs using the Filebeat ``cloudtrail`` module, you can add something like the following to a minion pillar (for example, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``) :
 
 ::
   
@@ -43,7 +43,7 @@ Access key details can be found within the AWS console by navigating to ``My Sec
 Example 2: Fortinet Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to parse Fortinet logs using the Filebeat fortinet module, you can add something like the following to a minion pillar (for example, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``:
+If you want to parse Fortinet logs using the Filebeat fortinet module, you can add something like the following to a minion pillar (for example, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``):
 
 ::
 
