@@ -24,20 +24,40 @@ Starting in Security Onion 2.3.60, we will support official Filebeat modules. Yo
 Example 1: AWS Cloudtrail Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you would like to parse AWS Cloudtrail logs using the Filebeat cloudtrail module, you can add something like the following to the minion pillar:
+If you would like to parse AWS Cloudtrail logs using the Filebeat ``cloudtrail`` module, you can add something like the following to a minion pillar (for example, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls`` :
 
-.. image:: images/filebeat-1.png
-  :target: _images/filebeat-1.png
+::
+  
+  filebeat:
+    third_party_filebeat:
+      modules:
+        aws:
+          cloudtrail:
+            enabled: true
+            var.queue_url: https://sqs.$REGION.amazonaws.com/$ACCOUNTID/my-test-queue
+            var.access_key_id: ABCD1234
+            var.secret_access_key: ABCD1234ABCD1234
+
+Access key details can be found within the AWS console by navigating to ``My Security Credentials`` -> ``Access Keys``.
 
 Example 2: Fortinet Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to parse Fortinet logs using the Filebeat fortinet module, you can add something like the following to the minion pillar:
+If you want to parse Fortinet logs using the Filebeat fortinet module, you can add something like the following to a minion pillar (for example, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``:
 
-.. image:: images/filebeat-2.png
-  :target: _images/filebeat-2.png
+::
 
-(Please note that firewall ports still need to be opened on the minion to accept the Fortinet logs.)
+  filebeat:
+    third_party_filebeat:
+      modules:
+        fortinet:
+          firewall:
+            enabled: true
+            var.input: udp
+            var.syslog_host: 0.0.0.0
+            var.syslog_port: 9004
+
+(Please note that :ref:`firewall` ports still need to be opened on the minion to accept the Fortinet logs.)
 
 Diagnostic Logging
 ------------------
