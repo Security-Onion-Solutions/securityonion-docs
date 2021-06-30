@@ -34,7 +34,7 @@ If you would like to parse AWS Cloudtrail logs using the Filebeat ``cloudtrail``
         aws:
           cloudtrail:
             enabled: true
-            var.queue_url: https://sqs.$REGION.amazonaws.com/$ACCOUNTID/my-test-queue
+            var.queue_url: https://sqs.$REGION.amazonaws.com/$ACCOUNTID/$QUEUENAME
             var.access_key_id: ABCD1234
             var.secret_access_key: ABCD1234ABCD1234
 
