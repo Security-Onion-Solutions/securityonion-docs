@@ -59,7 +59,7 @@ VPN Node
 Manager
 
 - Quantity: 1
-- Type: m5a.large
+- Type: m5a.xlarge
 - Storage: 300GB EBS (Optimized) gp3
   
 Search Nodes
