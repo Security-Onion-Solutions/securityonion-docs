@@ -44,6 +44,7 @@ Before downloading, please review the notes for this release.
 - UPGRADE: Elastic to 7.13 `#4313 <https://github.com/Security-Onion-Solutions/securityonion/issues/4313>`_
 - UPGRADE: Kratos to 0.6.3-alpha.1 `#4282 <https://github.com/Security-Onion-Solutions/securityonion/issues/4282>`_
 - UPGRADE: Redmine 4.2 (For Playbook) `#4159 <https://github.com/Security-Onion-Solutions/securityonion/issues/4159>`_
+- UPGRADE: Suricata 6.0.3 `#4661 <https://github.com/Security-Onion-Solutions/securityonion/issues/4661>`_
 
 2.3.52 Changes
 ----------------
