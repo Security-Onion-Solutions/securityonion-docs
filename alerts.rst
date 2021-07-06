@@ -8,7 +8,7 @@ Alerts
 .. image:: images/alerts.png
   :target: _images/alerts.png
   
-Starting in Security Onion 2.3.60, there is a new Options drop-down menu that allows you to set Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone options.
+Starting in Security Onion 2.3.60, there is a new Options drop-down menu that allows you to set options such as Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone.
 
 Toggles
 -------

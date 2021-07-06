@@ -8,7 +8,7 @@ Hunt
 .. image:: images/hunt.png
   :target: _images/hunt.png
 
-Starting in Security Onion 2.3.60, there is a new Options drop-down menu that allows you to set Auto Hunt, Automatic Refresh Interval, and Time Zone options.
+Starting in Security Onion 2.3.60, there is a new Options drop-down menu that allows you to set options such as Auto Hunt, Automatic Refresh Interval, and Time Zone.
 
 Auto Hunt
 ---------
