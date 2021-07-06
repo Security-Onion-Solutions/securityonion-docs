@@ -32,7 +32,7 @@ Security Onion seamlessly weaves together three core functions:
 Analysis Tools
 --------------
 
-With full packet capture, IDS alerts, :ref:`zeek` data, and endpoint telemetry, there is an incredible amount of data available at your fingertips. Fortunately, Security Onion tightly integrates the following tools to help make sense of this data.
+With full packet capture, IDS alerts, network metadata from :ref:`zeek` or :ref:`suricata`, and endpoint telemetry, there is an incredible amount of data available at your fingertips. Fortunately, Security Onion tightly integrates the following tools to help make sense of this data.
 
 Security Onion Console (SOC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
