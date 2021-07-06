@@ -8,12 +8,12 @@ Hunt
 .. image:: images/hunt.png
   :target: _images/hunt.png
 
-Starting in Security Onion 2.3.60, some of the options at the top of the screen are in a new Options drop-down menu.
+Starting in Security Onion 2.3.60, there is a new Options drop-down menu that allows you to set Auto Hunt, Automatic Refresh Interval, and Time Zone options.
 
 Auto Hunt
 ---------
 
-The top of the page has a toggle for Auto Hunt which defaults to enabled:
+The Auto Hunt option defaults to enabled:
 
 .. image:: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
   :target: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
@@ -23,12 +23,10 @@ When enabled, Hunt will automatically submit your query any time you change filt
 Automatic Refresh Interval
 --------------------------
 
-To the right of the Auto Hunt toggle is the Automatic Refresh Interval setting: 
+The Automatic Refresh Interval setting will automatically refresh your query at the time interval you select:
 
 .. image:: images/soc-automatic-refresh-interval.png
   :target: _images/soc-automatic-refresh-interval.png
-
-When enabled, Hunt will automatically refresh your query at the time interval you select.
 
 Time Zone
 ---------
@@ -140,16 +138,16 @@ The ``Actions`` sub-menu has several different options:
 
 - Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
 
-If you'd like to add your own custom actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` and then add new entries. Starting in Security Onion 2.3.60, this will be done in ``menu.actions.json``.
+If you'd like to add your own custom actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` and then add new entries. (Previous to Security Onion 2.3.60, this would be done in ``hunt.actions.json``.)
 
-For example, suppose you want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, copy ``/opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json``:
+For example, suppose you want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json``:
 
 ::
 
-  sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/hunt.actions.json /opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json
+  sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json /opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json
 
 
-Next, edit ``/opt/so/saltstack/local/salt/soc/files/soc/hunt.actions.json`` using your favorite text editor and insert the following as the next to last line of the file:
+Next, edit ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` using your favorite text editor and insert the following as the next to last line of the file:
 
 ::
 

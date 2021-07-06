@@ -8,12 +8,12 @@ Alerts
 .. image:: images/alerts.png
   :target: _images/alerts.png
   
-Starting in Security Onion 2.3.60, some of the options at the top of the screen are in a new Options drop-down menu.
+Starting in Security Onion 2.3.60, there is a new Options drop-down menu that allows you to set Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone options.
 
 Toggles
 -------
 
-The top of the page has toggles for ``Acknowledged`` and ``Escalated``:
+The first option is for ``Acknowledged`` and ``Escalated``:
 
 .. image:: https://user-images.githubusercontent.com/1659467/94587683-ed7d8e80-0250-11eb-951d-282ba76932f7.png
   :target: https://user-images.githubusercontent.com/1659467/94587683-ed7d8e80-0250-11eb-951d-282ba76932f7.png
@@ -25,7 +25,7 @@ The top of the page has toggles for ``Acknowledged`` and ``Escalated``:
 Automatic Refresh Interval
 --------------------------
 
-To the right of the toggles is the Automatic Refresh Interval setting:
+The second option is the Automatic Refresh Interval setting:
 
 .. image:: images/soc-automatic-refresh-interval.png
   :target: _images/soc-automatic-refresh-interval.png
@@ -77,10 +77,12 @@ The remainder of the page is a data table that starts in the grouped view and ca
 Grouped View
 ~~~~~~~~~~~~
 
-By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then selecting the Drilldown option allows you to drill down into that value which switches to the detailed view. Starting in Security Onion 2.3.60, you can also click the value in the Count column to perform a quick drilldown. Note that this quick drilldown feature is only enabled for certain queries.
+By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then selecting the Drilldown option allows you to drill down into that value which switches to the detailed view.
 
 .. image:: images/alerts-grouped.png
   :target: _images/alerts-grouped.png
+
+Starting in Security Onion 2.3.60, you can also click the value in the Count column to perform a quick drilldown. Note that this quick drilldown feature is only enabled for certain queries.
 
 Detailed View
 ~~~~~~~~~~~~~
@@ -140,16 +142,16 @@ The ``Actions`` sub-menu has several different options:
 
 - Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
 
-If you'd like to add your own custom actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json`` and then add new entries. Starting in Security Onion 2.3.60, this will be done in ``menu.actions.json``.
+If you'd like to add your own custom actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` and then add new entries. (Previous to Security Onion 2.3.60, this would be done in ``alerts.actions.json``.)
 
-For example, suppose you want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, copy ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json``:
+For example, suppose you want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json``:
 
 ::
 
-  sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/alerts.actions.json /opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json
+  sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json /opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json
 
 
-Next, edit ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.actions.json`` using your favorite text editor and insert the following as the next to last line of the file:
+Next, edit ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` using your favorite text editor and insert the following as the next to last line of the file:
 
 ::
 
