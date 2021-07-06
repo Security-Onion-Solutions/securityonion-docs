@@ -15,12 +15,12 @@ Stenographer writes full packet capture to ``/nsm/pcap/``. It will automatically
 
 Analysis
 --------
-You can access full packet capture via :ref:`pcap`:
+You can access full packet capture via the :ref:`pcap` interface:
 
 .. image:: images/pcap-transcript.png
   :target: _images/pcap-transcript.png
 
-:ref:`alerts`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` page.
+:ref:`alerts`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` interface.
 
 Alternatively, you can access packet capture from the command line using ``stenoread`` and a steno query as defined at https://github.com/google/stenographer#querying. In the following example, replace "YourStenoQueryHere" with your actual steno query:
 
