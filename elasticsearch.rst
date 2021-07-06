@@ -15,7 +15,7 @@ You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`hunt`
 Authentication
 --------------
 
-Starting in Security Onion 2.3.60, we will support Elastic authentication via :ref:`so-elastic-auth`.
+Starting in Security Onion 2.3.60, we support Elastic authentication via :ref:`so-elastic-auth`.
 
 Parsing
 -------

@@ -19,7 +19,7 @@ Any inputs that are added to the pillar definition will be in addition to the de
 Modules
 -------
 
-Starting in Security Onion 2.3.60, we will support official Filebeat modules. You can learn more about Filebeat modules at https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html.
+Starting in Security Onion 2.3.60, we support official Filebeat modules. You can learn more about Filebeat modules at https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html.
 
 Example 1: AWS Cloudtrail Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
