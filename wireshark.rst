@@ -14,8 +14,8 @@ Wireshark is a part of our :ref:`analyst-vm` installation.
 Screenshot
 ----------
 
-.. image:: https://user-images.githubusercontent.com/1659467/95370883-6dd26e00-08a7-11eb-8abe-3ae8e57209da.png
-  :target: https://user-images.githubusercontent.com/1659467/95370883-6dd26e00-08a7-11eb-8abe-3ae8e57209da.png
+.. image:: images/wireshark.png
+  :target: _images/wireshark.png
 
 More Information
 ----------------
