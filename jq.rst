@@ -10,7 +10,7 @@ From https://stedolan.github.io/jq/:
 Usage
 -----
 
-We configure :ref:`zeek` to write logs to ``/nsm/zeek/logs/`` in JSON format. If you want to parse those logs from the command line, then you can use ``jq``.  Here's a basic example:
+We configure :ref:`zeek` and :ref:`suricata` to write logs to ``/nsm/`` in JSON format. If you want to parse those logs from the command line, then you can use ``jq``.  Here's a basic example:
 
 ::
 
