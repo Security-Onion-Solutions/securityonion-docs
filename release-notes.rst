@@ -5,6 +5,12 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
+2.3.60 Hotfix [ECSFIX, HEAVYNODE_SSL_LOGSTASH_REDIS_PIPELINES] Changes
+----------------
+
+- FIX: Hotfix to revert Strelka and Wazuh Elastic Common Schema (ECS) changes that weren't intended for 2.3.60.
+- FIX: Correct SSL certificate common name (CN) to match heavy node hostnames. Only applicable to grids with heavy nodes. May require manual restart of Redis, Elasticsearch, Filebeat, and Logstash containers (in that order), once the heavy nodes have succeeded in applying highstate. For more information see the related blog post on https://blog.securityonion.net
+
 2.3.60 Changes
 ----------------
 
