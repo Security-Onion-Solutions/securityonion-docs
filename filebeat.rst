@@ -69,7 +69,7 @@ If you want to parse Fortinet logs using the Filebeat fortinet module, you can a
 Walkthrough: Google Workspace Audit Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this brief walkthrough, we’ll use the ``google_workspace`` module for Filebeat to ingest ``admin`` and ``user_accounts`` logs from Okta into Security Onion.  
+In this brief walkthrough, we’ll use the ``google_workspace`` module for Filebeat to ingest ``admin`` and ``user_accounts`` logs from Google Workspace into Security Onion.  
 
 Please follow the steps below to get started.
 
