@@ -142,7 +142,7 @@ Diagnostic Logging
 
 Filebeat's log can be found in ``/opt/so/log/filebeat/``.
 
-To debug Filebeat, copy /opt/so/saltstack/default/salt/filebeat/etc/filebeat.yml to ``/opt/so/saltstack/local/salt/filebeat/etc/filebeat.yml``, then change the ``logging.level`` value to ``debug``. Next, restart Filebeat with ``so-filebeat-restart``.  Be sure to remove the ``local`` file after debugging.
+To debug Filebeat, copy ``/opt/so/saltstack/default/salt/filebeat/etc/filebeat.yml`` to ``/opt/so/saltstack/local/salt/filebeat/etc/filebeat.yml``, then change the ``logging.level`` value to ``debug``. Next, restart Filebeat with ``so-filebeat-restart``.  Be sure to remove the ``local`` file after debugging.
 
 More Information
 ----------------
