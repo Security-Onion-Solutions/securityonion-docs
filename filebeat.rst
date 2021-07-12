@@ -16,6 +16,13 @@ You can configure Filebeat inputs and output using :ref:`salt`. An example of th
 
 Any inputs that are added to the pillar definition will be in addition to the default defined inputs. In order to prevent a :ref:`zeek` log from being used as input, the ``zeeklogs:enabled`` pillar will need to be modified. The easiest way to do this is via :ref:`so-zeek-logs`. 
 
+Diagnostic Logging
+------------------
+
+Filebeat's log can be found in ``/opt/so/log/filebeat/``.
+
+To debug Filebeat, copy ``/opt/so/saltstack/default/salt/filebeat/etc/filebeat.yml`` to ``/opt/so/saltstack/local/salt/filebeat/etc/filebeat.yml``, then change the ``logging.level`` value to ``debug``. Next, restart Filebeat with ``so-filebeat-restart``.  Be sure to remove the ``local`` file after debugging.
+
 Modules
 -------
 
@@ -246,13 +253,6 @@ We can also run the ``so-elasticsearch-query`` command, like so:
 
 Congratulations!  You’ve ingested Okta logs into Security Onion! 
 
-
-Diagnostic Logging
-------------------
-
-Filebeat's log can be found in ``/opt/so/log/filebeat/``.
-
-To debug Filebeat, copy ``/opt/so/saltstack/default/salt/filebeat/etc/filebeat.yml`` to ``/opt/so/saltstack/local/salt/filebeat/etc/filebeat.yml``, then change the ``logging.level`` value to ``debug``. Next, restart Filebeat with ``so-filebeat-restart``.  Be sure to remove the ``local`` file after debugging.
 
 More Information
 ----------------
