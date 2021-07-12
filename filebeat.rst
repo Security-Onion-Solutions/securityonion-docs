@@ -59,6 +59,84 @@ If you want to parse Fortinet logs using the Filebeat fortinet module, you can a
 
 (Please note that :ref:`firewall` ports still need to be opened on the minion to accept the Fortinet logs.)
 
+Walkthrough: Okta System Logs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this brief walkthrough, we’ll use the ``okta`` module for Filebeat to ingest ``system`` logs from Okta into Security Onion.  Please follow the steps below to get started.
+
+The official Elastic documentation for the Okta module can be found here:
+
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-okta.html
+
+NOTE: This module requires that the user have a valid API token for access to their Okta instance.
+
+**Okta Configuration**
+
+Within the Okta administrative console, from the pane on the left-hand side of the screen, navigate to ``Security-> API``.  
+
+.. image:: https://user-images.githubusercontent.com/16829864/125307798-5cb70180-e2fe-11eb-8cb5-a635fbed8c3e.png
+ :target: https://user-images.githubusercontent.com/16829864/125307798-5cb70180-e2fe-11eb-8cb5-a635fbed8c3e.png
+
+
+Next, navigate to Tokens, and click ``Create Token``:
+
+
+.. image:: https://user-images.githubusercontent.com/16829864/125307833-650f3c80-e2fe-11eb-93df-9bd8bd891093.png
+ :target: https://user-images.githubusercontent.com/16829864/125307833-650f3c80-e2fe-11eb-93df-9bd8bd891093.png
+
+
+Enter a name for the token, then click ``Create Token``:
+
+
+.. image:: https://user-images.githubusercontent.com/16829864/125307857-6b051d80-e2fe-11eb-9951-9c89d2138849.png
+ :target: https://user-images.githubusercontent.com/16829864/125307857-6b051d80-e2fe-11eb-9951-9c89d2138849.png
+
+
+A confirmation message like the following should appear:
+
+
+.. image:: https://user-images.githubusercontent.com/16829864/125307880-70fafe80-e2fe-11eb-94c2-f2cac8225991.png
+ :target: https://user-images.githubusercontent.com/16829864/125307880-70fafe80-e2fe-11eb-94c2-f2cac8225991.png
+
+Ensure the token provided below the message is saved and stored securely.
+
+**Security Onion Configuration**
+
+Now that we’ve got our token, we need to place it into our Filebeat module configuration within Security Onion. In this example, we’ll edit the minion pillar for the node we want to pull in the Okta logs -- in this case, a standalone node.  In a distributed environment, this would likely be the manager node.
+
+Edit ``/opt/so/saltstack/local/pillar/minions/$minion_standalone.sls``, adding the following configuration (if you are already using other modules, simply append the module specific configuration without adding the filebeat.third_party_filebeat.modules portion):
+
+
+::
+
+  filebeat:
+    third_party_filebeat:
+      modules:
+        okta:
+          system:
+            enabled: true
+            var.url: https://$yourdomain/api/v1/logs
+            var.api_key: "'$yourtoken'"
+
+
+Next, restart Filebeat on the node, with ``so-filebeat-restart``.
+
+After a few minutes, assuming there are logs to be gathered, Filebeat should pull in those logs from Okta, and an Elasticsearch index named ``so-okta-$DATE`` should be created.  This can be verified by navigating to Hunt or Kibana, searching for ``event.module:okta``:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125307921-7c4e2a00-e2fe-11eb-9fca-49b5112f647e.png
+ :target: https://user-images.githubusercontent.com/16829864/125307921-7c4e2a00-e2fe-11eb-9fca-49b5112f647e.png
+
+We can also run the ``so-elasticsearch-query`` command, like so:
+
+``so-elasticsearch-query _cat/indices | grep okta``
+
+.. image:: https://user-images.githubusercontent.com/16829864/125307904-77897600-e2fe-11eb-84bc-1998b71e48db.png
+ :target: https://user-images.githubusercontent.com/16829864/125307904-77897600-e2fe-11eb-84bc-1998b71e48db.png
+ 
+
+Congratulations!  You’ve ingested Okta logs into Security Onion! 
+
+
 Diagnostic Logging
 ------------------
 
