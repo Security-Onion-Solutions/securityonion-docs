@@ -59,6 +59,116 @@ If you want to parse Fortinet logs using the Filebeat fortinet module, you can a
 
 (Please note that :ref:`firewall` ports still need to be opened on the minion to accept the Fortinet logs.)
 
+Walkthrough: Google Workspace Audit Logs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this brief walkthrough, we’ll use the ``google_workspace`` module for Filebeat to ingest ``admin`` and `user_accounts` logs from Okta into Security Onion.  
+
+Please follow the steps below to get started.
+
+The official Elastic documentation for the Google Workspace module can be found here;
+
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-google_workspace.html
+
+NOTE: This module requires that the user have a valid Google Workspace administrator account. You’ll also need to set up a project within Google Cloud if that has not already been done (will set up as needed during the walkthrough).
+
+**Google Cloud/Workspace Configuration**
+
+Google provides documentation for setting up a service account here:
+
+https://support.google.com/workspacemigrate/answer/9222993?hl=en
+
+In this example, we’ll choose the automated method of service account creation (using a script and the Cloud Shell).
+
+We can enter the Cloud Shell by clicking the Cloud Shell icon (right-hand side of screen) from **console.cloud.google.com** (signed in as our Google Workspaces Super Administrator):
+
+.. image:: https://user-images.githubusercontent.com/16829864/125333193-f2ab5600-e317-11eb-95b7-08ac4c758549.png
+ :target: https://user-images.githubusercontent.com/16829864/125333193-f2ab5600-e317-11eb-95b7-08ac4c758549.png
+
+Once opened, we will run the following command:
+
+``python3 <(curl -s -S -L https://git.io/gwm-create-service-account)``
+
+.. image:: https://user-images.githubusercontent.com/16829864/125333342-24bcb800-e318-11eb-942c-8a8ffa70e8b8.png
+ :target: https://user-images.githubusercontent.com/16829864/125333342-24bcb800-e318-11eb-942c-8a8ffa70e8b8.png
+
+After running the command, we will be provided a menu (press Enter to continue):
+
+.. image:: https://user-images.githubusercontent.com/16829864/125333417-3900b500-e318-11eb-8fca-872169fb42a6.png
+ :target: https://user-images.githubusercontent.com/16829864/125333417-3900b500-e318-11eb-8fca-872169fb42a6.png
+ 
+ The script will proceed through the steps until the first phase of setup is complete:
+
+
+.. image:: https://user-images.githubusercontent.com/16829864/125333649-7c5b2380-e318-11eb-8fb8-5709ac8100c7.png
+ :target: https://user-images.githubusercontent.com/16829864/125333649-7c5b2380-e318-11eb-8fb8-5709ac8100c7.png
+
+After the first phase of setup, you will be provided a URL to visit and authorize the changes.  When authorizing changes, make sure to add the following OAuth scope to the client:
+
+``https://www.googleapis.com/auth/admin.reports.audit.readonly``
+
+.. image:: https://user-images.githubusercontent.com/16829864/125333682-8715b880-e318-11eb-8bfc-b6d938bba530.png
+ :target: https://user-images.githubusercontent.com/16829864/125333682-8715b880-e318-11eb-8bfc-b6d938bba530.png
+
+Navigate back to the Cloud Shell and press Enter to proceed through the rest of the setup:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125333704-8f6df380-e318-11eb-99f7-d374c9b4fd30.png
+ :target: https://user-images.githubusercontent.com/16829864/125333704-8f6df380-e318-11eb-99f7-d374c9b4fd30.png
+
+You will be prompted to download a file containing the service account credentials: 
+
+.. image:: https://user-images.githubusercontent.com/16829864/125333721-939a1100-e318-11eb-9526-5aed29aabbfb.png
+ :target: https://user-images.githubusercontent.com/16829864/125333721-939a1100-e318-11eb-9526-5aed29aabbfb.png
+
+
+Ensure this file is kept safe. We will provide it to Filebeat in the Security Onion Filebeat module configuration.
+
+**Security Onion Configuration**
+
+Now that we’ve set up a service account and obtained a credentials file, we need to place it into our Filebeat module configuration within Security Onion. In this example, we’ll edit the minion pillar for the node we want to pull in the Google Workspace logs -- in this case, a standalone node.  In a distributed environment, this would likely be the manager node.
+
+Copy the credentials file to ``/opt/so/conf/filebeat/modules/`` as ``credentials_file.json``.
+
+Edit ``/opt/so/saltstack/local/pillar/minions/$minion_standalone.sls``, adding the following configuration (if you are already using other modules, simply append the module specific configuration without adding the filebeat.third_party_filebeat.modules portion):
+
+
+::
+
+  filebeat:
+    third_party_filebeat:
+      modules:
+        google_workspadce:
+          admin:
+            enabled: true
+            var.url: https://$yourdomain/api/v1/logs
+            var.api_key: "'$yourtoken'"
+          admin:
+             enabled: true
+             var.jwt_file: "/usr/share/filebeat/modules.d/credentials_file.jsonn
+             var.delegated_account: "adminuser@yourdomain.com"
+          user_accounts:
+             enabled: true
+             var.jwt_file: "/usr/share/filebeat/modules.d/credentials_file.jsonn
+             var.delegated_account: "adminuser@yourdomain.com"
+
+Next, restart Filebeat on the node, with ``so-filebeat-restart``.
+
+After a few minutes, assuming there are logs to be gathered, Filebeat should pull in those logs from Google Workspace, and an Elasticsearch index named ``so-google_workspace-$DATE`` should be created.  This can be verified by navigating to Hunt or Kibana, searching for ``event.module:google_workspace``:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125335491-9c8be200-e31a-11eb-87e9-f328b4d7a07e.png
+ :target: https://user-images.githubusercontent.com/16829864/125335491-9c8be200-e31a-11eb-87e9-f328b4d7a07e.png
+ 
+
+We can also run the ``so-elasticsearch-query`` command, like so:
+
+``so-elasticsearch-query _cat/indices | grep google``
+
+.. image:: https://user-images.githubusercontent.com/16829864/125335044-18d1f580-e31a-11eb-8857-2e2040154a52.png
+ :target: https://user-images.githubusercontent.com/16829864/125335044-18d1f580-e31a-11eb-8857-2e2040154a52.png
+ 
+
+Congratulations!  You’ve ingested Google Workspace logs into Security Onion! 
+
 Walkthrough: Okta System Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
