@@ -161,7 +161,7 @@ After a few minutes, assuming there are logs to be gathered, Filebeat should pul
 
 We can also run the ``so-elasticsearch-query`` command, like so:
 
-``so-elasticsearch-query _cat/indices | grep google``
+``so-elasticsearch-query _cat/indices | grep google_workspace``
 
 .. image:: https://user-images.githubusercontent.com/16829864/125335044-18d1f580-e31a-11eb-8857-2e2040154a52.png
  :target: https://user-images.githubusercontent.com/16829864/125335044-18d1f580-e31a-11eb-8857-2e2040154a52.png
