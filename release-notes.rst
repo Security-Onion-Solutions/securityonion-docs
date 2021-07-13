@@ -5,9 +5,10 @@ Release Notes
 
 Before downloading, please review the notes for this release.
 
-2.3.60 Hotfix [ECSFIX, HEAVYNODE_SSL_LOGSTASH_REDIS_PIPELINES] Changes
+2.3.60 Hotfix [ECSFIX, HEAVYNODE_SSL_LOGSTASH_REDIS_PIPELINES, FBPIPELINE] Changes
 ----------------
-
+- FIX: Some logs from Filebeat were not being properly routed to the correct pipeline causing the log to fill up the disk.
+- FEATURE: All hotfixes going forward will have an ISO so that airgap users can follow the standard soup process as they would for normal releases.
 - FIX: Hotfix to revert Strelka and Wazuh Elastic Common Schema (ECS) changes that weren't intended for 2.3.60.
 - FIX: Correct SSL certificate common name (CN) to match heavy node hostnames. Only applicable to grids with heavy nodes. May require manual restart of Redis, Elasticsearch, Filebeat, and Logstash containers (in that order), once the heavy nodes have succeeded in applying highstate. For more information see the related blog post at https://blog.securityonion.net/2021/07/security-onion-2360-heavy-node-hotfix.html
 
