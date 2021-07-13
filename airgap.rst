@@ -24,7 +24,7 @@ When you run :ref:`soup` on an airgap install, it will ask for the location of t
 Security Onion Hotfixes
 -----------------------
 
-Hotfix upgrades follow the same process as described in the _Updates_ section above.
+Hotfix upgrades follow the same process as described in the "Updates" section above.
 
 Updating from RC3
 -----------------
