@@ -144,7 +144,7 @@ Edit ``/opt/so/saltstack/local/pillar/minions/$minion_standalone.sls``, adding t
   filebeat:
     third_party_filebeat:
       modules:
-        google_workspadce:
+        google_workspace:
           admin:
             enabled: true
             var.url: https://$yourdomain/api/v1/logs
