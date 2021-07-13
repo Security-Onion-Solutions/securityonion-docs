@@ -24,7 +24,7 @@ When you run :ref:`soup` on an airgap install, it will ask for the location of t
 Security Onion Hotfixes
 -----------------------
 
-Starting in Security Onion 2.3.60, airgap users will see a couple of new commands for applying hotfixes (smaller updates in between full version updates). The first command ``so-airgap-hotfixdownload`` will be run from a computer with Internet access. This will download the hotfix and drop it into a tarball that you will then need to sneakernet over to your airgapped manager. Once you have copied that ``sohotfix.tar`` to a location on the manager you will run ``so-airgap-hotfixapply /path/to/sohotfix.tar`` and it will apply the hotfix.
+Hotfix upgrades follow the same process as described in the _Updates_ section above.
 
 Updating from RC3
 -----------------
