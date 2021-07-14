@@ -94,9 +94,19 @@ Finally, if you are seeing legitimate executions that are not unique to your env
 User Accounts
 -------------
 
-By default, once a user has authenticated through SOC they can access Playbook without having to login again to the app itself. This anonymous access has the permissions of the analyst role. If you need your team to login with individual user accounts, you can disable this anonymous access and create new user accounts and add them to the analyst group which will give them all the relevant permissions.
+By default, once a user has authenticated through SOC they can access Playbook without having to login again to the app itself. This anonymous access has the permissions of the analyst role. 
 
 If you need administrator access to Playbook, you can login as ``admin`` with the randomized password found via ``sudo salt-call pillar.get secrets``. However, the Playbook UI is designed to be used with a user that has an analyst role. Using an admin account will be very confusing to newcomers to Playbook, since many of the fields will now be shown/editable and it will look much more cluttered.
+
+
+Disable Anonymous Access & Create User Accounts
+-----------------------------------------------
+If you need your team to login with individual user accounts, you can disable anonymous access and create new user accounts and add them to the analyst group which will give them all the relevant permissions. 
+
+To do this, login with a user that has administrative access, and navigate to Administration --> Users --> New User. Fill out the relevant fields. By default, Playbook is not connected to an email server so password resets via email will not work. Once the new user has been created, go back to Administration --> Users and select the newly created user. There will be a Groups tab, from which you can add the user to the Analyst group. This will give the user all the needed permissions.
+
+To disable anonymous access, login with a user that has administrative access and navigate to Administration --> Projects --> Detection Playbooks. Unselect the Public checkbox.
+
 
 Misc Notes
 ----------
