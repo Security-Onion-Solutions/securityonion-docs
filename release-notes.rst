@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-Before downloading, please review the notes for this release.
+Please review the notes for the current release and any hotfixes.
 
 2.3.60 Hotfix [ECSFIX, HEAVYNODE_SSL_LOGSTASH_REDIS_PIPELINES, FBPIPELINE] Changes
 ----------------
