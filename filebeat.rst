@@ -142,8 +142,8 @@ Under ``Event Types``, we can select the type of events for which we would like 
 
 We’ll also need to select the queue where events will be published:
 
-.. image:: https://user-images.githubusercontent.com/16829864/125964185-263a528b-ace1-409f-a92c-7503f4a30025.png 
- :target: https://user-images.githubusercontent.com/16829864/125964185-263a528b-ace1-409f-a92c-7503f4a30025.png
+.. image:: https://user-images.githubusercontent.com/16829864/125984529-d6337aee-1277-4dfe-9a93-9929e2d2f70c.png 
+ :target: https://user-images.githubusercontent.com/16829864/125984529-d6337aee-1277-4dfe-9a93-9929e2d2f70c.png
 
 If we would like to log bucket access events, we can enable ``Server Access Logging`` (within the bucket ``Properties`` section):
 
