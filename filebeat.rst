@@ -145,6 +145,11 @@ We’ll also need to select the queue where events will be published:
 .. image:: https://user-images.githubusercontent.com/16829864/125964185-263a528b-ace1-409f-a92c-7503f4a30025.png 
  :target: https://user-images.githubusercontent.com/16829864/125964185-263a528b-ace1-409f-a92c-7503f4a30025.png
 
+If we would like to log bucket access events, we can enable ``Server Access Logging`` (within the bucket ``Properties`` section):
+
+.. image:: https://user-images.githubusercontent.com/16829864/125983931-4473075f-f44a-4b06-82ae-58b25e7223e3.png 
+ :target: https://user-images.githubusercontent.com/16829864/125983931-4473075f-f44a-4b06-82ae-58b25e7223e3.png
+
 **Security Onion Configuration**
 
 Now that we’ve configured our Cloudtrail trail and SQS queue, we need to place our credential information into our Filebeat module configuration within Security Onion. In this example, we’ll edit the minion pillar for the node we want to pull in the AWS Cloudtrail logs -- in this case, a standalone node.  In a distributed environment, this would likely be the manager node.
