@@ -71,6 +71,8 @@ Walktrough: AWS Cloudtrail Logs
 
 In this brief walkthrough, we’ll use the ``aws`` module for Filebeat to ingest ``cloudtrail`` logs from Amazon Web Services into Security Onion.  
 
+Credit goes Kaiyan Sheng and Elastic for having an excellent starting point for which to base this walkthrough: https://www.elastic.co/blog/getting-aws-logs-from-s3-using-filebeat-and-the-elastic-stack
+
 Please follow the steps below to get started.
 
 The official Elastic documentation for the Google Workspace module can be found here:
