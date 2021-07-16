@@ -66,6 +66,123 @@ If you want to parse Fortinet logs using the Filebeat fortinet module, you can a
 
 (Please note that :ref:`firewall` ports still need to be opened on the minion to accept the Fortinet logs.)
 
+Walktrough: AWS Cloudtrail Logs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this brief walkthrough, we’ll use the ``aws`` module for Filebeat to ingest ``cloudtrail`` logs from Amazon Web Services into Security Onion.  
+
+Please follow the steps below to get started.
+
+The official Elastic documentation for the Google Workspace module can be found here:
+
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-aws.html
+
+NOTE: This module requires that the user have a valid AWS service account, and credentials/permissions to access to the SQS queue we will be configuring.
+
+**AWS Cloudtrail Configuration**
+
+`Create an SQS queue`:
+
+Navigate to ``Amazon SQS`` -> ``Queues``, and click ``Create queue``.
+
+Specify queue details, choosing to use a ``Standard`` queue, and providing a name:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125963350-b6f10fa0-c2d7-436b-8e52-ba0c4e3888a5.png
+ :target: https://user-images.githubusercontent.com/16829864/125963350-b6f10fa0-c2d7-436b-8e52-ba0c4e3888a5.png
+
+After the queue has been created, you will be redirected to a summary screen.  
+
+From here, copy the provided `RL`value.  This value will be used to populate the queue URL in Security Onion’s Filebeat configuration.
+
+`Create a Trail`:
+
+We’ll create a trail using the AWS Cloudtrail console. To get to the Cloudtrail console, search for `cloudtrail`in the AWS search bar at the top of the screen within the main console, and select CloudTrail:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125963488-d84adeda-a366-473f-9eaf-e1191312337d.png
+ :target: https://user-images.githubusercontent.com/16829864/125963488-d84adeda-a366-473f-9eaf-e1191312337d.pn
+
+From the main page of the Cloudtrail console, we can create our trail by clicking ``Create a trail``:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125963551-044f4fca-58a1-47c4-bc9a-da084d490de3.png
+ :target: https://user-images.githubusercontent.com/16829864/125963551-044f4fca-58a1-47c4-bc9a-da084d490de3.png
+
+Next, we'll configure some basic details, and choose to use a new s3 bucket with our trail:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125963927-c7b41fe1-91db-41f0-85db-4ddbb3732d1a.png
+ :target: https://user-images.githubusercontent.com/16829864/125963927-c7b41fe1-91db-41f0-85db-4ddbb3732d1a.png
+
+We’ll also need to specify an alias for a KMS key:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125967848-21d859bd-ce4a-4950-a4ce-d33d3ae1e467.png
+ :target: https://user-images.githubusercontent.com/16829864/125967848-21d859bd-ce4a-4950-a4ce-d33d3ae1e467.png
+
+Scroll down, and click ``Next``.
+
+From here, we'll select the type of log events we want to include with our trail:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125967981-0c10c52a-bd08-4e81-b2c3-6784f1559910.png
+ :target: https://user-images.githubusercontent.com/16829864/125967981-0c10c52a-bd08-4e81-b2c3-6784f1559910.png
+
+We'll then review our changes and click ``Create Trail``:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125968101-4d7aac8b-688c-4ee1-b8d6-eb182224c031.png
+ :target: https://user-images.githubusercontent.com/16829864/125968101-4d7aac8b-688c-4ee1-b8d6-eb182224c031.png
+
+The trail should now be created and viewable in ``Cloudtrail`` -> ``Trails``.  The ``Status`` column should display as ``Logging``.  Because we chose to create a new bucket when creating the trail, an s3 bucket should already be created.
+
+We’ll need to ensure our bucket is configured correctly by modifying the event notification properties.  To do this, we’ll navigate to ``Amazon S3`` ->  ``$BucketName`` -> ``Properties`` -> ``Event notifications`` -> ``Create event notification``:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125964090-aea00fd8-8a96-4cfa-97e2-773731a411ae.png
+ :target: https://user-images.githubusercontent.com/16829864/125964090-aea00fd8-8a96-4cfa-97e2-773731a411ae.png
+
+Under ``Event Types``, we can select the type of events for which we would like to receive notifications to our SQS queue:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125964111-0b4aac39-fbf3-4867-ba06-4a9810a1007d.png
+ :target: https://user-images.githubusercontent.com/16829864/125964111-0b4aac39-fbf3-4867-ba06-4a9810a1007d.png
+
+We’ll also need to select the queue where events will be published:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125964185-263a528b-ace1-409f-a92c-7503f4a30025.png 
+ :target: https://user-images.githubusercontent.com/16829864/125964185-263a528b-ace1-409f-a92c-7503f4a30025.png
+
+**Security Onion Configuration**
+
+Now that we’ve configured our Cloudtrail trail and SQS queue, we need to place our credential information into our Filebeat module configuration within Security Onion. In this example, we’ll edit the minion pillar for the node we want to pull in the AWS Cloudtrail logs -- in this case, a standalone node.  In a distributed environment, this would likely be the manager node.
+
+Edit ``/opt/so/saltstack/local/pillar/minions/$minion_standalone.sls``, adding the following configuration (if you are already using other modules, simply append the module specific configuration without adding the filebeat.third_party_filebeat.modules portion):
+
+
+::
+
+  filebeat:
+    third_party_filebeat:
+      modules:
+        aws:
+          cloudtrail:
+            enabled: true
+            var.queue_url: https://sqs.us-east-2.amazonaws.com/$youraccountid/demo-queue
+            var.access_key_id: ABCDE1234
+            var.secret_access_key: AbCdeFG...
+
+
+Next, restart Filebeat on the node, with ``so-filebeat-restart``.
+
+After a few minutes, assuming there are logs to be gathered, Filebeat should pull in those logs from AWS, and an Elasticsearch index named ``so-aws-$DATE`` should be created.  This can be verified by navigating to Hunt or Kibana, searching for ``event.module:aws``:
+
+.. image:: https://user-images.githubusercontent.com/16829864/125967430-284b9038-657d-402f-bc59-7e4cc6ef1968.png
+ :target: https://user-images.githubusercontent.com/16829864/125967430-284b9038-657d-402f-bc59-7e4cc6ef1968.png
+
+
+We can also run the ``so-elasticsearch-query`` command, like so:
+
+``so-elasticsearch-query _cat/indices | grep aws``
+
+.. image:: https://user-images.githubusercontent.com/16829864/125966682-ee85f41d-628b-4c9c-89f7-72a8fe25e27e.png
+ :target: https://user-images.githubusercontent.com/16829864/125966682-ee85f41d-628b-4c9c-89f7-72a8fe25e27e.png
+
+Congratulations! You’ve ingested AWS Cloudtrail logs into Security Onion!
+
+
 Walkthrough: Google Workspace Audit Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -73,7 +190,7 @@ In this brief walkthrough, we’ll use the ``google_workspace`` module for Fileb
 
 Please follow the steps below to get started.
 
-The official Elastic documentation for the Google Workspace module can be found here;
+The official Elastic documentation for the Google Workspace module can be found here:
 
 https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-google_workspace.html
 
