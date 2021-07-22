@@ -8,6 +8,7 @@ Release Notes
 
 - FIX: Airgap link to Release Notes `#4685 <https://github.com/Security-Onion-Solutions/securityonion/issues/4685>`_
 - FIX: CyberChef unable to load due to recent Content Security Policy restrictions `#4885 <https://github.com/Security-Onion-Solutions/securityonion/issues/4885>`_
+- FIX: Suricata dns.response.code needs to be renamed to dns.response.code_name `#4770 <https://github.com/Security-Onion-Solutions/securityonion/issues/4770>`_
 - UPGRADE: alpine 3.12.1 to latest for Fleet image `#4823 <https://github.com/Security-Onion-Solutions/securityonion/issues/4823>`_
 - UPGRADE: Elastic 7.13.4 `#4730 <https://github.com/Security-Onion-Solutions/securityonion/issues/4730>`_
 - UPGRADE: Zeek 4.0.3 `#4716 <https://github.com/Security-Onion-Solutions/securityonion/issues/4716>`_
