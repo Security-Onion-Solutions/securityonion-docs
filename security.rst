@@ -9,6 +9,7 @@ Vulnerability Disclosure
 If you have any security concerns regarding Security Onion or believe
 you have uncovered a vulnerability, please follow these end an email to 
 security@securityonion.net per the following guidelines:
+
 -  Include a description of the issue and steps to reproduce
 -  Use plain text format in the email (no Word documents or PDF files)
 
@@ -19,8 +20,8 @@ resolve the issue.
 
    This security address should be used only for undisclosed vulnerabilities. Dealing with fixed issues or general questions on how to use Security Onion should be handled via the normal :ref:`support` channels.
 
-Supply Chain Integrity
-----------------------
+Product and Supply Chain Integrity
+----------------------------------
 
 Security Onion is based on free and open software. Third-party components, as well as the software that the Security Onion team develops, is built from source code that is readily available for the public to review. Community contributors, or anyone for that matter, can request to have notifications pushed to them when a change is accepted into the public repositories. This is very different from closed source software, such as SolarWinds, since those closed source code bases are only visible to a very small group of developers. Often, closed source code bases do not have formal code review procedures in place, or infrastructure around the code base to make others aware of new changes. This allows attackers that gain unauthorized access to a closed source code base to make changes without others detecting it.
 
