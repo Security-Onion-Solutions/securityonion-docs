@@ -7,7 +7,7 @@ Vulnerability Disclosure
 ------------------------
 
 If you have any security concerns regarding Security Onion or believe
-you have uncovered a vulnerability, please follow these end an email to 
+you have uncovered a vulnerability, please follow send an email to 
 security@securityonion.net per the following guidelines:
 
 -  Include a description of the issue and steps to reproduce
