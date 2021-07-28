@@ -3,6 +3,8 @@
 Azure Cloud Image
 =============
 
+*** COMING SOON ***
+
 Azure users, we've published an official virtual machine image on the Azure Marketplace:
 https://securityonion.net/azure/?ref=_ptnr_soc_docs_210727
 
