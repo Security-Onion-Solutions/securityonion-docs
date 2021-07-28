@@ -123,7 +123,7 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 - Enter a suitable name for this virtual machine, such as ``so-vm-manager``.
 - Choose the desired Region and Availability options. (Use ``East US 2`` for Ultra SSD support, if needed.)
 - Choose the ``Security Onion 2 Standard`` image. If this option is not listed on the Image dropdown, select ``See all images`` and search for ``onion``.
-- Choose the appropriate Size based on the desired hardware requirements. For assistance on determining resource requirements please review the AWS Requirements section above.
+- Choose the appropriate Size based on the desired hardware requirements. For assistance on determining resource requirements please review the Requirements section above.
 - Change the Username to ``onion``. Note that this is not mandatory -- if you accidentally leave it to the default ``azureuser``, that's ok, you'll simply use the ``azureuser`` username any place where the documentation states to use the ``onion`` username.
 - Select an existing SSH public key if one already exists, otherwise select the option to ``Generate new key pair``.
 - Select ``Next: Disks``
