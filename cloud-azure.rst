@@ -12,6 +12,10 @@ https://securityonion.net/azure/?ref=_ptnr_soc_docs_210727
     
 .. note::
 
+Azure has put on hold their Virtual TAP preview feature, which means in order to install a Security Onion sensor in the Azure cloud you will need to use a packet broker offering from the Azure Marketplace. See more information here: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
+
+.. note::
+
 This section does not cover network connectivity to the Security Onion node. This can be achieved through configuring an external IP for the node’s management interface, or through the use of a VPN connection via OpenVPN. 
 
 .. note::
@@ -179,27 +183,25 @@ Search Node Setup
 
 Follow standard Security Onion search node installation, answering the setup prompts as applicable. 
 
-Azure Sensor Setup
-##################
-
-SSH into the sensor node and run through setup to set this node up as a sensor. Choose ``eth0`` as the main interface and ``eth1`` as the monitoring interface.
-
 Remote Sensor Setup
 ###################
 
 Setup the VPN (out of scope for this guide) and connect the sensor node to the VPN.
 When prompted to choose the management interface, select the VPN tunnel interface, such as ``tun0``. Use the internal IP address of the manager inside Azure when prompted for the manager IP.
 
+Azure Sensor Setup
+##################
 
-Azure Packet Broker
-#####################
+SSH into the sensor node and run through setup to set this node up as a sensor. Choose ``eth0`` as the main interface and ``eth1`` as the monitoring interface.
 
-*** TBD ***
+.. note::
+
+Azure has put on hold their Virtual TAP preview feature, which means in order to install a Security Onion sensor in the Azure cloud you will need to use a packet broker offering from the Azure Marketplace. See more information here: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
 
 Verify Monitoring Traffic
 -------------------------
 
-To verify the packet broker is sending the correct data to the sniffing interface run the following command on the Security Onion Azure sensor instance:
+To verify the Azure sensor is receiving the correct data on the sniffing interface run the following command on the Security Onion Azure sensor instance:
 
 ::
 
