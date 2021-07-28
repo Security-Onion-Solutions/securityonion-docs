@@ -277,4 +277,4 @@ To verify :ref:`zeek` is properly decapsulating and parsing the VXLAN traffic yo
 
 ::
 
-    ls -la /nsm/zeek/logs/curent/
+    ls -la /nsm/zeek/logs/current/
