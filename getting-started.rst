@@ -55,5 +55,6 @@ See the :ref:`post-installation` section.
    trouble-booting
    installation
    cloud-ami
+   cloud-azure
    configuration
    post-installation
