@@ -3,11 +3,12 @@
 Release Notes
 =============
 
-2.3.61 Hotfix [STENO]
+2.3.61 Hotfix [STENO, MSEARCH]
 ----------------
 
 - FIX: Some browsers refuse to load SOC UI due to CSP blocking wss: protocol `#4938 <https://github.com/Security-Onion-Solutions/securityonion/issues/4938>`_
 - FIX: Disabling steno raises errors when applying state.highstate / running soup update `#4922 <https://github.com/Security-Onion-Solutions/securityonion/issues/4922>`_
+- FIX: Manager Search does not come up properly with true clustering enabled `#4971 <https://github.com/Security-Onion-Solutions/securityonion/issues/4971>`_
 
 2.3.61 Changes
 ----------------
