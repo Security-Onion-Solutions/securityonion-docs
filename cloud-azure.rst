@@ -1,7 +1,7 @@
-.. _azure_cloud-image:
+.. _cloud-azure:
 
 Azure Cloud Image
-=============
+=================
 
 *** THE OFFICIAL SECURITY ONION 2 IMAGE FOR AZURE WILL BE AVAILABLE SOON! ***
 
