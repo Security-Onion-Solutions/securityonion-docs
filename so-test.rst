@@ -3,11 +3,11 @@
 so-test
 ============
 
-``so-test`` will replay some pcap samples to your sniffing interface. 
+``so-test`` will run ``so-tcpreplay`` to replay some pcap samples to your sniffing interface. 
 
 .. warning::
 
-  You will need to have Internet access in order to download the pcap samples.
+  You will need to have Internet access in order to download the pcap samples. Also, if you have a distributed deployment, make sure you run ``so-tcpreplay`` on the manager first to download the necessary Docker image.
 
 ::
 
