@@ -39,10 +39,12 @@ To disable an ML component:
     sudo so-learn disable <component> # --apply to immediately apply your changes
 
 
-Logscan Module
+Logscan
 -------------------
 Uses the following models to predict on Security Onion Console login activity
 
     K1: Alerts on a high number of logins from a single IP in a 1 minute window
+
     K5: Alerts on a high ratio of login failures from a single IP in a 5 minute window
+
     K60: Alerts on abnormal patterns of login failures from all IPs in a 1 hour window
