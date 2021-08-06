@@ -36,4 +36,4 @@ To disable an ML component:
 
 ::
 
-    sudo so-learn disable <component> # -- apply to apply changes
+    sudo so-learn disable <component> # --apply to immediately apply your changes
