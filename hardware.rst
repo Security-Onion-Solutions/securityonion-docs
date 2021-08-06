@@ -32,6 +32,10 @@ For all other configurations, the minimum specs for running Security Onion 2 are
 
    These minimum specs are for EVAL mode with minimal services running. These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
 
+.. warning::
+
+   If using the beta tool logscan, a CPU/vCPU with AVX support will be required, with AVX2 support recommended. Most CPU's produced since 2011 will have AVX support, but be sure to check the specs of your particular processor. This will be more important to virtualized environments, where the default vCPU type will typically not support either instruction set.
+
 Production Deployments
 ----------------------
 Security Onion 2 is a new platform with more features than previous versions of Security Onion. These additional features result in higher hardware requirements. For best results, we recommend purchasing new hardware to meet the new requirements.

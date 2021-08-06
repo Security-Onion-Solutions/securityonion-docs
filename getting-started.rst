@@ -57,4 +57,5 @@ See the :ref:`post-installation` section.
    cloud-ami
    cloud-azure
    configuration
+   machine-learning
    post-installation
