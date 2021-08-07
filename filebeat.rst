@@ -97,26 +97,26 @@ Specify an Advanced policy and add policy configuration (changing to suit your e
 
 :: 
 
-{
- "Version": "2012-10-17",
- "Id": "example-ID",
- "Statement": [
   {
-   "Sid": "example-statement-ID",
-   "Effect": "Allow",
-   "Principal": {
-     "Service": "s3.amazonaws.com"  
-   },
-   "Action": [
-    "SQS:SendMessage"
-   ],
-   "Resource": "arn:aws:sqs:<region>:<account-id>:<queue-name>",
-   "Condition": {         
-      "StringEquals": { "aws:SourceAccount": "<account-id" }
-   } 
+   "Version": "2012-10-17",
+   "Id": "example-ID",
+   "Statement": [
+    {
+     "Sid": "example-statement-ID",
+     "Effect": "Allow",
+     "Principal": {
+       "Service": "s3.amazonaws.com"  
+     },
+     "Action": [
+      "SQS:SendMessage"
+     ],
+     "Resource": "arn:aws:sqs:<region>:<account-id>:<queue-name>",
+     "Condition": {         
+        "StringEquals": { "aws:SourceAccount": "<account-id" }
+     } 
+    }
+   ]
   }
- ]
-}
 
 After the queue has been created, you will be redirected to a summary screen.  
 
