@@ -91,10 +91,36 @@ Specify queue details, choosing to use a ``Standard`` queue, and providing a nam
 
 .. image:: https://user-images.githubusercontent.com/16829864/125963350-b6f10fa0-c2d7-436b-8e52-ba0c4e3888a5.png
  :target: https://user-images.githubusercontent.com/16829864/125963350-b6f10fa0-c2d7-436b-8e52-ba0c4e3888a5.png
+ 
+
+Specify an Advanced policy and add policy configuration (changing to suit your environment):
+
+:: 
+
+  {
+   "Version": "2012-10-17",
+   "Id": "example-ID",
+   "Statement": [
+    {
+     "Sid": "example-statement-ID",
+     "Effect": "Allow",
+     "Principal": {
+      "AWS":"*"  
+     },
+     "Action": [
+      "SQS:SendMessage"
+     ],
+     "Resource": "<SQS-queue-ARN>",
+     "Condition": {
+        "ArnLike": { "aws:SourceArn": "arn:aws:s3:*:*:<bucket-name>" }
+     }
+    }
+   ]
+  }
 
 After the queue has been created, you will be redirected to a summary screen.  
 
-From here, copy the provided `RL`value.  This value will be used to populate the queue URL in Security Onion’s Filebeat configuration.
+From here, copy the provided `URL`value.  This value will be used to populate the queue URL in Security Onion’s Filebeat configuration.
 
 `Create a Trail`:
 
