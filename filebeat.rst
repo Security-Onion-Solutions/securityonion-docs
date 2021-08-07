@@ -93,30 +93,30 @@ Specify queue details, choosing to use a ``Standard`` queue, and providing a nam
  :target: https://user-images.githubusercontent.com/16829864/125963350-b6f10fa0-c2d7-436b-8e52-ba0c4e3888a5.png
  
 
-Specify an Advanced policy and add policy configuration (changing to suit your environment):
+Specify an Advanced policy and add policy configuration (changing to suit your environment, as needed):
 
 :: 
 
+{
+ "Version": "2012-10-17",
+ "Id": "example-ID",
+ "Statement": [
   {
-   "Version": "2012-10-17",
-   "Id": "example-ID",
-   "Statement": [
-    {
-     "Sid": "example-statement-ID",
-     "Effect": "Allow",
-     "Principal": {
-      "AWS":"*"  
-     },
-     "Action": [
-      "SQS:SendMessage"
-     ],
-     "Resource": "<SQS-queue-ARN>",
-     "Condition": {
-        "ArnLike": { "aws:SourceArn": "arn:aws:s3:*:*:<bucket-name>" }
-     }
-    }
-   ]
+   "Sid": "example-statement-ID",
+   "Effect": "Allow",
+   "Principal": {
+     "Service": "s3.amazonaws.com"  
+   },
+   "Action": [
+    "SQS:SendMessage"
+   ],
+   "Resource": "arn:aws:sqs:<region>:<account-id>:<queue-name>",
+   "Condition": {         
+      "StringEquals": { "aws:SourceAccount": "<account-id" }
+   } 
   }
+ ]
+}
 
 After the queue has been created, you will be redirected to a summary screen.  
 
