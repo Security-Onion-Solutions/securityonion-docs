@@ -20,7 +20,7 @@ Starting in Security Onion 2.3.60, we support Elastic authentication via :ref:`s
 Dashboards
 ----------
 
-We've included the old 16.04 dashboards in case you have any old 16.04 data. The new Security Onion 2 dashboards are all named with the ``Security Onion`` prefix and they should be used for any new data going forward.
+We've included the old 16.04 dashboards in case you performed an in-place upgrade and have any old 16.04 data. These dashboards are named with the ``z16.04`` prefix and will only show old 16.04 data. The new Security Onion 2 dashboards are all named with the ``Security Onion`` prefix and they should be used for any new data going forward.
 
 If you ever need to reload dashboards, you can run the following command on your manager:
 
