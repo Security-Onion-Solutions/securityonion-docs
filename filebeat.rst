@@ -120,11 +120,11 @@ Specify an Advanced policy and add policy configuration (changing to suit your e
 
 After the queue has been created, you will be redirected to a summary screen.  
 
-From here, copy the provided `URL`value.  This value will be used to populate the queue URL in Security Onion’s Filebeat configuration.
+From here, copy the provided ``URL`` value.  This value will be used to populate the queue URL in Security Onion’s Filebeat configuration.
 
 `Create a Trail`:
 
-We’ll create a trail using the AWS Cloudtrail console. To get to the Cloudtrail console, search for `cloudtrail`in the AWS search bar at the top of the screen within the main console, and select CloudTrail:
+We’ll create a trail using the AWS Cloudtrail console. To get to the Cloudtrail console, search for ``cloudtrail`` in the AWS search bar at the top of the screen within the main console, and select CloudTrail:
 
 .. image:: https://user-images.githubusercontent.com/16829864/125963488-d84adeda-a366-473f-9eaf-e1191312337d.png
  :target: https://user-images.githubusercontent.com/16829864/125963488-d84adeda-a366-473f-9eaf-e1191312337d.pn

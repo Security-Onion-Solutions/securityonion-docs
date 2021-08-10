@@ -59,7 +59,8 @@ If you want to install Security Onion on CentOS 7 or Ubuntu 18.04 (**not** using
 
 #. NOTE: If any interfaces intended to be used for monitoring were automatically configured via DHCP during Ubuntu installation, setup will ask you to remove them from other network management tools. The following steps will be required to ensure the devices are managed by ``nmcli``:
 
-  - Remove monitor interface declarations from `/etc/netplan/00-installer-config.yaml`.
+  - Remove monitor interface declarations from `/etc/netplan/00-installer-config.yaml`:
+
   ::
    
     sudo netplan apply

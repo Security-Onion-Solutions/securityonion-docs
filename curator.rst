@@ -42,7 +42,9 @@ If ``/opt/so/saltstack/local/salt/curator/init.sls`` does already exist, create 
 To add the new Curator job, copy and modify one of the existing sections or use these examples:
 
 For the "cur" section:
+
 ::
+
   cur<custom-name>:
     file.managed:
       - name: /usr/sbin/so-curator-<custom-name>
@@ -52,7 +54,9 @@ For the "cur" section:
       - mode: 755
 
 For the "cron" section:
+
 ::
+
   so-curator<custom-name>:
    cron.present:
      - name: /usr/sbin/so-curator-<custom-name> > /opt/so/log/curator/<your_logfile>.log 2>&1

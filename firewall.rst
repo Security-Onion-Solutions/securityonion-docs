@@ -121,7 +121,7 @@ Examples
 --------
 
 Allow hosts to send syslog to a sensor node
-###########################################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 By default, if you use :ref:`so-allow` to add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. If we want to allow a host or group of hosts to send syslog to a sensor, then we can do the following:
 
@@ -158,7 +158,8 @@ By default, if you use :ref:`so-allow` to add a host to the syslog hostgroup, th
 
 
 Modify a default port group
-###########################
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 In this example, we will be extending the default nginx port group to include port 8086 for a standalone node. By default, only the analyst hostgroup is allowed access to the nginx ports. At the end of this example IPs in the analyst host group, will be able to connect to 80, 443 and 8086 on our standalone node.
 
 All the following will need to be run from the manager.

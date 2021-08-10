@@ -13,7 +13,7 @@ Security Onion 2 runs :ref:`suricata` as its Network Intrusion Detection System 
 Performance
 -----------
 
-:ref:`suricata`_ leverages :ref:`af-packet` for higher performance.
+:ref:`suricata` leverages :ref:`af-packet` for higher performance.
 
 Analysis
 --------
@@ -32,4 +32,4 @@ Security Onion is designed to be passive and so :ref:`suricata` runs in NIDS mod
 More Information
 ----------------
 
-- For more information about :ref:`suricata`, please see the :ref:`suricata`_ section.
+- For more information about :ref:`suricata`, please see the :ref:`suricata` section.

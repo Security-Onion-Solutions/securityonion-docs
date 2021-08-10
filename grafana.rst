@@ -35,7 +35,8 @@ Configuration
 Grafana configuration can be found in ``/opt/so/conf/grafana/etc/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/grafana/etc/``, they may be overwritten at the next salt update.
 The default configuration options can be seen in ``/opt/so/saltstack/default/salt/grafana/defaults.yaml``. Any options not specified in here, will use the Grafana default. 
 
-.. Example::
+Example
+-------
 If you want to configure and enable SMTP for Grafana, place the following in the ``global.sls`` file. 
 If you have files referenced in the config file, those can be placed in ``/opt/so/saltstack/default/salt/grafana/etc/files/``.
 Those files will be then be placed in ``/opt/so/conf/grafana/etc/files`` on the minion and mapped to ``/etc/grafana/config/files/`` within the container.
