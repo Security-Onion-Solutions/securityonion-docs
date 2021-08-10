@@ -17,8 +17,6 @@ Security Onion would like to thank the following projects for their contribution
 
 :ref:`docker`
 
-:ref:`domainstats`
-
 :ref:`elastalert`
 
 :ref:`elasticsearch`
@@ -26,8 +24,6 @@ Security Onion would like to thank the following projects for their contribution
 :ref:`filebeat`
 
 :ref:`fleet`
-
-:ref:`freqserver`
 
 :ref:`grafana`
 
