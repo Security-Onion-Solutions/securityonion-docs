@@ -51,14 +51,14 @@ YARA
 Default YARA rules are provided from Florian Roth's `signature-base` Github repo at https://github.com/Neo23x0/signature-base.
 
 Local Rules:
-~~~~~~~~~~~
+~~~~~~~~~~~~
 
 To add local YARA rules, create a directory in ``/opt/so/saltstack/local/salt/strelka/rules``, for example ``localrules``.  Inside of ``/opt/so/saltstack/local/salt/strelka/rules/localrules``, add your YARA rules.
 
 After adding your rules, update the configuration by running ``so-strelka-restart``.
 
 Remotely Managed Rules:
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
 
 To have so-yara-update pull YARA rules from a Github repo, copy ``/opt/so/saltstack/local/salt/strelka/rules/``, and modify ``repos.txt`` to include the repo URL (one per line).
 

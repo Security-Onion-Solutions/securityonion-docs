@@ -16,7 +16,7 @@ FAQ
 | 
 
 Install / Update / Upgrade
-------------------------------
+--------------------------
 
 Why won't the ISO image boot on my machine?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,7 +29,7 @@ What's the recommended procedure for installing Security Onion?
 Please see the :ref:`installation` section.
 
 What languages are supported?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We only support the English language at this time.
 
@@ -39,7 +39,7 @@ How do I install Security Onion updates?
 Please see the :ref:`soup` section.
 
 What connectivity does Security Onion need to stay up to date?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the :ref:`firewall` section.
 
@@ -60,15 +60,15 @@ No, we only support 64-bit Intel/AMD architectures. Please see the :ref:`hardwar
 | 
 
 Users / Passwords
----------------------
+-----------------
 
 What is the password?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 Please see the :ref:`passwords` section.
 
 How do I add a new user account?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Please see the :ref:`adding-accounts` section.\ 
 | 
@@ -77,7 +77,7 @@ How do I add a new user account?
 | 
 
 Support / Help
-------------------
+--------------
 
 Where do I send questions/problems/suggestions?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,7 +95,7 @@ Is commercial support available for Security Onion?
 | 
 
 IDS engines
--------------------
+-----------
 
 Can Security Onion run in ``IPS`` mode?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -106,7 +106,7 @@ We do not support IPS.
  
 
 Security Onion internals
-----------------------------
+------------------------
 
 Where can I read more about the tools contained within Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -139,7 +139,7 @@ Additionally, if you are running version 2.3.40 on a standalone installation or 
 `back to top <#top>`__
 
 Tuning
-----------
+------
 
 How do I configure email for alerting and reporting?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -147,7 +147,7 @@ How do I configure email for alerting and reporting?
 Please see the :ref:`email` section.
 
 How do I configure a ``BPF``?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the :ref:`bpf` section.
 
@@ -174,7 +174,7 @@ Please see the :ref:`new-disk` section.
  `back to top <#top>`__
 
 Miscellaneous
------------------
+-------------
 
 Where can I find interesting pcaps to replay?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

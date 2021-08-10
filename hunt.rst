@@ -124,7 +124,7 @@ Clipboard
 The ``Clipboard`` sub-menu has several options that allow you to copy selected data to your clipboard in different ways.
 
 Actions
-~~~~~~
+~~~~~~~
 
 The ``Actions`` sub-menu has several different options:
 

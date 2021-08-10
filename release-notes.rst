@@ -4,14 +4,14 @@ Release Notes
 =============
 
 2.3.61 Hotfix [STENO, MSEARCH]
-----------------
+------------------------------
 
 - FIX: Some browsers refuse to load SOC UI due to CSP blocking wss: protocol `#4938 <https://github.com/Security-Onion-Solutions/securityonion/issues/4938>`_
 - FIX: Disabling steno raises errors when applying state.highstate / running soup update `#4922 <https://github.com/Security-Onion-Solutions/securityonion/issues/4922>`_
 - FIX: Manager Search does not come up properly with true clustering enabled `#4971 <https://github.com/Security-Onion-Solutions/securityonion/issues/4971>`_
 
 2.3.61 Changes
-----------------
+--------------
 
 - FIX: Airgap link to Release Notes `#4685 <https://github.com/Security-Onion-Solutions/securityonion/issues/4685>`_
 - FIX: CyberChef unable to load due to recent Content Security Policy restrictions `#4885 <https://github.com/Security-Onion-Solutions/securityonion/issues/4885>`_
@@ -21,7 +21,7 @@ Release Notes
 - UPGRADE: Zeek 4.0.3 `#4716 <https://github.com/Security-Onion-Solutions/securityonion/issues/4716>`_
 
 2.3.60 Hotfix [ECSFIX, HEAVYNODE_SSL_LOGSTASH_REDIS_PIPELINES, FBPIPELINE, CURATORAUTH] Changes
-----------------
+-----------------------------------------------------------------------------------------------
 - FIX: Curator's authentication to Elasticsearch was incorrectly configured for the version currently in use.
 - FIX: Some logs from Filebeat were not being properly routed to the correct pipeline causing the log to fill up the disk.
 - FEATURE: All hotfixes going forward will have an ISO so that airgap users can follow the standard soup process as they would for normal releases.
@@ -29,7 +29,7 @@ Release Notes
 - FIX: Correct SSL certificate common name (CN) to match heavy node hostnames. Only applicable to grids with heavy nodes. May require manual restart of Redis, Elasticsearch, Filebeat, and Logstash containers (in that order), once the heavy nodes have succeeded in applying highstate. For more information see the related blog post at https://blog.securityonion.net/2021/07/security-onion-2360-heavy-node-hotfix.html
 
 2.3.60 Changes
-----------------
+--------------
 
 - FEATURE: Ability to change default SOC timezone instead of using browser's timezone `#4261 <https://github.com/Security-Onion-Solutions/securityonion/issues/4261>`_
 - FEATURE: Add SOC database to the backups `#3748 <https://github.com/Security-Onion-Solutions/securityonion/issues/3748>`_
@@ -70,14 +70,14 @@ Release Notes
 - UPGRADE: Suricata 6.0.3 `#4661 <https://github.com/Security-Onion-Solutions/securityonion/issues/4661>`_
 
 2.3.52 Changes
-----------------
+--------------
 
 - FIX: packetloss.sh can cause Zeek to segfault `#4398 <https://github.com/Security-Onion-Solutions/securityonion/issues/4398>`_
 - FIX: soup now generates repo tarball with correct folder structure `#4368 <https://github.com/Security-Onion-Solutions/securityonion/issues/4368>`_
 - UPGRADE: Zeek 4.0.2 `#4395 <https://github.com/Security-Onion-Solutions/securityonion/issues/4395>`_
 
 2.3.51 Changes
-----------------
+--------------
 
 - FIX: Mixed case sensor hostnames lead to incomplete PCAP jobs `#4220 <https://github.com/Security-Onion-Solutions/securityonion/issues/4220>`_
 - FIX: Reconcile InfluxDB/Grafana containers in certain setup modes `#4207 <https://github.com/Security-Onion-Solutions/securityonion/issues/4207>`_
@@ -86,7 +86,7 @@ Release Notes
 - FIX: Truncate /root/wait_for_web_response.log before each wait invocation `#4247 <https://github.com/Security-Onion-Solutions/securityonion/issues/4247>`_
 
 2.3.50 Changes
-----------------
+--------------
 
 - FEATURE: Add EPS Stats for Filebeat `#3872 <https://github.com/Security-Onion-Solutions/securityonion/issues/3872>`_
 - FEATURE: Add copy-to-clipboard quick action menu option for copying a single field and value as 'field:value' `#3937 <https://github.com/Security-Onion-Solutions/securityonion/issues/3937>`_
@@ -202,7 +202,7 @@ Release Notes
 - If you upgrade to 2.3.40 and then :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then take a look at the Diagnostic Logging section of the :ref:`kibana` section.
 
 2.3.30 Changes
--------------
+--------------
 
 - Zeek is now at version 3.0.13.
 - CyberChef is now at version 9.27.2. 
@@ -259,7 +259,7 @@ Release Notes
 - Custom Kibana settings are not being applied properly on upgrades: https://github.com/Security-Onion-Solutions/securityonion/issues/3254
 
 2.3.21 Changes
--------------
+--------------
 
 - soup has been refactored. You will need to run it a few times to get all the changes properly. We are working on making this even easier for future releases.
 - soup now has awareness of Elastic Features and now downloads the appropriate Docker containers.
@@ -314,7 +314,7 @@ Release Notes
 
 
 2.3.10 Changes
--------------
+--------------
 
 - UEFI installs with multiple disks should work as intended now.
 - Telegraf scripts will now make sure they are not already running before execution.

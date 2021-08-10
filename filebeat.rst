@@ -254,8 +254,7 @@ After running the command, we will be provided a menu (press Enter to continue):
 .. image:: https://user-images.githubusercontent.com/16829864/125333417-3900b500-e318-11eb-8fca-872169fb42a6.png
  :target: https://user-images.githubusercontent.com/16829864/125333417-3900b500-e318-11eb-8fca-872169fb42a6.png
  
- The script will proceed through the steps until the first phase of setup is complete:
-
+The script will proceed through the steps until the first phase of setup is complete:
 
 .. image:: https://user-images.githubusercontent.com/16829864/125333649-7c5b2380-e318-11eb-8fb8-5709ac8100c7.png
  :target: https://user-images.githubusercontent.com/16829864/125333649-7c5b2380-e318-11eb-8fb8-5709ac8100c7.png
