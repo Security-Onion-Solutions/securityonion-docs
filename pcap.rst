@@ -22,9 +22,11 @@ You can drill into individual rows to see the actual payload data. There are but
 .. image:: images/pcap-transcript.png
   :target: _images/pcap-transcript.png
 
-You can also download the pcap by clicking the button on the right side of the table header.
-
 Starting in Security Onion 2.3.60, you can select text with your mouse and then use the context menu to send that selected text to :ref:`cyberchef`, Google, or other destinations defined in the actions list.
 
 .. image:: images/pcap-select-pivot.png
   :target: _images/pcap-select-pivot.png
+
+Starting in Security Onion 2.3.70, you can send all of the visible packet data to CyberChef by clicking the CyberChef icon on the right side of the table header. Please note that this only sends packet data that is currently being displayed, so you may need to click the ``LOAD MORE`` button if you want all packets in the stream.
+
+Finally, you can download the full pcap file by clicking the pcap button on the far right side of the table header. If you are using an :ref:`analyst-vm`, then the pcap will automatically open in :ref:`networkminer`.
