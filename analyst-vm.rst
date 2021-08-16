@@ -12,6 +12,10 @@ The ``so-analyst-install`` script will install a full GNOME desktop environment 
 
 .. note::
 
+  ``so-analyst-install`` currently only supports CentOS, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of CentOS 7.
+  
+.. note::
+
  ``so-analyst-install`` currently downloads packages from the Internet, so you will need to ensure that networking is configured before running ``so-analyst-install``.
 
 To connect from the Analyst VM to your manager node, you will need to run :ref:`so-allow` on the manager node and choose the ``analyst`` option to allow the traffic through the host-based :ref:`firewall`.
