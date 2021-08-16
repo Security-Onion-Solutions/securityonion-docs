@@ -3,6 +3,34 @@
 Release Notes
 =============
 
+2.3.70 Changes
+----------------
+
+- FEATURE: Add sha.256 to suricata.fileinfo pipeline `#4224 <https://github.com/Security-Onion-Solutions/securityonion/issues/4224>`_
+- FEATURE: Allow for adjustment of Kibana sampleSize setting in Discover dashboard `#4969 <https://github.com/Security-Onion-Solutions/securityonion/issues/4969>`_
+- FEATURE: Allow for adjustment to automatic patch schedule `#4985 <https://github.com/Security-Onion-Solutions/securityonion/issues/4985>`_
+- FEATURE: Require SOC login before allowing users to access playbook and soctopus `#4623 <https://github.com/Security-Onion-Solutions/securityonion/issues/4623>`_
+- FEATURE: Scan kratos logs for anomalous login attempts `#4710 <https://github.com/Security-Onion-Solutions/securityonion/issues/4710>`_
+- FEATURE: Send PCAP session transcript to CyberChef `#5010 <https://github.com/Security-Onion-Solutions/securityonion/issues/5010>`_
+- FEATURE: Show model numbers of cloud-deployed nodes `#4898 <https://github.com/Security-Onion-Solutions/securityonion/issues/4898>`_
+- FEATURE: Show warning when a user attempts to use a hostname or web domain entry that is not all lowercase `#4791 <https://github.com/Security-Onion-Solutions/securityonion/issues/4791>`_
+- FEATURE: Simplify Grafana dashboard management and redesign dashboards `#4674 <https://github.com/Security-Onion-Solutions/securityonion/issues/4674>`_
+- FEATURE: so-firewall needs an option to run apply by itself `#4765 <https://github.com/Security-Onion-Solutions/securityonion/issues/4765>`_
+- FEATURE: so-pcap-export `#4210 <https://github.com/Security-Onion-Solutions/securityonion/issues/4210>`_
+- FEATURE: SOUP - Prompt user when local modifications are detected  `#3860 <https://github.com/Security-Onion-Solutions/securityonion/issues/3860>`_
+- FIX: Add mapping to extracted file directory `#4622 <https://github.com/Security-Onion-Solutions/securityonion/issues/4622>`_
+- FIX: Clarify missing appliance images message on SOC grid `#5118 <https://github.com/Security-Onion-Solutions/securityonion/issues/5118>`_
+- FIX: Curator should only run on manager when set to use true clustering. `#2806 <https://github.com/Security-Onion-Solutions/securityonion/issues/2806>`_
+- FIX: Disabled user still shows as active in GUI `#5055 <https://github.com/Security-Onion-Solutions/securityonion/issues/5055>`_
+- FIX: Disallow blank passwords during ISO first stage setup (kickstart) `#4947 <https://github.com/Security-Onion-Solutions/securityonion/issues/4947>`_
+- FIX: Disallow ctrl-c during the first stage of ISO setup `#4948 <https://github.com/Security-Onion-Solutions/securityonion/issues/4948>`_
+- FIX: Improve raid failure detection on SOS Appliances `#5064 <https://github.com/Security-Onion-Solutions/securityonion/issues/5064>`_
+- FIX: Improve verbiage for initial IPv4 prompt and so-allow prompt `#5138 <https://github.com/Security-Onion-Solutions/securityonion/issues/5138>`_
+- FIX: Jinja the stream.reassembly.depth value in the Suricata defaults.yaml file `#4293 <https://github.com/Security-Onion-Solutions/securityonion/issues/4293>`_
+- FIX: Remove so-elastic-features. `#4542 <https://github.com/Security-Onion-Solutions/securityonion/issues/4542>`_
+- FIX: SOC login page missing the hide/show password icons `#5087 <https://github.com/Security-Onion-Solutions/securityonion/issues/5087>`_
+- FIX: Wazuh data ingest error: data.port `#3988 <https://github.com/Security-Onion-Solutions/securityonion/issues/3988>`_
+
 2.3.61 Hotfix [STENO, MSEARCH]
 ------------------------------
 
