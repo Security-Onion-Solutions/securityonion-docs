@@ -19,7 +19,7 @@ To list all available ML components:
     sudo so-learn list
 
 .. note::
-    Currently logscan is the only ML component available.
+    Currently logscan is the only ML component available. (Initially unavailable on air gapped installations. See warning below for more info.)
 
 
 Enabling components
@@ -46,6 +46,9 @@ To disable an ML component:
 
 Logscan
 ------
+
+.. warning::
+    Logscan will initially be unavailable on air gapped installations, therefore a networked installation is required to make use of the tool during this beta stage.
 
 Logscan is log agnostic, but in its current implementation only scans logs from the built-in auth provider kratos.
 
