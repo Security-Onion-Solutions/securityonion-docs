@@ -29,6 +29,28 @@ Accessing
 
 To access CyberChef, log into :ref:`soc` and click the CyberChef hyperlink.
 
+Starting in Security Onion 2.3.60, you can send highlighted text from :ref:`pcap` to CyberChef. When the CyberChef tab opens, you will see your highlighted text in both the Input box and the Output box.
+
+Starting in Security Onion 2.3.70, you can send all displayed packet data from :ref:`pcap` to CyberChef. When the CyberChef tab opens, it will automatically apply the ``From Hexdump`` recipe to render the hexdump that was sent.
+
+Example
+-------
+
+Suppose you are looking at an interesting HTTP transfer in :ref:`pcap` and want to carve the file. Click the CyberChef button and CyberChef will then show the session transcript.
+
+.. image:: images/cyberchef-session.png
+  :target: _images/cyberchef-session.png
+
+Depending on the kind of traffic, you may need to apply an Operation like ``Strip HTTP headers``.
+
+.. image:: images/cyberchef-strip.png
+  :target: _images/cyberchef-strip.png
+
+If a magic wand appears in the Output box, then you can click the magic wand to automatically apply Operations.
+
+.. image:: images/cyberchef-magic.png
+  :target: _images/cyberchef-magic.png
+
 More Information
 ----------------
 
