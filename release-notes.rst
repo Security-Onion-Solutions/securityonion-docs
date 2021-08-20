@@ -3,6 +3,12 @@
 Release Notes
 =============
 
+2.3.70 Hotfix [CURATOR]
+----------------
+
+- FIX: Rolled back curator change for true clustering deployments (will be fixed in next release) `#5226 <https://github.com/Security-Onion-Solutions/securityonion/issues/5226>`_
+- FIX: Resolved benign error repeatedly logged to telegraf log file `#5195 <https://github.com/Security-Onion-Solutions/securityonion/issues/5195>`_
+
 2.3.70 Changes
 ----------------
 
