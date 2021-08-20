@@ -32,7 +32,7 @@ Starting in Security Onion 2.3.70, you can send all of the visible packet data t
 .. image:: images/pcap-cyberchef.png
   :target: _images/pcap-cyberchef.png
 
-Finally, you can download the full pcap file by clicking the pcap button on the far right side of the table header. If you are using an :ref:`analyst-vm`, then the pcap will automatically open in :ref:`networkminer`.
+Finally, you can download the full pcap file by clicking the download button on the far right side of the table header. If you are using an :ref:`analyst-vm`, then the pcap will automatically open in :ref:`networkminer`.
 
 .. image:: images/pcap-download.png
   :target: _images/pcap-download.png
