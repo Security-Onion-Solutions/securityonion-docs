@@ -23,7 +23,7 @@ VMware Workstation is available for many different host operating systems, inclu
 #. Choose Linux, CentOS 7 64-Bit and click ``Next``.
 #. Specify virtual machine name and click ``Next``.
 #. Specify disk size (minimum 200GB), store as single file, click ``Next``.
-#. Customize hardware and increase Memory (minimum 12GB for most use cases) and Processors (minimum 4 CPU cores for most use cases).
+#. Customize hardware and increase Memory and Processors based on the :ref:`hardware` section.
 #. Network Adapter (NAT or Bridged -- if you want to be able to access your Security Onion machine from other devices in the network, then choose Bridged, otherwise choose NAT to leave it behind the host) -- in this tutorial, this will be the management interface.
 #. Add >> Network Adapter (Bridged) - this will be the sniffing (monitor) interface.
 #. Click ``Close``.
@@ -45,7 +45,7 @@ Follow the steps below to create a VM in VMware Fusion for our Security Onion IS
 #. ``Finish`` screen appears. Click the ``Customize Settings`` button.
 #. ``Save As`` screen appears. Give the VM a name and click the ``Save`` button.
 #. ``Settings`` window appears. Click ``Processors & Memory``.
-#. ``Processors & Memory`` screen appears. Increase the number of processors to at least ``4`` and memory to at least ``12GB`` depending on your use case. Click the ``Add Device...`` button.
+#. ``Processors & Memory`` screen appears. Increase processors and memory based on the :ref:`hardware` section. Click the ``Add Device...`` button.
 #. ``Add Device`` screen appears. Click ``Network Adapter`` and click the ``Add...`` button.
 #. ``Network Adapter 2`` screen appears. This will be the sniffing (monitor) interface. Select your desired network adapter configuration. Click the ``Show All`` button.
 #. ``Settings`` screen appears. Click ``Hard Disk (SCSI)``.
