@@ -145,8 +145,10 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 - Select. ``Create`` and download the new public key, if you chose to generate a new key.
 - Stop the new VM after deployment completes.
 - Edit the VM and:
+
   - Adjust the OS disk size to be at least 100GB in size.
   - If this VM is a single-node grid, or is sensor node, attach the monitoring network interface created earlier.
+  
 - Start the VM.
 
 Note that you'll need to reference the SSH public key when using SSH to access the new VMs. For example:
