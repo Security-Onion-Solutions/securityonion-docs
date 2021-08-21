@@ -36,7 +36,7 @@ Starting in Security Onion 2.3.70, you can send all visible packet data from :re
 Example
 -------
 
-Suppose you are looking at an interesting HTTP transfer in :ref:`pcap` and want to carve the file. Click the CyberChef button and CyberChef will then show the hexdump in the Input box, apply the ``From Hexdump`` recipe, and show the HTTP transcript in the Output box.
+Suppose you are looking at an interesting HTTP transfer in :ref:`pcap` and want to carve the file. Click the :ref:`pcap` CyberChef button and CyberChef will launch in a new tab. It will then show the hexdump in the Input box, automatically apply the ``From Hexdump`` recipe, and show the HTTP transcript in the Output box.
 
 .. image:: images/cyberchef-session.png
   :target: _images/cyberchef-session.png
