@@ -46,7 +46,7 @@ You may want to apply an Operation. In this case, we can remove the client HTTP 
 .. image:: images/cyberchef-strip.png
   :target: _images/cyberchef-strip.png
 
-If a magic wand appears in the Output box, then CyberChef has detected some applicable Operations and you can click the magic wand to automatically apply those Operations. Here, CyberChef is automatically applying "Strip HTTP headers" again to remove the web server HTTP headers and then rendering the actual PNG image.
+If a magic wand appears in the Output box, then CyberChef has detected some applicable Operations and you can click the magic wand to automatically apply those Operations. Here, CyberChef is automatically applying ``Strip HTTP headers`` again to remove the web server HTTP headers and then rendering the actual PNG image.
 
 .. image:: images/cyberchef-magic.png
   :target: _images/cyberchef-magic.png
