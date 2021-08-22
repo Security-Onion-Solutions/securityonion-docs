@@ -41,12 +41,12 @@ Suppose you are looking at an interesting HTTP transfer in :ref:`pcap` and want 
 .. image:: images/cyberchef-session.png
   :target: _images/cyberchef-session.png
 
-You may want to apply an Operation like ``Strip HTTP headers``.
+You may want to apply an Operation. In this case, we can remove the client HTTP headers using ``Strip HTTP headers``.
 
 .. image:: images/cyberchef-strip.png
   :target: _images/cyberchef-strip.png
 
-If a magic wand appears in the Output box, then CyberChef has detected some applicable Operations and you can click the magic wand to automatically apply those Operations.
+If a magic wand appears in the Output box, then CyberChef has detected some applicable Operations and you can click the magic wand to automatically apply those Operations. Here, CyberChef is automatically applying "Strip HTTP headers" again to remove the web server HTTP headers and then rendering the actual PNG image.
 
 .. image:: images/cyberchef-magic.png
   :target: _images/cyberchef-magic.png
