@@ -41,7 +41,7 @@ Suppose you are looking at an interesting HTTP file download in :ref:`pcap` and 
 .. image:: images/cyberchef-session.png
   :target: _images/cyberchef-session.png
 
-You may want to apply an Operation. One option is to use the ``Extract Files`` operation. If you choose this option, you may want to specify certain file types for extraction. In this case, let's instead remove the client HTTP headers using ``Strip HTTP headers``.
+You may want to apply an operation from the left column. One option is to use the ``Extract Files`` operation. If you choose this option, you may want to specify certain file types for extraction. In this case, let's instead remove the client HTTP headers using the ``Strip HTTP headers`` operation.
 
 .. image:: images/cyberchef-strip.png
   :target: _images/cyberchef-strip.png
