@@ -18,6 +18,24 @@ Screenshot
 .. image:: images/networkminer.png
   :target: _images/networkminer.png
 
+Example
+-------
+
+Suppose you are looking at an interesting HTTP file download in :ref:`PCAP` and want to extract the file. Click the PCAP download button and then open the pcap file with NetworkMiner.
+
+.. image:: images/networkminer-png-0.png
+  :target: _images/networkminer-png-0.png
+
+NetworkMiner will automatically attempt to detect and extract any files transferred. You can access these extracted files on the Files tab.
+
+.. image:: images/networkminer-png-1.png
+  :target: _images/networkminer-png-1.png
+
+If any files are images, they can be viewed on the Images tab.
+
+.. image:: images/networkminer-png-2.png
+  :target: _images/networkminer-png-2.png
+
 More Information
 ----------------
 
