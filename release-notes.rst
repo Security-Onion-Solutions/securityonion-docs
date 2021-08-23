@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.70 Hotfix [GRAFANA_DASH_ALLOW]
+----------------
+
+- FIX: Grafana state trying to create undefined dashboards `#5270 <https://github.com/Security-Onion-Solutions/securityonion/pull/5270>`_
+
 2.3.70 Hotfix [CURATOR]
 ----------------
 
