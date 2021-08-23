@@ -27,7 +27,7 @@ Starting in Security Onion 2.3.60, you can select text with your mouse and then 
 .. image:: images/pcap-select-pivot.png
   :target: _images/pcap-select-pivot.png
 
-Starting in Security Onion 2.3.70, you can send all of the visible packet data to :ref:`cyberchef` by clicking the CyberChef icon on the right side of the table header. Please note that this only sends packet data that is currently being displayed, so you may need to click the ``LOAD MORE`` button if you want all packets in the stream.
+Starting in Security Onion 2.3.70, you can send all of the visible packet data to :ref:`cyberchef` by clicking the CyberChef icon on the right side of the table header. Please note that this only sends packet data that is currently being displayed, so if you are looking at a large stream you may need to click the ``LOAD MORE`` button to display all packets in the stream.
 
 .. image:: images/pcap-cyberchef.png
   :target: _images/pcap-cyberchef.png
