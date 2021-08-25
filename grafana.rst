@@ -5,13 +5,13 @@ Grafana
 
 Once you've logged into :ref:`soc`, you can then click the Grafana link to see system health information. 
 
-.. image:: images/grafana-01.png
-  :target: _images/grafana-01.png
+.. image:: images/grafana-0.png
+  :target: _images/grafana-0.png
 
 Depending on what kind of deployment you have, there will be at least one more dashboard available if you click the Dashboards icon on the left.
 
-.. image:: images/grafana-02.png
-  :target: _images/grafana-02.png
+.. image:: images/grafana-1.png
+  :target: _images/grafana-1.png
 
 Once you've accessed the node dashboards, they should be added to ``Recently viewed dashboards`` which is accessible by simply clicking the Dashboards icon:
 
