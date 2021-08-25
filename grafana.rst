@@ -5,10 +5,15 @@ Grafana
 
 Once you've logged into :ref:`soc`, you can then click the Grafana link to see system health information. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/87230207-57864600-c37c-11ea-98a2-e9a4d4494c3a.png
-  :target: https://user-images.githubusercontent.com/1659467/87230207-57864600-c37c-11ea-98a2-e9a4d4494c3a.png
+.. image:: images/grafana-01.png
+  :target: _images/grafana-01.png
 
-On a distributed deployment, you will default to the manager dashboard. There are also dashboards for other node types. Once you've accessed the node dashboards, they should be added to ``Recently viewed dashboards`` which is accessible by simply clicking the Dashboards icon:
+Depending on what kind of deployment you have, there will be at least one more dashboard available if you click the Dashboards icon on the left.
+
+.. image:: images/grafana-02.png
+  :target: _images/grafana-02.png
+
+Once you've accessed the node dashboards, they should be added to ``Recently viewed dashboards`` which is accessible by simply clicking the Dashboards icon:
 
 .. image:: https://user-images.githubusercontent.com/1659467/97081308-9361b600-15cf-11eb-890d-585efb58e6aa.png
   :target: https://user-images.githubusercontent.com/1659467/97081308-9361b600-15cf-11eb-890d-585efb58e6aa.png
