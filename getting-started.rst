@@ -9,6 +9,10 @@ If you're ready to get started with Security Onion, you may have questions like:
 
 Security Onion is a free and open platform. See the :ref:`license` section.
 
+**What do you recommend for first time users?**
+
+See the :ref:`first-time-users` section.
+
 **How many machines do I need?**
 
 Depending on what you're trying to do, you may need anywhere from one machine to thousands of machines. The :ref:`architecture` section will help you decide.
@@ -45,6 +49,7 @@ See the :ref:`post-installation` section.
    :maxdepth: 2
 
    license
+   first-time-users
    architecture
    hardware
    partitioning

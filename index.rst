@@ -11,7 +11,6 @@ Security Onion Documentation
 
    about
    introduction
-   first-time-users
    getting-started
    soc
    analyst-vm
