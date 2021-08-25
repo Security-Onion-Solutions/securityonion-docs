@@ -13,10 +13,10 @@ Depending on what kind of deployment you have, there will be at least one more d
 .. image:: images/grafana-1.png
   :target: _images/grafana-1.png
 
-Once you've accessed the node dashboards, they should be added to ``Recently viewed dashboards`` which is accessible by simply clicking the Dashboards icon:
+Each dashboard you view is added to ``Recently viewed dashboards`` which is accessible by simply clicking the Dashboards icon:
 
-.. image:: https://user-images.githubusercontent.com/1659467/97081308-9361b600-15cf-11eb-890d-585efb58e6aa.png
-  :target: https://user-images.githubusercontent.com/1659467/97081308-9361b600-15cf-11eb-890d-585efb58e6aa.png
+.. image:: images/grafana-2.png
+  :target: _images/grafana-2.png
 
 Grafana Changes in Security Onion 2.3.60
 ----------------------------------------
