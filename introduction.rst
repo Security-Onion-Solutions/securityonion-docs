@@ -83,7 +83,7 @@ Kibana
 CyberChef
 ~~~~~~~~~
 
-:ref:`cyberchef` allows you decode, decompress, and analyze artifacts.
+:ref:`cyberchef` allows you decode, decompress, and analyze artifacts. :ref:`alerts`, :ref:`hunt`, and :ref:`pcap` all allow you to quickly and easily send data to :ref:`cyberchef` for further analysis.
 
 .. image:: images/cyberchef.png
   :target: _images/cyberchef.png
