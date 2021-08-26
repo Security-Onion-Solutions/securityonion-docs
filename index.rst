@@ -11,6 +11,7 @@ Security Onion Documentation
 
    about
    introduction
+   license
    first-time-users
    getting-started
    soc
