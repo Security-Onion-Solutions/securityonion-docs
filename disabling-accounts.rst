@@ -23,6 +23,11 @@ If you need to disable an account in :ref:`soc`, :ref:`hive`, and :ref:`fleet`, 
 
     sudo so-user-disable tom@example.com
 
+After disabling a user account, the :ref:`soc` :ref:`administration` page will show the disabled user account with a lock in the Status column:
+
+.. image:: images/users.png
+  :target: _images/users.png
+
 TheHive - UI
 ------------
 
