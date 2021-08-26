@@ -7,3 +7,5 @@ Administration
 
 .. image:: images/users.png
   :target: _images/users.png
+
+Disabled user accounts are displayed with a lock in the Status column.
