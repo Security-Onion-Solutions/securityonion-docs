@@ -12,22 +12,34 @@ In the diagram below, we see Security Onion in a traditional enterprise network 
    
 Many assume NSM is a solution they can buy to fill a gap; purchase and deploy solution XYZ and problem solved. The belief that you can buy an NSM denies the fact that the most important word in the NSM acronym is “M” for Monitoring. Data can be collected and analyzed, but not all malicious activity looks malicious at first glance. While automation and correlation can enhance intelligence and assist in the process of sorting through false positives and malicious indicators, there is no replacement for human intelligence and awareness. We don’t want to disillusion you. Security Onion isn’t a silver bullet that you can setup, walk away from and feel safe. Nothing is and if that’s what you’re looking for you’ll never find it. Security Onion will provide visibility into your network traffic and context around alerts and anomalous events, but it requires a commitment from you the defender to review alerts, monitor the network activity, and most importantly, have a willingness, passion, and desire to learn.
 
-Overview
---------
+Network Security Monitoring
+---------------------------
 
-Security Onion seamlessly weaves together three core functions:
+From a network visibility standpoint, Security Onion seamlessly weaves together intrusion detection, comprehensive network metadata, and full packet capture.
 
--  network and endpoint detection
--  full packet capture
--  powerful analysis tools
+Network Detection
+~~~~~~~~~~~~~~~~~
 
-*Network and endpoint detection* analyzes network traffic or host systems, respectively, and provides log and alert data for detected events and activity. Security Onion provides multiple options:
+Security Onion uses :ref:`suricata` to monitor your network traffic looking for fingerprints and identifiers that match known malicious, anomalous or otherwise suspicious traffic. You might say that it's similar to antivirus signatures for the network, but it's a bit deeper and more flexible than that. 
 
--  Rule-driven NIDS. For rule-driven network intrusion detection, Security Onion 2 uses :ref:`suricata`. Rule-based systems look at network traffic for fingerprints and identifiers that match known malicious, anomalous or otherwise suspicious traffic. You might say that they’re akin to antivirus signatures for the network, but they’re a bit deeper and more flexible than that.
--  Protocol metadata. For analysis-driven network intrusion detection, Security Onion offers :ref:`zeek`.  Unlike rule-based systems that look for needles in the haystack of data, :ref:`zeek` says, “Here’s all your data and this is what I’ve seen. Do with it what you will and here’s a framework so you can.” :ref:`zeek` monitors network activity and logs any connections, DNS requests, detected network services and software, SSL certificates, and HTTP, FTP, IRC, SMTP, SSH, SSL, and Syslog activity that it sees, providing a real depth and visibility into the context of data and events on your network. Additionally, :ref:`zeek` includes analyzers for many common protocols and by default has the capacity to check MD5 sums for HTTP file downloads against Team Cymru’s Malware Hash Registry project. Beyond logging activity and traffic analyzers, the :ref:`zeek` framework provides a very extensible way to analyze network data in real time. The input framework allows you to feed data into :ref:`zeek`, which can be scripted, for example, to read a comma delimited file of C-level employee usernames and correlate that against other activity, such as when they download an executable file from the Internet. The file analysis framework provides protocol independent file analysis, allowing you to capture files as they pass through your network and automatically pass them to a sandbox or a file share for antivirus scanning. The flexibility of :ref:`zeek` makes it an incredibly powerful ally in your defense.
--  For endpoint detection, Security Onion offers :ref:`wazuh`, a free, open source HIDS for Windows, Linux and Mac OS X. When you add the :ref:`wazuh` agent to endpoints on your network, you gain invaluable visibility from endpoint to your network’s exit point. :ref:`wazuh` performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response. As an analyst, being able to correlate host-based events with network-based events can be the difference in identifying a successful attack. A new addition to Security Onion 2 is :ref:`osquery`, which is another free and open source endpoint agent. In addition, Security Onion can collect data via :ref:`syslog` or other agent transport like :ref:`beats`.
+Comprehensive Network Metadata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*Full-packet capture* is accomplished via :ref:`stenographer`. :ref:`stenographer` captures all the network traffic your Security Onion sensors see and stores as much of it as your storage solution will hold (it has a built-in mechanism to purge old data before your disks fill to capacity). Full packet capture is like a video camera for your network, but better because not only can it tell us who came and went, but also exactly where they went and what they brought or took with them (exploit payloads, phishing emails, file exfiltration). It’s a crime scene recorder that can tell us a lot about the victim and the white chalk outline of a compromised host on the ground. There is certainly valuable evidence to be found on the victim’s body, but evidence at the host can be destroyed or manipulated; the camera doesn't lie, is hard to deceive, and can capture a bullet in transit.
+Comprehensive network metadata is provided by your choice of :ref:`zeek` or :ref:`suricata`.  Unlike rule-based systems that look for specific needles in the haystack of data, metadata provides you with logs of connections, DNS requests, detected network services and software, SSL certificates, and standard protocols like HTTP, FTP, SMTP, SSH, and SSL. This provides a real depth and visibility into the context of data and events on your network. 
+
+Full Packet Capture
+~~~~~~~~~~~~~~~~~~~
+
+Full-packet capture is accomplished via :ref:`stenographer`. :ref:`stenographer` captures all the network traffic your Security Onion sensors see and stores as much of it as your storage solution will hold (it has a built-in mechanism to purge old data before your disks fill to capacity). Full packet capture is like a video camera for your network, but better because not only can it tell us who came and went, but also exactly where they went and what they brought or took with them (exploit payloads, phishing emails, file exfiltration). It’s a crime scene recorder that can tell us a lot about the victim and the white chalk outline of a compromised host on the ground. There is certainly valuable evidence to be found on the victim’s body, but evidence at the host can be destroyed or manipulated; the camera doesn't lie, is hard to deceive, and can capture a bullet in transit.
+
+Enterprise Security Monitoring
+------------------------------
+
+In addition to network visibility, Security Onion provides endpoint visibility and can collect logs from a wide variety of devices like firewalls and routers.
+
+For endpoint detection, Security Onion offers :ref:`wazuh`, a free, open source HIDS for Windows, Linux and Mac OS X. When you add the :ref:`wazuh` agent to endpoints on your network, you gain invaluable visibility from endpoint to your network’s exit point. :ref:`wazuh` performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response. As an analyst, being able to correlate host-based events with network-based events can be the difference in identifying a successful attack.
+
+Security Onion also supports other endpoint agents like :ref:`osquery` and :ref:`beats`. For devices that don't support the installation of agents, Security Onion can consume standard :ref:`syslog`.
 
 Analysis Tools
 --------------
