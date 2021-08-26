@@ -25,7 +25,7 @@ Security Onion generates NIDS (Network Intrusion Detection System) alerts by mon
 Network Metadata
 ~~~~~~~~~~~~~~~~
 
-Unlike signature-based intrusion detection that looks for specific needles in the haystack of data, network metadata provides you with logs of connections, DNS requests, detected network services and software, SSL certificates, and standard protocols like HTTP, FTP, SMTP, SSH, and SSL. This provides a real depth and visibility into the context of data and events on your network. Security Onion provides network metadata using your choice of either :ref:`zeek` or :ref:`suricata`.
+Unlike signature-based intrusion detection that looks for specific needles in the haystack of data, network metadata provides you with logs of connections and standard protocols like DNS, HTTP, FTP, SMTP, SSH, and SSL. This provides a real depth and visibility into the context of data and events on your network. Security Onion provides network metadata using your choice of either :ref:`zeek` or :ref:`suricata`.
 
 Full Packet Capture
 ~~~~~~~~~~~~~~~~~~~
