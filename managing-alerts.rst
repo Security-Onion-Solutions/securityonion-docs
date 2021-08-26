@@ -366,10 +366,14 @@ Suppressions
 
 A suppression rule allows you to make some finer grained decisions about certain rules without the onus of rewriting them. With this functionality we can suppress rules based on their signature, the source or destination address and even the IP or full CIDR network block. This way, you still have the basic ruleset, but the situations in which they fire are altered. It's important to note that with this functionality, care should be given to the suppressions being written to make sure they do not suppress legitimate alerts. See above for ``suppress`` examples.
 
-Why is idstools ignoring disabled rules
----------------------------------------
+Flowbits
+--------
 
-``idstools`` may seem like it is ignoring your disabled rules request if you try to disable a rule that has flowbits set. For a quick primer on flowbits, see https://blog.snort.org/2011/05/resolving-flowbit-dependancies.html.
+``idstools`` may seem like it is ignoring your disabled rules request if you try to disable a rule that has flowbits set.
+
+.. seealso::
+
+	For a quick primer on flowbits, see https://blog.snort.org/2011/05/resolving-flowbit-dependancies.html.
 
 For example, consider the following rules that reference the ``ET.MSSQL`` flowbit.
 
