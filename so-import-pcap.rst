@@ -3,9 +3,7 @@
 so-import-pcap
 ==============
 
-``so-import-pcap`` will import one or more pcaps into Security Onion and preserve original timestamps.
-
-It will do the following:
+``so-import-pcap`` will import one or more pcaps into Security Onion and preserve original timestamps. It will do the following:
 
 -  generate IDS alerts using :ref:`suricata`
 -  generate network metadata using :ref:`zeek`
@@ -33,4 +31,11 @@ To import multiple pcaps:
 
     sudo so-import-pcap /full/path/to/import1.pcap /full/path/to/import2.pcap
 
+Please note that if you import multiple pcaps at one time, so-import-pcap currently only provides a hyperlink for the last pcap in the list. If you need a hyperlink for each pcap, then you can run one pcap file per so-import-pcap and use a for-loop to iterate over your collection of pcap files.
+
+Examples
+--------
+
 If you don't already have some pcap files to import, see :ref:`pcaps` for a list of sites where you can download sample pcaps.
+
+Our Quick Malware Analysis series at https://blog.securityonion.net/search/label/quick%20malware%20analysis uses so-import-pcap to import pcaps from https://www.malware-traffic-analysis.net/ and other sites. Following along with these blog posts in your own so-import-pcap VM is a great way to practice your skills!
