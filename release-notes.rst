@@ -4,18 +4,18 @@ Release Notes
 =============
 
 2.3.70 Hotfix [GRAFANA_DASH_ALLOW]
-----------------
+----------------------------------
 
 - FIX: Grafana state trying to create undefined dashboards `#5270 <https://github.com/Security-Onion-Solutions/securityonion/pull/5270>`_
 
 2.3.70 Hotfix [CURATOR]
-----------------
+-----------------------
 
 - FIX: Rolled back curator change for true clustering deployments (will be fixed in next release) `#5226 <https://github.com/Security-Onion-Solutions/securityonion/issues/5226>`_
 - FIX: Resolved benign error repeatedly logged to telegraf log file `#5195 <https://github.com/Security-Onion-Solutions/securityonion/issues/5195>`_
 
 2.3.70 Changes
-----------------
+--------------
 
 - FEATURE: Add sha.256 to suricata.fileinfo pipeline `#4224 <https://github.com/Security-Onion-Solutions/securityonion/issues/4224>`_
 - FEATURE: Allow for adjustment of Kibana sampleSize setting in Discover dashboard `#4969 <https://github.com/Security-Onion-Solutions/securityonion/issues/4969>`_

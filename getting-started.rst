@@ -53,7 +53,6 @@ See the :ref:`post-installation` section.
    architecture
    hardware
    partitioning
-   release-notes
    download
    vmware
    virtualbox

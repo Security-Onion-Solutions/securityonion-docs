@@ -27,4 +27,5 @@ Security Onion Documentation
    help
    security
    appendix
+   release-notes
    cheat-sheet
