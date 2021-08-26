@@ -59,8 +59,8 @@ Release Notes
 - UPGRADE: Elastic 7.13.4 `#4730 <https://github.com/Security-Onion-Solutions/securityonion/issues/4730>`_
 - UPGRADE: Zeek 4.0.3 `#4716 <https://github.com/Security-Onion-Solutions/securityonion/issues/4716>`_
 
-2.3.60 Hotfix [ECSFIX, HEAVYNODE_SSL_LOGSTASH_REDIS_PIPELINES, FBPIPELINE, CURATORAUTH] Changes
------------------------------------------------------------------------------------------------
+2.3.60 Hotfix [ECSFIX, HEAVYNODE, FBPIPELINE, CURATORAUTH] Changes
+------------------------------------------------------------------
 - FIX: Curator's authentication to Elasticsearch was incorrectly configured for the version currently in use.
 - FIX: Some logs from Filebeat were not being properly routed to the correct pipeline causing the log to fill up the disk.
 - FEATURE: All hotfixes going forward will have an ISO so that airgap users can follow the standard soup process as they would for normal releases.
