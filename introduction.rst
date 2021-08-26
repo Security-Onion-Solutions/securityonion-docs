@@ -17,20 +17,20 @@ Network Security Monitoring
 
 From a network visibility standpoint, Security Onion seamlessly weaves together intrusion detection, comprehensive network metadata, and full packet capture.
 
-Network Detection
-~~~~~~~~~~~~~~~~~
+Intrusion Detection
+~~~~~~~~~~~~~~~~~~~
 
 Security Onion uses :ref:`suricata` to monitor your network traffic looking for fingerprints and identifiers that match known malicious, anomalous or otherwise suspicious traffic. You might say that it's similar to antivirus signatures for the network, but it's a bit deeper and more flexible than that. 
 
 Comprehensive Network Metadata
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Comprehensive network metadata is provided by your choice of :ref:`zeek` or :ref:`suricata`.  Unlike rule-based systems that look for specific needles in the haystack of data, metadata provides you with logs of connections, DNS requests, detected network services and software, SSL certificates, and standard protocols like HTTP, FTP, SMTP, SSH, and SSL. This provides a real depth and visibility into the context of data and events on your network. 
+Comprehensive network metadata is provided by your choice of :ref:`zeek` or :ref:`suricata`.  Unlike rule-based intrusion detection that looks for specific needles in the haystack of data, metadata provides you with logs of connections, DNS requests, detected network services and software, SSL certificates, and standard protocols like HTTP, FTP, SMTP, SSH, and SSL. This provides a real depth and visibility into the context of data and events on your network.
 
 Full Packet Capture
 ~~~~~~~~~~~~~~~~~~~
 
-Full-packet capture is accomplished via :ref:`stenographer`. :ref:`stenographer` captures all the network traffic your Security Onion sensors see and stores as much of it as your storage solution will hold (it has a built-in mechanism to purge old data before your disks fill to capacity). Full packet capture is like a video camera for your network, but better because not only can it tell us who came and went, but also exactly where they went and what they brought or took with them (exploit payloads, phishing emails, file exfiltration). It’s a crime scene recorder that can tell us a lot about the victim and the white chalk outline of a compromised host on the ground. There is certainly valuable evidence to be found on the victim’s body, but evidence at the host can be destroyed or manipulated; the camera doesn't lie, is hard to deceive, and can capture a bullet in transit.
+Full packet capture is accomplished via :ref:`stenographer`. :ref:`stenographer` captures all the network traffic your Security Onion sensors see and stores as much of it as your storage solution will hold, automatically trimming old data as necessary to avoid filling your disk. Full packet capture is like a video camera for your network, but better because not only can it tell us who came and went, but also exactly where they went and what they brought or took with them (exploit payloads, phishing emails, file exfiltration). It’s a crime scene recorder that can tell us a lot about the victim and the white chalk outline of a compromised host on the ground. There is certainly valuable evidence to be found on the victim’s body, but evidence at the host can be destroyed or manipulated; the camera doesn't lie, is hard to deceive, and can capture a bullet in transit.
 
 Enterprise Security Monitoring
 ------------------------------
