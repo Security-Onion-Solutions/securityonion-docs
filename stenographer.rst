@@ -34,6 +34,14 @@ Configuration
 -------------
 Stenographer reads its configuration from ``/opt/so/conf/steno/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
 
+MaxDirectoryFiles
+-----------------
+The ``MaxDirectoryFiles`` setting defaults to 30000. If you have a large amount of storage and find that you only have 3 weeks worth of PCAP on disk while still having plenty of free space, then you may want to increase the ``MaxDirectoryFiles`` setting as follows:
+
+- copy ``/opt/so/saltstack/default/salt/pcap/files/config`` to ``/opt/so/saltstack/local/salt/pcap/files/config``
+- edit ``/opt/so/saltstack/local/salt/pcap/files/config`` and increase ``MaxDirectoryFiles`` to a higher value
+- restart Stenographer using ``sudo so-pcap-restart``
+
 Diagnostic Logging
 ------------------
 Diagnostic logging for Stenographer can be found at ``/opt/so/log/stenographer/``.
