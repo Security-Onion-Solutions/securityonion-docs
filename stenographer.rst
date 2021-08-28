@@ -36,7 +36,7 @@ Stenographer reads its configuration from ``/opt/so/conf/steno/``. However, plea
 
 MaxDirectoryFiles
 -----------------
-The ``MaxDirectoryFiles`` setting defaults to 30000. If you have a large amount of storage and find that you only have 3 weeks worth of PCAP on disk while still having plenty of free space, then you may want to increase the ``MaxDirectoryFiles`` setting as follows:
+By default, Stenographer limits the number of files in the pcap directory to 30K to avoid limitations with the ext3 filesystem. However, if you're using the ext4 or xfs filesystems, then it is safe to increase this value. So if you have a large amount of storage and find that you only have 3 weeks worth of PCAP on disk while still having plenty of free space, then you may want to increase the ``MaxDirectoryFiles`` setting as follows:
 
 - copy ``/opt/so/saltstack/default/salt/pcap/files/config`` to ``/opt/so/saltstack/local/salt/pcap/files/config``
 - edit ``/opt/so/saltstack/local/salt/pcap/files/config`` and increase ``MaxDirectoryFiles`` to a higher value
