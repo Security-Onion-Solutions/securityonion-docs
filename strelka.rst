@@ -11,7 +11,7 @@ Depending on what options you choose in Setup, it may ask if you want to use :re
 
 Alerts
 ------
-Strelka scans files using :ref:`yara` rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`hunt`, or :ref:`kibana`. Here is an example of Strelka detecting Poison Ivy RAT:
+Strelka scans files using YARA rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`hunt`, or :ref:`kibana`. Here is an example of Strelka detecting Poison Ivy RAT:
 
 .. image:: images/strelka-alert-1.png
   :target: _images/strelka-alert-1.png
@@ -26,6 +26,8 @@ Drilling into that alert, we find more information about the file and the YARA r
 
 .. image:: images/strelka-alert-4.png
   :target: _images/strelka-alert-4.png
+
+You can read more about YARA rules in the :ref:`local-rules` section.
 
 Logs
 ----
