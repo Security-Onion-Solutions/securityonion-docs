@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.70 Hostfix [WAZUH]
+----------------------
+
+- FIX: wazuh-agent is updated during setup on ISO, which causes service to fail to start `#5354 <https://github.com/Security-Onion-Solutions/securityonion/issues/5354>`_
+
 2.3.70 Hotfix [GRAFANA_DASH_ALLOW]
 ----------------------------------
 
