@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.3.70 Hostfix [WAZUH]
+2.3.70 Hotfix [WAZUH]
 ----------------------
 
 - FIX: wazuh-agent is updated during setup on ISO, which causes service to fail to start `#5354 <https://github.com/Security-Onion-Solutions/securityonion/issues/5354>`_
