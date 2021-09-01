@@ -22,13 +22,15 @@ You can access full packet capture via the :ref:`pcap` interface:
 
 :ref:`alerts`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` interface.
 
-Alternatively, you can access packet capture from the command line using ``stenoread`` and a steno query as defined at https://github.com/google/stenographer#querying. In the following example, replace "YourStenoQueryHere" with your actual steno query:
+Command Line
+------------
+You can also access packet capture from the command line of the box where the pcap is stored using a steno query as defined at https://github.com/google/stenographer#querying. In the following examples, replace "YourStenoQueryHere" with your actual steno query.
+
+The first option is using docker to run ``stenoread``. If the query succeeds, you can then find the resulting pcap file in ``/nsm/pcaptmp/`` in the host filesystem:
 
 ::
 
     sudo docker exec -it so-steno stenoread "YourStenoQueryHere" -w /tmp/new.pcap
-
-You can then find the resulting pcap file in ``/nsm/pcaptmp/`` in the host filesystem.
 
 Starting in Security Onion 2.3.70, we've included a wrapper script called ``so-pcap-export`` to make this a little easier. For example:
 
