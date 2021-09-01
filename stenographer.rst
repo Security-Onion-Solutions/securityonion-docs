@@ -30,6 +30,12 @@ Alternatively, you can access packet capture from the command line using ``steno
 
 You can then find the resulting pcap file in ``/nsm/pcaptmp/`` in the host filesystem.
 
+Starting in Security Onion 2.3.70, we've included a wrapper script called ``so-pcap-export`` to make this a little easier. For example:
+
+::
+
+    sudo so-pcap-export "YourStenoQueryHere" output.pcap
+
 Configuration
 -------------
 Stenographer reads its configuration from ``/opt/so/conf/steno/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
