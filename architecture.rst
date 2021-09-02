@@ -45,6 +45,10 @@ A standard distributed deployment includes a **manager node**, one or more **for
 
 There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
+.. warning::
+
+	Heavy nodes are NOT recommended for most users.
+
 -  Recommended only if a standard distributed deployment is not possible.
 -  Consists of a manager node and one or more heavy nodes.
 
@@ -52,6 +56,10 @@ There is the option to utilize only two node types -- the **manager node** and o
    :align: center
    :width: 600
    :target: _images/heavy-distributed.png
+
+.. note::
+
+	Heavy nodes do not consume from the :ref:`redis` queue on the manager. This means that if you just have a manager and heavy nodes, then the :ref:`redis` queue on the manager will grow and never be drained. To avoid this, you have two options. If you are starting a new deployment, you can make your ``manager`` a ``manager search`` so that it will drain its own :ref:`redis` queue. Alternatively, if you have an existing deployment with a ``manager`` and want to avoid rebuilding, then you can add a separate search node (NOT heavy node) to consume from the :ref:`redis` queue on the manager.
 
 Node Types
 ----------
@@ -115,11 +123,11 @@ A manager search node runs the following components:
 Heavy Node
 ~~~~~~~~~~
 
-Similar to search nodes, heavy nodes extend the storage and processing capabilities of the manager node. However, heavy nodes also perform sensor duties and thus have lower performance overall.
-
 .. warning::
 
 	Heavy nodes are NOT recommended for most users.
+
+Similar to search nodes, heavy nodes extend the storage and processing capabilities of the manager node. However, heavy nodes also perform sensor duties and thus have lower performance overall.
 
 Heavy Nodes run the following components:
 
@@ -130,10 +138,6 @@ Heavy Nodes run the following components:
 -  :ref:`suricata`
 -  :ref:`stenographer`
 -  :ref:`wazuh`
-
-.. note::
-
-	Heavy nodes do not consume from the :ref:`redis` queue on the manager. This means that if you just have a manager and heavy nodes, then the :ref:`redis` queue on the manager will grow and never be drained. To avoid this, you have two options. If you are starting a new deployment, you can make your ``manager`` a ``manager search`` so that it will drain its own :ref:`redis` queue. Alternatively, if you have an existing deployment with a ``manager`` and want to avoid rebuilding, then you can add a separate search node (NOT heavy node) to consume from the :ref:`redis` queue on the manager.
 
 Fleet Standalone Node
 ~~~~~~~~~~~~~~~~~~~~~
