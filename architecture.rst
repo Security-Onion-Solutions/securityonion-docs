@@ -117,6 +117,10 @@ Heavy Node
 
 Similar to search nodes, heavy nodes extend the storage and processing capabilities of the manager node. However, heavy nodes also perform sensor duties and thus have lower performance overall.
 
+.. warning::
+
+	Heavy nodes are NOT recommended for most users.
+
 Heavy Nodes run the following components:
 
 -  :ref:`elasticsearch`
@@ -126,6 +130,10 @@ Heavy Nodes run the following components:
 -  :ref:`suricata`
 -  :ref:`stenographer`
 -  :ref:`wazuh`
+
+.. note::
+
+	Heavy nodes do not consume from the :ref:`redis` queue on the manager. This means that if you just have a manager and heavy nodes, then the :ref:`redis` queue on the manager will grow and never be drained. To avoid this, you have two options. If you are starting a new deployment, you can make your ``manager`` a ``manager search`` so that it will drain its own :ref:`redis` queue. Alternatively, if you have an existing deployment with a ``manager`` and want to avoid rebuilding, then you can add a separate search node (NOT heavy node) to consume from the :ref:`redis` queue on the manager.
 
 Fleet Standalone Node
 ~~~~~~~~~~~~~~~~~~~~~
