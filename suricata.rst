@@ -130,7 +130,7 @@ The global pillar on your manager node controls the metadata engine on each sens
 
 To change your grid's metadata engine from Zeek to Suricata:
 
--  On the manager, edit the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) and change the ``mdengine`` variable from 'ZEEK' to 'SURICATA'.
+-  On the manager, edit the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) and change the ``mdengine`` variable from ``ZEEK`` to ``SURICATA``.
 
 -  Stop Zeek on all nodes:
 
@@ -138,7 +138,7 @@ To change your grid's metadata engine from Zeek to Suricata:
 
       sudo salt '*' cmd.run 'so-zeek-stop'
 
--  Highstate all minions:
+-  Update all nodes:
 
    ::
 
