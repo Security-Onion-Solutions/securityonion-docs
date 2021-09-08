@@ -93,7 +93,7 @@ For example:
 
 .. warning::
 
-   | Please note that :ref:`zeek` and :ref:`stenographer` will correctly process VLAN traffic but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
+   | Please note that :ref:`zeek` and :ref:`stenographer` should correctly analyze traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
    | https://github.com/J-Gras/zeek-af_packet-plugin/issues/9
    | https://github.com/google/stenographer/issues/211
    
