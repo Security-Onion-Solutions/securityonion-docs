@@ -10,7 +10,7 @@ From https://osquery.io/:
 Fleet
 -----
 
-Security Onion includes Kolide :ref:`fleet` to manage your osquery deployment. For more information, please see the :ref:`fleet` section.
+Security Onion includes :ref:`fleet` to manage your osquery deployment. For more information, please see the :ref:`fleet` section.
 
 Agents - Deployment
 -------------------
@@ -43,7 +43,7 @@ For macOS deployments, install the package and then configure the following:
 Agents - Updating
 -----------------
 
-Security Onion uses Kolide Launcher as a management wrapper around Osquery. This allows for a simpler configuration as well as auto-updates of Launcher and Osquery from the Kolide TUF service. Launcher will check every hour to see if an update is available and, if so, will download and install it. This is the default configuration, but can be changed within the osquery Flags file.
+Security Onion uses Launcher as a management wrapper around Osquery. This allows for a simpler configuration as well as auto-updates of Launcher and Osquery. Launcher will check every hour to see if an update is available and, if so, will download and install it. This is the default configuration, but can be changed within the osquery Flags file.
 
 In an airgap environment where the endpoints do not have Internet access, updated Osquery packages can be downloaded from the Security Onion Console and used to update the endpoints. Osquery packages are periodically updated on the Manager as new versions of Osquery are released. 
 
