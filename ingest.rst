@@ -41,7 +41,7 @@ Manager Node
 
 Manager + Search
 ----------------
-| Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [M+S] --> ES Ingest [M+S]
+| Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [M+S] --> Redis [M+S] <--> Logstash [M+S] --> ES Ingest [M+S]
 | Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 | 
 | Pipeline: Filebeat [M+S] --> Logstash [M+S] --> ES Ingest [M+S]
