@@ -36,7 +36,7 @@ Distributed
 A standard distributed deployment includes a **manager node**, one or more **forward nodes** running network sensor components, and one or more **search nodes** running Elastic search components. This architecture may cost more upfront, but it provides for greater scalability and performance, as you can simply add more nodes to handle more traffic or log sources.
 
 -  Recommended deployment type
--  Consists of a manager node, one or more forward nodes, and one or more search nodes.
+-  Consists of a manager node, one or more forward nodes, and one or more search nodes
 
 .. image:: images/distributed.png
    :align: center
@@ -49,8 +49,8 @@ There is the option to utilize only two node types -- the **manager node** and o
 
 	Heavy nodes are NOT recommended for most users.
 
--  Recommended only if a standard distributed deployment is not possible.
--  Consists of a manager node and one or more heavy nodes.
+-  Recommended only if a standard distributed deployment is not possible
+-  Consists of a manager node and one or more heavy nodes
 
 .. image:: images/heavy-distributed.png
    :align: center
