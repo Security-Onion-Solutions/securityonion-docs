@@ -28,7 +28,7 @@ Single Node Grid
 
 For simple, low-volume production monitoring, a single node grid can be used. EBS must be used for :ref:`elasticsearch` data storage if used for production purposes. Single node grids cannot use ephemeral instance storage without being at risk of losing :ref:`elasticsearch` data. However, for temporary evaluation installations, where there is little concern for data loss, ephemeral instance storage should be used. 
 
-Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both).
+Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both). Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
 
 Standalone:
 
@@ -48,7 +48,7 @@ Distributed Grid
 
 For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes must be used in this architecture. This is required due to the use of ephemeral instance storage for :ref:`elasticsearch` data storage, where each of the search nodes retains a replica of another search node, for disaster recovery.
 
-Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements.
+Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements. Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
 
 VPN Node
 

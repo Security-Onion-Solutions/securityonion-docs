@@ -36,7 +36,7 @@ Single Node Grid
 
 For simple, low-volume production monitoring, a single node grid can be used.
 
-Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both).
+Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both). Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
 
 Standalone:
 
@@ -55,7 +55,7 @@ Distributed Grid
 
 For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes are recommended for redundancy purposes.
 
-Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements.
+Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements. Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
 
 VPN Node
 
