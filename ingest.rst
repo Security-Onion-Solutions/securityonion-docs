@@ -33,10 +33,10 @@ Fleet Standalone
 
 Manager Node
 ------------
-| Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [Manager] --> ES Ingest [S]
+| Core Pipeline: Filebeat [Fleet | Forward] --> Logstash [Manager] --> Redis [Manager]
 | Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 | 
-| WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [Manager] --> ES Ingest [S]
+| WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [Manager] --> Redis [Manager]
 | Logs: WEL
 
 Manager + Search
@@ -57,7 +57,7 @@ Heavy
 
 Search
 ------
-| Pipeline: Redis [Search] --> Logstash [Search] --> ES Ingest [Search] 
+| Pipeline: Redis [Manager] --> Logstash [Search] --> ES Ingest [Search] 
 | Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 
 Forward
