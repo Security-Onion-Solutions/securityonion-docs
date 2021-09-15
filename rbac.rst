@@ -146,7 +146,7 @@ Creating a custom RBAC role in Security Onion, follow the steps below:
             sudo so-elasticsearch-query _security/privilege/kibana-.kibana | jq '. | map_values(keys)'
 
 
-2. Add a custom role with the same name as the json file above to the ``custom_roles`` file located at ``/opt/so/saltstack/local/salt/soc/files/soc/custom_roles`` as outlined in the below section "Defining SOC Roles".
+2. Add a custom role with the same name as the json file above to the ``custom_roles`` file located at ``/opt/so/saltstack/local/salt/soc/files/soc/custom_roles`` as outlined in "Defining SOC Roles".
 
 3. Run a salt highstate from the manager:
 
