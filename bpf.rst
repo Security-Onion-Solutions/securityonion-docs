@@ -64,7 +64,9 @@ YAML rules apply and so if you want to use a reserved YAML character such as ``[
 Multiple Conditions
 ~~~~~~~~~~~~~~~~~~~
 
-If your BPF contains multiple conditions you can put them on multiple lines and join them with ``&&`` but make sure the final condition has no ``&&`` at the end. For example:
+If your BPF contains multiple conditions you can put them on multiple lines and join them with a logical AND (``&&``) or logical OR (``||``) but make sure the final condition has nothing at the end. 
+
+Here's an example of joining conditions with a logical AND:
 
 ::
 
@@ -73,6 +75,16 @@ If your BPF contains multiple conditions you can put them on multiple lines and 
       - not host 192.168.1.2 &&
       - not host 192.168.1.3 &&
       - not host 192.168.1.4
+      
+Here's an example of joining conditions with a logical OR:
+
+::
+
+    nids:
+     bpf:
+      - host 192.168.1.2 ||
+      - host 192.168.1.3 ||
+      - host 192.168.1.4
 
 VLAN
 ~~~~

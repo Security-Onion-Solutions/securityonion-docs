@@ -14,10 +14,15 @@ so-allow
 
 Run ``sudo so-allow`` and select the ``b`` option to allow your Beats agents to send their logs to Logstash port ``5044/tcp``.
 
+Version
+-------
+
+When downloading a Beats agent, make sure the version number matches the version of Elastic running on your Security Onion deployment.
+
 Winlogbeat
 ----------
 
-Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version. Please note that the hyperlink simply points to the standard Winlogbeat download from the Elastic site.
+Navigate to the Downloads page in :ref:`soc` and download the linked Winlogbeat agent. This will ensure that you get the correct version of Winlogbeat for your Elastic version.
 
 Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if necessary. Then configure ``winlogbeat.yml`` as follows:
 
