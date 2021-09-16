@@ -102,6 +102,7 @@ if using_rtd_theme:
     html_theme = 'sphinx_rtd_theme'
     html_style = None
     html_theme_options = {}
+    html_static_path = ['_static']
     if 'html_theme_path' in globals():
         html_theme_path.append(theme.get_html_theme_path())
     else:
@@ -160,13 +161,15 @@ context = {
     'user_analytics_code': '',
     'global_analytics_code': 'UA-17997319-1',
     'commit': '525fc0c7',
+    'css_files': [
+        '_static/theme_overrides.css',  # overrides for wide tables in RTD theme
+    ],
 }
 
 
 
 
 if 'html_context' in globals():
-    
     html_context.update(context)
     
 else:

@@ -1,34 +1,132 @@
+
+
 .. _rbac:
 
 RBAC
 ====
 
-.. note::
-
-    RBAC in Security Onion covers both SOC privileges and Elastic privileges. 
-    The initial release of RBAC focuses on providing the capability for advanced administrators to customized their grid in order to limit direct search access to specific Elastic data. 
-    Additional RBAC features for SOC will be rolled out in future releases.
+RBAC in Security Onion covers both SOC privileges and Elastic privileges. 
+The initial release of RBAC focuses on providing the capability for advanced administrators to customized their grid in order to limit direct search access to specific Elastic data. 
+Additional RBAC features for SOC will be rolled out in future releases.
 
 
 Default Roles
 -------------
 
-Security Onion by default ships with the following roles:
+Security Onion by default ships with the following user roles: ``superuser``, ``analyst``, ``limited-analyst``, ``auditor``, and ``limited-auditor`` that have SOC permissions as shown in the below table. There is also a system role called ``agent`` used by the SOC agent that is given the  *jobs/process*, *nodes/read*, and *nodes/write* permissions (defined at the bottom of this page). 
 
-* **analyst** - ``Default Role``
+.. list-table::
+    :widths: 50 10 10 10 10 10
+    :header-rows: 1
+    :name: role-table
 
-  * **SOC** - Full access to Hunt, Grid and PCAP; can change own password
-  * **ES** - Read and update access to ``so-*`` indices, read/write access to kibana features (dashboards, etc) and fleet features, read access to other application features, read access to cluster operations
+    * - 
+      - superuser
+      - analyst
+      - limited-analyst
+      - auditor
+      - limited-auditor
+    * - View alerts
+      - X
+      - X
+      - X
+      - X
+      - X
+    * - Acknowledge alerts
+      - X
+      - X
+      - X
+      - 
+      -
+    * - Escalate alerts and events
+      - X
+      - X
+      - X
+      - 
+      -
+    * - View events in Hunt
+      - X
+      - X
+      - X
+      - X
+      - X
+    * - View own PCAP jobs
+      - X
+      - X
+      - X
+      - O
+      - O
+    * - View all PCAP jobs
+      - X
+      - X
+      - 
+      - X
+      - 
+    * - Pivot to PCAP job from event
+      - X
+      - X
+      - X
+      - 
+      -  
+    * - Request arbitrary PCAP jobs
+      - X
+      - X
+      -  
+      -  
+      -  
+    * - Delete own PCAP job
+      - X
+      - X
+      - X
+      - O
+      - O
+    * - Delete any PCAP job
+      - X
+      - X
+      -  
+      -  
+      -  
+    * - View all nodes in grid
+      - X
+      - X
+      - X
+      - X
+      - X
+    * - View all users
+      - X
+      - X
+      -  
+      - X
+      -  
+    * - View all users' roles
+      - X
+      - X
+      -  
+      - X
+      -  
+    * - View own user
+      - X
+      - X
+      - X
+      - X
+      - X
+    * - View own user roles
+      - X
+      - X
+      - X
+      - X
+      - X
+    * - Change own password
+      - X
+      - X
+      - X
+      - X
+      - X
 
-* **auditor**
 
-  * **SOC** - Full Hunt and Grid access, read only access to PCAP; can change own password 
-  * **ES** - Read access to ``so-*`` indices, read access to kibana features (dashboards, etc) and fleet features, read access to other application features, read access to cluster operations
+.. note::
 
-* **superuser**
-
-  * **SOC** - Full access to Hunt, Grid, and PCAP; can change any user's password
-  * **ES** - Full access to all Elastic and Kibana features
+    Both ``auditor`` and ``limited-auditor`` roles can interact with previously created PCAPs if they were created before a user was converted to that role (e.g. user was downgraded from ``analyst`` to ``auditor``). This is denoted by **O** in the above table.
 
 
 Adding a User With a Specific Role
@@ -61,9 +159,13 @@ Conversely to remove a role from a user use the ``so-user delrole`` command. To 
 Creating Custom Roles
 ---------------------
 
-Creating a custom RBAC role in Security Onion, follow the steps below:
+.. warning:: 
 
-1. Create a new json role file under ``/opt/so/saltstack/local/salt/elasticsearch/roles`` for the Elasticsearch portion of the role. For example, a role that matches the analyst role but only allow access to documents from nodes on the east coast - in this example represented by having a name prefixed with ``nyc`` or ``atl`` - would be written like so. Note the "query" field under "indices":
+    The creation of custom RBAC roles is an advanced feature that is recommended only for experienced users.
+
+To create a custom RBAC role in Security Onion, follow the steps below:
+
+1. Create a new json role file under ``/opt/so/saltstack/local/salt/elasticsearch/roles`` for the Elasticsearch portion of the role. For example, a role that matches the analyst role but only allows access to documents from nodes on the east coast - in this example represented by having a name prefixed with ``nyc`` or ``atl`` - would be written like so. Note the "query" field under "indices":
 
     ``eastcoast_analyst.json`` :
     ::
@@ -158,7 +260,12 @@ Creating a custom RBAC role in Security Onion, follow the steps below:
 Defining SOC Roles
 ------------------
 
-There are two ways to define a custom SOC role, by 1) building it from scratch using the permissions and base roles available as outlined below, or 2) inheriting the permissions of another role (and optionally adding more permissions to the new custom role).
+There are two ways to define a custom SOC role, by 1) building it from scratch using the permissions and base roles available as outlined below, or 2) inheriting the permissions of another role and optionally adding more permissions to the new custom role.
+
+.. note::
+    
+    The ``custom_roles`` file contains further instructions on modifying roles that are not within the scope of this documentation.
+
 
 The common syntax for either method of defining a role is as such:
 
@@ -170,8 +277,10 @@ The common syntax for either method of defining a role is as such:
 1. Creating the role for the above east coast analyst using the first method, building the custom role from scratch, would be written like so:
 
     ::
-
-        grid-monitor:eastcoast_analyst
+        
+        case-admin:eastcoast_analyst
+        event-admin:eastcoast_analyst
+        node-monitor:eastcoast_analyst
         user-monitor:eastcoast_analyst
         job-admin:eastcoast_analyst
 
@@ -182,16 +291,72 @@ The common syntax for either method of defining a role is as such:
         analyst:eastcoast_analyst
 
 
-
 SOC Permissions and Base Roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The available permissions in SOC are listed in the table below:
 
+.. list-table::
+    :widths: 25 50
+    :header-rows: 0
 
-* **LIST TBD**
+    * - *cases/write*
+      - Escalate events
+    * - *events/read*
+      - Read from Elasticsearch
+    * - *events/write*
+      - Write to Elasticsearch
+    * - *events/ack*
+      - Acknowledge alerts
+    * - *jobs/read*
+      - View all PCAP jobs
+    * - *jobs/pivot*
+      - Pivot to PCAP job from event
+    * - *jobs/write*
+      - Request arbitrary PCAP jobs
+    * - *jobs/delete*
+      - Delete any PCAP job
+    * - *jobs/process*
+      - Update, read, and attach packets to all pending PCAP jobs
+    * - *nodes/read*
+      - View all nodes in grid
+    * - *nodes/write*
+      - Update node information
+    * - *roles/read*
+      - View all users' roles
+    * - *roles/write*
+      - Change any user's role
+    * - *users/read*
+      - View all users
+    * - *users/write*
+      - Change any user's password
+    * - *users/delete*
+      - Delete any user
 
+These permissions are then collected into base roles as defined below:
 
-.. note::
-    
-    The ``custom_roles`` file contains further instructions on modifying roles that are not within the scope of this documentation.
+.. list-table::
+    :widths: 25 50
+    :header-rows: 0
 
-
+    * - case-admin
+      - *cases/write*
+    * - event-admin
+      - *events/read*, *events/write*, *events/ack*
+    * - event-monitor
+      - *events/read*
+    * - job-admin
+      - *jobs/read*, *jobs/pivot*, *jobs/write*, *jobs/delete*
+    * - job-monitor
+      - *jobs/read*
+    * - job-user
+      - *jobs/pivot*
+    * - job-processor
+      - *jobs/process*
+    * - node-admin
+      - *nodes/read*, *nodes/write*
+    * - node-monitor
+      - *nodes/read*
+    * - user-admin
+      - *roles/read*, *roles/write*, *users/read*, *users/write*, *users/delete*
+    * - user-monitor
+      - *roles/read*, *users/read*
