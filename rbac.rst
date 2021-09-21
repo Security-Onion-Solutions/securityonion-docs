@@ -334,11 +334,11 @@ The available low-level Security Onion privileges are listed in the table below:
     * - *jobs/delete*
       - Delete any PCAP job
     * - *jobs/process*
-      - Update, read, and attach packets to all pending PCAP jobs
+      - Update, read, and attach packets to all pending PCAP jobs †
     * - *nodes/read*
       - View all nodes in grid
     * - *nodes/write*
-      - Update node information
+      - Update node information †
     * - *roles/read*
       - View all users' roles
     * - *roles/write*
@@ -350,7 +350,7 @@ The available low-level Security Onion privileges are listed in the table below:
     * - *users/delete*
       - Delete any user
 
-These permissions are then collected into default roles as defined below:
+These discrete privileges are then collected into privilege groups as defined below:
 
 .. list-table::
     :widths: 25 50
@@ -369,7 +369,7 @@ These permissions are then collected into default roles as defined below:
     * - job-user
       - *jobs/pivot*
     * - job-processor
-      - *jobs/process*
+      - *jobs/process* †
     * - node-admin
       - *nodes/read*, *nodes/write*
     * - node-monitor
@@ -378,3 +378,5 @@ These permissions are then collected into default roles as defined below:
       - *roles/read*, *roles/write*, *users/read*, *users/write*, *users/delete*
     * - user-monitor
       - *roles/read*, *users/read*
+
+† intended for use by Sensoroni agents only
