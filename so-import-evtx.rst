@@ -18,7 +18,7 @@ To import multiple evtx files:
 
 ::
 
-    sudo so-import-pcap /full/path/to/import2.evtx /full/path/to/import2.evtx
+    sudo so-import-evtx /full/path/to/import2.evtx /full/path/to/import2.evtx
 
 so-import-evtx then provides a hyperlink for you to view all logs in :ref:`hunt`. You can also find logs in :ref:`kibana`.
 
