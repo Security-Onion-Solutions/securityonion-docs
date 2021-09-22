@@ -29,6 +29,7 @@ Release Notes
 - UPGRADE: Curator to 5.8.4 `#5272 <https://github.com/Security-Onion-Solutions/securityonion/issues/5272>`_
 - UPGRADE: CyberChef to 9.32.2 `#5158 <https://github.com/Security-Onion-Solutions/securityonion/issues/5158>`_
 - UPGRADE: SOC UI 3rd Party dependencies to latest versions `#5603 <https://github.com/Security-Onion-Solutions/securityonion/issues/5603>`_
+- UPGRADE: Zeek to 4.0.4 `#5630 <https://github.com/Security-Onion-Solutions/securityonion/issues/5630>`_
 
 
 2.3.70 Hotfix [WAZUH]
