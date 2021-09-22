@@ -4,9 +4,6 @@ Release Notes
 =============
 
 2.3.80 Changes
---------------
-
-2.3.80 Changes
 ----------------
 
 - FEATURE: Ability to disable Zeek, Suricata `#4429 <https://github.com/Security-Onion-Solutions/securityonion/issues/4429>`_
