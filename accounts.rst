@@ -15,3 +15,4 @@ In Security Onion, there are two main types of accounts:
    adding-accounts
    listing-accounts
    disabling-accounts
+   rbac
