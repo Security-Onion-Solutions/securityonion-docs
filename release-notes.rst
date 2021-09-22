@@ -3,6 +3,37 @@
 Release Notes
 =============
 
+2.3.80 Changes
+--------------
+
+2.3.80 Changes
+----------------
+
+- FEATURE: Ability to disable Zeek, Suricata `#4429 <https://github.com/Security-Onion-Solutions/securityonion/issues/4429>`_
+- FEATURE: Add docs link to Setup `#5459 <https://github.com/Security-Onion-Solutions/securityonion/issues/5459>`_
+- FEATURE: Add evtx support in Import Node `#2206 <https://github.com/Security-Onion-Solutions/securityonion/issues/2206>`_
+- FEATURE: Consolidate whiptail screens when selecting optional components `#5456 <https://github.com/Security-Onion-Solutions/securityonion/issues/5456>`_
+- FEATURE: Distinguish between Zeek generated syslog and normal syslog in hunt for event fields `#5403 <https://github.com/Security-Onion-Solutions/securityonion/issues/5403>`_
+- FEATURE: Enable index sorting to increase search speed `#5287 <https://github.com/Security-Onion-Solutions/securityonion/issues/5287>`_
+- FEATURE: Expose options for elasticsearch.yml via Salt pillar `#1257 <https://github.com/Security-Onion-Solutions/securityonion/issues/1257>`_
+- FEATURE: Role-based access control (RBAC) `#5614 <https://github.com/Security-Onion-Solutions/securityonion/issues/5614>`_
+- FEATURE: soup -y for automation `#5043 <https://github.com/Security-Onion-Solutions/securityonion/issues/5043>`_
+- FIX: Add new default filebeat module indices to the global pillar. `#5526 <https://github.com/Security-Onion-Solutions/securityonion/issues/5526>`_
+- FIX: all.rules file can become empty on non-airgap deployments if manager does not have access to the internet. `#3619 <https://github.com/Security-Onion-Solutions/securityonion/issues/3619>`_
+- FIX: Curator cron should run less often `#5189 <https://github.com/Security-Onion-Solutions/securityonion/issues/5189>`_
+- FIX: Improve unit test maintainability by refactoring to use Golang assertion library  `#5604 <https://github.com/Security-Onion-Solutions/securityonion/issues/5604>`_
+- FIX: Invalid password message should also mention dollar signs are not allowed `#5381 <https://github.com/Security-Onion-Solutions/securityonion/issues/5381>`_
+- FIX: Max files for steno should use a pillar value for easy tuning. `#5393 <https://github.com/Security-Onion-Solutions/securityonion/issues/5393>`_
+- FIX: Remove raid check for official cloud appliances `#5449 <https://github.com/Security-Onion-Solutions/securityonion/issues/5449>`_
+- FIX: Remove watermark settings from global pillar. `#5520 <https://github.com/Security-Onion-Solutions/securityonion/issues/5520>`_
+- FIX: SOC Username case sensitivity `#5154 <https://github.com/Security-Onion-Solutions/securityonion/issues/5154>`_
+- FIX: so-user tool should validate password before adding user to SOC `#5606 <https://github.com/Security-Onion-Solutions/securityonion/issues/5606>`_
+- FIX: Switch to new Curator auth params `#5273 <https://github.com/Security-Onion-Solutions/securityonion/pull/5273>`_
+- UPGRADE: Curator to 5.8.4 `#5272 <https://github.com/Security-Onion-Solutions/securityonion/issues/5272>`_
+- UPGRADE: CyberChef to 9.32.2 `#5158 <https://github.com/Security-Onion-Solutions/securityonion/issues/5158>`_
+- UPGRADE: SOC UI 3rd Party dependencies to latest versions `#5603 <https://github.com/Security-Onion-Solutions/securityonion/issues/5603>`_
+
+
 2.3.70 Hotfix [WAZUH]
 ----------------------
 
