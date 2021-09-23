@@ -132,6 +132,15 @@ All configuration changes take place in pillar files. You should never need to m
           close: 45
           delete: 365
 
+Starting in Security Onion 2.3.80, users can completely customize their Elasticsearch configuration via Salt pillars. This allows elasticsearch.yml customizations to be retained when doing upgrades of Security Onion. Depending on your customization goal, you can specify settings in either the global pillar or the minion pillar. Create the ``config`` sub-section if it does not already exist in your pillar and then place your configuration options under that sub-section.  For example, to change the ``node_concurrent_recoveries`` setting:
+
+::
+
+    elasticsearch:
+      config:
+        routing:
+          allocation:
+            node_concurrent_recoveries: 4
 
 Shards
 ~~~~~~
