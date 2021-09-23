@@ -32,6 +32,17 @@ Community ID
 | For logs that don’t natively support :ref:`community-id`, we use the Elasticsearch Community ID processor:
 | https://www.elastic.co/guide/en/elasticsearch/reference/7.x/community-id-processor.html
 
+Diagnostic Logging
+------------------
+
+-  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
+-  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.
+
+Storage
+-------
+
+All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
+
 Configuration
 -------------
 
@@ -201,12 +212,6 @@ Then restart Logstash:
 
 Please note that the change to the field limit will not occur immediately -- only upon index creation. Therefore, it is recommended to run the previously mentioned temporary command and modify the template file.
 
-Diagnostic Logging
-------------------
-
--  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
--  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.
-
 Distributed
 -----------
 
@@ -229,11 +234,6 @@ Search Nodes
 ------------
 
 ``Search nodes`` extend the storage and processing capabilities of the manager node, and run :ref:`elasticsearch`, :ref:`logstash`, and :ref:`curator`. Just like heavy nodes, search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
-
-Storage
--------
-
-All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
 
 Re-indexing
 -----------
