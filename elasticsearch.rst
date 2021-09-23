@@ -216,22 +216,22 @@ Distributed
 -----------
 
 Management
-----------
+~~~~~~~~~~
 
 The ``manager node`` runs its own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``heavy nodes`` and ``search nodes`` (where applicable), but not ``forward nodes``, as they do not run Elastic Stack components.
 
 Forward Nodes
--------------
+~~~~~~~~~~~~~
 
 When using a ``forward node``, Elastic Stack components are not enabled. :ref:`filebeat` forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
 
 Heavy Nodes
------------
+~~~~~~~~~~~
 
 When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local Elasticsearch instance.
 
 Search Nodes
-------------
+~~~~~~~~~~~~
 
 ``Search nodes`` extend the storage and processing capabilities of the manager node, and run :ref:`elasticsearch`, :ref:`logstash`, and :ref:`curator`. Just like heavy nodes, search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
 
