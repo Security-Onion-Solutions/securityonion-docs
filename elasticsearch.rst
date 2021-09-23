@@ -17,6 +17,17 @@ Authentication
 
 Starting in Security Onion 2.3.60, we support Elastic authentication via :ref:`so-elastic-auth`.
 
+Diagnostic Logging
+------------------
+
+-  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
+-  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.
+
+Storage
+-------
+
+All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
+
 Parsing
 -------
 
@@ -31,17 +42,6 @@ Community ID
 ------------
 | For logs that don’t natively support :ref:`community-id`, we use the Elasticsearch Community ID processor:
 | https://www.elastic.co/guide/en/elasticsearch/reference/7.x/community-id-processor.html
-
-Diagnostic Logging
-------------------
-
--  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
--  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.
-
-Storage
--------
-
-All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
 
 Configuration
 -------------
