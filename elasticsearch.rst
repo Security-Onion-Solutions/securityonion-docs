@@ -242,6 +242,19 @@ Elastic Clustering
 ~~~~~~~~~~~~~~~~~~
 For advanced users that require advanced features like shard replicas and hot/warm indices, Security Onion 2 also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
 
+.. warning::
+
+    Due to the increased complexity of Elastic clustering, we only recommend this option if you absolutely need cluster features.
+
+.. image:: images/elastic-cluster-1.png
+  :target: _images/elastic-cluster-1.png
+
+.. image:: images/elastic-cluster-2.png
+  :target: _images/elastic-cluster-2.png
+
+.. image:: images/elastic-cluster-3.png
+  :target: _images/elastic-cluster-3.png
+
 Re-indexing
 -----------
 Re-indexing may need to occur if field data types have changed and conflicts arise.  This process can be VERY time-consuming, and we only recommend this if keeping data is absolutely critical.  
