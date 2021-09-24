@@ -157,7 +157,7 @@ To see your existing shards:
 
 ::
 
-    curl -k https://localhost:9200/_cat/indices
+    sudo so-elasticsearch-query _cat/indices
     
 The number of shards will be shown in the fifth column.
 
@@ -165,7 +165,7 @@ If you want to view the detail for each of those shards:
 
 ::
 
-    curl -k https://localhost:9200/_cat/shards
+    sudo so-elasticsearch-query _cat/shards
 
 
 Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
@@ -238,6 +238,10 @@ The ``manager node`` runs its own local copy of Elasticsearch, which manages cro
 
 When using a ``forward node``, Elastic Stack components are not enabled. :ref:`filebeat` forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
 
+Let's look at the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
+
+The ``delete`` setting in the global pillar is ignored when using cross cluster search. Instead, index deletion is controlled by :ref:`curator` based on available disk space and the ``log_size_limit`` value in the minion pillar. 
+
 Elastic Clustering
 ~~~~~~~~~~~~~~~~~~
 For advanced users that require advanced features like shard replicas and hot/warm indices, Security Onion 2 also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
@@ -255,7 +259,7 @@ For advanced users that require advanced features like shard replicas and hot/wa
 .. image:: images/elastic-cluster-3.png
   :target: _images/elastic-cluster-3.png
 
-Let's discuss how to tune the ``shards``, ``close``, and ``delete`` settings shown above in the global pillar in an Elastic cluster. First, check your indices, using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
+Let's discuss how to tune the ``close``, and ``delete`` settings shown above in the global pillar in an Elastic cluster. First, check your indices, using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
 
 ::
 
@@ -271,9 +275,7 @@ Let's discuss how to tune the ``shards``, ``close``, and ``delete`` settings sho
  
 Adding all the index sizes together plus a little padding results in 3.5GB per day. We will use this as our baseline for tuning our settings.
 
-The first setting to consider is the ``shards`` setting shown in the global pillar above. Elastic recommends keeping shard size under 50GB for optimal performance. Therefore, if you have shards that are greater than 50GB, you will want to increase your shard count until you are under 50GB per shard. Please note that changing this setting will not apply to existing indices, only new indices going forward.
-
-Next, let's look at the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine your amount of days you can have in an open state, so this is a good setting to adjust specific to your environment.
+Let's look at the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
 
 The ``delete`` setting shown in the global pillar above configures :ref:`curator` to delete an index older than the value given. Curator can only delete closed indices so please make sure closed is set to a smaller value than delete!
 
