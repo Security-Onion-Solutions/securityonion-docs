@@ -21,6 +21,12 @@ When you run :ref:`soup` on an airgap install, it will ask for the location of t
 
 - simply copy the ISO file itself to the airgapped manager
 
+Starting in Security Onion 2.3.80, you can also specify the path on the command line using the ``-f`` option:
+
+::
+
+	soup -y -f /home/user/securityonion.iso
+
 Security Onion Hotfixes
 -----------------------
 
