@@ -49,7 +49,7 @@ Configuration
 Pillar Files
 ~~~~~~~~~~~~
 
-All configuration changes take place in pillar files. You should never need to modify a config file directly. There are two places that hold pillar settings for Elasticsearch. The pillars are:
+All configuration changes take place in pillar files. There are two places that hold pillar settings for Elasticsearch. The pillars are:
 
 ``/opt/so/saltstack/local/pillar/minions/$minion.sls``
 
