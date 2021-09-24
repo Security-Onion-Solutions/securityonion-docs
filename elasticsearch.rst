@@ -244,7 +244,7 @@ For advanced users that require advanced features like shard replicas and hot/wa
 
 .. warning::
 
-    Due to the increased complexity of Elastic clustering, we only recommend this option if you absolutely need cluster features.
+    Due to the increased complexity, we only recommend this option if you absolutely need cluster features.
 
 .. image:: images/elastic-cluster-1.png
   :target: _images/elastic-cluster-1.png
@@ -254,6 +254,50 @@ For advanced users that require advanced features like shard replicas and hot/wa
 
 .. image:: images/elastic-cluster-3.png
   :target: _images/elastic-cluster-3.png
+
+Let's discuss how to tune the ``shards``, ``close``, and ``delete`` settings shown above in the global pillar in an Elastic cluster. First, check your indices, using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
+
+::
+
+	sudo so-elasticsearch-query _cat/indices | grep 2021.08.26
+
+	green open  so-zeek-2021.08.26              rEtb1ERqQcyr7bfbnR95zQ 5 0  2514236      0    2.4gb    2.4gb
+	green open  so-ids-2021.08.26               d3ySLbRHSJGRQ2oiS4pmMg 1 0     1385    147    3.3mb    3.3mb
+	green open  so-ossec-2021.08.26             qYf1HWGUSn6fIOlOgFgJOQ 1 0   125333     61  267.1mb  267.1mb
+	green open  so-elasticsearch-2021.08.26     JH8tOgr3QjaQ-EX08OGEXw 1 0    61170      0   32.7mb   32.7mb
+	green open  so-firewall-2021.08.26          Qx6_ZQS3QL6VGwIXIQ8mfQ 1 0   508799      0  297.4mb  297.4mb
+	green open  so-syslog-2021.08.26            3HiYP3fgSPmoV-Nbs3dlDw 1 0   181207      0     27mb     27mb
+	green open  so-kibana-2021.08.26            C6v6sazHSYiwqq5HxfokQg 1 0      745      0  809.5kb  809.5kb
+ 
+Adding all the index sizes together plus a little padding results in 3.5GB per day. We will use this as our baseline for tuning our settings.
+
+The first setting to consider is the ``shards`` setting shown in the global pillar above. Elastic recommends keeping shard size under 50GB for optimal performance. Therefore, if you have shards that are greater than 50GB, you will want to increase your shard count until you are under 50GB per shard. Please note that changing this setting will not apply to existing indices, only new indices going forward.
+
+Next, let's look at the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine your amount of days you can have in an open state, so this is a good setting to adjust specific to your environment.
+
+The ``delete`` setting shown in the global pillar above configures :ref:`curator` to delete an index older than the value given. Curator can only delete closed indices so please make sure closed is set to a smaller value than delete!
+
+If we look at our total ``/nsm`` size for our search nodes (data nodes in Elastic nomenclature), we can calculate how many days open or closed that we can store. The equation shown below determines the proper delete timeframe. Note that total usable space depends on replica counts. In the example below we have 2 search nodes with 140GB for 280GB total of ``/nsm`` storage. Since we have a single replica we need to take that into account. The formula for that is: 
+
+1 replica = 2 x Daily Index Size
+2 replicas = 3 x Daily Index Size
+3 replicas = 4 x Daily Index Size
+
+Let’s use 1 replica:
+
+Total Space / copies of data = Usable Space
+
+280 / 2 = 140
+
+Suppose we want a little cushion so let's make Usable Space = 130
+
+Usable NSM space / Daily Index Size = Days
+
+For our example above lets fill in the proper values:
+
+130GB / 3.5GB = 37.1428571 days rounded down to 37 days
+
+Therefore, we can set all of our ``delete`` values to 37 in the global.sls.
 
 Re-indexing
 -----------
