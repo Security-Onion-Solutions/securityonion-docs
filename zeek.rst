@@ -373,6 +373,11 @@ In order to add or modify an option in ``zeekctl``, we will need to modify eithe
 
 Since ``zeek:zeekctl`` is a dictionary with dictionary values, we do not need to redefine the entire pillar here like we did for ``zeek:local`` above. Once the pillar file is saved and the node checks in with the manager, the ``zeekctl.cfg`` file will be updated and the ``so-zeek container`` will be restarted.
 
+Disabling
+---------
+
+Starting in Security Onion 2.3.80, Zeek can be disabled by setting ``enabled: false`` in the ``zeek`` :ref:`salt` pillar.
+
 More Information
 ----------------
 

@@ -149,6 +149,11 @@ File Extraction
 
 If you choose Suricata for metadata, it will extract files from network traffic and :ref:`strelka` will then analyze those extracted files. If you would like to extract additional file types, then you can add file types as shown at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules.
 
+Disabling
+---------
+
+Starting in Security Onion 2.3.80, Suricata can be disabled by setting ``enabled: false`` in the ``suricata`` :ref:`salt` pillar.
+
 Diagnostic Logging
 ------------------
 
