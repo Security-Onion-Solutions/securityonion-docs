@@ -263,7 +263,7 @@ For advanced users that require advanced features like shard replicas and hot/wa
 .. image:: images/elastic-cluster-3.png
   :target: _images/elastic-cluster-3.png
 
-Let's discuss how to tune the ``close``, and ``delete`` settings shown above in the global pillar in an Elastic cluster. First, check your indices, using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
+Let's discuss how to tune the ``close`` and ``delete`` settings shown above in the global pillar in an Elastic cluster. First, check your indices, using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
 
 ::
 
