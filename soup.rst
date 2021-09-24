@@ -81,7 +81,7 @@ After ``soup`` completes, if :ref:`kibana` says ``Kibana server is not ready yet
 Automation
 ----------
 
-Starting in Security Onion 2.3.80, ``soup`` can be automated as follows:
+Starting in Security Onion 2.3.80, ``soup`` can be automated as follows (assuming you've previously accepted the Elastic license):
 
 ::
 
