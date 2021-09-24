@@ -77,6 +77,11 @@ Logs
 ----
 When Curator completes an action, it logs its activity in a log file found in ``/opt/so/log/curator/``.
 
+Curator vs Index Lifecycle Management (ILM)
+-------------------------------------------
+
+The goal of Security Onion is to allow you to concentrate on finding evil rather than spending time managing infrastructure. The default mode that Security Onion deploys allows each node to be independent and removes the complexity of shard migration across multiple nodes. These nodes will use Curator to trim indices as needed ensuring that they never run out of disk space. This is especially important when running in standalone mode. Finally, it should also be noted that ILM does not support deletion based on disk space.
+
 More Information
 ----------------
 

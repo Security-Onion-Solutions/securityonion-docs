@@ -221,11 +221,6 @@ Then restart Logstash:
 
 Please note that the change to the field limit will not occur immediately, only on index creation. Therefore, it is recommended to run the previously mentioned temporary command and modify the template file.
 
-Elastic ILM vs Curator
-----------------------
-
-The goal of Security Onion is to allow the user to concentrate on finding evil rather than spending time managing the infrastructure. The default mode that Security Onion deploys allows each node to be independent and removes the complexity of shard migration across multiple nodes. These nodes will use :ref:`curator` to ensure they never run out of disk space and trim the indices as needed. This is very important when running in standalone mode. Further, establishing delete rules using available disk space is not supported with ILM.
-
 Distributed Deployments
 -----------------------
 
