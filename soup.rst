@@ -78,6 +78,21 @@ Kibana
 
 After ``soup`` completes, if :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then take a look at the Diagnostic Logging section of the :ref:`kibana` page.
 
+Automation
+----------
+
+Starting in Security Onion 2.3.80, ``soup`` can be automated as follows:
+
+::
+
+	soup -y
+
+This will make ``soup`` proceed unattended, automatically answering ``yes`` to any prompt.  If you have an airgap installation, you can specify the path to the ISO image using the ``-f`` option as follows:
+
+::
+
+	soup -y -f /home/user/securityonion.iso
+
 Distributed deployments
 -----------------------
 
