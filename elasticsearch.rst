@@ -219,30 +219,28 @@ Then restart Logstash:
 
    sudo so-logstash-restart
 
-Please note that the change to the field limit will not occur immediately -- only upon index creation. Therefore, it is recommended to run the previously mentioned temporary command and modify the template file.
+Please note that the change to the field limit will not occur immediately, only on index creation. Therefore, it is recommended to run the previously mentioned temporary command and modify the template file.
 
-Distributed
------------
+Distributed Deployments
+-----------------------
 
-Management
-~~~~~~~~~~
+For distributed deployments, Security Onion 2 supports two different configurations for deploying Elasticsearch: cross cluster search and Elastic clustering.
+
+Cross Cluster Search
+~~~~~~~~~~~~~~~~~~~~
+Our traditional and default configuration for distributed Elasticsearch instances is `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. This means that each Elasticsearch instance is totally independent and the manager queries all Elasticsearch instances via cross cluster search. This lowers the amount of maintenance required and the required knowledge of Elasticsearch internals. This configuration is recommended for most users.
 
 The ``manager node`` runs its own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``heavy nodes`` and ``search nodes`` (where applicable), but not ``forward nodes``, as they do not run Elastic Stack components.
 
-Forward Nodes
-~~~~~~~~~~~~~
+``Search nodes`` extend the storage and processing capabilities of the manager node, and run :ref:`elasticsearch`, :ref:`logstash`, and :ref:`curator`. Search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
+
+``Heavy nodes`` run sensor services and store their own logs in a local Elasticsearch instance. and then configure the manager node to query that instance. Search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node. Heavy nodes are not recommended for most use cases.
 
 When using a ``forward node``, Elastic Stack components are not enabled. :ref:`filebeat` forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
 
-Heavy Nodes
-~~~~~~~~~~~
-
-When using a ``heavy node``, Security Onion implements distributed deployments using Elasticsearch's `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Heavy Node``, it will create a local Elasticsearch instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local Elasticsearch instance.
-
-Search Nodes
-~~~~~~~~~~~~
-
-``Search nodes`` extend the storage and processing capabilities of the manager node, and run :ref:`elasticsearch`, :ref:`logstash`, and :ref:`curator`. Just like heavy nodes, search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
+Elastic Clustering
+~~~~~~~~~~~~~~~~~~
+For advanced users that require advanced features like shard replicas and hot/warm indices, Security Onion 2 also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
 
 Re-indexing
 -----------
