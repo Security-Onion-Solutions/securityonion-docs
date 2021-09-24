@@ -142,6 +142,10 @@ Starting in Security Onion 2.3.80, users can completely customize their Elastics
           allocation:
             node_concurrent_recoveries: 4
 
+.. warning::
+
+	Please be very careful when adding items under the ``config`` sub-section to avoid typos and other errors that would interfere with Elasticsearch. After making changes, keep a close eye on Elasticsearch to make sure the change is working as intended.
+
 Shards
 ~~~~~~
 
