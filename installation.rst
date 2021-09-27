@@ -41,12 +41,18 @@ If you want to install Security Onion on CentOS 7 or Ubuntu 18.04 (**not** using
 #. Follow the prompts in the installer. If you're building a production deployment, you'll probably want to use LVM and dedicate most of your disk space to ``/nsm`` as discussed in the :ref:`partitioning` section.
 #. Reboot into your new installation.
 #. Login using the username and password you specified during installation.
-#. If you're using CentOS 7 Minimal, you may need to install ``git``:
+#. If you don't already have ``git`` installed, then you'll need to install it. If you're using CentOS 7:
 
    ::
 
      sudo yum -y install git
    
+   If you're using Ubuntu 18.04:
+   
+   ::
+   
+     sudo apt -y install git
+     
 #. Once you have ``git``, then clone our repo and start the Setup process:
 
    ::
