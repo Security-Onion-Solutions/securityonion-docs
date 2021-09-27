@@ -120,6 +120,15 @@ Managing firewall rules, for all devices, should be done from the manager node u
 Examples
 --------
 
+Removing a host or network
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you previously added a host or network to your firewall configuration and now need to remove them, you can use ``so-firewall`` with the ``excludehost`` option. For example:
+
+::
+
+  sudo so-firewall excludehost analyst 192.168.1.255
+
 Allow hosts to send syslog to a sensor node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
