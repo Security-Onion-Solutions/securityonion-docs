@@ -9,6 +9,11 @@ Starting in Security Onion 2.3.80, the ability to restrict or grant specific pri
 
 RBAC in Security Onion covers both Security Onion privileges and Elastic stack privileges. Security Onion privileges are only involved with functionality specifically provided by the components developed by Security Onion, while Elastic stack privileges are only involved with the Elasticsearch, Kibana, and related Elastic stack. For example, Security Onion will check if a user has permission to create a PCAP request, while Elastic will check if the same user has permission to view a particular index or document stored in Elasticsearch. 
 
+Elastic Auth Requirement
+------------------------
+
+RBAC requires Elastic authentication which is enabled by default in version 2.3.60 and later. If you upgrade an older release, you may need to manually enable Elastic auth via :ref:``so-elastic-auth`` before using RBAC features.
+
 Default Roles
 -------------
 
