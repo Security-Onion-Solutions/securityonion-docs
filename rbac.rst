@@ -12,7 +12,7 @@ RBAC in Security Onion covers both Security Onion privileges and Elastic stack p
 Elastic Auth Requirement
 ------------------------
 
-RBAC requires Elastic authentication which is enabled by default in version 2.3.60 and later. If you upgrade an older release, you may need to manually enable Elastic auth via :ref:``so-elastic-auth`` before using RBAC features.
+RBAC requires Elastic authentication which is enabled by default in version 2.3.60 and later. If you upgrade an older release, you may need to manually enable Elastic auth via :ref:`so-elastic-auth` before using RBAC features.
 
 Default Roles
 -------------
