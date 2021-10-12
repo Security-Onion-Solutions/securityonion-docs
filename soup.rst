@@ -45,7 +45,9 @@ If you've previously added any external agents (:ref:`wazuh`, :ref:`beats`, etc.
 Errors
 ------
 
-When running ``soup``, you may see errors like:
+As ``soup`` is downloading container images, it may encounter errors if there are Internet connection issues or if the disk runs out of free space. Once you've resolved the underlying condition, you can manually refresh your container images using ``so-docker-refresh``.
+
+Here are some other errors that you may see when running ``soup``:
 
 ::
 
