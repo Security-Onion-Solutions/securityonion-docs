@@ -61,7 +61,7 @@ If we need to use an external email provider like Gmail, we can add something li
     from_addr: "youremail@gmail.com"
     smtp_auth_file: '/etc/elastalert/rules/smtp_auth_file.txt'
 
-In the ``smtp_auth_file.txt``, add:
+Then create a new file called ``/opt/so/rules/elastalert/smtp_auth_file.txt`` and add the following:
 
 ::
 
