@@ -3,7 +3,7 @@
 Airgap
 ======
 
-Security Onion is commited to allowing users to run a full install on networks that do not have Internet access. Setup will ask if you want to configure the installation for airgap and will then make the appropriate modifications to make this work properly.
+Security Onion is commited to allowing users to run a full install on networks that do not have Internet access. Setup will ask if you want to configure the installation for airgap and will then make the appropriate modifications to make this work properly. Please note that the airgap option is intended to be consistent across your deployment, so if you are on an airgap network you should choose the airgap option when installing the manager and all nodes.
 
 Key Differences
 ---------------
