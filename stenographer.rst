@@ -56,7 +56,14 @@ Diagnostic logging for Stenographer can be found at ``/opt/so/log/stenographer/`
 
 Disabling
 ---------
-If you need to disable Stenographer, you can set the :ref:`salt` pillar ``steno:enabled:false`` in the ``global.sls`` or in the sensor's ``minion.sls`` file.
+If you need to disable Stenographer, you can do so in two different ways. If you just want to disable it on a single sensor, then you can edit that sensor's ``minion.sls`` file. If the file doesn't already have a ``steno`` section, then add the following to the end of the file:
+
+::
+
+	steno:
+	  enabled: false
+
+If you want to disable Stenographer globally across all your sensors, then you can add that entry to your ``global.sls`` file.
 
 More Information
 ----------------
