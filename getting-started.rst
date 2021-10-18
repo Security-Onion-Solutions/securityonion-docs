@@ -47,9 +47,9 @@ See the :ref:`post-installation` section.
    vmware
    virtualbox
    trouble-booting
+   airgap
    installation
    cloud-ami
    cloud-azure
    configuration
-   machine-learning
    post-installation

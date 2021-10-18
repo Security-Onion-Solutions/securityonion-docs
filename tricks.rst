@@ -12,6 +12,7 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    docker
    dns-anomaly-detection
    icmp-anomaly-detection
+   machine-learning
    new-disk
    pcaps
    removing-a-node

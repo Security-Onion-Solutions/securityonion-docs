@@ -35,7 +35,7 @@ Starting in Security Onion 2.3.50, ``soup`` will check for missing OS updates an
 Airgap
 ------
 
-When you run :ref:`soup` on an airgap install, it will ask for the location of the upgrade disk. You can do one of the following:
+When you run ``soup`` on an :ref:`airgap` install, it will ask for the location of the upgrade disk. You can do one of the following:
 
 - burn the latest ISO image to a DVD and insert it in the DVD drive
 
