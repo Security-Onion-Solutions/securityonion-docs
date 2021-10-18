@@ -35,8 +35,20 @@ Starting in Security Onion 2.3.50, ``soup`` will check for missing OS updates an
 Airgap
 ------
 
-If you have an airgap deployment, please see the :ref:`airgap` section for further information.
+When you run :ref:`soup` on an airgap install, it will ask for the location of the upgrade disk. You can do one of the following:
 
+- burn the latest ISO image to a DVD and insert it in the DVD drive
+
+- flash the ISO image to a USB drive and insert that USB drive
+
+- simply copy the ISO file itself to the airgapped manager
+
+Starting in Security Onion 2.3.80, you can also specify the path on the command line using the ``-f`` option:
+
+::
+
+	soup -y -f /home/user/securityonion.iso
+	
 Agents
 ------
 
