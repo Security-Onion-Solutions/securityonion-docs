@@ -25,6 +25,10 @@ See the :ref:`vmware` and :ref:`virtualbox` sections.
 
 Check out the :ref:`trouble-booting` section.
 
+**What if I'm on an airgap network?**
+
+Review the :ref:`airgap` section.
+
 **Once I've booted the ISO image, how do I install it?**
 
 The :ref:`installation` section has steps for our Security Onion ISO image and for standard CentOS 7 and Ubuntu 18.04 ISO images.

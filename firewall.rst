@@ -13,7 +13,7 @@ This first sub-section will discuss network firewalls outside of Security Onion.
 Internet Communication
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When configuring network firewalls for Internet-connected deployments (non-airgap), you'll want to ensure that nodes can connect outbound to the following:
+When configuring network firewalls for Internet-connected deployments (non-:ref:`airgap`), you'll want to ensure that the deployment can connect outbound to the following:
 
 - repo.securityonion.net (CentOS Updates)   
 - raw.githubusercontent.com (Security Onion public key)   
@@ -27,6 +27,8 @@ When configuring network firewalls for Internet-connected deployments (non-airga
 - download.docker.com (Docker packages - Ubuntu only)
 - repo.saltstack.com (Salt packages - Ubuntu only)
 - packages.wazuh.com (Wazuh packages - Ubuntu only) 
+
+In the case of a distributed deployment, you can configure your nodes to pull everything from the manager so that only the manager requires Internet access.
 
 Node Communication
 ~~~~~~~~~~~~~~~~~~
