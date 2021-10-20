@@ -15,7 +15,7 @@ Configuration
 -------------
 Curator ``actions`` are stored in ``/opt/so/conf/curator/action/``. These actions are run by cron jobs managed by :ref:`salt`.
 
-Curator defaults to closing indices older than 30 days. To modify this, change ``cur_close_days`` in ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``.
+Curator defaults to closing indices older than 30 days. To modify this, edit ``/opt/so/saltstack/local/pillar/global.sls`` and change the close setting for each index under the ``elasticsearch:index_settings`` section.
 
 As your disk reaches capacity, Curator starts deleting old indices to prevent your disk from filling up. To change the limit, modify ``log_size_limit`` in ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``.
 
