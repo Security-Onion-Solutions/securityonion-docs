@@ -257,9 +257,9 @@ These steps will guide you through an example where we wish to introduce a new r
 
     .. note::
 
-        The format of the json in this file must match the request body outlined in the Elastic docs here: https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-api-put-role.html#security-api-put-role-request-body.
+        The format of the json in this file must match the request body outlined in the Elastic docs here: https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-put-role.html#security-api-put-role-request-body.
 
-        The available cluster and indices permissions are explained in the Elastic docs here: https://www.elastic.co/guide/en/elasticsearch/reference/7.x/security-privileges.html.
+        The available cluster and indices permissions are explained in the Elastic docs here: https://www.elastic.co/guide/en/elasticsearch/reference/current/security-privileges.html.
 
         The available kibana permissions can be obtained by running the following command on the manager node:
 

@@ -36,12 +36,12 @@ In Security Onion 2, Elasticsearch receives unparsed logs from :ref:`logstash` o
 .. seealso::
 
     | For more about Elasticsearch ingest parsing, please see:
-    | https://www.elastic.co/guide/en/elasticsearch/reference/master/ingest.html
+    | https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest.html
     
 Community ID
 ------------
 | For logs that don’t natively support :ref:`community-id`, we use the Elasticsearch Community ID processor:
-| https://www.elastic.co/guide/en/elasticsearch/reference/7.x/community-id-processor.html
+| https://www.elastic.co/guide/en/elasticsearch/reference/current/community-id-processor.html
 
 Configuration
 -------------

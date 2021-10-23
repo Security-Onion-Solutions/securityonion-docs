@@ -17,7 +17,7 @@ Security Onion enables the native Community ID support in both :ref:`zeek` and :
 We also sponsored the development of Community ID support in :ref:`osquery`.
 
 | For logs that don’t natively support :ref:`community-id`, we use the Elasticsearch Community ID processor:
-| https://www.elastic.co/guide/en/elasticsearch/reference/7.x/community-id-processor.html
+| https://www.elastic.co/guide/en/elasticsearch/reference/current/community-id-processor.html
 
 More Information
 ----------------
