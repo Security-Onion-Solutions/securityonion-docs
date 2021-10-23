@@ -95,8 +95,7 @@ Please refer to the osquery documentation for further information on osquery Eve
 Community ID
 ------------
 
-| We sponsored the development of :ref:`community-id` support for osquery:
-| https://webcache.googleusercontent.com/search?q=cache:RGB6YUatH0gJ:https://dactiv.llc/blog/correlate-osquery-network-connections/+&cd=1&hl=en&ct=clnk&gl=us
+We sponsored the development of :ref:`community-id` support for osquery to allow for quicker and easier log correlation from different data types.
 
 More Information
 ----------------
