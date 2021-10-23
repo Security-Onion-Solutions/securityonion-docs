@@ -8,7 +8,7 @@ If you're going to deploy Security Onion, you should first decide on what type o
 Import
 ------
 
-The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import a pcap using :ref:`so-import-pcap`. When you run :ref:`so-import-pcap`, it analyzes the pcap using :ref:`suricata` and :ref:`zeek` and the resulting logs are picked up by :ref:`filebeat` and sent to :ref:`elasticsearch` where they are parsed and indexed. You can then view those logs in :ref:`soc`.
+The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import pcap files using :ref:`so-import-pcap` or evtx files using :ref:`so-import-evtx`. You can then view those logs in :ref:`soc`.
 
 Evaluation
 ----------
