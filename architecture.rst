@@ -127,7 +127,7 @@ Heavy Node
 
 	Heavy nodes are NOT recommended for most users.
 
-Similar to search nodes, heavy nodes extend the storage and processing capabilities of the manager node. However, heavy nodes also perform sensor duties and thus have lower performance overall.
+Heavy nodes perform sensor duties and store their own logs in their own local Elasticsearch instance. This results in higher hardware requirements and lower performance. Heavy nodes do NOT pull logs from the redis queue on the manager like search nodes do.
 
 Heavy Nodes run the following components:
 
