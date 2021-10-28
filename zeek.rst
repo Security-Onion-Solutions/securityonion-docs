@@ -69,11 +69,6 @@ To pin Zeek workers to specific CPUs:
   
      sudo so-zeek-start
 
-Email
------
-
-To configure email notifications, please see the :ref:`email` section.
-
 Syslog
 ------
 
