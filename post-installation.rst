@@ -21,6 +21,8 @@ Other
 
 -  Full-time analysts may want to connect using a dedicated :ref:`analyst-vm`.
 
+-  Review the default :ref:`curator` configuration to see if you need to change any index retention settings.
+
 -  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the :ref:`tuning` section. 
 
 -  Configure the OS to use your preferred :ref:`ntp` server.
