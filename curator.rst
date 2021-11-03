@@ -17,6 +17,10 @@ Curator ``actions`` are stored in ``/opt/so/conf/curator/action/``. These action
 
 Curator defaults to closing indices older than 30 days. To modify this, edit ``/opt/so/saltstack/local/pillar/global.sls`` and change the close setting for each index under the ``elasticsearch:index_settings`` section.
 
+.. note::
+
+  ``/opt/so/saltstack/local/pillar/global.sls`` only lists default indices. If you add any new indices, you will need to manually add them to ``global.sls``.
+
 As your disk reaches capacity, Curator starts deleting old indices to prevent your disk from filling up. To change the limit, modify ``log_size_limit`` in ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``.
 
 Creating Actions
