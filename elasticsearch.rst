@@ -225,6 +225,15 @@ Then restart Logstash:
 
 Please note that the change to the field limit will not occur immediately, only on index creation. Therefore, it is recommended to run the previously mentioned temporary command and modify the template file.
 
+Standalone Deployments
+----------------------
+
+For standalone deployments, it's important to understand how indices are closed and deleted.
+
+Indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
+
+The ``delete`` setting in the global pillar is ignored on standalone deployments. Instead, index deletion is controlled by :ref:`curator` based on available disk space and the ``log_size_limit`` value in the minion pillar. 
+
 Distributed Deployments
 -----------------------
 
@@ -242,7 +251,7 @@ The ``manager node`` runs its own local copy of Elasticsearch, which manages cro
 
 When using a ``forward node``, Elastic Stack components are not enabled. :ref:`filebeat` forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
 
-Let's look at the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
+It's important to understand how indices are closed and deleted. Indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
 
 The ``delete`` setting in the global pillar is ignored when using cross cluster search. Instead, index deletion is controlled by :ref:`curator` based on available disk space and the ``log_size_limit`` value in the minion pillar. 
 
@@ -279,7 +288,7 @@ Let's discuss how to tune the ``close`` and ``delete`` settings shown above in t
  
 Adding all the index sizes together plus a little padding results in 3.5GB per day. We will use this as our baseline for tuning our settings.
 
-Let's look at the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
+It's important to understand how indices are closed and deleted. Indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
 
 The ``delete`` setting shown in the global pillar above configures :ref:`curator` to delete an index older than the value given. Curator can only delete closed indices so please make sure closed is set to a smaller value than delete!
 
