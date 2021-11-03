@@ -19,7 +19,7 @@ Services
 Data Retention
 --------------
 
--  Review the :ref:`elasticsearch` and :ref:`curator` sections to see if you need to change any of the default index retention settings.
+-  Review the :ref:`curator` and :ref:`elasticsearch` sections to see if you need to change any of the default index retention settings.
 
 Other
 -----
