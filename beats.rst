@@ -29,7 +29,7 @@ Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if 
 * Make sure that the ``setup.dashboards.enabled`` setting is commented out or disabled.
 * Disable the ``output.elasticsearch`` output.
 * Enable the ``output.logstash`` output and configure it to send logs to port ``5044`` on your management node.
-* If you are shipping Sysmon logs, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon processing module as Security Onion will do all the necessary parsing.
+* If you are shipping Sysmon logs, confirm that your Winlogbeat configuration simply collects the Sysmon logs and does NOT use the Elastic Sysmon ``processors`` section as Security Onion will do all the necessary parsing.
 
 Installation
 ------------
