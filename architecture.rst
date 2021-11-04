@@ -12,7 +12,7 @@ The simplest architecture is an ``Import`` node. An import node is a single stan
 
 Evaluation
 ----------
-The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`filebeat` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for quick installations to temporarily test out Security Onion. It is **not** designed for production usage at all.
+The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`filebeat` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for a quick installation to temporarily test out Security Onion. It is **not** designed for production usage at all.
 
 .. image:: images/eval.png
    :align: center
@@ -38,16 +38,20 @@ A standard distributed deployment includes a **manager node**, one or more **for
 -  Recommended deployment type
 -  Consists of a manager node, one or more forward nodes, and one or more search nodes
 
+.. note::
+
+	If you install a dedicated manager node, you must also deploy one or more search nodes. Otherwise, all logs will queue on the manager and have no place to be stored. If you are limited on the number of nodes you can deploy, you can install a **manager search** node so that your manager node can act as a search node and store those logs. However, please keep in mind that overall performance and scalability will be lower compared to our recommended architecture of dedicated manager node and separate search nodes.
+	
 .. image:: images/distributed.png
    :align: center
    :width: 600
    :target: _images/distributed.png
 
-There is the option to utilize only two node types -- the **manager node** and one or more **heavy nodes**, however, this is not recommended due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
+There is also an option to have a **manager node** and one or more **heavy nodes**.
 
 .. warning::
 
-	Heavy nodes are NOT recommended for most users.
+	Heavy nodes are NOT recommended for most users due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
 
 -  Recommended only if a standard distributed deployment is not possible
 -  Consists of a manager node and one or more heavy nodes
