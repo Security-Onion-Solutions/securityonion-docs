@@ -71,7 +71,7 @@ Node Types
 Management
 ~~~~~~~~~~
 
-The ``manager node`` runs its own local copy of :ref:`elasticsearch`, which manages cross-cluster search configuration for the deployment. This includes configuration for heavy nodes and search nodes (where applicable), but not forward nodes (since they do not run :ref:`elasticsearch`). An analyst connects to the manager node from a client workstation (typically a Security Onion virtual machine installation) to execute queries and retrieve data.
+The ``manager node`` runs its own local copy of :ref:`elasticsearch`, which manages cross-cluster search configuration for the deployment. This includes configuration for heavy nodes and search nodes (where applicable), but not forward nodes (since they do not run :ref:`elasticsearch`). An analyst connects to the manager node from a client workstation (typically a Security Onion virtual machine installation) to execute queries and retrieve data. Please keep in mind that a dedicated manager node requires separate search nodes.
 
 The manager node runs the following components:
 
