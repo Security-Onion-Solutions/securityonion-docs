@@ -96,8 +96,7 @@ Here is an example to suppress "Windows Logon Success" and "Windows User Logoff"
 Adding Agents
 -------------
 
-| The Wazuh agent is cross platform and you can download agents for Windows/Unix/Linux/FreeBSD from the Wazuh website:
-| https://documentation.wazuh.com/3.13/installation-guide/packages-list/index.html
+Navigate to the Downloads page in :ref:`soc` and download the appropriate Wazuh agent for your endpoint. This will ensure that you get the correct version of Wazuh. If your endpoint is not listed there, you can check the Wazuh website at https://documentation.wazuh.com/3.13/installation-guide/packages-list/index.html.
 
 .. warning::
 
