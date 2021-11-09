@@ -290,7 +290,7 @@ Adding all the index sizes together plus a little padding results in 3.5GB per d
 
 It's important to understand how indices are closed and deleted. Indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
 
-The ``delete`` setting shown in the global pillar above configures :ref:`curator` to delete an index older than the value given. Curator can only delete closed indices so please make sure closed is set to a smaller value than delete!
+The ``delete`` setting shown in the global pillar above configures :ref:`curator` to delete an index older than the value given. You should ensure that ``closed`` is set to a smaller value than ``delete``!
 
 If we look at our total ``/nsm`` size for our search nodes (data nodes in Elastic nomenclature), we can calculate how many days open or closed that we can store. The equation shown below determines the proper delete timeframe. Note that total usable space depends on replica counts. In the example below we have 2 search nodes with 140GB for 280GB total of ``/nsm`` storage. Since we have a single replica we need to take that into account. The formula for that is: 
 
