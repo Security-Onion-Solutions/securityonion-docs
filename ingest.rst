@@ -52,7 +52,7 @@ Manager + Search
 
 Heavy
 -----
-| Pipeline: Filebeat [Heavy Node] --> Logstash [Heavy] --> ES Ingest [Heavy] 
+| Pipeline: Filebeat [Heavy Node] --> Logstash [Heavy] --> Redis [Heavy] <--> Logstash [Heavy] --> ES Ingest [Heavy] 
 | Logs: Zeek, Suricata, Wazuh, Osquery/Fleet, syslog
 
 Search
