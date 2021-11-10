@@ -191,6 +191,14 @@ Finally, we can check the modified rule in ``/opt/so/rules/nids/all.rules``:
    grep 2100498 /opt/so/rules/nids/all.rules 
    alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root test"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
 
+To include an escaped ``$`` character in the regex pattern you'll need to make sure it's properly escaped. For example, if you want to modify SID 2009582 and change ``$EXTERNAL_NET`` to ``$HOME_NET``:
+
+::
+
+	sudo so-rule modify add 2009582 "\\\$EXTERNAL_NET" "\$HOME_NET"
+	
+The first string is a regex pattern, while the second is just a raw value. You'll need to ensure the first of the two properly escapes any characters that would be interpreted by regex. The second only needs the ``$`` character escaped to prevent bash from treating that as a variable.
+
 If you can't run ``so-rule``, you can modify configuration manually. ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then update the config:
 
 ::
