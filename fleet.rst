@@ -49,6 +49,20 @@ Then login using a valid username and password:
 | https://github.com/fleetdm/fleet/blob/master/docs/1-Using-Fleet/2-fleetctl-CLI.md
 
 
+
+Adding Query Packs
+--------
+You can bulk add queries & packs to FleetDM using fleetctl
+
+The following directory is mapped to the FleetDM container, so you can drop your query packs in the folder and reference it:
+/opt/so/conf/fleet/packs
+
+For instance:
+
+::
+
+    sudo docker exec -it so-fleet fleetctl apply -f /packs/<yourpack>.yaml
+
 More Information
 ----------------
 
