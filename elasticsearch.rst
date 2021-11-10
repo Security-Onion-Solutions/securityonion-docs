@@ -225,14 +225,23 @@ Then restart Logstash:
 
 Please note that the change to the field limit will not occur immediately, only on index creation. Therefore, it is recommended to run the previously mentioned temporary command and modify the template file.
 
-Standalone Deployments
-----------------------
-
-For standalone deployments, it's important to understand how indices are closed and deleted.
+Closing Indices
+---------------
 
 Indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
 
-Indices are deleted based on the ``log_size_limit`` value in the minion pillar. If your disk usage is above the ``log_size_limit`` value, then :ref:`curator` will delete old open indices and ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because it cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
+Deleting Indices
+----------------
+
+.. note::
+
+  This section describes how indices are deleted in standalone deployments and distributed deployments using cross cluster search. Index deletion is different for deployments using Elastic clustering and that is described in the Elastic clustering section later.
+
+For standalone deployments and distributed deployments using cross cluster search, indices are deleted based on the ``log_size_limit`` value in the minion pillar. If your open indices are using more than ``log_size_limit``, then :ref:`curator` will delete old open indices until disk space is back under ``log_size_limit``. If you are above ``log_size_limit`` but due to closed indices rather than open indices, then ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because :ref:`curator` cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
+
+:ref:`curator` and ``so-curator-closed-delete`` run on the same schedule. This might seem like we might delete open indices before deleting closed indices. However, keep in mind that curator's delete.yml is only going to see disk space used by open indices. So if we have both open and closed indices, we may be at ``log_size_limit`` but curator's delete.yml is going to see disk space at a value lower than ``log_size_limit`` and so it shouldn't delete any open indices.
+
+For example, suppose our log_size_limit is 1TB and we have 30 days of open indices and 300 days of closed indices. We reach ``log_size_limit`` and both :ref:`curator` and ``so-curator-closed-delete`` execute at the same time. Curator's delete.yml will check disk space used but it will see that disk space is at maybe 100GB so it thinks we haven't reached ``log_size_limit`` and does not delete anything. ``so-curator-closed-delete`` gets a more accurate view of disk space used, sees that we have indeed reached ``log_size_limit``, and so it deletes closed indices until we get lower than log_size_limit. :ref:`curator` deletion should really only come into play if we have open indices and no closed indices.
 
 Distributed Deployments
 -----------------------
@@ -250,10 +259,6 @@ The ``manager node`` runs its own local copy of Elasticsearch, which manages cro
 ``Heavy nodes`` run sensor services and store their own logs in a local Elasticsearch instance. Heavy nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node. Heavy nodes are not recommended for most use cases.
 
 When using a ``forward node``, Elastic Stack components are not enabled. :ref:`filebeat` forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
-
-It's important to understand how indices are closed and deleted. Indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
-
-Indices are deleted based on the ``log_size_limit`` value in the minion pillar. If your disk usage is above the ``log_size_limit`` value, then :ref:`curator` will delete old open indices and ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because it cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
 
 Elastic Clustering
 ~~~~~~~~~~~~~~~~~~
@@ -288,9 +293,7 @@ Let's discuss how to tune the ``close`` and ``delete`` settings shown above in t
  
 Adding all the index sizes together plus a little padding results in 3.5GB per day. We will use this as our baseline for tuning our settings.
 
-It's important to understand how indices are closed and deleted. Indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
-
-The ``delete`` setting shown in the global pillar above configures :ref:`curator` to delete an index older than the value given. You should ensure that ``closed`` is set to a smaller value than ``delete``!
+Index deletion works differently when using Elastic clustering. The ``delete`` setting shown in the global pillar above configures :ref:`curator` to delete an index older than the value given. You should ensure that the ``close`` setting is set to a smaller value than ``delete``!
 
 If we look at our total ``/nsm`` size for our search nodes (data nodes in Elastic nomenclature), we can calculate how many days open or closed that we can store. The equation shown below determines the proper delete timeframe. Note that total usable space depends on replica counts. In the example below we have 2 search nodes with 140GB for 280GB total of ``/nsm`` storage. Since we have a single replica we need to take that into account. The formula for that is: 
 
