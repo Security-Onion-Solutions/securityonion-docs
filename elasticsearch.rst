@@ -235,7 +235,7 @@ Deleting Indices
 
 .. note::
 
-  This section describes how Elasticsearch indices are deleted in standalone deployments and distributed deployments using cross cluster search. Index deletion is different for deployments using Elastic clustering and that is described in the Elastic clustering section later.
+  This section describes how Elasticsearch indices are deleted in standalone deployments and distributed deployments using our default deployment method of cross cluster search. Index deletion is different for deployments using Elastic clustering and that is described in the Elastic clustering section later.
 
 For standalone deployments and distributed deployments using cross cluster search, Elasticsearch indices are deleted based on the ``log_size_limit`` value in the minion pillar. If your open indices are using more than ``log_size_limit``, then :ref:`curator` will delete old open indices until disk space is back under ``log_size_limit``. If your total Elastic disk usage (both open and closed indices) is above ``log_size_limit``, then ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because :ref:`curator` cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
 
@@ -277,7 +277,9 @@ For advanced users that require advanced features like shard replicas and hot/wa
 .. image:: images/elastic-cluster-3.png
   :target: _images/elastic-cluster-3.png
 
-Let's discuss how to tune the ``close`` and ``delete`` settings shown above in the global pillar in an Elastic cluster. First, check your indices, using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
+When using Elastic clustering, index deletion is based on the ``delete`` settings shown above in the global pillar above. The ``delete`` setting in the global pillar configures :ref:`curator` to delete an index older than the value given. You should ensure that the ``close`` setting is set to a smaller value than ``delete``!
+
+Let's discuss the process for determining appropriate ``delete`` settings. First, check your indices using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
 
 ::
 
@@ -291,9 +293,7 @@ Let's discuss how to tune the ``close`` and ``delete`` settings shown above in t
 	green open  so-syslog-2021.08.26            3HiYP3fgSPmoV-Nbs3dlDw 1 0   181207      0     27mb     27mb
 	green open  so-kibana-2021.08.26            C6v6sazHSYiwqq5HxfokQg 1 0      745      0  809.5kb  809.5kb
  
-Adding all the index sizes together plus a little padding results in 3.5GB per day. We will use this as our baseline for tuning our settings.
-
-Index deletion works differently when using Elastic clustering. The ``delete`` setting shown in the global pillar above configures :ref:`curator` to delete an index older than the value given. You should ensure that the ``close`` setting is set to a smaller value than ``delete``!
+Adding all the index sizes together plus a little padding results in 3.5GB per day. We will use this as our baseline.
 
 If we look at our total ``/nsm`` size for our search nodes (data nodes in Elastic nomenclature), we can calculate how many days open or closed that we can store. The equation shown below determines the proper delete timeframe. Note that total usable space depends on replica counts. In the example below we have 2 search nodes with 140GB for 280GB total of ``/nsm`` storage. Since we have a single replica we need to take that into account. The formula for that is: 
 
