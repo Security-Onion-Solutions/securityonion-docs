@@ -161,7 +161,7 @@ Let's first check the syntax for the ``add`` option:
    positional arguments:
      SID|REGEX     A valid SID (ex: "4321") or regular expression pattern (ex:
                    "re:heartbleed|spectre")
-     SEARCH_TERM   A quoted regex search term (ex: "\$EXTERNAL_NET")
+     SEARCH_TERM   A quoted regex search term (ex: "\\\$EXTERNAL_NET")
      REPLACE_TERM  The text to replace the search term with
 
    optional arguments:
