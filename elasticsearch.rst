@@ -228,16 +228,16 @@ Please note that the change to the field limit will not occur immediately, only 
 Closing Indices
 ---------------
 
-Indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
+Elasticsearch indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
 
 Deleting Indices
 ----------------
 
 .. note::
 
-  This section describes how indices are deleted in standalone deployments and distributed deployments using cross cluster search. Index deletion is different for deployments using Elastic clustering and that is described in the Elastic clustering section later.
+  This section describes how Elasticsearch indices are deleted in standalone deployments and distributed deployments using cross cluster search. Index deletion is different for deployments using Elastic clustering and that is described in the Elastic clustering section later.
 
-For standalone deployments and distributed deployments using cross cluster search, indices are deleted based on the ``log_size_limit`` value in the minion pillar. If your open indices are using more than ``log_size_limit``, then :ref:`curator` will delete old open indices until disk space is back under ``log_size_limit``. If your total Elastic disk usage is above ``log_size_limit`` but due to closed indices rather than open indices, then ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because :ref:`curator` cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
+For standalone deployments and distributed deployments using cross cluster search, Elasticsearch indices are deleted based on the ``log_size_limit`` value in the minion pillar. If your open indices are using more than ``log_size_limit``, then :ref:`curator` will delete old open indices until disk space is back under ``log_size_limit``. If your total Elastic disk usage (both open and closed indices) is above ``log_size_limit``, then ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because :ref:`curator` cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
 
 :ref:`curator` and ``so-curator-closed-delete`` run on the same schedule. This might seem like there is a potential to delete open indices before deleting closed indices. However, keep in mind that :ref:`curator`'s delete.yml is only going to see disk space used by open indices and not closed indices. So if we have both open and closed indices, we may be at ``log_size_limit`` but :ref:`curator`'s delete.yml is going to see disk space at a value lower than ``log_size_limit`` and so it shouldn't delete any open indices.
 
