@@ -154,6 +154,16 @@ Disabling
 
 Starting in Security Onion 2.3.80, Suricata can be disabled by setting ``enabled: false`` in the ``suricata`` :ref:`salt` pillar.
 
+If you just want to disable Suricata on a single sensor, then you can edit that sensor's ``minion.sls`` file. If the file doesn't already have a ``suricata`` section, then add the following to the end of the file:
+
+::
+
+	suricata:
+	  enabled: false
+
+If you want to disable Suricata globally across all your sensors, then you could add that entry to your ``global.sls`` file.
+
+
 Diagnostic Logging
 ------------------
 
