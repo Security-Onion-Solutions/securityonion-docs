@@ -11,6 +11,10 @@ soup
 
 If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then check for other updates. This includes Security Onion version updates, Security Onion hotfixes, and operating system (OS) updates.
 
+After running ``soup`` and/or rebooting a Security Onion node, it may take a few minutes for services to display an ``OK`` status when running ``so-status``. This may be due to the intial on-boot Saltstack highstate running. If services do not appear to be fully up and running within 15 minutes, try applying a manual highstate with the following command:
+
+``sudo salt-call state.highstate``
+
 Security Onion Version Updates
 ------------------------------
 
