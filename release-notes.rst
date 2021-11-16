@@ -3,6 +3,72 @@
 Release Notes
 =============
 
+2.3.90 Changes
+----------------
+
+- FEATURE: Add ASN annotation for GeoIP `#5068 <https://github.com/Security-Onion-Solutions/securityonion/issues/5068>`_
+- FEATURE: Add Endgame Support for Security Onion `#6166 <https://github.com/Security-Onion-Solutions/securityonion/issues/6166>`_
+- FEATURE: Add TI Module `#5916 <https://github.com/Security-Onion-Solutions/securityonion/issues/5916>`_
+- FEATURE: Add additional flags to stenographer config `#5851 <https://github.com/Security-Onion-Solutions/securityonion/issues/5851>`_
+- FEATURE: Add filebeat, auditbeat, and metricbeat downloads to SOC Download screen `#5849 <https://github.com/Security-Onion-Solutions/securityonion/issues/5849>`_
+- FEATURE: Add logstash and redis input plugins to telegraf `#5960 <https://github.com/Security-Onion-Solutions/securityonion/issues/5960>`_
+- FEATURE: Add so-deny script for removing access from firewall and other apps `#4621 <https://github.com/Security-Onion-Solutions/securityonion/issues/4621>`_
+- FEATURE: Add support for escalation to Elastic Cases `#6048 <https://github.com/Security-Onion-Solutions/securityonion/issues/6048>`_
+- FEATURE: Allow for Kibana customizations via pillar `#3933 <https://github.com/Security-Onion-Solutions/securityonion/issues/3933>`_
+- FEATURE: Allow users to set their profile information `#5846 <https://github.com/Security-Onion-Solutions/securityonion/issues/5846>`_
+- FEATURE: Allow vlan tagged NICs to be used as management interface `#3687 <https://github.com/Security-Onion-Solutions/securityonion/issues/3687>`_
+- FEATURE: Create Pipeline Overview Dashboard for Grafana `#6177 <https://github.com/Security-Onion-Solutions/securityonion/issues/6177>`_
+- FEATURE: Create script to reset elastic auth passwords `#6206 <https://github.com/Security-Onion-Solutions/securityonion/issues/6206>`_
+- FEATURE: Enable Kibana Settings for encryption  `#6146 <https://github.com/Security-Onion-Solutions/securityonion/issues/6146>`_
+- FEATURE: Expose new user profile field for specifying a custom note about a user `#5847 <https://github.com/Security-Onion-Solutions/securityonion/issues/5847>`_
+- FEATURE: HTTP module for SOC event escalation `#5791 <https://github.com/Security-Onion-Solutions/securityonion/issues/5791>`_
+- FEATURE: Increase password lengths, provide a way to change existing passwords `#6043 <https://github.com/Security-Onion-Solutions/securityonion/issues/6043>`_
+- FEATURE: Indicate that setup has completed at the very end of sosetup.log `#5032 <https://github.com/Security-Onion-Solutions/securityonion/issues/5032>`_
+- FEATURE: Provide quick-select date ranges from Hunt/Alerts date range picker `#5953 <https://github.com/Security-Onion-Solutions/securityonion/issues/5953>`_
+- FEATURE: SOC Hunt Timeline/Charts should be collapsible `#5114 <https://github.com/Security-Onion-Solutions/securityonion/issues/5114>`_
+- FEATURE: Support Ubuntu 20.04 `#601 <https://github.com/Security-Onion-Solutions/securityonion/issues/601>`_
+- FEATURE: setup should run so-preflight `#3497 <https://github.com/Security-Onion-Solutions/securityonion/issues/3497>`_
+- FIX: ACNG sometimes returns 503 errors when updating Ubuntu through the manager `#6151 <https://github.com/Security-Onion-Solutions/securityonion/issues/6151>`_
+- FIX: Add details to Setup for Install Type menus `#6105 <https://github.com/Security-Onion-Solutions/securityonion/issues/6105>`_
+- FIX: Adjust timeout in check_salt_minion_status in so-functions `#5818 <https://github.com/Security-Onion-Solutions/securityonion/issues/5818>`_
+- FIX: All templates should honor replica settings `#6005 <https://github.com/Security-Onion-Solutions/securityonion/issues/6005>`_
+- FIX: Clear holds on Ubuntu installs `#5588 <https://github.com/Security-Onion-Solutions/securityonion/issues/5588>`_
+- FIX: Consider making the airgap option only settable on the manager `#5914 <https://github.com/Security-Onion-Solutions/securityonion/issues/5914>`_
+- FIX: Docker containers should not start unless file events are completed `#5955 <https://github.com/Security-Onion-Solutions/securityonion/issues/5955>`_
+- FIX: Ensure soc_users_roles file is cleaned up if incorrectly mounted by Docker `#5952 <https://github.com/Security-Onion-Solutions/securityonion/issues/5952>`_
+- FIX: Favor non-aggregatable data type when a cache field has multiple conflicting data types `#5962 <https://github.com/Security-Onion-Solutions/securityonion/issues/5962>`_
+- FIX: Firefox tooltips stuck on Hunt and Alerts screens `#6010 <https://github.com/Security-Onion-Solutions/securityonion/issues/6010>`_
+- FIX: Grafana sensor graphs only show interface graphs when selected individually `#6007 <https://github.com/Security-Onion-Solutions/securityonion/issues/6007>`_
+- FIX: Kibana saved objects `#5193 <https://github.com/Security-Onion-Solutions/securityonion/issues/5193>`_
+- FIX: Modify Steno packet loss calculation to show point in time packet loss `#6060 <https://github.com/Security-Onion-Solutions/securityonion/issues/6060>`_
+- FIX: Remove CURCLOSEDAYS prompt in Setup since it is no longer used `#6084 <https://github.com/Security-Onion-Solutions/securityonion/issues/6084>`_
+- FIX: Remove references to xenial (Ubuntu 16.04) from setup `#4292 <https://github.com/Security-Onion-Solutions/securityonion/issues/4292>`_
+- FIX: Remove unnecessary screens from Analyst Setup `#5615 <https://github.com/Security-Onion-Solutions/securityonion/issues/5615>`_
+- FIX: SOC docker should not start until file managed state runs `#5954 <https://github.com/Security-Onion-Solutions/securityonion/issues/5954>`_
+- FIX: SOC unable to acknowledge alerts when not grouped by rule.name `#5221 <https://github.com/Security-Onion-Solutions/securityonion/issues/5221>`_
+- FIX: SOUP fails if there is a pillar that cannot be rendered `#5809 <https://github.com/Security-Onion-Solutions/securityonion/issues/5809>`_
+- FIX: Setup should ask if new or existing distributed deployment `#6115 <https://github.com/Security-Onion-Solutions/securityonion/issues/6115>`_
+- FIX: Setup should prevent invalid characters in Node Description field `#5937 <https://github.com/Security-Onion-Solutions/securityonion/issues/5937>`_
+- FIX: Support non-WEL Beats `#6063 <https://github.com/Security-Onion-Solutions/securityonion/issues/6063>`_
+- FIX: Unnecessary Port Binding for so-steno `#5981 <https://github.com/Security-Onion-Solutions/securityonion/issues/5981>`_
+- FIX: Use yaml.safe_load() in so-firewall (thanks to @clairmont32) `#5750 <https://github.com/Security-Onion-Solutions/securityonion/issues/5750>`_
+- FIX: Zeek state max depth not working `#5558 <https://github.com/Security-Onion-Solutions/securityonion/issues/5558>`_
+- FIX: `so-ip-update` should grant mysql root user access on new IP `#4811 <https://github.com/Security-Onion-Solutions/securityonion/issues/4811>`_
+- FIX: docker group can be given gid used by salt created groups `#6071 <https://github.com/Security-Onion-Solutions/securityonion/issues/6071>`_
+- FIX: packetloss.sh gives an error every 10 min though ZEEK is disabled `#5759 <https://github.com/Security-Onion-Solutions/securityonion/issues/5759>`_
+- FIX: so-import-evtx elastic creds & logging `#6065 <https://github.com/Security-Onion-Solutions/securityonion/issues/6065>`_
+- FIX: so-user delete function causes re-migration of user roles `#5897 <https://github.com/Security-Onion-Solutions/securityonion/issues/5897>`_
+- FIX: wazuh-register-agent times out after 15 minutes lower to 5 minutes `#5794 <https://github.com/Security-Onion-Solutions/securityonion/issues/5794>`_
+- FIX: yum pkg.clean_metadata occasionally fails during setup `#6113 <https://github.com/Security-Onion-Solutions/securityonion/issues/6113>`_
+- UPGRADE: ElastAlert 2 v2.2.2 `#5751 <https://github.com/Security-Onion-Solutions/securityonion/issues/5751>`_
+- UPGRADE: Elastic to 7.15.2 `#5752 <https://github.com/Security-Onion-Solutions/securityonion/issues/5752>`_
+- UPGRADE: FleetDM 4.5 `#6188 <https://github.com/Security-Onion-Solutions/securityonion/issues/6188>`_
+- UPGRADE: Grafana to 8.2.3 `#5852 <https://github.com/Security-Onion-Solutions/securityonion/issues/5852>`_
+- UPGRADE: Kratos to 0.7.6-alpha.1 `#5848 <https://github.com/Security-Onion-Solutions/securityonion/issues/5848>`_
+- UPGRADE: Redis to 6.2.6 `#6140 <https://github.com/Security-Onion-Solutions/securityonion/issues/6140>`_
+- UPGRADE: Telegraf to 1.20.3 `#6075 <https://github.com/Security-Onion-Solutions/securityonion/issues/6075>`_
+
+
 2.3.80 Changes
 ----------------
 
