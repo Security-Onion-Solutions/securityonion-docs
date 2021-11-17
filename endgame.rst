@@ -1,14 +1,12 @@
 Endgame
 ==============
 
-Starting in Secrity Onion 2.3.90, we can ingest Endgame data, following the steps below.
+Starting in Secrity Onion 2.3.90, we can ingest Endgame data by following the steps below.
 
-Please keep in mind, we currently use the ``*:endgame-*`` index pattern for Endgame data, therefore 
-the data will not be visible using the native Security Onion dashboards/index pattern in Kibana. However, Endgame 
-data will be natively viewable and aggregatable using Hunt and Elastic Security.
+Please keep in mind that we currently use the ``*:endgame-*`` index pattern for Endgame data. This means the data will not be visible using the native Security Onion dashboards/index pattern in Kibana. However, Endgame data will be natively viewable and aggregatable using Hunt and Elastic Security.
 
 Configuration
-------------
+-------------
 
 **Before Setup**
 
@@ -48,14 +46,14 @@ Ensure the SMP is pointed to ``https://$securityonion:3765`` and save the config
 
 
 Example Endgame Data
-------------
+--------------------
 
 .. image:: https://user-images.githubusercontent.com/16829864/142234485-31778c15-e534-4747-882f-b82aafd14589.png
  :target: https://user-images.githubusercontent.com/16829864/142234485-31778c15-e534-4747-882f-b82aafd14589.png
 
 
 Pivot to Endgame Console
-------------
+------------------------
 
 If Endgame support is enabled, a default `Endgame` pivot will be populated within SOC, based on the ``agent.id`` field:
 
