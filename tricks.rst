@@ -11,6 +11,7 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    backups
    docker
    dns-anomaly-detection
+   endgame
    icmp-anomaly-detection
    machine-learning
    new-disk
@@ -18,4 +19,3 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    removing-a-node
    syslog-output
    timezones
-   endgame
