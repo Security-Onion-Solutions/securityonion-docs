@@ -74,7 +74,7 @@ Configuration
 
 Kibana's configuration can be found in ``/opt/so/conf/kibana/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/kibana/``, they may be overwritten at the next salt update.
 
-Starting in 2.3.90, ``/opt/so/conf/kibana/etc/kibana.yml`` can be managed using the kibana pillar placed in the manager pillar file located under ``/opt/so/saltstack/local/pillar/minion``. The manager pillar file will end with either ``*_manger.sls``, ``*_mangersearch.sls``, ``*_standalone.sls``, or ``*_eval.sls`` depending on the manager type that was chosen during install. 
+Starting in 2.3.90, ``/opt/so/conf/kibana/etc/kibana.yml`` can be managed using the ``kibana`` pillar placed in the manager pillar file located under ``/opt/so/saltstack/local/pillar/minion``. The manager pillar file will end with either ``*_manger.sls``, ``*_mangersearch.sls``, ``*_standalone.sls``, or ``*_eval.sls`` depending on the manager type that was chosen during install. 
 
 - An example of a Kibana pillar may look as follows:
 
