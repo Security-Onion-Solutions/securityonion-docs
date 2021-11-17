@@ -18,3 +18,4 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    removing-a-node
    syslog-output
    timezones
+   endgame
