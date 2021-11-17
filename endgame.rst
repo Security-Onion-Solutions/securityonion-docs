@@ -38,7 +38,7 @@ Add the following to the ``soc`` pillar entry the manager's sls file in ``/opt/s
 
 **Configure Event Streaming**
 
-Next, copy the contents of ``/etc/ssl/certs/intca.crt`` (on the Security Onion manager node) to the certificate section in the configuration for event streamining within the SMP web console.
+Next, copy the contents of ``/etc/ssl/certs/intca.crt`` (on the Security Onion manager node) to the certificate section in the configuration for event streaming within the SMP web console.
 
 You will also need to ensure the SMP can resolve the hostname of the Security Onion node (to match the certificate).  **This may require a hosts file entry on the SMP**.
 
