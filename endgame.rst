@@ -10,7 +10,7 @@ Configuration
 
 **Before Setup**
 
-To configure Endgame ingestion during setup, ensure the ``ENDGAMEHOST`` variable is set to the IP address of the Endgame SMP form which you intended to send data:
+To configure Endgame ingestion during setup, ensure the ``ENDGAMEHOST`` variable is set to the IP address of the Endgame SMP that you want to send data from:
 
 ``sudo ENDGAMEHOST=192.168.1.100 ./so-setup-network``
 
@@ -19,7 +19,7 @@ This will open the Security Onion host-based firewall for access from the SMP to
 
 **After Setup**
 
-To configure Endgame ingestion after setup, perform the following steps:
+To configure Endgame ingestion after setup, perform the following steps.
 
 Add the SMP to the firewall exceptions for the Security Onion node:
 
