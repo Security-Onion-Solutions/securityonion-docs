@@ -23,6 +23,11 @@ There are three alerting engines within Security Onion: :ref:`suricata`, :ref:`w
 
 All alerts are viewable in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`.
 
+Wazuh HIDS Alerts
+-----------------
+
+If you want to tune Wazuh HIDS alerts, please see the :ref:`wazuh` section.
+
 NIDS Testing
 ------------
 
