@@ -24,6 +24,7 @@ Release Notes
 - FEATURE: HTTP module for SOC event escalation `#5791 <https://github.com/Security-Onion-Solutions/securityonion/issues/5791>`_
 - FEATURE: Increase password lengths, provide a way to change existing passwords `#6043 <https://github.com/Security-Onion-Solutions/securityonion/issues/6043>`_
 - FEATURE: Indicate that setup has completed at the very end of sosetup.log `#5032 <https://github.com/Security-Onion-Solutions/securityonion/issues/5032>`_
+- FEATURE: Prevent SOUP from running if there is an issue with the manager pillar `#5809 <https://github.com/Security-Onion-Solutions/securityonion/issues/5809>`_
 - FEATURE: Provide quick-select date ranges from Hunt/Alerts date range picker `#5953 <https://github.com/Security-Onion-Solutions/securityonion/issues/5953>`_
 - FEATURE: SOC Hunt Timeline/Charts should be collapsible `#5114 <https://github.com/Security-Onion-Solutions/securityonion/issues/5114>`_
 - FEATURE: Support Ubuntu 20.04 `#601 <https://github.com/Security-Onion-Solutions/securityonion/issues/601>`_
@@ -46,7 +47,6 @@ Release Notes
 - FIX: Remove unnecessary screens from Analyst Setup `#5615 <https://github.com/Security-Onion-Solutions/securityonion/issues/5615>`_
 - FIX: SOC docker should not start until file managed state runs `#5954 <https://github.com/Security-Onion-Solutions/securityonion/issues/5954>`_
 - FIX: SOC unable to acknowledge alerts when not grouped by rule.name `#5221 <https://github.com/Security-Onion-Solutions/securityonion/issues/5221>`_
-- FIX: SOUP fails if there is a pillar that cannot be rendered `#5809 <https://github.com/Security-Onion-Solutions/securityonion/issues/5809>`_
 - FIX: Setup should ask if new or existing distributed deployment `#6115 <https://github.com/Security-Onion-Solutions/securityonion/issues/6115>`_
 - FIX: Setup should prevent invalid characters in Node Description field `#5937 <https://github.com/Security-Onion-Solutions/securityonion/issues/5937>`_
 - FIX: Support non-WEL Beats `#6063 <https://github.com/Security-Onion-Solutions/securityonion/issues/6063>`_
@@ -60,12 +60,13 @@ Release Notes
 - FIX: so-user delete function causes re-migration of user roles `#5897 <https://github.com/Security-Onion-Solutions/securityonion/issues/5897>`_
 - FIX: wazuh-register-agent times out after 15 minutes lower to 5 minutes `#5794 <https://github.com/Security-Onion-Solutions/securityonion/issues/5794>`_
 - FIX: yum pkg.clean_metadata occasionally fails during setup `#6113 <https://github.com/Security-Onion-Solutions/securityonion/issues/6113>`_
-- UPGRADE: ElastAlert 2 v2.2.2 `#5751 <https://github.com/Security-Onion-Solutions/securityonion/issues/5751>`_
+- UPGRADE: ElastAlert to 2.2.2 `#5751 <https://github.com/Security-Onion-Solutions/securityonion/issues/5751>`_
 - UPGRADE: Elastic to 7.15.2 `#5752 <https://github.com/Security-Onion-Solutions/securityonion/issues/5752>`_
-- UPGRADE: FleetDM 4.5 `#6188 <https://github.com/Security-Onion-Solutions/securityonion/issues/6188>`_
+- UPGRADE: FleetDM to 4.5 `#6188 <https://github.com/Security-Onion-Solutions/securityonion/issues/6188>`_
 - UPGRADE: Grafana to 8.2.3 `#5852 <https://github.com/Security-Onion-Solutions/securityonion/issues/5852>`_
 - UPGRADE: Kratos to 0.7.6-alpha.1 `#5848 <https://github.com/Security-Onion-Solutions/securityonion/issues/5848>`_
 - UPGRADE: Redis to 6.2.6 `#6140 <https://github.com/Security-Onion-Solutions/securityonion/issues/6140>`_
+- UPGRADE: Suricata to 6.0.4 `#6274 <https://github.com/Security-Onion-Solutions/securityonion/issues/6274>`_
 - UPGRADE: Telegraf to 1.20.3 `#6075 <https://github.com/Security-Onion-Solutions/securityonion/issues/6075>`_
 
 
