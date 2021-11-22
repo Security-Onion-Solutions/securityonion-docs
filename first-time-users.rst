@@ -16,131 +16,119 @@ After following the screenshots, you can skip to the :ref:`soc` section.
 
 Once you're comfortable with your IMPORT installation, then you can move on to more advanced installations as shown in the :ref:`architecture` section.
 
-.. image:: images/setup-01.png
-  :target: _images/setup-01.png
+.. image:: images/1_grub.png
+  :target: _images/1_grub.png
 
-.. image:: images/setup-02.png
-  :target: _images/setup-02.png
+.. image:: images/2_initial_install.png
+  :target: _images/2_initial_install.png
 
-.. image:: images/setup-03.png
-  :target: _images/setup-03.png
+.. image:: images/3_initial_install_finished.png
+  :target: _images/3_initial_install_finished.png
 
-.. image:: images/setup-04.png
-  :target: _images/setup-04.png
+.. image:: images/4_setup_init.png
+  :target: _images/4_setup_init.png
 
-.. image:: images/setup-05.png
-  :target: _images/setup-05.png
+.. image:: images/5_setup_option.png
+  :target: _images/5_setup_option.png
 
-.. image:: images/setup-06.png
-  :target: _images/setup-06.png
+.. image:: images/6_setup_type.png
+  :target: _images/6_setup_type.png
 
-.. image:: images/setup-07.png
-  :target: _images/setup-07.png
+.. image:: images/7_setup_license.png
+  :target: _images/7_setup_license.png
 
-.. image:: images/setup-08.png
-  :target: _images/setup-08.png
+.. image:: images/8_setup_hostname.png
+  :target: _images/8_setup_hostname.png
 
-.. image:: images/setup-09.png
-  :target: _images/setup-09.png
+.. image:: images/9_setup_hostname_conflict.png
+  :target: _images/9_setup_hostname_conflict.png
 
-.. image:: images/setup-10.png
-  :target: _images/setup-10.png
+.. image:: images/10_setup_mn_nic.png
+  :target: _images/10_setup_mn_nic.png
 
-.. image:: images/setup-11.png
-  :target: _images/setup-11.png
+.. image:: images/11_setup_mn_int.png
+  :target: _images/11_setup_mn_int.png
 
-.. image:: images/setup-12.png
-  :target: _images/setup-12.png
+.. image:: images/12_setup_cidr.png
+  :target: _images/12_setup_cidr.png
 
-.. image:: images/setup-13.png
-  :target: _images/setup-13.png
+.. image:: images/13_setup_gateway.png
+  :target: _images/13_setup_gateway.png
 
-.. image:: images/setup-14.png
-  :target: _images/setup-14.png
+.. image:: images/14_setup_dns_servers.png
+  :target: _images/14_setup_dns_servers.png
 
-.. image:: images/setup-15.png
-  :target: _images/setup-15.png
+.. image:: images/15_setup_dns_domain.png
+  :target: _images/15_setup_dns_domain.png
 
-.. image:: images/setup-16.png
-  :target: _images/setup-16.png
+.. image:: images/16_setup_network_init.png
+  :target: _images/16_setup_network_init.png
 
-.. image:: images/setup-17.png
-  :target: _images/setup-17.png
+.. image:: images/17_setup_airgap.png
+  :target: _images/17_setup_airgap.png
 
-.. image:: images/setup-18.png
-  :target: _images/setup-18.png
+.. image:: images/18_setup_direct_proxy.png
+  :target: _images/18_setup_direct_proxy.png
 
-.. image:: images/setup-19.png
-  :target: _images/setup-19.png
+.. image:: images/19_setup_homenet.png
+  :target: _images/19_setup_homenet.png
 
-.. image:: images/setup-20.png
-  :target: _images/setup-20.png
+.. image:: images/20_setup_webuser.png
+  :target: _images/20_setup_webuser.png
 
-.. image:: images/setup-21.png
-  :target: _images/setup-21.png
+.. image:: images/21_setup_webpass1.png
+  :target: _images/21_setup_webpass1.png
 
-.. image:: images/setup-22.png
-  :target: _images/setup-22.png
+.. image:: images/22_setup_webpass2.png
+  :target: _images/22_setup_webpass2.png
 
-.. image:: images/setup-23.png
-  :target: _images/setup-23.png
+.. image:: images/23_setup_access_type.png
+  :target: _images/23_setup_access_type.png
 
-.. image:: images/setup-24.png
-  :target: _images/setup-24.png
+.. image:: images/24_setup_ntp.png
+  :target: _images/24_setup_ntp.png
 
-.. image:: images/setup-25.png
-  :target: _images/setup-25.png
+.. image:: images/25_setup_npt_input.png
+  :target: _images/25_setup_npt_input.png
 
-.. image:: images/setup-26.png
-  :target: _images/setup-26.png
+.. image:: images/26_setup_so_allow.png
+  :target: _images/26_setup_so_allow.png
 
-.. image:: images/setup-27.png
-  :target: _images/setup-27.png
+.. image:: images/27_setup_so_allow_input.png
+  :target: _images/27_setup_so_allow_input.png
 
-.. image:: images/setup-28.png
-  :target: _images/setup-28.png
+.. image:: images/28_setup_summary.png
+  :target: _images/28_setup_summary.png
 
-.. image:: images/setup-29.png
-  :target: _images/setup-29.png
+.. image:: images/29_setup_finished.png
+  :target: _images/29_setup_finished.png
 
-.. image:: images/setup-30.png
-  :target: _images/setup-30.png
+.. image:: images/30_so_analyst_install.png
+  :target: _images/30_so_analyst_install.png
 
-.. image:: images/setup-31.png
-  :target: _images/setup-31.png
+.. image:: images/31_so_analyst_install_finished.png
+  :target: _images/31_so_analyst_install_finished.png
 
-.. image:: images/setup-32.png
-  :target: _images/setup-32.png
+.. image:: images/32_so-import-pcap.png
+  :target: _images/32_so-import-pcap.png
 
-.. image:: images/setup-33.png
-  :target: _images/setup-33.png
+.. image:: images/36_login.png
+  :target: _images/36_login.png
 
-.. image:: images/setup-34.png
-  :target: _images/setup-34.png
+.. image:: images/37_welcome.png
+  :target: _images/37_welcome.png
 
-.. image:: images/setup-35.png
-  :target: _images/setup-35.png
+.. image:: images/38_hunt.png
+  :target: _images/38_hunt.png
 
-.. image:: images/setup-36.png
-  :target: _images/setup-36.png
+.. image:: images/40_pcap.png
+  :target: _images/40_pcap.png
 
-.. image:: images/setup-37.png
-  :target: _images/setup-37.png
+.. image:: images/41_pcap_details.png
+  :target: _images/41_pcap_details.png
 
-.. image:: images/setup-38.png
-  :target: _images/setup-38.png
+.. image:: images/42_cyberchef.png
+  :target: _images/42_cyberchef.png
 
-.. image:: images/setup-39.png
-  :target: _images/setup-39.png
-
-.. image:: images/setup-40.png
-  :target: _images/setup-40.png
-
-.. image:: images/setup-41.png
-  :target: _images/setup-41.png
-
-.. image:: images/setup-42.png
-  :target: _images/setup-42.png
-
-.. image:: images/setup-43.png
-  :target: _images/setup-43.png
+.. image:: images/top.png
+  :target: _images/top.png
