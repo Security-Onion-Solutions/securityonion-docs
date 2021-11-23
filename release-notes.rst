@@ -3,6 +3,15 @@
 Release Notes
 =============
 
+2.3.90 Hotfix [WAZUH]
+---------------------
+
+- FIX: so-allow should not be modifying ossec.conf when Wazuh isn’t installed `#6317 <https://github.com/Security-Onion-Solutions/securityonion/issues/6317>`_
+- FIX: so-allow should not be writing an XML header to the ossec.conf file `#6325 <https://github.com/Security-Onion-Solutions/securityonion/issues/6325>`_
+- FIX: Correct "exisiting" typo on whiptail prompt
+- FIX: Soup will no longer attempt to validate a successful salt upgrade if salt wasn’t upgraded on this soup run
+
+
 2.3.90 Changes
 ----------------
 
