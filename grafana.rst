@@ -8,12 +8,12 @@ Once you've logged into :ref:`soc`, you can then click the Grafana link to see s
 .. image:: images/grafana-0.png
   :target: _images/grafana-0.png
 
-Depending on what kind of deployment you have, there will be at least one more dashboard available if you click the Dashboards icon on the left.
+Depending on what kind of deployment you have, there will be at least one more dashboard available if you click the Dashboards icon on the left and then click ``Manage``.
 
 .. image:: images/grafana-1.png
   :target: _images/grafana-1.png
 
-Each dashboard you view is added to ``Recently viewed dashboards`` which is accessible by simply clicking the Dashboards icon:
+Each dashboard you view is added to ``Recently viewed dashboards`` which is then accessible by simply clicking the Dashboards icon:
 
 .. image:: images/grafana-2.png
   :target: _images/grafana-2.png
