@@ -1,7 +1,7 @@
 Endgame
 ==============
 
-Starting in Secrity Onion 2.3.90, we can ingest Endgame data by following the steps below.
+Starting in Security Onion 2.3.90, we can ingest Endgame data by following the steps below.
 
 .. note::
 
