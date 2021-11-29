@@ -8,9 +8,9 @@ Starting in Security Onion 2.3.90, we can ingest Endgame data by following the s
  Please keep in mind that we currently use the ``*:endgame-*`` index pattern for Endgame data. This means the data will not be visible using the native Security Onion dashboards/index pattern in Kibana. However, Endgame data will be natively viewable and aggregatable using Hunt and Elastic Security.
 
 Configuration
--------------
+--------------------
 
-**Before Setup**
+**During Security Onion Setup**
 
 To configure Endgame ingestion during setup, ensure the ``ENDGAMEHOST`` variable is set to the IP address of the Endgame SMP that you want to send data from:
 
@@ -18,10 +18,11 @@ To configure Endgame ingestion during setup, ensure the ``ENDGAMEHOST`` variable
 
 This will open the Security Onion host-based firewall for access from the SMP to Security Onion on TCP port 3765.
 
+------
 
-**After Setup**
+**Post-Installation Setup**
 
-To configure Endgame ingestion after setup, perform the following steps.
+To configure Endgame ingestion on an existing Security Onion installation, perform the following steps.
 
 Add the SMP to the firewall exceptions for the Security Onion node:
 
@@ -32,20 +33,31 @@ Add the following to the ``soc`` pillar entry the manager's sls file in ``/opt/s
 ::
  
   soc:
-    endgamehost: $yoursmp
+    endgamehost: $smpip
     
+------
 
+**Configure Event Streaming in Endgame SMP**
 
-**Configure Event Streaming**
+Once one of the two requirements above have been completed, the following must be configured in the Endgame web console:
 
-Next, copy the contents of ``/etc/ssl/certs/intca.crt`` (on the Security Onion manager node) to the certificate section in the configuration for event streaming within the SMP web console.
+Select ``Administration -> Streaming -> Event Streaming -> Add`` **Requires Admin user role**
 
-You will also need to ensure the SMP can resolve the hostname of the Security Onion node (to match the certificate).  **This may require a hosts file entry on the SMP**.
+Ensure ``Logstash`` is selected under the ``Destination`` options.
 
-Ensure the SMP is pointed to ``https://$securityonion:3765`` and save the configuration. Once events are batched and published from the Endgame SMP, they will be accessible in Hunt, using:
+Next, copy the contents of ``/etc/ssl/certs/intca.crt`` (on the Security Onion manager node) to the ``Certificate`` section.
+
+*Endgame will attempt to verify the X.509 certificate attributes match the destination server, so you will also need to ensure the SMP can resolve the hostname of the Security Onion node (to match the certificate).*  **This may require a hosts file entry on the SMP**.
+
+Ensure the SMP is pointed to ``https://$securityonion:3765`` and save the configuration. 
+
+Navigate to ``Administration -> Policy -> YOUR POLICY -> Settings -> Elastic Streaming`` and enable ``Event Streaming`` if not already enabled
+
+Once events are batched and published from the Endgame SMP, they will be accessible in Hunt, using:
 
 ``event.module:endgame``
 
+----------
 
 Example Endgame Data
 --------------------
