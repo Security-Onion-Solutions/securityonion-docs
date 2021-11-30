@@ -45,7 +45,7 @@ Adding New Logs
 
 If you want to add a new log to the list of logs that are sent to Elasticsearch for parsing, you can update the logstash pipeline configurations by adding to ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom/``. 
 
-If you are modifying or adding a new ``manager`` pipeline, then add the following to your ``global.sls`` file:
+If you are modifying or adding a new ``manager`` pipeline, then first copy ``/opt/so/saltstack/default/pillar/logstash/manager.sls`` to ``/opt/so/saltstack/local/pillar/logstash/``, then add the following to the ``manager.sls`` file under the ``local`` directory:
 
 ::
 
@@ -56,9 +56,9 @@ If you are modifying or adding a new ``manager`` pipeline, then add the followin
             - so/0009_input_beats.conf      
             - so/0010_input_hhbeats.conf
             - so/9999_output_redis.conf.jinja
-            - custom/9999_output_custom.jinja
+            - custom/9999_output_custom.conf.jinja
         
-If you are modifying or adding a new ``search`` pipeline, then add the following to ``global.sls``:
+If you are modifying or adding a new ``search`` pipeline for all search nodes, then first copy ``/opt/so/saltstack/default/pillar/logstash/search.sls`` to ``/opt/so/saltstack/local/pillar/logstash/``, then add the following to the ``search.sls`` file under the ``local`` directory:
 
 ::
 
@@ -75,37 +75,14 @@ If you are modifying or adding a new ``search`` pipeline, then add the following
             - so/9500_output_beats.conf.jinja
             - so/9600_output_ossec.conf.jinja
             - so/9700_output_strelka.conf.jinja
-            - custom/9701_output_custom.jinja
+            - custom/9701_output_custom.conf.jinja
 
-both:
-
-::
-
-    logstash:
-      pipelines:
-        manager:
-          config:
-            - so/0009_input_beats.conf      
-            - so/0010_input_hhbeats.conf
-            - so/9999_output_redis.conf.jinja
-            - custom/9999_output_custom.jinja
-        search:
-          config:
-            - so/0900_input_redis.conf.jinja
-            - so/9000_output_zeek.conf.jinja
-            - so/9002_output_import.conf.jinja
-            - so/9034_output_syslog.conf.jinja
-            - so/9100_output_osquery.conf.jinja
-            - so/9400_output_suricata.conf.jinja
-            - so/9500_output_beats.conf.jinja
-            - so/9600_output_ossec.conf.jinja
-            - so/9700_output_strelka.conf.jinja
-            - custom/9701_output_custom.jinja
+If you only want to modify the search pipeline for a single search node, then the process is similar to the previous example. However, instead of placing ``logstash:pipelines:search:config`` in ``/opt/so/saltstack/local/pillar/logstash/search.sls``, it would be placed in ``/opt/so/saltstack/local/pillar/minions/$hostname_searchnode.sls``. 
 
 Logstash Parsing
 ----------------
 
-If you want to add a legacy Logstash parser (not recommended) then you can copy the file to ``local``. Once the file is in ``local`` you can add the proper value to the ``global.sls`` as in the example above with ``- custom/9701_output_custom.jinja``.
+If you want to add a legacy Logstash parser (not recommended) then you can copy the file to ``local``. Once the file is in ``local``, then depending on which nodes you want it to apply to, you can add the proper value to either ``/opt/so/saltstack/local/pillar/logstash/manager.sls``, ``/opt/so/saltstack/local/pillar/logstash/search.sls``, or ``/opt/so/saltstack/local/pillar/minions/$hostname_searchnode.sls`` as in the previous examples.
 
 Forwarding Events to an External Destination
 --------------------------------------------
