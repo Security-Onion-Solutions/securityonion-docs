@@ -4,7 +4,8 @@ Jupyter Notebooks with Security Onion
 Overview
 --------------------
 This article will serve as a brief walkthrough of how you can connect a Jupyter notebook/server instance to Elasticsearch within a Security Onion deployment to slice and dice the data as you wish.
-It will not cover the setup of a Jupyter instance, which has been thoroughly documented here, using Docker:
+
+It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) here:
 
 https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
 
