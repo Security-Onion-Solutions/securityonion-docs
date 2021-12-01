@@ -1,4 +1,4 @@
-Using Jupyter Notebooks with Security Onion
+Jupyter Notebooks with Security Onion
 ==============
 
 Overview
