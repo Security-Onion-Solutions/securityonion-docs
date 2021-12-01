@@ -31,7 +31,7 @@ Jupyter Notebook
 
 .. note::
 
-  The following steps are heavily borrowed from Roberto Rodriguez's Medium posts around Jupyter notebooks.  If you haven't checked them out, see:
+  The following steps are heavily inspired by Roberto Rodriguez's Medium post:
 
   https://medium.com/threat-hunters-forge/jupyter-notebooks-from-sigma-rules-%EF%B8%8F-to-query-elasticsearch-31a74cc59b99
 
