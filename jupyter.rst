@@ -3,7 +3,7 @@ Jupyter Notebook
 
 Overview
 --------
-This section is a brief overview of connecting a Jupyter notebook/server instance to Elasticsearch within a Security Onion deployment to slice and dice the data as you wish. It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) here:
+This section is a brief overview of connecting a Jupyter notebook/server instance to :ref:`elasticsearch` to slice and dice the data as you wish. It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) here:
 https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
 
 Security Onion Setup
@@ -11,20 +11,20 @@ Security Onion Setup
 
 **Create Jupyter User**
 
-As a best practice, we'll want to create a dedicated Jupyter notebook user inside of Kibana that will only have read-only access to the data inside of Elasticsearch. In Kibana, navigate to Stack Management -> Users and create the user with appropriate permissions:
+As a best practice, we'll want to create a dedicated Jupyter notebook user inside of :ref:`kibana` that will only have read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
   :target:  https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
 
 **Security Onion Firewall**
 
-In order to allow network-based access to the Elasticsearch instance within Security Onion, we'll need to ensure there is an exception for the host-based firewall. We'll use the :ref:`so-allow` utility to configure this exception:
+In order to allow network-based access to :ref:`elasticsearch`, we'll need to ensure there is an exception for the host-based firewall. We'll use the :ref:`so-allow` utility to configure this exception:
 
 ::
 
   sudo so-allow
 
-We'll choose the ``e`` option for the Elasticsearch REST API and provide our IP address(es) for which we could like to add an exception. Once complete, we should be able to reach the Elasticsearch instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
+We'll choose the ``e`` option for the :ref:`elasticsearch` REST API and provide our IP address(es) for which we could like to add an exception. Once complete, we should be able to reach the :ref:`elasticsearch` instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
 
 Jupyter Notebook
 ----------------
@@ -47,7 +47,7 @@ You can install these using the following commands on the Jupyter host, or withi
   pip3 install elasticsearch_dsl
   pip3 install pandas
   
-Once the Python pre-reqs are installed, we can start executing commands within our notebook.
+Once the Python prerequisites are installed, we can start executing commands within our notebook.
 
 We'll start with importing the libraries we just mentioned. In the first cell, we'll paste the following:
 ::
@@ -60,7 +60,7 @@ Then, we'll press **Shift+ENTER** to execute the command(s) within the cell (can
 .. image:: https://user-images.githubusercontent.com/16829864/144251813-190e33f2-0684-44be-a1d8-2caa5a440c8f.png
   :target:  https://user-images.githubusercontent.com/16829864/144251813-190e33f2-0684-44be-a1d8-2caa5a440c8f.png
 
-In the next cell, we'll specify the Elasticsearch instance address and port (``192.168.6.100:9200``) and the username (``jupyter``) and password (``password``) we created within Security Onion, as well as the index filter we would like to use for searching (``*:so-*``):
+In the next cell, we'll specify the :ref:`elasticsearch` instance address and port (``192.168.6.100:9200``) and the username (``jupyter``) and password (``password``) we created within Security Onion, as well as the index filter we would like to use for searching (``*:so-*``):
 ::
   es = Elasticsearch(['https://192.168.6.100:9200'],
   ca_certs=False,verify_certs=False, http_auth=('jupyter','password'))
