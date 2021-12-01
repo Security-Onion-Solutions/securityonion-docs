@@ -36,9 +36,6 @@ The following steps are heavily borrowed from Roberto Rodriguez's Medium posts a
 
 https://medium.com/threat-hunters-forge/jupyter-notebooks-from-sigma-rules-%EF%B8%8F-to-query-elasticsearch-31a74cc59b99
 
-https://medium.com/r/?url=https%3A%2F%2Fposts.specterops.io%2Fthreat-hunting-with-jupyter-notebooks-part-3-querying-elasticsearch-via-apache-spark-670054cd9d47
-
-
 The Jupyter environment will need to have at least the following Python libraries installed:
 
 - elasticsearch
