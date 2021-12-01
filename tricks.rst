@@ -13,6 +13,7 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    dns-anomaly-detection
    endgame
    icmp-anomaly-detection
+   jupyter
    machine-learning
    new-disk
    pcaps
