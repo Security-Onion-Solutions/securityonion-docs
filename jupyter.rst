@@ -55,10 +55,7 @@ We'll start with importing the libraries we just mentioned. In the first cell, w
   from elasticsearch_dsl import Search
   import pandas as pd
   
-Then, we'll press **Shift+ENTER** to execute the command(s) within the cell (can also click to run the cell from the Run menu):
-
-.. image:: https://user-images.githubusercontent.com/16829864/144251813-190e33f2-0684-44be-a1d8-2caa5a440c8f.png
-  :target:  https://user-images.githubusercontent.com/16829864/144251813-190e33f2-0684-44be-a1d8-2caa5a440c8f.png
+Then, we'll press **Shift+ENTER** to execute the command(s) within the cell (can also click to run the cell from the Run menu).
 
 In the next cell, we'll specify the :ref:`elasticsearch` instance address and port (``192.168.6.100:9200``) and the username (``jupyter``) and password (``password``) we created within Security Onion, as well as the index filter we would like to use for searching (``*:so-*``):
 ::
@@ -70,10 +67,7 @@ In the next cell, we'll specify the :ref:`elasticsearch` instance address and po
 
 We are choosing to use ``verify_certs=False`` here to avoid complications with self-signed certificates during testing. Ideally, we would want to make sure we are performing verification wherever possible.
 
-Again, we'll execute the code within the cell, by pressing **Shift+ENTER**:
-
-.. image:: https://user-images.githubusercontent.com/16829864/144254078-7b57d6a0-5729-41c0-a7f6-22842a42080e.png
-  :target:  https://user-images.githubusercontent.com/16829864/144254078-7b57d6a0-5729-41c0-a7f6-22842a42080e.png
+Again, we'll execute the code within the cell, by pressing **Shift+ENTER**.
 
 We may see warning like the following due the the fact that we are not performing verification for certificates:
 
