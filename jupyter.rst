@@ -1,12 +1,9 @@
 Jupyter Notebooks with Security Onion
-==============
+=====================================
 
 Overview
---------------------
-This article will serve as a brief walkthrough of how you can connect a Jupyter notebook/server instance to Elasticsearch within a Security Onion deployment to slice and dice the data as you wish.
-
-It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) here:
-
+--------
+This article will serve as a brief walkthrough of how you can connect a Jupyter notebook/server instance to Elasticsearch within a Security Onion deployment to slice and dice the data as you wish. It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) here:
 https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
 
 Security Onion Setup
@@ -23,7 +20,7 @@ To accomplish this, we'll navigate inside of Kibana to Stack Management -> Users
 **Security Onion Firewall**
 
 In order to allow network-based access to the Elasticsearch instance within Security Onion, we'll need to ensure there is an exception for the host-based firewall.
-We'll use the so-allow utility to configure this exception:
+We'll use the :ref:`so-allow` utility to configure this exception:
 
 ``sudo so-allow``
 
@@ -36,11 +33,11 @@ We'll choose the ``e`` option for the Elasticsearch REST API, and provide our IP
 
 
 Jupyter Notebook
---------------------
+----------------
 
 .. note::
 
-The following steps are heavily borrowed from Roberto Rodriguez's AWESOME Medium posts around Jupyter notebooks.  If you haven't checked them out, see:
+The following steps are heavily borrowed from Roberto Rodriguez's Medium posts around Jupyter notebooks.  If you haven't checked them out, see:
 
 https://medium.com/threat-hunters-forge/jupyter-notebooks-from-sigma-rules-%EF%B8%8F-to-query-elasticsearch-31a74cc59b99
 
@@ -101,9 +98,9 @@ In the following cell, we'll paste the following:
 ::
   s = searchContext.query('query_string', query='event.module:sysmon')
 
-In this example, we are looking for logs that contain a field called `event.module` and a value of `sysmon` (Sysmon logs). Once more, we'll press **Shift+ENTER**, and continue on.
+In this example, we are looking for logs that contain a field called ``event.module`` and a value of ``sysmon`` (Sysmon logs). Once more, we'll press **Shift+ENTER** and continue on.
 
-Last, we'll submit our query in the next cell using the following:
+Finally, we'll submit our query in the next cell using the following:
 ::
   response = s.execute()
   if response.success():
@@ -128,6 +125,4 @@ Then we end up with something a little bit more targeted (you may need to adjust
 .. image:: https://user-images.githubusercontent.com/16829864/144252941-5821e104-91ce-4fda-a00d-39352e17f9eb.png
   :target:  https://user-images.githubusercontent.com/16829864/144252941-5821e104-91ce-4fda-a00d-39352e17f9eb.png
 
-Obviously, there is much more we can do with this data other than just running the above example code. This won't be covered here, but potentially in a future blog post or video.
-
-Happy hunting!
+Obviously, there is much more we can do with this data other than just running the above example code. Happy hunting!
