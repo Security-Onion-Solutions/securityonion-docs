@@ -19,18 +19,12 @@ To accomplish this, we'll navigate inside of Kibana to Stack Management -> Users
 
 **Security Onion Firewall**
 
-In order to allow network-based access to the Elasticsearch instance within Security Onion, we'll need to ensure there is an exception for the host-based firewall.
-We'll use the :ref:`so-allow` utility to configure this exception:
+In order to allow network-based access to the Elasticsearch instance within Security Onion, we'll need to ensure there is an exception for the host-based firewall. We'll use the :ref:`so-allow` utility to configure this exception:
 
-``sudo so-allow``
-
-Once, run we'll be presented with a menu of options: 
-
-.. image:: https://user-images.githubusercontent.com/16829864/144250440-3a57f53c-bf38-48cf-91bd-416e1bb8db61.png
-  :target:  https://user-images.githubusercontent.com/16829864/144250440-3a57f53c-bf38-48cf-91bd-416e1bb8db61.png
+::
+  sudo so-allow
 
 We'll choose the ``e`` option for the Elasticsearch REST API, and provide our IP address(es) for which we could like to add an exception. Once complete, we should be able to reach the Elasticsearch instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
-
 
 Jupyter Notebook
 ----------------
