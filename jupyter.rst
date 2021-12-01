@@ -3,7 +3,7 @@ Jupyter Notebook
 
 Overview
 --------
-This article will serve as a brief walkthrough of how you can connect a Jupyter notebook/server instance to Elasticsearch within a Security Onion deployment to slice and dice the data as you wish. It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) here:
+This section is a brief overview of connecting a Jupyter notebook/server instance to Elasticsearch within a Security Onion deployment to slice and dice the data as you wish. It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) here:
 https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
 
 Security Onion Setup
@@ -11,8 +11,7 @@ Security Onion Setup
 
 **Create Jupyter User**
 
-As a best practice, we'll want to create a dedicated Jupyter notebook user inside of Kibana that will only have read-only access to the data inside of Elasticsearch. 
-To accomplish this, we'll navigate inside of Kibana to Stack Management -> Users, and create the user there with the appropriate permissions:
+As a best practice, we'll want to create a dedicated Jupyter notebook user inside of Kibana that will only have read-only access to the data inside of Elasticsearch. In Kibana, navigate to Stack Management -> Users and create the user with appropriate permissions:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
   :target:  https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
@@ -25,16 +24,16 @@ In order to allow network-based access to the Elasticsearch instance within Secu
 
   sudo so-allow
 
-We'll choose the ``e`` option for the Elasticsearch REST API, and provide our IP address(es) for which we could like to add an exception. Once complete, we should be able to reach the Elasticsearch instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
+We'll choose the ``e`` option for the Elasticsearch REST API and provide our IP address(es) for which we could like to add an exception. Once complete, we should be able to reach the Elasticsearch instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
 
 Jupyter Notebook
 ----------------
 
 .. note::
 
-The following steps are heavily borrowed from Roberto Rodriguez's Medium posts around Jupyter notebooks.  If you haven't checked them out, see:
+  The following steps are heavily borrowed from Roberto Rodriguez's Medium posts around Jupyter notebooks.  If you haven't checked them out, see:
 
-https://medium.com/threat-hunters-forge/jupyter-notebooks-from-sigma-rules-%EF%B8%8F-to-query-elasticsearch-31a74cc59b99
+  https://medium.com/threat-hunters-forge/jupyter-notebooks-from-sigma-rules-%EF%B8%8F-to-query-elasticsearch-31a74cc59b99
 
 The Jupyter environment will need to have at least the following Python libraries installed:
 
