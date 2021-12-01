@@ -3,15 +3,14 @@ Jupyter Notebook
 
 Overview
 --------
-This section is a brief overview of connecting a Jupyter notebook/server instance to :ref:`elasticsearch` to slice and dice the data as you wish. It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) here:
-https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
+This section is a brief overview of connecting a Jupyter notebook/server instance to :ref:`elasticsearch` to slice and dice the data as you wish. It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) at https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html.
 
 Security Onion Setup
 --------------------
 
 **Create Jupyter User**
 
-As a best practice, we'll want to create a dedicated Jupyter notebook user inside of :ref:`kibana` that will only have read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
+As a best practice, we'll want to create a dedicated Jupyter notebook user that will only have read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
   :target:  https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
