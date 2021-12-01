@@ -18,7 +18,7 @@ To accomplish this, we'll navigate inside of Kibana to Stack Management -> Users
 
 .. image:: https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
   :target:  https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
-|
+
 **Security Onion Firewall**
 
 In order to allow network-based access to the Elasticsearch instance within Security Onion, we'll need to ensure there is an exception for the host-based firewall.
@@ -30,7 +30,7 @@ Once, run we'll be presented with a menu of options: 
 
 .. image:: https://user-images.githubusercontent.com/16829864/144250440-3a57f53c-bf38-48cf-91bd-416e1bb8db61.png
   :target:  https://user-images.githubusercontent.com/16829864/144250440-3a57f53c-bf38-48cf-91bd-416e1bb8db61.png
-|
+
 We'll choose the e option for the Elasticsearch REST API, and provide our IP address(es) for which we could like to add an exception. Once complete, we should be able to reach the Elasticsearch instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
 
 
@@ -70,7 +70,7 @@ Then, we'll press **Shift+ENTER** to execute the command(s) within the cell (can
 
 .. image:: https://user-images.githubusercontent.com/16829864/144251813-190e33f2-0684-44be-a1d8-2caa5a440c8f.png
   :target:  https://user-images.githubusercontent.com/16829864/144251813-190e33f2-0684-44be-a1d8-2caa5a440c8f.png
-|
+
 In the next cell, we'll specify the Elasticsearch instance address and port (``192.168.6.100:9200``) and the username (``jupyter``) and password (``password``) we created within Security Onion, as well as the index filter we would like to use for searching (``*:so-*``):
 ::
   es = Elasticsearch(['https://192.168.6.100:9200'],
@@ -85,12 +85,12 @@ Again, we'll execute the code within the cell, by pressing **Shift+ENTER**:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144254078-7b57d6a0-5729-41c0-a7f6-22842a42080e.png
   :target:  https://user-images.githubusercontent.com/16829864/144254078-7b57d6a0-5729-41c0-a7f6-22842a42080e.png
-|
+
 We may see warning like the following due the the fact that we are not performing verification for certificates:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144252418-a6ced1a0-ef9e-4c66-b516-dc14facb80a5.png
   :target:  https://user-images.githubusercontent.com/16829864/144252418-a6ced1a0-ef9e-4c66-b516-dc14facb80a5.png
-|
+
 For convenience during our testing, we can disable the warning in future runs, by pasting the following the next cell and executing it with **Shift+ENTER**:
 ::
   import urllib3
@@ -113,7 +113,7 @@ The above code simply takes the results and converts them to a Python dict:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144252891-5832070d-1d58-4e28-82f5-ba47081724bf.png
   :target:  https://user-images.githubusercontent.com/16829864/144252891-5832070d-1d58-4e28-82f5-ba47081724bf.png
-|
+
 We can select a few fields, and modify the column values if we like:
 ::
   response = s.execute()
@@ -126,7 +126,7 @@ Then we end up with something a little bit more targeted (you may need to adjust
 
 .. image:: https://user-images.githubusercontent.com/16829864/144252941-5821e104-91ce-4fda-a00d-39352e17f9eb.png
   :target:  https://user-images.githubusercontent.com/16829864/144252941-5821e104-91ce-4fda-a00d-39352e17f9eb.png
-|
+
 Obviously, there is much more we can do with this data other than just running the above example code. This won't be covered here, but potentially in a future blog post or video.
 
 Happy hunting!
