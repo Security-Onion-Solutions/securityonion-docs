@@ -1,5 +1,5 @@
-Jupyter Notebooks with Security Onion
-=====================================
+Jupyter Notebook
+================
 
 Overview
 --------
