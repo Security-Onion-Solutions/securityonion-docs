@@ -10,7 +10,7 @@ Security Onion Setup
 
 **Create Jupyter User**
 
-As a best practice, we'll want to create a dedicated Jupyter notebook user that will only have read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
+As a best practice, we'll want to create a dedicated Jupyter notebook user with just read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
   :target:  https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
@@ -68,7 +68,7 @@ We are choosing to use ``verify_certs=False`` here to avoid complications with s
 
 Again, we'll execute the code within the cell, by pressing **Shift+ENTER**.
 
-We may see a warning like the following due the the fact that we are not performing verification for certificates:
+We may see a warning like the following due to the fact that we are not performing verification for certificates:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144252418-a6ced1a0-ef9e-4c66-b516-dc14facb80a5.png
   :target:  https://user-images.githubusercontent.com/16829864/144252418-a6ced1a0-ef9e-4c66-b516-dc14facb80a5.png
