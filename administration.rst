@@ -8,4 +8,6 @@ Administration
 .. image:: images/users.png
   :target: _images/users.png
 
+The Role(s) column lists roles assigned to the user as defined in the :ref:`rbac` section.
+
 A lock icon in the Status column indicates that the user account has been disabled via the ``so-user-disable`` command as described in the :ref:`disabling-accounts` section.
