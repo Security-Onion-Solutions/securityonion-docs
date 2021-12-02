@@ -66,8 +66,8 @@ If you want to parse Fortinet logs using the Filebeat fortinet module, you can a
 
 (Please note that :ref:`firewall` ports still need to be opened on the minion to accept the Fortinet logs.)
 
-Walktrough: AWS Cloudtrail Logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Walkthrough: AWS Cloudtrail Logs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this brief walkthrough, we’ll use the ``aws`` module for Filebeat to ingest ``cloudtrail`` logs from Amazon Web Services into Security Onion.  
 
@@ -398,8 +398,8 @@ We can also run the ``so-elasticsearch-query`` command, like so:
 
 Congratulations!  You’ve ingested Okta logs into Security Onion! 
 
-Walktrough: Netflow Logs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Walkthrough: Netflow Logs
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this brief walkthrough, we’ll use the ``netflow`` module for Filebeat to ingest Netflow logs into Security Onion.
 
