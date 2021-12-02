@@ -83,6 +83,15 @@ Snort Subscriber (Talos)
 -  rules retrievable as released
 -  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
 
+To enable Talos Subscriber in an already installed grid modify the /opt/so/saltstack/local/pillar/minions/<manager.sls>  
+
+::
+
+  idstools:
+    config:
+      ruleset: 'TALOS'
+      oinkcode: 'MYOINKCODE'
+
 | For more information, see:
 | https://www.snort.org/downloads/#rule-downloads
 | https://snort.org/documents/registered-vs-subscriber
