@@ -398,6 +398,96 @@ We can also run the ``so-elasticsearch-query`` command, like so:
 
 Congratulations!  You’ve ingested Okta logs into Security Onion! 
 
+Walktrough: Netflow Logs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this brief walkthrough, we’ll use the ``netflow`` module for Filebeat to ingest Netflow logs into Security Onion.
+
+Credit goes to Matthew Gracie for his YouTube video on setting up Netflow ingest: https://www.youtube.com/watch?v=ew5gtVjAs7g
+
+Please follow the steps below to get started.
+
+The official Elastic documentation for the Netflow module can be found here:
+
+https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-netflow.html
+
+Overview of steps:
+
+- Enable third party module.
+- Update docker config.
+- Update firewall config.
+- Build logstash pipeline.
+
+**Enable third party module**
+
+Edit ``/opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls``.  Add the code block below to the bottom of the file: ::
+
+  filebeat:
+    third_party_filebeat:
+      modules:
+        netflow:
+          log:
+            enabled: true
+            var.netflow_host: 0.0.0.0
+            var.netflow_port: 2055
+
+**Update docker config**
+
+Add an extra listening port to the Filebeat container.  Make a local copy the filebeat init.sls file.
+
+``cp /opt/so/saltstack/default/salt/filebeat/init.sls /opt/so/saltstack/local/salt/filebeat/init.sls``
+
+``chown socore:socore /opt/so/saltstack/local/salt/filebeat/init.sls``
+
+Edit ``/opt/so/saltstack/local/salt/filebeat/init.sls``.  Add port 2055 to the bindings section of the so-filebeat config: ::
+
+  - port_bindings:
+      - 0.0.0.0:514:514/udp
+      - 0.0.0.0:514:514/tcp
+      - 0.0.0.0:2055:2055/udp
+      - 0.0.0.0:5066:5066/tcp
+
+Save the file, and run ``salt-call state.apply filebeat`` to allow Salt to recreate the container.  You can check that the config has applied by running ``docker ps | grep so-filebeat``.  You should see ``0.0.0.0:2055->2055/udp`` among the other existing listening ports.
+
+**Update firewall config**
+
+The next step is to add a host group and port group for Netflow traffic to allow it through the firewall.  Change your source network to suit your setup. ::
+
+  so-firewall addhostgroup netflow
+  so-firewall addportgroup netflow
+  so-firewall includehost netflow 172.30.0.0/16
+  so-firewall addport netflow udp 2055
+
+Edit /opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls to add iptables rules to allow the new netflow groups: ::
+
+  firewall:
+    assigned_hostgroups:
+      chain:
+        DOCKER-USER:
+          hostgroups:
+            netflow:
+              portgroups:
+                - portgroups.netflow
+        INPUT:
+          hostgroups:
+            netflow:
+              portgroups:
+                - portgroups.netflow
+
+Save the file and exit, then run ``salt-call state.apply firewall`` to enable the new firewall rules.
+
+**Build logstash pipeline**
+
+Now the module is enabled, the container is listening on the right port, and the firewall is allowing traffic to get to the container.  Next is to ensure that the Netflow pipeline is enabled, or the data will not be saved to the ES database.
+
+Note:  If you have a distributed setup, you need to run the following command on the search nodes as well.
+
+``docker exec -i so-filebeat filebeat setup modules -pipelines -modules netflow -c /usr/share/filebeat/module-setup.yml``
+
+You should see ``Loaded Ingest pipelines``.  Once that is complete run ``so-filebeat-restart``.
+
+Assuming you have Netflow sources sending data, you should now start to see data in Hunt.  Group by event.dataset and you should now have netflow.log entries appearing.
+
 
 More Information
 ----------------
