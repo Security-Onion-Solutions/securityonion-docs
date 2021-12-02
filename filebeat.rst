@@ -445,7 +445,7 @@ Next, set permissions on the file:
 
 ::
 
-  chown socore:socore /opt/so/saltstack/local/salt/filebeat/init.sls
+  sudo chown socore:socore /opt/so/saltstack/local/salt/filebeat/init.sls
 
 Edit ``/opt/so/saltstack/local/salt/filebeat/init.sls`` and add port ``2055`` to the ``port_bindings`` section of the so-filebeat config: 
 
@@ -457,7 +457,7 @@ Edit ``/opt/so/saltstack/local/salt/filebeat/init.sls`` and add port ``2055`` to
       - 0.0.0.0:2055:2055/udp
       - 0.0.0.0:5066:5066/tcp
 
-Save the file and run ``sudo salt-call state.apply filebeat`` to allow Salt to recreate the container.  You can check that the config has applied by running ``docker ps | grep so-filebeat``.  You should see ``0.0.0.0:2055->2055/udp`` among the other existing listening ports.
+Save the file and run ``sudo salt-call state.apply filebeat`` to allow :ref:`salt` to recreate the container.  You can check that the config has applied by running ``sudo docker ps | grep so-filebeat``.  You should see ``0.0.0.0:2055->2055/udp`` among the other existing listening ports.
 
 **Update firewall config**
 
@@ -465,10 +465,10 @@ The next step is to add a host group and port group for Netflow traffic to allow
 
 ::
 
-  so-firewall addhostgroup netflow
-  so-firewall addportgroup netflow
-  so-firewall includehost netflow 172.30.0.0/16
-  so-firewall addport netflow udp 2055
+  sudo so-firewall addhostgroup netflow
+  sudo so-firewall addportgroup netflow
+  sudo so-firewall includehost netflow 172.30.0.0/16
+  sudo so-firewall addport netflow udp 2055
 
 Edit ``/opt/so/saltstack/local/pillar/minions/<manager.sls>`` to add iptables rules to allow the new netflow groups: 
 
