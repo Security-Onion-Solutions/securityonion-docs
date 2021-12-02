@@ -420,7 +420,7 @@ Overview of steps:
 
 **Enable third party module**
 
-Edit ``/opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls``.  Add the code block below to the bottom of the file: 
+Edit ``/opt/so/saltstack/local/pillar/minions/<manager.sls>``.  Add the code block below to the bottom of the file: 
 
 ::
 
@@ -494,13 +494,15 @@ Save the file and then run ``sudo salt-call state.apply firewall`` to enable the
 
 Now the module is enabled, the container is listening on the right port, and the firewall is allowing traffic to get to the container.  Next is to ensure that the Netflow pipeline is enabled, or the data will not be saved to the ES database.
 
-Note:  If you have a distributed setup, you need to run the following command on the search nodes as well.
+Note:  If you have a distributed setup, you need to run the following command on the search nodes as well:
 
-``sudo docker exec -i so-filebeat filebeat setup modules -pipelines -modules netflow -c /usr/share/filebeat/module-setup.yml``
+::
 
-You should see ``Loaded Ingest pipelines``.  Once that is complete run ``sudo so-filebeat-restart``.
+  sudo docker exec -i so-filebeat filebeat setup modules -pipelines -modules netflow -c /usr/share/filebeat/module-setup.yml
 
-Assuming you have Netflow sources sending data, you should now start to see data in :ref:`hunt`.  Group by ``event.dataset`` and you should now have netflow.log entries appearing.
+You should see ``Loaded Ingest pipelines``.  Once that is complete, run ``sudo so-filebeat-restart``.
+
+Assuming you have Netflow sources sending data, you should now start to see data in :ref:`hunt`.  Group by ``event.dataset`` and you should now have ``netflow.log`` entries appearing.
 
 More Information
 ----------------
