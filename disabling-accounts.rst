@@ -25,8 +25,8 @@ If you need to disable an account in :ref:`soc`, :ref:`hive`, and :ref:`fleet`, 
 
 After disabling a user account, the :ref:`soc` :ref:`administration` page will show the disabled user account with a lock icon in the Status column:
 
-.. image:: images/users-disabled.png
-  :target: _images/users-disabled.png
+.. image:: images/users.png
+  :target: _images/users.png
 
 TheHive - UI
 ------------
