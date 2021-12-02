@@ -413,14 +413,16 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-module-netflow.h
 
 Overview of steps:
 
-- Enable third party module.
-- Update docker config.
-- Update firewall config.
-- Build logstash pipeline.
+- enable third party module
+- update docker config
+- update firewall config
+- build logstash pipeline
 
 **Enable third party module**
 
-Edit ``/opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls``.  Add the code block below to the bottom of the file: ::
+Edit ``/opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls``.  Add the code block below to the bottom of the file: 
+
+::
 
   filebeat:
     third_party_filebeat:
@@ -433,13 +435,15 @@ Edit ``/opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls``.  Add the cod
 
 **Update docker config**
 
-Add an extra listening port to the Filebeat container.  Make a local copy the filebeat init.sls file.
+Next, we need to add an extra listening port to the Filebeat container.  We'll start by making a local copy the filebeat ``init.sls`` file.
 
-``cp /opt/so/saltstack/default/salt/filebeat/init.sls /opt/so/saltstack/local/salt/filebeat/init.sls``
+``sudo cp /opt/so/saltstack/default/salt/filebeat/init.sls /opt/so/saltstack/local/salt/filebeat/init.sls``
 
 ``chown socore:socore /opt/so/saltstack/local/salt/filebeat/init.sls``
 
-Edit ``/opt/so/saltstack/local/salt/filebeat/init.sls``.  Add port 2055 to the bindings section of the so-filebeat config: ::
+Edit ``/opt/so/saltstack/local/salt/filebeat/init.sls`` and add port ``2055`` to the ``port_bindings`` section of the so-filebeat config: 
+
+::
 
   - port_bindings:
       - 0.0.0.0:514:514/udp
@@ -447,18 +451,22 @@ Edit ``/opt/so/saltstack/local/salt/filebeat/init.sls``.  Add port 2055 to the b
       - 0.0.0.0:2055:2055/udp
       - 0.0.0.0:5066:5066/tcp
 
-Save the file, and run ``salt-call state.apply filebeat`` to allow Salt to recreate the container.  You can check that the config has applied by running ``docker ps | grep so-filebeat``.  You should see ``0.0.0.0:2055->2055/udp`` among the other existing listening ports.
+Save the file and run ``sudo salt-call state.apply filebeat`` to allow Salt to recreate the container.  You can check that the config has applied by running ``docker ps | grep so-filebeat``.  You should see ``0.0.0.0:2055->2055/udp`` among the other existing listening ports.
 
 **Update firewall config**
 
-The next step is to add a host group and port group for Netflow traffic to allow it through the firewall.  Change your source network to suit your setup. ::
+The next step is to add a host group and port group for Netflow traffic to allow it through the firewall.  Replace ``172.30.0.0/16`` with whatever is appropriate for your network. 
+
+::
 
   so-firewall addhostgroup netflow
   so-firewall addportgroup netflow
   so-firewall includehost netflow 172.30.0.0/16
   so-firewall addport netflow udp 2055
 
-Edit /opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls to add iptables rules to allow the new netflow groups: ::
+Edit ``/opt/so/saltstack/local/pillar/minions/<manager.sls>`` to add iptables rules to allow the new netflow groups: 
+
+::
 
   firewall:
     assigned_hostgroups:
@@ -474,7 +482,7 @@ Edit /opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls to add iptables r
               portgroups:
                 - portgroups.netflow
 
-Save the file and exit, then run ``salt-call state.apply firewall`` to enable the new firewall rules.
+Save the file and then run ``sudo salt-call state.apply firewall`` to enable the new firewall rules.
 
 **Build logstash pipeline**
 
@@ -482,12 +490,11 @@ Now the module is enabled, the container is listening on the right port, and the
 
 Note:  If you have a distributed setup, you need to run the following command on the search nodes as well.
 
-``docker exec -i so-filebeat filebeat setup modules -pipelines -modules netflow -c /usr/share/filebeat/module-setup.yml``
+``sudo docker exec -i so-filebeat filebeat setup modules -pipelines -modules netflow -c /usr/share/filebeat/module-setup.yml``
 
-You should see ``Loaded Ingest pipelines``.  Once that is complete run ``so-filebeat-restart``.
+You should see ``Loaded Ingest pipelines``.  Once that is complete run ``sudo so-filebeat-restart``.
 
-Assuming you have Netflow sources sending data, you should now start to see data in Hunt.  Group by event.dataset and you should now have netflow.log entries appearing.
-
+Assuming you have Netflow sources sending data, you should now start to see data in :ref:`hunt`.  Group by ``event.dataset`` and you should now have netflow.log entries appearing.
 
 More Information
 ----------------
