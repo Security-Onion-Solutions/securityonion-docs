@@ -437,9 +437,15 @@ Edit ``/opt/so/saltstack/local/pillar/minions/so-mgr_manager.sls``.  Add the cod
 
 Next, we need to add an extra listening port to the Filebeat container.  We'll start by making a local copy the filebeat ``init.sls`` file.
 
-``sudo cp /opt/so/saltstack/default/salt/filebeat/init.sls /opt/so/saltstack/local/salt/filebeat/init.sls``
+::
 
-``chown socore:socore /opt/so/saltstack/local/salt/filebeat/init.sls``
+  sudo cp /opt/so/saltstack/default/salt/filebeat/init.sls /opt/so/saltstack/local/salt/filebeat/init.sls
+
+Next, set permissions on the file:
+
+::
+
+  chown socore:socore /opt/so/saltstack/local/salt/filebeat/init.sls
 
 Edit ``/opt/so/saltstack/local/salt/filebeat/init.sls`` and add port ``2055`` to the ``port_bindings`` section of the so-filebeat config: 
 
