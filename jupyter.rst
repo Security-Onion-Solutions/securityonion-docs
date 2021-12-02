@@ -17,7 +17,7 @@ As a best practice, we'll want to create a dedicated Jupyter notebook user with 
 
 **Security Onion Firewall**
 
-In order to allow network-based access to :ref:`elasticsearch`, we'll need to ensure there is an exception for the host-based firewall. We'll use the :ref:`so-allow` utility to configure this exception:
+In order to allow network-based access to :ref:`elasticsearch`, we'll need to allow the traffic through the host-based firewall using :ref:`so-allow`:
 
 ::
 
