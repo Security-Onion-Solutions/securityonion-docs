@@ -39,7 +39,7 @@ ET Pro (Proofpoint)
 -  rules retrievable as released
 -  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
 
-To enable ET Pro in an already installed grid, modify the /opt/so/saltstack/local/pillar/minions/<manager.sls> file as follows:
+To enable the ET Pro ruleset in an already installed grid, modify the /opt/so/saltstack/local/pillar/minions/<manager.sls> file as follows:
 
 ::
 
@@ -83,7 +83,7 @@ Snort Subscriber (Talos)
 -  rules retrievable as released
 -  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
 
-To enable Talos Subscriber in an already installed grid, modify the /opt/so/saltstack/local/pillar/minions/<manager.sls> file as follows: 
+To enable the Talos Subscriber ruleset in an already installed grid, modify the /opt/so/saltstack/local/pillar/minions/<manager.sls> file as follows: 
 
 ::
 
