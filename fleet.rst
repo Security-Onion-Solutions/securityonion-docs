@@ -51,7 +51,7 @@ Then login using a valid username and password:
 
 
 Adding Query Packs
---------
+------------------
 You can bulk add queries & packs to FleetDM using fleetctl
 
 The following directory is mapped to the FleetDM container, so you can drop your query packs in the folder and reference it:

@@ -5,7 +5,7 @@ Release Notes
 
 
 2.3.90 Hotfix [AIRGAPFIX]
----------------------
+-------------------------
 
 - FIX: Airgap repo was created on distributed iso nodes even in non-airgap installs `#6415 <https://github.com/Security-Onion-Solutions/securityonion/issues/6415>`_
 

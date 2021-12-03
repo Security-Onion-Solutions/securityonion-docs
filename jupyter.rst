@@ -41,7 +41,9 @@ The Jupyter environment will need to have at least the following Python librarie
 - pandas
 
 You can install these using the following commands on the Jupyter host, or within the Jupyter Docker container:
+
 ::
+
   pip3 install elasticsearch
   pip3 install elasticsearch_dsl
   pip3 install pandas
@@ -49,7 +51,9 @@ You can install these using the following commands on the Jupyter host, or withi
 Once the Python prerequisites are installed, we can start executing commands within our notebook.
 
 We'll start with importing the libraries we just mentioned. In the first cell, we'll paste the following:
+
 ::
+
   from elasticsearch import Elasticsearch
   from elasticsearch_dsl import Search
   import pandas as pd
@@ -57,7 +61,9 @@ We'll start with importing the libraries we just mentioned. In the first cell, w
 Then, we'll press **Shift+ENTER** to execute the command(s) within the cell (can also click to run the cell from the Run menu).
 
 In the next cell, we'll specify the :ref:`elasticsearch` instance address and port (``192.168.6.100:9200``) and the username (``jupyter``) and password (``password``) we created within Security Onion, as well as the index filter we would like to use for searching (``*:so-*``):
+
 ::
+
   es = Elasticsearch(['https://192.168.6.100:9200'],
   ca_certs=False,verify_certs=False, http_auth=('jupyter','password'))
   searchContext = Search(using=es, index='*:so-*', doc_type='doc')
@@ -79,13 +85,17 @@ For convenience during our testing, we can disable the warning in future runs, b
   urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 In the following cell, we'll paste the following:
+
 ::
+
   s = searchContext.query('query_string', query='event.module:sysmon')
 
 In this example, we are looking for logs that contain a field called ``event.module`` and a value of ``sysmon`` (Sysmon logs). Once more, we'll press **Shift+ENTER** and continue on.
 
 Finally, we'll submit our query in the next cell using the following:
+
 ::
+
   response = s.execute()
   if response.success():
     df = pd.DataFrame((d.to_dict() for d in s.scan()))
@@ -97,7 +107,9 @@ The above code simply takes the results and converts them to a Python dict:
   :target:  https://user-images.githubusercontent.com/16829864/144252891-5832070d-1d58-4e28-82f5-ba47081724bf.png
 
 We can select a few fields, and modify the column values if we like:
+
 ::
+
   response = s.execute()
   if response.success():
       df = pd.DataFrame(([d['event']['dataset'], d['process']['executable'], d['file']['target']] for d in s))
