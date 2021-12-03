@@ -70,7 +70,7 @@ In the next cell, we'll specify the :ref:`elasticsearch` instance address and po
 
 .. note:: 
 
-We are choosing to use ``verify_certs=False`` here to avoid complications with self-signed certificates during testing. Ideally, we would want to make sure we are performing verification wherever possible.
+	We are choosing to use ``verify_certs=False`` here to avoid complications with self-signed certificates during testing. Ideally, we would want to make sure we are performing verification wherever possible.
 
 Again, we'll execute the code within the cell, by pressing **Shift+ENTER**.
 
@@ -80,7 +80,9 @@ We may see a warning like the following due to the fact that we are not performi
   :target:  https://user-images.githubusercontent.com/16829864/144252418-a6ced1a0-ef9e-4c66-b516-dc14facb80a5.png
 
 For convenience during our testing, we can disable the warning in future runs, by pasting the following the next cell and executing it with **Shift+ENTER**:
+
 ::
+
   import urllib3
   urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
