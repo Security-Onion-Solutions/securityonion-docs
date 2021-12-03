@@ -63,7 +63,7 @@ Putting a Play into Production
 
 When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template and the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatically update the :ref:`elastalert` configuration and :ref:`hive` case template.
 
-The Elastalert rules are located under ``/opt/so/rules/elastalert/playbook/<PlayID>.yml``. Elastalert rules created by Playbook will run every 3 minutes, with a ``buffer_time`` of 15 minutes.
+The Elastalert rules are located under ``/opt/so/rules/elastalert/playbook/<PlayID>.yaml``. Elastalert rules created by Playbook will run every 3 minutes, with a ``buffer_time`` of 15 minutes.
 
 Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` play as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
 
