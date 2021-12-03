@@ -22,7 +22,7 @@ Security Onion is designed for many different use cases. Here are just a few exa
 Import
 ------
 
-One of the easiest ways to get started with Security Onion is using it to forensically analyze one or more pcap files. Just install Security Onion in ``Import`` mode and then run `so-import-pcap <so-import-pcap>`__ giving it the full path to one or more pcap files. For more information, please see the `so-import-pcap <so-import-pcap>`__ section.
+One of the easiest ways to get started with Security Onion is using it to forensically analyze pcap and log files. Just install Security Onion in ``Import`` mode and then run :ref:`so-import-pcap` to import pcap files or :ref:`so-import-evtx` to import Windows event logs in EVTX format.
 
 Evaluation
 ----------
