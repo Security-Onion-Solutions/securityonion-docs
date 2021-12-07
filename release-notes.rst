@@ -3,6 +3,13 @@
 Release Notes
 =============
 
+2.3.90 Hotfix [20211206]
+------------------------
+
+- FIX: soup should now properly update 2.3.90 installs that had an issue with xml headers in the ossec.conf
+- FIX: soup now has more logging
+- FIX: soup now checks for the existence of the endgame group before trying to apply it on a re-soup
+- FIX: so-elasticsearch-pipelines now uses the proper value for applying the pipelines
 
 2.3.90 Hotfix [AIRGAPFIX]
 -------------------------
