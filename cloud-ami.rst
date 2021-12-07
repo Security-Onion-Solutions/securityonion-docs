@@ -155,6 +155,8 @@ If this is an ephemeral evaluation node, ensure the node has been prepared as de
 
 After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. For distributed manager nodes using ephemeral storage, if you would like to use traditional :ref:`elasticsearch` clustering, select Advanced and answer Yes. Continue instructions below for applicable nodes.
 
+AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be used when prompted for an NTP host.
+
 All Distributed Manager Nodes
 -----------------------------
 
