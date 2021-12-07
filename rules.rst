@@ -101,7 +101,7 @@ To enable the Talos Subscriber ruleset in an already installed grid, modify the 
 | https://snort.org/documents/registered-vs-subscriber
 
 Other
-------------------------
+-----
 
 - not officially managed/supported by Security Onion
 - license fee may or may not apply
@@ -112,7 +112,7 @@ To add other remotely-accessible rulesets, add an entry under ``urls`` for the r
 
   idstools:
     config:
-      ...primary ruelset...
+      ...primary ruleset...
       ...primary ruleset oinkcode...
       urls:
         - https://ruleseturlhere
