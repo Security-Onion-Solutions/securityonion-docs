@@ -67,10 +67,12 @@ Snort Registered
 ----------------
 
 -  optimized for Snort
--  Snort SO (Shared Object) rules will only work with Snort
+-  Snort SO (Shared Object) rules only work with Snort not :ref:`suricata`
 -  same rules as Snort Subscriber ruleset, except rules only retrievable after 30 days past release
 -  **free**
 
+Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'`` as described in the :ref:`managing-alerts` section.
+  
 | For more information, see:
 | https://www.snort.org/downloads/#rule-downloads
 | https://snort.org/documents/registered-vs-subscriber
@@ -79,9 +81,11 @@ Snort Subscriber (Talos)
 ------------------------
 
 -  optimized for Snort
--  Snort SO (Shared Object) rules will only work with Snort
+-  Snort SO (Shared Object) rules only work with Snort not :ref:`suricata`
 -  rules retrievable as released
 -  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
+
+Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'`` as described in the :ref:`managing-alerts` section.
 
 To enable the Talos Subscriber ruleset in an already installed grid, modify the ``/opt/so/saltstack/local/pillar/minions/<manager.sls>`` file as follows: 
 
