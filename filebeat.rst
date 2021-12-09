@@ -296,11 +296,11 @@ Edit ``/opt/so/saltstack/local/pillar/minions/$minion_standalone.sls``, adding t
         google_workspace:
           admin:
              enabled: true
-             var.jwt_file: "/usr/share/filebeat/modules.d/credentials_file.jsonn
+             var.jwt_file: "/usr/share/filebeat/modules.d/credentials_file.json"
              var.delegated_account: "adminuser@yourdomain.com"
           user_accounts:
              enabled: true
-             var.jwt_file: "/usr/share/filebeat/modules.d/credentials_file.jsonn
+             var.jwt_file: "/usr/share/filebeat/modules.d/credentials_file.json"
              var.delegated_account: "adminuser@yourdomain.com"
 
 Next, restart Filebeat on the node, with ``so-filebeat-restart``.
