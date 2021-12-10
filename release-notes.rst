@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.90 Hotfix [20211210]
+------------------------
+
+- FIX: Mitigate vulnerability in log4j
+
 2.3.90 Hotfix [20211206]
 ------------------------
 
