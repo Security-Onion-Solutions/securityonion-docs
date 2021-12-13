@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.90 Hotfix [20211213]
+------------------------
+
+- FIX: Remove JndiLookup class from Elasticsearch and Logstash jar files to address additional log4j attack vectors
+
 2.3.90 Hotfix [20211210]
 ------------------------
 
