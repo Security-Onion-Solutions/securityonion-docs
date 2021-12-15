@@ -55,7 +55,9 @@ Local Rules:
 
 To add local YARA rules, create a directory in ``/opt/so/saltstack/local/salt/strelka/rules``, for example ``localrules``.  Inside of ``/opt/so/saltstack/local/salt/strelka/rules/localrules``, add your YARA rules.
 
-After adding your rules, update the configuration by running ``so-strelka-restart``.
+After adding your rules, update the configuration by running ``so-strelka-restart`` on all sensor nodes.
+
+Alternatively, run ``salt -G 'role:so-sensor' cmd.run "so-strelka-restart"`` to restart Strelka on all sensors at once.
 
 Remotely Managed Rules:
 ~~~~~~~~~~~~~~~~~~~~~~~
