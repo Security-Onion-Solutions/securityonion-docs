@@ -65,7 +65,7 @@ To pin Suricata workers to specific CPUs:
 
   ::
   
-     suripins:  
+     suri_pins:  
        - <cpu_1>  
        - <cpu_2>  
        - <cpu_3> 
