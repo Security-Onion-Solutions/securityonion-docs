@@ -327,6 +327,10 @@ Re-indexing may need to occur if field data types have changed and conflicts ari
 | For more information about re-indexing, please see:
 | https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
 
+Clearing
+--------
+If you want to clear all Elasticsearch data including documents and indices, you can run the ``so-elastic-clear`` command.
+
 More Information
 ----------------
 
