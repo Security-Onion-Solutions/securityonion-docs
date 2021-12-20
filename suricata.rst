@@ -174,6 +174,17 @@ Stats
 
 For detailed Suricata statistics, check ``/opt/so/log/suricata/stats.log``.
 
+Tesing Rules
+------------
+
+To test a new rule, use the following utility on a node that runs Suricata (ie Forward or Import).
+
+::
+
+	sudo so-suricata-testrule <Filename> /path/to/pcap/test.pcap
+
+The file should contain the new rule that you would like to test. The pcap should contain network data that will trigger the rule.
+
 More Information
 ----------------
 
