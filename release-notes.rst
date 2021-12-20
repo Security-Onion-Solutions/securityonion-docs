@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.91 Changes
+------------------------
+
+- UPGRADE: Elastic to 7.16.2 for log4j vulnerability mitigation
+
 2.3.90 Hotfix [20211213]
 ------------------------
 
