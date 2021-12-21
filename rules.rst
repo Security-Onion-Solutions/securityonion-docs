@@ -6,7 +6,7 @@ Managing Rules
 Updating Rules
 --------------
 
-To update your rules, run ``so-rule-update`` on your manager node:
+Assuming you have Internet access, Security Onion will automatically update your NIDS rules on a daily basis. If you need to manually update your rules, you can run the following on your manager node:
 
 ::
 
