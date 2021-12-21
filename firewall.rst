@@ -16,7 +16,8 @@ Internet Communication
 When configuring network firewalls for Internet-connected deployments (non-:ref:`airgap`), you'll want to ensure that the deployment can connect outbound to the following:
 
 - repo.securityonion.net (CentOS Updates)   
-- raw.githubusercontent.com (Security Onion public key)   
+- raw.githubusercontent.com (Security Onion public key)
+- pkg-containers.githubusercontent.com
 - sigs.securityonion.net (Signature files for Security Onion containers)  
 - ghcr.io (Container downloads)  
 - rules.emergingthreatspro.com (Emerging Threats IDS rules)  
