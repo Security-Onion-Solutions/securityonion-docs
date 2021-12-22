@@ -251,7 +251,7 @@ In some cases, you may not want to use the modify option above, but instead crea
 Threshold
 ---------
 
-You can manage threshold.conf for :ref:`suricata` using :ref:`salt` pillars. The format of the pillar file can be seen below, as well as in ``/opt/so/saltstack/default/pillar/thresholding/pillar.usage`` and ``/opt/so/saltstack/default/pillar/thresholding/pillar.example``
+You can manage threshold entries for :ref:`suricata` using :ref:`salt` pillars. The format of the pillar file can be seen below, as well as in ``/opt/so/saltstack/default/pillar/thresholding/pillar.usage`` and ``/opt/so/saltstack/default/pillar/thresholding/pillar.example``
 
 .. note::
 
