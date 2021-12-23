@@ -100,55 +100,6 @@ If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`
 | http://blog.bro.org/2014/01/intelligence-data-and-bro_4980.html\ 
 | https://github.com/weslambert/securityonion-misp
 
-Custom Scripts
---------------
-
-Custom scripts can be added to ``/opt/so/saltstack/local/salt/zeek/policy/custom/<$custom-module>`` on the manager.  The custom folder is mapped to Zeek through Docker on the minions.  Once the script module is created, the configuration for ``local.zeek`` will need to be updated.  In Security Onion 2, this configuration is abstracted into a SaltStack pillar.  For example, we would copy ``/opt/so/saltstack/default/pillar/zeek/init.sls`` to ``/opt/so/saltstack/local/pillar/zeek/init.sls``, and add our custom module to be loaded by Zeek (alternatively, the pillar could be modified in the ``global.sls`` file.  More details can be found here here: https://docs.securityonion.net/en/latest/zeek.html#configuration):
-
-::
-
-  zeek:
-    local:
-      '@load':
-        - misc/loaded-scripts
-        - tuning/defaults
-        - misc/capture-loss
-        - misc/stats
-        - frameworks/software/vulnerable
-        - frameworks/software/version-changes
-        - protocols/ftp/software
-        - protocols/smtp/software
-        - protocols/ssh/software
-        - protocols/http/software
-        - protocols/dns/detect-external-names
-        - protocols/ftp/detect
-        - protocols/conn/known-hosts
-        - protocols/conn/known-services
-        - protocols/ssl/known-certs
-        - protocols/ssl/validate-certs
-        - protocols/ssl/log-hostcerts-only
-        - protocols/ssh/geo-data
-        - protocols/ssh/detect-bruteforcing
-        - protocols/ssh/interesting-hostnames
-        - protocols/http/detect-sqli
-        - frameworks/files/hash-all-files
-        - frameworks/files/detect-MHR
-        - policy/frameworks/notice/extend-email/hostnames
-        - ja3
-        - hassh
-        - intel
-        - cve-2020-0601
-        - securityonion/bpfconf
-        - securityonion/communityid
-        - securityonion/file-extraction
-        - custom/$module-name
-      
-One the configuration has been updated, Zeek can be restarted with ``sudo so-zeek-restart`` on applicable nodes to pick up the changes.  Finally, ``/nsm/zeek/logs/current/loaded_scripts.log`` can be checked to ensure the new module has been loaded. For example:
-
-::
-
-    grep mynewmodule /nsm/zeek/logs/current/loaded_scripts.log
-
 Logs
 ----
 
@@ -218,6 +169,118 @@ https://docs.zeek.org/en/latest/scripts/base/frameworks/notice/main.zeek.html#ty
 | https://docs.zeek.org/en/latest/script-reference/log-files.html
 
 As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`hunt` or :ref:`kibana`.
+
+Custom Scripts
+--------------
+
+Custom scripts can be added to ``/opt/so/saltstack/local/salt/zeek/policy/custom/<$custom-module>`` on the manager.  The custom folder is mapped to Zeek through Docker on the minions.  Once the script module is created, the configuration for ``local.zeek`` will need to be updated.  In Security Onion 2, this configuration is abstracted into a :ref:`salt` pillar.  For example, we would copy the following into the ``global.sls`` file, replacing ``$module-name`` on the last line with the actual module name:
+
+::
+
+  zeek:
+    local:
+      '@load':
+        - misc/loaded-scripts
+        - tuning/defaults
+        - misc/capture-loss
+        - misc/stats
+        - frameworks/software/vulnerable
+        - frameworks/software/version-changes
+        - protocols/ftp/software
+        - protocols/smtp/software
+        - protocols/ssh/software
+        - protocols/http/software
+        - protocols/dns/detect-external-names
+        - protocols/ftp/detect
+        - protocols/conn/known-hosts
+        - protocols/conn/known-services
+        - protocols/ssl/known-certs
+        - protocols/ssl/validate-certs
+        - protocols/ssl/log-hostcerts-only
+        - protocols/ssh/geo-data
+        - protocols/ssh/detect-bruteforcing
+        - protocols/ssh/interesting-hostnames
+        - protocols/http/detect-sqli
+        - frameworks/files/hash-all-files
+        - frameworks/files/detect-MHR
+        - policy/frameworks/notice/extend-email/hostnames
+        - ja3
+        - hassh
+        - intel
+        - cve-2020-0601
+        - securityonion/bpfconf
+        - securityonion/communityid
+        - securityonion/file-extraction
+        - custom/$module-name
+      
+One the configuration has been updated, Zeek can be restarted with ``sudo so-zeek-restart`` on applicable nodes to pick up the changes.  Finally, ``/nsm/zeek/logs/current/loaded_scripts.log`` can be checked to ensure the new module has been loaded. For example:
+
+::
+
+    grep mynewmodule /nsm/zeek/logs/current/loaded_scripts.log
+    
+Custom Script Example: log4j
+----------------------------
+
+Corelight has developed a Zeek package to detect log4j exploitation attempts at https://github.com/corelight/cve-2021-44228. This package contains Zeek scripts which can easily be loaded into your Security Onion deployment.
+
+First, download the Zeek package:
+
+::
+
+	git clone https://github.com/corelight/cve-2021-44228.git
+
+Now that we have the package, we need to move the Zeek scripts to the Zeek custom directory:
+
+::
+
+	sudo mv cve-2021-44228/scripts /opt/so/saltstack/local/salt/zeek/policy/custom/cve-2021-44228
+
+Next, we need to configure Zeek to load the new scripts. If ``/opt/so/saltstack/local/pillar/global.sls`` does not already contain a ``zeek:`` section, then copy and paste the following at the end of the file (be careful when pasting to respect yaml indentation):
+
+::
+
+  zeek:
+    local:
+      '@load':
+        - misc/loaded-scripts
+        - tuning/defaults
+        - misc/capture-loss
+        - misc/stats
+        - frameworks/software/vulnerable
+        - frameworks/software/version-changes
+        - protocols/ftp/software
+        - protocols/smtp/software
+        - protocols/ssh/software
+        - protocols/http/software
+        - protocols/dns/detect-external-names
+        - protocols/ftp/detect
+        - protocols/conn/known-hosts
+        - protocols/conn/known-services
+        - protocols/ssl/known-certs
+        - protocols/ssl/validate-certs
+        - protocols/ssl/log-hostcerts-only
+        - protocols/ssh/geo-data
+        - protocols/ssh/detect-bruteforcing
+        - protocols/ssh/interesting-hostnames
+        - protocols/http/detect-sqli
+        - frameworks/files/hash-all-files
+        - frameworks/files/detect-MHR
+        - policy/frameworks/notice/extend-email/hostnames
+        - ja3
+        - hassh
+        - intel
+        - cve-2020-0601
+        - securityonion/bpfconf
+        - securityonion/communityid
+        - securityonion/file-extraction
+        - custom/cve-2021-44228
+
+Finally, on any nodes currently running Zeek, restart the service:
+
+::
+
+	sudo so-zeek-restart
 
 Configuration
 -------------
