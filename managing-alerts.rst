@@ -75,7 +75,7 @@ There are multiple ways to handle overly productive signatures and we'll try to 
 
 .. seealso::
 
-	Check out our Youtube video on Tuning at https://youtu.be/GQObGTcFl-4!
+	Check out our tuning video at https://youtu.be/GQObGTcFl-4!
 	
 so-rule
 -------
