@@ -222,7 +222,7 @@ One the configuration has been updated, Zeek can be restarted with ``sudo so-zee
 Custom Script Example: log4j
 ----------------------------
 
-Corelight has developed Zeek scripts to detect log4j exploitation attempts and they can be found at https://github.com/corelight/cve-2021-44228. These Zeek scripts can easily be loaded into your Security Onion deployment.
+Corelight has developed a Zeek package to detect log4j exploitation attempts and it can be found at https://github.com/corelight/cve-2021-44228. This package contains Zeek scripts which can easily be loaded into your Security Onion deployment.
 
 First, we need to make sure that the ``custom`` directory exists on the manager:
 
