@@ -403,9 +403,9 @@ Walkthrough: Netflow Logs
 
 In this brief walkthrough, we’ll use the ``netflow`` module for Filebeat to ingest Netflow logs into Security Onion.
 
-Credit goes to Matthew Gracie for his YouTube video on setting up Netflow ingest: https://www.youtube.com/watch?v=ew5gtVjAs7g
+.. seealso::
 
-Please follow the steps below to get started.
+	Check out our Netflow video at https://youtu.be/ew5gtVjAs7g!
 
 The official Elastic documentation for the Netflow module can be found here:
 

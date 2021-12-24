@@ -44,6 +44,8 @@ More Information
 
 .. seealso::
 
+    Check out our Sysmon video at https://youtu.be/Xz-7oDrZdQY!
+
     | For more information about sysmon, please see:
     | https://technet.microsoft.com/en-us/sysinternals/sysmon
 
