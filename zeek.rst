@@ -230,7 +230,7 @@ First, we need to make sure that the ``custom`` directory exists on the manager:
 
 	sudo mkdir -p /opt/so/saltstack/local/salt/zeek/policy/custom/
 
-Next, clone the repo to a temporary location:
+Next, download the Zeek package to a temporary location:
 
 ::
 
