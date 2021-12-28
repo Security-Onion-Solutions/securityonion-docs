@@ -36,6 +36,8 @@ On the left side of the page, you'll see links for analyst tools like :ref:`aler
      - Develop a play in :ref:`playbook` that will automatically alert on IOCs moving forward and update your coverage in :ref:`attack-navigator`.
      - Finally, return to :ref:`hive` and document the entire investigation and close the case.
  
+**SOC Customization**
+
 You can customize the main SOC Overview page that you see when you first log into SOC. The content of this page is stored in the ``motd.md`` file, which uses the common Markdown (.md) format. You can learn more about Markdown format at `<https://markdownguide.org>`_. To customize the Overview page content, copy ``motd.md`` as follows and then edit ``/opt/so/saltstack/local/salt/soc/files/soc/motd.md`` using your favorite text editor:
 
 ::
@@ -61,6 +63,20 @@ Once all customizations are complete, you can then restart SOC to make the chang
 ::
 
 	sudo so-soc-restart
+
+**Auth Logs**
+
+If you need to see SOC auth logs, you can run the following:
+
+::
+
+	sudo zgrep "Identity authenticated successfully and was issued an Ory Kratos Session Cookie" /opt/so/log/kratos/*
+
+Once you see the auth logs, you will notice that Kratos logs using ``identity_id``. You can find your desired ``identity_id`` as follows, replacing USERNAME@DOMAIN.COM with your desired SOC username:
+
+::
+
+	echo "select * from identities;" | sudo sqlite3 /opt/so/conf/kratos/db/db.sqlite |grep USERNAME@DOMAIN.COM | cut -d
 
 .. toctree::
    :maxdepth: 2
