@@ -76,7 +76,7 @@ Once you see the auth logs, you will notice that Kratos logs using ``identity_id
 
 ::
 
-	echo "select * from identities;" | sudo sqlite3 /opt/so/conf/kratos/db/db.sqlite |grep USERNAME@DOMAIN.COM | cut -d
+	echo "select * from identities;" | sudo sqlite3 /opt/so/conf/kratos/db/db.sqlite |grep USERNAME@DOMAIN.COM | cut -d\| -f1
 
 .. toctree::
    :maxdepth: 2
