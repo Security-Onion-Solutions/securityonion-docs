@@ -20,7 +20,15 @@ Security Onion Version Updates
 
 When we release a new version of Security Onion, we update the :ref:`release-notes` section and publish a blog post to https://blog.securityonion.net. You'll want to review these for any relevant information about the individual updates. 
 
-If ``soup`` finds a full version update, then it will update :ref:`salt` code and all :ref:`docker` images. It will also update the Security Onion version in ``/etc/soversion``.
+If ``soup`` finds a full version update, then it will update the Security Onion version in ``/etc/soversion``, all :ref:`salt` code, and all :ref:`docker` images.
+
+``soup`` automatically keeps the previous version of :ref:`docker` images. These older unused :ref:`docker` images will be automatically removed at the next version update. If you need to remove these older :ref:`docker` images immediately, first verify that the upgrade completed successfully and that everything is working properly. You could then remove the older images individually or all at once using a command like:
+
+::
+
+	sudo docker system prune -a
+
+However, please note that this an aggressive option and you should exercise caution if you have any non-standard :ref:`docker` images or configuration. You may want to test it on a test system first.
 
 Security Onion Hotfixes
 -----------------------
