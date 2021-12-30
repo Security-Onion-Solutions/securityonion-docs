@@ -7,7 +7,7 @@ We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__ pulses int
 
 .. warning::
 
-  Please keep in mind we do not officially support use of this script, so installation is at your own risk.
+  Please keep in mind we do not officially support use of this script, so installation is at your own risk. Also note that some users have reported issues with the OTX feeds causing Zeek to crash.
 
 Installation
 ------------
