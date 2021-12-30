@@ -3,11 +3,11 @@
 AlienVault-OTX
 ==============
 
-We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__ pulses into Security Onion and have Zeek utilize them for the `Intel Framework <https://www.bro.org/sphinx-git/frameworks/intel.html>`__ by leveraging `Stephen Hosom <https://github.com/hosom/bro-otx>`__'s work with Alienvault OTX integration.
+We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__ pulses into Security Onion and have :ref:`zeek` utilize them for the `Intel Framework <https://www.bro.org/sphinx-git/frameworks/intel.html>`__ by leveraging `Stephen Hosom <https://github.com/hosom/bro-otx>`__'s work with Alienvault OTX integration.
 
 .. warning::
 
-  Please keep in mind we do not officially support use of this script, so installation is at your own risk. Also note that some users have reported issues with the OTX feeds causing Zeek to crash.
+  Please keep in mind we do not officially support use of this script, so installation is at your own risk. Also note that some users have reported issues with the OTX feeds causing :ref:`zeek` to crash.
 
 Installation
 ------------
@@ -16,7 +16,7 @@ In order to begin, we will need to make sure we satisfy a few prerequisites:
 
 | **Alienvault OTX API key** - can be obtained for free at:
   https://otx.alienvault.com
-| **Security Onion standalone/sensor** (running Zeek)
+| **Security Onion standalone/sensor** (running :ref:`zeek`)
 | **External internet access** - to retrieve updated pulses
   (https://otx.alienvault.com/api/v1/pulses/subscribed)
 
@@ -32,7 +32,7 @@ Run the script:
 
    sudo bash securityonion-otx
 
-After using the above script, ``/opt/so/conf/zeek/policy/custom/zeek-otx/`` will contain all necessary files, including ``otx.dat``, the intel file where all pulses will be populated.
+After using the above script, ``/opt/so/conf/zeek/policy/custom/zeek-otx/`` will contain all necessary files including ``otx.dat`` where all pulses will be populated.
 
 We can test our configuration by adding another piece of intel to the end of ``/opt/so/conf/zeek/policy/custom/zeek-otx/otx.dat``.  For example:
 
