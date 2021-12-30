@@ -3,7 +3,7 @@
 AlienVault-OTX
 ==============
 
-We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__ pulses into Security Onion and have :ref:`zeek` utilize them for the `Intel Framework <https://www.bro.org/sphinx-git/frameworks/intel.html>`__ by leveraging `Stephen Hosom <https://github.com/hosom/bro-otx>`__'s work with Alienvault OTX integration.
+We can easily pull in `Alienvault OTX <https://otx.alienvault.com>`__ pulses into Security Onion and have :ref:`zeek` utilize them for the `Intel Framework <https://docs.zeek.org/en/master/frameworks/intel.html>`__ by leveraging `Stephen Hosom <https://github.com/hosom/bro-otx>`__'s work with Alienvault OTX integration.
 
 .. warning::
 
