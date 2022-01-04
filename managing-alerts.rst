@@ -54,15 +54,11 @@ You can also test using :ref:`so-test`.
 Identifying rule categories
 ---------------------------
 
-Both the Snort Subscriber (Talos) and the Emerging Threats rulesets come with a large number of rules enabled (over 20,000 by default). You should only run the rules necessary for your environment. So you may want to disable entire categories of rules that don't apply to you. Run the following command to get a listing of categories and the number of rules in each:
+Rulesets come with a large number of rules enabled (over 20,000 by default). You should only run the rules necessary for your environment, so you may want to disable entire categories of rules that don't apply to you. Run the following command to get a listing of categories and the number of rules in each:
 
 ::
 
     cut -d\" -f2 /opt/so/rules/nids/all.rules | grep -v "^$" | grep -v "^#" | awk '{print $1, $2}'|sort |uniq -c |sort -nr
-
-| Also see:
-| https://github.com/shirkdog/pulledpork/blob/master/doc/README.CATEGORIES
-
 
 So what's next?
 ---------------
