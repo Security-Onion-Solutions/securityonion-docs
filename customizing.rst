@@ -14,6 +14,6 @@ This section covers how to customize Security Onion for your environment.
    email
    ntp
    ssh
-   ip
    hostname
+   ip
    url-base
