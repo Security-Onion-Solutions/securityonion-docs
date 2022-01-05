@@ -15,4 +15,5 @@ This section covers how to customize Security Onion for your environment.
    ntp
    ssh
    ip
+   hostname
    url-base
