@@ -25,7 +25,7 @@ Remove the node from any ``.sls`` files in ``/opt/so/saltstack/local/pillar/data
 Grafana
 -------
 
-Remove the node's json file from the appropriate subdirectory under ``/opt/so/conf/grafana/grafana_dashboards/`` on the manager.  Then restart Grafana with:
+If necessary, remove the node's json file from the appropriate subdirectory under ``/opt/so/conf/grafana/grafana_dashboards/`` on the manager and then restart Grafana with:
 
 :: 
 
