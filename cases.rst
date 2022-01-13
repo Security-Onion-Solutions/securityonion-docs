@@ -11,12 +11,12 @@ Starting in Security Onion 2.3.100, we have a new Cases interface for case manag
 Options
 -------
 
-The Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
+Starting at the top of the main Cases page, the Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
 
 New Case
 --------
 
-The + icon creates a new case. Alernatively, you can go to Alerts or Hunt, find an event of interest, and escalate to a new case or an existing case.
+Directly underneath the Options drop-down menu, the + icon creates a new case. Alernatively, you can go to Alerts or Hunt, find an event of interest, and escalate to a new case or an existing case.
 
 .. image:: images/cases-escalating.png
   :target: _images/cases-escalating.png
@@ -26,17 +26,17 @@ Query Bar
 
 The query bar defaults to Open Cases. Clicking the dropdown box reveals other options such as Closed Cases and Templates. If you want to send your current query to Hunt, you can click the crosshair icon to the right of the query bar.
 
-Under the query bar, you’ll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click its corresponding bubble to remove it and run a new search.
+Under the query bar, you’ll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
 Time Picker
 -----------
 
-By default, Cases searches the last 12 months. If you want to search a different time frame, you can change it in the upper right corner of the screen.
+The time picker is to the right of the query bar. By default, Cases searches the last 12 months. If you want to search a different time frame, you can change it here.
 
 Data Table
 ----------
 
-The remainder of the page is a data table that shows a high level overview of the cases matching the current search criteria.
+The remainder of the main Cases page is a data table that shows a high level overview of the cases matching the current search criteria.
 
 - Clicking the table headers allows you to sort ascending or descending.
 
