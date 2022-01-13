@@ -8,12 +8,43 @@ Starting in Security Onion 2.3.100, we have a new Cases interface for case manag
 .. image:: images/cases.png
   :target: _images/cases.png
 
-You can create a new case by going to Cases and clicking the + icon. Alernatively, you can go to Alerts or Hunt, find an event of interest, and escalate to a new case or an existing case.
+Options
+-------
+
+The Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
+
+New Case
+--------
+
+The + icon creates a new case. Alernatively, you can go to Alerts or Hunt, find an event of interest, and escalate to a new case or an existing case.
 
 .. image:: images/cases-escalating.png
   :target: _images/cases-escalating.png
 
-From the main Cases page, you can drill into a case by clicking the binoculaurs icon. This detail view shows you more information about the case including Comments, Attachments, Observables, Events, and History.
+Query Bar
+---------
+
+The query bar defaults to Open Cases. Clicking the dropdown box reveals other options such as Closed Cases and Templates. If you want to send your current query to Hunt, you can click the crosshair icon to the right of the query bar.
+
+Under the query bar, you’ll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click its corresponding bubble to remove it and run a new search.
+
+Time Picker
+-----------
+
+By default, Cases searches the last 12 months. If you want to search a different time frame, you can change it in the upper right corner of the screen.
+
+Data Table
+----------
+
+The remainder of the page is a data table that shows a high level overview of the cases matching the current search criteria.
+
+- Clicking the table headers allows you to sort ascending or descending.
+
+- Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
+
+- You can adjust the Rows per page setting in the bottom right and use the left and right arrow icons to page through the table.
+
+- You can drill into a case by clicking the binoculaurs icon. This detail view shows you more information about the case including Comments, Attachments, Observables, Events, and History.
 
 Comments
 --------
