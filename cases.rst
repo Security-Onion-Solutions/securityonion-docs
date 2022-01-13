@@ -49,7 +49,7 @@ The remainder of the main Cases page is a data table that shows a high level ove
 Comments
 --------
 
-On the Comments tab, users can add comments about the case. The Comments field uses Github flavored markdown.
+On the Comments tab, you can add comments about the case. The Comments field uses Github flavored markdown.
 
 .. image:: images/cases-comments.png
   :target: _images/cases-comments.png
