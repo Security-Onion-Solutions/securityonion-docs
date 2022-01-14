@@ -37,7 +37,7 @@ On the Attachments tab, you can upload attachments.
 Observables
 -----------
 
-On the Observables tab, you can track observables like IP addresses, domain names, hashes, etc.
+On the Observables tab, you can track observables like IP addresses, domain names, hashes, etc. You can observables directly on this tab or you can add them from the Events tab as well.
 
 .. image:: images/cases-observables.png
   :target: _images/cases-observables.png
@@ -45,7 +45,7 @@ On the Observables tab, you can track observables like IP addresses, domain name
 Events
 ------
 
-On the Events tab, you can see any events that have been escalated to the case. This could be :ref:`suricata` alerts, network metadata from :ref:`suricata` or :ref:`zeek` or endpoint logs.
+On the Events tab, you can see any events that have been escalated to the case. This could be :ref:`suricata` alerts, network metadata from :ref:`suricata` or :ref:`zeek` or endpoint logs. You can drilldown into an events to see all fields in that event. If you find something that you would like to track as an Observable, you can click the eye icon to add it to the Observables tab. It will attempt to automatically identify well known types such as IP addresses.
 
 .. image:: images/cases-events.png
   :target: _images/cases-events.png
