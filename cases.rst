@@ -29,31 +29,6 @@ If you find events of interest in :ref:`alerts` or :ref:`hunt`, you can click th
 .. image:: images/cases-escalate.png
   :target: _images/cases-escalate.png
 
-Query Bar
----------
-
-The query bar defaults to Open Cases. Clicking the dropdown box reveals other options such as Closed Cases and Templates. If you want to send your current query to Hunt, you can click the crosshair icon to the right of the query bar.
-
-Under the query bar, you’ll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
-
-Time Picker
------------
-
-The time picker is to the right of the query bar. By default, Cases searches the last 12 months. If you want to search a different time frame, you can change it here.
-
-Data Table
-----------
-
-The remainder of the main Cases page is a data table that shows a high level overview of the cases matching the current search criteria.
-
-- Clicking the table headers allows you to sort ascending or descending.
-
-- Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
-
-- You can adjust the Rows per page setting in the bottom right and use the left and right arrow icons to page through the table.
-
-- You can drill into a case by clicking the binoculaurs icon. This detail view shows you more information about the case including Comments, Attachments, Observables, Events, and History.
-
 Comments
 --------
 
@@ -93,3 +68,28 @@ On the History tab, you can see the history of the case itself, including any ch
 
 .. image:: images/cases-history.png
   :target: _images/cases-history.png
+
+Query Bar
+---------
+
+Once you have one or more cases, you can use the main Cases page to get an overview of all cases. The query bar defaults to Open Cases. Clicking the dropdown box reveals other options such as Closed Cases and Templates. If you want to send your current query to Hunt, you can click the crosshair icon to the right of the query bar.
+
+Under the query bar, you’ll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
+
+Time Picker
+-----------
+
+The time picker is to the right of the query bar. By default, Cases searches the last 12 months. If you want to search a different time frame, you can change it here.
+
+Data Table
+----------
+
+The remainder of the main Cases page is a data table that shows a high level overview of the cases matching the current search criteria.
+
+- Clicking the table headers allows you to sort ascending or descending.
+
+- Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
+
+- You can adjust the Rows per page setting in the bottom right and use the left and right arrow icons to page through the table.
+
+- You can drill into a case by clicking the binoculaurs icon. This detail view shows you more information about the case including Comments, Attachments, Observables, Events, and History.
