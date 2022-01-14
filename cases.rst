@@ -37,7 +37,7 @@ On the Attachments tab, you can upload attachments.
 Observables
 -----------
 
-On the Observables tab, you can track observables like IP addresses, domain names, hashes, etc. You can observables directly on this tab or you can add them from the Events tab as well.
+On the Observables tab, you can track observables like IP addresses, domain names, hashes, etc. You can add observables directly on this tab or you can add them from the Events tab as well.
 
 .. image:: images/cases-observables.png
   :target: _images/cases-observables.png
