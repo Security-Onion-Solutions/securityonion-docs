@@ -42,7 +42,7 @@ On the Observables tab, you can track observables like IP addresses, domain name
 .. image:: images/cases-observables.png
   :target: _images/cases-observables.png
 
-You can use the left icon to drill into the observable and see more information about it. You can use the hunt icon on the right to hunt for the observable.
+For each observable, you can click the icon on the far left of the row to drill into the observable and see more information about it. To the right of that is the the hunt icon which will start a new hunt for the observable.
 
 Events
 ------
@@ -57,7 +57,7 @@ You can drilldown into an event to see all fields in that event.
 .. image:: images/cases-events-drilldown.png
   :target: _images/cases-events-drilldown.png
 
-If you find something that you would like to track as an Observable, you can click the eye icon on the left side of the row to add it to the Observables tab. It will attempt to automatically identify well known data types such as IP addresses.
+If you find something that you would like to track as an Observable, you can click the eye icon on the far left of the row to add it to the Observables tab. It will attempt to automatically identify well known data types such as IP addresses.
 
 To the right of the eye icon is a Hunt icon that can be used to start a new hunt for that particular value.
 
@@ -68,6 +68,8 @@ On the History tab, you can see the history of the case itself, including any ch
 
 .. image:: images/cases-history.png
   :target: _images/cases-history.png
+
+For each row of history, you can click the icon on the far left of the row to drill in and see more information.
 
 Overview Page
 -------------
