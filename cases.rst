@@ -52,7 +52,7 @@ On the Events tab, you can see any events that have been escalated to the case. 
 .. image:: images/cases-events.png
   :target: _images/cases-events.png
 
-For each event, you can click the icon on the far left of the row to drill and see all the fields included in that event.
+For each event, you can click the icon on the far left of the row to drill in and see all the fields included in that event.
 
 .. image:: images/cases-events-drilldown.png
   :target: _images/cases-events-drilldown.png
