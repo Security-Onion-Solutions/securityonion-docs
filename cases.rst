@@ -42,6 +42,8 @@ On the Observables tab, you can track observables like IP addresses, domain name
 .. image:: images/cases-observables.png
   :target: _images/cases-observables.png
 
+You can use the left icon to drill into the observable and see more information about it. You can use the hunt icon on the right to hunt for the observable.
+
 Events
 ------
 
@@ -74,7 +76,6 @@ Once you have one or more cases, you can use the main Cases page to get an overv
 
 .. image:: images/cases.png
   :target: _images/cases.png
-
 
 Options
 -------
