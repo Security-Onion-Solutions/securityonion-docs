@@ -50,10 +50,12 @@ On the Events tab, you can see any events that have been escalated to the case. 
 .. image:: images/cases-events.png
   :target: _images/cases-events.png
 
-You can drilldown into an event to see all fields in that event. If you find something that you would like to track as an Observable, you can click the eye icon to add it to the Observables tab. It will attempt to automatically identify well known data types such as IP addresses.
+You can drilldown into an event to see all fields in that event.
 
 .. image:: images/cases-events-drilldown.png
   :target: _images/cases-events-drilldown.png
+
+If you find something that you would like to track as an Observable, you can click the eye icon on the left side of the row to add it to the Observables tab. It will attempt to automatically identify well known data types such as IP addresses.
 
 History
 -------
