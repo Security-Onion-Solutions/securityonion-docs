@@ -64,7 +64,7 @@ To the right of the eye icon is a Hunt icon that can be used to start a new hunt
 History
 -------
 
-On the History tab, you can see the history of the case itself, including any changes made by each user. You can drill into each row to see more detail.
+On the History tab, you can see the history of the case itself, including any changes made by each user.
 
 .. image:: images/cases-history.png
   :target: _images/cases-history.png
