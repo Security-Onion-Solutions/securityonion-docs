@@ -83,6 +83,7 @@ Once you see the auth logs, you will notice that Kratos logs using ``identity_id
 
    alerts
    hunt
+   cases
    pcap
    grid
    downloads
