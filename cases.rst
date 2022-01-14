@@ -5,14 +5,6 @@ Cases
 
 Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to manage your cases from start to finish including escalating logs from Alerts and Hunts, assigning analysts, commenting, adding attachments, and tracking observables.
 
-.. image:: images/cases.png
-  :target: _images/cases.png
-
-Options
--------
-
-Starting at the top of the main Cases page, the Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
-
 Creating a New Case
 -------------------
 
@@ -66,10 +58,24 @@ On the History tab, you can see the history of the case itself, including any ch
 .. image:: images/cases-history.png
   :target: _images/cases-history.png
 
+Overview Page
+-------------
+
+Once you have one or more cases, you can use the main Cases page to get an overview of all cases. 
+
+.. image:: images/cases.png
+  :target: _images/cases.png
+
+
+Options
+-------
+
+Starting at the top of the main Cases page, the Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
+
 Query Bar
 ---------
 
-Once you have one or more cases, you can use the main Cases page to get an overview of all cases. The query bar defaults to Open Cases. Clicking the dropdown box reveals other options such as Closed Cases and Templates. If you want to send your current query to Hunt, you can click the crosshair icon to the right of the query bar.
+The query bar defaults to Open Cases. Clicking the dropdown box reveals other options such as Closed Cases and Templates. If you want to send your current query to Hunt, you can click the crosshair icon to the right of the query bar.
 
 Under the query bar, you’ll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
