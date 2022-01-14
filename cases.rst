@@ -8,12 +8,12 @@ Starting in Security Onion 2.3.100, we have a new Cases interface for case manag
 Creating a New Case
 -------------------
 
-To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side:
+To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side.
 
 .. image:: images/cases-add.png
   :target: _images/cases-add.png
 
-If you find events of interest in :ref:`alerts` or :ref:`hunt`, you can click the blue escalate button to escalate to a new case (or an existing case):
+Alternatively, if you find events of interest in :ref:`alerts` or :ref:`hunt`, you can click the blue escalate button to escalate to a new case (or an existing case).
 
 .. image:: images/cases-escalate.png
   :target: _images/cases-escalate.png
@@ -21,7 +21,7 @@ If you find events of interest in :ref:`alerts` or :ref:`hunt`, you can click th
 Comments
 --------
 
-On the Comments tab, you can add comments about the case. The Comments field uses Github flavored markdown.
+On the Comments tab, you can add comments about the case. The Comments field uses `Github flavored markdown<https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>`_.
 
 .. image:: images/cases-comments.png
   :target: _images/cases-comments.png
