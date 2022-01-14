@@ -57,10 +57,12 @@ You can drilldown into an event to see all fields in that event.
 
 If you find something that you would like to track as an Observable, you can click the eye icon on the left side of the row to add it to the Observables tab. It will attempt to automatically identify well known data types such as IP addresses.
 
+To the right of the eye icon is a Hunt icon that can be used to start a new hunt for that particular value.
+
 History
 -------
 
-On the History tab, you can see the history of the case itself, including any changes made by each user.
+On the History tab, you can see the history of the case itself, including any changes made by each user. You can drill into each row to see more detail.
 
 .. image:: images/cases-history.png
   :target: _images/cases-history.png
