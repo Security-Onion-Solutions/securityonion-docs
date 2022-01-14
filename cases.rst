@@ -52,7 +52,7 @@ On the Events tab, you can see any events that have been escalated to the case. 
 .. image:: images/cases-events.png
   :target: _images/cases-events.png
 
-You can drilldown into an event to see all fields in that event.
+For each event, you can click the icon on the far left of the row to drill and see all the fields included in that event.
 
 .. image:: images/cases-events-drilldown.png
   :target: _images/cases-events-drilldown.png
@@ -64,12 +64,10 @@ To the right of the eye icon is a Hunt icon that can be used to start a new hunt
 History
 -------
 
-On the History tab, you can see the history of the case itself, including any changes made by each user.
+On the History tab, you can see the history of the case itself, including any changes made by each user. For each row of history, you can click the icon on the far left of the row to drill in and see more information.
 
 .. image:: images/cases-history.png
   :target: _images/cases-history.png
-
-For each row of history, you can click the icon on the far left of the row to drill in and see more information.
 
 Overview Page
 -------------
