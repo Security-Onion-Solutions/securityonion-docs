@@ -45,7 +45,7 @@ On the Observables tab, you can track observables like IP addresses, domain name
 Events
 ------
 
-On the Events tab, you can see any events that have been escalated to the case.
+On the Events tab, you can see any events that have been escalated to the case. This could be :ref:`suricata` alerts, network metadata from :ref:`suricata` or :ref:`zeek` or endpoint logs.
 
 .. image:: images/cases-events.png
   :target: _images/cases-events.png
