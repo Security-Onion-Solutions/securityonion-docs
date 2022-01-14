@@ -95,4 +95,6 @@ The remainder of the main Cases page is a data table that shows a high level ove
 
 - You can adjust the Rows per page setting in the bottom right and use the left and right arrow icons to page through the table.
 
-- You can drill into a case by clicking the binoculaurs icon. This detail view shows you more information about the case including Comments, Attachments, Observables, Events, and History.
+- When you click the arrow to expand a row in the data table, it will show the high level fields from that case. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search.
+
+- To the right of the arrow is a binoculaurs icon. Clicking this will display the full case including the Comments, Attachments, Observables, Events, and History tabs.
