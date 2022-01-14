@@ -21,7 +21,7 @@ Alternatively, if you find events of interest in :ref:`alerts` or :ref:`hunt`, y
 Comments
 --------
 
-On the Comments tab, you can add comments about the case. The Comments field uses `Github flavored markdown<https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>`_.
+On the Comments tab, you can add comments about the case. The Comments field uses Github flavored markdown and you can read more about that at https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax.
 
 .. image:: images/cases-comments.png
   :target: _images/cases-comments.png
