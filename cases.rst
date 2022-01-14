@@ -16,10 +16,15 @@ Starting at the top of the main Cases page, the Options drop-down menu allows yo
 New Case
 --------
 
-Directly underneath the Options drop-down menu, the + icon creates a new case. Alernatively, you can go to Alerts or Hunt, find an event of interest, and escalate to a new case or an existing case:
+Directly underneath the Options drop-down menu, the + icon creates a new case: 
 
-.. image:: images/cases-escalating.png
-  :target: _images/cases-escalating.png
+.. image:: images/cases-add.png
+  :target: _images/cases-add.png
+
+Alernatively, you can go to Alerts or Hunt, find an event of interest, and escalate to a new case or an existing case:
+
+.. image:: images/cases-escalate.png
+  :target: _images/cases-escalate.png
 
 Query Bar
 ---------
