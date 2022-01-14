@@ -13,18 +13,15 @@ Options
 
 Starting at the top of the main Cases page, the Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
 
-New Case
---------
+Creating a New Case
+-------------------
 
 To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side:
 
 .. image:: images/cases-add.png
   :target: _images/cases-add.png
 
-Escalating Events
------------------
-
-If you find events of interest in :ref:`alerts` or :ref:`hunt`, you can click the blue escalate button to escalate to a new case or an existing case:
+If you find events of interest in :ref:`alerts` or :ref:`hunt`, you can click the blue escalate button to escalate to a new case (or an existing case):
 
 .. image:: images/cases-escalate.png
   :target: _images/cases-escalate.png
