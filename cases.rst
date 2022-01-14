@@ -8,7 +8,7 @@ Starting in Security Onion 2.3.100, we have a new Cases interface for case manag
 Creating a New Case
 -------------------
 
-To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side.
+To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side including Assignee, Status, Severity, Priority, TLP, PAP, Category, and Tags.
 
 .. image:: images/cases-add.png
   :target: _images/cases-add.png
@@ -29,7 +29,7 @@ On the Comments tab, you can add comments about the case. The Comments field use
 Attachments
 -----------
 
-On the Attachments tab, you can upload attachments. 
+On the Attachments tab, you can upload attachments. For each attachment, you can optionally define TLP and add tags. Cases will automatically generate SHA256, SHA1, and MD5 hash values for each attachment.
 
 .. image:: images/cases-attachments.png
   :target: _images/cases-attachments.png
