@@ -3,7 +3,7 @@
 PCAP
 ====
 
-:ref:`soc` gives you access to our new PCAP interface. This interface allows you to access your full packet capture that was recorded by :ref:`stenographer`. 
+:ref:`soc` gives you access to our PCAP interface. This interface allows you to access your full packet capture that was recorded by :ref:`stenographer`. 
 
 You can pivot to PCAP from :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
 

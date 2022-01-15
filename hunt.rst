@@ -3,12 +3,12 @@
 Hunt
 ====
 
-:ref:`soc` gives you access to our new Hunt interface. This interface allows you to hunt through all of the data in :ref:`elasticsearch` and is highly tuned for stacking, pivoting, data expansion, and data reduction.
+:ref:`soc` gives you access to our Hunt interface. This interface allows you to hunt through all of the data in :ref:`elasticsearch` and is highly tuned for stacking, pivoting, data expansion, and data reduction.
 
 .. image:: images/hunt.png
   :target: _images/hunt.png
 
-Starting in Security Onion 2.3.60, there is a new Options drop-down menu that allows you to set options such as Auto Hunt, Automatic Refresh Interval, and Time Zone.
+Starting in Security Onion 2.3.60, there is an Options drop-down menu that allows you to set options such as Auto Hunt, Automatic Refresh Interval, and Time Zone.
 
 Auto Hunt
 ---------
