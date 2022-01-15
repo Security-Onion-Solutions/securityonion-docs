@@ -8,7 +8,7 @@ Starting in Security Onion 2.3.100, we have a new Cases interface for case manag
 Creating a New Case
 -------------------
 
-The first time you open Cases, it will be empty.
+On a new deployment, Cases will be empty until you create a new case.
 
 .. image:: images/cases-empty.png
   :target: _images/cases-empty.png
