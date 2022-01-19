@@ -26,7 +26,7 @@ Alternatively, if you find events of interest in :ref:`alerts` or :ref:`hunt`, y
 Comments
 --------
 
-On the Comments tab, you can add comments about the case. The Comments field uses markdown syntax and you can read more about that at https://www.markdownguide.org/.
+On the Comments tab, you can add comments about the case. The Comments field uses markdown syntax and you can read more about that at https://www.markdownguide.org/cheat-sheet/.
 
 .. image:: images/cases-comments.png
   :target: _images/cases-comments.png
