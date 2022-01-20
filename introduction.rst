@@ -59,15 +59,15 @@ Security Onion Console (SOC)
 .. image:: images/hunt.png
   :target: _images/hunt.png
 
-:ref:`soc` also includes an interface for full packet capture (:ref:`pcap`) retrieval.
-
-.. image:: images/pcap.png
-  :target: _images/pcap.png
-
 :ref:`cases` is the case management interface. As you are working in :ref:`alerts` or :ref:`hunt`, you may find alerts or logs that are interesting enough to send to :ref:`cases` and create a case. Other analysts can collaborate with you as you work to close that case.
 
 .. image:: images/cases.png
   :target: _images/cases.png
+
+:ref:`soc` also includes an interface for full packet capture (:ref:`pcap`) retrieval.
+
+.. image:: images/pcap.png
+  :target: _images/pcap.png
 
 Kibana
 ~~~~~~
