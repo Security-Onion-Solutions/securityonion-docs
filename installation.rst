@@ -8,7 +8,7 @@ Installation
   If you want to deploy in Amazon AWS using our AMI, you can skip to the :ref:`cloud-ami` section.
   If you want to deploy in Azure using our image, you can skip to the :ref:`cloud-azure` section.
 
-Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on CentOS 7) **or** installing standard CentOS 7 or Ubuntu 18.04 and then installing our components on top.
+Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on CentOS 7) **or** installing standard CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 and then installing our components on top.
 
 .. tip::
 
@@ -39,10 +39,10 @@ Installation on Ubuntu or CentOS
 
   Please make sure that your hostname is correct before performing a network installation. Setup generates certificates based on the hostname and we do not support changing the hostname after Setup.
   
-If you want to install Security Onion on CentOS 7 or Ubuntu 18.04 (**not** using our Security Onion ISO image), follow these steps:
+If you want to install Security Onion on CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 (**not** using our Security Onion ISO image), follow these steps:
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
-#. Download the ISO image for your preferred flavor of Ubuntu 18.04 64-bit or CentOS 7 64-bit, verify the ISO image, and boot from it.
+#. Download the ISO image for your preferred flavor of 64-bit CentOS 7, Ubuntu 18.04, or Ubuntu 20.04. Verify the ISO image and then boot from it.
 #. Follow the prompts in the installer. If you're building a production deployment, you'll probably want to use LVM and dedicate most of your disk space to ``/nsm`` as discussed in the :ref:`partitioning` section.
 #. Reboot into your new installation.
 #. Login using the username and password you specified during installation.
@@ -52,7 +52,7 @@ If you want to install Security Onion on CentOS 7 or Ubuntu 18.04 (**not** using
 
      sudo yum -y install git
    
-   If you're using Ubuntu 18.04:
+   If you're using Ubuntu 18.04 or Ubuntu 20.04:
    
    ::
    

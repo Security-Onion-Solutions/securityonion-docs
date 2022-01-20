@@ -43,7 +43,7 @@ Please include the following details where you can:
 
 - Install source. Did you install from our Security Onion ISO image or did you perform a network installation?
 
-- If network install, did you install from CentOS 7 or Ubuntu 18.04?
+- If network install, did you install from CentOS 7, Ubuntu 18.04, or Ubuntu 20.04?
 
 - Install type. ex. eval, standalone, forward node, search node, etc
 

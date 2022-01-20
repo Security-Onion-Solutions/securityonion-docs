@@ -14,7 +14,7 @@ Security Onion is a free and open Linux distribution for threat hunting, enterpr
 Here are some high level system differences between Security Onion 2 and the older legacy versions:
 
     - Move from Ubuntu packages to containers
-    - Support both CentOS 7 and Ubuntu 18.04
+    - Support CentOS 7, Ubuntu 18.04, and Ubuntu 20.04
     - Change pcap collection tool from netsniff-ng to Google Stenographer
     - Upgrade to Elastic Stack 7.x and support the Elastic Common Schema (ECS)
     - Remove unsigned kernel module PF_RING and completely replace with AF_PACKET
