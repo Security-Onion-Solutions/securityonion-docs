@@ -3,6 +3,10 @@
 Cortex
 ======
 
+.. warning::
+
+        Starting in Security Onion 2.3.100, we are transitioning from TheHive to :ref:`cases` and this will impact Cortex as well. Existing installations with TheHive/Cortex enabled will still be able to use TheHive for a very short time. However, new installations will not be able to enable TheHive/Cortex. We will stop including TheHive and Cortex container images starting in Security Onion 2.3.120, currently scheduled for release in March 2022. From that point forward, users running the current version of Security Onion will no longer be able to natively run TheHive/Cortex on the platform and our support for TheHive/Cortex on Security Onion will end. Users wishing to continue using TheHive/Cortex on Security Onion should plan to migrate to an external instance of TheHive/Cortex.
+
 From https://github.com/TheHive-Project/Cortex:
 
     Cortex tries to solve a common problem frequently encountered by SOCs, CSIRTs and security researchers in the course of threat intelligence, digital forensics and incident response: how to analyze observables they have collected, at scale, by querying a single tool instead of several?

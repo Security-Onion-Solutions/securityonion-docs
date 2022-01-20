@@ -5,7 +5,7 @@ About
 
 Security Onion
 --------------
-Security Onion is a free and open Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes our own tools for :ref:`alerts`, :ref:`hunt`, and :ref:`pcap`, as well as other tools such as :ref:`hive`, :ref:`playbook`, :ref:`fleet`, :ref:`osquery`, :ref:`cyberchef`, :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, :ref:`wazuh`. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
+Security Onion is a free and open Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes our own tools for :ref:`alerts`, :ref:`hunt`, :ref:`pcap`, and :ref:`cases` as well as other tools such as :ref:`playbook`, :ref:`fleet`, :ref:`osquery`, :ref:`cyberchef`, :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, and :ref:`wazuh`. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
 
 .. note::
 
@@ -21,7 +21,7 @@ Here are some high level system differences between Security Onion 2 and the old
     - Suricata completely replaces Snort (we may elect to add Snort 3.0 at some point in the future)
     - Sguil, Squert, and capME are removed
     - Storage Nodes are now known as Search Nodes
-    - Incorporate new tech: :ref:`hive`, :ref:`strelka`, :ref:`grafana`, :ref:`fleet`, :ref:`playbook`, :ref:`hunt`, :ref:`soc`
+    - Incorporate new tech: :ref:`soc`, :ref:`alerts`, :ref:`hunt`, :ref:`pcap`, :ref:`cases`, :ref:`strelka`, :ref:`grafana`, :ref:`fleet`, :ref:`playbook`
 
 Security Onion Solutions, LLC
 -----------------------------
