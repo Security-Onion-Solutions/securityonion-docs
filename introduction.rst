@@ -49,12 +49,12 @@ With full packet capture, IDS alerts, network metadata from :ref:`zeek` or :ref:
 Security Onion Console (SOC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`soc` is the first thing you see when you log into Security Onion. It includes a new :ref:`alerts` interface which allows you to see all of your NIDS alerts from :ref:`suricata` and HIDS alerts from :ref:`wazuh`.
+:ref:`soc` is the first thing you see when you log into Security Onion. It includes our :ref:`alerts` interface which allows you to see all of your NIDS alerts from :ref:`suricata` and HIDS alerts from :ref:`wazuh`.
 
 .. image:: images/alerts.png
   :target: _images/alerts.png
 
-:ref:`soc` also includes a new :ref:`Hunt` interface for threat hunting which allows you to query not only your NIDS/HIDS alerts but also network metadata logs from :ref:`zeek` or :ref:`suricata` and any other logs that you may be collecting. 
+:ref:`soc` also includes our :ref:`Hunt` interface for threat hunting which allows you to query not only your NIDS/HIDS alerts but also network metadata logs from :ref:`zeek` or :ref:`suricata` and any other logs that you may be collecting. 
 
 .. image:: images/hunt.png
   :target: _images/hunt.png
