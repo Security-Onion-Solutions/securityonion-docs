@@ -41,6 +41,8 @@ In :ref:`alerts` and :ref:`hunt`, logs are shown with a blue triangle that allow
 
 - ``thehive`` - Enables escalation directly to TheHive v3 instance running in the Security Onion cluster (only applicable to existing installations that upgrade to 2.3.100). Escalations will always open a new case; there will not be an advanced escalation menu popup. Note that Security Onion support for thehive has ended, and thehive will no longer be included in future Security Onion releases. Therefore this option should only be considered for short-term, temporary usage.
 
+- ``elasticcases`` - Enables escalation to the `Elastic Cases <https://www.elastic.co/guide/en/security/current/cases-overview.html>`_ tool. Escalations will always open a new case; there will not be an advanced escalation menu popup.  This module will use the same user/pass that SOC uses to talk to Elastic. Note, however, that Elastic cases is actually a Kibana feature, therefore, when this setting is used, SOC will be communicating with the local Kibana service (via its API) for case escalations.
+
 - ``httpcase`` - Enables escalation directly to an arbitrary web URL. Escalations will always open a new case; there will not be an advanced escalation menu popup. To use this module, you will need to add a second pillar value, for the pillar ``httpcase_config``. The value can include some, or all, of the following settings:
 
 ::
@@ -77,7 +79,6 @@ Example of a customized SOC pillar file located in /opt/so/saltstack/local/pilla
           "createContentType": "application/json",
           "createSuccessCode": 200
 
-- ``elasticcases`` - Enables escalation to the Elastic Cases tool. Escalations will always open a new case; there will not be an advanced escalation menu popup.  This module will use the same user/pass that SOC uses to talk to Elastic. Note, however, that Elastic cases is actually a Kibana feature, therefore, when this setting is used, SOC will be communicating with the local Kibana service (via its API) for case escalations.
 
 Making Changes Take Effect
 --------------------------
