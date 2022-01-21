@@ -8,7 +8,7 @@ This section covers how to customize Security Onion for your environment.
 .. toctree::
    :maxdepth: 2
 
-   cortex
+   soc-customization
    proxy
    firewall
    email
@@ -17,3 +17,4 @@ This section covers how to customize Security Onion for your environment.
    hostname
    ip
    url-base
+   cortex
