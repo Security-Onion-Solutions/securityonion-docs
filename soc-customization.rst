@@ -37,11 +37,11 @@ Escalation
 
 In :ref:`alerts` and :ref:`hunt`, logs are shown with a blue triangle that allows you to escalate the event. Starting in Security Onion 2.3.100, this defaults to our new :ref:`cases` interface. If for some reason you want to escalate to a different case management system, you can change this setting. To do so, locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the following values:
 
-``soc`` - Enables the new built-in Case Management, with the new Escalation menu.
+``soc`` - Enables the new built-in Case Management, with the new Escalation menu (default).
 
 ``thehive`` - Enables escalation directly to TheHive3. No escalation menu popup.
 
-``generichttp`` - Enables escalation directly to an arbitrary web URL. No escalation menu popup.
+``httpcase`` - Enables escalation directly to an arbitrary web URL. No escalation menu popup.
 
 ``elasticcases`` - Enables escalation to the Elastic case system. No escalation menu popup.
 
@@ -55,9 +55,23 @@ When using ``thehive``, it is hardcoded to use TheHive instance URL bundled with
         "verifyCert": false
       },
 
-When using ``generichttp``, another pillar value under the same pillar group ``soc`` can be specified: ``generic_case_config``. This can contain all the options as mentioned at https://github.com/Security-Onion-Solutions/securityonion/issues/5791#issuecomment-946721865.
+When using ``httpcase``, another multi-line pillar value under the same pillar group can be specified: ``httpcase_config``. The value can include the following settings:
 
-When using ``elasticcases`` it will use the same user/pass that SOC uses to talk to Elastic. Note that Elastic cases is actually a Kibana feature.
+::
+
+      "hostUrl": "http://some.external.host/some/api",
+      "headers": [
+        "Authorization: basic Fa3Fa01mDmCC09dA",
+        "x-some-key: 1122"
+      ],
+      "verifyCert": true,
+      "createPath": "/some/url/path/to/create/a/case",
+      "createMethod": "PUT",
+      "createBody": "{\"myid\":\"{{ '{{ .Id }}' }}\", \"title\":\"{{ '{{ .Title }}' }}\", \"desc\":\"{{ '{{ .Description | js }}' }}\"\", \"time\":\"{{ '{{ .CreateTime.Format \\"15:04\\" }}' }}\"}",
+      "createContentType": "application/json",
+      "createSuccessCode": 200
+
+When using ``elasticcases`` it will use the same user/pass that SOC uses to talk to Elastic. Note, however, that Elastic cases is actually a Kibana feature, therefore, when this setting is used, SOC will be communicating with the local Kibana service (via its API) for case escalations.
 
 Making Changes Take Effect
 --------------------------
