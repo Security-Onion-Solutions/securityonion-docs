@@ -3,7 +3,7 @@
 Alerts
 ======
 
-:ref:`soc` gives you access to our Alerts interface. This interface gives you an overview of the alerts that Security Onion is generating and allows you to quickly drill down into details, pivot to :ref:`hunt` or the :ref:`pcap` interface, and escalate alerts to :ref:`hive`.
+:ref:`soc` gives you access to our Alerts interface. This interface gives you an overview of the alerts that Security Onion is generating and allows you to quickly drill down into details, pivot to :ref:`hunt` or the :ref:`pcap` interface, and escalate alerts to :ref:`cases`.
 
 .. image:: images/alerts.png
   :target: _images/alerts.png
@@ -20,7 +20,7 @@ The first option is for ``Acknowledged`` and ``Escalated``:
 
 - Enabling the ``Acknowledged`` toggle will only show alerts that have previously been acknowledged by an analyst. 
 
-- Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst to :ref:`hive`.
+- Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst to :ref:`cases`.
 
 Automatic Refresh Interval
 --------------------------
@@ -68,7 +68,7 @@ The remainder of the page is a data table that starts in the grouped view and ca
 
 - Clicking the bell icon acknowledges an alert. That alert can then be seen by selecting the ``Acknowledged`` toggle at the top of the page. In the ``Acknowledged`` view, clicking the bell icon removes the acknowledgement.
 
-- Clicking the blue exclamation icon escalates the alert to :ref:`hive` and creates a case. The case can then be seen in :ref:`hive` interface. If you need to find that original escalated alert in the Alerts page, you can enable the ``Escalated`` toggle (which will automatically enable the ``Acknowledged`` toggle as well).
+- Clicking the blue exclamation icon escalates the alert to :ref:`cases` and allows you to create a new case or add to an existing case. If you need to find that original escalated alert in the Alerts page, you can enable the ``Escalated`` toggle (which will automatically enable the ``Acknowledged`` toggle as well).
 
 - Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
 
