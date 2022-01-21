@@ -11,18 +11,6 @@ Security Onion is a free and open Linux distribution for threat hunting, enterpr
 
    Security Onion started in 2008 and was originally based on the Ubuntu Linux distribution. Throughout the years, the Security Onion version tracked the version of Ubuntu it was based on. For example, the last major version of Security Onion was based on Ubuntu 16.04 and so it was called Security Onion 16.04. Security Onion is now container based and thus no longer limited to just Ubuntu. To signify this change, Security Onion now has its own versioning scheme and this new platform is Security Onion 2.
 
-Here are some high level system differences between Security Onion 2 and the older legacy versions:
-
-    - Move from Ubuntu packages to containers
-    - Support CentOS 7, Ubuntu 18.04, and Ubuntu 20.04
-    - Change pcap collection tool from netsniff-ng to Google Stenographer
-    - Upgrade to Elastic Stack 7.x and support the Elastic Common Schema (ECS)
-    - Remove unsigned kernel module PF_RING and completely replace with AF_PACKET
-    - Suricata completely replaces Snort (we may elect to add Snort 3.0 at some point in the future)
-    - Sguil, Squert, and capME are removed
-    - Storage Nodes are now known as Search Nodes
-    - Incorporate new tech: :ref:`soc`, :ref:`alerts`, :ref:`hunt`, :ref:`pcap`, :ref:`cases`, :ref:`strelka`, :ref:`grafana`, :ref:`fleet`, :ref:`playbook`
-
 Security Onion Solutions, LLC
 -----------------------------
 Doug Burks started Security Onion as a free and open project in 2008 and then founded Security Onion Solutions, LLC in 2014.  
