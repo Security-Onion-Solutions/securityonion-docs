@@ -58,6 +58,7 @@ When using ``thehive``, it is hardcoded to use TheHive instance URL bundled with
 When using ``httpcase``, another pillar value under the same pillar group can be specified: ``httpcase_config``. The value can include the following settings:
 
 ::
+
       "hostUrl": "http://some.external.host/some/path",
       "headers": [
         "Authorization: basic Fa3Fa01mDmCC09dA",
