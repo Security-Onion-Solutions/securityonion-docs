@@ -59,7 +59,7 @@ In :ref:`alerts` and :ref:`hunt`, logs are shown with a blue triangle that allow
       "createContentType": "application/json",
       "createSuccessCode": 200
       
-Example of a customized SOC pillar file located in ``/opt/so/saltstack/local/pillar/minions/import_import.sls`` (your file path will vary depending on your installation choices).
+Example of a customized SOC pillar file located in ``/opt/so/saltstack/local/pillar/minions/import_import.sls`` (your file path will vary depending on your installation choices):
 
 ::
 
