@@ -55,11 +55,11 @@ When using ``thehive``, it is hardcoded to use TheHive instance URL bundled with
         "verifyCert": false
       },
 
-When using ``httpcase``, another pillar value under the same pillar group can be specified: ``httpcase_config``. The value can include the following settings:
+When using ``httpcase``, another multi-line pillar value under the same pillar group can be specified: ``httpcase_config``. The value can include the following settings:
 
 ::
 
-      "hostUrl": "http://some.external.host/some/path",
+      "hostUrl": "http://some.external.host/some/api",
       "headers": [
         "Authorization: basic Fa3Fa01mDmCC09dA",
         "x-some-key: 1122"
@@ -71,7 +71,7 @@ When using ``httpcase``, another pillar value under the same pillar group can be
       "createContentType": "application/json",
       "createSuccessCode": 200
 
-When using ``elasticcases`` it will use the same user/pass that SOC uses to talk to Elastic. Note that Elastic cases is actually a Kibana feature, therefore, when this setting is used, SOC will be communicating with the local Kibana service (via its API) for case escalations.
+When using ``elasticcases`` it will use the same user/pass that SOC uses to talk to Elastic. Note, however, that Elastic cases is actually a Kibana feature, therefore, when this setting is used, SOC will be communicating with the local Kibana service (via its API) for case escalations.
 
 Making Changes Take Effect
 --------------------------
