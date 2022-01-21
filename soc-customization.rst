@@ -35,9 +35,7 @@ Another possible SOC customization is the session timeout. The default timeout f
 Escalation
 ----------
 
-In :ref:`alerts` and :ref:`hunt`, logs are shown with a blue triangle that allows you to escalate the event. Starting in Security Onion 2.3.100, this defaults to our new :ref:`cases` interface. If for some reason you want to escalate to a different case management system, you can change this setting.
-
-Locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the following values:
+In :ref:`alerts` and :ref:`hunt`, logs are shown with a blue triangle that allows you to escalate the event. Starting in Security Onion 2.3.100, this defaults to our new :ref:`cases` interface. If for some reason you want to escalate to a different case management system, you can change this setting. To do so, locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the following values:
 
 ``soc`` - Enables the new built-in Case Management, with the new Escalation menu.
 
@@ -50,6 +48,7 @@ Locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the
 When using ``thehive``, it is hardcoded to use TheHive instance URL bundled with Security Onion:
 
 ::
+
       "thehive": {
         "hostUrl": "http://{{ MANAGERIP }}:9000/thehive",
         "key": "{{ THEHIVEKEY }}",

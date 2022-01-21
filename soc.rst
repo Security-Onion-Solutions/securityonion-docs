@@ -18,7 +18,7 @@ Once logged in, you'll notice the user menu in the upper right corner:
 .. image:: images/soc-user-menu.png
   :target: _images/soc-user-menu.png
 
-On the left side of the page, you'll see links for analyst tools like :ref:`alerts`, :ref:`hunt`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, :ref:`hive`, and :ref:`attack-navigator`. While :ref:`alerts`, :ref:`hunt`, and :ref:`pcap` are native to SOC itself, the remaining tools are external and will spawn separate browser tabs:
+On the left side of the page, you'll see links for analyst tools like :ref:`alerts`, :ref:`hunt`, :ref:`cases`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, and :ref:`attack-navigator`. While :ref:`alerts`, :ref:`hunt`, :ref:`cases` and :ref:`pcap` are native to SOC itself, the remaining tools are external and will spawn separate browser tabs:
 
 .. image:: images/soc-tools.png
   :target: _images/soc-tools.png
