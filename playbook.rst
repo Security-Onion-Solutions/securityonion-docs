@@ -22,7 +22,6 @@ Any results from a Play (low, medium, high, critical severity) are available to 
 The final piece to Playbook is automation. Once a Play is made active, the following happens:
 
  - The required :ref:`elastalert` config is put into production
- - Case Template for :ref:`hive` is created (for escalations from the Alerts interface)
  - :ref:`attack-navigator` layer is updated to reflect current coverage
 
 Getting Started
@@ -61,7 +60,7 @@ Once you save your changes, Playbook will update the rest of the fields to match
 Putting a Play into Production
 ------------------------------
 
-When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create :ref:`hive` case template and the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatically update the :ref:`elastalert` configuration and :ref:`hive` case template.
+When you are ready to start alerting on your Play, change the Status of the play to ``Active``. This will create the :ref:`elastalert` config. Any edits made to the Play in Playbook will automatically update the :ref:`elastalert` configuration.
 
 The Elastalert rules are located under ``/opt/so/rules/elastalert/playbook/<PlayID>.yaml``. Elastalert rules created by Playbook will run every 3 minutes, with a ``buffer_time`` of 15 minutes.
 
@@ -111,7 +110,7 @@ To disable anonymous access, login with a user that has administrative access an
 Misc Notes
 ----------
 
-``so-playbook-sync`` runs every 5 minutes. This script queries Playbook for all active plays and then checks to make sure that there is an :ref:`elastalert` config and :ref:`hive` case template for each play. It also runs through the same process for inactive plays.
+``so-playbook-sync`` runs every 5 minutes. This script queries Playbook for all active plays and then checks to make sure that there is an :ref:`elastalert` config for each play. It also runs through the same process for inactive plays.
 
 Log Sources & Field Names
 -------------------------
