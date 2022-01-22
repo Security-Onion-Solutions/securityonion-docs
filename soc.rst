@@ -23,20 +23,6 @@ On the left side of the page, you'll see links for analyst tools like :ref:`aler
 .. image:: images/soc-tools.png
   :target: _images/soc-tools.png
 
-.. tip::
-
-   SOC gives you access to a variety of tools and they all complement each other very well. For example, here's one potential workflow:
-
-     - Check :ref:`grid` and :ref:`grafana` to make sure your deployment is healthy.
-     - Go to the :ref:`alerts` page and review any unacknowledged alerts.
-     - Once you've found an alert that you want to investigate, you might want to pivot to :ref:`hunt` to expand your search and look for additional logs relating to the source and destination IP addresses.
-     - If any of those alerts or logs look interesting, you might want to pivot to :ref:`pcap` to review the full packet capture for the entire stream.
-     - You might want to send that full packet capture to :ref:`cyberchef` for further analysis and decoding.
-     - Escalate alerts and logs to :ref:`cases` and document any observables.
-     - Go to :ref:`fleet` and perform a wider search for those observables across all :ref:`osquery` endpoints.
-     - Develop a play in :ref:`playbook` that will automatically alert on observables moving forward and update your coverage in :ref:`attack-navigator`.
-     - Finally, return to :ref:`cases` and document the entire investigation and close the case.
- 
 .. toctree::
    :maxdepth: 2
 

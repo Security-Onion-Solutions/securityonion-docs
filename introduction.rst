@@ -35,11 +35,9 @@ Full packet capture is like a video camera for your network, but better because 
 Enterprise Security Monitoring
 ------------------------------
 
-In addition to network visibility, Security Onion provides endpoint visibility and can collect logs from a wide variety of devices like firewalls and routers.
+In addition to network visibility, Security Onion provides endpoint visibility via agents like :ref:`beats`, :ref:`osquery`, and :ref:`wazuh`.
 
-For endpoint detection, Security Onion offers :ref:`wazuh`, a free, open source HIDS (Host Intrusion Detection System) for Windows, Linux, and Mac OS X. When you add the :ref:`wazuh` agent to endpoints on your network, you gain invaluable visibility from endpoint to your network’s exit point. :ref:`wazuh` performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response. As an analyst, being able to correlate host-based events with network-based events can be the difference in identifying a successful attack.
-
-Security Onion also supports other endpoint agents like :ref:`osquery` and :ref:`beats`. For devices that don't support the installation of agents, Security Onion can consume standard :ref:`syslog`.
+For devices like firewalls and routers that don't support the installation of agents, Security Onion can consume standard :ref:`syslog`.
 
 Analysis Tools
 --------------
@@ -80,7 +78,7 @@ Kibana
 CyberChef
 ~~~~~~~~~
 
-:ref:`cyberchef` allows you decode, decompress, and analyze artifacts. :ref:`alerts`, :ref:`hunt`, and :ref:`pcap` all allow you to quickly and easily send data to :ref:`cyberchef` for further analysis.
+:ref:`cyberchef` allows you to decode, decompress, and analyze artifacts. :ref:`alerts`, :ref:`hunt`, and :ref:`pcap` all allow you to quickly and easily send data to :ref:`cyberchef` for further analysis.
 
 .. image:: images/cyberchef.png
   :target: _images/cyberchef.png
@@ -88,17 +86,30 @@ CyberChef
 Playbook
 ~~~~~~~~
 
-:ref:`playbook` is a web application that allows you to create a Detection Playbook, which itself consists of individual plays. These plays are fully self-contained and describe the different aspects around the particular detection strategy.
+:ref:`playbook` allows you to create a Detection Playbook, which itself consists of individual plays. These plays are fully self-contained and describe the different aspects around the particular detection strategy.
 
 .. image:: https://user-images.githubusercontent.com/1659467/87230271-c5cb0880-c37c-11ea-8a36-24cabf137ed2.png
   :target: https://user-images.githubusercontent.com/1659467/87230271-c5cb0880-c37c-11ea-8a36-24cabf137ed2.png
 
+Workflow
+--------
+
+All of these analysis tools work together to provide more efficient and comprehensive analysis capabilities. For example, here's one potential workflow:
+
+     - Go to the :ref:`alerts` page and review any unacknowledged alerts.
+     - Once you've found an alert that you want to investigate, you might want to pivot to :ref:`hunt` to expand your search and look for additional logs relating to the source and destination IP addresses.
+     - If any of those alerts or logs look interesting, you might want to pivot to :ref:`pcap` to review the full packet capture for the entire stream.
+     - Depending on what you see in the stream, you might want to send it to :ref:`cyberchef` for further analysis and decoding.
+     - Escalate alerts and logs to :ref:`cases` and document any observables.
+     - Develop a play in :ref:`playbook` that will automatically alert on observables moving forward and update your coverage in :ref:`attack-navigator`.
+     - Finally, return to :ref:`cases` and document the entire investigation and close the case.
+
 Deployment Scenarios
 --------------------
 
-Analysts around the world are using Security Onion today for many different :ref:`architectures <architecture>`.  The Security Onion Setup wizard allows you to easily configure the best installation scenario to suit your needs.
+Analysts around the world are using Security Onion today for many different :ref:`architectures <architecture>`.  The Security Onion Setup wizard allows you to easily configure the best deployment scenario to suit your needs.
 
 Conclusion
 ----------
 
-After you install Security Onion, you will have network and endpoint detection, comprehensive metadata, and full packet capture. These disparate systems with various dependencies and complexities all run seamlessly together and would otherwise take hours, days, or weeks to assemble and integrate on their own. What was once a seemingly impossible task is now as easy as answering a few questions!
+After you install Security Onion, you will have network and endpoint detection, comprehensive metadata, and full packet capture. Our analyst tools will enable you to use all of that data to detect intruders more quickly and paint a more complete picture of what they're doing in your environment. Get ready to peel back the layers of your enterprise and make your adversaries cry!
