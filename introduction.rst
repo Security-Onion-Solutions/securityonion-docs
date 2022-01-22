@@ -94,7 +94,7 @@ Playbook
 Workflow
 --------
 
-All of these analysis tools work together to provide more efficient and comprehensive analysis capabilities. For example, here's one potential workflow:
+All of these analysis tools work together to provide efficient and comprehensive analysis capabilities. For example, here's one potential workflow:
 
      - Go to the :ref:`alerts` page and review any unacknowledged alerts.
      - Once you've found an alert that you want to investigate, you might want to pivot to :ref:`hunt` to expand your search and look for additional logs relating to the source and destination IP addresses.
