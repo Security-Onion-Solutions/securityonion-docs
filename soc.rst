@@ -13,15 +13,12 @@ Depending on the options you chose in the installer, connect to the IP address o
 .. image:: images/login.png
   :target: _images/login.png
 
-Once logged in, you'll notice the user menu in the upper right corner.
+Once logged in, you'll notice the user menu in the upper right corner. This allows you to manage your user settings and access documentation and other resources.
 
-.. image:: images/soc-user-menu.png
-  :target: _images/soc-user-menu.png
+.. image:: images/soc-overview.png
+  :target: _images/soc-overview.png
 
 On the left side of the page, you'll see links for analyst tools like :ref:`alerts`, :ref:`hunt`, :ref:`cases`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, and :ref:`attack-navigator`. While :ref:`alerts`, :ref:`hunt`, :ref:`cases`, and :ref:`pcap` are native to SOC itself, the remaining tools are external and will spawn separate browser tabs.
-
-.. image:: images/soc-tools.png
-  :target: _images/soc-tools.png
 
 .. toctree::
    :maxdepth: 2
