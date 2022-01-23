@@ -17,7 +17,7 @@ Integration
 | Josh Brower wrote a great paper on integrating sysmon into Security Onion:
 | https://www.sans.org/reading-room/whitepapers/forensics/sysmon-enrich-security-onion-039-s-host-level-capabilities-35837
 
-(Please note that the paper is a few years old and was therefore written for an older version of Security Onion.)
+Please note that the paper is a few years old and was therefore written for an older version of Security Onion.
 
 Configuration
 -------------
@@ -34,10 +34,15 @@ Downloads
 | Download SwiftOnSecurity's example sysmon config here:
 | https://github.com/SwiftOnSecurity/sysmon-config/raw/master/sysmonconfig-export.xml
 
+Transport
+---------
+
+Sysmon logs can be collected and transported using :ref:`beats`, :ref:`osquery`, or :ref:`wazuh`.
+
 Winlogbeat
 ----------
 
-If you are shipping Sysmon logs via Winlogbeat, confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module. Security Onion will do all the necessary parsing.
+If you are shipping Sysmon logs via Winlogbeat (see the :ref:`beats` section), confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module. Security Onion will do all the necessary parsing.
 
 More Information
 ----------------
