@@ -8,7 +8,7 @@ Starting in Security Onion 2.3.100, we have a new Cases interface for case manag
 Installation
 ------------
 
-Cases is a part of :ref:`soc`. It's automatically enabled when doing an Import, Eval, Standalone, Manager, or ManagerSearch installation. If you want the quickest and easiest way to try out Cases, follow our :ref:`first-time-users` guide.
+Cases is a part of :ref:`soc`. It's automatically enabled when doing an Import, Eval, Standalone, Manager, or ManagerSearch installation. If you want the quickest and easiest way to try out Cases, you can follow our :ref:`first-time-users` guide to install a minimal Import installation.
 
 Creating a New Case
 -------------------
