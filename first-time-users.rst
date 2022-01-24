@@ -3,7 +3,7 @@
 First Time Users
 ================
 
-If this is your first time using Security Onion 2, then we highly recommend that you start with a simple IMPORT installation using our Security Onion ISO image (see the :ref:`download` section). This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with only 4GB RAM. 
+If this is your first time using Security Onion 2, then we highly recommend that you start with a simple IMPORT installation using our Security Onion ISO image (see the :ref:`download` section). This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with only 4GB RAM, 2 CPU cores, and 200GB of storage. 
 
 Simply follow the screenshots below to:
 
