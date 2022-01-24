@@ -5,6 +5,11 @@ Cases
 
 Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to manage your cases from start to finish including escalating logs from :ref:`alerts` and :ref:`hunt`, assigning analysts, commenting, adding attachments, and tracking observables.
 
+Installation
+------------
+
+Cases is a part of :ref:`soc`. It's automatically enabled when doing an Import, Eval, Standalone, Manager, or ManagerSearch installation. If you want the quickest and easiest way to try out Cases, follow our :ref:`first-time-users` guide.
+
 Creating a New Case
 -------------------
 
