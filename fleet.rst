@@ -1,7 +1,7 @@
 .. _fleet:
 
-Fleet
-=====
+FleetDM
+=======
 
 From https://fleetdm.com/:
 
