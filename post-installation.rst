@@ -11,7 +11,7 @@ Depending on what kind of installation you did, you may have seen a warning at t
 .. image:: images/so-ssh-harden.png
   :target: _images/so-ssh-harden.png
 
-For more information, see the :ref:`so-ssh-harden` section.
+For more information, see the :ref:`ssh` section.
 
 Adjust firewall rules using so-allow
 ------------------------------------
