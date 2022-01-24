@@ -3,6 +3,16 @@
 After Installation
 ==================
 
+SSH Key Change
+--------------
+
+Depending on what kind of installation you did, you may have seen a warning at the end of Setup about SSH key changes.
+
+.. image:: images/so-ssh-harden.png
+  :target: _images/so-ssh-harden.png
+
+For more information, see the :ref:`so-ssh-harden` section.
+
 Adjust firewall rules using so-allow
 ------------------------------------
 Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to allow other IP addresses, you can manually run :ref:`so-allow`.
