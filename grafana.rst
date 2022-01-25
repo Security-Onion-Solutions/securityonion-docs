@@ -68,4 +68,6 @@ More Information
 
 .. seealso::
 
+  Check out our Grafana Alarms video at https://youtu.be/8FmZ4MRe8Uk.
+
   For more information about Grafana, please see https://grafana.com/.

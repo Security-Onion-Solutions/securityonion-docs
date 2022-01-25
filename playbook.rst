@@ -168,4 +168,12 @@ This can take a few minutes to complete if pulling in a large amount of new rule
 
 Diagnostic Logging
 ------------------
+
 Playbook logs can be found in ``/opt/so/log/playbook/``.
+
+More Information
+----------------
+
+.. seealso::
+
+	Check out our Detecting Hashes video at https://youtu.be/pK8mS60Sk5s!

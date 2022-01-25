@@ -3,7 +3,7 @@
 Cases
 =====
 
-Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to manage your cases from start to finish including escalating logs from :ref:`alerts` and :ref:`hunt`, assigning analysts, commenting, adding attachments, and tracking observables.
+Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to manage your cases from start to finish including escalating logs from :ref:`alerts` and :ref:`hunt`, assigning analysts, commenting, adding attachments, and tracking observables. Check out our Sneak Peak video at https://youtu.be/X4YqxdX-vkA!
 
 Installation
 ------------
