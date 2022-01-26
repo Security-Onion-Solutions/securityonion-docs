@@ -23,7 +23,7 @@ Security Onion enables Suricata's native support for :ref:`community-id`.
 Performance
 -----------
 
-If Suricata is experiencing packet loss, then you may need to do one or more of the following: tune the ruleset (see the :ref:`managing-alerts` section), apply a :ref:`bpf`, adjust `max-pending-packets`, or adjust :ref:`af-packet` workers.
+If Suricata is experiencing packet loss, then you may need to do one or more of the following: tune the ruleset (see the :ref:`managing-alerts` section), apply a :ref:`bpf`, adjust ``max-pending-packets`` in the Suricata configuration, or adjust :ref:`af-packet` workers.
 
 To change the number of workers:
 
