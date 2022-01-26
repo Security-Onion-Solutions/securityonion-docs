@@ -3,6 +3,10 @@
 Installation
 ============
 
+.. warning::
+
+  Please make sure that your hostname is correct during installation. Setup generates certificates based on the hostname and we do not support changing the hostname after Setup.
+  
 .. note::
 
   If you want to deploy in Amazon AWS using our AMI, you can skip to the :ref:`cloud-ami` section.
@@ -35,10 +39,6 @@ If you want to install Security Onion using our ISO image:
 Installation on Ubuntu or CentOS
 --------------------------------
 
-.. warning::
-
-  Please make sure that your hostname is correct before performing a network installation. Setup generates certificates based on the hostname and we do not support changing the hostname after Setup.
-  
 If you want to install Security Onion on CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 (**not** using our Security Onion ISO image), follow these steps:
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
