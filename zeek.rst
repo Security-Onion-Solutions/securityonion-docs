@@ -17,6 +17,11 @@ Community ID
 
 Security Onion enables Zeek's native support for :ref:`community-id`.
 
+Packet Loss and Capture Loss
+----------------------------
+
+Zeek reports both packet loss and capture loss. If Zeek reports packet loss, then you most likely need to adjust the number of Zeek workers as shown below or filter out traffic using :ref:`bpf`. If Zeek is reporting capture loss but no packet loss, this usually means that the capture loss is happening upstream in the tap or span port itself.
+
 Performance
 -----------
 
