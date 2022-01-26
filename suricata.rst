@@ -23,9 +23,9 @@ Security Onion enables Suricata's native support for :ref:`community-id`.
 Performance
 -----------
 
-Suricata uses :ref:`af-packet` to allow you to spin up multiple workers to handle more traffic.  
+If Suricata is experiencing packet loss, then you may need to do one or more of the following: tune the ruleset (see the :ref:`managing-alerts` section), apply a :ref:`bpf`, adjust `max-pending-packets`, or adjust :ref:`af-packet` workers.
 
-To change the number of Suricata workers:
+To change the number of workers:
 
 -  Stop sensor processes:
 
