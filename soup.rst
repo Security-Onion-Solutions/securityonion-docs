@@ -68,34 +68,6 @@ Agents
 
 If you've previously added any external agents (:ref:`wazuh`, :ref:`beats`, etc.), be sure to upgrade them to match the version of your upgraded components.
 
-Errors
-------
-
-As ``soup`` is downloading container images, it may encounter errors if there are Internet connection issues or if the disk runs out of free space. Once you've resolved the underlying condition, you can manually refresh your container images using ``so-docker-refresh``.
-
-Here are some other errors that you may see when running ``soup``:
-
-::
-
-    local:
-        Data failed to compile:
-    ----------
-        Rendering SLS 'base:common' failed: Jinja variable 'list object' has no attribute 'values'
-        
-and/or
-
-::
-
-    Status: Downloaded newer image for quay.io/securityonion/so-acng:2.3.30
-    quay.io/securityonion/so-acng:2.3.30
-      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                     Dload  Upload   Total   Spent    Left  Speed
-    100   543  100   543    0     0   1412      0 --:--:-- --:--:-- --:--:--  1414
-    There is a problem downloading the so-acng:2.3.30 image. Details: 
-    gpg: Signature made Thu 18 Feb 2021 02:26:10 PM UTC using RSA key ID FE507013 gpg: BAD signature from "Security Onion Solutions, LLC <info@securityonionsolutions.com>"
-    
-If you see these errors, it most likely means that a salt highstate process was already running when ``soup`` began. You can wait a few minutes and then try ``soup`` again. Alternatively, you can run ``sudo salt-call state.highstate`` and wait for it to complete before running ``soup`` again.
-
 log_size_limit
 --------------
 
@@ -120,6 +92,51 @@ This will make ``soup`` proceed unattended, automatically answering ``yes`` to a
 ::
 
 	soup -y -f /home/user/securityonion.iso
+	
+Errors
+------
+
+Pillars and sls files
+~~~~~~~~~~~~~~~~~~~~~
+
+``soup`` will check :ref:`salt` pillars to make sure they can be rendered. If not, it will output a message like this:
+
+::
+
+	There is an issue rendering the manager's pillars. Please correct the issues in the sls files mentioned below before running SOUP again.
+
+This usually means that somebody has modified the :ref:`salt` sls files and introduced a typo. 
+
+Downloading images
+~~~~~~~~~~~~~~~~~~
+
+As ``soup`` is downloading container images, it may encounter errors if there are Internet connection issues or if the disk runs out of free space. Once you've resolved the underlying condition, you can manually refresh your container images using ``so-docker-refresh``.
+
+Highstate already running
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Here are some other errors that you may see when running ``soup``:
+
+::
+
+    local:
+        Data failed to compile:
+    ----------
+        Rendering SLS 'base:common' failed: Jinja variable 'list object' has no attribute 'values'
+        
+and/or
+
+::
+
+    Status: Downloaded newer image for quay.io/securityonion/so-acng:2.3.30
+    quay.io/securityonion/so-acng:2.3.30
+      % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                     Dload  Upload   Total   Spent    Left  Speed
+    100   543  100   543    0     0   1412      0 --:--:-- --:--:-- --:--:--  1414
+    There is a problem downloading the so-acng:2.3.30 image. Details: 
+    gpg: Signature made Thu 18 Feb 2021 02:26:10 PM UTC using RSA key ID FE507013 gpg: BAD signature from "Security Onion Solutions, LLC <info@securityonionsolutions.com>"
+    
+If you see these errors, it most likely means that a salt highstate process was already running when ``soup`` began. You can wait a few minutes and then try ``soup`` again. Alternatively, you can run ``sudo salt-call state.highstate`` and wait for it to complete before running ``soup`` again.
 
 Distributed deployments
 -----------------------
