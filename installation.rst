@@ -12,11 +12,11 @@ Installation
   If you want to deploy in Amazon AWS using our AMI, you can skip to the :ref:`cloud-ami` section.
   If you want to deploy in Azure using our image, you can skip to the :ref:`cloud-azure` section.
 
-Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on CentOS 7) **or** installing standard CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 and then installing our components on top. For best results, we recommend that distributed deployments use the same base OS for all nodes in the deployment. For example, there are known issues when trying to run Ubuntu 18.04 on the manager and Ubuntu 20.04 on the sensor.
+Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on CentOS 7) **or** installing standard CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 and then installing our components on top.
 
-.. tip::
+.. warning::
 
-  For most use cases, we recommend using our Security Onion ISO image as it's the quickest and easiest method.
+  For most use cases, we recommend using our Security Onion ISO image as it's the quickest and easiest method. If you're not going to use our Security Onion ISO image and you're building a distributed deployment, then we recommend keeping the base OS consistent across all nodes in the deployment. For example, there are known issues when trying to run Ubuntu 18.04 on the manager and Ubuntu 20.04 on the sensor.
 
 Installation using Security Onion ISO Image
 -------------------------------------------
