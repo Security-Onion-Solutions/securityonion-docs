@@ -35,18 +35,18 @@ Pivoting
 
 Kibana uses multiple hyperlinked fields to accelerate investigations and decision-making:
 
-Transcript
-~~~~~~~~~~
+PCAP/Cases
+~~~~~~~~~
 
-When present, clicking the hyperlinked ``_id`` field allows an analyst to pivot to full packet capture via our :ref:`pcap` interface. You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards:
+Starting in Security Onion 2.3.100, the ``_id`` field has a hyperlink which is labeled as ``Hunt and optionally pivot to PCAP/Cases``. Clicking this hyperlink takes you to :ref:`hunt` and searches for that particular record. From :ref:`hunt`, you can then escalate the event to :ref:`cases` or pivot to full packet capture via our :ref:`pcap` interface (assuming it's a network event). You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards. 
 
-.. image:: https://user-images.githubusercontent.com/1659467/95376132-9c077c00-08ae-11eb-9675-8bddb3d20719.png
-  :target: https://user-images.githubusercontent.com/1659467/95376132-9c077c00-08ae-11eb-9675-8bddb3d20719.png
-  
-You can also find the ``_id`` field by drilling into a row in the log panel.
+.. image:: images/kibana-log-panel-hunt.png
+  :target: _images/kibana-log-panel-hunt.png
 
-.. image:: https://user-images.githubusercontent.com/1659467/95376213-c22d1c00-08ae-11eb-8ac0-73d7766d2d39.png
-  :target: https://user-images.githubusercontent.com/1659467/95376213-c22d1c00-08ae-11eb-8ac0-73d7766d2d39.png
+You can also find the hyperlinked ``_id`` field by drilling into a row in the log panel.
+
+.. image:: images/kibana-drilldown-hunt.png
+  :target: _images/kibana-drilldown-hunt.png
 
 Indicator Dashboard
 ~~~~~~~~~~~~~~~~~~~
