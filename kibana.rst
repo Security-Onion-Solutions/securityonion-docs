@@ -10,12 +10,12 @@ From https://www.elastic.co/kibana:
 Authentication
 --------------
 
-Starting in Security Onion 2.3.60, we support Elastic authentication via :ref:`so-elastic-auth`.
+Starting in Security Onion 2.3.60, we support Elastic authentication via :ref:`so-elastic-auth`. Elastic authentication is automatically enabled for new installations, so you will need to log into Kibana using the same username and password that you use for :ref:`soc`.
 
 Dashboards
 ----------
 
-When you log into Kibana, you should start on the ``Security Onion - Home`` dashboard.
+Once you log into Kibana, you should start on the ``Security Onion - Home`` dashboard.
 
 .. image:: images/kibana.png
   :target: _images/kibana.png
