@@ -109,14 +109,17 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/31_so_analyst_install_finished.png
   :target: _images/31_so_analyst_install_finished.png
 
-.. image:: images/32_so-import-pcap.png
-  :target: _images/32_so-import-pcap.png
+.. image:: images/32_gnome_user.png
+  :target: _images/32_gnome_user.png
 
-.. image:: images/34_desktop.png
-  :target: _images/34_desktop.png
+.. image:: images/33_gnome_pass.png
+  :target: _images/33_gnome_pass.png
 
-.. image:: images/35_desktop_menu.png
-  :target: _images/35_desktop_menu.png
+.. image:: images/34_gnome_desktop.png
+  :target: _images/34_gnome_desktop.png
+
+.. image:: images/35_gnome_apps.png
+  :target: _images/35_gnome_apps.png
 
 .. image:: images/36_login.png
   :target: _images/36_login.png
@@ -124,8 +127,11 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/37_welcome.png
   :target: _images/37_welcome.png
 
-.. image:: images/38_hunt.png
-  :target: _images/38_hunt.png
+.. image:: images/38_so-import-pcap.png
+  :target: _images/38_so-import-pcap.png
+
+.. image:: images/39_hunt.png
+  :target: _images/39_hunt.png
 
 .. image:: images/40_pcap.png
   :target: _images/40_pcap.png
