@@ -175,7 +175,7 @@ Stats
 For detailed Suricata statistics, check ``/opt/so/log/suricata/stats.log``.
 
 Testing Rules
-------------
+-------------
 
 To test a new rule, use the following utility on a node that runs Suricata (ie Forward or Import).
 

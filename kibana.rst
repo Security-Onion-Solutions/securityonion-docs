@@ -38,7 +38,7 @@ Pivoting
 Kibana uses multiple hyperlinked fields to accelerate investigations and decision-making:
 
 PCAP/Cases
-~~~~~~~~~
+~~~~~~~~~~
 
 Starting in Security Onion 2.3.100, the ``_id`` field has a hyperlink which is labeled as ``Hunt and optionally pivot to PCAP/Cases``. Clicking this hyperlink takes you to :ref:`hunt` and searches for that particular record. From :ref:`hunt`, you can then escalate the event to :ref:`cases` or pivot to full packet capture via our :ref:`pcap` interface (assuming it's a network event). You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards. 
 
