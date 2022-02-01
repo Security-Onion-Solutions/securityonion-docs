@@ -32,6 +32,11 @@ Another possible SOC customization is the session timeout. The default timeout f
           kratoskey: 'abcdef1234567890'
           sessiontimeout: 720h
 
+Cases
+-----
+
+:ref:`cases` comes with presets for things like category, severity, TLP, PAP, and status. You can modify these presets by copying the appropriate presets file from ``/opt/so/saltstack/default/salt/soc/files/soc/`` to ``/opt/so/saltstack/local/salt/soc/files/soc/``, make changes there, and then restart SOC as shown below.
+
 Escalation
 ----------
 
