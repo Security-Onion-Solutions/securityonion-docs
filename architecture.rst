@@ -153,3 +153,8 @@ If the Manager Node was originally setup with :ref:`fleet`, your grid will autom
 :ref:`fleet` Standalone Nodes run the following components:
 
 -  :ref:`fleet`
+
+Receiver Node
+~~~~~~~~~~~~~
+
+Starting in Security Onion 2.3.100, we have a new Receiver Node option. The Receiver Node runs Logstash and Redis and allows for events to continue to be processed by search nodes in the event the manager node is offline.
