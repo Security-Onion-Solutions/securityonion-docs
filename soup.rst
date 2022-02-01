@@ -7,7 +7,7 @@ soup
 
 ::
 
-    sudo soup
+	sudo soup
 
 If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then check for other updates. This includes Security Onion version updates, Security Onion hotfixes, and operating system (OS) updates.
 
@@ -61,7 +61,7 @@ Starting in Security Onion 2.3.80, you can also specify the path on the command 
 
 ::
 
-	soup -y -f /home/user/securityonion.iso
+	sudo soup -y -f /home/user/securityonion.iso
 	
 Agents
 ------
@@ -78,6 +78,12 @@ Kibana
 
 After ``soup`` completes, if :ref:`kibana` says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then take a look at the Diagnostic Logging section of the :ref:`kibana` page.
 
+If Kibana loads but the dashboards display errors that they didn't before the upgrade, then you may need to manually update the dashboards on your manager:
+
+::
+
+	sudo salt-call state.apply kibana.so_savedobjects_defaults -l info
+
 Automation
 ----------
 
@@ -85,13 +91,13 @@ Starting in Security Onion 2.3.80, ``soup`` can be automated as follows (assumin
 
 ::
 
-	soup -y
+	sudo soup -y
 
 This will make ``soup`` proceed unattended, automatically answering ``yes`` to any prompt.  If you have an airgap installation, you can specify the path to the ISO image using the ``-f`` option as follows:
 
 ::
 
-	soup -y -f /home/user/securityonion.iso
+	sudo soup -y -f /home/user/securityonion.iso
 	
 Errors
 ------
