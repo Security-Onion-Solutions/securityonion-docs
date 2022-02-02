@@ -131,6 +131,33 @@ If you would like to automate the deployment of Wazuh agents, the Wazuh server i
 
 When using ``ossec-authd``, be sure to add a firewall exception for agents to access port ``1515/tcp`` on the Wazuh manager node by running :ref:`so-allow` and choosing the ``r`` option.
 
+API
+--------------------
+
+The Wazuh API runs on port ``55000`` and requires a user to be created for access.
+
+To add a new user, run ``so-wazuh-user-add``:
+
+``so-wazuh-user-add newuser``
+
+(will be prompted to provide a password)
+
+Next, restart Wazuh:
+
+``so-wazuh-restart``
+
+Once restarted, try accessing the API locally from the node using the newly created user and password:
+
+``curl -k -u https://localhost:55000``
+
+You should receive a message similar to the following indicating success:
+
+``{"error":0,"data":{"msg":"Welcome to Wazuh HIDS API","api_version":"v3.13.1","hostname":"securityonion-is-the-coolest","timestamp":"Wed Feb 02 2022 13:09:03 GMT+0000 (UTC)"}}``
+
+If you receive a ``401`` (Unauthorized) error message, double-check the credentials or try running ``so-wazuh-user-passwd``, or confirm the the ``user`` file is correct within the Docker container:
+
+``docker exec -it so-wazuh cat /var/ossec/api/configuration/auth/user``
+
 More Information
 ----------------
 
