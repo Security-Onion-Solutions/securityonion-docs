@@ -140,7 +140,7 @@ To add a new user, run ``so-wazuh-user-add``:
 
 ``so-wazuh-user-add newuser``
 
-(will be prompted to provide a password)
+(you will be prompted to provide a password)
 
 Next, restart Wazuh:
 
