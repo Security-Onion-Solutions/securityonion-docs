@@ -148,7 +148,7 @@ Next, restart Wazuh:
 
 Once restarted, try accessing the API locally from the node using the newly created user and password:
 
-``curl -k -u https://localhost:55000``
+``curl -k -u newuser:password https://localhost:55000``
 
 You should receive a message similar to the following indicating success:
 
