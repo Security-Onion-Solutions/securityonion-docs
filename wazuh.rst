@@ -152,7 +152,9 @@ Once restarted, try accessing the API locally from the node using the newly crea
 
 You should receive a message similar to the following indicating success:
 
-``{"error":0,"data":{"msg":"Welcome to Wazuh HIDS API","api_version":"v3.13.1","hostname":"securityonion-is-the-coolest","timestamp":"Wed Feb 02 2022 13:09:03 GMT+0000 (UTC)"}}``
+```
+{"error":0,"data":{"msg":"Welcome to Wazuh HIDS API","api_version":"v3.13.1","hostname":"securityonion-is-the-coolest","timestamp":"Wed Feb 02 2022 13:09:03 GMT+0000 (UTC)"}}
+````
 
 If you receive a ``401`` (Unauthorized) error message, double-check the credentials or try running ``so-wazuh-user-passwd``, or confirm the the ``user`` file is correct within the Docker container:
 
