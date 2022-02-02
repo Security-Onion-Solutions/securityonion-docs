@@ -3,6 +3,12 @@
 Release Notes
 =============
 
+2.3.100-20220202 Changes
+------------------------
+
+- FIX: Add new salt URL to the ACNG config for SSL passthrough
+- FIX: Managers with capitals in the hostname will now properly pull from the salt mine `#7081 <https://github.com/Security-Onion-Solutions/securityonion/issues/7081>`_
+
 2.3.100 Changes
 ----------------
 
