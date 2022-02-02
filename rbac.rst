@@ -322,8 +322,10 @@ The available low-level Security Onion privileges are listed in the table below:
     :widths: 25 50
     :header-rows: 0
 
+    * - *cases/read*
+      - Read all case-related information for all cases
     * - *cases/write*
-      - Escalate events
+      - Create and update cases, and escalate events to cases
     * - *events/read*
       - Read from Elasticsearch
     * - *events/write*
@@ -363,6 +365,8 @@ These discrete privileges are then collected into privilege groups as defined be
 
     * - case-admin
       - *cases/write*
+    * - case-monitor
+      - *cases/read*
     * - event-admin
       - *events/read*, *events/write*, *events/ack*
     * - event-monitor
