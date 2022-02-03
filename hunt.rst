@@ -198,13 +198,11 @@ Onion Query Language (OQL) starts with standard `Lucene query syntax <https://lu
 sortby
 ~~~~~~
 
-Starting in Security Onion 2.3.100, the ``sortby`` segment can be added to the end of a hunt query:
+Starting in Security Onion 2.3.100, the ``sortby`` segment can be added to the end of a hunt query. You can specify one field to sort by or multiple fields separated by spaces. The default order is descending but if you want to force the sort order to be ascending you can add the optional caret (^) symbol to the end of the field name.
 
 ::
 
   | sortby some.field another.field^
-
-You can specify one field to sort by or multiple fields separated by spaces. The default order is descending but if you want to force the sort order to be ascending you can add the optional caret (^) symbol to the end of the field name.
 
 groupby
 ~~~~~~~
