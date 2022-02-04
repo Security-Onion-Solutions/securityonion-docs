@@ -5,7 +5,7 @@ PCAP
 
 :ref:`soc` gives you access to our PCAP interface. This interface allows you to access your full packet capture that was recorded by :ref:`stenographer`. 
 
-You can pivot to PCAP from :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
+In most cases, you'll pivot to PCAP from a particular event in :ref:`alerts` or :ref:`hunt`. Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
 
 .. image:: images/pcap-add-job.png
   :target: _images/pcap-add-job.png
@@ -36,3 +36,10 @@ Finally, you can download the full pcap file by clicking the download button on 
 
 .. image:: images/pcap-download.png
   :target: _images/pcap-download.png
+
+Once you've viewed one or more PCAPs, you will see them listed on the main PCAP page.
+
+.. image:: images/pcap-jobs.png
+  :target: _images/pcap-jobs.png
+
+When you are done with a PCAP, you may want to delete it using the ``X`` button on the far right. This deletes the cached PCAP file saved at ``/nsm/soc/jobs/``.
