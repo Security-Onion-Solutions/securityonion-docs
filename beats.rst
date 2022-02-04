@@ -7,12 +7,12 @@ We can use Elastic Beats to facilitate the shipping of endpoint logs to Security
 
 .. note::
 
-   In order to receive logs from Beats, Security Onion must be running Logstash. Evaluation Mode and Import Mode do not run Logstash, so you'll need Standalone or a full Distributed Deployment.
+   In order to receive logs from Beats, Security Onion must be running :ref:`logstash`. Evaluation Mode and Import Mode do not run :ref:`logstash`, so you'll need Standalone or a full Distributed Deployment.
 
 so-allow
 --------
 
-Run ``sudo so-allow`` and select the ``b`` option to allow your Beats agents to send their logs to Logstash port ``5044/tcp``.
+Run ``sudo so-allow`` and select the ``b`` option to allow your Beats agents to send their logs to :ref:`logstash` port ``5044/tcp``.
 
 Version
 -------
@@ -61,7 +61,7 @@ Encryption
 
 .. warning::
 
-   Beats communication with Logstash is ``not encrypted`` by default. If you require encryption, you will need to manually configure it.
+   Beats communication with :ref:`logstash` is ``not encrypted`` by default. If you require encryption, you will need to manually configure it.
 
 Configuring Encryption for Beats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
