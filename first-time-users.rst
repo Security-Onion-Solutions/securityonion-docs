@@ -5,12 +5,12 @@ First Time Users
 
 If this is your first time using Security Onion 2, then we highly recommend that you start with a simple IMPORT installation using our Security Onion ISO image (see the :ref:`download` section). This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with as little as 4GB RAM, 2 CPU cores, and 200GB of storage.
 
-Simply follow the screenshots below to:
+The following screenshots will walk you through:
 
-- install our Security Onion ISO image
-- configure for IMPORT
-- optionally enable the Analyst environment (see the :ref:`analyst-vm` section)
-- run :ref:`so-import-pcap` and import one or more pcap files
+- installing our Security Onion ISO image
+- configuring for IMPORT
+- optionally enabling the Analyst environment (see the :ref:`analyst-vm` section)
+- running :ref:`so-import-pcap` and importing one or more pcap files
 
 After following the screenshots, you can skip to the :ref:`soc` section.
 
