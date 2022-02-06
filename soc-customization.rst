@@ -92,7 +92,7 @@ The ``options`` object is the same options object that will be passed into the J
 Cases
 -----
 
-:ref:`cases` comes with presets for things like category, severity, TLP, PAP, and status. You can modify these presets by copying the appropriate presets file from ``/opt/so/saltstack/default/salt/soc/files/soc/`` to ``/opt/so/saltstack/local/salt/soc/files/soc/``, make changes there, and then restart SOC as shown below.
+:ref:`cases` comes with presets for things like category, severity, TLP, PAP, and status. You can modify these presets by copying the appropriate presets file from ``/opt/so/saltstack/default/salt/soc/files/soc/`` to ``/opt/so/saltstack/local/salt/soc/files/soc/``, making changes there, and then restarting SOC.
 
 Escalation
 ----------
