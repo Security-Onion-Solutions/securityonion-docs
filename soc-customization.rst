@@ -56,8 +56,11 @@ Next, edit ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` usin
 
   ,{ "name": "AbuseIPDB", "description": "Search for this value at AbuseIPDB", "icon": "fa-external-link-alt", "target": "_blank","links": [ "https://www.abuseipdb.com/check/{value}" ]}
 
+So once you've restarted SOC to make the change take effect:
 
-Don't forget to restart SOC as shown above to make the changes take effect!
+- ``AbuseIPDB`` will display on the Actions menu.
+- ``Search for this value at AbuseIPDB`` will display when you hover over the ``AbuseIPDB`` option on the Actions menu.
+- ``https://www.abuseipdb.com/check/{value}`` is where the browser will go when you click the ``AbuseIPDB`` option on the Actions menu.
 
 You can also create background actions that don't necessarily result in the user being taken to a new page or tab. For example, if you want to have a new action submit a case to JIRA, you would define it as a background POST action. When it completes the POST, it will show an auto-fading message in SOC telling you that the action completed. Alternatively, instead of the auto-fading message you can have it pop a new tab (or redirect SOC tab) to JIRA. Because of CORS restrictions, SOC can't expect to have visibility into the result of the background POST so there is no attempt to parse the response of any background action, other than the status code/text from the request's response.
 
