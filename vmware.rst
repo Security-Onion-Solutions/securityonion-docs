@@ -12,6 +12,10 @@ In this section, we'll cover creating a virtual machine (VM) for our Security On
 
    With the sniffing interface in ``bridged`` mode, you will be able to see all traffic to/from the host machine's physical NIC. If you would like to see **ALL** the traffic on your network, you will need a method of forwarding that traffic to the interface to which the virtual adapter is bridged. This can be achieved by switch port mirroring (SPAN), or through the use of a `tap <Hardware#enterprise-tap-solutions>`__.
 
+.. warning::
+
+   If you're using VMware ESXi, you may need to set your monitoring interface in the vSwitch to VLAN ID 4095 to allow all traffic through.
+   
 Workstation Pro
 ---------------
 
