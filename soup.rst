@@ -82,7 +82,7 @@ If Kibana loads but the dashboards display errors that they didn't before the up
 
 ::
 
-	sudo salt-call state.apply kibana.so_savedobjects_defaults -l info
+	sudo salt-call state.apply kibana.so_savedobjects_defaults -l info queue=True
 
 Automation
 ----------
