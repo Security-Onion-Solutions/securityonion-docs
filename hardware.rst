@@ -140,6 +140,11 @@ A heavy node Runs all the sensor components AND Elastic components locally. This
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
+Receiver Node
+-------------
+
+Since receiver nodes only run :ref:`logstash` and :ref:`redis`, they don't require much CPU or disk space. However, more RAM means you can set a larger queue size for :ref:`redis`.
+
 Sensor Hardware Considerations
 ------------------------------
 
