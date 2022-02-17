@@ -41,19 +41,23 @@ Another possible SOC customization is the session timeout. The default timeout f
 Alerts
 ------
 
-The :ref:`alerts` interface is a simplified version of the :ref:`hunt` interface by default. If you'd prefer the additional options of the :ref:`hunt` interface while reviewing your :ref:`alerts` queue, you can temporarily enable this by pressing Ctrl-Shift-J to open your browser console and then pasting the following:
+The :ref:`alerts` interface is a simplified version of the :ref:`hunt` interface by default. If you'd prefer the additional options of the :ref:`hunt` interface while reviewing your :ref:`alerts` queue, you can temporarily enable this by opening your browser console and then pasting the following:
 
 ::
 
         document.getElementById('hunt').__vue__.$parent._data.advanced=true
         
+.. warning::
+
+        Making this change permanent requires changes to ``soc.json`` which changes at nearly every release. So if you proceed with this, please be prepared to update to the new ``soc.json`` every time you update.
+
 If you would like to make this change permanent, make a copy of ``soc.json``:
 
 ::
 
         cp /opt/so/saltstack/default/salt/soc/files/soc/soc.json /opt/so/saltstack/local/salt/soc/files/soc/
         
-Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite text editor, find the ``alerts`` section, and set ``advanced`` to ``true``.
+Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite text editor, find the ``alerts`` section, and set ``advanced`` to ``true``. Don't forget that you will need to manually update ``soc.json`` every time you update to the latest version.
 
 Action Menu
 -----------
