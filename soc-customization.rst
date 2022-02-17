@@ -27,6 +27,17 @@ You can also customize the links on the left side. To do so, copy ``tools.json``
 
         sudo cp /opt/so/saltstack/default/salt/soc/files/soc/tools.json /opt/so/saltstack/local/salt/soc/files/soc/
 
+Session Timeout
+---------------
+
+Another possible SOC customization is the session timeout. The default timeout for user login sessions is 24 hours. This is a fixed timespan and will expire regardless of whether the user is active or idle in SOC. This can be adjusted by adding a pillar value to the manager node's pillar sls. For example, on an eval node, edit ``/opt/so/saltstack/local/pillar/minions/eval_eval.sls`` and add a new ``kratos.sessiontimeout`` value:
+
+::
+
+        kratos:
+          kratoskey: 'abcdef1234567890'
+          sessiontimeout: 720h
+          
 Alerts
 ------
 
@@ -42,18 +53,7 @@ If you would like to make this change permanent, make a copy of ``soc.json``:
 
         cp /opt/so/saltstack/default/salt/soc/files/soc/soc.json /opt/so/saltstack/local/salt/soc/files/soc/
         
-Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite text editor, find the ``alerts`` section, and set ``advanced`` to ``true``.  Then restart SOC to make the change take effect.
-
-Session Timeout
----------------
-
-Another possible SOC customization is the session timeout. The default timeout for user login sessions is 24 hours. This is a fixed timespan and will expire regardless of whether the user is active or idle in SOC. This can be adjusted by adding a pillar value to the manager node's pillar sls. For example, on an eval node, edit ``/opt/so/saltstack/local/pillar/minions/eval_eval.sls`` and add a new ``kratos.sessiontimeout`` value:
-
-::
-
-        kratos:
-          kratoskey: 'abcdef1234567890'
-          sessiontimeout: 720h
+Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite text editor, find the ``alerts`` section, and set ``advanced`` to ``true``.
 
 Action Menu
 -----------
