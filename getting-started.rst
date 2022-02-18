@@ -5,6 +5,10 @@ Getting Started
 
 If you're ready to get started with Security Onion, you may have questions like:
 
+**What are the recommended best practices?**
+
+See the :ref:`best-practices` section.
+
 **How many machines do I need?**
 
 Depending on what you're trying to do, you may need anywhere from one machine to thousands of machines. The :ref:`architecture` section will help you decide.
@@ -20,6 +24,10 @@ You can download our Security Onion ISO image or a standard 64-bit CentOS 7, Ubu
 **If I just want to try Security Onion in a virtual machine, how do I create a virtual machine?**
 
 See the :ref:`vmware` and :ref:`virtualbox` sections.
+
+**How do I deploy Security Onion in the cloud?**
+
+See the :ref:`cloud-ami` and :ref:`cloud-azure` sections.
 
 **What if I have trouble booting the ISO image?**
 
@@ -44,6 +52,7 @@ See the :ref:`post-installation` section.
 .. toctree::
    :maxdepth: 2
 
+   best-practices
    architecture
    hardware
    partitioning
