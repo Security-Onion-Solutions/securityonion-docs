@@ -3,7 +3,7 @@
 Best Practices
 ==============
 
-Security Onion provides lots of options and flexibility, but for best results we recommend the following best practices:
+Security Onion provides lots of options and flexibility, but for best results we recommend the following best practices.
 
 Installation
 ------------
@@ -39,8 +39,8 @@ Avoid Third Party Software
 Stay Up To Date
 ---------------
 
-- join our discussion forum at https://securityonion.net/discuss or subscribe to one or more of our social media channels to be notified of Security Onion updates
+- join our discussion forum at https://securityonion.net/discuss or subscribe to one of our social media channels to be notified of Security Onion updates
 
-- keep up with Security Onion updates as we frequently fix bugs and add new features
+- keep your deployment updated as we frequently fix bugs and add new features
 
 - if possible, test updates on a test deployment before deploying to production
