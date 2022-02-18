@@ -18,6 +18,8 @@ Installation
 
 - adequately spec your hardware to meet your current usage and allow for growth over time
 
+- prefer taps to span ports when possible
+
 - make sure that any network firewalls have the proper firewall rules in place to allow ongoing operation and updates (see the :ref:`firewall` section)
 
 Configuration
