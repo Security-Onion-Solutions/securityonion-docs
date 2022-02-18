@@ -25,7 +25,9 @@ Installation
 Configuration
 -------------
 
-- make sure that hostname and IP address is correct during installation and avoid changing after installation
+- make sure that both hostname and IP address are correct during installation
+
+- avoid changing hostname and IP address after installation
 
 - Linux is case sensitive where other OSs might not be, so we recommend using lowercase for things like hostnames, usernames, etc.
 
