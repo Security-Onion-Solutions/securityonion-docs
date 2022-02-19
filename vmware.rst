@@ -10,14 +10,16 @@ In this section, we'll cover creating a virtual machine (VM) for our Security On
 
 .. note::
 
-   With the sniffing interface in ``bridged`` mode, you will be able to see all traffic to/from the host machine's physical NIC. If you would like to see **ALL** the traffic on your network, you will need a method of forwarding that traffic to the interface to which the virtual adapter is bridged. This can be achieved by switch port mirroring (SPAN), or through the use of a `tap <Hardware#enterprise-tap-solutions>`__.
+   With the sniffing interface in ``bridged`` mode, you will be able to see all traffic to and from the host machine's physical NIC. If you would like to see **ALL** the traffic on your network, you will need a method of forwarding that traffic to the interface to which the virtual adapter is bridged. This can be achieved with a tap or SPAN port.
 
 ESXi
 ----
 
-If you're using VMware ESXi, you may need to set your monitoring interface in the vSwitch to VLAN ID 4095 to allow all traffic through. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/7185.
+If you're using VMware ESXi, then you're likely familiar with VM creation and installation and so we won't detail that here. There are a few things specific to ESXi that you might want to be aware of:
 
-If you're trying to monitor multiple network interfaces, then you may need to enable the ``Allow MAC Changes`` option at both the vSwitch and Port Group levels. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/2676.
+- you may need to set your monitoring interface in the vSwitch to VLAN ID 4095 to allow all traffic through. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/7185.
+
+- if you're trying to monitor multiple network interfaces, then you may need to enable the ``Allow MAC Changes`` option at both the vSwitch and Port Group levels. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/2676.
    
 Workstation Pro
 ---------------
