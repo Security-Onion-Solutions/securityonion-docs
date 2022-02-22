@@ -143,6 +143,8 @@ To change your grid's metadata engine from Zeek to Suricata:
    ::
 
       sudo salt '*' state.highstate
+      
+-  You may need to remove ``so-zeek`` from ``/opt/so/conf/so-status/so-status.conf`` on each sensor node.
 
 File Extraction
 ---------------
