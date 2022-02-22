@@ -37,6 +37,8 @@ Starting in Security Onion 2.3.70, we've included a wrapper script called ``so-p
 ::
 
     sudo so-pcap-export "YourStenoQueryHere" output.pcap
+    
+If the query succeeds, you can then find the resulting pcap file in ``/nsm/pcapout/`` in the host filesystem.
 
 Configuration
 -------------
