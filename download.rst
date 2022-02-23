@@ -21,7 +21,7 @@ You can either download our Security Onion ISO image (based on CentOS 7) **or** 
 
 .. warning::
 
-   If you download our ISO image and then scan it with antivirus, it is possible that one or more of the files included in the ISO image may generate false positives. For example, Windows Defender may flag ``SecurityOnion\agrules\strelka\yara\thor-webshells.yar`` (part of :ref:`strelka`) as a backdoor when it is really just a Yara ruleset that looks for backdoors. As another example, McAfee may detect ``default_exe.exe`` (another part of :ref:`strelka`) as ``Artemis!EE468A4B1F55``.
+   If you download our ISO image and then scan it with antivirus software, it is possible that one or more of the files included in the ISO image may generate false positives. If you look at the antivirus scan details, it will most likely tell you that it alerted on a file in ``SecurityOnion\agrules\strelka\yara\``. This is part of :ref:`strelka` and it is being incorrectly flagged as a backdoor when it is really just a Yara ruleset that looks for backdoors. In some cases, the alert may be for a sample EXE that is included in :ref:`strelka` but again a false positive.
    
 .. seealso::
 
