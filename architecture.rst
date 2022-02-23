@@ -71,10 +71,11 @@ Node Types
 Management
 ~~~~~~~~~~
 
-The ``manager node`` runs its own local copy of :ref:`elasticsearch`, which manages cross-cluster search configuration for the deployment. This includes configuration for heavy nodes and search nodes (where applicable), but not forward nodes (since they do not run :ref:`elasticsearch`). An analyst connects to the manager node from a client workstation (typically a Security Onion virtual machine installation) to execute queries and retrieve data. Please keep in mind that a dedicated manager node requires separate search nodes.
+The ``manager node`` runs :ref:`soc` and :ref:`kibana`. It has its own local instance of :ref:`elasticsearch`, but that's mainly used for storing :ref:`cases` data and central configuration. An analyst connects to the manager node from a client workstation (perhaps an :ref:`analyst-vm`) to execute queries and retrieve data. Please keep in mind that a dedicated manager node requires separate search nodes.
 
 The manager node runs the following components:
 
+-  :ref:`soc`
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
 -  :ref:`kibana`
@@ -86,9 +87,9 @@ The manager node runs the following components:
 Forward Node
 ~~~~~~~~~~~~
 
-A ``forward node`` is a sensor that forwards all logs via :ref:`filebeat` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). From there, the data can be queried through the use of cross-cluster search.
+A ``forward node`` is a sensor that forwards all logs via :ref:`filebeat` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node).
 
-Forward Nodes run the following components:
+Forward nodes run the following components:
 
 -  :ref:`zeek`
 -  :ref:`suricata`
@@ -98,9 +99,9 @@ Forward Nodes run the following components:
 Search Node
 ~~~~~~~~~~~
 
-When using a ``search node``, Security Onion implements distributed deployments using :ref:`elasticsearch`'s `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. When you run Setup and choose ``Search Node``, it will create a local :ref:`elasticsearch` instance and then configure the manager node to query that instance. This is done by updating \_cluster/settings on the manager node so that it will query the local :ref:`elasticsearch` instance.
-
 Search nodes pull logs from the :ref:`redis` queue on the manager node and then parse and index those logs. When a user queries the manager node, the manager node then queries the search nodes, and they return search results.
+
+Security Onion can add search nodes using `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__ where each search node is independent or using traditional Elastic clustering where all search nodes join to form a single cluster.
 
 Search Nodes run the following components:
 
@@ -116,6 +117,7 @@ A ``manager search`` node is both a manager node and a search node at the same t
 
 A manager search node runs the following components:
 
+-  :ref:`soc`
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
 -  :ref:`kibana`
