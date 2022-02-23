@@ -84,18 +84,6 @@ The manager node runs the following components:
 -  :ref:`redis`
 -  :ref:`wazuh`
 
-Forward Node
-~~~~~~~~~~~~
-
-A ``forward node`` is a sensor that forwards all logs via :ref:`filebeat` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node).
-
-Forward nodes run the following components:
-
--  :ref:`zeek`
--  :ref:`suricata`
--  :ref:`stenographer`
--  :ref:`wazuh`
-
 Search Node
 ~~~~~~~~~~~
 
@@ -124,6 +112,18 @@ A manager search node runs the following components:
 -  :ref:`curator`
 -  :ref:`elastalert`
 -  :ref:`redis`
+-  :ref:`wazuh`
+
+Forward Node
+~~~~~~~~~~~~
+
+A ``forward node`` is a sensor that forwards all logs via :ref:`filebeat` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node).
+
+Forward nodes run the following components:
+
+-  :ref:`zeek`
+-  :ref:`suricata`
+-  :ref:`stenographer`
 -  :ref:`wazuh`
 
 Heavy Node
