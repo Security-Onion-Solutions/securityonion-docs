@@ -26,19 +26,24 @@ Security Onion Console (SOC)
 
 Log into :ref:`soc` using the username and password you created in the Setup wizard.
 
-You can change your password in :ref:`soc` by clicking the user icon in the upper right corner and then clicking ``Settings``:
+You can change your password in :ref:`soc` by clicking the user icon in the upper right corner, clicking ``Settings``, and then going to the ``Security`` tab:
 
-.. image:: https://user-images.githubusercontent.com/1659467/95574537-17764400-09fb-11eb-80ff-15ce9e9de16d.png
-  :target: https://user-images.githubusercontent.com/1659467/95574537-17764400-09fb-11eb-80ff-15ce9e9de16d.png
+.. image:: images/password.png
+  :target: _images/password.png
 
 If you've forgotten your SOC password, you can reset it using the ``so-user`` command:
 
 ::
 
-    so-user update username@example.com
+    sudo so-user update username@example.com
     
-TheHive
--------
-Log into :ref:`hive` using the username and password you created in the Setup wizard.
+MFA
+~~~
 
-You can change your password in :ref:`hive` by clicking the user icon in the upper right corner, clicking ``Settings``. Then click ``Update password`` and follow the prompts.
+Starting in Security Onion 2.3.110, you can enable Multi-Factor Authentication (MFA) to further protect your account. This can be enabled at the bottom of the ``Security`` tab. Activating MFA requires the use of an authenticator app. Currently only Google Authenticator has been tested, however other authenticator apps that implement the time-based one-time password (TOTP) specification could also work.
+
+Note that if a user loses access to the authenticator app, a Security Onion administrator can SSH into the manager node and run the following to change that user's password and temporarily disable MFA:
+
+::
+
+    sudo so-user update username@example.com

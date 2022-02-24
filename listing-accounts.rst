@@ -32,6 +32,3 @@ Alternatively, you can get a list of users in :ref:`soc` by clicking ``Administr
 .. image:: images/users.png
   :target: _images/users.png
 
-TheHive
--------
-To see all :ref:`hive` accounts, log into :ref:`hive` and then click ``Admin`` and ``Users`` to access the User management screen.
