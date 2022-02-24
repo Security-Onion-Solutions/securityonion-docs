@@ -54,7 +54,13 @@ Sometimes, Wazuh may recognize legitimate activity as potentially malicious and 
 Tuning Rules
 ------------
 
-You can add new rules in ``/opt/so/rules/hids/local_rules.xml``. You can also modify existing rules by copying the rule to ``/opt/so/rules/hids/local_rules.xml``, making your changes, and adding ``overwrite="yes"`` as shown at https://documentation.wazuh.com/current/user-manual/ruleset/custom.html#changing-an-existing-rule. To suppress a Wazuh alert, you can add the rule and include ``noalert="1"`` in the ``rule`` section. 
+New Rules
+~~~~~~~~~
+You can add new rules in ``/opt/so/rules/hids/local_rules.xml``. 
+
+Modify Existing Rules
+~~~~~~~~~~~~~~~~~~~~~
+You can modify existing rules by copying the rule to ``/opt/so/rules/hids/local_rules.xml``, making your changes, and adding ``overwrite="yes"`` as shown at https://documentation.wazuh.com/current/user-manual/ruleset/custom.html#changing-an-existing-rule. To suppress a Wazuh alert, you can add the rule and include ``noalert="1"`` in the ``rule`` section. 
 
 The overall process would be as follows:
 
@@ -93,6 +99,77 @@ Here is an example to suppress "Windows Logon Success" and "Windows User Logoff"
 
    This will not remove existing alerts that were generated before applying the new rule. Also note that this only suppresses the alert and not the underlying log.
 
+Child Rules
+~~~~~~~~~~~
+
+In addition to overwriting rules, another option is to add child rules using ``if_sid``. In this example, suppose you are receiving Wazuh alerts for ``PAM: Login session closed`` and want to stop receiving those alerts for a particular user account.
+
+Let's start by using ``ossec-logtest`` with a default configuration:
+
+::
+
+    [doug@securityonion ~]$ sudo docker exec -it so-wazuh /var/ossec/bin/ossec-logtest
+    2022/02/24 17:52:49 ossec-testrule: INFO: Started (pid: 2298).
+    ossec-testrule: Type one log per line.
+
+    Feb 24 17:46:19 securityonion sshd[37140]: pam_unix(sshd:session): session closed for user doug
+
+
+    **Phase 1: Completed pre-decoding.
+           full event: 'Feb 24 17:46:19 securityonion sshd[37140]: pam_unix(sshd:session): session closed for user doug'
+           timestamp: 'Feb 24 17:46:19'
+           hostname: 'securityonion'
+           program_name: 'sshd'
+           log: 'pam_unix(sshd:session): session closed for user doug'
+
+    **Phase 2: Completed decoding.
+           decoder: 'pam'
+           dstuser: 'doug'
+
+    **Phase 3: Completed filtering (rules).
+           Rule id: '5502'
+           Level: '3'
+           Description: 'PAM: Login session closed.'
+    **Alert to be generated.
+    
+This shows us the rule that would fire and its Rule id of ``5502``. Now let's add the following rule to ``/opt/so/rules/hids/local_rules.xml``:
+
+::
+
+      <rule id="100002" level="1">
+        <if_sid>5502</if_sid>
+        <match>doug</match>
+        <description>ignore logins from doug</description>
+      </rule>
+
+Finally, let's re-run ``ossec-logtest``:
+
+::
+
+    [doug@securityonion ~]$ sudo docker exec -it so-wazuh /var/ossec/bin/ossec-logtest
+    2022/02/24 17:54:26 ossec-testrule: INFO: Started (pid: 2305).
+    ossec-testrule: Type one log per line.
+
+    Feb 24 17:46:19 securityonion sshd[37140]: pam_unix(sshd:session): session closed for user doug
+
+
+    **Phase 1: Completed pre-decoding.
+           full event: 'Feb 24 17:46:19 securityonion sshd[37140]: pam_unix(sshd:session): session closed for user doug'
+           timestamp: 'Feb 24 17:46:19'
+           hostname: 'securityonion'
+           program_name: 'sshd'
+           log: 'pam_unix(sshd:session): session closed for user doug'
+
+    **Phase 2: Completed decoding.
+           decoder: 'pam'
+           dstuser: 'doug'
+
+    **Phase 3: Completed filtering (rules).
+           Rule id: '100002'
+           Level: '1'
+           Description: 'ignore logins from doug'
+    **Alert to be generated.
+    
 Adding Agents
 -------------
 
