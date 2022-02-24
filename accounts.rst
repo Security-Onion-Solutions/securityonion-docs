@@ -14,6 +14,7 @@ OS accounts are controlled by standard Linux account utilities. SOC accounts are
    :maxdepth: 2
    
    passwords
+   mfa
    adding-accounts
    listing-accounts
    disabling-accounts
