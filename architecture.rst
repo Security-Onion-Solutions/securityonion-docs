@@ -161,7 +161,7 @@ Receiver Node
 
 Starting in Security Onion 2.3.100, we have a new Receiver Node option. The Receiver Node runs :ref:`logstash` and :ref:`redis` and allows for events to continue to be processed by search nodes in the event the manager node is offline. When a receiver node joins the grid, :ref:`filebeat` on all nodes adds this new address as a load balanced :ref:`logstash` output. The search nodes add this new node as another :ref:`logstash` input. Receiver nodes are "active-active" and you can add as many as you want (within reason) and events will be balanced among them.
 
-IDH Node
-~~~~~~~~
+Intrusion Detection Honeypot (IDH) Node
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Starting in Security Onion 2.3.110, we have a new Intrusion Detection Honeypot (IDH) Node. This allows you to build a node that runs fake services. Any connections to those fake services automatically generate alerts.
+Starting in Security Onion 2.3.110, we have a new :ref:`idh` Node. This allows you to build a node that runs fake services. Any connections to those fake services automatically generate alerts.
