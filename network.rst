@@ -16,3 +16,4 @@ When you log into :ref:`soc`, you may see network-based IDS alerts from :ref:`su
    suricata
    zeek
    strelka
+   idh
