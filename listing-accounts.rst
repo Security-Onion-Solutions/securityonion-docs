@@ -25,7 +25,7 @@ To list all :ref:`soc` accounts, you can use the ``so-user`` command with the ``
 
 ::
 
-    sudo so-user list
+    sudo so-user-list
 
 Alternatively, you can get a list of users in :ref:`soc` by clicking ``Administration`` and then ``Users``:
 
