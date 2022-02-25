@@ -3,7 +3,7 @@
 Homenet
 =======
 
-Currently homenet is only used for :ref:`suricata`, but could be used for other tools in the future.
+The homenet variable defines the networks that are considered home networks (those networks that you are monitoring and defending). It is used for :ref:`suricata` and, starting in Security Onion 2.3.110, for :ref:`zeek` as well.
 
 Configuration
 -------------
