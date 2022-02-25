@@ -9,6 +9,8 @@ From the book, Intrusion Detection Honeypots (Sanders, C):
 
      An Intrusion Detection Honeypot (IDH) is a security resource placed inside your network perimeter that generates alerts when probed or attacked. These systems, services, and tokens rely on deception to lure attackers in and convince them to interact. Unbeknownst to the attacker, you’re alerted when that interaction occurs and can begin investigating the compromise.
 
+Chris Sanders and Josh Brower presented the IDH concept at Security Onion Conference 2021 and you can view the recording at https://www.youtube.com/watch?v=NzUhfARVfJk&list=PLljFlTO9rB17mESq7Z9OeFKvVh39vJW34&index=5.
+
 .. warning::
 
         The IDH node is designed to be placed *inside* your network perimeter! It should not be accessible from the Internet!
