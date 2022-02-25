@@ -5,7 +5,7 @@ Intrusion Detection Honeypot
 
 Starting in Security Onion 2.3.110, we have a new Intrusion Detection Honeypot node. This allows you to build a node that mimics services. Connections to these services automatically generate alerts.
 
-From the book, Intrusion Detection Honeypots (Sanders, C):
+From the book, *Intrusion Detection Honeypots* (Sanders, C):
 
      An Intrusion Detection Honeypot (IDH) is a security resource placed inside your network perimeter that generates alerts when probed or attacked. These systems, services, and tokens rely on deception to lure attackers in and convince them to interact. Unbeknownst to the attacker, you’re alerted when that interaction occurs and can begin investigating the compromise.
 
@@ -61,3 +61,8 @@ The following services are available for use with the IDH node:
 - NTP - an NTP server which alerts on ntp requests
 
 * Modified from https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration
+
+SSH
+=============
+For IDH nodes, the local sshd is configured to listen on TCP/222, and connections are only acceppted from the Manager node. This allows TCP/22 to be used for honeypot services.
+
