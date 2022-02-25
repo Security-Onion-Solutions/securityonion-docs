@@ -17,18 +17,22 @@ Screenshots
 ===========    
 
 Run Setup, choose to add a new node to your distributed deployment, and select the IDH option:
+
 .. image:: images/idh-install-1.png
   :target: _images/idh-install-1.png
 
 Then choose from one of the common honeypot options or customize:
+
 .. image:: images/idh-install-2.png
   :target: _images/idh-install-2.png
 
 If you choose the webserver option, anybody who connects to the webserver will see a web page like this:
+
 .. image:: images/idh-webserver.png
   :target: _images/idh-webserver.png
 
 Connections to honeypot services will result in ``SO IDH`` alerts that can be seen in :ref:`alerts`:
+
 .. image:: images/idh-alert-1.png
   :target: _images/idh-alert-1.png
 
