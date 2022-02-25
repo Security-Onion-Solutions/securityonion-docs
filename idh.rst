@@ -16,7 +16,7 @@ Chris Sanders and Josh Brower presented the IDH concept at Security Onion Confer
         The IDH node is designed to be placed *inside* your network perimeter! It should not be accessible from the Internet!
      
 Screenshots
-===========    
+-----------
 
 Run Setup, choose to add a new node to your distributed deployment, and select the IDH option:
 
@@ -39,7 +39,7 @@ Connections to honeypot services will result in ``SO IDH`` alerts that can be se
   :target: _images/idh-alert-1.png
 
 Services Configuration
-=============
+----------------------
 
 The IDH node utilizes OpenCanary which is a modular opensource honeypot by Thinkst. You can read more about it at https://github.com/thinkst/opencanary.
 
@@ -65,6 +65,6 @@ RDP & SMB are not currently available for use within an IDH node.
 * Modified from https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration
 
 SSH
-=============
+---
 For IDH nodes, the local sshd is configured to listen on TCP/222, and connections are only accepted from the Manager node. This allows TCP/22 to be used for honeypot services.
 
