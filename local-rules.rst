@@ -45,6 +45,11 @@ For example:
 
 -  You can then run ``curl http://testmynids.org/uid/index.html`` on the node to generate traffic which should cause this rule to alert (and the original rule that it was copied from, if it is enabled).
 
+HIDS
+----
+
+You can add :ref:`wazuh` HIDS rules in ``/opt/so/rules/hids/local_rules.xml``.
+
 YARA
 ----
 

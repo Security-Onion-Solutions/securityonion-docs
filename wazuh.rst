@@ -104,7 +104,7 @@ Child Rules
 
 In addition to overwriting rules, another option is to add child rules using ``if_sid``. In this example, suppose you are receiving Wazuh alerts for ``PAM: Login session closed`` and want to stop receiving those alerts for a particular user account.
 
-Let's start by using ``ossec-logtest`` with a default configuration:
+Let's start by using ``ossec-logtest`` with a default configuration and pasting in a sample log:
 
 ::
 
@@ -170,6 +170,8 @@ Finally, let's re-run ``ossec-logtest``:
            Description: 'ignore logins from doug'
     **Alert to be generated.
     
+This shows us that Wazuh no longer fires rule ``5502`` but now fires our new alert. Once your changes are complete, restart Wazuh with ``sudo so-wazuh-restart``.
+
 Adding Agents
 -------------
 

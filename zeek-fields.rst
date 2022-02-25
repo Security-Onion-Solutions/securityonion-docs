@@ -28,4 +28,4 @@ https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elast
 
 which in turn calls the ``common`` pipeline (``/opt/so/conf/elasticsearch/ingest/common``):
 
-https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest/common
+https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest-dynamic/common
