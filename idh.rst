@@ -11,24 +11,31 @@ From the book, Intrusion Detection Honeypots (Sanders, C):
 
 .. warning::
 
-        The IDH node is designed to be placed _inside_ your network perimeter - It should not be deployed Internet-facing. 
+        The IDH node is designed to be placed *inside* your network perimeter! It should not be accessible from the Internet!
      
-    
+Screenshots
+===========    
 
+Run Setup, choose to add a new node to your distributed deployment, and select the IDH option:
 .. image:: images/idh-install-1.png
   :target: _images/idh-install-1.png
 
+Then choose from one of the common honeypot options or customize:
 .. image:: images/idh-install-2.png
   :target: _images/idh-install-2.png
 
+If you choose the webserver option, anybody who connects to the webserver will see a web page like this:
+.. image:: images/idh-webserver.png
+  :target: _images/idh-webserver.png
+
+Connections to honeypot services will result in ``SO IDH`` alerts that can be seen in :ref:`alerts`:
 .. image:: images/idh-alert-1.png
   :target: _images/idh-alert-1.png
 
-
 Configuration
-============================
+=============
 
-The IDH node utilizes the modular opensource honeypot by Thinkst, OpenCanary https://github.com/thinkst/opencanary
+The IDH node utilizes OpenCanary which is a modular opensource honeypot by Thinkst. You can read more about it at https://github.com/thinkst/opencanary.
 
 The following services are available for use with the IDH node:
 
