@@ -38,7 +38,7 @@ Connections to honeypot services will result in ``SO IDH`` alerts that can be se
 .. image:: images/idh-alert-1.png
   :target: _images/idh-alert-1.png
 
-Configuration
+Services Configuration
 =============
 
 The IDH node utilizes OpenCanary which is a modular opensource honeypot by Thinkst. You can read more about it at https://github.com/thinkst/opencanary.
@@ -59,6 +59,8 @@ The following services are available for use with the IDH node:
 - Redis - a Redis server which alerts on actions
 - TFTP - a tftp server which alerts on requests
 - NTP - an NTP server which alerts on ntp requests
+
+RDP & SMB are not currently available for use within an IDH node.
 
 * Modified from https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration
 
