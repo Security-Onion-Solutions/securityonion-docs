@@ -64,5 +64,5 @@ The following services are available for use with the IDH node:
 
 SSH
 =============
-For IDH nodes, the local sshd is configured to listen on TCP/222, and connections are only acceppted from the Manager node. This allows TCP/22 to be used for honeypot services.
+For IDH nodes, the local sshd is configured to listen on TCP/222, and connections are only accepted from the Manager node. This allows TCP/22 to be used for honeypot services.
 
