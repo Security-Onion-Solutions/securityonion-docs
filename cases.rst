@@ -123,3 +123,12 @@ The remainder of the main Cases page is a data table that shows a high level ove
 - When you click the arrow to expand a row in the data table, it will show the high level fields from that case. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search.
 
 - To the right of the arrow is a binoculars icon. Clicking this will display the full case including the Comments, Attachments, Observables, Events, and History tabs.
+
+Data
+----
+
+Cases data is stored in :ref:`elasticsearch`. You can view it in :ref:`kibana` by searching the ``so-case`` index with the following query:
+
+::
+
+	_index:"*:so-case"
