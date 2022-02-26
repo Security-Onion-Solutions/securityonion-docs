@@ -31,6 +31,8 @@ Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if 
 * Enable the ``output.logstash`` output and configure it to send logs to port ``5044`` on your management node.
 * If you are shipping :ref:`sysmon` logs, confirm that your Winlogbeat configuration simply collects the :ref:`sysmon` logs and does NOT use the Elastic Sysmon ``processors`` section as Security Onion will do all the necessary parsing.
 
+Once ``winlogbeat.yml`` is configured properly, start the Winlogbeat service.
+
 .. seealso::
 
 	Check out our Winlogbeat video at https://youtu.be/Xz-7oDrZdQY!
