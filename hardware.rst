@@ -183,21 +183,21 @@ The following RAM estimates are a rough guideline and assume that you're going t
 Storage
 ~~~~~~~
 
-Sensors that have full packet capture enabled need LOTS of storage. For example, suppose you are monitoring a link that averages 50Mbps, here are some quick calculations: 50Mb/s = 6.25 MB/s = 375 MB/minute = 22,500 MB/hour = 540,000 MB/day. So you're going to need about 540GB for one day's worth of pcaps (multiply this by the number of days you want to keep on disk for investigative/forensic purposes). The more disk space you have, the more PCAP retention you'll have for doing investigations after the fact. Disk is cheap, get all you can!
+Sensors that have full packet capture enabled need LOTS of storage. For example, suppose you are monitoring a link that averages 50Mbps, here are some quick calculations: 50Mb/s = 6.25 MB/s = 375 MB/minute = 22,500 MB/hour = 540,000 MB/day. So you're going to need about 540GB for one day's worth of pcaps (multiply this by the number of days of pcap you want to keep). The more disk space you have, the more PCAP retention you'll have for doing investigations after the fact. Disk is cheap, get all you can!
 
 Packets
 ~~~~~~~
 
-You need some way of getting packets into your sensor interface(s). If you're just evaluating Security Onion, you can replay :ref:`pcaps`. For a production deployment, you'll need to use SPAN/monitor port on an existing switch or use a dedicated TAP. We recommend dedicated TAPs where possible.
+You'll need some way of getting packets into your sensor interface(s). If you're just evaluating Security Onion, you can replay :ref:`pcaps`. For a production deployment, you'll need a SPAN/monitor port on an existing switch or a dedicated TAP. We recommend dedicated TAPs where possible.
 
-Inexpensive tap/span options:
+Inexpensive tap/span options (listed alphabetically):
 
 - `Dualcomm <https://www.dualcomm.com/collections/network-tap>`_
 - `Midbit SharkTap <https://www.midbittech.com>`_
 - `Mikrotik <https://mikrotik.com/product/RB260GS>`_
 - `Netgear GS105Ev2 <https://www.netgear.com/support/product/GS105Ev2>`_
 
-Enterprise Tap options:
+Enterprise Tap options (listed alphabetically):
 
 -  `APCON <https://www.apcon.com/products>`__
 -  `Arista <https://www.arista.com/>`__
