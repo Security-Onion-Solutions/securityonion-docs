@@ -73,11 +73,6 @@ MISP
 
 Please see the :ref:`misp` section.
 
-TheHive
-~~~~~~~
-
-Please see the :ref:`hive` section.
-
 so-elastalert-create
 ~~~~~~~~~~~~~~~~~~~~
 
