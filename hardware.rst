@@ -192,39 +192,22 @@ Sensors that have full packet capture enabled need LOTS of storage. For example,
 Packets
 ~~~~~~~
 
-You need some way of getting packets into your sensor interface(s). If you're just evaluating Security Onion, you can replay :ref:`pcaps`. For a production deployment, you'll need a tap or SPAN/monitor port. Here are some inexpensive tap/span solutions:
+You need some way of getting packets into your sensor interface(s). If you're just evaluating Security Onion, you can replay :ref:`pcaps`. For a production deployment, you'll need to use SPAN/monitor port on an existing switch or use a dedicated TAP. We recommend dedicated TAPs where possible.
 
-| Sheer Simplicity and Portability (USB-powered):
-| http://www.dual-comm.com/port-mirroring-LAN\_switch.htm
+Inexpensive tap/span options:
 
-| Dirt Cheap and Versatile:
-| https://mikrotik.com/product/RB260GS
+- `Dualcomm <https://www.dualcomm.com/collections/network-tap>`_
+- `Midbit SharkTap <https://www.midbittech.com>`_
+- `Mikrotik <https://mikrotik.com/product/RB260GS>`_
+- `Netgear GS105Ev2 <https://www.netgear.com/support/product/GS105Ev2>`_
 
-| Netgear GS105E (requires Windows app for config):
-| https://www.netgear.com/support/product/GS105E.aspx
+Enterprise Tap options:
 
-| Netgear GS105E v2 (includes built-in web server for config):
-| https://www.netgear.com/support/product/GS105Ev2
-
-| low cost TAP that uses USB or Ethernet port:
-| http://www.midbittech.com
-
-| More exhaustive list of enterprise switches with port mirroring:
-| http://www.miarec.com/knowledge/switches-port-mirroring
-
-
-Enterprise Tap Solutions:
-
--  `Net Optics /
-   Ixia <http://www.ixiacom.com/network-visibility-products>`__
--  `Arista Tap Aggregation Feature
-   Set <http://www.arista.com/en/solutions/tap-aggregation>`__
--  `Gigamon <http://gigamon.com>`__
--  `cPacket <http://cpacket.com>`__
--  `Bigswitch Monitoring
-   Fabric <http://www.bigswitch.com/products/big-monitoring-fabric>`__
--  `Garland Technologies
-   Taps <https://www.garlandtechnology.com/products>`__
+-  `Net Optics / Ixia <http://www.ixiacom.com/network-visibility-products>`__
+-  `Gigamon <https://gigamon.com>`__
+-  `cPacket <https://cpacket.com>`__
+-  `Arista <https://www.arista.com/>`__
+-  `Garland <https://www.garlandtechnology.com/products>`__
 -  `APCON <https://www.apcon.com/products>`__
 -  `Profitap <https://www.profitap.com>`__
 
