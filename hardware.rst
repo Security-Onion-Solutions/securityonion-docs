@@ -174,15 +174,11 @@ For best performance, over provision RAM so that you can fully disable swap.
 
 The following RAM estimates are a rough guideline and assume that you're going to be running :ref:`suricata`, :ref:`zeek`, and :ref:`stenographer` (full packet capture) and want to minimize/eliminate packet loss. Your mileage may vary!
 
-If you just want to quickly evaluate Security Onion in a VM, the bare minimum amount of RAM needed is 12GB. More is obviously better!
-
-If you're deploying Security Onion in production on a small network (100Mbps or less), you should plan on 16GB RAM or more. Again, more is obviously better!
-
-If you're deploying Security Onion in production to a medium network (100Mbps - 1000Mbps), you should plan on 16GB - 128GB RAM or more.
-
-If you're deploying Security Onion in production to a large network (1000Mbps - 10Gbps), you should plan on 128GB - 256GB RAM or more.
-
-If you're buying a new server, go ahead and max out the RAM (it's cheap!). As always, more is obviously better!
+- If you just want to quickly evaluate Security Onion in a VM, the bare minimum amount of RAM needed is 12GB. More is obviously better!
+- If you're deploying Security Onion in production on a small network (100Mbps or less), you should plan on 16GB RAM or more. Again, more is obviously better!
+- If you're deploying Security Onion in production to a medium network (100Mbps - 1000Mbps), you should plan on 16GB - 128GB RAM or more.
+- If you're deploying Security Onion in production to a large network (1000Mbps - 10Gbps), you should plan on 128GB - 256GB RAM or more.
+- If you're buying a new server, go ahead and max out the RAM (it's cheap!). As always, more is obviously better!
 
 Storage
 ~~~~~~~
