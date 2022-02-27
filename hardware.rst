@@ -203,12 +203,12 @@ Inexpensive tap/span options:
 
 Enterprise Tap options:
 
--  `Net Optics / Ixia <http://www.ixiacom.com/network-visibility-products>`__
--  `Gigamon <https://gigamon.com>`__
--  `cPacket <https://cpacket.com>`__
--  `Arista <https://www.arista.com/>`__
--  `Garland <https://www.garlandtechnology.com/products>`__
 -  `APCON <https://www.apcon.com/products>`__
+-  `Arista <https://www.arista.com/>`__
+-  `cPacket <https://cpacket.com>`__
+-  `Garland <https://www.garlandtechnology.com/products>`__
+-  `Gigamon <https://gigamon.com>`__
+-  `KeySight / Ixia / Net Optics <https://www.keysight.com/us/en/cmp/2020/network-visibility-network-test.html>`__
 -  `Profitap <https://www.profitap.com>`__
 
 Further Reading
