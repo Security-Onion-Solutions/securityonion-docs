@@ -62,7 +62,7 @@ Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite te
 Action Menu
 -----------
 
-Both :ref:`alerts` and :ref:`hunt` have an action menu with several default actions. If you'd like to add your own custom actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` and then add new entries. (Previous to Security Onion 2.3.60, this would be done in ``alerts.actions.json`` or ``hunt.actions.json``.)
+Both :ref:`alerts` and :ref:`hunt` have an action menu with several default actions. If you'd like to add your own custom HTTP GET or POST actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` and then add new entries. (Previous to Security Onion 2.3.60, this would be done in ``alerts.actions.json`` or ``hunt.actions.json``.)
 
 For example, suppose you want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json``:
 
