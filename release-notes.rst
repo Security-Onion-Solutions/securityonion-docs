@@ -23,7 +23,7 @@ Release Notes
 - FIX: curator should exclude so-case* indices `#7270 <https://github.com/Security-Onion-Solutions/securityonion/issues/7270>`_
 - FIX: so-ip-update needs to update Kibana dashboards `#7237 <https://github.com/Security-Onion-Solutions/securityonion/issues/7237>`_
 - FIX: so-status TTY improvements `#7355 <https://github.com/Security-Onion-Solutions/securityonion/issues/7355>`_
-- UPGRADE: Elastic 7.17 `#7137 <https://github.com/Security-Onion-Solutions/securityonion/issues/7137>`_
+- UPGRADE: Elastic 7.17.1 `#7137 <https://github.com/Security-Onion-Solutions/securityonion/issues/7137>`_
 - UPGRADE: FleetDM to 4.10.0 `#7245 <https://github.com/Security-Onion-Solutions/securityonion/issues/7245>`_
 - UPGRADE: Grafana 8.4.1 `#7281 <https://github.com/Security-Onion-Solutions/securityonion/issues/7281>`_
 - UPGRADE: Kratos 0.8.2-alpha.1 `#7351 <https://github.com/Security-Onion-Solutions/securityonion/issues/7351>`_
