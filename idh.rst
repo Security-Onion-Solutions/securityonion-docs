@@ -38,14 +38,23 @@ Connections to honeypot services will result in ``SO IDH`` alerts that can be se
 .. image:: images/idh-alert-1.png
   :target: _images/idh-alert-1.png
 
+Technical Background
+----------------------
+The IDH node utilizes OpenCanary which is a modular opensource honeypot by Thinkst. You can read more about it at https://github.com/thinkst/opencanary.
+
+OpenCanary logs can be found through SOC Hunt or Kibana using the following:
+
+``event.module: opencanary``
+``event.dataset: idh``
+
+Sigma Plays within Playbook look for certain logs emitted by OpenCanary to generate alerts, which can be viewed in the SOC Alerts interface.
+
 Services Configuration
 ----------------------
 
-The IDH node utilizes OpenCanary which is a modular opensource honeypot by Thinkst. You can read more about it at https://github.com/thinkst/opencanary.
+The following services are available for use with the IDH node. Pay special attention to how an alert is triggered for a service as some of them require more than a simple connection request to trigger.
 
-The following services are available for use with the IDH node:
-
-- FTP - a File Transfer Protocol server which on login attempts
+- FTP - a File Transfer Protocol server which alerts on login attempts
 - Git - a Git server which alerts on repo cloning
 - HTTP - an HTTP web server that alerts on login attempts
 - HTTP Proxy - an HTTP web proxy that alerts when there is an attempt to proxy to another page
@@ -63,6 +72,10 @@ The following services are available for use with the IDH node:
 RDP & SMB are not currently available for use within an IDH node.
 
 * Modified from https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration
+
+In addition to changing the default ports, some of these services have further configuration options. For instance, the HTTP server has the ability to use custom HTML pages ("skins"). Consult the OpenCanary documentation for further guidance: https://opencanary.readthedocs.io/en/latest/starting/configuration.html#default-configuration
+
+These types of configuration changes can be made by modifying the minion pillar.
 
 SSH
 ---
