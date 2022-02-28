@@ -3,6 +3,25 @@
 Release Notes
 =============
 
+2.3.110 Changes
+----------------
+
+- FEATURE: Full ECS data type compliance `#6747 <https://github.com/Security-Onion-Solutions/securityonion/issues/6747>`_
+- FEATURE: Intrusion Detection Honeypot Node `#7138 <https://github.com/Security-Onion-Solutions/securityonion/issues/7138>`_
+- FEATURE: Multi-Factor Authentication (MFA) for Security Onion `#7316 <https://github.com/Security-Onion-Solutions/securityonion/issues/7316>`_
+- FEATURE: Populate Zeek's networks.cfg with $HOME_NET `#6854 <https://github.com/Security-Onion-Solutions/securityonion/issues/6854>`_
+- FEATURE: sort indices list alphabetically by index name `#6969 <https://github.com/Security-Onion-Solutions/securityonion/issues/6969>`_
+- FIX: ACNG should clear the cache on restart `#7114 <https://github.com/Security-Onion-Solutions/securityonion/issues/7114>`_
+- FIX: Add Endgame Index settings to the global.sls on new installs `#7293 <https://github.com/Security-Onion-Solutions/securityonion/issues/7293>`_
+- FIX: Allow downgrades during docker_install `#7228 <https://github.com/Security-Onion-Solutions/securityonion/issues/7228>`_
+- FIX: Composable Templates `#4644 <https://github.com/Security-Onion-Solutions/securityonion/issues/4644>`_
+- FIX: Random passwords generated at setup contain character combinations that cause problems with some containers `#7233 <https://github.com/Security-Onion-Solutions/securityonion/issues/7233>`_
+- FIX: Update syslog ingest pipeline per #5251 `#6912 <https://github.com/Security-Onion-Solutions/securityonion/issues/6912>`_
+- FIX: curator should exclude so-case* indices `#7270 <https://github.com/Security-Onion-Solutions/securityonion/issues/7270>`_
+- FIX: so-ip-update needs to update Kibana dashboards `#7237 <https://github.com/Security-Onion-Solutions/securityonion/issues/7237>`_
+- UPGRADE: Elastic 7.17 `#7137 <https://github.com/Security-Onion-Solutions/securityonion/issues/7137>`_
+- UPGRADE: FleetDM to 4.10.0 `#7245 <https://github.com/Security-Onion-Solutions/securityonion/issues/7245>`_
+- UPGRADE: Grafana 8.4.1 `#7281 <https://github.com/Security-Onion-Solutions/securityonion/issues/7281>`_
 
 2.3.100 Hotfix [20220203] Changes
 ---------------------------------
