@@ -19,11 +19,19 @@ Security
 
 To prevent tampering, our Docker images are signed using GPG keys. :ref:`soup` verifies GPG signatures any time Docker images are updated.
 
+Images
+------
+
+After installation, you can see all Docker images with the following command:
+
+::
+
+    sudo docker images
+    
 Elastic
 -------
 
-To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co. Their Docker images are built on CentOS 7:
-https://www.elastic.co/blog/docker-base-centos7
+To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co.
 
 Registry
 --------
