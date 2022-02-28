@@ -31,14 +31,18 @@ Configuration
 
 - Linux is case sensitive where other OSs might not be, so we recommend using lowercase for things like hostnames, usernames, etc.
 
-Avoid Third Party Software
---------------------------
+Avoid Third Party Software and Modifications
+--------------------------------------------
 
 - Security Onion is a free and open platform based on standard Linux distros, but we recommend treating it as an appliance and avoid installing third party software as this may conflict with our components and cause issues when updating
 
 - avoid installing automation tools such as Puppet and Chef as these may conflict with our existing :ref:`salt` automation
 
 - avoid installing monitoring tools such as Zabbix as this may conflict with our existing :ref:`grafana` monitoring
+
+- avoid changing file permissions or umask settings
+
+- hardening guidelines may break functionality, so if you must apply those hardening guidelines, we recommend testing throughly before deploying to production
 
 Stay Up To Date
 ---------------
