@@ -17,6 +17,7 @@ Release Notes
 - FIX: Allow downgrades during docker_install `#7228 <https://github.com/Security-Onion-Solutions/securityonion/issues/7228>`_
 - FIX: Composable Templates `#4644 <https://github.com/Security-Onion-Solutions/securityonion/issues/4644>`_
 - FIX: Increase minimum password length from 6 to 8 characters `#7352 <https://github.com/Security-Onion-Solutions/securityonion/issues/7352>`_
+- FIX: Navigator should ship with all needed files `#1162 <https://github.com/Security-Onion-Solutions/securityonion/issues/1162>`_
 - FIX: Prevent Elasticsearch deprecation notices from causing installation failures `#7353 <https://github.com/Security-Onion-Solutions/securityonion/issues/7353>`_
 - FIX: Random passwords generated at setup contain character combinations that cause problems with some containers `#7233 <https://github.com/Security-Onion-Solutions/securityonion/issues/7233>`_
 - FIX: Update syslog ingest pipeline per #5251 `#6912 <https://github.com/Security-Onion-Solutions/securityonion/issues/6912>`_
