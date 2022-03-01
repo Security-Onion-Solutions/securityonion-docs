@@ -4,7 +4,7 @@ Release Notes
 =============
 
 2.3.110 Changes
-----------------
+---------------
 
 - FEATURE: Full ECS data type compliance `#6747 <https://github.com/Security-Onion-Solutions/securityonion/issues/6747>`_
 - FEATURE: Intrusion Detection Honeypot Node `#7138 <https://github.com/Security-Onion-Solutions/securityonion/issues/7138>`_
@@ -20,7 +20,6 @@ Release Notes
 - FIX: Navigator should ship with all needed files `#1162 <https://github.com/Security-Onion-Solutions/securityonion/issues/1162>`_
 - FIX: Prevent Elasticsearch deprecation notices from causing installation failures `#7353 <https://github.com/Security-Onion-Solutions/securityonion/issues/7353>`_
 - FIX: Random passwords generated at setup contain character combinations that cause problems with some containers `#7233 <https://github.com/Security-Onion-Solutions/securityonion/issues/7233>`_
-- FIX: Update syslog ingest pipeline per #5251 `#6912 <https://github.com/Security-Onion-Solutions/securityonion/issues/6912>`_
 - FIX: curator should exclude so-case* indices `#7270 <https://github.com/Security-Onion-Solutions/securityonion/issues/7270>`_
 - FIX: so-ip-update needs to update Kibana dashboards `#7237 <https://github.com/Security-Onion-Solutions/securityonion/issues/7237>`_
 - FIX: so-status TTY improvements `#7355 <https://github.com/Security-Onion-Solutions/securityonion/issues/7355>`_
