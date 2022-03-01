@@ -3,30 +3,10 @@
 Release Notes
 =============
 
-2.3.110 Changes
----------------
+2.3.100 Hotfix [20220301] Changes
+---------------------------------
 
-- FEATURE: Full ECS data type compliance `#6747 <https://github.com/Security-Onion-Solutions/securityonion/issues/6747>`_
-- FEATURE: Intrusion Detection Honeypot Node `#7138 <https://github.com/Security-Onion-Solutions/securityonion/issues/7138>`_
-- FEATURE: Multi-Factor Authentication (MFA) for Security Onion `#7316 <https://github.com/Security-Onion-Solutions/securityonion/issues/7316>`_
-- FEATURE: Populate Zeek's networks.cfg with $HOME_NET `#6854 <https://github.com/Security-Onion-Solutions/securityonion/issues/6854>`_
-- FEATURE: SOC authentication logs will now be ingested into Elasticsearch `#7354 <https://github.com/Security-Onion-Solutions/securityonion/issues/7354>`_
-- FEATURE: sort indices list alphabetically by index name `#6969 <https://github.com/Security-Onion-Solutions/securityonion/issues/6969>`_
-- FIX: ACNG should clear the cache on restart `#7114 <https://github.com/Security-Onion-Solutions/securityonion/issues/7114>`_
-- FIX: Add Endgame Index settings to the global.sls on new installs `#7293 <https://github.com/Security-Onion-Solutions/securityonion/issues/7293>`_
-- FIX: Allow downgrades during docker_install `#7228 <https://github.com/Security-Onion-Solutions/securityonion/issues/7228>`_
-- FIX: Composable Templates `#4644 <https://github.com/Security-Onion-Solutions/securityonion/issues/4644>`_
-- FIX: Increase minimum password length from 6 to 8 characters `#7352 <https://github.com/Security-Onion-Solutions/securityonion/issues/7352>`_
-- FIX: Navigator should ship with all needed files `#1162 <https://github.com/Security-Onion-Solutions/securityonion/issues/1162>`_
-- FIX: Prevent Elasticsearch deprecation notices from causing installation failures `#7353 <https://github.com/Security-Onion-Solutions/securityonion/issues/7353>`_
-- FIX: Random passwords generated at setup contain character combinations that cause problems with some containers `#7233 <https://github.com/Security-Onion-Solutions/securityonion/issues/7233>`_
-- FIX: curator should exclude so-case* indices `#7270 <https://github.com/Security-Onion-Solutions/securityonion/issues/7270>`_
-- FIX: so-ip-update needs to update Kibana dashboards `#7237 <https://github.com/Security-Onion-Solutions/securityonion/issues/7237>`_
-- FIX: so-status TTY improvements `#7355 <https://github.com/Security-Onion-Solutions/securityonion/issues/7355>`_
-- UPGRADE: Elastic 7.17.1 `#7137 <https://github.com/Security-Onion-Solutions/securityonion/issues/7137>`_
-- UPGRADE: FleetDM to 4.10.0 `#7245 <https://github.com/Security-Onion-Solutions/securityonion/issues/7245>`_
-- UPGRADE: Grafana 8.4.1 `#7281 <https://github.com/Security-Onion-Solutions/securityonion/issues/7281>`_
-- UPGRADE: Kratos 0.8.2-alpha.1 `#7351 <https://github.com/Security-Onion-Solutions/securityonion/issues/7351>`_
+- FIX: Prevent curator from pruning case indices `#7270 <https://github.com/Security-Onion-Solutions/securityonion/issues/7270>`_
 
 2.3.100 Hotfix [20220203] Changes
 ---------------------------------
