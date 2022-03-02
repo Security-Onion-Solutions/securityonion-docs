@@ -84,7 +84,18 @@ For IDH nodes, the local sshd is configured to listen on TCP/2222 and connection
 
 Custom Configuration 
 --------------------
-Services can be customized in two ways: 1) Changing their default port and 2) Service-specific config like SSH version string. Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the Manager.
+Services can be customized in two ways: 
+
+1) Changing the default port. 
+
+*Note: The previously-configured port is not automatically closed on the IDH firewall, so it will need to be closed manually.
+
+2) Service-specific config, like SSH version string. All of the defaults for these types of configuration can be found in the following files on the Manager:
+
+``/opt/so/saltstack/default/salt/idh/defaults/$Service.defaults.yaml``
+
+
+Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the Manager. 
 
 For example, let's say that we already have the HTTP service running, but we want to change the default port from 80 to 8080. Here is how to do that:
 
