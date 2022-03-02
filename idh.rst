@@ -97,6 +97,12 @@ Services can be customized in two ways:
 
 Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the Manager. 
 
+``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``
+
+
+Custom Configuration - Example Port Change
+------------------------------------------
+
 For example, let's say that we already have the HTTP service running, but we want to change the default port from 80 to 8080. Here is how to do that:
 
 .. warning::
