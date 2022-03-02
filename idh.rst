@@ -88,7 +88,10 @@ Services can be customized in two ways:
 
 1) Changing the default port. 
 
-*Note: The previously-configured port is not automatically closed on the IDH firewall, so it will need to be closed manually.
+*Note: The previously-configured port is not automatically closed on the IDH node's firewall, so it will need to be closed manually. This can be done by running the following command on the IDH node, substituting the protocol and port as needed:
+
+``iptables -D INPUT -p tcp -m tcp --dport 80 -j ACCEPT``
+
 
 2) Service-specific config, like SSH version string. All of the defaults for these types of configuration can be found in the following files on the Manager:
 
