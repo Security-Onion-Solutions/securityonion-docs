@@ -75,8 +75,54 @@ RDP & SMB are not currently available for use within an IDH node.
 
 In addition to changing the default ports, some of these services have further configuration options. For instance, the HTTP server has the ability to use custom HTML pages ("skins"). Consult the OpenCanary documentation for further guidance: https://opencanary.readthedocs.io/en/latest/starting/configuration.html#default-configuration
 
-These types of configuration changes can be made by modifying the minion pillar.
+These types of configuration changes can be made by modifying the minion pillar (see Custom Configuration).
 
 SSH
 ---
 For IDH nodes, the local sshd is configured to listen on TCP/2222 and connections are only accepted from the Manager node. This allows TCP/22 to be used for honeypot services.
+
+
+Custom Configuration 
+---
+Services can be customized in two ways: 1) Changing their default port and 2) Service-specific config like SSH verion string. Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the Manager.
+
+For example, let's say that we already have the HTTP service running, but we want to change the default port from 80 to 8080. Here is how to do that:
+
+.. warning::
+
+        The folowing configuration files are YAML, and as such, no tabs are permitted, only spaces! Also, the number of spaces matter!
+
+First off, we need to copy the default configuration for the HTTP service. This can be found on the Manager:
+
+``/opt/so/saltstack/default/salt/idh/defaults/http.defaults.yaml``
+
+Out of the defaults defined there, we just need the following:
+
+::
+
+idh:
+  opencanary:
+    config:
+      http.port: 80
+
+Next, we will edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``), and add the previously copied config, but swap 80 for 8080. The minion sls file should look something like this:
+
+::
+
+idh:
+  services:
+    - http
+    - ftp
+    - ssh
+  opencanary:
+    config:
+      http.port: 8080
+
+With this configuration changed, we can now make it active on the IDH node by using Salt to apply the idh & firewall states.
+
+Run the following from the Manager:
+
+``sudo salt '$IDH-Hostname*' state.apply idh,firewall``
+
+You should now be able to browse to the HTTP server on the IDH node on TCP/8080!
+
