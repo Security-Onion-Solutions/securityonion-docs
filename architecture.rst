@@ -164,4 +164,6 @@ Starting in Security Onion 2.3.100, we have a new Receiver Node option. The Rece
 Intrusion Detection Honeypot (IDH) Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Starting in Security Onion 2.3.110, we have a new :ref:`idh` Node. This allows you to build a node that runs fake services. Any connections to those fake services automatically generate alerts.
+Starting in Security Onion 2.3.110, we have a new :ref:`idh` Node. This allows you to build a node that mimics common services - interaction with these fake services automatically generate alerts.
+
+Overall system requirements for this node type are low: 1GB RAM, 2x CPU, 1x NIC, 100GB Disk Space
