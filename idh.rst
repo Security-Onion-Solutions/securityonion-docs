@@ -39,15 +39,21 @@ Connections to honeypot services will result in ``SO IDH`` alerts that can be se
   :target: _images/idh-alert-1.png
 
 Technical Background
-----------------------
+--------------------
+
 The IDH node utilizes OpenCanary which is a modular opensource honeypot by Thinkst. You can read more about it at https://github.com/thinkst/opencanary.
 
-OpenCanary logs can be found through SOC Hunt or Kibana using the following:
+OpenCanary logs can be found through :ref:`hunt` or :ref:`kibana` using the following queries:
 
-``event.module: opencanary``
-``event.dataset: idh``
+::
 
-Sigma Plays within Playbook look for certain logs emitted by OpenCanary to generate alerts, which can be viewed in the SOC Alerts interface.
+     event.module: opencanary
+     
+::
+
+     event.dataset: idh
+
+Sigma Plays within :ref:`playbook` look for certain logs emitted by OpenCanary to generate alerts, which can be viewed in the :ref:`alerts` interface.
 
 Services Configuration
 ----------------------
@@ -73,9 +79,9 @@ RDP & SMB are not currently available for use within an IDH node.
 
 * Modified from https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration
 
-In addition to changing the default ports, some of these services have further configuration options. For instance, the HTTP server has the ability to use custom HTML pages ("skins"). Consult the OpenCanary documentation for further guidance: https://opencanary.readthedocs.io/en/latest/starting/configuration.html#default-configuration
+In addition to changing the default ports, some of these services have further configuration options. For instance, the HTTP server has the ability to use custom HTML pages ("skins"). For more information, please see the OpenCanary documentation at https://opencanary.readthedocs.io/en/latest/starting/configuration.html#default-configuration.
 
-These types of configuration changes can be made by modifying the minion pillar (see Custom Configuration).
+These types of configuration changes can be made by modifying the minion pillar (see the Custom Configuration section below).
 
 SSH
 ---
@@ -84,13 +90,16 @@ For IDH nodes, the local sshd is configured to listen on TCP/2222 and connection
 
 Custom Configuration 
 --------------------
+
 Services can be customized in two ways: 
 
 1) Changing the default port. 
 
 *Note: The previously-configured port is not automatically closed on the IDH node's firewall, so it will need to be closed manually. This can be done by running the following command on the IDH node, substituting the protocol and port as needed:
 
-``iptables -D INPUT -p tcp -m tcp --dport 80 -j ACCEPT``
+::
+
+     iptables -D INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 
 
 2) Service-specific config, like SSH version string. All of the defaults for these types of configuration can be found in the following files on the Manager:
@@ -98,25 +107,19 @@ Services can be customized in two ways:
 ``/opt/so/saltstack/default/salt/idh/defaults/$Service.defaults.yaml``
 
 
-Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the Manager. 
-
-``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``
+Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the Manager in ``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``.
 
 
 Custom Configuration - Example Port Change
 ------------------------------------------
 
-For example, let's say that we already have the HTTP service running, but we want to change the default port from 80 to 8080. Here is how to do that:
+For example, suppose that we already have the HTTP service running, but we want to change the default port from ``80`` to ``8080``.
 
 .. warning::
 
         The following configuration files are YAML, and as such, no tabs are permitted, only spaces! Also, the number of spaces matter!
 
-First off, we need to copy the default configuration for the HTTP service. This can be found on the Manager:
-
-``/opt/so/saltstack/default/salt/idh/defaults/http.defaults.yaml``
-
-Out of the defaults defined there, we just need the following:
+First off, we need to copy the default configuration for the HTTP service. This can be found on the Manager in ``/opt/so/saltstack/default/salt/idh/defaults/http.defaults.yaml``. Out of the defaults defined there, we just need the following:
 
 ::
 
@@ -125,7 +128,7 @@ Out of the defaults defined there, we just need the following:
         config:
           http.port: 80
 
-Next, we will edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``) and add the previously copied config, but swap 80 for 8080. 
+Next, we will edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``) and add the previously copied config, but swap ``80`` for ``8080``. 
 
 The minion sls file should look something like this:
 
@@ -140,13 +143,14 @@ The minion sls file should look something like this:
         config:
           http.port: 8080
 
-With this configuration changed, we can now make it active on the IDH node by using Salt to apply the idh & firewall states.
+With this configuration changed, we can now make it active on the IDH node by using :ref:`salt` to apply the ``idh`` & ``firewall`` states.
 
-Run the following from the Manager:
+Run the following from the Manager (replacing ``$IDH-Hostname`` as appropriate):
 
-``sudo salt '$IDH-Hostname*' state.apply idh,firewall``
+::
+
+     sudo salt '$IDH-Hostname*' state.apply idh,firewall
 
 You should now be able to browse to the HTTP server on the IDH node on TCP/8080!
 
 Any other configuration in the ``http.defaults.yaml`` can be overriden in this way.
-
