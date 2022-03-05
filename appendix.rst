@@ -166,8 +166,14 @@ Remove an old Docker configuration option:
 
 ::
 
-   rm /etc/profile.d/securityonion-docker.sh 
+   sudo rm /etc/profile.d/securityonion-docker.sh 
    
+You may need to enable rsyslog:
+
+::
+
+   sudo systemctl enable rsyslog
+
 Download the Security Onion 2 repo:
 
 ::
