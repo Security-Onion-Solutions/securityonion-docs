@@ -8,7 +8,19 @@ Security Onion is committed to allowing users to run a full install on networks 
 Key Differences
 ---------------
 
-There are a few differences between an ``Airgap`` install and a normal install with Internet access. First, all CentOS repos are removed and replaced with a new repo that runs on the manager. During the install, all of the necessary RPMs are copied from the ISO to a new repo located in ``/nsm/repo/``. All devices in the grid will now use this repo for updates to packages. Another difference is the latest Emerging Threats (ET) Open rules are copied to ``/nsm/repo/rules/`` so that the manager can access them. This allows users to use the standard SO process for managing NIDS rules. Finally, yara rules are copied to ``/nsm/repo/rules/strelka/`` for :ref:`strelka` file analysis.
+There are a few differences between an airgap install and a normal install with Internet access:
+
+- All CentOS repos are removed and replaced with a new repo that runs on the manager.
+
+- During the install, all of the necessary RPMs are copied from the ISO to a new repo located in ``/nsm/repo/``. 
+
+- All devices in the grid will now use this repo for updates to packages.
+
+- The latest Emerging Threats (ET) Open rules are copied to ``/nsm/repo/rules/`` so that the manager can access them and users can use the standard Security Onion process for managing NIDS rules. 
+
+- Yara rules are copied to ``/nsm/repo/rules/strelka/`` for :ref:`strelka` file analysis.
+
+- When updating the system, :ref:`soup` will ask for the location of the latest ISO media and will then update using that media rather than pulling from the Internet.
 
 Rule Updates
 ------------
