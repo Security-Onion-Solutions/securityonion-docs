@@ -1,0 +1,50 @@
+.. _so-status:
+
+so-status
+=========
+
+``so-status`` will show the status of Security Onion services.
+
+::
+
+	Checking Docker status
+
+	    Docker ---------------------------------------- [ OK ]    
+
+	Checking container statuses
+
+	    so-aptcacherng -------------------------------- [ OK ]    
+	    so-cortex ------------------------------------- [ OK ]    
+	    so-curator ------------------------------------ [ OK ]    
+	    so-dockerregistry ----------------------------- [ OK ]    
+	    so-elastalert --------------------------------- [ OK ]    
+	    so-elasticsearch ------------------------------ [ OK ]    
+	    so-filebeat ----------------------------------- [ OK ]    
+	    so-fleet -------------------------------------- [ OK ]    
+	    so-grafana ------------------------------------ [ OK ]    
+	    so-idstools ----------------------------------- [ OK ]    
+	    so-influxdb ----------------------------------- [ OK ]    
+	    so-kibana ------------------------------------- [ OK ]    
+	    so-kratos ------------------------------------- [ OK ]    
+	    so-logstash ----------------------------------- [ OK ]    
+	    so-mysql -------------------------------------- [ OK ]    
+	    so-nginx -------------------------------------- [ OK ]    
+	    so-playbook ----------------------------------- [ OK ]    
+	    so-redis -------------------------------------- [ OK ]    
+	    so-sensoroni ---------------------------------- [ OK ]    
+	    so-soc ---------------------------------------- [ OK ]    
+	    so-soctopus ----------------------------------- [ OK ]    
+	    so-steno -------------------------------------- [ OK ]    
+	    so-strelka-backend ---------------------------- [ OK ]    
+	    so-strelka-coordinator ------------------------ [ OK ]    
+	    so-strelka-filestream ------------------------- [ OK ]    
+	    so-strelka-frontend --------------------------- [ OK ]    
+	    so-strelka-gatekeeper ------------------------- [ OK ]    
+	    so-strelka-manager ---------------------------- [ OK ]    
+	    so-suricata ----------------------------------- [ OK ]    
+	    so-telegraf ----------------------------------- [ OK ]    
+	    so-thehive ------------------------------------ [ OK ]    
+	    so-thehive-es --------------------------------- [ OK ]    
+	    so-wazuh -------------------------------------- [ OK ] 
+
+It reads the list of enabled services from ``/opt/so/conf/so-status/so-status.conf`` and checks the status of each. If you ever disable a service, you may need to remove it from that file.

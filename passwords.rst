@@ -15,7 +15,7 @@ When you first install Security Onion, you create a standard OS user account for
 OS root account
 ---------------
 
-Your default user account should have sudo permissions. Command-line utilities that require administrative access can be prefixed with ``sudo``. For example, the ``so-status`` command requires administrative access so you can run it with ``sudo`` as follows:
+Your default user account should have sudo permissions. Command-line utilities that require administrative access can be prefixed with ``sudo``. For example, the :ref:`so-status` command requires administrative access so you can run it with ``sudo`` as follows:
 
 ::
 

@@ -20,12 +20,12 @@ Depending on what kind of installation you did, the Setup wizard may have alread
 Services
 --------
 
--  Verify services are running:
-   
-   ::
-   
-      sudo so-status
+-  Verify services are running with the :ref:`so-status` command:
 
+::
+
+	sudo so-status
+   
 Data Retention
 --------------
 
