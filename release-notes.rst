@@ -49,7 +49,6 @@ Release Notes
 - FIX: SOUP should check that en_US.UTF-8 is available before switching to it `#6599 <https://github.com/Security-Onion-Solutions/securityonion/issues/6599>`_
 - FIX: Salt does not generate a fleet.crt file with CUSTOM_FLEET_HOSTNAME `#4319 <https://github.com/Security-Onion-Solutions/securityonion/issues/4319>`_
 - FIX: Typo in so-image-common output `#6563 <https://github.com/Security-Onion-Solutions/securityonion/issues/6563>`_
-- FIX: Upgrade salt to 3004 `#6810 <https://github.com/Security-Onion-Solutions/securityonion/issues/6810>`_
 - FIX: Wazuh WEL Parsing `#6829 <https://github.com/Security-Onion-Solutions/securityonion/issues/6829>`_
 - FIX: _id fielddata deprecated message `#6703 <https://github.com/Security-Onion-Solutions/securityonion/issues/6703>`_
 - FIX: elastic_curl_config depends on elastic_curl_config_distributed `#6811 <https://github.com/Security-Onion-Solutions/securityonion/issues/6811>`_
@@ -60,6 +59,7 @@ Release Notes
 - UPGRADE: Elastic components to 7.16.3 `#6860 <https://github.com/Security-Onion-Solutions/securityonion/issues/6860>`_
 - UPGRADE: FleetDM 4.8.0 `#6828 <https://github.com/Security-Onion-Solutions/securityonion/issues/6828>`_
 - UPGRADE: Grafana 8.3.2 `#6321 <https://github.com/Security-Onion-Solutions/securityonion/issues/6321>`_
+- UPGRADE: Salt to 3004 `#6810 <https://github.com/Security-Onion-Solutions/securityonion/issues/6810>`_
 - UPGRADE: Zeek to 4.0.5 `#6983 <https://github.com/Security-Onion-Solutions/securityonion/issues/6983>`_
 
 2.3.91 Changes
