@@ -192,6 +192,19 @@ Finally, let's re-run ``ossec-logtest``:
     
 This shows us that Wazuh no longer fires rule ``5502`` but now fires our new alert. Once your changes are complete, restart Wazuh with ``sudo so-wazuh-restart``.
 
+Apparmor DENIED Alerts
+----------------------
+
+If you're running on Ubuntu, then you most likely get Wazuh HIDS alerts for ``Apparmor DENIED`` (Wazuh sid 52002). In most cases, this is due to telegraf (part of :ref:`grafana`) trying to use ptrace. You might want to write a simple child rule that avoids alerting on this behavior:
+
+::
+
+  <rule id="100002" level="0">
+    <if_sid>52002</if_sid>
+    <description>ignore apparmor denied messages from telegraf</description>
+    <regex>apparmor="DENIED" operation="ptrace" profile="docker-default" pid=\d+ comm="telegraf"</regex>
+  </rule>
+
 Adding Agents
 -------------
 
