@@ -195,7 +195,7 @@ This shows us that Wazuh no longer fires rule ``5502`` but now fires our new ale
 Apparmor DENIED Alerts
 ----------------------
 
-If you're running on Ubuntu, then you most likely get Wazuh HIDS alerts for ``Apparmor DENIED`` (Wazuh sid 52002). In most cases, this is due to telegraf (part of :ref:`grafana`) trying to use ptrace. You might want to write a simple child rule that avoids alerting on this behavior:
+If you're running on Ubuntu, then you most likely get Wazuh HIDS alerts for ``Apparmor DENIED`` (Wazuh sid 52002). In most cases, this is due to telegraf (part of :ref:`grafana`) trying to use ptrace. To avoid this, you might want to add a rule to ``/opt/so/rules/hids/local_rules.xml`` like the following:
 
 ::
 
@@ -205,6 +205,8 @@ If you're running on Ubuntu, then you most likely get Wazuh HIDS alerts for ``Ap
     <regex>apparmor="DENIED" operation="ptrace" profile="docker-default" pid=\d+ comm="telegraf"</regex>
   </rule>
 
+Don't forget to restart Wazuh with ``sudo so-wazuh-restart``.
+ 
 Adding Agents
 -------------
 
