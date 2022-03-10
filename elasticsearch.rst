@@ -45,15 +45,17 @@ Fields are mapped to their appropriate data type using templates. When making ch
 Component Templates
 ~~~~~~~~~~~~~~~~~~~
     Component templates are reusable building blocks that configure mappings, settings, and aliases. While you can use component templates to construct index  templates, they aren’t directly applied to a set of indices.
-https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-component-template.html
+    https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-component-template.html
 
 
 Index Templates
 ~~~~~~~~~~~~~~~
     An index template is a way to tell Elasticsearch how to configure an index when it is created. Templates are configured prior to index creation. When an index is created - either manually or through indexing a document - the template settings are used as a basis for creating the index. Index templates can contain a collection of component templates, as well as directly specify settings, mappings, and aliases.
-https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templates.html
+    https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templates.html
 
-In Security Onion, component templates are stored in ``/opt/so/saltstack/default/salt/elasticsearch/templates/component/``. The templates are specified to be used in the index template definitions in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yml``, and these references can be modified in the ``elasticsearch`` pillar.
+In Security Onion, component templates are stored in ``/opt/so/saltstack/default/salt/elasticsearch/templates/component/``. 
+
+These templates are specified to be used in the index template definitions in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yml``, and these references can be modified in the ``elasticsearch`` pillar.
 
 
 Community ID
