@@ -40,26 +40,34 @@ In Security Onion 2, Elasticsearch receives unparsed logs from :ref:`logstash` o
 
 Templates
 ---------
-Fields are mapped to their appropriate data type using templates. When making changes for parsing, it is necessary to ensure fields are mapped to a data type to allow for indexing, which in turn allows for effective aggregation and searching in Hunt and Kibana. Elasticsearch leverages two different types of templates to enforce these mappings (explained below).
+
+Fields are mapped to their appropriate data type using templates. When making changes for parsing, it is necessary to ensure fields are mapped to a data type to allow for indexing, which in turn allows for effective aggregation and searching in :ref:`hunt` and :ref:`kibana`. Elasticsearch leverages both component and index templates.
 
 Component Templates
 ~~~~~~~~~~~~~~~~~~~
+
+From https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templates.html:
+
     Component templates are reusable building blocks that configure mappings, settings, and aliases. While you can use component templates to construct index  templates, they aren’t directly applied to a set of indices.
-    https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-component-template.html
+    
+Also see https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-component-template.html.
 
 
 Index Templates
 ~~~~~~~~~~~~~~~
+
+From https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templates.html:    
+    
     An index template is a way to tell Elasticsearch how to configure an index when it is created. Templates are configured prior to index creation. When an index is created - either manually or through indexing a document - the template settings are used as a basis for creating the index. Index templates can contain a collection of component templates, as well as directly specify settings, mappings, and aliases.
-    https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templates.html
 
 In Security Onion, component templates are stored in ``/opt/so/saltstack/default/salt/elasticsearch/templates/component/``. 
 
-These templates are specified to be used in the index template definitions in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yml``, and these references can be modified in the ``elasticsearch`` pillar.
+These templates are specified to be used in the index template definitions in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yml``, and these references can be modified in the ``elasticsearch`` :ref:`salt` pillar.
 
 
 Community ID
 ------------
+
 | For logs that don’t natively support :ref:`community-id`, we use the Elasticsearch Community ID processor:
 | https://www.elastic.co/guide/en/elasticsearch/reference/current/community-id-processor.html
 
@@ -196,6 +204,7 @@ All configuration changes take place in :ref:`salt` pillar files. There are two 
               settings:
                 index:
                   number_of_shards: 1
+		  
 Customization
 ~~~~~~~~~~~~~
 
