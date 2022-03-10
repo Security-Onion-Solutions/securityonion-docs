@@ -71,67 +71,111 @@ All configuration changes take place in :ref:`salt` pillar files. There are two 
 ::
 
     elasticsearch:
-      replicas: 0
       true_cluster: False
-      true_cluster_name: so
+      replicas: 0
       discovery_nodes: 1
       hot_warm_enabled: False
       cluster_routing_allocation_disk.threshold_enabled: true
-      cluster_routing_allocation_disk_watermark_low: 95%
-      cluster_routing_allocation_disk_watermark_high: 98%
-      cluster_routing_allocation_disk_watermark_flood_stage: 98%
+      cluster_routing_allocation_disk_watermark_low: '95%'
+      cluster_routing_allocation_disk_watermark_high: '98%'
+      cluster_routing_allocation_disk_watermark_flood_stage: '98%'
+      script.painless.regex.enabled: true
       index_settings:
         so-beats:
-          shards: 1
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
+          warm: 7
+          close: 30
+          delete: 365
+        so-endgame:
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
           warm: 7
           close: 30
           delete: 365
         so-firewall:
-          shards: 1
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
           warm: 7
           close: 30
           delete: 365
         so-flow:
-          shards: 1
-          warm: 7
-          close: 30
-          delete: 365
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
+              close: 45
+              delete: 365
         so-ids:
-          shards: 1
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
           warm: 7
           close: 30
           delete: 365
         so-import:
-          shards: 1
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
           warm: 7
           close: 73000
           delete: 73001
         so-osquery:
-          shards: 1
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
           warm: 7
           close: 30
           delete: 365
         so-ossec:
-          shards: 1
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
           warm: 7
           close: 30
           delete: 365
         so-strelka:
-          shards: 1
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
           warm: 7
           close: 30
-          delete: 365
+           delete: 365
         so-syslog:
-          shards: 1
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
           warm: 7
           close: 30
           delete: 365
         so-zeek:
-          shards: 5
-          warm: 7
-          close: 45
-          delete: 365
-
+          index_template:
+            template:
+              settings:
+                index:
+                  number_of_shards: 1
 Customization
 ~~~~~~~~~~~~~
 
