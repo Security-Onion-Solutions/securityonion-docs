@@ -15,6 +15,11 @@ Chris Sanders and Josh Brower presented the IDH concept at Security Onion Confer
 
         The IDH node is designed to be placed *inside* your network perimeter! It should not be accessible from the Internet!
      
+Installation
+------------
+
+You can join an IDH node to a Standalone deployment or a full distributed deployment.
+
 Screenshots
 -----------
 
