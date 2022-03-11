@@ -17,6 +17,10 @@ After running ``soup`` or rebooting a Security Onion node, it may take a few min
 
 	sudo salt-call state.highstate
 
+.. warning::
+
+	If you have a production deployment, we recommend that you test the upgrade process on a test deployment if possible before deploying to production.
+
 Security Onion Version Updates
 ------------------------------
 
