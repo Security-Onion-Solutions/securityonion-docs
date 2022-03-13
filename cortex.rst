@@ -5,7 +5,7 @@ Cortex
 
 .. warning::
 
-        Starting in Security Onion 2.3.100, we are transitioning from :ref:`hive` to :ref:`cases` and this will impact Cortex as well. Existing installations with TheHive/Cortex enabled will still be able to use TheHive/Cortex for a very short time. However, new installations will not be able to enable TheHive/Cortex. We will stop including TheHive/Cortex container images starting in Security Onion 2.3.120, currently scheduled for release in March 2022. From that point forward, users running the current version of Security Onion will no longer be able to natively run TheHive/Cortex on the platform and our support for TheHive/Cortex on Security Onion will end. Users wishing to continue using TheHive/Cortex on Security Onion should plan to migrate to an external instance of TheHive/Cortex.
+        Starting in Security Onion 2.3.100, we are transitioning from :ref:`hive` to :ref:`cases` and this will impact Cortex as well. Existing installations with TheHive/Cortex enabled will still be able to use TheHive/Cortex for a very short time. However, new installations will not be able to enable TheHive/Cortex. We will stop including TheHive/Cortex container images starting in Security Onion 2.3.120, currently scheduled for release in April 2022. From that point forward, users running the current version of Security Onion will no longer be able to natively run TheHive/Cortex on the platform and our support for TheHive/Cortex on Security Onion will end. Users wishing to continue using TheHive/Cortex on Security Onion should plan to migrate to an external instance of TheHive/Cortex.
 
 From https://github.com/TheHive-Project/Cortex:
 
