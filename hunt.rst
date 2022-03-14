@@ -8,7 +8,7 @@ Hunt
 .. image:: images/hunt.png
   :target: _images/hunt.png
 
-Starting in Security Onion 2.3.60, there is an Options drop-down menu that allows you to set options such as Auto Hunt, Automatic Refresh Interval, and Time Zone.
+Starting in Security Onion 2.3.60, there is an Options drop-down menu that allows you to set options such as Auto Hunt, Exclude case data, Automatic Refresh Interval, and Time Zone.
 
 Auto Hunt
 ---------
@@ -19,6 +19,16 @@ The Auto Hunt option defaults to enabled:
   :target: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
 
 When enabled, Hunt will automatically submit your query any time you change filters, groupings, or date ranges.
+
+Exclude case data
+-----------------
+
+Hunt excludes :ref:`cases` data by default:
+
+.. image:: images/soc-exclude-case-data.png
+  :target: _images/soc-exclude-case-data.png
+
+If you disable this option, then you can use Hunt to query your :ref:`cases` data.
 
 Automatic Refresh Interval
 --------------------------
