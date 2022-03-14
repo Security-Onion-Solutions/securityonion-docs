@@ -145,6 +145,11 @@ Receiver Node
 
 Since receiver nodes only run :ref:`logstash` and :ref:`redis`, they don't require much CPU or disk space. However, more RAM means you can set a larger queue size for :ref:`redis`.
 
+Intrusion Detection Honeypot (IDH) Node
+---------------------------------------
+
+For an IDH node, the overall system requirements are low: 1GB RAM, 2x CPU, 1x NIC, and 100GB disk space.
+
 Sensor Hardware Considerations
 ------------------------------
 
