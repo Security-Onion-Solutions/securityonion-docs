@@ -148,7 +148,7 @@ Since receiver nodes only run :ref:`logstash` and :ref:`redis`, they don't requi
 Intrusion Detection Honeypot (IDH) Node
 ---------------------------------------
 
-For an IDH node, the overall system requirements are low: 1GB RAM, 2x CPU, 1x NIC, and 100GB disk space.
+For an :ref:`idh` node, the overall system requirements are low: 1GB RAM, 2x CPU, 1x NIC, and 100GB disk space.
 
 Sensor Hardware Considerations
 ------------------------------
