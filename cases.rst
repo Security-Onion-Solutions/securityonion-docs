@@ -127,8 +127,10 @@ The remainder of the main Cases page is a data table that shows a high level ove
 Data
 ----
 
-Cases data is stored in :ref:`elasticsearch`. You can view it in :ref:`kibana` by searching the ``so-case`` index with the following query:
+Cases data is stored in :ref:`elasticsearch`. You can view it in :ref:`hunt` by clicking the Options menu and disabling the ``Exclude case data`` option. You can then search the ``so-case`` index with the following query:
 
 ::
 
 	_index:"*:so-case"
+
+You can also use this query in :ref:`kibana`.
