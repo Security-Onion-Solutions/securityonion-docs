@@ -14,6 +14,15 @@ Starting in Security Onion 2.3.110, those logs should be ingested into :ref:`ela
 .. image:: images/soc-logins.png
   :target: _images/soc-logins.png
 
+Starting in Security Onion 2.3.120, :ref:`hunt` will include the following query in the drop-down query menu:
+
+::
+
+        event.module:kratos AND event.dataset:audit AND msg:authenticated | groupby http_request.headers.x-real-ip identity_id
+        
+identity_id
+-----------
+
 Once you see the auth logs, you will notice that the login is logged as ``identity_id``. You can find your desired ``identity_id`` as follows, replacing USERNAME@DOMAIN.COM with your desired SOC username:
 
 ::
