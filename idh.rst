@@ -18,7 +18,7 @@ Chris Sanders and Josh Brower presented the IDH concept at Security Onion Confer
 Installation
 ------------
 
-You can join an IDH node to a Standalone deployment or a full distributed deployment.
+You can join a new IDH node to an existing Standalone deployment or full distributed deployment. IDH nodes are dedicated to just being IDH nodes and cannot run any other services. Therefore, you must have a separate manager to connect to.
 
 Screenshots
 -----------
