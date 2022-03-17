@@ -39,6 +39,11 @@ For macOS deployments, install the package and then configure the following:
  
    sudo launchctl kickstart -k system/com.so-launcher.launcher
 
+If required, you can review logs for issues:
+
+ ::
+ 
+   sudo tail /var/log/so-launcher/launcher-stderr.log
 
 Agents - Updating
 -----------------
