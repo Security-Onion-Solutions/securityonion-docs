@@ -8,7 +8,6 @@ Security Onion would like to thank the following projects for their contribution
 (listed alphabetically)
 
 - :ref:`attack-navigator`
-- :ref:`cortex`
 - :ref:`curator`
 - :ref:`cyberchef`
 - :ref:`docker`
@@ -17,7 +16,6 @@ Security Onion would like to thank the following projects for their contribution
 - :ref:`filebeat`
 - :ref:`fleet`
 - :ref:`grafana`
-- :ref:`hive`
 - :ref:`kibana`
 - :ref:`logstash`
 - :ref:`osquery`
