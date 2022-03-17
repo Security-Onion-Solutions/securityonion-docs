@@ -53,11 +53,7 @@ Can I run Security Onion on Raspberry Pi or some other non-x86 box?
 
 No, we only support 64-bit Intel/AMD architectures. Please see the :ref:`hardware` section.
 
-| 
-| 
-| `back to top <#top>`__
-| 
-| 
+`back to top <#top>`__
 
 Users / Passwords
 -----------------
@@ -70,11 +66,9 @@ Please see the :ref:`passwords` section.
 How do I add a new user account?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Please see the :ref:`adding-accounts` section.\ 
-| 
-| `back to top <#top>`__
-| 
-| 
+Please see the :ref:`adding-accounts` section.\ 
+ 
+`back to top <#top>`__
 
 Support / Help
 --------------
@@ -87,13 +81,10 @@ Please see the :ref:`community-support` section.
 Is commercial support available for Security Onion?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Yes, we offer commercial support at https://securityonionsolutions.com.
-| 
-| 
-| `back to top <#top>`__
-| 
-| 
+Yes, we offer commercial support at https://securityonionsolutions.com.
 
+`back to top <#top>`__
+ 
 IDS engines
 -----------
 
@@ -103,7 +94,6 @@ Can Security Onion run in ``IPS`` mode?
 We do not support IPS.
 
 `back to top <#top>`__
- 
 
 Security Onion internals
 ------------------------
@@ -132,9 +122,6 @@ Why is my disk filling up?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Security Onion records full packet capture to disk via :ref:`stenographer`.
-
-Additionally, if you are running version 2.3.40 on a standalone installation or a combined manager/search node, please see `this announcement
-<https://github.com/Security-Onion-Solutions/securityonion/discussions/3738>`_.
 
 `back to top <#top>`__
 
