@@ -3,7 +3,7 @@
 Changing IP Addresses
 =====================
 
-If you need to change the IP address on a standalone machine, you can try the experimental utility ``so-ip-update``.
+The :ref:`best-practices` section recommends that you avoid changing IP addresses after installation. If for some reason you must do so, you can try the experimental utility ``so-ip-update``.
 
 .. warning::
 
