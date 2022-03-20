@@ -193,7 +193,7 @@ Sensors that have full packet capture enabled need LOTS of storage. For example,
 Packets
 ~~~~~~~
 
-You'll need some way of getting packets into your sensor interface(s). If you're just evaluating Security Onion, you can replay :ref:`pcaps`. For a production deployment, you'll need a SPAN/monitor port on an existing switch or a dedicated TAP. We recommend dedicated TAPs where possible.
+You'll need some way of getting packets into your sensor interface(s). If you're just evaluating Security Onion, you can replay :ref:`pcaps`. For a production deployment, you'll need a SPAN/monitor port on an existing switch or a dedicated TAP. We recommend dedicated TAPs where possible. If collecting traffic near a NAT boundary, make sure you collect from inside the NAT boundary so that you see the true internal IP addresses.
 
 Inexpensive tap/span options (listed alphabetically):
 
