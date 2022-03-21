@@ -3,7 +3,7 @@
 ElastAlert
 ==========
 
-From http://elastalert.readthedocs.io/en/latest/elastalert.html#overview:
+From https://elastalert2.readthedocs.io/en/latest/elastalert.html#overview:
 
     ElastAlert is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.
 
@@ -108,7 +108,7 @@ Keep in mind, for queries that span greater than a minute back in time, you may 
 
 ``allow_buffer_time_overlap: true``
 
-| https://elastalert.readthedocs.io/en/latest/ruletypes.html#buffer-time
+| https://elastalert2.readthedocs.io/en/latest/ruletypes.html#buffer-time
 | https://github.com/Yelp/elastalert/issues/805
 
 More Information
@@ -116,4 +116,4 @@ More Information
 
 .. seealso::
 
-    For more information about ElastAlert, please see http://elastalert.readthedocs.io/en/latest/.
+    For more information about ElastAlert, please see https://elastalert2.readthedocs.io/en/latest/.
