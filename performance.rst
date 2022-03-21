@@ -28,7 +28,7 @@ Disk/Memory
 If you have plenty of RAM, disable swap altogether.
 
 | Use ``hdparm`` to gather drive statistics and alter settings, as described here:
-| http://www.linux-magazine.com/Online/Features/Tune-Your-Hard-Disk-with-hdparm
+| https://www.linux-magazine.com/Online/Features/Tune-Your-Hard-Disk-with-hdparm
 
 ``vm.dirty_ratio`` is the maximum amount of system memory that can be filled with dirty pages before everything must get committed to disk.
 

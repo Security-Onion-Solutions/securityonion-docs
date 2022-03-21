@@ -3,7 +3,7 @@
 VirtualBox
 ==========
 
-In this section, we'll cover installing Security Onion on VirtualBox. You can download a copy of VirtualBox for Windows, Mac OS X, or Linux at http://www.virtualbox.org. 
+In this section, we'll cover installing Security Onion on VirtualBox. You can download a copy of VirtualBox for Windows, Mac OS X, or Linux at https://www.virtualbox.org. 
 
 Creating VM
 -----------

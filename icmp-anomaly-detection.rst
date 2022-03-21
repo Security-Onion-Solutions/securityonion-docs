@@ -14,7 +14,7 @@ Presentation
 ------------
 
 | You can find Eric's presentation here:
-| http://www.ericconrad.com/2016/09/c2-phone-home-leveraging-securityonion.html
+| https://www.ericconrad.com/2016/09/c2-phone-home-leveraging-securityonion.html
 
 Download
 --------
