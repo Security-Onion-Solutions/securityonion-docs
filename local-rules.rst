@@ -67,6 +67,6 @@ Alternatively, run ``salt -G 'role:so-sensor' cmd.run "so-strelka-restart"`` to 
 Remotely Managed Rules:
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-To have so-yara-update pull YARA rules from a Github repo, copy ``/opt/so/saltstack/local/salt/strelka/rules/``, and modify ``repos.txt`` to include the repo URL (one per line).
+If you have Internet access and want to have ``so-yara-update`` pull YARA rules from a Github repo, copy ``/opt/so/saltstack/local/salt/strelka/rules/``, and modify ``repos.txt`` to include the repo URL (one per line).
 
 Next, run ``so-yara-update`` to pull down the rules.  Finally, run ``so-strelka-restart`` to allow Strelka to pull in the new rules.
