@@ -37,5 +37,4 @@ If you'd like to customize SOC, please see the :ref:`soc-customization` section.
    cyberchef
    playbook
    fleet
-   hive
    attack-navigator
