@@ -7,7 +7,7 @@ From https://redis.io/:
 
     Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs and geospatial indexes with radius queries.
 
-On Standalone (non-Eval) installations and distributed deployments, Logstash on the manager node outputs to Redis. Search nodes can then consume from Redis.
+On Standalone (non-Eval) installations and distributed deployments, :ref:`logstash` on the manager node outputs to Redis. Search nodes can then consume from Redis.
 
 Queue
 -----
@@ -18,7 +18,7 @@ To see how many logs are in the Redis queue:
 
     sudo so-redis-count
 
-If the queue is backed up and doesn't seem to be draining, try stopping Logstash on the manager node:
+If the queue is backed up and doesn't seem to be draining, try stopping :ref:`logstash` on the manager node:
 
 ::
 
@@ -30,7 +30,7 @@ Then monitor the queue to see if it drains:
 
     watch 'sudo so-redis-count'
 
-If the Redis queue looks okay, but you are still having issues with logs getting indexed into Elasticsearch, you will want to check the Logstash statistics on the search node(s).
+If the Redis queue looks okay, but you are still having issues with logs getting indexed into :ref:`elasticsearch`, you will want to check the :ref:`logstash` statistics on the search node(s).
 
 .. |redis| image:: https://user-images.githubusercontent.com/16829864/37215984-91a348d4-2387-11e8-8c08-2e270b8fd986.png
 
@@ -39,18 +39,18 @@ Tuning
 
 We configure Redis to use 812MB of your total system memory.  If you have sufficient RAM available, you may want to increase the ``redis_maxmemory`` setting in ``/opt/so/saltstack/local/pillar/global.sls``. This value is in Megabytes so to set it to use 8 gigs of ram you would set the value to 8192.
 
-Logstash on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``ls_pipeline_batch_size`` variable to find the sweet spot for your deployment.
+:ref:`logstash` on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``ls_pipeline_batch_size`` variable to find the sweet spot for your deployment.
 
 .. seealso::
 
-    | For more information about logstash's output plugin for Redis, please see:
+    | For more information about the :ref:`logstash` output plugin for Redis, please see:
     | https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html
 
-Logstash on search nodes pulls from Redis.  For best performance, you may want to tune ``ls_pipeline_batch_size`` and ``ls_input_threads`` to find the sweet spot for your deployment. 
+:ref:`logstash` on search nodes pulls from Redis.  For best performance, you may want to tune ``ls_pipeline_batch_size`` and ``ls_input_threads`` to find the sweet spot for your deployment. 
 
 .. seealso::
 
-    | For more information about logstash's input plugin for Redis, please see:
+    | For more information about the :ref:`logstash` input plugin for Redis, please see:
     | https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html
 
 Diagnostic Logging
