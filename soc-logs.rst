@@ -3,7 +3,7 @@
 SOC Logs
 ========
 
-If you need to see SOC auth logs, you can run the following:
+If you need to see :ref:`soc` auth logs, you can run the following:
 
 ::
 
