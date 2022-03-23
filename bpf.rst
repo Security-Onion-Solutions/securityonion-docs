@@ -17,7 +17,7 @@ You can specify your BPF in the global pillar on your manager node (``/opt/so/sa
 
 If you have separate sensors reporting to that manager node, they will pull down the relevant BPF as part of the Salt update that runs every 15 minutes and then restart :ref:`suricata`/:ref:`stenographer`/:ref:`zeek` so that the BPF change will take effect.
 
-Use the following format for :ref:`stenographer` (``steno``), :ref:`suricata` (``nids``) and :ref:`zeek` (``zeek``):
+:ref:`stenographer` example:
 
 ::
 
@@ -25,14 +25,21 @@ Use the following format for :ref:`stenographer` (``steno``), :ref:`suricata` (`
      bpf:
       - "Your BPF Here"
       
+:ref:`suricata` example:
+
+::
+      
     nids:
      bpf:
       - "Your BPF Here"
-      
+  
+:ref:`zeek` example:
+
+::
+
     zeek:
      bpf:
       - "Your BPF Here"
-
 
 Node-Specific BPF
 ~~~~~~~~~~~~~~~~~
