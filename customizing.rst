@@ -17,4 +17,3 @@ This section covers how to customize Security Onion for your environment.
    hostname
    ip
    url-base
-   cortex
