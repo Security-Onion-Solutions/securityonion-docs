@@ -7,7 +7,7 @@ From https://elastalert2.readthedocs.io/en/latest/elastalert.html#overview:
 
     ElastAlert is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.
 
-ElastAlert queries ref:`elasticsearch` and provides an alerting mechanism with multiple output types, such as Slack, Email, JIRA, OpsGenie, and many more.
+ElastAlert queries :ref:`elasticsearch` and provides an alerting mechanism with multiple output types, such as Slack, Email, JIRA, OpsGenie, and many more.
 
 Configuration
 -------------
