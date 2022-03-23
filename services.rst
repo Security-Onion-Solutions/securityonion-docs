@@ -11,19 +11,19 @@ You can control individual services with the ``so-<component>-<verb>`` scripts. 
 
 The following examples are for :ref:`zeek`, but you could substitute whatever service you're trying to control (:ref:`logstash`, :ref:`elasticsearch`, etc.).
 
-Start Zeek:
+Start :ref:`zeek`:
 
 ::
 
     sudo so-zeek-start
 
-Stop Zeek:
+Stop :ref:`zeek`:
 
 ::
 
     sudo so-zeek-stop
 
-Restart Zeek:
+Restart :ref:`zeek`:
 
 ::
 
