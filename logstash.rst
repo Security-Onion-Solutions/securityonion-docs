@@ -43,7 +43,7 @@ Since Logstash no longer parses logs in Security Onion 2, modifying existing par
 Adding New Logs
 ---------------
 
-If you want to add a new log to the list of logs that are sent to Elasticsearch for parsing, you can update the logstash pipeline configurations by adding to ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom/``. 
+If you want to add a new log to the list of logs that are sent to :ref:`elasticsearch` for parsing, you can update the logstash pipeline configurations by adding to ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom/``. 
 
 If you are modifying or adding a new ``manager`` pipeline, then first copy ``/opt/so/saltstack/default/pillar/logstash/manager.sls`` to ``/opt/so/saltstack/local/pillar/logstash/``, then add the following to the ``manager.sls`` file under the ``local`` directory:
 
@@ -168,7 +168,7 @@ Queue Max Bytes
 Dead Letter Queue
 ~~~~~~~~~~~~~~~~~
 
-If you want to check for dropped events, you can enable the dead letter queue. This will write all records that are not able to make it into Elasticsearch into a sequentially-numbered file (for each start/restart of Logstash).
+If you want to check for dropped events, you can enable the dead letter queue. This will write all records that are not able to make it into :ref:`elasticsearch` into a sequentially-numbered file (for each start/restart of Logstash).
 
 This can be achieved by adding the following to the Logstash configuration:
 
