@@ -3,7 +3,7 @@
 SOC Customization
 =================
 
-Below are some ways in which you can customize SOC. Once all customizations are complete, you can then restart SOC to make the changes take effect:
+Below are some ways in which you can customize :ref:`soc`. Once all customizations are complete, you can then restart SOC to make the changes take effect:
 
 ::
 
