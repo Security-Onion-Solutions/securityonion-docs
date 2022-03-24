@@ -3,7 +3,12 @@
 SOC Logs
 ========
 
-If you need to see :ref:`soc` auth logs, you can run the following:
+Standard :ref:`soc` logs can be found at ``/opt/so/log/soc/``.
+
+SOC Auth Logs
+-------------
+
+SOC auth is handled by Kratos and logs can be found at ``/opt/so/log/kratos/``. To look for successful SOC logins, you can run the following:
 
 ::
 
@@ -21,7 +26,7 @@ Starting in Security Onion 2.3.120, :ref:`hunt` will include the following query
         event.module:kratos AND event.dataset:audit AND msg:authenticated | groupby http_request.headers.x-real-ip identity_id
         
 identity_id
------------
+~~~~~~~~~~~
 
 Once you see the auth logs, you will notice that the login is logged as ``identity_id``. You can find your desired ``identity_id`` as follows, replacing USERNAME@DOMAIN.COM with your desired SOC username:
 
