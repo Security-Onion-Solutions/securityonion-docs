@@ -22,24 +22,24 @@ If you have separate sensors reporting to that manager node, they will pull down
 ::
 
     steno:
-     bpf:
-      - "Your BPF Here"
+      bpf:
+        - "Your BPF Here"
       
 :ref:`suricata` example:
 
 ::
       
     nids:
-     bpf:
-      - "Your BPF Here"
+      bpf:
+        - "Your BPF Here"
   
 :ref:`zeek` example:
 
 ::
 
     zeek:
-     bpf:
-      - "Your BPF Here"
+      bpf:
+        - "Your BPF Here"
 
 Node-Specific BPF
 ~~~~~~~~~~~~~~~~~
@@ -54,8 +54,8 @@ Suppose you want :ref:`stenographer` to not record full packet capture for port 
 ::
 
     steno:
-     bpf:
-      - not port 443
+      bpf:
+        - not port 443
 
 Quoting
 ~~~~~~~
@@ -65,8 +65,8 @@ YAML rules apply and so if you want to use a reserved YAML character such as ``[
 ::
 
     steno:
-     bpf:
-      - "!(port 443)"
+      bpf:
+        - "!(port 443)"
       
 Multiple Conditions
 ~~~~~~~~~~~~~~~~~~~
@@ -78,20 +78,20 @@ Here's an example of joining conditions with a logical AND:
 ::
 
     nids:
-     bpf:
-      - not host 192.168.1.2 &&
-      - not host 192.168.1.3 &&
-      - not host 192.168.1.4
+      bpf:
+        - not host 192.168.1.2 &&
+        - not host 192.168.1.3 &&
+        - not host 192.168.1.4
       
 Here's an example of joining conditions with a logical OR:
 
 ::
 
     nids:
-     bpf:
-      - host 192.168.1.2 ||
-      - host 192.168.1.3 ||
-      - host 192.168.1.4
+      bpf:
+        - host 192.168.1.2 ||
+        - host 192.168.1.3 ||
+        - host 192.168.1.4
 
 VLAN
 ~~~~
