@@ -80,9 +80,7 @@ The following services are available for use with the IDH node. Pay special atte
 - TFTP - a tftp server which alerts on requests
 - NTP - an NTP server which alerts on ntp requests
 
-RDP & SMB are not currently available for use within an IDH node.
-
-* Modified from https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration
+This is based on the list at https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration. RDP & SMB are not currently available for use within an IDH node.
 
 In addition to changing the default ports, some of these services have further configuration options. For instance, the HTTP server has the ability to use custom HTML pages ("skins"). For more information, please see the OpenCanary documentation at https://opencanary.readthedocs.io/en/latest/starting/configuration.html#default-configuration.
 
@@ -90,8 +88,8 @@ These types of configuration changes can be made by modifying the minion pillar 
 
 SSH
 ---
-For IDH nodes, the local sshd is configured to listen on TCP/2222 and connections are only accepted from the Manager node. This allows TCP/22 to be used for honeypot services.
 
+For IDH nodes, the local sshd is configured to listen on TCP/2222 and connections are only accepted from the Manager node. This allows TCP/22 to be used for honeypot services.
 
 Custom Configuration 
 --------------------
@@ -107,12 +105,12 @@ Services can be customized in two ways:
      iptables -D INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 
 
-2) Service-specific config, like SSH version string. All of the defaults for these types of configuration can be found in the following files on the Manager:
+2) Service-specific config, like SSH version string. All of the defaults for these types of configuration can be found in the following files on the manager:
 
 ``/opt/so/saltstack/default/salt/idh/defaults/$Service.defaults.yaml``
 
 
-Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the Manager in ``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``.
+Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the manager in ``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``.
 
 
 Custom Configuration - Example Port Change
@@ -124,7 +122,7 @@ For example, suppose that we already have the HTTP service running, but we want 
 
         The following configuration files are YAML, and as such, no tabs are permitted, only spaces! Also, the number of spaces matter!
 
-First off, we need to copy the default configuration for the HTTP service. This can be found on the Manager in ``/opt/so/saltstack/default/salt/idh/defaults/http.defaults.yaml``. Out of the defaults defined there, we just need the following:
+First, we need to copy the default configuration for the HTTP service. This can be found on the manager in ``/opt/so/saltstack/default/salt/idh/defaults/http.defaults.yaml``. Out of the defaults defined there, we just need the following:
 
 ::
 
@@ -148,14 +146,14 @@ The minion sls file should look something like this:
         config:
           http.port: 8080
 
-With this configuration changed, we can now make it active on the IDH node by using :ref:`salt` to apply the ``idh`` & ``firewall`` states.
+With this configuration changed, we can now make it active on the IDH node by using :ref:`salt` to apply the ``idh`` and ``firewall`` states.
 
-Run the following from the Manager (replacing ``$IDH-Hostname`` as appropriate):
+Run the following from the manager (replacing ``$IDH-Hostname`` with your actual IDH hostname):
 
 ::
 
      sudo salt '$IDH-Hostname*' state.apply idh,firewall
 
-You should now be able to browse to the HTTP server on the IDH node on TCP/8080!
+You should now be able to browse to the HTTP server on the IDH node on TCP/8080.
 
-Any other configuration in the ``http.defaults.yaml`` can be overriden in this way.
+You should be able to override any other configuration in the ``http.defaults.yaml`` in a similar manner.
