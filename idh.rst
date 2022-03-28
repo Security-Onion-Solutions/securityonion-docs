@@ -80,7 +80,7 @@ The following services are available for use with the IDH node. Pay special atte
 - TFTP - a tftp server which alerts on requests
 - NTP - an NTP server which alerts on ntp requests
 
-This is based on the list at https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration. RDP & SMB are not currently available for use within an IDH node.
+This is based on the list at https://opencanary.readthedocs.io/en/latest/starting/configuration.html#services-configuration. RDP and SMB are not currently available for use within an IDH node.
 
 In addition to changing the default ports, some of these services have further configuration options. For instance, the HTTP server has the ability to use custom HTML pages ("skins"). For more information, please see the OpenCanary documentation at https://opencanary.readthedocs.io/en/latest/starting/configuration.html#default-configuration.
 
