@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.110 Hotfix [20220401] Changes
+---------------------------------
+
+- FIX: Updated Saltstack to 3004.1 to address CVE-2022-22934 `#7701 <https://github.com/Security-Onion-Solutions/securityonion/issues/7701>`_
+
 2.3.110 Changes
 ----------------
 
