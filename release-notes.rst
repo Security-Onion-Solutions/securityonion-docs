@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.110 Hotfix [20220405] Changes
+---------------------------------
+
+- FIX: Change the salt bootstrap script to pull from the proper location for Ubuntu.
+
 2.3.110 Hotfix [20220401] Changes
 ---------------------------------
 
