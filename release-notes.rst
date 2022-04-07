@@ -3,6 +3,17 @@
 Release Notes
 =============
 
+2.3.110 Hotfix [20220407] Changes
+---------------------------------
+
+- FIX: Previoulsy failed Ubuntu minions will now be able to get the proper repo for install.
+- FIX: Fixed a regression in AIRGAP that was preventing salt from upgrading.
+
+2.3.110 Hotfix [20220407] Known Issues
+--------------------------------------
+
+- If you had a previous failed soup please ensure that the salt-master service is running before you run soup again.
+
 2.3.110 Hotfix [20220405] Changes
 ---------------------------------
 
