@@ -6,8 +6,8 @@ Release Notes
 2.3.110 Hotfix [20220407] Changes
 ---------------------------------
 
-- FIX: Previoulsy failed Ubuntu minions will now be able to get the proper repo for install.
-- FIX: Fixed a regression in AIRGAP that was preventing salt from upgrading.
+- FIX: Previously failed Ubuntu minions will now be able to get the proper repo for install
+- FIX: Fixed a regression in AIRGAP that was preventing salt from upgrading
 
 2.3.110 Hotfix [20220407] Known Issues
 --------------------------------------
@@ -17,7 +17,7 @@ Release Notes
 2.3.110 Hotfix [20220405] Changes
 ---------------------------------
 
-- FIX: Change the salt bootstrap script to pull from the proper location for Ubuntu.
+- FIX: Change the salt bootstrap script to pull from the proper location for Ubuntu
 
 2.3.110 Hotfix [20220401] Changes
 ---------------------------------
