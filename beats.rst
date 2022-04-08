@@ -12,7 +12,7 @@ We can use Elastic Beats to facilitate the shipping of endpoint logs to Security
 so-allow
 --------
 
-Run ``sudo so-allow`` and select the ``b`` option to allow your Beats agents to send their logs to :ref:`logstash` port ``5044/tcp``.
+Run :ref:`so-allow` and select the ``b`` option to allow your Beats agents to send their logs to :ref:`logstash` port ``5044/tcp``.
 
 Version
 -------
