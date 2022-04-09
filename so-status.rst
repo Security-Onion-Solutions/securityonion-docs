@@ -49,4 +49,4 @@ To check the status of Security Onion services, run ``sudo so-status``:
 
 so-status reads the list of enabled services from ``/opt/so/conf/so-status/so-status.conf`` and checks the status of each. If you ever disable a service, you may need to remove it from that file.
 
-If you're running Security Onion in Import mode, then so-status will show ``so-steno``, ``so-suricata``, and ``so-zeek`` as ``DISABLED`` since they are not sniffing live traffic. :ref:`suricata` and :ref:`zeek` will still analyze pcaps normally when running :ref:`so-import-pcap`. Steno is not used at all in Import mode.
+If you're running Security Onion in Import mode, then so-status will show ``so-steno``, ``so-suricata``, and ``so-zeek`` as ``DISABLED`` since they are not sniffing live traffic. :ref:`suricata` and :ref:`zeek` will still analyze pcaps normally when running :ref:`so-import-pcap`. :ref:`stenographer` is not used at all in Import mode.
