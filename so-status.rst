@@ -3,7 +3,7 @@
 so-status
 =========
 
-``so-status`` will show the status of Security Onion services.
+To check the status of Security Onion services, run ``sudo so-status``:
 
 ::
 
@@ -47,4 +47,6 @@ so-status
 	    so-thehive-es --------------------------------- [ OK ]    
 	    so-wazuh -------------------------------------- [ OK ] 
 
-It reads the list of enabled services from ``/opt/so/conf/so-status/so-status.conf`` and checks the status of each. If you ever disable a service, you may need to remove it from that file.
+so-status reads the list of enabled services from ``/opt/so/conf/so-status/so-status.conf`` and checks the status of each. If you ever disable a service, you may need to remove it from that file.
+
+If you're running Security Onion in Import Mode, then so-status will show ``so-steno``, ``so-suricata``, and ``so-zeek`` as ``DISABLED`` since they are not sniffing live traffic. They will still function normally when running :ref:`so-import-pcap`.
