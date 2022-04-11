@@ -9,15 +9,19 @@ so-import-pcap
 -  generate network metadata using :ref:`zeek`
 -  store IDS alerts and network metadata in :ref:`elasticsearch` with original timestamps
 -  store pcaps where :ref:`soc` can find them
+-  provide a hyperlink for you to view all alerts and logs in :ref:`hunt`
+
+In addition to viewing alerts and logs in :ref:`hunt`, you can also find NIDS alerts in :ref:`alerts` and all logs in :ref:`kibana`.
+
+Configuration
+-------------
+      
+so-import-pcap requires you to run through Setup and choose a configuration that supports so-import-pcap. This includes Import Node and other nodes that include sensor services like Eval and Standalone. The quickest and easiest option is to choose Import Node which gives you the minimal services necessary to import a pcap.
+
+If you’re running a Security Onion Import node and run :ref:`so-status`, then it will show ``so-steno``, ``so-suricata``, and ``so-zeek`` as ``DISABLED`` since they are not sniffing live traffic. :ref:`suricata` and :ref:`zeek` will still analyze pcaps normally when running so-import-pcap. :ref:`stenographer` is not used at all in Import mode.
 
 Usage
 -----
-
-.. warning::
-
-   so-import-pcap works differently on Security Onion 2 than it did in previous versions! 
-      
-so-import-pcap requires you to run through Setup and choose a configuration that supports so-import-pcap. This includes Import Node and other nodes that include sensor services like Eval and Standalone. The quickest and easiest option is to choose Import Node which gives you the minimal services necessary to import a pcap. so-import-pcap then provides a hyperlink for you to view all alerts and logs in :ref:`hunt`. You can also find NIDS alerts in :ref:`alerts` and all logs in :ref:`kibana`.
 
 Once Setup completes, you can then run ``sudo so-import-pcap`` and supply the full path to at least one pcap file. For example, to import a single pcap named ``import.pcap``:
 
