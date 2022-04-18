@@ -33,6 +33,11 @@ Then choose from one of the common honeypot options or customize:
 .. image:: images/idh-install-2.png
   :target: _images/idh-install-2.png
 
+Starting in Security Onion 2.3.120, you can optionally prevent the IDH services from listening on the management interface:
+
+.. image:: images/idh-install-3.png
+  :target: _images/idh-install-3.png
+
 If you choose the webserver option, anybody who connects to the webserver will see a web page like this:
 
 .. image:: images/idh-webserver.png
