@@ -14,11 +14,9 @@ The ``so-analyst-install`` script will install a full GNOME desktop environment 
 
   ``so-analyst-install`` currently only supports CentOS, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of CentOS 7.
   
-.. note::
+Starting in Security Onion 2.3.120, our ISO image includes a new boot menu option for Analyst installs that will partition your disk appropriately and immediately perform an Analyst installation.
 
- ``so-analyst-install`` currently downloads packages from the Internet, so you will need to ensure that networking is configured before running ``so-analyst-install``.
-
-To connect from the Analyst VM to your manager node, you will need to run :ref:`so-allow` on the manager node and choose the ``analyst`` option to allow the traffic through the host-based :ref:`firewall`.
+Security Onion 2.3.120 also allows you to optionally join your Analyst installation to your grid. This allows it to pull updates from the grid and automatically trust the grid's HTTPS certificate. It also updates the manager's firewall to allow the Analyst installation to connect. If you choose not to join your Analyst installation to your grid, then you may need to run :ref:`so-allow` on the manager node and choose the ``analyst`` option to allow the traffic through the host-based :ref:`firewall`.
 
 .. toctree::
    :maxdepth: 2
