@@ -21,7 +21,7 @@ Security Onion 2.3.120 also allows you to optionally join your Analyst installat
 Disabling
 ---------
 
-If you need to disable the Analyst desktop environment, find the ``workstation`` setting in your :ref:`salt` pillar and change ``enabled: true`` to ``enabled: false``:
+Starting in Security Onion 2.3.120, the analyst desktop is controlled via :ref:`salt` pillar. If you need to disable the Analyst desktop environment, find the ``workstation`` setting in your :ref:`salt` pillar and change ``enabled: true`` to ``enabled: false``:
 
 ::
 
