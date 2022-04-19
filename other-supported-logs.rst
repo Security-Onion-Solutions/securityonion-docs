@@ -5,6 +5,11 @@ Other Supported Logs
 
 We include :ref:`elasticsearch` ingest parsers for several log types that don't have :ref:`filebeat` modules.
 
+Example: pfSense
+----------------
+
+Security Onion includes :ref:`elasticsearch` ingest parsers for pfSense firewall logs. Simply run :ref:`so-allow` as described in the :ref:`syslog` section and then configure your pfSense firewall to send syslog to the IP address of your Security Onion box. You should then be able to see your firewall logs using the ``Firewall`` query in :ref:`hunt`.
+
 Example: RITA
 -------------
 
