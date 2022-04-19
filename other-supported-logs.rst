@@ -32,31 +32,31 @@ Once ingested into Security Onion, you should be able to search for :ref:`rita` 
 Summary
 ~~~~~~~
 
-.. image:: https://user-images.githubusercontent.com/16829864/164031803-35586e1a-2c51-4c1d-bdc6-1f8034ca35c6.png
- :target: https://user-images.githubusercontent.com/16829864/164031803-35586e1a-2c51-4c1d-bdc6-1f8034ca35c6.png
+.. image:: images/rita-summary.png
+ :target: _images/rita-summary.png
  
 Connections
 ~~~~~~~~~~~
 
-.. image:: https://user-images.githubusercontent.com/16829864/164031943-e7a7c296-16f5-4eaf-a4df-efb7779a98d0.png
- :target: https://user-images.githubusercontent.com/16829864/164031943-e7a7c296-16f5-4eaf-a4df-efb7779a98d0.png
+.. image:: images/rita-connections.png
+ :target: _images/rita-connections.png
  
 DNS
 ~~~
 
-.. image:: https://user-images.githubusercontent.com/16829864/164031973-eadac445-7327-442e-805c-b30fd671b9e6.png
- :target: https://user-images.githubusercontent.com/16829864/164031973-eadac445-7327-442e-805c-b30fd671b9e6.png
+.. image:: images/rita-dns.png
+ :target: _images/rita-dns.png
 
 Beacon
 ~~~~~~
 
-.. image::  https://user-images.githubusercontent.com/16829864/164031876-e59dccf7-95cb-4e90-90c1-6eb2e0b8acfa.png
- :target:  https://user-images.githubusercontent.com/16829864/164031876-e59dccf7-95cb-4e90-90c1-6eb2e0b8acfa.png
+.. image:: images/rita-beacon.png
+ :target: _images/rita-beacon.png
 
 Alert
 ~~~~~
 
 If the value for ``beacon.score`` in a ``beacon`` record equals ``1``, an alert will be generated and viewable in :ref:`alerts`.
 
-.. image:: https://user-images.githubusercontent.com/16829864/164031733-5633fd36-2e6e-4e93-aecc-6b13e21a2114.png
- :target: https://user-images.githubusercontent.com/16829864/164031733-5633fd36-2e6e-4e93-aecc-6b13e21a2114.png
+.. image:: images/rita-alert.png
+ :target: _images/rita-alert.png
