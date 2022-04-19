@@ -15,7 +15,7 @@ Starting in Security Onion 2.3.120, we include :ref:`elasticsearch` ingest parse
    rita:
      enabled: True
 
-This will configure :ref:`filebeat` to start the :ref:`filebeat` inputs for :ref:`rita`.  The inputs look for the following files:
+This will enable the following :ref:`filebeat` inputs:
 
 ``/nsm/rita/beacons.csv``
 
