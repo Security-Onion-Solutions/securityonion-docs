@@ -59,7 +59,7 @@ Beacon:
 Alert:
 ######
 
-If the value for `beacon.score` in a `beacon` record equals `1`, an alert will be generated and viewable in SOC Alerts.
+If the value for ``beacon.score`` in a ``beacon`` record equals ``1``, an alert will be generated and viewable in SOC Alerts.
 
 .. image:: https://user-images.githubusercontent.com/16829864/164031733-5633fd36-2e6e-4e93-aecc-6b13e21a2114.png
  :target: https://user-images.githubusercontent.com/16829864/164031733-5633fd36-2e6e-4e93-aecc-6b13e21a2114.png
