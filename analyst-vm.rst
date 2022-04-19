@@ -18,6 +18,17 @@ Starting in Security Onion 2.3.120, our ISO image includes a new boot menu optio
 
 Security Onion 2.3.120 also allows you to optionally join your Analyst installation to your grid. This allows it to pull updates from the grid and automatically trust the grid's HTTPS certificate. It also updates the manager's firewall to allow the Analyst installation to connect. If you choose not to join your Analyst installation to your grid, then you may need to run :ref:`so-allow` on the manager node and choose the ``analyst`` option to allow the traffic through the host-based :ref:`firewall`.
 
+Disabling
+---------
+
+If you need to disable the Analyst desktop environment, find the ``workstation`` setting in your :ref:`salt` pillar and change ``enabled: true`` to ``enabled: false``:
+
+::
+
+	workstation:
+	  gui:
+	    enabled: false
+
 .. toctree::
    :maxdepth: 2
    
