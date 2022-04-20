@@ -19,6 +19,12 @@ Security
 
 To prevent tampering, our Docker images are signed using GPG keys. :ref:`soup` verifies GPG signatures any time Docker images are updated.
 
+
+Elastic
+-------
+
+To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co.
+
 Images
 ------
 
@@ -28,11 +34,15 @@ After installation, you can see all Docker images with the following command:
 
     sudo docker images
     
-Elastic
--------
+Logs
+----
 
-To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co.
+If a service is not writing its logs to ``/opt/so/log``, then you may need to check the Docker logs for more detail. For example, to check the Docker logs for :ref:`kibana`:
 
+::
+
+    sudo docker logs so-kibana
+    
 Registry
 --------
 
