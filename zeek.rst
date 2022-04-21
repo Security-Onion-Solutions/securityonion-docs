@@ -445,7 +445,7 @@ Since ``zeek:zeekctl`` is a dictionary with dictionary values, we do not need to
 Diagnostic Logging
 ------------------
 
-Zeek diagnostic logs can be found in ``/nsm/zeek/logs/``. Look for files like ``reporter.log``, ``stats.log``, ``stderr.log``, and ``stdout.log``  Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+Zeek diagnostic logs can be found in ``/nsm/zeek/logs/``. Look for files like ``reporter.log``, ``stats.log``, ``stderr.log``, and ``stdout.log``. Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
 
 ::
 
