@@ -10,7 +10,7 @@ Configuration
 
 A node can be assigned either the global homenet or its own homenet.
 
-By default, a node will use the global homenet pillar value if it is defind in the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) under ``global:hnmanager``. 
+By default, a node will use the global homenet pillar value if it is defined in the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) under ``global:hnmanager``. 
 
 ::
 
@@ -33,7 +33,7 @@ In order to define a per node homenet, it can be defined in the minion pillar fi
     uniqueid: 1602623674
     hnsensor: 10.0.0.0/8
 
-In order to sync the configuration change with the node, we can either wait for the node to automatically highstate on the predefined interval, or we can force it. Since this homenet only applies to :ref:`suricata`, we can apply the ``suricata`` state to the node.
+In order to sync the configuration change with the node, we can either wait for the node to automatically highstate on the predefined interval or we can force it. Since this homenet only applies to :ref:`suricata`, we can apply the ``suricata`` state to the node.
 
 - From the manager:
 
