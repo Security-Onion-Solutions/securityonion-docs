@@ -116,7 +116,7 @@ Elastalert diagnostic logs are in ``/opt/so/log/elastalert/``. Depending on what
 
 ::
 
-	sudo docker logs so-redis
+	sudo docker logs so-elastalert
 
 More Information
 ----------------
