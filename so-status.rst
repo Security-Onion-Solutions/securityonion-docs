@@ -14,7 +14,6 @@ To check the status of Security Onion services, run ``sudo so-status``:
 	Checking container statuses
 
 	    so-aptcacherng -------------------------------- [ OK ]    
-	    so-cortex ------------------------------------- [ OK ]    
 	    so-curator ------------------------------------ [ OK ]    
 	    so-dockerregistry ----------------------------- [ OK ]    
 	    so-elastalert --------------------------------- [ OK ]    
@@ -43,8 +42,6 @@ To check the status of Security Onion services, run ``sudo so-status``:
 	    so-strelka-manager ---------------------------- [ OK ]    
 	    so-suricata ----------------------------------- [ OK ]    
 	    so-telegraf ----------------------------------- [ OK ]    
-	    so-thehive ------------------------------------ [ OK ]    
-	    so-thehive-es --------------------------------- [ OK ]    
 	    so-wazuh -------------------------------------- [ OK ] 
 
 so-status reads the list of enabled services from ``/opt/so/conf/so-status/so-status.conf`` and checks the status of each. If you ever disable a service, you may need to remove it from that file.

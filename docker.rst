@@ -98,12 +98,6 @@ If you have VMware Tools installed and you suspend and then resume, the Docker i
 Dependencies
 ------------
 
-TheHive / Cortex
-~~~~~~~~~~~~~~~~
-| ``so-thehive`` - REQ - TheHive Web App
-| ``so-thehive-cortex`` - OPT - Cortex Web App
-| ``so-thehive-es`` - REQ - TheHive & Cortex state data
-
 Fleet
 ~~~~~
 | ``so-fleet`` - REQ - Fleet Web App
@@ -132,7 +126,7 @@ Kibana
 
 Zeek
 ~~~~
-| ``so-bro`` - REQ - Zeek app
+| ``so-zeek`` - REQ - Zeek app
 
 More Information
 ----------------
