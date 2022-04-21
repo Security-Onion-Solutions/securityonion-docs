@@ -52,7 +52,11 @@ By default, Stenographer limits the number of files in the pcap directory to 30K
 
 Diagnostic Logging
 ------------------
-Diagnostic logging for Stenographer can be found at ``/opt/so/log/stenographer/``.
+Diagnostic logging for Stenographer can be found at ``/opt/so/log/stenographer/``. Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+	sudo docker logs so-steno
 
 Disabling
 ---------

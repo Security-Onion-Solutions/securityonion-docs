@@ -442,6 +442,15 @@ In order to add or modify an option in ``zeekctl``, we will need to modify eithe
 
 Since ``zeek:zeekctl`` is a dictionary with dictionary values, we do not need to redefine the entire pillar here like we did for ``zeek:local`` above. Once the pillar file is saved and the node checks in with the manager, the ``zeekctl.cfg`` file will be updated and the ``so-zeek container`` will be restarted.
 
+Diagnostic Logging
+------------------
+
+Zeek diagnostic logs can be found in ``/nsm/zeek/logs/``. Look for files like ``reporter.log``, ``stats.log``, ``stderr.log``, and ``stdout.log``  Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-zeek
+
 Disabling
 ---------
 

@@ -169,7 +169,11 @@ This can take a few minutes to complete if pulling in a large amount of new rule
 Diagnostic Logging
 ------------------
 
-Playbook logs can be found in ``/opt/so/log/playbook/``.
+Playbook logs can be found in ``/opt/so/log/playbook/``. Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-playbook
 
 More Information
 ----------------

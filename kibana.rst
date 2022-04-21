@@ -104,7 +104,11 @@ Starting in 2.3.90, ``/opt/so/conf/kibana/etc/kibana.yml`` can be managed using 
 Diagnostic Logging
 ------------------
 
-Kibana logs to ``/opt/so/log/kibana/kibana.log``.
+Kibana logs to ``/opt/so/log/kibana/kibana.log``. Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-kibana
 
 If you try to access Kibana and it says ``Kibana server is not ready yet`` even after waiting a few minutes for it to fully initialize, then check ``/opt/so/log/kibana/kibana.log``. You may see something like:
 

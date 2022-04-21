@@ -25,8 +25,11 @@ Fleet configuration can be found in ``/opt/so/conf/fleet/``. However, please kee
 Diagnostic Logging
 ------------------
 
-Fleet logs can be found in ``/opt/so/log/fleet/``.
+Fleet logs can be found in ``/opt/so/log/fleet/``. Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
 
+::
+
+        sudo docker logs so-fleet
 
 fleetctl
 --------

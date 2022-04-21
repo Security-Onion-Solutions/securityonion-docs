@@ -55,7 +55,12 @@ We configure Redis to use 812MB of your total system memory.  If you have suffic
 
 Diagnostic Logging
 ------------------
-Redis logs can be found at ``/opt/so/log/redis/``.
+
+Redis logs can be found at ``/opt/so/log/redis/``. Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-redis
 
 More Information
 ----------------

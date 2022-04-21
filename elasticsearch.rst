@@ -23,6 +23,12 @@ Diagnostic Logging
 -  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
 -  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.
 
+Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-elasticsearch
+
 Storage
 -------
 

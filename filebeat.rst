@@ -23,6 +23,12 @@ Filebeat's log can be found in ``/opt/so/log/filebeat/``.
 
 To debug Filebeat, copy ``/opt/so/saltstack/default/salt/filebeat/etc/filebeat.yml`` to ``/opt/so/saltstack/local/salt/filebeat/etc/filebeat.yml``, then change the ``logging.level`` value to ``debug``. Next, restart Filebeat with ``so-filebeat-restart``.  Be sure to remove the ``local`` file after debugging.
 
+Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-filebeat
+
 Modules
 -------
 
