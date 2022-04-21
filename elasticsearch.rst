@@ -239,24 +239,21 @@ Here are a few tips from https://www.elastic.co/blog/how-many-shards-should-i-ha
 
     TIP: The number of shards you can hold on a node will be proportional to the amount of heap you have available, but there is no fixed limit enforced by Elasticsearch. A good rule-of-thumb is to ensure you keep the number of shards per node below 20 to 25 per GB heap it has configured. A node with a 30GB heap should therefore have a maximum of 600-750 shards, but the further below this limit you can keep it the better. This will generally help the cluster stay in good health.
 
-To see your existing shards:
+To see your existing shards, run the following command and the number of shards will be shown in the fifth column:
 
 ::
 
     sudo so-elasticsearch-query _cat/indices
     
-The number of shards will be shown in the fifth column.
-
 If you want to view the detail for each of those shards:
 
 ::
 
     sudo so-elasticsearch-query _cat/shards
 
-
 Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
 
-The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar/global.sls``. You can adjust shard counts for each index individually to meet your needs. The next time the node checks in it will apply the settings automatically.
+The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar/global.sls``. You can adjust shard counts for each index individually to meet your needs. The next time the node checks in, it will apply the settings automatically.
 
 Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
 
