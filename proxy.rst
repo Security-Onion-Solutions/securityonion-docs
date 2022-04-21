@@ -3,7 +3,7 @@
 Proxy Configuration
 ===================
 
-Starting in Security Onion 2.3.40, Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. Otherwise, if you need to configure manually, please continue reading.
+Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. Otherwise, if you need to configure manually, please continue reading.
 
 There is no way to set a global proxy on Linux, but several tools will route their traffic through a proxy if the following lines are added to ``/etc/environment``:
 

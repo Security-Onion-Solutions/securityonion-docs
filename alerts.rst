@@ -8,7 +8,7 @@ Alerts
 .. image:: images/alerts.png
   :target: _images/alerts.png
   
-Starting in Security Onion 2.3.60, there is an Options drop-down menu that allows you to set options such as Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone.
+There is an Options drop-down menu that allows you to set options such as Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone.
 
 Toggles
 -------
@@ -35,7 +35,7 @@ When enabled, the Alerts page will automatically refresh at the time interval yo
 Time Zone
 ---------
 
-Alerts will try to detect your local time zone via your browser. Starting in Security Onion 2.3.60, you can manually specify your time zone if necessary.
+Alerts will try to detect your local time zone via your browser. You can manually specify your time zone if necessary.
 
 Query Bar
 ---------
@@ -82,7 +82,7 @@ By default, alerts are grouped by whatever criteria is selected in the query bar
 .. image:: images/alerts-grouped.png
   :target: _images/alerts-grouped.png
 
-Starting in Security Onion 2.3.60, you can also click the value in the Count column to perform a quick drilldown. Note that this quick drilldown feature is only enabled for certain queries.
+You can also click the value in the Count column to perform a quick drilldown. Note that this quick drilldown feature is only enabled for certain queries.
 
 Detailed View
 ~~~~~~~~~~~~~

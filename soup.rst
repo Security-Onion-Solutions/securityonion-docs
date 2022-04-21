@@ -39,7 +39,7 @@ However, please note that this an aggressive option and you should exercise caut
 Security Onion Hotfixes
 -----------------------
 
-Starting in Security Onion 2.3.50, ``soup`` can check for Security Onion hotfixes. Hotfixes typically include updates to the :ref:`salt` code and small configuration changes that do not warrant a full version update. This does not include Docker images since that would require a full version update. 
+``soup`` checks for Security Onion hotfixes. Hotfixes typically include updates to the :ref:`salt` code and small configuration changes that do not warrant a full version update. This does not include Docker images since that would require a full version update. 
 
 After applying a hotfix, you may notice that the Security Onion version in ``/etc/soversion`` stays the same. The application of the hotfix is tracked on the manager in the ``/etc/sohotfix`` file.
 
@@ -48,7 +48,7 @@ OS Updates
 
 There is an option during :ref:`Configuration` to automatically install OS updates.
 
-Starting in Security Onion 2.3.50, ``soup`` will check for missing OS updates and ask if you want to install them.
+``soup`` checks for missing OS updates and ask if you want to install them.
 
 Airgap
 ------
@@ -158,7 +158,7 @@ If you have a distributed deployment with a manager node and separate sensor nod
 
     Just because the update completed on the manager does NOT mean the upgrade is complete on other nodes in the grid. Do not manually restart anything until you know that all the search/heavy nodes in your deployment are updated. This is especially important if you are using true clustering for :ref:`elasticsearch`.
 
-    Each minion is on a random 15 minute check-in period and things like network bandwidth can be a factor in how long the actual upgrade takes. If you have a heavy node on a slow link, it is going to take a while to get the containers to it. Depending on what changes happened between the versions, :ref:`elasticsearch` might not be able to talk to said heavy node until the update is complete. This will definitely be the case when upgrading to 2.3.40 because of the way the basic license SSL works.
+    Each minion is on a random 15 minute check-in period and things like network bandwidth can be a factor in how long the actual upgrade takes. If you have a heavy node on a slow link, it is going to take a while to get the containers to it. Depending on what changes happened between the versions, :ref:`elasticsearch` might not be able to talk to said heavy node until the update is complete.
 
     If it looks like you're missing data after the upgrade, please avoid restarting services and instead make sure at least one search node has completed its upgrade. The best way to do this is to run ``sudo salt-call state.highstate`` from a search node and make sure there are no errors. Typically if it works on one node it will work on the rest. Forward nodes are less complex and will update as they check in so you can monitor those from the :ref:`grid` section of :ref:`soc`.
     

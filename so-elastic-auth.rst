@@ -3,14 +3,14 @@
 so-elastic-auth
 ===============
 
-Starting in Security Onion 2.3.60, we support Elastic authentication. This means that you will authenticate to :ref:`elasticsearch` and :ref:`kibana` using the same username and password that you use for :ref:`soc`. 
+We support Elastic authentication. This means that you will authenticate to :ref:`elasticsearch` and :ref:`kibana` using the same username and password that you use for :ref:`soc`. 
 
 Please note that if Elastic auth is enabled and you add a new user directly in :ref:`kibana` via the Kibana Users page, then that new user will only have access to :ref:`kibana` and no other apps. If you want the user to have access to all apps, make sure you add the user as shown in the :ref:`adding-accounts` section.
 
 New Installations
 -----------------
 
-New installations of Security Onion 2.3.60 and later will automatically enable Elastic auth. If for some reason you want to disable Elastic auth, you can do so as shown in the Disabling section below.
+New installations will automatically enable Elastic auth. If for some reason you want to disable Elastic auth, you can do so as shown in the Disabling section below.
 
 Existing Installations
 ----------------------

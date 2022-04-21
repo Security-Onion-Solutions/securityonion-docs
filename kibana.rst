@@ -10,7 +10,7 @@ From https://www.elastic.co/kibana:
 Authentication
 --------------
 
-Starting in Security Onion 2.3.60, we support Elastic authentication via :ref:`so-elastic-auth`. Elastic authentication is automatically enabled for new installations, so you will need to log into Kibana using the same username and password that you use for :ref:`soc`.
+We support Elastic authentication via :ref:`so-elastic-auth`. Elastic authentication is automatically enabled for new installations, so you will need to log into Kibana using the same username and password that you use for :ref:`soc`.
 
 Dashboards
 ----------
@@ -133,7 +133,7 @@ If you then are able to login to Kibana but your dashboards don't look right, yo
 Features
 --------
 
-Starting in Security Onion 2.3.40, Elastic Features are enabled by default. If you had previously enabled Elastic Features and then upgrade to Security Onion 2.3.40 or higher, you may notice some features missing in Kibana. You can enable or disable features as necessary by clicking the main menu in the upper left corner, then click ``Stack Management``, then click ``Spaces``, then click ``Default``. For more information, please see https://www.elastic.co/guide/en/kibana/master/xpack-spaces.html#spaces-control-feature-visibility.
+You can enable or disable specific features by clicking the main menu in the upper left corner, then click ``Stack Management``, then click ``Spaces``, then click ``Default``. For more information, please see https://www.elastic.co/guide/en/kibana/master/xpack-spaces.html#spaces-control-feature-visibility.
 
 More Information
 ----------------

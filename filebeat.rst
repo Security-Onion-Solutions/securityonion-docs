@@ -32,7 +32,7 @@ Depending on what you're looking for, you may also need to look at the :ref:`doc
 Modules
 -------
 
-Starting in Security Onion 2.3.60, we support official Filebeat modules. You can learn more about Filebeat modules at https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html.
+We support official Filebeat modules and you can learn more at https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-modules.html.
 
 Example 1: AWS Cloudtrail Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

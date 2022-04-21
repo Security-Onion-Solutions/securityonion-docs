@@ -10,12 +10,12 @@ From https://www.elastic.co/products/elasticsearch:
 Querying
 --------
 
-You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. You can also query Elasticsearch from the command line using a tool like ``curl``. Starting in Security Onion 2.3.60, you can also use :ref:`so-elasticsearch-query`.
+You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. You can also query Elasticsearch from the command line using a tool like ``curl``. You can also use :ref:`so-elasticsearch-query`.
 
 Authentication
 --------------
 
-Starting in Security Onion 2.3.60, we support Elastic authentication via :ref:`so-elastic-auth`.
+We support Elastic authentication via :ref:`so-elastic-auth`.
 
 Diagnostic Logging
 ------------------

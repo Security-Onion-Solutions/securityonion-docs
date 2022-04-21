@@ -32,7 +32,7 @@ The first option is using docker to run ``stenoread``. If the query succeeds, yo
 
     sudo docker exec -it so-steno stenoread "YourStenoQueryHere" -w /tmp/new.pcap
 
-Starting in Security Onion 2.3.70, we've included a wrapper script called ``so-pcap-export`` to make this a little easier. For example:
+We've included a wrapper script called ``so-pcap-export`` to make this a little easier. For example:
 
 ::
 

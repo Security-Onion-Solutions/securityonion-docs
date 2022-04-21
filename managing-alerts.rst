@@ -76,7 +76,7 @@ There are multiple ways to handle overly productive signatures and we'll try to 
 so-rule
 -------
 
-Starting in 2.3.30, we have a new utility called ``so-rule`` which will allow you to disable, enable, or modify NIDS rules. Run ``so-rule`` without any options to see the help output:
+``so-rule`` allows you to disable, enable, or modify NIDS rules. Run ``so-rule`` without any options to see the help output:
 
 ::
 

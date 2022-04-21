@@ -22,12 +22,12 @@ You can drill into individual rows to see the actual payload data. There are but
 .. image:: images/pcap-transcript.png
   :target: _images/pcap-transcript.png
 
-Starting in Security Onion 2.3.60, you can select text with your mouse and then use the context menu to send that selected text to :ref:`cyberchef`, Google, or other destinations defined in the actions list.
+You can select text with your mouse and then use the context menu to send that selected text to :ref:`cyberchef`, Google, or other destinations defined in the actions list.
 
 .. image:: images/pcap-select-pivot.png
   :target: _images/pcap-select-pivot.png
 
-Starting in Security Onion 2.3.70, you can send all of the visible packet data to :ref:`cyberchef` by clicking the CyberChef icon on the right side of the table header. Please note that this only sends packet data that is currently being displayed, so if you are looking at a large stream you may need to use the ``LOAD MORE`` button to display all packets in the stream.
+You can send all of the visible packet data to :ref:`cyberchef` by clicking the CyberChef icon on the right side of the table header. Please note that this only sends packet data that is currently being displayed, so if you are looking at a large stream you may need to use the ``LOAD MORE`` button to display all packets in the stream.
 
 .. image:: images/pcap-cyberchef.png
   :target: _images/pcap-cyberchef.png

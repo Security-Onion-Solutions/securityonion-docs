@@ -191,13 +191,7 @@ Then, restart :ref:`logstash`:
 
     sudo so-logstash-restart
 
-Next, fix :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online. If you're running Security Onion 2.3.30, run the following command:
-
-::
-
-    curl -X PUT "localhost:9200/elastalert*/_settings?pretty" -H 'Content-Type: application/json' -d '{"index" : { "Number_of_replicas" : 1 }}'
-
-If instead you're running Security Onion 2.3.40 or higher, run the following command:
+Next, fix :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online:
 
 ::
 
