@@ -278,6 +278,15 @@ If you receive a ``401`` (Unauthorized) error message, double-check the credenti
 
     sudo docker exec -it so-wazuh cat /var/ossec/api/configuration/auth/user
 
+Diagnostic Logging
+------------------
+
+Wazuh diagnostic logs are in ``/nsm/wazuh/logs/``. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-wazuh
+
 More Information
 ----------------
 

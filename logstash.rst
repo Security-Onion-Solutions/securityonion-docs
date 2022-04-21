@@ -192,10 +192,14 @@ Redis
 
 When using search nodes, Logstash on the manager node outputs to :ref:`redis` (which also runs on the manager node). Redis queues events from the Logstash output (on the manager node) and the Logstash input on the search node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the manager node and then the redis `queue <Redis#queue>`__.
 
-Log
----
+Diagnostic Logging
+------------------
 
-The Logstash log file is located at ``/opt/so/log/logstash/logstash.log``. Log file settings can be adjusted in ``/opt/so/conf/logstash/etc/log4j2.properties``. Currently, logs are set to rollover daily, and configured to be deleted after 7 days.
+The Logstash log file is located at ``/opt/so/log/logstash/logstash.log``. Log file settings can be adjusted in ``/opt/so/conf/logstash/etc/log4j2.properties``. By default, logs are set to rollover daily and purged after 7 days. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+	sudo docker logs so-logstash
 
 Errors
 ------

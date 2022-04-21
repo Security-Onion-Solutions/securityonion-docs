@@ -169,7 +169,7 @@ If you want to disable Suricata globally across all your sensors, then you could
 Diagnostic Logging
 ------------------
 
-If you need to troubleshoot Suricata, check ``/opt/so/log/suricata/suricata.log``. Some logs may also be seen with the following command:
+If you need to troubleshoot Suricata, check ``/opt/so/log/suricata/suricata.log``. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the container:
 
 ::
 

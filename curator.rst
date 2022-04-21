@@ -79,9 +79,14 @@ To confirm that the job was added correctly, run ``crontab -l`` and look for the
 
 If the task's cron job does not show up, then there may have been errors during the restart process. You must fix those errors for the cron job to be created.
 
-Logs
-----
-When Curator completes an action, it logs its activity in a log file found in ``/opt/so/log/curator/``.
+Diagnostic Logging
+------------------
+
+When Curator completes an action, it logs its activity in a log file found in ``/opt/so/log/curator/``. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-curator
 
 Curator vs Index Lifecycle Management (ILM)
 -------------------------------------------

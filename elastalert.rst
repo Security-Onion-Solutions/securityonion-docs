@@ -67,7 +67,7 @@ Then create a new file called ``/opt/so/rules/elastalert/smtp_auth_file.txt`` an
     password: yourpassword   
 
 MISP
-~~~~~~~
+~~~~
 
 Please see the :ref:`misp` section.
 
@@ -108,6 +108,15 @@ Keep in mind, for queries that span greater than a minute back in time, you may 
 
 | https://elastalert2.readthedocs.io/en/latest/ruletypes.html#buffer-time
 | https://github.com/Yelp/elastalert/issues/805
+
+Diagnostic Logging
+------------------
+
+Elastalert diagnostic logs are in ``/opt/so/log/elastalert/``. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+	sudo docker logs so-redis
 
 More Information
 ----------------

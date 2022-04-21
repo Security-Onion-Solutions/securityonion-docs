@@ -11,6 +11,7 @@ Depending on what options you choose in Setup, it may ask if you want to use :re
 
 Alerts
 ------
+
 Strelka scans files using YARA rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`hunt`, or :ref:`kibana`. Here is an example of Strelka detecting Poison Ivy RAT:
 
 .. image:: images/strelka-alert-1.png
@@ -31,6 +32,7 @@ You can read more about YARA rules in the :ref:`local-rules` section.
 
 Logs
 ----
+
 Even if Strelka doesn't detect a YARA match, it will still log metadata about the file. You can find Strelka logs in :ref:`hunt` and :ref:`kibana`. Here's an example of Strelka logs in :ref:`hunt`:
 
 .. image:: images/strelka.png
@@ -38,7 +40,21 @@ Even if Strelka doesn't detect a YARA match, it will still log metadata about th
 
 Configuration
 -------------
+
 Strelka reads its configuration from ``/opt/so/conf/strelka/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
+
+Diagnostic Logging
+------------------
+
+Strelka diagnostic logs are in ``/nsm/strelka/log/``. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the containers:
+
+::
+
+        sudo docker logs so-strelka-backend
+        sudo docker logs so-strelka-coordinator
+        sudo docker logs so-strelka-filestream
+        sudo docker logs so-strelka-frontend
+        sudo docker logs so-strelka-manager
 
 More Information
 ----------------
