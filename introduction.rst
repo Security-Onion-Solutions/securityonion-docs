@@ -15,7 +15,7 @@ Many assume NSM is a solution they can buy to fill a gap; purchase and deploy so
 Network Security Monitoring
 ---------------------------
 
-From a network visibility standpoint, Security Onion seamlessly weaves together intrusion detection, network metadata, and full packet capture.
+From a network visibility standpoint, Security Onion seamlessly weaves together intrusion detection, network metadata, full packet capture, file analysis, and intrusion detection honeypots.
 
 Intrusion Detection
 ~~~~~~~~~~~~~~~~~~~
