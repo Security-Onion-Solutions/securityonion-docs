@@ -10,12 +10,12 @@ From https://fleetdm.com/:
 Usage
 -----
 
-If you selected to enable Fleet during the setup, you can now login to Fleet using the email address and password that you entered during the installer. You can edit the password or add a new Fleet user within Fleet itself.
+If you enabled Fleet during setup, you can then login to Fleet using the email address and password that you entered during the installer. You can edit the password or add a new Fleet user within Fleet itself.
 
 .. image:: images/fleet.png
   :target: _images/fleet.png
 
-Custom :ref:`osquery` packages were generated for you during setup and you can find them under Downloads in :ref:`soc`. Before you install a package on an endpoint, use :ref:`so-allow` on your manager node to configure the firewall to allow inbound osquery connections.
+Custom :ref:`osquery` packages are generated during setup and you can find them on the :ref:`downloads` page in :ref:`soc`. Before you install a package on an endpoint, use :ref:`so-allow` on your manager node to configure the firewall to allow inbound :ref:`osquery` connections.
 
 Configuration
 -------------
@@ -48,19 +48,12 @@ Then login using a valid username and password:
 
     ./fleetctl login
 
-| ``fleetctl`` documentation can be found here:
-| https://github.com/fleetdm/fleet/blob/main/docs/01-Using-Fleet/02-fleetctl-CLI.md
-
-
+``fleetctl`` documentation can be found at https://github.com/fleetdm/fleet/blob/main/docs/01-Using-Fleet/02-fleetctl-CLI.md.
 
 Adding Query Packs
 ------------------
-You can bulk add queries & packs to FleetDM using fleetctl
 
-The following directory is mapped to the FleetDM container, so you can drop your query packs in the folder and reference it:
-/opt/so/conf/fleet/packs
-
-For instance:
+You can bulk add queries & packs to FleetDM using fleetctl. ``/opt/so/conf/fleet/packs/`` is mapped to the FleetDM container, so you can drop your query packs there and then reference them like this:
 
 ::
 
