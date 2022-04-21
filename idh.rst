@@ -121,11 +121,11 @@ Both of these configurations can be implemented by editing the node's minion pil
 Custom Configuration - Example Port Change
 ------------------------------------------
 
-For example, suppose that we already have the HTTP service running, but we want to change the default port from ``80`` to ``8080``.
+For example, suppose that we already have the HTTP service running but we want to change the default port from ``80`` to ``8080``.
 
 .. warning::
 
-        The following configuration files are YAML, and as such, no tabs are permitted, only spaces! Also, the number of spaces matter!
+        The following configuration files are YAML, and so tabs are not permitted. Please only use spaces and pay special attention to the number of spaces!
 
 First, we need to copy the default configuration for the HTTP service. This can be found on the manager in ``/opt/so/saltstack/default/salt/idh/defaults/http.defaults.yaml``. Out of the defaults defined there, we just need the following:
 
@@ -136,9 +136,7 @@ First, we need to copy the default configuration for the HTTP service. This can 
         config:
           http.port: 80
 
-Next, we will edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``) and add the previously copied config, but swap ``80`` for ``8080``. 
-
-The minion sls file should look something like this:
+Next, we will edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``) and add the previously copied config, but swap ``80`` for ``8080``. The minion sls file should look something like this:
 
 ::
 
@@ -151,14 +149,10 @@ The minion sls file should look something like this:
         config:
           http.port: 8080
 
-With this configuration changed, we can now make it active on the IDH node by using :ref:`salt` to apply the ``idh`` and ``firewall`` states.
-
-Run the following from the manager (replacing ``$IDH-Hostname`` with your actual IDH hostname):
+With this configuration changed, we can now make it active on the IDH node by using :ref:`salt` to apply the ``idh`` and ``firewall`` states. Run the following from the manager (replacing ``$IDH-Hostname`` with your actual IDH hostname):
 
 ::
 
      sudo salt '$IDH-Hostname*' state.apply idh,firewall
 
-You should now be able to browse to the HTTP server on the IDH node on TCP/8080.
-
-You should be able to override any other configuration in the ``http.defaults.yaml`` in a similar manner.
+You should now be able to browse to the HTTP server on the IDH node on TCP/8080. You should be able to override any other configuration in the ``http.defaults.yaml`` in a similar manner.
