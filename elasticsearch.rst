@@ -209,7 +209,7 @@ All configuration changes take place in :ref:`salt` pillar files. There are two 
             template:
               settings:
                 index:
-                  number_of_shards: 1
+                  number_of_shards: 2
 		  
 Customization
 ~~~~~~~~~~~~~
