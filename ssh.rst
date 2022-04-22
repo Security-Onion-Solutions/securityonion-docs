@@ -13,7 +13,12 @@ For distributed deployments, nodes only connect to the manager via SSH when they
 Hardening
 ---------
 
-Some organizations require the removal of certain ciphers and algorithms from sshd. Setup will automatically do this for you by running ``so-ssh-harden``. Alternatively, you can manually run ``so-ssh-harden`` or manually modify your ``sshd_config`` as follows:
+Some organizations require the removal of certain ciphers and algorithms from sshd. Setup will automatically do this for you by running ``so-ssh-harden``:
+
+.. image:: images/so-ssh-harden.png
+  :target: _images/so-ssh-harden.png
+
+Alternatively, you can manually run ``sudo so-ssh-harden`` or manually modify your ``sshd_config`` as follows:
 
 ::
 
