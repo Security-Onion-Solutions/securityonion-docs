@@ -3,6 +3,40 @@
 Release Notes
 =============
 
+2.3.120 Changes
+----------------
+
+- FEATURE: Add ISO option to the installer for analyst workstation `#7502 <https://github.com/Security-Onion-Solutions/securityonion/issues/7502>`_
+- FEATURE: Add new Hunt query for SOC logins `#7327 <https://github.com/Security-Onion-Solutions/securityonion/issues/7327>`_
+- FEATURE: Add strelka-fileshot and strelka-oneshot binaries to analyst workstation `#7670 <https://github.com/Security-Onion-Solutions/securityonion/issues/7670>`_
+- FEATURE: Expose Case user info (email address) in SOC Alert/Hunt/Cases results instead of user ID `#7548 <https://github.com/Security-Onion-Solutions/securityonion/issues/7548>`_
+- FEATURE: Have Observables inherit their case's TLP by default `#7642 <https://github.com/Security-Onion-Solutions/securityonion/issues/7642>`_
+- FEATURE: IDH - Separate MGT & IDH NIC `#7589 <https://github.com/Security-Onion-Solutions/securityonion/issues/7589>`_
+- FEATURE: Remove thehive and cortex dockers `#7501 <https://github.com/Security-Onion-Solutions/securityonion/issues/7501>`_
+- FEATURE: Stop hive related services in soup to 120 `#7599 <https://github.com/Security-Onion-Solutions/securityonion/issues/7599>`_
+- FIX: Create .keyword shim for additional process fields `#7633 <https://github.com/Security-Onion-Solutions/securityonion/issues/7633>`_
+- FIX: Elasticsearch & Logstash logs not compressed or cleaned `#6932 <https://github.com/Security-Onion-Solutions/securityonion/issues/6932>`_
+- FIX: Failure of influxdb state if default shell is zsh `#7730 <https://github.com/Security-Onion-Solutions/securityonion/issues/7730>`_
+- FIX: Hunt OR queries should work without parentheses `#7540 <https://github.com/Security-Onion-Solutions/securityonion/issues/7540>`_
+- FIX: Improve Hunt query when pivoting from Cases Observables `#7405 <https://github.com/Security-Onion-Solutions/securityonion/issues/7405>`_
+- FIX: Improve Zeek file extraction `#7829 <https://github.com/Security-Onion-Solutions/securityonion/issues/7829>`_
+- FIX: Management IP is sometimes null at the end of setup `#7113 <https://github.com/Security-Onion-Solutions/securityonion/issues/7113>`_
+- FIX: Prevent multiple instances of so-sensor-clean and so-playbook-sync `#6622 <https://github.com/Security-Onion-Solutions/securityonion/issues/6622>`_
+- FIX: Prevent users from running `so-setup iso` on Ubuntu `#7601 <https://github.com/Security-Onion-Solutions/securityonion/issues/7601>`_
+- FIX: Remove TheHive deps from Playbook `#7483 <https://github.com/Security-Onion-Solutions/securityonion/issues/7483>`_
+- FIX: Run telegraf as non-root `#7468 <https://github.com/Security-Onion-Solutions/securityonion/issues/7468>`_
+- FIX: Salt error during setup - [ERROR   ] Unable to connect pusher: Stream is closed `#7203 <https://github.com/Security-Onion-Solutions/securityonion/issues/7203>`_
+- FIX: Update syslog ingest pipeline per #5251 `#6912 <https://github.com/Security-Onion-Solutions/securityonion/issues/6912>`_
+- FIX: remove soremote access after analyst install joins grid `#7639 <https://github.com/Security-Onion-Solutions/securityonion/issues/7639>`_
+- FIX: soup should ensure salt-master service is running prior to running `#7763 <https://github.com/Security-Onion-Solutions/securityonion/issues/7763>`_
+- FIX: surilogcompress not working correctly on some systems `#7133 <https://github.com/Security-Onion-Solutions/securityonion/issues/7133>`_
+- UPGRADE: CyberChef 9.37.3 `#7817 <https://github.com/Security-Onion-Solutions/securityonion/issues/7817>`_
+- UPGRADE: Elastic 7.17.3 `#7807 <https://github.com/Security-Onion-Solutions/securityonion/issues/7807>`_
+- UPGRADE: FleetDM 4.12.1  `#7725 <https://github.com/Security-Onion-Solutions/securityonion/issues/7725>`_
+- UPGRADE: Suricata 6.0.5 `#7836 <https://github.com/Security-Onion-Solutions/securityonion/issues/7836>`_
+- UPGRADE: Zeek 4.0.6 `#7839 <https://github.com/Security-Onion-Solutions/securityonion/issues/7839>`_
+- UPGRADE: nginx 1.20.2 `#7808 <https://github.com/Security-Onion-Solutions/securityonion/issues/7808>`_
+
 2.3.110 Hotfix [20220407] Changes
 ---------------------------------
 
