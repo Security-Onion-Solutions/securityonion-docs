@@ -5,8 +5,8 @@ End Of Life
 
 This page lists End Of Life (EOL) dates for older versions of Security Onion and older components.
 
-| TheHive 3 reached EOL on December 31, 2021. TheHive and Cortex will be fully removed from Security Onion in Security Onion 2.3.120:
-| https://blog.securityonion.net/2022/01/coming-soon-in-security-onion-23100.html
+| TheHive 3 reached EOL on December 31, 2021. TheHive and Cortex were fully removed from Security Onion in Security Onion 2.3.120:
+| https://blog.securityonion.net/2022/04/security-onion-23120-now-available.html
 
 | Security Onion 16.04 reached EOL on April 16, 2021:
 | https://blog.securityonion.net/2021/04/security-onion-1604-has-reached-end-of.html
