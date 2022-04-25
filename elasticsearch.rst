@@ -68,7 +68,64 @@ From https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templ
 
 In Security Onion, component templates are stored in ``/opt/so/saltstack/default/salt/elasticsearch/templates/component/``. 
 
-These templates are specified to be used in the index template definitions in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yml``, and these references can be modified in the ``elasticsearch`` :ref:`salt` pillar.
+These templates are specified to be used in the index template definitions in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yml``, and these references can be modified in the ``elasticsearch`` :ref:`salt` pillar:
+
+Custom Templates:
+~~~~~~~~~~~~~~~~
+To add a custom index template, ensure the custom or modified component templates are copied to ``/opt/so/salstack/local/salt/elasticsearch/templates/component/so``.
+
+Next, copy ``/opt/so/salstack/default/pillar/elasticsearch/index_templates.sls`` to ``/opt/so/salstack/local/pillar/elasticsearch``.
+Edit the file similar to the following, adding you custom index template details and the references to the component templates you wish to associate to the index template:
+
+``/opt/so/saltstack/local/pillar/elasticsearch/index_templates.sls``
+
+::
+
+    elasticsearch:
+      index_settings:
+        so-custom:
+          index_sorting: False
+          index_template:
+            index_patterns:
+              - so-custom*
+            template:
+              mappings:
+                dynamic_templates:
+                  - strings_as_keyword:
+                      mapping:
+                        ignore_above: 1024
+                        type: keyword
+                      match_mapping_type: string
+                date_detection: false
+              settings:
+                index:
+                  mapping:
+                    total_fields:
+                      limit: 1500
+                  sort:
+                    field: "@timestamp"
+                    order: desc
+                  refresh_interval: 30s
+                  number_of_shards: 1
+                  number_of_replicas: 0
+            composed_of:
+              - custom-mappings
+              - custom-settings
+            priority: 500
+
+Next, apply the Elasticsearch state for the relevant nodes (or wait for the next highstate):
+
+``sudo salt-call state.apply elasticsearch`` 
+
+Upon successful application, the resultant index template will be created in ``/opt/so/conf/elasticsearch/templates/index`` (with a filename that consists of the custom index key value (``so-custom`` in this case) and a static ``-template.json`` suffix. We can check to see if the file exists and check the contents of the file with the following command:
+
+``cat /opt/so/conf/elasticsearch/templates/index/so-custom-template.json``
+
+We can also check to ensure that both the associated component templates and the index template itself were loaded into Elasticsearch:
+
+``so-elasticsearch-component-templates-list | grep custom``
+``so-elasticsearch-index-templates-list | grep custom``
+
 
 
 Community ID
