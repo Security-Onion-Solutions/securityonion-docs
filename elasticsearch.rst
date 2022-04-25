@@ -70,7 +70,7 @@ In Security Onion, component templates are stored in ``/opt/so/saltstack/default
 
 These templates are specified to be used in the index template definitions in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yml``, and these references can be modified in the ``elasticsearch`` :ref:`salt` pillar:
 
-Custom Templates:
+Custom Templates
 ~~~~~~~~~~~~~~~~
 To add a custom index template, ensure the custom or modified component templates are copied to ``/opt/so/salstack/local/salt/elasticsearch/templates/component/so``.
 
