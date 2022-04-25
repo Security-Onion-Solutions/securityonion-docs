@@ -36,7 +36,7 @@ Starting in Security Onion 2.3.120, there are a few different ways to install th
 Joining to Grid
 ~~~~~~~~~~~~~~~
 
-Security Onion 2.3.120 allows you to optionally join your Analyst installation to your grid. This allows it to pull updates from the grid and automatically trust the grid's HTTPS certificate. It also updates the manager's firewall to allow the Analyst installation to connect. Please note that Analyst installations won't actually display on the :ref:`grid` page of :ref:`soc`.
+Security Onion 2.3.120 allows you to optionally join your Analyst installation to your grid. This allows it to pull updates from the grid and automatically trust the grid's HTTPS certificate. It also updates the manager's firewall to allow the Analyst installation to connect. Please note that Analyst installations won't actually display on the :ref:`grid` page.
 
 If you choose not to join your Analyst installation to your grid, then you may need to run :ref:`so-allow` on the manager node and choose the ``analyst`` option to allow the traffic through the host-based :ref:`firewall`.
 
