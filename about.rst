@@ -40,8 +40,7 @@ This documentation is published online at https://securityonion.net/docs.  If yo
 
 This documentation is also available in PDF format at https://readthedocs.org/projects/securityonion/downloads/pdf/2.3/.
 
-| Many folks have asked for a printed version of our documentation.  Whether you work on airgapped networks or simply want a portable reference that doesn't require an Internet connection or batteries, this is what you've been asking for.  Thanks to Richard Bejtlich for writing the inspiring foreword!  Proceeds go to the Rural Technology Fund!
-| https://securityonion.net/book
+Many folks have asked for a printed version of our documentation.  Whether you work on airgapped networks or simply want a portable reference that doesn't require an Internet connection or batteries, this is what you've been asking for.  Thanks to Richard Bejtlich for writing the inspiring foreword!  Proceeds go to the Rural Technology Fund! You can purchase your copy at https://securityonion.net/book.
 
 Authors
 ~~~~~~~
@@ -60,10 +59,8 @@ Pages are written in RST format and you can find several RST guides on the Inter
 
 Naming Convention
 ~~~~~~~~~~~~~~~~~
-Our goal is to allow you to easily guess and type the URL of the documentation you want to go to.
-
-| For example, if you want to read more about Suricata, you can type the following into your browser: 
-| https://securityonion.net/docs/suricata
+Our goal is to allow you to easily guess and type the URL of the documentation you want to go to. For example, if you want to read more about Suricata, you can type the following into your browser: 
+https://securityonion.net/docs/suricata
 
 To achieve this goal, new documentation pages should use the following naming convention:
 
