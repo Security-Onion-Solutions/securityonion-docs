@@ -72,9 +72,9 @@ These templates are specified to be used in the index template definitions in ``
 
 Custom Templates
 ~~~~~~~~~~~~~~~~
-To add a custom index template, ensure the custom or modified component templates are copied to ``/opt/so/salstack/local/salt/elasticsearch/templates/component/so``.
+To add a custom index template, ensure the custom or modified component templates are copied to ``/opt/so/salstack/local/salt/elasticsearch/templates/component/so/``.
 
-Next, copy ``/opt/so/saltstack/default/pillar/elasticsearch/index_templates.sls`` to ``/opt/so/salstack/local/pillar/elasticsearch``.
+Next, copy ``/opt/so/saltstack/default/pillar/elasticsearch/index_templates.sls`` to ``/opt/so/salstack/local/pillar/elasticsearch/``.
 
 Edit the file similar to the following, adding your custom index template details and the references to the component templates you wish to associate to the index template:
 
@@ -116,18 +116,22 @@ Edit the file similar to the following, adding your custom index template detail
 
 Next, apply the Elasticsearch state for the relevant nodes (or wait for the next highstate):
 
-``sudo salt-call state.apply elasticsearch`` 
+::
 
-Upon successful application, the resultant index template will be created in ``/opt/so/conf/elasticsearch/templates/index`` (with a filename that consists of the custom index key value (``so-custom`` in this case) and a static ``-template.json`` suffix. We can check to see if the file exists and check the contents of the file with the following command:
+	sudo salt-call state.apply elasticsearch
 
-``cat /opt/so/conf/elasticsearch/templates/index/so-custom-template.json``
+Upon successful application, the resultant index template will be created in ``/opt/so/conf/elasticsearch/templates/index`` with a filename that consists of the custom index key value (``so-custom`` in this case) and a static ``-template.json`` suffix. We can check to see if the file exists and check the contents of the file with the following command:
+
+::
+
+	cat /opt/so/conf/elasticsearch/templates/index/so-custom-template.json
 
 We can also check to ensure that both the associated component templates and the index template itself were loaded into Elasticsearch:
 
-``so-elasticsearch-component-templates-list | grep custom``
-``so-elasticsearch-index-templates-list | grep custom``
+::
 
-
+	so-elasticsearch-component-templates-list | grep custom
+	so-elasticsearch-index-templates-list | grep custom
 
 Community ID
 ------------
