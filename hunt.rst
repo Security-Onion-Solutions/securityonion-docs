@@ -181,4 +181,4 @@ However, if you add an asterisk after the ``network.protocol`` field name, Hunt 
 .. image:: images/hunt-groupby-asterisk.png
   :target: _images/hunt-groupby-asterisk.png
 
-Please note that adding the asterisk to a non-string field may not work as expected. As an alternative, you may be able to use the asterisk with the equivalent ``keyword`` field if it is available. For example, ``source.geo.ip*`` may return 0 results but ``source.geo.ip.keyword*`` may work as expected.
+Please note that adding the asterisk to a non-string field may not work as expected. As an alternative, you may be able to use the asterisk with the equivalent ``keyword`` field if it is available. For example, ``source.geo.ip*`` may return 0 results, or a query failure error, but ``source.geo.ip.keyword*`` may work as expected.
