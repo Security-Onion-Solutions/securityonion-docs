@@ -21,6 +21,7 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 - sigs.securityonion.net (Signature files for Security Onion containers)  
 - ghcr.io (Container downloads)  
 - rules.emergingthreatspro.com (Emerging Threats IDS rules)  
+- rules.emergingthreats.net (Emerging Threats IDS open rules)  
 - www.snort.org (Paid Snort Talos ruleset)  
 - github.com (Strelka and Sigma rules updates)  
 - notary.kolide.co (osquery agent update)  
