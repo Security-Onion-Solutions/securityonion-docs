@@ -166,7 +166,7 @@ Onion Query Language (OQL) starts with standard `Lucene query syntax <https://lu
 sortby
 ~~~~~~
 
-Starting in Security Onion 2.3.100, the ``sortby`` segment can be added to the end of a hunt query. This can help ensure that you see the most recent data, for example, when sorting by descending timestamp. Otherwise, if the search yields a dataset larger than the X Limit size selected in the UI then you will only get the first X records and then those will be sorted on the web browser.
+The ``sortby`` segment can be added to the end of a hunt query. This can help ensure that you see the most recent data, for example, when sorting by descending timestamp. Otherwise, if the search yields a dataset larger than the X Limit size selected in the UI then you will only get the first X records and then those will be sorted on the web browser.
 
 You can specify one field to sort by or multiple fields separated by spaces. The default order is descending but if you want to force the sort order to be ascending you can add the optional caret (^) symbol to the end of the field name.
 
@@ -177,7 +177,15 @@ You can specify one field to sort by or multiple fields separated by spaces. The
 groupby
 ~~~~~~~
 
-The ``groupby`` segment tells Dashboards to group by (aggregate) a particular field. So, for example, if you want to group by destination IP address, you can add ``| groupby destination.ip`` to your search (assuming it didn't already have a groupby statement). The ``groupby`` segment supports multiple aggregations so you can add more fields that you want to group by, separating those fields with spaces. For example, to group by destination IP address and then destination port, you could use ``| groupby destination.ip destination.port``.
+The ``groupby`` segment tells Dashboards to group by (aggregate) a particular field. So, for example, if you want to group by destination IP address, you can add ``| groupby destination.ip`` to your search. The ``groupby`` segment supports multiple aggregations so you can add more fields that you want to group by, separating those fields with spaces. For example, to group by destination IP address and then destination port in the same data table, you could use ``| groupby destination.ip destination.port``. OQL supports multiple ``groupby`` segments so you could do ``| groupby destination.ip | groupby destination.port`` if you wanted each of those fields to have their own independent data tables.
+
+Instead of rendering data tables, you can optionally render the data as one of three chart types:
+
+- The pie chart is specified using the ``-pie`` option (for example: ``| groupby -pie destination.ip``).
+
+- The bar chart is specified using the ``-bar`` option (for example: ``| groupby -bar destination.ip``).
+
+- The sankey diagram is specified using the ``-sankey`` option, but keep in mind that this requires at least two fields (for example: ``| groupby -sankey destination.ip destination.port``).
 
 By default, grouping by a particular field won't show any values if that field is missing. If you would like to include missing values, you can add an asterisk after the field name. For example, you might have some non-HTTP traffic on port 80 that wouldn't be shown by the following query grouping by ``network.protocol``:
 
