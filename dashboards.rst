@@ -137,7 +137,7 @@ Clicking the ``Only`` option will start a new search for the selected value and 
 Group By
 ~~~~~~~~
 
-If there are already one or more ``Group By`` data tables, clicking the ``Group By`` option will add the field to the most recent data table. If there are no existing ``Group By`` data tables, clicking the ``Group By`` option will create a new data table for the selected field.
+If one or more ``Group By`` data tables already exists, clicking the ``Group By`` option will add the field to the most recent data table. If there are no existing ``Group By`` data tables, clicking the ``Group By`` option will create a new data table for the selected field.
 
 New Group By
 ~~~~~~~~~~~~
