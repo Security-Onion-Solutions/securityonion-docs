@@ -69,14 +69,19 @@ The first section of output contains a Most Occurrences visualization, a timelin
 Group Metrics
 -------------
 
-The middle section of output is the Group Metrics section. It consists of one or more data tables that allow you to stack (aggregate) arbitrary fields. Group metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see a third button in the Count column that will convert the data table to a sankey diagram. Each of the groupby fields has a trash button that will remove the field from the table.
+The middle section of output is the Group Metrics section. It consists of one or more data tables that allow you to stack (aggregate) arbitrary fields. 
+
+.. image:: images/dashboards-group-metrics.png
+  :target: _images/dashboards-group-metrics.png
+
+Group metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see a third button in the Count column that will convert the data table to a sankey diagram. Each of the groupby fields has a trash button that will remove the field from the table.
+
+.. image:: images/dashboards-group-metrics-table.png
+  :target: _images/dashboards-group-metrics-table.png
 
 Clicking a value in the Group Metrics table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
 
 The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
-
-.. image:: images/dashboards-group-metrics.png
-  :target: _images/dashboards-group-metrics.png
 
 Events
 ------
