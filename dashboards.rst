@@ -84,7 +84,10 @@ You can use the buttons in the Count column header to convert the data table to 
 .. image:: images/dashboards-group-metrics-table.png
   :target: _images/dashboards-group-metrics-table.png
 
-Once you have switched to a chart, you can use the left-most button to return to the data table, the middle button to toggle the legend, and the right button to remove the chart altogether.
+Once you have switched to a chart, you will see three buttons at the top of the chart. You can use the left-most button to return to the data table, the middle button to toggle the legend, and the right button to remove the chart altogether.
+
+.. image:: images/dashboards-group-metrics-sankey.png
+  :target: _images/dashboards-group-metrics-sankey.png
 
 Events
 ------
@@ -197,19 +200,19 @@ OQL supports multiple ``groupby`` segments so if you wanted each of those fields
 
 Instead of rendering data tables, you can optionally render the data as one of three chart types:
 
-- The pie chart is specified using the ``-pie`` option. For example:
+- The pie chart is specified using the ``-pie`` option:
 
 ::
 
   | groupby -pie destination.ip
 
-- The bar chart is specified using the ``-bar`` option. For example:
+- The bar chart is specified using the ``-bar`` option:
 
 ::
 
   | groupby -bar destination.ip
 
-- The sankey diagram is specified using the ``-sankey`` option, but keep in mind that this requires at least two fields. For example:
+- The sankey diagram is specified using the ``-sankey`` option, but keep in mind that this requires at least two fields:
 
 ::
 
@@ -219,6 +222,6 @@ By default, grouping by a particular field won't show any values if that field i
 
 ::
 
-  event.dataset:conn AND destination.port:80 | groupby network.protocol destination.port
+  event.dataset:conn AND destination.port:80 | groupby network.protocol* destination.port
 
 Please note that adding the asterisk to a non-string field may not work as expected. As an alternative, you may be able to use the asterisk with the equivalent ``keyword`` field if it is available. For example, ``source.geo.ip*`` may return 0 results, or a query failure error, but ``source.geo.ip.keyword*`` may work as expected.
