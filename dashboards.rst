@@ -8,10 +8,13 @@ Starting in Security Onion 2.3.130, :ref:`soc` has a new Dashboards interface. T
 .. image:: images/dashboards.png
   :target: _images/dashboards.png
 
+Options
+-------
+
 At the top of the page, there is an Options drop-down menu that allows you to set options such as Auto Hunt, Exclude case data, Automatic Refresh Interval, and Time Zone.
 
 Auto Hunt
----------
+~~~~~~~~~
 
 The Auto Hunt option defaults to enabled:
 
@@ -21,7 +24,7 @@ The Auto Hunt option defaults to enabled:
 When enabled, Dashboards will automatically submit your query any time you change filters, groupings, or date ranges.
 
 Exclude case data
------------------
+~~~~~~~~~~~~~~~~~
 
 Dashboards excludes :ref:`cases` data by default:
 
@@ -31,7 +34,7 @@ Dashboards excludes :ref:`cases` data by default:
 If you disable this option, then you can use Dashboards to query your :ref:`cases` data.
 
 Automatic Refresh Interval
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The Automatic Refresh Interval setting will automatically refresh your query at the time interval you select:
 
@@ -39,7 +42,7 @@ The Automatic Refresh Interval setting will automatically refresh your query at 
   :target: _images/soc-automatic-refresh-interval.png
 
 Time Zone
----------
+~~~~~~~~~
 
 Dashboards will try to detect your local time zone via your browser. You can manually specify your time zone if necessary.
 
