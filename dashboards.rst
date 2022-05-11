@@ -45,7 +45,7 @@ Dashboards will try to detect your local time zone via your browser. You can man
 
 Query Bar
 ---------
-The easiest way to get started is to click the query drop down box and select one of the pre-defined queries. These pre-defined queries cover most of the major data types that you would expect to see in a Security Onion deployment: NIDS alerts from :ref:`suricata`, HIDS alerts from :ref:`wazuh`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs. Each of the entries in the drop down list will show the actual query followed by a description of what that query does.
+The easiest way to get started is to click the query drop down box and select one of the pre-defined queries. These pre-defined queries cover most of the major data types that you would expect to see in a Security Onion deployment: NIDS alerts from :ref:`suricata`, HIDS alerts from :ref:`wazuh`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs.
 
 .. image:: images/dashboards-query.png
   :target: _images/dashboards-query.png
@@ -69,14 +69,14 @@ The first section of output contains a Most Occurrences visualization, a timelin
 Group Metrics
 -------------
 
-The middle section of output is the Group Metrics section and it's a data table that allows you to stack (aggregate) arbitrary fields. Group metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. 
+The middle section of output is the Group Metrics section. It consists of one or more data tables that allow you to stack (aggregate) arbitrary fields. Group metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see a third button in the Count column that will convert the data table to a sankey diagram. Each of the groupby fields has a trash button that will remove the field from the table.
 
 Clicking a value in the Group Metrics table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
 
 The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: images/hunt-group-metrics.png
-  :target: _images/hunt-group-metrics.png
+.. image:: images/dashboards-group-metrics.png
+  :target: _images/dashboards-group-metrics.png
 
 Events
 ------
