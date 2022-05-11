@@ -77,14 +77,14 @@ The middle section of output is the Group Metrics section. It consists of one or
 .. image:: images/dashboards-group-metrics.png
   :target: _images/dashboards-group-metrics.png
 
-Group metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see a third button in the Count column that will convert the data table to a sankey diagram. Each of the groupby fields has a trash button that will remove the field from the table.
+Group metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. Clicking a value in the Group Metrics table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
+
+You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see a third button in the Count column that will convert the data table to a sankey diagram. Each of the groupby fields has a trash button that will remove the field from the table.
 
 .. image:: images/dashboards-group-metrics-table.png
   :target: _images/dashboards-group-metrics-table.png
 
-Clicking a value in the Group Metrics table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
-
-The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
+Once you have switched to a chart, you can use the left-most button to return to the data table, the middle button to toggle the legend, and the right button to remove the chart altogether.
 
 Events
 ------
@@ -177,24 +177,48 @@ You can specify one field to sort by or multiple fields separated by spaces. The
 groupby
 ~~~~~~~
 
-The ``groupby`` segment tells Dashboards to group by (aggregate) a particular field. So, for example, if you want to group by destination IP address, you can add ``| groupby destination.ip`` to your search. The ``groupby`` segment supports multiple aggregations so you can add more fields that you want to group by, separating those fields with spaces. For example, to group by destination IP address and then destination port in the same data table, you could use ``| groupby destination.ip destination.port``. OQL supports multiple ``groupby`` segments so you could do ``| groupby destination.ip | groupby destination.port`` if you wanted each of those fields to have their own independent data tables.
+The ``groupby`` segment tells Dashboards to group by (aggregate) a particular field. So, for example, if you want to group by destination IP address, you can add the following to your search:
+
+::
+
+  | groupby destination.ip
+
+The ``groupby`` segment supports multiple aggregations so you can add more fields that you want to group by, separating those fields with spaces. For example, to group by destination IP address and then destination port in the same data table, you could use:
+
+::
+
+  | groupby destination.ip destination.port
+
+OQL supports multiple ``groupby`` segments so if you wanted each of those fields to have their own independent data tables, you could do:
+
+::
+
+  | groupby destination.ip | groupby destination.port
 
 Instead of rendering data tables, you can optionally render the data as one of three chart types:
 
-- The pie chart is specified using the ``-pie`` option (for example: ``| groupby -pie destination.ip``).
+- The pie chart is specified using the ``-pie`` option. For example:
 
-- The bar chart is specified using the ``-bar`` option (for example: ``| groupby -bar destination.ip``).
+::
 
-- The sankey diagram is specified using the ``-sankey`` option, but keep in mind that this requires at least two fields (for example: ``| groupby -sankey destination.ip destination.port``).
+  | groupby -pie destination.ip
 
-By default, grouping by a particular field won't show any values if that field is missing. If you would like to include missing values, you can add an asterisk after the field name. For example, you might have some non-HTTP traffic on port 80 that wouldn't be shown by the following query grouping by ``network.protocol``:
+- The bar chart is specified using the ``-bar`` option. For example:
 
-.. image:: images/hunt-groupby-default.png
-  :target: _images/hunt-groupby-default.png
+::
 
-However, if you add an asterisk after the ``network.protocol`` field name, Dashboards will show missing values which in this case will help you see the non-HTTP traffic on port 80:
+  | groupby -bar destination.ip
 
-.. image:: images/hunt-groupby-asterisk.png
-  :target: _images/hunt-groupby-asterisk.png
+- The sankey diagram is specified using the ``-sankey`` option, but keep in mind that this requires at least two fields. For example:
+
+::
+
+  | groupby -sankey destination.ip destination.port
+
+By default, grouping by a particular field won't show any values if that field is missing. If you would like to include missing values, you can add an asterisk after the field name. For example, suppose you want to look for non-HTTP traffic on port 80 using a query like ``event.dataset:conn AND destination.port:80 | groupby network.protocol destination.port``. If there was non-HTTP traffic on port 80, the ``network.protocol`` field may be null and so this query would only return port 80 traffic identified as HTTP. To fix this, add the asterisk after the ``network.protocol``:
+
+::
+
+  event.dataset:conn AND destination.port:80 | groupby network.protocol destination.port
 
 Please note that adding the asterisk to a non-string field may not work as expected. As an alternative, you may be able to use the asterisk with the equivalent ``keyword`` field if it is available. For example, ``source.geo.ip*`` may return 0 results, or a query failure error, but ``source.geo.ip.keyword*`` may work as expected.
