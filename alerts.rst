@@ -8,10 +8,13 @@ Alerts
 .. image:: images/alerts.png
   :target: _images/alerts.png
   
-There is an Options drop-down menu that allows you to set options such as Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone.
+Options
+-------
+
+At the top of the page, there is an Options drop-down menu that allows you to set options such as Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone.
 
 Toggles
--------
+~~~~~~~
 
 The first option is for ``Acknowledged`` and ``Escalated``:
 
@@ -23,7 +26,7 @@ The first option is for ``Acknowledged`` and ``Escalated``:
 - Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst to :ref:`cases`.
 
 Automatic Refresh Interval
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The second option is the Automatic Refresh Interval setting:
 
@@ -33,7 +36,7 @@ The second option is the Automatic Refresh Interval setting:
 When enabled, the Alerts page will automatically refresh at the time interval you select.
 
 Time Zone
----------
+~~~~~~~~~
 
 Alerts will try to detect your local time zone via your browser. You can manually specify your time zone if necessary.
 
