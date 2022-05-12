@@ -331,7 +331,7 @@ If total available memory is 8GB or greater, Setup configures the heap size to b
 Field limit
 ~~~~~~~~~~~
 
-Security Onion currently utilizes the default field limit for Elasticsearch indices (``1000``). If you receive error messages from Logstash, or you would simply like to increase this, you can do so with one of the following options.
+Security Onion currently defaults to a field limit of 5000. If you receive error messages from Logstash, or you would simply like to increase this, you can do so with one of the following options.
 
 Temporary
 ~~~~~~~~~
@@ -340,9 +340,9 @@ If you only need to increase the field limit temporarily, you can do something l
 
 ::
 
-   curl -k -XPUT -H'Content-Type: application/json' https://localhost:9200/logstash-syslog-*/_settings -d'{ "index.mapping.total_fields.limit": 2000 }'
+   curl -k -XPUT -H'Content-Type: application/json' https://localhost:9200/logstash-syslog-*/_settings -d'{ "index.mapping.total_fields.limit": 6000 }'
 
-The above command would increase the field limit for the ``logstash-syslog-*`` indice(s) to ``2000``. Keep in mind, this setting only applies to the current index, so when the index rolls over and a new one is created, your new settings will not apply.
+The above command would increase the field limit for the ``logstash-syslog-*`` indice(s) to 6000. Keep in mind, this setting only applies to the current index, so when the index rolls over and a new one is created, your new settings will not apply.
 
 Persistent
 ~~~~~~~~~~
@@ -355,7 +355,7 @@ If you need this change to be persistent, you can modify the ``settings`` stanza
         "number_of_replicas": 0,
         "number_of_shards": 1,
         "index.refresh_interval" : "5s",
-        "index.mapping.total_fields.limit": 2000
+        "index.mapping.total_fields.limit": 6000
     },
 
 Then restart Logstash:
