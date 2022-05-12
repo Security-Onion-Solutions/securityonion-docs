@@ -192,7 +192,7 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 
 - Check the Suricata log for additional clues.
 
-- Try installing a simple import node (perhaps in a VM) following the steps at :ref:`first-time-users` and see if you get alerts there. If so, compare the working system to the non-working system and determine where the differences are.
+- Try installing a simple import node (perhaps in a VM) following the steps in the :ref:`first-time-users` section and see if you get alerts there. If so, compare the working system to the non-working system and determine where the differences are.
 
 Stats
 -----
