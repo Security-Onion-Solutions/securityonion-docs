@@ -175,6 +175,25 @@ If you need to troubleshoot Suricata, check ``/opt/so/log/suricata/suricata.log`
 
 	sudo docker logs so-suricata
 
+Troubleshooting Alerts
+----------------------
+
+If you're not seeing the Suricata alerts that you expect to see, here are some things that you can check:
+
+- If you're sniffing traffic from the network, verify that the traffic is reaching the NIC using tcpdump. If importing a pcap file, verify that file contains the traffic you expect and that the Suricata process can read the file and any parent directories.
+
+- If you have metadata enabled, check to see if you have metadata for the connections. Depending on your configuration, this could be Suricata metadata or :ref:`zeek` metadata.
+
+- Check to see if you have a full NIDS ruleset with rules that should specifically alert on the traffic and that those rules are enabled.
+
+- Check to see if you have any threshold or suppression configuration that might be preventing alerts.
+
+- Check your :ref:`homenet` configuration to make sure it includes the networks that you're watching traffic for.
+
+- Check the Suricata log for additional clues.
+
+- Try installing a simple import node (perhaps in a VM) following the steps at :ref:`first-time-users` and see if you get alerts there. If so, compare the working system to the non-working system and determine where the differences are.
+
 Stats
 -----
 
