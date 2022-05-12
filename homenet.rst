@@ -3,7 +3,7 @@
 Homenet
 =======
 
-The homenet variable defines the networks that are considered home networks (those networks that you are monitoring and defending). It is used for :ref:`suricata` and, starting in Security Onion 2.3.110, for :ref:`zeek` as well. The default value is RFC1918 address space:
+The homenet variable defines the networks that are considered home networks (those networks that you are monitoring and defending). It is used for :ref:`suricata` and, starting in Security Onion 2.3.110, for :ref:`zeek` as well. The default value is RFC1918 private address space:
 
 .. image:: images/19_setup_homenet.png
   :target: _images/19_setup_homenet.png
