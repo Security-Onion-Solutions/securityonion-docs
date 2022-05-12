@@ -125,6 +125,11 @@ Group By
 
 Clicking the ``Group By`` option will update the existing query and aggregate the results based on the selected field.
 
+New Group By
+~~~~~~~~~~~
+
+Starting in Security Onion 2.3.130, clicking the ``New Group By`` option will create a new data table for the selected field.
+
 Clipboard
 ~~~~~~~~~
 
