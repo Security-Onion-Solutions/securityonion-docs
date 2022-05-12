@@ -160,7 +160,7 @@ AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be used w
 All Distributed Manager Nodes
 -----------------------------
 
-For distributed manager nodes, if connecting sensors through the VPN instance, add the following to the ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``:
+For distributed manager nodes, if connecting sensors through the VPN instance then follow the instructions below to allow remote sensor connections:
 
 Run ``so-firewall includehost minion <inside interface of your VPN concentrator>``. Ex:
 
