@@ -11,15 +11,15 @@ Starting in Security Onion 2.3.130, :ref:`soc` has a new Dashboards interface. T
 Options
 -------
 
-At the top of the page, there is an Options drop-down menu that allows you to set options such as Auto Hunt, Exclude case data, Automatic Refresh Interval, and Time Zone.
+At the top of the page, there is an Options drop-down menu that allows you to set options such as Auto Apply, Exclude case data, Automatic Refresh Interval, and Time Zone.
 
-Auto Hunt
-~~~~~~~~~
+Auto Apply
+~~~~~~~~~~
 
-The Auto Hunt option defaults to enabled:
+The Auto Apply option defaults to enabled:
 
-.. image:: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
-  :target: https://user-images.githubusercontent.com/1659467/94722720-af05d380-0325-11eb-9139-ce49c3a549cf.png
+.. image:: images/soc-auto-apply.png
+  :target: _images/soc-auto-apply.png
 
 When enabled, Dashboards will automatically submit your query any time you change filters, groupings, or date ranges.
 
