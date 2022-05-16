@@ -139,14 +139,14 @@ By default, this command expects the ephemeral device to be located at ``/dev/nv
 
 ::
 
-	sudo so-prepare-fs /dev/nvme3n0 /nsm
+	sudo so-prepare-fs /dev/nvme3n0 /nsm/elasticsearch
 
 Restart the Security Onion setup by running the following command:
 
 ::
 
 	cd /securityonion
-	sudo ./so-network-setup
+	sudo ./so-setup-network
 
 Manager Setup
 #############
@@ -195,7 +195,7 @@ Next, fix :ref:`elastalert` indices so that they have a replica. This will cause
 
 ::
 
-    curl -k -X PUT "https://localhost:9200/elastalert*/_settings?pretty" -H 'Content-Type: application/json' -d '{"index" : { "Number_of_replicas" : 1 }}'
+    so-elasticsearch-query elastalert*/_settings -X PUT -d '{"index" : { "number_of_replicas" : 1 }}'
 
 Search Node Setup
 #################
