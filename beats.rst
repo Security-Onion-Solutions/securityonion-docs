@@ -95,7 +95,7 @@ Next make your config look like the one below. Note that the paths are not the s
       beats {
         port => "5044"
         ssl => true
-        ssl_certificate_authorities => ["/usr/share/logstash/myca.crt"]
+        ssl_certificate_authorities => ["/usr/share/logstash/certs/myca.crt"]
         ssl_certificate => "/usr/share/logstash/certs/mybeats.crt"
         ssl_key => "/usr/share/logstash/certs/mybeats.key"
         tags => [ "beat-ext" ]
