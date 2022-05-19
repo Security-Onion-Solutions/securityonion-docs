@@ -8,20 +8,22 @@ Supported Analyzers and Data Types
 ----------------------------------
 The follow is a summary of the natively available analyzers and their supported data types:
 
-| Name                    | Domain | Hash  | IP    | JA3   | Mail  | Other | URI   |  URL  | User Agent |
-| ------------------------|--------|-------|-------|-------|-------|-------|-------|-------|------------
-| Alienvault OTX          ✓  &check;|&check;|&cross;|&cross;|&cross;|&cross;|&check;|&cross;|
-| EmailRep                &cross; |&cross;|&cross;|&cross;|&check;|&cross;|&cross;|&cross;|&cross;|
-| Greynoise               &cross; |&cross;|&check;|&cross;|&cross;|&cross;|&cross;|&cross;|&cross;|
-| JA3er                   &cross; |&cross;|&cross;|&check;|&cross;|&cross;|&cross;|&cross;|&cross;|
-| LocalFile               &check; |&check;|&check;|&check;|&cross;|&check;|&cross;|&check;|&cross;|
-| Malware Hash Registry   &cross; |&check;|&cross;|&cross;|&cross;|&cross;|&cross;|&check;|&cross;|
-| Pulsedive               &check; |&check;|&check;|&cross;|&cross;|&cross;|&check;|&check;|&check;|
-| Spamhaus                &cross; |&cross;|&check;|&cross;|&cross;|&cross;|&cross;|&cross;|&cross;|
-| Urlhaus                 &cross; |&cross;|&cross;|&cross;|&cross;|&cross;|&cross;|&check;|&cross;|
-| Urlscan                 &cross; |&cross;|&cross;|&cross;|&cross;|&cross;|&cross;|&check;|&cross;|
-| Virustotal              &check; |&check;|&check;|&cross;|&cross;|&cross;|&cross;|&check;|&cross;|
-| WhoisLookup             &check; |&cross;|&cross;|&cross;|&cross;|&cross;|&check;|&cross;|&cross;|
+=======================       ======= ====   ==   ===   ====  ===== ===  === ==========
+ Name                         Domain  Hash   IP   JA3   Mail  Other URI  URL User Agent 
+=======================       ======= ====   ==   ===   ====  ===== ===  === ==========  
+Alienvault OTX                   ✓      ✓                                 ✓
+EmailRep                                                  ✓
+Greynoise                                     ✓
+JA3er                                              ✓
+LocalFile                        ✓      ✓     ✓                 ✓         ✓  
+Malware Hash Registry                   ✓
+Pulsedive                        ✓      ✓     ✓                      ✓    ✓      ✓     
+Spamhaus                                      ✓
+Urlhaus                                                                   ✓
+Urlscan                                                                   ✓
+Virustotal                       ✓      ✓     ✓                           ✓
+WhoisLookup                      ✓
+=======================       ======= ====   ==   ===   ====  ===== ===  === ==========
 
 Running Analyzers
 -----------------
