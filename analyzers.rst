@@ -45,7 +45,7 @@ The collapsed job view for an analyzer will return a summary view of the analysi
 .. image:: images/analyzers-job-summary.png
   :target: _images/analyzers-job-summary.png
   
-  Expanding the collapsed row will review a more detailed view of the analysis:
+Expanding the collapsed row will review a more detailed view of the analysis:
   
 .. image:: images/analyzers-job-details.png
   :target: _images/analyzers-job-details.png
