@@ -77,6 +77,11 @@ If you need to increase this delay, it can be done using the ``salt:minion:servi
     minion:
       service_start_delay: 60 # in seconds.
 
+Diagnostic Logs
+---------------
+
+Diagnostic logs can be found in ``/opt/so/log/salt/``.
+
 More Information
 ----------------
 
