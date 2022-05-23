@@ -53,6 +53,20 @@ Configuring Analyzers
 ---------------------
 Some analyzers require authentication or other details to be configured before use. If analysis is requested for an observable and an analyzer supports that observable type but the analyzer is left unconfigured, then it will not run. 
 
+The following analyzers require users to configure authentication or other parameters in order for the analyzer to work correctly:
+
+- AlienVault OTX
+- EmailRep
+- GreyNoise
+- LocalFile
+- Pulsedive
+- Urlscan
+- VirusTotal
+
+To configure an analyzer, consult its documentation via the provided README file. For example, the README for the Virustotal analyzer can be found here:
+
+https://github.com/Security-Onion-Solutions/securityonion/tree/dev/salt/sensoroni/files/analyzers/virustotal
+
 Developing Analyzers
 --------------------
 Additional analyzers can be developed using the developer's guide.
