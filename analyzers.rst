@@ -63,7 +63,7 @@ The following analyzers require users to configure authentication or other param
 - Urlscan
 - VirusTotal
 
-To configure an analyzer, consult its documentation via the provided README file. For example, the README for the Virustotal analyzer can be found here:
+To configure an analyzer, consult its documentation via the provided README file. For example, the README for the VirusTotal analyzer can be found here:
 
 https://github.com/Security-Onion-Solutions/securityonion/tree/dev/salt/sensoroni/files/analyzers/virustotal
 
