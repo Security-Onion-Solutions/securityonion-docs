@@ -50,6 +50,11 @@ There is an option during :ref:`Configuration` to automatically install OS updat
 
 ``soup`` checks for missing OS updates and ask if you want to install them.
 
+ssh
+---
+
+If you run soup via ssh and the ssh session terminates, then any processes running in that session would terminate. You should avoid leaving soup unattended especially if the machine you are ssh'ing from is configured to sleep after a period of time. You might also consider using something like screen or tmux so that if your ssh session terminates, the processes will continue running on the server.
+
 Airgap
 ------
 
