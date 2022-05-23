@@ -69,4 +69,5 @@ https://github.com/Security-Onion-Solutions/securityonion/tree/dev/salt/sensoron
 
 Developing Analyzers
 --------------------
-Additional analyzers can be developed using the developer's guide.
+Additional analyzers can be developed using the developer's guide, here:
+https://github.com/Security-Onion-Solutions/securityonion/tree/dev/salt/sensoroni/files/analyzers
