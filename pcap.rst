@@ -5,7 +5,7 @@ PCAP
 
 :ref:`soc` gives you access to our PCAP interface. This interface allows you to access your full packet capture that was recorded by :ref:`stenographer`. 
 
-In most cases, you'll pivot to PCAP from a particular event in :ref:`alerts` or :ref:`hunt`. Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
+In most cases, you'll pivot to PCAP from a particular event in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`. Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
 
 .. image:: images/pcap-add-job.png
   :target: _images/pcap-add-job.png
