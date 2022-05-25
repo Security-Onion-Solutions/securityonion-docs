@@ -3,7 +3,7 @@
 Cases
 =====
 
-Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to manage your cases from start to finish including escalating logs from :ref:`alerts` and :ref:`hunt`, assigning analysts, commenting, adding attachments, and tracking observables. Check out our Cases video at https://youtu.be/y_kr_hrtqVc!
+Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. Check out our Cases video at https://youtu.be/y_kr_hrtqVc!
 
 Installation
 ------------
@@ -44,7 +44,7 @@ On the Comments tab, you can add comments about the case. The Comments field use
 Attachments
 -----------
 
-On the Attachments tab, you can upload attachments. For each attachment, you can optionally define TLP and add tags. Cases will automatically generate SHA256, SHA1, and MD5 hash values for each attachment.
+On the Attachments tab, you can upload attachments. For each attachment, you can optionally define TLP and add tags. Cases will automatically generate SHA256, SHA1, and MD5 hash values for each attachment. Buttons next to the hash values allow you to copy the value or add it as an observable.
 
 .. image:: images/cases-attachments.png
   :target: _images/cases-attachments.png

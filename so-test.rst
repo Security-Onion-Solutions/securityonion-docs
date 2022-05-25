@@ -61,4 +61,4 @@ so-test
     Retried packets (EAGAIN):  0
   Replay completed. Warnings shown above are typically expected.
 
-Once this completes, you can then go to :ref:`alerts` and :ref:`hunt` and review data there.
+Once this completes, you can then go to :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` to review data.
