@@ -16,7 +16,7 @@ https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elast
 
 https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/elasticsearch/files/ingest-dynamic/common
 
-You can find parsed NIDS alerts in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana` via their predefined queries and dashboards or by manually searching for:
+You can find parsed NIDS alerts in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana` via their predefined queries and dashboards or by manually searching for:
 
 | ``event.module:"suricata"``
 | ``event.dataset:"alert"``

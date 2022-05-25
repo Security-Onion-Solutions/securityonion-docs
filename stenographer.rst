@@ -20,7 +20,7 @@ You can access full packet capture via the :ref:`pcap` interface:
 .. image:: images/pcap-transcript.png
   :target: _images/pcap-transcript.png
 
-:ref:`alerts`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` interface.
+:ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` interface.
 
 Command Line
 ------------

@@ -8,7 +8,7 @@ From https://suricata-ids.org:
     Suricata is a free and open source, mature, fast and robust network threat detection engine. Suricata inspects the network traffic using
     a powerful and extensive rules and signature language, and has powerful Lua scripting support for detection of complex threats.
 
-Suricata NIDS alerts can be found in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Suricata NIDS alerts in :ref:`alerts`:
+Suricata NIDS alerts can be found in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Suricata NIDS alerts in :ref:`alerts`:
 
 .. image:: images/alerts.png
   :target: _images/alerts.png

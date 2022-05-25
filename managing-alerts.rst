@@ -21,7 +21,7 @@ There are three alerting engines within Security Onion: :ref:`suricata`, :ref:`w
 
 ``event.severity``: ``1`` ==> ``event.severity_label``: ``low``
 
-All alerts are viewable in :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`.
+All alerts are viewable in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
 
 Wazuh HIDS Alerts
 -----------------

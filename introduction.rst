@@ -62,7 +62,12 @@ Security Onion Console (SOC)
 .. image:: images/alerts.png
   :target: _images/alerts.png
 
-:ref:`soc` also includes our :ref:`Hunt` interface for threat hunting which allows you to query not only your NIDS/HIDS alerts but also network metadata logs from :ref:`zeek` or :ref:`suricata` and any other logs that you may be collecting. 
+:ref:`soc` also includes our :ref:`dashboards` interface which gives you a nice overview of not only your NIDS/HIDS alerts but also network metadata logs from :ref:`zeek` or :ref:`suricata` and any other logs that you may be collecting. 
+
+.. image:: images/dashboards.png
+  :target: _images/dashboards.png
+
+:ref:`hunt` is similar to :ref:`dashboards` but its default queries are more focused than the overview queries in :ref:`dashboards`.
 
 .. image:: images/hunt.png
   :target: _images/hunt.png
@@ -80,7 +85,7 @@ Security Onion Console (SOC)
 CyberChef
 ~~~~~~~~~
 
-:ref:`cyberchef` allows you to decode, decompress, and analyze artifacts. :ref:`alerts`, :ref:`hunt`, and :ref:`pcap` all allow you to quickly and easily send data to :ref:`cyberchef` for further analysis.
+:ref:`cyberchef` allows you to decode, decompress, and analyze artifacts. :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`pcap` all allow you to quickly and easily send data to :ref:`cyberchef` for further analysis.
 
 .. image:: images/cyberchef.png
   :target: _images/cyberchef.png

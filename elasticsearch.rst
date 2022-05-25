@@ -10,7 +10,7 @@ From https://www.elastic.co/products/elasticsearch:
 Querying
 --------
 
-You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`hunt`, and :ref:`kibana`. You can also query Elasticsearch from the command line using a tool like ``curl``. You can also use :ref:`so-elasticsearch-query`.
+You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. You can also query Elasticsearch from the command line using a tool like ``curl``. You can also use :ref:`so-elasticsearch-query`.
 
 Authentication
 --------------
