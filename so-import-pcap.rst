@@ -11,7 +11,7 @@ so-import-pcap
 -  store pcaps where :ref:`soc` can find them
 -  provide a hyperlink for you to view all alerts and logs in :ref:`hunt`
 
-In addition to viewing alerts and logs in :ref:`hunt`, you can also find NIDS alerts in :ref:`alerts` and all logs in :ref:`kibana`.
+In addition to viewing alerts and logs in :ref:`hunt`, you can also find NIDS alerts in :ref:`alerts` and all logs in :ref:`dashboards` and :ref:`kibana`.
 
 Configuration
 -------------

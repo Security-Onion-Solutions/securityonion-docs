@@ -57,7 +57,7 @@ Ensure the SMP is pointed to ``https://$securityonion:3765`` and save the config
 
 Navigate to ``Administration -> Policy -> YOUR POLICY -> Settings -> Elastic Streaming`` and enable ``Event Streaming`` if not already enabled.
 
-Once events are batched and published from the Endgame SMP, you can search for them in :ref:`hunt` using a query like ``event.module:endgame``.
+Once events are batched and published from the Endgame SMP, you can search for them in :ref:`dashboards` or :ref:`hunt` using a query like ``event.module:endgame``.
 
 ----------
 

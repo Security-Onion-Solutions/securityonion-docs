@@ -508,7 +508,7 @@ Note:  If you have a distributed setup, you need to run the following command on
 
 You should see ``Loaded Ingest pipelines``.  Once that is complete, run ``sudo so-filebeat-restart``.
 
-Assuming you have Netflow sources sending data, you should now start to see data in :ref:`hunt`.  Group by ``event.dataset`` and you should now have ``netflow.log`` entries appearing.
+Assuming you have Netflow sources sending data, you should now start to see data in :ref:`dashboards` or :ref:`hunt`.  Group by ``event.dataset`` and you should now have ``netflow.log`` entries appearing.
 
 More Information
 ----------------

@@ -123,6 +123,6 @@ https://www.elastic.co/guide/en/beats/winlogbeat/master/exported-fields-eventlog
 Data
 ----
 
-In :ref:`kibana`, you can find Beats data on the ``Host`` dashboard or by searching for ``_index:"*:so-beats-*"`` in Discover.
+In :ref:`dashboards` and :ref:`hunt`, you can find Beats data by searching for ``_index:"*:so-beats-*"``.
 
-In :ref:`hunt`, you can find Beats data by searching for ``_index:"*:so-beats-*"``.
+In :ref:`kibana`, you can find Beats data on the ``Host`` dashboard or by searching for ``_index:"*:so-beats-*"`` in Discover.

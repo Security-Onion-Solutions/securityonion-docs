@@ -47,7 +47,7 @@ In Security Onion 2, Elasticsearch receives unparsed logs from :ref:`logstash` o
 Templates
 ---------
 
-Fields are mapped to their appropriate data type using templates. When making changes for parsing, it is necessary to ensure fields are mapped to a data type to allow for indexing, which in turn allows for effective aggregation and searching in :ref:`hunt` and :ref:`kibana`. Elasticsearch leverages both component and index templates.
+Fields are mapped to their appropriate data type using templates. When making changes for parsing, it is necessary to ensure fields are mapped to a data type to allow for indexing, which in turn allows for effective aggregation and searching in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Elasticsearch leverages both component and index templates.
 
 Component Templates
 ~~~~~~~~~~~~~~~~~~~

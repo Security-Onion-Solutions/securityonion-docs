@@ -7,7 +7,7 @@ Zeek is formerly known as Bro.  From https://www.zeek.org/:
 
     Zeek is a powerful network analysis framework that is much different from the typical IDS you may know. (Zeek is the new name for the long-established Bro system. Note that parts of the system retain the "Bro" name, and it also often appears in the documentation and distributions.)
 
-Zeek logs are sent to :ref:`elasticsearch` for parsing and storage and can then be found in :ref:`hunt` and :ref:`kibana`. Here's an example of Zeek conn (connection) logs in :ref:`hunt`:
+Zeek logs are sent to :ref:`elasticsearch` for parsing and storage and can then be found in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Zeek conn (connection) logs in :ref:`hunt`:
 
 .. image:: images/hunt.png
   :target: _images/hunt.png
@@ -108,7 +108,7 @@ If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`
 Logs
 ----
 
-Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`filebeat`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`hunt` and :ref:`kibana`.
+Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`filebeat`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
 
 We configure Zeek to output logs in JSON format. If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
 
@@ -173,7 +173,7 @@ https://docs.zeek.org/en/latest/scripts/base/frameworks/notice/main.zeek.html#ty
 | ...and others, which can be researched here:
 | https://docs.zeek.org/en/latest/script-reference/log-files.html
 
-As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`hunt` or :ref:`kibana`.
+As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
 
 Custom Scripts
 --------------

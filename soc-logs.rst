@@ -14,7 +14,7 @@ SOC auth is handled by Kratos and logs can be found at ``/opt/so/log/kratos/``. 
 
         sudo zgrep "Identity authenticated successfully and was issued an Ory Kratos Session Cookie" /opt/so/log/kratos/*
 
-Starting in Security Onion 2.3.110, those logs should be ingested into :ref:`elasticsearch` and available for searching in :ref:`hunt` and :ref:`kibana`.
+Starting in Security Onion 2.3.110, those logs should be ingested into :ref:`elasticsearch` and available for searching in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
 
 .. image:: images/soc-logins.png
   :target: _images/soc-logins.png

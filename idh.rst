@@ -53,7 +53,7 @@ Technical Background
 
 The IDH node utilizes OpenCanary which is a modular opensource honeypot by Thinkst. You can read more about it at https://github.com/thinkst/opencanary.
 
-OpenCanary logs can be found through :ref:`hunt` or :ref:`kibana` using the following queries:
+OpenCanary logs can be found through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana` using the following queries:
 
 ::
 

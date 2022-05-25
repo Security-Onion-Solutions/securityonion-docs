@@ -17,7 +17,7 @@ The key components of a Play are:
  #. What are the follow-up actions required to validate and/or remediate when results are seen?
  #. The actual query needed to implement the Play's objective. In our case, the :ref:`elastalert` / :ref:`elasticsearch` configuration.
 
-Any results from a Play (low, medium, high, critical severity) are available to view within :ref:`hunt` or :ref:`kibana`. High or critical severity results from a Play will generate an Alert within the Security Onion Console :ref:`alerts` interface.
+Any results from a Play (low, medium, high, critical severity) are available to view within :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. High or critical severity results from a Play will generate an Alert within the Security Onion Console :ref:`alerts` interface.
 
 The final piece to Playbook is automation. Once a Play is made active, the following happens:
 
@@ -36,7 +36,7 @@ Plays are based on Sigma rules - from https://github.com/Neo23x0/sigma:
 
     Sigma is a generic and open signature format that allows you to describe relevant log events in a straightforward manner. The rule format is very flexible, easy to write and applicable to any type of log file. The main purpose of this project is to provide a structured form in which researchers or analysts can describe their once developed detection methods and make them shareable with others.
 
-To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a sample Sigma rule or paste one into the Sigma field and click ``Convert``. This will convert the Sigma into a query that you can use in :ref:`hunt` or :ref:`kibana` to confirm that it will work for your target log.  
+To create a new play, click on the ``Sigma Editor`` menu link. Either ``Load`` a sample Sigma rule or paste one into the Sigma field and click ``Convert``. This will convert the Sigma into a query that you can use in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana` to confirm that it will work for your target log.  
 
 Refer to Log Sources & Field Names for details around what field names to use in the Sigma etc.
 

@@ -33,7 +33,7 @@ You can read more about YARA rules in the :ref:`local-rules` section.
 Logs
 ----
 
-Even if Strelka doesn't detect a YARA match, it will still log metadata about the file. You can find Strelka logs in :ref:`hunt` and :ref:`kibana`. Here's an example of Strelka logs in :ref:`hunt`:
+Even if Strelka doesn't detect a YARA match, it will still log metadata about the file. You can find Strelka logs in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Strelka logs in :ref:`hunt`:
 
 .. image:: images/strelka.png
   :target: _images/strelka.png

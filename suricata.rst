@@ -13,7 +13,7 @@ Suricata NIDS alerts can be found in :ref:`alerts`, :ref:`dashboards`, :ref:`hun
 .. image:: images/alerts.png
   :target: _images/alerts.png
   
-If enabled, Suricata metadata (protocol logs) can be found in :ref:`hunt` and :ref:`kibana`.
+If enabled, Suricata metadata (protocol logs) can be found in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
 
 Community ID
 ------------
