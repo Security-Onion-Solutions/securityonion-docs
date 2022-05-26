@@ -67,7 +67,7 @@ Security Onion Console (SOC)
 .. image:: images/dashboards.png
   :target: _images/dashboards.png
 
-:ref:`hunt` is similar to :ref:`dashboards` but its default queries are more focused than the overview queries in :ref:`dashboards`.
+:ref:`hunt` is similar to :ref:`dashboards` but its default queries are more focused on threat hunting.
 
 .. image:: images/hunt.png
   :target: _images/hunt.png
@@ -104,10 +104,11 @@ Workflow
 All of these analysis tools work together to provide efficient and comprehensive analysis capabilities. For example, here's one potential workflow:
 
      - Go to the :ref:`alerts` page and review any unacknowledged alerts.
-     - Once you've found an alert that you want to investigate, you might want to pivot to :ref:`hunt` to expand your search and look for additional logs relating to the source and destination IP addresses.
+     - Review :ref:`dashboards` for anything that looks suspicious.
+     - Once you've found something that you want to investigate, you might want to pivot to :ref:`hunt` to expand your search and look for additional logs relating to the source and destination IP addresses.
      - If any of those alerts or logs look interesting, you might want to pivot to :ref:`pcap` to review the full packet capture for the entire stream.
      - Depending on what you see in the stream, you might want to send it to :ref:`cyberchef` for further analysis and decoding.
-     - Escalate alerts and logs to :ref:`cases` and document any observables.
+     - Escalate alerts and logs to :ref:`cases` and document any observables. Pivot to :ref:`hunt` to cast a wider net for those observables.
      - Develop a play in :ref:`playbook` that will automatically alert on observables moving forward and update your coverage in :ref:`attack-navigator`.
      - Finally, return to :ref:`cases` and document the entire investigation and close the case.
 
