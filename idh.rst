@@ -23,27 +23,27 @@ IDH nodes are dedicated to just being IDH nodes and cannot run any other service
 Screenshots
 -----------
 
-Run Setup, choose to add a new node to your distributed deployment, and select the IDH option:
+Run Setup, choose to add a new node to your distributed deployment, and then select the IDH option.
 
 .. image:: images/idh-install-1.png
   :target: _images/idh-install-1.png
 
-Then choose from one of the common honeypot options or customize:
+Then choose from one of the common honeypot options or choose the Custom option to customize.
 
 .. image:: images/idh-install-2.png
   :target: _images/idh-install-2.png
 
-Starting in Security Onion 2.3.120, you can optionally prevent the IDH services from listening on the management interface:
+Starting in Security Onion 2.3.120, you can optionally prevent the IDH services from listening on the management interface.
 
 .. image:: images/idh-install-3.png
   :target: _images/idh-install-3.png
 
-If you choose the webserver option, anybody who connects to the webserver will see a web page like this:
+If you choose the webserver option, anybody who connects to the webserver will see a fake login page.
 
 .. image:: images/idh-webserver.png
   :target: _images/idh-webserver.png
 
-Connections to honeypot services will result in ``SO IDH`` alerts that can be seen in :ref:`alerts`:
+Connections to honeypot services will result in ``SO IDH`` alerts that can be seen in :ref:`alerts`.
 
 .. image:: images/idh-alert-1.png
   :target: _images/idh-alert-1.png
