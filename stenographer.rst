@@ -48,7 +48,7 @@ For example, suppose you want to change the default value for purging old pcap. 
 
 Maximum Files
 -------------
-By default, Stenographer limits the number of files in the pcap directory to 30K to avoid limitations with the ext3 filesystem. However, if you're using the ext4 or xfs filesystems, then it is safe to increase this value. So if you have a large amount of storage and find that you only have 3 weeks worth of PCAP on disk while still having plenty of free space, then you may want to increase this default setting. Starting in Security Onion 2.3.80, this is controlled by the ``maxfiles`` option in the ``steno`` section of the :ref:`salt` pillar.
+By default, Stenographer limits the number of files in the pcap directory to 30K to avoid limitations with the ext3 filesystem. However, if you're using the ext4 or xfs filesystems, then it is safe to increase this value. So if you have a large amount of storage and find that you only have 3 weeks worth of PCAP on disk while still having plenty of free space, then you may want to increase this default setting. This is controlled by the ``maxfiles`` option in the ``steno`` section of the :ref:`salt` pillar.
 
 Diagnostic Logging
 ------------------

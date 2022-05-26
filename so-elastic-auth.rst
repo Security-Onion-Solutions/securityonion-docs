@@ -45,4 +45,4 @@ To disable Elastic auth, run ``so-elastic-auth`` with the ``false`` option:
 Service Accounts
 ----------------
 
-Service accounts use randomly generated passwords. Starting in Security Onion 2.3.90, these service account passwords are 72 characters in length. If you need to reset these passwords, you can use the ``so-elastic-auth-password-reset`` utility.
+Service accounts use randomly generated passwords that are 72 characters in length. If you need to reset these passwords, you can use the ``so-elastic-auth-password-reset`` utility.

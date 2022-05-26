@@ -3,7 +3,7 @@
 so-import-evtx
 ==============
 
-Starting in Security Onion 2.3.80, ``so-import-evtx`` will import one or more evtx files into Security Onion.
+``so-import-evtx`` will import one or more evtx files into Security Onion.
 
 Usage
 -----

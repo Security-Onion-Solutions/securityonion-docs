@@ -454,7 +454,7 @@ Zeek diagnostic logs can be found in ``/nsm/zeek/logs/``. Look for files like ``
 Disabling
 ---------
 
-Starting in Security Onion 2.3.80, Zeek can be disabled by setting ``enabled: false`` in the ``zeek`` :ref:`salt` pillar.
+Zeek can be disabled by setting ``enabled: false`` in the ``zeek`` :ref:`salt` pillar.
 
 If you just want to disable Zeek on a single sensor, then you can edit that sensor's ``minion.sls`` file. If the file doesn't already have a ``zeek`` section, then add the following to the end of the file:
 

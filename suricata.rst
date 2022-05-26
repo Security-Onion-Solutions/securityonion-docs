@@ -154,7 +154,7 @@ If you choose Suricata for metadata, it will extract files from network traffic 
 Disabling
 ---------
 
-Starting in Security Onion 2.3.80, Suricata can be disabled by setting ``enabled: false`` in the ``suricata`` :ref:`salt` pillar.
+Suricata can be disabled by setting ``enabled: false`` in the ``suricata`` :ref:`salt` pillar.
 
 If you just want to disable Suricata on a single sensor, then you can edit that sensor's ``minion.sls`` file. If the file doesn't already have a ``suricata`` section, then add the following to the end of the file:
 

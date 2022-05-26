@@ -66,7 +66,7 @@ When you run ``soup`` on an :ref:`airgap` install, it will ask for the location 
 
 - simply copy the ISO file itself to the airgapped manager
 
-Starting in Security Onion 2.3.80, you can also specify the path on the command line using the ``-f`` option:
+You can also specify the path on the command line using the ``-f`` option:
 
 ::
 
@@ -97,7 +97,7 @@ If Kibana loads but the dashboards display errors that they didn't before the up
 Automation
 ----------
 
-Starting in Security Onion 2.3.80, ``soup`` can be automated as follows (assuming you've previously accepted the Elastic license):
+``soup`` can be automated as follows (assuming you've previously accepted the Elastic license):
 
 ::
 
