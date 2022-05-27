@@ -11,15 +11,15 @@ From the book, *Intrusion Detection Honeypots* (Sanders, C):
 
 Chris Sanders and Josh Brower presented the IDH concept at Security Onion Conference 2021 and you can view the recording at https://www.youtube.com/watch?v=NzUhfARVfJk&list=PLljFlTO9rB17mESq7Z9OeFKvVh39vJW34&index=5.
 
-.. warning::
-
-        The IDH node is designed to be placed *inside* your network perimeter! It should not be accessible from the Internet!
-     
 Installation
 ------------
 
 IDH nodes are dedicated to just being IDH nodes and cannot run any other services. Therefore, you must have a separate manager to connect to. You can join a new IDH node to an existing Standalone deployment or full distributed deployment. Starting in Security Onion 2.3.120, our ISO image includes a new boot menu option for IDH installs that will partition your disk appropriately with lower requirements than a full installation.
 
+.. warning::
+
+        The IDH node is designed to be placed *inside* your network perimeter! It should not be accessible from the Internet!
+     
 Screenshots
 -----------
 
