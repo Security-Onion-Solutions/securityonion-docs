@@ -50,13 +50,13 @@ You can delete the node from FleetDM via the :ref:`fleet` web interface.
 Cross Cluster Search
 --------------------
 
-If you are removing a search node, you will want to remove it from cross cluster search. To do so, you'll need to update that search node's settings in ``_cluster/settings`` and make sure that any settings are set to ``null``. So you might want to start by doing the following query via curl:
+If you are removing a search node, you will want to remove it from cross cluster search. To do so, you'll need to update that search node's settings in ``_cluster/settings`` and make sure that any settings are set to ``null``. So you might want to start by doing the following query via :ref:`so-elasticsearch-query`:
 
 ::
 
-   curl -sk https://localhost:9200/_cluster/settings
+   sudo so-elasticsearch-query _cluster/settings
    
-Then based on that output, update ``_cluster/settings`` by sending that node section back but with all settings set to ``null``. You could use curl again or use :ref:`kibana`'s ``Dev Tools`` and paste something like the following text into the window (replacing ``nodename`` with the actual node name and adding any other settings as necessary):
+Then based on that output, update ``_cluster/settings`` by sending that node section back but with all settings set to ``null``. You could use :ref:`so-elasticsearch-query` again or use :ref:`kibana`'s ``Dev Tools`` and paste something like the following text into the window (replacing ``nodename`` with the actual node name and adding any other settings as necessary):
 
 ::
 
