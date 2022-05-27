@@ -8,23 +8,17 @@ Standard :ref:`soc` logs can be found at ``/opt/so/log/soc/``.
 SOC Auth Logs
 -------------
 
-SOC auth is handled by Kratos and logs can be found at ``/opt/so/log/kratos/``. To look for successful SOC logins, you can run the following:
+SOC auth is handled by Kratos and you can read more about that at https://github.com/ory/kratos. SOC auth logs can be found at ``/opt/so/log/kratos/``. To look for successful SOC logins, you can run the following:
 
 ::
 
         sudo zgrep "Identity authenticated successfully and was issued an Ory Kratos Session Cookie" /opt/so/log/kratos/*
 
-Starting in Security Onion 2.3.110, those logs should be ingested into :ref:`elasticsearch` and available for searching in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
+Those logs should be ingested into :ref:`elasticsearch` and available for searching in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Both :ref:`dashboards` and :ref:`hunt` have pre-defined queries for SOC auth logs.
 
 .. image:: images/soc-logins.png
   :target: _images/soc-logins.png
 
-Starting in Security Onion 2.3.120, :ref:`hunt` will include the following query in the drop-down query menu:
-
-::
-
-        event.module:kratos AND event.dataset:audit AND msg:authenticated | groupby http_request.headers.x-real-ip identity_id
-        
 identity_id
 ~~~~~~~~~~~
 
