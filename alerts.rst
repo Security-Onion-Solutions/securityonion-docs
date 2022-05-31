@@ -79,12 +79,12 @@ The remainder of the page is a data table that starts in the grouped view and ca
 Grouped View
 ~~~~~~~~~~~~
 
-By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then selecting the Drilldown option allows you to drill down into that value which switches to the detailed view.
+By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then selecting the Drilldown option allows you to drill down into that value which switches to the detailed view. You can also click the value in the Count column to perform a quick drilldown. Note that this quick drilldown feature is only enabled for certain queries.
 
 .. image:: images/alerts-grouped.png
   :target: _images/alerts-grouped.png
 
-You can also click the value in the Count column to perform a quick drilldown. Note that this quick drilldown feature is only enabled for certain queries.
+If you'd like to remove a particular field from the grouped view, you can click the trash icon at the top of the table to the right of the field name.
 
 Detailed View
 ~~~~~~~~~~~~~
