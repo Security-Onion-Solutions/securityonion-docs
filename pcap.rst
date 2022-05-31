@@ -7,8 +7,8 @@ PCAP
 
 In most cases, you'll pivot to PCAP from a particular event in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt` by choosing the PCAP action on the action menu. 
 
-.. image:: images/hunt-events.png
-  :target: _images/hunt-events.png
+.. image:: images/soc-events-table.png
+  :target: _images/soc-events-table.png
 
 Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
 

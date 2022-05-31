@@ -98,8 +98,8 @@ Clicking a value in the Events table brings up a context menu of actions for tha
 
 The default Fetch Limit for the Events table is ``100``. If you need to see more than 100 events, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: images/hunt-events.png
-  :target: _images/hunt-events.png
+.. image:: images/soc-events-table.png
+  :target: _images/soc-events-table.png
 
 When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
 
