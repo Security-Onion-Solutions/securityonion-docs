@@ -42,25 +42,24 @@ Alerts will try to detect your local time zone via your browser. You can manuall
 
 Query Bar
 ---------
+
 The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. If you want to send your current Alerts query to :ref:`hunt`, you can click the crosshair icon to the right of the query bar.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94837346-2305b180-03e2-11eb-96c9-0c99fd1781dc.png
-  :target: https://user-images.githubusercontent.com/1659467/94837346-2305b180-03e2-11eb-96c9-0c99fd1781dc.png
-
-Under the query bar, you'll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click its corresponding bubble to remove it and run a new search.
+.. image:: images/alerts-query-bar.png
+  :target: _images/alerts-query-bar.png
 
 You can click the dropdown box to select other queries which will group by other fields.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94837439-3e70bc80-03e2-11eb-8399-f40678fd5594.png
-  :target: https://user-images.githubusercontent.com/1659467/94837439-3e70bc80-03e2-11eb-8399-f40678fd5594.png
+.. image:: images/alerts-queries.png
+  :target: _images/alerts-queries.png
   
 Time Picker
 -----------
 
 By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94587826-20c01d80-0251-11eb-8fa3-2e73a0763981.png
-  :target: https://user-images.githubusercontent.com/1659467/94587826-20c01d80-0251-11eb-8fa3-2e73a0763981.png
+.. image:: images/soc-time-picker.png
+  :target: _images/soc-time-picker.png
 
 Data Table
 ----------
