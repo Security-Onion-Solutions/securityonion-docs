@@ -9,10 +9,19 @@ Below are some ways in which you can customize :ref:`soc`. Once all customizatio
 
         sudo so-soc-restart
 
+Login Page
+----------
+
+You can customize the SOC login page with a login banner. The content of this banner is stored in the ``banner.md`` file, which uses the common Markdown (.md) format. You can learn more about Markdown format at `<https://markdownguide.org>`_. To customize the login banner, copy ``banner.md`` as follows and then edit ``/opt/so/saltstack/local/salt/soc/files/soc/banner.md`` using your favorite text editor:
+
+::
+
+        sudo cp /opt/so/saltstack/default/salt/soc/files/soc/banner.md /opt/so/saltstack/local/salt/soc/files/soc/
+        
 Overview Page
 -------------
 
-You can customize the main SOC Overview page that you see when you first log into SOC. The content of this page is stored in the ``motd.md`` file, which uses the common Markdown (.md) format. You can learn more about Markdown format at `<https://markdownguide.org>`_. To customize the Overview page content, copy ``motd.md`` as follows and then edit ``/opt/so/saltstack/local/salt/soc/files/soc/motd.md`` using your favorite text editor:
+After logging into SOC, you'll start on the main SOC Overview page which can be customized as well. The content of this page is stored in the ``motd.md`` file, which uses Markdown format as mentioned above. To customize the Overview page content, copy ``motd.md`` as follows and then edit ``/opt/so/saltstack/local/salt/soc/files/soc/motd.md`` using your favorite text editor:
 
 ::
 
