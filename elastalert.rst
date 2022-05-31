@@ -14,7 +14,13 @@ Configuration
 
 ElastAlert rules are stored in ``/opt/so/rules/elastalert/``.
 
-Security Onion's default ElastAlert rules are configured with an output type of "debug", which simply outputs all matches queries to a log file found in ``/opt/so/log/elastalert/``.
+By default, ElastAlert rules are configured with an output type of ``debug``, which simply outputs to a log file found in ``/opt/so/log/elastalert/``.
+
+ElastAlert logs to :ref:`elasticsearch` indices. You can search those indices in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically search the ``elastalert`` indices by default so if you want to use :ref:`dashboards` or :ref:`hunt` to search ElastAlert logs, then you'll need to adjust the ``es_index_patterns`` setting in your :ref:`salt` pillar to include ``*:elastalert*``:
+
+::
+
+    es_index_patterns: '*:so-*,*:endgame-*,*:elastalert*'
 
 Slack
 ~~~~~
