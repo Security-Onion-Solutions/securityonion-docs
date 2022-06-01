@@ -74,19 +74,23 @@ When results from your Plays are found (ie alerts), they are available to view w
 Tuning Plays
 ------------
 
-If you have a Play that is generating false positives, then you will need to edit the Sigma of the Play to account for your local configuration that is generating those false positives.
+If you have a Play that is generating false positives, you can tune it by adding a `Custom Filter` to the Play.
 
-For example, suppose you are seeing a large amount of ``Non Interactive PowerShell`` alerts. Drilling down into the alerts, it appears to be a legitimate execution of ``CompatTelRunner.exe``. This can be tuned out by doing the following:
+For example, suppose you are seeing a large amount of ``Suspicious Service Path Modification`` alerts. Drilling down into the alerts, it appears to be a legitimate configuration change by one of the IT Ops Service Accounts. This can be tuned out by doing the following:
 
-- Copy the Sigma from the Play (found under the Sigma field) and paste it into the left pane under ``Create New Play``.
-- Click ``Convert`` and make sure that it converts correctly.
-- Add ``CompatTelRunner.exe`` under the filter clause and click ``Convert`` again to make sure it works.
-- Copy and paste the edited sigma back to the Play under the Sigma field (drop it in between the ``<pre><code class="yaml">`` and ``</code></pre>`` tags)
-- Finally, click ``Submit`` and Playbook will take care of the rest.
+- Open the Play and click ``Edit``
+- Add the following filter in the ``Custom Filter`` field (YAML Formatting!):
 
-You can edit the Sigma right there in the Sigma field in the Play, but it is not a YAML editor and sometimes it is easier to edit using a YAML editor.
+::
 
-Please note that if there is ever an update for that Sigma rule from the Sigma rules repo, your changes will get overwritten. We are working on solutions for that and a way to make edits and tuning a bit easier.
+  sofilter:
+    User: SA_ITOPS
+
+The ``sofilter`` syntax is important - add as many top-level filter clauses as you need, but they should all start with ``sofilter`` - for example ``sofilter1``, ``sofilter2``
+
+- Click ``Submit`` and Playbook will take care of the rest, which includes automatically adding the custom filter to the rule when it is converted.
+
+It is not recommended to edit the Sigma directly for Community rules, as if there is ever an update for that Sigma rule from the Sigma rules repo, your changes will get overwritten.
 
 Finally, if you are seeing legitimate executions that are not unique to your environment, you might consider submitting a PR to the rule in the Sigma repo (https://github.com/SigmaHQ/sigma/tree/master/rules).
 
