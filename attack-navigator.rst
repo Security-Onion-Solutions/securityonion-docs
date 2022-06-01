@@ -14,8 +14,8 @@ Accessing
 
 To access Navigator, log into :ref:`soc` and then click the Navigator hyperlink on the left side.
 
-.. image:: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/2.3/images/navigator.jpg
-    :target: https://github.com/Security-Onion-Solutions/securityonion-docs/raw/2.3/images/navigator.jpg
+.. image:: images/navigator.jpg
+  :target: _images/navigator.jpg
 
 Default Layer - Playbook
 ------------------------
