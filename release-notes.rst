@@ -13,6 +13,7 @@ Release Notes
 - FEATURE: Native analyzer infrastructure `#7944 <https://github.com/Security-Onion-Solutions/securityonion/issues/7944>`_
 - FEATURE: Playbook False Positive Tuning  `#8059 <https://github.com/Security-Onion-Solutions/securityonion/issues/8059>`_
 - FEATURE: SOC Dashboards `#1211 <https://github.com/Security-Onion-Solutions/securityonion/issues/1211>`_
+- FIX: Allow quick actions on a field value with the number 0 `#8023 <https://github.com/Security-Onion-Solutions/securityonion/issues/8023>`_
 - FIX: Elastalert query in Hunt `#8049 <https://github.com/Security-Onion-Solutions/securityonion/issues/8049>`_
 - FIX: Ensure failed elastic queries show an error on the SOC UI `#7846 <https://github.com/Security-Onion-Solutions/securityonion/issues/7846>`_
 - UPGRADE: ElastAlert 2 from 2.2.2 to 2.5.0 `#8008 <https://github.com/Security-Onion-Solutions/securityonion/issues/8008>`_
