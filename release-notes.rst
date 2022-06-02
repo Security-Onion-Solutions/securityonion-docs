@@ -16,6 +16,7 @@ Release Notes
 - FIX: Allow quick actions on a field value with the number 0 `#8023 <https://github.com/Security-Onion-Solutions/securityonion/issues/8023>`_
 - FIX: Elastalert query in Hunt `#8049 <https://github.com/Security-Onion-Solutions/securityonion/issues/8049>`_
 - FIX: Ensure failed elastic queries show an error on the SOC UI `#7846 <https://github.com/Security-Onion-Solutions/securityonion/issues/7846>`_
+- FIX: Firefox OQL edits should release focus after pressing ENTER `#8063 <https://github.com/Security-Onion-Solutions/securityonion/issues/8063>`_
 - UPGRADE: ElastAlert 2 from 2.2.2 to 2.5.0 `#8008 <https://github.com/Security-Onion-Solutions/securityonion/issues/8008>`_
 - UPGRADE: Elastic 7.17.4 `#8002 <https://github.com/Security-Onion-Solutions/securityonion/issues/8002>`_
 - UPGRADE: FleetDM 4.14.0 `#8012 <https://github.com/Security-Onion-Solutions/securityonion/issues/8012>`_
