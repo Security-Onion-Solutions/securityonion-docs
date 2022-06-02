@@ -3,6 +3,25 @@
 Release Notes
 =============
 
+
+2.3.130 Changes
+----------------
+
+- FEATURE: Add "observable" button next to hash for case attachments `#7222 <https://github.com/Security-Onion-Solutions/securityonion/issues/7222>`_
+- FEATURE: Add set of default analyzers `#7945 <https://github.com/Security-Onion-Solutions/securityonion/issues/7945>`_
+- FEATURE: Make classification.config user-configurable `#7918 <https://github.com/Security-Onion-Solutions/securityonion/issues/7918>`_
+- FEATURE: Native analyzer infrastructure `#7944 <https://github.com/Security-Onion-Solutions/securityonion/issues/7944>`_
+- FEATURE: Playbook False Positive Tuning  `#8059 <https://github.com/Security-Onion-Solutions/securityonion/issues/8059>`_
+- FEATURE: SOC Dashboards `#1211 <https://github.com/Security-Onion-Solutions/securityonion/issues/1211>`_
+- FIX: Elastalert query in Hunt `#8049 <https://github.com/Security-Onion-Solutions/securityonion/issues/8049>`_
+- FIX: Ensure failed elastic queries show an error on the SOC UI `#7846 <https://github.com/Security-Onion-Solutions/securityonion/issues/7846>`_
+- UPGRADE: ElastAlert 2 from 2.2.2 to 2.5.0 `#8008 <https://github.com/Security-Onion-Solutions/securityonion/issues/8008>`_
+- UPGRADE: Elastic 7.17.4 `#8002 <https://github.com/Security-Onion-Solutions/securityonion/issues/8002>`_
+- UPGRADE: FleetDM 4.14.0 `#8012 <https://github.com/Security-Onion-Solutions/securityonion/issues/8012>`_
+- UPGRADE: Kratos 0.8.2-alpha.1 to 0.9.0-alpha.3 `#7943 <https://github.com/Security-Onion-Solutions/securityonion/issues/7943>`_
+- UPGRADE: TensorFlow from 2.5 to 2.9.1 `#8009 <https://github.com/Security-Onion-Solutions/securityonion/issues/8009>`_
+- UPGRADE: attack-navigator v4.6.4 `#7977 <https://github.com/Security-Onion-Solutions/securityonion/issues/7977>`_
+
 2.3.120 Changes
 ----------------
 
