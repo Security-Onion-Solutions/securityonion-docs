@@ -23,6 +23,7 @@ Release Notes
 - UPGRADE: Kratos 0.8.2-alpha.1 to 0.9.0-alpha.3 `#7943 <https://github.com/Security-Onion-Solutions/securityonion/issues/7943>`_
 - UPGRADE: TensorFlow from 2.5 to 2.9.1 `#8009 <https://github.com/Security-Onion-Solutions/securityonion/issues/8009>`_
 - UPGRADE: attack-navigator v4.6.4 `#7977 <https://github.com/Security-Onion-Solutions/securityonion/issues/7977>`_
+- UPGRADE: Zeek 4.0.6 to 4.0.7 `#8067 <https://github.com/Security-Onion-Solutions/securityonion/issues/8067>`_
 
 2.3.120 Changes
 ----------------
