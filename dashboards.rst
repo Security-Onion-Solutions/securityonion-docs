@@ -234,4 +234,8 @@ Please note that adding the asterisk to a non-string field may not work as expec
 Sankey Diagram Recursion
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-There's a known limitation with Sankey diagrams where the diagram is unable to render when multiple fields of the diagram contain the same value. This causes a recursion issue. For example, this can occur if using an OQL query of ``* | groupby -sankey source.ip destination.ip`` and the included events have a specific IP appearing in both the ``source.ip`` and ``destination.ip`` fields. A workaround is to filter the query to avoid the value showing up in multiple fields. Following the above example, if one event contains ``192.168.1.10`` in the ``source.ip`` and a second event contains that same IP in the ``destination.ip``, then the filter could be more specific to exclude local networks from the destination.ip: ``* AND NOT destination.ip: "192.168.0.0/16" | groupby -sankey source.ip destination.ip``.
+There's a known limitation with Sankey diagrams where the diagram is unable to render when multiple fields of the diagram contain the same value. This causes a recursion issue. For example, this can occur if using an OQL query of ``* | groupby -sankey source.ip destination.ip`` and the included events have a specific IP appearing in both the ``source.ip`` and ``destination.ip`` fields. A workaround is to filter the query to avoid the value showing up in multiple fields. Following the above example, if one event contains ``192.168.1.10`` in the ``source.ip`` and a second event contains that same IP in the ``destination.ip``, then the filter could be more specific to exclude local networks from the ``destination.ip``:
+
+::
+
+  * AND NOT destination.ip: "192.168.0.0/16" | groupby -sankey source.ip destination.ip
