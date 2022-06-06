@@ -203,7 +203,7 @@ OQL supports multiple ``groupby`` segments so if you wanted each of those fields
 
   | groupby destination.ip | groupby destination.port
 
-Instead of rendering data tables, you can optionally render the data as one of three chart types:
+In addition to rendering standard data tables, you can optionally render the data as a pie chart, bar chart, or sankey diagram.
 
 - The pie chart is specified using the ``-pie`` option:
 
