@@ -79,7 +79,7 @@ The default allow rules for each node are defined by its role (manager, searchno
 There are two directories that contain the yaml files for the firewall configuration.
 
 ``/opt/so/saltstack/default/salt/firewall/``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This directory contains the default firewall rules. The files in this directory should not be modified as they could possibly be overwritten during a :ref:`soup` update in the event we update those files.
 
@@ -96,7 +96,7 @@ This directory contains the default firewall rules. The files in this directory 
   :target: https://user-images.githubusercontent.com/17089008/96641900-62456500-12f3-11eb-94bc-2b6874f3f4f7.png
 
 ``/opt/so/saltstack/local/salt/firewall/``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This directory stores the firewall rules specific to your grid.
 

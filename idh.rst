@@ -103,7 +103,7 @@ Services can be customized in two ways:
 
 1) Changing the default port. 
 
-*Note: The previously-configured port is not automatically closed on the IDH node's firewall, so it will need to be closed manually. This can be done by running the following command on the IDH node, substituting the protocol and port as needed:
+Note: The previously-configured port is not automatically closed on the IDH node's firewall, so it will need to be closed manually. This can be done by running the following command on the IDH node, substituting the protocol and port as needed:
 
 ::
 
@@ -116,7 +116,6 @@ Services can be customized in two ways:
 
 
 Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the manager in ``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``.
-
 
 Custom Configuration - Example Port Change
 ------------------------------------------
