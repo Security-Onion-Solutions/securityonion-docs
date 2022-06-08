@@ -50,7 +50,7 @@ Another possible SOC customization is the session timeout. The default timeout f
 Alerts
 ------
 
-The :ref:`alerts` interface is a simplified version of the :ref:`hunt` interface by default.  If you'd prefer the additional options of the :ref:`hunt` interface while reviewing your :ref:`alerts` queue, you can temporarily enable this by opening your browser console and then pasting the following:
+The :ref:`alerts` interface is a simplified version of the :ref:`hunt` interface by default. If you'd prefer the additional options of the :ref:`hunt` interface while reviewing your :ref:`alerts` queue, you can temporarily enable this by opening your browser console and then pasting the following:
 
 ::
 
@@ -68,25 +68,26 @@ If you would like to make this change permanent, make a copy of ``soc.json``:
         
 Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite text editor, find the ``alerts`` section, and set ``advanced`` to ``true``. Don't forget that you will need to manually update ``soc.json`` every time you update to the latest version.
 
-Custom Alert Queries
---------------------
+Custom Queries
+--------------
 
-If you'd like to add your own custom queries, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.queries.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alert.queries.json`` and then add new entries.
+If you'd like to add your own custom queries to :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you can copy the relevant ``queries.json`` file from ``/opt/so/saltstack/default/salt/soc/files/soc/`` to ``/opt/so/saltstack/local/salt/soc/files/soc/`` and then add new entries. For example, if you want to add a new dashboard, you can copy ``dashboards.queries.json`` and then add your new dashboard there.
 
-To view available fields for your queries, from the drill down, when you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event.   
+To see all available fields for your queries, go down to the Events table and then click the arrow to expand a row. It will show all of the individual fields from that particular event.
 
-For example you want to add GeoIP Information like ``source.geo.region_iso_code`` or ``destination.geo.region_iso_code`` for Source/Destination IP you would first copy the ``alerts.queries.json``:
-
-::
-
-  sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/alerts.queries.json /opt/so/saltstack/local/salt/soc/files/soc/alert.queries.json
-
-Next edit the ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.queries.json`` using your favorite text editor and insert the right before  ``{ "name": "Ungroup", "query": "*" }``:
+For example, suppose you want to add GeoIP information like ``source.geo.region_iso_code`` or ``destination.geo.region_iso_code`` to :ref:`alerts`. You would first copy the ``alerts.queries.json``:
 
 ::
 
-{ "name": "Group By Source IP/Port/Geo, Destination IP/Port/Geo, Name", "query": "* | groupby source.ip source.port source.geo.region_iso_code destination.ip destination.port destination.geo.region_iso_code rule.name" },
+  sudo cp -n /opt/so/saltstack/default/salt/soc/files/soc/alerts.queries.json /opt/so/saltstack/local/salt/soc/files/soc/alerts.queries.json
 
+Next edit the ``/opt/so/saltstack/local/salt/soc/files/soc/alerts.queries.json`` using your favorite text editor and insert the following line wherever you want it show up in the query list:
+
+::
+
+  { "name": "Group By Source IP/Port/Geo, Destination IP/Port/Geo, Name", "query": "* | groupby source.ip source.port source.geo.region_iso_code destination.ip destination.port destination.geo.region_iso_code rule.name" },
+
+Please note that some events may not have GeoIP information and this query would only show those alerts that do have GeoIP information.
 
 Action Menu
 -----------
