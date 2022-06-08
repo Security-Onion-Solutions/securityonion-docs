@@ -71,9 +71,11 @@ Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite te
 Custom Alert Queries
 --------------------
 
-If you'd like to add your own custom queries , you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.queries.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alert.queries.json`` and then add new entries.
+If you'd like to add your own custom queries, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/alerts.queries.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/alert.queries.json`` and then add new entries.
 
-For example you want to add ``GeoIP Region`` for Source/Destination IP you would first copy the ``alerts.queries.json``:
+To view available fields for your queries, from the drill down, when you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event.   
+
+For example you want to add GeoIP Information like ``source.geo.region_iso_code`` or ``destination.geo.region_iso_code`` for Source/Destination IP you would first copy the ``alerts.queries.json``:
 
 ::
 
