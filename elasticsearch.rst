@@ -461,7 +461,7 @@ Therefore, we can set all of our ``delete`` values to 37 in the global.sls.
 field expansion matches too many fields
 ---------------------------------------
 
-If you get errors like ``reason="failed to create query: field expansion for [*] matches too many fields, limit: 3500, got: XXXX"``, then you can increase the ``indices.query.bool.max_clause_count`` value.
+If you get errors like ``failed to create query: field expansion for [*] matches too many fields, limit: 3500, got: XXXX``, then you can increase the ``indices.query.bool.max_clause_count`` value.
 
 Re-indexing
 -----------
