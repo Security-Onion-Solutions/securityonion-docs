@@ -213,10 +213,7 @@ Remote Sensor Setup
 Setup the VPN (out of scope for this guide) and connect the sensor node to the VPN.
 When prompted to choose the management interface, select the VPN tunnel interface, such as ``tun0``. Use the internal IP address of the manager inside AWS when prompted for the manager IP.
 
-The AWS internal VPN endpoint IP will need to be added to the following arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``, which is located on the Manager:
-
-``minion``
-``sensor``
+The AWS internal VPN endpoint IP will need to be added to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml`` on the Manager.
 
 Adding internal VPN endpoint IP to these two arrays will open up the required ports for the remote sensor to communicate with the Manager, since it is behind a NAT.
 
