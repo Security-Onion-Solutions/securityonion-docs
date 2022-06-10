@@ -458,8 +458,14 @@ For our example above lets fill in the proper values:
 
 Therefore, we can set all of our ``delete`` values to 37 in the global.sls.
 
+field expansion matches too many fields
+---------------------------------------
+
+If you get errors like ``reason="failed to create query: field expansion for [*] matches too many fields, limit: 3500, got: XXXX"``, then you can increase the ``indices.query.bool.max_clause_count`` value.
+
 Re-indexing
 -----------
+
 Re-indexing may need to occur if field data types have changed and conflicts arise.  This process can be VERY time-consuming, and we only recommend this if keeping data is absolutely critical.  
 
 | For more information about re-indexing, please see:
@@ -467,6 +473,7 @@ Re-indexing may need to occur if field data types have changed and conflicts ari
 
 Clearing
 --------
+
 If you want to clear all Elasticsearch data including documents and indices, you can run the ``so-elastic-clear`` command.
 
 More Information
