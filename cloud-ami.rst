@@ -213,15 +213,13 @@ Remote Sensor Setup
 Setup the VPN (out of scope for this guide) and connect the sensor node to the VPN.
 When prompted to choose the management interface, select the VPN tunnel interface, such as ``tun0``. Use the internal IP address of the manager inside AWS when prompted for the manager IP.
 
-The AWS internal VPN endpoint IP will need to be added to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml`` on the Manager.
-
-Adding internal VPN endpoint IP to these two arrays will open up the required ports for the remote sensor to communicate with the Manager, since it is behind a NAT.
+The AWS internal VPN endpoint IP will need to be added to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml`` on the manager. This will open up the required ports for the remote sensor to communicate with the manager, since it is behind a NAT.
 
 For instance, assuming the following architecture:
 
 Remote Network (including Forward Node, 192.168.33.13) <--> Remote Network VPN Endpoint, 192.168.33.10 <--> Internet  <--> AWS VPN Endpoint, 10.55.1.10 <--> AWS Security Onion Manager, 10.55.1.20
 
-In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``
+In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``.
 
 AWS Traffic Mirroring
 #####################
