@@ -192,6 +192,8 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 
 - Check the Suricata log for additional clues.
 
+- Check the :ref:`filebeat`, :ref:`logstash`, and :ref:`elasticsearch` logs for any pipeline issues that may be preventing the alerts from being written to the ``so-ids`` indices.
+
 - Try installing a simple import node (perhaps in a VM) following the steps in the :ref:`first-time-users` section and see if you get alerts there. If so, compare the working system to the non-working system and determine where the differences are.
 
 Stats
