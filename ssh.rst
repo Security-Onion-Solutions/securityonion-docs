@@ -34,7 +34,9 @@ Alternatively, you can manually run ``sudo so-ssh-harden`` or manually modify yo
 Banner
 ------
 
-Some organizations require a warning banner for SSH connections. You can customize the default Security Onion warning banner by editing ``/etc/ssh/sshd-banner`` with your favorite text editor.
+Some organizations require a warning banner for SSH connections. Security Onion automatically configures SSH to display a warning banner.
 
 .. image:: images/sshd-banner.png
   :target:  _images/sshd-banner.png
+
+You can customize this default Security Onion warning banner by editing ``/etc/ssh/sshd-banner`` with your favorite text editor.
