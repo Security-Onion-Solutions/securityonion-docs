@@ -290,6 +290,17 @@ You can completely customize your Elasticsearch configuration via :ref:`salt` pi
 
 	Please be very careful when adding items under the ``config`` sub-section to avoid typos and other errors that would interfere with Elasticsearch. After making changes, keep a close eye on Elasticsearch to make sure the change is working as intended.
 
+field expansion matches too many fields
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you get errors like ``failed to create query: field expansion for [*] matches too many fields, limit: 3500, got: XXXX``, then this usually means that you're sending in additional logs and so you have more fields than our default ``max_clause_count`` value. To resolve this, you can customize the ``indices.query.bool.max_clause_count`` value for any boxes running Elasticsearch in your deployment.
+
+::
+
+    elasticsearch:
+      config:
+        indices.query.bool.max_clause_count: 4000
+      
 Shards
 ~~~~~~
 
@@ -457,11 +468,6 @@ For our example above lets fill in the proper values:
 130GB / 3.5GB = 37.1428571 days rounded down to 37 days
 
 Therefore, we can set all of our ``delete`` values to 37 in the global.sls.
-
-field expansion matches too many fields
----------------------------------------
-
-If you get errors like ``failed to create query: field expansion for [*] matches too many fields, limit: 3500, got: XXXX``, then this usually means that you're sending in additional logs and so you have more fields than our default ``max_clause_count`` value. To resolve this, you can increase the ``indices.query.bool.max_clause_count`` value for any boxes running Elasticsearch in your deployment.
 
 Re-indexing
 -----------
