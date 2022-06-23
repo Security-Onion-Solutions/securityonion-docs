@@ -42,7 +42,7 @@ Avoid Third Party Software and Modifications
 
 - avoid changing file permissions or umask settings
 
-- hardening guidelines may break functionality, so if you must apply those hardening guidelines, we recommend testing throughly before deploying to production
+- hardening guidelines may break functionality, so if you must apply those hardening guidelines, we recommend testing thoroughly before deploying to production
 
 Stay Up To Date
 ---------------
