@@ -40,6 +40,8 @@ Avoid Third Party Software and Modifications
 
 - avoid installing monitoring tools such as Zabbix as this may conflict with our existing :ref:`grafana` monitoring
 
+- avoid installing third-party endpoint security agents as they may break functionality or introduce unacceptable performance overhead
+
 - avoid changing file permissions or umask settings
 
 - hardening guidelines may break functionality, so if you must apply those hardening guidelines, we recommend testing thoroughly before deploying to production
