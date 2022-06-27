@@ -176,7 +176,7 @@ All configured analyzers supporting the observable's data type will then run and
   :target: _images/analyzers-hash-results-summary.png
 
 .. note::
-    Analyzers currently only support the analysis of one observable at a time (this means supplying the observable value field with more than one observable value). If attempting to analyze more than one observable at a time, you will encounter an error.
+    Analyzers currently only support the analysis of one observable at a time (this means supplying the observable value field with more than one observable value). If attempting to analyze more than one observable at a time, you will encounter an error or unexpected results.
     
 Analyzer Output
 ~~~~~~~~~~~~~~~
