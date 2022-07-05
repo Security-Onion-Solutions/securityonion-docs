@@ -48,12 +48,12 @@ Then login using a valid username and password:
 
     ./fleetctl login
 
-``fleetctl`` documentation can be found at https://github.com/fleetdm/fleet/blob/main/docs/01-Using-Fleet/02-fleetctl-CLI.md.
+``fleetctl`` documentation can be found at https://fleetdm.com/docs/using-fleet/fleetctl-cli.
 
 Adding Query Packs
 ------------------
 
-You can bulk add queries & packs to FleetDM using fleetctl. ``/opt/so/conf/fleet/packs/`` is mapped to the FleetDM container, so you can drop your query packs there and then reference them like this:
+You can bulk add queries and packs to FleetDM using fleetctl. ``/opt/so/conf/fleet/packs/`` is mapped to the FleetDM container, so you can drop your query packs there and then reference them like this:
 
 ::
 
