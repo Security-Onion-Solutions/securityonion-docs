@@ -91,23 +91,14 @@ Please keep in mind that we don't provide free support for third party systems, 
 
 Original Event Forwarding
 -------------------------
-To forward events to an external destination with minimal modifications to the original event, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom/`` to clone the events and match the cloned events in the output. We recommend using either the ``http``, ``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
+To forward events to an external destination with minimal modifications to the original event, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom/`` for the applicable output. We recommend using either the ``http``, ``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
 
 For example, to forward all Zeek events from the ``dns`` dataset, we could use a configuration like the following:
 
 ::
 
-            filter {
-              if [module] =~ "zeek" and [dataset] =~ "dns" {
-                clone {
-                    id => "clone_zeek_dns_events"
-                    clones => ["zeek-dns-clone"]
-                    add_tag => [ "clone" ]
-                }
-              }
-            }
             output {
-              if "clone" in [tags] {
+              if [module] =~ "zeek" and [dataset] =~ "dns" {
                 tcp {
                   id => "cloned_events_out"
                   host => "192.168.x.x"
@@ -133,7 +124,7 @@ Monitor events flowing through the output with ``curl -s localhost:9600/_node/st
 
 Modified Event Forwarding
 --------------------------
-To forward events to an external destination AFTER they have traversed all of the data pipelines used by Security Onion, perform the same steps as above, but instead of adding the reference for your Logstash output to ``manager.sls``, add it to ``search.sls`` instead, and then restart services on the search nodes with something like:
+To forward events to an external destination AFTER they have traversed the Logstash pipelines (NOT ingest node pipelines) used by Security Onion, perform the same steps as above, but instead of adding the reference for your Logstash output to ``manager.sls``, add it to ``search.sls`` instead, and then restart services on the search nodes with something like:
 
 ::
 
