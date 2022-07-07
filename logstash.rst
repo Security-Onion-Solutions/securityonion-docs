@@ -99,7 +99,7 @@ For example, to forward all Zeek events from the ``dns`` dataset, we could use a
 
             output {
               if [module] =~ "zeek" and [dataset] =~ "dns" {
-                tcp {
+                udp {
                   id => "cloned_events_out"
                   host => "192.168.x.x"
                   port => 1001
