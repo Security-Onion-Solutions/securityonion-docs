@@ -90,6 +90,8 @@ The ``sofilter`` syntax is important - add as many top-level filter clauses as y
 
 - Click ``Submit`` and Playbook will take care of the rest, which includes automatically adding the custom filter to the rule when it is converted.
 
+Custom filters are applied right away (written out to the backend ElastAlert rule file), but ElastAlert could take a couple minutes to pick up on the change, as it runs rules every 3 minutes.
+
 It is not recommended to edit the Sigma directly for Community rules, as if there is ever an update for that Sigma rule from the Sigma rules repo, your changes will get overwritten.
 
 Finally, if you are seeing legitimate executions that are not unique to your environment, you might consider submitting a PR to the rule in the Sigma repo (https://github.com/SigmaHQ/sigma/tree/master/rules).
