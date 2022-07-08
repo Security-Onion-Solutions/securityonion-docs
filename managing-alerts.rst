@@ -204,7 +204,7 @@ To include an escaped ``$`` character in the regex pattern you'll need to make s
 	
 The first string is a regex pattern, while the second is just a raw value. You'll need to ensure the first of the two properly escapes any characters that would be interpreted by regex. The second only needs the ``$`` character escaped to prevent bash from treating that as a variable.
 
-If you can't run ``so-rule``, you can modify configuration manually. ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` contains a ``modify`` sub-section under the ``idstools`` section. You can list modifications here and then update the config:
+If you can't run ``so-rule``, you can modify configuration manually. The manager pillar file is located under ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` and it contains a ``modify`` sub-section under the ``idstools`` section. The manager pillar file will end with either ``*_manager.sls, *_managersearch.sls, *_standalone.sls, or *_eval.sls`` depending on the manager type that was chosen during install. You can list modifications here and then update the config:
 
 ::
 
