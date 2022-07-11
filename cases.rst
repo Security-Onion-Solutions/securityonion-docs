@@ -54,6 +54,8 @@ Observables
 
 On the Observables tab, you can track observables like IP addresses, domain names, hashes, etc. You can add observables directly on this tab or you can add them from the Events tab as well.
 
+Starting in Security Onion 2.3.140, you can add multiple observables of the same type by selecting the ``Enable this checkbox to have a separate observable added for each line of the provided value above`` option.
+
 .. image:: images/cases-observables.png
   :target: _images/cases-observables.png
 
