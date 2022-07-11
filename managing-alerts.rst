@@ -124,7 +124,7 @@ Finally, we can check that 2100498 is commented out in ``/opt/so/rules/nids/all.
    grep 2100498 /opt/so/rules/nids/all.rules 
    # alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
 
-If you can't run ``so-rule``, then you can modify configuration manually. Security Onion uses ``idstools`` to download new signatures every night and process them against a set list of user generated configurations. To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/<minionid>.sls``). In a distributed Security Onion environment, you only need to change the configuration in the manager pillar and then all other nodes will get the updated rules automatically.
+If you can't run ``so-rule``, then you can modify configuration manually. Security Onion uses ``idstools`` to download new signatures every night and process them against a set list of user generated configurations. To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/<managername>_<role>.sls``). In a distributed Security Onion environment, you only need to change the configuration in the manager pillar and then all other nodes will get the updated rules automatically.
  
 If SID 4321 is noisy, you can disable it as follows:
 
@@ -204,7 +204,7 @@ To include an escaped ``$`` character in the regex pattern you'll need to make s
 	
 The first string is a regex pattern, while the second is just a raw value. You'll need to ensure the first of the two properly escapes any characters that would be interpreted by regex. The second only needs the ``$`` character escaped to prevent bash from treating that as a variable.
 
-If you can't run ``so-rule``, you can modify configuration manually. The manager pillar file is located at ``/opt/so/saltstack/local/pillar/minions/<minionid>.sls`` and it contains a ``modify`` sub-section under the ``idstools`` section. The manager pillar file will end with either ``<minionid>_manager.sls``, ``<minionid>_managersearch.sls``, ``<minionid>_standalone.sls``, or ``<minionid>_eval.sls`` depending on the manager type that was chosen during install. You can list modifications here and then update the config:
+If you can't run ``so-rule``, you can modify the configuration manually in the manager pillar file at ``/opt/so/saltstack/local/pillar/minions/<managername>_<role>.sls`` (where ``<role>`` is ``manager``, ``managersearch``, ``standalone``, or ``eval`` depending on the manager type that was chosen during install). In this file, the ``idstools`` section has a ``modify`` sub-section where you can add your  modifications. For example:
 
 ::
 
