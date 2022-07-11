@@ -71,11 +71,11 @@ When you run ``soup`` on an :ref:`airgap` install, it will ask for the location 
 
 - simply copy the ISO file itself to the airgapped manager
 
-You can also specify the path on the command line using the ``-f`` option:
+You can also specify the path on the command line using the ``-f`` option. For example (change this to reflect the actual path to the ISO image):
 
 ::
 
-	sudo soup -y -f /home/user/securityonion.iso
+	sudo soup -y -f /home/YourUser/securityonion-2.3.X.iso
 	
 Agents
 ------
