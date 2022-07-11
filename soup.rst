@@ -50,6 +50,11 @@ There is an option during :ref:`Configuration` to automatically install OS updat
 
 ``soup`` checks for missing OS updates and ask if you want to install them.
 
+Log
+---
+
+If ``soup`` displays any errors, you can check ``/root/soup.log`` for additional clues.
+
 ssh
 ---
 
