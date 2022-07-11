@@ -75,7 +75,7 @@ You can also specify the path on the command line using the ``-f`` option. For e
 
 ::
 
-	sudo soup -y -f /home/YourUser/securityonion-2.3.X.iso
+	sudo soup -y -f /home/YourUser/securityonion-2.3.XYZ-YYYYMMDD.iso
 	
 Agents
 ------
