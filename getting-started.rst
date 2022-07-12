@@ -59,6 +59,7 @@ See the :ref:`post-installation` section.
    download
    vmware
    virtualbox
+   proxmox
    trouble-booting
    airgap
    installation
