@@ -130,6 +130,12 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/38_so-import-pcap.png
   :target: _images/38_so-import-pcap.png
 
+.. image:: images/44_alerts.png
+  :target: _images/44_alerts.png
+
+.. image:: images/45_dashboards.png
+  :target: _images/45_dashboards.png
+
 .. image:: images/39_hunt.png
   :target: _images/39_hunt.png
 
