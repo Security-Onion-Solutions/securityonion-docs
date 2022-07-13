@@ -20,6 +20,7 @@ Release Notes
 - FIX: Support group-by sorting memory on first group only `#8133 <https://github.com/Security-Onion-Solutions/securityonion/issues/8133>`_
 - FIX: Using so-firewall to list default port groups `#8264 <https://github.com/Security-Onion-Solutions/securityonion/issues/8264>`_
 - FIX: pam.d lastlog module breaks BPF capability `#8188 <https://github.com/Security-Onion-Solutions/securityonion/issues/8188>`_
+- FIX: Ensure so-kibana indices can be cleaned up on search nodes `#8262 <https://github.com/Security-Onion-Solutions/securityonion/issues/8262>`_
 - UPGRADE: Kratos to 0.10.1 `#8227 <https://github.com/Security-Onion-Solutions/securityonion/issues/8227>`_
 - UPGRADE: Salt 3004.2 `#8166 <https://github.com/Security-Onion-Solutions/securityonion/issues/8166>`_
 - UPGRADE: Suricata 6.0.6 `#8279 <https://github.com/Security-Onion-Solutions/securityonion/issues/8279>`_
