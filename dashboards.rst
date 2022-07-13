@@ -79,12 +79,12 @@ The middle section of output is the Group Metrics section. It consists of one or
 
 Group metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. Clicking a value in the Group Metrics table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see a third button that will convert the data table to a sankey diagram. Each of the groupby field headers has a trash button that will remove the field from the table.
+You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see an additional button that will convert the data table to a sankey diagram. Starting in Security Onion 2.3.140, there is a Maximize View button that will maximize the table to fill the pane (you can press the Esc key to return to normal view). Each of the groupby field headers has a trash button that will remove the field from the table.
 
 .. image:: images/dashboards-group-metrics-table.png
   :target: _images/dashboards-group-metrics-table.png
 
-Once you have switched to a chart, you will see three buttons at the top of the chart. You can use the left-most button to return to the data table, the middle button to toggle the legend, and the right button to remove the chart altogether.
+Once you have switched to a chart, you will see different buttons at the top of the chart. You can use the Show Table button to return to the data table and the Toggle Legend button to toggle the legend, and the Remove button to remove the chart altogether. Starting in Security Onion 2.3.140, there is a Maximize View button that will maximize the chart to fill the pane (you can press the Esc key to return to normal view).
 
 .. image:: images/dashboards-group-metrics-sankey.png
   :target: _images/dashboards-group-metrics-sankey.png
