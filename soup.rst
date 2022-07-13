@@ -53,7 +53,7 @@ There is an option during :ref:`Configuration` to automatically install OS updat
 Elastic 8
 ---------
 
-In Security Onion 2.3.140, the Elastic components will undergo a major version upgrade to version 8. For best results, please review and follow these recommendations:
+In Security Onion 2.3.140, the Elastic components will undergo a major version upgrade to version 8. Please review and follow the steps below. Failure to do so could result in loss of access to all data stored inside of Elastic and a non-functioning Security Onion installation.
 
 - You should test the update in a test environment that closely matches your production environment. Do not upgrade your production environment without testing first!
 

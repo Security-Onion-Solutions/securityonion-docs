@@ -5,6 +5,7 @@ Adding Local Rules
 
 NIDS
 ----
+
 You can add NIDS rules in ``/opt/so/saltstack/local/salt/idstools/local.rules`` on your manager. Within 15 minutes, :ref:`salt` should then copy those rules into ``/opt/so/rules/nids/local.rules``. The next run of ``idstools`` should then merge ``/opt/so/rules/nids/local.rules`` into ``/opt/so/rules/nids/all.rules`` which is what :ref:`suricata` reads from. 
 
 If you don't want to wait for these automatic processes, you can run them manually from the manager (replacing ``$SENSORNAME_$ROLE`` as necessary):
@@ -55,8 +56,8 @@ YARA
 
 Default YARA rules are provided from Florian Roth's `signature-base` Github repo at https://github.com/Neo23x0/signature-base.
 
-Local Rules:
-~~~~~~~~~~~~
+Local YARA Rules
+~~~~~~~~~~~~~~~~
 
 To add local YARA rules, create a directory in ``/opt/so/saltstack/local/salt/strelka/rules``, for example ``localrules``.  Inside of ``/opt/so/saltstack/local/salt/strelka/rules/localrules``, add your YARA rules.
 
@@ -64,9 +65,9 @@ After adding your rules, update the configuration by running ``so-strelka-restar
 
 Alternatively, run ``salt -G 'role:so-sensor' cmd.run "so-strelka-restart"`` to restart Strelka on all sensors at once.
 
-Remotely Managed Rules:
-~~~~~~~~~~~~~~~~~~~~~~~
+Remote YARA Rules
+~~~~~~~~~~~~~~~~~
 
-If you have Internet access and want to have ``so-yara-update`` pull YARA rules from a Github repo, copy ``/opt/so/saltstack/local/salt/strelka/rules/``, and modify ``repos.txt`` to include the repo URL (one per line).
+If you have Internet access and want to have ``so-yara-update`` pull YARA rules from a remote Github repo, copy ``/opt/so/saltstack/local/salt/strelka/rules/``, and modify ``repos.txt`` to include the repo URL (one per line).
 
-Next, run ``so-yara-update`` to pull down the rules.  Finally, run ``so-strelka-restart`` to allow Strelka to pull in the new rules.
+Next, run ``so-yara-update`` to pull down the rules. Finally, run ``so-strelka-restart`` to allow Strelka to pull in the new rules.
