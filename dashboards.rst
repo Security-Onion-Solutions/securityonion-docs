@@ -84,7 +84,7 @@ You can use the buttons in the Count column header to convert the data table to 
 .. image:: images/dashboards-group-metrics-table.png
   :target: _images/dashboards-group-metrics-table.png
 
-Once you have switched to a chart, you will see different buttons at the top of the chart. You can use the Show Table button to return to the data table and the Toggle Legend button to toggle the legend, and the Remove button to remove the chart altogether. Starting in Security Onion 2.3.140, there is a Maximize View button that will maximize the chart to fill the pane (you can press the Esc key to return to normal view).
+Once you have switched to a chart, you will see different buttons at the top of the chart. You can use the Show Table button to return to the data table, the Toggle Legend button to toggle the legend, and the Remove button to remove the chart altogether. Starting in Security Onion 2.3.140, there is a Maximize View button that will maximize the chart to fill the pane (you can press the Esc key to return to normal view).
 
 .. image:: images/dashboards-group-metrics-sankey.png
   :target: _images/dashboards-group-metrics-sankey.png
