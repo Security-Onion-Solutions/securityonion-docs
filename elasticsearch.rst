@@ -482,6 +482,11 @@ Clearing
 
 If you want to clear all Elasticsearch data including documents and indices, you can run the ``so-elastic-clear`` command.
 
+Elastic 8
+---------
+
+In Security Onion 2.3.140, the Elastic components will undergo a major version upgrade from version 7 to version 8. You can read more about this in the :ref:`soup` section.
+
 More Information
 ----------------
 
