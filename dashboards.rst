@@ -72,12 +72,16 @@ The first section of output contains a Most Occurrences visualization, a timelin
 Group Metrics
 -------------
 
-The middle section of output is the Group Metrics section. It consists of one or more data tables that allow you to stack (aggregate) arbitrary fields. 
+The middle section of output is the Group Metrics section. It consists of one or more data tables or visualizations that allow you to stack (aggregate) arbitrary fields.
 
 .. image:: images/dashboards-group-metrics.png
   :target: _images/dashboards-group-metrics.png
 
-Group metrics are controlled by the ``groupby`` parameter in the search bar. Clicking the table headers allows you to sort ascending or descending. Clicking a value in the Group Metrics table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
+Group metrics are controlled by the ``groupby`` parameter in the search bar. You can read more about the ``groupby`` parameter in the OQL section below.
+
+Clicking the table headers allows you to sort ascending or descending. Refreshing the page will retain the sort, but only for the first table.
+
+Clicking a value in the Group Metrics table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
 You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see an additional button that will convert the data table to a sankey diagram. Starting in Security Onion 2.3.140, there is a Maximize View button that will maximize the table to fill the pane (you can press the Esc key to return to normal view). Each of the groupby field headers has a trash button that will remove the field from the table.
 
@@ -222,6 +226,8 @@ In addition to rendering standard data tables, you can optionally render the dat
 ::
 
   | groupby -sankey destination.ip destination.port
+
+Starting in Security Onion 2.3.140, the ``-maximize`` option will maximize the table or chart to fill the pane. After viewing the maximized result, you can press the Esc key to return to normal view.
 
 By default, grouping by a particular field won't show any values if that field is missing. If you would like to include missing values, you can add an asterisk after the field name. For example, suppose you want to look for non-HTTP traffic on port 80 using a query like ``event.dataset:conn AND destination.port:80 | groupby network.protocol destination.port``. If there was non-HTTP traffic on port 80, the ``network.protocol`` field may be null and so this query would only return port 80 traffic identified as HTTP. To fix this, add the asterisk after the ``network.protocol``:
 
