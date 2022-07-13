@@ -3,6 +3,25 @@
 Release Notes
 =============
 
+2.3.140 Changes
+----------------
+
+- FEATURE: Provide ability to maximize view of a groupby chart or table `#8176 <https://github.com/Security-Onion-Solutions/securityonion/issues/8176>`_
+- FEATURE: Remember the state of the left menu (visible or hidden) between SOC refreshes `#8186 <https://github.com/Security-Onion-Solutions/securityonion/issues/8186>`_
+- FEATURE: Remove disabled accounts from Case Assignee list  `#8184 <https://github.com/Security-Onion-Solutions/securityonion/issues/8184>`_
+- FEATURE: SOUP should not let you update to 2.3.140 or above unless you have updated to at least 2.3.110 `#8239 <https://github.com/Security-Onion-Solutions/securityonion/issues/8239>`_
+- FEATURE: Support bulk observable data entry `#8210 <https://github.com/Security-Onion-Solutions/securityonion/issues/8210>`_
+- FIX: Add ID to Filestream Inputs `#8006 <https://github.com/Security-Onion-Solutions/securityonion/issues/8006>`_
+- FIX: Add event.category field to pfsense firewall logs `#8112 <https://github.com/Security-Onion-Solutions/securityonion/issues/8112>`_
+- FIX: Add jinja to localfile.yaml `#8196 <https://github.com/Security-Onion-Solutions/securityonion/issues/8196>`_
+- FIX: IDH ISO Disk partitions `#8144 <https://github.com/Security-Onion-Solutions/securityonion/issues/8144>`_
+- FIX: Improve default dashboards `#8136 <https://github.com/Security-Onion-Solutions/securityonion/issues/8136>`_
+- FIX: Strip whitespace after analyzer input strings (observable values) `#8208 <https://github.com/Security-Onion-Solutions/securityonion/issues/8208>`_
+- FIX: Support group-by sorting memory on first group only `#8133 <https://github.com/Security-Onion-Solutions/securityonion/issues/8133>`_
+- FIX: Using so-firewall to list default port groups `#8264 <https://github.com/Security-Onion-Solutions/securityonion/issues/8264>`_
+- FIX: pam.d lastlog module breaks BPF capability `#8188 <https://github.com/Security-Onion-Solutions/securityonion/issues/8188>`_
+- UPGRADE: Kratos to 0.10.1 `#8227 <https://github.com/Security-Onion-Solutions/securityonion/issues/8227>`_
+- UPGRADE: Salt 3004.2 `#8166 <https://github.com/Security-Onion-Solutions/securityonion/issues/8166>`_
 
 2.3.130 Changes
 ----------------
