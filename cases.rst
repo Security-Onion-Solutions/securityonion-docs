@@ -18,7 +18,7 @@ On a new deployment, Cases will be empty until you create a new case.
 .. image:: images/cases-empty.png
   :target: _images/cases-empty.png
 
-To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side including Assignee, Status, Severity, Priority, TLP, PAP, Category, and Tags. Clicking the fields on the right side reveals drop-down boxes with standard options.
+To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side including Assignee, Status, Severity, Priority, TLP, PAP, Category, and Tags. Clicking the fields on the right side reveals drop-down boxes with standard options. Starting in Security Onion 2.3.140, the Assignee field will only list user accounts that are currently enabled.
 
 .. image:: images/cases-add.png
   :target: _images/cases-add.png
