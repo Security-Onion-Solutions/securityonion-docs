@@ -23,6 +23,7 @@ Release Notes
 - UPGRADE: Kratos to 0.10.1 `#8227 <https://github.com/Security-Onion-Solutions/securityonion/issues/8227>`_
 - UPGRADE: Salt 3004.2 `#8166 <https://github.com/Security-Onion-Solutions/securityonion/issues/8166>`_
 - UPGRADE: Suricata 6.0.6 `#8279 <https://github.com/Security-Onion-Solutions/securityonion/issues/8279>`_
+- UPGRADE: Elastic 8.3.2 `#7563 <https://github.com/Security-Onion-Solutions/securityonion/issues/7563>`_
 
 2.3.130 Changes
 ----------------
