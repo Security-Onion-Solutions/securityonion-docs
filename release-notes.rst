@@ -25,6 +25,7 @@ Release Notes
 - UPGRADE: Salt 3004.2 `#8166 <https://github.com/Security-Onion-Solutions/securityonion/issues/8166>`_
 - UPGRADE: Suricata 6.0.6 `#8279 <https://github.com/Security-Onion-Solutions/securityonion/issues/8279>`_
 - UPGRADE: Elastic 8.3.2 `#7563 <https://github.com/Security-Onion-Solutions/securityonion/issues/7563>`_
+- UPGRADE: Redmine to 4.2.7 `#8308 <https://github.com/Security-Onion-Solutions/securityonion/issues/8308>`_
 
 2.3.130 Changes
 ----------------
