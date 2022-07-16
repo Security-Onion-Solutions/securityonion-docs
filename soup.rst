@@ -57,7 +57,7 @@ When you update to Security Onion 2.3.140 or higher, the Elastic components will
 
 - You should test the update in a test environment that closely matches your production environment. Do not upgrade your production environment without testing first!
 
-- Elastic's requirement for upgrading to version 8 is to be on Elastic 7.17.0 or later (https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html). This means that if you are currently using a version of Security Onion prior to 2.3.110, then you will need to update to Security Onion 2.3.130 before updating to 2.3.140. Failure to do so could result in loss of access to all data stored inside of Elastic and a non-functioning Security Onion installation. ``soup`` should check for applicable versions and advise on the proper method to upgrade appropriately.
+- Elastic's requirement for upgrading to version 8 is to be on Elastic 7.17.0 or later (https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-upgrade.html). This means that if you are currently using a version of Security Onion prior to 2.3.110, then you will need to update to Security Onion 2.3.130 before updating to 2.3.140. ``soup`` should check for applicable versions and advise on the proper method to upgrade appropriately.
 
 - Once you are on Security Onion 2.3.110 or higher, you may want to log into :ref:`kibana` and run the Upgrade Assistant to check for any unexpected issues before upgrading to 2.3.140 or higher. Upgrade Assistant may display issues for :ref:`elastalert` indices, but they will be deleted automatically when you update. You may need to investigate any non-Elastalert issues.
 
