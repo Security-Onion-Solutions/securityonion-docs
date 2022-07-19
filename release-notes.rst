@@ -2,6 +2,9 @@
 
 Release Notes
 =============
+2.3.140 Hotfix [20220719] Changes
+- FIX: Revise Elastalert index check/deletion logic
+- FIX: Ensure Elastalert is enabled before trying to run 'so-elastalert-stop'. Also suppress error output for when so-elastalert container is missing.
 
 2.3.140 Changes
 ----------------
