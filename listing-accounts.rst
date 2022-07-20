@@ -21,7 +21,7 @@ If you want a list of user accounts (not service accounts), then you can filter 
 SOC
 ---
 
-To list all :ref:`soc` accounts, you can use the ``so-user`` command with the ``list`` option:
+To list all :ref:`soc` accounts, you can use the ``so-user-list`` command:
 
 ::
 
