@@ -487,6 +487,11 @@ Elastic 8
 
 In Security Onion 2.3.140, the Elastic components will undergo a major version upgrade from version 7 to version 8. You can read more about this in the :ref:`soup` section.
 
+GeoIP
+-----
+
+Elasticsearch 8 requires access to https://geoip.elastic.co/v1/database for GeoIP updates. You can read more at https://www.elastic.co/guide/en/elasticsearch/reference/current/geoip-processor.html#geoip-processor.
+
 More Information
 ----------------
 
