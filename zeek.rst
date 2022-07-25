@@ -293,6 +293,20 @@ Within 15 minutes, :ref:`salt` should automatically restart Zeek where necessary
 
 	sudo so-zeek-restart
 
+Modifying base protocol scripts
+-------------------------------
+
+If you need to modify base protocol scripts, you can do so as follows. In this example, we are modifying the default ports that Zeek considers for the MySQL analyzer:
+
+::
+
+	const ports = { 11434/tcp, 13306/tcp };
+
+	event zeek_init() &priority=5
+		{
+		Analyzer::register_for_ports(Analyzer::ANALYZER_MYSQL, ports);
+		}
+	
 Configuration
 -------------
 You can use :ref:`salt` to manage Zeek's ``local.zeek``, ``node.cfg`` and ``zeekctl.cfg``:
