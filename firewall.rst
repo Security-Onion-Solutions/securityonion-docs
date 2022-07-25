@@ -24,6 +24,7 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 - rules.emergingthreats.net (Emerging Threats IDS open rules)  
 - www.snort.org (Paid Snort Talos ruleset)  
 - github.com (Strelka and Sigma rules updates)  
+- geoip.elastic.co (GeoIP updates for Elasticsearch)
 - notary.kolide.co (osquery agent update)  
 - Ubuntu PPAs (OS Updates - Ubuntu only)  
 - download.docker.com (Docker packages - Ubuntu only)
