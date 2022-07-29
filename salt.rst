@@ -85,13 +85,13 @@ Diagnostic logs can be found in ``/opt/so/log/salt/``.
 Known Issues
 ------------
 
-Beginning in Security Onion 2.3.100, when Salt was upgraded to 3004, users may see the following error in the salt-master log located at ``/opt/so/log/salt/master``.
+In Security Onion 2.3.100, Salt was upgraded to version 3004. Starting in this release, users may see the following error in the salt-master log located at ``/opt/so/log/salt/master``:
 
 ::
 
   [ERROR   ][24983] Event iteration failed with exception: 'list' object has no attribute 'items'
 
-The root cause of this error, is a state trying to run on a minion when another state is already running. This error now occurs in the log due to a change in the expection handling within Salt's event module. Previously, in the case of an expection, the code would just pass. However, the exception is now logged. The error can be ignored as it is not an indication of any issue with the minions.
+The root cause of this error is a state trying to run on a minion when another state is already running. This error now occurs in the log due to a change in the exception handling within Salt's event module. Previously, in the case of an exception, the code would just pass. However, the exception is now logged. The error can be ignored as it is not an indication of any issue with the minions.
 
 More Information
 ----------------
