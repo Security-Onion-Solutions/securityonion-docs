@@ -56,7 +56,7 @@ If you want to install Security Onion on CentOS 7, Ubuntu 18.04, or Ubuntu 20.04
    
    ::
    
-     sudo apt -y install git curl
+     sudo apt -y install git curl ethtool
      
 #. Download our repo and start the Setup process:
 
