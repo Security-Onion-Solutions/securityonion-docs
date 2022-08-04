@@ -123,6 +123,11 @@ Why is my disk filling up?
 
 Security Onion records full packet capture to disk via :ref:`stenographer`.
 
+How is my data kept secure?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Standard network connections to or from Security Onion are encrypted. This includes SSH, HTTPS, :ref:`elasticsearch` network queries, and :ref:`salt` minion traffic. Endpoint agent traffic is encrypted where supported. This includes :ref:`wazuh` agents and :ref:`osquery` agents. Elastic :ref:`beats` agents support encryption with additional configuration. SOC user account passwords are hashed via bcrypt in Kratos and you can read more about that at https://github.com/ory/kratos.
+
 `back to top <#top>`__
 
 Tuning
