@@ -77,6 +77,8 @@ If you need to increase this delay, it can be done using the ``salt:minion:servi
     minion:
       service_start_delay: 60 # in seconds.
 
+Please keep this value below 90 seconds otherwise systemd will reach timeout and terminate the service.
+
 Diagnostic Logs
 ---------------
 
