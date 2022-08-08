@@ -5,7 +5,7 @@ You can ingest Endgame data by following the steps below.
 
 .. note::
 
- Please keep in mind that we currently use the ``*:endgame-*`` index pattern for Endgame data. This means the data will not be visible using the native Security Onion dashboards/index pattern in Kibana. However, Endgame data will be natively viewable and aggregatable using Hunt and Elastic Security.
+ Please keep in mind that we currently use the ``*:endgame-*`` index pattern for Endgame data. This means the data will not be visible using the normal Security Onion dashboards/index pattern in Kibana. However, Endgame data will be viewable and aggregatable using Hunt and Elastic Security.
 
 Configuration
 -------------

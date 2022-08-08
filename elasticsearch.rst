@@ -136,7 +136,7 @@ We can also check to ensure that both the associated component templates and the
 Community ID
 ------------
 
-| For logs that don’t natively support :ref:`community-id`, we use the Elasticsearch Community ID processor:
+| For logs that don’t naturally include :ref:`community-id`, we use the Elasticsearch Community ID processor:
 | https://www.elastic.co/guide/en/elasticsearch/reference/current/community-id-processor.html
 
 Configuration

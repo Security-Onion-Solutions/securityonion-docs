@@ -145,7 +145,7 @@ Starting in Security Onion 2.3.130, we have included analyzers which allow you t
 Supported Analyzers and Data Types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following is a summary of the native analyzers and their supported data types:
+The following is a summary of the built-in analyzers and their supported data types:
 
 =======================       ======= ====   ==   ===   ====  ===== ===  === ==========
  Name                         Domain  Hash   IP   JA3   Mail  Other URI  URL User Agent

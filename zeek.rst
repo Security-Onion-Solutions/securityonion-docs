@@ -15,7 +15,7 @@ Zeek logs are sent to :ref:`elasticsearch` for parsing and storage and can then 
 Community ID
 ------------
 
-Security Onion enables Zeek's native support for :ref:`community-id`.
+Security Onion enables Zeek's built-in support for :ref:`community-id`.
 
 Packet Loss and Capture Loss
 ----------------------------

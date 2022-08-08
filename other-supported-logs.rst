@@ -30,7 +30,7 @@ This will enable the following :ref:`filebeat` inputs:
 
 ``/nsm/rita/open-connections.csv``  
 
-If you are installing :ref:`filebeat` on a non-Security Onion node or your filenames differ, you will need to copy the :ref:`filebeat` configuration from ``/opt/so/saltstack/default/salt/filebeat/etc/filebeat.yml`` to ``/opt/so/saltstack/local/salt/filebeat/etc/filebeat.yml`` (or modify on the non-Security Onion node in the native Filebeat configuration file) and emulate the path/filename accordingly.
+If you are installing :ref:`filebeat` on a non-Security Onion node or your filenames differ, you will need to copy the :ref:`filebeat` configuration from ``/opt/so/saltstack/default/salt/filebeat/etc/filebeat.yml`` to ``/opt/so/saltstack/local/salt/filebeat/etc/filebeat.yml`` (or modify on the non-Security Onion node in the normal Filebeat configuration file) and emulate the path/filename accordingly.
 
 Once ingested into Security Onion, you should be able to search for :ref:`rita` logs in :ref:`dashboards` or :ref:`hunt` using ``event.module:rita | groupby event.dataset``.
 

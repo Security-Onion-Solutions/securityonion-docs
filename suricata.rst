@@ -18,7 +18,7 @@ If enabled, Suricata metadata (protocol logs) can be found in :ref:`dashboards`,
 Community ID
 ------------
 
-Security Onion enables Suricata's native support for :ref:`community-id`.
+Security Onion enables Suricata's built-in support for :ref:`community-id`.
 
 Performance
 -----------
