@@ -51,7 +51,7 @@ If you would like to parse AWS Cloudtrail logs using the Filebeat ``cloudtrail``
             var.access_key_id: ABCD1234
             var.secret_access_key: ABCD1234ABCD1234
 
-A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in `global.sls`.
+A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in ``global.sls``.
 
 Access key details can be found within the AWS console by navigating to ``My Security Credentials`` -> ``Access Keys``.
 
@@ -73,7 +73,7 @@ If you want to parse Fortinet logs using the Filebeat fortinet module, you can a
             var.syslog_port: 9004
 
 
-A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in `global.sls`.
+A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in ``global.sls``.
 
 (Please note that :ref:`firewall` ports still need to be opened on the minion to accept the Fortinet logs.)
 
@@ -446,7 +446,7 @@ Edit ``/opt/so/saltstack/local/pillar/minions/<manager.sls>``.  Add the code blo
             var.netflow_host: 0.0.0.0
             var.netflow_port: 2055
 
-A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in `global.sls`.
+A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in ``global.sls``.
 
 **Update docker config**
 
