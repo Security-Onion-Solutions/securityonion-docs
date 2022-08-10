@@ -37,7 +37,9 @@ We support official Filebeat modules and you can learn more at https://www.elast
 Example 1: AWS Cloudtrail Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you would like to parse AWS Cloudtrail logs using the Filebeat ``cloudtrail`` module, you can add something like the following to a minion pillar (for example, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``) :
+If you would like to parse AWS Cloudtrail logs using the Filebeat ``cloudtrail`` module, you can enable the Filebeat module on any nodes that require it. Depending on your deployment, you might add the following configuration to the global pillar in ``global.sls``, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``, and/or the search node pillars in ``/opt/so/saltstack/local/pillar/minions/``. If you have a distributed deployment using cross cluster search, then you will need to enable it for the manager and each search node. If you have a distributed deployment using Elastic clustering, then it only needs to be enabled for the manager.
+
+Here's the configuration:
 
 ::
   
@@ -51,14 +53,14 @@ If you would like to parse AWS Cloudtrail logs using the Filebeat ``cloudtrail``
             var.access_key_id: ABCD1234
             var.secret_access_key: ABCD1234ABCD1234
 
-A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in ``global.sls``.
-
 Access key details can be found within the AWS console by navigating to ``My Security Credentials`` -> ``Access Keys``.
 
 Example 2: Fortinet Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to parse Fortinet logs using the Filebeat fortinet module, you can add something like the following to a minion pillar (for example, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``):
+If you would like to parse Fortinet logs using the Filebeat ``fortinet`` module, you can enable the Filebeat module on any nodes that require it. Depending on your deployment, you might add the following configuration to the global pillar in ``global.sls``, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``, and/or the search node pillars in ``/opt/so/saltstack/local/pillar/minions/``. If you have a distributed deployment using cross cluster search, then you will need to enable it for the manager and each search node. If you have a distributed deployment using Elastic clustering, then it only needs to be enabled for the manager.
+
+Here's the configuration:
 
 ::
 
@@ -72,12 +74,7 @@ If you want to parse Fortinet logs using the Filebeat fortinet module, you can a
             var.syslog_host: 0.0.0.0
             var.syslog_port: 9004
 
-
-A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in ``global.sls``.
-
 (Please note that :ref:`firewall` ports still need to be opened on the minion to accept the Fortinet logs.)
-
-
 
 Walkthrough: AWS Cloudtrail Logs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -433,8 +430,9 @@ Overview of steps:
 
 **Enable third party module**
 
-Edit ``/opt/so/saltstack/local/pillar/minions/<manager.sls>``.  Add the code block below to the bottom of the file: 
+If you would like to ingest Netflow logs using the Filebeat ``netflow`` module, you can enable the Filebeat module on any nodes that require it. Depending on your deployment, you might add the following configuration to the global pillar in ``global.sls``, the manager's minion pillar in ``/opt/so/saltstack/local/pillar/minions/$managername_manager.sls``, and/or the search node pillars in ``/opt/so/saltstack/local/pillar/minions/``. If you have a distributed deployment using cross cluster search, then you will need to enable it for the manager and each search node. If you have a distributed deployment using Elastic clustering, then it only needs to be enabled for the manager.
 
+Here's the configuration:
 ::
 
   filebeat:
@@ -445,8 +443,6 @@ Edit ``/opt/so/saltstack/local/pillar/minions/<manager.sls>``.  Add the code blo
             enabled: true
             var.netflow_host: 0.0.0.0
             var.netflow_port: 2055
-
-A corresponding entry will need to be put in each search node's pillar in a non-traditional cluster (default) installation. If using a traditional cluster, the entry will need to be placed into the manager's pillar. Otherwise, add the entry to the global pillar in ``global.sls``.
 
 **Update docker config**
 
