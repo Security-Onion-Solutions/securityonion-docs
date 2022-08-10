@@ -3,7 +3,11 @@
 Cases
 =====
 
-Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. Check out our Cases video at https://youtu.be/y_kr_hrtqVc!
+Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. 
+
+.. seealso::
+
+    Check out our Cases video at https://youtu.be/y_kr_hrtqVc!
 
 Installation
 ------------
