@@ -23,7 +23,7 @@ IDH nodes are dedicated to just being IDH nodes and cannot run any other service
 Screenshots
 -----------
 
-Run Setup, choose to add a new node to your distributed deployment, and then select the IDH option.
+Run Setup, select the DISTRIBUTED install submenu, choose to add a new node to your existing deployment, and then select the IDH option.
 
 .. image:: images/idh-install-1.png
   :target: _images/idh-install-1.png
