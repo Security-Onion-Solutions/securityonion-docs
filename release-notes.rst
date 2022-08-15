@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.3.140 Hotfix [20220815] Changes
+2.3.140 Hotfix [20220812] Changes
 ---------------------------------
 
 - FIX: so-curator-closed-delete-delete needs to reference new Elasticsearch directory `#8529 <https://github.com/Security-Onion-Solutions/securityonion/issues/8529>`_
