@@ -10,7 +10,7 @@ In most cases, you'll pivot to PCAP from a particular event in :ref:`alerts`, :r
 .. image:: images/soc-events-table.png
   :target: _images/soc-events-table.png
 
-Alternatively, you can go directly to the PCAP interface and then put in your search criteria to search for a particular stream. 
+Alternatively, you can go directly to the PCAP interface, click the blue + button, and then put in your search criteria to search for a particular stream. 
 
 .. image:: images/pcap-add-job.png
   :target: _images/pcap-add-job.png
