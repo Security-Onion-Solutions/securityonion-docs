@@ -494,7 +494,7 @@ Elasticsearch 8 no longer includes GeoIP databases by default.
 
 In Security Onion 2.3.140, Elasticsearch requires access to geoip.elastic.co and storage.googleapis.com to download the GeoIP databases. You can read more at https://www.elastic.co/guide/en/elasticsearch/reference/current/geoip-processor.html#geoip-processor.
 
-Starting in Security Onion 2.3.150, we are including GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. Add the following to your Elasticsearch :ref:`salt` config:
+Starting in Security Onion 2.3.150, we are including GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. To do this, add the following to your Elasticsearch :ref:`salt` config:
 
 ::
 
