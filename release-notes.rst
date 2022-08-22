@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.3.150 [20220822] Changes
+2.3.150 [20220820] Changes
 --------------------------
 
 - FIX: Allow Filebeat to be disabled for sensors, idh, and fleet nodes `#8404 <https://github.com/Security-Onion-Solutions/securityonion/issues/8404>`_
