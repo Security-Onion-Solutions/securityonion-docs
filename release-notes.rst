@@ -3,6 +3,21 @@
 Release Notes
 =============
 
+2.3.150 [20220822] Changes
+--------------------------
+
+- FIX: Allow Filebeat to be disabled for sensors, idh, and fleet nodes `#8404 <https://github.com/Security-Onion-Solutions/securityonion/issues/8404>`_
+- FIX: Display PCAP menu action on Dashboards page `#8343 <https://github.com/Security-Onion-Solutions/securityonion/issues/8343>`_
+- FIX: Elasticsearch geoip lookups fail for some users in Elastic 8 `#8373 <https://github.com/Security-Onion-Solutions/securityonion/issues/8373>`_
+- FIX: Fix TLP options in Cases to align with TLP 2.0 `#8469 <https://github.com/Security-Onion-Solutions/securityonion/issues/8469>`_
+- FIX: Remove Elastic Pipeline Time graph from Grafana `#8369 <https://github.com/Security-Onion-Solutions/securityonion/issues/8369>`_
+- FIX: Update TALOS rules snapshot version to 29200 `#8551 <https://github.com/Security-Onion-Solutions/securityonion/issues/8551>`_
+- FIX: Use systemd drop-in file for salt-minion.service override `#8441 <https://github.com/Security-Onion-Solutions/securityonion/issues/8441>`_
+- FIX: soup should check for local configurations before modifying anything `#8423 <https://github.com/Security-Onion-Solutions/securityonion/issues/8423>`_
+- FIX: soup should only delete elastalert indices when upgrading from Elastic versions older than 8 `#8536 <https://github.com/Security-Onion-Solutions/securityonion/issues/8536>`_
+- UPGRADE: CyberChef 9.46.0 `#8299 <https://github.com/Security-Onion-Solutions/securityonion/issues/8299>`_
+- UPGRADE: Elastic 8.3.3 `#8398 <https://github.com/Security-Onion-Solutions/securityonion/issues/8398>`_
+
 2.3.140 Hotfix [20220812] Changes
 ---------------------------------
 
