@@ -23,12 +23,12 @@ IDH nodes are dedicated to just being IDH nodes and cannot run any other service
 Screenshots
 -----------
 
-Run Setup, select the DISTRIBUTED install submenu, choose to add a new node to your existing deployment, and then select the IDH option.
+Run Setup, select the ``DISTRIBUTED`` install submenu, choose the ``Existing Deployment`` option, and then select the ``IDH`` option.
 
 .. image:: images/idh-install-1.png
   :target: _images/idh-install-1.png
 
-Then choose from one of the common honeypot options or choose the Custom option to customize.
+Then choose from one of the common honeypot options or choose the ``Custom`` option to customize.
 
 .. image:: images/idh-install-2.png
   :target: _images/idh-install-2.png
@@ -38,7 +38,7 @@ Starting in Security Onion 2.3.120, you can optionally prevent the IDH services 
 .. image:: images/idh-install-3.png
   :target: _images/idh-install-3.png
 
-If you choose the webserver option, anybody who connects to the webserver will see a fake login page.
+If you chose the ``Linux Webserver`` option above, anybody who connects to the webserver will see a fake login page.
 
 .. image:: images/idh-webserver.png
   :target: _images/idh-webserver.png
