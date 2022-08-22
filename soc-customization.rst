@@ -47,10 +47,10 @@ Another possible SOC customization is the session timeout. The default timeout f
           kratoskey: 'abcdef1234567890'
           sessiontimeout: 720h
           
-Alerts
-------
+Advanced Interface
+------------------
 
-The :ref:`alerts` interface is a simplified version of the :ref:`hunt` interface by default. If you'd prefer the additional options of the :ref:`hunt` interface while reviewing your :ref:`alerts` queue, you can temporarily enable this by opening your browser console and then pasting the following:
+The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the :ref:`hunt` interface by default. If you'd prefer the additional options of the :ref:`hunt` interface while using :ref:`alerts` or :ref:`cases`, you can temporarily enable this by opening your browser console and then pasting the following:
 
 ::
 
@@ -66,7 +66,7 @@ If you would like to make this change permanent, make a copy of ``soc.json``:
 
         cp /opt/so/saltstack/default/salt/soc/files/soc/soc.json /opt/so/saltstack/local/salt/soc/files/soc/
         
-Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite text editor, find the ``alerts`` section, and set ``advanced`` to ``true``. Don't forget that you will need to manually update ``soc.json`` every time you update to the latest version.
+Then edit ``/opt/so/saltstack/local/salt/soc/files/soc/`` using your favorite text editor, find the ``alerts`` or ``cases`` section, and set ``advanced`` to ``true``. Don't forget that you will need to manually update ``soc.json`` every time you update to the latest version.
 
 Custom Queries
 --------------
