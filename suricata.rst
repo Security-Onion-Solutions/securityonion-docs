@@ -83,6 +83,11 @@ HOME_NET
 
 To configure HOME_NET, please see the :ref:`homenet` section. 
 
+EXTERNAL_NET
+------------
+
+By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to detect lateral movement inside your environment.
+
 Configuration
 -------------
 
