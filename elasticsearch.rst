@@ -429,7 +429,7 @@ For advanced users that require advanced features like shard replicas and hot/wa
 .. image:: images/elastic-cluster-3.png
   :target: _images/elastic-cluster-3.png
 
-When using Elastic clustering, index deletion is based on the ``delete`` settings shown above in the global pillar above. The ``delete`` setting in the global pillar configures :ref:`curator` to delete an index older than the value given. You should ensure that the ``close`` setting is set to a smaller value than ``delete``!
+When using Elastic clustering, index deletion is based on the ``delete`` settings shown in the global pillar above. The ``delete`` settings in the global pillar configure :ref:`curator` to delete indices older than the value given. For each index, please ensure that the ``close`` setting is set to a smaller value than the ``delete`` setting.
 
 Let's discuss the process for determining appropriate ``delete`` settings. First, check your indices using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
 
