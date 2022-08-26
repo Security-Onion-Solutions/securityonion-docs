@@ -21,7 +21,7 @@ Starting in Security Onion 2.3.160, there is a new toggle labeled ``Temporarily 
 .. image:: images/soc-toggle-advanced.png
   :target: _images/soc-toggle-advanced.png
 
-If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will be back to its default view. 
+If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
 
 The ``Acknowledged`` and ``Escalated`` toggles control what alerts are displayed:
 
