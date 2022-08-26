@@ -50,12 +50,20 @@ Another possible SOC customization is the session timeout. The default timeout f
 Advanced Interface
 ------------------
 
-The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the :ref:`hunt` interface by default. If you'd prefer the additional options of the :ref:`hunt` interface while using :ref:`alerts` or :ref:`cases`, you can temporarily enable this by opening your browser console and then pasting the following:
+The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. Starting in Security Onion 2.3.160, :ref:`alerts` and :ref:`cases` have a new toggle under Options labeled ``Temporarily enable advanced interface features``.
+
+.. image:: images/soc-toggle-advanced.png
+  :target: _images/soc-toggle-advanced.png
+
+If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will be back to its default view.
+
+In older versions, you can temporarily enable this by opening your browser console and then pasting the following:
 
 ::
 
         document.getElementById('hunt').__vue__.$parent._data.advanced=true
         
+
 .. warning::
 
         Making this change permanent requires changes to ``soc.json`` which changes at nearly every release. So if you proceed with this, please be prepared to update to the new ``soc.json`` every time you update.
