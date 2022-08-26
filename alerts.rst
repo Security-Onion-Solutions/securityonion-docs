@@ -16,10 +16,12 @@ At the top of the page, there is an Options drop-down menu that allows you to se
 Toggles
 ~~~~~~~
 
-Starting in Security Onion 2.3.160, there is a new toggle labeled ``Temporarily enable advanced interface features``. If you enable this option, then the Alerts interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the Alerts page and then return to the Alerts page, it will be back to its default view.
+Starting in Security Onion 2.3.160, there is a new toggle labeled ``Temporarily enable advanced interface features``. 
 
 .. image:: images/soc-toggle-advanced.png
   :target: _images/soc-toggle-advanced.png
+
+If you enable this option, then the Alerts interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the Alerts page and then return to the Alerts page, it will be back to its default view.
 
 The ``Acknowledged`` and ``Escalated`` toggles control what alerts are displayed:
 
