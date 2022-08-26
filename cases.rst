@@ -103,6 +103,11 @@ Options
 
 Starting at the top of the main Cases page, the Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
 
+Starting in Security Onion 2.3.160, there is a new toggle labeled ``Temporarily enable advanced interface features``. If you enable this option, then the Cases interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the Cases page and then return to the Cases page, it will be back to its default view.
+
+.. image:: images/soc-toggle-advanced.png
+  :target: _images/soc-toggle-advanced.png
+
 Query Bar
 ---------
 

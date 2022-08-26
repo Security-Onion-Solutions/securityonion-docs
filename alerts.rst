@@ -16,10 +16,15 @@ At the top of the page, there is an Options drop-down menu that allows you to se
 Toggles
 ~~~~~~~
 
-The first option is for ``Acknowledged`` and ``Escalated``:
+Starting in Security Onion 2.3.160, there is a new toggle labeled ``Temporarily enable advanced interface features``. If you enable this option, then the Alerts interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the Alerts page and then return to the Alerts page, it will be back to its default view.
 
-.. image:: https://user-images.githubusercontent.com/1659467/94587683-ed7d8e80-0250-11eb-951d-282ba76932f7.png
-  :target: https://user-images.githubusercontent.com/1659467/94587683-ed7d8e80-0250-11eb-951d-282ba76932f7.png
+.. image:: images/soc-toggle-advanced.png
+  :target: _images/soc-toggle-advanced.png
+
+The ``Acknowledged`` and ``Escalated`` toggles control what alerts are displayed:
+
+.. image:: images/soc-toggle-alerts.png
+  :target: _images/soc-toggle-alerts.png
 
 - Enabling the ``Acknowledged`` toggle will only show alerts that have previously been acknowledged by an analyst. 
 
@@ -28,7 +33,7 @@ The first option is for ``Acknowledged`` and ``Escalated``:
 Automatic Refresh Interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The second option is the Automatic Refresh Interval setting:
+Another option is the Automatic Refresh Interval setting:
 
 .. image:: images/soc-automatic-refresh-interval.png
   :target: _images/soc-automatic-refresh-interval.png
