@@ -3,6 +3,13 @@
 Release Notes
 =============
 
+2.3.160 [20220829] Changes
+--------------------------
+
+- FEATURE: Add Advanced toggle to Alerts and Cases pages `#7559 <https://github.com/Security-Onion-Solutions/securityonion/issues/7559>`_
+- FIX: Add gen_webshells.yar to Strelka ignore list `#8624 <https://github.com/Security-Onion-Solutions/securityonion/issues/8624>`_
+- UPGRADE: Zeek 4.0.8 `#8610 <https://github.com/Security-Onion-Solutions/securityonion/issues/8610>`_
+
 2.3.150 [20220820] Changes
 --------------------------
 
