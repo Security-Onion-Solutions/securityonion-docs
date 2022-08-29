@@ -43,8 +43,8 @@ Please note that all nodes will need to be able to connect to the manager node o
 
 Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option. Save the ``soremote`` password so that you can join nodes to the manager.
 
-Build search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. When prompted, join them to the manager node using the ``soremote`` password.
+Build search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. When prompted, join them to the manager node using the password that you created for the ``soremote`` account.
 
-Build forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. When prompted, join them to the manager node using the ``soremote`` password.
+Build forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. When prompted, join them to the manager node using the password that you created for the ``soremote`` account.
 
 Proceed to the :ref:`post-installation` section.
