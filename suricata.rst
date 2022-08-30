@@ -3,7 +3,7 @@
 Suricata
 ========
 
-From https://suricata-ids.org:
+From https://suricata.io:
 
     Suricata is a free and open source, mature, fast and robust network threat detection engine. Suricata inspects the network traffic using
     a powerful and extensive rules and signature language, and has powerful Lua scripting support for detection of complex threats.
@@ -222,4 +222,4 @@ More Information
 
 .. seealso::
 
-    For more information about Suricata, please see https://suricata-ids.org.
+    For more information about Suricata, please see https://suricata.io.
