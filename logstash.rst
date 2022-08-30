@@ -181,7 +181,7 @@ The dead letter queue files are located in ``/nsm/logstash/dead_letter_queue/mai
 Redis
 ~~~~~
 
-When using search nodes, Logstash on the manager node outputs to :ref:`redis` (which also runs on the manager node). Redis queues events from the Logstash output (on the manager node) and the Logstash input on the search node(s) pull(s) from Redis. If you notice new events aren't making it into Kibana, you may want to first check Logstash on the manager node and then the redis `queue <Redis#queue>`__.
+When using search nodes, Logstash on the manager node outputs to :ref:`redis` (which also runs on the manager node). :ref:`redis` queues events from the Logstash output (on the manager node) and the Logstash input on the search node(s) pull(s) from :ref:`redis`. If you notice new events aren't making it into :ref:`elasticsearch`, you may want to first check Logstash on the manager node and then the :ref:`redis` queue.
 
 Diagnostic Logging
 ------------------
