@@ -163,7 +163,7 @@ We recommend dedicated physical hardware (especially if you're monitoring lots o
 CPU
 ~~~
 
-:ref:`suricata` and :ref:`zeek` are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per :ref:`suricata` worker or :ref:`zeek` worker. So if you have a fully saturated 1Gbps link and are running :ref:`suricata` and :ref:`zeek`, then you'll want at least 5 :ref:`suricata` instances and 5 :ref:`zeek` workers, which means you'll need at least 10 CPU cores for :ref:`suricata` and :ref:`zeek` with additional CPU cores for :ref:`stenographer` and/or other services.
+:ref:`suricata` and :ref:`zeek` are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per :ref:`suricata` worker or :ref:`zeek` worker. So if you have a fully saturated 1Gbps link and are running :ref:`suricata` and :ref:`zeek`, then you'll want at least 5 :ref:`suricata` workers and 5 :ref:`zeek` workers. This means you'll need at least 10 CPU cores for :ref:`suricata` and :ref:`zeek` with additional CPU cores for :ref:`stenographer` and/or other services.
 
 RAM
 ~~~
