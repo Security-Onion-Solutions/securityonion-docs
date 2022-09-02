@@ -16,12 +16,24 @@ What is being backed up?
 
   This includes all minion sls files and customizations. 
 
-Kibana Customizations
----------------------
+Elasticsearch
+-------------
 
-Kibana customizations are located in the ``.kibana`` indices. Periodic snapshots of this data will preserve them in case of failure. You can also utilize true elastic clustering to add replicas to ensure quick recovery.
+:ref:`elasticsearch` stores important information like :ref:`kibana` customizations and :ref:`cases` data. :ref:`kibana` customizations are located in the ``.kibana`` indices and  :ref:`cases` data is stored in the ``so-case`` and ``so-casehistory`` indices. To backup this data, there are a few options.
 
-Elastic Data
-------------
+The first option is to enable snapshots with :ref:`curator` to snapshot data to an external storage device such as a NAS.
 
-Users can enable snapshots with :ref:`curator` to snapshot data to an external storage device such as a NAS. True Elastic clustering will allow you to have redundancy in case of a single node failure if you enable replicas. However, please keep in mind that enabling replicas doubles your storage needs.
+The second option is to use :ref:`elasticsearch`'s built-in support for snapshots:
+https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshot-restore.html
+
+This option requires that you configure :ref:`elasticsearch` with a ``path.repo`` setting where it can store the snapshots. To do this, you can update the ``elasticsearch`` :ref:`salt` pillar using something like the following and then restart :ref:`elasticsearch`:
+
+::
+
+  elasticsearch:
+    config:
+      path.repo: '/usr/share/elasticsearch/data/repo'
+
+Once :ref:`elasticsearch` has the ``path.repo`` setting, you should be able to log into :ref:`kibana` and configure snapshots as shown in the link above. Those snapshots will then be accessible in ``/nsm/elasticsearch/repo``.
+
+A third option is if you have a distributed deployment with :ref:`easticsearch` clustering, then you can enable replicas to have redundancy in case of a single node failure. Of course, please keep in mind that enabling replicas doubles your storage needs.
