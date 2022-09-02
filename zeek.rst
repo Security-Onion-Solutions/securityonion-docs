@@ -22,6 +22,14 @@ Packet Loss and Capture Loss
 
 Zeek reports both packet loss and capture loss and you can find graphs of these in :ref:`grafana`. If Zeek reports packet loss, then you most likely need to adjust the number of Zeek workers as shown below or filter out traffic using :ref:`bpf`. If Zeek is reporting capture loss but no packet loss, this usually means that the capture loss is happening upstream in the tap or span port itself.
 
+VLAN tags
+---------
+
+.. warning::
+
+   | Please note that Zeek should correctly analyze traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
+   | https://github.com/J-Gras/zeek-af_packet-plugin/issues/9
+
 Performance
 -----------
 
