@@ -3,10 +3,7 @@
 Backups
 =======
 
-Security Onion 2 performs daily backups of some critical files so that you can recover your grid from a catastophic failure of the manager. Daily backups create a tar file located in the ``/nsm/backup/`` directory located on the manager. 
-
-What is being backed up?
-------------------------
+Security Onion 2 performs daily backups of some critical files so that you can recover your grid from a catastophic failure of the manager. Daily backups create a tar file located in the ``/nsm/backup/`` directory located on the manager. Here is what gets backed up automatically:
 
 - ``/etc/pki/``
 
@@ -19,7 +16,7 @@ What is being backed up?
 Elasticsearch
 -------------
 
-:ref:`elasticsearch` stores important information like :ref:`kibana` customizations and :ref:`cases` data. :ref:`kibana` customizations are located in the ``.kibana`` indices and  :ref:`cases` data is stored in the ``so-case`` and ``so-casehistory`` indices. To backup this data, there are a few options.
+:ref:`elasticsearch` data is not automatically backed up. This includes things that may be important to you like :ref:`kibana` customizations and :ref:`cases` data. :ref:`kibana` customizations are located in the ``.kibana`` indices and  :ref:`cases` data is stored in the ``so-case`` and ``so-casehistory`` indices. To backup this data, there are a few options.
 
 The first option is to enable snapshots with :ref:`curator` to snapshot data to an external storage device such as a NAS.
 
