@@ -113,7 +113,7 @@ Instance Creation
 To configure a Security Onion instance (repeat for each node in a distributed grid), follow these steps:
 
 - From the EC2 dashboard select: ``Launch Instance``
-- Search the AWS Marketplace for ``Security Onion`` and make sure you get the latest version of the Security Onion 2 official AMI.
+- Search the AWS Marketplace for ``Security Onion`` and make sure you get the latest version of the Security Onion official AMI.
 - Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please review the AWS Requirements section above.
 - From the subnet drop-down menu select the same subnet as the sniffing interface.
 - Under the Network interfaces section configure the eth0 (management) interface.
@@ -124,7 +124,7 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 - Select: ``Next: Configure Security Group`` and add the appropriate inbound rules.
 - Select: ``Review and Launch``
 - If prompted, select the appropriate SSH keypair that will be used to ssh into the Security Onion instance for administration 
-- The default username for the Security Onion 2 AMI is: ``onion``
+- The default username for the Security Onion AMI is: ``onion``
 
 Prepare Nodes with Ephemeral Storage
 ------------------------------------

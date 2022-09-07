@@ -3,7 +3,7 @@
 Azure Cloud Image
 =================
 
-Azure users can deploy an official Security Onion 2 virtual machine image found on the Azure Marketplace:
+Azure users can deploy an official Security Onion virtual machine image found on the Azure Marketplace:
 https://securityonion.net/azure
 
 .. warning::

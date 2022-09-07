@@ -3,7 +3,7 @@
 Backups
 =======
 
-Security Onion 2 performs daily backups of some critical files so that you can recover your grid from a catastophic failure of the manager. Daily backups create a tar file located in the ``/nsm/backup/`` directory located on the manager. Here is what gets backed up automatically:
+Security Onion performs daily backups of some critical files so that you can recover your grid from a catastophic failure of the manager. Daily backups create a tar file located in the ``/nsm/backup/`` directory located on the manager. Here is what gets backed up automatically:
 
 - ``/etc/pki/``
 

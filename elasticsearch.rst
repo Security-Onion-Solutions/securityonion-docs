@@ -37,7 +37,7 @@ All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
 Parsing
 -------
 
-In Security Onion 2, Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`filebeat`. Elasticsearch then parses and stores those logs. Parsers are stored in ``/opt/so/conf/elasticsearch/ingest/``.  Custom ingest parsers can be placed in ``/opt/so/saltstack/local/salt/elasticsearch/files/ingest/``.   To make these changes take effect, restart Elasticsearch using ``so-elasticsearch-restart``.
+Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`filebeat`. Elasticsearch then parses and stores those logs. Parsers are stored in ``/opt/so/conf/elasticsearch/ingest/``.  Custom ingest parsers can be placed in ``/opt/so/saltstack/local/salt/elasticsearch/files/ingest/``.   To make these changes take effect, restart Elasticsearch using ``so-elasticsearch-restart``.
 
 .. seealso::
 
@@ -398,7 +398,7 @@ For example, suppose our ``log_size_limit`` is 1TB and we have 30 days of open i
 Distributed Deployments
 -----------------------
 
-For distributed deployments, Security Onion 2 supports two different configurations for deploying Elasticsearch: cross cluster search and Elastic clustering.
+For distributed deployments, Security Onion supports two different configurations for deploying Elasticsearch: cross cluster search and Elastic clustering.
 
 Cross Cluster Search
 ~~~~~~~~~~~~~~~~~~~~
@@ -414,7 +414,7 @@ When using a ``forward node``, Elastic Stack components are not enabled. :ref:`f
 
 Elastic Clustering
 ~~~~~~~~~~~~~~~~~~
-For advanced users that require advanced features like shard replicas and hot/warm indices, Security Onion 2 also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
+For advanced users that require advanced features like shard replicas and hot/warm indices, Security Onion also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
 
 .. warning::
 

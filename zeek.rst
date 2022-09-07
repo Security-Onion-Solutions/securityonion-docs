@@ -186,7 +186,7 @@ If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`
 Custom Scripts
 --------------
 
-Custom scripts can be added to ``/opt/so/saltstack/local/salt/zeek/policy/custom/<$custom-module>`` on the manager.  The custom folder is mapped to Zeek through Docker on the minions.  Once the script module is created, the configuration for ``local.zeek`` will need to be updated.  In Security Onion 2, this configuration is abstracted into a :ref:`salt` pillar.  For example, we would copy the following into the ``global.sls`` file, replacing ``$module-name`` on the last line with the actual module name:
+Custom scripts can be added to ``/opt/so/saltstack/local/salt/zeek/policy/custom/<$custom-module>`` on the manager.  The custom folder is mapped to Zeek through Docker on the minions.  Once the script module is created, the configuration for ``local.zeek`` will need to be updated.  This configuration is abstracted into a :ref:`salt` pillar.  For example, we would copy the following into the ``global.sls`` file, replacing ``$module-name`` on the last line with the actual module name:
 
 ::
 

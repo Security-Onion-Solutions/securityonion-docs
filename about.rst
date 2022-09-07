@@ -7,10 +7,6 @@ Security Onion
 --------------
 Security Onion is a free and open Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes our own tools for :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, :ref:`pcap`, and :ref:`cases` as well as other tools such as :ref:`playbook`, :ref:`fleet`, :ref:`osquery`, :ref:`cyberchef`, :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, :ref:`zeek`, and :ref:`wazuh`. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
 
-.. note::
-
-   Security Onion started in 2008 and was originally based on the Ubuntu Linux distribution. Throughout the years, the Security Onion version tracked the version of Ubuntu it was based on. For example, the last major version of Security Onion was based on Ubuntu 16.04 and so it was called Security Onion 16.04. Security Onion is now container based and thus no longer limited to just Ubuntu. To signify this change, Security Onion now has its own versioning scheme and this new platform is Security Onion 2.
-
 Security Onion Solutions, LLC
 -----------------------------
 Doug Burks started Security Onion as a free and open project in 2008 and then founded Security Onion Solutions, LLC in 2014.  
