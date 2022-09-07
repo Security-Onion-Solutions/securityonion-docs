@@ -3,7 +3,7 @@
 Intrusion Detection Honeypot
 ============================
 
-Starting in Security Onion 2.3.110, we have a new Intrusion Detection Honeypot node. This allows you to build a node that mimics services. Connections to these services automatically generate alerts.
+The Intrusion Detection Honeypot node allows you to build a node that mimics services. Connections to these services automatically generate alerts.
 
 From the book, *Intrusion Detection Honeypots* (Sanders, C):
 
@@ -14,7 +14,7 @@ Chris Sanders and Josh Brower presented the IDH concept at Security Onion Confer
 Installation
 ------------
 
-IDH nodes are dedicated to just being IDH nodes and cannot run any other services. Therefore, you must have a separate manager to connect to. You can join a new IDH node to an existing Standalone deployment or full distributed deployment. Starting in Security Onion 2.3.120, our ISO image includes a new boot menu option for IDH installs that will partition your disk appropriately with lower requirements than a full installation.
+IDH nodes are dedicated to just being IDH nodes and cannot run any other services. Therefore, you must have a separate manager to connect to. You can join a new IDH node to an existing Standalone deployment or full distributed deployment. Our ISO image includes a new boot menu option for IDH installs that will partition your disk appropriately with lower requirements than a full installation.
 
 .. warning::
 
@@ -33,7 +33,7 @@ Then choose from one of the common honeypot options or choose the ``Custom`` opt
 .. image:: images/idh-install-2.png
   :target: _images/idh-install-2.png
 
-Starting in Security Onion 2.3.120, you can optionally prevent the IDH services from listening on the management interface.
+You can optionally prevent the IDH services from listening on the management interface.
 
 .. image:: images/idh-install-3.png
   :target: _images/idh-install-3.png

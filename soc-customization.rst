@@ -50,19 +50,12 @@ Another possible SOC customization is the session timeout. The default timeout f
 Advanced Interface
 ------------------
 
-The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. Starting in Security Onion 2.3.160, :ref:`alerts` and :ref:`cases` have a new toggle under Options labeled ``Temporarily enable advanced interface features``.
+The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. :ref:`alerts` and :ref:`cases` have a new toggle under Options labeled ``Temporarily enable advanced interface features``.
 
 .. image:: images/soc-toggle-advanced.png
   :target: _images/soc-toggle-advanced.png
 
 If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
-
-In versions older than 2.3.160, you can temporarily enable this by opening your browser console and then pasting the following:
-
-::
-
-        document.getElementById('hunt').__vue__.$parent._data.advanced=true
-        
 
 .. warning::
 
@@ -100,7 +93,7 @@ Please note that some events may not have GeoIP information and this query would
 Action Menu
 -----------
 
-:ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` have an action menu with several default actions. If you'd like to add your own custom HTTP GET or POST actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` and then add new entries. (Previous to Security Onion 2.3.60, this would be done in ``alerts.actions.json`` or ``hunt.actions.json``.)
+:ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` have an action menu with several default actions. If you'd like to add your own custom HTTP GET or POST actions, you can copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json`` and then add new entries.
 
 For example, suppose you want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. First, copy ``/opt/so/saltstack/default/salt/soc/files/soc/menu.actions.json`` to ``/opt/so/saltstack/local/salt/soc/files/soc/menu.actions.json``:
 
@@ -159,11 +152,9 @@ Cases
 Escalation
 ----------
 
-:ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` display logs with a blue triangle that allows you to escalate the event. Starting in Security Onion 2.3.100, this defaults to our new :ref:`cases` interface. If for some reason you want to escalate to a different case management system, you can change this setting. To do so, locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the following values:
+:ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` display logs with a blue triangle that allows you to escalate the event. This defaults to our :ref:`cases` interface. If for some reason you want to escalate to a different case management system, you can change this setting. To do so, locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the following values:
 
 - ``soc`` - Enables the new built-in Case Management, with the new Escalation menu (default).
-
-- ``thehive`` - Enables escalation directly to TheHive v3 instance running in the Security Onion cluster (only applicable to existing installations that upgrade to 2.3.100). Escalations will always open a new case; there will not be an advanced escalation menu popup. Note that Security Onion support for TheHive has ended, and TheHive will no longer be included in future Security Onion releases. Therefore this option should only be considered for short-term, temporary usage.
 
 - ``elasticcases`` - Enables escalation to the `Elastic Cases <https://www.elastic.co/guide/en/security/current/cases-overview.html>`_ tool. Escalations will always open a new case; there will not be an advanced escalation menu popup.  This module will use the same user/pass that SOC uses to talk to Elastic. Note, however, that Elastic cases is actually a Kibana feature, therefore, when this setting is used, SOC will be communicating with the local Kibana service (via its API) for case escalations.
 

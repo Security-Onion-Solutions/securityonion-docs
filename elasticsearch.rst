@@ -482,19 +482,10 @@ Clearing
 
 If you want to clear all Elasticsearch data including documents and indices, you can run the ``so-elastic-clear`` command.
 
-Elastic 8
----------
-
-In Security Onion 2.3.140, the Elastic components will undergo a major version upgrade from version 7 to version 8. You can read more about this in the :ref:`soup` section.
-
 GeoIP
 -----
 
-Elasticsearch 8 no longer includes GeoIP databases by default.
-
-In Security Onion 2.3.140, Elasticsearch requires access to geoip.elastic.co and storage.googleapis.com to download the GeoIP databases. You can read more at https://www.elastic.co/guide/en/elasticsearch/reference/current/geoip-processor.html#geoip-processor.
-
-Starting in Security Onion 2.3.150, we are including GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. To do this, add the following to your Elasticsearch :ref:`salt` config:
+Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. To do this, add the following to your Elasticsearch :ref:`salt` config:
 
 ::
 

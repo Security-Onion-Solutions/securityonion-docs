@@ -87,7 +87,7 @@ Diagnostic logs can be found in ``/opt/so/log/salt/``.
 Known Issues
 ------------
 
-In Security Onion 2.3.100, Salt was upgraded to version 3004. Starting in this release, users may see the following error in the salt-master log located at ``/opt/so/log/salt/master``:
+You may see the following error in the salt-master log located at ``/opt/so/log/salt/master``:
 
 ::
 

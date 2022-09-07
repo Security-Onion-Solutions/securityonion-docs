@@ -18,12 +18,12 @@ Each dashboard you view is added to ``Recently viewed dashboards`` which is then
 .. image:: images/grafana-2.png
   :target: _images/grafana-2.png
 
-Grafana Changes in Security Onion 2.3.60
-----------------------------------------
+Data
+----
 
-Starting in Security Onion 2.3.60, Grafana will have both high-resolution data and downsampled low-resolution data. Some Grafana graphs have dotted lines that show previous data that has been downsampled. High-resolution data will be purged after 30 days, leaving just the downsampled low-resolution data.
+Grafana will have both high-resolution data and downsampled low-resolution data. Some Grafana graphs have dotted lines that show previous data that has been downsampled. High-resolution data will be purged after 30 days, leaving just the downsampled low-resolution data.
 
-For existing installations upgraded to Security Onion 2.3.60 or later, you may want to update your Grafana data as shown below. If you have a distributed deployment, you will run all commands on the manager.
+You may want to update your Grafana data as shown below. If you have a distributed deployment, you will run all commands on the manager.
 
 If you want to remove some old data prior to downsampling, you can run ``so-influxdb-clean``. This is optional and not required. ``so-influxdb-clean`` will ask how many days or weeks worth of data you want to retain and remove all data older than that.
 

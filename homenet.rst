@@ -3,7 +3,7 @@
 Homenet
 =======
 
-The homenet variable defines the networks that are considered home networks (those networks that you are monitoring and defending). It is used for :ref:`suricata` and, starting in Security Onion 2.3.110, for :ref:`zeek` as well. The default value is RFC1918 private address space:
+The homenet variable defines the networks that are considered home networks (those networks that you are monitoring and defending). It is used for :ref:`suricata` and for :ref:`zeek` as well. The default value is RFC1918 private address space:
 
 .. image:: images/19_setup_homenet.png
   :target: _images/19_setup_homenet.png
@@ -18,7 +18,7 @@ By default, a node will use the global homenet pillar value if it is defined in 
 ::
 
   global:
-    soversion: '2.3.0'
+    soversion: '2.4.0'
     hnmanager: '10.0.0.0/8,192.168.0.0/16,172.16.0.0/12'
 
 In order to define a per node homenet, it can be defined in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``) under ``sensor:hnsensor``.

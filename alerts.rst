@@ -16,7 +16,7 @@ At the top of the page, there is an Options drop-down menu that allows you to se
 Toggles
 ~~~~~~~
 
-Starting in Security Onion 2.3.160, there is a new toggle labeled ``Temporarily enable advanced interface features``. 
+The first toggle is labeled ``Temporarily enable advanced interface features``. 
 
 .. image:: images/soc-toggle-advanced.png
   :target: _images/soc-toggle-advanced.png
@@ -134,7 +134,7 @@ Clicking the ``Group By`` option will update the existing query and aggregate th
 New Group By
 ~~~~~~~~~~~~
 
-Starting in Security Onion 2.3.130, clicking the ``New Group By`` option will create a new data table for the selected field.
+Clicking the ``New Group By`` option will create a new data table for the selected field.
 
 Clipboard
 ~~~~~~~~~
