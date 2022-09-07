@@ -30,7 +30,6 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 - Ubuntu PPAs (OS Updates - Ubuntu only)  
 - download.docker.com (Docker packages - Ubuntu only)
 - repo.saltstack.com (Salt packages - Ubuntu only)
-- packages.wazuh.com (Wazuh packages - Ubuntu only) 
 
 In the case of a distributed deployment, you can configure your nodes to pull everything from the manager so that only the manager requires Internet access.
 

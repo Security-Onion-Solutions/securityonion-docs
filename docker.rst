@@ -98,12 +98,6 @@ If you have VMware Tools installed and you suspend and then resume, the Docker i
 Dependencies
 ------------
 
-Fleet
-~~~~~
-| ``so-fleet`` - REQ - Fleet Web App
-| ``so-mysql`` - REQ - Fleet state data
-| ``so-redis`` - REQ - Required for live querying
-
 Playbook
 ~~~~~~~~
 | ``so-playbook`` - REQ - Playbook Web App

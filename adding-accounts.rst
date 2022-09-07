@@ -17,7 +17,7 @@ For more information, please see ``man adduser``.
 SOC
 ---
 
-If you need to add a new account to :ref:`soc` and :ref:`fleet`, you can use the ``so-user-add`` command and specify the user's email address. For example, to add a new account for ``tom@example.com``:
+If you need to add a new account to :ref:`soc`, you can use the ``so-user-add`` command and specify the user's email address. For example, to add a new account for ``tom@example.com``:
 
 ::
 

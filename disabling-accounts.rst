@@ -17,7 +17,7 @@ For more information, please see ``man passwd`` and ``man usermod``.
 SOC
 ---
 
-If you need to disable an account in :ref:`soc` and :ref:`fleet`, you can use the ``so-user-disable`` command and specify the user's email address. For example, to disable the account for ``tom@example.com``:
+If you need to disable an account in :ref:`soc`, you can use the ``so-user-disable`` command and specify the user's email address. For example, to disable the account for ``tom@example.com``:
 
 ::
 

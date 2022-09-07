@@ -34,7 +34,3 @@ The vast majority of data is stored in ``/nsm/``.
 /nsm/pcap
 ---------
 :ref:`stenographer` stores full packet capture in ``/nsm/pcap/``.
-
-/nsm/wazuh
--------------
-All :ref:`wazuh` files are stored in ``/nsm/wazuh/``. For convenience, we have placed symlinks for :ref:`wazuh` config at ``/opt/so/conf/wazuh/`` (linked to ``/nsm/wazuh/etc``) and :ref:`wazuh` rules at ``/opt/so/rules/hids/`` (``local_rules.xml`` links to ``/nsm/wazuh/etc/rules/local_rules.xml`` and ``ruleset`` links to ``/nsm/wazuh/ruleset``).

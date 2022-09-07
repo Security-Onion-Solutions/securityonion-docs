@@ -82,7 +82,6 @@ The manager node runs the following components:
 -  :ref:`curator`
 -  :ref:`elastalert`
 -  :ref:`redis`
--  :ref:`wazuh`
 
 Search Node
 ~~~~~~~~~~~
@@ -96,7 +95,6 @@ Search Nodes run the following components:
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
 -  :ref:`curator`
--  :ref:`wazuh`
 
 Manager Search
 ~~~~~~~~~~~~~~
@@ -112,7 +110,6 @@ A manager search node runs the following components:
 -  :ref:`curator`
 -  :ref:`elastalert`
 -  :ref:`redis`
--  :ref:`wazuh`
 
 Forward Node
 ~~~~~~~~~~~~
@@ -124,7 +121,6 @@ Forward nodes run the following components:
 -  :ref:`zeek`
 -  :ref:`suricata`
 -  :ref:`stenographer`
--  :ref:`wazuh`
 
 Heavy Node
 ~~~~~~~~~~
@@ -143,18 +139,11 @@ Heavy Nodes run the following components:
 -  :ref:`zeek`
 -  :ref:`suricata`
 -  :ref:`stenographer`
--  :ref:`wazuh`
 
-Fleet Standalone Node
-~~~~~~~~~~~~~~~~~~~~~
+Elastic Fleet Standalone Node
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A :ref:`fleet` Standalone Node is ideal when there are a large amount of osquery endpoints deployed. It reduces the amount of overhead on the manager node by transferring the workload associated with managing osquery endpoints to a dedicated system. It is also useful for off-network osquery endpoints that do not have  remote access to the Manager node as it can be deployed to the DMZ and TCP/8090 made accessible to your off-network osquery endpoints.
-
-If the Manager Node was originally setup with :ref:`fleet`, your grid will automatically switch over to using the :ref:`fleet` Standalone Node instead as a grid can only have one :ref:`fleet` instance active at a time.
-
-:ref:`fleet` Standalone Nodes run the following components:
-
--  :ref:`fleet`
+An Elastic Fleet Standalone Node is ideal when there are a large amount of Elastic endpoints deployed. It reduces the amount of overhead on the manager node by transferring the workload associated with managing endpoints to a dedicated system. It is also useful for off-network osquery endpoints that do not have remote access to the Manager node as it can be deployed to the DMZ and TCP/8090 made accessible to your off-network osquery endpoints.
 
 Receiver Node
 ~~~~~~~~~~~~~

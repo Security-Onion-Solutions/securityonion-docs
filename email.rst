@@ -3,7 +3,7 @@
 Email Configuration
 ===================
 
-Some applications rely on having a mail server in the OS itself and other applications (like :ref:`wazuh`) have their own mail configuration and so they don't rely on a mail server in the OS itself.
+Some applications rely on having a mail server in the OS itself and other applications have their own mail configuration and so they don't rely on a mail server in the OS itself.
 
 Operating System
 ----------------
@@ -14,8 +14,3 @@ Elastalert
 ----------
 
 Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
-
-Wazuh
------
-
-Follow the steps in the :ref:`wazuh` section.

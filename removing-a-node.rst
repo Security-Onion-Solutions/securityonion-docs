@@ -42,11 +42,6 @@ To remove the node from the SOC Grid page, simply restart SOC:
 
    sudo so-soc-restart
    
-FleetDM
--------
-
-You can delete the node from FleetDM via the :ref:`fleet` web interface.
-
 Cross Cluster Search
 --------------------
 

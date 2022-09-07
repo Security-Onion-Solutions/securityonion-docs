@@ -17,15 +17,8 @@ Security Onion locks down the :ref:`firewall` by default. Depending on what kind
     [f] - Strelka frontend - port 57314/tcp
     [o] - Osquery endpoint - port 8090/tcp
     [s] - Syslog device - 514/tcp/udp
-    [w] - Wazuh agent - port 1514/tcp/udp
-    [p] - Wazuh API - port 55000/tcp
-    [r] - Wazuh registration service - 1515/tcp
 
     Please enter your selection:
-
-Wazuh
------
-If you choose the ``analyst`` option, ``so-allow`` will also add the ``analyst`` IP address to the :ref:`wazuh` safe list.  This will prevent :ref:`wazuh` Active Response from blocking the ``analyst`` IP address.
 
 Automation
 ----------

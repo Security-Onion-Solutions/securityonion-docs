@@ -19,7 +19,6 @@ To check the status of Security Onion services, run ``sudo so-status``:
 	    so-elastalert --------------------------------- [ OK ]    
 	    so-elasticsearch ------------------------------ [ OK ]    
 	    so-filebeat ----------------------------------- [ OK ]    
-	    so-fleet -------------------------------------- [ OK ]    
 	    so-grafana ------------------------------------ [ OK ]    
 	    so-idstools ----------------------------------- [ OK ]    
 	    so-influxdb ----------------------------------- [ OK ]    
@@ -42,7 +41,6 @@ To check the status of Security Onion services, run ``sudo so-status``:
 	    so-strelka-manager ---------------------------- [ OK ]    
 	    so-suricata ----------------------------------- [ OK ]    
 	    so-telegraf ----------------------------------- [ OK ]    
-	    so-wazuh -------------------------------------- [ OK ] 
 
 so-status reads the list of enabled services from ``/opt/so/conf/so-status/so-status.conf`` and checks the status of each. If you ever disable a service, you may need to remove it from that file.
 

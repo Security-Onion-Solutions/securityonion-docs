@@ -14,7 +14,6 @@ Security Onion would like to thank the following projects for their contribution
 - :ref:`elastalert`
 - :ref:`elasticsearch`
 - :ref:`filebeat`
-- :ref:`fleet`
 - :ref:`grafana`
 - :ref:`kibana`
 - :ref:`logstash`
@@ -24,5 +23,4 @@ Security Onion would like to thank the following projects for their contribution
 - :ref:`stenographer`
 - :ref:`strelka`
 - :ref:`suricata`
-- :ref:`wazuh`
 - :ref:`zeek`

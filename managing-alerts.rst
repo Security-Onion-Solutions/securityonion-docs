@@ -11,7 +11,7 @@ Security Onion generates a lot of valuable information for you the second you pl
    
 Alerting Engines & Severity
 ---------------------------
-There are three alerting engines within Security Onion: :ref:`suricata`, :ref:`wazuh` and :ref:`playbook` (Sigma). Though each engine uses its own severity level system, Security Onion converts that to a standardized alert severity: 
+There are two alerting engines within Security Onion: :ref:`suricata` and :ref:`playbook` (Sigma). Though each engine uses its own severity level system, Security Onion converts that to a standardized alert severity: 
 
 ``event.severity``: ``4`` ==> ``event.severity_label``: ``critical``
 
@@ -22,11 +22,6 @@ There are three alerting engines within Security Onion: :ref:`suricata`, :ref:`w
 ``event.severity``: ``1`` ==> ``event.severity_label``: ``low``
 
 All alerts are viewable in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
-
-Wazuh HIDS Alerts
------------------
-
-If you want to tune Wazuh HIDS alerts, please see the :ref:`wazuh` section.
 
 NIDS Testing
 ------------

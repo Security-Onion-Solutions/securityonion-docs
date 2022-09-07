@@ -37,7 +37,7 @@ Downloads
 Transport
 ---------
 
-Sysmon logs can be collected and transported using :ref:`beats`, :ref:`osquery`, or :ref:`wazuh`.
+Sysmon logs can be collected and transported using :ref:`beats`.
 
 Winlogbeat
 ----------

@@ -45,7 +45,7 @@ We also have an :ref:`idh` node that allows you to build a node that mimics serv
 Enterprise Security Monitoring
 ------------------------------
 
-In addition to network visibility, Security Onion provides endpoint visibility via agents like :ref:`beats`, :ref:`osquery`, and :ref:`wazuh`.
+In addition to network visibility, Security Onion provides endpoint visibility via agents like :ref:`beats` and :ref:`osquery`.
 
 For devices like firewalls and routers that don't support the installation of agents, Security Onion can consume standard :ref:`syslog`.
 
@@ -57,7 +57,7 @@ With all of the data sources mentioned above, there is an incredible amount of d
 Security Onion Console (SOC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`soc` is the first thing you see when you log into Security Onion. It includes our :ref:`alerts` interface which allows you to see all of your NIDS alerts from :ref:`suricata` and HIDS alerts from :ref:`wazuh`.
+:ref:`soc` is the first thing you see when you log into Security Onion. It includes our :ref:`alerts` interface which allows you to see all of your NIDS alerts from :ref:`suricata`.
 
 .. image:: images/alerts.png
   :target: _images/alerts.png

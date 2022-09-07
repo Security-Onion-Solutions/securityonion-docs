@@ -85,7 +85,7 @@ You can also specify the path on the command line using the ``-f`` option. For e
 Agents
 ------
 
-If you've previously added any external agents (:ref:`wazuh`, :ref:`beats`, etc.), be sure to upgrade them to match the version of your upgraded components.
+If you've previously added any external agents, be sure to upgrade them to match the version of your upgraded components.
 
 log_size_limit
 --------------
@@ -185,7 +185,6 @@ When you run ``soup`` on the manager, it does the following:
 - Makes any changes to pillars that are needed such as adding new settings or renaming values. This varies from release to release.
 - If the grid is in :ref:`airgap` mode, then it copies the latest ET Open rules and yara rules to the manager.
 - The new :ref:`salt` code is put into place on the manager.
-- If :ref:`fleet` is enabled, then it generates new :ref:`osquery` packages.
 - Runs a highstate on the manager which is the actual upgrade where it will use the new :ref:`salt` code and :ref:`docker` containers.
 - Unlocks the :ref:`salt` master service and allows minions to connect again.
 - Issues a command to all minions to update :ref:`salt` if necessary. This is important to note as it takes time to to update the :ref:`salt` minion on all minions. If the minion doesn't respond for whatever reason, it will not be upgraded at this time. This is not an issue because the first thing that gets checked when a minion talks to the master is if :ref:`salt` needs to be updated and will apply the update if it does.
