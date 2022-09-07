@@ -16,32 +16,32 @@ After following the screenshots, you can skip to the :ref:`soc` section.
 
 Once you're comfortable with your IMPORT installation, then you can move on to more advanced installations as shown in the :ref:`architecture` section.
 
-.. image:: images/1_grub.png
-  :target: _images/1_grub.png
+.. image:: images/01_grub.png
+  :target: _images/01_grub.png
 
-.. image:: images/2_initial_install.png
-  :target: _images/2_initial_install.png
+.. image:: images/02_initial_install.png
+  :target: _images/02_initial_install.png
 
-.. image:: images/3_initial_install_finished.png
-  :target: _images/3_initial_install_finished.png
+.. image:: images/03_initial_install_finished.png
+  :target: _images/03_initial_install_finished.png
 
-.. image:: images/4_setup_init.png
-  :target: _images/4_setup_init.png
+.. image:: images/04_setup_init.png
+  :target: _images/04_setup_init.png
 
-.. image:: images/5_setup_option.png
-  :target: _images/5_setup_option.png
+.. image:: images/05_setup_option.png
+  :target: _images/05_setup_option.png
 
-.. image:: images/6_setup_type.png
-  :target: _images/6_setup_type.png
+.. image:: images/06_setup_type.png
+  :target: _images/06_setup_type.png
 
-.. image:: images/7_setup_license.png
-  :target: _images/7_setup_license.png
+.. image:: images/07_setup_license.png
+  :target: _images/07_setup_license.png
 
-.. image:: images/8_setup_hostname.png
-  :target: _images/8_setup_hostname.png
+.. image:: images/08_setup_hostname.png
+  :target: _images/08_setup_hostname.png
 
-.. image:: images/9_setup_hostname_conflict.png
-  :target: _images/9_setup_hostname_conflict.png
+.. image:: images/09_setup_hostname_conflict.png
+  :target: _images/09_setup_hostname_conflict.png
 
 .. image:: images/10_setup_mn_nic.png
   :target: _images/10_setup_mn_nic.png
