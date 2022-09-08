@@ -88,8 +88,8 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/24_setup_ntp.png
   :target: _images/24_setup_ntp.png
 
-.. image:: images/25_setup_npt_input.png
-  :target: _images/25_setup_npt_input.png
+.. image:: images/25_setup_ntp_input.png
+  :target: _images/25_setup_ntp_input.png
 
 .. image:: images/26_setup_so_allow.png
   :target: _images/26_setup_so_allow.png
