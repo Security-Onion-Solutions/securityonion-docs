@@ -50,7 +50,7 @@ Another possible SOC customization is the session timeout. The default timeout f
 Advanced Interface
 ------------------
 
-The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. :ref:`alerts` and :ref:`cases` have a new toggle under Options labeled ``Temporarily enable advanced interface features``.
+The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. :ref:`alerts` and :ref:`cases` have a toggle under Options labeled ``Temporarily enable advanced interface features``.
 
 .. image:: images/soc-toggle-advanced.png
   :target: _images/soc-toggle-advanced.png
@@ -154,7 +154,7 @@ Escalation
 
 :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` display logs with a blue triangle that allows you to escalate the event. This defaults to our :ref:`cases` interface. If for some reason you want to escalate to a different case management system, you can change this setting. To do so, locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the following values:
 
-- ``soc`` - Enables the new built-in Case Management, with the new Escalation menu (default).
+- ``soc`` - Enables the built-in Case Management, with our Escalation menu (default).
 
 - ``elasticcases`` - Enables escalation to the `Elastic Cases <https://www.elastic.co/guide/en/security/current/cases-overview.html>`_ tool. Escalations will always open a new case; there will not be an advanced escalation menu popup.  This module will use the same user/pass that SOC uses to talk to Elastic. Note, however, that Elastic cases is actually a Kibana feature, therefore, when this setting is used, SOC will be communicating with the local Kibana service (via its API) for case escalations.
 

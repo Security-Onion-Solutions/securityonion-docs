@@ -10,7 +10,7 @@ From https://www.elastic.co/kibana:
 Authentication
 --------------
 
-We support Elastic authentication via :ref:`so-elastic-auth`. Elastic authentication is automatically enabled for new installations, so you will need to log into Kibana using the same username and password that you use for :ref:`soc`.
+Log into Kibana using the same username and password that you use for :ref:`soc`.
 
 Dashboards
 ----------

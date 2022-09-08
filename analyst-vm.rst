@@ -12,21 +12,18 @@ Full-time analysts may want to create a dedicated Analyst VM. This allows you to
 
   The Analyst desktop currently only supports CentOS, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of CentOS 7.
   
-so-analyst-install
-------------------
-
-The ``so-analyst-install`` script will install a full GNOME desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools. ``so-analyst-install`` is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst VM itself.
+The analyst installation includes a full GNOME desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools.
  
 Installation
 ------------
 
 There are a few different ways to install the Analyst desktop:
 
-- Our Security Onion ISO image includes a new boot menu option for Analyst installs that will partition your disk appropriately and immediately perform an Analyst installation.
+- Our Security Onion ISO image includes a boot menu option for Analyst installs that will partition your disk appropriately and immediately perform an Analyst installation.
 
 - In our normal Setup wizard, you can choose ``OTHER`` and then choose ``ANALYST``.
 
-- You can still run ``so-analyst-install`` as in previous versions.
+- The ``so-analyst-install`` command is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst desktop itself.
 
 Joining to Grid
 ---------------
