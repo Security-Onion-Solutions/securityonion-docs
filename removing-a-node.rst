@@ -36,7 +36,7 @@ You may also want to purge old Grafana data using ``so-influxdb-clean`` as descr
 SOC
 ---
 
-To remove the node from the SOC Grid page, simply restart SOC:
+To remove the node from the SOC Grid page, make sure the node is powered off and then restart SOC:
 
 ::
 
