@@ -14,7 +14,6 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    endgame
    icmp-anomaly-detection
    jupyter
-   machine-learning
    new-disk
    pcaps
    removing-a-node
