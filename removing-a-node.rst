@@ -58,7 +58,7 @@ Then based on that output, update ``_cluster/settings`` by sending that node sec
     PUT _cluster/settings
     {
       "persistent": {
-        "search": {
+        "cluster": {
           "remote": {
             "nodename": {
               "skip_unavailable": null,
