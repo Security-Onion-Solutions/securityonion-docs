@@ -41,7 +41,6 @@ When configuring network firewalls for distributed deployments, you'll want to e
 All nodes to manager:
 
 - 22 (only needed for initial setup)
-- 3142 (Apt-cacher-ng) (if manager proxy enabled)
 - 5000 (Docker registry)
 - 8086 (influxdb)
 - 4505 (Salt)

@@ -13,7 +13,6 @@ To check the status of Security Onion services, run ``sudo so-status``:
 
 	Checking container statuses
 
-	    so-aptcacherng -------------------------------- [ OK ]    
 	    so-curator ------------------------------------ [ OK ]    
 	    so-dockerregistry ----------------------------- [ OK ]    
 	    so-elastalert --------------------------------- [ OK ]    
