@@ -91,8 +91,8 @@ In addition to changing the default ports, some of these services have further c
 
 These types of configuration changes can be made by modifying the minion pillar (see the Custom Configuration section below).
 
-SSH
----
+sshd
+----
 
 For IDH nodes, the local sshd is configured to listen on TCP/2222 and connections are only accepted from the Manager node. This allows TCP/22 to be used for honeypot services.
 
