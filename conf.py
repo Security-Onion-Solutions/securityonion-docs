@@ -9,9 +9,6 @@ from recommonmark.parser import CommonMarkParser
 extensions = [
     'notfound.extension'
 ]
-local_extensions = [
-    "_extensions.rtd_patch"
-]
 templates_path = ['templates', '_templates', '.templates']
 source_suffix = ['.rst', '.md']
 source_parsers = {
