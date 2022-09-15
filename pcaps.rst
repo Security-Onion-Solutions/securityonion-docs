@@ -52,7 +52,7 @@ tcpreplay
 
 You can use ``tcpreplay`` to replay any standard pcap to the sniffing interface of your Security Onion sensor.
 
-so-import-pcap
---------------
+import
+------
 
 A drawback to using tcpreplay is that it's replaying the pcap as new traffic and thus the timestamps that you see in :ref:`kibana` and other interfaces do not reflect the original timestamps from the pcap. To avoid this, a new tool was developed called :ref:`so-import-pcap`.
