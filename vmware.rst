@@ -63,8 +63,8 @@ Follow the steps below to create a VM in VMware Fusion for our Security Onion IS
 #. At the window for your new VM, click the ``Play`` button to power on the virtual machine.
 #. Follow the installation steps for your desired installation type in the :ref:`installation` section.
 
-Tools
------
+VMware Tools
+------------
 
 If using a graphical desktop, you may want to install ``open-vm-tools-desktop`` to enable more screen resolution options and other features. For example, using our ISO image or standard CentOS:
 
