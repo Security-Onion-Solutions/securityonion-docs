@@ -7,8 +7,10 @@ from datetime import datetime
 from recommonmark.parser import CommonMarkParser
 
 extensions = [
-    "_extensions.rtd_patch",
     'notfound.extension'
+]
+local_extensions = [
+    "_extensions.rtd_patch"
 ]
 templates_path = ['templates', '_templates', '.templates']
 source_suffix = ['.rst', '.md']
