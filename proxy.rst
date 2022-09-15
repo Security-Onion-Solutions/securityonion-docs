@@ -24,9 +24,6 @@ Where:
 .. note::
     You may also need to include the IP address and hostname of the manager in the ``no_proxy`` variable above if configuring the proxy on a forward node.
    
-Salt
-----
-
 In addition to the above, Security Onion also makes use of pillar values in the file ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls`` on managers. Edit that file as below, following the same substitutions from above:
 
 ::
@@ -43,14 +40,8 @@ In addition to the above, Security Onion also makes use of pillar values in the 
     The above snippet is truncated, ellipses ( ``...`` ) should be treated as one or more lines in the file.
 
 
-Docker
-------
-
 To configure Docker proxy settings, please see https://docs.docker.com/network/proxy/.
 
-
-Git
----
 
 To configure git to use a proxy for all users, add the following to ``/etc/gitconfig``:
 
