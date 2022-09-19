@@ -13,4 +13,4 @@ You can install and configure your favorite mail server. Depending on your needs
 Elastalert
 ----------
 
-Follow the steps on the `Elastalert <ElastAlert#email---internal>`__ page.
+Follow the steps in the :ref:`elastalert` section.
