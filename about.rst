@@ -5,10 +5,12 @@ About
 
 Security Onion
 --------------
+
 Security Onion is a free and open Linux distribution for threat hunting, enterprise security monitoring, and log management. It includes our own tools for :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, :ref:`pcap`, and :ref:`cases` as well as other tools such as :ref:`playbook`, :ref:`osquery`, :ref:`cyberchef`, :ref:`elasticsearch`, :ref:`logstash`, :ref:`kibana`, :ref:`suricata`, and :ref:`zeek`. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build an army of distributed sensors for your enterprise in minutes!
 
 Security Onion Solutions, LLC
 -----------------------------
+
 Doug Burks started Security Onion as a free and open project in 2008 and then founded Security Onion Solutions, LLC in 2014.  
 
 .. important::
@@ -32,7 +34,7 @@ This documentation is licensed under CC BY 4.0. You can read more about this lic
 Formats
 ~~~~~~~
 
-This documentation is published online at https://securityonion.net/docs.  If you are viewing an offline version of this documentation but have Internet access, you might want to switch to the online version at https://securityonion.net/docs to see the latest version.
+This documentation is published online at https://securityonion.net/docs. If you are viewing an offline version of this documentation but have Internet access, you might want to switch to the online version at https://securityonion.net/docs to see the latest version.
 
 This documentation is also available in PDF format at https://readthedocs.org/projects/securityonion/downloads/pdf/2.4/.
 
@@ -45,6 +47,7 @@ Security Onion Solutions is the primary author and maintainer of this documentat
 
 Contributing
 ~~~~~~~~~~~~
+
 We welcome your contributions to our documentation!  We will review any suggestions and apply them if appropriate.
 
 If you are accessing the online version of the documentation and notice that a particular page has incorrect information, you can submit corrections by clicking the ``Edit on GitHub`` button in the upper right corner of each page.
@@ -55,10 +58,8 @@ Pages are written in RST format and you can find several RST guides on the Inter
 
 Naming Convention
 ~~~~~~~~~~~~~~~~~
-Our goal is to allow you to easily guess and type the URL of the documentation you want to go to. For example, if you want to read more about Suricata, you can type the following into your browser: 
-https://securityonion.net/docs/suricata
 
-To achieve this goal, new documentation pages should use the following naming convention:
+New documentation pages should use the following naming convention:
 
 - all lowercase
 - ``.rst`` file extension

@@ -3,7 +3,8 @@
 Grid
 ====
 
-:ref:`soc` gives you access to our Grid interface. This interface allows you to quickly check the status of all nodes in your grid. You can drill into individual nodes to see detailed information. The ``Grid EPS`` value in the upper right corner is the sum of all Consumption EPS measurements in the entire grid.
+:ref:`soc` gives you access to our Grid interface. This interface allows you to quickly check the status of all nodes in your grid. The ``Grid EPS`` value in the upper right corner is the sum of all Consumption EPS measurements in the entire grid.
+ You can drill into individual nodes to see detailed information including Node Status, Container Status, and Appliance Images.
 
 .. image:: images/grid.png
   :target: _images/grid.png

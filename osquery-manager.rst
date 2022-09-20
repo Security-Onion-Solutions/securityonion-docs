@@ -1,0 +1,13 @@
+.. _osquery-manager:
+
+Osquery Manager
+===============
+
+Clicking this link on the SOC sidebar takes you to the Osquery manager page inside :ref:`kibana`.
+
+More Information
+----------------
+
+.. seealso::
+
+    For more information about Osquery Manager, please see https://docs.elastic.co/en/integrations/osquery_manager.

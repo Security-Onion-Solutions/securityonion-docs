@@ -34,6 +34,8 @@ If you'd like to customize SOC, please see the :ref:`soc-customization` section.
    downloads
    administration
    kibana
+   elastic-fleet
+   osquery-manager
    grafana
    cyberchef
    playbook
