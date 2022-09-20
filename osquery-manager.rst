@@ -3,7 +3,7 @@
 Osquery Manager
 ===============
 
-Clicking this link on the SOC sidebar takes you to the Osquery manager page inside :ref:`kibana`.
+Clicking Osquery Manager link on the SOC sidebar takes you to the Osquery manager page inside :ref:`kibana`.
 
 More Information
 ----------------

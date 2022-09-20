@@ -3,7 +3,7 @@
 Cases
 =====
 
-Cases is our interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. 
+:ref:`soc` includes our Cases interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. 
 
 .. seealso::
 

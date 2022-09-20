@@ -3,7 +3,7 @@
 Administration
 ==============
 
-:ref:`soc` includes an Administration section which includes sections for Users, Grid Members, and Configuration.
+:ref:`soc` includes an Administration section which allows you to administer Users, Grid Members, and Configuration.
 
 Users
 -----
