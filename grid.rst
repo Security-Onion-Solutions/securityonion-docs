@@ -43,6 +43,11 @@ RAID Status
 
 If you are using an official Security Onion Solutions appliance with RAID support, then you will see the corresponding status appear in this field.
 
+Link to Grafana
+~~~~~~~~~~~~~~~
+
+The icon in the lower left of the ``Node Status`` section hyperlinks you to the Grafana dashboard for that particular node.
+
 Container Status
 ----------------
 
