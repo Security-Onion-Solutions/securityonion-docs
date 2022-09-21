@@ -3,7 +3,7 @@
 Elastic Fleet
 =============
 
-Clicking the Elastic Fleet link on the SOC sidebar takes you to the Fleet page inside :ref:`kibana`.
+:ref:`soc` includes a link on the sidebar labeled Elastic Fleet which takes you to the Fleet page inside :ref:`kibana`.
 
 More Information
 ----------------

@@ -3,6 +3,8 @@
 Playbook
 ========
 
+:ref:`soc` includes a link on the sidebar that takes you to Playbook which allows you to review and create plays for your deployment.
+
 Overview
 --------
 

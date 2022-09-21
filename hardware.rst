@@ -32,10 +32,6 @@ For all other configurations, the minimum specs for running Security Onion are:
 
    These minimum specs are for EVAL mode with minimal services running. These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
 
-.. warning::
-
-   If using the beta tool logscan, a CPU/vCPU with AVX support will be required, with AVX2 support recommended. Most CPU's produced since 2011 will have AVX support, but be sure to check the specs of your particular processor. This will be more important to virtualized environments, where the default vCPU type will typically not support either instruction set.
-
 Production Deployments
 ----------------------
 For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
@@ -132,7 +128,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Heavy Node (Sensor with ES components)
 --------------------------------------
 
-A heavy node Runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through Kibana, the manager node queries this node's Elasticsearch instance.
+A heavy node runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through Kibana, the manager node queries this node's Elasticsearch instance.
 
 - CPU: Used to parse incoming events, index incoming events, search metadata . As monitored bandwidth (and the amount of overall data/events) increases, a greater amount of CPU will be required.
 - RAM: Used for Logstash , Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
@@ -148,7 +144,7 @@ Since receiver nodes only run :ref:`logstash` and :ref:`redis`, they don't requi
 Intrusion Detection Honeypot (IDH) Node
 ---------------------------------------
 
-For an :ref:`idh` node, the overall system requirements are low: 1GB RAM, 2x CPU, 1x NIC, and 100GB disk space.
+For an :ref:`idh` node, the overall system requirements are low: 1GB RAM, 2 CPU cores, 1 NIC, and 100GB disk space.
 
 Sensor Hardware Considerations
 ------------------------------

@@ -3,7 +3,7 @@
 Grafana
 =======
 
-Once you've logged into :ref:`soc`, you can then click the Grafana link to see system health information. 
+:ref:`soc` includes a link on the sidebar that takes you to the Grafana app to see system health information. You can also access Grafana from the :ref:`grid` page.
 
 .. image:: images/grafana-0.png
   :target: _images/grafana-0.png

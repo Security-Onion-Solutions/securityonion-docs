@@ -8,6 +8,8 @@ Administration
 Users
 -----
 
+The Users page shows all user accounts that have been created for the grid.
+
 .. image:: images/users.png
   :target: _images/users.png
 
@@ -18,12 +20,16 @@ The Status column will show a different icon depending on the status of the acco
 Grid Members
 ------------
 
-A distributed grid is made of up member nodes. Member nodes will request to join the grid and remain in a pending state until an admninistrator has accepted the node. If a pending member node is not yet listed as pending, then it's possible that the wrong manager host was provided during setup or there could be a connectivity problem.
+The Grid Members page shows nodes that have attempted to join the grid and whether or not they have been accepted into the grid by an administrator.
+
+Unaccepted members are displayed on the left side and broken into three sections: Pending Members, Denied Members, and Rejected Members. When you accept a member, it will then move to the right side under Accepted Members.
+
+For accepted members, you can click the REVIEW button to show additional information about the grid member. If you want to remove the member, you can then click the DELETE button.
 
 Configuration
 -------------
 
-This section allows you to configure various aspects of your grid including:
+The Configuration page allows you to configure various components of your grid including:
 
 - bpf
 - elastalert
@@ -38,3 +44,18 @@ This section allows you to configure various aspects of your grid including:
 - soc
 - suricata
 - zeek
+
+For each of these components, you can click on the component to drill into it and show all available settings for that component. You can then click on a setting to show the current setting or modify it if necessary. If you make a mistake, you can easily revert back to the default value.
+
+If you're not sure of which component a particular setting may belong to, you can use the Filter at the top of the list to look for a particular setting. To the right of the Filter field are buttons that do the following:
+
+- expand all settings
+- collapse all settings
+- show settings that have been modified from the default value
+- show settings that have a unique value specified for one or more nodes in the grid
+
+By default, the Configuration page only shows the most widely used settings. If you want to see all settings, you can go to the Options bar at the top of the page and then click the toggle that says `Show all configurable settings, including advanced settings.`.
+
+.. warning::
+
+	Changing advanced settings is unsupported and could result in requiring a full cluster re-installation.

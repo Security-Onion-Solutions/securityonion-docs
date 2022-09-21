@@ -13,19 +13,22 @@ Depending on what kind of installation you did, you may have seen a warning at t
 
 For more information, see the :ref:`ssh` section.
 
-Adjust firewall rules using so-allow
-------------------------------------
-Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to allow other IP addresses, you can manually run :ref:`so-allow`.
+Adjust firewall rules
+---------------------
+
+Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to make other adjustments to firewall rules, you can do so via the :ref:`administration` page.
 
 Services
 --------
 
--  Verify services are running with the :ref:`so-status` command:
+-  Verify services are running by running the :ref:`so-status` command:
 
 ::
 
 	sudo so-status
-   
+
+Alternatively, once you've logged into :ref:`soc`, you can simply check the :ref:`grid` page.
+
 Data Retention
 --------------
 
