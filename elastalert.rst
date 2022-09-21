@@ -12,6 +12,11 @@ ElastAlert queries :ref:`elasticsearch` and provides an alerting mechanism with 
 Configuration
 -------------
 
+You can modify ElastAlert configuration by going to :ref:`administration` --> Configuration --> elastalert.
+
+ElastAlert Rules
+----------------
+
 ElastAlert rules are stored in ``/opt/so/rules/elastalert/``.
 
 By default, ElastAlert rules are configured with an output type of ``debug``, which simply outputs to a log file found in ``/opt/so/log/elastalert/``.

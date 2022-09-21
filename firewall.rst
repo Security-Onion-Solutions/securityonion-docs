@@ -57,6 +57,11 @@ Host Firewall
 
 The remainder of this section will cover the host firewall built into Security Onion.
 
+Configuration
+-------------
+
+You can configure the firewall by going to :ref:`administration` --> Configuration --> firewall.
+
 Port Groups
 -----------
 

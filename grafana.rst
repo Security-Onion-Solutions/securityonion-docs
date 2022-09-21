@@ -33,12 +33,13 @@ Once the downsampling is complete and you verify the downsampled data is availab
 
 Accounts
 --------
+
 By default, you will be viewing Grafana as an anonymous user. If you want to make changes to the default Grafana dashboards, you will need to log into Grafana with username ``admin`` and the randomized password found via ``sudo salt-call pillar.get secrets``.
 
 Configuration
 -------------
-Grafana configuration can be found in ``/opt/so/conf/grafana/etc/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/grafana/etc/``, they may be overwritten at the next salt update.
-The default configuration options can be seen in ``/opt/so/saltstack/default/salt/grafana/defaults.yaml``. Any options not specified in here, will use the Grafana default. 
+
+You can modify Grafana configuration by going to :ref:`administration` --> Configuration --> grafana. You can modify influxdb configuration by going to :ref:`administration` --> Configuration --> influxdb.
 
 Example
 -------

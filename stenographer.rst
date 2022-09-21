@@ -46,25 +46,12 @@ If the query succeeds, you can then find the resulting pcap file in ``/nsm/pcapo
 Configuration
 -------------
 
-Stenographer reads its configuration from ``/opt/so/conf/steno/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
-
-For example, suppose you want to change the default value for purging old pcap. You could add the ``diskfreepercentage`` option in the ``steno`` section of the :ref:`salt` pillar and set the value to something appropriate for your system. For example:
-
-::
-
-	steno:
-  	  diskfreepercentage: 20
-
+You can configure Stenographer by going to :ref:`administration` --> Configuration --> pcap. For example, suppose you want to change the default value for purging old pcap. You could go to :ref:`administration` --> Configuration --> pcap --> config --> diskfreepercentage and set the value to something appropriate for your system.
 
 Maximum Files
 -------------
 
-By default, Stenographer limits the number of files in the pcap directory to ``30000`` to avoid limitations with the ext3 filesystem. However, if you're using the ext4 or xfs filesystems, then it is safe to increase this value. So if you have a large amount of storage and find that you only have 3 weeks worth of PCAP on disk while still having plenty of free space, then you may want to increase this default setting. To do so, you can add the ``maxfiles`` option in the ``steno`` section of the :ref:`salt` pillar and set the value to something appropriate for your system. For example:
-
-::
-
-	steno:
-	  maxfiles: 120000
+By default, Stenographer limits the number of files in the pcap directory to ``30000`` to avoid limitations with the ext3 filesystem. However, if you're using the ext4 or xfs filesystems, then it is safe to increase this value. So if you have a large amount of storage and find that you only have 3 weeks worth of PCAP on disk while still having plenty of free space, then you may want to increase this default setting. To do so, you can go to :ref:`administration` --> Configuration --> pcap --> config --> maxdirectoryfiles and set the value to something appropriate for your system.
 
 Diagnostic Logging
 ------------------
@@ -78,14 +65,7 @@ Diagnostic logging for Stenographer can be found at ``/opt/so/log/stenographer/`
 Disabling
 ---------
 
-If you need to disable Stenographer, you can do so in two different ways. If you just want to disable it on a single sensor, then you can edit that sensor's ``minion.sls`` file. If the file doesn't already have a ``steno`` section, then add the following to the end of the file:
-
-::
-
-	steno:
-	  enabled: false
-
-If you want to disable Stenographer globally across all your sensors, then you can add that entry to your ``global.sls`` file.
+If you need to disable Stenographer, you can do so by going to :ref:`administration` --> Configuration --> pcap --> enabled.
 
 VLAN tags
 ---------

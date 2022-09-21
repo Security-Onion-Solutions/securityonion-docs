@@ -12,9 +12,9 @@ On an Evaluation installation, Filebeat sends logs directly to :ref:`elasticsear
 Configuration
 -------------
 
-You can configure Filebeat inputs and output using :ref:`salt`. An example of the filebeat pillar can be seen at https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/filebeat/pillar.example
+You can configure Filebeat inputs and output by going to :ref:`administration` --> Configuration --> filebeat.
 
-Any inputs that are added to the pillar definition will be in addition to the default defined inputs. In order to prevent a :ref:`zeek` log from being used as input, the ``zeeklogs:enabled`` pillar will need to be modified. The easiest way to do this is via :ref:`so-zeek-logs`. 
+Any inputs that are added to the pillar definition will be in addition to the default defined inputs. In order to prevent a :ref:`zeek` log from being used as input, you can go to :ref:`administration` --> Configuration --> filebeat --> zeek_logs_enabled.
 
 Diagnostic Logging
 ------------------

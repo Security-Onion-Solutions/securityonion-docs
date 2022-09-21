@@ -12,7 +12,7 @@ When Security Onion is running in Standalone mode or in a full distributed deplo
 Configuration
 -------------
 
-You can configure Logstash using :ref:`salt`. Here are a few of the settings which you may need to tune in ``/opt/so/saltstack/local/pillar/minions/$MINION_$ROLE.sls`` under ``logstash_settings``.
+You can configure Logstash by going to :ref:`administration` --> Configuration --> logstash.
 
 ls_pipeline_batch_size
 ~~~~~~~~~~~~~~~~~~~~~~

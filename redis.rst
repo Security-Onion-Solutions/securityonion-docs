@@ -37,16 +37,16 @@ If the Redis queue looks okay, but you are still having issues with logs getting
 Tuning
 ------
 
-We configure Redis to use 812MB of your total system memory.  If you have sufficient RAM available, you may want to increase the ``redis_maxmemory`` setting in ``/opt/so/saltstack/local/pillar/global.sls``. This value is in Megabytes so to set it to use 8 gigs of ram you would set the value to 8192.
+We configure Redis to use 812MB of your total system memory. If you have sufficient RAM available, you may want to increase the ``redis_maxmemory`` setting by going to :ref:`administration` --> Configuration --> redis_settings. This value is in Megabytes so to set it to use 8 gigs of ram you would set the value to 8192.
 
-:ref:`logstash` on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``ls_pipeline_batch_size`` variable to find the sweet spot for your deployment.
+:ref:`logstash` on the manager node is configured to send to Redis.  For best performance, you may want to tune the ``ls_pipeline_batch_size`` value at :ref:`administration` --> Configuration --> logstash_settings to find the sweet spot for your deployment.
 
 .. seealso::
 
     | For more information about the :ref:`logstash` output plugin for Redis, please see:
     | https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html
 
-:ref:`logstash` on search nodes pulls from Redis.  For best performance, you may want to tune ``ls_pipeline_batch_size`` and ``ls_input_threads`` to find the sweet spot for your deployment. 
+:ref:`logstash` on search nodes pulls from Redis.  For best performance, you may want to tune ``ls_pipeline_batch_size`` and ``ls_input_threads`` at :ref:`administration` --> Configuration --> logstash_settings to find the sweet spot for your deployment.
 
 .. seealso::
 

@@ -19,11 +19,15 @@ Security
 
 To prevent tampering, our Docker images are signed using GPG keys. :ref:`soup` verifies GPG signatures any time Docker images are updated.
 
-
 Elastic
 -------
 
 To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co.
+
+Configuration
+-------------
+
+You can modify Docker configuration by going to :ref:`administration` --> Configuration --> docker.
 
 Images
 ------
@@ -100,26 +104,31 @@ Dependencies
 
 Playbook
 ~~~~~~~~
+
 | ``so-playbook`` - REQ - Playbook Web App
 | ``so-navigator`` - OPT - Navigator Web App
 | ``so-soctopus`` - REQ - Automation
 
 SOCtopus
 ~~~~~~~~
+
 | ``so-soctopus`` - REQ - SOCtopus App
 | ``so-elasticsearch`` - OPT - Automation
 
 Suricata
 ~~~~~~~~
+
 | ``so-suricata`` - REQ - Suricata app
 
 Kibana
 ~~~~~~
+
 | ``so-kibana`` - REQ - Kibana Web App
 | ``so-elasticsearch`` - REQ -
 
 Zeek
 ~~~~
+
 | ``so-zeek`` - REQ - Zeek app
 
 More Information

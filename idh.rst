@@ -99,6 +99,8 @@ For IDH nodes, the local sshd is configured to listen on TCP/2222 and connection
 Custom Configuration 
 --------------------
 
+You can configure IDH by going to :ref:`administration` --> Configuration --> idh.
+
 Services can be customized in two ways: 
 
 1) Changing the default port. 

@@ -8,10 +8,10 @@ To get the best performance out of Security Onion, you'll want to tune it for yo
 .. toctree::
    :maxdepth: 2
    
-   salt
    homenet
    bpf
    rules
    local-rules
    managing-alerts
    performance
+   salt

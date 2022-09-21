@@ -142,164 +142,12 @@ Community ID
 Configuration
 -------------
 
-Pillar Files
-~~~~~~~~~~~~
-
-All configuration changes take place in :ref:`salt` pillar files. There are two places that hold pillar settings for Elasticsearch. The pillars are:
-
-``/opt/so/saltstack/local/pillar/minions/$minion.sls``
-
-::
-
-    elasticsearch:
-      mainip: 10.66.166.22
-      mainint: eth0
-      esheap: 4066m
-      esclustername: {{ grains.host }}
-      node_type: search
-      es_port: 9200
-      log_size_limit: 3198
-      node_route_type: hot
-
-
-``/opt/so/saltstack/local/pillar/global.sls``
-
-::
-
-    elasticsearch:
-      true_cluster: False
-      replicas: 0
-      discovery_nodes: 1
-      hot_warm_enabled: False
-      cluster_routing_allocation_disk.threshold_enabled: true
-      cluster_routing_allocation_disk_watermark_low: '95%'
-      cluster_routing_allocation_disk_watermark_high: '98%'
-      cluster_routing_allocation_disk_watermark_flood_stage: '98%'
-      script.painless.regex.enabled: true
-      index_settings:
-        so-beats:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 30
-          delete: 365
-        so-endgame:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 30
-          delete: 365
-        so-firewall:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 30
-          delete: 365
-        so-flow:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-              close: 45
-              delete: 365
-        so-ids:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 30
-          delete: 365
-        so-import:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 73000
-          delete: 73001
-        so-osquery:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 30
-          delete: 365
-        so-ossec:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 30
-          delete: 365
-        so-strelka:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 30
-           delete: 365
-        so-syslog:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 1
-          warm: 7
-          close: 30
-          delete: 365
-        so-zeek:
-          index_template:
-            template:
-              settings:
-                index:
-                  number_of_shards: 2
-		  
-Customization
-~~~~~~~~~~~~~
-
-You can completely customize your Elasticsearch configuration via :ref:`salt` pillars. This allows elasticsearch.yml customizations to be retained when doing upgrades of Security Onion. Depending on your customization goal, you can specify settings in either the global pillar or the minion pillar. Create the ``config`` sub-section if it does not already exist in your pillar and then place your configuration options under that sub-section.  For example, to change the ``node_concurrent_recoveries`` setting:
-
-::
-
-    elasticsearch:
-      config:
-        routing:
-          allocation:
-            node_concurrent_recoveries: 4
-
-.. warning::
-
-	Please be very careful when adding items under the ``config`` sub-section to avoid typos and other errors that would interfere with Elasticsearch. After making changes, keep a close eye on Elasticsearch to make sure the change is working as intended.
+You can configure Elasticsearch by going to :ref:`administration`, then Configuration, and then ``elasticsearch``.
 
 field expansion matches too many fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you get errors like ``failed to create query: field expansion for [*] matches too many fields, limit: 3500, got: XXXX``, then this usually means that you're sending in additional logs and so you have more fields than our default ``max_clause_count`` value. To resolve this, you can customize the ``indices.query.bool.max_clause_count`` value for any boxes running Elasticsearch in your deployment.
-
-::
-
-    elasticsearch:
-      config:
-        indices.query.bool.max_clause_count: 4000
+If you get errors like ``failed to create query: field expansion for [*] matches too many fields, limit: 3500, got: XXXX``, then this usually means that you're sending in additional logs and so you have more fields than our default ``max_clause_count`` value. To resolve this, you can go to :ref:`administration` --> Configuration --> elasticsearch --> config --> indices --> query --> bool --> max_clause_count and adjust the value for any boxes running Elasticsearch in your deployment.
       
 Shards
 ~~~~~~
@@ -326,14 +174,14 @@ If you want to view the detail for each of those shards:
 
 Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
 
-The number of shards for an index is defined in ``/opt/so/saltstack/local/pillar/global.sls``. You can adjust shard counts for each index individually to meet your needs. The next time the node checks in, it will apply the settings automatically.
+The number of shards for an index can be adjusted by going to :ref:`administration` --> Configuration --> elasticsearch --> index_settings --> so-INDEX-NAME --> index_template --> template --> settings --> index --> number_of_shards.
 
 Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
 
 Heap Size
 ~~~~~~~~~
 
-If total available memory is 8GB or greater, Setup configures the heap size to be 33% of available memory, but no greater than 25GB. You may need to adjust the value for heap size depending on your system's performance. This can be modified in ``/opt/so/saltstack/local/pillar/minions/$minion.sls``.
+If total available memory is 8GB or greater, Setup configures the heap size to be 33% of available memory, but no greater than 25GB. You may need to adjust the value for heap size depending on your system's performance. You can modify this by going to :ref:`administration` --> Configuration --> elasticsearch --> esheap.
 
 | For more information, please see:
 | https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#compressed_oops
@@ -342,45 +190,14 @@ If total available memory is 8GB or greater, Setup configures the heap size to b
 Field limit
 ~~~~~~~~~~~
 
-Security Onion currently defaults to a field limit of 5000. If you receive error messages from Logstash, or you would simply like to increase this, you can do so with one of the following options.
+Security Onion currently defaults to a field limit of 5000. If you receive error messages from Logstash, or you would simply like to increase this, you can do so by going to :ref:`administration` --> Configuration --> elasticsearch --> index_settings --> so-INDEX-NAME --> index_template --> template --> settings --> index --> mapping --> total_fields --> limit.
 
-Temporary
-~~~~~~~~~
-
-If you only need to increase the field limit temporarily, you can do something like:
-
-::
-
-   curl -k -XPUT -H'Content-Type: application/json' https://localhost:9200/logstash-syslog-*/_settings -d'{ "index.mapping.total_fields.limit": 6000 }'
-
-The above command would increase the field limit for the ``logstash-syslog-*`` indice(s) to 6000. Keep in mind, this setting only applies to the current index, so when the index rolls over and a new one is created, your new settings will not apply.
-
-Persistent
-~~~~~~~~~~
-
-If you need this change to be persistent, you can modify the ``settings`` stanza for the matched indices in the template:
-
-::
-
-    "settings" : {
-        "number_of_replicas": 0,
-        "number_of_shards": 1,
-        "index.refresh_interval" : "5s",
-        "index.mapping.total_fields.limit": 6000
-    },
-
-Then restart Logstash:
-
-::
-
-   sudo so-logstash-restart
-
-Please note that the change to the field limit will not occur immediately, only on index creation. Therefore, it is recommended to run the previously mentioned temporary command and modify the template file.
+Please note that the change to the field limit will not occur immediately, only on index creation.
 
 Closing Indices
 ---------------
 
-Elasticsearch indices are closed based on the ``close`` setting shown in the global pillar above. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
+Elasticsearch indices are closed based on the ``close`` setting shown at :ref:`administration` --> Configuration --> elasticsearch --> index_settings --> so-INDEX-NAME --> close. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
 
 Deleting Indices
 ----------------

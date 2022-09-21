@@ -10,7 +10,7 @@ BPF stands for Berkeley Packet Filter. From https://en.wikipedia.org/wiki/Berkel
 Configuration
 -------------
 
-You can modify your BPF configuration by going to :ref:`administration`, then Configuration, then ``bpf``.
+You can modify your BPF configuration by going to :ref:`administration` --> Configuration --> bpf.
 
 Quoting
 ~~~~~~~
