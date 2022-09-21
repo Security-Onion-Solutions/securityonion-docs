@@ -10,7 +10,7 @@ Full-time analysts may want to create a dedicated Analyst VM. This allows you to
 
 .. note::
 
-  The Analyst desktop currently only supports CentOS, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of CentOS 7.
+  The Analyst desktop currently only supports Rocky Linux 9, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of Rocky Linux 9.
   
 The analyst installation includes a full GNOME desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools.
  

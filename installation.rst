@@ -12,11 +12,11 @@ Installation
   If you want to deploy in Amazon AWS using our AMI, you can skip to the :ref:`cloud-ami` section.
   If you want to deploy in Azure using our image, you can skip to the :ref:`cloud-azure` section.
 
-Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on CentOS 7) **or** installing standard CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 and then installing our components on top.
+Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on Rocky Linux 9) **or** installing standard Rocky Linux 9 or Ubuntu 22.04 and then installing our components on top.
 
 .. warning::
 
-  For most use cases, we recommend using our Security Onion ISO image as it's the quickest, easiest, and most consistent method. If you're not going to use our Security Onion ISO image and you're building a distributed deployment, then we recommend keeping the base OS consistent across all nodes in the deployment. For example, there are known issues when trying to run Ubuntu 18.04 on the manager and Ubuntu 20.04 on the sensor.
+  For most use cases, we recommend using our Security Onion ISO image as it's the quickest, easiest, and most consistent method. If you're not going to use our Security Onion ISO image and you're building a distributed deployment, then we recommend keeping the base OS consistent across all nodes in the deployment. Please do not mix and match Rocky Linux 9 and Ubuntu 22.04 in the same deployment.
 
 Installation using Security Onion ISO Image
 -------------------------------------------
@@ -36,23 +36,23 @@ If you want to install Security Onion using our ISO image:
       
 #. Proceed to the :ref:`configuration` section.
 
-Installation on Ubuntu or CentOS
---------------------------------
+Installation on Ubuntu or Rocky Linux
+-------------------------------------
 
-If you want to install Security Onion on CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 (**not** using our Security Onion ISO image), follow these steps:
+If you want to install Security Onion on Rocky Linux 9 or Ubuntu 22.04 (**not** using our Security Onion ISO image), follow these steps:
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
-#. Download the ISO image for your preferred flavor of 64-bit CentOS 7, Ubuntu 18.04, or Ubuntu 20.04. Verify the ISO image and then boot from it.
+#. Download the ISO image for your preferred flavor of 64-bit Rocky Linux 9 or Ubuntu 22.04. Verify the ISO image and then boot from it.
 #. Follow the prompts in the installer. If you're building a production deployment, you'll probably want to use LVM and dedicate most of your disk space to ``/nsm`` as discussed in the :ref:`partitioning` section.
 #. Reboot into your new installation.
 #. Login using the username and password you specified during installation.
-#. Install prerequisites. If you're using CentOS 7:
+#. Install prerequisites. If you're using Rocky Linux 9:
 
    ::
 
      sudo yum -y install git
    
-   If you're using Ubuntu 18.04 or Ubuntu 20.04:
+   If you're using Ubuntu 22.04:
    
    ::
    

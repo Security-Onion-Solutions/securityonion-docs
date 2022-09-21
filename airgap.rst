@@ -10,7 +10,7 @@ Key Differences
 
 There are a few differences between an airgap install and a normal install with Internet access:
 
-- All CentOS repos are removed and replaced with a new repo that runs on the manager.
+- All Rocky Linux repos are removed and replaced with a new repo that runs on the manager.
 
 - During the install, all of the necessary RPMs are copied from the ISO to a new repo located in ``/nsm/repo/``. 
 

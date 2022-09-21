@@ -66,7 +66,7 @@ Follow the steps below to create a VM in VMware Fusion for our Security Onion IS
 VMware Tools
 ------------
 
-If using a graphical desktop, you may want to install ``open-vm-tools-desktop`` to enable more screen resolution options and other features. For example, using our ISO image or standard CentOS:
+If using a graphical desktop, you may want to install ``open-vm-tools-desktop`` to enable more screen resolution options and other features. For example, using our ISO image or standard Rocky Linux 9:
 
 ::
 

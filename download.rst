@@ -5,7 +5,7 @@ Download
 
 Before downloading, we highly recommend that you review the :ref:`release-notes` section so that you are aware of all recent changes!
 
-You can either download our Security Onion ISO image (based on CentOS 7) **or** download a standard 64-bit CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 ISO image and then add our Security Onion components. **Please keep in mind that we only support CentOS 7, Ubuntu 18.04, and Ubuntu 20.04**.
+You can either download our Security Onion ISO image (based on Rocky Linux 9) **or** download a standard 64-bit Rocky Linux 9 or Ubuntu 22.04 ISO image and then add our Security Onion components. **Please keep in mind that we only support Rocky Linux 9 and and Ubuntu 22.04**.
 
 .. tip::
 
@@ -13,11 +13,11 @@ You can either download our Security Onion ISO image (based on CentOS 7) **or** 
   
 .. warning::
 
-   **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or a standard CentOS or Ubuntu ISO image, you should ALWAYS verify the downloaded ISO image to ensure it hasn't been tampered with or corrupted during download.
+   **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or a standard Rocky Linux or Ubuntu ISO image, you should ALWAYS verify the downloaded ISO image to ensure it hasn't been tampered with or corrupted during download.
 
 -  If downloading our Security Onion ISO image, you can find the download link and verification instructions here:
    https://github.com/Security-Onion-Solutions/securityonion/blob/master/VERIFY_ISO.md
--  If downloading an Ubuntu or CentOS ISO image, please verify that ISO image using whatever instructions they provide.
+-  If downloading an Ubuntu or Rocky Linux ISO image, please verify that ISO image using whatever instructions they provide.
 
 .. warning::
 
