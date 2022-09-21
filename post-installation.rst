@@ -21,7 +21,7 @@ Depending on what kind of installation you did, the Setup wizard may have alread
 Services
 --------
 
--  Verify services are running by running the :ref:`so-status` command:
+You can verify services are running with the :ref:`so-status` command:
 
 ::
 
