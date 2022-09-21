@@ -3,6 +3,8 @@
 Kibana
 ======
 
+:ref:`soc` includes a link on the sidebar that takes you to Kibana.
+
 From https://www.elastic.co/kibana:
 
     Kibana is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. Do anything from tracking query load to understanding the way requests flow through your apps.

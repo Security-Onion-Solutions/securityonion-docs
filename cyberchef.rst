@@ -3,7 +3,9 @@
 CyberChef
 =========
 
-:ref:`soc` includes a link on the sidebar that takes you to CyberChef. From https://github.com/gchq/CyberChef :
+:ref:`soc` includes a link on the sidebar that takes you to CyberChef. 
+
+From https://github.com/gchq/CyberChef:
 
     The Cyber Swiss Army Knife
     
