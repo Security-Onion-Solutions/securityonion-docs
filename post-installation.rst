@@ -16,7 +16,7 @@ For more information, see the :ref:`ssh` section.
 Adjust firewall rules
 ---------------------
 
-Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to make other adjustments to firewall rules, you can do so via the :ref:`administration` page.
+Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to make other adjustments to firewall rules, you can do so by going to :ref:`administration` and then Configuration.
 
 Services
 --------
