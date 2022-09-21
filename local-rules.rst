@@ -6,7 +6,7 @@ Adding Local Rules
 NIDS
 ----
 
-You can add local NIDS rules by going to :ref:`administration`, then Configuration, then ``idstools``, then ``rules``, and then ``Local Rules``.
+You can add local NIDS rules by going to :ref:`administration` --> Configuration --> idstools --> rules --> Local Rules.
 
 YARA
 ----

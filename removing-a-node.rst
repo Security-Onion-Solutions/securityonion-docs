@@ -8,7 +8,7 @@ There may come a time when you need to remove a node from your distributed deplo
 Salt
 ----
 
-You can remove a node from salt by going to :ref:`administration` and then Grid Members. Find the Grid Member you would like to remove, click the REVIEW button, and then click the DELETE button.
+You can remove a node from salt by going to :ref:`administration` --> Configuration --> Grid Members. Find the Grid Member you would like to remove, click the REVIEW button, and then click the DELETE button.
 
 Grafana
 -------

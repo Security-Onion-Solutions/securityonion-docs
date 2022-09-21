@@ -13,6 +13,7 @@ From https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.
 
 Configuration
 -------------
+
 Curator ``actions`` are stored in ``/opt/so/conf/curator/action/``. These actions are run by cron jobs managed by :ref:`salt`.
 
 Curator defaults to closing indices older than 30 days. To modify this, edit ``/opt/so/saltstack/local/pillar/global.sls`` and change the close setting for each index under the ``elasticsearch:index_settings`` section.
@@ -27,18 +28,22 @@ For more information about the Curator close and delete settings, please see the
 
 Creating Actions
 ----------------
+
 If you would like to create a custom Curator action, you will need to create a Curator action file and corresponding script file and then update Curator's state file.
 
 Curator action file
 ~~~~~~~~~~~~~~~~~~~
+
 You can add the action file to ``/opt/so/saltstack/local/salt/curator/files/action/``. Make sure the file ownership is ``curator:socore``. The file will automatically get copied into ``/opt/so/conf/curator/action/``.
 
 Script file
 ~~~~~~~~~~~
+
 The script file is what actually executes Curator and specifies the action file. This script file must be placed in ``/opt/so/saltstack/local/salt/curator/files/bin/``. See ``/opt/so/saltstack/default/salt/curator/files/bin/`` for examples of script files and copy one over to modify if needed.
 
 State file
 ~~~~~~~~~~
+
 Next, Curator's state file (``init.sls``) must be modified. This will be located at ``/opt/so/saltstack/local/salt/curator/`` and will copy files and create the cron job. 
 
 If ``/opt/so/saltstack/local/salt/curator/init.sls`` does not already exist, you can copy ``/opt/so/saltstack/default/salt/curator/init.sls`` to ``/opt/so/saltstack/local/salt/curator/init.sls`` and modify as shown below.
@@ -87,11 +92,6 @@ When Curator completes an action, it logs its activity in a log file found in ``
 ::
 
         sudo docker logs so-curator
-
-Curator vs Index Lifecycle Management (ILM)
--------------------------------------------
-
-The goal of Security Onion is to allow you to concentrate on finding evil rather than spending time managing infrastructure. The default mode that Security Onion deploys allows each node to be independent and removes the complexity of shard migration across multiple nodes. These nodes will use Curator to trim indices as needed ensuring that they never run out of disk space. This is especially important when running in standalone mode. Finally, it should also be noted that ILM does not support deletion based on disk space.
 
 More Information
 ----------------

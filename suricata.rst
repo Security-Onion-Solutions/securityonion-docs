@@ -91,7 +91,7 @@ By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to dete
 Configuration
 -------------
 
-You can configure Suricata's ``suricata.yaml`` using :ref:`salt`. The defaults for this have been defined in https://github.com/Security-Onion-Solutions/securityonion/blob/master/salt/suricata/defaults.yaml. Under ``suricata:config``, the pillar structure follows the same YAML structure of the ``suricata.yaml`` file. 
+You can configure Suricata by going to :ref:`administration` --> Configuration --> suricata.
 
 For example, suppose you want to change Suricata's ``EXTERNAL_NET`` setting from the default of ``any`` to ``!$HOME_NET``. You could add the following to the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) or minion pillar file (``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``) on the manager:
 

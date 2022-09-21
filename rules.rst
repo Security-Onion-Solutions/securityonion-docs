@@ -21,7 +21,7 @@ If you have a distributed deployment and you update the rules on your manager no
 Configuration
 -------------
 
-You can modify your rule configuration by going to :ref:`administration`, then Configuration, then ``idstools``.
+You can modify your rule configuration by going to :ref:`administration` --> Configuration --> idstools.
 
 Rulesets
 --------

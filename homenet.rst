@@ -11,4 +11,6 @@ The homenet variable defines the networks that are considered home networks (tho
 Configuration
 -------------
 
-This value can be modified by going to :ref:`administration` and then Configuration.
+You can configure Suricata's HOME_NET value by going to :ref:`administration` --> Configuration --> suricata --> config --> vars --> address-groups --> HOME_NET.
+
+You can configure Zeek's HOME_NET value by going to :ref:`administration` --> Configuration --> zeek --> config --> networks --> HOME_NET.

@@ -71,7 +71,7 @@ There are multiple ways to handle overly productive signatures and we'll try to 
 Disable the SID
 ---------------
 
-You can disable a SID by going to :ref:`administration`, then Configuration, then ``idstools``, then ``sids``, and then ``disabled``.
+You can disable a SID by going to :ref:`administration` --> Configuration --> idstools --> sids --> disabled.
 
 If you want to disable multiple rules at one time, you can use a regular expression, but make sure you enclose the full entry in single quotes like this:
 
@@ -82,7 +82,7 @@ If you want to disable multiple rules at one time, you can use a regular express
 Modify the SID
 --------------
 
-You can modify a SID by going to :ref:`administration`, then Configuration, then ``idstools``, then ``sids``, and then ``modify``.
+You can modify a SID by going to :ref:`administration` --> Configuration --> idstools --> sids --> modify.
 
 To include an escaped ``$`` character in the regex pattern you'll need to make sure it's properly escaped. For example, if you want to modify SID 2009582 and change ``$EXTERNAL_NET`` to ``$HOME_NET``:
 
@@ -95,14 +95,14 @@ The first string is a regex pattern, while the second is just a raw value. You'l
 Rewrite the signature
 ---------------------
 
-In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. You can add local rules by going to :ref:`administration`, then Configuration, then ``idstools``, then ``rules``, and then ``Local Rules``.
+In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. You can add local rules by going to :ref:`administration` --> Configuration --> idstools --> rules --> Local Rules.
 
 After pasting the rule, you may want to bump the SID into the 90,000,000 range and set the revision to 1. Then make any other changes to the rule. Now that we have a signature that will generate alerts a little more selectively, we need to disable the original SID as shown above.
 
 Threshold
 ---------
 
-You can manage threshold entries for :ref:`suricata` by going to :ref:`administration`, then Configuration, then ``suricata``, then ``config``, and then ``threshold-file``.
+You can manage threshold entries for :ref:`suricata` by going to :ref:`administration` --> Configuration --> suricata --> config --> threshold-file.
 
 Please note that :ref:`suricata` 6 has a 64-character limitation on the IP field in a threshold. You can read more about this at https://redmine.openinfosecfoundation.org/issues/4377.
 

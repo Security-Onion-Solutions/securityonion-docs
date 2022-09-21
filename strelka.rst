@@ -41,7 +41,7 @@ Even if Strelka doesn't detect a YARA match, it will still log metadata about th
 Configuration
 -------------
 
-Strelka reads its configuration from ``/opt/so/conf/strelka/``. However, please keep in mind that if you make any changes to this directory they may be overwritten since the configuration is managed with :ref:`salt`.
+You can configure Strelka by going to :ref:`administration` --> Configuration --> strelka.
 
 Diagnostic Logging
 ------------------
