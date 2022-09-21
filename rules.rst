@@ -18,6 +18,11 @@ If you have a distributed deployment and you update the rules on your manager no
 
   sudo salt \* state.highstate
 
+Configuration
+-------------
+
+You can modify your rule configuration by going to :ref:`administration`, then Configuration, then ``idstools``.
+
 Rulesets
 --------
 
@@ -39,18 +44,8 @@ ET Pro (Proofpoint)
 -  rules retrievable as released
 -  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
 
-To enable the ET Pro ruleset in an already installed grid, modify the ``/opt/so/saltstack/local/pillar/minions/<manager.sls>`` file as follows:
-
-::
-
-  idstools:
-    config:
-      ruleset: 'ETPRO'
-      oinkcode: 'MYOINKCODE'
-
 | For more information, see:
 | https://www.proofpoint.com/us/threat-insight/et-pro-ruleset  
-
 
 Snort Community
 ---------------
@@ -87,15 +82,6 @@ Snort Subscriber (Talos)
 
 Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'`` as described in the :ref:`managing-alerts` section.
 
-To enable the Talos Subscriber ruleset in an already installed grid, modify the ``/opt/so/saltstack/local/pillar/minions/<manager.sls>`` file as follows: 
-
-::
-
-  idstools:
-    config:
-      ruleset: 'TALOS'
-      oinkcode: 'MYOINKCODE'
-
 | For more information, see:
 | https://www.snort.org/downloads/#rule-downloads
 | https://snort.org/documents/registered-vs-subscriber
@@ -105,15 +91,3 @@ Other
 
 - not officially managed/supported by Security Onion
 - license fee may or may not apply
-
-To add other remotely-accessible rulesets, add an entry under ``urls`` for the ruleset URL in ``/opt/so/saltstack/local/pillar/minions/<manager.sls>``:
-
-::
-
-  idstools:
-    config:
-      ...primary ruleset...
-      ...primary ruleset oinkcode...
-      urls:
-        - https://ruleseturlhere
-

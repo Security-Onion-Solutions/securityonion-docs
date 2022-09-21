@@ -10,52 +10,7 @@ BPF stands for Berkeley Packet Filter. From https://en.wikipedia.org/wiki/Berkel
 Configuration
 -------------
 
-Global BPF
-~~~~~~~~~~
-
-You can specify your BPF in the global pillar on your manager node (``/opt/so/saltstack/local/pillar/global.sls``) and it will apply to all interfaces in your entire deployment by default. If there is no BPF configuration already in the file, you can append it to the bottom of the file.
-
-If you have separate sensors reporting to that manager node, they will pull down the relevant BPF as part of the Salt update that runs every 15 minutes and then restart :ref:`suricata`/:ref:`stenographer`/:ref:`zeek` so that the BPF change will take effect.
-
-:ref:`stenographer` example:
-
-::
-
-    steno:
-      bpf:
-        - "Your BPF Here"
-      
-:ref:`suricata` example:
-
-::
-      
-    nids:
-      bpf:
-        - "Your BPF Here"
-  
-:ref:`zeek` example:
-
-::
-
-    zeek:
-      bpf:
-        - "Your BPF Here"
-
-Node-Specific BPF
-~~~~~~~~~~~~~~~~~
-
-If you don’t want your sensors to inherit BPF from the manager node, you can edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$Hostname.sls``), which will override any global BPF settings set from the global pillar.
-
-Simple Example
-~~~~~~~~~~~~~~
-
-Suppose you want :ref:`stenographer` to not record full packet capture for port 443:
-
-::
-
-    steno:
-      bpf:
-        - not port 443
+You can modify your BPF configuration by going to :ref:`administration`, then Configuration, then ``bpf``.
 
 Quoting
 ~~~~~~~
@@ -64,9 +19,7 @@ YAML rules apply and so if you want to use a reserved YAML character such as ``[
 
 ::
 
-    steno:
-      bpf:
-        - "!(port 443)"
+        "!(port 443)"
       
 Multiple Conditions
 ~~~~~~~~~~~~~~~~~~~
@@ -77,21 +30,17 @@ Here's an example of joining conditions with a logical AND:
 
 ::
 
-    nids:
-      bpf:
-        - not host 192.168.1.2 &&
-        - not host 192.168.1.3 &&
-        - not host 192.168.1.4
+        not host 192.168.1.2 &&
+        not host 192.168.1.3 &&
+        not host 192.168.1.4
       
 Here's an example of joining conditions with a logical OR:
 
 ::
 
-    nids:
-      bpf:
-        - host 192.168.1.2 ||
-        - host 192.168.1.3 ||
-        - host 192.168.1.4
+        host 192.168.1.2 ||
+        host 192.168.1.3 ||
+        host 192.168.1.4
 
 VLAN
 ~~~~
@@ -118,6 +67,7 @@ For example:
    
 Troubleshooting BPF using tcpdump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 | If you need to troubleshoot BPF, you can use ``tcpdump`` as shown in the following articles:
 | https://taosecurity.blogspot.com/2004/09/understanding-tcpdumps-d-option-have.html
 | https://taosecurity.blogspot.com/2004/12/understanding-tcpdumps-d-option-part-2.html

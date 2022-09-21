@@ -8,19 +8,7 @@ There may come a time when you need to remove a node from your distributed deplo
 Salt
 ----
 
-First, log into your manager and list all :ref:`salt` keys:
-
-::
-
-   sudo salt-key
-
-Then remove the node by deleting its key from :ref:`salt` (replacing ``nodename`` with the actual node name):
-
-::
-
-   sudo salt-key -d nodename
-
-Remove the node from any ``.sls`` files in ``/opt/so/saltstack/local/pillar/data/``.
+You can remove a node from salt by going to :ref:`administration` and then Grid Members. Find the Grid Member you would like to remove, click the REVIEW button, and then click the DELETE button.
 
 Grafana
 -------

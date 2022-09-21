@@ -54,7 +54,7 @@ If you're not sure of which component a particular setting may belong to, you ca
 - show settings that have been modified from the default value
 - show settings that have a unique value specified for one or more nodes in the grid
 
-By default, the Configuration page only shows the most widely used settings. If you want to see all settings, you can go to the Options bar at the top of the page and then click the toggle that says ``Show all configurable settings, including advanced settings.``.
+By default, the Configuration page only shows the most widely used settings. If you want to see all settings, you can go to the Options bar at the top of the page and then click the toggle labeled ``Show all configurable settings, including advanced settings``.
 
 .. warning::
 

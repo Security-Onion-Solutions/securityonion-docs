@@ -68,311 +68,48 @@ There are multiple ways to handle overly productive signatures and we'll try to 
 
 	Check out our NIDS tuning video at https://youtu.be/1jEkFIEUCuI!
 	
-so-rule
--------
-
-``so-rule`` allows you to disable, enable, or modify NIDS rules. Run ``so-rule`` without any options to see the help output:
-
-::
-
-   so-rule
-   usage: so-rule [-h]  ...
-
-   optional arguments:
-     -h, --help  show this help message and exit
-
-   commands:
-     disabled            Manage and list disabled rules (add, remove, list)
-     enabled             Manage and list enabled rules (add, remove, list)
-     modify              Manage and list modified rules (add, remove, list)
-
 Disable the SID
 ---------------
 
-We can use ``so-rule`` to modify an existing NIDS rule. For example, suppose we want to disable SID 2100498. We can start by listing any currently disabled rules:
-
-::
-
-   sudo so-rule disabled list
-   No rules disabled.
-
-Next, let's disable SID 2100498:
-
-::
-
-   sudo so-rule disabled add 2100498
-   Configuration updated. Would you like to apply your changes now? (y/N) y
-   Applying idstools state...
-
-Once that completes, we can then verify that 2100498 is now disabled with ``so-rule disabled list``:
-
-::
-
-   sudo so-rule disabled list
-   Disabled rules:
-     - 2100498
-
-Finally, we can check that 2100498 is commented out in ``/opt/so/rules/nids/all.rules``:
-
-::
-
-   grep 2100498 /opt/so/rules/nids/all.rules 
-   # alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
-
-If you can't run ``so-rule``, then you can modify configuration manually. Security Onion uses ``idstools`` to download new signatures every night and process them against a set list of user generated configurations. To enable or disable SIDs for :ref:`suricata`, the :ref:`salt` ``idstools`` pillar can be used in the minion pillar file (``/opt/so/saltstack/local/pillar/minions/<managername>_<role>.sls``). In a distributed Security Onion environment, you only need to change the configuration in the manager pillar and then all other nodes will get the updated rules automatically.
- 
-If SID 4321 is noisy, you can disable it as follows:
-
-::
-
-   idstools:
-     sids:
-       disabled:
-         - 4321
-
-Then, from the manager run ``sudo salt $SENSORNAME_$ROLE state.apply idstools`` to update the config.
+You can disable a SID by going to :ref:`administration`, then Configuration, then ``idstools``, then ``sids``, and then ``disabled``.
 
 If you want to disable multiple rules at one time, you can use a regular expression, but make sure you enclose the full entry in single quotes like this:
 
 ::
 
-   idstools:
-     sids:
-       disabled:
-         - 're:heartbleed'
+         're:heartbleed'
 
 Modify the SID
 --------------
 
-We can use ``so-rule`` to modify an existing NIDS rule. For example, suppose that we want to modify SID 2100498 and replace any instances of "returned root" with "returned root test". We can start by listing any rules that are currently modified:
-
-::
-
-   sudo so-rule modify list
-   No rules currently modified.
-
-Let's first check the syntax for the ``add`` option:
-
-::
-
-   sudo so-rule modify add -h
-   usage: so-rule modify add [-h] [--apply] SID|REGEX SEARCH_TERM REPLACE_TERM
-
-   positional arguments:
-     SID|REGEX     A valid SID (ex: "4321") or regular expression pattern (ex:
-                   "re:heartbleed|spectre")
-     SEARCH_TERM   A quoted regex search term (ex: "\\\$EXTERNAL_NET")
-     REPLACE_TERM  The text to replace the search term with
-
-   optional arguments:
-     -h, --help    show this help message and exit
-     --apply       After updating rule configuration, apply the idstools state.
-
-Now that we understand the syntax, let's add our modification:
-
-::
-
-   sudo so-rule modify add 2100498 "returned root" "returned root test"
-   Configuration updated. Would you like to apply your changes now? (y/N) y
-   Applying idstools state...
-
-Once the command completes, we can verify that our modification has been added:
-
-::
-
-   sudo so-rule modify list
-   Modified rules + modifications:
-     - 2100498 "returned root" "returned root test"
-
-Finally, we can check the modified rule in ``/opt/so/rules/nids/all.rules``:
-
-::
-
-   grep 2100498 /opt/so/rules/nids/all.rules 
-   alert ip any any -> any any (msg:"GPL ATTACK_RESPONSE id check returned root test"; content:"uid=0|28|root|29|"; classtype:bad-unknown; sid:2100498; rev:7; metadata:created_at 2010_09_23, updated_at 2010_09_23;)
+You can modify a SID by going to :ref:`administration`, then Configuration, then ``idstools``, then ``sids``, and then ``modify``.
 
 To include an escaped ``$`` character in the regex pattern you'll need to make sure it's properly escaped. For example, if you want to modify SID 2009582 and change ``$EXTERNAL_NET`` to ``$HOME_NET``:
 
 ::
 
-	sudo so-rule modify add 2009582 "\\\$EXTERNAL_NET" "\$HOME_NET"
+	2009582 "\\\$EXTERNAL_NET" "\$HOME_NET"
 	
 The first string is a regex pattern, while the second is just a raw value. You'll need to ensure the first of the two properly escapes any characters that would be interpreted by regex. The second only needs the ``$`` character escaped to prevent bash from treating that as a variable.
-
-If you can't run ``so-rule``, you can modify the configuration manually in the manager pillar file at ``/opt/so/saltstack/local/pillar/minions/<managername>_<role>.sls`` (where ``<role>`` is ``manager``, ``managersearch``, ``standalone``, or ``eval`` depending on the manager type that was chosen during install). In this file, the ``idstools`` section has a ``modify`` sub-section where you can add your  modifications. For example:
-
-::
-
-   idstools:
-     sids:
-       modify:
-         - '2019401 "seconds \d+" "seconds 3600"'
-
-If you need to modify a part of a rule that contains a special character, such as a $ in variable names, the special character needs to be escaped in the ``search`` part of the modify string. For example:
-
-::
-
-    idstools:
-      sids:
-        modify:
-          - '2826931 "\$EXTERNAL_NET" "!$HOME_NET"'
-          
-- From the manager, run:
-
-  ::
-
-    salt $SENSORNAME_$ROLE state.apply idstools
 
 Rewrite the signature
 ---------------------
 
-In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in ``/opt/so/rules/nids/local.rules``.
+In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. You can add local rules by going to :ref:`administration`, then Configuration, then ``idstools``, then ``rules``, and then ``Local Rules``.
 
-- Edit the ``/opt/so/rules/nids/local.rules`` file using ``vi`` or your favorite text editor:
-
-   ::
-
-        sudo vi /opt/so/rules/nids/local.rules
-
-- Paste the rule. You may want to bump the SID into the 90,000,000 range and set the revision to 1.
-- Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. As shown above, we edit the minion pillar and add the SID to the ``idstools - sids - disabled`` section.
-
-- Finally, from the manager, update the config on the remote node:
-
-  ::
-
-    salt $SENSORNAME_$ROLE state.highstate
+After pasting the rule, you may want to bump the SID into the 90,000,000 range and set the revision to 1. Then make any other changes to the rule. Now that we have a signature that will generate alerts a little more selectively, we need to disable the original SID as shown above.
 
 Threshold
 ---------
 
-You can manage threshold entries for :ref:`suricata` using :ref:`salt` pillars. The format of the pillar file can be seen below, as well as in ``/opt/so/saltstack/default/pillar/thresholding/pillar.usage`` and ``/opt/so/saltstack/default/pillar/thresholding/pillar.example``
+You can manage threshold entries for :ref:`suricata` by going to :ref:`administration`, then Configuration, then ``suricata``, then ``config``, and then ``threshold-file``.
 
-.. note::
-
-   The signature id (SID) must be unique. If you have multiple entries for the same SID, it will cause an error in salt resulting in all of the nodes in your grid to error out when checking in. 
-
-Usage:
-
-::
-
-   thresholding:
-     sids:
-       <signature id>:
-         - threshold:
-             gen_id: <generator id>
-             type: <threshold | limit | both>
-             track: <by_src | by_dst>
-             count: <count>
-             seconds: <seconds>
-         - rate_filter:
-             gen_id: <generator id>
-             track: <by_src | by_dst | by_rule | by_both>
-             count: <count>
-             seconds: <seconds>
-             new_action: <alert | pass>
-             timeout: <seconds>
-         - suppress:
-             gen_id: <generator id>
-             track: <by_src | by_dst | by_either>
-             ip: <ip | subnet>
-             
-Example:
-
-::
-
-   thresholding:
-     sids:
-       8675309:
-         - threshold:
-             gen_id: 1
-             type: threshold
-             track: by_src
-             count: 10
-             seconds: 10
-         - threshold:
-             gen_id: 1
-             type: limit
-             track: by_dst
-             count: 100
-             seconds: 30
-         - rate_filter:
-             gen_id: 1
-             track: by_rule
-             count: 50
-             seconds: 30
-             new_action: alert
-             timeout: 30
-         - suppress:
-             gen_id: 1
-             track: by_either
-             ip: 10.10.3.7
-       11223344:
-         - threshold:
-             gen_id: 1
-             type: limit
-             track: by_dst
-             count: 10
-             seconds: 10
-         - rate_filter:
-             gen_id: 1
-             track: by_src
-             count: 50
-             seconds: 20
-             new_action: pass
-             timeout: 60
-         - suppress:
-             gen_id: 1
-             track: by_src
-             ip: 10.10.3.0/24
-             
-In order to apply the threshold to all nodes, place the pillar in ``/opt/so/saltstack/local/pillar/global.sls``. If you want to apply the threshold to a single node, place the pillar in ``/opt/so/saltstack/local/pillar/minions/<MINION_ID>.sls``
-
-.. warning::
-
-   | Salt sls files are in YAML format. When editing these files, please be very careful to respect YAML syntax, especially whitespace. For more information, please see:
-   | https://docs.saltproject.io/en/latest/topics/troubleshooting/yaml_idiosyncrasies.html
-   
 Please note that :ref:`suricata` 6 has a 64-character limitation on the IP field in a threshold. You can read more about this at https://redmine.openinfosecfoundation.org/issues/4377.
-
-For example, the following threshold IP exceeds the 64-character limit:
-
-::
-
-   thresholding:
-     sids:
-       2012454:
-         - suppress:
-             gen_id: 1
-             track: by_dst
-             ip: 1.1.1.1,2.2.2.2,3.3.3.3,4.4.4.4,5.5.5.5,6.6.6.6,7.7.7.7,8.8.8.8,9.9.9.9,10.10.10.10,11.11.11.11
-
-This results in the following error in the :ref:`suricata` log:
-
-::
-
-   <Error> - [ERRCODE: SC_ERR_PCRE_COPY_SUBSTRING(325)] - pcre_copy_substring failed
-
-The solution is to break the ``ip`` field into multiple entries like this:
-
-::
-
-   thresholding:
-     sids:
-       2012454:
-         - suppress:
-             gen_id: 1
-             track: by_dst
-             ip: 1.1.1.1,2.2.2.2,3.3.3.3,4.4.4.4,5.5.5.5,6.6.6.6,7.7.7.7,8.8.8.8
-         - suppress:
-             gen_id: 1
-             track: by_dst
-             ip: 9.9.9.9,10.10.10.10,11.11.11.11
 
 Suppressions
 ------------
 
-A suppression rule allows you to make some finer grained decisions about certain rules without the onus of rewriting them. With this functionality we can suppress rules based on their signature, the source or destination address and even the IP or full CIDR network block. This way, you still have the basic ruleset, but the situations in which they fire are altered. It's important to note that with this functionality, care should be given to the suppressions being written to make sure they do not suppress legitimate alerts. See above for ``suppress`` examples.
+A suppression rule allows you to make some finer grained decisions about certain rules without the onus of rewriting them. With this functionality we can suppress rules based on their signature, the source or destination address and even the IP or full CIDR network block. This way, you still have the basic ruleset, but the situations in which they fire are altered. It's important to note that with this functionality, care should be given to the suppressions being written to make sure they do not suppress legitimate alerts.
 
 Flowbits
 --------
