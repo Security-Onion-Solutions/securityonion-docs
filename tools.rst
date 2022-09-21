@@ -17,7 +17,6 @@ Security Onion would like to thank the following projects for their contribution
 - :ref:`grafana`
 - :ref:`kibana`
 - :ref:`logstash`
-- :ref:`osquery`
 - :ref:`redis`
 - :ref:`salt`
 - :ref:`stenographer`

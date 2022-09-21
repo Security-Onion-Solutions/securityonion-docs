@@ -24,9 +24,8 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 - rules.emergingthreats.net (Emerging Threats IDS open rules)  
 - www.snort.org (Paid Snort Talos ruleset)  
 - github.com (Strelka and Sigma rules updates)  
-- geoip.elastic.co (GeoIP updates for Elasticsearch)
-- storage.googleapis.com (GeoIP updates for Elasticsearch)
-- notary.kolide.co (osquery agent update)  
+- geoip.elastic.co (optional GeoIP updates for Elasticsearch)
+- storage.googleapis.com (optional GeoIP updates for Elasticsearch)
 - Ubuntu PPAs (OS Updates - Ubuntu only)  
 - download.docker.com (Docker packages - Ubuntu only)
 - repo.saltstack.com (Salt packages - Ubuntu only)
@@ -47,7 +46,6 @@ All nodes to manager:
 - 4506 (Salt)
 - 5644 (Filebeat)
 - 443 (Sensoroni)
-- 8080 (Osquery, if enabled)
 
 Search nodes from/to manager:
 

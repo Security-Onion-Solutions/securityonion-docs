@@ -45,7 +45,7 @@ We also have an :ref:`idh` node that allows you to build a node that mimics serv
 Enterprise Security Monitoring
 ------------------------------
 
-In addition to network visibility, Security Onion provides endpoint visibility via agents like :ref:`beats` and :ref:`osquery`.
+In addition to network visibility, Security Onion provides endpoint visibility via the :ref:`elastic-agent`.
 
 For devices like firewalls and routers that don't support the installation of agents, Security Onion can consume standard :ref:`syslog`.
 

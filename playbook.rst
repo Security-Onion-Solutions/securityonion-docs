@@ -122,11 +122,11 @@ Log Sources and Field Names
 ---------------------------
 
 Sigma support currently extends to the following log sources in Security Onion:
- - :ref:`osquery`
+ - Windows Eventlogs and :ref:`sysmon` (via :ref:`elastic-agent`)
+ - osquery (via :ref:`elastic-agent`)
  - network (via :ref:`zeek` logs)
- - Windows Eventlogs and :ref:`sysmon` (shipped with :ref:`osquery` or winglobeat)
 
-The pre-loaded Plays depend on Sysmon and Windows Eventlogs shipped with winlogbeat or osquery.
+The pre-loaded Plays depend on Sysmon and Windows Eventlogs shipped with :ref:`elastic-agent`.
 
 For best compatibility, use the following Sigma Taxonomy:
  - Process Creation: https://github.com/Neo23x0/sigma/wiki/Taxonomy#process-creation-events
