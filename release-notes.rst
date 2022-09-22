@@ -3,6 +3,15 @@
 Release Notes
 =============
 
+2.3.170 [20220922] Changes
+--------------------------
+
+- FEATURE: Events table(s) for Windows Events matching default view `#8591 <https://github.com/Security-Onion-Solutions/securityonion/issues/8591>`_
+- FEATURE: Split the winlog.event_data.Hashes field for Windows sysmon process creation events. `#8593 <https://github.com/Security-Onion-Solutions/securityonion/issues/8593>`_
+- FIX: Mapping error when trying to index Strelka logs generated from ELF files. `#8592 <https://github.com/Security-Onion-Solutions/securityonion/issues/8592>`_
+- UPGRADE: Elastic 8.4.1 `#8794 <https://github.com/Security-Onion-Solutions/securityonion/issues/8794>`_
+- UPGRADE: Zeek 4.0.9 `#8774 <https://github.com/Security-Onion-Solutions/securityonion/issues/8774>`_
+
 2.3.160 [20220829] Changes
 --------------------------
 
