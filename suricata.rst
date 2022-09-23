@@ -78,40 +78,22 @@ To pin Suricata workers to specific CPUs:
   
      sudo so-suricata-start
      
-HOME_NET
---------
-
-To configure HOME_NET, please see the :ref:`homenet` section. 
-
-EXTERNAL_NET
-------------
-
-By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to detect lateral movement inside your environment.
-
 Configuration
 -------------
 
 You can configure Suricata by going to :ref:`administration` --> Configuration --> suricata.
 
-For example, suppose you want to change Suricata's ``EXTERNAL_NET`` setting from the default of ``any`` to ``!$HOME_NET``. You could add the following to the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) or minion pillar file (``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``) on the manager:
-
-::
-
-    suricata:
-      config:
-        vars:
-          address-groups:
-            EXTERNAL_NET: "!$HOME_NET"
-            
-From the manager, then run:
-
-::
-
-    sudo salt $SENSORNAME_$ROLE state.highstate
-
-Some of the settings normally found in ``suricata.yaml`` can be found in the sensor pillar instead of the Suricata pillar. These options are: ``HOMENET``, ``default-packet-size``, and the CPU affinity settings for pinning the processes to CPU cores or how many processes to run.
-
 If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`managing-alerts` sections.
+
+HOME_NET
+--------
+
+The HOME_NET variable defines the networks that are considered home networks (those networks that you are monitoring and defending). The default value is RFC1918 private address space (10.0.0.0/8, 192.168.0.0/16, and 172.16.0.0/12). You can modify this default value by going to :ref:`administration` --> Configuration --> suricata --> config --> vars --> address-groups --> HOME_NET.
+
+EXTERNAL_NET
+------------
+
+By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to detect lateral movement inside your environment. You can modify this default value by going to :ref:`administration` --> Configuration --> suricata --> config --> vars --> address-groups --> EXTERNAL_NET.
 
 Thresholding
 ------------
@@ -189,7 +171,7 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 
 - If you have metadata enabled but aren't seeing any metadata, then something may be preventing the process from seeing the traffic. Check to see if you have any :ref:`bpf` configuration that may cause the process to ignore the traffic. If you're sniffing traffic from the network, verify that the traffic is reaching the NIC using tcpdump. If importing a pcap file, verify that file contains the traffic you expect and that the Suricata process can read the file and any parent directories.
 
-- Check your :ref:`homenet` configuration to make sure it includes the networks that you're watching traffic for.
+- Check your HOME_NET configuration to make sure it includes the networks that you're watching traffic for.
 
 - Check to see if you have a full NIDS ruleset with rules that should specifically alert on the traffic and that those rules are enabled.
 

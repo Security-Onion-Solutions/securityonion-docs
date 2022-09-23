@@ -30,57 +30,26 @@ VLAN tags
    | Please note that Zeek should correctly analyze traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
    | https://github.com/J-Gras/zeek-af_packet-plugin/issues/9
 
+Configuration
+-------------
+
+You can configure Zeek by going to :ref:`administration` --> Configuration --> zeek. 
+
+HOME_NET
+--------
+
+The HOME_NET variable defines the networks that are considered home networks (those networks that you are monitoring and defending). The default value is RFC1918 private address space (10.0.0.0/8, 192.168.0.0/16, and 172.16.0.0/12). You can modify this default value by going to :ref:`administration` --> Configuration --> zeek --> config --> networks --> HOME_NET.
+
 Performance
 -----------
 
 Zeek uses :ref:`af-packet` so that you can spin up multiple Zeek workers to handle more traffic.  
 
-To change the number of AF-PACKET workers for :ref:`zeek`:
-
--  Stop Zeek:
-
-   ::
-
-      sudo so-zeek-stop
-
--  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``zeek_lbprocs`` variable to the desired number of cores.
-
--  Start Zeek:
-
-   ::
-
-      sudo so-zeek-start
-      
-For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  
+If you have multiple physical CPUs, you’ll most likely want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  
 
 .. seealso::
 
     For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see https://github.com/brokenscripts/cpu_pinning.
-
-To pin Zeek workers to specific CPUs:
-
-- Stop sensor processes:
-
-  ::
-
-     sudo so-zeek-stop
-       
-- Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and add the following under ``sensor:`` 
-
-  ::
-  
-     zeek_pins:  
-       - <cpu_1>  
-       - <cpu_2>  
-       - <cpu_3> 
-
-- Note: To avoid inconsistent Zeek workers being allocated, ensure ``zeek_lbprocs`` is removed from under ``sensor:`` or is equivalent to the number of cpu cores being pinned. 
-
-- Start sensor processes:
-
-  ::
-  
-     sudo so-zeek-start
 
 Syslog
 ------
@@ -315,11 +284,6 @@ If you need to modify base protocol scripts, you can do so as follows. In this e
 		Analyzer::register_for_ports(Analyzer::ANALYZER_MYSQL, ports);
 		}
 	
-Configuration
--------------
-
-You can configure Zeek by going to :ref:`administration` --> Configuration --> zeek.
- 
 Diagnostic Logging
 ------------------
 
