@@ -20,64 +20,6 @@ Community ID
 
 Security Onion enables Suricata's built-in support for :ref:`community-id`.
 
-Performance
------------
-
-If Suricata is experiencing packet loss, then you may need to do one or more of the following: tune the ruleset (see the :ref:`managing-alerts` section), apply a :ref:`bpf`, adjust ``max-pending-packets`` in the Suricata configuration, or adjust :ref:`af-packet` workers.
-
-To change the number of workers:
-
--  Stop sensor processes:
-
-   ::
-
-      sudo so-suricata-stop
-
--  Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and change the ``suriprocs`` variable to the desired number of workers.
-
--  Start sensor processes:
-
-   ::
-
-      sudo so-suricata-start
-
-.. seealso::
-
-    | For other tuning considerations, please see:
-    | https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html
-
-For best performance, Suricata should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  
-
-.. seealso::
-
-    | For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see:
-    | https://github.com/brokenscripts/cpu_pinning
-    
-To pin Suricata workers to specific CPUs:
-
-- Stop sensor processes:
-
-  ::
-
-     sudo so-suricata-stop
-       
-- Edit ``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls`` and add the following under ``sensor:`` 
-
-  ::
-  
-     suripins:  
-       - <cpu_1>  
-       - <cpu_2>  
-       - <cpu_3> 
-
-- Note: To avoid inconsistent Suricata workers being allocated, ensure ``suriprocs`` is removed from under ``sensor:`` or is equivalent to the number of cpu cores being pinned. 
-
-- Start sensor processes:
-
-  ::
-  
-     sudo so-suricata-start
-     
 Configuration
 -------------
 
@@ -95,6 +37,23 @@ EXTERNAL_NET
 
 By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to detect lateral movement inside your environment. You can modify this default value by going to :ref:`administration` --> Configuration --> suricata --> config --> vars --> address-groups --> EXTERNAL_NET.
 
+Performance
+-----------
+
+If Suricata is experiencing packet loss, then you may need to do one or more of the following: tune the ruleset (see the :ref:`managing-alerts` section), apply a :ref:`bpf`, adjust ``max-pending-packets`` in the Suricata configuration, or adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
+
+.. seealso::
+
+    | For other tuning considerations, please see:
+    | https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html
+
+If you have multiple physical CPUs, you’ll most likely want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  
+
+.. seealso::
+
+    | For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see:
+    | https://github.com/brokenscripts/cpu_pinning
+    
 Thresholding
 ------------
 
