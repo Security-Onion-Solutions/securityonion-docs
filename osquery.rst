@@ -105,4 +105,4 @@ More Information
 
 .. seealso::
 
-    For more information about osquery, please see https://osquery.io/.
+    For more information about osquery, please see https://osquery.readthedocs.io/en/stable/.
