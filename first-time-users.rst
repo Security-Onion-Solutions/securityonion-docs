@@ -109,14 +109,14 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/31_so_analyst_install_finished.png
   :target: _images/31_so_analyst_install_finished.png
 
-.. image:: images/32_gnome_user.png
-  :target: _images/32_gnome_user.png
+.. image:: images/32_so_analyst_login.png
+  :target: _images/32_so_analyst_login.png
 
-.. image:: images/33_gnome_pass.png
-  :target: _images/33_gnome_pass.png
+.. image:: images/33_so_analyst_login_pass.png
+  :target: _images/33_so_analyst_login_pass.png
 
-.. image:: images/34_gnome_desktop.png
-  :target: _images/34_gnome_desktop.png
+.. image:: images/34_so_analyst_desktop.png
+  :target: _images/34_so_analyst_desktop.png
 
 .. image:: images/35_gnome_apps.png
   :target: _images/35_gnome_apps.png
