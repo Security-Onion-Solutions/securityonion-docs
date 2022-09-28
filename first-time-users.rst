@@ -121,32 +121,44 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/35_gnome_apps.png
   :target: _images/35_gnome_apps.png
 
-.. image:: images/36_login.png
-  :target: _images/36_login.png
+.. image:: images/36_so-import-pcap.png
+  :target: _images/36_so-import-pcap.png
 
-.. image:: images/37_welcome.png
-  :target: _images/37_welcome.png
+.. image:: images/37_login.png
+  :target: _images/37_login.png
 
-.. image:: images/38_so-import-pcap.png
-  :target: _images/38_so-import-pcap.png
+.. image:: images/38_welcome.png
+  :target: _images/38_welcome.png
 
-.. image:: images/44_alerts.png
-  :target: _images/44_alerts.png
+.. image:: images/39_alerts.png
+  :target: _images/39_alerts.png
 
-.. image:: images/45_dashboards.png
-  :target: _images/45_dashboards.png
+.. image:: images/40_dashboards.png
+  :target: _images/40_dashboards.png
 
-.. image:: images/39_hunt.png
-  :target: _images/39_hunt.png
+.. image:: images/41_hunt.png
+  :target: _images/41_hunt.png
 
-.. image:: images/40_pcap.png
-  :target: _images/40_pcap.png
+.. image:: images/42_pcap.png
+  :target: _images/42_pcap.png
 
-.. image:: images/41_pcap_details.png
-  :target: _images/41_pcap_details.png
+.. image:: images/43_pcap_details.png
+  :target: _images/43_pcap_details.png
 
-.. image:: images/42_cyberchef.png
-  :target: _images/42_cyberchef.png
+.. image:: images/44_cyberchef.png
+  :target: _images/44_cyberchef.png
 
-.. image:: images/43_top.png
-  :target: _images/43_top.png
+.. image:: images/45_jobs.png
+  :target: _images/45_jobs.png
+
+.. image:: images/46_grid.png
+  :target: _images/46_grid.png
+
+.. image:: images/47_downloads.png
+  :target: _images/47_downloads.png
+
+.. image:: images/48_users.png
+  :target: _images/48_users.png
+
+.. image:: images/49_top.png
+  :target: _images/49_top.png
