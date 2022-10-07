@@ -388,7 +388,7 @@ Edit ``/opt/so/saltstack/local/pillar/minions/$minion_standalone.sls``, adding t
           system:
             enabled: true
             var.url: https://$yourdomain/api/v1/logs
-            var.api_key: "'$yourtoken'"
+            var.api_key: '$yourtoken'
 
 
 Next, restart Filebeat on the node, with ``so-filebeat-restart``.
