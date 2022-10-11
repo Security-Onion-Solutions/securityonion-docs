@@ -11,6 +11,10 @@ From https://technet.microsoft.com/en-us/sysinternals/sysmon:
     SIEM agents and subsequently analyzing them, you can identify malicious or anomalous activity and understand how intruders and
     malware operate on your network.
 
+.. seealso::
+
+    Check out our Sysmon video at https://youtu.be/Xz-7oDrZdQY!
+    
 Integration
 -----------
 
@@ -44,12 +48,15 @@ Winlogbeat
 
 If you are shipping Sysmon logs via Winlogbeat (see the :ref:`beats` section), confirm that your Winlogbeat configuration does NOT use the Elastic Sysmon module. Security Onion will do all the necessary parsing.
 
+Visualizations
+--------------
+
+Once Security Onion is receiving and parsing Sysmon data, you can search for it and and visualize it via :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
+
 More Information
 ----------------
 
 .. seealso::
-
-    Check out our Sysmon video at https://youtu.be/Xz-7oDrZdQY!
 
     | For more information about sysmon, please see:
     | https://technet.microsoft.com/en-us/sysinternals/sysmon
