@@ -51,7 +51,7 @@ If you are shipping Sysmon logs via Winlogbeat (see the :ref:`beats` section), c
 Visualizations
 --------------
 
-Once Security Onion is receiving and parsing Sysmon data, you can search for it and and visualize it via :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
+Once Security Onion is receiving and parsing Sysmon data, you can search for that data and visualize it via :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. Each of these interfaces have at least one dashboard or query specifically designed for Sysmon data.
 
 More Information
 ----------------
