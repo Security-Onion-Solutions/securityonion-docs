@@ -3,6 +3,15 @@
 Release Notes
 =============
 
+2.3.180 [20221013] Changes
+----------------
+
+- FEATURE: Add Additional Zeek Plugins to the Zeek Docker Container `#8877 <https://github.com/Security-Onion-Solutions/securityonion/issues/8877>`_
+- FEATURE: Add new Sysmon dashboards `#8870 <https://github.com/Security-Onion-Solutions/securityonion/issues/8870>`_
+- UPGRADE: Elastic 8.4.3 `#8861 <https://github.com/Security-Onion-Solutions/securityonion/issues/8861>`_
+- UPGRADE: Suricata 6.0.8 `#8820 <https://github.com/Security-Onion-Solutions/securityonion/issues/8820>`_
+- UPGRADE: Zeek 5.0.2 `#8881 <https://github.com/Security-Onion-Solutions/securityonion/issues/8881>`_
+
 2.3.170 [20220922] Changes
 --------------------------
 
