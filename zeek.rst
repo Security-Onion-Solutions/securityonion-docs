@@ -9,8 +9,8 @@ Zeek is formerly known as Bro.  From https://www.zeek.org/:
 
 Zeek logs are sent to :ref:`elasticsearch` for parsing and storage and can then be found in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Zeek conn (connection) logs in :ref:`hunt`:
 
-.. image:: images/hunt.png
-  :target: _images/hunt.png
+.. image:: images/41_hunt.png
+  :target: _images/41_hunt.png
   
 Community ID
 ------------

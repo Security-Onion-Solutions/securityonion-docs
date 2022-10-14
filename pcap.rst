@@ -17,8 +17,8 @@ Alternatively, you can go directly to the PCAP interface, click the blue + butto
 
 Security Onion will then locate the stream and render a high level overview of the packets.
 
-.. image:: images/pcap.png
-  :target: _images/pcap.png
+.. image:: images/42_pcap.png
+  :target: _images/42_pcap.png
 
 If there are many packets in the stream, you can use the ``LOAD MORE`` button, ``Rows per page`` setting, and arrows to navigate through the list of packets. 
 

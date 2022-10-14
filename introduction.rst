@@ -59,18 +59,18 @@ Security Onion Console (SOC)
 
 :ref:`soc` is the first thing you see when you log into Security Onion. It includes our :ref:`alerts` interface which allows you to see all of your NIDS alerts from :ref:`suricata` and HIDS alerts from :ref:`wazuh`.
 
-.. image:: images/alerts.png
-  :target: _images/alerts.png
+.. image:: images/39_alerts.png
+  :target: _images/39_alerts.png
 
 :ref:`soc` also includes our :ref:`dashboards` interface which gives you a nice overview of not only your NIDS/HIDS alerts but also network metadata logs from :ref:`zeek` or :ref:`suricata` and any other logs that you may be collecting. 
 
-.. image:: images/dashboards.png
-  :target: _images/dashboards.png
+.. image:: images/40_dashboards.png
+  :target: _images/40_dashboards.png
 
 :ref:`hunt` is similar to :ref:`dashboards` but its default queries are more focused on threat hunting.
 
-.. image:: images/hunt.png
-  :target: _images/hunt.png
+.. image:: images/41_hunt.png
+  :target: _images/41_hunt.png
 
 :ref:`cases` is the case management interface. As you are working in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you may find alerts or logs that are interesting enough to send to :ref:`cases` and create a case. Other analysts can collaborate with you as you work to close that case.
 
@@ -79,8 +79,8 @@ Security Onion Console (SOC)
 
 :ref:`soc` also includes an interface for full packet capture (:ref:`pcap`) retrieval.
 
-.. image:: images/pcap.png
-  :target: _images/pcap.png
+.. image:: images/42_pcap.png
+  :target: _images/42_pcap.png
 
 CyberChef
 ~~~~~~~~~

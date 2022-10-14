@@ -5,8 +5,8 @@ Dashboards
 
 Starting in Security Onion 2.3.130, :ref:`soc` has a new Dashboards interface. This interface includes an entire set of pre-built dashboards for our standard data types.
 
-.. image:: images/dashboards.png
-  :target: _images/dashboards.png
+.. image:: images/40_dashboards.png
+  :target: _images/40_dashboards.png
 
 .. seealso::
 
