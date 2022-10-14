@@ -6,7 +6,6 @@ Release Notes
 2.3.170 [20220922] Changes
 --------------------------
 
-- FEATURE: Add Additional Zeek Plugins to the Zeek Docker Container `#8877 <https://github.com/Security-Onion-Solutions/securityonion/issues/8877>`_
 - FEATURE: Events table(s) for Windows Events matching default view `#8591 <https://github.com/Security-Onion-Solutions/securityonion/issues/8591>`_
 - FEATURE: Split the winlog.event_data.Hashes field for Windows sysmon process creation events. `#8593 <https://github.com/Security-Onion-Solutions/securityonion/issues/8593>`_
 - FIX: Mapping error when trying to index Strelka logs generated from ELF files. `#8592 <https://github.com/Security-Onion-Solutions/securityonion/issues/8592>`_
