@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.3.180 [20221013] Changes
+2.3.180 [20221014] Changes
 ----------------
 
 - FEATURE: Add Additional Zeek Plugins to the Zeek Docker Container `#8877 <https://github.com/Security-Onion-Solutions/securityonion/issues/8877>`_
