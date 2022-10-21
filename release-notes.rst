@@ -3,6 +3,12 @@
 Release Notes
 =============
 
+2.3.181 [20221021] Changes
+----------------
+
+- FIX: Add find to the zeek docker container `#8922 <https://github.com/Security-Onion-Solutions/securityonion/issues/8922>`_
+- FIX: Implement workaround for case events query `#8965 <https://github.com/Security-Onion-Solutions/securityonion/issues/8965>`_
+
 2.3.180 [20221014] Changes
 ----------------
 
