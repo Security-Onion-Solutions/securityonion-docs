@@ -4,13 +4,13 @@ Release Notes
 =============
 
 2.3.181 [20221021] Changes
-----------------
+--------------------------
 
 - FIX: Add find to the zeek docker container `#8922 <https://github.com/Security-Onion-Solutions/securityonion/issues/8922>`_
 - FIX: Implement workaround for case events query `#8965 <https://github.com/Security-Onion-Solutions/securityonion/issues/8965>`_
 
 2.3.180 [20221014] Changes
-----------------
+--------------------------
 
 - FEATURE: Add Additional Zeek Plugins to the Zeek Docker Container `#8877 <https://github.com/Security-Onion-Solutions/securityonion/issues/8877>`_
 - FEATURE: Add new Sysmon dashboards `#8870 <https://github.com/Security-Onion-Solutions/securityonion/issues/8870>`_
@@ -61,7 +61,7 @@ Release Notes
 - FIX: Ensure Elastalert is enabled before trying to run 'so-elastalert-stop'. Also suppress error output for when so-elastalert container is missing.
 
 2.3.140 Changes
-----------------
+---------------
 
 - FEATURE: Provide ability to maximize view of a groupby chart or table `#8176 <https://github.com/Security-Onion-Solutions/securityonion/issues/8176>`_
 - FEATURE: Remember the state of the left menu (visible or hidden) between SOC refreshes `#8186 <https://github.com/Security-Onion-Solutions/securityonion/issues/8186>`_
@@ -85,7 +85,7 @@ Release Notes
 - UPGRADE: Redmine to 4.2.7 `#8308 <https://github.com/Security-Onion-Solutions/securityonion/issues/8308>`_
 
 2.3.130 Changes
-----------------
+---------------
 
 - FEATURE: Add "observable" button next to hash for case attachments `#7222 <https://github.com/Security-Onion-Solutions/securityonion/issues/7222>`_
 - FEATURE: Add set of default analyzers `#7945 <https://github.com/Security-Onion-Solutions/securityonion/issues/7945>`_
@@ -106,7 +106,7 @@ Release Notes
 - UPGRADE: Zeek 4.0.6 to 4.0.7 `#8067 <https://github.com/Security-Onion-Solutions/securityonion/issues/8067>`_
 
 2.3.120 Changes
-----------------
+---------------
 
 - FEATURE: Add ISO option to the installer for analyst workstation `#7502 <https://github.com/Security-Onion-Solutions/securityonion/issues/7502>`_
 - FEATURE: Add new Hunt query for SOC logins `#7327 <https://github.com/Security-Onion-Solutions/securityonion/issues/7327>`_
@@ -161,7 +161,7 @@ Release Notes
 - FIX: Updated Saltstack to 3004.1 to address CVE-2022-22934 `#7701 <https://github.com/Security-Onion-Solutions/securityonion/issues/7701>`_
 
 2.3.110 Changes
-----------------
+---------------
 
 - FEATURE: Full ECS data type compliance `#6747 <https://github.com/Security-Onion-Solutions/securityonion/issues/6747>`_
 - FEATURE: Intrusion Detection Honeypot Node `#7138 <https://github.com/Security-Onion-Solutions/securityonion/issues/7138>`_
@@ -205,7 +205,7 @@ Release Notes
 - FIX: Managers with capitals in the hostname will now properly pull from the salt mine `#7081 <https://github.com/Security-Onion-Solutions/securityonion/issues/7081>`_
 
 2.3.100 Changes
-----------------
+---------------
 
 - FEATURE: Add verbiage to soup to denote which branch is being used `#6763 <https://github.com/Security-Onion-Solutions/securityonion/issues/6763>`_
 - FEATURE: Allow for an easy way to add a local repo directory for Elastic snapshots `#7034 <https://github.com/Security-Onion-Solutions/securityonion/issues/7034>`_
@@ -284,7 +284,7 @@ Release Notes
 
 
 2.3.90 Changes
-----------------
+--------------
 
 - FEATURE: Add ASN annotation for GeoIP `#5068 <https://github.com/Security-Onion-Solutions/securityonion/issues/5068>`_
 - FEATURE: Add Endgame Support for Security Onion `#6166 <https://github.com/Security-Onion-Solutions/securityonion/issues/6166>`_
@@ -351,7 +351,7 @@ Release Notes
 
 
 2.3.80 Changes
-----------------
+--------------
 
 - FEATURE: Ability to disable Zeek, Suricata `#4429 <https://github.com/Security-Onion-Solutions/securityonion/issues/4429>`_
 - FEATURE: Add docs link to Setup `#5459 <https://github.com/Security-Onion-Solutions/securityonion/issues/5459>`_
@@ -380,7 +380,7 @@ Release Notes
 
 
 2.3.70 Hotfix [WAZUH]
-----------------------
+---------------------
 
 - FIX: wazuh-agent is updated during setup on ISO, which causes service to fail to start `#5354 <https://github.com/Security-Onion-Solutions/securityonion/issues/5354>`_
 
