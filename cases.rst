@@ -160,22 +160,23 @@ Supported Analyzers and Data Types
 
 The following is a summary of the built-in analyzers and their supported data types:
 
-=======================       ======= ====   ==   ===   ====  ===== ===  === ==========
- Name                         Domain  Hash   IP   JA3   Mail  Other URI  URL User Agent
-=======================       ======= ====   ==   ===   ====  ===== ===  === ==========  
-Alienvault OTX                   ✓      ✓                                 ✓
-EmailRep                                                  ✓
+=======================       ======= ====   ==   ====  ===== ===  === ==== =====
+ Name                         Domain  Hash   IP   Mail  Other URI  URL User Agent
+=======================       ======= ====   ==   ====  ===== ===  === ==== =====  
+Alienvault OTX                   ✓      ✓                           ✓
+EmailRep                                            ✓
 Greynoise                                     ✓
-JA3er                                              ✓
-LocalFile                        ✓      ✓     ✓                 ✓         ✓
+LocalFile                        ✓      ✓     ✓           ✓         ✓
 Malware Hash Registry                   ✓
-Pulsedive                        ✓      ✓     ✓                      ✓    ✓      ✓
+Pulsedive                        ✓      ✓     ✓                ✓    ✓      ✓
 Spamhaus                                      ✓
-Urlhaus                                                                   ✓
-Urlscan                                                                   ✓
-Virustotal                       ✓      ✓     ✓                           ✓
+Urlhaus                                                             ✓
+Urlscan                                                             ✓
+Virustotal                       ✓      ✓     ✓                     ✓
 WhoisLookup                      ✓
-=======================       ======= ====   ==   ===   ====  ===== ===  === ==========
+=======================       ======= ====   ==   ====  ===== ===  === ==== =====
+
+
 
 Running Analyzers
 ~~~~~~~~~~~~~~~~~
