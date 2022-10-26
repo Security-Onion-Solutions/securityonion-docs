@@ -10,7 +10,6 @@ This section covers some of the main utilities in Security Onion.
    
    jq
    so-allow
-   so-checkin
    so-elastic-auth
    so-elasticsearch-query
    so-import-pcap
