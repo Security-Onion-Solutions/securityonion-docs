@@ -35,6 +35,15 @@ Similarly, you can use salt's ``cmd.run`` to execute a command on all your nodes
 
     sudo salt \* cmd.run 'df'
 
+Node checkin
+------------
+
+If you want to force a node to do a full update of all salt states, you can run ``so-checkin``. This will execute ``salt-call state.highstate -l info`` which outputs to the terminal with the log level set to ``info`` so that you can see exactly what's happening:
+
+::
+
+    sudo so-checkin
+
 Configuration
 -------------
 
