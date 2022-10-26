@@ -1,7 +1,7 @@
 .. _so-test:
 
 so-test
-============
+=======
 
 ``so-test`` will run ``so-tcpreplay`` to replay some pcap samples to your sniffing interface. 
 
