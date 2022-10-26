@@ -160,10 +160,11 @@ Supported Analyzers and Data Types
 
 The following is a summary of the built-in analyzers and their supported data types:
 
-=======================       ======= ====   ==   ====  ===== ===  === ==== =====
+
+=======================       ======= ====   ==   ====  ===== ===  === ==========
  Name                         Domain  Hash   IP   Mail  Other URI  URL User Agent
-=======================       ======= ====   ==   ====  ===== ===  === ==== =====  
-Alienvault OTX                   ✓      ✓                           ✓
+=======================       ======= ====   ==   ====  ===== ===  === ==========  
+Alienvault OTX                   ✓      ✓                                 ✓
 EmailRep                                            ✓
 Greynoise                                     ✓
 LocalFile                        ✓      ✓     ✓           ✓         ✓
@@ -174,7 +175,8 @@ Urlhaus                                                             ✓
 Urlscan                                                             ✓
 Virustotal                       ✓      ✓     ✓                     ✓
 WhoisLookup                      ✓
-=======================       ======= ====   ==   ====  ===== ===  === ==== =====
+=======================       ======= ====   ==   ====  ===== ===  === ==========
+
 
 
 
