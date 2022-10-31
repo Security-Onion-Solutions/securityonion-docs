@@ -135,7 +135,11 @@ If SID 4321 is noisy, you can disable it as follows:
        disabled:
          - 4321
 
-Then, from the manager run ``sudo salt $SENSORNAME_$ROLE state.apply idstools`` to update the config.
+From the manager, run the following to update the config:
+
+  ::
+
+    sudo salt $SENSORNAME_$ROLE state.apply idstools
 
 If you want to disable multiple rules at one time, you can use a regular expression, but make sure you enclose the full entry in single quotes like this:
 
@@ -213,7 +217,13 @@ If you can't run ``so-rule``, you can modify the configuration manually in the m
        modify:
          - '2019401 "seconds \d+" "seconds 3600"'
 
-If you need to modify a part of a rule that contains a special character, such as a $ in variable names, the special character needs to be escaped in the ``search`` part of the modify string. For example:
+From the manager, run the following to update the config:
+
+  ::
+
+    sudo salt $SENSORNAME_$ROLE state.apply idstools
+
+If you need to modify a part of a rule that contains a special character, such as a ``$`` in variable names, the special character needs to be escaped in the ``search`` part of the modify string. For example:
 
 ::
 
@@ -222,12 +232,6 @@ If you need to modify a part of a rule that contains a special character, such a
         modify:
           - '2826931 "\$EXTERNAL_NET" "!$HOME_NET"'
           
-- From the manager, run:
-
-  ::
-
-    salt $SENSORNAME_$ROLE state.apply idstools
-
 Rewrite the signature
 ---------------------
 
