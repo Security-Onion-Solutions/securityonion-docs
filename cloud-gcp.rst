@@ -18,7 +18,7 @@ https://securityonion.net/gcp/?ref=_ptnr_soc_docs_221103
 
 .. note::
 
-   This section does not cover how to set up a VPC in GCP. For more details about setting up a VPC, please see https://cloud.google.com/vpc/docs/vpc.
+   This section does not cover all aspects of how to set up a VPC in GCP, as each deployments is typically unique for the user. For more details about setting up a VPC, please see https://cloud.google.com/vpc/docs/vpc.
 
 Requirements
 ############
