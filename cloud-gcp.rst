@@ -233,6 +233,8 @@ Follow standard Security Onion search node installation, answering the setup pro
 GCP Sensor Setup
 ################
 
+In the GCP console, under Compute Engine go to the Instance Group page and edit the instance group that was created earlier. Use the dropdown list to add the new sensor VM instance to this group.
+
 SSH into the sensor node and run through setup to set this node up as a sensor. Choose ``eth0`` as the main interface and ``eth1`` as the monitoring interface.
 
 Remote Sensor Setup
