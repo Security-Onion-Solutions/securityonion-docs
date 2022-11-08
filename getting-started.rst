@@ -65,5 +65,6 @@ See the :ref:`post-installation` section.
    installation
    cloud-ami
    cloud-azure
+   cloud-gcp
    configuration
    post-installation
