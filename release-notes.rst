@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.182 [20221109] Changes
+--------------------------
+
+- UPGRADE: Zeek 5.0.3 `#9100 <https://github.com/Security-Onion-Solutions/securityonion/issues/9100>`_
+
 2.3.181 [20221021] Changes
 --------------------------
 
