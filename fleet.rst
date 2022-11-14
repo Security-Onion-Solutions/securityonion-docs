@@ -53,11 +53,19 @@ Then login using a valid username and password:
 Adding Query Packs
 ------------------
 
+CLI
+~~~
+
 You can bulk add queries and packs to FleetDM using fleetctl. ``/opt/so/conf/fleet/packs/`` is mapped to the FleetDM container, so you can drop your query packs there and then reference them like this:
 
 ::
 
     sudo docker exec -it so-fleet fleetctl apply -f /packs/<yourpack>.yaml
+
+GUI
+~~~
+
+Single queries and packs can also be added via the GUI in FleetDM. Go to the ``Queries`` section, click the ``Create New Query`` button, and add the query. Test the live query, verify that it works correctly, and save it. You can then either add it to an existing pack or create a new pack. Do this by going to the ``Schedule`` section, choosing ``Advanced``, and using the options there. Your query will not work if it isn't also scheduled, so set a short interval for testing, then update to a more sensible gap for production.
 
 More Information
 ----------------
