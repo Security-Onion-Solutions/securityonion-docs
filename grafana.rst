@@ -13,11 +13,6 @@ You will start on the ``Security Onion Grid Overview`` dashboard. Depending on w
 .. image:: images/grafana-1.png
   :target: _images/grafana-1.png
 
-Each dashboard you view is added to ``Recently viewed dashboards`` which is then accessible by simply clicking the Dashboards icon:
-
-.. image:: images/grafana-2.png
-  :target: _images/grafana-2.png
-
 Grafana Changes in Security Onion 2.3.60
 ----------------------------------------
 
