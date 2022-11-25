@@ -8,7 +8,7 @@ Once you've logged into :ref:`soc`, you can then click the Grafana link to see s
 .. image:: images/grafana-0.png
   :target: _images/grafana-0.png
 
-You will start on the ``Security Onion Grid Overview`` dashboard. Depending on what kind of deployment you have, there will be at least one more dashboard available if you click the Dashboards icon on the left and then click ``Manage``. You can then drill into the ``Dashboards`` folder to see all available dashboards.
+You will start on the ``Security Onion Grid Overview`` dashboard. Depending on what kind of deployment you have, there will be at least one more dashboard available if you click the Dashboards icon on the left.
 
 .. image:: images/grafana-1.png
   :target: _images/grafana-1.png
