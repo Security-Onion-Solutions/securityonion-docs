@@ -32,7 +32,7 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 - repo.saltstack.com (Salt packages - Ubuntu only)
 - packages.wazuh.com (Wazuh packages - Ubuntu only) 
 
-In the case of a distributed deployment, you can configure your nodes to pull everything from the manager so that only the manager requires Internet access.
+In the case of a distributed deployment, you can configure your nodes to pull everything from the manager so that only the manager requires Internet access. Nodes will be configured to pull from repocache.securityonion.net but this URL does not actually exist on the Internet, it is just a special address for the manager proxy.
 
 Node Communication
 ~~~~~~~~~~~~~~~~~~
@@ -42,7 +42,7 @@ When configuring network firewalls for distributed deployments, you'll want to e
 All nodes to manager:
 
 - 22 (only needed for initial setup)
-- 3142 (Apt-cacher-ng) (if manager proxy enabled)
+- 3142 (Apt-cacher-ng) (if manager proxy enabled, this is repocache.securityonion.net as mentioned above)
 - 5000 (Docker registry)
 - 8086 (influxdb)
 - 4505 (Salt)
