@@ -3,6 +3,23 @@
 Release Notes
 =============
 
+2.3.190 [20221201] Changes
+--------------------------
+
+- FEATURE: Add Additional ICS Zeek Packages `#9149 <https://github.com/Security-Onion-Solutions/securityonion/issues/9149>`_
+- FEATURE: Check hashes for duplicates before sending to strelka `#9034 <https://github.com/Security-Onion-Solutions/securityonion/issues/9034>`_
+- FEATURE: Improve local copy of docs in SOC `#9097 <https://github.com/Security-Onion-Solutions/securityonion/issues/9097>`_
+- FEATURE: so-pcap-export can run without needing to be attached to a TTY `#8994 <https://github.com/Security-Onion-Solutions/securityonion/issues/8994>`_
+- FIX: Avoid deprecation warning in Zeek file extraction script `#9123 <https://github.com/Security-Onion-Solutions/securityonion/issues/9123>`_
+- FIX: Change PyYAML .whl file name to comply with Joliet's 240-character limit/threshold `#8995 <https://github.com/Security-Onion-Solutions/securityonion/issues/8995>`_
+- FIX: Remove JA3er Analyzer `#8984 <https://github.com/Security-Onion-Solutions/securityonion/issues/8984>`_
+- FIX: prevent ISO image from triggering common AV false positives `#7297 <https://github.com/Security-Onion-Solutions/securityonion/issues/7297>`_
+- UPGRADE: CyberChef 9.49.0 `#9180 <https://github.com/Security-Onion-Solutions/securityonion/issues/9180>`_
+- UPGRADE: Grafana 9.2.7 `#8950 <https://github.com/Security-Onion-Solutions/securityonion/issues/8950>`_
+- UPGRADE: Strelka `#8996 <https://github.com/Security-Onion-Solutions/securityonion/issues/8996>`_
+- UPGRADE: Suricata 6.0.9 `#9229 <https://github.com/Security-Onion-Solutions/securityonion/issues/9229>`_
+- UPGRADE: Zeek 5.0.4 `#9167 <https://github.com/Security-Onion-Solutions/securityonion/issues/9167>`_
+
 2.3.182 [20221109] Changes
 --------------------------
 
