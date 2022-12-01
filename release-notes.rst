@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.3.190 [20221201] Changes
+2.3.190 [20221202] Changes
 --------------------------
 
 - FEATURE: Add Additional ICS Zeek Packages `#9149 <https://github.com/Security-Onion-Solutions/securityonion/issues/9149>`_
