@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.190 Hotfix [20221207] Changes
+---------------------------------
+
+- FIX: Improve support for Suricata file extraction into Strelka `#9318 <https://github.com/Security-Onion-Solutions/securityonion/issues/9318>`_
+
 2.3.190 [20221205] Changes
 --------------------------
 
