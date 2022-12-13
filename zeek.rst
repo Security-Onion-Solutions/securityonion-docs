@@ -22,14 +22,6 @@ Packet Loss and Capture Loss
 
 Zeek reports both packet loss and capture loss and you can find graphs of these in :ref:`grafana`. If Zeek reports packet loss, then you most likely need to adjust the number of Zeek workers as shown below or filter out traffic using :ref:`bpf`. If Zeek is reporting capture loss but no packet loss, this usually means that the capture loss is happening upstream in the tap or span port itself.
 
-VLAN tags
----------
-
-.. warning::
-
-   | Please note that Zeek should correctly analyze traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
-   | https://github.com/J-Gras/zeek-af_packet-plugin/issues/9
-
 Performance
 -----------
 
@@ -162,6 +154,11 @@ Starting in Security Onion 2.3.190, we include protocol analyzers for STUN, TDS,
 Security Onion 2.3.190 also includes MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can add ``bzar`` to your ``global.sls`` as shown in the Custom Scripts section below.
 
 As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
+
+VLAN tags
+---------
+
+Starting in Security Onion 2.3.190, we're including a newer version of the :ref:`af-packet` plugin that allows Zeek to log VLAN tags correctly. If you want to include VLAN tags in your conn.log, then you can enable the ``protocols/conn/vlan-logging`` script (already included in Zeek but disabled by default) in your Zeek configuration as shown in the Custom Scripts section below.
 
 Intel
 -----
