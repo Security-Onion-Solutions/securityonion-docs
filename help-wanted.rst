@@ -36,26 +36,27 @@ Thanks
 
 The following folks have made significant contributions to Security Onion over the years. Thanks!
 
--  Wes Lambert
--  Mike Reeves
--  Jason Ertel
+-  Lawrence Abrams
+-  Jack Blanchard
+-  Kevin Branch
 -  Josh Brower
+-  Pete Di Giorgio
+-  Dennis Distler
+-  Jason Ertel
+-  Seth Hall
+-  Paul Halliday
+-  Joe Hargis
+-  Mark Hillick
+-  Wes Lambert
+-  Dustin Lee
+-  Josh More
+-  Eric Ooi
 -  Josh Patterson
 -  Phil Plantamura
--  William Wernert
--  Bryant Treacle
--  Dustin Lee
--  Kevin Branch
--  Scott Runnels
--  Brad Shoop
--  Paul Halliday
--  Seth Hall
 -  Liam Randall
--  Eric Ooi
--  Lawrence Abrams
--  Mark Hillick
--  Joe Hargis
--  Dennis Distler
+-  Mike Reeves
+-  Scott Runnels
 -  Jon Schipp
--  Josh More
--  Jack Blanchard
+-  Brad Shoop
+-  Bryant Treacle
+-  William Wernert
