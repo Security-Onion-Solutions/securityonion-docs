@@ -233,6 +233,10 @@ Please keep in mind that when you run ``manage_agents`` you will need to do so i
     
 You also may need to run :ref:`so-allow` to allow traffic from the IP address of your Wazuh agent(s).
 
+.. warning::
+
+    The Windows Wazuh agent installs with incorrect permissions on ossec.conf which could allow users to escalate privileges. However, most users configure that Wazuh agent using Wazuh Agent Manager which then sets the permissions correctly. If you don't use the Wazuh Agent Manager for configuration, then you may need to manually fix the permissions on ossec.conf. For more information, please see https://github.com/Security-Onion-Solutions/securityonion/discussions/9390.
+
 Maximum Number of Agents
 ------------------------
 
