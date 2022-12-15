@@ -210,6 +210,10 @@ We could add this to ``/opt/so/rules/hids/local_rules.xml`` and then restart Waz
 Adding Agents
 -------------
 
+.. warning::
+
+	Before deploying lots of Wazuh agents to your enterprise, please be aware that Wazuh will not be included in the upcoming Security Onion 2.4.
+
 Navigate to the Downloads page in :ref:`soc` and download the appropriate Wazuh agent for your endpoint. This will ensure that you get the correct version of Wazuh. If your endpoint is not listed there, you can check the Wazuh website at https://documentation.wazuh.com/3.13/installation-guide/packages-list/index.html.
 
 .. warning::
