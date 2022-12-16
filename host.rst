@@ -14,7 +14,6 @@ For Windows endpoints, you can optionally augment the standard Windows logging w
    :maxdepth: 2
 
    elastic-agent
-   beats
    syslog
    sysmon
    autoruns
