@@ -155,6 +155,10 @@ Analyzers
 
 Starting in Security Onion 2.3.130, we have included analyzers which allow you to quickly gather context around an observable.
 
+.. seealso::
+
+    Check out our Analyzers video at https://youtu.be/99LXr7UmtKI!
+
 Supported Analyzers and Data Types
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
