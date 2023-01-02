@@ -9,9 +9,9 @@ so-import-pcap
 -  generate network metadata using :ref:`zeek`
 -  store IDS alerts and network metadata in :ref:`elasticsearch` with original timestamps
 -  store pcaps where :ref:`soc` can find them
--  provide a hyperlink for you to view all alerts and logs in :ref:`hunt`
+-  provide a hyperlink for you to view all alerts and logs in :ref:`soc`
 
-In addition to viewing alerts and logs in :ref:`hunt`, you can also find NIDS alerts in :ref:`alerts` and all logs in :ref:`dashboards` and :ref:`kibana`.
+In addition to viewing alerts and logs in :ref:`soc`, you can also find logs in :ref:`kibana`.
 
 Configuration
 -------------
