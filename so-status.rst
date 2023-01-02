@@ -3,7 +3,7 @@
 so-status
 =========
 
-To check the status of Security Onion services, run ``sudo so-status``.
+To check the status of Security Onion services, you can either run ``sudo so-status`` or simply view the Status panel on the :ref:`grid` page.
 
 so-status reads the list of enabled services from ``/opt/so/conf/so-status/so-status.conf`` and checks the status of each. If you ever disable a service, you may need to remove it from that file.
 
