@@ -3,7 +3,7 @@
 Sysmon
 ======
 
-From https://technet.microsoft.com/en-us/sysinternals/sysmon:
+From https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon:
 
     System Monitor (Sysmon) is a Windows system service and device driver that, once installed on a system, remains resident across
     system reboots to monitor and log system activity to the Windows event log. It provides detailed information about process creations,
@@ -23,20 +23,18 @@ Integration
 
 Please note that the paper is a few years old and was therefore written for an older version of Security Onion.
 
-Configuration
--------------
-
-| SwiftOnSecurity has a great sysmon config file to use as a starting point:
-| https://github.com/SwiftOnSecurity/sysmon-config
-
 Downloads
 ---------
 
-| Download sysmon here:
-| https://download.sysinternals.com/files/Sysmon.zip
+You can download sysmon from Microsoft at https://download.sysinternals.com/files/Sysmon.zip.
 
-| Download SwiftOnSecurity's example sysmon config here:
-| https://github.com/SwiftOnSecurity/sysmon-config/raw/master/sysmonconfig-export.xml
+Once you've downloaded sysmon, you probably also want to download a sysmon config to use as a starting point. Here are a few options to choose from.
+
+https://github.com/Neo23x0/sysmon-config
+
+https://github.com/SwiftOnSecurity/sysmon-config
+
+https://github.com/olafhartong/sysmon-modular
 
 Transport
 ---------
@@ -59,7 +57,7 @@ More Information
 .. seealso::
 
     | For more information about sysmon, please see:
-    | https://technet.microsoft.com/en-us/sysinternals/sysmon
+    | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
 
     | TrustedSec has a great Community Guide on Sysmon:
     | https://github.com/trustedsec/SysmonCommunityGuide
