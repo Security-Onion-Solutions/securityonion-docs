@@ -3,7 +3,7 @@
 Intrusion Detection Honeypot
 ============================
 
-The Intrusion Detection Honeypot node allows you to build a node that mimics services. Connections to these services automatically generate alerts.
+Security Onion includes an Intrusion Detection Honeypot (IDH) node option. This allows you to build a node that mimics common services such as HTTP, FTP, and SSH. Any interaction with these fake services will automatically result in an alert.
 
 From the book, *Intrusion Detection Honeypots* (Sanders, C):
 
@@ -14,7 +14,7 @@ Chris Sanders and Josh Brower presented the IDH concept at Security Onion Confer
 Installation
 ------------
 
-IDH nodes are dedicated to just being IDH nodes and cannot run any other services. Therefore, you must have a separate manager to connect to. You can join a new IDH node to an existing Standalone deployment or full distributed deployment. Our ISO image includes a new boot menu option for IDH installs that will partition your disk appropriately with lower requirements than a full installation.
+IDH nodes are dedicated to just being IDH nodes and cannot run any other services. Therefore, you must have a separate manager to connect to. You can join a new IDH node to an existing Standalone deployment or full distributed deployment. Our ISO image includes a boot menu option for IDH installs that will partition your disk appropriately with lower requirements than a full installation.
 
 .. warning::
 
