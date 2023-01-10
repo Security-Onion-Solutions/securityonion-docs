@@ -9,6 +9,8 @@ From https://github.com/target/strelka:
 
 Depending on what options you choose in Setup, it may ask if you want to use :ref:`zeek` or :ref:`suricata` for metadata. Whichever engine you choose for metadata will then extract files from network traffic. Strelka then analyzes those files and they end up in ``/nsm/strelka/processed/``.
 
+Security Onion checks file hashes before sending to Strelka to avoid analyzing the same file multiple times in a 48 hour period.
+
 Alerts
 ------
 
