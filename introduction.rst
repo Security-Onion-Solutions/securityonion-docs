@@ -40,7 +40,7 @@ As :ref:`zeek` and :ref:`suricata` are monitoring your network traffic, they can
 Intrusion Detection Honeypot (IDH)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Starting in Security Onion 2.3.110, we have a new :ref:`idh` node. This allows you to build a node that mimics services. Connections to these services automatically generate alerts.
+Security Onion includes an :ref:`idh` node option. This allows you to build a node that mimics common services such as HTTP, FTP, and SSH. Any interaction with these fake services will automatically result in an alert.
 
 Enterprise Security Monitoring
 ------------------------------

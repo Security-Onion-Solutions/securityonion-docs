@@ -149,16 +149,16 @@ Other Zeek logs
 
 Zeek also provides other logs by default and you can read more about them at https://docs.zeek.org/en/latest/script-reference/log-files.html.
 
-Starting in Security Onion 2.3.190, we include protocol analyzers for STUN, TDS, and Wireguard traffic and several different ICS/SCADA protocols. By default, these analyzers are enabled and will log to the filesystem. For new installations, these logs are automatically ingested into Elasticsearch. If you upgrade an existing deployment and would like to ingest these logs, you can enable them via :ref:`so-zeek-logs`.
+Security Onion includes protocol analyzers for STUN, TDS, and Wireguard traffic and several different ICS/SCADA protocols. By default, these analyzers are enabled and will log to the filesystem. For new installations, these logs are automatically ingested into Elasticsearch. If you upgrade an existing deployment and would like to ingest these logs, you can enable them via :ref:`so-zeek-logs`.
 
-Security Onion 2.3.190 also includes MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can add ``bzar`` to your ``global.sls`` as shown in the Custom Scripts section below.
+Security Onion also includes MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can add ``bzar`` to your ``global.sls`` as shown in the Custom Scripts section below.
 
 As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
 
 VLAN tags
 ---------
 
-Starting in Security Onion 2.3.190, we're including a newer version of the :ref:`af-packet` plugin that allows Zeek to log VLAN tags correctly. If you want to include VLAN tags in your conn.log, then you can enable the ``protocols/conn/vlan-logging`` script (already included in Zeek but disabled by default) in your Zeek configuration as shown in the Custom Scripts section below.
+If you want to include VLAN tags in your conn.log, then you can enable the ``protocols/conn/vlan-logging`` script (already included in Zeek but disabled by default) in your Zeek configuration as shown in the Custom Scripts section below.
 
 Intel
 -----

@@ -50,7 +50,7 @@ Another possible SOC customization is the session timeout. The default timeout f
 Advanced Interface
 ------------------
 
-The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. Starting in Security Onion 2.3.160, :ref:`alerts` and :ref:`cases` have a new toggle under Options labeled ``Temporarily enable advanced interface features``.
+The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. :ref:`alerts` and :ref:`cases` have a new toggle under Options labeled ``Temporarily enable advanced interface features``.
 
 .. image:: images/soc-toggle-advanced.png
   :target: _images/soc-toggle-advanced.png
@@ -159,7 +159,7 @@ Cases
 Escalation
 ----------
 
-:ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` display logs with a blue triangle that allows you to escalate the event. Starting in Security Onion 2.3.100, this defaults to our new :ref:`cases` interface. If for some reason you want to escalate to a different case management system, you can change this setting. To do so, locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the following values:
+:ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` display logs with a blue triangle that allows you to escalate the event which defaults to our own :ref:`cases` interface. If for some reason you want to escalate to a different case management system, you can change this setting. To do so, locate the ``soc`` :ref:`salt` pillar and then set ``case_module`` to one of the following values:
 
 - ``soc`` - Enables the new built-in Case Management, with the new Escalation menu (default).
 

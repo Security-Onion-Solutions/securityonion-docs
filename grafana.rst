@@ -13,12 +13,12 @@ You will start on the ``Security Onion Grid Overview`` dashboard. Depending on w
 .. image:: images/grafana-1.png
   :target: _images/grafana-1.png
 
-Grafana Changes in Security Onion 2.3.60
-----------------------------------------
+Data
+----
 
-Starting in Security Onion 2.3.60, Grafana will have both high-resolution data and downsampled low-resolution data. Some Grafana graphs have dotted lines that show previous data that has been downsampled. High-resolution data will be purged after 30 days, leaving just the downsampled low-resolution data.
+Grafana has both high-resolution data and downsampled low-resolution data. Some Grafana graphs have dotted lines that show previous data that has been downsampled. High-resolution data will be purged after 30 days, leaving just the downsampled low-resolution data.
 
-For existing installations upgraded to Security Onion 2.3.60 or later, you may want to update your Grafana data as shown below. If you have a distributed deployment, you will run all commands on the manager.
+At some point, you may want to update your Grafana data as shown below. If you have a distributed deployment, you will run all commands on the manager.
 
 If you want to remove some old data prior to downsampling, you can run ``so-influxdb-clean``. This is optional and not required. ``so-influxdb-clean`` will ask how many days or weeks worth of data you want to retain and remove all data older than that.
 
@@ -28,18 +28,19 @@ Once the downsampling is complete and you verify the downsampled data is availab
 
 Accounts
 --------
+
 By default, you will be viewing Grafana as an anonymous user. If you want to make changes to the default Grafana dashboards, you will need to log into Grafana with username ``admin`` and the randomized password found via ``sudo salt-call pillar.get secrets``.
 
 Configuration
 -------------
+
 Grafana configuration can be found in ``/opt/so/conf/grafana/etc/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/grafana/etc/``, they may be overwritten at the next salt update.
 The default configuration options can be seen in ``/opt/so/saltstack/default/salt/grafana/defaults.yaml``. Any options not specified in here, will use the Grafana default. 
 
 Example
 -------
-If you want to configure and enable SMTP for Grafana, place the following in the ``global.sls`` file. 
-If you have files referenced in the config file, those can be placed in ``/opt/so/saltstack/default/salt/grafana/etc/files/``.
-Those files will be then be placed in ``/opt/so/conf/grafana/etc/files`` on the minion and mapped to ``/etc/grafana/config/files/`` within the container.
+
+If you want to configure and enable SMTP for Grafana, place the following in the ``global.sls`` file. If you have files referenced in the config file, those can be placed in ``/opt/so/saltstack/default/salt/grafana/etc/files/``. Those files will be then be placed in ``/opt/so/conf/grafana/etc/files`` on the minion and mapped to ``/etc/grafana/config/files/`` within the container.
 
 ::
 

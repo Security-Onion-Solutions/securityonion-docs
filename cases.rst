@@ -3,7 +3,7 @@
 Cases
 =====
 
-Starting in Security Onion 2.3.100, we have a new Cases interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. 
+Security Onion includes its own Cases interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. 
 
 .. seealso::
 
@@ -22,7 +22,7 @@ On a new deployment, Cases will be empty until you create a new case.
 .. image:: images/cases-empty.png
   :target: _images/cases-empty.png
 
-To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side including Assignee, Status, Severity, Priority, TLP, PAP, Category, and Tags. Clicking the fields on the right side reveals drop-down boxes with standard options. Starting in Security Onion 2.3.140, the Assignee field will only list user accounts that are currently enabled.
+To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side including Assignee, Status, Severity, Priority, TLP, PAP, Category, and Tags. Clicking the fields on the right side reveals drop-down boxes with standard options. The Assignee field will only list user accounts that are currently enabled.
 
 .. image:: images/cases-add.png
   :target: _images/cases-add.png
@@ -58,12 +58,12 @@ Observables
 
 On the Observables tab, you can track observables like IP addresses, domain names, hashes, etc. You can add observables directly on this tab or you can add them from the Events tab as well.
 
-Starting in Security Onion 2.3.140, you can add multiple observables of the same type by selecting the option labeled ``Enable this checkbox to have a separate observable added for each line of the provided value above``.
+You can add multiple observables of the same type by selecting the option labeled ``Enable this checkbox to have a separate observable added for each line of the provided value above``.
 
 .. image:: images/cases-observables.png
   :target: _images/cases-observables.png
 
-For each observable, you can click the icon on the far left of the row to drill into the observable and see more information about it. To the right of that is the the hunt icon which will start a new hunt for the observable. Starting in Security Onion 2.3.130, clicking the lightning bolt icon will analyze the observable (see the Analyzers section later).
+For each observable, you can click the icon on the far left of the row to drill into the observable and see more information about it. To the right of that is the the hunt icon which will start a new hunt for the observable. Clicking the lightning bolt icon will analyze the observable (see the Analyzers section later).
 
 Events
 ------
@@ -103,7 +103,7 @@ Options
 
 Starting at the top of the main Cases page, the Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
 
-Starting in Security Onion 2.3.160, there is a new toggle labeled ``Temporarily enable advanced interface features``.
+There is a toggle labeled ``Temporarily enable advanced interface features``.
 
 .. image:: images/soc-toggle-advanced.png
   :target: _images/soc-toggle-advanced.png
@@ -153,7 +153,7 @@ You might want to backup this data as described in the :ref:`backups` section.
 Analyzers
 ---------
 
-Starting in Security Onion 2.3.130, we have included analyzers which allow you to quickly gather context around an observable.
+Security Onion includes analyzers which allow you to quickly gather context around an observable.
 
 .. seealso::
 

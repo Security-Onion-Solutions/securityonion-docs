@@ -13,7 +13,7 @@ Security Onion includes :ref:`elasticsearch` ingest parsers for pfSense firewall
 Example: RITA
 -------------
 
-Starting in Security Onion 2.3.120, we include :ref:`elasticsearch` ingest parsers for :ref:`rita` logs. To enable this support, add the following in the relevant :ref:`salt` minion pillar and then restart :ref:`filebeat` on the minion(s):
+Security Onion includes :ref:`elasticsearch` ingest parsers for :ref:`rita` logs. To enable this support, add the following in the relevant :ref:`salt` minion pillar and then restart :ref:`filebeat` on the minion(s):
 
 ::
 

@@ -3,7 +3,7 @@
 Dashboards
 ==========
 
-Starting in Security Onion 2.3.130, :ref:`soc` has a new Dashboards interface. This interface includes an entire set of pre-built dashboards for our standard data types.
+:ref:`soc` has its own Dashboards interface. This interface includes an entire set of pre-built dashboards for our standard data types.
 
 .. image:: images/40_dashboards.png
   :target: _images/40_dashboards.png
@@ -87,12 +87,12 @@ Clicking the table headers allows you to sort ascending or descending. Refreshin
 
 Clicking a value in the Group Metrics table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal. The default Fetch Limit for the Group Metrics table is ``10``. If you need to see more than the top 10, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see an additional button that will convert the data table to a sankey diagram. Starting in Security Onion 2.3.140, there is a Maximize View button that will maximize the table to fill the pane (you can press the Esc key to return to normal view). Each of the groupby field headers has a trash button that will remove the field from the table.
+You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see an additional button that will convert the data table to a sankey diagram. There is a Maximize View button that will maximize the table to fill the pane (you can press the Esc key to return to normal view). Each of the groupby field headers has a trash button that will remove the field from the table.
 
 .. image:: images/dashboards-group-metrics-table.png
   :target: _images/dashboards-group-metrics-table.png
 
-Once you have switched to a chart, you will see different buttons at the top of the chart. You can use the Show Table button to return to the data table, the Toggle Legend button to toggle the legend, and the Remove button to remove the chart altogether. Starting in Security Onion 2.3.140, there is a Maximize View button that will maximize the chart to fill the pane (you can press the Esc key to return to normal view).
+Once you have switched to a chart, you will see different buttons at the top of the chart. You can use the Show Table button to return to the data table, the Toggle Legend button to toggle the legend, and the Remove button to remove the chart altogether. There is a Maximize View button that will maximize the chart to fill the pane (you can press the Esc key to return to normal view).
 
 .. image:: images/dashboards-group-metrics-sankey.png
   :target: _images/dashboards-group-metrics-sankey.png
@@ -231,7 +231,7 @@ In addition to rendering standard data tables, you can optionally render the dat
 
   | groupby -sankey destination.ip destination.port
 
-Starting in Security Onion 2.3.140, the ``-maximize`` option will maximize the table or chart to fill the pane. After viewing the maximized result, you can press the Esc key to return to normal view.
+The ``-maximize`` option will maximize the table or chart to fill the pane. After viewing the maximized result, you can press the Esc key to return to normal view.
 
 By default, grouping by a particular field won't show any values if that field is missing. If you would like to include missing values, you can add an asterisk after the field name. For example, suppose you want to look for non-HTTP traffic on port 80 using a query like ``event.dataset:conn AND destination.port:80 | groupby network.protocol destination.port``. If there was non-HTTP traffic on port 80, the ``network.protocol`` field may be null and so this query would only return port 80 traffic identified as HTTP. To fix this, add the asterisk after the ``network.protocol``:
 

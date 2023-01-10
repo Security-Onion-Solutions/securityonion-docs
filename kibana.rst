@@ -46,7 +46,7 @@ Kibana uses multiple hyperlinked fields to accelerate investigations and decisio
 PCAP/Cases
 ~~~~~~~~~~
 
-Starting in Security Onion 2.3.100, the ``_id`` field has a hyperlink which is labeled as ``Hunt and optionally pivot to PCAP/Cases``. Clicking this hyperlink takes you to :ref:`hunt` and searches for that particular record. From :ref:`hunt`, you can then escalate the event to :ref:`cases` or pivot to full packet capture via our :ref:`pcap` interface (assuming it's a network event). You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards. 
+The ``_id`` field has a hyperlink which is labeled as ``Hunt and optionally pivot to PCAP/Cases``. Clicking this hyperlink takes you to :ref:`hunt` and searches for that particular record. From :ref:`hunt`, you can then escalate the event to :ref:`cases` or pivot to full packet capture via our :ref:`pcap` interface (assuming it's a network event). You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards. 
 
 .. image:: images/kibana-log-panel-hunt.png
   :target: _images/kibana-log-panel-hunt.png
@@ -82,7 +82,7 @@ Configuration
 
 Kibana's configuration can be found in ``/opt/so/conf/kibana/``. However, please keep in mind that most configuration is managed with :ref:`salt`, so if you manually make any modifications in ``/opt/so/conf/kibana/``, they may be overwritten at the next salt update.
 
-Starting in 2.3.90, ``/opt/so/conf/kibana/etc/kibana.yml`` can be managed using the ``kibana`` pillar placed in the manager pillar file located under ``/opt/so/saltstack/local/pillar/minions/``. The manager pillar file will end with either ``*_manager.sls``, ``*_managersearch.sls``, ``*_standalone.sls``, or ``*_eval.sls`` depending on the manager type that was chosen during install. 
+``/opt/so/conf/kibana/etc/kibana.yml`` can be managed using the ``kibana`` pillar placed in the manager pillar file located under ``/opt/so/saltstack/local/pillar/minions/``. The manager pillar file will end with either ``*_manager.sls``, ``*_managersearch.sls``, ``*_standalone.sls``, or ``*_eval.sls`` depending on the manager type that was chosen during install. 
 
 - An example of a Kibana pillar may look as follows:
 
