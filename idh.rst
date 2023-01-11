@@ -167,15 +167,15 @@ For example, suppose that we already have the HTTP service running but we want t
         The following configuration files are YAML, and so tabs are not permitted. Please only use spaces and pay special attention to the number of spaces!
  
  
- First off, copy the custom skin folder to the following directory on the Manager:
+First off, copy the custom skin folder to the following directory on the Manager:
  
  ``/opt/so/saltstack/local/salt/idh/skins/http/custom/``
  
- It should look like this:
+It should look like this:
  
  ``/opt/so/saltstack/local/salt/idh/skins/http/custom/CustomSkin01/``
  
- Next, edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``) and add an override for the custom skin. The minion sls file should look something like this:
+Next, edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``) and add an override for the custom skin. The minion sls file should look something like this:
 
 ::
 
