@@ -117,7 +117,7 @@ Note: The previously-configured port is not automatically closed on the IDH node
 
 Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the manager in ``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``.
 
-Custom Configuration - Example Port Change
+Custom Configuration - Example: Port Change
 ------------------------------------------
 
 For example, suppose that we already have the HTTP service running but we want to change the default port from ``80`` to ``8080``.
@@ -155,3 +155,43 @@ With this configuration changed, we can now make it active on the IDH node by us
      sudo salt '$IDH-Hostname*' state.apply idh,firewall
 
 You should now be able to browse to the HTTP server on the IDH node on TCP/8080. You should be able to override any other configuration in the ``http.defaults.yaml`` in a similar manner.
+
+
+Custom Configuration - Example: Custom HTTP Skin
+------------------------------------------
+
+For example, suppose that we already have the HTTP service running but we want to change the default skin to a custom skin.
+
+.. warning::
+
+        The following configuration files are YAML, and so tabs are not permitted. Please only use spaces and pay special attention to the number of spaces!
+ 
+ 
+ First off, copy the custom skin folder to the following directory on the Manager:
+ 
+ ``/opt/so/saltstack/local/salt/idh/skins/http/custom/``
+ 
+ It should look like this:
+ 
+ ``/opt/so/saltstack/local/salt/idh/skins/http/custom/CustomSkin01/``
+ 
+ Next, edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``) and add an override for the custom skin. The minion sls file should look something like this:
+
+::
+
+    idh:
+      services:
+        - http
+        - ftp
+        - ssh
+      opencanary:
+        config:
+          http.skin: CustomSkin01
+
+With this configuration changed, we can now make it active on the IDH node by using :ref:`salt` to apply the ``idh`` states. Run the following from the manager (replacing ``$IDH-Hostname`` with your actual IDH hostname):
+
+::
+
+     sudo salt '$IDH-Hostname*' state.apply idh
+
+You should now be able to browse to the HTTP server on the IDH node and see your custom skin. 
