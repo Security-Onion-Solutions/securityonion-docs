@@ -3,6 +3,23 @@
 Release Notes
 =============
 
+2.3.200 [20230113] Changes
+----------------
+
+- FEATURE: Add Consumption EPS to default Grid view `#9359 <https://github.com/Security-Onion-Solutions/securityonion/issues/9359>`_
+- FEATURE: Allow custom IDH HTTP Skins `#9045 <https://github.com/Security-Onion-Solutions/securityonion/issues/9045>`_
+- FEATURE: Improve SOC Dashboards `#9450 <https://github.com/Security-Onion-Solutions/securityonion/issues/9450>`_
+- FEATURE: Update Zeek oui.dat during container build `#9542 <https://github.com/Security-Onion-Solutions/securityonion/issues/9542>`_
+- FIX: EPS sorting in SOC Grid `#9363 <https://github.com/Security-Onion-Solutions/securityonion/issues/9363>`_
+- FIX: Ensure file path is ascertainable by localfile.py for localfile analyzer `#9342 <https://github.com/Security-Onion-Solutions/securityonion/issues/9342>`_
+- FIX: RITA number_format_exception "unable to convert to integer" `#9503 <https://github.com/Security-Onion-Solutions/securityonion/issues/9503>`_
+- FIX: Superuser permission check for so-elasticsearch-indices-list `#9461 <https://github.com/Security-Onion-Solutions/securityonion/issues/9461>`_
+- FIX: Sysmon logs are missing event.category and event.dataset `#8194 <https://github.com/Security-Onion-Solutions/securityonion/issues/8194>`_
+- FIX: config.map.jinja updates for highlander setting `#9321 <https://github.com/Security-Onion-Solutions/securityonion/issues/9321>`_
+- FIX: so-import utilities should hyperlink to dashboards `#9373 <https://github.com/Security-Onion-Solutions/securityonion/issues/9373>`_
+- FIX: so-status runs some code before checking for root privileges `#9270 <https://github.com/Security-Onion-Solutions/securityonion/issues/9270>`_
+- UPGRADE: Elastic 8.5.3 `#9356 <https://github.com/Security-Onion-Solutions/securityonion/issues/9356>`_
+
 2.3.190 Hotfix [20221207] Changes
 ---------------------------------
 
