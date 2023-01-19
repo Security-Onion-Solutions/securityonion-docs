@@ -57,6 +57,8 @@ The easiest way to get started is to click the query drop down box and select on
 .. image:: images/dashboards-query.png
   :target: _images/dashboards-query.png
 
+If you would like to save your own personal queries, you can bookmark them in your browser. If you would like to customize the default queries for all users, please see the :ref:`soc-customization` section.
+
 Time Picker
 -----------
 
