@@ -62,7 +62,7 @@ If you want to configure and enable SMTP for Grafana, place the following in the
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
   Check out our Grafana Alarms video at https://youtu.be/8FmZ4MRe8Uk.
 

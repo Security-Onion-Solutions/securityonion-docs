@@ -45,7 +45,7 @@ To change the number of AF-PACKET workers for :ref:`zeek`:
       
 For best performance, Zeek should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  
 
-.. seealso::
+.. note::
 
     For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see https://github.com/brokenscripts/cpu_pinning.
 
@@ -506,6 +506,6 @@ If you want to disable Zeek globally across all your sensors, then you could add
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Zeek, please see https://www.zeek.org/.

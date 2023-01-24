@@ -41,14 +41,14 @@ We configure Redis to use 812MB of your total system memory.  If you have suffic
 
 :ref:`logstash` on the manager node is configured to send to Redis.  For best performance, you may want to ensure that ``batch`` is set to ``true`` and then tune the ``ls_pipeline_batch_size`` variable to find the sweet spot for your deployment.
 
-.. seealso::
+.. note::
 
     | For more information about the :ref:`logstash` output plugin for Redis, please see:
     | https://www.elastic.co/guide/en/logstash/current/plugins-outputs-redis.html
 
 :ref:`logstash` on search nodes pulls from Redis.  For best performance, you may want to tune ``ls_pipeline_batch_size`` and ``ls_input_threads`` to find the sweet spot for your deployment. 
 
-.. seealso::
+.. note::
 
     | For more information about the :ref:`logstash` input plugin for Redis, please see:
     | https://www.elastic.co/guide/en/logstash/current/plugins-inputs-redis.html
@@ -65,6 +65,6 @@ Redis logs can be found at ``/opt/so/log/redis/``. Depending on what you're look
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Redis, please see https://redis.io/.

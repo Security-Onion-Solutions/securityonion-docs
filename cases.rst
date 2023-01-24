@@ -5,7 +5,7 @@ Cases
 
 Security Onion includes its own Cases interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. 
 
-.. seealso::
+.. note::
 
     Check out our Cases video at https://youtu.be/y_kr_hrtqVc!
 
@@ -155,7 +155,7 @@ Analyzers
 
 Security Onion includes analyzers which allow you to quickly gather context around an observable.
 
-.. seealso::
+.. note::
 
     Check out our Analyzers video at https://youtu.be/99LXr7UmtKI!
 

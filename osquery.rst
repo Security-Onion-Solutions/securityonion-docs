@@ -103,6 +103,6 @@ We sponsored the development of :ref:`community-id` support for osquery to allow
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about osquery, please see https://osquery.readthedocs.io/en/stable/.

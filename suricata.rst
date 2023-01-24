@@ -41,14 +41,14 @@ To change the number of workers:
 
       sudo so-suricata-start
 
-.. seealso::
+.. note::
 
     | For other tuning considerations, please see:
     | https://suricata.readthedocs.io/en/latest/performance/tuning-considerations.html
 
 For best performance, Suricata should be pinned to specific CPUs. In most cases, you’ll want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  
 
-.. seealso::
+.. note::
 
     | For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see:
     | https://github.com/brokenscripts/cpu_pinning
@@ -220,6 +220,6 @@ The file should contain the new rule that you would like to test. The pcap shoul
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Suricata, please see https://suricata.io.

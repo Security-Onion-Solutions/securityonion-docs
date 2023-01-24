@@ -215,6 +215,6 @@ Additionally, you can run the following command to allow writing to the affected
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Logstash, please see https://www.elastic.co/products/logstash.

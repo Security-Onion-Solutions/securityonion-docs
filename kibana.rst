@@ -138,6 +138,6 @@ You can enable or disable specific features by clicking the main menu in the upp
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Kibana, please see https://www.elastic.co/kibana.

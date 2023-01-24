@@ -96,7 +96,7 @@ The goal of Security Onion is to allow you to concentrate on finding evil rather
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     | For more information about Curator, please see:
     | https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.html#about

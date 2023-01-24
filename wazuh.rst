@@ -298,6 +298,6 @@ Wazuh diagnostic logs are in ``/nsm/wazuh/logs/``. Depending on what you’re lo
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Wazuh, please see https://documentation.wazuh.com/3.13/.

@@ -70,7 +70,7 @@ Single queries and packs can also be added via the GUI in FleetDM. Go to the ``Q
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about osquery, please see the :ref:`osquery` section.
 

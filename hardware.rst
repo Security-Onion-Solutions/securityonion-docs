@@ -215,6 +215,6 @@ Enterprise Tap options (listed alphabetically):
 Further Reading
 ~~~~~~~~~~~~~~~
 
-.. seealso::
+.. note::
 
    For large networks and/or deployments, please also see https://github.com/pevma/SEPTun.

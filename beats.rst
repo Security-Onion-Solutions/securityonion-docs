@@ -33,7 +33,7 @@ Install Winlogbeat and copy ``winlogbeat.example.yml`` to ``winlogbeat.yml`` if 
 
 Once ``winlogbeat.yml`` is configured properly, start the Winlogbeat service.
 
-.. seealso::
+.. note::
 
 	Check out our Winlogbeat video at https://youtu.be/Xz-7oDrZdQY!
 

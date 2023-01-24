@@ -39,7 +39,7 @@ If any files are images, they can be viewed on the Images tab.
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     | For more information about NetworkMiner, please see:
     | https://www.netresec.com/?page=networkminer

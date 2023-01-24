@@ -56,7 +56,7 @@ or
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Suricata and Zeek, please see the :ref:`suricata` and :ref:`zeek` sections.
 

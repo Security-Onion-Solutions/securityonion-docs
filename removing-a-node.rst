@@ -75,7 +75,7 @@ Then based on that output, update ``_cluster/settings`` by sending that node sec
     }
 
 
-.. seealso::
+.. note::
 
    | For more information, please see:
    | https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-remote-clusters.html#configure-remote-clusters-dynamic

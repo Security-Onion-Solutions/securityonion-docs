@@ -54,6 +54,6 @@ If a magic wand appears in the Output box, then CyberChef has detected some appl
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about CyberChef, please see https://github.com/gchq/CyberChef.

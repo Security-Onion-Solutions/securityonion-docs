@@ -22,7 +22,7 @@ We also sponsored the development of Community ID support in :ref:`osquery`.
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     | For more information about Community ID, please see:
     | https://github.com/corelight/community-id-spec

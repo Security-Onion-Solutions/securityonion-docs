@@ -48,6 +48,6 @@ Review the extracted file(s).
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Wireshark, please see https://www.wireshark.org/.

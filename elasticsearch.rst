@@ -39,7 +39,7 @@ Parsing
 
 In Security Onion 2, Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`filebeat`. Elasticsearch then parses and stores those logs. Parsers are stored in ``/opt/so/conf/elasticsearch/ingest/``.  Custom ingest parsers can be placed in ``/opt/so/saltstack/local/salt/elasticsearch/files/ingest/``.   To make these changes take effect, restart Elasticsearch using ``so-elasticsearch-restart``.
 
-.. seealso::
+.. note::
 
     | For more about Elasticsearch ingest parsing, please see:
     | https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest.html
@@ -498,7 +498,7 @@ Elasticsearch 8 no longer includes GeoIP databases by default, but we add GeoIP 
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     | For more information about Elasticsearch, please see:
     | https://www.elastic.co/products/elasticsearch
