@@ -134,6 +134,6 @@ Zeek
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Docker, please see https://www.docker.com/what-docker.

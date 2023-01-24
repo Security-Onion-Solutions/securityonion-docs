@@ -13,6 +13,6 @@ You can modify Elastic Fleet configuration by going to :ref:`administration` -->
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Fleet, please see https://www.elastic.co/guide/en/kibana/current/fleet.html.

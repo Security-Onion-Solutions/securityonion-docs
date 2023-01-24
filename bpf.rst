@@ -76,7 +76,7 @@ Troubleshooting BPF using tcpdump
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
    Check out our BPF video at https://youtu.be/uamNOjtUi4Y!
 

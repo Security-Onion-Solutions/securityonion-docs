@@ -132,6 +132,6 @@ Elastalert diagnostic logs are in ``/opt/so/log/elastalert/``. Depending on what
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about ElastAlert, please see https://elastalert2.readthedocs.io/en/latest/.

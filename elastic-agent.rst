@@ -20,6 +20,6 @@ Once the agent starts sending logs, you should be able to find them in :ref:`das
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about the Elastic Agent, please see https://www.elastic.co/guide/en/fleet/current/fleet-overview.html.

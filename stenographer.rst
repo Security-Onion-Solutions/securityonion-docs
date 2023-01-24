@@ -78,6 +78,6 @@ VLAN tags
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about stenographer, please see https://github.com/google/stenographer.

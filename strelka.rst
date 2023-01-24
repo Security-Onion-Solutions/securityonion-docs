@@ -61,6 +61,6 @@ Strelka diagnostic logs are in ``/nsm/strelka/log/``. Depending on what you’re
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Strelka, please see https://github.com/target/strelka.

@@ -10,7 +10,7 @@ Elastic components and Security Onion components are licensed under the Elastic 
 .. image:: images/07_setup_license.png
   :target: _images/07_setup_license.png
 
-.. seealso::
+.. note::
 
    | You can find the full text of the Elastic License 2.0 (ELv2) at:
    | https://securityonion.net/license

@@ -73,6 +73,6 @@ The root cause of this error is a state trying to run on a minion when another s
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Salt, please see https://docs.saltstack.com/en/latest/.

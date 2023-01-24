@@ -13,6 +13,6 @@ You can modify nginx configuration by going to :ref:`administration` --> Configu
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about nginx, please see https://nginx.org/.

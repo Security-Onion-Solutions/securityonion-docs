@@ -180,6 +180,6 @@ Playbook logs can be found in ``/opt/so/log/playbook/``. Depending on what you'r
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
 	Check out our Detecting Hashes video at https://youtu.be/pK8mS60Sk5s!

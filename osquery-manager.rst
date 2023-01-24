@@ -8,6 +8,6 @@ Osquery Manager
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Osquery Manager, please see https://docs.elastic.co/en/integrations/osquery_manager.

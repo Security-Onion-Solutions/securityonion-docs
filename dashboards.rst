@@ -8,7 +8,7 @@ Dashboards
 .. image:: images/dashboards.png
   :target: _images/dashboards.png
 
-.. seealso::
+.. note::
 
     Check out our Dashboards video at https://youtu.be/xUBhyF7se8s!
 

@@ -5,7 +5,7 @@ Syslog Output
 
 If you want to send logs to an external system, you can configure :ref:`logstash` to output to syslog.
 
-.. seealso::
+.. note::
 
    | For more information about Logstash's syslog output plugin, please see:
    | https://www.elastic.co/guide/en/logstash/current/plugins-outputs-syslog.html

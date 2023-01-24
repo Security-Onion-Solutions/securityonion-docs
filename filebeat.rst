@@ -413,7 +413,7 @@ Walkthrough: Netflow Logs
 
 In this brief walkthrough, we’ll use the ``netflow`` module for Filebeat to ingest Netflow logs into Security Onion.
 
-.. seealso::
+.. note::
 
 	Check out our Netflow video at https://youtu.be/ew5gtVjAs7g!
 
@@ -518,6 +518,6 @@ Assuming you have Netflow sources sending data, you should now start to see data
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Filebeat, please see https://www.elastic.co/beats/filebeat.

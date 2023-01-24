@@ -62,7 +62,7 @@ Those files will be then be placed in ``/opt/so/conf/grafana/etc/files`` on the 
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
   Check out our Grafana Alarms video at https://youtu.be/8FmZ4MRe8Uk.
 

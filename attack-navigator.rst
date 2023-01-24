@@ -32,7 +32,7 @@ Navigator reads its configuration from ``/opt/so/conf/navigator/``. However, ple
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     | For more information about ATT&CK Navigator, please see:
     | https://github.com/mitre-attack/attack-navigator

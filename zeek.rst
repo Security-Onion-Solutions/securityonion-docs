@@ -39,7 +39,7 @@ Zeek uses :ref:`af-packet` so that you can spin up multiple Zeek workers to hand
 
 If you have multiple physical CPUs, you’ll most likely want to pin sniffing processes to a CPU in the same Non-Uniform Memory Access (NUMA) domain that your sniffing NIC is bound to.  Accessing a CPU in the same NUMA domain is faster than across a NUMA domain.  
 
-.. seealso::
+.. note::
 
     For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see https://github.com/brokenscripts/cpu_pinning.
 
@@ -326,6 +326,6 @@ If you want to disable Zeek globally across all your sensors, then you could add
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     For more information about Zeek, please see https://www.zeek.org/.

@@ -20,7 +20,7 @@ Security Onion enables the built-in Community ID support in both :ref:`zeek` and
 More Information
 ----------------
 
-.. seealso::
+.. note::
 
     | For more information about Community ID, please see:
     | https://github.com/corelight/community-id-spec
