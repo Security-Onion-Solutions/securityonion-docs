@@ -3,8 +3,20 @@
 Release Notes
 =============
 
+2.3.210 [20230202] Changes
+--------------------------
+
+- FIX: Add configured_vulns_ext_vars.yar to Strelka YARA exclusion list `#9701 <https://github.com/Security-Onion-Solutions/securityonion/issues/9701>`_
+- FIX: Improve Suricata DHCP parsing and dashboard `#9678 <https://github.com/Security-Onion-Solutions/securityonion/issues/9678>`_
+- UPGRADE: CyberChef 9.55.0 `#9673 <https://github.com/Security-Onion-Solutions/securityonion/issues/9673>`_
+- UPGRADE: Elastic 8.6.1 `#9594 <https://github.com/Security-Onion-Solutions/securityonion/issues/9594>`_
+- UPGRADE: MySQL 5.7.24 to 5.7.41 `#9616 <https://github.com/Security-Onion-Solutions/securityonion/issues/9616>`_
+- UPGRADE: Strelka 0.23.01.07 `#9687 <https://github.com/Security-Onion-Solutions/securityonion/issues/9687>`_
+- UPGRADE: Suricata 6.0.10 `#9403 <https://github.com/Security-Onion-Solutions/securityonion/issues/9403>`_
+- UPGRADE: Zeek 5.0.6 `#9695 <https://github.com/Security-Onion-Solutions/securityonion/issues/9695>`_
+
 2.3.200 [20230113] Changes
-----------------
+--------------------------
 
 - FEATURE: Add Consumption EPS to default Grid view `#9359 <https://github.com/Security-Onion-Solutions/securityonion/issues/9359>`_
 - FEATURE: Allow custom IDH HTTP Skins `#9045 <https://github.com/Security-Onion-Solutions/securityonion/issues/9045>`_
