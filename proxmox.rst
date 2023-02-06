@@ -8,7 +8,12 @@ Proxmox Virtual Environment is a virtualization platform similar to :ref:`vmware
 CPU
 ---
 
-Proxmox defaults to setting the CPU type to ``kvm64``. You may need to change this to ``host`` to pass through the host CPU type.
+Proxmox defaults to setting the VM CPU type to ``kvm64``. You may need to change this to ``host`` to pass through the host CPU type.
+
+Display
+-------
+
+If you plan to use :ref:`networkminer` or other Mono-based applications in a Proxmox VM, then you may need to set the VM Display to ``VMware compatible (vmware)``.
 
 NIC
 ---
