@@ -12,24 +12,19 @@ This appendix covers the process of upgrading from Ubuntu 16.04 to Ubuntu 18.04.
 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following.
 
-First, make sure that all Ubuntu packages are fully up-to-date:
+First, make sure that all Ubuntu packages are fully up-to-date and reboot:
 ::
 
-   sudo apt update && sudo apt upgrade -y
-
-Reboot:
-::
-
-   sudo reboot
+   sudo apt update && sudo apt upgrade -y && sudo reboot
 
 After rebooting, copy and paste the following into a terminal to prepare for the upgrade process:
 ::
 
+   sudo apt-mark unhold salt-* && \
+   sudo apt-mark unhold docker* && \
    sudo sed -i 's|deb \[arch=amd64\] https://download.docker.com|#deb [arch=amd64] https://download.docker.com|g' /etc/apt/sources.list && \
    sudo sed -i 's/^/#/' /etc/apt/sources.list.d/wazuh.list && \
-   sudo sed -i 's/^/#/' /etc/apt/sources.list.d/saltstack.list && \
-   sudo apt-mark unhold docker* && \
-   sudo apt-mark unhold salt-*
+   sudo sed -i 's/^/#/' /etc/apt/sources.list.d/saltstack.list
    
 Initiate the upgrade from Ubuntu 18.04 to Ubuntu 20.04:
 ::
