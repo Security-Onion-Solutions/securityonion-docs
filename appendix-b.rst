@@ -45,5 +45,7 @@ When prompted, accept all the defaults. When the upgrade is complete, it will pr
    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf && \
    sudo service network-manager restart && \
    sudo rm -rf /opt/so/state/influxdb* && \
-   sudo so-checkin
+   sudo salt-call state.highstate -linfo queue=True && \
+   sudo so-status
 
+Review the output and make sure everything is OK.
