@@ -3,7 +3,7 @@
 Appendix B
 ==========
 
-This appendix covers the process of upgrading from Ubuntu 16.04 to Ubuntu 18.04.
+This appendix covers the process of upgrading from Ubuntu 18.04 to Ubuntu 20.04.
 
 .. warning::
 
@@ -17,7 +17,7 @@ First, make sure that all Ubuntu packages are fully up-to-date and then initiate
 
    sudo apt update && sudo apt upgrade -y && sudo reboot
 
-After rebooting, copy and paste the following into a terminal to prepare for the upgrade process:
+After rebooting, copy and paste the following list of commands into a terminal to prepare for the upgrade process:
 ::
 
    sudo apt-mark unhold salt-* && \
@@ -31,7 +31,7 @@ Initiate the upgrade from Ubuntu 18.04 to Ubuntu 20.04:
    
    sudo do-release-upgrade
 
-When prompted, accept all the defaults. When the upgrade is complete, it will prompt you to reboot. After rebooting, copy and paste the following:
+When prompted, accept all the defaults. When the upgrade is complete, it will prompt you to reboot. After rebooting, copy and paste the following list of commands:
 ::
 
    sudo sed -i 's|# deb \[arch=amd64\] https://download.docker.com/linux/ubuntu bionic|deb [arch=amd64] https://download.docker.com/linux/ubuntu focal|g' /etc/apt/sources.list && \
