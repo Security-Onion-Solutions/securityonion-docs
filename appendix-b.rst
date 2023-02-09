@@ -8,11 +8,11 @@ This appendix covers the process of upgrading from Ubuntu 16.04 to Ubuntu 18.04.
 .. warning::
 
    - We do not provide any guarantees that the upgrade process will work! If the upgrade fails, be prepared to perform a fresh installation.
-   - Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc.  Failure to do so could result in an unsuccessful upgrade, requiring a fresh installation.
+   - Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc. Failure to do so could result in an unsuccessful upgrade, requiring a fresh installation.
 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following.
 
-First, make sure that all Ubuntu packages are fully up-to-date and reboot:
+First, make sure that all Ubuntu packages are fully up-to-date and then initiate a reboot:
 ::
 
    sudo apt update && sudo apt upgrade -y && sudo reboot
