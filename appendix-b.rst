@@ -39,7 +39,8 @@ When prompted, accept all the defaults. When the upgrade is complete, it will pr
    sudo sed -i 's/#//' /etc/apt/sources.list.d/saltstack.list && \
    sudo sed -i 's/bionic/focal/' /etc/apt/sources.list.d/saltstack.list && \
    sudo sed -i 's/18/20/' /etc/apt/sources.list.d/saltstack.list && \
-   sudo apt update && apt upgrade -y && \
+   sudo apt update && \
+   sudo apt upgrade -y && \
    sudo apt install salt-common salt-master salt-minion -y && \
    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf && \
    sudo service network-manager restart && \
