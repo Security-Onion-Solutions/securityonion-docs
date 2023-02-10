@@ -27,7 +27,7 @@ After rebooting, copy and paste the following multi-line command into a terminal
    sudo sed -i 's/^/#/' /etc/apt/sources.list.d/saltstack.list && \
    sudo do-release-upgrade
 
-When prompted about configuration options, accept the default option. When the upgrade is complete, it will prompt you to reboot. After rebooting, copy and paste the following multi-line command:
+When prompted about configuration options, accept the default option. When the upgrade is complete, it will prompt you to reboot. After rebooting, copy and paste the following multi-line command into a terminal:
 ::
 
    sudo sed -i 's|# deb \[arch=amd64\] https://download.docker.com/linux/ubuntu bionic|deb [arch=amd64] https://download.docker.com/linux/ubuntu focal|g' /etc/apt/sources.list && \
