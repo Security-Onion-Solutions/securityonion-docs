@@ -3,7 +3,7 @@
 Appendix B
 ==========
 
-This appendix covers the process of upgrading from Ubuntu 18.04 to Ubuntu 20.04.
+This appendix covers the process of upgrading a Security Onion 2.3 standalone installation from Ubuntu 18.04 to Ubuntu 20.04.
 
 .. warning::
 
@@ -17,21 +17,17 @@ First, make sure that all Ubuntu packages are fully up-to-date and then initiate
 
    sudo apt update && sudo apt upgrade -y && sudo reboot
 
-After rebooting, copy and paste the following list of commands into a terminal to prepare for the upgrade process:
+After rebooting, copy and paste the following multi-line command into a terminal to initiate the upgrade process:
 ::
 
    sudo apt-mark unhold salt-* && \
    sudo apt-mark unhold docker* && \
    sudo sed -i 's|deb \[arch=amd64\] https://download.docker.com|#deb [arch=amd64] https://download.docker.com|g' /etc/apt/sources.list && \
    sudo sed -i 's/^/#/' /etc/apt/sources.list.d/wazuh.list && \
-   sudo sed -i 's/^/#/' /etc/apt/sources.list.d/saltstack.list
-   
-Initiate the upgrade from Ubuntu 18.04 to Ubuntu 20.04:
-::
-   
+   sudo sed -i 's/^/#/' /etc/apt/sources.list.d/saltstack.list && \
    sudo do-release-upgrade
 
-When prompted, accept all the defaults. When the upgrade is complete, it will prompt you to reboot. After rebooting, copy and paste the following list of commands:
+When prompted about configuration options, accept the default option. When the upgrade is complete, it will prompt you to reboot. After rebooting, copy and paste the following multi-line command:
 ::
 
    sudo sed -i 's|# deb \[arch=amd64\] https://download.docker.com/linux/ubuntu bionic|deb [arch=amd64] https://download.docker.com/linux/ubuntu focal|g' /etc/apt/sources.list && \
@@ -48,4 +44,4 @@ When prompted, accept all the defaults. When the upgrade is complete, it will pr
    sudo salt-call state.highstate -linfo queue=True && \
    sudo so-status
 
-Review the output and make sure everything is OK.
+Review the output for any errors and make sure all services started properly.
