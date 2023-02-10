@@ -1,7 +1,7 @@
-.. _appendix:
+.. _appendix-a:
 
-Appendix
-========
+Appendix A
+==========
 
 This appendix covers the process of upgrading from the old Security Onion 16.04 to the new Security Onion 2.
 

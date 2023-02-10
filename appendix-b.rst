@@ -56,7 +56,7 @@ If this node has any sniffing interfaces, then you may need to update NetworkMan
    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf && \
    sudo service network-manager restart
 
-If this node is a manager, then you may need to remove influxdb files:
+If this node is a manager, then you may need to remove some influxdb files:
 ::
 
    sudo rm -rf /opt/so/state/influxdb*

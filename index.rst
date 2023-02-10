@@ -28,6 +28,7 @@ Security Onion Documentation
    utilities
    help
    security
-   appendix
+   appendix-a
+   appendix-b
    release-notes
    cheat-sheet
