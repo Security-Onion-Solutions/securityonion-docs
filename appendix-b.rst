@@ -3,21 +3,24 @@
 Appendix B
 ==========
 
-This appendix covers the process of upgrading a Security Onion 2.3 standalone installation from Ubuntu 18.04 to Ubuntu 20.04.
+This appendix covers the process of upgrading a Security Onion 2.3 deployment from Ubuntu 18.04 to Ubuntu 20.04.
 
 .. warning::
 
    - We do not provide any guarantees that the upgrade process will work! If the upgrade fails, be prepared to perform a fresh installation.
    - Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc. Failure to do so could result in an unsuccessful upgrade, requiring a fresh installation.
+   - Plan on at least one hour per node to complete the upgrade process.
 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following.
 
-First, make sure that all Ubuntu packages are fully up-to-date and then reboot:
+If you have a distributed deployment, you will need to perform the following steps on the manager first and then on each of the remaining nodes.
+
+First, make sure that all Ubuntu packages are fully up-to-date and then reboot: 
 ::
 
    sudo apt update && sudo apt upgrade -y && sudo reboot
 
-After rebooting, copy and paste the following multi-line command to initiate the upgrade process:
+Copy and paste the following multi-line command to initiate the upgrade process:
 ::
 
    sudo apt-mark unhold salt-* && \
@@ -37,11 +40,25 @@ When prompted about configuration options, accept the default option. When the u
    sudo sed -i 's|18|20|' /etc/apt/sources.list.d/saltstack.list && \
    sudo apt update && \
    sudo apt upgrade -y && \
-   sudo apt install salt-common salt-master salt-minion -y && \
-   sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf && \
-   sudo service network-manager restart && \
-   sudo rm -rf /opt/so/state/influxdb* && \
-   sudo salt-call state.highstate -linfo queue=True ; \
-   sudo so-status
+   sudo apt install salt-common salt-master salt-minion -y
 
-Review the output for any errors and make sure all services started properly.
+If this node has any sensor components, then you may need to update NetworkManager:
+::
+
+   sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf && \
+   sudo service network-manager restart
+
+If this node is a manager, then you may need to remove influxdb files:
+::
+
+   sudo rm -rf /opt/so/state/influxdb*
+
+Run all salt states and review the output for any errors:
+::
+
+   sudo salt-call state.highstate -linfo queue=True
+
+Finally, make sure all services started properly:
+::
+
+   sudo so-status
