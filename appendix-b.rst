@@ -12,12 +12,12 @@ This appendix covers the process of upgrading a Security Onion 2.3 standalone in
 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following.
 
-First, make sure that all Ubuntu packages are fully up-to-date and then initiate a reboot:
+First, make sure that all Ubuntu packages are fully up-to-date and then reboot:
 ::
 
    sudo apt update && sudo apt upgrade -y && sudo reboot
 
-After rebooting, copy and paste the following multi-line command into a terminal to initiate the upgrade process:
+After rebooting, copy and paste the following multi-line command to initiate the upgrade process:
 ::
 
    sudo apt-mark unhold salt-* && \
@@ -27,7 +27,7 @@ After rebooting, copy and paste the following multi-line command into a terminal
    sudo sed -i 's|^deb|# deb|' /etc/apt/sources.list.d/saltstack.list && \
    sudo do-release-upgrade
 
-When prompted about configuration options, accept the default option. When the upgrade is complete, it will prompt you to reboot. After rebooting, copy and paste the following multi-line command into a terminal:
+When prompted about configuration options, accept the default option. When the upgrade is complete, it will prompt you to reboot. After rebooting, copy and paste the following multi-line command:
 ::
 
    sudo sed -i 's|# deb \[arch=amd64\] https://download.docker.com/linux/ubuntu bionic|deb [arch=amd64] https://download.docker.com/linux/ubuntu focal|g' /etc/apt/sources.list && \
