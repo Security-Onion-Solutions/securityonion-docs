@@ -10,6 +10,7 @@ This appendix covers the process of upgrading a Security Onion 2.3 deployment fr
    - We do not provide any guarantees that the upgrade process will work! If the upgrade fails, be prepared to perform a fresh installation.
    - Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc. Failure to do so could result in an unsuccessful upgrade, requiring a fresh installation.
    - Plan on at least one hour per node to complete the upgrade process.
+   - If you have a distributed deployment with nodes configured to pull updates from the manager, you may need to comment out the proxy config in /etc/apt/apt.conf.d/00Proxy and make sure they can reach the Internet directly.
 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to do the following.
 
@@ -42,7 +43,7 @@ When prompted about configuration options, accept the default option. When the u
    sudo apt upgrade -y && \
    sudo apt install salt-common salt-master salt-minion -y
 
-If this node has any sensor components, then you may need to update NetworkManager:
+If this node has any sniffing interfaces, then you may need to update NetworkManager:
 ::
 
    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf && \
