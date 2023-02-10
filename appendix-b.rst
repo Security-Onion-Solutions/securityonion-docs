@@ -1,7 +1,7 @@
 .. _appendix-b:
 
-Appendix B
-==========
+Appendix B: Ubuntu 18.04
+========================
 
 This appendix covers the process of upgrading a Security Onion 2.3 deployment from Ubuntu 18.04 to Ubuntu 20.04.
 
