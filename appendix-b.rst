@@ -14,7 +14,9 @@ This appendix covers the process of upgrading a Security Onion 2.3 deployment fr
 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade, you should be able to follow the steps below.
 
-If you have a distributed deployment, you will need to perform the steps on the manager first and then on each of the remaining nodes.
+.. note::
+
+   If you have a distributed deployment, you will need to perform the steps on the manager first and then on each of the remaining nodes.
 
 First, verify that the system is currently on Ubuntu 18.04:
 ::
