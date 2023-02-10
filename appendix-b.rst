@@ -41,7 +41,7 @@ When prompted about configuration options, accept the default option. When the u
    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf && \
    sudo service network-manager restart && \
    sudo rm -rf /opt/so/state/influxdb* && \
-   sudo salt-call state.highstate queue=True && \
+   sudo salt-call state.highstate -linfo queue=True ; \
    sudo so-status
 
 Review the output for any errors and make sure all services started properly.
