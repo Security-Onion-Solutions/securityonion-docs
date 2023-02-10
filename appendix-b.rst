@@ -44,6 +44,7 @@ After rebooting, copy and paste the following multi-line command:
 ::
 
    sudo sed -i 's|# deb \[arch=amd64\] https://download.docker.com/linux/ubuntu bionic|deb [arch=amd64] https://download.docker.com/linux/ubuntu focal|g' /etc/apt/sources.list && \
+   sudo sed -i 's|bionic|focal|' /etc/apt/sources.list && \
    sudo sed -i 's|# deb|deb|' /etc/apt/sources.list.d/wazuh.list && \
    sudo sed -i 's|# deb|deb|' /etc/apt/sources.list.d/saltstack.list && \
    sudo sed -i 's|bionic|focal|' /etc/apt/sources.list.d/saltstack.list && \
