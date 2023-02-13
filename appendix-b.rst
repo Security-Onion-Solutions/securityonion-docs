@@ -3,10 +3,11 @@
 Appendix B: Ubuntu 18.04
 ========================
 
-This appendix covers the process of upgrading a Security Onion 2.3 deployment from Ubuntu 18.04. Ubuntu 18.04 reaches the end of Ubuntu standard support in April 2023 (https://wiki.ubuntu.com/Releases).
+This appendix covers the process of upgrading a Security Onion 2.3 deployment from Ubuntu 18.04. 
 
 .. warning::
 
+   - Ubuntu 18.04 reaches the end of Ubuntu standard support in April 2023 (https://wiki.ubuntu.com/Releases).
    - We do not provide any guarantees that the Ubuntu in-place upgrade process will work! If the upgrade fails, be prepared to perform a fresh installation.
    - Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc. Failure to do so could result in an unsuccessful upgrade, requiring a fresh installation.
    - Plan on at least one hour per node to complete the upgrade process.
