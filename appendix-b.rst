@@ -12,7 +12,7 @@ This appendix covers the process of upgrading a Security Onion 2.3 deployment fr
    - Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc. Failure to do so could result in an unsuccessful upgrade, requiring a fresh installation.
    - Plan on at least one hour per node to complete the upgrade process.
    - If you have a distributed deployment with nodes configured to pull updates from the manager, you may need to comment out the proxy config in ``/etc/apt/apt.conf.d/00Proxy`` and make sure they can reach the Internet directly.
-   - In Security Onion 2.4, we will begin phasing out support for Ubuntu (https://blog.securityonion.net/2023/02/security-onion-in-2022-and-2023.html), so you may want to take this opportunity to go ahead and migrate from Ubuntu to our Security Onion ISO image.
+   - Please keep in mind that, in Security Onion 2.4, we will begin phasing out support for Ubuntu (https://blog.securityonion.net/2023/02/security-onion-in-2022-and-2023.html).
 
 If you have reviewed all of the warnings above and still want to attempt an in-place upgrade from Ubuntu 18.04 to Ubuntu 20.04, you should be able to follow the steps below.
 
