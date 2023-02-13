@@ -5,6 +5,9 @@ End Of Life
 
 This page lists End Of Life (EOL) dates for older versions of Security Onion and older components.
 
+| Ubuntu 18.04 reaches End of Ubuntu Standard Support in April 2023:
+| https://blog.securityonion.net/2023/02/ubuntu-1804-reaches-end-of-ubuntu.html
+
 | TheHive 3 reached EOL on December 31, 2021. TheHive and Cortex were fully removed from Security Onion in Security Onion 2.3.120:
 | https://blog.securityonion.net/2022/04/security-onion-23120-now-available.html
 
