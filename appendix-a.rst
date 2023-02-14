@@ -15,6 +15,7 @@ This appendix covers the process of upgrading from the old Security Onion 16.04 
    - There will be no way to migrate sguild data from Security Onion 16.04 to Security Onion 2.
    - You may need to purge pcap to make free space for the upgrade process. Any pcap remaining after the upgrade can only be accessed via tcpdump.
    - We do not provide any guarantees that the upgrade process will work! If the upgrade fails, be prepared to perform a fresh installation of Security Onion 2.
+   - Ubuntu 18.04 reaches the end of Ubuntu standard support in April 2023 (https://wiki.ubuntu.com/Releases). So if you upgrade from Ubuntu 16.04 to 18.04 then you will need to immediately upgrade from 18.04 to 20.04 as shown in :ref:`appendix-b`.
  
 For the reasons listed above, we recommend that most users procure new hardware and perform a fresh installation of Security Onion 2.
 
@@ -194,3 +195,4 @@ Example configuration may include:
 - Custom Logstash config (``/etc/logstash/custom``)
 - Custom Zeek scripts or BPFs (``/opt/zeek/share/zeek/policy``, ``/etc/nsm/rules/bpf.conf``)
 
+Now that you've upgraded from Ubuntu 16.04 to 18.04, you should immediately upgrade from 18.04 to 20.04 as shown in :ref:`appendix-b`.

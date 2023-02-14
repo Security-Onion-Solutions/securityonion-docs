@@ -12,7 +12,7 @@ As the :ref:`hardware` section mentions, the MINIMUM requirement is 200GB storag
 ISO
 ---
 
-If you use our Security Onion ISO image, it will automatically partition your disk for you. If you instead use CentOS 7, Ubuntu 18.04, or Ubuntu 20.04, you will most likely need to manually modify their default partition layout.
+If you use our Security Onion ISO image, it will automatically partition your disk for you. If you instead use CentOS 7 or Ubuntu 20.04, you will most likely need to manually modify their default partition layout.
 
 LVM
 ---
@@ -42,7 +42,7 @@ Docker images are currently written to ``/var/lib/docker/``. The current set of 
 Other
 -----
 
-If you install using a standard CentOS 7, Ubuntu 18.04, or Ubuntu 20.04 ISO, then those installers may try to dedicate a large amount of space to ``/home``. You may need to adjust this to ensure that it is not overly large and wasting valuable disk space.
+If you install using a standard CentOS 7 or Ubuntu 20.04 ISO, then those installers may try to dedicate a large amount of space to ``/home``. You may need to adjust this to ensure that it is not overly large and wasting valuable disk space.
 
 Example
 -------
