@@ -48,7 +48,7 @@ MISP rules will be downloaded via cron-job at the interval specified in ``/etc/c
 
 Elastalert
 ----------
-If we want to send events to :ref:`hive` based on the MISP NIDS rules we've pulled into Security Onion, we can implement an Elastalert rule like the following, filtering on the ``alert`` field for NIDS alerts:
+If we want to send events to TheHive based on the MISP NIDS rules we've pulled into Security Onion, we can implement an Elastalert rule like the following, filtering on the ``alert`` field for NIDS alerts:
 
 :: 
 
@@ -97,9 +97,9 @@ If we want to send events to :ref:`hive` based on the MISP NIDS rules we've pull
         - other: '{match[interface]}'
         - other: '{match[sid]}'
 
-Simply fill in the pertinent :ref:`hive` instance connection details above, and place this rule in ``/etc/elastalert/rules`` as ``misp-nids-hive.yaml``.
+Simply fill in the pertinent TheHive instance connection details above, and place this rule in ``/etc/elastalert/rules`` as ``misp-nids-hive.yaml``.
 
-As a result, you will receive alerts in :ref:`hive` for any matching events in the ``logstash-ids-*`` index.  The following observables will be generated for the alert:
+As a result, you will receive alerts in TheHive for any matching events in the ``logstash-ids-*`` index.  The following observables will be generated for the alert:
 
 - Source/Destination IP from alert
 - Sensor interface from IDS alert

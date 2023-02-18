@@ -886,7 +886,7 @@ Release Notes
 2.3.0 Changes
 -------------
 
-- We have a new :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in :ref:`hive`. Please note that :ref:`hive` no longer receives alerts directly. 
+- We have a new :ref:`alerts` interface for reviewing alerts and acknowledging or escalating them. Escalating creates a new case in TheHive. Please note that TheHive no longer receives alerts directly. 
 - Kibana no longer presents the option to create alerts from events, but instead allows creation of cases from events.
 - Our Security Onion ISO now works for UEFI as well as Secure Boot.
 - :ref:`airgap` deployments can now be updated using the latest ISO. Please read this documentation carefully. 
