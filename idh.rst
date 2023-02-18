@@ -118,7 +118,7 @@ Note: The previously-configured port is not automatically closed on the IDH node
 Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the manager in ``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``.
 
 Custom Configuration - Example: Port Change
-------------------------------------------
+-------------------------------------------
 
 For example, suppose that we already have the HTTP service running but we want to change the default port from ``80`` to ``8080``.
 
@@ -158,7 +158,7 @@ You should now be able to browse to the HTTP server on the IDH node on TCP/8080.
 
 
 Custom Configuration - Example: Custom HTTP Skin
-------------------------------------------
+------------------------------------------------
 
 For example, suppose that we already have the HTTP service running but we want to change the default skin to a custom skin.
 
