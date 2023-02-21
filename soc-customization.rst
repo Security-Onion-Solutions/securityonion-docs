@@ -93,6 +93,14 @@ Here is an example of a background action that submits a javascript fetch to a r
   
 The ``options`` object is the same options object that will be passed into the Javascript ``fetch()`` method. You can read more about that at `<https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>`_.
 
+There may come a time where you are not sure what fields to target for the request body, or you may want to forward events of different types that contain different field names. In this case, the ``eventJson`` variable can be used to pass the entire event as a JSON string.
+
+To use this variable, construct the body of the request within our action, like so:
+
+``"body": "{eventJson}"``
+
+*NOTE*: You may run into issues using the ``evenJson`` variable, depending on the size of the event and the amount of data being passed in the request.
+
 Cases
 -----
 
