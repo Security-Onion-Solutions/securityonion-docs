@@ -95,7 +95,7 @@ The ``options`` object is the same options object that will be passed into the J
 
 There may come a time where you are not sure what fields to target for the request body, or you may want to forward events of different types that contain different field names. In this case, the ``eventJson`` variable can be used to pass the entire event as a JSON string.
 
-To use this variable, construct the body of the request within the action, like so:
+To use this variable, construct the body of the request within the action configuration, like so:
 
 ``"body": "{eventJson}"``
 
