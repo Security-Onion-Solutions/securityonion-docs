@@ -99,7 +99,7 @@ To use this variable, construct the body of the request within the action config
 
 ``"body": "{eventJson}"``
 
-*NOTE*: You may run into issues using the ``evenJson`` variable, depending on the size of the event and the amount of data being passed in the request.
+*NOTE*: You may run into issues using the ``eventJson`` variable, depending on the size of the event and the amount of data being passed in the request.
 
 Cases
 -----
