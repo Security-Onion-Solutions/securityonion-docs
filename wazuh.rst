@@ -212,7 +212,7 @@ Adding Agents
 
 .. warning::
 
-	Before deploying lots of Wazuh agents to your enterprise, please be aware that Wazuh will not be included in the upcoming Security Onion 2.4.
+	Before deploying lots of Wazuh agents to your enterprise, please be aware that Wazuh will not be included in the upcoming Security Onion 2.4. For more information, please see https://blog.securityonion.net/2023/02/security-onion-in-2022-and-2023.html.
 
 Navigate to the Downloads page in :ref:`soc` and download the appropriate Wazuh agent for your endpoint. This will ensure that you get the correct version of Wazuh. If your endpoint is not listed there, you can check the Wazuh website at https://documentation.wazuh.com/3.13/installation-guide/packages-list/index.html.
 
