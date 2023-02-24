@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.3.220 [20230223] Changes
+2.3.220 [20230224] Changes
 --------------------------
 
 - FIX: Trim rule.name to fit the so_case.title field `#9781 <https://github.com/Security-Onion-Solutions/securityonion/issues/9781>`_
