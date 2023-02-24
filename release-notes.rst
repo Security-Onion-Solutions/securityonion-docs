@@ -3,6 +3,16 @@
 Release Notes
 =============
 
+2.3.220 [20230223] Changes
+--------------------------
+
+- FIX: Trim rule.name to fit the so_case.title field `#9781 <https://github.com/Security-Onion-Solutions/securityonion/issues/9781>`_
+- UPGRADE: Elastic 8.6.2 `#9804 <https://github.com/Security-Onion-Solutions/securityonion/issues/9804>`_
+- UPGRADE: FleetDM 4.27.1 `#9750 <https://github.com/Security-Onion-Solutions/securityonion/issues/9750>`_
+- UPGRADE: Golang to 1.20 `#9839 <https://github.com/Security-Onion-Solutions/securityonion/issues/9839>`_
+- UPGRADE: Grafana 9.2.10 `#9808 <https://github.com/Security-Onion-Solutions/securityonion/issues/9808>`_
+- UPGRADE: Zeek 5.0.7 `#9831 <https://github.com/Security-Onion-Solutions/securityonion/issues/9831>`_
+
 2.3.210 [20230202] Changes
 --------------------------
 
