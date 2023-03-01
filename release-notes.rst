@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.220 Hotfix [20230301] Changes
+---------------------------------
+
+- FIX: Curator configuration to align with requirements for Curator 8.0.x `#9871 <https://github.com/Security-Onion-Solutions/securityonion/issues/9871>`_
+
 2.3.220 [20230224] Changes
 --------------------------
 
