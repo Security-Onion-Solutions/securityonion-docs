@@ -8,7 +8,7 @@ Security Onion can consume many kinds of host logs. You can send logs to Securit
 - Choose :ref:`elastic-agent` for comprehensive telemetry if you can install an agent on the host.
 - Choose :ref:`syslog` if you can't install an agent but the device supports sending standard syslog. Examples include firewalls, switches, routers, and other network devices.
 
-For Windows endpoints, you can optionally augment the standard Windows logging with :ref:`sysmon` and/or :ref:`autoruns`. Those additional logs can then be transported by whatever mechanism you chose above.
+For Windows endpoints, you can optionally augment the standard Windows logging with :ref:`sysmon` and/or :ref:`autoruns`.
 
 .. toctree::
    :maxdepth: 2
