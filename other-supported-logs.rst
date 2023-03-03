@@ -30,7 +30,7 @@ This will enable the following :ref:`elastic-agent` inputs:
 
 ``/nsm/rita/open-connections.csv``  
 
-If you are installing :ref:`elastic-agent` on a non-Security Onion node or your filenames differ, you will need to copy the :ref:`elastic-agent` configuration from ``/opt/so/saltstack/default/salt/elastic-agent/etc/elastic-agent.yml`` to ``/opt/so/saltstack/local/salt/elastic-agent/etc/elastic-agent.yml`` (or modify on the non-Security Onion node in the normal Filebeat configuration file) and emulate the path/filename accordingly.
+If you are installing :ref:`elastic-agent` on a non-Security Onion node or your filenames differ, you will need to copy the :ref:`elastic-agent` configuration from ``/opt/so/saltstack/default/salt/elastic-agent/etc/elastic-agent.yml`` to ``/opt/so/saltstack/local/salt/elastic-agent/etc/elastic-agent.yml`` (or modify on the non-Security Onion node in the normal Elastic Agent configuration file) and emulate the path/filename accordingly.
 
 Once ingested into Security Onion, you should be able to search for :ref:`rita` logs in :ref:`dashboards` or :ref:`hunt` using ``event.module:rita | groupby event.dataset``.
 

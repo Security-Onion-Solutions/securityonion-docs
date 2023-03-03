@@ -44,7 +44,7 @@ All nodes to manager:
 - 8086 (influxdb)
 - 4505 (Salt)
 - 4506 (Salt)
-- 5644 (Filebeat)
+- 5644 (Elastic Agent)
 - 443 (Sensoroni)
 
 Search nodes from/to manager:
