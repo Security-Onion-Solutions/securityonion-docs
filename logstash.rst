@@ -40,6 +40,8 @@ Parsing
 
 Logstash does not parse logs in Security Onion, so modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
 
+If you want to add a legacy Logstash parser (not recommended) then you can copy the file to ``local``. Once the file is in ``local``, then depending on which nodes you want it to apply to, you can add the proper value to either ``/opt/so/saltstack/local/pillar/logstash/manager.sls``, ``/opt/so/saltstack/local/pillar/logstash/search.sls``, or ``/opt/so/saltstack/local/pillar/minions/$hostname_searchnode.sls`` as in the previous examples.
+
 Adding New Logs
 ---------------
 
@@ -78,11 +80,6 @@ If you are modifying or adding a new ``search`` pipeline for all search nodes, t
             - custom/9701_output_custom.conf.jinja
 
 If you only want to modify the search pipeline for a single search node, then the process is similar to the previous example. However, instead of placing ``logstash:pipelines:search:config`` in ``/opt/so/saltstack/local/pillar/logstash/search.sls``, it would be placed in ``/opt/so/saltstack/local/pillar/minions/$hostname_searchnode.sls``. 
-
-Logstash Parsing
-----------------
-
-If you want to add a legacy Logstash parser (not recommended) then you can copy the file to ``local``. Once the file is in ``local``, then depending on which nodes you want it to apply to, you can add the proper value to either ``/opt/so/saltstack/local/pillar/logstash/manager.sls``, ``/opt/so/saltstack/local/pillar/logstash/search.sls``, or ``/opt/so/saltstack/local/pillar/minions/$hostname_searchnode.sls`` as in the previous examples.
 
 Forwarding Events to an External Destination
 --------------------------------------------
