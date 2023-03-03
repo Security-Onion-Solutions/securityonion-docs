@@ -127,7 +127,7 @@ As you can see, Zeek log data can provide a wealth of information to the analyst
 VLAN tags
 ---------
 
-If you want to include VLAN tags in your conn.log, then you can enable the ``protocols/conn/vlan-logging`` script (already included in Zeek but disabled by default) in your Zeek configuration as shown in the Custom Scripts section below.
+You can find VLAN tags in the conn.log. :ref:`dashboards` includes a groupby for this field on the Connections dashboard.
 
 Intel
 -----
