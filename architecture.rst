@@ -12,7 +12,7 @@ The simplest architecture is an ``Import`` node. An import node is a single stan
 
 Evaluation
 ----------
-The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`filebeat` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for a quick installation to temporarily test out Security Onion. It is **not** designed for production usage at all.
+The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`elastic-agent` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for a quick installation to temporarily test out Security Onion. It is **not** designed for production usage at all.
 
 .. image:: images/eval.png
    :align: center
@@ -21,7 +21,7 @@ The next architecture is ``Evaluation``. It's a little more complicated than ``I
 
 Standalone
 ----------
-``Standalone`` is similar to ``Evaluation`` in that all components run on one box. However, instead of :ref:`filebeat` sending logs directly to :ref:`elasticsearch`, it sends them to :ref:`logstash`, which sends them to :ref:`redis` for queuing. A second Logstash pipeline pulls the logs out of :ref:`redis` and sends them to :ref:`elasticsearch`, where they are parsed and indexed.
+``Standalone`` is similar to ``Evaluation`` in that all components run on one box. However, instead of :ref:`elastic-agent` sending logs directly to :ref:`elasticsearch`, it sends them to :ref:`logstash`, which sends them to :ref:`redis` for queuing. A second Logstash pipeline pulls the logs out of :ref:`redis` and sends them to :ref:`elasticsearch`, where they are parsed and indexed.
 
 This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
@@ -114,7 +114,7 @@ A manager search node runs the following components:
 Forward Node
 ~~~~~~~~~~~~
 
-A ``forward node`` is a sensor that forwards all logs via :ref:`filebeat` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node).
+A ``forward node`` is a sensor that forwards all logs via :ref:`elastic-agent` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node).
 
 Forward nodes run the following components:
 
@@ -148,7 +148,7 @@ An Elastic Fleet Standalone Node is ideal when there are a large amount of Elast
 Receiver Node
 ~~~~~~~~~~~~~
 
-The Receiver Node runs :ref:`logstash` and :ref:`redis` and allows for events to continue to be processed by search nodes in the event the manager node is offline. When a receiver node joins the grid, :ref:`filebeat` on all nodes adds this new address as a load balanced :ref:`logstash` output. The search nodes add this new node as another :ref:`logstash` input. Receiver nodes are "active-active" and you can add as many as you want (within reason) and events will be balanced among them.
+The Receiver Node runs :ref:`logstash` and :ref:`redis` and allows for events to continue to be processed by search nodes in the event the manager node is offline. When a receiver node joins the grid, :ref:`elastic-agent` on all nodes adds this new address as a load balanced :ref:`logstash` output. The search nodes add this new node as another :ref:`logstash` input. Receiver nodes are "active-active" and you can add as many as you want (within reason) and events will be balanced among them.
 
 Intrusion Detection Honeypot (IDH) Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

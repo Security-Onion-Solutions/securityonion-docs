@@ -21,7 +21,7 @@ This shows how long the node has been online.
 Production EPS
 ~~~~~~~~~~~~~~
 
-Production EPS is how much a node is producing. This is taken from the number of events out in :ref:`filebeat`.
+Production EPS is how much a node is producing. This is taken from the number of events out in :ref:`elastic-agent`.
 
 Consumption EPS
 ~~~~~~~~~~~~~~~

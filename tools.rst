@@ -13,7 +13,7 @@ Security Onion would like to thank the following projects for their contribution
 - :ref:`docker`
 - :ref:`elastalert`
 - :ref:`elasticsearch`
-- :ref:`filebeat`
+- :ref:`elastic-agent`
 - :ref:`influxdb`
 - :ref:`kibana`
 - :ref:`logstash`

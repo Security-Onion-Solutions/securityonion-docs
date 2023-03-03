@@ -39,4 +39,4 @@ If you have plenty of RAM, disable swap altogether.
 
 Elastic
 -------
-You will want to make sure that each part of the pipeline is operating at maximum efficiency.  Depending on your configuration, this may include :ref:`filebeat`, :ref:`logstash`, :ref:`redis`, and :ref:`elasticsearch`. 
+You will want to make sure that each part of the pipeline is operating at maximum efficiency.  Depending on your configuration, this may include :ref:`elastic-agent`, :ref:`logstash`, :ref:`redis`, and :ref:`elasticsearch`. 

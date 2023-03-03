@@ -51,7 +51,7 @@ To forward Zeek logs to an external syslog collector, please see the :ref:`syslo
 Logs
 ----
 
-Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`filebeat`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
+Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`elastic-agent`, parsed by and stored in :ref:`elasticsearch`, and viewable in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
 
 We configure Zeek to output logs in JSON format. If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
 
