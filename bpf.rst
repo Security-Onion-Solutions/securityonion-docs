@@ -61,7 +61,7 @@ For example:
 
 .. warning::
 
-   | Please note that Stenographer should correctly record traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
+   | Please note that :ref:`stenographer` should correctly record traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
    | https://github.com/google/stenographer/issues/211
    
 Troubleshooting BPF using tcpdump
