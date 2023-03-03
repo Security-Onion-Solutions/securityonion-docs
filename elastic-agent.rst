@@ -7,6 +7,8 @@ From https://www.elastic.co/elastic-agent:
 
     With Elastic Agent you can collect all forms of data from anywhere with a single unified agent per host. One thing to install, configure, and scale.
       
+Each Security Onion node uses the Elastic Agent to transport logs to Elasticsearch. You can also deploy the Elastic Agent to your endpoints to transport logs to your Security Onion deployment.
+
 Deployment
 ----------
 
