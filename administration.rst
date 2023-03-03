@@ -35,7 +35,6 @@ The Configuration page allows you to configure various components of your grid i
 - elastalert
 - elasticsearch
 - firewall
-- grafana
 - idstools
 - influxdb
 - kibana

@@ -38,7 +38,7 @@ Avoid Third Party Software and Modifications
 
 - avoid installing automation tools such as Puppet and Chef as these may conflict with our existing :ref:`salt` automation
 
-- avoid installing monitoring tools such as Zabbix as this may conflict with our existing :ref:`grafana` monitoring
+- avoid installing monitoring tools such as Zabbix as this may conflict with our existing :ref:`influxdb` monitoring
 
 - avoid installing third-party endpoint security agents as they may break functionality or introduce unacceptable performance overhead
 

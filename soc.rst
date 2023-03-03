@@ -36,7 +36,7 @@ If you'd like to customize SOC, please see the :ref:`soc-customization` section.
    kibana
    elastic-fleet
    osquery-manager
-   grafana
+   influxdb
    cyberchef
    playbook
    attack-navigator

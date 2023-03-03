@@ -14,7 +14,7 @@ Security Onion would like to thank the following projects for their contribution
 - :ref:`elastalert`
 - :ref:`elasticsearch`
 - :ref:`filebeat`
-- :ref:`grafana`
+- :ref:`influxdb`
 - :ref:`kibana`
 - :ref:`logstash`
 - :ref:`redis`

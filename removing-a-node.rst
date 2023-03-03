@@ -10,17 +10,6 @@ Salt
 
 You can remove a node from salt by going to :ref:`administration` --> Configuration --> Grid Members. Find the Grid Member you would like to remove, click the REVIEW button, and then click the DELETE button.
 
-Grafana
--------
-
-If necessary, remove the node's json file from the appropriate subdirectory under ``/opt/so/conf/grafana/grafana_dashboards/`` on the manager and then restart Grafana with:
-
-:: 
-
-  sudo so-grafana-restart
-
-You may also want to purge old Grafana data using ``so-influxdb-clean`` as described in the :ref:`grafana` section.
-
 SOC
 ---
 
