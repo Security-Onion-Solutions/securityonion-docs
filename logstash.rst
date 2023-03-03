@@ -27,7 +27,7 @@ ls_pipeline_workers
 For more information, please see https://www.elastic.co/guide/en/logstash/current/logstash-settings-file.html.
 
 lsheap
-~~~~~~~~~~~~~
+~~~~~~
 
 If total available memory is 8GB or greater, Setup sets the Logstash heap size to 25% of available memory, but no greater than 4GB.
 
@@ -40,7 +40,7 @@ Parsing
 
 Logstash does not parse logs in Security Onion, so modifying existing parsers or adding new parsers should be done via :ref:`elasticsearch`.
 
-If you want to add a legacy Logstash parser (not recommended) then you can copy the file to ``local``. Once the file is in ``local``, then depending on which nodes you want it to apply to, you can add the proper value to either ``/opt/so/saltstack/local/pillar/logstash/manager.sls``, ``/opt/so/saltstack/local/pillar/logstash/search.sls``, or ``/opt/so/saltstack/local/pillar/minions/$hostname_searchnode.sls`` as in the previous examples.
+If you want to add a legacy Logstash parser (not recommended) then you can copy the file to ``local``. Once the file is in ``local``, then depending on which nodes you want it to apply to, you can add the proper value to either ``/opt/so/saltstack/local/pillar/logstash/manager.sls``, ``/opt/so/saltstack/local/pillar/logstash/search.sls``, or ``/opt/so/saltstack/local/pillar/minions/$hostname_searchnode.sls``.
 
 Adding New Logs
 ---------------
