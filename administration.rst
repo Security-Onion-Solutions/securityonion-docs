@@ -35,13 +35,17 @@ The Configuration page allows you to configure various components of your grid i
 - elastalert
 - elasticsearch
 - firewall
+- global
 - idstools
 - influxdb
 - kibana
+- kratos
 - ntp
 - pcap
+- redis
 - soc
 - suricata
+- telegraf
 - zeek
 
 For each of these components, you can click on the component to drill into it and show all available settings for that component. You can then click on a setting to show the current setting or modify it if necessary. If you make a mistake, you can easily revert back to the default value.
