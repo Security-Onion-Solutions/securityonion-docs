@@ -158,6 +158,11 @@ To test a new rule, use the following utility on a node that runs Suricata (ie F
 
 The file should contain the new rule that you would like to test. The pcap should contain network data that will trigger the rule.
 
+VLAN Tags
+---------
+
+If your network traffic has VLAN tags, then Suricata will log them. :ref:`dashboards` has a VLAN dashboard which will show this data.
+
 More Information
 ----------------
 

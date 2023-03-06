@@ -124,10 +124,10 @@ We also include MITRE BZAR scripts and you can read more about them at https://g
 
 As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
 
-VLAN tags
+VLAN Tags
 ---------
 
-You can find VLAN tags in the conn.log. :ref:`dashboards` includes a groupby for this field on the Connections dashboard.
+If your network traffic has VLAN tags, then Zeek will log them in conn.log. :ref:`dashboards` includes a VLAN dashboard which shows this data.
 
 Intel
 -----
