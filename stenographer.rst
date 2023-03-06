@@ -67,7 +67,7 @@ Disabling
 
 If you need to disable Stenographer, you can do so by going to :ref:`administration` --> Configuration --> pcap --> enabled.
 
-VLAN tags
+VLAN Tags
 ---------
 
 .. warning::
