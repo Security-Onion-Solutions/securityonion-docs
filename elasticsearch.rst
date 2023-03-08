@@ -7,6 +7,40 @@ From https://www.elastic.co/products/elasticsearch:
 
     Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease.
 
+Data
+----
+
+Indexing
+~~~~~~~~
+Starting in Security Onion 2.4, most data is associated with a data stream, which is an abstraction from traditional indices that leverages one or more backing indices to manage and represent the data within the data stream. The usage of data streams allows for greater flexibility in data management.
+
+Data streams can be targeting during search or other operations directly, similar to how indices are targeted.
+
+For example, a CLI-based query against Zeek connection records would look like the following:
+
+``so-elasticsearch-query logs-zeek-so/_search?q=event.dataset:conn``
+
+When this query is run against the backend data, it is actually targeting one or more backing indices, such as:
+
+::
+
+  .ds-logs-zeek-so-2022-03-07.0001
+  .ds-logs-zeek-so-2022-03-08.0001
+  .ds-logs-zeek-so-2022-03-08.0002
+
+Similarly, you can target a single backing index with the following query:
+
+``so-elasticsearch-query .ds-logs-zeek-so-2022-03-08.001/_search?q=event.dataset:conn``
+
+You can learn more about data streams here: 
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/data-streams.html
+
+
+Schema
+~~~~~~
+Security Onion tries to adhere to the Elastic Common Schema wherever possible. Otherwise, additional fields or slight modifications to native Elastic field mappings may be found within the data.
+
 Querying
 --------
 
