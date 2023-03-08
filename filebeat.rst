@@ -509,7 +509,7 @@ Note:  If you have a distributed setup, you need to run the following command on
 
 ::
 
-  sudo docker exec -i so-filebeat filebeat setup modules -pipelines -modules netflow -c /usr/share/filebeat/module-setup.yml
+  sudo docker exec -i so-filebeat filebeat setup modules --pipelines --modules netflow -M "netflow.log.enabled=true" -c /usr/share/filebeat/module-setup.yml
 
 You should see ``Loaded Ingest pipelines``.  Once that is complete, run ``sudo so-filebeat-restart``.
 
