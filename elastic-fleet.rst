@@ -22,6 +22,12 @@ To assign the agent to a new policy, unenroll, upgrade the agent, or perform oth
 
 By default, Elastic Agent is installed on every Security Onion grid node. As a result, all grid node agents will be enrolled in the ``SO-Grid-Nodes`` agent policy. We do not recommend removing policy settings for Security Onion grid node agents.
 
+Adding Agents
+~~~~~~~~~~~~~
+To add a new agent to your deployment, see the following:
+
+https://docs.securityonion.net/en/2.4/elastic-agent.html#deployment
+
 Agent Policies
 ~~~~~~~~~~~~~~
 Agent policies dictate what data each agent will ingest and forward to Elasticsearch. This could be through the use of an HTTP, log file, or TCP-based input.
