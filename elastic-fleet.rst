@@ -72,9 +72,12 @@ The section provides details, such as:
 
 - Fleet server hosts in your deployment
 - Configured outputs
+
   - specifies where data will be sent
   - this should include Elasticseach for the Fleet server and Logstash for Elastic Agent
+  
 - Method in which agent binaries will be downloaded
+
   - this will be a a local artifact repository if running an airgapped deployment)
 
 .. note::
