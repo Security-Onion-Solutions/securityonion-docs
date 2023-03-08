@@ -8,7 +8,7 @@ Elastic Fleet
 Configuration
 -------------
 
-Elastic Fleet provides centralized management of configuration within it's user interface inside of Kibana.
+Elastic Fleet is pre-configured during Security Onion setup, however, centralized management of configuration is provided within it's user interface inside of Kibana.
 
 Configuration options for various components are detailed below.
 
