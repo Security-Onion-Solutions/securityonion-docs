@@ -41,6 +41,29 @@ Schema
 ~~~~~~
 Security Onion tries to adhere to the Elastic Common Schema wherever possible. Otherwise, additional fields or slight modifications to native Elastic field mappings may be found within the data.
 
+Management
+~~~~~~~~~~
+In Security Onion 2.4, Elasticsearch data is handled partially by bot :ref:`curator` and ILM (https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html).
+
+Only Curator performs the following actions:
+
+- closing of open indices
+- size-based index deletion
+- size-based closed index deletion
+
+Only ILM performs the following actions:
+
+- size-based index rollover
+- time-based index rollover
+- time-based content tiers
+
+Both Curator and ILM perform the following actions:
+
+- time-based open index deletion
+- time-based closed index deletion
+
+Default ILM policies are preconfigured and associated with various data streams and index templates in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yaml``.
+
 Querying
 --------
 
