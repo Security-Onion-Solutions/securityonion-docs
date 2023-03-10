@@ -12,13 +12,16 @@ Data
 
 Indexing
 ~~~~~~~~
+
 Starting in Security Onion 2.4, most data is associated with a data stream, which is an abstraction from traditional indices that leverages one or more backing indices to manage and represent the data within the data stream. The usage of data streams allows for greater flexibility in data management.
 
 Data streams can be targeting during search or other operations directly, similar to how indices are targeted.
 
 For example, a CLI-based query against Zeek connection records would look like the following:
 
-``so-elasticsearch-query logs-zeek-so/_search?q=event.dataset:conn``
+::
+
+	so-elasticsearch-query logs-zeek-so/_search?q=event.dataset:conn
 
 When this query is run against the backend data, it is actually targeting one or more backing indices, such as:
 
@@ -30,20 +33,21 @@ When this query is run against the backend data, it is actually targeting one or
 
 Similarly, you can target a single backing index with the following query:
 
-``so-elasticsearch-query .ds-logs-zeek-so-2022-03-08.001/_search?q=event.dataset:conn``
+::
 
-You can learn more about data streams here: 
+	so-elasticsearch-query .ds-logs-zeek-so-2022-03-08.001/_search?q=event.dataset:conn
 
-https://www.elastic.co/guide/en/elasticsearch/reference/current/data-streams.html
-
+You can learn more about data streams at https://www.elastic.co/guide/en/elasticsearch/reference/current/data-streams.html.
 
 Schema
 ~~~~~~
+
 Security Onion tries to adhere to the Elastic Common Schema wherever possible. Otherwise, additional fields or slight modifications to native Elastic field mappings may be found within the data.
 
 Management
 ~~~~~~~~~~
-In Security Onion 2.4, Elasticsearch data is handled partially by bot :ref:`curator` and ILM (https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html).
+
+In Security Onion 2.4, Elasticsearch data is handled partially by both :ref:`curator` and ILM (https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html).
 
 Only Curator performs the following actions:
 
@@ -131,6 +135,7 @@ These templates are specified to be used in the index template definitions in ``
 
 Custom Templates
 ~~~~~~~~~~~~~~~~
+
 To add a custom index template, ensure the custom or modified component templates are copied to ``/opt/so/salstack/local/salt/elasticsearch/templates/component/so/``.
 
 Next, copy ``/opt/so/saltstack/default/pillar/elasticsearch/index_templates.sls`` to ``/opt/so/salstack/local/pillar/elasticsearch/``.
@@ -278,6 +283,7 @@ For distributed deployments, Security Onion supports two different configuration
 
 Cross Cluster Search
 ~~~~~~~~~~~~~~~~~~~~
+
 Our traditional and default configuration for distributed Elasticsearch instances is `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. This means that each Elasticsearch instance is totally independent and the manager queries all Elasticsearch instances via cross cluster search. This lowers the amount of maintenance required and the required knowledge of Elasticsearch internals. This configuration is recommended for most users.
 
 The ``manager node`` runs its own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``search nodes`` and ``heavy nodes`` (where applicable). This does not include ``forward nodes`` since they do not run Elastic Stack components.
@@ -290,6 +296,7 @@ When using a ``forward node``, Elastic Stack components are not enabled. :ref:`e
 
 Elastic Clustering
 ~~~~~~~~~~~~~~~~~~
+
 For advanced users that require advanced features like shard replicas and hot/warm indices, Security Onion also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
 
 .. warning::
