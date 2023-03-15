@@ -5,11 +5,6 @@ SSH
 
 Security Onion uses the latest SSH packages. It does not manage the SSH configuration in ``/etc/ssh/sshd_config`` with :ref:`salt`. This allows you to add any PAM modules or enable two factor authentication (2FA) of your choosing. 
 
-Distributed Deployments
------------------------
-
-For distributed deployments, nodes only connect to the manager via SSH when they initially join the grid. That initial connection is done using the ``soremote`` account. If you enable 2FA for SSH, you will need to disable 2FA for the ``soremote`` account. The ``soremote`` account can be disabled when you are not adding any nodes to the grid.
-
 Hardening
 ---------
 

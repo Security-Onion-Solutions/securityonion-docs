@@ -41,10 +41,10 @@ If deploying a distributed environment, install and configure the manager node f
 
 Please note that all nodes will need to be able to connect to the manager node on several ports and the manager will need to connect to search nodes and heavy nodes. You'll need to make sure that any network firewalls have firewall rules to allow this traffic as defined in the :ref:`firewall` section.
 
-Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option. Save the ``soremote`` password so that you can join nodes to the manager.
+Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option.
 
-Build search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. When prompted, join them to the manager node using the password that you created for the ``soremote`` account.
+Build search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`soc` --> Administration --> Grid Members and accept the new node.
 
-Build forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. When prompted, join them to the manager node using the password that you created for the ``soremote`` account.
+Build forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`soc` --> Administration --> Grid Members and accept the new node.
 
 Proceed to the :ref:`post-installation` section.
