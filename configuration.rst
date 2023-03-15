@@ -43,8 +43,8 @@ Please note that all nodes will need to be able to connect to the manager node o
 
 Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option.
 
-Build search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`soc` --> Administration --> Grid Members and accept the new node.
+Build one or more search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`administration` --> Grid Members and accept the new node.
 
-Build forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`soc` --> Administration --> Grid Members and accept the new node.
+Build one or more forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`administration` --> Grid Members and accept the new node.
 
 Proceed to the :ref:`post-installation` section.
