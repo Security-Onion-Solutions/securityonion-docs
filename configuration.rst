@@ -41,9 +41,9 @@ If deploying a distributed environment, install and configure the manager node f
 
 Please note that all nodes will need to be able to connect to the manager node on several ports and the manager will need to connect to search nodes and heavy nodes. You'll need to make sure that any network firewalls have firewall rules to allow this traffic as defined in the :ref:`firewall` section.
 
-Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option.
+Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option. You can choose either Manager or ManagerSearch.
 
-Build one or more search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`administration` --> Grid Members and accept the new node.
+If you chose Manager, then you must join one or more search nodes (this is optional if you chose ManagerSearch). Build search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`administration` --> Grid Members and accept the new node.
 
 Build one or more forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`administration` --> Grid Members and accept the new node.
 
