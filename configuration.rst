@@ -39,12 +39,12 @@ Production Server - Distributed Deployment
 
 If deploying a distributed environment, install and configure the manager node first and then join the other nodes to it. For best performance, the manager node should be dedicated to just being a manager for the other nodes (the manager node should have no sniffing interfaces of its own). 
 
-Please note that all nodes will need to be able to connect to the manager node on several ports and the manager will need to connect to search nodes and heavy nodes. You'll need to make sure that any network firewalls have firewall rules to allow this traffic as defined in the :ref:`firewall` section.
+Please note that all nodes will need to be able to connect to the manager node on several ports and the manager will need to connect to search nodes and heavy nodes. You'll need to make sure that any network firewalls have firewall rules to allow this traffic as defined in the :ref:`firewall` section. In addition to network firewalls, you'll need to make sure the manager's host-based firewall allows the connections. You can either allow node connections before joining nodes or you can wait until the node tries to join and it will prompt you to run a command on the manager.
 
-Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option. You can choose either Manager or ManagerSearch.
+Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option. You can choose either ``MANAGER`` or ``MANAGERSEARCH``. If you choose ``MANAGER``, then you must join one or more search nodes (this is optional if you choose ``MANAGERSEARCH``).
 
-If you chose Manager, then you must join one or more search nodes (this is optional if you chose ManagerSearch). Build search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`administration` --> Grid Members and accept the new node.
+Build search nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. When the node initialization completes, it will prompt you to go to :ref:`administration` --> Grid Members, find the node in the Pending Members list, click the ``Review`` button, and then click the ``Accept`` button.
 
-Build one or more forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. Once the initial configuration completes, go to :ref:`administration` --> Grid Members and accept the new node.
+Build one or more forward nodes by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``Existing Deployment`` option. When the node initialization completes, it will prompt you to go to :ref:`administration` --> Grid Members, find the node in the Pending Members list, click the ``Review`` button, and then click the ``Accept`` button.
 
 Proceed to the :ref:`post-installation` section.
