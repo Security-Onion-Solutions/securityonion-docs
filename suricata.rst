@@ -109,6 +109,10 @@ From the manager, then run:
 
     sudo salt $SENSORNAME_$ROLE state.highstate
 
+.. note::
+
+    Check out our Suricata Variables video at https://youtu.be/8TfnocUuQnM!
+
 Some of the settings normally found in ``suricata.yaml`` can be found in the sensor pillar instead of the Suricata pillar. These options are: ``HOMENET``, ``default-packet-size``, and the CPU affinity settings for pinning the processes to CPU cores or how many processes to run.
 
 If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`managing-alerts` sections.
