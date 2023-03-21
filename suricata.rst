@@ -70,13 +70,29 @@ This pillar can be added to :ref:`salt` in either the global pillar file (``/opt
 Metadata
 --------
 
-Depending on what options you choose in Setup, it may ask if you want to use :ref:`zeek` or :ref:`suricata` for metadata. If you choose :ref:`suricata` and later find that some metadata is unnecessary, you can filter out the unnecessary metadata by writing rules. We have included some examples at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules.
+Depending on what options you choose in Setup, it may ask if you want to use :ref:`zeek` or :ref:`suricata` for metadata. If you choose :ref:`suricata`, then here are some of the kinds of metadata you can expect to see in :ref:`dashboards` or :ref:`hunt`:
+
+-  Connections
+
+-  DHCP
+
+-  DNS
+
+-  Files
+
+-  FTP
+
+-  HTTP
+
+-  SSL
+
+If you later find that some of that metadata is unnecessary, you can filter out the unnecessary metadata by writing rules. We have included some examples at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules.
 
 The global pillar on your manager node controls the metadata engine on each sensor. Only one metadata engine at a time is supported.
 
 To change your grid's metadata engine from Zeek to Suricata:
 
--  On the manager, edit the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) and change the ``mdengine`` variable from ``ZEEK`` to ``SURICATA``.
+-  On the manager, go to :ref:`administration` --> Configuration --> global --> mdengine and change the value from ``ZEEK`` to ``SURICATA``.
 
 -  Stop Zeek on all nodes:
 
