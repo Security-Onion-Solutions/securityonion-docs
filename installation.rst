@@ -62,7 +62,7 @@ If you want to install Security Onion on Rocky Linux 9 or Ubuntu 22.04 (**not** 
 
    ::
 
-     git clone https://github.com/Security-Onion-Solutions/securityonion
+     git clone -b 2.4/main https://github.com/Security-Onion-Solutions/securityonion
      cd securityonion
      sudo bash so-setup-network
      
