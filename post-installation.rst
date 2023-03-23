@@ -21,14 +21,19 @@ Depending on what kind of installation you did, the Setup wizard may have alread
 Services
 --------
 
-You can verify services are running with the :ref:`so-status` command:
+Once you've logged into :ref:`soc`, you can check the :ref:`grid` page to see if all services are running correctly.
+
+.. note::
+
+  Please note that new nodes start off showing a red Fault and may take a few minutes to fully initialize before they show a green OK.
+
+
+You can also verify services are running from the command line with the :ref:`so-status` command:
 
 ::
 
 	sudo so-status
-
-Alternatively, once you've logged into :ref:`soc`, you can simply check the :ref:`grid` page.
-
+	
 Data Retention
 --------------
 
