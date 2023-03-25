@@ -22,6 +22,9 @@ Grid Members
 
 The Grid Members page shows nodes that have attempted to join the grid and whether or not they have been accepted into the grid by an administrator.
 
+.. image:: images/grid-members.png
+  :target: _images/grid-members.png
+
 Unaccepted members are displayed on the left side and broken into three sections: Pending Members, Denied Members, and Rejected Members. When you accept a member, it will then move to the right side under Accepted Members.
 
 For accepted members, you can click the REVIEW button to show additional information about the grid member. If you want to remove the member, you can then click the DELETE button.
@@ -29,34 +32,12 @@ For accepted members, you can click the REVIEW button to show additional informa
 Configuration
 -------------
 
-The Configuration page allows you to configure various components of your grid including:
+The Configuration page allows you to configure various components of your grid.
 
-- backup
-- bpf
-- elastalert
-- elasticsearch
-- firewall
-- global
-- host
-- idh
-- idstools
-- influxdb
-- kibana
-- kratos
-- manager
-- ntp
-- patch
-- pcap
-- redis
-- sensor
-- sensoroni
-- soc
-- strelka
-- suricata
-- telegraf
-- zeek
+.. image:: images/configuration.png
+  :target: _images/configuration.png
 
-For each of these components, you can click on the component to drill into it and show all available settings for that component. You can then click on a setting to show the current setting or modify it if necessary. If you make a mistake, you can easily revert back to the default value.
+You can click on a component to drill into it and show all available settings for that component. You can then click on a setting to show the current setting or modify it if necessary. If you make a mistake, you can easily revert back to the default value.
 
 If you're not sure of which component a particular setting may belong to, you can use the Filter at the top of the list to look for a particular setting. To the right of the Filter field are buttons that do the following:
 
