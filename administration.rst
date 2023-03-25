@@ -31,19 +31,27 @@ Configuration
 
 The Configuration page allows you to configure various components of your grid including:
 
+- backup
 - bpf
 - elastalert
 - elasticsearch
 - firewall
 - global
+- host
+- idh
 - idstools
 - influxdb
 - kibana
 - kratos
+- manager
 - ntp
+- patch
 - pcap
 - redis
+- sensor
+- sensoroni
 - soc
+- strelka
 - suricata
 - telegraf
 - zeek
