@@ -8,6 +8,10 @@ Grid
 .. image:: images/grid.png
   :target: _images/grid.png
 
+.. note::
+
+  Please note that new nodes start off showing a red Fault and may take a few minutes to fully initialize before they show a green OK.
+
 Node Status
 -----------
 
@@ -43,10 +47,20 @@ RAID Status
 
 If you are using an official Security Onion Solutions appliance with RAID support, then you will see the corresponding status appear in this field.
 
+Description
+~~~~~~~~~~~
+
+This shows the Description entered during Setup.
+
 Link to InfluxDB
 ~~~~~~~~~~~~~~~~
 
-The icon in the lower left of the ``Node Status`` section hyperlinks you to the InfluxDB dashboard for that particular node.
+The first icon in the lower left of the ``Node Status`` section hyperlinks you to the InfluxDB dashboard for that particular node.
+
+Link to Sensor Test
+~~~~~~~~~~~~~~~~~~~
+
+The second icon in the lower left of the ``Node Status`` section displays if the node is a sensor and allows you to send test data to the sensor.
 
 Container Status
 ----------------
