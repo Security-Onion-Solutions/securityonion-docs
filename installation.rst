@@ -68,15 +68,3 @@ If you want to install Security Onion on Rocky Linux 9 or Ubuntu 22.04 (**not** 
      sudo bash so-setup-network
      
 #. Proceed to the :ref:`configuration` section.
-
-#. NOTE: If any interfaces intended to be used for monitoring were automatically configured via DHCP during Ubuntu installation, setup will ask you to remove them from other network management tools. The following steps will be required to ensure the devices are managed by ``nmcli``:
-
-  - Remove monitor interface declarations from ``/etc/netplan/00-installer-config.yaml`` and then run:
-
-  ::
-   
-    sudo netplan apply
-    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
-    sudo service network-manager restart
-    
-  - Re-run setup.  
