@@ -3,13 +3,12 @@
 First Time Users
 ================
 
-If this is your first time using Security Onion, then we highly recommend that you start with a simple IMPORT installation using our Security Onion ISO image (see the :ref:`download` section). This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with as little as 4GB RAM, 2 CPU cores, and 200GB of storage.
+If this is your first time using Security Onion, then we highly recommend that you start with a simple IMPORT installation. This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with as little as 4GB RAM, 2 CPU cores, and 200GB of storage.
 
 The following screenshots will walk you through:
 
-- installing our Security Onion ISO image
+- installing Security Onion
 - configuring for IMPORT
-- optionally enabling the Analyst environment (see the :ref:`analyst-vm` section)
 - running :ref:`so-import-pcap` and importing one or more pcap files
 
 After following the screenshots, you can skip to the :ref:`soc` section.
@@ -18,9 +17,6 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 
 .. image:: images/04_setup_init.png
   :target: _images/04_setup_init.png
-
-.. image:: images/05_setup_option.png
-  :target: _images/05_setup_option.png
 
 .. image:: images/06_setup_type.png
   :target: _images/06_setup_type.png
@@ -31,38 +27,14 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/08_setup_hostname.png
   :target: _images/08_setup_hostname.png
 
-.. image:: images/09_setup_hostname_conflict.png
-  :target: _images/09_setup_hostname_conflict.png
+.. image:: images/09_setup_network.png
+  :target: _images/09_setup_network.png
+
+.. image:: images/10_setup_dhcp.png
+  :target: _images/10_setup_dhcp.png
 
 .. image:: images/10_setup_mn_nic.png
   :target: _images/10_setup_mn_nic.png
-
-.. image:: images/11_setup_mn_int.png
-  :target: _images/11_setup_mn_int.png
-
-.. image:: images/12_setup_cidr.png
-  :target: _images/12_setup_cidr.png
-
-.. image:: images/13_setup_gateway.png
-  :target: _images/13_setup_gateway.png
-
-.. image:: images/14_setup_dns_servers.png
-  :target: _images/14_setup_dns_servers.png
-
-.. image:: images/15_setup_dns_domain.png
-  :target: _images/15_setup_dns_domain.png
-
-.. image:: images/16_setup_network_init.png
-  :target: _images/16_setup_network_init.png
-
-.. image:: images/17_setup_airgap.png
-  :target: _images/17_setup_airgap.png
-
-.. image:: images/18_setup_direct_proxy.png
-  :target: _images/18_setup_direct_proxy.png
-
-.. image:: images/19_setup_homenet.png
-  :target: _images/19_setup_homenet.png
 
 .. image:: images/20_setup_webuser.png
   :target: _images/20_setup_webuser.png
@@ -75,12 +47,6 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 
 .. image:: images/23_setup_access_type.png
   :target: _images/23_setup_access_type.png
-
-.. image:: images/24_setup_ntp.png
-  :target: _images/24_setup_ntp.png
-
-.. image:: images/25_setup_ntp_input.png
-  :target: _images/25_setup_ntp_input.png
 
 .. image:: images/26_setup_so_allow.png
   :target: _images/26_setup_so_allow.png
