@@ -16,15 +16,6 @@ After following the screenshots, you can skip to the :ref:`soc` section.
 
 Once you're comfortable with your IMPORT installation, then you can move on to more advanced installations as shown in the :ref:`architecture` section.
 
-.. image:: images/01_grub.png
-  :target: _images/01_grub.png
-
-.. image:: images/02_initial_install.png
-  :target: _images/02_initial_install.png
-
-.. image:: images/03_initial_install_finished.png
-  :target: _images/03_initial_install_finished.png
-
 .. image:: images/04_setup_init.png
   :target: _images/04_setup_init.png
 
@@ -103,24 +94,6 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/29_setup_finished.png
   :target: _images/29_setup_finished.png
 
-.. image:: images/30_so_analyst_install.png
-  :target: _images/30_so_analyst_install.png
-
-.. image:: images/31_so_analyst_install_finished.png
-  :target: _images/31_so_analyst_install_finished.png
-
-.. image:: images/32_gnome_user.png
-  :target: _images/32_gnome_user.png
-
-.. image:: images/33_gnome_pass.png
-  :target: _images/33_gnome_pass.png
-
-.. image:: images/34_gnome_desktop.png
-  :target: _images/34_gnome_desktop.png
-
-.. image:: images/35_gnome_apps.png
-  :target: _images/35_gnome_apps.png
-
 .. image:: images/36_login.png
   :target: _images/36_login.png
 
@@ -147,6 +120,3 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 
 .. image:: images/42_cyberchef.png
   :target: _images/42_cyberchef.png
-
-.. image:: images/43_top.png
-  :target: _images/43_top.png
