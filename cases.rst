@@ -148,7 +148,7 @@ Cases data is stored in :ref:`elasticsearch`. You can view it in :ref:`dashboard
 
 You can also use this query in :ref:`kibana`.
 
-You might want to backup this data as described in the :ref:`backups` section.
+You might want to backup this data as described in the :ref:`backup` section.
 
 Analyzers
 ---------

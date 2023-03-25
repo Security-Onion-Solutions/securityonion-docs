@@ -1,9 +1,11 @@
-.. _backups:
+.. _backup:
 
-Backups
-=======
+Backup
+======
 
-Security Onion performs daily backups of some critical files so that you can recover your grid from a catastophic failure of the manager. Daily backups create a tar file located in the ``/nsm/backup/`` directory located on the manager. Here is what gets backed up automatically:
+Security Onion performs a daily backup of some critical files so that you can recover your grid from a catastophic failure of the manager. Daily backups create a tar file located in the ``/nsm/backup/`` directory located on the manager. You may want to replicate this backup directory to a location outside of your manager in case the manager ever needs to be rebuilt.
+
+Here is what gets backed up automatically:
 
 - ``/etc/pki/``
 
@@ -12,6 +14,8 @@ Security Onion performs daily backups of some critical files so that you can rec
 - ``/opt/so/saltstack/local/``
 
   This includes all minion sls files and customizations. 
+
+You can configure backups by going to :ref:`administration` --> Configuration --> backup. 
 
 Elasticsearch
 -------------
