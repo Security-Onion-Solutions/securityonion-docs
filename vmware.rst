@@ -12,15 +12,6 @@ In this section, we'll cover creating a virtual machine (VM) for our Security On
 
    With the sniffing interface in ``bridged`` mode, you will be able to see all traffic to and from the host machine's physical NIC. If you would like to see **ALL** the traffic on your network, you will need a method of forwarding that traffic to the interface to which the virtual adapter is bridged. This can be achieved with a tap or SPAN port.
 
-ESXi
-----
-
-If you're using VMware ESXi, then you're likely familiar with VM creation and installation and so we won't detail that here. There are a few things specific to ESXi that you might want to be aware of:
-
-- you may need to set your monitoring interface in the vSwitch to VLAN ID 4095 to allow all traffic through. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/7185.
-
-- if you're trying to monitor multiple network interfaces, then you may need to enable the ``Allow MAC Changes`` option at both the vSwitch and Port Group levels. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/2676.
-   
 Workstation Pro
 ---------------
 
@@ -63,6 +54,15 @@ Follow the steps below to create a VM in VMware Fusion for our Security Onion IS
 #. At the window for your new VM, click the ``Play`` button to power on the virtual machine.
 #. Follow the installation steps for your desired installation type in the :ref:`installation` section.
 
+ESXi
+----
+
+If you're using VMware ESXi, then you're likely familiar with VM creation and installation and so we won't detail that here. There are a few things specific to ESXi that you might want to be aware of:
+
+- you may need to set your monitoring interface in the vSwitch to VLAN ID 4095 to allow all traffic through. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/7185.
+
+- if you're trying to monitor multiple network interfaces, then you may need to enable the ``Allow MAC Changes`` option at both the vSwitch and Port Group levels. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/2676.
+   
 VMware Tools
 ------------
 
