@@ -20,6 +20,7 @@ Having downloaded your desired ISO according to the :ref:`download` section, it'
 
 Installation using Security Onion ISO Image
 -------------------------------------------
+
 If you want to install Security Onion using our ISO image:
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
@@ -39,7 +40,7 @@ If you want to install Security Onion using our ISO image:
 Installation on Ubuntu or Rocky Linux
 -------------------------------------
 
-If you want to install Security Onion on Rocky Linux 9 or Ubuntu 22.04 (**not** using our Security Onion ISO image), follow these steps:
+If you want to install Security Onion on Rocky Linux 9 or Ubuntu 22.04 (**not** using our Security Onion ISO image), follow the steps below. Please note that Ubuntu is not supported for manager nodes and will be phased out in the future.
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
 #. Download the ISO image for your preferred flavor of 64-bit Rocky Linux 9 or Ubuntu 22.04. Verify the ISO image and then boot from it.
