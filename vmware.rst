@@ -70,5 +70,5 @@ If using a graphical desktop, you may want to install ``open-vm-tools-desktop`` 
 
 ::
 
-   sudo yum install open-vm-tools-desktop
+   sudo dnf install open-vm-tools-desktop
 
