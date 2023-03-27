@@ -52,14 +52,14 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/29_setup_finished.png
   :target: _images/29_setup_finished.png
 
+.. image:: images/38_so-import-pcap.png
+  :target: _images/38_so-import-pcap.png
+
 .. image:: images/36_login.png
   :target: _images/36_login.png
 
 .. image:: images/37_welcome.png
   :target: _images/37_welcome.png
-
-.. image:: images/38_so-import-pcap.png
-  :target: _images/38_so-import-pcap.png
 
 .. image:: images/44_alerts.png
   :target: _images/44_alerts.png
