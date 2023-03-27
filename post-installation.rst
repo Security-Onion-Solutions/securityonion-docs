@@ -3,16 +3,6 @@
 After Installation
 ==================
 
-SSH Key Change
---------------
-
-Depending on what kind of installation you did, you may have seen a warning at the end of Setup about SSH key changes.
-
-.. image:: images/so-ssh-harden.png
-  :target: _images/so-ssh-harden.png
-
-For more information, see the :ref:`ssh` section.
-
 Adjust firewall rules
 ---------------------
 
