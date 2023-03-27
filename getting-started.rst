@@ -19,7 +19,7 @@ This could be anything from a small virtual machine to a large rack mount server
 
 **Which ISO image should I download?**
 
-You can download our Security Onion ISO image or a standard 64-bit Rocky Linux 9 or Ubuntu 22.04 ISO image. We recommend our Security Onion ISO image for most use cases, but you should review the :ref:`partitioning`, :ref:`release-notes`, and :ref:`download` sections for more information.
+You can download our Security Onion ISO image or a standard 64-bit Rocky Linux 9 Minimal or Ubuntu 22.04 ISO image. We recommend our Security Onion ISO image for most use cases, but you should review the :ref:`partitioning`, :ref:`release-notes`, and :ref:`download` sections for more information.
 
 **If I just want to try Security Onion in a virtual machine, how do I create a virtual machine?**
 

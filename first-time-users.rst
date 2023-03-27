@@ -3,7 +3,7 @@
 First Time Users
 ================
 
-If this is your first time using Security Onion, then we highly recommend that you start with a simple IMPORT installation. This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with as little as 4GB RAM, 2 CPU cores, and 200GB of storage. Just install Rocky Linux 9 and start our Setup wizard as shown in the :ref:`installation` section. Then follow the screenshots below to configure for IMPORT and run :ref:`so-import-pcap` to import one or more pcap files. After following the screenshots, you can skip to the :ref:`soc` section.
+If this is your first time using Security Onion, then we highly recommend that you start with a simple IMPORT installation. This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with as little as 4GB RAM, 2 CPU cores, and 200GB of storage. Just install Rocky Linux 9 Minimal and start our Setup wizard as shown in the :ref:`installation` section. Then follow the screenshots below to configure for IMPORT and run :ref:`so-import-pcap` to import one or more pcap files. After following the screenshots, you can skip to the :ref:`soc` section.
 
 Once you're comfortable with your IMPORT installation, then you can move on to more advanced installations as shown in the :ref:`architecture` section.
 
