@@ -39,9 +39,9 @@ We've included a wrapper script called ``so-pcap-export`` to make this a little 
 
 ::
 
-    sudo so-pcap-export "YourStenoQueryHere" output.pcap
+    sudo so-pcap-export "YourStenoQueryHere" output
     
-If the query succeeds, you can then find the resulting pcap file in ``/nsm/pcapout/`` in the host filesystem.
+If the query succeeds, you can then find the resulting ``output.pcap`` file in ``/nsm/pcapout/`` in the host filesystem.
 
 Configuration
 -------------
