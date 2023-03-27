@@ -78,3 +78,6 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 
 .. image:: images/42_cyberchef.png
   :target: _images/42_cyberchef.png
+
+.. image:: images/47_grid.png
+  :target: _images/47_grid.png
