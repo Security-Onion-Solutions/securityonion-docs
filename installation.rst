@@ -16,7 +16,7 @@ Having downloaded your desired ISO according to the :ref:`download` section, it'
 
 .. warning::
 
-  For most use cases, we recommend using our Security Onion ISO image as it's the quickest, easiest, and most consistent method. If you're not going to use our Security Onion ISO image and you're building a distributed deployment, then we recommend keeping the base OS consistent across all nodes in the deployment. Please do not mix and match Rocky Linux 9 and Ubuntu 22.04 in the same deployment.
+  Our Security Onion ISO image is not quite ready yet, so for now you'll need to use Rocky Linux 9 Minimal as shown below.
 
 Installation using Security Onion ISO Image
 -------------------------------------------
