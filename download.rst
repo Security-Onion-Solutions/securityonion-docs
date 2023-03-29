@@ -9,7 +9,7 @@ You can either download our Security Onion ISO image (based on Rocky Linux 9) **
 
 .. warning::
 
-  Our Security Onion ISO image is not quite ready yet, so for now you'll need to use Rocky Linux 9 Minimal.
+  Our Security Onion ISO image is not quite ready yet, so for now you'll need to use Rocky Linux 9 Minimal. Download it from https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.1-x86_64-minimal.iso and check the checksum via https://download.rockylinux.org/pub/rocky/9/isos/x86_64/CHECKSUM.
   
 .. tip::
 
