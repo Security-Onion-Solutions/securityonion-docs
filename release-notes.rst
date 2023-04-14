@@ -3,6 +3,17 @@
 Release Notes
 =============
 
+2.3.230 [20230417] Changes
+----------------------
+
+- FIX: Suricata DNS A and CNAME parsing `#10117 <https://github.com/Security-Onion-Solutions/securityonion/issues/10117>`_
+- UPGRADE: CyberChef 10.2.0 `#9992 <https://github.com/Security-Onion-Solutions/securityonion/issues/9992>`_
+- UPGRADE: Grafana 9.2.15 `#9889 <https://github.com/Security-Onion-Solutions/securityonion/issues/9889>`_
+- UPGRADE: Redis 6.2.11 `#9980 <https://github.com/Security-Onion-Solutions/securityonion/issues/9980>`_
+- UPGRADE: Suricata 6.0.11 `#10067 <https://github.com/Security-Onion-Solutions/securityonion/issues/10067>`_
+- UPGRADE: Zeek 5.0.8 `#10107 <https://github.com/Security-Onion-Solutions/securityonion/issues/10107>`_
+- UPGRADE: nginx 1.22.1 `#9742 <https://github.com/Security-Onion-Solutions/securityonion/issues/9742>`_
+
 2.3.220 Hotfix [20230301] Changes
 ---------------------------------
 
