@@ -26,4 +26,4 @@ Once you see the auth logs, you will notice that the login is logged as ``identi
 
 ::
 
-        echo "select * from identities;" | sudo sqlite3 /opt/so/conf/kratos/db/db.sqlite |grep USERNAME@DOMAIN.COM | cut -d\| -f1
+        echo "select * from identities;" | sudo sqlite3 /nsm/kratos/db/db.sqlite |grep USERNAME@DOMAIN.COM | cut -d\| -f1
