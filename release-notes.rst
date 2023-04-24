@@ -4,7 +4,7 @@ Release Notes
 =============
 
 2.3.230 [20230417] Changes
-----------------------
+--------------------------
 
 - FIX: Suricata DNS A and CNAME parsing `#10117 <https://github.com/Security-Onion-Solutions/securityonion/issues/10117>`_
 - UPGRADE: CyberChef 10.2.0 `#9992 <https://github.com/Security-Onion-Solutions/securityonion/issues/9992>`_
