@@ -4,7 +4,7 @@ Release Notes
 =============
 
 2.4.1 Beta 2 [20230424] Changes
--------------
+-------------------------------
 
 - FIX: Add Dedicated Fleet Node `#10054 <https://github.com/Security-Onion-Solutions/securityonion/issues/10054>`_
 - FIX: Don't create curl.config on Forward Nodes `#10057 <https://github.com/Security-Onion-Solutions/securityonion/issues/10057>`_
@@ -29,6 +29,6 @@ Release Notes
 
 
 2.4.0 Beta 1 [20230328] Changes
--------------
+-------------------------------
 
 https://blog.securityonion.net/2023/03/security-onion-24-beta-release-now.html
