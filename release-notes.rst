@@ -4,7 +4,7 @@ Release Notes
 =============
 
 2.3.240 [20230424] Changes
-----------------------
+--------------------------
 
 - FIX: Case attachments should download to disk rather than open inline `#10179 <https://github.com/Security-Onion-Solutions/securityonion/issues/10179>`_
 
