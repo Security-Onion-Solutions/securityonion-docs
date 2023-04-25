@@ -59,12 +59,12 @@ If this node has any sniffing interfaces, then you may need to update NetworkMan
 ::
 
    sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf && \
-   sudo service network-manager restart
+   sudo systemctl restart NetworkManager.service
 
 If this node is a manager, then you may need to remove some influxdb files:
 ::
 
-   sudo rm -rf /opt/so/state/influxdb*
+   sudo rm /opt/so/state/influxdb*
 
 Run all salt states and review the output for any errors:
 ::
