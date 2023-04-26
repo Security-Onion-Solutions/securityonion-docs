@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.3.240 [20230425] Changes
+2.3.240 [20230426] Changes
 --------------------------
 
 - FIX: AWS Instances with forced IMDSv2 enabled fail to detect running in AWS `#10205 <https://github.com/Security-Onion-Solutions/securityonion/issues/10205>`_
