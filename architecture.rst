@@ -16,7 +16,6 @@ The next architecture is ``Evaluation``. It's a little more complicated than ``I
 
 .. image:: images/eval.png
    :align: center
-   :width: 600
    :target: _images/eval.png
 
 Standalone
@@ -27,7 +26,6 @@ This type of deployment is typically used for testing, labs, POCs, or **very** l
 
 .. image:: images/standalone.png
    :align: center
-   :width: 600
    :target: _images/standalone.png
 
 Distributed
