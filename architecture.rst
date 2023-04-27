@@ -10,6 +10,10 @@ Import
 
 The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import pcap files using :ref:`so-import-pcap` or evtx files using :ref:`so-import-evtx`. You can then view those logs in :ref:`soc`.
 
+.. image:: images/import.png
+   :align: center
+   :target: _images/import.png
+
 Evaluation
 ----------
 The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`elastic-agent` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for a quick installation to temporarily test out Security Onion. It is **not** designed for production usage at all.
