@@ -9,7 +9,8 @@ From https://www.wireshark.org/:
     
 Usage
 -----
-Wireshark is a part of our :ref:`analyst-vm` installation.
+
+Wireshark is a part of our :ref:`desktop` installation.
 
 Screenshot
 ----------

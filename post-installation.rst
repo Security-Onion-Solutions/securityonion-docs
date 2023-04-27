@@ -32,7 +32,7 @@ Data Retention
 Other
 -----
 
--  Full-time analysts may want to connect using a dedicated :ref:`analyst-vm`.
+-  Full-time analysts may want to connect using a dedicated :ref:`desktop`.
 
 -  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the :ref:`tuning` section. 
 

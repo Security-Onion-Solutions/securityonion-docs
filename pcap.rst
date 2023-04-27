@@ -37,7 +37,7 @@ You can send all of the visible packet data to :ref:`cyberchef` by clicking the 
 .. image:: images/pcap-cyberchef.png
   :target: _images/pcap-cyberchef.png
 
-Finally, you can download the full pcap file by clicking the download button on the far right side of the table header. If you are using an :ref:`analyst-vm`, then the pcap will automatically open in :ref:`networkminer`. Alternatively, you could open the pcap in :ref:`wireshark`.
+Finally, you can download the full pcap file by clicking the download button on the far right side of the table header. If you are using an :ref:`desktop`, then the pcap will automatically open in :ref:`networkminer`. Alternatively, you could open the pcap in :ref:`wireshark`.
 
 .. image:: images/pcap-download.png
   :target: _images/pcap-download.png

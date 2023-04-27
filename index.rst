@@ -15,7 +15,7 @@ Security Onion Documentation
    first-time-users
    getting-started
    soc
-   analyst-vm
+   desktop
    network
    host
    logs
