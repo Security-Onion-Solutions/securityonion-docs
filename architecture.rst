@@ -42,7 +42,6 @@ A standard distributed deployment includes a **manager node**, one or more **for
 	
 .. image:: images/distributed.png
    :align: center
-   :width: 600
    :target: _images/distributed.png
 
 There is also an option to have a **manager node** and one or more **heavy nodes**.
@@ -56,7 +55,6 @@ There is also an option to have a **manager node** and one or more **heavy nodes
 
 .. image:: images/heavy-distributed.png
    :align: center
-   :width: 600
    :target: _images/heavy-distributed.png
 
 .. note::
