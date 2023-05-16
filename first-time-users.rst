@@ -19,11 +19,8 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/08_setup_hostname.png
   :target: _images/08_setup_hostname.png
 
-.. image:: images/09_setup_network.png
-  :target: _images/09_setup_network.png
-
-.. image:: images/10_setup_dhcp.png
-  :target: _images/10_setup_dhcp.png
+.. image:: images/09_setup_hostname_conflict.png
+  :target: _images/09_setup_hostname_conflict.png
 
 .. image:: images/10_setup_mn_nic.png
   :target: _images/10_setup_mn_nic.png
