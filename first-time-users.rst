@@ -76,8 +76,26 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/44_cyberchef.png
   :target: _images/44_cyberchef.png
 
+.. image:: images/45_jobs.png
+  :target: _images/45_jobs.png
+
 .. image:: images/46_grid.png
   :target: _images/46_grid.png
 
-.. image:: images/49_top.png
-  :target: _images/49_top.png
+.. image:: images/47_downloads.png
+  :target: _images/47_downloads.png
+
+.. image:: images/48_users.png
+  :target: _images/48_users.png
+
+.. image:: images/49_gridmembers.png
+  :target: _images/49_gridmembers.png
+
+.. image:: images/50_config.png
+  :target: _images/50_config.png
+
+.. image:: images/51_licensekey.png
+  :target: _images/51_licensekey.png
+
+.. image:: images/59_top.png
+  :target: _images/59_top.png
