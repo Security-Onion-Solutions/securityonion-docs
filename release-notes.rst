@@ -3,6 +3,22 @@
 Release Notes
 =============
 
+2.3.250 [20230519] Changes
+--------------------------
+
+- FIX: Bump SOCtopus Flask Version to 2.3.2 `#10272 <https://github.com/Security-Onion-Solutions/securityonion/issues/10272>`_
+- FIX: Improve soup's local file modification logic `#8972 <https://github.com/Security-Onion-Solutions/securityonion/issues/8972>`_
+- FIX: Kibana: Ensure _id fields beginning with a hyphen work properly when pivoting to SOC from Kibana `#10305 <https://github.com/Security-Onion-Solutions/securityonion/issues/10305>`_
+- FIX: Simplify cloud detection `#10261 <https://github.com/Security-Onion-Solutions/securityonion/issues/10261>`_
+- FIX: Strelka YARA Compilation `#10271 <https://github.com/Security-Onion-Solutions/securityonion/issues/10271>`_
+- UPGRADE: Elastic 8.7.1 `#10269 <https://github.com/Security-Onion-Solutions/securityonion/issues/10269>`_
+- UPGRADE: FleetDM 4.31.1 `#10379 <https://github.com/Security-Onion-Solutions/securityonion/issues/10379>`_
+- UPGRADE: Grafana 9.2.17 `#10262 <https://github.com/Security-Onion-Solutions/securityonion/issues/10262>`_
+- UPGRADE: Kratos to 0.13.0 `#10309 <https://github.com/Security-Onion-Solutions/securityonion/issues/10309>`_
+- UPGRADE: SOC external dependencies `#10268 <https://github.com/Security-Onion-Solutions/securityonion/issues/10268>`_
+- UPGRADE: Suricata 6.0.12 `#10311 <https://github.com/Security-Onion-Solutions/securityonion/issues/10311>`_
+- UPGRADE: Zeek 5.0.9 `#10374 <https://github.com/Security-Onion-Solutions/securityonion/issues/10374>`_
+
 2.3.240 [20230426] Changes
 --------------------------
 
