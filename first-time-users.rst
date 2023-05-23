@@ -3,12 +3,33 @@
 First Time Users
 ================
 
-If this is your first time using Security Onion, then we highly recommend that you start with a simple IMPORT installation. This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with as little as 4GB RAM, 2 CPU cores, and 200GB of storage. Just install Rocky Linux 9 Minimal and start our Setup wizard as shown in the :ref:`installation` section. Then follow the screenshots below to configure for IMPORT and run :ref:`so-import-pcap` to import one or more pcap files. After following the screenshots, you can skip to the :ref:`soc` section.
+If this is your first time using Security Onion 2, then we highly recommend that you start with a simple IMPORT installation using our Security Onion ISO image (see the :ref:`download` section). This can be done in a minimal virtual machine (see the :ref:`vmware` and :ref:`virtualbox` sections) with as little as 4GB RAM, 2 CPU cores, and 200GB of storage.
+
+The following screenshots will walk you through:
+
+- installing our Security Onion ISO image
+- configuring for IMPORT
+- running :ref:`so-import-pcap` and importing one or more pcap files
+- logging into :ref:`soc` to revie alerts and logs
+
+After following the screenshots, you can skip to the :ref:`soc` section.
 
 Once you're comfortable with your IMPORT installation, then you can move on to more advanced installations as shown in the :ref:`architecture` section.
 
+.. image:: images/01_grub.png
+  :target: _images/01_grub.png
+
+.. image:: images/02_initial_install.png
+  :target: _images/02_initial_install.png
+
+.. image:: images/03_initial_install_finished.png
+  :target: _images/03_initial_install_finished.png
+
 .. image:: images/04_setup_init.png
   :target: _images/04_setup_init.png
+
+.. image:: images/05_setup_option.png
+  :target: _images/05_setup_option.png
 
 .. image:: images/06_setup_type.png
   :target: _images/06_setup_type.png
@@ -24,6 +45,30 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 
 .. image:: images/10_setup_mn_nic.png
   :target: _images/10_setup_mn_nic.png
+
+.. image:: images/11_setup_mn_int.png
+  :target: _images/11_setup_mn_int.png
+
+.. image:: images/12_setup_cidr.png
+  :target: _images/12_setup_cidr.png
+
+.. image:: images/13_setup_gateway.png
+  :target: _images/13_setup_gateway.png
+
+.. image:: images/14_setup_dns_servers.png
+  :target: _images/14_setup_dns_servers.png
+
+.. image:: images/15_setup_dns_domain.png
+  :target: _images/15_setup_dns_domain.png
+
+.. image:: images/16_setup_docker_range.png
+  :target: _images/16_setup_docker_range.png
+
+.. image:: images/17_setup_airgap.png
+  :target: _images/17_setup_airgap.png
+
+.. image:: images/18_setup_direct_proxy.png
+  :target: _images/18_setup_direct_proxy.png
 
 .. image:: images/20_setup_webuser.png
   :target: _images/20_setup_webuser.png
