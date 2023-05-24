@@ -22,7 +22,7 @@ You may want to consider Logical Volume Management (LVM) as it will allow you to
 /boot
 -----
 
-You probably want a dedicated ``/boot`` partition of at least 500MB at the beginning of the drive.
+You probably want a dedicated ``/boot`` partition of at least 512MB at the beginning of the drive.
 
 /nsm
 ----
@@ -49,7 +49,7 @@ Example
 
 Here's an example of how our current Security Onion ISO image partitions a 1TB disk:
 
-- 500MB ``/boot`` partition at the beginning of the drive
+- 512MB ``/boot`` partition at the beginning of the drive
 - the remainder of the drive is an ``LVM`` volume that is then partitioned as follows:
 
   - 630GB ``/nsm``

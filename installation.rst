@@ -14,17 +14,13 @@ Installation
 
 Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on Rocky Linux 9) **or** installing standard Rocky Linux 9 or Ubuntu 22.04 and then installing our components on top.
 
-.. warning::
-
-  Our Security Onion ISO image is not quite ready yet, so for now you'll need to use Rocky Linux 9 Minimal as shown below.
-
 Installation using Security Onion ISO Image
 -------------------------------------------
 
 If you want to install Security Onion using our ISO image:
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
-#. `Download and verify our Security Onion ISO image <https://github.com/Security-Onion-Solutions/securityonion/blob/master/VERIFY_ISO.md>`__.
+#. Download and verify our `Security Onion ISO image <https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/VERIFY_ISO.md>`__.
 #. Boot the ISO in a machine that meets the minimum hardware specs.
 #. Follow the prompts to complete the installation and reboot.
 #. You may need to eject the ISO image or change the boot order of the machine to boot from the newly installed OS.

@@ -5,12 +5,8 @@ Download
 
 Before downloading, we highly recommend that you review the :ref:`release-notes` section so that you are aware of all recent changes!
 
-You can either download our Security Onion ISO image (based on Rocky Linux 9) **or** download a standard 64-bit Rocky Linux 9 Minimal or Ubuntu 22.04 ISO image and then add our Security Onion components. **Please keep in mind that we only support Rocky Linux 9 Minimal and and Ubuntu 22.04. Also note that Ubuntu 22.04 is not supported for manager nodes and will be phased out in the future.**
+You can either download our Security Onion ISO image (based on Rocky Linux 9) **or** download a standard 64-bit Rocky Linux 9 Minimal or Ubuntu 22.04 ISO image and then add our Security Onion components. **Please keep in mind that Ubuntu 22.04 is not supported for manager nodes and will be phased out altogether in the future.**
 
-.. warning::
-
-  Our Security Onion ISO image is not quite ready yet, so for now you'll need to use Rocky Linux 9 Minimal. Download it from https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.1-x86_64-minimal.iso and check the checksum via https://download.rockylinux.org/pub/rocky/9/isos/x86_64/CHECKSUM.
-  
 .. tip::
 
   For most use cases, we recommend using our Security Onion ISO image as it's the quickest and easiest method.
