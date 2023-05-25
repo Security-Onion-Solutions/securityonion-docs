@@ -277,19 +277,6 @@ Distributed Deployments
 
 Security Onion also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
 
-.. warning::
-
-    Due to the increased complexity, we only recommend this option if you absolutely need cluster features.
-
-.. image:: images/elastic-cluster-1.png
-  :target: _images/elastic-cluster-1.png
-
-.. image:: images/elastic-cluster-2.png
-  :target: _images/elastic-cluster-2.png
-
-.. image:: images/elastic-cluster-3.png
-  :target: _images/elastic-cluster-3.png
-
 When using Elastic clustering, index deletion is based on the ``delete`` settings shown in the global pillar above. The ``delete`` settings in the global pillar configure :ref:`curator` to delete indices older than the value given. For each index, please ensure that the ``close`` setting is set to a smaller value than the ``delete`` setting.
 
 Let's discuss the process for determining appropriate ``delete`` settings. First, check your indices using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
