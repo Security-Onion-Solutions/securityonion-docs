@@ -51,7 +51,7 @@ Please see the :ref:`proxy` section.
 Can I run Security Onion on Raspberry Pi or some other non-x86 box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-No, we only support 64-bit Intel/AMD architectures. Please see the :ref:`hardware` section.
+No, we only support x86-64 (standard Intel/AMD 64-bit architectures). Please see the :ref:`hardware` section.
 
 `back to top <#top>`__
 
