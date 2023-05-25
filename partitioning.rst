@@ -37,7 +37,7 @@ The vast majority of data will be written to ``/nsm``, so you'll want to dedicat
 Docker
 ------
 
-Docker images are currently written to ``/var/lib/docker/``. The current set of Docker images uses 27GB on disk. If you're planning a production deployment, you should plan on having enough space for another set of those Docker images for in-place updates.
+Docker images are currently written to ``/var/lib/docker/``. The current set of Docker images uses 30GB on disk. If you're planning a production deployment, you should plan on having enough space for another set of those Docker images for in-place updates.
 
 Other
 -----
