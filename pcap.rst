@@ -44,7 +44,7 @@ Finally, you can download the full pcap file by clicking the download button on 
 
 Once you've viewed one or more PCAPs, you will see them listed on the main PCAP page.
 
-.. image:: images/pcap-jobs.png
-  :target: _images/pcap-jobs.png
+.. image:: images/45_jobs.png
+  :target: _images/45_jobs.png
 
 When you are done with a PCAP, you may want to delete it using the ``X`` button on the far right. This deletes the cached PCAP file saved at ``/nsm/soc/jobs/``.
