@@ -266,11 +266,7 @@ Elasticsearch indices are closed based on the ``close`` setting shown at :ref:`a
 Deleting Indices
 ----------------
 
-.. note::
-
-  This section describes how Elasticsearch indices are deleted in standalone deployments and distributed deployments using our default deployment method of cross cluster search. Index deletion is different for deployments using Elastic clustering and that is described in the Elastic clustering section later.
-
-For standalone deployments and distributed deployments using cross cluster search, Elasticsearch indices are deleted based on the ``log_size_limit`` value in the minion pillar. If your open indices are using more than ``log_size_limit`` gigabytes, then :ref:`curator` will delete old open indices until disk space is back under ``log_size_limit``. If your total Elastic disk usage (both open and closed indices) is above ``log_size_limit``, then ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because :ref:`curator` cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
+Elasticsearch indices are deleted based on the ``log_size_limit`` value in the minion pillar. If your open indices are using more than ``log_size_limit`` gigabytes, then :ref:`curator` will delete old open indices until disk space is back under ``log_size_limit``. If your total Elastic disk usage (both open and closed indices) is above ``log_size_limit``, then ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because :ref:`curator` cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
 
 :ref:`curator` and ``so-curator-closed-delete`` run on the same schedule. This might seem like there is a potential to delete open indices before deleting closed indices. However, keep in mind that :ref:`curator`'s delete.yml is only going to see disk space used by open indices and not closed indices. So if we have both open and closed indices, we may be at ``log_size_limit`` but :ref:`curator`'s delete.yml is going to see disk space at a value lower than ``log_size_limit`` and so it shouldn't delete any open indices.
 
@@ -279,25 +275,7 @@ For example, suppose our ``log_size_limit`` is 1TB and we have 30 days of open i
 Distributed Deployments
 -----------------------
 
-For distributed deployments, Security Onion supports two different configurations for deploying Elasticsearch: cross cluster search and Elastic clustering.
-
-Cross Cluster Search
-~~~~~~~~~~~~~~~~~~~~
-
-Our traditional and default configuration for distributed Elasticsearch instances is `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__. This means that each Elasticsearch instance is totally independent and the manager queries all Elasticsearch instances via cross cluster search. This lowers the amount of maintenance required and the required knowledge of Elasticsearch internals. This configuration is recommended for most users.
-
-The ``manager node`` runs its own local copy of Elasticsearch, which manages cross-cluster search configuration for the deployment. This includes configuration for ``search nodes`` and ``heavy nodes`` (where applicable). This does not include ``forward nodes`` since they do not run Elastic Stack components.
-
-``Search nodes`` extend the storage and processing capabilities of the manager node, and run :ref:`elasticsearch`, :ref:`logstash`, and :ref:`curator`. Search nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node.
-
-``Heavy nodes`` run sensor services and store their own logs in a local Elasticsearch instance. Heavy nodes are added to the manager node's cluster search configuration, so the data that resides on the nodes can be queried from the manager node. Heavy nodes are not recommended for most use cases.
-
-When using a ``forward node``, Elastic Stack components are not enabled. :ref:`elastic-agent` forwards all logs to :ref:`logstash` on the manager node, where they are stored in Elasticsearch on the manager node or a search node (if the manager node has been configured to use search nodes). From there, the data can be queried through the use of cross-cluster search.
-
-Elastic Clustering
-~~~~~~~~~~~~~~~~~~
-
-For advanced users that require advanced features like shard replicas and hot/warm indices, Security Onion also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
+Security Onion also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
 
 .. warning::
 

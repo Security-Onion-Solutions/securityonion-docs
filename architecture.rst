@@ -88,8 +88,6 @@ Search Node
 
 Search nodes pull logs from the :ref:`redis` queue on the manager node and then parse and index those logs. When a user queries the manager node, the manager node then queries the search nodes, and they return search results.
 
-Security Onion can add search nodes using `cross cluster search <https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cross-cluster-search.html>`__ where each search node is independent or using traditional Elastic clustering where all search nodes join to form a single cluster.
-
 Search Nodes run the following components:
 
 -  :ref:`elasticsearch`
