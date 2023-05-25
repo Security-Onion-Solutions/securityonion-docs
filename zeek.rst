@@ -43,6 +43,13 @@ If you have multiple physical CPUs, you’ll most likely want to pin sniffing pr
 
     For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see https://github.com/brokenscripts/cpu_pinning.
 
+You can modify Zeek worker count by going to :ref:`administration` --> Configuration --> zeek --> config --> node --> workers.
+
+Disabling
+---------
+
+Zeek can be disabled by going to :ref:`administration` --> Configuration --> zeek --> enabled.
+
 Syslog
 ------
 
@@ -308,20 +315,6 @@ Zeek diagnostic logs can be found in ``/nsm/zeek/logs/``. Look for files like ``
 ::
 
         sudo docker logs so-zeek
-
-Disabling
----------
-
-Zeek can be disabled by setting ``enabled: false`` in the ``zeek`` :ref:`salt` pillar.
-
-If you just want to disable Zeek on a single sensor, then you can edit that sensor's ``minion.sls`` file. If the file doesn't already have a ``zeek`` section, then add the following to the end of the file:
-
-::
-
-	zeek:
-	  enabled: false
-
-If you want to disable Zeek globally across all your sensors, then you could add that entry to your ``global.sls`` file.
 
 More Information
 ----------------
