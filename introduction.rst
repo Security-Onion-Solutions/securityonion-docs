@@ -59,13 +59,13 @@ Security Onion Console (SOC)
 
 :ref:`soc` is the first thing you see when you log into Security Onion. It includes our :ref:`alerts` interface which allows you to see all of your NIDS alerts from :ref:`suricata`.
 
-.. image:: images/alerts.png
-  :target: _images/alerts.png
+.. image:: images/39_alerts.png
+  :target: _images/39_alerts.png
 
 :ref:`soc` also includes our :ref:`dashboards` interface which gives you a nice overview of not only your NIDS/HIDS alerts but also network metadata logs from :ref:`zeek` or :ref:`suricata` and any other logs that you may be collecting. 
 
-.. image:: images/dashboards.png
-  :target: _images/dashboards.png
+.. image:: images/40_dashboards.png
+  :target: _images/40_dashboards.png
 
 :ref:`hunt` is similar to :ref:`dashboards` but its default queries are more focused on threat hunting.
 
