@@ -57,15 +57,9 @@ If you have multiple physical CPUs, you’ll most likely want to pin sniffing pr
 Thresholding
 ------------
 
-To enable thresholding for SIDS, reference the example pillar at https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.example. 
+To edit the thresholding configuration, go to :ref:`administration` --> Configuration --> suricata --> thresholding --> SIDS.
 
-To view the acceptable syntax, view the file located at https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.usage. 
-
-This pillar can be added to :ref:`salt` in either the global pillar file (``/opt/so/saltstack/local/pillar/global.sls``) or minion pillar file (``/opt/so/saltstack/local/pillar/minions/$SENSORNAME_$ROLE.sls``).
-
-.. warning::
-
-   Salt sls files are in YAML format. When editing these files, please be very careful to respect YAML syntax, especially whitespace. For more information, please see https://docs.saltproject.io/en/latest/topics/troubleshooting/yaml_idiosyncrasies.html.
+Reference the example files at https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.usage and https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.example.
 
 Metadata
 --------
@@ -116,17 +110,7 @@ If you choose Suricata for metadata, it will extract files from network traffic 
 Disabling
 ---------
 
-Suricata can be disabled by setting ``enabled: false`` in the ``suricata`` :ref:`salt` pillar.
-
-If you just want to disable Suricata on a single sensor, then you can edit that sensor's ``minion.sls`` file. If the file doesn't already have a ``suricata`` section, then add the following to the end of the file:
-
-::
-
-	suricata:
-	  enabled: false
-
-If you want to disable Suricata globally across all your sensors, then you could add that entry to your ``global.sls`` file.
-
+Suricata can be disabled by going to :ref:`administration` --> Configuration --> suricata --> enabled.
 
 Diagnostic Logging
 ------------------
