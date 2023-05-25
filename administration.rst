@@ -22,8 +22,8 @@ Grid Members
 
 The Grid Members page shows nodes that have attempted to join the grid and whether or not they have been accepted into the grid by an administrator.
 
-.. image:: images/grid-members.png
-  :target: _images/grid-members.png
+.. image:: images/49_gridmembers.png
+  :target: _images/49_gridmembers.png
 
 Unaccepted members are displayed on the left side and broken into three sections: Pending Members, Denied Members, and Rejected Members. When you accept a member, it will then move to the right side under Accepted Members.
 
@@ -34,8 +34,8 @@ Configuration
 
 The Configuration page allows you to configure various components of your grid.
 
-.. image:: images/configuration.png
-  :target: _images/configuration.png
+.. image:: images/50_config.png
+  :target: _images/50_config.png
 
 You can click on a component to drill into it and show all available settings for that component. You can then click on a setting to show the current setting or modify it if necessary. If you make a mistake, you can easily revert back to the default value.
 
