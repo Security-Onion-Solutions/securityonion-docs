@@ -52,9 +52,6 @@ Time Picker
 
 By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen.
 
-.. image:: images/soc-time-picker.png
-  :target: _images/soc-time-picker.png
-
 Data Table
 ----------
 
