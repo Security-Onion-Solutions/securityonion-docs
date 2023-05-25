@@ -50,6 +50,7 @@ The following folks have made significant contributions to Security Onion over t
 -  Wes Lambert
 -  Dustin Lee
 -  Josh More
+-  Corey Ogburn
 -  Eric Ooi
 -  Josh Patterson
 -  Phil Plantamura
