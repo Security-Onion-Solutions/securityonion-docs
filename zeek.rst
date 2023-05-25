@@ -62,8 +62,6 @@ Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`elastic-
 
 We configure Zeek to output logs in JSON format. If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
 
-If you want to specify what Zeek logs are ingested, you can use :ref:`so-zeek-logs`.
-
 Zeek monitors your network traffic and creates logs, such as:
 
 conn.log
@@ -125,7 +123,7 @@ Other Zeek logs
 
 Zeek also provides other logs by default and you can read more about them at https://docs.zeek.org/en/latest/script-reference/log-files.html.
 
-In addition to Zeek's default logs, we also include protocol analyzers for STUN, TDS, and Wireguard traffic and several different ICS/SCADA protocols. By default, these analyzers are enabled and will log to the filesystem. For new installations, these logs are automatically ingested into Elasticsearch. If you upgrade an existing deployment and would like to ingest these logs, you can enable them via :ref:`so-zeek-logs`.
+In addition to Zeek's default logs, we also include protocol analyzers for STUN, TDS, and Wireguard traffic and several different ICS/SCADA protocols. These analyzers are enabled by default.
 
 We also include MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can add ``bzar`` to your ``global.sls`` as shown in the Custom Scripts section below.
 

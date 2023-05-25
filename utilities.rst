@@ -17,4 +17,3 @@ This section covers some of the main utilities in Security Onion.
    so-monitor-add
    so-status
    so-test
-   so-zeek-logs
