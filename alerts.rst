@@ -16,17 +16,9 @@ At the top of the page, there is an Options drop-down menu that allows you to se
 Toggles
 ~~~~~~~
 
-The first toggle is labeled ``Temporarily enable advanced interface features``. 
-
-.. image:: images/soc-toggle-advanced.png
-  :target: _images/soc-toggle-advanced.png
-
-If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
+The first toggle is labeled ``Temporarily enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
 
 The ``Acknowledged`` and ``Escalated`` toggles control what alerts are displayed:
-
-.. image:: images/soc-toggle-alerts.png
-  :target: _images/soc-toggle-alerts.png
 
 - Enabling the ``Acknowledged`` toggle will only show alerts that have previously been acknowledged by an analyst. 
 
@@ -35,12 +27,7 @@ The ``Acknowledged`` and ``Escalated`` toggles control what alerts are displayed
 Automatic Refresh Interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Another option is the Automatic Refresh Interval setting:
-
-.. image:: images/soc-automatic-refresh-interval.png
-  :target: _images/soc-automatic-refresh-interval.png
-
-When enabled, the Alerts page will automatically refresh at the time interval you select.
+Another option is the Automatic Refresh Interval setting. When enabled, the Alerts page will automatically refresh at the time interval you select.
 
 Time Zone
 ~~~~~~~~~

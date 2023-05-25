@@ -103,12 +103,7 @@ Options
 
 Starting at the top of the main Cases page, the Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
 
-There is also a toggle labeled ``Temporarily enable advanced interface features``.
-
-.. image:: images/soc-toggle-advanced.png
-  :target: _images/soc-toggle-advanced.png
-
-If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
+There is also a toggle labeled ``Temporarily enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
 
 Query Bar
 ---------

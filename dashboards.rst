@@ -20,30 +20,17 @@ At the top of the page, there is an Options drop-down menu that allows you to se
 Auto Apply
 ~~~~~~~~~~
 
-The Auto Apply option defaults to enabled:
-
-.. image:: images/soc-auto-apply.png
-  :target: _images/soc-auto-apply.png
-
-When enabled, Dashboards will automatically submit your query any time you change filters, groupings, or date ranges.
+The Auto Apply option defaults to enabled and will automatically submit your query any time you change filters, groupings, or date ranges.
 
 Exclude case data
 ~~~~~~~~~~~~~~~~~
 
-Dashboards excludes :ref:`cases` data by default:
-
-.. image:: images/soc-exclude-case-data.png
-  :target: _images/soc-exclude-case-data.png
-
-If you disable this option, then you can use Dashboards to query your :ref:`cases` data.
+Dashboards excludes :ref:`cases` data by default. If you disable this option, then you can use Dashboards to query your :ref:`cases` data.
 
 Automatic Refresh Interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Automatic Refresh Interval setting will automatically refresh your query at the time interval you select:
-
-.. image:: images/soc-automatic-refresh-interval.png
-  :target: _images/soc-automatic-refresh-interval.png
+The Automatic Refresh Interval setting will automatically refresh your query at the time interval you select.
 
 Time Zone
 ~~~~~~~~~

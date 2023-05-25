@@ -32,12 +32,7 @@ Another possible SOC customization is the session timeout. The default timeout f
 Advanced Interface
 ------------------
 
-The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. :ref:`alerts` and :ref:`cases` have a toggle under Options labeled ``Temporarily enable advanced interface features``.
-
-.. image:: images/soc-toggle-advanced.png
-  :target: _images/soc-toggle-advanced.png
-
-If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
+The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. :ref:`alerts` and :ref:`cases` have a toggle under Options labeled ``Temporarily enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
 
 Custom Queries
 --------------
