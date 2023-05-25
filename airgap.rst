@@ -3,13 +3,11 @@
 Airgap
 ======
 
-Security Onion is committed to allowing users to run a full install on networks that do not have Internet access. You will need to use our Security Onion ISO image as it includes everything you need to run without Internet access. Setup will ask if you want to configure the installation for airgap and will then make the appropriate modifications to make this work properly. Please note that the airgap option is intended to be consistent across your deployment, so if you are on an airgap network you should choose the airgap option when installing the manager and all nodes (recent versions enforce this automatically).
+Security Onion is committed to allowing users to run a full install on networks that do not have Internet access. You will need to use our Security Onion ISO image as it includes everything you need to run without Internet access. Setup will ask if you want to configure the installation for airgap and will then make the appropriate modifications to make this work properly. 
 
 Here's how airgap mode works:
 
-- All Rocky Linux repos are removed and replaced with a new repo that runs on the manager.
-
-- During the install, all of the necessary RPMs are copied from the ISO to a new repo located in ``/nsm/repo/``. 
+- During the install, all of the necessary RPM packages are copied from the ISO image to a new repo located in ``/nsm/repo/``. 
 
 - All devices in the grid will now use this repo for updates to packages.
 
