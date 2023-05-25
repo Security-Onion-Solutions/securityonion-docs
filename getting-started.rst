@@ -23,11 +23,11 @@ You can download our Security Onion ISO image or a standard 64-bit Rocky Linux 9
 
 **If I just want to try Security Onion in a virtual machine, how do I create a virtual machine?**
 
-See the :ref:`vmware` and :ref:`virtualbox` sections.
+See the :ref:`vmware`, :ref:`virtualbox`, and :ref:`proxmox` sections.
 
 **How do I deploy Security Onion in the cloud?**
 
-See the :ref:`cloud-ami` and :ref:`cloud-azure` sections.
+See the :ref:`cloud-ami`, :ref:`cloud-azure`, and :ref:`cloud-gcp` sections.
 
 **What if I have trouble booting the ISO image?**
 
