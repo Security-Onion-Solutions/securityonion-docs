@@ -69,8 +69,8 @@ Security Onion Console (SOC)
 
 :ref:`hunt` is similar to :ref:`dashboards` but its default queries are more focused on threat hunting.
 
-.. image:: images/hunt.png
-  :target: _images/hunt.png
+.. image:: images/41_hunt.png
+  :target: _images/41_hunt.png
 
 :ref:`cases` is the case management interface. As you are working in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you may find alerts or logs that are interesting enough to send to :ref:`cases` and create a case. Other analysts can collaborate with you as you work to close that case.
 
