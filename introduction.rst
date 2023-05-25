@@ -79,8 +79,8 @@ Security Onion Console (SOC)
 
 :ref:`soc` also includes an interface for full packet capture (:ref:`pcap`) retrieval.
 
-.. image:: images/pcap.png
-  :target: _images/pcap.png
+.. image:: images/42_pcap.png
+  :target: _images/42_pcap.png
 
 CyberChef
 ~~~~~~~~~

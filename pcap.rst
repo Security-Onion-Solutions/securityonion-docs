@@ -17,15 +17,15 @@ Alternatively, you can go directly to the PCAP interface, click the blue + butto
 
 Security Onion will then locate the stream and render a high level overview of the packets.
 
-.. image:: images/pcap.png
-  :target: _images/pcap.png
+.. image:: images/42_pcap.png
+  :target: _images/42_pcap.png
 
 If there are many packets in the stream, you can use the ``LOAD MORE`` button, ``Rows per page`` setting, and arrows to navigate through the list of packets. 
 
 You can drill into individual rows to see the actual payload data. There are buttons at the top of the table that control what data is displayed in the individual rows. By disabling ``Show all packet data`` and ``HEX``, we can get an ASCII transcript.
 
-.. image:: images/pcap-transcript.png
-  :target: _images/pcap-transcript.png
+.. image:: images/43_pcap_details.png
+  :target: _images/43_pcap_details.png
 
 You can select text with your mouse and then use the context menu to send that selected text to :ref:`cyberchef`, Google, or other destinations defined in the actions list.
 

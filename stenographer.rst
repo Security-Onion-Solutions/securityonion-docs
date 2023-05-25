@@ -19,8 +19,8 @@ Analysis
 
 You can access full packet capture via the :ref:`pcap` interface:
 
-.. image:: images/pcap-transcript.png
-  :target: _images/pcap-transcript.png
+.. image:: images/43_pcap_details.png
+  :target: _images/43_pcap_details.png
 
 :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` interface.
 
