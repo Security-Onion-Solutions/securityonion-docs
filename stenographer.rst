@@ -7,7 +7,7 @@ Security Onion uses Stenographer to write network traffic to disk. From https://
 
     Stenographer is a full-packet-capture utility for buffering packets to disk for intrusion detection and incident response purposes. It provides a high-performance implementation of NIC-to-disk packet writing, handles deleting those files as disk fills up, and provides methods for reading back specific sets of packets quickly and easily.
 
-Stenographer uses :ref:`af-packet` for packet acquisition. It's important to note that Stenographer is totally independent from :ref:`suricata` and :ref:`zeek`. This means that if you don't want or need to write full packet capture to disk, then you can safely disable stenographer while still getting NIDS alerts and protocol metadata.
+Stenographer uses :ref:`af-packet` for packet acquisition. It's important to note that Stenographer is totally independent from :ref:`suricata` and :ref:`zeek`. This means that Stenographer has no impact on your NIDS alerts and protocol metadata.
 
 Output
 ------
@@ -65,7 +65,7 @@ Diagnostic logging for Stenographer can be found at ``/opt/so/log/stenographer/`
 Disabling
 ---------
 
-If you need to disable Stenographer, you can do so by going to :ref:`administration` --> Configuration --> pcap --> enabled.
+Since Stenographer is totally independent from :ref:`suricata` and :ref:`zeek`, you can disable it without impacting your NIDS alerts or protocol metadata. If you decide to disable Stenographer, you can do so by going to :ref:`administration` --> Configuration --> pcap --> enabled.
 
 VLAN Tags
 ---------
