@@ -3,6 +3,10 @@
 Security Onion Desktop
 ======================
 
+.. warning::
+
+   Security Onion Desktop is not quite ready yet. Stay tuned!
+
 Full-time analysts may want to use a dedicated Security Onion desktop. This allows you to investigate pcaps, malware, and other potentially malicious artifacts without impacting your Security Onion deployment or your usual desktop environment.
 
 .. image:: images/desktop.png
