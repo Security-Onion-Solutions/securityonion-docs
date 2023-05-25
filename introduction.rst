@@ -87,8 +87,8 @@ CyberChef
 
 :ref:`cyberchef` allows you to decode, decompress, and analyze artifacts. :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`pcap` all allow you to quickly and easily send data to :ref:`cyberchef` for further analysis.
 
-.. image:: images/cyberchef.png
-  :target: _images/cyberchef.png
+.. image:: images/44_cyberchef.png
+  :target: _images/44_cyberchef.png
 
 Playbook
 ~~~~~~~~
