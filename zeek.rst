@@ -7,7 +7,7 @@ Security Onion includes Zeek for network protocol analysis and metadata.  From h
 
     Zeek is a powerful network analysis framework that is much different from the typical IDS you may know. (Zeek is the new name for the long-established Bro system. Note that parts of the system retain the "Bro" name, and it also often appears in the documentation and distributions.)
 
-Zeek logs are sent to :ref:`elasticsearch` for parsing and storage and can then be found in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Zeek conn (connection) logs in :ref:`hunt`:
+Zeek logs are sent to :ref:`elasticsearch` for parsing and storage and can then be found in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Zeek logs in :ref:`hunt`:
 
 .. image:: images/41_hunt.png
   :target: _images/41_hunt.png
