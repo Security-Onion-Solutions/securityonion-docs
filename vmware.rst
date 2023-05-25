@@ -20,7 +20,7 @@ VMware Workstation is available for many different host operating systems, inclu
 #. From the VMware main window, select File >> New Virtual Machine.
 #. Select Typical installation >> Click ``Next``.
 #. Installer disc image file >> SO ISO file path >> Click ``Next``.
-#. Choose Linux, CentOS 7 64-Bit and click ``Next``.
+#. Choose Linux, CentOS 64-Bit and click ``Next``.
 #. Specify virtual machine name and click ``Next``.
 #. Specify disk size (minimum 200GB), store as single file, click ``Next``.
 #. Customize hardware and increase Memory and Processors based on the :ref:`hardware` section.
@@ -40,7 +40,7 @@ Follow the steps below to create a VM in VMware Fusion for our Security Onion IS
 #. From the VMware Fusion main window, click ``File`` and then click ``New``.
 #. ``Select the Installation Method`` appears. Click ``Install from disc or image`` and click ``Continue``.
 #. ``Create a New Virtual Machine`` appears. Click ``Use another disc or disc image...``, select our ISO image, click ``Open``, then click ``Continue``.
-#. ``Choose Operating System`` appears. Click ``Linux``, click ``CentOS 7 64-bit``, then click ``Continue``.
+#. ``Choose Operating System`` appears. Click ``Linux``, click ``CentOS 64-bit``, then click ``Continue``.
 #. ``Choose Firmware Type`` appears. Click ``Legacy BIOS`` and then click ``Continue``.
 #. ``Finish`` screen appears. Click the ``Customize Settings`` button.
 #. ``Save As`` screen appears. Give the VM a name and click the ``Save`` button.
