@@ -5,8 +5,8 @@ Grid
 
 :ref:`soc` includes a Grid interface which allows you to quickly check the status of all nodes in your grid.
 
-.. image:: images/grid.png
-  :target: _images/grid.png
+.. image:: images/46_grid.png
+  :target: _images/46_grid.png
 
 Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that shows the sum of all Consumption EPS measurements in the entire grid. Below that you will find a list of all nodes in your grid.
 

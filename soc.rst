@@ -10,13 +10,13 @@ Once all configuration is complete, you can then connect to Security Onion Conso
 
 Depending on the options you chose in the installer, connect to the IP address or hostname of your Security Onion installation. Then login using the email address and password that you specified in the installer. 
 
-.. image:: images/login.png
-  :target: _images/login.png
+.. image:: images/37_login.png
+  :target: _images/37_login.png
 
 Once logged in, you'll notice the user menu in the upper right corner. This allows you to manage your user settings and access documentation and other resources.
 
-.. image:: images/soc-overview.png
-  :target: _images/soc-overview.png
+.. image:: images/38_welcome.png
+  :target: _images/38_welcome.png
 
 On the left side of the page, you'll see links for analyst tools like :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, :ref:`cases`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, and :ref:`attack-navigator`. While :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, :ref:`cases`, and :ref:`pcap` are built into SOC itself, the remaining tools are external and will spawn separate browser tabs.
 
