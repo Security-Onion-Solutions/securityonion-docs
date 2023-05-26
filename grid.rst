@@ -8,7 +8,7 @@ Grid
 .. image:: images/grid.png
   :target: _images/grid.png
 
-Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that is the sum of all Consumption EPS measurements in the entire grid. Below that you will find a list of all nodes in your grid.
+Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that shows the sum of all Consumption EPS measurements in the entire grid. Below that you will find a list of all nodes in your grid.
 
 .. note::
 
@@ -24,27 +24,27 @@ This section includes an overview of node status.
 Online Since
 ~~~~~~~~~~~~
 
-This shows how long the node has been online.
+The ``Online Since`` field shows how long the node has been online.
 
 Production EPS
 ~~~~~~~~~~~~~~
 
-Production EPS is how much a node is producing. This is taken from the number of events out in :ref:`elastic-agent`.
+The ``Production EPS`` field is how much a node is producing. This is taken from the number of events out in :ref:`elastic-agent`.
 
 Consumption EPS
 ~~~~~~~~~~~~~~~
 
-Consumption EPS is how much a search node is consuming. 
+The ``Consumption EPS`` field is how much a search node is consuming. 
 
 Process Status
 ~~~~~~~~~~~~~~
 
-If this shows ``Fault``, you can check the ``Container Status`` section to determine which process has failed.
+If the ``Process Status`` field shows ``Fault``, you can check the ``Container Status`` section to determine which process has failed.
 
 Connection Status
 ~~~~~~~~~~~~~~~~~
 
-This shows whether or not the node is currently connected to the grid.
+The ``Connection Status`` field shows whether or not the node is currently connected to the grid.
 
 RAID Status
 ~~~~~~~~~~~
@@ -54,7 +54,7 @@ If you are using an official Security Onion Solutions appliance with RAID suppor
 Description
 ~~~~~~~~~~~
 
-This shows the Description entered during Setup.
+The ``Description`` field shows the optional Description you may have entered during Setup.
 
 Link to InfluxDB
 ~~~~~~~~~~~~~~~~
