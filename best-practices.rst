@@ -29,7 +29,7 @@ Configuration
 
 - Avoid changing hostname and IP address after installation.
 
-- Linux is case sensitive where other OSs might not be, so we recommend using lowercase for things like hostnames, usernames, etc.
+- Linux is case sensitive where other operating systems might not be, so we recommend using lowercase for things like hostnames, usernames, etc.
 
 Avoid Third Party Software and Modifications
 --------------------------------------------
