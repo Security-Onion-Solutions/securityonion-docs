@@ -48,23 +48,6 @@ A standard distributed deployment includes a **manager node**, one or more **for
    :align: center
    :target: _images/diagrams/distributed.png
 
-There is also an option to have a **manager node** and one or more **heavy nodes**.
-
-.. warning::
-
-	Heavy nodes are NOT recommended for most users due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
-
--  Recommended only if a standard distributed deployment is not possible
--  Consists of a manager node and one or more heavy nodes
-
-.. image:: images/diagrams/heavy-distributed.png
-   :align: center
-   :target: _images/diagrams/heavy-distributed.png
-
-.. note::
-
-	Heavy nodes do not consume from the :ref:`redis` queue on the manager. This means that if you just have a manager and heavy nodes, then the :ref:`redis` queue on the manager will grow and never be drained. To avoid this, you have two options. If you are starting a new deployment, you can make your ``manager`` a ``manager search`` so that it will drain its own :ref:`redis` queue. Alternatively, if you have an existing deployment with a ``manager`` and want to avoid rebuilding, then you can add a separate search node (NOT heavy node) to consume from the :ref:`redis` queue on the manager.
-
 Node Types
 ----------
 
@@ -120,24 +103,6 @@ Forward nodes run the following components:
 -  :ref:`suricata`
 -  :ref:`stenographer`
 
-Heavy Node
-~~~~~~~~~~
-
-.. warning::
-
-	Heavy nodes are NOT recommended for most users.
-
-Heavy nodes perform sensor duties and store their own logs in their own local Elasticsearch instance. This results in higher hardware requirements and lower performance. Heavy nodes do NOT pull logs from the redis queue on the manager like search nodes do.
-
-Heavy Nodes run the following components:
-
--  :ref:`elasticsearch`
--  :ref:`logstash`
--  :ref:`curator`
--  :ref:`zeek`
--  :ref:`suricata`
--  :ref:`stenographer`
-
 Elastic Fleet Standalone Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -160,3 +125,34 @@ The :ref:`idh` node mimics common services such as HTTP, FTP, and SSH. Any inter
 .. image:: images/diagrams/idh.png
    :align: center
    :target: _images/diagrams/idh.png
+
+Heavy Node
+~~~~~~~~~~
+
+There is also an option to have a **manager node** and one or more **heavy nodes**.
+
+.. warning::
+
+	Heavy nodes are NOT recommended for most users due to performance reasons, and should only be used for testing purposes or in low-throughput environments.
+
+-  Recommended only if a standard distributed deployment is not possible
+-  Consists of a manager node and one or more heavy nodes
+
+.. image:: images/diagrams/heavy-distributed.png
+   :align: center
+   :target: _images/diagrams/heavy-distributed.png
+
+.. note::
+
+	Heavy nodes do not consume from the :ref:`redis` queue on the manager. This means that if you just have a manager and heavy nodes, then the :ref:`redis` queue on the manager will grow and never be drained. To avoid this, you have two options. If you are starting a new deployment, you can make your ``manager`` a ``manager search`` so that it will drain its own :ref:`redis` queue. Alternatively, if you have an existing deployment with a ``manager`` and want to avoid rebuilding, then you can add a separate search node (NOT heavy node) to consume from the :ref:`redis` queue on the manager.
+
+Heavy nodes perform sensor duties and store their own logs in their own local Elasticsearch instance. This results in higher hardware requirements and lower performance. Heavy nodes do NOT pull logs from the redis queue on the manager like search nodes do.
+
+Heavy Nodes run the following components:
+
+-  :ref:`elasticsearch`
+-  :ref:`logstash`
+-  :ref:`curator`
+-  :ref:`zeek`
+-  :ref:`suricata`
+-  :ref:`stenographer`
