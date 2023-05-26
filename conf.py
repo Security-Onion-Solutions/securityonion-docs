@@ -118,8 +118,8 @@ if globals().get('websupport2_base_url', False):
 context = {
     'using_theme': using_rtd_theme,
     'html_theme': html_theme,
-    'current_version': "latest",
-    'version_slug': "latest",
+    'current_version': "2.4",
+    'version_slug': "2.4",
     'MEDIA_URL': "https://media.readthedocs.org/",
     'STATIC_URL': "https://assets.readthedocs.org/static/",
     'PRODUCTION_DOMAIN': "readthedocs.org",
