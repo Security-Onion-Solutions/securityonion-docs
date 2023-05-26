@@ -148,7 +148,15 @@ Receiver Node
 
 The Receiver Node runs :ref:`logstash` and :ref:`redis` and allows for events to continue to be processed by search nodes in the event the manager node is offline. When a receiver node joins the grid, :ref:`elastic-agent` on all nodes adds this new address as a load balanced :ref:`logstash` output. The search nodes add this new node as another :ref:`logstash` input. Receiver nodes are "active-active" and you can add as many as you want (within reason) and events will be balanced among them.
 
+.. image:: images/diagrams/receiver.png
+   :align: center
+   :target: _images/diagrams/receiver.png
+
 Intrusion Detection Honeypot (IDH) Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The :ref:`idh` node mimics common services such as HTTP, FTP, and SSH. Any interaction with these fake services will automatically result in an alert.
+
+.. image:: images/diagrams/idh.png
+   :align: center
+   :target: _images/diagrams/idh.png
