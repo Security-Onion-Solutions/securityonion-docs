@@ -144,7 +144,7 @@ context = {
     'api_host': 'https://readthedocs.org',
     'github_user': 'Security-Onion-Solutions',
     'github_repo': 'securityonion-docs',
-    'github_version': 'master',
+    'github_version': '2.4',
     'display_github': True,
     'bitbucket_user': 'None',
     'bitbucket_repo': 'None',
