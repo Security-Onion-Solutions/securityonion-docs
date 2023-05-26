@@ -10,17 +10,17 @@ Import
 
 The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import pcap files using :ref:`so-import-pcap` or evtx files using :ref:`so-import-evtx`. You can then view those logs in :ref:`soc`.
 
-.. image:: images/import.png
+.. image:: images/diagrams/import.png
    :align: center
-   :target: _images/import.png
+   :target: _images/diagrams/import.png
 
 Evaluation
 ----------
 The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`elastic-agent` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for a quick installation to temporarily test out Security Onion. It is **not** designed for production usage at all.
 
-.. image:: images/eval.png
+.. image:: images/diagrams/eval.png
    :align: center
-   :target: _images/eval.png
+   :target: _images/diagrams/eval.png
 
 Standalone
 ----------
@@ -28,9 +28,9 @@ Standalone
 
 This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
 
-.. image:: images/standalone.png
+.. image:: images/diagrams/standalone.png
    :align: center
-   :target: _images/standalone.png
+   :target: _images/diagrams/standalone.png
 
 Distributed
 -----------
@@ -44,9 +44,9 @@ A standard distributed deployment includes a **manager node**, one or more **for
 
 	If you install a dedicated manager node, you must also deploy one or more search nodes. Otherwise, all logs will queue on the manager and have no place to be stored. If you are limited on the number of nodes you can deploy, you can install a **manager search** node so that your manager node can act as a search node and store those logs. However, please keep in mind that overall performance and scalability of a **manager search** node will be lower compared to our recommended architecture of dedicated manager node and separate search nodes.
 	
-.. image:: images/distributed.png
+.. image:: images/diagrams/distributed.png
    :align: center
-   :target: _images/distributed.png
+   :target: _images/diagrams/distributed.png
 
 There is also an option to have a **manager node** and one or more **heavy nodes**.
 
@@ -57,9 +57,9 @@ There is also an option to have a **manager node** and one or more **heavy nodes
 -  Recommended only if a standard distributed deployment is not possible
 -  Consists of a manager node and one or more heavy nodes
 
-.. image:: images/heavy-distributed.png
+.. image:: images/diagrams/heavy-distributed.png
    :align: center
-   :target: _images/heavy-distributed.png
+   :target: _images/diagrams/heavy-distributed.png
 
 .. note::
 

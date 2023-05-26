@@ -3,8 +3,8 @@
 Security Onion Console (SOC)
 ============================
 
-.. image:: images/analyst.png
-  :target: _images/analyst.png
+.. image:: images/diagrams/analyst.png
+  :target: _images/diagrams/analyst.png
 
 Once all configuration is complete, you can then connect to Security Onion Console (SOC) with your web browser. We recommend chromium-based browsers such as Google Chrome. Other browsers may work, but fully updated chromium-based browsers provide the best compatibility. 
 
