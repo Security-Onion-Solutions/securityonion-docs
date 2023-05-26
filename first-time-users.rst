@@ -100,8 +100,8 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/37_login.png
   :target: _images/37_login.png
 
-.. image:: images/38_welcome.png
-  :target: _images/38_welcome.png
+.. image:: images/38_overview.png
+  :target: _images/38_overview.png
 
 .. image:: images/39_alerts.png
   :target: _images/39_alerts.png
