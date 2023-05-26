@@ -3,7 +3,7 @@
 Dashboards
 ==========
 
-:ref:`soc` includes our own Dashboards interface. This interface includes an entire set of pre-built dashboards for our standard data types.
+:ref:`soc` includes a Dashboards interface which includes an entire set of pre-built dashboards for our standard data types.
 
 .. image:: images/40_dashboards.png
   :target: _images/40_dashboards.png

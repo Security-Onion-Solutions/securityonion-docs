@@ -3,7 +3,7 @@
 Grid
 ====
 
-:ref:`soc` includes a Grid page which allows you to quickly check the status of all nodes in your grid.
+:ref:`soc` includes a Grid interface which allows you to quickly check the status of all nodes in your grid.
 
 .. image:: images/grid.png
   :target: _images/grid.png

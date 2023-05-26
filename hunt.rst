@@ -3,7 +3,7 @@
 Hunt
 ====
 
-:ref:`soc` includes our Hunt interface which is similar to our :ref:`dashboards` interface but is tuned more for threat hunting.
+:ref:`soc` includes a Hunt interface which is similar to our :ref:`dashboards` interface but is tuned more for threat hunting.
 
 .. image:: images/41_hunt.png
   :target: _images/41_hunt.png

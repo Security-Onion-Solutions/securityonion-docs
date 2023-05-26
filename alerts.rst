@@ -3,7 +3,7 @@
 Alerts
 ======
 
-:ref:`soc` includes our Alerts interface. This interface gives you an overview of the alerts that Security Onion is generating and allows you to quickly drill down into details, pivot to :ref:`hunt` or the :ref:`pcap` interface, and escalate alerts to :ref:`cases`.
+:ref:`soc` includes an Alerts interface which gives you an overview of the alerts that Security Onion is generating. You can then quickly drill down into details, pivot to :ref:`hunt` or the :ref:`pcap` interface, and escalate alerts to :ref:`cases`.
 
 .. image:: images/39_alerts.png
   :target: _images/39_alerts.png
