@@ -17,7 +17,7 @@ source_parsers = {
 master_doc = 'index'
 project = u'Security Onion'
 copyright = str(datetime.now().year)
-version = 'latest'
+version = '2.3'
 release = '2.3'
 exclude_patterns = ['_build']
 pygments_style = 'sphinx'
@@ -118,8 +118,8 @@ if globals().get('websupport2_base_url', False):
 context = {
     'using_theme': using_rtd_theme,
     'html_theme': html_theme,
-    'current_version': "latest",
-    'version_slug': "latest",
+    'current_version': "2.3",
+    'version_slug': "2.3",
     'MEDIA_URL': "https://media.readthedocs.org/",
     'STATIC_URL': "https://assets.readthedocs.org/static/",
     'PRODUCTION_DOMAIN': "readthedocs.org",
@@ -144,7 +144,7 @@ context = {
     'api_host': 'https://readthedocs.org',
     'github_user': 'Security-Onion-Solutions',
     'github_repo': 'securityonion-docs',
-    'github_version': 'master',
+    'github_version': '2.3',
     'display_github': True,
     'bitbucket_user': 'None',
     'bitbucket_repo': 'None',
