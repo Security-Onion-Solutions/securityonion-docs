@@ -20,33 +20,14 @@ IDH nodes are dedicated to just being IDH nodes and cannot run any other service
 
         The IDH node is designed to be placed *inside* your network perimeter! It should not be accessible from the Internet!
      
-Screenshots
------------
+Configuration
+-------------
 
-Run Setup, select the ``DISTRIBUTED`` install submenu, choose the ``Existing Deployment`` option, and then select the ``IDH`` option.
-
-.. image:: images/idh-install-1.png
-  :target: _images/idh-install-1.png
-
-Then choose from one of the common honeypot options or choose the ``Custom`` option to customize.
-
-.. image:: images/idh-install-2.png
-  :target: _images/idh-install-2.png
-
-You can optionally prevent the IDH services from listening on the management interface.
-
-.. image:: images/idh-install-3.png
-  :target: _images/idh-install-3.png
-
-If you chose the ``Linux Webserver`` option above, anybody who connects to the webserver will see a fake login page.
-
-.. image:: images/idh-webserver.png
-  :target: _images/idh-webserver.png
-
-Connections to honeypot services will result in ``SO IDH`` alerts that can be seen in :ref:`alerts`.
-
-.. image:: images/idh-alert-1.png
-  :target: _images/idh-alert-1.png
+- Run Setup, select the ``DISTRIBUTED`` install submenu, choose the ``Existing Deployment`` option, and then select the ``IDH`` option.
+- Choose from one of the common honeypot options or choose the ``Custom`` option to customize.
+- You can optionally prevent the IDH services from listening on the management interface.
+  
+After configuration is complete, connections to honeypot services will result in ``SO IDH`` alerts that can be seen in :ref:`alerts`.
 
 Technical Background
 --------------------
