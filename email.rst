@@ -1,7 +1,7 @@
 .. _email:
 
-Email Configuration
-===================
+Email
+=====
 
 Some applications rely on having a mail server in the OS itself and other applications have their own mail configuration and so they don't rely on a mail server in the OS itself.
 

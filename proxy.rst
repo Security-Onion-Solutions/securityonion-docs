@@ -1,7 +1,7 @@
 .. _proxy:
 
-Proxy Configuration
-===================
+Proxy
+=====
 
 Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. Otherwise, if you need to configure manually, please continue reading.
 
