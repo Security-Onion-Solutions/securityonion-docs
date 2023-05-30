@@ -18,36 +18,3 @@ To remove the node from the SOC Grid page, make sure the node is powered off and
 ::
 
    sudo so-soc-restart
-   
-Cross Cluster Search
---------------------
-
-If you are removing a search node, you will want to remove it from cross cluster search. To do so, you'll need to update that search node's settings in ``_cluster/settings`` and make sure that any settings are set to ``null``. So you might want to start by doing the following query via :ref:`so-elasticsearch-query`:
-
-::
-
-   sudo so-elasticsearch-query _cluster/settings
-   
-Then based on that output, update ``_cluster/settings`` by sending that node section back but with all settings set to ``null``. You could use :ref:`so-elasticsearch-query` again or use :ref:`kibana`'s ``Dev Tools`` and paste something like the following text into the window (replacing ``nodename`` with the actual node name and adding any other settings as necessary):
-
-::
-
-    PUT _cluster/settings
-    {
-      "persistent": {
-        "cluster": {
-          "remote": {
-            "nodename": {
-              "skip_unavailable": null,
-              "seeds":null
-            }
-          }
-        }
-      }  
-    }
-
-
-.. note::
-
-   | For more information, please see:
-   | https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-remote-clusters.html#configure-remote-clusters-dynamic
