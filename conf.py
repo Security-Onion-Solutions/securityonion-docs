@@ -23,7 +23,7 @@ exclude_patterns = ['_build']
 pygments_style = 'sphinx'
 htmlhelp_basename = 'securityonion'
 html_theme = 'sphinx_rtd_theme'
-html_logo = 'images/so-logo.png'
+html_logo = 'images/logo/so-logo.png'
 html_theme_options = {
     'logo_only': True,
     'style_nav_header_background': 'black',
