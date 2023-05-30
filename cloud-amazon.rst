@@ -1,9 +1,9 @@
-.. _cloud-ami:
+.. _cloud-amazon:
 
-AWS Cloud AMI
-=============
+Amazon Cloud Image
+==================
 
-If you would like to deploy Security Onion in AWS, we have an AMI that is already built for you:
+If you would like to deploy Security Onion in Amazon Web Services (AWS), we have an Amazon Machine Image (AMI) that is already built for you:
 https://securityonion.net/aws/?ref=_ptnr_soc_docs_230525
 
 .. warning::

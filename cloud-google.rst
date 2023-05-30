@@ -1,4 +1,4 @@
-.. _cloud-gcp:
+.. _cloud-google:
 
 Google Cloud Image
 ==================

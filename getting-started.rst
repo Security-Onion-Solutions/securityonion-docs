@@ -27,7 +27,7 @@ See the :ref:`vmware`, :ref:`virtualbox`, and :ref:`proxmox` sections.
 
 **How do I deploy Security Onion in the cloud?**
 
-See the :ref:`cloud-ami`, :ref:`cloud-azure`, and :ref:`cloud-gcp` sections.
+See the :ref:`cloud-amazon`, :ref:`cloud-azure`, and :ref:`cloud-google` sections.
 
 **What if I have trouble booting the ISO image?**
 
@@ -63,8 +63,8 @@ See the :ref:`post-installation` section.
    trouble-booting
    airgap
    installation
-   cloud-ami
+   cloud-amazon
    cloud-azure
-   cloud-gcp
+   cloud-google
    configuration
    post-installation

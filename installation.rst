@@ -9,7 +9,7 @@ Installation
   
 .. note::
 
-  If you want to deploy in the cloud using one of our official cloud images, you can skip to the :ref:`cloud-ami`, :ref:`cloud-azure`, or :ref:`cloud-google` sections.
+  If you want to deploy in the cloud using one of our official cloud images, you can skip to the :ref:`cloud-amazon`, :ref:`cloud-azure`, or :ref:`cloud-google` sections.
 
 Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on Rocky Linux 9) **or** installing standard Rocky Linux 9 or Ubuntu 20.04 and then installing our components on top.
 
