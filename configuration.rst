@@ -8,10 +8,6 @@ Now that you've installed Security Onion, it's time to configure it!
 .. image:: images/04_setup_init.png
   :target: _images/04_setup_init.png
 
-.. warning::
-
-  If you use DHCP and your IP address changes, this can cause problems. If you want to use DHCP, make sure that you have a DHCP reservation so that your IP address does not change. Otherwise, use a static IP address to be safe.
-  
 Security Onion is designed for many different use cases. Here are just a few examples!
  
 .. tip::
