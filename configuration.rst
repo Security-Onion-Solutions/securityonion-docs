@@ -5,6 +5,9 @@ Configuration
 
 Now that you've installed Security Onion, it's time to configure it!
 
+.. image:: images/04_setup_init.png
+  :target: _images/04_setup_init.png
+
 .. note::
 
   Setup uses keyboard navigation and you can use arrow keys to move around. Certain screens may provide a list and ask you to select one or more items from that list. You can use the space bar to select items and the Enter key to proceed to the next screen.
