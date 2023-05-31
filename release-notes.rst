@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.4.2 [20230531] Changes
+2.4.2 Beta 3 [20230531] Changes
 ----------------------
 
 - FEATURE: Add additional alerts for Influxdb `#10388 <https://github.com/Security-Onion-Solutions/securityonion/issues/10388>`_
