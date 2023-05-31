@@ -12,6 +12,11 @@ From https://github.com/influxdata/influxdb:
 .. image:: images/influxdb.png
   :target: _images/influxdb.png
 
+Authentication
+--------------
+
+Log into InfluxDB using the same username and password that you use for :ref:`soc`.
+
 Configuration
 -------------
 
