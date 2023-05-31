@@ -3,9 +3,7 @@
 Airgap
 ======
 
-Security Onion is committed to allowing users to run a full install on networks that do not have Internet access. You will need to use our Security Onion ISO image as it includes everything you need to run without Internet access. Setup will ask if you want to configure the installation for airgap and will then make the appropriate modifications to make this work properly. 
-
-Here's how airgap mode works:
+Security Onion is committed to allowing users to run a full install on networks that do not have Internet access. You will need to use our Security Onion ISO image as it includes everything you need to run without Internet access. Setup will ask if you want to configure the installation for airgap and will then make the appropriate modifications to make this work properly. Here's how it works:
 
 - During the install, all of the necessary RPM packages are copied from the ISO image to a new repo located in ``/nsm/repo/``. All devices in the grid will now use this repo for updates to packages.
 
