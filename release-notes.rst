@@ -45,8 +45,8 @@ Release Notes
 - FIX: Use pillar values to allow Zeek log ingestion selection from the UI `#10322 <https://github.com/Security-Onion-Solutions/securityonion/issues/10322>`_
 - FIX: Zeek local policies are not being updated when changed in Current Grid value. `#10209 <https://github.com/Security-Onion-Solutions/securityonion/issues/10209>`_
 - FIX: Zeek not ignoring lb_procs when Zeek pins configured `#10215 <https://github.com/Security-Onion-Solutions/securityonion/issues/10215>`_
-- Prepare SOUP for 2.4 `#10056 <https://github.com/Security-Onion-Solutions/securityonion/issues/10056>`_
-- Review 2.4 file permissions and other local security changes `#9110 <https://github.com/Security-Onion-Solutions/securityonion/issues/9110>`_
+- FIX: Prepare SOUP for 2.4 `#10056 <https://github.com/Security-Onion-Solutions/securityonion/issues/10056>`_
+- FIX: Review 2.4 file permissions and other local security changes `#9110 <https://github.com/Security-Onion-Solutions/securityonion/issues/9110>`_
 - UPGRADE: Elastic 8.7.1 `#10269 <https://github.com/Security-Onion-Solutions/securityonion/issues/10269>`_
 - UPGRADE: Kratos to 0.13.0 `#10309 <https://github.com/Security-Onion-Solutions/securityonion/issues/10309>`_
 - UPGRADE: SOC external dependencies `#10268 <https://github.com/Security-Onion-Solutions/securityonion/issues/10268>`_
