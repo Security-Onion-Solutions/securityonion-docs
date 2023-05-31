@@ -7,13 +7,9 @@ Security Onion is committed to allowing users to run a full install on networks 
 
 Here's how airgap mode works:
 
-- During the install, all of the necessary RPM packages are copied from the ISO image to a new repo located in ``/nsm/repo/``. 
+- During the install, all of the necessary RPM packages are copied from the ISO image to a new repo located in ``/nsm/repo/``. All devices in the grid will now use this repo for updates to packages.
 
-- All devices in the grid will now use this repo for updates to packages.
-
-- The latest Emerging Threats (ET) Open rules are copied to ``/nsm/repo/rules/`` so that the manager can access them and users can use the standard Security Onion process for managing NIDS rules. 
-
-- Yara rules are copied to ``/nsm/repo/rules/strelka/`` for :ref:`strelka` file analysis.
+- Rules are copied to ``/nsm/repo/rules/``. This includes NIDS rules, Yara rules for :ref:`strelka`, and Sigma rules for :ref:`playbook`.
 
 - When updating the system, :ref:`soup` will ask for the location of the latest ISO media and will then update using that media rather than pulling from the Internet.
 
