@@ -3,7 +3,7 @@
 Elastic Fleet
 =============
 
-:ref:`soc` includes a link on the sidebar labeled ``Elastic Fleet`` which takes you to the Fleet page inside :ref:`kibana`.
+:ref:`soc` includes a link on the sidebar that takes you to the Fleet page inside :ref:`kibana`.
 
 Configuration
 -------------
