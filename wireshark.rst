@@ -21,12 +21,7 @@ Screenshot
 File Extraction
 ---------------
 
-Suppose you are looking at an interesting HTTP file download in :ref:`PCAP` and want to extract the file. Click the PCAP download button and then open the pcap file with Wireshark. To extract files from HTTP traffic:
-
-- Click File - Export Objects - HTTP.
-- Select the file(s) to save.
-- Specify where to save them.
-- Review the extracted file(s).
+Suppose you are looking at an interesting HTTP file download in :ref:`PCAP` and want to extract the file. Click the PCAP download button and then open the pcap file with Wireshark. To extract files from HTTP traffic, click File - Export Objects - HTTP. Then select the file(s) to save and specify where to save them.
 
 More Information
 ----------------

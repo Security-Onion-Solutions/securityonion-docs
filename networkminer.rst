@@ -11,10 +11,12 @@ From https://www.netresec.com/?page=networkminer:
 
 Usage
 -----
+
 NetworkMiner is a part of our :ref:`desktop` installation. ``so-analyst-install`` automatically registers NetworkMiner as a pcap handler, so if you download a pcap file from the :ref:`pcap` interface, you can simply click on it to open in NetworkMiner.
 
 Screenshot
 ----------
+
 .. image:: images/networkminer.png
   :target: _images/networkminer.png
 
