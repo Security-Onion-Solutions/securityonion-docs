@@ -36,8 +36,8 @@ Release Notes
 - FIX: Kibana: Ensure _id fields beginning with a hyphen work properly when pivoting to SOC from Kibana `#10305 <https://github.com/Security-Onion-Solutions/securityonion/issues/10305>`_
 - FIX: Logstash WARN logstash.outputs.elasticsearch on searchnode `#10291 <https://github.com/Security-Onion-Solutions/securityonion/issues/10291>`_
 - FIX: Prepare SOUP for 2.4 `#10056 <https://github.com/Security-Onion-Solutions/securityonion/issues/10056>`_
-- FIX: Review 2.4 file permissions and other local security changes `#9110 <https://github.com/Security-Onion-Solutions/securityonion/issues/9110>`_
 - FIX: Prevent duplicate observables from being automatically created when attaching events to a case. `#10123 <https://github.com/Security-Onion-Solutions/securityonion/issues/10123>`_
+- FIX: Review 2.4 file permissions and other local security changes `#9110 <https://github.com/Security-Onion-Solutions/securityonion/issues/9110>`_
 - FIX: Setting CPU affinity or number of threads for Suricata not being applied. `#10240 <https://github.com/Security-Onion-Solutions/securityonion/issues/10240>`_
 - FIX: Simplify cloud detection `#10261 <https://github.com/Security-Onion-Solutions/securityonion/issues/10261>`_
 - FIX: Some SOC Config settings are only visible when Advanced is enabled `#10429 <https://github.com/Security-Onion-Solutions/securityonion/issues/10429>`_
