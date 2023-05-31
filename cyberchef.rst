@@ -35,23 +35,14 @@ You can send highlighted text from :ref:`pcap` to CyberChef. When the CyberChef 
 
 You can send all visible packet data from :ref:`pcap` to CyberChef. When the CyberChef tab opens, it will automatically apply the ``From Hexdump`` recipe to render the hexdump that was sent.
 
-Example
--------
+File Extraction
+---------------
 
-Suppose you are looking at an interesting HTTP file download in :ref:`pcap` and want to extract the file. Click the :ref:`pcap` CyberChef button and CyberChef will launch in a new tab. It will then show the hexdump in the Input box, automatically apply the ``From Hexdump`` recipe, and show the HTTP transcript in the Output box.
+Suppose you are looking at an interesting HTTP file download in :ref:`pcap` and want to extract the file using CyberChef:
 
-.. image:: images/cyberchef-session.png
-  :target: _images/cyberchef-session.png
-
-You may want to apply an operation from the left column. One option is to use the ``Extract Files`` operation. If you choose this option, you may want to specify certain file types for extraction. In this case, let's instead remove the client HTTP headers using the ``Strip HTTP headers`` operation.
-
-.. image:: images/cyberchef-strip.png
-  :target: _images/cyberchef-strip.png
-
-If a magic wand appears in the Output box, then CyberChef has detected some applicable operations and you can click the magic wand to automatically apply those operations. Here, CyberChef is automatically applying ``Strip HTTP headers`` again to remove the web server HTTP headers and then rendering the actual PNG image.
-
-.. image:: images/cyberchef-magic.png
-  :target: _images/cyberchef-magic.png
+- Click the :ref:`pcap` CyberChef button and CyberChef will launch in a new tab. It will then show the hexdump in the Input box, automatically apply the ``From Hexdump`` recipe, and show the HTTP transcript in the Output box.
+- You may want to apply an operation from the left column. One option is to use the ``Extract Files`` operation and optionally specify certain file types for extraction. Another option is to instead remove the HTTP headers using the ``Strip HTTP headers`` operation.
+- If a magic wand appears in the Output box, then CyberChef has detected some applicable operations and you can click the magic wand to automatically apply those operations. For example, CyberChef might automatically apply ``Strip HTTP headers`` and then render the file.
 
 More Information
 ----------------
