@@ -235,7 +235,7 @@ If you need to modify a part of a rule that contains a special character, such a
 Rewrite the signature
 ---------------------
 
-In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in `` /opt/so/saltstack/local/salt/idstools/local.rules`` on the manager. Within 15 minutes, :ref:`salt` should then copy those rules into ``/opt/so/rules/nids/local.rules``.
+In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in ``/opt/so/saltstack/local/salt/idstools/local.rules`` on the manager. Within 15 minutes, :ref:`salt` should then copy those rules into ``/opt/so/rules/nids/local.rules``.
 
 - Edit the ``/opt/so/saltstack/local/salt/idstools/local.rules`` file using ``vi`` or your favorite text editor:
 
@@ -244,6 +244,7 @@ In some cases, you may not want to use the modify option above, but instead crea
         sudo vi /opt/so/saltstack/local/salt/idstools/local.rules
 
 - Paste the rule. You may want to bump the SID into the 90,000,000 range and set the revision to 1.
+
 - Now that we have a signature that will generate alerts a little more selectively, we need to disable the original signature. As shown above, we edit the minion pillar and add the SID to the ``idstools - sids - disabled`` section.
 
 - Finally, from the manager, update the config on the remote node:
