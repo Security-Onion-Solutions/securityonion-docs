@@ -235,7 +235,7 @@ If you need to modify a part of a rule that contains a special character, such a
 Rewrite the signature
 ---------------------
 
-In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in `` /opt/so/saltstack/local/salt/idstools/local.rules`` which will then get copied to ``/opt/so/rules/nids/local.rules``.
+In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. In Security Onion, locally created rules are stored in `` /opt/so/saltstack/local/salt/idstools/local.rules`` on the manager. Within 15 minutes, :ref:`salt` should then copy those rules into ``/opt/so/rules/nids/local.rules``.
 
 - Edit the ``/opt/so/saltstack/local/salt/idstools/local.rules`` file using ``vi`` or your favorite text editor:
 
