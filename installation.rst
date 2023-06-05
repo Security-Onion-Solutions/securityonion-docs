@@ -19,7 +19,7 @@ Installation using Security Onion ISO Image
 .. image:: images/01_grub.png
   :target: _images/01_grub.png
 
-If you want to install Security Onion using our ISO image:
+If you want to install using our Security Onion ISO image:
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
 #. Download and verify our Security Onion ISO image as shown in the :ref:`download` section.
