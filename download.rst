@@ -15,7 +15,8 @@ You can either download our Security Onion ISO image (based on Rocky Linux 9) **
 
    **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or a standard Rocky Linux or Ubuntu ISO image, you should ALWAYS verify the downloaded ISO image to ensure it hasn't been tampered with or corrupted during download.
 
--  If downloading our Security Onion ISO image, you can find the download link and verification instructions at https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/VERIFY_ISO.md. (As of version 2.4.3, this file has moved to https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/DOWNLOAD_AND_VERIFY_ISO.md.)
+-  If downloading our Security Onion ISO image for version 2.4.2, you can find the download link and verification instructions at https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/VERIFY_ISO.md.
+-  If downloading our Security Onion ISO image for version 2.4.3 or later, you can find the download link and verification instructions at https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/DOWNLOAD_AND_VERIFY_ISO.md.
 -  If downloading an Ubuntu or Rocky Linux ISO image, please verify that ISO image using whatever instructions they provide.
 
 .. warning::
