@@ -22,7 +22,7 @@ Installation using Security Onion ISO Image
 If you want to install Security Onion using our ISO image:
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
-#. Download and verify our `Security Onion ISO image <https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/VERIFY_ISO.md>`__.
+#. Download and verify our Security Onion ISO image as shown in the :ref:`download` section.
 #. Boot the ISO in a machine that meets the minimum hardware specs.
 #. Follow the prompts to complete the installation and reboot.
 #. You may need to eject the ISO image or change the boot order of the machine to boot from the newly installed OS.
