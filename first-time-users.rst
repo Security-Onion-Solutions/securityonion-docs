@@ -64,9 +64,6 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/16_setup_docker_range.png
   :target: _images/16_setup_docker_range.png
 
-.. image:: images/17_setup_airgap.png
-  :target: _images/17_setup_airgap.png
-
 .. image:: images/18_setup_direct_proxy.png
   :target: _images/18_setup_direct_proxy.png
 
