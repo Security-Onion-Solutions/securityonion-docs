@@ -34,6 +34,9 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/06_setup_type.png
   :target: _images/06_setup_type.png
 
+.. image:: images/06_setup_airgap.png
+  :target: _images/06_setup_airgap.png
+
 .. image:: images/07_setup_license.png
   :target: _images/07_setup_license.png
 
