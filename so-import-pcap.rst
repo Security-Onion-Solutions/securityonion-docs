@@ -13,6 +13,12 @@ so-import-pcap
 
 In addition to viewing alerts and logs in :ref:`soc`, you can also find logs in :ref:`kibana`.
 
+Screenshot
+----------
+
+.. image:: images/36_so-import-pcap.png
+  :target: _images/36_so-import-pcap.png
+
 Configuration
 -------------
       
