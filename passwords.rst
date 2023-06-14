@@ -36,11 +36,11 @@ If you've forgotten your SOC password, an administrator can change it using the 
 Passwordless Logins to SOC
 --------------------------
 
-Once logged in to SOC using the username and password method, users can optionally enable passwordless logins, provided the setting is enabled. The login screen will show a separate sections for passwordless logins, if it is enabled. Note that it is enabled by default on new installations.
+Once logged in to SOC using the username and password method, users can optionally enable passwordless logins, provided the setting is enabled. The login screen will show a separate section for passwordless logins, if it is enabled. Note that it is enabled by default on new installations.
 
-Enable passwordless logins in :ref:`soc` by clicking the user icon in the upper right corner, clicking ``Settings``, and then going to the ``Security`` tab. Scroll down to the ``Security Keys`` section and follow the provided instructions.
+Activate passwordless login for your :ref:`soc` user by clicking the user icon in the upper right corner, clicking ``Settings``, and then going to the ``Security`` tab. Scroll down to the ``Security Keys`` section and follow the provided instructions.
 
-Similarly, disable passwordless logins by returning to the Security tab and clicking the trash can icon next to any previously-created Security Key.
+Similarly, disable passwordless logins by returning to the ``Security`` tab and clicking the delete icon next to any previously-created Security Key.
 
 .. note::
 
