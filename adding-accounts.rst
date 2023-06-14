@@ -17,9 +17,4 @@ For more information, please see ``man adduser``.
 SOC
 ---
 
-If you need to add a new account to :ref:`soc`, you can use the ``so-user-add`` command and specify the user's email address. For example, to add a new account for ``tom@example.com``:
-
-::
-
-    sudo so-user-add tom@example.com
-
+If you need to add a new account to :ref:`soc`, navigate to the :ref:`administration` interface and click the + icon. Fill out the popup dialog and press the Add button.

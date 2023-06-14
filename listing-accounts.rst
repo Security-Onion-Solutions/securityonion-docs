@@ -21,13 +21,7 @@ If you want a list of user accounts (not service accounts), then you can filter 
 SOC
 ---
 
-To list all :ref:`soc` accounts, you can use the ``so-user-list`` command:
-
-::
-
-    sudo so-user-list
-
-Alternatively, you can get a list of users in :ref:`soc` by clicking ``Administration`` and then ``Users``:
+You can get a list of users in :ref:`soc` by clicking ``Administration`` and then ``Users``:
 
 .. image:: images/users.png
   :target: _images/users.png
