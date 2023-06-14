@@ -24,7 +24,7 @@ There are a few different ways to install Security Onion Desktop:
 
 - Our Security Onion ISO image includes a boot menu option for Desktop installs that will partition your disk appropriately and immediately perform a Desktop installation.
 
-- In our normal Setup wizard, you can choose ``OTHER`` and then choose ``ANALYST``.
+- If you’re doing a network installation on Rocky Linux 9 (NOT using our Security Onion ISO image), then in our normal Setup wizard, you can choose ``OTHER`` and then choose ``ANALYST``.
 
 - The ``so-analyst-install`` command is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst desktop itself.
 
