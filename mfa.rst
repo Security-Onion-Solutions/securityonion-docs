@@ -18,9 +18,7 @@ Time-based One-Time Passwords (TOTP) can be activated on a user account. TOTP re
 
   If you have a user account on multiple Security Onion deployments with TOTP activated, they may be listed identically in your authenticator app. If so, you should be able to edit the listing in your authenticator app so that you can distinguish between them.
 
-.. note::
-
-  If you've lost access to your authenticator app, an administrator can change your password using the :ref:`administration` interface, which will also remove the TOTP from your account.
+If you lose access to your authenticator app, an administrator can reset your password using the :ref:`administration` interface which will also remove the TOTP from your account.
 
 WebAuthn Security Keys
 ----------------------

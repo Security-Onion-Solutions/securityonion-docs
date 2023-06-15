@@ -26,4 +26,4 @@ You can get a list of users in :ref:`soc` by clicking ``Administration`` and the
 .. image:: images/users.png
   :target: _images/users.png
 
-The Status column will show a different icon depending on the status of the account. In the screenshot above, the first account is disabled, the second account is enabled and has TOTP :ref:`mfa` enabled, and the third account is enabled but does not have TOTP :ref:`mfa` enabled. Hovering over the icon in the Status column will show you these details as well.
+You can read more about this in the :ref:`administration` section.
