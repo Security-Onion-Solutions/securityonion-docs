@@ -12,7 +12,7 @@ If you need to disable an OS user account, you can expire the account using ``us
 
     sudo usermod --expiredate 1 tom
 
-For more information, please see ``man passwd`` and ``man usermod``.
+For more information, please see passwd manual by typing ``man passwd`` and the usermod manual by typing ``man usermod``.
 
 SOC
 ---
@@ -24,3 +24,4 @@ After disabling a user account, the :ref:`administration` page will show the dis
 .. image:: images/users.png
   :target: _images/users.png
 
+For more information about the Users page, please see the :ref:`administration` section.

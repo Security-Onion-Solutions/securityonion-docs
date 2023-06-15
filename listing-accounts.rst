@@ -25,3 +25,5 @@ You can get a list of users in :ref:`soc` by navigating to the :ref:`administrat
 
 .. image:: images/users.png
   :target: _images/users.png
+
+For more information about the Users page, please see the :ref:`administration` section.
