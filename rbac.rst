@@ -142,28 +142,12 @@ After a new installation of Security Onion completes, a single administrator use
 Adding a User With a Specific Role
 ----------------------------------
 
-To add a user with a role other than the default ``analyst`` role, use the ``so-user add`` command with an additional parameter for the role. 
-For example, to add the user ``tom@example.com`` with the ``auditor`` role:
-
-::
-
-    sudo so-user add "tom@example.com" auditor
-
+In the :ref:`administration` interface, navigate to the Users screen and click the + icon to add a new user. In the popup dialog you can check the roles you would like to assign to the new user.
 
 Modifying User Roles
 ----------------------
 
-To add a role to an existing user you can use the ``so-user addrole`` command. For example to add the ``analyst`` role to the user ``tom@example.com``:
-
-::
-
-    sudo so-user addrole "tom@example.com" analyst
-
-Conversely, to remove a role from a user use the ``so-user delrole`` command. To remove the ``analyst`` role from ``tom@example.com`` run:
-
-::
-
-    sudo so-user delrole "tom@example.com" analyst
+In the :ref:`administration` interface, navigate to the Users screen and click the > icon to the left of the email address needing adjusting. Check or uncheck the desired roles. 
 
 
 Creating Custom Roles
