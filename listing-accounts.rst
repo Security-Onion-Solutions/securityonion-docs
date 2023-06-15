@@ -21,9 +21,7 @@ If you want a list of user accounts (not service accounts), then you can filter 
 SOC
 ---
 
-You can get a list of users in :ref:`soc` by clicking ``Administration`` and then ``Users``:
+You can get a list of users in :ref:`soc` by navigating to the :ref:`administration` interface and then clicking ``Users``:
 
 .. image:: images/users.png
   :target: _images/users.png
-
-You can read more about this in the :ref:`administration` section.
