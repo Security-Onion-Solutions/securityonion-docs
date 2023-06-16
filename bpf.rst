@@ -12,35 +12,22 @@ Configuration
 
 You can modify your BPF configuration by going to :ref:`administration` --> Configuration --> bpf. You can apply BPF configuration to :ref:`stenographer`, :ref:`suricata`, or :ref:`zeek`.
 
-Quoting
-~~~~~~~
-
-YAML rules apply and so if you want to use a reserved YAML character such as ``[] {} > | * & ! % # ` @ ,``, then you may need to enclose the entire line in double quotes. For example:
-
-::
-
-        "!(port 443)"
-      
 Multiple Conditions
 ~~~~~~~~~~~~~~~~~~~
 
-If your BPF contains multiple conditions you can put them on multiple lines and join them with a logical AND (``&&``) or logical OR (``||``) but make sure the final condition has nothing at the end. 
+If your BPF contains multiple conditions you can join them with a logical ``and`` or logical ``or``.
 
-Here's an example of joining conditions with a logical AND:
+Here's an example of joining conditions with a logical ``and``:
 
 ::
-
-        not host 192.168.1.2 &&
-        not host 192.168.1.3 &&
-        not host 192.168.1.4
+    
+    not host 192.168.1.2 and not host 192.168.1.3
       
-Here's an example of joining conditions with a logical OR:
+Here's an example of joining conditions with a logical ``or``:
 
 ::
 
-        host 192.168.1.2 ||
-        host 192.168.1.3 ||
-        host 192.168.1.4
+    host 192.168.1.2 or host 192.168.1.3
 
 VLAN
 ~~~~
