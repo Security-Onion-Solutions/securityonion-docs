@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.3.260 [20230615] Changes
+2.3.260 [20230620] Changes
 --------------------------
 
 - UPGRADE: CyberChef 10.4.0 `#10581 <https://github.com/Security-Onion-Solutions/securityonion/issues/10581>`_
