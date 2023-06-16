@@ -6,6 +6,7 @@ Release Notes
 2.3.260 [20230620] Changes
 --------------------------
 
+- FIX: Update Analyzer Dependencies `#10603 <https://github.com/Security-Onion-Solutions/securityonion/issues/10603>`_
 - UPGRADE: CyberChef 10.4.0 `#10581 <https://github.com/Security-Onion-Solutions/securityonion/issues/10581>`_
 - UPGRADE: Grafana 9.2.19 `#10583 <https://github.com/Security-Onion-Solutions/securityonion/issues/10583>`_
 - UPGRADE: Suricata 6.0.13 `#10594 <https://github.com/Security-Onion-Solutions/securityonion/issues/10594>`_
