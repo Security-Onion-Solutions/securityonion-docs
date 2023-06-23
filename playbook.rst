@@ -150,7 +150,7 @@ As previously mentioned, the pre-loaded Plays come from the community Sigma repo
       
 Add one or more of the following:
 
-``application,cloud,compliance,linux,macos,network,proxy,web``
+``application,category,cloud,compliance,linux,macos,network,web,windows``
 
 These are based on the top level directories from the Sigma community repository rule's folder.
 
