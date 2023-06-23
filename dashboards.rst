@@ -27,6 +27,11 @@ Exclude case data
 
 Dashboards excludes :ref:`cases` data by default. If you disable this option, then you can use Dashboards to query your :ref:`cases` data.
 
+Exclude SOC Logs
+~~~~~~~~~~~~~~~~
+
+As of 2.4, SOC logs are now being ingested. Dashboards will exclude this data by default. Disabling the option will include SOC data.
+
 Automatic Refresh Interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
