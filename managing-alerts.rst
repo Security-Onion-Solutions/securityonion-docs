@@ -3,14 +3,11 @@
 Managing Alerts
 ===============
 
-Security Onion generates a lot of valuable information for you the second you plug it into a TAP or SPAN port. Between :ref:`zeek` logs, alert data from :ref:`suricata`, and full packet capture from :ref:`stenographer`, you have enough information to begin identifying areas of interest and making positive changes to your security stance.
-
-.. note::
-
-   Network Security Monitoring, as a practice, is not a solution you can plug into your network, make sure you see blinking lights and tell people you are "secure." It requires active intervention from an analyst to qualify the quantity of information presented. One of those regular interventions is to ensure that you are tuning properly and proactively attempting to reach an acceptable level of signal to noise.
+Network Security Monitoring, as a practice, is not a solution you can plug into your network, make sure you see blinking lights and tell people you are "secure." It requires active intervention from an analyst to qualify the quantity of information presented. One of those regular interventions is to ensure that you are tuning properly and proactively attempting to reach an acceptable level of signal to noise.
    
 Alerting Engines & Severity
 ---------------------------
+
 There are two alerting engines within Security Onion: :ref:`suricata` and :ref:`playbook` (Sigma). Though each engine uses its own severity level system, Security Onion converts that to a standardized alert severity: 
 
 ``event.severity``: ``4`` ==> ``event.severity_label``: ``critical``
