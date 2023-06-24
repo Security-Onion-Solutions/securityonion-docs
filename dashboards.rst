@@ -15,7 +15,7 @@ Dashboards
 Options
 -------
 
-At the top of the page, there is an Options drop-down menu that allows you to set options such as Auto Apply, Exclude case data, Automatic Refresh Interval, and Time Zone.
+At the top of the page, there is an Options drop-down menu that allows you to set options such as Auto Apply, Exclude case data, Exclude SOC Logs, Automatic Refresh Interval, and Time Zone.
 
 Auto Apply
 ~~~~~~~~~~
@@ -30,7 +30,7 @@ Dashboards excludes :ref:`cases` data by default. If you disable this option, th
 Exclude SOC Logs
 ~~~~~~~~~~~~~~~~
 
-As of 2.4, SOC logs are now being ingested. Dashboards will exclude this data by default. Disabling the option will include SOC data.
+Dashboards also excludes SOC diagnostic logs by default. If you disable this option, then you can use Dashboards to query your SOC diagnostic logs.
 
 Automatic Refresh Interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
