@@ -61,10 +61,15 @@ Link to InfluxDB
 
 The first icon in the lower left of the ``Node Status`` section hyperlinks you to the InfluxDB dashboard for that particular node.
 
-Link to Sensor Test
-~~~~~~~~~~~~~~~~~~~
+Sensor Test
+~~~~~~~~~~~
 
 The second icon in the lower left of the ``Node Status`` section displays if the node is a sensor and allows you to send test data to the sensor.
+
+Import
+~~~~~~
+
+The third icon in the lower left of the ``Node Status`` section allows you to upload your own PCAP or EVTX file. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import. Only one file can be imported at a time, so upload will be disabled until import is complete.
 
 Container Status
 ----------------
