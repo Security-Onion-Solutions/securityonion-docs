@@ -7,13 +7,11 @@ If this is your first time using Security Onion 2, then we highly recommend that
 
 The following screenshots will walk you through:
 
-- installing our Security Onion ISO image.
-- configuring for IMPORT.
-- logging into :ref:`soc`.
-- navigating to :ref:`grid` and importing a pcap or evtx file.
-- reviewing data via :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`pcap`.
-
-After following the screenshots, you can skip to the :ref:`soc` section.
+- installing our Security Onion ISO image
+- configuring for IMPORT
+- logging into :ref:`soc`
+- navigating to :ref:`grid` and importing a pcap or evtx file
+- reviewing data via :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`pcap`
 
 Once you're comfortable with your IMPORT installation, then you can move on to more advanced installations as shown in the :ref:`architecture` section.
 
