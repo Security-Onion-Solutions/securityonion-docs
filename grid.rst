@@ -61,7 +61,7 @@ Icons in Lower Left Corner
 
 There are a few icons in the lower left of the ``Node Status`` section depending on what kind of node you are looking at: 
 
-- Clicking the first icon takes you to the InfluxDB dashboard for that particular node.
+- Clicking the first icon takes you to the :ref:`influxdb` dashboard for that particular node to view health metrics.
 
 - If the node is a network sensor, then there will be an additional icon for sending test traffic to the sensor.
 

@@ -95,9 +95,6 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/29_setup_finished.png
   :target: _images/29_setup_finished.png
 
-.. image:: images/36_so-import-pcap.png
-  :target: _images/36_so-import-pcap.png
-
 .. image:: images/37_login.png
   :target: _images/37_login.png
 
