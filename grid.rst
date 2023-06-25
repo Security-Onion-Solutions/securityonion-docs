@@ -56,20 +56,16 @@ Description
 
 The ``Description`` field shows the optional Description you may have entered during Setup.
 
-Link to InfluxDB
-~~~~~~~~~~~~~~~~
+Icons in Lower Left Corner
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The first icon in the lower left of the ``Node Status`` section hyperlinks you to the InfluxDB dashboard for that particular node.
+There are a few icons in the lower left of the ``Node Status`` section depending on what kind of node you are looking at: 
 
-Sensor Test
-~~~~~~~~~~~
+- The first link takes you to the InfluxDB dashboard for that particular node.
 
-The second icon in the lower left of the ``Node Status`` section displays if the node is a sensor and allows you to send test data to the sensor.
+- If the node is a sensor, then there will be a link that allows you to send test traffic to the sensor.
 
-Import
-~~~~~~
-
-The third icon in the lower left of the ``Node Status`` section allows you to upload your own PCAP or EVTX file. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import. Only one file can be imported at a time, so upload will be disabled until import is complete.
+- If the node is a sensor or import node, there is a link that allows you to upload your own PCAP or EVTX file. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import. Only one file can be imported at a time, so upload will be disabled until import is complete.
 
 Container Status
 ----------------
