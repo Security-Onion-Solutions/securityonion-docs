@@ -11,7 +11,7 @@ The following screenshots will walk you through:
 - configuring for IMPORT
 - logging into :ref:`soc`
 - navigating to :ref:`grid` and importing a pcap or evtx file
-- reviewing alerts and logs
+- reviewing data via :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`pcap`
 
 After following the screenshots, you can skip to the :ref:`soc` section.
 
