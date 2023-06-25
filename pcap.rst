@@ -17,15 +17,15 @@ Alternatively, you can go directly to the PCAP interface, click the blue + butto
 
 Security Onion will then locate the stream and render a high level overview of the packets.
 
-.. image:: images/42_pcap.png
-  :target: _images/42_pcap.png
+.. image:: images/53_pcap.png
+  :target: _images/53_pcap.png
 
 If there are many packets in the stream, you can use the ``LOAD MORE`` button, ``Rows per page`` setting, and arrows to navigate through the list of packets. 
 
 You can drill into individual rows to see the actual payload data. There are buttons at the top of the table that control what data is displayed in the individual rows. By disabling ``Show all packet data`` and ``HEX``, we can get an ASCII transcript.
 
-.. image:: images/43_pcap_details.png
-  :target: _images/43_pcap_details.png
+.. image:: images/54_pcap_details.png
+  :target: _images/54_pcap_details.png
 
 You can select text with your mouse and then use the context menu to send that selected text to :ref:`cyberchef`, Google, or other destinations defined in the actions list.
 
@@ -44,7 +44,7 @@ Finally, you can download the full pcap file by clicking the download button on 
 
 Once you've viewed one or more PCAPs, you will see them listed on the main PCAP page.
 
-.. image:: images/45_jobs.png
-  :target: _images/45_jobs.png
+.. image:: images/56_jobs.png
+  :target: _images/56_jobs.png
 
 When you are done with a PCAP, you may want to delete it using the ``X`` button on the far right. This deletes the cached PCAP file saved at ``/nsm/soc/jobs/``.

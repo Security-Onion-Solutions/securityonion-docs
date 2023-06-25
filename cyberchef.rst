@@ -23,8 +23,8 @@ From https://github.com/gchq/CyberChef:
 Screenshot
 ----------
 
-.. image:: images/44_cyberchef.png
-  :target: _images/44_cyberchef.png
+.. image:: images/55_cyberchef.png
+  :target: _images/55_cyberchef.png
 
 Accessing
 ---------

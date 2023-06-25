@@ -5,8 +5,8 @@ Dashboards
 
 :ref:`soc` includes a Dashboards interface which includes an entire set of pre-built dashboards for our standard data types.
 
-.. image:: images/40_dashboards.png
-  :target: _images/40_dashboards.png
+.. image:: images/51_dashboards.png
+  :target: _images/51_dashboards.png
 
 .. note::
 

@@ -10,8 +10,8 @@ From https://suricata.io:
 
 Suricata NIDS alerts can be found in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Suricata NIDS alerts in :ref:`alerts`:
 
-.. image:: images/39_alerts.png
-  :target: _images/39_alerts.png
+.. image:: images/50_alerts.png
+  :target: _images/50_alerts.png
   
 If enabled, Suricata metadata (protocol logs) can be found in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`.
 

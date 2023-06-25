@@ -9,8 +9,8 @@ Security Onion includes Zeek for network protocol analysis and metadata.  From h
 
 Zeek logs are sent to :ref:`elasticsearch` for parsing and storage and can then be found in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Zeek logs in :ref:`hunt`:
 
-.. image:: images/41_hunt.png
-  :target: _images/41_hunt.png
+.. image:: images/52_hunt.png
+  :target: _images/52_hunt.png
   
 Community ID
 ------------
