@@ -9,8 +9,9 @@ The following screenshots will walk you through:
 
 - installing our Security Onion ISO image
 - configuring for IMPORT
-- running :ref:`so-import-pcap` and importing one or more pcap files
-- logging into :ref:`soc` to review alerts and logs
+- logging into :ref:`soc`
+- navigating to :ref:`grid` and importing a pcap or evtx file
+- reviewing alerts and logs
 
 After following the screenshots, you can skip to the :ref:`soc` section.
 

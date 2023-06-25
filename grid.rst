@@ -61,11 +61,11 @@ Icons in Lower Left Corner
 
 There are a few icons in the lower left of the ``Node Status`` section depending on what kind of node you are looking at: 
 
-- The first link takes you to the InfluxDB dashboard for that particular node.
+- Clicking the first icon takes you to the InfluxDB dashboard for that particular node.
 
-- If the node is a sensor, then there will be a link that allows you to send test traffic to the sensor.
+- If the node is a network sensor, then there will be an additional icon for sending test traffic to the sensor.
 
-- If the node is a sensor or import node, there is a link that allows you to upload your own PCAP or EVTX file. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import. Only one file can be imported at a time, so upload will be disabled until import is complete.
+- If the node is a network sensor or import node, then there will be an additional icon for uploading your own PCAP or EVTX file. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import. Only one file can be imported at a time, so upload will be disabled until import is complete.
 
 Container Status
 ----------------
