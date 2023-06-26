@@ -30,3 +30,7 @@ If the Security Onion installation has been configured to use security keys for 
 .. note::
 
   If you lose access to your security key device, an administrator can reset your password using the :ref:`administration` interface which will also remove the security keys from your account.
+
+.. important::
+
+   The webauthn specification requires that the web server be accessed via a hostname, and _not_ via an IP address. Also, the server's TLS certification must not have any errors. This means that self-signed certificates will only be permitted provided the Certificate Authority has also been imported into analyst's browsers and operating systems and marked as trusted.
