@@ -5,7 +5,7 @@ Security Onion Desktop
 
 .. warning::
 
-   Security Onion Desktop is not quite ready yet. Stay tuned!
+   Security Onion Desktop is still considered experimental!
 
 Full-time analysts may want to use a dedicated Security Onion desktop. This allows you to investigate pcaps, malware, and other potentially malicious artifacts without impacting your Security Onion deployment or your usual desktop environment.
 
@@ -26,7 +26,7 @@ There are a few different ways to install Security Onion Desktop:
 
 - If you’re doing a network installation on Rocky Linux 9 (NOT using our Security Onion ISO image), then in our normal Setup wizard, you can choose ``OTHER`` and then choose ``ANALYST``.
 
-- The ``so-analyst-install`` command is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst desktop itself.
+- The ``so-desktop-install`` command is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst desktop itself.
 
 **Joining to Grid**
 
