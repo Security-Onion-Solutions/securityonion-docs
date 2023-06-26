@@ -67,18 +67,18 @@ If the node is a network sensor, then there will be an additional icon for sendi
 
 If the node is a network sensor or import node, then there will be an additional icon for uploading your own PCAP or EVTX file. Clicking this icon results in an upload form:
 
-.. image:: images/40_upload.png
-  :target: _images/40_upload.png
+.. image:: images/grid-upload.png
+  :target: _images/grid-upload.png
 
 Once the file is uploaded, a status message appears:
 
-.. image:: images/41_import.png
-  :target: _images/41_import.png
+.. image:: images/grid-import.png
+  :target: _images/grid-import.png
 
 Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Only one file can be imported at a time, so upload will be disabled until import is complete. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import:
 
-.. image:: images/42_import_complete.png
-  :target: _images/42_import_complete.png
+.. image:: images/grid-import-complete.png
+  :target: _images/grid-import-complete.png
 
 Container Status
 ----------------
