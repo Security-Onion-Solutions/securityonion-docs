@@ -16,7 +16,7 @@ Full-time analysts may want to use a dedicated Security Onion desktop. This allo
 
   Security Onion Desktop currently only supports Rocky Linux 9, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of Rocky Linux 9.
   
-Security Onion Desktop consists of a full GNOME desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools.
+Security Onion Desktop consists of a full Cinnamon desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools.
  
 **Installation**
 
