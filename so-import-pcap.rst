@@ -13,6 +13,10 @@ so-import-pcap
 
 In addition to viewing alerts and logs in :ref:`soc`, you can also find logs in :ref:`kibana`.
 
+.. tip::
+
+  You can run this command manually, but for most use cases it's easier to upload a pcap via :ref:`grid` and it will automatically run ``so-import-pcap`` for you.
+
 Screenshot
 ----------
 
