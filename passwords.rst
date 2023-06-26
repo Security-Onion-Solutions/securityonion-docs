@@ -45,3 +45,7 @@ Similarly, disable passwordless logins by returning to the ``Security`` tab and 
 .. note::
 
   While it is possible to use TOTP MFA as a second authentication factor in combination with passwordless logins, it is not possible to use a second security key as a second authentication factor with passwordless logins.
+
+.. important::
+
+   The webauthn specification requires that the web server be accessed via a hostname, and _not_ via an IP address. Also, the server's TLS certification must not have any errors. This means that self-signed certificates will only be permitted provided the Certificate Authority has also been imported into analyst's browsers and operating systems and marked as trusted.
