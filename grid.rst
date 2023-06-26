@@ -65,7 +65,7 @@ There are a few icons in the lower left of the ``Node Status`` section depending
 
 - If the node is a network sensor, then there will be an additional icon for sending test traffic to the sensor.
 
-- If the node is a network sensor or import node, then there will be an additional icon for uploading your own PCAP or EVTX file. Clicking this icon results in an upload form. Once you've selected a file and initiated the upload, a status message appears saying ``File is uploading and importing. You will receive a notification when it completes.``. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Only one file can be imported at a time, so upload will be disabled until import is complete. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import.
+- If the node is a network sensor or import node, then there will be an additional icon for uploading your own PCAP or EVTX file. Clicking this icon results in an upload form. Once you've selected a file and initiated the upload, a status message appears. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Only one file can be imported at a time, so upload will be disabled until import is complete. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import.
 
 Container Status
 ----------------
