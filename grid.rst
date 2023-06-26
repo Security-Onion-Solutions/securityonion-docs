@@ -59,26 +59,13 @@ The ``Description`` field shows the optional Description you may have entered du
 Icons in Lower Left Corner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-There are a few icons in the lower left of the ``Node Status`` section depending on what kind of node you are looking at. 
+There are a few icons in the lower left of the ``Node Status`` section depending on what kind of node you are looking at: 
 
-Clicking the first icon takes you to the :ref:`influxdb` dashboard for that particular node to view health metrics.
+- Clicking the first icon takes you to the :ref:`influxdb` dashboard for that particular node to view health metrics.
 
-If the node is a network sensor, then there will be an additional icon for sending test traffic to the sensor.
+- If the node is a network sensor, then there will be an additional icon for sending test traffic to the sensor.
 
-If the node is a network sensor or import node, then there will be an additional icon for uploading your own PCAP or EVTX file. Clicking this icon results in an upload form:
-
-.. image:: images/grid-upload.png
-  :target: _images/grid-upload.png
-
-Once the file is uploaded, a status message appears:
-
-.. image:: images/grid-import.png
-  :target: _images/grid-import.png
-
-Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Only one file can be imported at a time, so upload will be disabled until import is complete. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import:
-
-.. image:: images/grid-import-complete.png
-  :target: _images/grid-import-complete.png
+- If the node is a network sensor or import node, then there will be an additional icon for uploading your own PCAP or EVTX file. Clicking this icon results in an upload form. Once you've selected a file and initiated the upload, a status message appears saying ``File is uploading and importing. You will receive a notification when it completes.``. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Only one file can be imported at a time, so upload will be disabled until import is complete. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import.
 
 Container Status
 ----------------
