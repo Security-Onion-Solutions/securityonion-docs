@@ -32,7 +32,7 @@ There are a few different ways to install Security Onion Desktop:
 
 You can optionally join your Desktop installation to your grid. This allows it to pull updates from the grid and automatically trust the grid's HTTPS certificate. It also updates the manager's firewall to allow the Desktop installation to connect. Please note that Desktop installations won't actually display on the :ref:`grid` page.
 
-If you choose not to join your Desktop installation to your grid, then you may need to run :ref:`so-allow` on the manager node and choose the ``analyst`` option to allow the traffic through the host-based :ref:`firewall`.
+If you choose not to join your Desktop installation to your grid, then you may need to allow the traffic through the host-based :ref:`firewall` by going to :ref:`administration` --> Configuration --> firewall.
 
 **Disabling**
 

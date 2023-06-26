@@ -17,13 +17,9 @@ As a best practice, we'll want to create a dedicated Jupyter notebook user with 
 
 **Security Onion Firewall**
 
-In order to allow network-based access to :ref:`elasticsearch`, we'll need to allow the traffic through the host-based firewall using :ref:`so-allow`:
+In order to allow network-based access to :ref:`elasticsearch`, we'll need to allow the traffic through the host-based firewall by going to :ref:`administration` --> Configuration --> firewall.
 
-::
-
-  sudo so-allow
-
-We'll choose the ``e`` option for the :ref:`elasticsearch` REST API and provide our IP address(es) for which we could like to add an exception. Once complete, we should be able to reach the :ref:`elasticsearch` instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
+Once complete, we should be able to reach the :ref:`elasticsearch` instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
 
 Jupyter Notebook
 ----------------

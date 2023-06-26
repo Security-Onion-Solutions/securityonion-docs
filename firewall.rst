@@ -77,7 +77,7 @@ Function
 
 The firewall state is designed with the idea of creating port groups and host groups, each with their own alias or name, and associating the two in order to create an allow rule. A node that has a port group and host group association assigned to it will allow those hosts to connect to those ports on that node.
 
-The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node using either :ref:`so-allow`, ``so-firewall`` or manually editing the yaml files. When setup is run on a new node, it will ask the manager to add itself to the appropriate host groups. All node types are added to the minion host group to allow :ref:`salt` communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
+The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node by going to :ref:`administration` --> Configuration --> firewall. When setup is run on a new node, it will ask the manager to add itself to the appropriate host groups. All node types are added to the minion host group to allow :ref:`salt` communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
 
 There are two directories that contain the yaml files for the firewall configuration.
 
@@ -105,14 +105,14 @@ This directory stores the firewall rules specific to your grid.
 
 ``/opt/so/saltstack/local/salt/firewall/portgroups.local.yaml`` defines custom port groups.
 
-``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml`` is where many default named hostgroups get populated with IPs that are specific to your environment. When you run :ref:`so-allow` or ``so-firewall``, it modifies this file to include the IP provided in the proper hostgroup. Some node types get their IP assigned to multiple host groups.
+``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml`` is where many default named hostgroups get populated with IPs that are specific to your environment. When you update the firewall by going to :ref:`administration` --> Configuration --> firewall, it modifies this file to include the IP provided in the proper hostgroup. Some node types get their IP assigned to multiple host groups.
 
 ``/opt/so/saltstack/local/salt/firewall/assigned_hostgroups.local.map.yaml`` is where host group and port group associations would be made to create custom host group and port group assignements that would apply to all nodes of a certain role type in the grid.
 
 Managing
 --------
 
-Managing firewall rules for all devices should be done from the manager node using either :ref:`so-allow`, ``so-firewall`` or, for advanced cases, manually editing the yaml files.
+Managing firewall rules for all devices should be done from the manager node by going to :ref:`administration` --> Configuration --> firewall.
 
 Examples
 --------
@@ -129,7 +129,7 @@ If you previously added a host or network to your firewall configuration and now
 Allow hosts to send syslog to a sensor node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, if you use :ref:`so-allow` to add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. If we want to allow a host or group of hosts to send syslog to a sensor, then we can do the following:
+By default, if you go to :ref:`administration` --> Configuration --> firewall and add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. If we want to allow a host or group of hosts to send syslog to a sensor, then we can do the following:
 
 1. Create a new host group that will contain the IPs of the hosts that you want to allow to connect to the sensor. This will add the host group to ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``. If the host group already exists, you can skip to step 2. Run the following on the manager:
 
@@ -206,4 +206,4 @@ All the following will need to be run from the manager.
 
 .. warning::
 
-  Please review the :ref:`salt` section to understand pillars and templates. Modifying these values outside of :ref:`so-allow` or ``so-firewall`` could lead to problems accessing your existing hosts. This is an advanced case and you most likely won't never need to modify these files.
+  Please review the :ref:`salt` section to understand pillars and templates. Modifying these values outside of :ref:`administration` --> Configuration --> firewall could lead to problems accessing your existing hosts. This is an advanced case and you most likely won't never need to modify these files.
