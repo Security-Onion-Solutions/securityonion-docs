@@ -48,4 +48,4 @@ Similarly, disable passwordless logins by returning to the ``Security`` tab and 
 
 .. important::
 
-   The webauthn specification requires that the web server be accessed via a hostname, and _not_ via an IP address. Also, the server's TLS certification must not have any errors. This means that self-signed certificates will only be permitted provided the Certificate Authority has also been imported into analyst's browsers and operating systems and marked as trusted.
+   The webauthn specification requires that the web server be accessed via a hostname. Therefore, IP addresses cannot be used to access SOC when utilizing webauthn. Also, the server's TLS certificate must not have any errors. Consequently, self-signed certificates will only be permitted provided the certificate authority (CA) has also been imported into analyst's browsers and/or operating systems, and marked as trusted.
