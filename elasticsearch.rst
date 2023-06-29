@@ -72,9 +72,9 @@ These templates are specified to be used in the index template definitions in ``
 
 Custom Templates
 ~~~~~~~~~~~~~~~~
-To add a custom index template, ensure the custom or modified component templates are copied to ``/opt/so/salstack/local/salt/elasticsearch/templates/component/so/``.
+To add a custom index template, ensure the custom or modified component templates are copied to ``/opt/so/saltstack/local/salt/elasticsearch/templates/component/so/``.
 
-Next, copy ``/opt/so/saltstack/default/pillar/elasticsearch/index_templates.sls`` to ``/opt/so/salstack/local/pillar/elasticsearch/``.
+Next, copy ``/opt/so/saltstack/default/pillar/elasticsearch/index_templates.sls`` to ``/opt/so/saltstack/local/pillar/elasticsearch/``.
 
 Edit the file similar to the following, adding your custom index template details and the references to the component templates you wish to associate to the index template:
 
