@@ -3,6 +3,53 @@
 Release Notes
 =============
 
+2.4.3 [20230711] Changes
+----------------------
+
+- FEATURE: Add link to Downloads page for convenient access to firewall settings `#10702 <https://github.com/Security-Onion-Solutions/securityonion/issues/10702>`_
+- FEATURE: Add more SOC Config quick links `#10563 <https://github.com/Security-Onion-Solutions/securityonion/issues/10563>`_
+- FEATURE: Add time zone selection to Grid page `#8629 <https://github.com/Security-Onion-Solutions/securityonion/issues/8629>`_
+- FEATURE: Add webauthn support to SOC `#10608 <https://github.com/Security-Onion-Solutions/securityonion/issues/10608>`_
+- FEATURE: Allow import of PCAP and EVTX via SOC UI `#10413 <https://github.com/Security-Onion-Solutions/securityonion/issues/10413>`_
+- FEATURE: Elastic Fleet - Automatically Update Logstash Outputs `#10746 <https://github.com/Security-Onion-Solutions/securityonion/issues/10746>`_
+- FEATURE: Elastic Fleet Server URL - Custom Domain `#10744 <https://github.com/Security-Onion-Solutions/securityonion/issues/10744>`_
+- FEATURE: Supported Integrations `#10590 <https://github.com/Security-Onion-Solutions/securityonion/issues/10590>`_
+- FEATURE: so-import-evtx `#10673 <https://github.com/Security-Onion-Solutions/securityonion/issues/10673>`_
+- FIX: Strelka rule path `#10715 <https://github.com/Security-Onion-Solutions/securityonion/issues/10715>`_
+- FIX: 2.4 ISO image won't install on Virtualbox `#10534 <https://github.com/Security-Onion-Solutions/securityonion/issues/10534>`_
+- FIX: Account for Suricata XFF function in parsing and ingestion `#8643 <https://github.com/Security-Onion-Solutions/securityonion/issues/8643>`_
+- FIX: Add more Zeek logs to excluded list `#10569 <https://github.com/Security-Onion-Solutions/securityonion/issues/10569>`_
+- FIX: Analyzer requests and whoisit updates `#10524 <https://github.com/Security-Onion-Solutions/securityonion/issues/10524>`_
+- FIX: Change Playbook index to data stream and update event.severity_label `#10523 <https://github.com/Security-Onion-Solutions/securityonion/issues/10523>`_
+- FIX: Cleanup log-rotate.conf `#10545 <https://github.com/Security-Onion-Solutions/securityonion/issues/10545>`_
+- FIX: Curator should ignore empty list `#10512 <https://github.com/Security-Onion-Solutions/securityonion/issues/10512>`_
+- FIX: Don't override default integration ingest node pipelines `#10542 <https://github.com/Security-Onion-Solutions/securityonion/issues/10542>`_
+- FIX: Ensure operations on records with "*Missing" fields use correct search `#8025 <https://github.com/Security-Onion-Solutions/securityonion/issues/8025>`_
+- FIX: Ensure packages aren't installed from default Rocky repos `#10630 <https://github.com/Security-Onion-Solutions/securityonion/issues/10630>`_
+- FIX: Exclude System logs from Hunt/Dashboard Queries. `#10122 <https://github.com/Security-Onion-Solutions/securityonion/issues/10122>`_
+- FIX: Finish SSL cert integration into SOC config UI `#10533 <https://github.com/Security-Onion-Solutions/securityonion/issues/10533>`_
+- FIX: Improve SOC login error message for disabled users `#8908 <https://github.com/Security-Onion-Solutions/securityonion/issues/8908>`_
+- FIX: Increase net.core.wmem_default value `#10602 <https://github.com/Security-Onion-Solutions/securityonion/issues/10602>`_
+- FIX: InfluxDB NSM Disk Usage visualization `#10520 <https://github.com/Security-Onion-Solutions/securityonion/issues/10520>`_
+- FIX: Integration logs not parsed correctly `#10672 <https://github.com/Security-Onion-Solutions/securityonion/issues/10672>`_
+- FIX: Logstash soc.fields.query warning `#10528 <https://github.com/Security-Onion-Solutions/securityonion/issues/10528>`_
+- FIX: Node description config setting should only apply at the node level `#10562 <https://github.com/Security-Onion-Solutions/securityonion/issues/10562>`_
+- FIX: Remove default excluded rules from YARA repo `#10718 <https://github.com/Security-Onion-Solutions/securityonion/issues/10718>`_
+- FIX: Review Kibana Dashboards `#10664 <https://github.com/Security-Onion-Solutions/securityonion/issues/10664>`_
+- FIX: Rework dataset name and add tags based on suffix `#10526 <https://github.com/Security-Onion-Solutions/securityonion/issues/10526>`_
+- FIX: Rework field to account for missing classifiers `#10420 <https://github.com/Security-Onion-Solutions/securityonion/issues/10420>`_
+- FIX: SOC Config NTP quick link `#10519 <https://github.com/Security-Onion-Solutions/securityonion/issues/10519>`_
+- FIX: Scheduled jobs trying to run during setup `#10468 <https://github.com/Security-Onion-Solutions/securityonion/issues/10468>`_
+- FIX: Set Elastic Fleet certs to use url_base `#10510 <https://github.com/Security-Onion-Solutions/securityonion/issues/10510>`_
+- FIX: Setup re-runs when SSH'ing into a successfully installed minion node `#10498 <https://github.com/Security-Onion-Solutions/securityonion/issues/10498>`_
+- FIX: Strelka rule exclusions `#10716 <https://github.com/Security-Onion-Solutions/securityonion/issues/10716>`_
+- FIX: Suricata DHCP logs not ingesting `#10565 <https://github.com/Security-Onion-Solutions/securityonion/issues/10565>`_
+- FIX: Suricata dataset values for certain types of metadata `#10551 <https://github.com/Security-Onion-Solutions/securityonion/issues/10551>`_
+- FIX: Update README.md `#10554 <https://github.com/Security-Onion-Solutions/securityonion/issues/10554>`_
+- FIX: Update cheat sheet for 2.4 `#10532 <https://github.com/Security-Onion-Solutions/securityonion/issues/10532>`_
+- UPGRADE: CyberChef 10.4.0 `#10581 <https://github.com/Security-Onion-Solutions/securityonion/issues/10581>`_
+- UPGRADE: Suricata 6.0.13 `#10594 <https://github.com/Security-Onion-Solutions/securityonion/issues/10594>`_
+
 2.4.2 Beta 3 [20230531] Changes
 ----------------------
 
