@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.4.3 [20230711] Changes
+2.4.3 Beta 4 [20230711] Changes
 ----------------------
 
 - FEATURE: Add link to Downloads page for convenient access to firewall settings `#10702 <https://github.com/Security-Onion-Solutions/securityonion/issues/10702>`_
