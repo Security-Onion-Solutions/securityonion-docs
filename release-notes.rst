@@ -4,7 +4,7 @@ Release Notes
 =============
 
 2.4.3 Beta 4 [20230711] Changes
-----------------------
+-------------------------------
 
 - FEATURE: Add link to Downloads page for convenient access to firewall settings `#10702 <https://github.com/Security-Onion-Solutions/securityonion/issues/10702>`_
 - FEATURE: Add more SOC Config quick links `#10563 <https://github.com/Security-Onion-Solutions/securityonion/issues/10563>`_
@@ -51,7 +51,7 @@ Release Notes
 - UPGRADE: Suricata 6.0.13 `#10594 <https://github.com/Security-Onion-Solutions/securityonion/issues/10594>`_
 
 2.4.2 Beta 3 [20230531] Changes
-----------------------
+-------------------------------
 
 - FEATURE: Add additional alerts for Influxdb `#10388 <https://github.com/Security-Onion-Solutions/securityonion/issues/10388>`_
 - FEATURE: Add link to SOC error messages that takes user to hunt and auto-searches for recent SOC-related errors. `#10283 <https://github.com/Security-Onion-Solutions/securityonion/issues/10283>`_
