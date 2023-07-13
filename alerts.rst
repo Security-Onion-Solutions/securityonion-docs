@@ -123,7 +123,7 @@ Clicking the ``New Group By`` option will create a new data table for the select
 Numeric Ops
 ~~~~~~~~~~~
 
-If the value you clicked is numeric, then the Numeric Ops sub-menu allows you to choose operations like less than, less than or equal, greater than, greater than or equal, or Between. Choosing the Between option displays a window so that you can specify a range of values.
+If the value you clicked is numeric, then the ``Numeric Ops`` sub-menu allows you to choose operations like less than, less than or equal, greater than, greater than or equal, or Between. Choosing the Between option displays a window so that you can specify a range of values.
 
 Clipboard
 ~~~~~~~~~
