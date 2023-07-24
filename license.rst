@@ -3,7 +3,7 @@
 License
 =======
 
-Security Onion is a free and open platform. The vast majority of software included in Security Onion is licensed under OSI-approved open source licenses. 
+Security Onion is a free and open platform. Most software included in Security Onion is licensed under open source licenses. 
 
 Elastic components and Security Onion components are licensed under the Elastic License 2.0 (ELv2). During installation, you will be prompted to accept the Elastic License:
 
