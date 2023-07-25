@@ -102,6 +102,9 @@ Once you're comfortable with your IMPORT installation, then you can move on to m
 .. image:: images/39_grid.png
   :target: _images/39_grid.png
 
+.. image:: images/40_upload.png
+  :target: _images/40_upload.png
+
 .. image:: images/50_alerts.png
   :target: _images/50_alerts.png
 
