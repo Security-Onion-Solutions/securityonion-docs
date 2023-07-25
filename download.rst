@@ -5,7 +5,7 @@ Download
 
 Before downloading, we highly recommend that you review the :ref:`release-notes` section so that you are aware of all recent changes!
 
-You can either download our Security Onion ISO image (based on Rocky Linux 9) **or** download a standard x86-64 Rocky Linux 9 Minimal or Ubuntu 20.04 ISO image and then add our Security Onion components. **Please keep in mind that Ubuntu 20.04 is not supported for manager nodes and will be phased out altogether in the future.**
+You can either download our Security Onion ISO image (based on Oracle Linux 9) **or** download a standard x86-64 Oracle Linux 9 or Ubuntu 20.04 ISO image and then add our Security Onion components. **Please keep in mind that Ubuntu 20.04 is not supported for manager nodes and will be phased out altogether in the future.**
 
 .. tip::
 
@@ -13,10 +13,10 @@ You can either download our Security Onion ISO image (based on Rocky Linux 9) **
   
 .. warning::
 
-   **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or a standard Rocky Linux or Ubuntu ISO image, you should ALWAYS verify the downloaded ISO image to ensure it hasn't been tampered with or corrupted during download. If it fails to verify, try downloading again. If it still fails to verify, try downloading from another computer or another network.
+   **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or a standard Oracle Linux or Ubuntu ISO image, you should ALWAYS verify the downloaded ISO image to ensure it hasn't been tampered with or corrupted during download. If it fails to verify, try downloading again. If it still fails to verify, try downloading from another computer or another network.
 
 -  If downloading our Security Onion ISO image for version 2.4.3 or later, you can find the download link and verification instructions at https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/DOWNLOAD_AND_VERIFY_ISO.md.
--  If downloading an Ubuntu or Rocky Linux ISO image, please verify that ISO image using whatever instructions they provide.
+-  If downloading an Ubuntu or Oracle Linux ISO image, please verify that ISO image using whatever instructions they provide.
 
 .. warning::
 

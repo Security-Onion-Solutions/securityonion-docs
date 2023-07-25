@@ -11,7 +11,7 @@ Installation
 
   If you want to deploy in the cloud using one of our official cloud images, you can skip to the :ref:`cloud-amazon`, :ref:`cloud-azure`, or :ref:`cloud-google` sections.
 
-Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on Rocky Linux 9) **or** installing standard Rocky Linux 9 or Ubuntu 20.04 and then installing our components on top.
+Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! There are separate sections below to walk you through installing using our Security Onion ISO image (based on Oracle Linux 9) **or** installing standard Oracle Linux 9 or Ubuntu 20.04 and then installing our components on top.
 
 Installation using Security Onion ISO Image
 -------------------------------------------
@@ -35,17 +35,17 @@ If you want to install using our Security Onion ISO image:
       
 #. Proceed to the :ref:`configuration` section.
 
-Installation on Rocky Linux or Ubuntu
--------------------------------------
+Installation on Oracle Linux or Ubuntu
+--------------------------------------
 
-If you want to install Security Onion on Rocky Linux 9 Minimal or Ubuntu 20.04 (**not** using our Security Onion ISO image), follow the steps below. Please note that Ubuntu is not supported for manager nodes and will be phased out in the future.
+If you want to install Security Onion on Oracle Linux 9 or Ubuntu 20.04 (**not** using our Security Onion ISO image), follow the steps below. Please note that Ubuntu is not supported for manager nodes and will be phased out in the future.
 
 #. Review the :ref:`hardware` and :ref:`release-notes` sections.
-#. Download the ISO image for x86-64 Rocky Linux 9 Minimal or Ubuntu 20.04. Verify the ISO image and then boot from it.
+#. Download the ISO image for x86-64 Oracle Linux 9 or Ubuntu 20.04. Verify the ISO image and then boot from it.
 #. Follow the prompts in the installer. If you're building a production deployment, you'll probably want to use LVM and dedicate most of your disk space to ``/nsm`` as discussed in the :ref:`partitioning` section.
 #. Reboot into your new installation.
 #. Login using the username and password you specified during installation.
-#. Install prerequisites. If you're using Rocky Linux 9 Minimal:
+#. Install prerequisites. If you're using Oracle Linux 9:
 
    ::
 

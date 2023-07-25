@@ -66,7 +66,7 @@ If you're using VMware ESXi, then you're likely familiar with VM creation and in
 VMware Tools
 ------------
 
-If using a graphical desktop, you may want to install ``open-vm-tools-desktop`` to enable more screen resolution options and other features. For example, using our ISO image or standard Rocky Linux 9:
+If using a graphical desktop, you may want to install ``open-vm-tools-desktop`` to enable more screen resolution options and other features. For example, using our ISO image or standard Oracle Linux 9:
 
 ::
 

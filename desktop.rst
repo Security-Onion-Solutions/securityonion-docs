@@ -14,9 +14,9 @@ Full-time analysts may want to use a dedicated Security Onion desktop. This allo
 
 .. note::
 
-  Security Onion Desktop currently only supports Rocky Linux 9, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of Rocky Linux 9.
+  Security Onion Desktop currently only supports Oracle Linux 9, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of Oracle Linux 9.
   
-Security Onion Desktop consists of a full Cinnamon desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools.
+Security Onion Desktop consists of a full desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools.
  
 **Installation**
 
@@ -24,7 +24,7 @@ There are a few different ways to install Security Onion Desktop:
 
 - Our Security Onion ISO image includes a boot menu option for Desktop installs that will partition your disk appropriately and immediately perform a Desktop installation.
 
-- If you’re doing a network installation on Rocky Linux 9 (NOT using our Security Onion ISO image), then in our normal Setup wizard, you can choose ``OTHER`` and then choose ``ANALYST``.
+- If you’re doing a network installation on Oracle Linux 9 (NOT using our Security Onion ISO image), then in our normal Setup wizard, you can choose ``OTHER`` and then choose ``ANALYST``.
 
 - The ``so-desktop-install`` command is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst desktop itself.
 
