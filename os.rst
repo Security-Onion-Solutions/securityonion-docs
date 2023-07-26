@@ -3,7 +3,8 @@
 Operating System
 ================
 
-For most use cases, we recommend using our Security Onion ISO image which is based on Rocky Linux 9.
+For most use cases, we recommend using our Security Onion ISO image which is based on Oracle Linux 9:
+https://blog.securityonion.net/2023/07/security-onion-24-base-os.html
 
 If you don’t want to use our Security Onion 2.4 ISO image, you can still perform a network installation of our Security Onion components after manually installing one of the following:
 
