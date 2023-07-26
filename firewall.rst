@@ -15,22 +15,26 @@ Internet Communication
 
 When configuring network firewalls for Internet-connected deployments (non-:ref:`airgap`), you'll want to ensure that the deployment can connect outbound to the following:
 
-- repo.securityonion.net (Oracle Linux Updates)   
 - raw.githubusercontent.com (Security Onion public key)
 - pkg-containers.githubusercontent.com
 - sigs.securityonion.net (Signature files for Security Onion containers)  
 - ghcr.io (Container downloads)  
 - rules.emergingthreatspro.com (Emerging Threats IDS rules)  
 - rules.emergingthreats.net (Emerging Threats IDS open rules)  
-- www.snort.org (Paid Snort Talos ruleset)  
 - github.com (Strelka and Sigma rules updates)  
 - geoip.elastic.co (optional GeoIP updates for Elasticsearch)
 - storage.googleapis.com (optional GeoIP updates for Elasticsearch)
-- Ubuntu PPAs (OS Updates - Ubuntu only)  
-- download.docker.com (Docker packages - Ubuntu only)
-- repo.saltstack.com (Salt packages - Ubuntu only)
+- www.snort.org (if you are using the paid Snort Talos ruleset)  
 
-In the case of a distributed deployment, you can configure your nodes to pull everything from the manager so that only the manager requires Internet access.
+If you are using our Security Onion ISO image, you will also need access to the following:
+
+- repo.securityonion.net (Oracle Linux package updates)   
+
+If you are not using our Security Onion ISO image and are instead performing a network installation, you will also need access to the following:
+
+- update repo for whatever base OS you're installing on (:ref:`os` packages)
+- download.docker.com (:ref:`docker` packages)
+- repo.saltstack.com (:ref:`salt` packages)
 
 Node Communication
 ~~~~~~~~~~~~~~~~~~
