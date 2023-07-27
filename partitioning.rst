@@ -3,7 +3,7 @@
 Partitioning
 ============
 
-Now that you understand :ref:`hardware`, we should next discuss disk partitioning. If you're installing Security Onion for a production deployment, you'll want to pay close attention to partitioning to make sure you don't fill up a partition at some point. 
+Now that you understand :ref:`hardware` and :ref:`os` options, we should next discuss disk partitioning. If you're installing Security Onion for a production deployment, you'll want to pay close attention to partitioning to make sure you don't fill up a partition at some point. 
 
 Minimum Storage
 ---------------
