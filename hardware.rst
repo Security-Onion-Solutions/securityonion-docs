@@ -16,7 +16,7 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 
 Minimum Specs
 -------------
-If you just want to import a pcap using :ref:`so-import-pcap`, then you can configure Security Onion as an Import Node with the following minimum specs:
+If you just want to import a pcap or evtx file using the :ref:`grid` page, then you can configure Security Onion as an Import Node with the following minimum specs:
 
  - 4GB RAM
  - 2 CPU cores

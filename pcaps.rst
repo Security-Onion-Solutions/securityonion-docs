@@ -47,12 +47,12 @@ To download a pcap from https://www.netresec.com/?page=MACCDC:
 
   wget https://download.netresec.com/pcap/maccdc-2012/maccdc2012_00000.pcap.gz
 
-tcpreplay
----------
+Replay
+------
 
 You can use ``tcpreplay`` to replay any standard pcap to the sniffing interface of your Security Onion sensor.
 
-import
+Import
 ------
 
-A drawback to using tcpreplay is that it's replaying the pcap as new traffic and thus the timestamps that you see in :ref:`kibana` and other interfaces do not reflect the original timestamps from the pcap. To avoid this, a new tool was developed called :ref:`so-import-pcap`.
+A drawback to using tcpreplay is that it's replaying the pcap as new traffic and thus the timestamps that you see in :ref:`kibana` and other interfaces do not reflect the original timestamps from the pcap. To avoid this, you can import the pcap using the :ref:`grid` page.
