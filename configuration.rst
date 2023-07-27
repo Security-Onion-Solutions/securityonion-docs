@@ -17,7 +17,7 @@ Security Onion is designed for many different use cases. Here are just a few exa
 Import
 ------
 
-One of the easiest ways to get started with Security Onion is using it to forensically analyze pcap and log files. Just install Security Onion in ``Import`` mode and then run :ref:`so-import-pcap` to import pcap files or :ref:`so-import-evtx` to import Windows event logs in EVTX format.
+One of the easiest ways to get started with Security Onion is using it to forensically analyze pcap and log files. Just install Security Onion in ``Import`` mode and then import pcap files or Windows event logs in EVTX format using the :ref:`grid` page.
 
 Evaluation
 ----------
@@ -32,7 +32,7 @@ Standalone is similar to Evaluation in that it only requires a single box, but S
 Production Server - Distributed Deployment
 ------------------------------------------
 
-If deploying a distributed environment, install and configure the manager node first and then join the other nodes to it. For best performance, the manager node should be dedicated to just being a manager for the other nodes (the manager node should have no sniffing interfaces of its own). 
+If deploying a distributed environment, install and configure the manager node first and then join the other nodes to it. For best performance, the manager node should be dedicated to just being a manager for the other nodes (the manager node should not do any network sniffing, leaving that forward nodes). 
 
 Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option. You can choose either ``MANAGER`` or ``MANAGERSEARCH``. If you choose ``MANAGER``, then you must join one or more search nodes (this is optional if you choose ``MANAGERSEARCH``) and you will want to do this before you start joining other node types.
 
