@@ -8,7 +8,7 @@ Proxmox Virtual Environment is a virtualization platform similar to :ref:`vmware
 CPU
 ---
 
-Proxmox defaults to setting the VM CPU type to ``kvm64``. You may need to change this to ``host`` to pass through the host CPU type.
+Proxmox defaults to a VM CPU which may not include all of the features of your host CPU. You may need to change this to ``host`` to pass through the host CPU type.
 
 Display
 -------
