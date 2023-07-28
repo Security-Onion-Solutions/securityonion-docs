@@ -32,7 +32,7 @@ Standalone is similar to Evaluation in that it only requires a single box, but S
 Production Server - Distributed Deployment
 ------------------------------------------
 
-If deploying a distributed environment, install and configure the manager node first and then join the other nodes to it. For best performance, the manager node should be dedicated to just being a manager for the other nodes (the manager node should not do any network sniffing, leaving that forward nodes). 
+If deploying a distributed environment, install and configure the manager node first and then join the other nodes to it. For best performance, the manager node should be dedicated to just being a manager for the other nodes (the manager node should not do any network sniffing, that should be handled by dedicated forward nodes). 
 
 Build the manager by running Setup, selecting the ``DISTRIBUTED`` install submenu, and choosing the ``New Deployment`` option. You can choose either ``MANAGER`` or ``MANAGERSEARCH``. If you choose ``MANAGER``, then you must join one or more search nodes (this is optional if you choose ``MANAGERSEARCH``) and you will want to do this before you start joining other node types.
 
