@@ -12,6 +12,7 @@ Release Notes
 - FEATURE: Add relative Timeframe and Refresh Interval as URL Parameters to Hunt `#3352 <https://github.com/Security-Onion-Solutions/securityonion/issues/3352>`_
 - FEATURE: Cases - Add ability to enable dynamic observable extraction `#7972 <https://github.com/Security-Onion-Solutions/securityonion/issues/7972>`_
 - FEATURE: Oracle Linux ISO `#10845 <https://github.com/Security-Onion-Solutions/securityonion/issues/10845>`_
+- FEATURE: Security Onion Desktop `#10862 <https://github.com/Security-Onion-Solutions/securityonion/issues/10862>`_
 - FIX: Add retry to Elastic Agent installer `#10488 <https://github.com/Security-Onion-Solutions/securityonion/issues/10488>`_
 - FIX: Case status code 404 error `#10759 <https://github.com/Security-Onion-Solutions/securityonion/issues/10759>`_
 - FIX: Intermittent pcap retrieval `#10750 <https://github.com/Security-Onion-Solutions/securityonion/issues/10750>`_
