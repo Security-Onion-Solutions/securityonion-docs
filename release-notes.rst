@@ -3,6 +3,23 @@
 Release Notes
 =============
 
+2.4.4 RC1 [20230728] Changes
+----------------------------
+
+- FEATURE: Add DNS lookup action to SOC `#8655 <https://github.com/Security-Onion-Solutions/securityonion/issues/8655>`_
+- FEATURE: Add Oracle Linux Support `#10844 <https://github.com/Security-Onion-Solutions/securityonion/issues/10844>`_
+- FEATURE: Add pivots for relational operators on numbers `#8024 <https://github.com/Security-Onion-Solutions/securityonion/issues/8024>`_
+- FEATURE: Add relative Timeframe and Refresh Interval as URL Parameters to Hunt `#3352 <https://github.com/Security-Onion-Solutions/securityonion/issues/3352>`_
+- FEATURE: Cases - Add ability to enable dynamic observable extraction `#7972 <https://github.com/Security-Onion-Solutions/securityonion/issues/7972>`_
+- FEATURE: Oracle Linux ISO `#10845 <https://github.com/Security-Onion-Solutions/securityonion/issues/10845>`_
+- FIX: Add retry to Elastic Agent installer `#10488 <https://github.com/Security-Onion-Solutions/securityonion/issues/10488>`_
+- FIX: Case status code 404 error `#10759 <https://github.com/Security-Onion-Solutions/securityonion/issues/10759>`_
+- FIX: Intermittent pcap retrieval `#10750 <https://github.com/Security-Onion-Solutions/securityonion/issues/10750>`_
+- FIX: Navigator Errors `#10742 <https://github.com/Security-Onion-Solutions/securityonion/issues/10742>`_
+- FIX: Remove .security subfield `#10745 <https://github.com/Security-Onion-Solutions/securityonion/issues/10745>`_
+- UPGRADE: CyberChef 10.5.2 `#10781 <https://github.com/Security-Onion-Solutions/securityonion/issues/10781>`_
+- UPGRADE: so-registry docker image `#10727 <https://github.com/Security-Onion-Solutions/securityonion/issues/10727>`_
+
 2.4.3 Beta 4 [20230711] Changes
 -------------------------------
 
