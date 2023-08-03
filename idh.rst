@@ -23,11 +23,12 @@ IDH nodes are dedicated to just being IDH nodes and cannot run any other service
 Configuration
 -------------
 
-- Run Setup, select the ``DISTRIBUTED`` install submenu, choose the ``Existing Deployment`` option, and then select the ``IDH`` option.
-- Choose from one of the common honeypot options or choose the ``Custom`` option to customize.
+- Run Setup and select the ``DISTRIBUTED`` install option.
+- Select the ``Existing Deployment`` option.
+- Select the ``IDH`` option.
 - You can optionally prevent the IDH services from listening on the management interface.
-  
-After configuration is complete, connections to honeypot services will result in ``SO IDH`` alerts that can be seen in :ref:`alerts`.
+- Once Setup is complete and the IDH node is fully joined to the grid, you can do additional configuration by going to :ref:`administration` --> Configuration --> idh.
+- After configuration is complete, connections to honeypot services will result in ``SO IDH`` alerts that can be seen in :ref:`alerts`.
 
 Technical Background
 --------------------
