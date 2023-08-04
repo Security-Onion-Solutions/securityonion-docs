@@ -3,6 +3,37 @@
 Release Notes
 =============
 
+2.4.5 [20230807] Changes
+------------------------
+
+- FEATURE: Add NetworkMiner to Security Onion Desktop `#10865 <https://github.com/Security-Onion-Solutions/securityonion/issues/10865>`_
+- FEATURE: Add value from record in Hunt, etc as an observable to an existing or new case `#7992 <https://github.com/Security-Onion-Solutions/securityonion/issues/7992>`_
+- FEATURE: Enable CommunityID for Elastic Defend Logs `#10811 <https://github.com/Security-Onion-Solutions/securityonion/issues/10811>`_
+- FEATURE: Heavy Node Support `#10671 <https://github.com/Security-Onion-Solutions/securityonion/issues/10671>`_
+- FEATURE: so-import-evtx - timeshift `#10743 <https://github.com/Security-Onion-Solutions/securityonion/issues/10743>`_
+- FEATURE: soup should rotate its log file `#10951 <https://github.com/Security-Onion-Solutions/securityonion/issues/10951>`_
+- FIX: Dashboards with multiple groupby charts always filter by the first chart's, first groupby field `#10856 <https://github.com/Security-Onion-Solutions/securityonion/issues/10856>`_
+- FIX: Disable offload on monitor NICs `#10900 <https://github.com/Security-Onion-Solutions/securityonion/issues/10900>`_
+- FIX: EQL Field Mappings `#10783 <https://github.com/Security-Onion-Solutions/securityonion/issues/10783>`_
+- FIX: Elastic Fleet Improvements `#10846 <https://github.com/Security-Onion-Solutions/securityonion/issues/10846>`_
+- FIX: Firewall state custom host group assignments for single portgroup entry `#10917 <https://github.com/Security-Onion-Solutions/securityonion/issues/10917>`_
+- FIX: IDH node `#10882 <https://github.com/Security-Onion-Solutions/securityonion/issues/10882>`_
+- FIX: Influx reporting No Results for Zeek Capture Loss `#10956 <https://github.com/Security-Onion-Solutions/securityonion/issues/10956>`_
+- FIX: IPTables Persistence `#10884 <https://github.com/Security-Onion-Solutions/securityonion/issues/10884>`_
+- FIX: Install Error: so-yara-download failed `#10880 <https://github.com/Security-Onion-Solutions/securityonion/issues/10880>`_
+- FIX: Install screen - Firewall `#10945 <https://github.com/Security-Onion-Solutions/securityonion/issues/10945>`_
+- FIX: List settings updated with blank values should be stored as empty lists `#10936 <https://github.com/Security-Onion-Solutions/securityonion/issues/10936>`_
+- FIX: Login page shows error banner briefly on initial page load `#10911 <https://github.com/Security-Onion-Solutions/securityonion/issues/10911>`_
+- FIX: RAID status on Grid page `#10935 <https://github.com/Security-Onion-Solutions/securityonion/issues/10935>`_
+- FIX: SOC Auth dashboard `#10878 <https://github.com/Security-Onion-Solutions/securityonion/issues/10878>`_
+- FIX: Security Onion Desktop state should default to Gnome Classic `#10958 <https://github.com/Security-Onion-Solutions/securityonion/issues/10958>`_
+- FIX: sensor MTU setting in SOC Config should be read only `#10883 <https://github.com/Security-Onion-Solutions/securityonion/issues/10883>`_
+- FIX: so-status taking several seconds to complete `#10909 <https://github.com/Security-Onion-Solutions/securityonion/issues/10909>`_
+- FIX: soup `#10902 <https://github.com/Security-Onion-Solutions/securityonion/issues/10902>`_
+- FIX: syslog not working `#10896 <https://github.com/Security-Onion-Solutions/securityonion/issues/10896>`_
+- FIX: verbiage and links in soc_sensor.yaml `#10906 <https://github.com/Security-Onion-Solutions/securityonion/issues/10906>`_
+- UPGRADE: Elastic 8.8.2 `#10864 <https://github.com/Security-Onion-Solutions/securityonion/issues/10864>`_
+
 2.4.4 RC1 [20230728] Changes
 ----------------------------
 
