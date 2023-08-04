@@ -3,8 +3,8 @@
 Release Notes
 =============
 
-2.4.5 [20230807] Changes
-------------------------
+2.4.5 RC2 [20230807] Changes
+----------------------------
 
 - FEATURE: Add NetworkMiner to Security Onion Desktop `#10865 <https://github.com/Security-Onion-Solutions/securityonion/issues/10865>`_
 - FEATURE: Add value from record in Hunt, etc as an observable to an existing or new case `#7992 <https://github.com/Security-Onion-Solutions/securityonion/issues/7992>`_
