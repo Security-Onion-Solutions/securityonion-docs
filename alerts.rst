@@ -137,6 +137,8 @@ The ``Actions`` sub-menu has several different options:
 
 - Clicking the ``Hunt`` option will start a new search for the selected value and will aggregate the results by ``event.module`` and ``event.dataset`` to give you a good overview of what types of data are available for that indicator.
 
+- Clicking the ``Add to Case`` option will add an observable to a new or existing case.
+
 - Clicking the ``Correlate`` option will find related logs based on Community ID, uid, fuid, etc.
 
 - Clicking the ``PCAP`` option will pivot to the :ref:`pcap` interface to retrieve full packet capture for the selected stream.
