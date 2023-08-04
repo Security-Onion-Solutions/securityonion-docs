@@ -3,11 +3,7 @@
 SOC Customization
 =================
 
-You can customize SOC by going to :ref:`administration` --> Configuration --> soc. Below are some ways in which you can customize :ref:`soc`. Once all customizations are complete, you can then restart SOC to make the changes take effect:
-
-::
-
-        sudo so-soc-restart
+You can customize SOC by going to :ref:`administration` --> Configuration --> soc. Below are some ways in which you can customize :ref:`soc`. Once all customizations are complete, you can make the changes take effect by clicking the ``Options`` bar at the top and then clicking the ``SYNCHRONIZE GRID`` button.
 
 Login Page
 ----------
@@ -27,8 +23,13 @@ You can also customize the links on the left side. To do so, go to :ref:`adminis
 Session Timeout
 ---------------
 
-Another possible SOC customization is the session timeout. The default timeout for user login sessions is 24 hours. This is a fixed timespan and will expire regardless of whether the user is active or idle in SOC. You can configure this by going to :ref:`administration` --> Configuration --> kratos --> sessiontimeout.
-          
+The default timeout for user login sessions is 24 hours. This is a fixed timespan and will expire regardless of whether the user is active or idle in SOC. You can configure this by going to :ref:`administration` --> Configuration --> kratos --> sessiontimeout.
+
+Reverse DNS Lookups
+-------------------
+
+You can enable reverse DNS lookups by going to :ref:`administration` --> Configuration --> soc --> server --> client --> enableReverseLookup.
+
 Advanced Interface
 ------------------
 
