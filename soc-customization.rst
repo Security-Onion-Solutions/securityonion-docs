@@ -3,7 +3,7 @@
 SOC Customization
 =================
 
-You can customize SOC by going to :ref:`administration` --> Configuration --> soc. Below are some ways in which you can customize :ref:`soc`. Once all customizations are complete, you can make the changes take effect by clicking the ``Options`` bar at the top and then clicking the ``SYNCHRONIZE GRID`` button.
+You can customize :ref:`soc` by going to :ref:`administration` --> Configuration --> soc. Below are some ways in which you can customize SOC. Once all customizations are complete, you can make the changes take effect by clicking the ``Options`` bar at the top and then clicking the ``SYNCHRONIZE GRID`` button.
 
 Login Page
 ----------
@@ -29,11 +29,6 @@ Reverse DNS Lookups
 -------------------
 
 You can enable reverse DNS lookups by going to :ref:`administration` --> Configuration --> soc --> server --> client --> enableReverseLookup.
-
-Advanced Interface
-------------------
-
-The interface for :ref:`alerts` and :ref:`cases` is a simplified version of the interface seen in :ref:`dashboards` and :ref:`hunt`. :ref:`alerts` and :ref:`cases` have a toggle under Options labeled ``Temporarily enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
 
 Custom Queries
 --------------
