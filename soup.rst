@@ -85,7 +85,7 @@ You can also specify the path on the command line using the ``-f`` option. For e
 Agents
 ------
 
-If you've previously added any external agents, be sure to upgrade them to match the version of your upgraded components.
+If soup updated to a new version of the Elastic stack, then you might need to update your Elastic Agents via :ref:`elastic-fleet`.
 
 log_size_limit
 --------------
