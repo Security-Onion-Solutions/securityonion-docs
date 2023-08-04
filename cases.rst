@@ -65,6 +65,8 @@ You can add multiple observables of the same type by selecting the option labele
 
 For each observable, you can click the icon on the far left of the row to drill into the observable and see more information about it. To the right of that is the the hunt icon which will start a new hunt for the observable. Clicking the lightning bolt icon will analyze the observable (see the Analyzers section later).
 
+You can also add observables directly from :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`. Click the observable and select the ``Add to Case`` option. You'll then have the option of adding the observable to a new case or an existing case.
+
 Events
 ------
 
