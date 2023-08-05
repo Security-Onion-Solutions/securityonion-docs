@@ -18,7 +18,6 @@ Release Notes
 - FIX: Elastic Fleet Improvements `#10846 <https://github.com/Security-Onion-Solutions/securityonion/issues/10846>`_
 - FIX: Firewall state custom host group assignments for single portgroup entry `#10917 <https://github.com/Security-Onion-Solutions/securityonion/issues/10917>`_
 - FIX: IDH node `#10882 <https://github.com/Security-Onion-Solutions/securityonion/issues/10882>`_
-- FIX: Influx reporting No Results for Zeek Capture Loss `#10956 <https://github.com/Security-Onion-Solutions/securityonion/issues/10956>`_
 - FIX: IPTables Persistence `#10884 <https://github.com/Security-Onion-Solutions/securityonion/issues/10884>`_
 - FIX: Install Error: so-yara-download failed `#10880 <https://github.com/Security-Onion-Solutions/securityonion/issues/10880>`_
 - FIX: Install screen - Firewall `#10945 <https://github.com/Security-Onion-Solutions/securityonion/issues/10945>`_
