@@ -8,7 +8,7 @@ https://securityonion.net/aws/?ref=_ptnr_soc_docs_230525
 
 .. warning::
 
-   Existing Security Onion AMI installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer AMI from the AWS Marketplace could cause loss of data and require full grid re-installation.
+   Existing 2.4 RC1 or newer Security Onion AMI installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer AMI from the AWS Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
     
 .. note::
 
@@ -26,7 +26,7 @@ Before proceeding, determine the grid architecture desired. Choose from a single
 Single Node Grid
 ----------------
 
-For simple, low-volume production monitoring, a single node grid can be used. EBS must be used for :ref:`elasticsearch` data storage if used for production purposes. Single node grids cannot use ephemeral instance storage without being at risk of losing :ref:`elasticsearch` data. However, for temporary evaluation installations, where there is little concern for data loss, ephemeral instance storage should be used. 
+For simple, low-volume production monitoring, a single node grid can be used. EBS must be used for :ref:`elasticsearch` data storage if used for production purposes. Single node grids cannot use ephemeral instance storage without being at risk of data loss. However, for temporary evaluation installations, where there is little concern for data loss, ephemeral instance storage can be used. 
 
 Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both). Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
 
@@ -48,7 +48,7 @@ Distributed Grid
 
 For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes must be used in this architecture. This is required due to the use of ephemeral instance storage for :ref:`elasticsearch` data storage, where each of the search nodes retains a replica of another search node, for disaster recovery.
 
-Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements. Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
+Listed below are the *minimum* suggested distributed grid instance quantities, sizes, and storage requirements. Prefer increasing VM memory over enabling swap memory, for best performance. High volume networks will need more powerful VM types than those listed below.
 
 VPN Node
 
@@ -91,7 +91,7 @@ Security Groups act like a firewall for your Amazon EC2 instances controlling bo
 - Select the appropriate VPC for the security group. 
 - With the inbound tab selected, select: ``Add Rule`` 
 - Add the appropriate inbound rules to ensure all desired traffic destined for the sniffing interface is allowed.
-- Select: ``Create``
+- Press the ``Create security group`` button.
 
 Create Sniffing Interface
 -------------------------
