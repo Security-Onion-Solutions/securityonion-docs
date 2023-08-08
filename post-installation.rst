@@ -8,6 +8,11 @@ Adjust firewall rules
 
 Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to make other adjustments to firewall rules, you can do so by going to :ref:`administration` --> Configuration --> firewall.
 
+SSH
+---
+
+You should be able to do most administration from :ref:`soc` but if you need access to the command line then we recommend using :ref:`ssh` rather than the :ref:`console`.
+
 Services
 --------
 
