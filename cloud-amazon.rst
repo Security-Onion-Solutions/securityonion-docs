@@ -153,7 +153,7 @@ Manager Setup
 
 If this is an ephemeral evaluation node, ensure the node has been prepared as described in the preceding section. 
 
-After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Continue instructions below for applicable nodes.
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Most distributed installations will use the ``hostname`` or ``other`` web access method, due to the need for both cluster nodes inside the private network, and analyst across the public Internet to reach with the manager. This allows for custom DNS entries to define the correct IP (private vs public) depending on whether its a cluster node or an analyst user.
 
 AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be specified in the SOC Configuration screen after setup completes. By default the server will use the time servers at ``ntp.org``.
 

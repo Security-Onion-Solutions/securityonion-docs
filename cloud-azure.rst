@@ -8,7 +8,7 @@ https://securityonion.net/azure
 
 .. warning::
 
-   Existing Security Onion installations in Azure should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Azure Marketplace could cause loss of data and require full grid re-installation.
+   Existing 2.4 RC1 or newer Security Onion Azure Image installations should use the soup command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Azure Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
     
 .. note::
 
@@ -20,14 +20,14 @@ https://securityonion.net/azure
 
 .. note::
 
-   This section does not cover how to set up a virtual network in Azure. For more details about setting up a virtual network, please see https://docs.microsoft.com/en-us/azure/virtual-network/.
+   This section does not cover how to set up a virtual network in Azure. For more details about setting up a virtual network, please see https://docs.microsoft.com/en-us/azure/virtual-network/. Ensure that all Security Onion nodes can access the manager node over the necessary ports. This could require adding rules to your Azure Virtual Network and/or VMs in order to satisfy the Security Onion :ref:`firewall` Node Communication requirements.
 
 Requirements
 ############
 
 Before proceeding, determine the grid architecture desired. Choose from a single-node grid versus a distributed, multi-node grid. 
 
-While Azure has recently begun offering ephemeral storage, which potentially could offer increased disk performance for search nodes, the setup required for configuring them is out of scope of this documentation. We recommend using either Premium SSD disks, or the more expensive Ultra SSD disks, with suitable IOPS and throughput matched to your expected network monitoring requirements.
+Security Onion recommends using either Premium SSD disks, or the more expensive Ultra SSD disks, with suitable IOPS and throughput matched to your expected network monitoring requirements.
 
 Single Node Grid
 ----------------
@@ -53,7 +53,7 @@ Distributed Grid
 
 For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes are recommended for redundancy purposes.
 
-Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements. Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
+Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements. Prefer increasing VM memory over enabling swap memory, for best performance. High volume networks will need more powerful VM types with more storage than those listed below.
 
 VPN Node
 
@@ -126,10 +126,11 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 - Choose or create a new Resource group.
 - Enter a suitable name for this virtual machine, such as ``so-vm-manager``.
 - Choose the desired Region and Availability options. (Use ``East US 2`` for Ultra SSD support, if needed.)
-- Choose the ``Security Onion 2 Standard`` image. If this option is not listed on the Image dropdown, select ``See all images`` and search for ``onion``.
+- Choose the ``Security Onion 2 VM Image``. If this option is not listed on the Image dropdown, select ``See all images`` and search for ``onion``.
 - Choose the appropriate Size based on the desired hardware requirements. For assistance on determining resource requirements please review the Requirements section above.
 - Change the Username to ``onion``. Note that this is not mandatory -- if you accidentally leave it to the default ``azureuser``, that's ok, you'll simply use the ``azureuser`` username any place where the documentation states to use the ``onion`` username.
 - Select an existing SSH public key if one already exists, otherwise select the option to ``Generate new key pair``.
+- Choose ``Other`` for Licensing type.
 - Select ``Next: Disks``
 - Ensure ``Premium SSD`` is selected.
 - For single-node grids, distributed sensor nodes, or distributed search nodes: If you would like to separate the ``/nsm`` partition into its own disk, create and attach a data disk for this purpose, with a minimum size of 100GB, or more depending on predicted storage needs. Note that the size of the ``/nsm`` partition determines the rate that old packet and event data is pruned. Separating the /nsm partition can provide more flexibility with scaling up the grid node sizes, but requires a little more setup, which is described later.
@@ -141,13 +142,11 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 - Select: ``Review + create``
 - Review the summary. If a ``Validation failed`` message appears, correct the missing inputs under each tab section containing a red dot to the right of the tab name.
 - Select. ``Create`` and download the new public key, if you chose to generate a new key.
-- Stop the new VM after deployment completes.
-- Edit the VM and:
+- If this VM is a single-node grid, or is sensor node:
 
-  - Adjust the OS disk size to be at least 100GB in size.
-  - If this VM is a single-node grid, or is sensor node, attach the monitoring network interface created earlier.
-  
-- Start the VM.
+   - Stop the new VM after deployment completes.
+   - Edit the VM and attach the monitoring network interface created earlier.
+   - Start the VM.
 
 Note that you'll need to reference the SSH public key when using SSH to access the new VMs. For example:
 
@@ -159,26 +158,7 @@ Note that you'll need to reference the SSH public key when using SSH to access t
 Manager Setup
 #############
 
-After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Continue instructions below for applicable nodes.
-
-All Distributed Manager Nodes
------------------------------
-
-For distributed manager nodes, if connecting sensors through the VPN instance, adjust the Security Onion firewall as shown in the below commands:
-
-Run ``so-firewall includehost minion <inside interface of your VPN concentrator>``. Ex:
-
-::
-
-	so-firewall includehost minion 10.99.1.10
-
-Run ``so-firewall includehost sensor <inside interface of your VPN concentrator>``. Ex:
-
-::
-
-	so-firewall --apply includehost sensor 10.99.1.10
-
-At this time your Manager is ready for remote minions to start connecting.
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Most distributed installations will use the ``hostname`` or ``other`` web access method, due to the need for both cluster nodes inside the private network, and analyst across the public Internet to reach with the manager. This allows for custom DNS entries to define the correct IP (private vs public) depending on whether its a cluster node or an analyst user.
 
 Search Node Setup
 #################
