@@ -135,7 +135,7 @@ For distributed search nodes, or an evaluation node if using ephemeral storage, 
 
     sudo so-prepare-fs
 
-By default, this command expects the ephemeral device to be located at ``/dev/nvme1n1`` and will mount that device at ``/nsm/elasticsearch``. To override either of those two defaults, specify them as arguments. For example:
+By default, this command expects the ephemeral device to be located at ``/dev/nvme1n1`` and will mount that device at ``/nsm/elasticsearch``. If this fails run ``lsblk`` to determine which disk to use. To override either of those two defaults, specify them as arguments. For example:
 
 ::
 
