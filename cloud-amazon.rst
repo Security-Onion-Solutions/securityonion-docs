@@ -157,7 +157,7 @@ After SSH'ing into the node, setup will begin automatically. Follow the prompts,
 
 AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be specified in the SOC Configuration screen after setup completes. By default the server will use the time servers at ``ntp.org``.
 
-For distributed manager nodes using ephemeral storage, go to SOC Configuration and search for number_of_replicas. Change each index's replica count to 1. By default there are no replicas.
+For distributed manager nodes using ephemeral storage, go to SOC Configuration. Search for ``number_of_replicas`` and change to 1. This will double the storage cost but will ensure at least two VMs have the data, in case of an ephemeral disk loss.
 
 Optionally, adjust :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online:
 
@@ -184,15 +184,11 @@ Setup the VPN (out of scope for this guide) and connect the sensor node to the V
 
 If connecting sensors through the VPN instance you will need to add the inside interface of your VPN concentrator to the ``sensor`` firewall hostgroup. For instance, assuming the following architecture:
 
-Forward Node, 192.168.33.13 (Remote)
-  |
-VPN Endpoint, 192.168.33.10 (Remote)
-  |
-Internet
-  |
-VPN Endpoint, 10.55.1.10 (AWS)
-  |
-Security Onion Manager, 10.55.1.20 (AWS)
+::
+
+    SO Sensor        -> VPN Endpoint     -> Internet -> VPN Endpoint  -> SO Manager
+    Location: Remote    Location: Remote                Location: AWS    Location: AWS
+    192.168.33.13       192.168.33.10                   10.55.1.10       10.55.1.20
 
 In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``sensor`` firewall hostgroup.
 
