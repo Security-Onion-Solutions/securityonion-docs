@@ -16,7 +16,7 @@ https://securityonion.net/aws/?ref=_ptnr_soc_docs_230525
 
 .. note::
 
-   This section does not cover how to set up a VPC in AWS. For more details about setting up a VPC, please see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html. Ensure that all Security Onion nodes can access the manager node over the necessary ports. This could require adding rules to your AWS security groups in order to satisfy the Security Onion :ref:`node-communication` requirements.
+   This section does not cover how to set up a VPC in AWS. For more details about setting up a VPC, please see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html. Ensure that all Security Onion nodes can access the manager node over the necessary ports. This could require adding rules to your AWS security groups in order to satisfy the Security Onion :ref:`firewall` Node Communication requirements.
 
 Requirements
 ############
@@ -157,12 +157,6 @@ After SSH'ing into the node, setup will begin automatically. Follow the prompts,
 
 AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be specified in the SOC Configuration screen after setup completes. By default the server will use the time servers at ``ntp.org``.
 
-Distributed Manager Nodes
--------------------------
-
-Manager Node Setup
-#################
-
 For distributed manager nodes using ephemeral storage, go to SOC Configuration and search for number_of_replicas. Change each index's replica count to 1. By default there are no replicas.
 
 Optionally, adjust :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online:
@@ -171,7 +165,7 @@ Optionally, adjust :ref:`elastalert` indices so that they have a replica. This w
 
     so-elasticsearch-query elastalert*/_settings -X PUT -d '{"index" : { "number_of_replicas" : 1 }}'
 
-This is an optional step due to the ElastAlert 2 indices being used primarily for short-term/recent alert history. In the event of a data loss when ElastAlert 2 restarts the indices will be regenerated. 
+This is an optional step due to the ElastAlert indices being used primarily for short-term/recent alert history. In the event of a data loss when ElastAlert 2 restarts the indices will be regenerated. 
 
 Search Node Setup
 #################
@@ -190,7 +184,15 @@ Setup the VPN (out of scope for this guide) and connect the sensor node to the V
 
 If connecting sensors through the VPN instance you will need to add the inside interface of your VPN concentrator to the ``sensor`` firewall hostgroup. For instance, assuming the following architecture:
 
-Remote Network (including Forward Node, 192.168.33.13) <--> Remote Network VPN Endpoint, 192.168.33.10 <--> Internet  <--> AWS VPN Endpoint, 10.55.1.10 <--> AWS Security Onion Manager, 10.55.1.20
+Forward Node, 192.168.33.13 (Remote)
+  |
+VPN Endpoint, 192.168.33.10 (Remote)
+  |
+Internet
+  |
+VPN Endpoint, 10.55.1.10 (AWS)
+  |
+Security Onion Manager, 10.55.1.20 (AWS)
 
 In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``sensor`` firewall hostgroup.
 
