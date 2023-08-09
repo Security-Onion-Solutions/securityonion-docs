@@ -16,7 +16,7 @@ https://securityonion.net/aws/?ref=_ptnr_soc_docs_230525
 
 .. note::
 
-   This section does not cover how to set up a VPC in AWS. For more details about setting up a VPC, please see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html.
+   This section does not cover how to set up a VPC in AWS. For more details about setting up a VPC, please see https://docs.aws.amazon.com/directoryservice/latest/admin-guide/gsg_create_vpc.html. Ensure that all Security Onion nodes can access the manager node over the necessary ports. This could require adding rules to your AWS security groups in order to satisfy the Security Onion :ref:`node-communication` requirements.
 
 Requirements
 ############
@@ -48,7 +48,7 @@ Distributed Grid
 
 For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes must be used in this architecture. This is required due to the use of ephemeral instance storage for :ref:`elasticsearch` data storage, where each of the search nodes retains a replica of another search node, for disaster recovery.
 
-Listed below are the *minimum* suggested distributed grid instance quantities, sizes, and storage requirements. Prefer increasing VM memory over enabling swap memory, for best performance. High volume networks will need more powerful VM types than those listed below.
+Listed below are the *minimum* suggested distributed grid instance quantities, sizes, and storage requirements. Prefer increasing VM memory over enabling swap memory, for best performance. High volume networks will need more powerful VM types with more storage than those listed below.
 
 VPN Node
 
@@ -153,49 +153,25 @@ Manager Setup
 
 If this is an ephemeral evaluation node, ensure the node has been prepared as described in the preceding section. 
 
-After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. For distributed manager nodes using ephemeral storage, if you would like to use traditional :ref:`elasticsearch` clustering, select Advanced and answer Yes. Continue instructions below for applicable nodes.
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Continue instructions below for applicable nodes.
 
-AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be used when prompted for an NTP host.
+AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be specified in the SOC Configuration screen after setup completes. By default the server will use the time servers at ``ntp.org``.
 
-All Distributed Manager Nodes
------------------------------
+Distributed Manager Nodes
+-------------------------
 
-For distributed manager nodes, if connecting sensors through the VPN instance then follow the instructions below to allow remote sensor connections:
+Manager Node Setup
+#################
 
-Run ``so-firewall includehost minion <inside interface of your VPN concentrator>``. Ex:
+For distributed manager nodes using ephemeral storage, go to SOC Configuration and search for number_of_replicas. Change each index's replica count to 1. By default there are no replicas.
 
-::
-
-	so-firewall includehost minion 10.99.1.10
-
-Run ``so-firewall includehost sensor <inside interface of your VPN concentrator>``. Ex:
-
-::
-
-	so-firewall --apply includehost sensor 10.99.1.10
-
-At this time your Manager is ready for remote minions to start connecting.
-
-Distributed Manager Nodes using Traditional Elasticsearch Clustering
---------------------------------------------------------------------
-
-For distributed manager nodes using ephemeral storage that chose to use traditional :ref:`elasticsearch` clustering, make the following changes in ``/opt/so/saltstack/local/pillar/global.sls``:
-
-::
-
-    replicas: 1 
-
-Then, restart :ref:`logstash`:
-
-::
-
-    sudo so-logstash-restart
-
-Next, fix :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online:
+Optionally, adjust :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online:
 
 ::
 
     so-elasticsearch-query elastalert*/_settings -X PUT -d '{"index" : { "number_of_replicas" : 1 }}'
+
+This is an optional step due to the ElastAlert 2 indices being used primarily for short-term/recent alert history. In the event of a data loss when ElastAlert 2 restarts the indices will be regenerated. 
 
 Search Node Setup
 #################
@@ -210,21 +186,20 @@ SSH into the sensor node and run through setup to set this node up as a sensor. 
 Remote Sensor Setup
 ###################
 
-Setup the VPN (out of scope for this guide) and connect the sensor node to the VPN.
-When prompted to choose the management interface, select the VPN tunnel interface, such as ``tun0``. Use the internal IP address of the manager inside AWS when prompted for the manager IP.
+Setup the VPN (out of scope for this guide) and connect the sensor node to the VPN. During the Security Onion setup of the Sensor, when prompted to choose the management interface, select the VPN tunnel interface, typically ``tun0``.
 
-The AWS internal VPN endpoint IP will need to be added to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml`` on the manager. This will open up the required ports for the remote sensor to communicate with the manager, since it is behind a NAT.
-
-For instance, assuming the following architecture:
+If connecting sensors through the VPN instance you will need to add the inside interface of your VPN concentrator to the ``sensor`` firewall hostgroup. For instance, assuming the following architecture:
 
 Remote Network (including Forward Node, 192.168.33.13) <--> Remote Network VPN Endpoint, 192.168.33.10 <--> Internet  <--> AWS VPN Endpoint, 10.55.1.10 <--> AWS Security Onion Manager, 10.55.1.20
 
-In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``.
+In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``sensor`` firewall hostgroup.
+
+This change can be done in the SOC Configuration screen. Then, either wait up to 15 minutes for the scheduled configuration sync to run, or force a synchronization immediately via the SOC Configuration Options. Once the firewall hostgroup configuration has been synchronized your Manager will be ready for remote minions to start connecting.
 
 AWS Traffic Mirroring
 #####################
 
-Traffic mirroring allows you to copy the traffic to/from an instance and send it to the sniffing interface of a network security monitoring sensor or a group of interfaces using a network load balancer.  For more details about AWS Traffic Mirroring please see: https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html
+Traffic mirroring allows you to copy the traffic to/from an instance and send it to the sniffing interface of a network security monitoring sensor or a group of interfaces using a network load balancer. For more details about AWS Traffic Mirroring please see: https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html
 
 .. tip::
 
