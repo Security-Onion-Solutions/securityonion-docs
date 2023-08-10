@@ -10,7 +10,7 @@ https://securityonion.net/gcp/?ref=_ptnr_soc_docs_230525
 
 .. warning::
 
-   Existing 2.4 RC1 or newer Security Onion Azure Image installations should use the soup command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Azure Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
+   Existing 2.4 RC1 or newer Security Onion Azure Image installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Azure Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
 
 .. note::
 
