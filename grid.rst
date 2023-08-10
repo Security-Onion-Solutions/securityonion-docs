@@ -79,3 +79,10 @@ Appliance Images
 ----------------
 
 If you have purchased our official Security Onion Solutions appliances, then the grid page will show pictures of the front and rear of the appliances, useful for walking through connectivity discussions with personnel in the data center. If you are not using official Security Onion Solutions appliances, then it will simply display a message to that effect.
+
+Other Grid Pages
+----------------
+
+.. note::
+
+    You can manage Grid members and Grid configuration in the :ref:`administration` section.
