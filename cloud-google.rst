@@ -10,15 +10,16 @@ https://securityonion.net/gcp/?ref=_ptnr_soc_docs_230525
 
 .. warning::
 
-   Existing Security Onion GCP installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the GCP Marketplace could cause loss of data and require full grid re-installation.
-    
+   Existing 2.4 RC1 or newer Security Onion Azure Image installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Azure Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
+
 .. note::
 
    This section does not cover network connectivity to the Security Onion node. This can be achieved through configuring an external IP for the node’s management interface, or through the use of a VPN connection via OpenVPN.
 
 .. note::
 
-   This section does not cover all aspects of how to set up a VPC in GCP, as each deployments is typically unique for the user. For more details about setting up a VPC, please see https://cloud.google.com/vpc/docs/vpc.
+   This section does not cover all aspects of how to set up a VPC in GCP, as each deployments is typically unique for the user. For more details about setting up a VPC, please see https://cloud.google.com/vpc/docs/vpc. Ensure that all Security Onion nodes can access the manager node over the necessary ports. This could require adding rules to your GCP Virtual Private Cloud and/or VMs in order to satisfy the Security Onion :ref:`firewall` Node Communication requirements.
+
 
 Requirements
 ############
@@ -28,7 +29,7 @@ Before proceeding, determine the grid architecture desired. Choose from a single
 Single Node Grid
 ----------------
 
-For simple, low-volume production monitoring, a single node grid can be used. Persistent disks must be used for :ref:`elasticsearch` data storage if used for production purposes. Single node grids cannot use local disks without being at risk of losing :ref:`elasticsearch` data. However, for temporary evaluation installations, where there is little concern for data loss, local disks should be used. 
+For simple, low-volume production monitoring, a single node grid can be used. Persistent disks must be used for :ref:`elasticsearch` data storage if used for production purposes. Single node grids cannot use local disks without being at risk of losing :ref:`elasticsearch` data. However, for temporary evaluation installations, where there is little concern for data loss, local disks can be used. 
 
 Listed below are the minimum suggested single-node instance quantities, sizes, and storage requirements for either standalone or evaluation installations (choose one, not both). Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
 
@@ -51,7 +52,7 @@ Distributed Grid
 
 For high volume production monitoring, choose a multi-node grid architecture. At least two search nodes must be used in this architecture. This is required due to the use of local disks for :ref:`elasticsearch` data storage, where each of the search nodes retains a replica of another search node, for disaster recovery.
 
-Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements. Note that when using virtual machines with the minimum RAM requirements you may need to enable memory swapping.
+Listed below are the minimum suggested distributed grid instance quantities, sizes, and storage requirements. Prefer increasing VM memory over enabling swap memory, for best performance. High volume networks will need more powerful VM types with more storage than those listed below.
 
 VPN Node
 
@@ -98,7 +99,7 @@ Create a VPC for the Security Onion Network
 
 Create a new Virtual Private Cloud (VPC) network where the Security Onion grid will communicate. Configure the subnets as desired, however, at least one subnet is required, and this VPC cannot overlap IP space with the above Monitored VPC network. Ensure that SSH access (port TCP/22) and HTTPS (port TCP/443) is enabled so that you have the ability to connect to VMs from your external network. For security purposes it's recommended to limit inbound access from trusted IPs.
 
-Add a new firewall rule to allow all traffic originating from any VM instance within the Security Onion VPC network. Choose a source IP range that encapsulates the IP ranges of the subnet(s) created above. This is necessary for connectivity between the manager and minion nodes.
+Add a new firewall rule to allow all traffic originating from any VM instance within the Security Onion VPC network. Choose a source IP range that encapsulates the IP ranges of the subnet(s) created above. This is necessary for connectivity between the manager and minion nodes. You can also choose to be more specific about traffic within the VPC however the rules must satisfy the Security Onion :ref:`firewall` Node Communication requirements.
 
 Create Sensor Instance Group
 ----------------------------
@@ -110,7 +111,7 @@ Create Internal Load Balancer
 
 Under Network services, within the Google Cloud Console, create a Load Balancer. Choose TCP Load Balancer and select the ``Only between my VMs`` option. Click Continue and then select the Monitoring VPC network.
 
-For the Backend configuration, choose the Instance Group created above. Accept the informative popup that explains the need to use additional NICs in the group instances. Specify that the backend is a failover group for backup. Create a new Health check that uses port TCP/7 (SSH) as the health test, with the following timing settings:
+For the Backend configuration, choose the Instance Group created above. Ignore the informative box that explains the need to use additional NICs in the group instances. Specify that the backend is a failover group for backup. Create a new Health check that uses port TCP/22 (SSH) as the health test, with the following timing settings:
 
 - Check Interval: 300
 - Timeout: 1
@@ -130,7 +131,7 @@ Create a Packet Mirroring policy. This can be found in the Google Cloud Console 
 
 Under Select mirrored source, check the box next to the "Select with network tag" label. Then enter a tag named ``so-mirror``. Once completed with the grid setup, you can later tag all your VMs, whose traffic you want monitored, with the same ``so-mirror`` tag.
 
-Under Select collector destination, choose the forwarding rule that was created during the Load Balancer setup earlier.
+Under Select collector destination, choose the front end forwarding rule that was created during the Load Balancer setup earlier.
 
 Finally, choose to mirror all traffic, unless you prefer to filter specific traffic for mirroring.
 
@@ -147,12 +148,12 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 - Search the Marketplace for ``Security Onion`` and Launch the latest version of the Security Onion 2 official VM image.
 - Choose the appropriate machine type based on the desired hardware requirements.  For assistance on determining resource requirements please review the Requirements section above.
 - Under the Networking interfaces section, expand the pre-added Network interface and select the Security Onion VPC network and desired subnet. External ephemeral IP is sufficient, unless you are planning to use a VPN to access the Security Onion Console, in which case no external ephemeral IP is necessary. Using a VPN is recommended, but setup of a VPN in GCP is out of scope of this guide.
-- (Distributed "Sensor" node or Single-Node grid only) Add a second Network interface and select the monitoring VPC network, and the appropriate subnet. No external ephemeral IP is necessary for this interface. Specify the tag ``so-collector`` for this VM.
+- (Distributed "Sensor" node or Single-Node grid only) Add a second Network interface and select the monitoring VPC network, and the appropriate subnet. No external ephemeral IP is necessary for this interface. Specify the network tag ``so-collector`` for this VM.
 - (Distributed "Manager" node or Single-Node grid only) If not using a VPN, enable the Allow HTTPS traffic from the Internet checkbox, and specify allowed source IP ranges. Under network tags, type ``https-server`` and press <ENTER>.
 - Adjust the boot disk size and type as necessary, using the guidance in the above Requirements section and elsewhere in the Security Onion documentation.
-- (Distributed "Search" node or Evaluation grid only) Under Disks, click ``Add Local SSD``. Choose NVMe and select the desired disk capacity based on anticipated log/even retention.
+- (Distributed "Search" node or Evaluation grid only) Under Disks, click ``Add Local SSD``. Choose NVMe and select the desired disk capacity based on anticipated log/event retention.
 - If requested, review GCP Marketplace Terms, and if acceptable click the corresponding checkbox.
-- Select: ``Deploy``
+- Select: ``Create``
 
 Prepare Nodes with Ephemeral, Local Disk Storage
 ------------------------------------------------
@@ -163,7 +164,7 @@ For distributed search nodes, or an evaluation node if using local disk storage,
 
     sudo so-prepare-fs
 
-By default, this command expects the local disk device to be located at ``/dev/nvme1n1`` and will mount that device at ``/nsm/elasticsearch``. To override either of those two defaults, specify them as arguments. For example:
+By default, this command expects the local disk device to be located at ``/dev/nvme1n1`` and will mount that device at ``/nsm/elasticsearch``. If this fails run ``lsblk`` to determine which disk to use. To override either of those two defaults, specify them as arguments. For example:
 
 ::
 
@@ -181,49 +182,19 @@ Manager Setup
 
 If this is an evaluation node with a local disk, ensure the node has been prepared as described in the preceding section. 
 
-After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. For distributed manager nodes using local disk storage, if you would like to use traditional :ref:`elasticsearch` clustering, select Advanced and answer Yes. Continue instructions below for applicable nodes.
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Most distributed installations will use the ``hostname`` or ``other`` web access method, due to the need for both cluster nodes inside the private network, and analyst across the public Internet to reach with the manager. This allows for custom DNS entries to define the correct IP (private vs public) depending on whether its a cluster node or an analyst user.
 
-GCP provides a built-in NTP server at hostname ``metadata.google.internal``. This can be used when prompted for an NTP host.
+GCP provides a built-in NTP server at hostname ``metadata.google.internal``. This can be specified in the SOC Configuration screen after setup completes. By default the server will use the time servers at ``ntp.org``.
 
-All Distributed Manager Nodes
------------------------------
+For distributed manager nodes using ephemeral storage, go to SOC Configuration. Search for ``number_of_replicas`` and change to 1. This will double the storage cost but will ensure at least two VMs have the data, in case of an ephemeral disk loss.
 
-For distributed manager nodes, if connecting sensors through the VPN instance then follow the instructions below to allow remote sensor connections:
-
-Run ``so-firewall includehost minion <inside interface of your VPN concentrator>``. Ex:
-
-::
-
-    so-firewall includehost minion 10.99.1.10
-
-Run ``so-firewall includehost sensor <inside interface of your VPN concentrator>``. Ex:
-
-::
-
-    so-firewall --apply includehost sensor 10.99.1.10
-
-At this time your Manager is ready for remote minions to start connecting.
-
-Distributed Manager Nodes using Traditional Elasticsearch Clustering
---------------------------------------------------------------------
-
-For distributed manager nodes using ephemeral, local disk storage that chose to use traditional :ref:`elasticsearch` clustering, make the following changes in ``/opt/so/saltstack/local/pillar/global.sls``:
-
-::
-
-    replicas: 1 
-
-Then, restart :ref:`logstash`:
-
-::
-
-    sudo so-logstash-restart
-
-Next, fix :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online:
+Optionally, adjust :ref:`elastalert` indices so that they have a replica. This will cause them to turn yellow but that will be fixed when search nodes come online:
 
 ::
 
     so-elasticsearch-query elastalert*/_settings -X PUT -d '{"index" : { "number_of_replicas" : 1 }}'
+
+This is an optional step due to the ElastAlert indices being used primarily for short-term/recent alert history. In the event of a data loss when ElastAlert 2 restarts the indices will be regenerated. 
 
 Search Node Setup
 #################
@@ -235,7 +206,7 @@ GCP Sensor Setup
 
 In the GCP console, under Compute Engine go to the Instance Group page and edit the instance group that was created earlier. Use the dropdown list to add the new sensor VM instance to this group.
 
-SSH into the sensor node and run through setup to set this node up as a sensor. Choose ``eth0`` as the main interface and ``eth1`` as the monitoring interface.
+SSH into the sensor node and run through setup to set this node up as a sensor. Choose ``ens4`` as the main interface and ``ens5`` as the monitoring interface.
 
 Remote Sensor Setup
 ###################
@@ -243,22 +214,27 @@ Remote Sensor Setup
 Setup the VPN (out of scope for this guide) and connect the sensor node to the VPN.
 When prompted to choose the management interface, select the VPN tunnel interface, such as ``tun0``. Use the internal IP (not the ephemeral IP) address of the manager inside GCP when prompted for the manager IP.
 
-The GCP internal VPN endpoint IP will need to be added to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml`` on the manager. This will open up the required ports for the remote sensor to communicate with the manager, since it is behind a NAT.
 
-For instance, assuming the following architecture:
+If connecting sensors through the VPN instance you will need to add the inside interface of your VPN concentrator to the ``sensor`` firewall hostgroup. For instance, assuming the following architecture:
 
-Remote Network (including Forward Node, 192.168.33.13) <--> Remote Network VPN Endpoint, 192.168.33.10 <--> Internet  <--> GCP VPN Endpoint, 10.55.1.10 <--> GCP Security Onion Manager, 10.55.1.20
+::
 
-In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``minion`` and ``sensor`` arrays in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``.
+    SO Sensor        -> VPN Endpoint     -> Internet -> VPN Endpoint  -> SO Manager
+    Location: Remote    Location: Remote                Location: AWS    Location: AWS
+    192.168.33.13       192.168.33.10                   10.55.1.10       10.55.1.20
+
+In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``sensor`` firewall hostgroup.
+
+This change can be done in the SOC Configuration screen. Then, either wait up to 15 minutes for the scheduled configuration sync to run, or force a synchronization immediately via the SOC Configuration Options. Once the firewall hostgroup configuration has been synchronized your Manager will be ready for remote minions to start connecting.
 
 Verifying Traffic Mirroring
 ###########################
 
-Deploy a temporary test VM instance, using a e2.micro, debian-based instance in the Monitored VPC network, and in the same region used in the rest of this guide.
+Deploy a temporary test VM instance, using a e2.micro, debian-based instance in the Monitored VPC network, and in the same region used in the rest of this guide. Add the ``so-mirror`` network tag to the VM.
 
 SSH into the sensor node created earlier in this guide, and run the following command to watch mirrored traffic:
 
-``tcpdump -nni eth1``
+``tcpdump -nni ens5``
 
 While that is running, in another terminal, SSH into this new test VM and run a curl command to a popular website. You should see that HTTP/HTTPS traffic appear in the tcpdump output.
 

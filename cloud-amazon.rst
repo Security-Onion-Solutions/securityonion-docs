@@ -135,7 +135,7 @@ For distributed search nodes, or an evaluation node if using ephemeral storage, 
 
     sudo so-prepare-fs
 
-By default, this command expects the ephemeral device to be located at ``/dev/nvme1n1`` and will mount that device at ``/nsm/elasticsearch``. To override either of those two defaults, specify them as arguments. For example:
+By default, this command expects the ephemeral device to be located at ``/dev/nvme1n1`` and will mount that device at ``/nsm/elasticsearch``. If this fails run ``lsblk`` to determine which disk to use. To override either of those two defaults, specify them as arguments. For example:
 
 ::
 
@@ -153,7 +153,7 @@ Manager Setup
 
 If this is an ephemeral evaluation node, ensure the node has been prepared as described in the preceding section. 
 
-After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Continue instructions below for applicable nodes.
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Most distributed installations will use the ``hostname`` or ``other`` web access method, due to the need for both cluster nodes inside the private network, and analyst across the public Internet to reach with the manager. This allows for custom DNS entries to define the correct IP (private vs public) depending on whether its a cluster node or an analyst user.
 
 AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be specified in the SOC Configuration screen after setup completes. By default the server will use the time servers at ``ntp.org``.
 
