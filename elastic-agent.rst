@@ -23,6 +23,16 @@ Logs
 
 Once the agent starts sending logs, you should be able to find them in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
 
+Management
+----------
+
+You can manage your agents using :ref:`elastic-fleet`.
+
+Live Queries
+------------
+
+You can query your agents in realtime using :ref:`osquery-manager`.
+
 More Information
 ----------------
 
