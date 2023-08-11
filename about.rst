@@ -6,7 +6,7 @@ About
 Security Onion
 --------------
 
-Security Onion is a free and open platform built by defenders for defenders. It includes :ref:`network visibility<network>`, :ref:`host visibility<host>`, :ref:`intrusion detection honeypots<idh>`, log management, and :ref:`case management<cases>`. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build a distributed grid for your enterprise in minutes!
+Security Onion is a free and open platform built by defenders for defenders. It includes :ref:`network visibility<network>`, :ref:`host visibility<host>`, :ref:`intrusion detection honeypots<idh>`, :ref:`log management<elasticsearch>`, and :ref:`case management<cases>`. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build a distributed grid for your enterprise in minutes!
 
 Security Onion Solutions, LLC
 -----------------------------
