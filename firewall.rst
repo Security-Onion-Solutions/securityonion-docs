@@ -43,18 +43,22 @@ When configuring network firewalls for distributed deployments, you'll want to e
 
 All nodes to manager:
 
-- 22 (only needed for initial setup)
-- 5000 (Docker registry)
-- 8086 (influxdb)
-- 4505 (Salt)
-- 4506 (Salt)
-- 5644 (Elastic Agent)
-- 443 (Sensoroni)
+- TCP/443 - Sensoroni
+- TCP/5000 - Docker registry
+- TCP/8086 - influxdb
+- TCP/4505 - Salt
+- TCP/4506 - Salt
+
+Elastic Agent:
+
+- TCP/8220 (All nodes to Manager, Fleet nodes) - Elastic Agent management
+- TCP/8443 (All nodes to Manager) - Elastic Agent binary updates
+- TCP/5055 (All nodes to Manager, Fleet nodes, Receiver nodes) - Elastic Agent data
 
 Search nodes from/to manager:
 
-- 9300 (Node-to-node for Elasticsearch)
-- 9696 (Redis)
+- TCP/9300 - Node-to-node for Elasticsearch
+- TCP/9696 - Redis
 
 Host Firewall
 -------------
