@@ -3,17 +3,17 @@
 Introduction
 ============
 
-Security Onion is a free and open platform for Network Security Monitoring (NSM) and Enterprise Security Monitoring (ESM). NSM is, put simply, monitoring your network for security related events. It might be proactive, when used to identify vulnerabilities or expiring SSL certificates, or it might be reactive, such as in incident response and network forensics. Whether you’re tracking an adversary or trying to keep malware at bay, NSM provides context, intelligence, and situational awareness of your network. ESM takes NSM to the next level and includes endpoint visibility and other telemetry from your enterprise.
+Security Onion is a free and open platform built by defenders for defenders. It includes :ref:`network visibility<network>`, :ref:`host visibility<host>`, :ref:`intrusion detection honeypots<idh>`, :ref:`log management<elasticsearch>`, and :ref:`case management<cases>`. 
+
+For network visibility, we offer signature based detection via :ref:`suricata`, rich protocol metadata and file extraction using your choice of either :ref:`zeek` or :ref:`suricata`, full packet capture via :ref:`stenographer`, and file analysis via :ref:`strelka`. For host visibility, we offer the :ref:`elastic-agent` which provides data collection, live queries via :ref:`osquery<osquery-manager>`, and centralized management using :ref:`elastic-fleet`. :ref:`Intrusion detection honeypots<idh>` based on OpenCanary can be added to your deployment for even more enterprise visibility. All of these logs flow into :ref:`elasticsearch` and we've built our own user interfaces for :ref:`alerts<alerts>`, :ref:`dashboards<dashboards>`, :ref:`threat hunting<hunt>`, :ref:`case management<cases>`, and :ref:`grid management<grid>`. 
 
 In the diagram below, we see Security Onion in a traditional enterprise network with a firewall, workstations, and servers. You can use Security Onion to monitor north/south traffic to detect an adversary entering an environment, establishing command-and-control (C2), or perhaps data exfiltration. You'll probably also want to monitor east/west traffic to detect lateral movement. As more and more of our network traffic becomes encrypted, it's important to fill in those blind spots with additional visibility in the form of endpoint telemetry. Security Onion can consume logs from your servers and workstations so that you can then hunt across all of your network and host logs at the same time.
 
 .. image:: images/diagrams/network-horiz.png
   :target: _images/diagrams/network-horiz.png
    
-Many assume NSM is a solution they can buy to fill a gap; purchase and deploy solution XYZ and problem solved. The belief that you can buy an NSM denies the fact that the most important word in the NSM acronym is “M” for Monitoring. Data can be collected and analyzed, but not all malicious activity looks malicious at first glance. While automation and correlation can enhance intelligence and assist in the process of sorting through false positives and malicious indicators, there is no replacement for human intelligence and awareness. We don’t want to disillusion you. Security Onion isn’t a silver bullet that you can setup, walk away from and feel safe. Nothing is and if that’s what you’re looking for you’ll never find it. Security Onion will provide visibility into your network traffic and context around alerts and anomalous events, but it requires a commitment from you the defender to review alerts, monitor the network activity, and most importantly, have a willingness, passion, and desire to learn.
-
-Network Security Monitoring
----------------------------
+Network Visibility
+------------------
 
 From a network visibility standpoint, Security Onion seamlessly weaves together intrusion detection, network metadata, full packet capture, file analysis, and intrusion detection honeypots.
 
@@ -42,10 +42,10 @@ Intrusion Detection Honeypot (IDH)
 
 We also have an :ref:`idh` node that allows you to build a node that mimics services. Connections to these services automatically generate alerts.
 
-Enterprise Security Monitoring
-------------------------------
+Host Visibility
+---------------
 
-In addition to network visibility, Security Onion provides endpoint visibility via the :ref:`elastic-agent`.
+In addition to network visibility, Security Onion provides endpoint visibility via the :ref:`elastic-agent` which provides data collection, live queries via :ref:`osquery<osquery-manager>`, and centralized management using :ref:`elastic-fleet`.
 
 For devices like firewalls and routers that don't support the installation of agents, Security Onion can consume standard :ref:`syslog`.
 
@@ -120,4 +120,4 @@ Analysts around the world are using Security Onion today for many different :ref
 Conclusion
 ----------
 
-After you install Security Onion, you will have network and endpoint detection, comprehensive metadata, and full packet capture. Our analyst tools will enable you to use all of that data to detect intruders more quickly and paint a more complete picture of what they're doing in your environment. Get ready to peel back the layers of your enterprise and make your adversaries cry!
+After you install Security Onion, you will have comprehensive network and host visibility for your enterprise. Our analyst tools will enable you to use all of that data to detect intruders more quickly and paint a more complete picture of what they're doing in your environment. Get ready to peel back the layers of your enterprise and make your adversaries cry!
