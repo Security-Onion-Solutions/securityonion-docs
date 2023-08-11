@@ -3,6 +3,23 @@
 Release Notes
 =============
 
+2.4.10 [20230815] Changes
+-------------------------
+
+- FEATURE: Auto-Upgrade Node Agents `#10949 <https://github.com/Security-Onion-Solutions/securityonion/issues/10949>`_
+- FEATURE: Customize desktop environment `#10957 <https://github.com/Security-Onion-Solutions/securityonion/issues/10957>`_
+- FIX: Elastic Agents won't upgrade without Internet connection `#10981 <https://github.com/Security-Onion-Solutions/securityonion/issues/10981>`_
+- FIX: Elastic Integrations not upgrading during SOUP `#10984 <https://github.com/Security-Onion-Solutions/securityonion/issues/10984>`_
+- FIX: Elastic index settings annotations need synchronized with those specified in defaults `#10999 <https://github.com/Security-Onion-Solutions/securityonion/issues/10999>`_
+- FIX: File extraction not working after switching from Zeek metadata to Suricata metadata `#10973 <https://github.com/Security-Onion-Solutions/securityonion/issues/10973>`_
+- FIX: Fleet - url_base not working in cert CN `#11003 <https://github.com/Security-Onion-Solutions/securityonion/issues/11003>`_
+- FIX: Improve wording for Firewall entries under Grid Administration Quick Links `#10990 <https://github.com/Security-Onion-Solutions/securityonion/issues/10990>`_
+- FIX: Influx reporting No Results for Zeek Capture Loss `#10956 <https://github.com/Security-Onion-Solutions/securityonion/issues/10956>`_
+- FIX: Suricata should not assume the interface will always be bond0 `#10954 <https://github.com/Security-Onion-Solutions/securityonion/issues/10954>`_
+- FIX: Sysmon Events Table Field Rendering `#10985 <https://github.com/Security-Onion-Solutions/securityonion/issues/10985>`_
+- FIX: so-desktop-install needs to change from Rocky to Oracle `#10962 <https://github.com/Security-Onion-Solutions/securityonion/issues/10962>`_
+- FIX: soup may fail while trying to query Fleet server `#10974 <https://github.com/Security-Onion-Solutions/securityonion/issues/10974>`_
+
 2.4.5 RC2 [20230807] Changes
 ----------------------------
 
