@@ -6,11 +6,7 @@ About
 Security Onion
 --------------
 
-Security Onion is a free and open platform built by defenders for defenders. It includes :ref:`network visibility<network>`, :ref:`host visibility<host>`, :ref:`intrusion detection honeypots<idh>`, log management, and :ref:`case management<cases>`. 
-
-For network visibility, we offer signature based detection via :ref:`suricata`, rich protocol metadata and file extraction using your choice of either :ref:`zeek` or :ref:`suricata`, full packet capture via :ref:`stenographer`, and file analysis via :ref:`strelka`. For host visibility, we offer the :ref:`elastic-agent` which provides data collection, live queries via :ref:`osquery<osquery-manager>`, and centralized management using :ref:`elastic-fleet`. :ref:`Intrusion detection honeypots<idh>` based on OpenCanary can be added to your deployment for even more enterprise visibility. All of these logs flow into :ref:`elasticsearch` and we've built our own user interfaces for :ref:`alerts<alerts>`, :ref:`dashboards<dashboards>`, :ref:`threat hunting<hunt>`, :ref:`case management<cases>`, and :ref:`grid management<grid>`. 
-
-Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build a distributed grid for your enterprise in minutes!
+Security Onion is a free and open platform built by defenders for defenders. It includes :ref:`network visibility<network>`, :ref:`host visibility<host>`, :ref:`intrusion detection honeypots<idh>`, log management, and :ref:`case management<cases>`. Security Onion has been downloaded over 2 million times and is being used by security teams around the world to monitor and defend their enterprises. Our easy-to-use Setup wizard allows you to build a distributed grid for your enterprise in minutes!
 
 Security Onion Solutions, LLC
 -----------------------------
