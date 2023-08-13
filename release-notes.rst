@@ -8,6 +8,7 @@ Release Notes
 
 - FEATURE: Auto-Upgrade Node Agents `#10949 <https://github.com/Security-Onion-Solutions/securityonion/issues/10949>`_
 - FEATURE: Customize desktop environment `#10957 <https://github.com/Security-Onion-Solutions/securityonion/issues/10957>`_
+- FIX: Custom actions, queries, tools can cause SOC restart to fail `#11022 <https://github.com/Security-Onion-Solutions/securityonion/issues/11022>`_
 - FIX: Elastic Agents won't upgrade without Internet connection `#10981 <https://github.com/Security-Onion-Solutions/securityonion/issues/10981>`_
 - FIX: Elastic Integrations not upgrading during SOUP `#10984 <https://github.com/Security-Onion-Solutions/securityonion/issues/10984>`_
 - FIX: Elastic index settings annotations need synchronized with those specified in defaults `#10999 <https://github.com/Security-Onion-Solutions/securityonion/issues/10999>`_
