@@ -110,6 +110,7 @@ All of these analysis tools work together to provide efficient and comprehensive
      - Depending on what you see in the stream, you might want to send it to :ref:`cyberchef` for further analysis and decoding.
      - Escalate alerts and logs to :ref:`cases` and document any observables. Pivot to :ref:`hunt` to cast a wider net for those observables.
      - Develop a play in :ref:`playbook` that will automatically alert on observables moving forward and update your coverage in :ref:`attack-navigator`.
+     - If you have the :ref:`elastic-agent` deployed, then you might want to search for additional host logs or run live queries against your endpoints using :ref:`osquery<osquery-manager>`.
      - Finally, return to :ref:`cases` and document the entire investigation and close the case.
 
 Deployment Scenarios
