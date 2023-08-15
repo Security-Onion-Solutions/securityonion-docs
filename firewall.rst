@@ -108,10 +108,10 @@ By default, if you go to :ref:`administration` --> Configuration --> firewall an
 ADVANCED Firewall Config
 ------------------------
 
-Modify a default port group
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Modifying a default port group
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, only the analyst hostgroup is allowed access to the nginx ports. In this example, we will extend the default nginx port group to include a custom port for a standalone node.
+The analyst hostgroup is allowed access to the nginx ports which are 80 and 443 by default. In this example, we will extend the default nginx port group to include a custom port for a standalone node.
 
 #. At the top of the page, click the ``Options`` dropdown menu and then select the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``portgroups``, locate the ``nginx`` portgroup, and then select ``tcp``.
