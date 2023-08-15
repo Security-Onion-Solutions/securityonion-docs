@@ -70,7 +70,7 @@ Search Nodes
 
 - Quantity: 2 or more
 - Type: n2-standard-4
-- Storage: 200GB Balanced Persistent Disk
+- Storage: 256GB Balanced Persistent Disk
 - Storage: 375GB Local Disk (NVMe)
   
 Sensor monitoring the VPN ingress
