@@ -105,7 +105,6 @@ Allow hosts to send syslog to a sensor node
 
 By default, if you go to :ref:`administration` --> Configuration --> firewall and add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. 
 
-
 ADVANCED Firewall Config
 ========================
 
@@ -114,26 +113,21 @@ Modify a default port group
 
 In this example, we will be extending the default nginx port group to include port 8086 for a standalone node. By default, only the analyst hostgroup is allowed access to the nginx ports. At the end of this example, IPs in the analyst host group will be able to connect to ports 80, 443, and 8086 on our standalone node.
 
-1. Click the Options dropdown menu and then select the "Show all configurable settings, including advanced settings." option.
-2. Under ``firewall``, select ``portgroups``, and then locate the ``nginx`` portgroup. 
-3. Select ``tcp``.
-4. Select the manager node and then pecify the port to be added.
-5. Click the checkmark to save the value.
-6. Click the "SYNCHRONIZE GRID" button if you would like to apply the rules to the manager immediately.
+1. At the top of the page, click the ``Options`` dropdown menu and then select the ``Show all configurable settings, including advanced settings.`` option.
+1. On the left side, go to ``firewall``, select ``portgroups``, and then locate the ``nginx`` portgroup, and select ``tcp``.
+1. On the right side, select the manager node, specify the port to be added, and then click the checkmark to save the value.
+1. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button at the top.
 
 Creating a custom host group with a custom port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this example, we will be adding a new custom hostgroup to allow a custom set of hosts to connect to a custom port on the idh nodes on port 1234.
 
-1. Select "Show all configuration settings, including advanced settings." on the options dropdown menu.
-2. Under firewall select customhostgroup0 that is part of the hostgroups section.
-3. Select the idh node that you want to allow access to under the dropdown.
-4. Add the list of hosts that require access and select the checkmark.
-5. Under firewall select customportgroup0 that is part of the portgroups section.
-6. Select the idh node that you want to allow access to under the dropdown.
-7. Add the apporpriate port under the appropriate protocol. In this case we will be adding 1234 tcp and selecting the checkmark.
-8. Under firewall/roles select idh/chain/DOCKER-USER/hostgroups/customhostgroups/portgroups.
-9. Select the idh node that we want to allow access to under the dropdown. 
-10. Add the portgroup customportgroup0 to the list and select the checkmark.
-11. The next time the idh node checks in it will get the appropriate firewall rules.
+1. At the top of the page, click the ``Options`` dropdown menu and then select the ``Show all configurable settings, including advanced settings.`` option.
+1. On the left side, go to ``firewall``, select ``hostgroups``, and then select ``customhostgroup0``.
+1. On the right side, select the idh node that you want to allow access to, add the list of hosts that require access, and then click the checkmark.
+1. On the left side, go to ``firewall``, select ``portgroups``, select ``customportgroup0``, and then select the appropriate protocol.
+1. On the right side, select the idh node that you want to allow access to, and then add the appropriate port, and then click the checkmark. In this example you would add ``1234``.
+1. On the left side, go to ``firewall``, ``role``, and then select ``idh``, ``chain``, ``DOCKER-USER``, ``hostgroups``, ``customhostgroup0``, ``portgroups``.
+1. On the right side, select the idh node that you want to allow access to, add the portgroup ``customportgroup0``, and then click the checkmark.
+1. The next time the idh node checks in, it should get the appropriate firewall rules.
