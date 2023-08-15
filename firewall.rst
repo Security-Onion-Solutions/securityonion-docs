@@ -112,14 +112,14 @@ ADVANCED Firewall Config
 Modify a default port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this example, we will be extending the default nginx port group to include port 8086 for a standalone node. By default, only the analyst hostgroup is allowed access to the nginx ports. At the end of this example IPs in the analyst host group, will be able to connect to 80, 443 and 8086 on our standalone node.
+In this example, we will be extending the default nginx port group to include port 8086 for a standalone node. By default, only the analyst hostgroup is allowed access to the nginx ports. At the end of this example, IPs in the analyst host group will be able to connect to ports 80, 443, and 8086 on our standalone node.
 
-1. Select "Show all configuration settings, including advanced settings." on the options dropdown menu.
-2. Under firewall select portgroups and locate the nginx portgroup. 
-3. Select the manager node as the node to modify.
-4. Add the port to the apporpriate protocol in this case we would add 8086 to the tcp list.
+1. Click the Options dropdown menu and then select the "Show all configurable settings, including advanced settings." option.
+2. Under ``firewall``, select ``portgroups``, and then locate the ``nginx`` portgroup. 
+3. Select ``tcp``.
+4. Select the manager node and then pecify the port to be added.
 5. Click the checkmark to save the value.
-6. Select "SYNCHRONIZE GRID" if you would like to apply the rules to the manager immediately.
+6. Click the "SYNCHRONIZE GRID" button if you would like to apply the rules to the manager immediately.
 
 Creating a custom host group with a custom port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
