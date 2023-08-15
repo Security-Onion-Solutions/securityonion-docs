@@ -14,14 +14,21 @@ so-status supports a quiet mode:
 
 ::
 
-	sudo so-status -h
+	so-status -h
+	Usage: /usr/sbin/so-status [OPTIONS]
+	  Options:
+	   -h                  - Prints this usage information
+	   -q                  - Suppress output; useful for automation of exit code value
+	   -j                  - Output in JSON format
+	   -i                  - Consider the installation outcome regardless of whether the system appears healthy
+	
+	  Exit codes:
+	    0                  - Success, system appears to be running correctly
+	    1                  - Error, one or more subsystems are not running
+	    2                  - System is starting
+	    99                 - Installation in progress
+	    100                - System installation encountered errors
 
-    	/usr/sbin/so-status  [-h] [-q|--quiet]
-
-   	-h             Show this message.
-   	-q|--quiet     Suppress the output and only return a
-	              single status code for overall status
-	0:Ok, 1:Error, 2:Starting/Pending, 99:Installing SO
 
 	sudo so-status -q
 	echo $?
