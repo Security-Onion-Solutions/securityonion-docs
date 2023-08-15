@@ -40,13 +40,13 @@ Standalone:
 
 - Quantity: 1
 - Type: Standard_D4as_v4
-- Storage: 200GB Premium SSD
+- Storage: 256GB Premium SSD
 
 Evaluation
 
 - Quantity: 1
 - Type: Standard_D8as_v4
-- Storage: 200GB Premium SSD
+- Storage: 256GB Premium SSD
   
 Distributed Grid
 ----------------
