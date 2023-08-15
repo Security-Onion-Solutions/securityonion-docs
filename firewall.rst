@@ -87,36 +87,6 @@ The firewall state is designed with the idea of creating port groups and host gr
 
 The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node by going to :ref:`administration` --> Configuration --> firewall. When setup is run on a new node, it will ask the manager to add itself to the appropriate host groups. All node types are added to the minion host group to allow :ref:`salt` communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
 
-There are two directories that contain the yaml files for the firewall configuration.
-
-``/opt/so/saltstack/default/salt/firewall/``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This directory contains the default firewall rules. The files in this directory should not be modified as they could possibly be overwritten during a :ref:`soup` update in the event we update those files.
-
-``/opt/so/saltstack/default/salt/firewall/portgroups.yaml`` is where the default port groups are defined. 
-
-.. image:: https://user-images.githubusercontent.com/17089008/96641876-5a85c080-12f3-11eb-90e3-0ac3d2dc9b8b.png
-  :target: https://user-images.githubusercontent.com/17089008/96641876-5a85c080-12f3-11eb-90e3-0ac3d2dc9b8b.png
-
-``/opt/so/saltstack/default/salt/firewall/hostgroups.yaml`` is where the default hostgroups are defined. There isn't much in here other than ``anywhere``, ``dockernet``, ``localhost`` and ``self``.
-
-``/opt/so/saltstack/default/salt/firewall/assigned_hostgroups.map.yaml`` is where the default allow rules come together and pair hostgroups and portgroups and assign that pairing to a node based on its role in the grid. In the image below, we can see how we define some rules for an eval node.
-
-.. image:: https://user-images.githubusercontent.com/17089008/96641900-62456500-12f3-11eb-94bc-2b6874f3f4f7.png
-  :target: https://user-images.githubusercontent.com/17089008/96641900-62456500-12f3-11eb-94bc-2b6874f3f4f7.png
-
-``/opt/so/saltstack/local/salt/firewall/``
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-This directory stores the firewall rules specific to your grid.
-
-``/opt/so/saltstack/local/salt/firewall/portgroups.local.yaml`` defines custom port groups.
-
-``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml`` is where many default named hostgroups get populated with IPs that are specific to your environment. When you update the firewall by going to :ref:`administration` --> Configuration --> firewall, it modifies this file to include the IP provided in the proper hostgroup. Some node types get their IP assigned to multiple host groups.
-
-``/opt/so/saltstack/local/salt/firewall/assigned_hostgroups.local.map.yaml`` is where host group and port group associations would be made to create custom host group and port group assignements that would apply to all nodes of a certain role type in the grid.
-
 Managing
 --------
 
@@ -128,90 +98,42 @@ Examples
 Removing a host or network
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you previously added a host or network to your firewall configuration and now need to remove them, you can use ``so-firewall`` with the ``excludehost`` option. For example:
-
-::
-
-  sudo so-firewall excludehost analyst 192.168.1.255
+If you previously added a host or network to your firewall configuration and now need to remove them, you can use :ref:`administration` --> Configuration --> firewall.
 
 Allow hosts to send syslog to a sensor node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, if you go to :ref:`administration` --> Configuration --> firewall and add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. If we want to allow a host or group of hosts to send syslog to a sensor, then we can do the following:
+By default, if you go to :ref:`administration` --> Configuration --> firewall and add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. 
 
-1. Create a new host group that will contain the IPs of the hosts that you want to allow to connect to the sensor. This will add the host group to ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``. If the host group already exists, you can skip to step 2. Run the following on the manager:
 
-  ::
-
-    sudo so-firewall addhostgroup <GROUP_NAME>
-
-2. Add the desired IPs to the host group. This will add the IPs to the host group in ``/opt/so/saltstack/local/salt/firewall/hostgroups.local.yaml``.
-
-  ::
-
-    sudo so-firewall includehost <GROUP_NAME> <IP>
-
-3. Since we reused the syslog port group that is already defined, we don't need to create a new port group. Now we have to build the association between the host group and the syslog port group and assign that to our sensor node. Add the following to the sensor minion pillar file located at ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls``:
-
-  ::
-
-    firewall:
-      assigned_hostgroups:
-        chain:
-          DOCKER-USER:
-            hostgroups:
-              syslogtosensor1:
-                portgroups:
-                  - portgroups.syslog
-
-4. Now that the configuration is in place, you can either wait for the sensor to sync with Salt running on the manager, or you can force it to update its firewall by running the following from the manager:
-
-  ::
-
-    sudo salt <HOSTNAME>_<ROLE> state.apply firewall
-
+ADVANCED Firewall Config
+========================
 
 Modify a default port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this example, we will be extending the default nginx port group to include port 8086 for a standalone node. By default, only the analyst hostgroup is allowed access to the nginx ports. At the end of this example IPs in the analyst host group, will be able to connect to 80, 443 and 8086 on our standalone node.
 
-All the following will need to be run from the manager.
+1. Select "Show all configuration settings, including advanced settings." on the options dropdown menu.
+2. Under firewall select portgroups and locate the nginx portgroup. 
+3. Select the manager node as the node to modify.
+4. Add the port to the apporpriate protocol in this case we would add 8086 to the tcp list.
+5. Click the checkmark to save the value.
+6. Select "SYNCHRONIZE GRID" if you would like to apply the rules to the manager immediately.
 
-1. Add the custom nginx port group:
+Creating a custom host group with a custom port group
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-  ::
+In this example, we will be adding a new custom hostgroup to allow a custom set of hosts to connect to a custom port on the idh nodes on port 1234.
 
-    sudo so-firewall addportgroup nginx
-
-2. Add the required ports to the port group. In this step we are redefining the nginx port group, so be sure to include the default ports as well if you want to keep them:
-
-  ::
-
-    sudo so-firewall addport nginx tcp 80
-    sudo so-firewall addport nginx tcp 443
-    sudo so-firewall addport nginx tcp 8086
-
-3. Associate this port group redefinition to a node. Add the following to the minion's sls file located at ``/opt/so/saltstack/local/pillar/minions/<HOSTNAME>_<ROLE>.sls``:
-
-  ::
-
-    firewall:
-      assigned_hostgroups:
-        chain:
-          DOCKER-USER:
-            hostgroups:
-              analyst:
-                portgroups:
-                  - portgroups.nginx
-
-4. Apply the firewall state to the node, or wait for the highstate to run for the changes to happen automatically:
-
-  ::
-
-    sudo salt-call state.apply firewall
-
-
-.. warning::
-
-  Please review the :ref:`salt` section to understand pillars and templates. Modifying these values outside of :ref:`administration` --> Configuration --> firewall could lead to problems accessing your existing hosts. This is an advanced case and you most likely won't never need to modify these files.
+1. Select "Show all configuration settings, including advanced settings." on the options dropdown menu.
+2. Under firewall select customhostgroup0 that is part of the hostgroups section.
+3. Select the idh node that you want to allow access to under the dropdown.
+4. Add the list of hosts that require access and select the checkmark.
+5. Under firewall select customportgroup0 that is part of the portgroups section.
+6. Select the idh node that you want to allow access to under the dropdown.
+7. Add the apporpriate port under the appropriate protocol. In this case we will be adding 1234 tcp and selecting the checkmark.
+8. Under firewall/roles select idh/chain/DOCKER-USER/hostgroups/customhostgroups/portgroups.
+9. Select the idh node that we want to allow access to under the dropdown. 
+10. Add the portgroup customportgroup0 to the list and select the checkmark.
+11. The next time the idh node checks in it will get the appropriate firewall rules.
