@@ -106,12 +106,12 @@ Allow hosts to send syslog to a sensor node
 By default, if you go to :ref:`administration` --> Configuration --> firewall and add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. 
 
 ADVANCED Firewall Config
-========================
+------------------------
 
 Modify a default port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-By default, only the analyst hostgroup is allowed access to the nginx ports. In this example, we will be extending the default nginx port group to include a custom port for a standalone node.
+By default, only the analyst hostgroup is allowed access to the nginx ports. In this example, we will extend the default nginx port group to include a custom port for a standalone node.
 
 #. At the top of the page, click the ``Options`` dropdown menu and then select the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``portgroups``, locate the ``nginx`` portgroup, and then select ``tcp``.
@@ -121,7 +121,7 @@ By default, only the analyst hostgroup is allowed access to the nginx ports. In 
 Creating a custom host group with a custom port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this example, we will be adding a new custom hostgroup to allow a custom set of hosts to connect to a custom port on an IDH node.
+In this example, we will add a new custom hostgroup to allow a custom set of hosts to connect to a custom port on an IDH node.
 
 #. At the top of the page, click the ``Options`` dropdown menu and then select the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``hostgroups``, and then select ``customhostgroup0``.
