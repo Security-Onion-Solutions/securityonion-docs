@@ -34,13 +34,13 @@ Standalone:
 
 - Quantity: 1
 - Type: t3a.xlarge
-- Storage: 200GB EBS (Optimized) gp3
+- Storage: 256GB EBS (Optimized) gp3
 
 Evaluation
 
 - Quantity: 1
 - Type: t3a.2xlarge
-- Storage: 100GB EBS (Optimized) gp3
+- Storage: 256GB EBS (Optimized) gp3
 - Storage: 100GB Instance Storage (SSD/NVMe)
   
 Distributed Grid
