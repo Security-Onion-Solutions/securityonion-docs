@@ -7,13 +7,8 @@ Security Onion performs a daily backup of some critical files so that you can re
 
 Here is what gets backed up automatically:
 
-- ``/etc/pki/``
-
-  All of the certs including the CA are backed up. Restoring this would allow you to communicate with your salt minions again.
-
-- ``/opt/so/saltstack/local/``
-
-  This includes all minion sls files and customizations. 
+- ``/etc/pki/`` - All of the certs including the CA are backed up. Restoring this would allow you to communicate with your salt minions again.
+- ``/opt/so/saltstack/local/`` - This includes all customizations done via :ref:`administration` --> Configuration. 
 
 You can configure backups by going to :ref:`administration` --> Configuration --> backup. 
 
