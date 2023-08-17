@@ -6,9 +6,9 @@ Release Notes
 2.4.10 Hotfix [20230821] Changes
 --------------------------------
 
-- FIX: Component templates not updated when packages are updated `#11065 <https://github.com/Security-Onion-Solutions/securityonion/issues/11065>`
-- FIX: Importing both PCAP and EVTX files fails `#11030 <https://github.com/Security-Onion-Solutions/securityonion/issues/11030>`
-- FIX: pipeline with id logs-system.syslog-1.6.4 does not exist `#11038 <https://github.com/Security-Onion-Solutions/securityonion/issues/11038>`
+- FIX: Component templates not updated when packages are updated `#11065 <https://github.com/Security-Onion-Solutions/securityonion/issues/11065>`_
+- FIX: Importing both PCAP and EVTX files fails `#11030 <https://github.com/Security-Onion-Solutions/securityonion/issues/11030>`_
+- FIX: pipeline with id logs-system.syslog-1.6.4 does not exist `#11038 <https://github.com/Security-Onion-Solutions/securityonion/issues/11038>`_
 
 2.4.10 [20230815] Changes
 -------------------------
