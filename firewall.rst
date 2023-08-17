@@ -70,6 +70,9 @@ Configuration
 
 You can configure the firewall by going to :ref:`administration` --> Configuration --> firewall.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 Port Groups
 -----------
 
