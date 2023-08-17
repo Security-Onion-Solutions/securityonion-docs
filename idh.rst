@@ -83,59 +83,17 @@ Custom Configuration
 
 You can configure IDH by going to :ref:`administration` --> Configuration --> idh.
 
-Services can be customized in two ways: 
-
-1) Changing the default port. 
-
-Note: The previously-configured port is not automatically closed on the IDH node's firewall, so it will need to be closed manually. This can be done by running the following command on the IDH node, substituting the protocol and port as needed:
-
-::
-
-     iptables -D INPUT -p tcp -m tcp --dport 80 -j ACCEPT
-
-
-2) Service-specific config, like SSH version string. All of the defaults for these types of configuration can be found in the following files on the manager:
-
-``/opt/so/saltstack/default/salt/idh/defaults/$Service.defaults.yaml``
-
-
-Both of these configurations can be implemented by editing the node's minion pillar, which is stored on the manager in ``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``.
-
-Custom Configuration - Example Port Change
-------------------------------------------
+Custom Configuration Example
+----------------------------
 
 For example, suppose that we already have the HTTP service running but we want to change the default port from ``80`` to ``8080``.
 
 .. warning::
 
-        The following configuration files are YAML, and so tabs are not permitted. Please only use spaces and pay special attention to the number of spaces!
+        Please be very careful when making changes!
 
-First, we need to copy the default configuration for the HTTP service. This can be found on the manager in ``/opt/so/saltstack/default/salt/idh/defaults/http.defaults.yaml``. Out of the defaults defined there, we just need the following:
-
-::
-
-    idh:
-      opencanary:
-        config:
-          http.port: 80
-
-Next, we will edit the minion sls file (``/opt/so/saltstack/local/pillar/minions/$IDH-Hostname_idh.sls``) and add the previously copied config, but swap ``80`` for ``8080``. The minion sls file should look something like this:
-
-::
-
-    idh:
-      services:
-        - http
-        - ftp
-        - ssh
-      opencanary:
-        config:
-          http.port: 8080
-
-With this configuration changed, we can now make it active on the IDH node by using :ref:`salt` to apply the ``idh`` and ``firewall`` states. Run the following from the manager (replacing ``$IDH-Hostname`` with your actual IDH hostname):
-
-::
-
-     sudo salt '$IDH-Hostname*' state.apply idh,firewall
-
-You should now be able to browse to the HTTP server on the IDH node on TCP/8080. You should be able to override any other configuration in the ``http.defaults.yaml`` in a similar manner.
+- Go to :ref:`administration` --> Configuration.
+- At the top of the page, click the ``Options`` drop-down menu and enable the ``Show all configurable settings, including advanced settings.`` option.
+- On the left side, navigate to idh --> opencanary --> config --> http_x_port.
+- On the right side, change the port value and then click the checkmark to save the change.
+- At the top of the page, click the ``SYNCHRONIZE GRID`` button under the ``Options`` drop-down menu.
