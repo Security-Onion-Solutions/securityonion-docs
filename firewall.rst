@@ -73,7 +73,7 @@ You can configure the firewall by going to :ref:`administration` --> Configurati
 Port Groups
 -----------
 
-Port groups are a way of grouping together ports similar to a firewall port/service alias. For example, if you had a web server you could include 80 and 443 tcp into an alias or in this case a port group.
+Port groups are a way of grouping together ports similar to a firewall port/service alias. For example, if you have a web server you might add ports 80 and 443 into a port group.
 
 Host Groups
 -----------
@@ -87,43 +87,27 @@ The firewall state is designed with the idea of creating port groups and host gr
 
 The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node by going to :ref:`administration` --> Configuration --> firewall. When setup is run on a new node, it will ask the manager to add itself to the appropriate host groups. All node types are added to the minion host group to allow :ref:`salt` communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
 
-Managing
---------
-
-Managing firewall rules for all devices should be done from the manager node by going to :ref:`administration` --> Configuration --> firewall.
-
-Examples
---------
-
-Removing a host or network
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you previously added a host or network to your firewall configuration and now need to remove them, you can use :ref:`administration` --> Configuration --> firewall.
-
-Allow hosts to send syslog to a sensor node
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-By default, if you go to :ref:`administration` --> Configuration --> firewall and add a host to the syslog hostgroup, that host will only be allowed to connect to the manager node. 
-
-ADVANCED Firewall Config
+Advanced Firewall Config
 ------------------------
+
+When you go to :ref:`administration` --> Configuration --> firewall, you will only see ``hostgroups`` by default. If you need to modify port groups, then you will need to click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 
 Modifying a default port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The analyst hostgroup is allowed access to the nginx ports which are 80 and 443 by default. In this example, we will extend the default nginx port group to include a custom port for a standalone node.
+The analyst hostgroup is allowed access to the nginx ports which are 80 and 443 by default. In this example, we will extend the default nginx port group to include a custom port.
 
-#. At the top of the page, click the ``Options`` dropdown menu and then select the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``portgroups``, locate the ``nginx`` portgroup, and then select ``tcp``.
 #. On the right side, select the manager node, specify your custom port to be added, and then click the checkmark to save the value.
-#. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button at the top of the page.
+#. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` dropdown at the top of the page.
 
 Creating a custom host group with a custom port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this example, we will add a new custom hostgroup to allow a custom set of hosts to connect to a custom port on an IDH node.
 
-#. At the top of the page, click the ``Options`` dropdown menu and then select the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``hostgroups``, and then select ``customhostgroup0``.
 #. On the right side, select the IDH node that you want to allow access to, add the list of hosts that require access, and then click the checkmark to save the value.
 #. On the left side, go to ``firewall``, select ``portgroups``, select ``customportgroup0``, and then select the appropriate protocol.
