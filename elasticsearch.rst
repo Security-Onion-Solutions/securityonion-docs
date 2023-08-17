@@ -211,9 +211,7 @@ For example, suppose our ``log_size_limit`` is 1TB and we have 30 days of open i
 Distributed Deployments
 -----------------------
 
-Security Onion also supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. However, please keep in mind that this requires more maintenance, more knowledge of Elasticsearch internals, and more traffic between nodes in the cluster. 
-
-When using Elastic clustering, index deletion is based on the ``delete`` settings shown in the global pillar above. The ``delete`` settings in the global pillar configure :ref:`curator` to delete indices older than the value given. For each index, please ensure that the ``close`` setting is set to a smaller value than the ``delete`` setting.
+Security Onion supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. When using Elastic clustering, index deletion is based on the ``delete`` settings shown in the global pillar above. The ``delete`` settings in the global pillar configure :ref:`curator` to delete indices older than the value given. For each index, please ensure that the ``close`` setting is set to a smaller value than the ``delete`` setting.
 
 Let's discuss the process for determining appropriate ``delete`` settings. First, check your indices using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
 
@@ -251,7 +249,7 @@ For our example above lets fill in the proper values:
 
 130GB / 3.5GB = 37.1428571 days rounded down to 37 days
 
-Therefore, we can set all of our ``delete`` values to 37 in the global.sls.
+Therefore, we can set all of our ``delete`` values to 37.
 
 Re-indexing
 -----------
