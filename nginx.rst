@@ -16,7 +16,13 @@ You can modify nginx configuration by going to :ref:`administration` --> Configu
 Replacing Default Cert
 ----------------------
 
-To replace the default cert, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option. On the left side, go to ``nginx``, and then expand ``ssl``. You can then set ``Replace Default Cert`` to ``true``, and paste your cert and key files.
+If you'd like to replace the default cert with your own cert, then you can do the following:
+
+#. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+#. On the left side, go to ``nginx``, and then expand ``ssl``.
+#. Set ``Replace Default Cert`` to ``true``, and then click the checkmark to save the value.
+#. Paste your cert file.
+#. Paste your key file.
 
 More Information
 ----------------
