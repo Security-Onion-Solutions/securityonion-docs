@@ -8,7 +8,9 @@ Release Notes
 
 - FIX: Component templates not updated when packages are updated `#11065 <https://github.com/Security-Onion-Solutions/securityonion/issues/11065>`_
 - FIX: Importing both PCAP and EVTX files fails `#11030 <https://github.com/Security-Onion-Solutions/securityonion/issues/11030>`_
+- FIX: Logstash container missing on distributed receiver `#11099 <https://github.com/Security-Onion-Solutions/securityonion/issues/11099>`_
 - FIX: pipeline with id logs-system.syslog-1.6.4 does not exist `#11038 <https://github.com/Security-Onion-Solutions/securityonion/issues/11038>`_
+- FIX: Suricata permissions on Heavy Nodes are incorrect `#11031 <https://github.com/Security-Onion-Solutions/securityonion/issues/11031>`_
 
 2.4.10 [20230815] Changes
 -------------------------
