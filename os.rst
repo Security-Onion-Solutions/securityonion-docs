@@ -36,3 +36,5 @@ Unsupported
 If you don’t want to use our Security Onion 2.4 ISO image and choose to perform a manual OS installation followed by a network installation of our Security Onion components, then we recommend using Oracle Linux 9 or Rocky Linux 9. CentOS Stream 9 or Alma Linux 9 should also work. Another option might be RHEL 9 itself although that is a paid option.
 
 If you really want to run Ubuntu 22.04 or Debian 12, then please note that these distros may work but they get less testing and therefore you will be more likely to run into issues.
+
+If you choose Ubuntu 22.04, we recommend the Ubuntu 22.04 Server ISO image as there are known issues when using the Ubuntu 22.04 minimal image.
