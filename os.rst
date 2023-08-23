@@ -37,4 +37,4 @@ If you don’t want to use our Security Onion 2.4 ISO image and choose to perfor
 
 If you really want to run Ubuntu 22.04 or Debian 12, then please note that these distros may work but they get less testing and therefore you will be more likely to run into issues.
 
-If you choose Ubuntu 22.04, we recommend the Ubuntu 22.04 Server ISO image as there are known issues when using the Ubuntu 22.04 minimal image.
+If you choose Ubuntu 22.04, we recommend the Ubuntu 22.04 Server ISO image and selecting the ``Ubuntu Server`` installation option as there are known issues when choosing the ``Ubuntu Server (minimized)`` option.
