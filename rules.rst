@@ -31,7 +31,7 @@ Security Onion offers the following choices for rulesets to be used by :ref:`sur
 ET Open
 -------
 
--  optimized for :ref:`suricata`, but available for Snort as well
+-  optimized for :ref:`suricata`
 -  **free**
 
 | For more information, see:
@@ -40,9 +40,9 @@ ET Open
 ET Pro (Proofpoint)
 -------------------
 
--  optimized for :ref:`suricata`, but available for Snort as well
+-  optimized for :ref:`suricata`
 -  rules retrievable as released
--  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
+-  license fee per sensor (you are responsible for purchasing enough licenses for your entire deployment)
 
 | For more information, see:
 | https://www.proofpoint.com/us/threat-insight/et-pro-ruleset  
@@ -50,7 +50,7 @@ ET Pro (Proofpoint)
 Snort Community
 ---------------
 
--  optimized for Snort
+-  NOT optimized for :ref:`suricata`
 -  community-contributed rules
 -  **free**
 
@@ -61,8 +61,8 @@ Snort Community
 Snort Registered
 ----------------
 
--  optimized for Snort
--  Snort SO (Shared Object) rules only work with Snort not :ref:`suricata`
+-  NOT optimized for :ref:`suricata`
+-  Snort SO (Shared Object) rules do NOT work with :ref:`suricata`
 -  same rules as Snort Subscriber ruleset, except rules only retrievable after 30 days past release
 -  **free**
 
@@ -75,10 +75,10 @@ Since Shared Object rules won't work with :ref:`suricata`, you may want to disab
 Snort Subscriber (Talos)
 ------------------------
 
--  optimized for Snort
--  Snort SO (Shared Object) rules only work with Snort not :ref:`suricata`
+-  NOT optimized for :ref:`suricata`
+-  Snort SO (Shared Object) rules do NOT work with :ref:`suricata`
 -  rules retrievable as released
--  license fee per sensor (users are responsible for purchasing enough licenses for their entire deployment)
+-  license fee per sensor (you are responsible for purchasing enough licenses for your entire deployment)
 
 Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'`` as described in the :ref:`managing-alerts` section.
 
