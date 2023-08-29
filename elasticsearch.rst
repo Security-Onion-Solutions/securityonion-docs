@@ -199,8 +199,11 @@ Closing Indices
 
 Elasticsearch indices are closed based on the ``close`` setting shown at :ref:`administration` --> Configuration --> elasticsearch --> index_settings --> so-INDEX-NAME --> close. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
 
+Deleting Indices
+----------------
+
 Size-based Index Deletion
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent, and it can be modified by navigating to :ref:`administration` -> Configuration -> Show all configurable settings, including advanced settings. -> elasticsearch -> retention -> retention_pct.
 
@@ -213,7 +216,8 @@ If your open indices are using more than ``retention_pct``, then :ref:`curator` 
 For example, suppose our ``retention_pct`` is 50%, total disk space is 1TB, and we have 30 days of open indices and 300 days of closed indices. We reach ``retention_pct`` and both :ref:`curator` and ``so-curator-closed-delete`` execute at the same time. Curator's delete.yml will check disk space used but it will see that disk space is at maybe 500GB so it thinks we haven't reached ``retention_pct`` and does not delete anything. ``so-curator-closed-delete`` gets a more accurate view of disk space used, sees that we have indeed reached ``retention_pct``, and so it deletes closed indices until we get lower than ``retention_pct``. In most cases, :ref:`curator` deletion should really only happen if we have open indices without any closed indices.
 
 Time-based Index Deletion
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Time-based deletion occurs through the use of the $data_stream.policy.phases.delete.min_age setting within the lifecycle policy tied to each index and is controlled by ILM. It is important to note that size-based deletion takes priority over time-based deletion, as disk may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
 
 Policies can be edited within the SOC administration interface by navigating to :ref:`administration` -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age. Changes will take effect when a new index is created.
