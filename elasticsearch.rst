@@ -202,9 +202,7 @@ Elasticsearch indices are closed based on the ``close`` setting shown at :ref:`a
 Size-based Index Deletion
 -------------------------
 
-Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent, and it can be modified by navigating to: 
-
-``SOC -> Administration -> Configuration -> Show all configurable settings, including advanced settings. -> elasticsearch -> retention -> retention_pct``
+Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent, and it can be modified by navigating to :ref:`administration` -> Configuration -> Show all configurable settings, including advanced settings. -> elasticsearch -> retention -> retention_pct.
 
 The change can be applied immediately by clicking ``Synchronize Grid``. Otherwise, the change will take effect after the Salt state has been applied at the next 15-minute interval.
 
@@ -218,7 +216,7 @@ Time-based Index Deletion
 -------------------------
 Time-based deletion occurs through the use of the $data_stream.policy.phases.delete.min_age setting within the lifecycle policy tied to each index and is controlled by ILM. It is important to note that size-based deletion takes priority over time-based deletion, as disk may reach ``retention_pct`` and indices will be delete before the ``min_age`` value is reached.
 
-Policies can be edited within the SOC administration interface by navigating to ``SOC -> Administration -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age``. Changes will take effect when a new index is created.
+Policies can be edited within the SOC administration interface by navigating to :ref:`administration` -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age. Changes will take effect when a new index is created.
 
 Distributed Deployments
 -----------------------
