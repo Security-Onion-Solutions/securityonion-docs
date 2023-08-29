@@ -202,7 +202,11 @@ Elasticsearch indices are closed based on the ``close`` setting shown at :ref:`a
 Size-based Index Deletion
 -------------------------
 
-Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent, and it can be modified by navigating to ``SOC -> Administration -> Configuration -> Show all configurable settings, including advanced settings. -> elasticsearch -> retention -> retention_pct``. The change can be applied immediately by clicking ``Synchronize Grid``. Otherwise, the change will take effect after the next 15-minute interval Salt state has been applied.
+Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent, and it can be modified by navigating to: 
+
+``SOC -> Administration -> Configuration -> Show all configurable settings, including advanced settings. -> elasticsearch -> retention -> retention_pct``
+
+The change can be applied immediately by clicking ``Synchronize Grid``. Otherwise, the change will take effect after the Salt state has been applied at the next 15-minute interval.
 
 If your open indices are using more than ``retention_pct``, then :ref:`curator` will delete old open indices until disk space is back under ``retention_pct``. If your total Elastic disk usage (both open and closed indices) is above ``log_size_limit``, then ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``log_size_limit``. ``so-curator-closed-delete`` does not use :ref:`curator` because :ref:`curator` cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
 
