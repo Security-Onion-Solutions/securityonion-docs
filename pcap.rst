@@ -48,3 +48,13 @@ Once you've viewed one or more PCAPs, you will see them listed on the main PCAP 
   :target: _images/56_jobs.png
 
 When you are done with a PCAP, you may want to delete it using the ``X`` button on the far right. This deletes the cached PCAP file saved at ``/nsm/soc/jobs/``.
+
+Troubleshooting
+---------------
+
+If you have trouble retrieving PCAP, here are some things to check:
+
+- Verify that :ref:`stenographer` is enabled.
+- Check :ref:`grid` and verify that all services are running properly.
+- Check :ref:`influxdb` and verify that PCAP Retention is long enough to include the stream you're looking for.
+- Make sure that there is plenty of free space on /nsm so that :ref:`stenographer` can carve the stream and write the output to disk.
