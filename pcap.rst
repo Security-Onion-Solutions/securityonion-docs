@@ -58,4 +58,4 @@ If you have trouble retrieving PCAP, here are some things to check:
 - Check :ref:`grid` and verify that all services are running properly.
 - Check :ref:`influxdb` and verify that PCAP Retention is long enough to include the stream you're looking for.
 - Check to see if you have any :ref:`bpf` configuration that may cause :ref:`stenographer` to ignore the traffic.
-- Make sure that there is plenty of free space on /nsm so that :ref:`stenographer` can carve the stream and write the output to disk.
+- Make sure that there is plenty of free space on ``/nsm`` so that :ref:`stenographer` can carve the stream and write the output to disk.
