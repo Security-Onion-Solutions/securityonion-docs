@@ -1,5 +1,5 @@
 alabaster>=0.7,<0.8,!=0.7.5
-commonmark
+commonmark==0.9.1
 jinja2
 mock
 readthedocs-sphinx-ext
