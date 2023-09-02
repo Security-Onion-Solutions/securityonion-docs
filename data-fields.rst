@@ -10,8 +10,9 @@ ECS
 
 We try to align with Elastic Common Schema (ECS) where possible.
 
-| For more information about ECS, please see:
-| https://www.elastic.co/guide/en/ecs/current/ecs-reference.html
+.. note::
+
+    For more information about ECS, please see https://www.elastic.co/guide/en/ecs/current/ecs-reference.html
 
 Fields
 ------
