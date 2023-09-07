@@ -22,7 +22,7 @@ Security Onion Desktop consists of a full desktop environment including Chromium
 
 There are a few different ways to install Security Onion Desktop:
 
-- Our Security Onion ISO image includes a boot menu option for Desktop installs that will partition your disk appropriately and immediately perform a Desktop installation.
+- Our Security Onion ISO image includes a boot menu option for Desktop installs that will partition your disk appropriately and immediately perform a Desktop installation. The minimum disk size is 50GB.
 
 - If you’re doing a network installation on Oracle Linux 9 (NOT using our Security Onion ISO image), then in our normal Setup wizard, you can choose ``OTHER`` and then choose ``ANALYST``.
 
