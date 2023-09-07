@@ -47,5 +47,6 @@ The analyst desktop is controlled via :ref:`salt` pillar. If you need to disable
 .. toctree::
    :maxdepth: 2
    
+   chromium   
    networkminer
    wireshark
