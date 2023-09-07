@@ -16,7 +16,7 @@ Full-time analysts may want to use a dedicated Security Onion desktop. This allo
 
   Security Onion Desktop currently only supports Oracle Linux 9, so you'll either need to use our Security Onion ISO image (recommended) or a manual installation of Oracle Linux 9.
   
-Security Onion Desktop consists of a full desktop environment including Chromium web browser, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools.
+Security Onion Desktop consists of a full desktop environment including :ref:`chromium`, :ref:`networkminer`, :ref:`wireshark`, and other analyst tools.
  
 **Installation**
 
