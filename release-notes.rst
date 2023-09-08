@@ -99,7 +99,7 @@ Release Notes
 - FIX: Cleanup log-rotate.conf `#10545 <https://github.com/Security-Onion-Solutions/securityonion/issues/10545>`_
 - FIX: Curator should ignore empty list `#10512 <https://github.com/Security-Onion-Solutions/securityonion/issues/10512>`_
 - FIX: Don't override default integration ingest node pipelines `#10542 <https://github.com/Security-Onion-Solutions/securityonion/issues/10542>`_
-- FIX: Ensure operations on records with "*Missing" fields use correct search `#8025 <https://github.com/Security-Onion-Solutions/securityonion/issues/8025>`_
+- FIX: Ensure operations on records with "Missing" fields use correct search `#8025 <https://github.com/Security-Onion-Solutions/securityonion/issues/8025>`_
 - FIX: Ensure packages aren't installed from default Rocky repos `#10630 <https://github.com/Security-Onion-Solutions/securityonion/issues/10630>`_
 - FIX: Exclude System logs from Hunt/Dashboard Queries. `#10122 <https://github.com/Security-Onion-Solutions/securityonion/issues/10122>`_
 - FIX: Finish SSL cert integration into SOC config UI `#10533 <https://github.com/Security-Onion-Solutions/securityonion/issues/10533>`_
