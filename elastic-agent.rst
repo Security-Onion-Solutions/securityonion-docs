@@ -36,7 +36,7 @@ You can query your agents in realtime using :ref:`osquery-manager`.
 Integrations
 ------------
 
-You can read more about integrations at :ref:`elastic-fleet` and https://docs.elastic.co/integrations.
+You can read more about integrations in the :ref:`elastic-fleet` section and at https://docs.elastic.co/integrations.
 
 More Information
 ----------------
