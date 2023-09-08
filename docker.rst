@@ -57,11 +57,7 @@ The manager node runs a Docker registry. From https://docs.docker.com/registry/r
 Networking and Bridging
 -----------------------
 
-By default, Docker configures its bridge with an IP address of ``172.17.0.1``.
-
-https://docs.docker.com/engine/userguide/networking/#default-networks
-
-This works fine for most folks since most organizations aren't already using the ``172.17.0.0/16`` range in their network. If you are using this range in your network, then you can change the Docker range during installation.
+By default, Docker configures its network bridge with an IP address of ``172.17.0.1``. This works fine for networks that aren't already using the ``172.17.0.0/16`` range. If you are using this range in your network, then you can change the Docker range during installation.
 
 .. image:: images/16_setup_docker_range.png
   :target: _images/16_setup_docker_range.png
