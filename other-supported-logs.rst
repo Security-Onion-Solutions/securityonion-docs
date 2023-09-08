@@ -3,7 +3,7 @@
 Other Supported Logs
 ====================
 
-We include :ref:`elasticsearch` ingest parsers for several log types that don't have :ref:`elastic-agent` modules.
+We include :ref:`elasticsearch` ingest parsers for several log types that don't have :ref:`elastic-agent` integrations.
 
 Example: pfSense
 ----------------
