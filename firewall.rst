@@ -21,20 +21,27 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 - ghcr.io (Container downloads)  
 - rules.emergingthreatspro.com (Emerging Threats IDS rules)  
 - rules.emergingthreats.net (Emerging Threats IDS open rules)  
-- github.com (Strelka and Sigma rules updates)  
-- geoip.elastic.co (optional GeoIP updates for Elasticsearch)
-- storage.googleapis.com (optional GeoIP updates for Elasticsearch)
-- www.snort.org (if you are using the paid Snort Talos ruleset)  
+- github.com (Strelka and Sigma rules updates) 
 
 If you are using our Security Onion ISO image, you will also need access to the following:
 
-- repo.securityonion.net (Oracle Linux package updates)   
+- repo.securityonion.net (primary repo for Oracle Linux package updates)
+- so-repo-east.s3.us-east-005.backblazeb2.com (secondary repo for Oracle Linux package updates)
 
 If you are not using our Security Onion ISO image and are instead performing a network installation, you will also need access to the following:
 
 - update repo for whatever base OS you're installing on (:ref:`os` packages)
 - download.docker.com (:ref:`docker` packages)
 - repo.saltstack.com (:ref:`salt` packages)
+
+If you choose to enable GeoIP updates for Elasticsearch, you will also need access to the following:
+
+- geoip.elastic.co
+- storage.googleapis.com
+
+If you choose to enable the Snort Talos ruleset, you will also need access to the following:
+
+- www.snort.org
 
 Node Communication
 ~~~~~~~~~~~~~~~~~~
