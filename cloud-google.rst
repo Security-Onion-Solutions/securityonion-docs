@@ -8,7 +8,7 @@ https://securityonion.net/google/?ref=_ptnr_soc_docs_230824
 
 .. warning::
 
-   Existing 2.4 RC1 or newer Security Onion Azure Image installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Azure Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
+   Existing 2.4 RC1 or newer Security Onion Google Image installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Google Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
 
 .. note::
 
@@ -218,7 +218,7 @@ If connecting sensors through the VPN instance you will need to add the inside i
 ::
 
     SO Sensor        -> VPN Endpoint     -> Internet -> VPN Endpoint  -> SO Manager
-    Location: Remote    Location: Remote                Location: AWS    Location: AWS
+    Location: Remote    Location: Remote                Location: Googe  Location: Google
     192.168.33.13       192.168.33.10                   10.55.1.10       10.55.1.20
 
 In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``sensor`` firewall hostgroup.
