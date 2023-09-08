@@ -1,4 +1,4 @@
-.. chromium:
+.. _chromium:
 
 Chromium
 ========
