@@ -72,7 +72,7 @@ For example, to forward all Zeek events from the ``dns`` dataset, we could use a
     
 In SOC, navigate to Administration -> Configuration -> Toggle the option to show all settings -> logstash -> defined_pipelines -> manager, and append the name of your newly created file to the list of config files used for the ``manager`` pipeline:
 
-``- custom/myfile.conf``
+``custom/myfile.conf``
 
 Click ``Synchronize Grid`` or wait for the configuration to be applied at the next 15-minute interval.
 
