@@ -34,7 +34,7 @@ If you are not using our Security Onion ISO image and are instead performing a n
 - download.docker.com (:ref:`docker` packages)
 - repo.saltstack.com (:ref:`salt` packages)
 
-If you choose to enable GeoIP updates for Elasticsearch, you will also need access to the following:
+If you choose to enable GeoIP updates for :ref:`elasticsearch`, you will also need access to the following:
 
 - geoip.elastic.co
 - storage.googleapis.com
