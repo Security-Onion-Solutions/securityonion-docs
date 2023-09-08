@@ -53,6 +53,11 @@ For example, the ``SO-Grid-Nodes`` agent policy is comprised of the following in
 - system-grid-nodes (``System`` integration)
 - zeek-logs (``Custom Logs`` integration)
 
+Integrations
+~~~~~~~~~~~~
+
+You can read more about Elastic integrations at https://docs.elastic.co/integrations.
+
 Adding an Integration
 ~~~~~~~~~~~~~~~~~~~~~
 
