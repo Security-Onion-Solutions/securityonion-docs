@@ -76,7 +76,9 @@ You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`dashb
 Authentication
 --------------
 
-We support Elastic authentication via :ref:`so-elastic-auth`.
+You can authenticate to Elasticsearch using the same username and password that you use for :ref:`soc`.
+
+You can add new user accounts to both Elasticsearch and :ref:`soc` at the same time as shown in the :ref:`adding-accounts` section. Please note that if you instead create accounts directly in Elastic, then those accounts will only have access to Elastic and not :ref:`soc`.
 
 Diagnostic Logging
 ------------------
