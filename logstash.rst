@@ -88,9 +88,13 @@ You can monitor events flowing through the output by running the following comma
 Modified Event Forwarding
 --------------------------
 
-To forward events to an external destination AFTER they have traversed the Logstash pipelines (NOT ingest node pipelines) used by Security Onion, perform the same steps as above, but instead of adding the reference for your Logstash output to the ``manager`` pipeline, add it to ``search`` pipeline instead, and then click ``Synchronize Grid``, or wait for the configuration to be applied at the next 15-minute interval.
+To forward events to an external destination AFTER they have traversed the Logstash pipelines (NOT ingest node pipelines), perform the same steps as above but instead of adding the reference for your Logstash output to the ``manager`` pipeline add it to ``search`` pipeline instead. The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` drop-down menu.
 
-You can monitor events flowing through the output with ``curl -s localhost:9600/_node/stats | jq .pipelines.search`` via the CLI on the search nodes.
+You can monitor events flowing through the output by running the following command on the search nodes:
+
+::
+
+   curl -s localhost:9600/_node/stats | jq .pipelines.search
 
 Please keep in mind that events will be forwarded from all applicable search nodes, as opposed to just the manager.
 
