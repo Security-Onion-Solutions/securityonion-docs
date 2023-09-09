@@ -47,9 +47,10 @@ Please keep in mind that we don't provide free support for third party systems, 
 
 Original Event Forwarding
 -------------------------
+
 To forward events to an external destination with minimal modifications to the original event, create a new custom configuration file on the manager in ``/opt/so/saltstack/local/salt/logstash/pipelines/config/custom/`` for the applicable output. We recommend using either the ``http``, ``tcp``, ``udp``, or ``syslog`` output plugin. At this time we only support the default bundled Logstash output plugins.
 
-For example, to forward all Zeek events from the ``dns`` dataset, we could use a configuration like the following:
+For example, to forward all :ref:`zeek` events from the ``dns`` dataset, we could use a configuration like the following:
 
 ::
 
@@ -66,22 +67,26 @@ For example, to forward all Zeek events from the ``dns`` dataset, we could use a
 
 .. warning::
 
-    When using the ``tcp`` output plugin, if the destination host/port is down, it will cause the Logstash pipeline to be blocked.  To avoid this behavior, try using the other output options, or consider having forwarded logs use a separate Logstash pipeline.
+    When using the ``tcp`` output plugin, if the destination host or port is down, it will cause the Logstash pipeline to be blocked.  To avoid this, try using the other output options or consider having forwarded logs use a separate Logstash pipeline.
     
-    Also keep in mind that when forwarding logs from the manager, Suricata's ``dataset`` value will still be set to ``common``, as the events have not yet been processed by the Ingest Node configuration.
+    Also keep in mind that when forwarding logs from the manager, some fields may not be set as expected since the events have not yet been processed by the Ingest Node configuration.
     
-In SOC, navigate to Administration -> Configuration -> Toggle the option to show all settings -> logstash -> defined_pipelines -> manager, and append the name of your newly created file to the list of config files used for the ``manager`` pipeline:
+In :ref:`soc`, navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to logstash -> defined_pipelines -> manager and append the name of your newly created file to the list of config files used for the ``manager`` pipeline:
 
 ``custom/myfile.conf``
 
-Click ``Synchronize Grid`` or wait for the configuration to be applied at the next 15-minute interval.
+The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` drop-down menu.
 
-You can monitor events flowing through the output with ``curl -s localhost:9600/_node/stats | jq .pipelines.manager`` via the CLI on the manager.
+You can monitor events flowing through the output by running the following command on the manager:
+
+::
+
+   curl -s localhost:9600/_node/stats | jq .pipelines.manager
 
 Modified Event Forwarding
 --------------------------
-To forward events to an external destination AFTER they have traversed the Logstash pipelines (NOT ingest node pipelines) used by Security Onion, perform the same steps as above, but instead of adding the reference for your Logstash output to the ``manager`` pipeline, add it to ``search`` pipeline instead, and then click ``Synchronize Grid``, or wait for the configuration to be applied at the next 15-minute interval.
 
+To forward events to an external destination AFTER they have traversed the Logstash pipelines (NOT ingest node pipelines) used by Security Onion, perform the same steps as above, but instead of adding the reference for your Logstash output to the ``manager`` pipeline, add it to ``search`` pipeline instead, and then click ``Synchronize Grid``, or wait for the configuration to be applied at the next 15-minute interval.
 
 You can monitor events flowing through the output with ``curl -s localhost:9600/_node/stats | jq .pipelines.search`` via the CLI on the search nodes.
 
