@@ -73,7 +73,9 @@ For example, to forward all :ref:`zeek` events from the ``dns`` dataset, we coul
     
 In :ref:`soc`, navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to logstash -> defined_pipelines -> manager and append the name of your newly created file to the list of config files used for the ``manager`` pipeline:
 
-``custom/myfile.conf``
+::
+
+   custom/myfile.conf
 
 The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` drop-down menu.
 
