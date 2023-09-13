@@ -115,10 +115,10 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 - From the EC2 dashboard select: ``Launch Instance``
 - Search the AWS Marketplace for ``Security Onion`` and make sure you get the latest version of the Security Onion official AMI.
 - Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please review the AWS Requirements section above.
-- From the subnet drop-down menu select the same subnet as the sniffing interface.
+- From the subnet menu select the same subnet as the sniffing interface.
 - Under the Network interfaces section configure the eth0 (management) interface.
 - (Distributed "Sensor" node or Single-Node grid only) Under the Network interfaces section select: ``Add Device`` to attach the previously created sniffing interface to the instance.
-- (Distributed "Sensor" node or Single-Node grid only) From the Network Interface drop-down menu for eth1 choose the sniffing interface you created for this instance.  Please note if you have multiple interfaces listed you can verify the correct interface by navigating to the Network Interfaces section in the EC2 Dashboard.
+- (Distributed "Sensor" node or Single-Node grid only) From the Network Interface menu for eth1 choose the sniffing interface you created for this instance.  Please note if you have multiple interfaces listed you can verify the correct interface by navigating to the Network Interfaces section in the EC2 Dashboard.
 - Select: ``Next: Add Storage`` and configure the volume settings.
 - Select: ``Next: Add Tags`` and add any additional tags for the instance.
 - Select: ``Next: Configure Security Group`` and add the appropriate inbound rules.
