@@ -71,13 +71,13 @@ For example, to forward all :ref:`zeek` events from the ``dns`` dataset, we coul
     
     Also keep in mind that when forwarding logs from the manager, some fields may not be set as expected since the events have not yet been processed by the Ingest Node configuration.
     
-In :ref:`soc`, navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to logstash -> defined_pipelines -> manager and append the name of your newly created file to the list of config files used for the ``manager`` pipeline:
+In :ref:`soc`, navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to logstash -> defined_pipelines -> manager and append the name of your newly created file to the list of config files used for the ``manager`` pipeline:
 
 ::
 
    custom/myfile.conf
 
-The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` drop-down menu.
+The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` menu.
 
 You can monitor events flowing through the output by running the following command on the manager:
 
@@ -88,7 +88,7 @@ You can monitor events flowing through the output by running the following comma
 Modified Event Forwarding
 --------------------------
 
-To forward events to an external destination AFTER they have traversed the Logstash pipelines (NOT ingest node pipelines), perform the same steps as above but instead of adding the reference for your Logstash output to the ``manager`` pipeline add it to ``search`` pipeline instead. The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` drop-down menu.
+To forward events to an external destination AFTER they have traversed the Logstash pipelines (NOT ingest node pipelines), perform the same steps as above but instead of adding the reference for your Logstash output to the ``manager`` pipeline add it to ``search`` pipeline instead. The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` menu.
 
 You can monitor events flowing through the output by running the following command on the search nodes:
 
