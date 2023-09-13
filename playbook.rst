@@ -149,10 +149,10 @@ The pre-loaded Plays come from the community Sigma repository at https://github.
         Please be very careful when making changes!
 
 - Go to :ref:`administration` --> Configuration.
-- At the top of the page, click the ``Options`` drop-down menu and enable the ``Show all configurable settings, including advanced settings.`` option.
+- At the top of the page, click the ``Options`` menu and enable the ``Show all configurable settings, including advanced settings.`` option.
 - On the left side, navigate to soctopus --> playbook --> rulesets.
 - On the right side, add one or more of the following: ``application,category,cloud,compliance,linux,macos,network,web,windows``. These are based on the top level directories from the Sigma community repository rule's folder.
-- At the top of the page, click the ``SYNCHRONIZE GRID`` button under the ``Options`` drop-down menu.
+- At the top of the page, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu.
 
 Diagnostic Logging
 ------------------
