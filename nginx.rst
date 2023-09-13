@@ -22,7 +22,7 @@ If you'd like to replace the default cert with your own cert, then you can do so
 
         Please be very careful when modifying advanced settings like this!
 
-#. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``nginx``, expand ``ssl``, and then select the ``Replace Default Cert`` setting.
 #. On the right side, change the setting to ``true`` and then click the checkmark to save the value.
 #. On the left side, select the ``SSL/TLS Cert File`` setting.
