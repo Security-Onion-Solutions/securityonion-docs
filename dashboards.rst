@@ -15,7 +15,7 @@ Dashboards
 Options
 -------
 
-At the top of the page, there is an Options drop-down menu that allows you to set options such as Auto Apply, Exclude case data, Exclude SOC Logs, Automatic Refresh Interval, and Time Zone.
+At the top of the page, there is an Options menu that allows you to set options such as Auto Apply, Exclude case data, Exclude SOC Logs, Automatic Refresh Interval, and Time Zone.
 
 Auto Apply
 ~~~~~~~~~~
