@@ -38,7 +38,9 @@ Virtual NIC
 
 The second option is to sniff traffic from a Proxmox virtual NIC. For more details, please see the discussion at https://github.com/Security-Onion-Solutions/securityonion/discussions/8245.
 
-Keep in mind you may need to manually disable NIC offloading features on any Proxmox NIC used for sniffing (the physical interface and any related bridge interface). One way to do this is to add a post-up command to each sniffing interface in /etc/network/interfaces. For example, if you have a physical interface called ``enp2s0`` with a bridge interface called ``vmbr1``, then you might add the following to the ``enp2s0`` section:
+Keep in mind you may need to manually disable NIC offloading features on any Proxmox NIC used for sniffing (the physical interface and any related bridge interface). One way to do this is to add a post-up command to each sniffing interface in /etc/network/interfaces on the Proxmox host. 
+
+For example, if you have a Proxmox physical interface called ``enp2s0`` with a bridge interface called ``vmbr1``, then you might log into Proxmox and edit /etc/network/interfaces by adding the following to the ``enp2s0`` section:
 
 ::
 
