@@ -151,7 +151,7 @@ Zeek also provides other logs by default and you can read more about them at htt
 
 Security Onion includes protocol analyzers for STUN, TDS, and Wireguard traffic and several different ICS/SCADA protocols. By default, these analyzers are enabled and will log to the filesystem. For new installations, these logs are automatically ingested into Elasticsearch. If you upgrade an existing deployment and would like to ingest these logs, you can enable them via :ref:`so-zeek-logs`.
 
-Security Onion also includes MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can add ``bzar`` to your ``global.sls`` as shown in the Custom Scripts section below.
+Security Onion also includes MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can add ``bzar`` to your ``global.sls`` as shown in the Custom Scripts section below. Once enabled, you can then check for BZAR detections by going to :ref:`dashboards` and selecting the Zeek Notice dashboard.
 
 As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
 
