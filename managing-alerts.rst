@@ -99,7 +99,7 @@ After pasting the rule, you may want to bump the SID into the 90,000,000 range a
 Threshold
 ---------
 
-You can manage threshold entries for :ref:`suricata` by going to :ref:`administration` --> Configuration --> suricata --> config --> threshold-file.
+You can manage threshold entries for :ref:`suricata` by going to :ref:`administration` --> Configuration --> suricata --> thresholding --> SIDS.
 
 Please note that :ref:`suricata` 6 has a 64-character limitation on the IP field in a threshold. You can read more about this at https://redmine.openinfosecfoundation.org/issues/4377.
 
