@@ -99,7 +99,7 @@ After pasting the rule, you may want to bump the SID into the 90,000,000 range a
 Threshold
 ---------
 
-Thresholds, rate filters, and suppressions allow you to make finer grained decisions about certain rules without having to rewrite them. The most common is a suppression which allows you to suppress alerts based on their signature, the source or destination address, and even the IP or full CIDR network block. This way, you can still have certain rules enabled, but the situations in which they alert are limited. It's important to note that with this functionality, care should be given to the thresholds being written to make sure they do not suppress legitimate alerts. You can learn more about Suricata thresholds at https://docs.suricata.io/en/suricata-6.0.0/configuration/global-thresholds.html.
+Thresholds, rate filters, and suppressions allow you to make finer grained decisions about certain rules without having to rewrite them. The most common is a suppression which allows you to suppress alerts by specifying the SID, whether you want to track by source/destination/either, and the IP address or subnet. This way, you can still have certain rules enabled, but the situations in which they alert are limited. It's important to note that with this functionality, care should be given to the thresholds being written to make sure they do not suppress legitimate alerts. You can learn more about Suricata thresholds at https://docs.suricata.io/en/suricata-6.0.0/configuration/global-thresholds.html.
 
 You can manage threshold entries for :ref:`suricata` by going to :ref:`administration` --> Configuration --> suricata --> thresholding --> SIDS.
 
@@ -131,7 +131,7 @@ Please note that :ref:`suricata` 6 has a 64-character limitation on the IP field
 Suppress
 ~~~~~~~~
 
-For example, suppose you want to suppress SID 2013030 where the source IP address is in the 10.10.3.0/24 range:
+For example, suppose you want to suppress SID 2013030 where the source IP address is in the 10.10.3.0/24 subnet:
 
 ::
 
