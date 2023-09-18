@@ -125,7 +125,7 @@ Zeek also provides other logs by default and you can read more about them at htt
 
 In addition to Zeek's default logs, we also include protocol analyzers for STUN, TDS, and Wireguard traffic and several different ICS/SCADA protocols. These analyzers are enabled by default.
 
-We also include MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can do so via :ref:`administration` --> Configuration --> zeek. Once enabled, you can then go to :ref:`dashboards` and select the Zeek Notice dashboard to check for BZAR detections.
+We also include MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can do so via :ref:`administration` --> Configuration --> zeek. Once enabled, you can then check for BZAR detections by going to :ref:`dashboards` and selecting the Zeek Notice dashboard.
 
 As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
 
