@@ -99,14 +99,47 @@ After pasting the rule, you may want to bump the SID into the 90,000,000 range a
 Threshold
 ---------
 
+A threshold entry allows you to make some finer grained decisions about certain rules without having to rewrite them. You can use a threshold to suppress rules based on their signature, the source or destination address and even the IP or full CIDR network block. This way, you still have the basic ruleset, but the situations in which they fire are altered. It's important to note that with this functionality, care should be given to the thresholds being written to make sure they do not suppress legitimate alerts. You can learn more about Suricata thresholds at https://docs.suricata.io/en/suricata-6.0.0/configuration/global-thresholds.html.
+
 You can manage threshold entries for :ref:`suricata` by going to :ref:`administration` --> Configuration --> suricata --> thresholding --> SIDS.
+
+Usage:
+
+::
+
+       <signature id>:
+         - threshold:
+             gen_id: <generator id>
+             type: <threshold | limit | both>
+             track: <by_src | by_dst>
+             count: <count>
+             seconds: <seconds>
+         - rate_filter:
+             gen_id: <generator id>
+             track: <by_src | by_dst | by_rule | by_both>
+             count: <count>
+             seconds: <seconds>
+             new_action: <alert | pass>
+             timeout: <seconds>
+         - suppress:
+             gen_id: <generator id>
+             track: <by_src | by_dst | by_either>
+             ip: <ip | subnet>
 
 Please note that :ref:`suricata` 6 has a 64-character limitation on the IP field in a threshold. You can read more about this at https://redmine.openinfosecfoundation.org/issues/4377.
 
-Suppressions
-------------
+Suppress
+~~~~~~~~
 
-A suppression rule allows you to make some finer grained decisions about certain rules without the onus of rewriting them. With this functionality we can suppress rules based on their signature, the source or destination address and even the IP or full CIDR network block. This way, you still have the basic ruleset, but the situations in which they fire are altered. It's important to note that with this functionality, care should be given to the suppressions being written to make sure they do not suppress legitimate alerts.
+For example, suppose you want to suppress SID 2013030 where the source IP address is in the 10.10.3.0/24 range:
+
+::
+
+	2013030:
+  	  - suppress:
+	      gen_id: 1
+	      track: by_src
+              ip: 10.10.3.0/24
 
 Flowbits
 --------
