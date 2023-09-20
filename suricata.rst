@@ -25,6 +25,9 @@ Configuration
 
 You can configure Suricata by going to :ref:`administration` --> Configuration --> suricata.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`managing-alerts` sections.
 
 HOME_NET

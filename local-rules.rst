@@ -6,7 +6,12 @@ Adding Local Rules
 NIDS
 ----
 
-You can add local NIDS rules by going to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to idstools --> rules --> Local Rules. Add your new rule(s) and click the checkmark to save them. The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` menu.
+You can add local NIDS rules by going to :ref:`administration` --> Configuration. 
+
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+   
+At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to idstools --> rules --> Local Rules. Add your new rule(s) and click the checkmark to save them. The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` menu.
 
 YARA
 ----

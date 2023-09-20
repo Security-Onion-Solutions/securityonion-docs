@@ -22,6 +22,9 @@ Configuration
 
 You can configure InfluxDB by going to :ref:`administration` --> Configuration --> influxdb.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 More Information
 ----------------
 

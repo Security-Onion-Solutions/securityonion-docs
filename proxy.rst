@@ -5,6 +5,9 @@ Proxy
 
 Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. If you need to make changes after Setup, please see the proxy settings in :ref:`administration` --> Configuration --> manager. 
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 General Information
 -------------------
 

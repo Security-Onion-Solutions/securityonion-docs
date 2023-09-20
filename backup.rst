@@ -12,6 +12,9 @@ Here is what gets backed up automatically:
 
 You can configure backups by going to :ref:`administration` --> Configuration --> backup. 
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 Elasticsearch
 -------------
 
@@ -22,13 +25,7 @@ The first option is to enable snapshots with :ref:`curator` to snapshot data to 
 The second option is to use :ref:`elasticsearch`'s built-in support for snapshots:
 https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshot-restore.html
 
-This option requires that you configure :ref:`elasticsearch` with a ``path.repo`` setting where it can store the snapshots. To do this, you can update the ``elasticsearch`` :ref:`salt` pillar using something like the following and then restart :ref:`elasticsearch`:
-
-::
-
-  elasticsearch:
-    config:
-      path.repo: '/usr/share/elasticsearch/data/repo'
+This option requires that you configure :ref:`elasticsearch` with a ``path.repo`` setting where it can store the snapshots.
 
 Once :ref:`elasticsearch` has the ``path.repo`` setting, you should be able to log into :ref:`kibana` and configure snapshots as shown in the link above. Those snapshots will then be accessible in ``/nsm/elasticsearch/repo/``.
 

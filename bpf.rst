@@ -12,6 +12,9 @@ Configuration
 
 You can modify your BPF configuration by going to :ref:`administration` --> Configuration --> bpf. You can apply BPF configuration to :ref:`stenographer`, :ref:`suricata`, or :ref:`zeek`.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 Multiple Conditions
 ~~~~~~~~~~~~~~~~~~~
 

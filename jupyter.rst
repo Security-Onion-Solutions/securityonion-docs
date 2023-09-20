@@ -19,6 +19,9 @@ As a best practice, we'll want to create a dedicated Jupyter notebook user with 
 
 In order to allow network-based access to :ref:`elasticsearch`, we'll need to allow the traffic through the host-based firewall by going to :ref:`administration` --> Configuration --> firewall.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 Once complete, we should be able to reach the :ref:`elasticsearch` instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
 
 Jupyter Notebook

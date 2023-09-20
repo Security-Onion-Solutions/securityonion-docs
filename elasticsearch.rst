@@ -146,6 +146,9 @@ Configuration
 
 You can configure Elasticsearch by going to :ref:`administration`, then Configuration, and then ``elasticsearch``.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 field expansion matches too many fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

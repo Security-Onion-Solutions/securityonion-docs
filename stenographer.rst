@@ -46,7 +46,12 @@ If the query succeeds, you can then find the resulting ``output.pcap`` file in `
 Configuration
 -------------
 
-You can configure Stenographer by going to :ref:`administration` --> Configuration --> pcap. For example, suppose you want to change the default value for purging old pcap. You could go to :ref:`administration` --> Configuration --> pcap --> config --> diskfreepercentage and set the value to something appropriate for your system.
+You can configure Stenographer by going to :ref:`administration` --> Configuration --> pcap. 
+
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
+For example, suppose you want to change the default value for purging old pcap. You could go to :ref:`administration` --> Configuration --> pcap --> config --> diskfreepercentage and set the value to something appropriate for your system.
 
 Maximum Files
 -------------

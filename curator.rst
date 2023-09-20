@@ -18,6 +18,9 @@ Curator defaults to closing indices older than 30 days. Curator also deletes old
 
 Curator configuration can be found by going to :ref:`administration` --> Configuration --> curator.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 For more information about the Curator close and delete settings, please see the :ref:`elasticsearch` section.
 
 Diagnostic Logging

@@ -34,6 +34,9 @@ You can optionally join your Desktop installation to your grid. This allows it t
 
 If you choose not to join your Desktop installation to your grid, then you may need to allow the traffic through the host-based :ref:`firewall` by going to :ref:`administration` --> Configuration --> firewall.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 **Disabling**
 
 The analyst desktop is controlled via :ref:`salt` pillar. If you need to disable the Desktop desktop environment, find the ``workstation`` setting in your :ref:`salt` pillar and change ``enabled: true`` to ``enabled: false``:

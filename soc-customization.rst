@@ -3,7 +3,12 @@
 SOC Customization
 =================
 
-You can customize :ref:`soc` by going to :ref:`administration` --> Configuration --> soc. Below are some ways in which you can customize SOC. Once all customizations are complete, you can make the changes take effect by clicking the ``Options`` bar at the top and then clicking the ``SYNCHRONIZE GRID`` button.
+You can customize :ref:`soc` by going to :ref:`administration` --> Configuration --> soc. 
+
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
+Below are some ways in which you can customize SOC. Once all customizations are complete, you can make the changes take effect by clicking the ``Options`` bar at the top and then clicking the ``SYNCHRONIZE GRID`` button.
 
 Login Page
 ----------

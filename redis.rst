@@ -37,6 +37,9 @@ Tuning
 
 Security Onion configures Redis to use 812MB of your total system memory. If you have sufficient RAM available, you may want to increase the ``redis_maxmemory`` setting by going to :ref:`administration` --> Configuration --> redis_settings. This value is in Megabytes so to set it to use 8 gigs of ram you would set the value to 8192.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 :ref:`logstash` on the manager node is configured to send to Redis.  For best performance, you may want to tune the ``ls_pipeline_batch_size`` value at :ref:`administration` --> Configuration --> logstash_settings to find the sweet spot for your deployment.
 
 .. note::

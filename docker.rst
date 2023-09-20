@@ -29,6 +29,9 @@ Configuration
 
 You can modify Docker configuration by going to :ref:`administration` --> Configuration --> docker.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 Images
 ------
 

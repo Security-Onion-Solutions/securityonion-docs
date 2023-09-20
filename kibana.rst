@@ -84,6 +84,9 @@ Configuration
 
 You can configure Kibana by going to :ref:`administration` --> Configuration --> kibana.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 Diagnostic Logging
 ------------------
 

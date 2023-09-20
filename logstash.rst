@@ -14,6 +14,9 @@ Configuration
 
 You can configure Logstash by going to :ref:`administration` --> Configuration --> logstash.
 
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+
 ls_pipeline_batch_size
 ~~~~~~~~~~~~~~~~~~~~~~
 
