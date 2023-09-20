@@ -3,6 +3,17 @@
 Release Notes
 =============
 
+2.3.270 [20231006] Changes
+----------------------
+
+- FIX: Prevent repeated creation of unused Docker volumes `#11354 <https://github.com/Security-Onion-Solutions/securityonion/issues/11354>`_
+- FIX: Support filtering against multiple groupby charts `#10856 <https://github.com/Security-Onion-Solutions/securityonion/issues/10856>`_
+- UPGRADE: CyberChef 10.5.2 `#10781 <https://github.com/Security-Onion-Solutions/securityonion/issues/10781>`_
+- UPGRADE: Elastic 8.8.2 `#10913 <https://github.com/Security-Onion-Solutions/securityonion/issues/10913>`_
+- UPGRADE: Grafana 9.2.20 `#10666 <https://github.com/Security-Onion-Solutions/securityonion/issues/10666>`_
+- UPGRADE: Suricata 6.0.14 `#11318 <https://github.com/Security-Onion-Solutions/securityonion/issues/11318>`_
+- UPGRADE: Zeek 5.0.10 `#11300 <https://github.com/Security-Onion-Solutions/securityonion/issues/11300>`_
+
 2.3.260 [20230620] Changes
 --------------------------
 
