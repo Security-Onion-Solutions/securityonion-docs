@@ -3,6 +3,24 @@
 After Installation
 ==================
 
+Services
+--------
+
+You can check the :ref:`grid` page to see if all services are running correctly.
+
+.. image:: images/39_grid.png
+  :target: _images/39_grid.png
+
+.. note::
+
+  Please note that new nodes start off showing a red Fault and may take a few minutes to fully initialize before they show a green OK.
+
+You can also verify services are running from the command line with the :ref:`so-status` command:
+
+::
+
+	sudo so-status
+	
 Adjust firewall rules
 ---------------------
 
@@ -16,22 +34,6 @@ SSH
 
 You should be able to do most administration from :ref:`soc` but if you need access to the command line then we recommend using :ref:`ssh` rather than the :ref:`console`.
 
-Services
---------
-
-Once you've logged into :ref:`soc`, you can check the :ref:`grid` page to see if all services are running correctly.
-
-.. note::
-
-  Please note that new nodes start off showing a red Fault and may take a few minutes to fully initialize before they show a green OK.
-
-
-You can also verify services are running from the command line with the :ref:`so-status` command:
-
-::
-
-	sudo so-status
-	
 Data Retention
 --------------
 
