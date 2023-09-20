@@ -3,7 +3,7 @@
 AWS Cloud AMI
 =============
 
-If you would like to deploy Security Onion 2.3 in AWS, we have an AMI that is already built for you. In a browser, login to AWS and navigate to the EC2 "AMI catalog" at https://console.aws.amazon.com/ec2/home#AMICatalog. When the AMI Catalog loads, click the ``Community AMIs`` tab and search for ``security onion official``. Choose the 2.3.260 version. Note that a soup is required after setup completes in order to apply the latest Security Onion 2.3 updates.
+If you would like to deploy Security Onion 2.3 in AWS, we have an AMI that is already built for you. As this is an older version of Security Onion, the launch of the VM is a little different from installing the latest version on the marketplace. The details are described below.
 
 .. warning::
 
@@ -112,7 +112,7 @@ Instance Creation
 To configure a Security Onion instance (repeat for each node in a distributed grid), follow these steps:
 
 - From the EC2 dashboard select: ``Launch Instance``
-- Search the AWS Marketplace for ``Security Onion`` and make sure you get the latest version of the Security Onion 2 official AMI.
+- Browse for more AMIs. Change to the ``Community AMIs`` tab and search for ``security onion official``. Choose the 2.3.260 version.
 - Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please review the AWS Requirements section above.
 - From the subnet drop-down menu select the same subnet as the sniffing interface.
 - Under the Network interfaces section configure the eth0 (management) interface.
