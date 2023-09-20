@@ -3,8 +3,7 @@
 Azure Cloud Image
 =================
 
-Azure users can deploy an official Security Onion 2 virtual machine image found on the Azure Marketplace:
-https://securityonion.net/azure
+If you would like to deploy Security Onion 2.3 in Azure, we have an Azure compatible image that is already built for you. As this is an older Security Onion version, it must be accessed via the Azure CLI rather than the Azure Marketplace.
 
 .. warning::
 
@@ -119,33 +118,36 @@ Create Security Onion Instances
 Instance Creation
 -----------------
 
-To configure a Security Onion instance (repeat for each node in a distributed grid), follow these steps:
+As this is an older Security Onion version, it must be accessed via the Azure CLI rather than the Azure Marketplace. To configure a Security Onion instance (repeat for each node in a distributed grid), follow these steps:
 
-- In the Azure Dashboard search for: ``Virtual machines``
-- Select: ``Create`` and then ``Virtual machine``
-- Choose or create a new Resource group.
-- Enter a suitable name for this virtual machine, such as ``so-vm-manager``.
-- Choose the desired Region and Availability options. (Use ``East US 2`` for Ultra SSD support, if needed.)
-- Choose the ``Security Onion 2 Standard`` image. If this option is not listed on the Image dropdown, select ``See all images`` and search for ``onion``.
+- Using the Azure CLI (available in the Azure web portal if not installed locally) run the following commands to launch a new Security Onion 2.3 instance, adjusting the parameters as needed:
+
+::
+
+  az vm image terms show --urn securityonionsolutions:securityonion:so2:2.3.260
+  az vm image terms accept --urn securityonionsolutions:securityonion:so2:2.3.260
+  az group create --name mySOGroup --location eastus
+  az vm create \
+    --resource-group mySOGroup \
+    --name so-vm-manager \
+    --admin-username onion \
+    --generate-ssh-keys \
+    --image securityonionsolutions:securityonion:so2:2.3.260 \
+    --plan-name so2 \
+    --plan-product securityonion \
+    --plan-publisher securityonionsolutions \
+    --size Standard_D8ds_v4 \
+    ...
+
 - Choose the appropriate Size based on the desired hardware requirements. For assistance on determining resource requirements please review the Requirements section above.
-- Change the Username to ``onion``. Note that this is not mandatory -- if you accidentally leave it to the default ``azureuser``, that's ok, you'll simply use the ``azureuser`` username any place where the documentation states to use the ``onion`` username.
-- Select an existing SSH public key if one already exists, otherwise select the option to ``Generate new key pair``.
-- Select ``Next: Disks``
-- Ensure ``Premium SSD`` is selected.
-- For single-node grids, distributed sensor nodes, or distributed search nodes: If you would like to separate the ``/nsm`` partition into its own disk, create and attach a data disk for this purpose, with a minimum size of 100GB, or more depending on predicted storage needs. Note that the size of the ``/nsm`` partition determines the rate that old packet and event data is pruned. Separating the /nsm partition can provide more flexibility with scaling up the grid node sizes, but requires a little more setup, which is described later.
-- Select ``Next: Networking``
-- Choose the virtual network for this virtual machine.
-- Choose a public IP if you intend to access this virtual machine directly (not recommended for production grids).
-- Choose appropriate security group settings. Note that this is typically not the same security group used for the sensor monitoring interface.
-- Accelerated networking will be automatically enabled if the virtual machine size supports it.
-- Select: ``Review + create``
-- Review the summary. If a ``Validation failed`` message appears, correct the missing inputs under each tab section containing a red dot to the right of the tab name.
-- Select. ``Create`` and download the new public key, if you chose to generate a new key.
+- Ensure you have access to the generated SSH private key, or copy the key locally if using the Azure CLI in the web portal
 - Stop the new VM after deployment completes.
 - Edit the VM and:
 
   - Adjust the OS disk size to be at least 100GB in size.
+  - For single-node grids, distributed sensor nodes, or distributed search nodes: If you would like to separate the ``/nsm`` partition into its own disk, create and attach a data disk for this purpose, with a minimum size of 100GB, or more depending on predicted storage needs. Note that the size of the ``/nsm`` partition determines the rate that old packet and event data is pruned. Separating the /nsm partition can provide more flexibility with scaling up the grid node sizes, but requires a little more setup, which is described later.
   - If this VM is a single-node grid, or is sensor node, attach the monitoring network interface created earlier.
+  - Adjust public IP, virtual networks, etc as necessary.
   
 - Start the VM.
 
@@ -160,6 +162,10 @@ Manager Setup
 #############
 
 After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Continue instructions below for applicable nodes.
+
+.. note::
+
+  As Security Onion 2.3 approaches EOL, new cloud images are no longer being released. However, maintenance releases are available for cloud installation. After the manager completes setup it is important to run ``sudo soup`` to apply all newer maintenance releases and patches. This only is necessary on the manager node.
 
 All Distributed Manager Nodes
 -----------------------------
