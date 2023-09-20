@@ -3,8 +3,7 @@
 AWS Cloud AMI
 =============
 
-If you would like to deploy Security Onion in AWS, we have an AMI that is already built for you:
-https://securityonion.net/aws/?ref=_ptnr_soc_docs_210505
+If you would like to deploy Security Onion 2.3 in AWS, we have an AMI that is already built for you. In a browser, login to AWS and navigate to the EC2 "AMI catalog" at https://console.aws.amazon.com/ec2/home#AMICatalog. When the AMI Catalog loads, click the ``Community AMIs`` tab and search for ``security onion official``. Choose the 2.3.260 version. Note that a soup is required after setup completes in order to apply the latest Security Onion 2.3 updates.
 
 .. warning::
 
@@ -156,6 +155,10 @@ If this is an ephemeral evaluation node, ensure the node has been prepared as de
 After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. For distributed manager nodes using ephemeral storage, if you would like to use traditional :ref:`elasticsearch` clustering, select Advanced and answer Yes. Continue instructions below for applicable nodes.
 
 AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be used when prompted for an NTP host.
+
+.. note::
+
+  As Security Onion 2.3 approaches EOL, new cloud images are no longer being released. However, maintenance releases are available for cloud installation. After the manager completes setup it is important to run ``sudo soup`` to apply all newer maintenance releases and patches. This only is necessary on the manager node.
 
 All Distributed Manager Nodes
 -----------------------------
