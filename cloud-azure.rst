@@ -136,8 +136,7 @@ As this is an older Security Onion version, it must be accessed via the Azure CL
     --plan-name so2 \
     --plan-product securityonion \
     --plan-publisher securityonionsolutions \
-    --size Standard_D8ds_v4 \
-    ...
+    --size Standard_D8ds_v4
 
 - Choose the appropriate Size based on the desired hardware requirements. For assistance on determining resource requirements please review the Requirements section above.
 - Ensure you have access to the generated SSH private key, or copy the key locally if using the Azure CLI in the web portal
