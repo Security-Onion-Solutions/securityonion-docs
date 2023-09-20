@@ -225,7 +225,13 @@ The following analyzers require users to configure authentication or other param
 - Urlscan
 - VirusTotal
 
-To configure an analyzer, navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to sensoroni -> analyzers.
+To configure an analyzer, navigate to :ref:`administration` -> Configuration. 
+
+
+.. image:: images/61_config.png
+  :target: _images/61_config.png
+   
+At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to sensoroni -> analyzers.
 
 Developing Analyzers
 ~~~~~~~~~~~~~~~~~~~~
