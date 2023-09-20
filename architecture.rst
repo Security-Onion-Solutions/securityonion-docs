@@ -46,7 +46,7 @@ A standard distributed deployment includes a **manager node**, one or more **for
 	
 .. image:: images/diagrams/distributed.png
    :align: center
-   :width: 600
+   :width: 500
    :target: _images/diagrams/distributed.png
 
 Node Types
@@ -116,7 +116,7 @@ The Receiver Node runs :ref:`logstash` and :ref:`redis` and allows for events to
 
 .. image:: images/diagrams/receiver.png
    :align: center
-   :width: 600
+   :width: 500
    :target: _images/diagrams/receiver.png
 
 Intrusion Detection Honeypot (IDH) Node
@@ -126,7 +126,7 @@ The :ref:`idh` node mimics common services such as HTTP, FTP, and SSH. Any inter
 
 .. image:: images/diagrams/idh.png
    :align: center
-   :width: 600
+   :width: 500
    :target: _images/diagrams/idh.png
 
 Heavy Node
