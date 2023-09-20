@@ -46,6 +46,7 @@ A standard distributed deployment includes a **manager node**, one or more **for
 	
 .. image:: images/diagrams/distributed.png
    :align: center
+   :width: 400
    :target: _images/diagrams/distributed.png
 
 Node Types
