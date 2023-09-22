@@ -76,7 +76,7 @@ Integrations
     - tcp
     - udp
     - windows
-    - 1password (edit
+    - 1password
 
     Support for more native Elastic integrations will be added in future releases.
 
