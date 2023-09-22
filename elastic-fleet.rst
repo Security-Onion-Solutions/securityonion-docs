@@ -78,7 +78,41 @@ Integrations
     - windows
     - 1password
 
-    Support for more native Elastic integrations will be added in future releases.
+    Support for the following integrations will be added in 2.4.20:
+
+    - apache
+    - auditd
+    - barracuda
+    - cisco_asa
+    - crowdstrike
+    - darktrace
+    - f5_bigip
+    - fortinet
+    - fortinet_fortigate
+    - gcp
+    - http_endpoint
+    - httpjson
+    - juniper
+    - juniper_srx
+    - kafka_log
+    - lastpass
+    - m365_defender
+    - microsoft_defender_endpoint
+    - microsoft_dhcp
+    - netflow
+    - o365
+    - okta
+    - panw
+    - pfsense
+    - sentinel_one
+    - sonicwall_firewall
+    - symantec_endpoint
+    - ti_abusech
+    - ti_misp
+    - ti_otx
+    - ti_recordedfuture
+    - zscaler_zia
+    - zscaler_zpa
 
 You can read more about Elastic integrations at https://docs.elastic.co/integrations.
 
