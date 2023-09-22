@@ -58,7 +58,7 @@ Integrations
 
 .. note::
 
-    As of Security Onion 2.4.10, only the following Elastic integrations are supported:
+    Security Onion 2.4.10 supports the following Elastic integrations:
     
     - aws
     - azure
@@ -78,7 +78,7 @@ Integrations
     - windows
     - 1password
 
-    Support for the following integrations will be added in 2.4.20:
+    Security Onion 2.4.20 supports these additional Elastic integrations:
 
     - apache
     - auditd
