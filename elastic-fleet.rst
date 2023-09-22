@@ -56,6 +56,30 @@ For example, the ``SO-Grid-Nodes`` agent policy is comprised of the following in
 Integrations
 ~~~~~~~~~~~~
 
+.. note::
+
+    As of Security Onion 2.4.10, only the following Elastic integrations are supported:
+    
+    - aws
+    - azure
+    - cloudflare
+    - elasticsearch
+    - endpoint
+    - fleet_server
+    - fim
+    - github
+    - google_workspace
+    - log
+    - osquery_manager
+    - redis
+    - system
+    - tcp
+    - udp
+    - windows
+    - 1password (edit
+
+    Support for more native Elastic integrations will be added in future releases.
+
 You can read more about Elastic integrations at https://docs.elastic.co/integrations.
 
 Adding an Integration
