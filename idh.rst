@@ -83,8 +83,8 @@ Custom Configuration
 
 You can configure IDH by going to :ref:`administration` --> Configuration --> idh.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-idh.png
+  :target: _images/config-item-idh.png
 
 Custom Configuration Example
 ----------------------------

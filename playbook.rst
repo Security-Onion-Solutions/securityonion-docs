@@ -141,8 +141,8 @@ Adding Additional Rulesets
 
 The pre-loaded Plays come from the community Sigma repository at https://github.com/Neo23x0/sigma/tree/master/rules. The default config is to only pull in the Windows rules. The rest of the rules from the community repository can be added via :ref:`administration` --> Configuration as shown below.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-soctopus.png
+  :target: _images/config-item-soctopus.png
 
 .. warning::
 

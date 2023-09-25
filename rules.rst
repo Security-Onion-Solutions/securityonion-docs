@@ -23,8 +23,8 @@ Configuration
 
 You can modify your rule configuration by going to :ref:`administration` --> Configuration --> idstools.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-idstools.png
+  :target: _images/config-item-idstools.png
 
 Rulesets
 --------

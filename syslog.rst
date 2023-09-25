@@ -7,8 +7,8 @@ If you want to send syslog from other devices, you should check to see if the de
 
 If your device does not have an existing :ref:`elastic-agent` integration, you can still collect standard syslog. Start by going to :ref:`administration` --> Configuration --> firewall.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-firewall.png
+  :target: _images/config-item-firewall.png
 
 Then choose the ``syslog`` option to allow the port through the firewall. If sending syslog to a sensor, please see the Examples in the :ref:`firewall` section. If you need to add custom parsing for those syslog logs, we recommend using :ref:`elasticsearch` ingest parsing.
 

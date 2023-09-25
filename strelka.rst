@@ -45,8 +45,8 @@ Configuration
 
 You can configure Strelka by going to :ref:`administration` --> Configuration --> strelka.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-strelka.png
+  :target: _images/config-item-strelka.png
 
 Diagnostic Logging
 ------------------

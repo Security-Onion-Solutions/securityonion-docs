@@ -10,8 +10,8 @@ Configuration
 
 You can modify nginx configuration by going to :ref:`administration` --> Configuration --> nginx.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-nginx.png
+  :target: _images/config-item-nginx.png
 
 Replacing Default Cert
 ----------------------

@@ -70,8 +70,8 @@ Disable the SID
 
 You can disable a SID by going to :ref:`administration` --> Configuration --> idstools --> sids --> disabled.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-idstools.png
+  :target: _images/config-item-idstools.png
 
 If you want to disable multiple rules at one time, you can use regular expressions. For example, to disable all rules that contain ``heartbleed``:
 

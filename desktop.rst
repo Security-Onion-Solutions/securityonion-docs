@@ -34,8 +34,8 @@ You can optionally join your Desktop installation to your grid. This allows it t
 
 If you choose not to join your Desktop installation to your grid, then you may need to allow the traffic through the host-based :ref:`firewall` by going to :ref:`administration` --> Configuration --> firewall.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-firewall.png
+  :target: _images/config-item-firewall.png
 
 **Disabling**
 

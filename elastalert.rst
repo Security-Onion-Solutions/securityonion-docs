@@ -14,8 +14,8 @@ Configuration
 
 You can modify ElastAlert configuration by going to :ref:`administration` --> Configuration --> elastalert.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-elastalert.png
+  :target: _images/config-item-elastalert.png
 
 ElastAlert Rules
 ----------------

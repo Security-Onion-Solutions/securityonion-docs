@@ -48,8 +48,8 @@ Configuration
 
 You can configure Stenographer by going to :ref:`administration` --> Configuration --> pcap. 
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-pcap.png
+  :target: _images/config-item-pcap.png
 
 For example, suppose you want to change the default value for purging old pcap. You could go to :ref:`administration` --> Configuration --> pcap --> config --> diskfreepercentage and set the value to something appropriate for your system.
 

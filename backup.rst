@@ -12,8 +12,8 @@ Here is what gets backed up automatically:
 
 You can configure backups by going to :ref:`administration` --> Configuration --> backup. 
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-backup.png
+  :target: _images/config-item-backup.png
 
 Elasticsearch
 -------------

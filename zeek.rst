@@ -27,8 +27,8 @@ Configuration
 
 You can configure Zeek by going to :ref:`administration` --> Configuration --> zeek. 
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-zeek.png
+  :target: _images/config-item-zeek.png
 
 HOME_NET
 --------

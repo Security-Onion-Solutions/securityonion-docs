@@ -10,8 +10,8 @@ Example: pfSense
 
 Security Onion includes :ref:`elasticsearch` ingest parsers for pfSense firewall logs. To enable this, first allow the traffic through the firewall by going to :ref:`administration` --> Configuration --> firewall. 
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-firewall.png
+  :target: _images/config-item-firewall.png
    
 Then configure your pfSense firewall to send syslog to the IP address of your Security Onion box. If you are using pfSense 2.6.0 or higher, make sure that ``Log Message Format`` is set to ``BSD (RFC 3164, default)``. You should then be able to see your firewall logs using the ``Firewall`` query in :ref:`dashboards` or :ref:`hunt`.
 

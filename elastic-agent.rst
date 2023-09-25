@@ -14,8 +14,8 @@ Deployment
 
 To deploy an Elastic agent to an endpoint, go to the :ref:`soc` :ref:`downloads` page and download the proper Elastic agent for the operating system of that endpoint. Don't forget to allow the agent to connect through the firewall by going to :ref:`administration` --> Configuration --> firewall.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-firewall.png
+  :target: _images/config-item-firewall.png
 
 .. note::
 

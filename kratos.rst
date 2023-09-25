@@ -10,8 +10,8 @@ Configuration
 
 You can configure Kratos by going to :ref:`administration` --> Configuration --> kratos.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-kratos.png
+  :target: _images/config-item-kratos.png
 
 More Information
 ----------------
