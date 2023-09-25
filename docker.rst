@@ -24,14 +24,6 @@ Elastic
 
 To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co.
 
-Configuration
--------------
-
-You can modify Docker configuration by going to :ref:`administration` --> Configuration --> docker.
-
-.. image:: images/config-item-docker.png
-  :target: _images/config-item-docker.png
-
 Images
 ------
 
