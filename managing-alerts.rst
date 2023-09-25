@@ -65,13 +65,18 @@ There are multiple ways to handle overly productive signatures and we'll try to 
 
 	Check out our NIDS tuning video at https://youtu.be/1jEkFIEUCuI!
 	
+Managing SIDs
+-------------
+
+You can disable, modify, or threshold alerts by going to :ref:`administration` --> Configuration --> idstools.
+
+.. image:: images/config-item-idstools.png
+  :target: _images/config-item-idstools.png
+
 Disable the SID
 ---------------
 
 You can disable a SID by going to :ref:`administration` --> Configuration --> idstools --> sids --> disabled.
-
-.. image:: images/config-item-idstools.png
-  :target: _images/config-item-idstools.png
 
 If you want to disable multiple rules at one time, you can use regular expressions. For example, to disable all rules that contain ``heartbleed``:
 

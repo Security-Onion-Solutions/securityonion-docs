@@ -144,7 +144,7 @@ Community ID
 Configuration
 -------------
 
-You can configure Elasticsearch by going to :ref:`administration`, then Configuration, and then ``elasticsearch``.
+You can configure Elasticsearch by going to :ref:`administration` --> Configuration --> elasticsearch.
 
 .. image:: images/config-item-elasticsearch.png
   :target: _images/config-item-elasticsearch.png
