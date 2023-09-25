@@ -65,29 +65,26 @@ There are multiple ways to handle overly productive signatures and we'll try to 
 
 	Check out our NIDS tuning video at https://youtu.be/1jEkFIEUCuI!
 	
-Managing SIDs
--------------
-
 You can disable, modify, or threshold alerts by going to :ref:`administration` --> Configuration --> idstools.
 
 .. image:: images/config-item-idstools.png
   :target: _images/config-item-idstools.png
 
-Disable the SID
----------------
+Disable the alert
+-----------------
 
-You can disable a SID by going to :ref:`administration` --> Configuration --> idstools --> sids --> disabled.
+You can disable an alert by going to :ref:`administration` --> Configuration --> idstools --> sids --> disabled.
 
-If you want to disable multiple rules at one time, you can use regular expressions. For example, to disable all rules that contain ``heartbleed``:
+If you want to disable multiple alerts at one time, you can use regular expressions. For example, to disable all alerts that contain ``heartbleed``:
 
 ::
 
          re:heartbleed
 
-Modify the SID
---------------
+Modify the alert
+----------------
 
-You can modify a SID by going to :ref:`administration` --> Configuration --> idstools --> sids --> modify.
+You can modify an alert by going to :ref:`administration` --> Configuration --> idstools --> sids --> modify.
 
 To include an escaped ``$`` character in the regex pattern you'll need to make sure it's properly escaped. For example, if you want to modify SID 2009582 and change ``$EXTERNAL_NET`` to ``$HOME_NET``:
 
@@ -97,8 +94,8 @@ To include an escaped ``$`` character in the regex pattern you'll need to make s
 	
 The first string is a regex pattern, while the second is just a raw value. You'll need to ensure the first of the two properly escapes any characters that would be interpreted by regex. The second only needs the ``$`` character escaped to prevent bash from treating that as a variable.
 
-Rewrite the signature
----------------------
+Rewrite the alert
+-----------------
 
 In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. You can add local rules by going to :ref:`administration` --> Configuration --> idstools --> rules --> Local Rules.
 
@@ -107,7 +104,7 @@ After pasting the rule, you may want to bump the SID into the 90,000,000 range a
 Threshold
 ---------
 
-Thresholds, rate filters, and suppressions allow you to make finer grained decisions about certain rules without having to rewrite them. The most common is a suppression which allows you to suppress alerts by specifying the SID, whether you want to track by source/destination/either, and the IP address or subnet. This way, you can still have certain rules enabled, but the situations in which they alert are limited. It's important to note that with this functionality, care should be given to the thresholds being written to make sure they do not suppress legitimate alerts. You can learn more about Suricata thresholds at https://docs.suricata.io/en/suricata-6.0.0/configuration/global-thresholds.html.
+Thresholds, rate filters, and suppressions allow you to make finer grained decisions about certain alerts without having to rewrite them. The most common is a suppression which allows you to suppress alerts by specifying the SID, whether you want to track by source/destination/either, and the IP address or subnet. This way, you can still have certain alerts enabled, but the situations in which they alert are limited. It's important to note that with this functionality, care should be given to the thresholds being written to make sure they do not suppress legitimate alerts. You can learn more about Suricata thresholds at https://docs.suricata.io/en/suricata-6.0.0/configuration/global-thresholds.html.
 
 You can manage threshold entries for :ref:`suricata` by going to :ref:`administration` --> Configuration --> suricata --> thresholding --> SIDS.
 
