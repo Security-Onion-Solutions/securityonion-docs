@@ -7,6 +7,7 @@ Release Notes
 -------------------------
 
 - FEATURE: Add ingest parser for pfSense OpenVPN logs `#7656 <https://github.com/Security-Onion-Solutions/securityonion/issues/7656>`_
+- FEATURE: Add new so-log-check tool to scan SO logging for anomalies
 - FEATURE: Enable Analyzers to be managed through SOC `#11211 <https://github.com/Security-Onion-Solutions/securityonion/issues/11211>`_
 - FEATURE: Grid screen improvements; support for desktop nodes
 - FEATURE: Provide global replica value for index templates `#10998 <https://github.com/Security-Onion-Solutions/securityonion/issues/10998>`_
@@ -35,7 +36,6 @@ Release Notes
 - FIX: Prevent repeated creation of unused Docker volumes `#9941 <https://github.com/Security-Onion-Solutions/securityonion/issues/9941>`_
 - FIX: Remove OSSEC and add Playbook mappings for the SOC Alerts Event Table `#11015 <https://github.com/Security-Onion-Solutions/securityonion/issues/11015>`_
 - FIX: Remove default component templates to prevent conflicts `#11260 <https://github.com/Security-Onion-Solutions/securityonion/issues/11260>`_
-- FIX: Review log permissions in /nsm
 - FIX: SOC Config pcap doc links should point to steno docs `#11302 <https://github.com/Security-Onion-Solutions/securityonion/issues/11302>`_
 - FIX: SOC Config sensoroni doc links should point to correct docs `#11362 <https://github.com/Security-Onion-Solutions/securityonion/issues/11362>`_
 - FIX: SOC Grid Import inconsistency with larger files `#11143 <https://github.com/Security-Onion-Solutions/securityonion/issues/11143>`_
@@ -45,6 +45,7 @@ Release Notes
 - FIX: Update firewall docs for custom port and host groups `#11053 <https://github.com/Security-Onion-Solutions/securityonion/issues/11053>`_
 - FIX: osquery not working on macOS
 - FIX: so-import-evtx incorrect dates `#11332 <https://github.com/Security-Onion-Solutions/securityonion/issues/11332>`_
+- FIX: so-salt-minion-check not rendering as jinja `#11390 <https://github.com/Security-Onion-Solutions/securityonion/issues/11390>`_
 - UPGRADE: Kratos to v1.0.0
 - UPGRADE: Suricata 6.0.14 `#11319 <https://github.com/Security-Onion-Solutions/securityonion/issues/11319>`_
 - UPGRADE: Zeek 5.0.10 `#11301 <https://github.com/Security-Onion-Solutions/securityonion/issues/11301>`_
