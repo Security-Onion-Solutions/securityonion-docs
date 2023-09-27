@@ -121,7 +121,7 @@ A forward node runs sensor components only, and forwards metadata to the manager
 
 - CPU: Used for analyzing and storing network traffic. As monitored bandwidth increases, a greater amount of CPU will be required. See below.
 - RAM: Used for write cache and processing traffic.
-- Disk: Used for storage of PCAP and metadata . A larger amount of storage allows for a longer retention period.
+- Disk: Used for storage of PCAP and metadata. A larger amount of storage allows for a longer retention period.
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
@@ -130,7 +130,7 @@ Heavy Node (Sensor with ES components)
 
 A heavy node runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through Kibana, the manager node queries this node's Elasticsearch instance.
 
-- CPU: Used to parse incoming events, index incoming events, search metadata . As monitored bandwidth (and the amount of overall data/events) increases, a greater amount of CPU will be required.
+- CPU: Used to parse incoming events, index incoming events, search metadata. As monitored bandwidth (and the amount of overall data/events) increases, a greater amount of CPU will be required.
 - RAM: Used for Logstash , Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
 - Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
 
