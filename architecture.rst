@@ -96,7 +96,7 @@ A manager search node runs the following components:
 Forward Node
 ~~~~~~~~~~~~
 
-A ``forward node`` is a sensor that forwards all logs via :ref:`elastic-agent` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node).
+A ``forward node`` forwards alerts and logs from :ref:`suricata` and :ref:`zeek` via :ref:`elastic-agent` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). Full packet capture recorded by :ref:`stenographer` remains on the forward node itself.
 
 Forward nodes run the following components:
 
