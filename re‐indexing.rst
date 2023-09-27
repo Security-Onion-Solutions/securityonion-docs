@@ -21,7 +21,7 @@ Make the script executable:
 
    sudo chmod +x so-elastic-reindex
 
-Re-index all indices matching ``logstash-*``, pulling the appropriate ``refresh_interval`` from the template named ``logstash`` in Elasticsearch:
+Re-index all indices matching ``logstash-*``, pulling the appropriate ``refresh_interval`` from the template named ``logstash`` in :ref:`elasticsearch`:
 
 ::
 

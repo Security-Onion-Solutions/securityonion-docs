@@ -3,7 +3,7 @@
 Zeek Fields
 ===========
 
-Zeek logs are sent to Elasticsearch where they are parsed using ingest parsing. Most Zeek logs have a few standard fields and they are parsed as follows:
+Zeek logs are sent to :ref:`elasticsearch` where they are parsed using ingest parsing. Most Zeek logs have a few standard fields and they are parsed as follows:
 
 | ts => @timestamp
 | uid => log.id.uid

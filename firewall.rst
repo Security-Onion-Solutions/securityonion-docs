@@ -64,8 +64,8 @@ Elastic Agent:
 
 Search nodes from/to manager:
 
-- TCP/9300 - Node-to-node for Elasticsearch
-- TCP/9696 - Redis
+- TCP/9300 - Node-to-node for :ref:`elasticsearch`
+- TCP/9696 - :ref:`redis`
 
 Host Firewall
 -------------

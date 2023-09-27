@@ -149,7 +149,7 @@ There is also an option to have a **manager node** and one or more **heavy nodes
 
 	Heavy nodes do not consume from the :ref:`redis` queue on the manager. This means that if you just have a manager and heavy nodes, then the :ref:`redis` queue on the manager will grow and never be drained. To avoid this, you have two options. If you are starting a new deployment, you can make your ``manager`` a ``manager search`` so that it will drain its own :ref:`redis` queue. Alternatively, if you have an existing deployment with a ``manager`` and want to avoid rebuilding, then you can add a separate search node (NOT heavy node) to consume from the :ref:`redis` queue on the manager.
 
-Heavy nodes perform sensor duties and store their own logs in their own local Elasticsearch instance. This results in higher hardware requirements and lower performance. Heavy nodes do NOT pull logs from the redis queue on the manager like search nodes do.
+Heavy nodes perform sensor duties and store their own logs in their own local :ref:`elasticsearch` instance. This results in higher hardware requirements and lower performance. Heavy nodes do NOT pull logs from the redis queue on the manager like search nodes do.
 
 Heavy Nodes run the following components:
 
