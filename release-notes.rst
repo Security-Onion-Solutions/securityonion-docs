@@ -46,6 +46,8 @@ Release Notes
 - FIX: Reposync and yara rules shot not run in airgap `#11427 <https://github.com/Security-Onion-Solutions/securityonion/issues/11427>`_
 - FIX: SOC Config pcap doc links should point to steno docs `#11302 <https://github.com/Security-Onion-Solutions/securityonion/issues/11302>`_
 - FIX: SOC Config sensoroni doc links should point to correct docs `#11362 <https://github.com/Security-Onion-Solutions/securityonion/issues/11362>`_
+- FIX: SOC doesn't return user to login page after session expires `#11438 <https://github.com/Security-Onion-Solutions/securityonion/issues/11438>`_
+- FIX: SOC fails to parse incomplete Elastic error response `#11435 <https://github.com/Security-Onion-Solutions/securityonion/issues/11435>`_
 - FIX: SOC Grid Import inconsistency with larger files `#11143 <https://github.com/Security-Onion-Solutions/securityonion/issues/11143>`_
 - FIX: so-import-evtx incorrect dates `#11332 <https://github.com/Security-Onion-Solutions/securityonion/issues/11332>`_
 - FIX: so-salt-minion-check not rendering as jinja `#11390 <https://github.com/Security-Onion-Solutions/securityonion/issues/11390>`_
