@@ -67,8 +67,6 @@ More Information
 
 .. note::
 
-   Check out our BPF video at https://youtu.be/uamNOjtUi4Y!
-
    | For more information about BPF, please see:
    | https://en.wikipedia.org/wiki/Berkeley_Packet_Filter
    | https://biot.com/capstats/bpf.html
