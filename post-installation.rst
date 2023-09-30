@@ -24,7 +24,7 @@ You can also verify services are running from the command line with the :ref:`so
 Adjust firewall rules
 ---------------------
 
-Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to make other adjustments to firewall rules, you can do so by going to :ref:`administration` --> Configuration --> firewall.
+Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to make other adjustments to firewall rules, you can do so by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png

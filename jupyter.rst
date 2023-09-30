@@ -17,7 +17,7 @@ As a best practice, we'll want to create a dedicated Jupyter notebook user with 
 
 **Security Onion Firewall**
 
-In order to allow network-based access to :ref:`elasticsearch`, we'll need to allow the traffic through the host-based firewall by going to :ref:`administration` --> Configuration --> firewall.
+In order to allow network-based access to :ref:`elasticsearch`, we'll need to allow the traffic through the host-based firewall by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png

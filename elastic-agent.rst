@@ -12,14 +12,16 @@ Each Security Onion node uses the Elastic Agent to transport logs to :ref:`elast
 Deployment
 ----------
 
-To deploy an Elastic agent to an endpoint, go to the :ref:`soc` :ref:`downloads` page and download the proper Elastic agent for the operating system of that endpoint. Don't forget to allow the agent to connect through the firewall by going to :ref:`administration` --> Configuration --> firewall.
+.. note::
+
+   In order to receive logs from the Elastic Agent, Security Onion must be running :ref:`logstash`. Evaluation Mode and Import Mode do not run :ref:`logstash`, so you'll need Standalone or a full Distributed Deployment. In a Distributed Deployment, forward nodes do not run :ref:`logstash`, so you'll need to configure agents to send to your manager or receiver nodes. For more information, please see the :ref:`architecture` section.
+
+To deploy an Elastic agent to an endpoint, go to the :ref:`soc` :ref:`downloads` page and download the proper Elastic agent for the operating system of that endpoint. Don't forget to allow the agent to connect through the firewall by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png
 
-.. note::
-
-   In order to receive logs from the Elastic Agent, Security Onion must be running :ref:`logstash`. Evaluation Mode and Import Mode do not run :ref:`logstash`, so you'll need Standalone or a full Distributed Deployment. In a Distributed Deployment, forward nodes do not run :ref:`logstash`, so you'll need to configure agents to send to your manager or receiver nodes. For more information, please see the :ref:`architecture` section.
+Once there, select the ``elastic_agent_endpoint`` option.
 
 Logs
 ----

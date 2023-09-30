@@ -5,7 +5,7 @@ Syslog
 
 If you want to send syslog from other devices, you should check to see if the device has an existing :ref:`elastic-agent` integration. If so, using the :ref:`elastic-agent` integration should provide some parsing by default.
 
-If your device does not have an existing :ref:`elastic-agent` integration, you can still collect standard syslog. Start by going to :ref:`administration` --> Configuration --> firewall.
+If your device does not have an existing :ref:`elastic-agent` integration, you can still collect standard syslog. Start by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png

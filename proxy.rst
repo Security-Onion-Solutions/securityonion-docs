@@ -8,6 +8,8 @@ Setup will ask if you want to connect through a proxy server and, if so, it will
 .. image:: images/config-item-manager.png
   :target: _images/config-item-manager.png
 
+Once there, select the ``proxy`` or ``no_proxy`` options.
+
 General Information
 -------------------
 

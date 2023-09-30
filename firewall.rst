@@ -75,7 +75,7 @@ The remainder of this section will cover the host firewall built into Security O
 Configuration
 -------------
 
-You can configure the firewall by going to :ref:`administration` --> Configuration --> firewall.
+You can configure the firewall by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png
@@ -95,7 +95,7 @@ Function
 
 The firewall state is designed with the idea of creating port groups and host groups, each with their own alias or name, and associating the two in order to create an allow rule. A node that has a port group and host group association assigned to it will allow those hosts to connect to those ports on that node.
 
-The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node by going to :ref:`administration` --> Configuration --> firewall. When setup is run on a new node, it will ask the manager to add itself to the appropriate host groups. All node types are added to the minion host group to allow :ref:`salt` communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
+The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node by going to :ref:`administration` --> Configuration --> firewall --> hostgroups. When setup is run on a new node, it will ask the manager to add itself to the appropriate host groups. All node types are added to the minion host group to allow :ref:`salt` communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
 
 Advanced Firewall Config
 ------------------------
