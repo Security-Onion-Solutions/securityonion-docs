@@ -3,6 +3,7 @@ Jupyter Notebook
 
 Overview
 --------
+
 This section is a brief overview of connecting a Jupyter notebook/server instance to :ref:`elasticsearch` to slice and dice the data as you wish. It will not cover the setup of a Jupyter instance, which has been thoroughly documented (using Docker) at https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html.
 
 Security Onion Setup
@@ -10,19 +11,21 @@ Security Onion Setup
 
 **Create Jupyter User**
 
-As a best practice, we'll want to create a dedicated Jupyter notebook user with just read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
+As a best practice, you'll want to create a dedicated Jupyter notebook user with just read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
 
 .. image:: https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
   :target:  https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
 
 **Security Onion Firewall**
 
-In order to allow network-based access to :ref:`elasticsearch`, we'll need to allow the traffic through the host-based firewall by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
+In order to allow network-based access to :ref:`elasticsearch`, you'll need to allow the traffic through the host-based firewall by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png
 
-Once complete, we should be able to reach the :ref:`elasticsearch` instance. We can confirm connectivity using tools like curl, or Powershell's Test-NetConnection.
+At the top of the page, click the ``Options`` menu and enable the ``Show all configurable settings, including advanced settings.`` option. On the left side, select the ``elasticsearch_rest`` option. On the right side, add your IP address or CIDR blocks and click the checkmark to save.
+
+Once complete, you should be able to connect to the :ref:`elasticsearch` instance. You can confirm connectivity using tools like curl or Powershell's Test-NetConnection.
 
 Jupyter Notebook
 ----------------
