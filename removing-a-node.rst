@@ -10,8 +10,8 @@ Salt
 
 You can remove a node from salt by going to :ref:`administration` --> Grid Members. 
 
-.. image:: images/39_grid.png
-  :target: _images/39_grid.png
+.. image:: images/60_gridmembers.png
+  :target: _images/60_gridmembers.png
    
 Find the Grid Member you would like to remove, click the REVIEW button, and then click the DELETE button.
 
