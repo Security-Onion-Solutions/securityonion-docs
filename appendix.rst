@@ -48,7 +48,7 @@ Make sure docker containers are stopped:
     sudo systemctl restart docker
     sudo docker ps
 
-If there are any reminaing docker processes, stop them (replacing $CONT_ID with the actual ID):
+If there are any remaining docker processes, stop them (replacing $CONT_ID with the actual ID):
 ::
 
     sudo docker stop $CONT_ID
@@ -60,7 +60,7 @@ Unmount /nsm:
     sudo vgchange -an /dev/mapper/nsm
     sudo vgexport /dev/mapper/nsm
 
-Boot the Security Onion 2.4 ISO image, go through the initial OS installation, and reboot.
+Boot the Security Onion 2.4 ISO image, go through the initial OS installation as shown in the :ref:`installation` section, and reboot.
 
 After reboot, cancel setup and change partitioning (replacing /home/user with your desired temporary location):
 ::
