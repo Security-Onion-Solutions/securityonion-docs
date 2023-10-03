@@ -1,7 +1,7 @@
 .. _appendix:
 
-Appendix A: Migrating from 2.3 to 2.4
-=====================================
+Appendix
+========
 
 This appendix provides an overview of the process of migrating from the old Security Onion 2.3 to the new Security Onion 2.4.
 
