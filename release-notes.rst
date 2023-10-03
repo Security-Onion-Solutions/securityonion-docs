@@ -49,6 +49,7 @@ Release Notes
 - FIX: SOC doesn't return user to login page after session expires `#11438 <https://github.com/Security-Onion-Solutions/securityonion/issues/11438>`_
 - FIX: SOC fails to parse incomplete Elastic error response `#11435 <https://github.com/Security-Onion-Solutions/securityonion/issues/11435>`_
 - FIX: SOC Grid Import inconsistency with larger files `#11143 <https://github.com/Security-Onion-Solutions/securityonion/issues/11143>`_
+- FIX: Some packages are installed/removed and upgraded/downgraded every 15min `#11458 <https://github.com/Security-Onion-Solutions/securityonion/issues/11458>`_
 - FIX: so-import-evtx incorrect dates `#11332 <https://github.com/Security-Onion-Solutions/securityonion/issues/11332>`_
 - FIX: so-salt-minion-check not rendering as jinja `#11390 <https://github.com/Security-Onion-Solutions/securityonion/issues/11390>`_
 - FIX: Stop zeek from trying to email reports `#11407 <https://github.com/Security-Onion-Solutions/securityonion/issues/11407>`_
