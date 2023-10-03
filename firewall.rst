@@ -80,7 +80,7 @@ You can configure the firewall by going to :ref:`administration` --> Configurati
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png
 
-If for some reason you can't access :ref:`soc`, you can use the so-firewall command to allow your IP address to connect (replacing ``<IP ADDRESS> with your actual IP address):
+If for some reason you can't access :ref:`soc`, you can use the so-firewall command to allow your IP address to connect (replacing ``<IP ADDRESS>`` with your actual IP address):
 ::
 
     so-firewall includehost analyst <IP ADDRESS>
