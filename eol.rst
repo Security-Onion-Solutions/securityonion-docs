@@ -5,7 +5,8 @@ End Of Life
 
 This page lists End Of Life (EOL) dates for older versions of Security Onion and older components.
 
-Security Onion 2.3 reaches EOL on April 6, 2024.
+| Security Onion 2.3 reaches EOL on April 6, 2024:
+| https://blog.securityonion.net/2023/10/6-month-eol-notice-for-security-onion-23.html
 
 | Ubuntu 18.04 reached End of Ubuntu Standard Support in April 2023:
 | https://blog.securityonion.net/2023/02/ubuntu-1804-reaches-end-of-ubuntu.html
