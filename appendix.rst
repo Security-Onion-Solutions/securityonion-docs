@@ -57,7 +57,7 @@ Make sure docker containers are stopped:
     sudo systemctl restart docker
     sudo docker ps
 
-If there are any remaining docker processes, stop them (replacing $CONT_ID with the actual ID):
+If there are any remaining docker processes, stop them (replacing ``$CONT_ID`` with the actual ID):
 ::
 
     sudo docker stop $CONT_ID
@@ -71,7 +71,7 @@ Unmount /nsm:
 
 Boot the Security Onion 2.4 ISO image, go through the initial OS installation as shown in the :ref:`installation` section, and reboot.
 
-After reboot, cancel setup and change partitioning (replacing /home/user with your desired temporary location):
+After reboot, cancel setup and change partitioning (replacing ``/home/user/`` with your desired temporary location):
 ::
 
     sudo cp -av /nsm/* /home/user/
@@ -97,7 +97,7 @@ Copy the /nsm contents of /home/user/ (or wherever they were copied to) back to 
 
 Run through setup as described in the :ref:`configuration` section.
 
-After setup, get the secrets pillar from /nsm/backup:
+After setup, get the secrets pillar from /nsm/backup (replacing ``2023_08_30`` with the date of your most recent backup):
 ::
 
     tar -xvf /nsm/backup/so-config-backup-2023_08_30.tar opt/so/saltstack/local/pillar/secrets.sls
