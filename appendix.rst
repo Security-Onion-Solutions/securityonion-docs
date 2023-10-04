@@ -29,6 +29,10 @@ If you have reviewed all of the warnings above and still want to attempt migrati
 
 .. warning::
 
+   We recommend trying this process in a test environment before attempting in your production environment.
+
+.. warning::
+
    Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc. Failure to do so could result in an unsuccessful upgrade, requiring a clean installation of Security Onion 2.4.
 
 First, make sure that your 2.3 installation is fully updated via :ref:`soup`:
