@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.4.20 Hotfix [20231012] Changes
+--------------------------------
+
+- FIX: Elastic Defend Integration Policy Corrupted `#11527 <https://github.com/Security-Onion-Solutions/securityonion/issues/11527>`_
+
 2.4.20 [20231006] Changes
 -------------------------
 
