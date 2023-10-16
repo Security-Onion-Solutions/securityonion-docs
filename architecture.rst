@@ -140,6 +140,7 @@ There is also an option to have a **manager node** and one or more **heavy nodes
 
 -  Recommended only if a standard distributed deployment is not possible
 -  Consists of a manager node and one or more heavy nodes
+-  Each heavy node is an independent Elastic cluster that is queried from the manager via cross-cluster search
 
 .. image:: images/diagrams/heavy-distributed.png
    :align: center
