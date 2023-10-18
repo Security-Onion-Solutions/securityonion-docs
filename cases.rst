@@ -210,6 +210,10 @@ Expanding the collapsed row will reveal a more detailed view of the analysis:
 .. image:: images/analyzers-job-details.png
   :target: _images/analyzers-job-details.png
 
+.. warning::
+
+    If you try to run the Malware Hash Registry analyzer but it results in a "Name or service not known" error, then it may be a DNS issue. Folks using 8.8.4.4 or 8.8.8.8 as their DNS resolver have reported this issue. A potential workaround is to switch to another DNS resolver like 1.1.1.1.
+
 Configuring Analyzers
 ~~~~~~~~~~~~~~~~~~~~~
 
