@@ -17,6 +17,8 @@ Authentication
 
 Log into InfluxDB using the same username and password that you use for :ref:`soc`.
 
+Please note that, due to technical limitations, if you change your SOC password via the SOC self-service password change it will not update your password in InfluxDB and so you may want to manually update your password here.
+
 Configuration
 -------------
 
