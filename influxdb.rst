@@ -17,7 +17,7 @@ Authentication
 
 Log into InfluxDB using the same username and password that you use for :ref:`soc`.
 
-If you need to reset your InfluxDB password, an administrator can reset your :ref:`soc` password via the :ref:`administration` interface which will also update your InfluxDB password.
+If you need to reset your InfluxDB password, you can reset your :ref:`soc` password via the :ref:`administration` interface which will also update your InfluxDB password.
 
 Configuration
 -------------
