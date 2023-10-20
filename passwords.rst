@@ -31,7 +31,7 @@ You can change your password in :ref:`soc` by clicking the user icon in the uppe
 .. image:: images/password.png
   :target: _images/password.png
 
-Please note that, due to technical limitations, if you change your SOC password here it will not update your password in :ref:`influxdb` and so you may want to manually update your password there.
+Please note that, due to technical limitations, if you change your SOC password here it will not update your password in :ref:`influxdb`. However, resetting your password via :ref:`administration` will reset your :ref:`influxdb` password.
 
 If you've forgotten your SOC password, an administrator can change it using the :ref:`administration` interface.
 
