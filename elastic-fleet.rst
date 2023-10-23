@@ -157,7 +157,7 @@ The section provides details such as:
 
   - this will be a a local artifact repository if running an airgapped deployment)
 
-.. note::
+.. warning::
 
     We do NOT recommend changing these settings, as they are managed by Security Onion.
 
