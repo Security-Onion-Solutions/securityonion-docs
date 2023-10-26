@@ -33,21 +33,21 @@ Locate the ``provider`` setting in the SOC configuration screen. Specify the val
 In a separate browser tab, login to the Microsoft Azure account you plan to use for the integration. Navigate to the Microsoft Entra ID service and find the ``Tenant ID``, which will resemble a UUID similar to ``abcdef12-1234-abcd-5678-a1b2c3d4e5f6``. 
 
 .. image:: images/oidc/microsoft_tenant_id.png
-  :target: images/oidc/microsoft_tenant_id.png
+  :target: _images/microsoft_tenant_id.png
 
 Locate the ``microsoft_tenant`` setting in the SOC configuration screen back on the SOC browser tab. Specify the UUID value for this setting.
 
 Back in the Azure tab, under the desired Azure Tenant, register a new App named ``Security Onion``. Most organizations will only desire organization accounts to have access to Security Onion so be sure to choose the correct account type option. Failure to choose this correctly could expose your Security Onion installation to users outside of your organization. Specify the web Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click Register, and on the resulting screen find the application ID for this new app registration. It will also resemble a UUID.
 
 .. image:: images/oidc/microsoft_app_registration.png
-  :target: images/oidc/microsoft_app_registration.png
+  :target: _images/microsoft_app_registration.png
 
 Locate the ``client_id`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above application ID for this setting.
 
 Add a new client secret to the app registration created above. Specify the secret name as ``so-oidc`` and choose the expiration that makes the most sense for your organization. If you choose to use a short or medium term expiration, a good practice is to make it very short, so that it forces your rotation processes to be well-known and documented. Choosing a medium expiration of two years will likely cause more trouble when the secret expires and the knowledge of how to resolve it is lost among the administrative team. Copy the generated secret to your clipboard. You will only have this one chance to copy the secret. Returning to this secret later will not provide access to the original secret.
 
 .. image:: images/oidc/microsoft_secret.png
-  :target: images/oidc/microsoft_secret.png
+  :target: _images/microsoft_secret.png
 
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
 
@@ -66,7 +66,7 @@ Locate the ``provider`` setting in the SOC configuration screen. Specify the val
 In a separate browser tab, login to the Google Cloud Console and select or create a project under your Google organization containing the workspace users you plan to use for the integration. Navigate to the Credentials screen and find the add a new OAuth 2.0 Client ID named ``Security Onion``, of type ``Web``. Specify the web Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. 
 
 .. image:: images/oidc/google_client_id.png
-  :target: images/oidc/google_client_id.png
+  :target: _images/google_client_id.png
 
 When the client ID is added a popup will appear with the new Client ID and Secret. These values must be entered into the SOC configuration screen.
 
@@ -84,12 +84,12 @@ Locate the ``provider`` setting in the SOC configuration screen. Specify the val
 In a separate browser tab, login to the GitHub account you plan to use for the integration. Navigate to the Organization Settings and then Developer Settings -> OAuth Apps. Enter ``Security Onion`` for the Application name, the login URL to your SOC grid for the Homepage URL, and optional description, and then the authorization callback URL, which will resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click Register Application.
 
 .. image:: images/oidc/github_app_registration.png
-  :target: images/oidc/github_app_registration.png
+  :target: _images/github_app_registration.png
 
 Once the app is created a new screen will show the newly create OAuth application settings, including the generated client ID and secret. 
 
 .. image:: images/oidc/github_client_id_secret.png
-  :target: images/oidc/github_client_id_secret.png
+  :target: _images/github_client_id_secret.png
 
 Be sure to copy the secret before refreshing or navigating away from this screen. These two values must be entered into the SOC configuration screen.
 
@@ -107,12 +107,12 @@ Locate the ``provider`` setting in the SOC configuration screen. Specify the val
 In a separate browser tab, login to the Auth0 account you plan to use for the integration. Create a new application named ``Security Onion``. After it's created, navigate to the Settings tab. Scroll down to the Application URIs section and enter ``https://<my-soc-base-url>`` for the Application Login URI and Logout URL, and then enter the callback URL, which wiill resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click Save Changes.
 
 .. image:: images/oidc/auth0_urls.png
-  :target: images/oidc/auth0_urls.png
+  :target: _images/auth0_urls.png
 
 Scroll back to the top of the Auth0 Settings page where the Client ID and Secret are shown. 
 
 .. image:: images/oidc/auth0_app.png
-  :target: images/oidc/auth0_app.png
+  :target: _images/auth0_app.png
 
 Be sure to copy the secret before refreshing or navigating away from this screen. These two values must be entered into the SOC configuration screen.
 
@@ -132,7 +132,7 @@ Enabling OIDC
 Finally, enable OIDC by locating the ``enabled`` setting in the SOC configuration and specify the value of ``true`` for this setting. 
 
 .. image:: images/oidc/oidc_enabled.png
-  :target: images/oidc/oidc_enabled.png
+  :target: _images/oidc_enabled.png
 
 .. note::
 
@@ -169,12 +169,12 @@ OIDC Self Service
 Users will continue to have access to their own Security Settings via the User Settings -> Security screen. A user could set a local SOC password via this screen, which would allow logins to SOC for that user without using SSO. After setting a local password, a user could then unlink the SSO account, which would disallow the user from logging in via SSO but still allow the user to login via the local password.
 
 .. image:: images/oidc/oidc_unlink.png
-  :target: images/oidc/oidc_unlink.png
+  :target: _images/oidc_unlink.png
 
 Conversely, locally logged in users that have not logged in via SSO yet can link to their SSO user.
 
 .. image:: images/oidc/oidc_link.png
-  :target: images/oidc/oidc_link.png
+  :target: _images/oidc_link.png
 
 Administrators may choose to disable password logins when using SSO, to ensure all logins must go through the external OIDC provider. On the SOC Configuration screen, enter ``password.enabled`` into the filter to locate that Advanced setting (ensure the "Show all configurable settings" toggle is enabled).
 
@@ -183,7 +183,7 @@ Similarly, the TOTP MFA and Passwordless options can also be disabled, if there 
 When all local authentication methods have been disabled, users will have no security settings to modify in their self-service screen:
 
 .. image:: images/oidc/oidc_sso_only.png
-  :target: images/oidc/oidc_sso_only.png
+  :target: _images/oidc_sso_only.png
 
 External Tools
 --------------
