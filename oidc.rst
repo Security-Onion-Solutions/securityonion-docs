@@ -21,7 +21,7 @@ OIDC configuration can be complex and we recommend taking advantage of the offic
 
 The first step in configuration OIDC is to determine which provider the grid will use, and collecting the required configuration inputs necessary for that specific provider. 
 
-Next, in Security Onion Console, while logged in as an administrator, navigate to the Administration -> Configuration screen and enter ``oidc`` into the filter field. Then click the ``Expand All`` icon.
+Next, in Security Onion Console, while logged in as an administrator, navigate to the Administration -> Configuration screen and enter ``oidc`` into the filter field. Then click the *Expand All* icon.
 
 Review the following instructions for the applicable provider.
 
@@ -37,7 +37,7 @@ In a separate browser tab, login to the Microsoft Azure account you plan to use 
 
 Locate the ``microsoft_tenant`` setting in the SOC configuration screen back on the SOC browser tab. Specify the UUID value for this setting.
 
-Back in the Azure tab, under the desired Azure Tenant, register a new App named ``Security Onion``. Most organizations will only desire organization accounts to have access to Security Onion so be sure to choose the correct account type option. Failure to choose this correctly could expose your Security Onion installation to users outside of your organization. Specify the web Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click Register, and on the resulting screen find the application ID for this new app registration. It will also resemble a UUID.
+Back in the Azure tab, under the desired Azure Tenant, register a new App named ``Security Onion``. Most organizations will only desire organization accounts to have access to Security Onion so be sure to choose the correct account type option. Failure to choose this correctly could expose your Security Onion installation to users outside of your organization. Specify the web Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click *Register*, and on the resulting screen find the application ID for this new app registration. It will also resemble a UUID.
 
 .. image:: images/oidc/microsoft_app_registration.png
   :target: _images/microsoft_app_registration.png
@@ -81,7 +81,7 @@ GitHub
 
 Locate the ``provider`` setting in the SOC configuration screen. Specify the value ``github`` for this setting.
 
-In a separate browser tab, login to the GitHub account you plan to use for the integration. Navigate to the Organization Settings and then Developer Settings -> OAuth Apps. Enter ``Security Onion`` for the Application name, the login URL to your SOC grid for the Homepage URL, and optional description, and then the authorization callback URL, which will resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click Register Application.
+In a separate browser tab, login to the GitHub account you plan to use for the integration. Navigate to the Organization Settings and then Developer Settings -> OAuth Apps. Click the *New Org OAuth App* button. Enter ``Security Onion`` for the Application name, the login URL to your SOC grid for the Homepage URL, and optional description, and then the authorization callback URL, which will resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click *Register Application*.
 
 .. image:: images/oidc/github_app_registration.png
   :target: _images/github_app_registration.png
@@ -104,7 +104,7 @@ Auth0
 
 Locate the ``provider`` setting in the SOC configuration screen. Specify the value ``auth0`` for this setting.
 
-In a separate browser tab, login to the Auth0 account you plan to use for the integration. Create a new application named ``Security Onion``. After it's created, navigate to the Settings tab. Scroll down to the Application URIs section and enter ``https://<my-soc-base-url>`` for the Application Login URI and Logout URL, and then enter the callback URL, which wiill resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click Save Changes.
+In a separate browser tab, login to the Auth0 account you plan to use for the integration. Create a new application named ``Security Onion``. After it's created, navigate to the Settings tab. Scroll down to the Application URIs section and enter ``https://<my-soc-base-url>`` for the Application Login URI and Logout URL, and then enter the callback URL, which wiill resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click *Save Changes*.
 
 .. image:: images/oidc/auth0_urls.png
   :target: _images/auth0_urls.png
@@ -120,7 +120,7 @@ Locate the ``client_id`` setting in the SOC configuration screen back on the SOC
 
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
 
-Back in the Auth0 tab, scroll down to the Advance Settings section, and click on Endpoints. Copy the OAuth Authorization URL, but without the ``/authorize`` path. Locate the ``issuer_url`` setting in the SOC configuration screen back on the SOC browser tab. Paste the copied URL into this setting. It should resemble the following: ``https://dev-xyz123abc456.us.auth0.com``
+Back in the Auth0 tab, scroll down to the Advance Settings section, and click on *Endpoints*. Copy the OAuth Authorization URL, but without the ``/authorize`` path. Locate the ``issuer_url`` setting in the SOC configuration screen back on the SOC browser tab. Paste the copied URL into this setting. It should resemble the following: ``https://dev-xyz123abc456.us.auth0.com``
 
 Next, skip to the :ref:`Enabling OIDC` section to enable the newly configured OIDC authentication.
 
@@ -145,7 +145,7 @@ Finally, enable OIDC by locating the ``enabled`` setting in the SOC configuratio
 Initial Login
 -------------
 
-Upon the first login via OIDC the user will likely be returned back to the login screen. However, clicking on the "Continue with <SSO>" the second time will take the newly linked user to the SOC interface. This additional login click is only required once.
+Upon the first login via OIDC the user will likely be returned back to the login screen. However, clicking on the *Continue with <SSO>* the second time will take the newly linked user to the SOC interface. This additional login click is only required once.
 
 Roles
 -----
@@ -176,7 +176,7 @@ Conversely, locally logged in users that have not logged in via SSO yet can link
 .. image:: images/oidc/oidc_link.png
   :target: _images/oidc_link.png
 
-Administrators may choose to disable password logins when using SSO, to ensure all logins must go through the external OIDC provider. On the SOC Configuration screen, enter ``password.enabled`` into the filter to locate that Advanced setting (ensure the "Show all configurable settings" toggle is enabled).
+Administrators may choose to disable password logins when using SSO, to ensure all logins must go through the external OIDC provider. On the SOC Configuration screen, enter ``password.enabled`` into the filter to locate that Advanced setting (ensure the *Show all configurable settings* toggle is enabled).
 
 Similarly, the TOTP MFA and Passwordless options can also be disabled, if there is a desire to prevent users from altering all local authentication methods. Search for ``totp.enabled`` and ``webauthn.enabled``, respectively, to disable those authentication methods.
 
