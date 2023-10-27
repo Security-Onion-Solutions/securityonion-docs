@@ -63,7 +63,7 @@ Google
 
 Locate the ``provider`` setting in the SOC configuration screen. Specify the value ``google`` for this setting.
 
-In a separate browser tab, login to the Google Cloud Console and select or create a project under your Google organization containing the workspace users you plan to use for the integration. Navigate to the Credentials screen and find the add a new OAuth 2.0 Client ID named ``Security Onion``, of type ``Web``. Specify the web Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. 
+In a separate browser tab, login to the Google Cloud Console and select or create a project under your Google organization containing the workspace users you plan to use for the integration. Navigate to the Credentials screen and add a new OAuth 2.0 Client ID named ``Security Onion``, of type ``Web``. Specify the web Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. 
 
 .. image:: images/oidc/google_client_id.png
   :target: _images/google_client_id.png
