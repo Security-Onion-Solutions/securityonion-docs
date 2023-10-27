@@ -161,7 +161,7 @@ Users created via an OIDC login should not have their credentials managed within
 
 .. note::
 
-    Authentication relates to obtaining access to a system, whereas authentication relates to permissions a user has within the system. While *authentication* settings of OIDC users should not be managed within SOC, *authorization* settings can be managed within SOC for OIDC users. See the :ref:`Roles` section above for more information about granting roles to OIDC users.
+    Authentication relates to obtaining access to a system, whereas authorization relates to permissions a user has within the system. While *authentication* settings of OIDC users should not be managed within SOC, *authorization* settings can be managed within SOC for OIDC users. See the :ref:`Roles` section above for more information about granting roles to OIDC users.
 
 OIDC Self Service
 -----------------
