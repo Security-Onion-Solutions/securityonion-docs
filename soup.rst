@@ -9,6 +9,10 @@ soup
 
 	sudo soup
 
+.. note::
+
+	Upgrading from Security Onion 2.3 to Security Onion 2.4 is not supported via ``soup``, as the new version is a major change, including a new operating system. More information on the upgrade process can be found in the Security Onion 2.4 documentation: https://docs.securityonion.net/en/2.4/appendix.html
+
 If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then check for other updates. This includes Security Onion version updates, Security Onion hotfixes, and operating system (OS) updates.
 
 After running ``soup`` or rebooting a Security Onion node, it may take a few minutes for services to display an ``OK`` status when running :ref:`so-status`. This may be due to the intial on-boot :ref:`salt` highstate running. If services do not appear to be fully up and running within 15 minutes, try running the following command:
