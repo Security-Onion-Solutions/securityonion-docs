@@ -4,7 +4,7 @@ Release Notes
 =============
 
 2.3.270 [20231006] Changes
-----------------------
+--------------------------
 
 - FIX: Prevent repeated creation of unused Docker volumes `#11354 <https://github.com/Security-Onion-Solutions/securityonion/issues/11354>`_
 - FIX: Support filtering against multiple groupby charts `#10856 <https://github.com/Security-Onion-Solutions/securityonion/issues/10856>`_

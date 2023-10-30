@@ -65,3 +65,11 @@ If the value for ``beacon.score`` in a ``beacon`` record equals ``1``, an alert 
 
 .. image:: images/rita-alert.png
  :target: _images/rita-alert.png
+
+Related Information
+===================
+.. toctree::
+   :maxdepth: 2
+
+   rita
+   endgame

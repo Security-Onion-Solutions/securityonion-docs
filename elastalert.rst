@@ -72,11 +72,6 @@ Then create a new file called ``/opt/so/rules/elastalert/smtp_auth_file.txt`` an
     user: youremail@gmail.com
     password: yourpassword   
 
-MISP
-~~~~
-
-Please see the :ref:`misp` section.
-
 so-elastalert-create
 ~~~~~~~~~~~~~~~~~~~~
 
