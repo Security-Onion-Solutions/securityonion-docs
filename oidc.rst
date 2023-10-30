@@ -51,7 +51,7 @@ Add a new client secret to the app registration created above. Specify the secre
 
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
 
-Next, skip to the :ref:`Enabling OIDC` section to enable the newly configured OIDC authentication.
+Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
 Active Directory (Self-hosted)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,7 +74,7 @@ Locate the ``client_id`` setting in the SOC configuration screen back on the SOC
 
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
 
-Next, skip to the :ref:`Enabling OIDC` section to enable the newly configured OIDC authentication.
+Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
 GitHub
 ^^^^^^
@@ -97,7 +97,7 @@ Locate the ``client_id`` setting in the SOC configuration screen back on the SOC
 
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
 
-Next, skip to the :ref:`Enabling OIDC` section to enable the newly configured OIDC authentication.
+Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
 Auth0
 ^^^^^
@@ -122,9 +122,7 @@ Locate the ``client_secret`` setting in the SOC configuration screen back on the
 
 Back in the Auth0 tab, scroll down to the Advance Settings section, and click on *Endpoints*. Copy the OAuth Authorization URL, but without the ``/authorize`` path. Locate the ``issuer_url`` setting in the SOC configuration screen back on the SOC browser tab. Paste the copied URL into this setting. It should resemble the following: ``https://dev-xyz123abc456.us.auth0.com``
 
-Next, skip to the :ref:`Enabling OIDC` section to enable the newly configured OIDC authentication.
-
-.. _Enabling OIDC
+Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
 Enabling OIDC
 ^^^^^^^^^^^^^
@@ -140,7 +138,7 @@ Finally, enable OIDC by locating the ``enabled`` setting in the SOC configuratio
 
 .. warning::
 
-    Once OIDC is enabled, any user of the selected external identity provider will be able to login to SOC, provided they have network access to do so. However, once logged in the new user will have no assigned roles and cannot view or modify sensitive SOC data. See the :ref:`Roles` section below for more information.
+    Once OIDC is enabled, any user of the selected external identity provider will be able to login to SOC, provided they have network access to do so. However, once logged in the new user will have no assigned roles and cannot view or modify sensitive SOC data. See the *Roles* section below for more information.
 
 Initial Login
 -------------
@@ -161,7 +159,7 @@ Users created via an OIDC login should not have their credentials managed within
 
 .. note::
 
-    Authentication relates to obtaining access to a system, whereas authorization relates to permissions a user has within the system. While *authentication* settings of OIDC users should not be managed within SOC, *authorization* settings can be managed within SOC for OIDC users. See the :ref:`Roles` section above for more information about granting roles to OIDC users.
+    Authentication relates to obtaining access to a system, whereas authorization relates to permissions a user has within the system. While *authentication* settings of OIDC users should not be managed within SOC, *authorization* settings can be managed within SOC for OIDC users. See the *Roles* section above for more information about granting roles to OIDC users.
 
 OIDC Self Service
 -----------------
