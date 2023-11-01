@@ -8,7 +8,7 @@ Grid
 .. image:: images/39_grid.png
   :target: _images/39_grid.png
 
-Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that shows the sum of all Consumption EPS measurements in the entire grid. Below that you will find a list of all nodes in your grid.
+Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that shows the sum of all EPS measurements in the entire grid. Below that you will find a list of all nodes in your grid.
 
 .. note::
 
@@ -26,10 +26,10 @@ Online Since
 
 The ``Online Since`` field shows how long the node has been online.
 
-Consumption EPS
-~~~~~~~~~~~~~~~
+EPS
+~~~
 
-The ``Consumption EPS`` field is how much a search node is consuming. 
+The ``EPS`` field is the number of Events Per Second.
 
 Process Status
 ~~~~~~~~~~~~~~
