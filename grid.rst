@@ -26,11 +26,6 @@ Online Since
 
 The ``Online Since`` field shows how long the node has been online.
 
-Production EPS
-~~~~~~~~~~~~~~
-
-The ``Production EPS`` field is how much a node is producing. This is taken from the number of events out in :ref:`elastic-agent`.
-
 Consumption EPS
 ~~~~~~~~~~~~~~~
 
