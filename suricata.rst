@@ -60,9 +60,7 @@ If you have multiple physical CPUs, you’ll most likely want to pin sniffing pr
 Thresholding
 ------------
 
-To edit the thresholding configuration, go to :ref:`administration` --> Configuration --> suricata --> thresholding --> SIDS.
-
-Reference the example files at https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.usage and https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.example.
+To edit the thresholding configuration, please see the :ref:`managing-alerts` section.
 
 Metadata
 --------
