@@ -16,25 +16,25 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 
 Minimum Specs for Import and Eval Modes
 ---------------------------------------
-If you just want to import a pcap or evtx file using the :ref:`grid` page, then you can configure Security Onion as an Import Node with the following minimum specs:
 
- - 4GB RAM
- - 2 CPU cores
- - 200GB storage
-
-For Eval mode the minimum specs for running Security Onion are:
-
- - 12GB RAM
- - 4 CPU cores
- - 200GB storage
-
-.. note::
-
-   These minimum specs are for Import or EVAL modes with minimal services running. These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
+================       ====== ===== ========= ======   
+ Node Type              CPUs   RAM   Storage   NICs  
+================       ====== ===== ========= ======     
+Import                    2    4GB    50GB      1
+Eval                      4    12GB   200GB     2
+Standalone                4    16GB   200GB     2
+Manager                   4    16GB   200GB     1
+ManagerSearch             8    16GB   200GB     1
+Searchnode                4    16GB   200GB     1
+Heavynode                 4    16GB   200GB     2
+IDH                       2    1GB    12GB      1
+Fleet                     4    12GB   200GB     1
+Receiver                  2    8GB    200GB     1
+================       ====== ===== ========= ======   
 
 Production Deployments
 ----------------------
-For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
+For best results, we recommend purchasing new hardware that meets the hardware requirements detailed above.
 
 .. tip::
 
