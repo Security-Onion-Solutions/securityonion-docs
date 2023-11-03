@@ -114,7 +114,7 @@ Integrations
     - zscaler_zia
     - zscaler_zpa
 
-Security Onion 2.4.30 supports these additional Elastic integrations:
+    Security Onion 2.4.30 supports these additional Elastic integrations:
 
     - auth0
     - carbonblack_edr
