@@ -58,7 +58,7 @@ For example, to forward all :ref:`zeek` events from the ``dns`` dataset, we coul
 ::
 
             output {
-              if [module] =~ "zeek" and [dataset] =~ "dns" {
+              if [event][module] == "zeek" and [pipeline] == "dns" {
                 udp {
                   id => "cloned_events_out"
                   host => "192.168.x.x"
