@@ -14,8 +14,10 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 
    We do not support ARM or any other non-x86-64 processors!
 
-Minimum Specs for Import and Eval Modes
----------------------------------------
+Minimum Specs
+-------------
+
+Please note these are the absolute bare minimum requirements. Your requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
 
 ================       ====== ===== ========= ======   
  Node Type              CPUs   RAM   Storage   NICs  
@@ -34,7 +36,8 @@ Receiver                  2    8GB    200GB     1
 
 Production Deployments
 ----------------------
-For best results, we recommend purchasing new hardware that meets the hardware requirements detailed above.
+
+For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
 
 .. tip::
 
