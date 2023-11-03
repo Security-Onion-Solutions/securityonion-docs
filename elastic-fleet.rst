@@ -114,6 +114,23 @@ Integrations
     - zscaler_zia
     - zscaler_zpa
 
+    Security Onion 2.4.30 supports these additional Elastic integrations:
+
+    - auth0
+    - carbonblack_edr
+    - checkpoint
+    - cisco_duo
+    - cisco_meraki
+    - cisco_umbrella
+    - fireeye
+    - mimecast
+    - pulse_connect_secure
+    - snyk
+    - sophos
+    - sophos_central
+    - tenable_sc
+    - vsphere
+
 You can read more about Elastic integrations at https://docs.elastic.co/integrations.
 
 Adding an Integration
