@@ -14,27 +14,27 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 
    We do not support ARM or any other non-x86-64 processors!
 
-Minimum Specs
--------------
-If you just want to import a pcap or evtx file using the :ref:`grid` page, then you can configure Security Onion as an Import Node with the following minimum specs:
+Minimum Specs for Import and Eval Modes
+---------------------------------------
 
- - 4GB RAM
- - 2 CPU cores
- - 200GB storage
-
-For all other configurations, the minimum specs for running Security Onion are:
-
- - 12GB RAM
- - 4 CPU cores
- - 200GB storage
-
-.. note::
-
-   These minimum specs are for EVAL mode with minimal services running. These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
+================       ====== ===== ========= ======   
+ Node Type              CPUs   RAM   Storage   NICs  
+================       ====== ===== ========= ======     
+Import                    2    4GB    50GB      1
+Eval                      4    12GB   200GB     2
+Standalone                4    16GB   200GB     2
+Manager                   4    16GB   200GB     1
+ManagerSearch             8    16GB   200GB     1
+Searchnode                4    16GB   200GB     1
+Heavynode                 4    16GB   200GB     2
+IDH                       2    1GB    12GB      1
+Fleet                     4    12GB   200GB     1
+Receiver                  2    8GB    200GB     1
+================       ====== ===== ========= ======   
 
 Production Deployments
 ----------------------
-For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
+For best results, we recommend purchasing new hardware that meets the hardware requirements detailed above.
 
 .. tip::
 
@@ -71,7 +71,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Standalone Deployments
 ----------------------
 
-In a standalone deployment, the manager components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. You'll need at minimum 24GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 24GB RAM, you would most likely need swap space to avoid issues.
+In a standalone deployment, the manager components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. You'll need at minimum 16GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 16GB RAM, you will need swap space to avoid issues. We recommend a minimum of 24GB of RAM if you plan on monitoring traffic. The more traffic you plan on monitoring this RAM requirement will also increase. 
 
 This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
@@ -128,7 +128,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Heavy Node (Sensor with Elasticsearch components)
 -------------------------------------------------
 
-A heavy node runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through :ref:`kibana`, the manager node queries this node's :ref:`elasticsearch` instance.
+A heavy node runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through :ref:`kibana`, the manager node queries this node's :ref:`elasticsearch` instance. You'll need at minimum 16GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 16GB RAM, you will need swap space to avoid issues. We recommend a minimum of 24GB of RAM if you plan on monitoring traffic. The more traffic you plan on monitoring this RAM requirement will also increase.
 
 - CPU: Used to parse incoming events, index incoming events, and search metadata. As monitored bandwidth (and the amount of overall data/events) increases, a greater amount of CPU will be required.
 - RAM: Used for :ref:`logstash`, :ref:`elasticsearch`, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
