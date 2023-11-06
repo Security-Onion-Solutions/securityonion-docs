@@ -3,6 +3,40 @@
 Release Notes
 =============
 
+2.4.30 [20231107] Changes
+-------------------------
+
+- FEATURE: Additional Supported Integrations `#11513 <https://github.com/Security-Onion-Solutions/securityonion/issues/11513>`_
+- FEATURE: Dedicated Fleet node should have an nginx entry and cert that works for /artifacts
+- FEATURE: OpenID Connect (OIDC) support
+- FEATURE: so-elastic-fleet-reset `#11697 <https://github.com/Security-Onion-Solutions/securityonion/issues/11697>`_
+- FEATURE: Sublime Platform Integration `#11579 <https://github.com/Security-Onion-Solutions/securityonion/issues/11579>`_
+- FIX: Add the socore user to the Suricata container and adjust perms 
+- FIX: Add -watch to soctopus saltstate for file SOCtopus.conf. Makes container restart @ highstate if file is updated. `#11700 <https://github.com/Security-Onion-Solutions/securityonion/issues/11700>`_
+- FIX: Allow ICMP to allow a node to respond to ping `#11495 <https://github.com/Security-Onion-Solutions/securityonion/issues/11495>`_
+- FIX: Allow standalone install type to work with 16GB of ram `#11699 <https://github.com/Security-Onion-Solutions/securityonion/issues/11699>`_
+- FIX: Allow the setting up of data_warm to the nodes list in ES
+- FIX: Data not returned from mine for network.ip_addrs `#11502 <https://github.com/Security-Onion-Solutions/securityonion/issues/11502>`_
+- FIX: Delete all obsolete scripts and unused code (also check so-setup, so-functions)
+- FIX: Fail so-setup if Elastic Fleet Setup encounters an error `#11696 <https://github.com/Security-Onion-Solutions/securityonion/issues/11696>`_
+- FIX: Global BPF prevents new sensor from applying highstate `#11610 <https://github.com/Security-Onion-Solutions/securityonion/issues/11610>`_
+- FIX: Improve error handling of Elasticsearch pipeline and template load scripts `#11728 <https://github.com/Security-Onion-Solutions/securityonion/issues/11728>`_
+- FIX: Logs not parsed correctly when shipped from Fleet Node `#11698 <https://github.com/Security-Onion-Solutions/securityonion/issues/11698>`_
+- FIX: Only heavy nodes should be treated as remote Elastic clusters in SOC `#11553 <https://github.com/Security-Onion-Solutions/securityonion/issues/11553>`_
+- FIX: Reduce ISO size `#11510 <https://github.com/Security-Onion-Solutions/securityonion/issues/11510>`_
+- FIX: Set days for warm for all so-* indices
+- FIX: Show container download status during soup `#11550 <https://github.com/Security-Onion-Solutions/securityonion/issues/11550>`_
+- FIX: Sigma DNS mapping `#11498 <https://github.com/Security-Onion-Solutions/securityonion/issues/11498>`_
+- FIX: Suricata 7 pkt_src field needs to be parsed `#11566 <https://github.com/Security-Onion-Solutions/securityonion/issues/11566>`_
+- FIX: The values for specific nodes in zeek.config.local.load are being populated incorrectly `#11472 <https://github.com/Security-Onion-Solutions/securityonion/issues/11472>`_
+- UPGRADE: NetworkMiner 2.8.1 `#11457 <https://github.com/Security-Onion-Solutions/securityonion/issues/11457>`_
+- UPGRADE: Salt 3006.3 `#11529 <https://github.com/Security-Onion-Solutions/securityonion/issues/11529>`_
+- UPGRADE: Sophos Integration `#11548 <https://github.com/Security-Onion-Solutions/securityonion/issues/11548>`_
+- UPGRADE: Upgrade Elastic to 8.10.4
+- UPGRADE: Upgrade InfluxDB to 2.7.1 and Telegraf to 1.28.2
+- UPGRADE: Upgrade Suricata to 7.0.2
+- UPGRADE: Zeek 6.0.2
+
 2.4.20 Hotfix [20231012] Changes
 --------------------------------
 
