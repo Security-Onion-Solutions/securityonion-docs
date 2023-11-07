@@ -53,6 +53,64 @@ For example, the ``SO-Grid-Nodes`` agent policy is comprised of the following in
 - system-grid-nodes (``System`` integration)
 - zeek-logs (``Custom Logs`` integration)
 
+Agent Polices - endpoints-initial
+~~~~~~~~~~~~~~
+Agent installers downloaded from SOC --> Downloads, are deployed using the ``endpoints-initial`` Agent Policy. This policy includes the following integrations:
+
+elastic-defend-endpoints (``Elastic Defend`` integration)
+The Elastic Defend integration has both free and paid features. By default, only the following free features are enabled:
+
+Event Collection - Windows
+
+- Credential Access
+- DLL and Driver Load
+- DNS
+- File
+- Network
+- Process
+- Registry
+- Security
+
+Event Collection - macOS
+
+- File
+- Process
+- Network
+
+Event Collection - Linux
+
+- File
+- Network
+- Process
+
+osquery-endpoints (``Osquery Manager`` integration)
+The Osquery Manager integration runs osquery as a daemon on the endpoint, and makes the endpoint available for Live or Scheduled queries through the Osquery manager interface in Kibana.
+
+system-endpoints (``System`` integration)
+The ``System`` integration collects the following logs from the endpoint, where applicable:
+
+- System auth logs
+    - ``/var/log/auth.log*``
+    - ``/var/log/secure*``
+- Syslog logs
+    - ``/var/log/messages*``
+    - ``/var/log/syslog*``
+    - ``/var/log/system*``
+- Windows Event Log - Application channel
+- Windows Event Log - Security channel
+- Windows Event Log - System channel
+
+
+windows-endpoints (``Windows`` integration)
+The ``Windows`` integration collects the following logs from the endpoint, where applicable:
+
+Windows Event Log:
+- ForwardedEvents channel
+- Windows Powershell channel
+- Microsoft-Windows-Powershell/Operational channel
+- Microsoft-Windows-Sysmon/Operational channel
+
+
 Integrations
 ~~~~~~~~~~~~
 
