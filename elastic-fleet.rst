@@ -58,6 +58,7 @@ Agent Polices - endpoints-initial
 Agent installers downloaded from SOC --> Downloads, are deployed using the ``endpoints-initial`` Agent Policy. This policy includes the following integrations:
 
 elastic-defend-endpoints (``Elastic Defend`` integration)
+
 The Elastic Defend integration has both free and paid features. By default, only the following free features are enabled:
 
 Event Collection - Windows
@@ -84,9 +85,11 @@ Event Collection - Linux
 - Process
 
 osquery-endpoints (``Osquery Manager`` integration)
+
 The Osquery Manager integration runs osquery as a daemon on the endpoint, and makes the endpoint available for Live or Scheduled queries through the Osquery manager interface in Kibana.
 
 system-endpoints (``System`` integration)
+
 The ``System`` integration collects the following logs from the endpoint, where applicable:
 
 - System auth logs
@@ -102,9 +105,11 @@ The ``System`` integration collects the following logs from the endpoint, where 
 
 
 windows-endpoints (``Windows`` integration)
+
 The ``Windows`` integration collects the following logs from the endpoint, where applicable:
 
 Windows Event Log:
+
 - ForwardedEvents channel
 - Windows Powershell channel
 - Microsoft-Windows-Powershell/Operational channel
