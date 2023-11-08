@@ -57,17 +57,15 @@ For example:
 Adding Comments
 ~~~~~~~~~~~~~~~
 
-As of version 2.4.30, comments can be added to the filters via the SOC UI.
-
-For example:
+Starting in Security Onion 2.4.30, comments can be added to the filters via the SOC UI. For example:
 
 ::
 
-   | # labeast
+   | # lab-east
    | not host 192.168.1.2 and not host 192.168.1.3 &&
-   | # labwest
+   | # lab-west
    | not host 192.168.1.4 or not host 192.168.1.5 &&
-   | # labcentral
+   | # lab-central
    | not host 192.168.1.6 or not host 192.168.1.27
 
 Troubleshooting BPF using tcpdump
