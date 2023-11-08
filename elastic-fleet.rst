@@ -13,7 +13,7 @@ Elastic Fleet is pre-configured during Security Onion setup, however, centralize
 Configuration options for various components are detailed below.
 
 Agents
-~~~~~~
+------
 
 This section displays registered Elastic agents (https://docs.securityonion.net/en/2.4/elastic-agent.html) and allows the user to add additional agents.
 
@@ -24,14 +24,14 @@ To assign the agent to a new policy, unenroll, upgrade the agent, or perform oth
 By default, Elastic Agent is installed on every Security Onion grid node. As a result, all grid node agents will be enrolled in the ``SO-Grid-Nodes`` agent policy. We do not recommend removing policy settings for Security Onion grid node agents.
 
 Adding Agents
-~~~~~~~~~~~~~
+-------------
 
 To add a new agent to your deployment, see the following:
 
 https://docs.securityonion.net/en/2.4/elastic-agent.html#deployment
 
 Agent Policies
-~~~~~~~~~~~~~~
+--------------
 
 Agent policies dictate what data each agent will ingest and forward to Elasticsearch. This could be through the use of an HTTP, log file, or TCP-based input.
 
@@ -53,71 +53,78 @@ For example, the ``SO-Grid-Nodes`` agent policy is comprised of the following in
 - system-grid-nodes (``System`` integration)
 - zeek-logs (``Custom Logs`` integration)
 
-Agent Polices - endpoints-initial
-~~~~~~~~~~~~~~
-Agent installers downloaded from SOC --> Downloads, are deployed using the ``endpoints-initial`` Agent Policy. This policy includes the following integrations:
+Agent Policies - endpoints-initial
+----------------------------------
+
+Agent installers downloaded from SOC --> Downloads, are deployed using the ``endpoints-initial`` Agent Policy. This policy includes the ``Elastic Defend``, ``Osquery Manager``, ``System``, and ``Windows`` integrations.
 
 elastic-defend-endpoints (``Elastic Defend`` integration)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Elastic Defend integration has both free and paid features. By default, only the following free features are enabled:
+The ``Elastic Defend`` integration has both free and paid features. By default, only the following free features are enabled:
 
-Event Collection - Windows
+- Event Collection - Windows
 
-- Credential Access
-- DLL and Driver Load
-- DNS
-- File
-- Network
-- Process
-- Registry
-- Security
+        - Credential Access
+        - DLL and Driver Load
+        - DNS
+        - File
+        - Network
+        - Process
+        - Registry
+        - Security
 
-Event Collection - macOS
+- Event Collection - macOS
 
-- File
-- Process
-- Network
+        - File
+        - Process
+        - Network
 
-Event Collection - Linux
+- Event Collection - Linux
 
-- File
-- Network
-- Process
+        - File
+        - Network
+        - Process
 
 osquery-endpoints (``Osquery Manager`` integration)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Osquery Manager integration runs osquery as a daemon on the endpoint, and makes the endpoint available for Live or Scheduled queries through the Osquery manager interface in Kibana.
+The ``Osquery Manager`` integration runs osquery as a daemon on the endpoint, and makes the endpoint available for Live or Scheduled queries through the Osquery manager interface in Kibana.
 
 system-endpoints (``System`` integration)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``System`` integration collects the following logs from the endpoint, where applicable:
 
 - System auth logs
+
     - ``/var/log/auth.log*``
     - ``/var/log/secure*``
+
 - Syslog logs
+
     - ``/var/log/messages*``
     - ``/var/log/syslog*``
     - ``/var/log/system*``
+
 - Windows Event Log - Application channel
 - Windows Event Log - Security channel
 - Windows Event Log - System channel
 
-
 windows-endpoints (``Windows`` integration)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``Windows`` integration collects the following logs from the endpoint, where applicable:
 
-Windows Event Log:
+- Windows Event Log:
 
-- ForwardedEvents channel
-- Windows Powershell channel
-- Microsoft-Windows-Powershell/Operational channel
-- Microsoft-Windows-Sysmon/Operational channel
-
+        - ForwardedEvents channel
+        - Windows Powershell channel
+        - Microsoft-Windows-Powershell/Operational channel
+        - Microsoft-Windows-Sysmon/Operational channel
 
 Integrations
-~~~~~~~~~~~~
+------------
 
 .. note::
 
@@ -197,7 +204,7 @@ Integrations
 You can read more about Elastic integrations at https://docs.elastic.co/integrations.
 
 Adding an Integration
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 New integrations can be added to existing policies to provide increased visibility and more comprehensive monitoring.
 
@@ -206,24 +213,24 @@ To add an integration to an existing policy:
 From ``Fleet`` -> ``Agent policies`` -> ``$Policy name``, click ``Add Integration`` and follow the steps for adding the integration.
 
 Adding a Custom Integration
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 A custom integration can be added by adding an integration such as the ``Custom Logs`` integration. We can specify various settings relative to the data source and define additional actions to be performed.
 
 Enrollment Tokens
-~~~~~~~~~~~~~~~~~
+-----------------
 
 An enrollment token allows an agent to enroll in Fleet, subscribe to a particular agent policy, and send data.
 
 Each agent policy typically uses its own enrollment token. It is recommended that these tokens are NOT to be changed, especially those generated by default Security Onion agent policies.
 
 Data Streams
-~~~~~~~~~~~~
+------------
 
 Data collected by Elastic Agent is sent to a data stream (https://www.elastic.co/guide/en/fleet/current/fleet-overview.html#data-streams-intro) by default. This allows data to be efficiently categorized and managed across a variety of datasets. This section within the Fleet UI allows for a quick review of data streams generated by data from Elastic Agent.
 
 Settings
-~~~~~~~~
+--------
 
 The section provides details such as:
 
