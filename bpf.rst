@@ -53,7 +53,23 @@ For example:
 
    | Please note that :ref:`stenographer` should correctly record traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
    | https://github.com/google/stenographer/issues/211
-   
+
+Adding Comments
+~~~~~~~~~~~~~~~
+
+As of version 2.4.30, comments can be added to the filters via the SOC UI.
+
+For example:
+
+::
+
+   | # labeast
+   | not host 192.168.1.2 and not host 192.168.1.3 &&
+   | # labwest
+   | not host 192.168.1.4 or not host 192.168.1.5 &&
+   | # labcentral
+   | not host 192.168.1.6 or not host 192.168.1.27
+
 Troubleshooting BPF using tcpdump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
