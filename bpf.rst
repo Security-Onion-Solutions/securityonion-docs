@@ -57,7 +57,7 @@ For example:
 Adding Comments
 ~~~~~~~~~~~~~~~
 
-Comments can be added to the filters via the SOC UI.
+As of version 2.4.30, comments can be added to the filters via the SOC UI.
 
 For example:
 
