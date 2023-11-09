@@ -3,7 +3,7 @@
 Release Notes
 =============
 
-2.4.30 [20231107] Changes
+2.4.30 [20231113] Changes
 -------------------------
 
 - FEATURE: Additional Supported Integrations `#11513 <https://github.com/Security-Onion-Solutions/securityonion/issues/11513>`_
@@ -13,7 +13,7 @@ Release Notes
 - FEATURE: so-elastic-fleet-reset `#11697 <https://github.com/Security-Onion-Solutions/securityonion/issues/11697>`_
 - FEATURE: Sublime Platform Integration `#11579 <https://github.com/Security-Onion-Solutions/securityonion/issues/11579>`_
 - FIX: Add the socore user to the Suricata container and adjust perms 
-- FIX: Add -watch to soctopus saltstate for file SOCtopus.conf. Makes container restart @ highstate if file is updated. `#11700 <https://github.com/Security-Onion-Solutions/securityonion/issues/11700>`_
+- FIX: Add -watch to soctopus saltstate for file SOCtopus.conf `#11700 <https://github.com/Security-Onion-Solutions/securityonion/issues/11700>`_
 - FIX: Allow ICMP to allow a node to respond to ping `#11495 <https://github.com/Security-Onion-Solutions/securityonion/issues/11495>`_
 - FIX: Allow standalone install type to work with 16GB of ram `#11699 <https://github.com/Security-Onion-Solutions/securityonion/issues/11699>`_
 - FIX: Allow the setting up of data_warm to the nodes list in ES
@@ -29,7 +29,7 @@ Release Notes
 - FIX: Show container download status during soup `#11550 <https://github.com/Security-Onion-Solutions/securityonion/issues/11550>`_
 - FIX: Sigma DNS mapping `#11498 <https://github.com/Security-Onion-Solutions/securityonion/issues/11498>`_
 - FIX: Suricata 7 pkt_src field needs to be parsed `#11566 <https://github.com/Security-Onion-Solutions/securityonion/issues/11566>`_
-- FIX: The values for specific nodes in zeek.config.local.load are being populated incorrectly `#11472 <https://github.com/Security-Onion-Solutions/securityonion/issues/11472>`_
+- FIX: The values for specific nodes in zeek.config.local.load are populated incorrectly `#11472 <https://github.com/Security-Onion-Solutions/securityonion/issues/11472>`_
 - UPGRADE: NetworkMiner 2.8.1 `#11457 <https://github.com/Security-Onion-Solutions/securityonion/issues/11457>`_
 - UPGRADE: Salt 3006.3 `#11529 <https://github.com/Security-Onion-Solutions/securityonion/issues/11529>`_
 - UPGRADE: Sophos Integration `#11548 <https://github.com/Security-Onion-Solutions/securityonion/issues/11548>`_
