@@ -7,6 +7,7 @@ Release Notes
 -------------------------
 
 - FEATURE: Additional Supported Integrations `#11513 <https://github.com/Security-Onion-Solutions/securityonion/issues/11513>`_
+- FEATURE: Allow for BPF comments in SOC `#11738 <https://github.com/Security-Onion-Solutions/securityonion/issues/11738>`_
 - FEATURE: Dedicated Fleet node should have an nginx entry and cert that works for /artifacts
 - FEATURE: OpenID Connect (OIDC) support
 - FEATURE: so-elastic-fleet-reset `#11697 <https://github.com/Security-Onion-Solutions/securityonion/issues/11697>`_
