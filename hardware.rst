@@ -27,12 +27,12 @@ Eval                      4    12GB   200GB     2
 Standalone                4    16GB   200GB     2
 Manager                   4    16GB   200GB     1
 ManagerSearch             8    16GB   200GB     1
-Searchnode                4    16GB   200GB     1
-Sensor                    4    12GB   200GB     2
-Heavynode                 4    16GB   200GB     2
-IDH                       2    1GB    12GB      1
-Fleet                     4    12GB   200GB     1
-Receiver                  2    8GB    200GB     1
+Search node               4    16GB   200GB     1
+Forward node              4    12GB   200GB     2
+Heavy node                4    16GB   200GB     2
+IDH node                  2    1GB    12GB      1
+Fleet node                4    12GB   200GB     1
+Receiver node             2    8GB    200GB     1
 ================       ====== ===== ========= ======   
 
 Production Deployments
