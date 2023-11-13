@@ -28,6 +28,7 @@ Standalone                4    16GB   200GB     2
 Manager                   4    16GB   200GB     1
 ManagerSearch             8    16GB   200GB     1
 Searchnode                4    16GB   200GB     1
+Sensor                    4    12GB   200GB     2
 Heavynode                 4    16GB   200GB     2
 IDH                       2    1GB    12GB      1
 Fleet                     4    12GB   200GB     1
