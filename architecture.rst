@@ -160,3 +160,10 @@ Heavy Nodes run the following components:
 -  :ref:`zeek`
 -  :ref:`suricata`
 -  :ref:`stenographer`
+
+There are two instances of Elastic Agent that run on a Heavy Node:  
+
+Instance 1 - Not connected to Fleet (runs standalone), runs in a container, picks up /nsm/ logs and other local logs (soc) and sends them to the local Heavy Node ES cluster.
+
+Instance 2 - Connected to Grid Fleet Server, runs directly on the Heavy Node. Not currently picking up any logs, but has the osquery integration installed  
+
