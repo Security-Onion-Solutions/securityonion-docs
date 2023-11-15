@@ -93,9 +93,7 @@ The first string is a regex pattern, while the second is just a raw value. You'l
 Rewrite the alert
 -----------------
 
-In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. You can add local rules as shown in the :ref:`local-rules` section.
-
-After pasting the rule, you may want to bump the SID into the 90,000,000 range and set the revision to 1. Then make any other changes to the rule. Now that we have a signature that will generate alerts a little more selectively, we need to disable the original SID as shown above.
+In some cases, you may not want to use the modify option above, but instead create a copy of the rule and disable the original. You can add local rules as shown in the :ref:`local-rules` section. After pasting the rule, you may want to bump the SID into the 90,000,000 range and set the revision to 1. Then make any other changes to the rule. Now that we have a signature that will generate alerts a little more selectively, we need to disable the original SID as shown above.
 
 Threshold
 ---------
