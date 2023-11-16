@@ -3,7 +3,12 @@
 Proxy
 =====
 
-Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. If you have problems installing via your proxy server, you may want to consider the :ref:`airgap` option as everything will install via the ISO image.
+Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. 
+
+.. image:: images/18_setup_direct_proxy.png
+  :target: _images/18_setup_direct_proxy.png
+
+If you have problems installing via your proxy server, you may want to consider the :ref:`airgap` option as everything will install via the ISO image.
 
 Configuration
 --------------
