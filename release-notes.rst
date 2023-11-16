@@ -11,7 +11,6 @@ Release Notes
 - FEATURE: OpenID Connect (OIDC) support
 - FEATURE: so-elastic-fleet-reset `#11697 <https://github.com/Security-Onion-Solutions/securityonion/issues/11697>`_
 - FEATURE: Sublime Platform Integration `#11579 <https://github.com/Security-Onion-Solutions/securityonion/issues/11579>`_
-- FIX: Add the socore user to the Suricata container and adjust perms 
 - FIX: Add -watch to soctopus saltstate for file SOCtopus.conf. Makes container restart @ highstate if file is updated. `#11700 <https://github.com/Security-Onion-Solutions/securityonion/issues/11700>`_
 - FIX: Allow ICMP to allow a node to respond to ping `#11495 <https://github.com/Security-Onion-Solutions/securityonion/issues/11495>`_
 - FIX: Allow standalone install type to work with 16GB of ram `#11699 <https://github.com/Security-Onion-Solutions/securityonion/issues/11699>`_
