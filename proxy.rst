@@ -3,7 +3,12 @@
 Proxy
 =====
 
-Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. If you need to make changes after Setup, please see the proxy settings in :ref:`administration` --> Configuration --> manager. 
+Setup will ask if you want to connect through a proxy server and, if so, it will automatically configure the system for you. If you have problems installing via your proxy server, you may want to consider the :ref:`airgap` option as everything will install via the ISO image.
+
+Configuration
+--------------
+
+If you need to make changes after Setup, please see the proxy settings in :ref:`administration` --> Configuration --> manager. 
 
 .. image:: images/config-item-manager.png
   :target: _images/config-item-manager.png
