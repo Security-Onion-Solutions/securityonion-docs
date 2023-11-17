@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.4.30 Hotfix [20231117] Changes
+--------------------------------
+
+- FIX: Elastic Defend Integration Policy Downgrade  `#11810 <https://github.com/Security-Onion-Solutions/securityonion/issues/11810>`_
+
 2.4.30 [20231113] Changes
 -------------------------
 
