@@ -7,6 +7,7 @@ Release Notes
 --------------------------------
 
 - FIX: Elastic Defend Integration Policy Downgrade  `#11810 <https://github.com/Security-Onion-Solutions/securityonion/issues/11810>`_
+- FIX: Update SSL cert to avoid Google Chrome error (2.4) `#11824 <https://github.com/Security-Onion-Solutions/securityonion/issues/11824>`_
 
 2.4.30 [20231113] Changes
 -------------------------
