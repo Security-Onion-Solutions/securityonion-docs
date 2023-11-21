@@ -48,7 +48,10 @@ OS Updates
 
 ``soup`` checks for missing OS updates and ask if you want to install them.
 
-You can configure automatic OS updates by going to :ref:`administration` --> Configuration --> patch.
+You can configure automatic OS updates by going to :ref:`administration` --> Configuration --> patch:
+
+.. image:: images/config-item-patch.png
+  :target: _images/config-item-patch.png
 
 Local Configurations
 --------------------
