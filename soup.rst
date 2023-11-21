@@ -46,9 +46,9 @@ After applying a hotfix, you may notice that the Security Onion version in ``/et
 OS Updates
 ----------
 
-There is an option during :ref:`Configuration` to automatically install OS updates.
-
 ``soup`` checks for missing OS updates and ask if you want to install them.
+
+You can configure automatic OS updates by going to :ref:`administration` --> Configuration --> patch.
 
 Local Configurations
 --------------------
