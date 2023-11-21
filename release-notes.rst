@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.4.30 Hotfix [20231121] Changes
+--------------------------------
+
+- FIX: Salt minion service disabled highstate in upgrade to 2.4.30 `#11851 <https://github.com/Security-Onion-Solutions/securityonion/issues/11851>`_
+
 2.4.30 Hotfix [20231117] Changes
 --------------------------------
 
