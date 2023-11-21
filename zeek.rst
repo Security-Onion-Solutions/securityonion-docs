@@ -30,7 +30,7 @@ You can configure Zeek by going to :ref:`administration` --> Configuration --> z
 .. image:: images/config-item-zeek.png
   :target: _images/config-item-zeek.png
 
-Also, you can configure which Zeek logs are excluded by going to :ref:`administration` --> Configuration --> elasticfleet --> logging --> zeek --> excluded.
+Zeek logs are consumed by the Elastic Agent (managed by Elastic Fleet) so if you want to configure which Zeek logs are excluded, you can go to :ref:`administration` --> Configuration --> elasticfleet --> logging --> zeek --> excluded.
 
 .. image:: images/config-item-elasticfleet.png
   :target: _images/config-item-elasticfleet.png
