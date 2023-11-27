@@ -3,6 +3,20 @@
 Release Notes
 =============
 
+2.3.280 [20231128] Changes
+--------------------------
+
+- FEATURE: Add 2.3 EOL reminder icon to SOC UI
+- FEATURE: Add note to soup about 2.3 EOL and 2.4 migration
+- FIX: 2.3 Field Mapping for CodeIntegrity windows event logs `#11807 <https://github.com/Security-Onion-Solutions/securityonion/issues/11807>`_
+- FIX: Update SSL cert to avoid Google Chrome error (2.3) `#11825 <https://github.com/Security-Onion-Solutions/securityonion/issues/11825>`_
+- UPGRADE: 2.3 Grafana to Latest
+- UPGRADE: 2.3 Strelka backend to 0.23.09.12
+- UPGRADE: 2.3 Suricata to 6.0.15
+- UPGRADE: 2.3 Update Zeek to 6.0
+- UPGRADE: 2.3 Upgrade Elastic to 8.10.4
+- UPGRADE: SOC dependency Axios to 1.6.1 `#11764 <https://github.com/Security-Onion-Solutions/securityonion/issues/11764>`_
+
 2.3.270 [20231006] Changes
 --------------------------
 
