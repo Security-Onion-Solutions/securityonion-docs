@@ -40,35 +40,6 @@ If that doesn't resolve the issue, then you may need to run the following:
     
 If you try to modify a default dashboard, your change will get overwritten. Instead of modifying, copy the desired dashboard and edit the copy. You may also want to consider setting up Kibana Spaces as this will allow you to make whatever changes you want without them being overwritten. This includes not only dashboards but certain Kibana settings as well. You can read more about Kibana Spaces at https://www.elastic.co/guide/en/kibana/current/xpack-spaces.html.
 
-Pivoting
---------
-
-Kibana uses multiple hyperlinked fields to accelerate investigations and decision-making:
-
-PCAP/Cases
-~~~~~~~~~~
-
-The ``_id`` field has a hyperlink which is labeled as ``Hunt and optionally pivot to PCAP/Cases``. Clicking this hyperlink takes you to :ref:`hunt` and searches for that particular record. From :ref:`hunt`, you can then escalate the event to :ref:`cases` or pivot to full packet capture via our :ref:`pcap` interface (assuming it's a network event). You can usually find the ``_id`` field as the rightmost column in the log panels at the bottom of the dashboards. 
-
-.. image:: images/kibana-log-panel-hunt.png
-  :target: _images/kibana-log-panel-hunt.png
-
-You can also find the hyperlinked ``_id`` field by drilling into a row in the log panel.
-
-.. image:: images/kibana-drilldown-hunt.png
-  :target: _images/kibana-drilldown-hunt.png
-
-Indicator Dashboard
-~~~~~~~~~~~~~~~~~~~
-
-Several fields are hyperlinked to the Indicator dashboard to allow you to get all the information you can about a particular indicator. Here are just a few:
-
-| ``uid``
-| ``source.ip``
-| ``source.port``
-| ``destination.ip``
-| ``destination.port``
-
 Search Results
 --------------
 
