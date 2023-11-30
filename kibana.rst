@@ -5,10 +5,6 @@ Kibana
 
 :ref:`soc` includes a link on the sidebar that takes you to Kibana.
 
-From https://www.elastic.co/kibana:
-
-    Kibana is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. Do anything from tracking query load to understanding the way requests flow through your apps.
-
 Authentication
 --------------
 
@@ -16,12 +12,14 @@ Log into Kibana using the same username and password that you use for :ref:`soc`
 
 You can add new user accounts to both Kibana and :ref:`soc` at the same time as shown in the :ref:`adding-accounts` section. Please note that if you instead create accounts directly in Kibana, then those accounts will only have access to Kibana and not :ref:`soc`.
 
-Dashboards
-----------
+Kibana Dashboards
+-----------------
+
+We've included a simple set of dashboards in Kibana. These Kibana dashboards are not as comprehensive as those in SOC :ref:`dashboards`.
 
 Once you log into Kibana, you should start on the ``Security Onion - Home`` dashboard. Notice the visualization in the upper left is labeled ``Security Onion - Navigation``. This navigation panel contains links to other dashboards and will change depending on what dashboard you're currently looking at. For example, when you're on the ``Security Onion - Home`` dashboard and click the ``Alert`` link, you will go to the ``Security Onion - Alerts`` dashboard and the Navigation panel will then contain links to more specific alert dashboards for :ref:`playbook` and :ref:`suricata`. When you're done looking at alerts, you can click the ``Home`` link in the navigation panel to go back to the main ``Security Onion - Home`` dashboard.
 
-If you ever need to reload dashboards, you can run the following command on your manager:
+If you ever need to reload Kibana dashboards, you can run the following command on your manager:
 
 ::
 
@@ -33,12 +31,12 @@ If that doesn't resolve the issue, then you may need to run the following:
 
     sudo salt-call state.apply kibana.so_savedobjects_defaults -l info queue=True
     
-If you try to modify a default dashboard, your change will get overwritten. Instead of modifying, copy the desired dashboard and edit the copy. You may also want to consider setting up Kibana Spaces as this will allow you to make whatever changes you want without them being overwritten. This includes not only dashboards but certain Kibana settings as well. You can read more about Kibana Spaces at https://www.elastic.co/guide/en/kibana/current/xpack-spaces.html.
+If you try to modify a default Kibana dashboard, your change will get overwritten. Instead of modifying, copy the desired dashboard and edit the copy. You may also want to consider setting up Kibana Spaces as this will allow you to make whatever changes you want without them being overwritten. This includes not only dashboards but certain Kibana settings as well. You can read more about Kibana Spaces at https://www.elastic.co/guide/en/kibana/current/xpack-spaces.html.
 
 Search Results
 --------------
 
-Search results in the dashboards and through Discover are limited to the first ``100`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Stack Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance for your deployment.
+In Kibana, search results are limited to the first ``100`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Stack Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance for your deployment.
 
 Timestamps
 ----------
@@ -48,7 +46,7 @@ By default, Kibana will display timestamps in the timezone of your local browser
 Configuration
 -------------
 
-You can configure Kibana by going to :ref:`administration` --> Configuration --> kibana.
+Most Kibana configuration settings are in Kibana itself. However, configuration settings that would traditionally be set in the Kibana configuration file can be configured by going to :ref:`administration` --> Configuration --> kibana.
 
 .. image:: images/config-item-kibana.png
   :target: _images/config-item-kibana.png
