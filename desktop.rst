@@ -28,6 +28,10 @@ There are a few different ways to install Security Onion Desktop:
 
 - The ``so-desktop-install`` command is totally independent of the standard setup process, so you can run it before or after setup or not run setup at all if all you really want is the Analyst desktop itself.
 
+.. note::
+
+  Depending on how you install, it may take a full :ref:`salt` cycle before all desktop components are installed and ready for use.
+
 **Joining to Grid**
 
 You can optionally join your Desktop installation to your grid. This allows it to pull updates from the grid and automatically trust the grid's HTTPS certificate. It also updates the manager's firewall to allow the Desktop installation to connect. Starting with Security Onion 2.4.20, Desktop nodes will now display on the :ref:`grid` page along with the other grid nodes.
