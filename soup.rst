@@ -125,6 +125,11 @@ This will make ``soup`` proceed unattended, automatically answering ``yes`` to a
 Errors
 ------
 
+Data failed to compile
+~~~~~~~~~~~~~~~~~~~~~~
+
+Occasionally, soup may output a ``Data failed to compile`` error that says something like ``Rendering SLS failed: Jinja variable 'None' has no attribute``. In most cases, this error corrects itself on the next :ref:`salt` run.
+
 Pillars and sls files
 ~~~~~~~~~~~~~~~~~~~~~
 
