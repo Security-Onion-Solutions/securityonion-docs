@@ -21,8 +21,8 @@ Airgap mode works as follows:
 Rule Updates
 ------------
 
-The Security Onion ISO image includes the Emerging Threats (ET) ruleset. When :ref:`soup` updates an airgap system via ISO, it automatically installs the latest ET rules as well. If you would like to switch to a different ruleset like Emerging Threats Pro (ETPRO), then you can manually copy the ETPRO rules to ``/nsm/repo/rules/emerging-all.rules`` using a command like:
+The Security Onion ISO image includes the Emerging Threats (ET) ruleset. When :ref:`soup` updates an airgap system via ISO, it automatically installs the latest ET rules as well. If you would like to switch to a different ruleset like Emerging Threats Pro (ETPRO), then you can manually copy the ETPRO rules to ``/nsm/repo/rules/suricata/emerging-all.rules`` using a command like:
 
 ::
 
-  cat /path/to/ETPRO_rules/*.rules > /nsm/repo/rules/emerging-all.rules
+  cat /path/to/ETPRO_rules/*.rules > /nsm/repo/rules/suricata/emerging-all.rules
