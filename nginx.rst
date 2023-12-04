@@ -16,7 +16,7 @@ You can modify nginx configuration by going to :ref:`administration` --> Configu
 Replacing Default Cert
 ----------------------
 
-If you'd like to replace the default cert with your own cert, then you can do so as shown below.
+If you'd like to replace the default certificate with your own cert, then you can do so as shown below.
 
 .. warning::
 
