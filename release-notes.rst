@@ -3,6 +3,14 @@
 Release Notes
 =============
 
+2.4.30 Hotfix [20231204] Changes
+--------------------------------
+
+- FIX: Choosing Desktop or IDH from ISO GRUB menu results in failure `#11865 <https://github.com/Security-Onion-Solutions/securityonion/issues/11865>`_
+- FIX: Ensure airgap rule updates are being copied to the proper location `#11932 <https://github.com/Security-Onion-Solutions/securityonion/issues/11932>`_
+- FIX: outdated import-evtx-logs pipeline versions `#11889 <https://github.com/Security-Onion-Solutions/securityonion/issues/11889>`_
+- FIX: x509.pem_managed errors
+
 2.4.30 Hotfix [20231121] Changes
 --------------------------------
 
