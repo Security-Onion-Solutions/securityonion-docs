@@ -162,21 +162,22 @@ Supported Analyzers and Data Types
 The following is a summary of the built-in analyzers and their supported data types:
 
 
-=======================       ======= ====   ==   ====  ===== ===  === ==========
- Name                         Domain  Hash   IP   Mail  Other URI  URL User Agent
-=======================       ======= ====   ==   ====  ===== ===  === ==========  
-Alienvault OTX                   ✓      ✓                                 ✓
+=======================       ======= === ==== == ==== ===== === === ==========
+ Name                         Domain  EML Hash IP Mail Other URI URL User Agent
+=======================       ======= === ==== == ==== ===== === === ==========  
+Alienvault OTX                   ✓          ✓                                 ✓
 EmailRep                                            ✓
-Greynoise                                     ✓
-LocalFile                        ✓      ✓     ✓           ✓         ✓
-Malware Hash Registry                   ✓
-Pulsedive                        ✓      ✓     ✓                ✓    ✓      ✓
-Spamhaus                                      ✓
-Urlhaus                                                             ✓
-Urlscan                                                             ✓
-Virustotal                       ✓      ✓     ✓                     ✓
+Greynoise                                      ✓
+LocalFile                        ✓          ✓  ✓           ✓      ✓
+Malware Hash Registry                       ✓
+Pulsedive                        ✓          ✓  ✓              ✓    ✓      ✓
+Spamhaus                                       ✓
+Sublime Platform                       ✓
+Urlhaus                                                           ✓
+Urlscan                                                           ✓
+Virustotal                       ✓         ✓   ✓                  ✓
 WhoisLookup                      ✓
-=======================       ======= ====   ==   ====  ===== ===  === ==========
+=======================       ======= === ==== == ==== ===== === === ==========
 
 
 
