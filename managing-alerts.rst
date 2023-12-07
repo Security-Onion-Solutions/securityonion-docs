@@ -140,7 +140,7 @@ For example, suppose you want to suppress SID 2013030 where the source IP addres
 	      track: by_src
               ip: 10.10.3.0/24
 
-If you want to suppress SID 2013030 for multiple IPs where source IP address is in the 10.10.3.0/24 subnet and also IP address 10.0.0.5 simply separate them with a comma:
+If you want to suppress a SID for multiple IP addresses, you can separate the IP addresses with a comma. For example, suppose you want to suppress SID 2013030 for the 10.10.3.0/24 subnet and also IP address 10.0.0.5:
 
 ::
 
