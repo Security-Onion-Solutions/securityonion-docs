@@ -140,6 +140,16 @@ For example, suppose you want to suppress SID 2013030 where the source IP addres
 	      track: by_src
               ip: 10.10.3.0/24
 
+If you want to suppress SID 2013030 for multiple IPs where source IP address is in the 10.10.3.0/24 subnet and also IP address 10.0.0.5 simply separate them with a comma:
+
+::
+
+	2013030:
+  	  - suppress:
+	      gen_id: 1
+	      track: by_src
+              ip: 10.10.3.0/24,10.0.0.5
+
 Flowbits
 --------
 
