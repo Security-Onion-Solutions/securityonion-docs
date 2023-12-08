@@ -166,13 +166,17 @@ The following is a summary of the built-in analyzers and their supported data ty
  Name                         Domain  EML Hash IP Mail Other URI URL User Agent
 =======================       ======= === ==== == ==== ===== === === ==========  
 Alienvault OTX                   ✓          ✓                                 ✓
+Echotrail                               ✓                  ✓         
 EmailRep                                            ✓
+Elasticsearch                    ✓      ✓     ✓    ✓      ✓     ✓   ✓     ✓
 Greynoise                                      ✓
 LocalFile                        ✓          ✓  ✓           ✓      ✓
+Malwarebazaar                           ✓                  ✓         
 Malware Hash Registry                       ✓
 Pulsedive                        ✓          ✓  ✓              ✓    ✓      ✓
 Spamhaus                                       ✓
 Sublime Platform                       ✓
+Threatfox                        ✓      ✓     ✓                     
 Urlhaus                                                           ✓
 Urlscan                                                           ✓
 Virustotal                       ✓         ✓   ✓                  ✓
@@ -223,10 +227,14 @@ Some analyzers require authentication or other details to be configured before u
 The following analyzers require users to configure authentication or other parameters in order for the analyzer to work correctly:
 
 - AlienVault OTX
+- Echotrail
+- Elasticsearch
 - EmailRep
 - GreyNoise
 - LocalFile
+- Malwarebazaar
 - Pulsedive
+- Threatfox
 - Urlscan
 - VirusTotal
 
