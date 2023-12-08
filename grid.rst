@@ -104,22 +104,22 @@ The ``Consumption EPS`` field is the number of Events Per Second consumed.
 Memory Usage
 ~~~~~~~~~~~~
 
-The ``Memory Usage`` field shows the system memory percentage used, as well as the total memory, in gigabytes. When this value is consistently in the red it may be time to add more system memory. Consistently red usage will likely end up causing node faults due to some services being automatically shutdown to recover memory for more critical processes.
+The ``Memory Usage`` field shows the system memory percentage used, as well as the total memory, in gigabytes. If this value is consistently in the red, then it may be time to add more system memory. Consistently red usage will likely end up causing node faults due to some services being automatically shutdown to recover memory for more critical processes.
 
 Swap Usage
 ~~~~~~~~~~
 
-The ``Swap Usage`` field shows the system swap percentage used, as well as the total swap, in gigabytes. Systems that do not have swap enabled will remain at 0.0%. When this value is consistently in the red it may be time to increase the system memory and potentially the swap size.
+The ``Swap Usage`` field shows the system swap percentage used, as well as the total swap, in gigabytes. Systems that do not have swap enabled will remain at 0.0%. If this value is consistently in the red, then it may be time to increase the system memory and potentially the swap size.
 
 CPU Usage
 ~~~~~~~~~
 
-The ``CPU Usage`` field shows the system CPU percentage used, across all cores. When this value is consistently in the red it may be time to upgrade the node hardware or distribute the load across additional nodes.
+The ``CPU Usage`` field shows the system CPU percentage used, across all cores. If this value is consistently in the red, then it may be time to upgrade the node hardware or distribute the load across additional nodes.
 
 I/O Wait
 ~~~~~~~~
 
-The ``I/O Wait`` field shows the system I/O wait percentage. Higher values indicate the system is spending more time waiting for network or disk data transfer. When this value is consistently in the red it may be time to replace slow disks or expand network throughput capacity.
+The ``I/O Wait`` field shows the system I/O wait percentage. Higher values indicate the system is spending more time waiting for network or disk data transfer. If this value is consistently in the red, then it may be time to replace slow disks or expand network throughput capacity.
 
 Capture Loss
 ~~~~~~~~~~~~
@@ -144,12 +144,12 @@ The ``Stenographer Loss`` field shows the percentage of dropped packets due to :
 Disk Usage Root
 ~~~~~~~~~~~~~~~
 
-The ``Disk Usage Root`` field shows the percentage of the root OS disk utilization, as well as the total capacity of that disk (or partition). When this value is consistently in the red it can lead to problems including being unable to upgrade OS packages and Security Onion, the inability to save system logs, and other critical issues.
+The ``Disk Usage Root`` field shows the percentage of the root OS disk utilization, as well as the total capacity of that disk (or partition). If this value is consistently in the red, then it can lead to problems including being unable to upgrade OS packages and Security Onion, the inability to save system logs, and other critical issues.
 
 Disk Usage NSM
 ~~~~~~~~~~~~~~~
 
-The ``Disk Usage NSM`` field shows the percentage of the NSM disk utilization, as well as the total capacity of that disk (or partition). When this value is consistently in the red it can lead to problems including being unable to ingest new events, store PCAP on disk, detect anomalous events, and other critical issues.
+The ``Disk Usage NSM`` field shows the percentage of the NSM disk utilization, as well as the total capacity of that disk (or partition). If this value is consistently in the red, then it can lead to problems including being unable to ingest new events, store PCAP on disk, detect anomalous events, and other critical issues.
 
 Elastic Storage Used
 ~~~~~~~~~~~~~~~~~~~~
