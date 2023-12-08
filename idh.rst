@@ -100,3 +100,8 @@ For example, suppose that we already have the HTTP service running but we want t
 - On the left side, navigate to idh --> opencanary --> config --> http_x_port.
 - On the right side, change the port value and then click the checkmark to save the change.
 - At the top of the page, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu.
+
+Activating Additional Network Interfaces
+----------------------------------------
+
+If you want to activate additional network interfaces after joining your IDH node to your grid, you can do so using standard Linux networking tools like nmtui. You can read more about nmtui at https://docs.oracle.com/en/operating-systems/oracle-linux/9/network/network-ConfiguringtheSystemsNetwork.html#ol-netconf-config-tui.
