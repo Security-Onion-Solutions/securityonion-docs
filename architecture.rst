@@ -12,7 +12,7 @@ The simplest architecture is an ``Import`` node. An import node is a single stan
 
 .. image:: images/diagrams/import.png
    :align: center
-   :target: _images/diagrams/import.png
+   :target: _images/import.png
 
 Evaluation
 ----------
@@ -20,7 +20,7 @@ The next architecture is ``Evaluation``. It's a little more complicated than ``I
 
 .. image:: images/diagrams/eval.png
    :align: center
-   :target: _images/diagrams/eval.png
+   :target: _images/eval.png
 
 Standalone
 ----------
@@ -30,7 +30,7 @@ This type of deployment is typically used for testing, labs, POCs, or **very** l
 
 .. image:: images/diagrams/standalone.png
    :align: center
-   :target: _images/diagrams/standalone.png
+   :target: _images/standalone.png
 
 Distributed
 -----------
@@ -47,7 +47,7 @@ A standard distributed deployment includes a **manager node**, one or more **for
 .. image:: images/diagrams/distributed.png
    :align: center
    :width: 450
-   :target: _images/diagrams/distributed.png
+   :target: _images/distributed.png
 
 Node Types
 ----------
@@ -117,7 +117,7 @@ The Receiver Node runs :ref:`logstash` and :ref:`redis` and allows for events to
 .. image:: images/diagrams/receiver.png
    :align: center
    :width: 450
-   :target: _images/diagrams/receiver.png
+   :target: _images/receiver.png
 
 Intrusion Detection Honeypot (IDH) Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,7 +127,7 @@ The :ref:`idh` node mimics common services such as HTTP, FTP, and SSH. Any inter
 .. image:: images/diagrams/idh.png
    :align: center
    :width: 450
-   :target: _images/diagrams/idh.png
+   :target: _images/idh.png
 
 Heavy Node
 ~~~~~~~~~~
@@ -144,7 +144,7 @@ There is also an option to have a **manager node** and one or more **heavy nodes
 
 .. image:: images/diagrams/heavy-distributed.png
    :align: center
-   :target: _images/diagrams/heavy-distributed.png
+   :target: _images/heavy-distributed.png
 
 .. note::
 
