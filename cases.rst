@@ -166,16 +166,16 @@ The following is a summary of the built-in analyzers and their supported data ty
  Name                         Domain  EML Hash IP Mail Other URI URL User Agent
 =======================       ======= === ==== == ==== ===== === === ==========  
 Alienvault OTX                   ✓          ✓                                 ✓
-Echotrail                               ✓                  ✓         
+Echotrail                                                 ✓         
 EmailRep                                            ✓
-Elasticsearch                    ✓      ✓     ✓    ✓      ✓     ✓   ✓     ✓
-Greynoise                                      ✓
+Elasticsearch                    ✓      ✓      ✓   ✓     ✓   ✓  ✓   ✓     
+Greynoise                                       ✓
 LocalFile                        ✓          ✓  ✓           ✓      ✓
 Malwarebazaar                           ✓                  ✓         
 Malware Hash Registry                       ✓
 Pulsedive                        ✓          ✓  ✓              ✓    ✓      ✓
 Spamhaus                                       ✓
-Sublime Platform                       ✓
+Sublime Platform                        ✓
 Threatfox                        ✓      ✓     ✓                     
 Urlhaus                                                           ✓
 Urlscan                                                           ✓
