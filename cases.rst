@@ -167,16 +167,16 @@ The following is a summary of the built-in analyzers and their supported data ty
 =======================       ======= === ==== == ==== ===== === === ==========  
 Alienvault OTX                   ✓          ✓                                 ✓
 Echotrail                                                 ✓         
-EmailRep                                            ✓
-Elasticsearch                    ✓      ✓      ✓   ✓     ✓   ✓  ✓   ✓     
+EmailRep                                            ✓               
+Elasticsearch                    ✓      ✓   ✓  ✓   ✓     ✓   ✓  ✓           ✓     
 Greynoise                                       ✓
 LocalFile                        ✓          ✓  ✓           ✓      ✓
-Malwarebazaar                           ✓                  ✓         
+Malwarebazaar                               ✓             ✓         
 Malware Hash Registry                       ✓
 Pulsedive                        ✓          ✓  ✓              ✓    ✓      ✓
 Spamhaus                                       ✓
 Sublime Platform                        ✓
-Threatfox                        ✓      ✓     ✓                     
+Threatfox                        ✓     ✓     ✓                     
 Urlhaus                                                           ✓
 Urlscan                                                           ✓
 Virustotal                       ✓         ✓   ✓                  ✓
