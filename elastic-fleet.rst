@@ -250,13 +250,15 @@ The section provides details such as:
 
 Custom FQDN URL
 ---------------
-You can add custom FQDN for Agents to connect to (for both control TCP/8220 & data TCP/5055) by editing the following SOC Config:
 
-Advanced settings will need to be toggled.
+You can add custom FQDN for Agents to connect to (for both control traffic on port TCP/8220 and data traffic on port TCP/5055) by editing the config as follows.
 
-elasticfleet --> config --> server --> custom_fqdn
+First, go to :ref:`administration` --> Configuration --> elasticfleet.
 
-Within 15 minutes, the Grid will apply these new settings and you should see the new FQDNs show up in Elastic Fleet settings. New agent installers will also be regenerated to use this new setting.
+.. image:: images/config-item-elasticfleet.png
+  :target: _images/config-item-elasticfleet.png
+
+At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then, navigate to elasticfleet --> config --> server --> custom_fqdn and set your custom FQDN. Within 15 minutes, the grid will apply these new settings and you should see the new FQDNs show up in Elastic Fleet settings. New agent installers will also be regenerated to use this new setting.
 
 More Information
 ----------------
