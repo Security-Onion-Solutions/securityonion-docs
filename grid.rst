@@ -10,16 +10,15 @@ Grid
 
 Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that shows the sum of all Consumption EPS measurements in the entire grid. Below that you will find a list of all nodes in your grid.
 
-.. note::
+.. warning::
 
   Please note that new nodes start off showing a red Fault and may take a few minutes to fully initialize before they show a green OK.
 
 .. note::
 
-  The EPS column represents inbound Events Per Second, therefore will only be relevant on nodes that ingest data. Pure sensors do not ingest events, therefore those nodes will show 0 EPS. To help 
-  identify sensors that are generating large volumes of events, sort by the Mgmt Out column, which shows the outbound traffic throughput on the management network interface.
+  The EPS column represents Events Per Second consumed, so it will only be relevant on nodes that ingest data. Pure sensors do not ingest events, so those nodes will show 0 EPS. If you want to identify sensors that are generating large volumes of events, you can sort by the Mgmt Out column, which shows the outbound traffic throughput on the management network interface.
 
-To show additional, sensor-related columns in the table, check the corresponding checkbox in the options dropdown, near the top of the page. This will add several more sortable columns to help identify sensors that may be underperforming, or due for a hardware upgrade. As these additional columns take up significant screen area, they will only be visible on wide displays, where the SOC web browser window is wide enough to show a large number of tabular columns. Included as of version 2.4.40.
+Starting in Security Onion 2.4.40, there is a new checkbox in the options dropdown near the top of the page. This checkbox will show additional sensor-related columns in the table. You can use these sortable columns to help identify sensors that may be underperforming or due for a hardware upgrade. As these additional columns take up significant screen area, they will only be visible on wide displays where the SOC web browser window is wide enough to show a large number of tabular columns.
 
 You can drill into individual nodes to see detailed information including Node Status, Container Status, and Appliance Images.
 
@@ -30,8 +29,7 @@ This section includes an overview of node status.
 
 .. note::
 
-  As of 2.4.40, a significant number of new metrics were added to the grid page. Be sure to upgrade to the latest version of Security Onion to see all the metrics 
-  mentioned in this documentation.
+  Starting in Security Onion 2.4.40, a significant number of new metrics are included on the grid page. Older versions will not have all of the metrics shown below.
 
 ID
 ~~
