@@ -8,15 +8,15 @@ Grid
 .. image:: images/39_grid.png
   :target: _images/39_grid.png
 
-Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that shows the sum of all Consumption EPS measurements in the entire grid. Below that you will find a list of all nodes in your grid.
+Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that shows the sum of all ``Consumption EPS`` measurements in the entire grid. Below that you will find a list of all nodes in your grid.
 
 .. warning::
 
-  Please note that new nodes start off showing a red Fault and may take a few minutes to fully initialize before they show a green OK.
+  Please note that new nodes start off showing a red ``Fault`` and may take a few minutes to fully initialize before they show a green OK.
 
 .. note::
 
-  The EPS column represents Events Per Second consumed, so it will only be relevant on nodes that ingest data. Pure sensors do not ingest events, so those nodes will show 0 EPS. If you want to identify sensors that are generating large volumes of events, you can sort by the Mgmt Out column, which shows the outbound traffic throughput on the management network interface.
+  The ``EPS`` column represents Events Per Second consumed, so it will only be relevant on nodes that ingest data. Pure sensors do not ingest events, so those nodes will show 0 EPS. If you want to identify sensors that are generating large volumes of events, you can sort by the ``Mgmt Out`` column, which shows the outbound traffic throughput on the management network interface.
 
 Starting in Security Onion 2.4.40, there is a new checkbox in the options dropdown near the top of the page. This checkbox will show additional sensor-related columns in the table. You can use these sortable columns to help identify sensors that may be underperforming or due for a hardware upgrade. As these additional columns take up significant screen area, they will only be visible on wide displays where the SOC web browser window is wide enough to show a large number of tabular columns.
 
@@ -34,52 +34,52 @@ This section includes an overview of node status.
 ID
 ~~
 
-The hostname assigned to the node.
+The ``ID`` field shows the hostname assigned to the node.
 
 Role
 ~~~~
 
-The type of Security Onion node that was selected during Security Onion setup.
+The ``Role`` field shows the type of Security Onion node that was selected during Security Onion setup.
 
 Address
 ~~~~~~~
 
-The network IP address assigned to the management interface of the node.
+The ``Address`` field shows the network IP address assigned to the management interface of the node.
 
 Version
 ~~~~~~~
 
-The version of Security Onion installed on this node.
+The ``Version`` field shows the version of Security Onion installed on this node.
 
 Model
 ~~~~~
 
-The official Security Onion appliance model number. Will show N/A for all other devices.
+The ``Model`` field shows the official Security Onion Solutions appliance model number. For non-SOS devices, this field will show ``N/A``.
 
 Date Created
 ~~~~~~~~~~~~
 
-The date the node was created. This date is based on the node's filesystem timestamps, so replacing partition data or manually recreating core areas of the filesystem can interfere with assessing a node's true age.
+The ``Date Created`` field shows the date the node was created. This date is based on the node's filesystem timestamps, so replacing partition data or manually recreating core areas of the filesystem can interfere with assessing a node's true age.
 
 Earliest PCAP
 ~~~~~~~~~~~~~
 
-The earliest PCAP that is available on a sensor node. Only visible on sensor nodes which capture live packet data.
+The ``Earliest PCAP`` field shows the earliest PCAP that is available on a sensor node and is only visible on sensor nodes which capture live packet data.
 
 Last Heard From
 ~~~~~~~~~~~~~~~
 
-The last time that the node checked-in with the manager. Note that a check-in doesn't always include updated node metrics. 
+The ``Last Heard From`` field shows the last time that the node checked-in with the manager. Note that a check-in doesn't always include updated node metrics. 
 
 Age
 ~~~
 
-The ``Age`` field shows how long the node has been part of the grid. Based on the ``Date Created`` value.
+The ``Age`` field shows how long the node has been part of the grid and is based on the ``Date Created`` value.
 
 OS Uptime
 ~~~~~~~~~
 
-How long the node has been running, since the last power-on or reboot event.
+The ``OS Uptime`` field shows how long the node has been running since the last power-on or reboot event.
 
 Process Status
 ~~~~~~~~~~~~~~
@@ -104,67 +104,67 @@ The ``Consumption EPS`` field is the number of Events Per Second consumed.
 Memory Usage
 ~~~~~~~~~~~~
 
-The system memory percentage used, as well as the total memory, in gigabytes. When this value is consistently in the red it may be time to add more system memory. Consistently red usage will likely end up causing node faults due to some services being automatically shutdown to recover memory for more critical processes.
+The ``Memory Usage`` field shows the system memory percentage used, as well as the total memory, in gigabytes. When this value is consistently in the red it may be time to add more system memory. Consistently red usage will likely end up causing node faults due to some services being automatically shutdown to recover memory for more critical processes.
 
 Swap Usage
 ~~~~~~~~~~
 
-The system swap percentage used, as well as the total swap, in gigabytes. Systems that do not have swap enabled will remain at 0.0%. When this value is consistently in the red it may be time to increase the system memory and potentially the swap size.
+The ``Swap Usage`` field shows the system swap percentage used, as well as the total swap, in gigabytes. Systems that do not have swap enabled will remain at 0.0%. When this value is consistently in the red it may be time to increase the system memory and potentially the swap size.
 
 CPU Usage
 ~~~~~~~~~
 
-The system CPU percentage used, across all cores. When this value is consistently in the red it may be time to upgrade the node hardware or distribute the load across additional nodes.
+The ``CPU Usage`` field shows the system CPU percentage used, across all cores. When this value is consistently in the red it may be time to upgrade the node hardware or distribute the load across additional nodes.
 
 I/O Wait
 ~~~~~~~~
 
-The system I/O wait percentage. Higher values indicate the system is spending more time waiting for network or disk data transfer. When this value is consistently in the red it may be time to replace slow disks or expand network throughput capacity.
+The ``I/O Wait`` field shows the system I/O wait percentage. Higher values indicate the system is spending more time waiting for network or disk data transfer. When this value is consistently in the red it may be time to replace slow disks or expand network throughput capacity.
 
 Capture Loss
 ~~~~~~~~~~~~
 
-The percentage of packet capture loss reported by :ref:`zeek`. Higher values indicate a reduced visibility into packets traversing the network. If :ref:`zeek` is reporting capture loss but no packet loss, this usually means that the capture loss is happening upstream in the tap or span port itself.
+The ``Capture Loss`` field shows the percentage of packet capture loss reported by :ref:`zeek`. Higher values indicate a reduced visibility into packets traversing the network. If :ref:`zeek` is reporting capture loss but no packet loss, this usually means that the capture loss is happening upstream in the tap or span port itself.
 
 Zeek Loss
-~~~~~~~~~~~~
+~~~~~~~~~
 
-The percentage of dropped packets due to :ref:`zeek` being unable to keep up with the flow of network data. 
+The ``Zeek Loss`` field shows the percentage of dropped packets due to :ref:`zeek` being unable to keep up with the flow of network data. 
 
 Suricata Loss
 ~~~~~~~~~~~~~
 
-The percentage of dropped packets due to :ref:`suricata` being unable to keep up with the flow of network data.
+The ``Suricata Loss`` field shows the percentage of dropped packets due to :ref:`suricata` being unable to keep up with the flow of network data.
 
 Stenographer Loss
 ~~~~~~~~~~~~~~~~~
 
-The percentage of dropped packets due to :ref:`stenographer` being unable to keep up with the flow of network data. :ref:`stenographer` is responsible for writing down all packets to disk, as well as indexing these packets.
+The ``Stenographer Loss`` field shows the percentage of dropped packets due to :ref:`stenographer` being unable to keep up with the flow of network data. :ref:`stenographer` is responsible for writing down all packets to disk, as well as indexing these packets.
 
 Disk Usage Root
 ~~~~~~~~~~~~~~~
 
-The percentage of the root OS disk utilization, as well as the total capacity of that disk (or partition). When this value is consistently in the red it can lead to problems including being unable to upgrade OS packages and Security Onion, the inability to save system logs, and other critical issues.
+The ``Disk Usage Root`` field shows the percentage of the root OS disk utilization, as well as the total capacity of that disk (or partition). When this value is consistently in the red it can lead to problems including being unable to upgrade OS packages and Security Onion, the inability to save system logs, and other critical issues.
 
 Disk Usage NSM
 ~~~~~~~~~~~~~~~
 
-The percentage of the NSM disk utilization, as well as the total capacity of that disk (or partition). When this value is consistently in the red it can lead to problems including being unable to ingest new events, store PCAP on disk, detect anomalous events, and other critical issues.
+The ``Disk Usage NSM`` field shows the percentage of the NSM disk utilization, as well as the total capacity of that disk (or partition). When this value is consistently in the red it can lead to problems including being unable to ingest new events, store PCAP on disk, detect anomalous events, and other critical issues.
 
 Elastic Storage Used
 ~~~~~~~~~~~~~~~~~~~~
 
-The total gigabytes used by :ref:`elasticsearch` to store the ingested events, across all indices.
+The ``Elastic Storage Used`` field shows the total gigabytes used by :ref:`elasticsearch` to store the ingested events, across all indices.
 
 InfluxDB Storage Used
 ~~~~~~~~~~~~~~~~~~~~~
 
-The total gigabytes used by :ref:`influxdb` to store the current and historic metric data collected from all nodes in the grid.
+The ``InfluxDB Storage Used`` field shows the total gigabytes used by :ref:`influxdb` to store the current and historic metric data collected from all nodes in the grid.
 
 PCAP Retention
 ~~~~~~~~~~~~~~
 
-The number of historic days of available packet capture data which can be viewed by analysts using the SOC :ref:`pcap` tool.
+The ``PCAP Retention`` field shows the number of historic days of available packet capture data which can be viewed by analysts using the SOC :ref:`pcap` tool.
 
 Load Average
 ~~~~~~~~~~~~
@@ -174,27 +174,27 @@ The 1 minute, 5 minute, and 15 minute load averages for the node. Note that on s
 Redis Queue Size
 ~~~~~~~~~~~~~~~~
 
-The number of events queued in :ref:`redis` waiting to be ingested into :ref:`elasticsearch`. If this number is either steady or falling then it indicates the system is able to keep up with the current traffic flow. If this number is continually increasing then it can indicate a problem with ingest times taking too long for the amount of events that are being generated. Occasional increases are expected during traffic bursts but should eventually start to decrease once the high traffic flow period ends.
+The ``Redis Queue Size`` shows the number of events queued in :ref:`redis` waiting to be ingested into :ref:`elasticsearch`. If this number is either steady or falling then it indicates the system is able to keep up with the current traffic flow. If this number is continually increasing then it can indicate a problem with ingest times taking too long for the amount of events that are being generated. Occasional increases are expected during traffic bursts but should eventually start to decrease once the high traffic flow period ends.
 
 Inbound Monitor Traffic
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The throughput of inbound bytes reaching the sensor's monitoring interface.
+The ``Inbound Monitor Traffic`` field shows the throughput of inbound bytes reaching the sensor's monitoring interface.
 
 Dropped Monitor Traffic
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-The throughput of inbound bytes intended for the sensor's monitoring interface but are instead dropped, typically due to insufficient network capacity.
+The ``Dropped Monitor Traffic`` field shows the throughput of inbound bytes intended for the sensor's monitoring interface but are instead dropped, typically due to insufficient network capacity.
 
 Inbound Mgmt Traffic
 ~~~~~~~~~~~~~~~~~~~~
 
-The throughput of inbound bytes intended for the node's management interface. This is the internal interface that the node uses to communicate with other nodes in the Security Onion grid.
+The ``Inbound Mgmt Traffic`` field shows the throughput of inbound bytes intended for the node's management interface. This is the internal interface that the node uses to communicate with other nodes in the Security Onion grid.
 
 Outbound Mgmt Traffic
 ~~~~~~~~~~~~~~~~~~~~~
 
-The throughput of outbound bytes being transmitted from the node's management interface. This is the internal interface that the node uses to communicate with other nodes in the Security Onion grid.
+The ``Outbound Mgmt Traffic`` field shows the throughput of outbound bytes being transmitted from the node's management interface. This is the internal interface that the node uses to communicate with other nodes in the Security Onion grid.
 
 Filter Keywords
 ~~~~~~~~~~~~~~~
