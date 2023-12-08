@@ -248,6 +248,16 @@ The section provides details such as:
 
     We do NOT recommend changing these settings, as they are managed by Security Onion.
 
+Custom FQDN URL
+---------------
+You can add custom FQDN for Agents to connect to (for both control TCP/8220 & data TCP/5055) by editing the following SOC Config:
+
+Advanced settings will need to be toggled.
+
+elasticfleet --> config --> server --> custom_fqdn
+
+Within 15 minutes, the Grid will apply these new settings and you should see the new FQDNs show up in Elastic Fleet settings. New agent installers will also be regenerated to use this new setting.
+
 More Information
 ----------------
 
