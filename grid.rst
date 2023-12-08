@@ -25,11 +25,11 @@ You can drill into individual nodes to see detailed information including Node S
 Node Status
 -----------
 
-This section includes an overview of node status.
+The ``Node Status`` section displays many different fields relating to each node's status.
 
 .. note::
 
-  Starting in Security Onion 2.4.40, a significant number of new metrics are included on the grid page. Older versions will not have all of the metrics shown below.
+  Starting in Security Onion 2.4.40, a significant number of new metrics are included in the ``Node Status`` section. Older versions will not have all of the metrics shown below.
 
 ID
 ~~
