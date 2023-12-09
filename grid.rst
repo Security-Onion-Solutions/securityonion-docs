@@ -204,7 +204,7 @@ This is the list of keywords that are associated with this node type. Useful for
 Description
 ~~~~~~~~~~~
 
-The ``Description`` field shows the optional Description you may have entered during Setup or set in :ref:`administration`.
+The ``Description`` field shows the optional description you may have entered during Setup or set in :ref:`administration` --> Configuration --> sensoroni --> config --> node_description.
 
 Icons in Lower Left Corner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
