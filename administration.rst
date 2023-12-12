@@ -13,7 +13,9 @@ The Users page shows all user accounts that have been created for the grid.
 .. image:: images/users.png
   :target: _images/users.png
 
-The Role(s) column lists roles assigned to the user as defined in the :ref:`rbac` section.
+The Note column allows administrators to include a short note on a user's account.
+
+The Role column lists roles assigned to the user as defined in the :ref:`rbac` section.
 
 The Status column will show different icons depending on the status of the account. In the screenshot above:
 
