@@ -63,7 +63,6 @@ The manager node runs the following components:
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
 -  :ref:`kibana`
--  :ref:`curator`
 -  :ref:`elastalert`
 -  :ref:`redis`
 
@@ -76,7 +75,6 @@ Search Nodes run the following components:
 
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
--  :ref:`curator`
 
 Manager Search
 ~~~~~~~~~~~~~~
@@ -89,7 +87,6 @@ A manager search node runs the following components:
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
 -  :ref:`kibana`
--  :ref:`curator`
 -  :ref:`elastalert`
 -  :ref:`redis`
 
@@ -156,7 +153,6 @@ Heavy Nodes run the following components:
 
 -  :ref:`elasticsearch`
 -  :ref:`logstash`
--  :ref:`curator`
 -  :ref:`zeek`
 -  :ref:`suricata`
 -  :ref:`stenographer`

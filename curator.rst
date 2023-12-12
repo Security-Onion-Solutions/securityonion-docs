@@ -11,6 +11,10 @@ From https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.
     #. Iterate through a list of user-defined filters to progressively remove indices (or snapshots) from this actionable list as needed.
     #. Perform various actions on the items which remain in the actionable list.
 
+.. warning::
+
+        Starting in Security Onion 2.4.40, Curator is no longer included in Security Onion. To learn more about index maintenance, please see the :ref:`elasticsearch` section.
+
 Configuration
 -------------
 

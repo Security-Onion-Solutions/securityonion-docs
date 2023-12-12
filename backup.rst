@@ -18,15 +18,9 @@ You can configure backups by going to :ref:`administration` --> Configuration --
 Elasticsearch
 -------------
 
-:ref:`elasticsearch` data is not automatically backed up. This includes things that may be important to you like :ref:`kibana` customizations and :ref:`cases` data. :ref:`kibana` customizations are located in the ``.kibana`` indices and  :ref:`cases` data is stored in the ``so-case`` and ``so-casehistory`` indices. To backup this data, there are a few options.
+:ref:`elasticsearch` data is not automatically backed up. This includes things that may be important to you like :ref:`kibana` customizations and :ref:`cases` data. :ref:`kibana` customizations are located in the ``.kibana`` indices and  :ref:`cases` data is stored in the ``so-case`` and ``so-casehistory`` indices. If you have a distributed deployment with :ref:`elasticsearch` clustering, then you can enable replicas to have redundancy in case of a single node failure. Of course, please keep in mind that enabling replicas doubles your storage needs.
 
-The first option is to enable snapshots with :ref:`curator` to snapshot data to an external storage device such as a NAS.
-
-The second option is to use :ref:`elasticsearch`'s built-in support for snapshots:
+Another option is to use :ref:`elasticsearch`'s built-in support for snapshots:
 https://www.elastic.co/guide/en/elasticsearch/reference/current/snapshot-restore.html
 
-This option requires that you configure :ref:`elasticsearch` with a ``path.repo`` setting where it can store the snapshots.
-
-Once :ref:`elasticsearch` has the ``path.repo`` setting, you should be able to log into :ref:`kibana` and configure snapshots as shown in the link above. Those snapshots will then be accessible in ``/nsm/elasticsearch/repo/``.
-
-A third option is if you have a distributed deployment with :ref:`elasticsearch` clustering, then you can enable replicas to have redundancy in case of a single node failure. Of course, please keep in mind that enabling replicas doubles your storage needs.
+This option requires that you configure :ref:`elasticsearch` with a ``path.repo`` setting where it can store the snapshots. Once :ref:`elasticsearch` has the ``path.repo`` setting, you should be able to log into :ref:`kibana` and configure snapshots as shown in the link above. Those snapshots will then be accessible in ``/nsm/elasticsearch/repo/``.
