@@ -18,8 +18,8 @@ The Role(s) column lists roles assigned to the user as defined in the :ref:`rbac
 The Status column will show different icons depending on the status of the account. In the screenshot above:
 
 - the first account is enabled and has TOTP :ref:`mfa` enabled
-- the second account is enabled and has changed their password but does not have TOTP :ref:`mfa` enabled
-- the third account is enabled but has not yet changed their password and does not have TOTP :ref:`mfa` enabled
+- the second account is enabled and has changed their password but does not have :ref:`mfa` enabled
+- the third account is enabled but has not yet changed their password and does not have :ref:`mfa` enabled
 - the fourth account is locked
   
 Hovering over the icon in the Status column will show you these details as well.
