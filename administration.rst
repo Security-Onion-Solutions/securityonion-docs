@@ -62,3 +62,12 @@ By default, the Configuration page only shows the most widely used settings. If 
 .. warning::
 
 	Changing advanced settings is unsupported and could result in requiring a full cluster re-installation.
+
+License Key
+-----------
+
+In the future, we will offer some new enterprise features for Security Onion. If you are interested in those features and purchase a license key, then this screen will show the status of your license key.
+
+.. image:: images/62_licensekey.png
+  :target: _images/62_licensekey.png
+
