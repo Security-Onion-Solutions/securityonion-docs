@@ -7,6 +7,7 @@ Now that you understand :ref:`hardware` and :ref:`os` options, we should next di
 
 Minimum Storage
 ---------------
+
 As the :ref:`hardware` section mentions, the MINIMUM requirement is 200GB storage. This is to allow 100GB for ``/nsm`` and 100GB for the rest of ``/``.
 
 ISO
@@ -22,7 +23,7 @@ You may want to consider Logical Volume Management (LVM) as it will allow you to
 /boot
 -----
 
-You probably want a dedicated ``/boot`` partition of at least 512MB at the beginning of the drive.
+You probably want a dedicated ``/boot`` partition of at least 1GB at the beginning of the drive.
 
 /nsm
 ----
@@ -49,7 +50,7 @@ Example
 
 Here's an example of how our current Security Onion ISO image partitions a 1TB disk:
 
-- 512MB ``/boot`` partition at the beginning of the drive
+- 1GB ``/boot`` partition at the beginning of the drive
 - the remainder of the drive is an ``LVM`` volume that is then partitioned as follows:
 
   - 630GB ``/nsm``
