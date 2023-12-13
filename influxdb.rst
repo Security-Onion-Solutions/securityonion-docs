@@ -27,7 +27,7 @@ You can configure InfluxDB by going to :ref:`administration` --> Configuration -
 .. image:: images/config-item-influxdb.png
   :target: _images/config-item-influxdb.png
 
-You can configure InfluxDB by going to :ref:`administration` --> Configuration --> telegraf.
+You can configure Telegraf by going to :ref:`administration` --> Configuration --> telegraf.
 
 .. image:: images/config-item-telegraf.png
   :target: _images/config-item-telegraf.png
