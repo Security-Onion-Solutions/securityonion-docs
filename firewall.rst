@@ -13,12 +13,12 @@ This first sub-section will discuss network firewalls outside of Security Onion.
 Internet Communication
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When configuring network firewalls for Internet-connected deployments (non-:ref:`airgap`), you'll want to ensure that the deployment can connect outbound to the following:
+When configuring network firewalls for Internet-connected deployments (non-:ref:`airgap`), you'll want to ensure that the deployment can connect outbound (TCP/443) to the following:
 
 - raw.githubusercontent.com (Security Onion public key)
-- pkg-containers.githubusercontent.com
 - sigs.securityonion.net (Signature files for Security Onion containers)  
 - ghcr.io (Container downloads)  
+- pkg-containers.githubusercontent.com (Container downloads)  
 - rules.emergingthreatspro.com (Emerging Threats IDS rules)  
 - rules.emergingthreats.net (Emerging Threats IDS open rules)  
 - github.com (Strelka and Sigma rules updates) 
