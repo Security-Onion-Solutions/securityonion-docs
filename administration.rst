@@ -59,6 +59,8 @@ If you're not sure of which component a particular setting may belong to, you ca
 
 	If you see a key that includes ``_x_``, it is a placeholder value used to represent a period (``.``).
 
+Some settings can be applied across the entire grid or to specific nodes. If you apply a setting to a specific node, it will override the grid setting.
+
 By default, the Configuration page only shows the most widely used settings. If you want to see all settings, you can go to the Options bar at the top of the page and then click the toggle labeled ``Show all configurable settings, including advanced settings``.
 
 .. warning::
