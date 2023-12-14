@@ -115,7 +115,7 @@ The analyst hostgroup is allowed access to the nginx ports which are 80 and 443 
 #. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``portgroups``, locate the ``nginx`` portgroup, and then select ``tcp``.
 #. On the right side, select the manager node, specify your custom port to be added, and then click the checkmark to save the value.
-#. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` at the top of the page.
+#. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
 Creating a custom host group with a custom port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
