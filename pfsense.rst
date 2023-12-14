@@ -19,7 +19,7 @@ To use the simple parser, first go to :ref:`administration` --> Configuration --
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png
    
-Once there, select the ``syslog`` option, specify the IP address of the pfSense firewall, and click the checkmark to save.
+Once there, select the ``syslog`` option, specify the IP address of the pfSense firewall, and click the checkmark to save. Then click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
    
 Next, configure your pfSense firewall to send syslog to the IP address of your Security Onion box. If you are using pfSense 2.6.0 or higher, make sure that ``Log Message Format`` is set to ``BSD (RFC 3164, default)``. 
 
