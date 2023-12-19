@@ -161,17 +161,16 @@ Supported Analyzers and Data Types
 
 The following is a summary of the built-in analyzers and their supported data types:
 
-
-=======================       ======= === ======== ==== == ==== ===== === === ========== ======== ====
- Name                         Domain  EML Gimphash Hash IP Mail Other URI URL User Agent Telfhash Tlsh
-=======================       ======= === ======== ==== == ==== ===== === === ========== ======== ====
+=======================       ======= === ======== ==== == ==== ===== === === ==========
+ Name                         Domain  EML Gimphash Hash IP Mail Other URI URL User Agent
+=======================       ======= === ======== ==== == ==== ===== === === ==========
 Alienvault OTX                   ✓                  ✓                              ✓
 Echotrail                                                         ✓         
-Elasticsearch                    ✓     ✓     ✓      ✓   ✓  ✓     ✓    ✓    ✓      ✓      ✓        ✓
+Elasticsearch                    ✓     ✓     ✓      ✓   ✓  ✓     ✓    ✓    ✓      ✓     
 EmailRep                                                    ✓               
 Greynoise                                               ✓
 LocalFile                        ✓                  ✓   ✓         ✓        ✓
-Malwarebazaar                                 ✓     ✓                                     ✓        ✓
+Malwarebazaar                                 ✓     ✓                                   
 Malware Hash Registry                               ✓
 Pulsedive                        ✓                  ✓   ✓              ✓   ✓      ✓
 Spamhaus                                                ✓
@@ -181,10 +180,7 @@ Urlhaus                                                                   ✓
 Urlscan                                                                   ✓
 Virustotal                       ✓                  ✓   ✓                 ✓
 WhoisLookup                      ✓        
-=======================       ======= === ======== ==== == ==== ===== === === ========== ======== ====
-
-
-
+=======================       ======= === ======== ==== == ==== ===== === === ==========
 
 Running Analyzers
 ~~~~~~~~~~~~~~~~~
