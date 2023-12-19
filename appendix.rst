@@ -69,9 +69,13 @@ Unmount /nsm:
     sudo vgchange -an /dev/mapper/nsm
     sudo vgexport /dev/mapper/nsm
 
-Boot the Security Onion 2.4 ISO image, go through the initial OS installation as shown in the :ref:`installation` section, and reboot.
+Boot the Security Onion 2.4 ISO image and go through the initial OS installation as shown in the :ref:`installation` section.
 
-After reboot, cancel setup and change partitioning (replacing ``/home/user/`` with your desired temporary location):
+.. warning::
+
+   During the OS installation, do NOT select the old NSM disk! It will be re-imported and used AFTER the OS install with LVM.
+
+After installation and reboot, log in as the user you created during installation. Setup will automatically start, but you'll need to cancel setup and change partitioning (replacing ``/home/user/`` with your desired temporary location):
 ::
 
     sudo cp -av /nsm/* /home/user/
