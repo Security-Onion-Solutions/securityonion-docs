@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.4.30 Hotfix [20231209] Changes
+--------------------------------
+
+- FIX: Update appliance kickstart scripts to fix issue with package copy `#12044 <https://github.com/Security-Onion-Solutions/securityonion/issues/12044>`_
+
 2.4.30 Hotfix [20231204] Changes
 --------------------------------
 
