@@ -162,22 +162,26 @@ Supported Analyzers and Data Types
 The following is a summary of the built-in analyzers and their supported data types:
 
 
-=======================       ======= === ==== == ==== ===== === === ==========
- Name                         Domain  EML Hash IP Mail Other URI URL User Agent
-=======================       ======= === ==== == ==== ===== === === ==========  
-Alienvault OTX                   ✓          ✓                                 ✓
-EmailRep                                            ✓
-Greynoise                                      ✓
-LocalFile                        ✓          ✓  ✓           ✓      ✓
-Malware Hash Registry                       ✓
-Pulsedive                        ✓          ✓  ✓              ✓    ✓      ✓
-Spamhaus                                       ✓
-Sublime Platform                       ✓
-Urlhaus                                                           ✓
-Urlscan                                                           ✓
-Virustotal                       ✓         ✓   ✓                  ✓
-WhoisLookup                      ✓
-=======================       ======= === ==== == ==== ===== === === ==========
+=======================       ======= === ======== ==== == ==== ===== === === ========== ======== ====
+ Name                         Domain  EML Gimphash Hash IP Mail Other URI URL User Agent Telfhash Tlsh
+=======================       ======= === ======== ==== == ==== ===== === === ========== ======== ====
+Alienvault OTX                   ✓                  ✓                              ✓
+Echotrail                                                         ✓         
+Elasticsearch                    ✓     ✓     ✓      ✓   ✓  ✓     ✓    ✓    ✓      ✓      ✓        ✓
+EmailRep                                                    ✓               
+Greynoise                                               ✓
+LocalFile                        ✓                  ✓   ✓         ✓        ✓
+Malwarebazaar                                 ✓     ✓                                     ✓        ✓
+Malware Hash Registry                               ✓
+Pulsedive                        ✓                  ✓   ✓              ✓   ✓      ✓
+Spamhaus                                                ✓
+Sublime Platform                        ✓        
+Threatfox                        ✓                  ✓   ✓
+Urlhaus                                                                   ✓
+Urlscan                                                                   ✓
+Virustotal                       ✓                  ✓   ✓                 ✓
+WhoisLookup                      ✓        
+=======================       ======= === ======== ==== == ==== ===== === === ========== ======== ====
 
 
 
@@ -223,10 +227,14 @@ Some analyzers require authentication or other details to be configured before u
 The following analyzers require users to configure authentication or other parameters in order for the analyzer to work correctly:
 
 - AlienVault OTX
+- Echotrail
+- Elasticsearch
 - EmailRep
 - GreyNoise
 - LocalFile
+- Malwarebazaar
 - Pulsedive
+- Threatfox
 - Urlscan
 - VirusTotal
 
