@@ -212,6 +212,8 @@ To add an integration to an existing policy:
 
 From ``Fleet`` -> ``Agent policies`` -> ``$Policy name``, click ``Add Integration`` and follow the steps for adding the integration.
 
+If the integration is designed to listen on a port to receive data, it will most likely default to listening on ``localhost`` only. Depending on how you are sending data to the integration, you may need to change that to ``0.0.0.0``.
+
 Adding a Custom Integration
 ---------------------------
 
