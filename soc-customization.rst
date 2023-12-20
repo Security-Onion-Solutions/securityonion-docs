@@ -33,7 +33,7 @@ The default timeout for user login sessions is 24 hours. This is a fixed timespa
 Reverse DNS Lookups
 -------------------
 
-You can enable reverse DNS lookups by going to :ref:`administration` --> Configuration --> soc --> server --> client --> enableReverseLookup.
+You can enable reverse DNS lookups by going to :ref:`administration` --> Configuration --> soc --> config --> server --> client --> enableReverseLookup.
 
 Custom Queries
 --------------
