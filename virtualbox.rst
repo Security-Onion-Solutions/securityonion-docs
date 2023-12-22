@@ -13,7 +13,7 @@ Creating VM
 - Specify RAM and Processors as needed per the :ref:`hardware` section and then click the ``Next`` button.
 - Specify virtual hard disk size as needed per the :ref:`hardware` section and then click the ``Next`` button.
 - Confirm options and then click the ``Finish`` button.
-- Virtualbox should have automatically enabled a network adapter attached to the NAT network. Depending on what kind of installation you are doing, you may want an additional network interface for sniffing from a TAP or SPAN port. If so, click the ``Settings`` button, click ``Network``, and then go to ``Adapter 2``. Enable the adapter, configure the network it should attach to, and then you will most likely want to go to Advanced and set Promiscuous Mode to either ``Allow VMs`` or ``Allow All``. Click the ``OK`` button.
+- Virtualbox should have automatically enabled a network adapter attached to the NAT network. Depending on what kind of installation you are doing, you may want to keep that as NAT or change to something else. If you want an additional network interface for sniffing from a TAP or SPAN port, then click the ``Settings`` button, click ``Network``, and then go to ``Adapter 2``. Enable the adapter, configure the network it should attach to, and then you will most likely want to go to Advanced and set Promiscuous Mode to either ``Allow VMs`` or ``Allow All``. Click the ``OK`` button.
 - Click the ``Start`` button to start the VM.
 - Follow the installation steps for your desired installation type in the :ref:`installation` section.
 
