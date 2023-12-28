@@ -61,7 +61,9 @@ When you are ready to start alerting on your Play, change the Status of the play
 
 The Elastalert rules are located under ``/opt/so/rules/elastalert/playbook/<PlayID>.yaml``. Elastalert rules created by Playbook will run every 3 minutes, with a ``buffer_time`` of 15 minutes.
 
-Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` play as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
+.. warning::
+
+	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` play as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
 
 Viewing Playbook Alerts
 -----------------------
