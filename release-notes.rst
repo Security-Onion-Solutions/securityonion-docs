@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.4.30 Hotfix [20231228] Changes
+--------------------------------
+
+- FIX: Appliance kickstart files are not copying Elastic Agent tarballs `#12081 <https://github.com/Security-Onion-Solutions/securityonion/issues/12081>`_
+
 2.4.30 Hotfix [20231219] Changes
 --------------------------------
 
