@@ -31,6 +31,11 @@ The ``Node Status`` section displays many different fields relating to each node
 
   Starting in Security Onion 2.4.40, a significant number of new metrics are included in the ``Node Status`` section. Older versions will not have all of the metrics shown below.
 
+.. note::
+
+  If a node has not checked in recently then the metrics and statuses for that node will be slightly grayed out, to indicate that the values are stale.
+
+
 ID
 ~~
 
@@ -80,6 +85,13 @@ OS Uptime
 ~~~~~~~~~
 
 The ``OS Uptime`` field shows how long the node has been running since the last power-on or reboot event.
+
+If the node needs to be restarted to apply kernel updates then a message will appear next to the uptime value indicating this. The reboot button at the bottom of the grid page allows administrators to remotely reboot a node via the SOC web interface.
+
+Last Synchronized
+~~~~~~~~~~~~~~~~~
+
+The ``Last Synchronized`` field shows how long ago the node was synchronized to the manager node. This is equivalent to the last Salt highstate run. Knowing this value can be helpful when making configuration changes to the grid and determining whether a specific node has received those changes.
 
 Process Status
 ~~~~~~~~~~~~~~
@@ -215,24 +227,28 @@ There are a few icons in the lower left of the ``Node Status`` section depending
 
 - If the node is a network sensor, then there will be an additional icon for sending test traffic to the sensor.
 
-- Depending on the node type, there may be an additional icon for uploading your own PCAP or EVTX file. Clicking this icon results in an upload form. Once you've selected a file and initiated the upload, a status message appears. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import. Please note that this is designed for smaller files. If you need to import files larger than 25MB, then you will need to manually import via :ref:`so-import-pcap` or :ref:`so-import-evtx`.
+- Depending on the node type, there may be an additional icon for uploading your own PCAP or EVTX file. Clicking this icon results in an upload form. Once you've selected a file and initiated the upload, a status message appears. Uploaded PCAP files are automatically imported via :ref:`so-import-pcap` and EVTX files are automatically imported via :ref:`so-import-evtx`. Once the import is complete, a message will appear containing a hyperlink to view the logs from the import. Please note that this is designed for smaller files. If you need to import files larger than the default max upload size then you will need to either change the max upload size via the Configuration screen, or manually import via :ref:`so-import-pcap` or :ref:`so-import-evtx`.
 
   .. image:: images/40_upload.png
     :target: _images/40_upload.png
 
-- The reboot button allows for remotely rebooting a grid node. This may be necessary when scheduled OS/kernel updates are automatically applied and required a restart to take effect. Review the notes on the confirmation dialog thoroughly before confirming a reboot. Rebooting a manager node will likely cause the SOC web interface to become temporarily unavailable.
+- The reboot button allows for remotely rebooting a grid node. This may be necessary when scheduled OS/kernel updates are automatically applied and require a restart to take effect. Review the notes on the confirmation dialog thoroughly before confirming a reboot. Rebooting a manager node will likely cause the SOC web interface to become temporarily unavailable.
 
 - Clicking the question mark button takes you to this help document.
 
 Container Status
 ----------------
 
-If any containers show anything other than ``running``, then you might want to double-check the configuration for that container and check the corresponding logs in ``/opt/so/log/``.
+.. note::
+
+  Restarting a node can take several minutes for all containers to return to a running state.
+
+If any containers show anything other than ``running`` click the cross-hair icon next to the container name. This will bring up the Hunt screen showing logs specific to that container, and may help determine why the container is not running.
 
 Appliance Images
 ----------------
 
-If you have purchased our official Security Onion Solutions appliances, then the grid page will show pictures of the front and rear of the appliances, useful for walking through connectivity discussions with personnel in the data center. If you are not using official Security Onion Solutions appliances, then it will simply display a message to that effect.
+If a node is running on an official Security Onion Solutions appliance then the grid page will show pictures of the front and rear of the appliance. This is useful for walking through connectivity discussions with personnel in the data center. When not using official Security Onion Solutions appliances it will simply display a message to that effect.
 
 Other Grid Pages
 ----------------
