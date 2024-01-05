@@ -46,11 +46,11 @@ You can also test using :ref:`so-test`.
 Identifying rule categories
 ---------------------------
 
-Rulesets come with a large number of rules enabled (over 20,000 by default). You should only run the rules necessary for your environment, so you may want to disable entire categories of rules that don't apply to you. Run the following command to get a listing of categories and the number of rules in each:
+Rulesets come with a large number of rules enabled (over 20,000 by default). You should only run the rules necessary for your environment, so you may want to disable entire categories of rules that don't apply to you. Run the following command to get a listing of categories and the number of enabled rules in each:
 
 ::
 
-    cut -d\" -f2 /opt/so/rules/nids/all.rules | grep -v "^$" | grep -v "^#" | awk '{print $1, $2}'|sort |uniq -c |sort -nr
+    grep -v "^#" /opt/so/rules/nids/all.rules | cut -d\" -f2 | awk '{print $1, $2}' | grep -v "^$" | sort | uniq -c |sort -nr
 
 So what's next?
 ---------------
