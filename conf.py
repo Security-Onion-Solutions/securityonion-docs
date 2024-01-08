@@ -9,6 +9,7 @@ from datetime import datetime
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Security Onion Documentation'
+author = 'Security Onion Solutions, LLC'
 copyright = str(datetime.now().year)
 release = '2.4'
 
