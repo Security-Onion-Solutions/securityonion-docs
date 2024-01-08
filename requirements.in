@@ -1,0 +1,9 @@
+commonmark
+jinja2
+mock
+readthedocs-sphinx-ext
+recommonmark
+six
+sphinx
+sphinx-notfound-page
+sphinx-rtd-theme
