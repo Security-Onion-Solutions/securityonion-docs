@@ -6,9 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Security Onion'
-copyright = '2024, Security Onion Solutions, LLC'
-author = 'Security Onion Solutions, LLC'
+project = 'Security Onion Documentation'
+copyright = str(datetime.now().year)
 release = '2.4'
 
 # -- General configuration ---------------------------------------------------
