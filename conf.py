@@ -34,6 +34,9 @@ html_theme_options = {
     'logo_only': True,
     'style_nav_header_background': 'black',
 }
+html_css_files = [
+    'theme_overrides.css'
+]
 html_js_files = [
     'theme_overrides.js'
 ]
