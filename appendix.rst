@@ -25,8 +25,6 @@ For the reasons listed above, we recommend that most users procure new hardware 
 
    If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion 2 pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open platform!
 
-If you have reviewed all of the warnings above and still want to attempt migration, you should be able to do the following.
-
 .. warning::
 
    We recommend trying this process in a test environment before attempting in your production environment.
@@ -34,6 +32,12 @@ If you have reviewed all of the warnings above and still want to attempt migrati
 .. warning::
 
    Please ensure that you have local access to the machine being upgraded via console, DRAC, IPMI, etc. Failure to do so could result in an unsuccessful upgrade, requiring a clean installation of Security Onion 2.4.
+
+If you have reviewed all of the warnings above and still want to attempt migration, you should be able to do the following.
+
+.. note::
+
+   If you have a distributed deployment, you will need to perform the steps on the manager first and then on each of the remaining nodes.
 
 First, make sure that your 2.3 installation is fully updated via :ref:`soup`:
 ::
