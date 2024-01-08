@@ -14,7 +14,7 @@ charset-normalizer==3.3.2
     # via requests
 commonmark==0.9.1
     # via recommonmark
-docutils==0.20.1
+docutils==0.19
     # via
     #   recommonmark
     #   sphinx
@@ -39,7 +39,7 @@ six==1.16.0
     # via -r requirements.in
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==7.2.6
+sphinx==6.2.1
     # via
     #   -r requirements.in
     #   recommonmark
