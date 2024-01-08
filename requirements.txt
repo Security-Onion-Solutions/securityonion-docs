@@ -1,8 +1,8 @@
-commonmark==0.9.1
+commonmark
 jinja2<3.1.0
 mock==1.0.1
 readthedocs-sphinx-ext
-recommonmark==0.5.0
+recommonmark
 six
 sphinx<7
 sphinx-notfound-page
