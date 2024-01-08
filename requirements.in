@@ -1,4 +1,5 @@
 recommonmark
+six
 sphinx
 sphinx-notfound-page
 sphinx-rtd-theme

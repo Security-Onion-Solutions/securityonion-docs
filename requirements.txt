@@ -35,6 +35,8 @@ recommonmark==0.7.1
     # via -r requirements.in
 requests==2.31.0
     # via sphinx
+six==1.16.0
+    # via -r requirements.in
 snowballstemmer==2.2.0
     # via sphinx
 sphinx==7.2.6
