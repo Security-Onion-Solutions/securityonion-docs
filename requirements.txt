@@ -4,6 +4,6 @@ mock
 readthedocs-sphinx-ext
 recommonmark
 six
-sphinx<7
+sphinx<6
 sphinx-notfound-page
 sphinx-rtd-theme
