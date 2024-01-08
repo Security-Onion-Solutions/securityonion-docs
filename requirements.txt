@@ -39,7 +39,7 @@ six==1.16.0
     # via -r requirements.in
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==6.2.1
+sphinx==5.3.0
     # via
     #   -r requirements.in
     #   recommonmark
