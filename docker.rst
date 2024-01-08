@@ -24,11 +24,6 @@ Elastic
 
 To maintain a high level of stability, reliability, and support, our Elastic Docker images are based on the Docker images provided by Elastic.co.
 
-Configuration
--------------
-
-You can modify Docker configuration by going to :ref:`administration` --> Configuration --> docker.
-
 Images
 ------
 
@@ -57,16 +52,10 @@ The manager node runs a Docker registry. From https://docs.docker.com/registry/r
 Networking and Bridging
 -----------------------
 
-By default, Docker configures its bridge with an IP of ``172.17.0.1``.
+By default, Docker configures its network bridge with an IP address of ``172.17.0.1``. This works fine for networks that aren't already using the ``172.17.0.0/16`` range. If you are using this range in your network, then you can change the Docker range during installation.
 
-https://docs.docker.com/engine/userguide/networking/#default-networks
-
-For many folks this is fine, but what if we actually use the the ``172.17.0.0/16`` range within our internal network(s)?  This results in a **conflict** when trying to assign IP addresses to interfaces and trying to route outside of the host. 
-
-It is currently possible to change this at install time. Once you change this default docker network you **MUST** configure all nodes in the grid to use this range:
-
-- During setup choose change docker network range.  
-- Enter your desired address range. You do not need the /24 at the end.  
+.. image:: images/16_setup_docker_range.png
+  :target: _images/16_setup_docker_range.png
     
 Containers
 ----------

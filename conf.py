@@ -16,7 +16,7 @@ project = u'Security Onion'
 copyright = str(datetime.now().year)
 version = '2.4'
 release = '2.4'
-exclude_patterns = ['_build']
+exclude_patterns = ['_build','.venv','README.md']
 pygments_style = 'sphinx'
 htmlhelp_basename = 'securityonion'
 html_theme = 'sphinx_rtd_theme'
@@ -32,6 +32,9 @@ latex_documents = [
 ]
 extensions = [
     'notfound.extension'
+]
+html_js_files = [
+    'theme_overrides.js'
 ]
 
 # sphinx-notfound-page

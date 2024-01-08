@@ -3,4 +3,7 @@
 so-allow
 ========
 
-In previous versions of Security Onion, so-allow was used to allow traffic through the host-based :ref:`firewall`. This is now done by going to :ref:`administration` --> Configuration --> firewall.
+In previous versions of Security Onion, so-allow was used to allow traffic through the host-based :ref:`firewall`. This is now done by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
+
+.. image:: images/config-item-firewall.png
+  :target: _images/config-item-firewall.png

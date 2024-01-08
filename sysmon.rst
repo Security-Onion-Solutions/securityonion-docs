@@ -11,10 +11,6 @@ From https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon:
     SIEM agents and subsequently analyzing them, you can identify malicious or anomalous activity and understand how intruders and
     malware operate on your network.
 
-.. note::
-
-    Check out our Sysmon video at https://youtu.be/Xz-7oDrZdQY!
-    
 Integration
 -----------
 

@@ -10,7 +10,7 @@ For network visibility, we offer signature based detection via :ref:`suricata`, 
 In the diagram below, we see Security Onion in a traditional enterprise network with a firewall, workstations, and servers. You can use Security Onion to monitor north/south traffic to detect an adversary entering an environment, establishing command-and-control (C2), or perhaps data exfiltration. You'll probably also want to monitor east/west traffic to detect lateral movement. As more and more of our network traffic becomes encrypted, it's important to fill in those blind spots with additional visibility in the form of endpoint telemetry. Security Onion can consume logs from your servers and workstations so that you can then hunt across all of your network and host logs at the same time.
 
 .. image:: images/diagrams/network-horiz.png
-  :target: _images/diagrams/network-horiz.png
+  :target: _images/network-horiz.png
    
 Network Visibility
 ------------------

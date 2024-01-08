@@ -3,7 +3,7 @@
 Administration
 ==============
 
-:ref:`soc` includes an Administration section which allows you to administer Users, Grid Members, and Configuration.
+:ref:`soc` includes an Administration section which allows you to administer Users, Grid Members, Configuration, and the License Key.
 
 Users
 -----
@@ -13,13 +13,16 @@ The Users page shows all user accounts that have been created for the grid.
 .. image:: images/users.png
   :target: _images/users.png
 
-The Role(s) column lists roles assigned to the user as defined in the :ref:`rbac` section.
+The Note column allows administrators to include a short note on a user's account.
+
+The Role column lists roles assigned to the user as defined in the :ref:`rbac` section.
 
 The Status column will show different icons depending on the status of the account. In the screenshot above:
 
-- the first account is disabled
-- the second account is enabled and has TOTP :ref:`mfa` enabled
-- the third account is enabled but does not have TOTP :ref:`mfa` enabled and has not yet changed their password
+- the first account is enabled and has TOTP :ref:`mfa` enabled
+- the second account is enabled and has changed their password but does not have :ref:`mfa` enabled
+- the third account is enabled but has not yet changed their password and does not have :ref:`mfa` enabled
+- the fourth account is locked
   
 Hovering over the icon in the Status column will show you these details as well.
 
@@ -33,7 +36,7 @@ The Grid Members page shows nodes that have attempted to join the grid and wheth
 
 Unaccepted members are displayed on the left side and broken into three sections: Pending Members, Denied Members, and Rejected Members. When you accept a member, it will then move to the right side under Accepted Members.
 
-For accepted members, you can click the REVIEW button to show additional information about the grid member. If you want to remove the member, you can then click the DELETE button.
+For accepted members, you can click the REVIEW button to show additional information about the grid member. If you want to remove the member, you can then click the DELETE button and review the confirmation.
 
 Configuration
 -------------
@@ -56,8 +59,19 @@ If you're not sure of which component a particular setting may belong to, you ca
 
 	If you see a key that includes ``_x_``, it is a placeholder value used to represent a period (``.``).
 
+Some settings can be applied across the entire grid or to specific nodes. If you apply a setting to a specific node, it will override the grid setting.
+
 By default, the Configuration page only shows the most widely used settings. If you want to see all settings, you can go to the Options bar at the top of the page and then click the toggle labeled ``Show all configurable settings, including advanced settings``.
 
 .. warning::
 
 	Changing advanced settings is unsupported and could result in requiring a full cluster re-installation.
+
+License Key
+-----------
+
+In the future, we will offer some new enterprise features for Security Onion. If you are interested in those features and purchase a license key, then this screen will allow you to enter your license key and then show the status of that license key.
+
+.. image:: images/62_licensekey.png
+  :target: _images/62_licensekey.png
+

@@ -27,6 +27,14 @@ Configuration
 
 You can configure Zeek by going to :ref:`administration` --> Configuration --> zeek. 
 
+.. image:: images/config-item-zeek.png
+  :target: _images/config-item-zeek.png
+
+Zeek logs are consumed by the Elastic Agent (managed by Elastic Fleet) so if you want to configure which Zeek logs are excluded, you can go to :ref:`administration` --> Configuration --> elasticfleet --> logging --> zeek --> excluded.
+
+.. image:: images/config-item-elasticfleet.png
+  :target: _images/config-item-elasticfleet.png
+
 HOME_NET
 --------
 
@@ -125,7 +133,7 @@ Zeek also provides other logs by default and you can read more about them at htt
 
 In addition to Zeek's default logs, we also include protocol analyzers for STUN, TDS, and Wireguard traffic and several different ICS/SCADA protocols. These analyzers are enabled by default.
 
-We also include MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can do so via :ref:`administration` --> Configuration --> zeek.
+We also include MITRE BZAR scripts and you can read more about them at https://github.com/mitre-attack/bzar. Please note that the MITRE BZAR scripts are disabled by default. If you would like to enable them, you can do so via :ref:`administration` --> Configuration --> zeek. Once enabled, you can then check for BZAR detections by going to :ref:`dashboards` and selecting the Zeek Notice dashboard.
 
 As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
 
@@ -158,7 +166,6 @@ If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`
 | For more information, please see:
 | https://docs.zeek.org/en/latest/frameworks/intel.html\ 
 | https://zeek.org/2014/01/23/intelligence-data-and-bro/\ 
-| https://github.com/weslambert/securityonion-misp
 
 Diagnostic Logging
 ------------------

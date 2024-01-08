@@ -8,7 +8,6 @@ Security Onion would like to thank the following projects for their contribution
 (listed alphabetically)
 
 - :ref:`attack-navigator`
-- :ref:`curator`
 - :ref:`cyberchef`
 - :ref:`docker`
 - :ref:`elastalert`

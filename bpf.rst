@@ -12,6 +12,9 @@ Configuration
 
 You can modify your BPF configuration by going to :ref:`administration` --> Configuration --> bpf. You can apply BPF configuration to :ref:`stenographer`, :ref:`suricata`, or :ref:`zeek`.
 
+.. image:: images/config-item-bpf.png
+  :target: _images/config-item-bpf.png
+
 Multiple Conditions
 ~~~~~~~~~~~~~~~~~~~
 
@@ -50,7 +53,21 @@ For example:
 
    | Please note that :ref:`stenographer` should correctly record traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
    | https://github.com/google/stenographer/issues/211
-   
+
+Adding Comments
+~~~~~~~~~~~~~~~
+
+Starting in Security Onion 2.4.30, comments can be added to the filters via the SOC UI. For example:
+
+::
+
+   # lab-east
+   not host 192.168.1.2 and not host 192.168.1.3 &&
+   # lab-west
+   not host 192.168.1.4 or not host 192.168.1.5 &&
+   # lab-central
+   not host 192.168.1.6 or not host 192.168.1.27
+
 Troubleshooting BPF using tcpdump
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -63,8 +80,6 @@ More Information
 ----------------
 
 .. note::
-
-   Check out our BPF video at https://youtu.be/uamNOjtUi4Y!
 
    | For more information about BPF, please see:
    | https://en.wikipedia.org/wiki/Berkeley_Packet_Filter

@@ -20,3 +20,4 @@ OS accounts are controlled by standard Linux account utilities. SOC accounts are
    disabling-accounts
    rbac
    kratos
+   oidc

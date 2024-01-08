@@ -8,10 +8,11 @@ This page references the various types of data fields utilized by the Elastic St
 ECS
 ---
 
-We've begun transitioning to Elastic Common Schema (ECS). This is a work-in-progress and will continue as time goes on.
+We try to align with Elastic Common Schema (ECS) where possible.
 
-| For more information about ECS, please see:
-| https://www.elastic.co/guide/en/ecs/current/ecs-reference.html
+.. note::
+
+    For more information about ECS, please see https://www.elastic.co/guide/en/ecs/current/ecs-reference.html
 
 Fields
 ------

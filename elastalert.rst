@@ -14,6 +14,9 @@ Configuration
 
 You can modify ElastAlert configuration by going to :ref:`administration` --> Configuration --> elastalert.
 
+.. image:: images/config-item-elastalert.png
+  :target: _images/config-item-elastalert.png
+
 ElastAlert Rules
 ----------------
 
@@ -21,11 +24,11 @@ ElastAlert rules are stored in ``/opt/so/rules/elastalert/``.
 
 By default, ElastAlert rules are configured with an output type of ``debug``, which simply outputs to a log file found in ``/opt/so/log/elastalert/``.
 
-ElastAlert logs to :ref:`elasticsearch` indices. You can search those indices in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically search the ``elastalert`` indices by default so if you want to use :ref:`dashboards` or :ref:`hunt` to search ElastAlert logs, then you'll need to adjust the ``es_index_patterns`` setting in your :ref:`salt` pillar to include ``*:elastalert*``:
+ElastAlert logs to :ref:`elasticsearch` indices. You can search those indices in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically search the ``elastalert`` indices by default so if you want to use :ref:`dashboards` or :ref:`hunt` to search ElastAlert logs, then you'll need to adjust the appropriate configuration setting. Find it in the Administration -> Configuration screen by filtering for ``elastic.index`` and selecting Options (at the top) and toggle on "Show all configurable settings". Add ``*:elastalert*`` to the ``index`` setting. The new setting value should resemble the following:
 
 ::
 
-    es_index_patterns: '*:so-*,*:endgame-*,*:elastalert*'
+    *:so-*,*:endgame-*,*:logs-*,*:elastalert*
 
 Slack
 ~~~~~
@@ -76,11 +79,6 @@ Then create a new file called ``/opt/so/rules/elastalert/smtp_auth_file.txt`` an
 
     user: youremail@gmail.com
     password: yourpassword   
-
-MISP
-~~~~
-
-Please see the :ref:`misp` section.
 
 so-elastalert-create
 ~~~~~~~~~~~~~~~~~~~~

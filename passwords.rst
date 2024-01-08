@@ -24,12 +24,14 @@ Your default user account should have sudo permissions. Command-line utilities t
 Password Logins to SOC
 ----------------------
 
-Log into :ref:`soc` using the username and password you created in the Setup wizard.
+Log into :ref:`soc` using the username and password you created in the Setup wizard or the username and password provided by your administrator.
 
 You can change your password in :ref:`soc` by clicking the user icon in the upper right corner, clicking ``Settings``, and then going to the ``Security`` tab:
 
 .. image:: images/password.png
   :target: _images/password.png
+
+Please note that, due to technical limitations, if you change your SOC password here it will not update your password in :ref:`influxdb`. However, resetting your password via :ref:`administration` will reset your :ref:`influxdb` password.
 
 If you've forgotten your SOC password, an administrator can change it using the :ref:`administration` interface.
 
@@ -37,6 +39,9 @@ Passwordless Logins to SOC
 --------------------------
 
 Once logged in to SOC using the username and password method, users can optionally enable passwordless logins, provided the setting is enabled. The login screen will show a separate section for passwordless logins, if it is enabled. Note that it is enabled by default on new installations.
+
+.. image:: images/37_login.png
+  :target: _images/37_login.png
 
 Activate passwordless login for your :ref:`soc` user by clicking the user icon in the upper right corner, clicking ``Settings``, and then going to the ``Security`` tab. Scroll down to the ``Security Keys`` section and follow the provided instructions.
 

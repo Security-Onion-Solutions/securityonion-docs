@@ -16,24 +16,28 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 
 Minimum Specs
 -------------
-If you just want to import a pcap or evtx file using the :ref:`grid` page, then you can configure Security Onion as an Import Node with the following minimum specs:
 
- - 4GB RAM
- - 2 CPU cores
- - 200GB storage
+Please note these are the absolute bare minimum requirements. Your requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
 
-For all other configurations, the minimum specs for running Security Onion are:
-
- - 12GB RAM
- - 4 CPU cores
- - 200GB storage
-
-.. note::
-
-   These minimum specs are for EVAL mode with minimal services running. These requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
+================       ====== ===== ========= ======   
+ Node Type              CPUs   RAM   Storage   NICs  
+================       ====== ===== ========= ======     
+Import                    2    4GB    50GB      1
+Eval                      4    12GB   200GB     2
+Standalone                4    16GB   200GB     2
+Manager                   4    16GB   200GB     1
+ManagerSearch             8    16GB   200GB     1
+Search node               4    16GB   200GB     1
+Forward node              4    12GB   200GB     2
+Heavy node                4    16GB   200GB     2
+IDH node                  2    1GB    12GB      1
+Fleet node                4    12GB   200GB     1
+Receiver node             2    8GB    200GB     1
+================       ====== ===== ========= ======   
 
 Production Deployments
 ----------------------
+
 For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
 
 .. tip::
@@ -71,24 +75,24 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Standalone Deployments
 ----------------------
 
-In a standalone deployment, the manager components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. You'll need at minimum 24GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 24GB RAM, you would most likely need swap space to avoid issues.
+In a standalone deployment, the manager components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. You'll need at minimum 16GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 16GB RAM, you will need swap space to avoid issues. We recommend a minimum of 24GB of RAM if you plan on monitoring traffic. The more traffic you plan on monitoring this RAM requirement will also increase. 
 
 This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
 - CPU: Used to parse incoming events, index incoming events, search metatadata, capture PCAP, analyze packets, and run the frontend components. As data and event consumption increases, a greater amount of CPU will be required.
-- RAM: Used for Logstash, Elasticsearch, disk cache for Lucene, :ref:`suricata`, :ref:`zeek`, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
-- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
+- RAM: Used for :ref:`logstash`, :ref:`elasticsearch`, disk cache for Lucene, :ref:`suricata`, :ref:`zeek`, etc. The amount of available RAM will directly impact search speeds and reliability, as well as ability to process and capture traffic.
+- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot :ref:`elasticsearch` indices.
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Manager node with local log storage and search
 ----------------------------------------------
 
-In an enterprise distributed deployment, a manager node will store logs from itself and forward nodes. It can also act as a syslog destination for other log sources to be indexed into Elasticsearch. An enterprise manager node should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
+In an enterprise distributed deployment, a manager node will store logs from itself and forward nodes. It can also act as a syslog destination for other log sources to be indexed into :ref:`elasticsearch`. An enterprise manager node should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
 
-- CPU: Used to parse incoming events, index incoming events, search metadata. As consumption of data and events increases, more CPU will be required.
-- RAM: Used for Logstash, Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
-- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
+- CPU: Used to parse incoming events, index incoming events, and search metadata. As consumption of data and events increases, more CPU will be required.
+- RAM: Used for :ref:`logstash`, :ref:`elasticsearch`, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
+- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot :ref:`elasticsearch` indices.
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
@@ -97,20 +101,20 @@ Manager node with separate search nodes
 
 This deployment type utilizes search nodes to parse and index events. As a result, the hardware requirements of the manager node are reduced. An enterprise manager node should have at least 4-8 CPU cores, 16GB RAM, and 200GB to 1TB of disk space. Many folks choose to host their manager node in their VM farm since it has lower hardware requirements than sensors but needs higher reliability and availability.
 
-- CPU: Used to receive incoming events and place them into Redis. Used to run all the front end web components and aggregate search results from the search nodes.
-- RAM: Used for Logstash and Redis. The amount of available RAM directly impacts the size of the Redis queue.
-- Disk: Used for general OS purposes and storing Kibana dashboards.
+- CPU: Used to receive incoming events and place them into :ref:`redis`. Used to run all the front end web components and aggregate search results from the search nodes.
+- RAM: Used for :ref:`logstash` and :ref:`redis`. The amount of available RAM directly impacts the size of the :ref:`redis` queue.
+- Disk: Used for general OS purposes and storing :ref:`kibana` dashboards.
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
 Search Node
 -----------
 
-Search nodes increase search and retention capacity with regard to Elasticsearch. These nodes parse and index events, and provide the ability to scale horizontally as overall data intake increases. Search nodes should have at least 4-8 CPU cores, 16-64GB RAM, and 200GB of disk space or more depending on your logging requirements.
+Search nodes increase search and retention capacity with regard to :ref:`elasticsearch`. These nodes parse and index events, and provide the ability to scale horizontally as overall data intake increases. Search nodes should have at least 4-8 CPU cores, 16-64GB RAM, and 200GB of disk space or more depending on your logging requirements.
 
 - CPU: Used to parse incoming events and index incoming events. As consumption of data and events increases, more CPU will be required.
-- RAM: Used for Logstash, Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
-- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
+- RAM: Used for :ref:`logstash`, :ref:`elasticsearch`, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
+- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot :ref:`elasticsearch` indices.
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
@@ -121,18 +125,18 @@ A forward node runs sensor components only, and forwards metadata to the manager
 
 - CPU: Used for analyzing and storing network traffic. As monitored bandwidth increases, a greater amount of CPU will be required. See below.
 - RAM: Used for write cache and processing traffic.
-- Disk: Used for storage of PCAP and metadata . A larger amount of storage allows for a longer retention period.
+- Disk: Used for storage of PCAP and metadata. A larger amount of storage allows for a longer retention period.
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
-Heavy Node (Sensor with ES components)
---------------------------------------
+Heavy Node (Sensor with Elasticsearch components)
+-------------------------------------------------
 
-A heavy node runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through Kibana, the manager node queries this node's Elasticsearch instance.
+A heavy node runs all the sensor components AND Elastic components locally. This dramatically increases the hardware requirements. In this case, all indexed metadata and PCAP are retained locally. When a search is performed through :ref:`kibana`, the manager node queries this node's :ref:`elasticsearch` instance. You'll need at minimum 16GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 16GB RAM, you will need swap space to avoid issues. We recommend a minimum of 24GB of RAM if you plan on monitoring traffic. The more traffic you plan on monitoring this RAM requirement will also increase.
 
-- CPU: Used to parse incoming events, index incoming events, search metadata . As monitored bandwidth (and the amount of overall data/events) increases, a greater amount of CPU will be required.
-- RAM: Used for Logstash , Elasticsearch, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
-- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot ES indices.
+- CPU: Used to parse incoming events, index incoming events, and search metadata. As monitored bandwidth (and the amount of overall data/events) increases, a greater amount of CPU will be required.
+- RAM: Used for :ref:`logstash`, :ref:`elasticsearch`, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
+- Disk: Used for storage of indexed metadata. A larger amount of storage allows for a longer retention period. It is typically recommended to retain no more than 30 days of hot :ref:`elasticsearch` indices.
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 

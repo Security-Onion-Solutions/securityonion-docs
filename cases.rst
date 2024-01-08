@@ -103,14 +103,14 @@ Once you have one or more cases, you can use the main Cases page to get an overv
 Options
 -------
 
-Starting at the top of the main Cases page, the Options drop-down menu allows you to set options such as Automatic Refresh Interval and Time Zone.
+Starting at the top of the main Cases page, the Options menu allows you to set options such as Automatic Refresh Interval and Time Zone.
 
 There is also a toggle labeled ``Temporarily enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
 
 Query Bar
 ---------
 
-The query bar defaults to Open Cases. Clicking the dropdown box reveals other options such as Closed Cases, My Open Cases, My Closed Cases, and Templates. If you want to send your current query to Hunt, you can click the crosshair icon to the right of the query bar.
+The query bar defaults to Open Cases. Clicking the drop-down box reveals other options such as Closed Cases, My Open Cases, My Closed Cases, and Templates. If you want to send your current query to Hunt, you can click the crosshair icon to the right of the query bar.
 
 Under the query bar, you’ll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
@@ -161,25 +161,26 @@ Supported Analyzers and Data Types
 
 The following is a summary of the built-in analyzers and their supported data types:
 
-
-=======================       ======= ====   ==   ====  ===== ===  === ==========
- Name                         Domain  Hash   IP   Mail  Other URI  URL User Agent
-=======================       ======= ====   ==   ====  ===== ===  === ==========  
-Alienvault OTX                   ✓      ✓                                 ✓
-EmailRep                                            ✓
-Greynoise                                     ✓
-LocalFile                        ✓      ✓     ✓           ✓         ✓
-Malware Hash Registry                   ✓
-Pulsedive                        ✓      ✓     ✓                ✓    ✓      ✓
-Spamhaus                                      ✓
-Urlhaus                                                             ✓
-Urlscan                                                             ✓
-Virustotal                       ✓      ✓     ✓                     ✓
-WhoisLookup                      ✓
-=======================       ======= ====   ==   ====  ===== ===  === ==========
-
-
-
+=======================       ======= === ==== == ==== ===== === === ==========
+ Name                         Domain  EML Hash IP Mail Other URI URL User Agent
+=======================       ======= === ==== == ==== ===== === === ==========
+Alienvault OTX                   ✓         ✓                              ✓
+Echotrail                                                ✓         
+Elasticsearch                    ✓     ✓   ✓   ✓  ✓     ✓    ✓    ✓      ✓     
+EmailRep                                           ✓               
+Greynoise                                      ✓
+LocalFile                        ✓         ✓   ✓         ✓        ✓
+Malwarebazaar                              ✓                                   
+Malware Hash Registry                      ✓
+Pulsedive                        ✓         ✓   ✓              ✓   ✓      ✓
+Spamhaus                                       ✓
+Sublime Platform                        ✓        
+Threatfox                        ✓         ✓   ✓
+Urlhaus                                                          ✓
+Urlscan                                                          ✓
+Virustotal                       ✓         ✓   ✓                 ✓
+WhoisLookup                      ✓        
+=======================       ======= === ==== == ==== ===== === === ==========
 
 Running Analyzers
 ~~~~~~~~~~~~~~~~~
@@ -210,6 +211,10 @@ Expanding the collapsed row will reveal a more detailed view of the analysis:
 .. image:: images/analyzers-job-details.png
   :target: _images/analyzers-job-details.png
 
+.. warning::
+
+    If you try to run the Malware Hash Registry analyzer but it results in a "Name or service not known" error, then it may be a DNS issue. Folks using 8.8.4.4 or 8.8.8.8 as their DNS resolver have reported this issue. A potential workaround is to switch to another DNS resolver like 1.1.1.1.
+
 Configuring Analyzers
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -218,14 +223,23 @@ Some analyzers require authentication or other details to be configured before u
 The following analyzers require users to configure authentication or other parameters in order for the analyzer to work correctly:
 
 - AlienVault OTX
+- Echotrail
+- Elasticsearch
 - EmailRep
 - GreyNoise
 - LocalFile
+- Malwarebazaar
 - Pulsedive
+- Threatfox
 - Urlscan
 - VirusTotal
 
-To configure an analyzer, consult its documentation via the provided README file. For example, the README for the VirusTotal analyzer can be found at https://github.com/Security-Onion-Solutions/securityonion/tree/dev/salt/sensoroni/files/analyzers/virustotal.
+To configure an analyzer, navigate to :ref:`administration` -> Configuration -> sensoroni.
+
+.. image:: images/config-item-sensoroni.png
+  :target: _images/config-item-sensoroni.png
+   
+At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to sensoroni -> analyzers.
 
 Developing Analyzers
 ~~~~~~~~~~~~~~~~~~~~

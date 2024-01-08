@@ -3,7 +3,7 @@
 so-elasticsearch-query
 ======================
 
-You can use ``so-elasticsearch-query`` to submit a cURL request to the local Security Onion Elasticsearch host from the command line.
+You can use ``so-elasticsearch-query`` to submit a cURL request to the local Security Onion :ref:`elasticsearch` host from the command line.
 
 Usage
 -----

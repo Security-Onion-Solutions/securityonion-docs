@@ -12,14 +12,22 @@ If you need to add a new OS user account, you can use the ``adduser`` command.  
 
     sudo adduser tom
 
+We recommend creating usernames in lower case for consistency.
+
 For more information, please see the adduser manual by typing ``man adduser``.
 
 SOC
 ---
 
-If you need to add a new account to :ref:`soc`, navigate to the :ref:`administration` interface, click ``Users``, and then click the + icon. Fill out the necessary information and then click the ``ADD`` button.
+If you need to add a new account to :ref:`soc`, navigate to the :ref:`administration` interface, and then click ``Users``.
 
-.. image:: images/users.png
-  :target: _images/users.png
+.. image:: images/59_users.png
+  :target: _images/59_users.png
+
+Click the ``+`` button, fill out the necessary information, and then click the ``ADD`` button.
+
+.. tip::
+
+  We recommend specifying email addresses in lower case for consistency.
 
 For more information about the Users page, please see the :ref:`administration` section.

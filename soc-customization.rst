@@ -3,7 +3,12 @@
 SOC Customization
 =================
 
-You can customize :ref:`soc` by going to :ref:`administration` --> Configuration --> soc. Below are some ways in which you can customize SOC. Once all customizations are complete, you can make the changes take effect by clicking the ``Options`` bar at the top and then clicking the ``SYNCHRONIZE GRID`` button.
+You can customize :ref:`soc` by going to :ref:`administration` --> Configuration --> soc. 
+
+.. image:: images/config-item-soc.png
+  :target: _images/config-item-soc.png
+
+Below are some ways in which you can customize SOC. Once all customizations are complete, you can make the changes take effect by clicking the ``Options`` bar at the top and then clicking the ``SYNCHRONIZE GRID`` button.
 
 Login Page
 ----------
@@ -28,7 +33,7 @@ The default timeout for user login sessions is 24 hours. This is a fixed timespa
 Reverse DNS Lookups
 -------------------
 
-You can enable reverse DNS lookups by going to :ref:`administration` --> Configuration --> soc --> server --> client --> enableReverseLookup.
+You can enable reverse DNS lookups by going to :ref:`administration` --> Configuration --> soc --> config --> server --> client --> enableReverseLookup.
 
 Custom Queries
 --------------

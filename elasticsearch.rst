@@ -13,7 +13,7 @@ Data
 Indexing
 ~~~~~~~~
 
-Starting in Security Onion 2.4, most data is associated with a data stream, which is an abstraction from traditional indices that leverages one or more backing indices to manage and represent the data within the data stream. The usage of data streams allows for greater flexibility in data management.
+Most data is associated with a data stream, which is an abstraction from traditional indices that leverages one or more backing indices to manage and represent the data within the data stream. The usage of data streams allows for greater flexibility in data management.
 
 Data streams can be targeting during search or other operations directly, similar to how indices are targeted.
 
@@ -47,24 +47,14 @@ Security Onion tries to adhere to the Elastic Common Schema wherever possible. O
 Management
 ~~~~~~~~~~
 
-In Security Onion 2.4, Elasticsearch data is handled partially by both :ref:`curator` and ILM (https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html).
+Elasticsearch indices are managed by the ``so-elasticsearch-indices-delete`` utility and ILM (https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html).
 
-Only Curator performs the following actions:
-
-- closing of open indices
-- size-based index deletion
-- size-based closed index deletion
-
-Only ILM performs the following actions:
+``so-elasticsearch-indices-delete`` handles size-based index deletion and ILM handles the following:
 
 - size-based index rollover
 - time-based index rollover
 - time-based content tiers
-
-Both Curator and ILM perform the following actions:
-
-- time-based open index deletion
-- time-based closed index deletion
+- time-based index deletion
 
 Default ILM policies are preconfigured and associated with various data streams and index templates in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yaml``.
 
@@ -76,7 +66,9 @@ You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`dashb
 Authentication
 --------------
 
-We support Elastic authentication via :ref:`so-elastic-auth`.
+You can authenticate to Elasticsearch using the same username and password that you use for :ref:`soc`.
+
+You can add new user accounts to both Elasticsearch and :ref:`soc` at the same time as shown in the :ref:`adding-accounts` section. Please note that if you instead create accounts directly in Elastic, then those accounts will only have access to Elastic and not :ref:`soc`.
 
 Diagnostic Logging
 ------------------
@@ -142,7 +134,10 @@ Community ID
 Configuration
 -------------
 
-You can configure Elasticsearch by going to :ref:`administration`, then Configuration, and then ``elasticsearch``.
+You can configure Elasticsearch by going to :ref:`administration` --> Configuration --> elasticsearch.
+
+.. image:: images/config-item-elasticsearch.png
+  :target: _images/config-item-elasticsearch.png
 
 field expansion matches too many fields
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -194,26 +189,17 @@ Security Onion currently defaults to a field limit of 5000. If you receive error
 
 Please note that the change to the field limit will not occur immediately, only on index creation.
 
-Closing Indices
----------------
-
-Elasticsearch indices are closed based on the ``close`` setting shown at :ref:`administration` --> Configuration --> elasticsearch --> index_settings --> so-INDEX-NAME --> close. This setting configures :ref:`curator` to close any index older than the value given. The more indices are open, the more heap is required. Having too many open indices can lead to performance issues. There are many factors that determine the number of days you can have in an open state, so this is a good setting to adjust specific to your environment.
-
 Deleting Indices
 ----------------
 
 Size-based Index Deletion
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent, and it can be modified by navigating to :ref:`administration` -> Configuration -> Show all configurable settings, including advanced settings. -> elasticsearch -> retention -> retention_pct.
+Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent. 
 
-The change can be applied immediately by clicking ``Synchronize Grid``. Otherwise, the change will take effect after the Salt state has been applied at the next 15-minute interval.
+To modify this value, first navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch -> retention -> retention_pct. The change will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
-If your open indices are using more than ``retention_pct``, then :ref:`curator` will delete old open indices until disk space is back under ``retention_pct``. If your total Elastic disk usage (both open and closed indices) is above ``retention_pct``, then ``so-curator-closed-delete`` will delete old closed indices until disk space is back under ``retention_pct``. ``so-curator-closed-delete`` does not use :ref:`curator` because :ref:`curator` cannot calculate disk space used by closed indices. For more information, see https://www.elastic.co/guide/en/elasticsearch/client/curator/current/filtertype_space.html.
-
-:ref:`curator` and ``so-curator-closed-delete`` run on the same schedule. This might seem like there is a potential to delete open indices before deleting closed indices. However, keep in mind that :ref:`curator`'s delete.yml is only going to see disk space used by open indices and not closed indices. So if we have both open and closed indices, we may be at ``retention_pct`` but :ref:`curator`'s delete.yml is going to see disk space at a value lower than ``retention_pct`` and so it shouldn't delete any open indices.
-
-For example, suppose our ``retention_pct`` is 50%, total disk space is 1TB, and we have 30 days of open indices and 300 days of closed indices. We reach ``retention_pct`` and both :ref:`curator` and ``so-curator-closed-delete`` execute at the same time. Curator's delete.yml will check disk space used but it will see that disk space is at maybe 500GB so it thinks we haven't reached ``retention_pct`` and does not delete anything. ``so-curator-closed-delete`` gets a more accurate view of disk space used, sees that we have indeed reached ``retention_pct``, and so it deletes closed indices until we get lower than ``retention_pct``. In most cases, :ref:`curator` deletion should really only happen if we have open indices without any closed indices.
+If your indices are using more than ``retention_pct``, then ``so-elasticsearch-indices-delete`` will delete old indices until disk space is back under ``retention_pct``.
 
 Time-based Index Deletion
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -221,49 +207,6 @@ Time-based Index Deletion
 Time-based deletion occurs through the use of the $data_stream.policy.phases.delete.min_age setting within the lifecycle policy tied to each index and is controlled by ILM. It is important to note that size-based deletion takes priority over time-based deletion, as disk may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
 
 Policies can be edited within the SOC administration interface by navigating to :ref:`administration` -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age. Changes will take effect when a new index is created.
-
-Distributed Deployments
------------------------
-
-Security Onion supports Elastic clustering. In this configuration, Elasticsearch instances join together to create a single cluster. When using Elastic clustering, index deletion is based on the ``delete`` settings shown in the global pillar above. The ``delete`` settings in the global pillar configure :ref:`curator` to delete indices older than the value given. For each index, please ensure that the ``close`` setting is set to a smaller value than the ``delete`` setting.
-
-Let's discuss the process for determining appropriate ``delete`` settings. First, check your indices using :ref:`so-elasticsearch-query` to query ``_cat/indices``. For example:
-
-::
-
-	sudo so-elasticsearch-query _cat/indices | grep 2021.08.26
-
-	green open  so-zeek-2021.08.26              rEtb1ERqQcyr7bfbnR95zQ 5 0  2514236      0    2.4gb    2.4gb
-	green open  so-ids-2021.08.26               d3ySLbRHSJGRQ2oiS4pmMg 1 0     1385    147    3.3mb    3.3mb
-	green open  so-ossec-2021.08.26             qYf1HWGUSn6fIOlOgFgJOQ 1 0   125333     61  267.1mb  267.1mb
-	green open  so-elasticsearch-2021.08.26     JH8tOgr3QjaQ-EX08OGEXw 1 0    61170      0   32.7mb   32.7mb
-	green open  so-firewall-2021.08.26          Qx6_ZQS3QL6VGwIXIQ8mfQ 1 0   508799      0  297.4mb  297.4mb
-	green open  so-syslog-2021.08.26            3HiYP3fgSPmoV-Nbs3dlDw 1 0   181207      0     27mb     27mb
-	green open  so-kibana-2021.08.26            C6v6sazHSYiwqq5HxfokQg 1 0      745      0  809.5kb  809.5kb
- 
-Adding all the index sizes together plus a little padding results in 3.5GB per day. We will use this as our baseline.
-
-If we look at our total ``/nsm`` size for our search nodes (data nodes in Elastic nomenclature), we can calculate how many days open or closed that we can store. The equation shown below determines the proper delete timeframe. Note that total usable space depends on replica counts. In the example below we have 2 search nodes with 140GB for 280GB total of ``/nsm`` storage. Since we have a single replica we need to take that into account. The formula for that is: 
-
-1 replica = 2 x Daily Index Size
-2 replicas = 3 x Daily Index Size
-3 replicas = 4 x Daily Index Size
-
-Let’s use 1 replica:
-
-Total Space / copies of data = Usable Space
-
-280 / 2 = 140
-
-Suppose we want a little cushion so let's make Usable Space = 130
-
-Usable NSM space / Daily Index Size = Days
-
-For our example above lets fill in the proper values:
-
-130GB / 3.5GB = 37.1428571 days rounded down to 37 days
-
-Therefore, we can set all of our ``delete`` values to 37.
 
 Re-indexing
 -----------

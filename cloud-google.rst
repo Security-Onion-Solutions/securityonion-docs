@@ -8,7 +8,7 @@ https://securityonion.net/google/?ref=_ptnr_soc_docs_230824
 
 .. warning::
 
-   Existing 2.4 RC1 or newer Security Onion Azure Image installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Azure Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
+   Existing 2.4 RC1 or newer Security Onion Google Image installations should use the :ref:`soup` command to upgrade to newer versions of Security Onion. Attempting to switch to a newer image from the Google Marketplace could cause loss of data and require full grid re-installation. Upgrading from Security Onion 2.3 or beta versions of 2.4 is unsupported.
 
 .. note::
 
@@ -180,7 +180,7 @@ Manager Setup
 
 If this is an evaluation node with a local disk, ensure the node has been prepared as described in the preceding section. 
 
-After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Most distributed installations will use the ``hostname`` or ``other`` web access method, due to the need for both cluster nodes inside the private network, and analyst across the public Internet to reach with the manager. This allows for custom DNS entries to define the correct IP (private vs public) depending on whether its a cluster node or an analyst user.
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Most distributed installations will use the ``hostname`` or ``other`` web access method, due to the need for both cluster nodes inside the private network, and analyst users across the public Internet to reach the manager. This allows for custom DNS entries to define the correct IP (private vs public) depending on whether it's a cluster node or an analyst user. Users evaluating Security Onion for the first time should consider choosing the ``other`` option and specifying the node's public cloud IP.
 
 GCP provides a built-in NTP server at hostname ``metadata.google.internal``. This can be specified in the SOC Configuration screen after setup completes. By default the server will use the time servers at ``ntp.org``.
 
@@ -218,7 +218,7 @@ If connecting sensors through the VPN instance you will need to add the inside i
 ::
 
     SO Sensor        -> VPN Endpoint     -> Internet -> VPN Endpoint  -> SO Manager
-    Location: Remote    Location: Remote                Location: AWS    Location: AWS
+    Location: Remote    Location: Remote                Location: Googe  Location: Google
     192.168.33.13       192.168.33.10                   10.55.1.10       10.55.1.20
 
 In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``sensor`` firewall hostgroup.

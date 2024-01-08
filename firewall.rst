@@ -13,28 +13,35 @@ This first sub-section will discuss network firewalls outside of Security Onion.
 Internet Communication
 ~~~~~~~~~~~~~~~~~~~~~~
 
-When configuring network firewalls for Internet-connected deployments (non-:ref:`airgap`), you'll want to ensure that the deployment can connect outbound to the following:
+When configuring network firewalls for Internet-connected deployments (non-:ref:`airgap`), you'll want to ensure that the deployment can connect outbound (TCP/443) to the following:
 
 - raw.githubusercontent.com (Security Onion public key)
-- pkg-containers.githubusercontent.com
 - sigs.securityonion.net (Signature files for Security Onion containers)  
 - ghcr.io (Container downloads)  
+- pkg-containers.githubusercontent.com (Container downloads)  
 - rules.emergingthreatspro.com (Emerging Threats IDS rules)  
 - rules.emergingthreats.net (Emerging Threats IDS open rules)  
-- github.com (Strelka and Sigma rules updates)  
-- geoip.elastic.co (optional GeoIP updates for Elasticsearch)
-- storage.googleapis.com (optional GeoIP updates for Elasticsearch)
-- www.snort.org (if you are using the paid Snort Talos ruleset)  
+- github.com (Strelka and Sigma rules updates) 
 
 If you are using our Security Onion ISO image, you will also need access to the following:
 
-- repo.securityonion.net (Oracle Linux package updates)   
+- repo.securityonion.net (primary repo for Oracle Linux package updates)
+- so-repo-east.s3.us-east-005.backblazeb2.com (secondary repo for Oracle Linux package updates)
 
 If you are not using our Security Onion ISO image and are instead performing a network installation, you will also need access to the following:
 
 - update repo for whatever base OS you're installing on (:ref:`os` packages)
 - download.docker.com (:ref:`docker` packages)
 - repo.saltstack.com (:ref:`salt` packages)
+
+If you choose to enable GeoIP updates for :ref:`elasticsearch`, you will also need access to the following:
+
+- geoip.elastic.co
+- storage.googleapis.com
+
+If you choose to enable the Snort Talos ruleset, you will also need access to the following:
+
+- www.snort.org
 
 Node Communication
 ~~~~~~~~~~~~~~~~~~
@@ -57,8 +64,8 @@ Elastic Agent:
 
 Search nodes from/to manager:
 
-- TCP/9300 - Node-to-node for Elasticsearch
-- TCP/9696 - Redis
+- TCP/9300 - Node-to-node for :ref:`elasticsearch`
+- TCP/9696 - :ref:`redis`
 
 Host Firewall
 -------------
@@ -68,10 +75,15 @@ The remainder of this section will cover the host firewall built into Security O
 Configuration
 -------------
 
-You can configure the firewall by going to :ref:`administration` --> Configuration --> firewall.
+You can configure the firewall by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/config-item-firewall.png
+  :target: _images/config-item-firewall.png
+
+If for some reason you can't access :ref:`soc`, you can use the so-firewall command to allow your IP address to connect (replacing ``<IP ADDRESS>`` with your actual IP address):
+::
+
+    so-firewall includehost analyst <IP ADDRESS>
 
 Port Groups
 -----------
@@ -88,29 +100,29 @@ Function
 
 The firewall state is designed with the idea of creating port groups and host groups, each with their own alias or name, and associating the two in order to create an allow rule. A node that has a port group and host group association assigned to it will allow those hosts to connect to those ports on that node.
 
-The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node by going to :ref:`administration` --> Configuration --> firewall. When setup is run on a new node, it will ask the manager to add itself to the appropriate host groups. All node types are added to the minion host group to allow :ref:`salt` communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
+The default allow rules for each node are defined by its role (manager, searchnode, sensor, heavynode, etc) in the grid. Host groups and port groups can be created or modified from the manager node by going to :ref:`administration` --> Configuration --> firewall --> hostgroups. When setup is run on a new node, it will ask the manager to add itself to the appropriate host groups. All node types are added to the minion host group to allow :ref:`salt` communication. If you were to add a search node, you would see its IP appear in both the ``minion`` and the ``search_node`` host groups.
 
 Advanced Firewall Config
 ------------------------
 
-When you go to :ref:`administration` --> Configuration --> firewall, you will only see ``hostgroups`` by default. If you need to modify port groups, then you will need to click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+When you go to :ref:`administration` --> Configuration --> firewall, you will only see ``hostgroups`` by default. If you need to modify port groups, then you will need to click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 
 Modifying a default port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The analyst hostgroup is allowed access to the nginx ports which are 80 and 443 by default. In this example, we will extend the default nginx port group to include a custom port.
 
-#. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``portgroups``, locate the ``nginx`` portgroup, and then select ``tcp``.
 #. On the right side, select the manager node, specify your custom port to be added, and then click the checkmark to save the value.
-#. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` dropdown at the top of the page.
+#. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
 Creating a custom host group with a custom port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this example, we will add a new custom hostgroup to allow a custom set of hosts to connect to a custom port on an IDH node.
 
-#. At the top of the page, click the ``Options`` dropdown menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``hostgroups``, and then select ``customhostgroup0``.
 #. On the right side, select the IDH node that you want to allow access to, add the list of hosts that require access, and then click the checkmark to save the value.
 #. On the left side, go to ``firewall``, select ``portgroups``, select ``customportgroup0``, and then select the appropriate protocol.

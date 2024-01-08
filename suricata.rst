@@ -25,6 +25,9 @@ Configuration
 
 You can configure Suricata by going to :ref:`administration` --> Configuration --> suricata.
 
+.. image:: images/config-item-suricata.png
+  :target: _images/config-item-suricata.png
+
 If you would like to configure/manage IDS rules, please see the :ref:`rules` and :ref:`managing-alerts` sections.
 
 HOME_NET
@@ -57,9 +60,7 @@ If you have multiple physical CPUs, you’ll most likely want to pin sniffing pr
 Thresholding
 ------------
 
-To edit the thresholding configuration, go to :ref:`administration` --> Configuration --> suricata --> thresholding --> SIDS.
-
-Reference the example files at https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.usage and https://github.com/Security-Onion-Solutions/securityonion/blob/master/pillar/thresholding/pillar.example.
+To edit the thresholding configuration, please see the :ref:`managing-alerts` section.
 
 Metadata
 --------
@@ -138,7 +139,7 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 
 - Check the Suricata log for additional clues.
 
-- Check the :ref:`elastic-agent`, :ref:`logstash`, and :ref:`elasticsearch` logs for any pipeline issues that may be preventing the alerts from being written to the ``so-ids`` indices.
+- Check the :ref:`elastic-agent`, :ref:`logstash`, and :ref:`elasticsearch` logs for any pipeline issues that may be preventing the alerts from being written to :ref:`elasticsearch`.
 
 - Try installing a simple import node (perhaps in a VM) following the steps in the :ref:`first-time-users` section and see if you get alerts there. If so, compare the working system to the non-working system and determine where the differences are.
 

@@ -115,10 +115,10 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 - From the EC2 dashboard select: ``Launch Instance``
 - Search the AWS Marketplace for ``Security Onion`` and make sure you get the latest version of the Security Onion official AMI.
 - Choose the appropriate instance type based on the desired hardware requirements and select ``Next: Configure Instance Details``.  For assistance on determining resource requirements please review the AWS Requirements section above.
-- From the subnet drop-down menu select the same subnet as the sniffing interface.
+- From the subnet menu select the same subnet as the sniffing interface.
 - Under the Network interfaces section configure the eth0 (management) interface.
 - (Distributed "Sensor" node or Single-Node grid only) Under the Network interfaces section select: ``Add Device`` to attach the previously created sniffing interface to the instance.
-- (Distributed "Sensor" node or Single-Node grid only) From the Network Interface drop-down menu for eth1 choose the sniffing interface you created for this instance.  Please note if you have multiple interfaces listed you can verify the correct interface by navigating to the Network Interfaces section in the EC2 Dashboard.
+- (Distributed "Sensor" node or Single-Node grid only) From the Network Interface menu for eth1 choose the sniffing interface you created for this instance.  Please note if you have multiple interfaces listed you can verify the correct interface by navigating to the Network Interfaces section in the EC2 Dashboard.
 - Select: ``Next: Add Storage`` and configure the volume settings.
 - Select: ``Next: Add Tags`` and add any additional tags for the instance.
 - Select: ``Next: Configure Security Group`` and add the appropriate inbound rules.
@@ -153,7 +153,7 @@ Manager Setup
 
 If this is an ephemeral evaluation node, ensure the node has been prepared as described in the preceding section. 
 
-After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Most distributed installations will use the ``hostname`` or ``other`` web access method, due to the need for both cluster nodes inside the private network, and analyst across the public Internet to reach with the manager. This allows for custom DNS entries to define the correct IP (private vs public) depending on whether its a cluster node or an analyst user.
+After SSH'ing into the node, setup will begin automatically. Follow the prompts, selecting the appropriate install options. Most distributed installations will use the ``hostname`` or ``other`` web access method, due to the need for both cluster nodes inside the private network, and analyst users across the public Internet to reach the manager. This allows for custom DNS entries to define the correct IP (private vs public) depending on whether it's a cluster node or an analyst user. Users evaluating Security Onion for the first time should consider choosing the ``other`` option and specifying the node's public cloud IP.
 
 AWS provides a built-in NTP server at IP ``169.254.169.123``. This can be specified in the SOC Configuration screen after setup completes. By default the server will use the time servers at ``ntp.org``.
 

@@ -3,6 +3,133 @@
 Release Notes
 =============
 
+2.4.30 Hotfix [20231228] Changes
+--------------------------------
+
+- FIX: Appliance kickstart files are not copying Elastic Agent tarballs `#12081 <https://github.com/Security-Onion-Solutions/securityonion/issues/12081>`_
+
+2.4.30 Hotfix [20231219] Changes
+--------------------------------
+
+- FIX: Update appliance kickstart scripts to fix issue with package copy `#12044 <https://github.com/Security-Onion-Solutions/securityonion/issues/12044>`_
+
+2.4.30 Hotfix [20231204] Changes
+--------------------------------
+
+- FIX: Choosing Desktop or IDH from ISO GRUB menu results in failure `#11865 <https://github.com/Security-Onion-Solutions/securityonion/issues/11865>`_
+- FIX: Ensure airgap rule updates are being copied to the proper location `#11932 <https://github.com/Security-Onion-Solutions/securityonion/issues/11932>`_
+- FIX: outdated import-evtx-logs pipeline versions `#11889 <https://github.com/Security-Onion-Solutions/securityonion/issues/11889>`_
+- FIX: x509.pem_managed errors
+
+2.4.30 Hotfix [20231121] Changes
+--------------------------------
+
+- FIX: Salt minion service disabled highstate in upgrade to 2.4.30 `#11851 <https://github.com/Security-Onion-Solutions/securityonion/issues/11851>`_
+
+2.4.30 Hotfix [20231117] Changes
+--------------------------------
+
+- FIX: Elastic Defend Integration Policy Downgrade  `#11810 <https://github.com/Security-Onion-Solutions/securityonion/issues/11810>`_
+- FIX: Update SSL cert to avoid Google Chrome error (2.4) `#11824 <https://github.com/Security-Onion-Solutions/securityonion/issues/11824>`_
+
+2.4.30 [20231113] Changes
+-------------------------
+
+- FEATURE: Additional Supported Integrations `#11513 <https://github.com/Security-Onion-Solutions/securityonion/issues/11513>`_
+- FEATURE: Allow for BPF comments in SOC `#11738 <https://github.com/Security-Onion-Solutions/securityonion/issues/11738>`_
+- FEATURE: OpenID Connect (OIDC) support
+- FEATURE: so-elastic-fleet-reset `#11697 <https://github.com/Security-Onion-Solutions/securityonion/issues/11697>`_
+- FEATURE: Sublime Platform Integration `#11579 <https://github.com/Security-Onion-Solutions/securityonion/issues/11579>`_
+- FIX: Add -watch to soctopus saltstate for file SOCtopus.conf. Makes container restart @ highstate if file is updated. `#11700 <https://github.com/Security-Onion-Solutions/securityonion/issues/11700>`_
+- FIX: Allow ICMP to allow a node to respond to ping `#11495 <https://github.com/Security-Onion-Solutions/securityonion/issues/11495>`_
+- FIX: Allow standalone install type to work with 16GB of ram `#11699 <https://github.com/Security-Onion-Solutions/securityonion/issues/11699>`_
+- FIX: Allow the setting up of data_warm to the nodes list in ES
+- FIX: Data not returned from mine for network.ip_addrs `#11502 <https://github.com/Security-Onion-Solutions/securityonion/issues/11502>`_
+- FIX: Delete all obsolete scripts and unused code (also check so-setup, so-functions)
+- FIX: Fail so-setup if Elastic Fleet Setup encounters an error `#11696 <https://github.com/Security-Onion-Solutions/securityonion/issues/11696>`_
+- FIX: Global BPF prevents new sensor from applying highstate `#11610 <https://github.com/Security-Onion-Solutions/securityonion/issues/11610>`_
+- FIX: Improve error handling of Elasticsearch pipeline and template load scripts `#11728 <https://github.com/Security-Onion-Solutions/securityonion/issues/11728>`_
+- FIX: Logs not parsed correctly when shipped from Fleet Node `#11698 <https://github.com/Security-Onion-Solutions/securityonion/issues/11698>`_
+- FIX: Only heavy nodes should be treated as remote Elastic clusters in SOC `#11553 <https://github.com/Security-Onion-Solutions/securityonion/issues/11553>`_
+- FIX: Reduce ISO size `#11510 <https://github.com/Security-Onion-Solutions/securityonion/issues/11510>`_
+- FIX: Set days for warm for all so-* indices
+- FIX: Show container download status during soup `#11550 <https://github.com/Security-Onion-Solutions/securityonion/issues/11550>`_
+- FIX: Sigma DNS mapping `#11498 <https://github.com/Security-Onion-Solutions/securityonion/issues/11498>`_
+- FIX: Suricata 7 pkt_src field needs to be parsed `#11566 <https://github.com/Security-Onion-Solutions/securityonion/issues/11566>`_
+- FIX: The values for specific nodes in zeek.config.local.load are being populated incorrectly `#11472 <https://github.com/Security-Onion-Solutions/securityonion/issues/11472>`_
+- UPGRADE: NetworkMiner 2.8.1 `#11457 <https://github.com/Security-Onion-Solutions/securityonion/issues/11457>`_
+- UPGRADE: Salt 3006.3 `#11529 <https://github.com/Security-Onion-Solutions/securityonion/issues/11529>`_
+- UPGRADE: SOC dependency Axios to 1.6.1 `#11763 <https://github.com/Security-Onion-Solutions/securityonion/issues/11763>`_
+- UPGRADE: Sophos Integration `#11548 <https://github.com/Security-Onion-Solutions/securityonion/issues/11548>`_
+- UPGRADE: Upgrade Elastic to 8.10.4
+- UPGRADE: Upgrade InfluxDB to 2.7.1 and Telegraf to 1.28.2
+- UPGRADE: Upgrade Suricata to 7.0.2
+- UPGRADE: Zeek 6.0.2
+
+
+2.4.20 Hotfix [20231012] Changes
+--------------------------------
+
+- FIX: Elastic Defend Integration Policy Corrupted `#11527 <https://github.com/Security-Onion-Solutions/securityonion/issues/11527>`_
+
+2.4.20 [20231006] Changes
+-------------------------
+
+- FEATURE: Add ingest parser for pfSense OpenVPN logs `#7656 <https://github.com/Security-Onion-Solutions/securityonion/issues/7656>`_
+- FEATURE: Add new so-log-check tool to scan SO logging for anomalies
+- FEATURE: Enable Analyzers to be managed through SOC `#11211 <https://github.com/Security-Onion-Solutions/securityonion/issues/11211>`_
+- FEATURE: Grid screen improvements; support for desktop nodes
+- FEATURE: Provide global replica value for index templates `#10998 <https://github.com/Security-Onion-Solutions/securityonion/issues/10998>`_
+- FEATURE: SOC Grid Members should prompt for confirmation before actually deleting `#11223 <https://github.com/Security-Onion-Solutions/securityonion/issues/11223>`_
+- FIX: Adding custom action to SOC causes the Endgame action to be replicated `#11210 <https://github.com/Security-Onion-Solutions/securityonion/issues/11210>`_
+- FIX: Add Transform Role `#11309 <https://github.com/Security-Onion-Solutions/securityonion/issues/11309>`_
+- FIX: CentOS stream 9 installation `#11168 <https://github.com/Security-Onion-Solutions/securityonion/issues/11168>`_
+- FIX: Clean component template directory `#11331 <https://github.com/Security-Onion-Solutions/securityonion/issues/11331>`_
+- FIX: Desktop via network install fails `#10975 <https://github.com/Security-Onion-Solutions/securityonion/issues/10975>`_
+- FIX: Disable conn stats from being generated by default `#11410 <https://github.com/Security-Onion-Solutions/securityonion/issues/11410>`_
+- FIX: Docker custom_bind_mounts not working for some containers `#11122 <https://github.com/Security-Onion-Solutions/securityonion/issues/11122>`_
+- FIX: Duplicate cronjobs for filecheck `#11400 <https://github.com/Security-Onion-Solutions/securityonion/issues/11400>`_
+- FIX: Elastic Agent - Installation "Not Accessible" Message `#11191 <https://github.com/Security-Onion-Solutions/securityonion/issues/11191>`_
+- FIX: Elastic Fleet key and cert errors on heavynode `#11026 <https://github.com/Security-Onion-Solutions/securityonion/issues/11026>`_
+- FIX: Exclude Zeek console log ingestion `#11082 <https://github.com/Security-Onion-Solutions/securityonion/issues/11082>`_
+- FIX: Features pillar not showing all enabled features `#11130 <https://github.com/Security-Onion-Solutions/securityonion/issues/11130>`_
+- FIX: Fleet plugin logs ERROR during kibana restart `#10955 <https://github.com/Security-Onion-Solutions/securityonion/issues/10955>`_
+- FIX: Force nginx to run as user nobody `#11402 <https://github.com/Security-Onion-Solutions/securityonion/issues/11402>`_
+- FIX: Heavy nodes are missing ElasticFleet integration policies `#11189 <https://github.com/Security-Onion-Solutions/securityonion/issues/11189>`_
+- FIX: Heavy Nodes are not properly added to the soc.json `#11192 <https://github.com/Security-Onion-Solutions/securityonion/issues/11192>`_
+- FIX: Improve consistency in cert storage across OS families `#11162 <https://github.com/Security-Onion-Solutions/securityonion/issues/11162>`_
+- FIX: Improve default settings to avoid Elasticsearch hitting watermark `#11305 <https://github.com/Security-Onion-Solutions/securityonion/issues/11305>`_
+- FIX: Kibana Elastic Agent Dashboard 404 `#11018 <https://github.com/Security-Onion-Solutions/securityonion/issues/11018>`_
+- FIX: Maintain minion log in INFO level, add logrotate `#10921 <https://github.com/Security-Onion-Solutions/securityonion/issues/10921>`_
+- FIX: Make sure a data stream is created for syslog `#11209 <https://github.com/Security-Onion-Solutions/securityonion/issues/11209>`_
+- FIX: Make sure Elastic packages are loaded when changed `#11428 <https://github.com/Security-Onion-Solutions/securityonion/issues/11428>`_
+- FIX: Minimum system requirements checks during setup `#11324 <https://github.com/Security-Onion-Solutions/securityonion/issues/11324>`_
+- FIX: Minion log appears to show timezone bouncing `#10922 <https://github.com/Security-Onion-Solutions/securityonion/issues/10922>`_
+- FIX: osquery not working on macOS
+- FIX: Pre-load Integration Templates `#11146 <https://github.com/Security-Onion-Solutions/securityonion/issues/11146>`_
+- FIX: Prevent repeated creation of unused Docker volumes `#9941 <https://github.com/Security-Onion-Solutions/securityonion/issues/9941>`_
+- FIX: Remove default component templates to prevent conflicts `#11260 <https://github.com/Security-Onion-Solutions/securityonion/issues/11260>`_
+- FIX: Remove OSSEC and add Playbook mappings for the SOC Alerts Event Table `#11015 <https://github.com/Security-Onion-Solutions/securityonion/issues/11015>`_
+- FIX: Remove telegraf beats EPS script `#11412 <https://github.com/Security-Onion-Solutions/securityonion/issues/11412>`_
+- FIX: Rename some SOC log fields to more unique field names `#11429 <https://github.com/Security-Onion-Solutions/securityonion/issues/11429>`_
+- FIX: Reposync and yara rules shot not run in airgap `#11427 <https://github.com/Security-Onion-Solutions/securityonion/issues/11427>`_
+- FIX: SOC Config pcap doc links should point to steno docs `#11302 <https://github.com/Security-Onion-Solutions/securityonion/issues/11302>`_
+- FIX: SOC Config sensoroni doc links should point to correct docs `#11362 <https://github.com/Security-Onion-Solutions/securityonion/issues/11362>`_
+- FIX: SOC doesn't return user to login page after session expires `#11438 <https://github.com/Security-Onion-Solutions/securityonion/issues/11438>`_
+- FIX: SOC fails to parse incomplete Elastic error response `#11435 <https://github.com/Security-Onion-Solutions/securityonion/issues/11435>`_
+- FIX: SOC Grid Import inconsistency with larger files `#11143 <https://github.com/Security-Onion-Solutions/securityonion/issues/11143>`_
+- FIX: Some packages are installed/removed and upgraded/downgraded every 15min `#11458 <https://github.com/Security-Onion-Solutions/securityonion/issues/11458>`_
+- FIX: so-import-evtx incorrect dates `#11332 <https://github.com/Security-Onion-Solutions/securityonion/issues/11332>`_
+- FIX: so-salt-minion-check not rendering as jinja `#11390 <https://github.com/Security-Onion-Solutions/securityonion/issues/11390>`_
+- FIX: Stop zeek from trying to email reports `#11407 <https://github.com/Security-Onion-Solutions/securityonion/issues/11407>`_
+- FIX: Strelka ingest pipeline should properly index entropy 0 values and float values in the same field
+- FIX: Suricata filter and extraction rules are not properly updated `#11229 <https://github.com/Security-Onion-Solutions/securityonion/issues/11229>`_
+- FIX: Update firewall docs for custom port and host groups `#11053 <https://github.com/Security-Onion-Solutions/securityonion/issues/11053>`_
+- FIX: Update IDH Opencanary Modules to indicate they only apply to IDH nodes `#10170 <https://github.com/Security-Onion-Solutions/securityonion/issues/10170>`_
+- UPGRADE: Kratos to v1.0.0
+- UPGRADE: Suricata 6.0.14 `#11319 <https://github.com/Security-Onion-Solutions/securityonion/issues/11319>`_
+- UPGRADE: Zeek 5.0.10 `#11301 <https://github.com/Security-Onion-Solutions/securityonion/issues/11301>`_
+
 2.4.10 Hotfix [20230821] Changes
 --------------------------------
 
@@ -99,7 +226,7 @@ Release Notes
 - FIX: Cleanup log-rotate.conf `#10545 <https://github.com/Security-Onion-Solutions/securityonion/issues/10545>`_
 - FIX: Curator should ignore empty list `#10512 <https://github.com/Security-Onion-Solutions/securityonion/issues/10512>`_
 - FIX: Don't override default integration ingest node pipelines `#10542 <https://github.com/Security-Onion-Solutions/securityonion/issues/10542>`_
-- FIX: Ensure operations on records with "*Missing" fields use correct search `#8025 <https://github.com/Security-Onion-Solutions/securityonion/issues/8025>`_
+- FIX: Ensure operations on records with "Missing" fields use correct search `#8025 <https://github.com/Security-Onion-Solutions/securityonion/issues/8025>`_
 - FIX: Ensure packages aren't installed from default Rocky repos `#10630 <https://github.com/Security-Onion-Solutions/securityonion/issues/10630>`_
 - FIX: Exclude System logs from Hunt/Dashboard Queries. `#10122 <https://github.com/Security-Onion-Solutions/securityonion/issues/10122>`_
 - FIX: Finish SSL cert integration into SOC config UI `#10533 <https://github.com/Security-Onion-Solutions/securityonion/issues/10533>`_
