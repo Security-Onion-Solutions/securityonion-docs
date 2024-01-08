@@ -4,4 +4,4 @@ six
 readthedocs-sphinx-ext
 sphinx
 sphinx-notfound-page
-sphinx-rtd-theme
+sphinx-rtd-theme<2
