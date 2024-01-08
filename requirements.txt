@@ -1,6 +1,6 @@
 commonmark
-jinja2<3.1.0
-mock==1.0.1
+jinja2
+mock
 readthedocs-sphinx-ext
 recommonmark
 six
