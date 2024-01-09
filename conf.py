@@ -29,7 +29,7 @@ root_doc = 'index'
 
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
-html_logo = 'images/logo/so-logo.png'
+html_logo = 'images/so-logo.png'
 html_theme_options = {
     'logo_only': True,
     'style_nav_header_background': 'black',
