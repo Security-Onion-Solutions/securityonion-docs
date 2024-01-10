@@ -17,3 +17,4 @@ This section covers some of the utilities in Security Onion.
    so-monitor-add
    so-status
    so-test
+   so-user
