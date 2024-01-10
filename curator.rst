@@ -15,27 +15,6 @@ From https://www.elastic.co/guide/en/elasticsearch/client/curator/current/about.
 
         Starting in Security Onion 2.4.40, Curator is no longer included in Security Onion. To learn more about index maintenance, please see the :ref:`elasticsearch` section.
 
-Configuration
--------------
-
-Curator defaults to closing indices older than 30 days. Curator also deletes old indices to prevent your disk from filling up.
-
-Curator configuration can be found by going to :ref:`administration` --> Configuration --> curator.
-
-.. image:: images/config-item-curator.png
-  :target: _images/config-item-curator.png
-
-For more information about the Curator close and delete settings, please see the :ref:`elasticsearch` section.
-
-Diagnostic Logging
-------------------
-
-When Curator completes an action, it logs its activity in a log file found in ``/opt/so/log/curator/``. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the container:
-
-::
-
-        sudo docker logs so-curator
-
 More Information
 ----------------
 
