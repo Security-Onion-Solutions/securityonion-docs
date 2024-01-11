@@ -89,7 +89,7 @@ Once you have switched to a chart, you will see different buttons at the top of 
 Events
 ------
 
-The third and final section of the page is a data table that contains all search results and allows you to drill into individual search results as necessary. Clicking the table headers allows you to sort ascending or descending. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. To the right of that arrow is the ``Timestamp`` field. Next, a few standard fields are shown: ``source.ip``, ``source.port``, ``destination.ip``, ``destination.port``, ``log.id.uid`` (Zeek unique identifier), ``network.community_id`` (Community ID), and ``event.dataset``. Depending on what kind of data you're looking at, there may be some additional data-specific fields as well. 
+The third and final section of the page is a data table that contains all search results and allows you to drill into individual search results as necessary. Clicking the table header labels allows you to sort ascending or descending. You can also move a column to the right or left, or remove the column, by clicking the appropriate icons surrounding the column header labels. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. To the right of that arrow is the ``Timestamp`` field. Next, a few standard fields are shown: ``source.ip``, ``source.port``, ``destination.ip``, ``destination.port``, ``log.id.uid`` (Zeek unique identifier), ``network.community_id`` (Community ID), and ``event.dataset``. Depending on what kind of data you're looking at, there may be some additional data-specific fields as well. 
 
 Clicking a value in the Events table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
 
@@ -98,7 +98,7 @@ The default Fetch Limit for the Events table is ``100``. If you need to see more
 .. image:: images/soc-events-table.png
   :target: _images/soc-events-table.png
 
-When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
+When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there are two icons to the left. The Groupby icon, the left most icon, will add that field to the ``groupby`` segment of your query. The Toggle Column icon, to the right of the Groupby icon, will toggle that column in the Events table, and the icon will be a blue color if the column is visible. Additionally, clicking the Toggle Column icon will add a new ``| table xxx yyy zzz`` segment to the active query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
 
 .. image:: images/hunt-expanded.png
   :target: _images/hunt-expanded.png
@@ -236,6 +236,11 @@ By default, grouping by a particular field won't show any values if that field i
   event.dataset:conn AND destination.port:80 | groupby network.protocol* destination.port
 
 Please note that adding the asterisk to a non-string field may not work as expected. As an alternative, you may be able to use the asterisk with the equivalent ``keyword`` field if it is available. For example, ``source.geo.ip*`` may return 0 results, or a query failure error, but ``source.geo.ip.keyword*`` may work as expected.
+
+table
+~~~~~
+
+The ``table`` segment tells Dashboards to include the given field names as columns in the Events table at the bottom of the dashboards screen. The columns will be ordered within the Events table following the same order used in the ``| table xxx yyy zzz` segment``. When no ``table`` segment is provided in the query, Dashboards will analyze the ``events.dataset`` and ``events.module`` values of the query results to determine which default columns would be most appropriate to represent those events. Those default columns are defined in the SOC Configuration.
 
 Sankey Diagram Recursion
 ~~~~~~~~~~~~~~~~~~~~~~~~
