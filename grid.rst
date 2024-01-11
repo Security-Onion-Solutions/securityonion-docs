@@ -103,6 +103,11 @@ Connection Status
 
 The ``Connection Status`` field shows whether or not the node is currently connected to the grid.
 
+Elasticsearch Status
+~~~~~~~~~~~~~~~~~~~~
+
+If the node runs Elasticsearch, then the ``Elasticsearch Status`` field will show the status of it.
+
 RAID Status
 ~~~~~~~~~~~
 
@@ -153,15 +158,15 @@ Stenographer Loss
 
 The ``Stenographer Loss`` field shows the percentage of dropped packets due to :ref:`stenographer` being unable to keep up with the flow of network data. :ref:`stenographer` is responsible for writing down all packets to disk, as well as indexing these packets.
 
-Disk Usage Root
-~~~~~~~~~~~~~~~
+Root Partition Usage
+~~~~~~~~~~~~~~~~~~~~
 
-The ``Disk Usage Root`` field shows the percentage of the root OS disk utilization, as well as the total capacity of that disk (or partition). If this value is consistently in the red, then it can lead to problems including being unable to upgrade OS packages and Security Onion, the inability to save system logs, and other critical issues.
+The ``Root Partition Usage`` field shows the percentage of the root OS disk utilization, as well as the total capacity of that disk (or partition). If this value is consistently in the red, then it can lead to problems including being unable to upgrade OS packages and Security Onion, the inability to save system logs, and other critical issues.
 
-Disk Usage NSM
-~~~~~~~~~~~~~~~
+NSM Partition Usage
+~~~~~~~~~~~~~~~~~~~
 
-The ``Disk Usage NSM`` field shows the percentage of the NSM disk utilization, as well as the total capacity of that disk (or partition). If this value is consistently in the red, then it can lead to problems including being unable to ingest new events, store PCAP on disk, detect anomalous events, and other critical issues.
+The ``NSM Partition Usage`` field shows the percentage of the NSM disk utilization, as well as the total capacity of that disk (or partition). If this value is consistently in the red, then it can lead to problems including being unable to ingest new events, store PCAP on disk, detect anomalous events, and other critical issues.
 
 Elastic Storage Used
 ~~~~~~~~~~~~~~~~~~~~
@@ -181,12 +186,12 @@ The ``PCAP Retention`` field shows the number of historic days of available pack
 Load Average
 ~~~~~~~~~~~~
 
-The 1 minute, 5 minute, and 15 minute load averages for the node. Note that on systems with high numbers of CPU cores, this average can be equally as high. For example, if a system has 128 cores then a load average of 128 generally indicates that all 128 cores are working at the peak capacity. Exceeding that number can indicate that some cores are bottlenecked due to waiting on I/O. 
+The ``Load Average`` field shows the 1 minute, 5 minute, and 15 minute load averages for the node. Note that on systems with high numbers of CPU cores, this average can be equally as high. For example, if a system has 128 cores then a load average of 128 generally indicates that all 128 cores are working at the peak capacity. Exceeding that number can indicate that some cores are bottlenecked due to waiting on I/O. 
 
 Redis Queue Size
 ~~~~~~~~~~~~~~~~
 
-The ``Redis Queue Size`` shows the number of events queued in :ref:`redis` waiting to be ingested into :ref:`elasticsearch`. If this number is either steady or falling then it indicates the system is able to keep up with the current traffic flow. If this number is continually increasing then it can indicate a problem with ingest times taking too long for the amount of events that are being generated. Occasional increases are expected during traffic bursts but should eventually start to decrease once the high traffic flow period ends.
+The ``Redis Queue Size`` field shows the number of events queued in :ref:`redis` waiting to be ingested into :ref:`elasticsearch`. If this number is either steady or falling then it indicates the system is able to keep up with the current traffic flow. If this number is continually increasing then it can indicate a problem with ingest times taking too long for the amount of events that are being generated. Occasional increases are expected during traffic bursts but should eventually start to decrease once the high traffic flow period ends.
 
 Inbound Monitor Traffic
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -211,7 +216,7 @@ The ``Outbound Mgmt Traffic`` field shows the throughput of outbound bytes being
 Filter Keywords
 ~~~~~~~~~~~~~~~
 
-This is the list of keywords that are associated with this node type. Useful for filtering to only show a subset of a grid's nodes on the grid page.
+The ``Filter Keywords`` fields shows the list of keywords that are associated with this node type. These keywords are useful for filtering to only show nodes of a certain type.
 
 Description
 ~~~~~~~~~~~
