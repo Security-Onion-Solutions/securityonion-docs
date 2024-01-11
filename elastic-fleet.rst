@@ -201,6 +201,20 @@ Integrations
     - tenable_sc
     - vsphere
 
+    Security Onion 2.4.40 supports these additional Elastic integrations:
+
+    - anomali
+    - cisco_ftd
+    - cisco_ios
+    - cisco_ise
+    - cybersixgill
+    - iis
+    - microsoft_sqlserver
+    - mysql
+    - proofpoint_tap
+    - snort
+    - threatquotient
+
 You can read more about Elastic integrations at https://docs.elastic.co/integrations.
 
 Adding an Integration
