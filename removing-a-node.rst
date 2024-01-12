@@ -13,7 +13,7 @@ You can remove a node from :ref:`salt` by going to :ref:`administration` --> Gri
 .. image:: images/60_gridmembers.png
   :target: _images/60_gridmembers.png
    
-Find the Grid Member you would like to remove, click the REVIEW button, and then click the DELETE button.
+Find the Grid Member you would like to remove, click the ``REVIEW`` button, and then click the ``DELETE`` button.
 
 Removing from SOC
 -----------------
