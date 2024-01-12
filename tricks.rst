@@ -19,5 +19,4 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    syslog-output
    timezones
    pfsense
-   rita
    endgame
