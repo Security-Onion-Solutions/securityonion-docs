@@ -3,6 +3,23 @@
 Release Notes
 =============
 
+Known Issues
+~~~~~~~~~~~~
+
+If you notice an Elasticsearch status of "Pending" in the Grid interface, you can view affected indices by running the following command from the CLI on the manager node:
+
+::
+    sudo so-elasticsearch-indices-list | grep -vE "green|health"
+
+Affected indices will be presented with a health value of yellow or red. Older metrics indices for Elastic Endpoint logs may have been assigned a replica, so if you are running a single-node Elastic cluster there will be nowhere for the replica to exist.
+
+To resolve the issue, run the follow command for each affected index:
+
+::
+    sudo so-elasticsearch-query $index/_settings -d '{"number_of_replicas":0"}' -XPUT
+
+After running the command, the index should no longer use replicas, and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
+
 2.4.40 [20240116] Changes
 -------------------------
 
