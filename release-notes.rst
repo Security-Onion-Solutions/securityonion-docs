@@ -3,6 +3,66 @@
 Release Notes
 =============
 
+Known Issues
+~~~~~~~~~~~~
+
+If you notice an Elasticsearch status of "Pending" in the Grid interface, you can view affected indices by running the following command from the CLI on the manager node:
+
+::
+
+  sudo so-elasticsearch-indices-list | grep -vE "green|health"
+
+Affected indices will be presented with a health value of yellow or red. Older metrics indices for Elastic Endpoint logs may have been assigned a replica, so if you are running a single-node Elastic cluster there will be nowhere for the replica to exist.
+
+To resolve the issue, run the follow command for each affected index:
+
+::
+
+  sudo so-elasticsearch-query $index/_settings -d '{"number_of_replicas":0"}' -XPUT
+
+After running the command, the index should no longer use replicas, and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
+
+2.4.40 [20240116] Changes
+-------------------------
+
+- FEATURE: Add geoip support to Suricata `#11901 <https://github.com/Security-Onion-Solutions/securityonion/issues/11901>`_
+- FEATURE: Additional Supported Integrations #2 `#11958 <https://github.com/Security-Onion-Solutions/securityonion/issues/11958>`_
+- FEATURE: Additional Supported Integrations #3 `#12056 <https://github.com/Security-Onion-Solutions/securityonion/issues/12056>`_
+- FEATURE: Add server reboot notification to SOC  `#11852 <https://github.com/Security-Onion-Solutions/securityonion/issues/11852>`_
+- FEATURE: Allow an easy way to disable incoming events to a manager `#12033 <https://github.com/Security-Onion-Solutions/securityonion/issues/12033>`_
+- FEATURE: Carve out the cert_chain_fps value from SSL traffic `#11806 <https://github.com/Security-Onion-Solutions/securityonion/issues/11806>`_
+- FEATURE: Echotrail, Elasticsearch, MalwareBazaar, and ThreatFox Analyzers `#12014 <https://github.com/Security-Onion-Solutions/securityonion/issues/12014>`_
+- FEATURE: Grid page status/metric enhancements `#11971 <https://github.com/Security-Onion-Solutions/securityonion/issues/11971>`_
+- FEATURE: Manipulate event table columns `#12145 <https://github.com/Security-Onion-Solutions/securityonion/issues/12145>`_
+- FEATURE: Sublime Platform Analyzer `#11883 <https://github.com/Security-Onion-Solutions/securityonion/issues/11883>`_
+- FIX: Add force option to integrations `#12017 <https://github.com/Security-Onion-Solutions/securityonion/issues/12017>`_
+- FIX: Adding extra_hosts for SOC, Elasticsearch and Logstash Docker containers fails `#12015 <https://github.com/Security-Onion-Solutions/securityonion/issues/12015>`_
+- FIX: Begin kickstart consolidation
+- FIX: Corrupt job files should not cause SOC to exit during startup `#12082 <https://github.com/Security-Onion-Solutions/securityonion/issues/12082>`_
+- FIX: Disable Elastic Agent Downloads for Import and Eval mode
+- FIX: Docker service sometimes not started or enabled on remote nodes during setup `#12101 <https://github.com/Security-Onion-Solutions/securityonion/issues/12101>`_
+- FIX: Documentation links under SOC - Administration - Configuration need updating `#11828 <https://github.com/Security-Onion-Solutions/securityonion/issues/11828>`_
+- FIX: FIM Integration `#11847 <https://github.com/Security-Onion-Solutions/securityonion/issues/11847>`_
+- FIX: Ignore Zeek analyzer log `#11892 <https://github.com/Security-Onion-Solutions/securityonion/issues/11892>`_
+- FIX: Improve salt-relay reponse integrity
+- FIX: ISO image should default to 1GB /boot partition `#12002 <https://github.com/Security-Onion-Solutions/securityonion/issues/12002>`_
+- FIX: Logstash pipeline to point to self instead of manager `#12038 <https://github.com/Security-Onion-Solutions/securityonion/issues/12038>`_
+- FIX: Make sure optional integration pillar values are merged with defaults `#12163 <https://github.com/Security-Onion-Solutions/securityonion/issues/12163>`_
+- FIX: Playbook Navigator Layer `#11380 <https://github.com/Security-Onion-Solutions/securityonion/issues/11380>`_
+- FIX: Remove Curator
+- FIX: Remove sudo entry for so-setup after setup completes
+- FIX: Rerunning setup should uninstall local Elastic Agent `#12030 <https://github.com/Security-Onion-Solutions/securityonion/issues/12030>`_
+- FIX: Show more readable column names for default Case list screen `#12162 <https://github.com/Security-Onion-Solutions/securityonion/issues/12162>`_
+- FIX: SOC Hunt HTTP EXE query `#11784 <https://github.com/Security-Onion-Solutions/securityonion/issues/11784>`_
+- FIX: so-elastic-fleet-reset non-destructive `#12142 <https://github.com/Security-Onion-Solutions/securityonion/issues/12142>`_
+- FIX: so-playbook-reset `#11790 <https://github.com/Security-Onion-Solutions/securityonion/issues/11790>`_
+- FIX: Update clear scripts `#11991 <https://github.com/Security-Onion-Solutions/securityonion/issues/11991>`_
+- FIX: Update dashboard and hunt query for firewall logs `#12021 <https://github.com/Security-Onion-Solutions/securityonion/issues/12021>`_
+- FIX: Update NIDS rule.reference in common.nids pipeline `#11846 <https://github.com/Security-Onion-Solutions/securityonion/issues/11846>`_
+- UPGRADE: Salt 3006.5 `#12143 <https://github.com/Security-Onion-Solutions/securityonion/issues/12143>`_
+- UPGRADE: SOC dependencies to latest versions `#12041 <https://github.com/Security-Onion-Solutions/securityonion/issues/12041>`_
+- UPGRADE: Strelka 0.23.12.01 `#11770 <https://github.com/Security-Onion-Solutions/securityonion/issues/11770>`_
+
 2.4.30 Hotfix [20231228] Changes
 --------------------------------
 
