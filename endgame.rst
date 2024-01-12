@@ -27,16 +27,16 @@ This will open the Security Onion host-based firewall for access from the SMP to
 Example Endgame Data
 --------------------
 
-.. image:: https://user-images.githubusercontent.com/16829864/142234485-31778c15-e534-4747-882f-b82aafd14589.png
- :target: https://user-images.githubusercontent.com/16829864/142234485-31778c15-e534-4747-882f-b82aafd14589.png
+.. image:: images/endgame-data.png
+ :target: _images/endgame-data.png
 
 Pivot to Endgame Console
 ------------------------
 
 If Endgame support is enabled, a default `Endgame` pivot will be populated within SOC, based on the ``agent.id`` field:
 
-.. image:: https://user-images.githubusercontent.com/16829864/142237432-4657a104-1a98-47fd-98e2-0c800c025740.png
- :target: https://user-images.githubusercontent.com/16829864/142237432-4657a104-1a98-47fd-98e2-0c800c025740.png
+.. image:: images/endgame-pivot.png
+ :target: _images/endgame-pivot.png
  
-.. image:: https://user-images.githubusercontent.com/16829864/142236568-5a19f356-b197-4bb4-99ee-8a74313bed11.png
- :target: https://user-images.githubusercontent.com/16829864/142236568-5a19f356-b197-4bb4-99ee-8a74313bed11.png
+.. image:: images/endgame-console.png
+ :target: _images/endgame-console.png
