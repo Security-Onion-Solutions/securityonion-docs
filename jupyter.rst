@@ -13,8 +13,8 @@ Security Onion Setup
 
 As a best practice, you'll want to create a dedicated Jupyter notebook user with just read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
 
-.. image:: https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
-  :target:  https://user-images.githubusercontent.com/16829864/144250356-ed1ccfd7-d312-48e1-875d-92c9717b4145.png
+.. image:: images/jupyter-user.png
+  :target:  _images/jupyter-user.png
 
 **Security Onion Firewall**
 
@@ -78,8 +78,8 @@ Again, we'll execute the code within the cell, by pressing **Shift+ENTER**.
 
 We may see a warning like the following due to the fact that we are not performing verification for certificates:
 
-.. image:: https://user-images.githubusercontent.com/16829864/144252418-a6ced1a0-ef9e-4c66-b516-dc14facb80a5.png
-  :target:  https://user-images.githubusercontent.com/16829864/144252418-a6ced1a0-ef9e-4c66-b516-dc14facb80a5.png
+.. image:: images/jupyter-warning.png
+  :target:  _images/jupyter-warning.png
 
 For convenience during our testing, we can disable the warning in future runs, by pasting the following the next cell and executing it with **Shift+ENTER**:
 
@@ -107,8 +107,8 @@ Finally, we'll submit our query in the next cell using the following:
 
 The above code simply takes the results and converts them to a Python dict:
 
-.. image:: https://user-images.githubusercontent.com/16829864/144252891-5832070d-1d58-4e28-82f5-ba47081724bf.png
-  :target:  https://user-images.githubusercontent.com/16829864/144252891-5832070d-1d58-4e28-82f5-ba47081724bf.png
+.. image:: images/jupyter-python.png
+  :target:  _images/jupyter-python.png
 
 We can select a few fields, and modify the column values if we like:
 
@@ -122,7 +122,7 @@ We can select a few fields, and modify the column values if we like:
 
 Then we end up with something a little bit more targeted (you may need to adjust ``pd.options.display.max_colwidth`` for it to display appropriately) :
 
-.. image:: https://user-images.githubusercontent.com/16829864/144252941-5821e104-91ce-4fda-a00d-39352e17f9eb.png
-  :target:  https://user-images.githubusercontent.com/16829864/144252941-5821e104-91ce-4fda-a00d-39352e17f9eb.png
+.. image:: images/jupyter-targeted.png
+  :target:  _images/jupyter-targeted.png
 
 Obviously, there is much more we can do with this data other than just running the above example code. Happy hunting!
