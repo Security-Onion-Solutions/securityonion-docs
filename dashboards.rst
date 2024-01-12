@@ -240,7 +240,7 @@ Please note that adding the asterisk to a non-string field may not work as expec
 table
 ~~~~~
 
-The ``table`` segment tells Dashboards to include the given field names as columns in the Events table at the bottom of the dashboards screen. The columns will be ordered within the Events table following the same order used in the ``| table xxx yyy zzz` segment``. When no ``table`` segment is provided in the query, Dashboards will analyze the ``events.dataset`` and ``events.module`` values of the query results to determine which default columns would be most appropriate to represent those events. Those default columns are defined in the SOC Configuration.
+The ``table`` segment tells Dashboards to include the given field names as columns in the Events table at the bottom of the dashboards screen. The columns will be ordered within the Events table following the same order used in the ``| table xxx yyy zzz`` segment. When no ``table`` segment is provided in the query, Dashboards will analyze the ``events.dataset`` and ``events.module`` values of the query results to determine which default columns would be most appropriate to represent those events. Those default columns are defined in the SOC Configuration.
 
 Sankey Diagram Recursion
 ~~~~~~~~~~~~~~~~~~~~~~~~
