@@ -29,8 +29,8 @@ To create a new case, click the + icon and then fill out the Title and Descripti
 
 Alternatively, if you find events of interest in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you can escalate directly to Cases using the escalate button (blue triangle with exclamation point). Clicking the escalate button will escalate the data from the row as it is displayed. This means that if you're looking at an aggregated view, you will get limited details in the resulting escalated case. If you want more details to be included in the case, then first drill into the aggregation and escalate one of the individual items in that aggregation.
 
-.. image:: https://user-images.githubusercontent.com/1659467/95380455-c9572880-08b4-11eb-8821-cee23b97d85e.png
-  :target: https://user-images.githubusercontent.com/1659467/95380455-c9572880-08b4-11eb-8821-cee23b97d85e.png
+.. image:: images/cases-escalate-aggregation.png
+  :target: _images/cases-escalate-aggregation.png
 
 Once you click the escalate button, you can choose to escalate to a new case or an existing case. 
 
