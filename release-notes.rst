@@ -14,7 +14,7 @@ If you notice an Elasticsearch status of ``Pending`` in the Grid interface, you 
 
 Affected indices will be presented with a health value of yellow or red. Older metrics indices for Elastic Endpoint logs may have been assigned a replica, so if you are running a single-node Elastic cluster there will be nowhere for the replica to exist.
 
-To resolve the issue, run the follow command for each affected index (replacing ``$index`` with the actual index name):
+To resolve the issue, run the following command for each affected index (replacing ``$index`` with the actual index name):
 
 ::
 
