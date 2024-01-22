@@ -98,7 +98,7 @@ The default Fetch Limit for the Events table is ``100``. If you need to see more
 .. image:: images/soc-events-table.png
   :target: _images/soc-events-table.png
 
-When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there are two icons to the left. The Groupby icon, the left most icon, will add that field to the ``groupby`` segment of your query. The Toggle Column icon, to the right of the Groupby icon, will toggle that column in the Events table, and the icon will be a blue color if the column is visible. Additionally, clicking the Toggle Column icon will add a new ``| table xxx yyy zzz`` segment to the active query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
+When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there are two icons to the left. The Groupby icon, the left most icon, will add a new groupby table for that field. The Toggle Column icon, to the right of the Groupby icon, will toggle that column in the Events table, and the icon will be a blue color if the column is visible. Additionally, clicking the Toggle Column icon will add a new ``| table xxx yyy zzz`` segment to the active query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
 
 .. image:: images/hunt-expanded.png
   :target: _images/hunt-expanded.png
