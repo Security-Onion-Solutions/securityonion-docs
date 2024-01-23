@@ -86,7 +86,7 @@ To include an escaped ``$`` character in the regex pattern you'll need to make s
 
 ::
 
-	2009582 "\\\$EXTERNAL_NET" "\$HOME_NET"
+	2009582 "\$EXTERNAL_NET" "$HOME_NET"
 	
 The first string is a regex pattern, while the second is just a raw value. You'll need to ensure the first of the two properly escapes any characters that would be interpreted by regex. The second only needs the ``$`` character escaped to prevent bash from treating that as a variable.
 
