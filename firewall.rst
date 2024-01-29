@@ -67,6 +67,11 @@ Search nodes from/to manager:
 - TCP/9300 - Node-to-node for :ref:`elasticsearch`
 - TCP/9696 - :ref:`redis`
 
+Elastic Fleet nodes to manager:
+
+- TCP/9200 - Node-to-node for :ref:`elasticsearch`
+
+
 Host Firewall
 -------------
 
