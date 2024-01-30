@@ -48,7 +48,7 @@ Node Communication
 
 When configuring network firewalls for distributed deployments, you'll want to ensure that nodes can connect as shown below. 
 
-All nodes to manager:
+All nodes to Manager:
 
 - TCP/443 - Sensoroni
 - TCP/5000 - Docker registry
@@ -62,14 +62,19 @@ Elastic Agent:
 - TCP/8443 (All nodes to Manager) - Elastic Agent binary updates
 - TCP/5055 (All nodes to Manager, Fleet nodes, Receiver nodes) - Elastic Agent data
 
-Search nodes from/to manager:
+Search nodes from/to Manager:
 
 - TCP/9300 - Node-to-node for :ref:`elasticsearch`
 - TCP/9696 - :ref:`redis`
 
-Elastic Fleet nodes to manager:
+Elastic Fleet nodes to Manager:
 
 - TCP/9200 - Node-to-node for :ref:`elasticsearch`
+- TCP/5056 - Logstash-to-Logstash for Elastic Agent data ingest
+
+Elastic Fleet nodes to Receiver nodes:
+
+- TCP/5056 - Logstash-to-Logstash for Elastic Agent data ingest
 
 
 Host Firewall
