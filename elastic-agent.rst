@@ -23,6 +23,29 @@ To deploy an Elastic agent to an endpoint, go to the :ref:`soc` :ref:`downloads`
 
 Once there, select the ``elastic_agent_endpoint`` option.
 
+Linux
+~~~~~
+
+If deploying the Elastic Agent to a Linux host, make the file executable and then execute using sudo:
+
+::
+
+    chmod +x ./so-elastic-agent_linux_amd64
+    sudo ./so-elastic-agent_linux_amd64
+
+MacOS
+~~~~~
+
+If deploying the Elastic Agent to macOS, you will need to take a few steps. First, remove the quarantine attribute. Then, make the file executable. Finally, execute the file using sudo:
+
+::
+
+    xattr -d com.apple.quarantine ./so-elastic-agent_darwin_amd64
+    chmod +x ./so-elastic-agent_darwin_amd64
+    sudo ./so-elastic-agent_darwin_amd64
+
+After the installer has completed, review the Elastic docs for your version of macOS and approve the required settings (system extension and full drive access) as shown at https://www.elastic.co/guide/en/security/8.9/elastic-endpoint-deploy-reqs.html.
+
 Logs
 ----
 
