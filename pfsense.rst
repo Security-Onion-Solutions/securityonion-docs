@@ -32,9 +32,10 @@ The second option is using the Elastic Integration for pfSense (https://docs.ela
 
 First, add the pfSense integration and configure the pfSense firewall:
 
-#. Go to :ref:`elastic-fleet`, click the ``Agent policies`` tab, click the desired policy, and then click the ``Add integration`` button.
+#. Go to :ref:`elastic-fleet`, click the ``Agent policies`` tab, and then click the desired policy (for example ``so-grid-nodes_general``).
+#. Click the ``Add integration`` button.
 #. Search for ``pfSense`` and then click on the ``pfSense`` integration.
-#. Follow the instructions provided to configure pfSense but please note that the Elastic Integration expects to receive pfSense logs on port 9001 by default.
+#. The Elastic Integration page will show instructions for configuring pfSense. Follow these instructions but please note that the Elastic Integration expects to receive pfSense logs on port 9001 by default.
 #. Once you've configured pfSense, then go back to the Elastic screen and click the ``Add pfSense`` button.
 #. On the ``Edit pfSense integration`` screen, go to the ``Syslog Host`` field and change ``localhost`` to ``0.0.0.0``.
 #. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
@@ -45,7 +46,7 @@ Next, we need to allow the traffic from the pfSense firewall to port 9001:
 #. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
 #. On the left side, go to ``firewall``, select ``hostgroups``, and click the ``customhostgroup0`` group. On the right side, enter the IP address of the pfSense firewall and click the checkmark to save.
 #. On the left side, go to ``firewall``, select ``portgroups``, select the ``customportgroup0`` group, and then click ``udp``. On the right side, enter ``9001`` and click the checkmark to save.
-#. On the left side, go to ``firewall``, select ``role``, select your desired role, select ``chain``, select ``INPUT``, select ``hostgroups``, select ``customhostgroup0``, and then click ``portgroups``. On the right side, enter ``customportgroup0`` and click the checkmark to save.
+#. On the left side, go to ``firewall``, select ``role``, and then select the node type that will receive the pfSense logs. Then drill into ``chain`` --> ``INPUT`` --> ``hostgroups`` --> ``customhostgroup0`` --> ``portgroups``. On the right side, enter ``customportgroup0`` and click the checkmark to save.
 #. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
 Once all configuration is complete, you should be able to go to :ref:`dashboards` and select the Firewall dashboard to see your firewall logs.
