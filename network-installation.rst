@@ -3,7 +3,7 @@
 Network Installation
 ====================
 
-For most use cases, we recommend using our official Security Onion images as shown in the :ref:`installation` section. Our official Security Onion images are the only fully supported installation method. We highly recommend our official images if any of the following apply to you:
+For most use cases, we HIGHLY recommend using our official Security Onion images as shown in the :ref:`installation` section. Our official images are the only fully supported installation method and you should use them if any of the following apply to you:
 
 - You are deploying in an enterprise environment.
 - You are deploying in an airgap environment.
@@ -11,7 +11,7 @@ For most use cases, we recommend using our official Security Onion images as sho
 - You want the quickest and easiest installation with the fewest issues.
 - You need full support.
 
-If none of the above apply to you, you may be able to install one of the following operating systems and then perform a network installation:
+If NONE of the above apply to you, you may be able to install one of the following operating systems and then perform a network installation:
 
 - Oracle Linux 9
 - Rocky Linux 9
