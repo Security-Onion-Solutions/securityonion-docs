@@ -3,9 +3,9 @@
 Booting Issues
 ==============
 
-If you have trouble booting an ISO image, here are some troubleshooting steps:
+If you have trouble booting the ISO image, here are some troubleshooting steps:
 
--  Verify the downloaded ISO image using hashes or GPG key.
+-  Verify the ISO image using hashes or GPG key.
 -  Verify that your machine is x86-64 architecture (standard Intel or AMD 64-bit).
 -  If you're trying to run a 64-bit virtual machine, verify that your 64-bit processor supports virtualization and that virtualization is enabled in the BIOS.
 -  If you’re trying to create a bootable USB from an ISO image, try using Balena Etcher which can be downloaded at https://www.balena.io/etcher/.
@@ -14,4 +14,4 @@ If you have trouble booting an ISO image, here are some troubleshooting steps:
 
 .. tip::
 
-  If all else fails but standard x86-64 Oracle Linux 9 installs normally, then you can always install our components on top of it as described on the :ref:`installation` page.
+  If all else fails but standard x86-64 Oracle Linux 9 installs normally, then you can install our components on top of it as described in the :ref:`network-installation` section. However, please keep in mind that network installations are not supported.

@@ -6,7 +6,7 @@ VMware
 Overview
 --------
 
-In this section, we'll cover creating a virtual machine (VM) for our Security Onion ISO image in VMware Workstation Pro and VMware Fusion. These steps should be fairly similar for most VMware installations. If you don't already have VMware, you can download VMware Workstation Player from https://www.vmware.com/products/player/playerpro-evaluation.html.
+In this section, we'll cover creating a virtual machine (VM) for our ISO image in VMware Workstation Pro and VMware Fusion. These steps should be fairly similar for most VMware installations. If you don't already have VMware, you can download VMware Workstation Player from https://www.vmware.com/products/player/playerpro-evaluation.html.
 
 .. note::
 
@@ -15,7 +15,7 @@ In this section, we'll cover creating a virtual machine (VM) for our Security On
 Workstation Pro
 ---------------
 
-VMware Workstation is available for many different host operating systems, including Windows and several popular Linux distros. Follow the steps below to create a VM in VMware Workstation Pro for our Security Onion ISO image:
+VMware Workstation is available for many different host operating systems, including Windows and several popular Linux distros. Follow the steps below to create a VM in VMware Workstation Pro for our ISO image:
 
 #. From the VMware main window, select File >> New Virtual Machine.
 #. Select Typical installation >> Click ``Next``.
@@ -35,7 +35,7 @@ Fusion
 
 VMware Fusion is available for Mac OS. For more information about VMware Fusion, please see https://www.vmware.com/products/fusion.html.
 
-Follow the steps below to create a VM in VMware Fusion for our Security Onion ISO image:
+Follow the steps below to create a VM in VMware Fusion for our ISO image:
 
 #. From the VMware Fusion main window, click ``File`` and then click ``New``.
 #. ``Select the Installation Method`` appears. Click ``Install from disc or image`` and click ``Continue``.

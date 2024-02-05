@@ -3,11 +3,11 @@
 First Time Users
 ================
 
-If this is your first time using Security Onion 2, then we highly recommend that you start with our Security Onion ISO image as shown in the :ref:`download` section. Then install the ISO image as shown in the :ref:`installation` section and configure for IMPORT as shown in the :ref:`configuration` section. This can be done in a minimal virtual machine with as little as 4GB RAM, 2 CPU cores, and 200GB of storage. For more information about virtualization, please see the :ref:`vmware`, :ref:`virtualbox`, and :ref:`proxmox` sections.
+Welcome first time users! You're going to be peeling back the layers of your network in just a few minutes! First, download our ISO image as shown in the :ref:`download` section. Then install the ISO image as shown in the :ref:`installation` section and configure for IMPORT as shown in the :ref:`configuration` section. This can be done in a minimal virtual machine with as little as 4GB RAM, 2 CPU cores, and 200GB of storage. For more information about virtualization, please see the :ref:`vmware`, :ref:`virtualbox`, and :ref:`proxmox` sections.
 
 The following screenshots will walk you through:
 
-- installing our Security Onion ISO image
+- installing our ISO image
 - configuring for IMPORT
 - logging into :ref:`soc`
 - navigating to :ref:`grid` and importing a pcap or evtx file

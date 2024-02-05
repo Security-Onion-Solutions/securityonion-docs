@@ -23,14 +23,14 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 - rules.emergingthreats.net (Emerging Threats IDS open rules)  
 - github.com (Strelka and Sigma rules updates) 
 
-If you are using our Security Onion ISO image, you will also need access to the following:
+If you are using our ISO image, you will also need access to the following:
 
 - repo.securityonion.net (primary repo for Oracle Linux package updates)
 - so-repo-east.s3.us-east-005.backblazeb2.com (secondary repo for Oracle Linux package updates)
 
-If you are not using our Security Onion ISO image and are instead performing a network installation, you will also need access to the following:
+If you are not using our ISO image and are instead performing a :ref:`network-installation`, you will also need access to the following:
 
-- update repo for whatever base OS you're installing on (:ref:`os` packages)
+- update repo for whatever base OS you're installing on (OS packages)
 - download.docker.com (:ref:`docker` packages)
 - repo.saltstack.com (:ref:`salt` packages)
 

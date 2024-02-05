@@ -8,7 +8,7 @@ Security Onion provides lots of options and flexibility, but for best results we
 Installation
 ------------
 
-- Download our Security Onion ISO image for the quickest and easiest installation experience (see the :ref:`download` section).
+- Download and verify our ISO image as shown in the :ref:`download` section.
 
 - For production deployments, prefer dedicated hardware to VMs when possible (see the :ref:`hardware` section).
 

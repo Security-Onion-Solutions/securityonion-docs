@@ -10,9 +10,7 @@ From https://www.docker.com/what-docker:
 Download
 --------
 
-If you download our Security Onion ISO image, the Docker engine and these Docker images are baked right into the ISO image.
-
-If you instead use another ISO image, our installer will download Docker images from ghcr.io as necessary.
+Our ISO image includes the Docker engine and all of our Docker images.
 
 Security
 --------

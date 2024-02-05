@@ -5,18 +5,11 @@ Download
 
 Before downloading, we highly recommend that you review the :ref:`release-notes` section so that you are aware of all recent changes!
 
-We recommend that you download our Security Onion ISO image but see the :ref:`os` page for other options.
-
-.. tip::
-
-  For most use cases, we recommend using our Security Onion ISO image as it's the quickest and easiest method.
-  
 .. warning::
 
-   **ALWAYS verify the checksum of ANY downloaded ISO image!** Regardless of whether you're downloading our Security Onion ISO image or any other ISO image, you should ALWAYS verify the downloaded ISO image to ensure it hasn't been tampered with or corrupted during download. If it fails to verify, try downloading again. If it still fails to verify, try downloading from another computer or another network.
+   **ALWAYS verify the checksum of the ISO image before booting!** This ensures that the ISO image hasn't been tampered with or corrupted during download. If it fails to verify, try downloading again. If it still fails to verify, try downloading from another computer or another network.
 
--  If downloading our Security Onion ISO image, you can find the download link and verification instructions at https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/DOWNLOAD_AND_VERIFY_ISO.md.
--  If downloading any other ISO image, please verify that ISO image using whatever instructions they provide.
+Download and verify our ISO image as shown at https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/DOWNLOAD_AND_VERIFY_ISO.md.
 
 .. warning::
 
@@ -24,4 +17,4 @@ We recommend that you download our Security Onion ISO image but see the :ref:`os
    
 .. note::
 
-  If you're going to create a bootable USB from one of the ISO images above, there are many ways to do that.  One popular choice that seems to work well for many folks is Balena Etcher which can be downloaded at https://www.balena.io/etcher/.
+  If you're going to create a bootable USB from the ISO image, there are many ways to do that.  One popular choice that seems to work well for many folks is Balena Etcher which can be downloaded at https://www.balena.io/etcher/.

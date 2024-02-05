@@ -17,10 +17,6 @@ Depending on what you're trying to do, you may need anywhere from one machine to
 
 This could be anything from a small virtual machine to a large rack mount server with lots of CPU cores, lots of RAM, and lots of storage. The :ref:`hardware` section provides further details.
 
-**Which ISO image should I download?**
-
-We recommend our Security Onion ISO image for most use cases, but you should review the :ref:`os`, :ref:`partitioning`, :ref:`release-notes`, and :ref:`download` sections for more information.
-
 **If I just want to try Security Onion in a virtual machine, how do I create a virtual machine?**
 
 See the :ref:`vmware`, :ref:`virtualbox`, and :ref:`proxmox` sections.
@@ -39,7 +35,7 @@ Review the :ref:`airgap` section.
 
 **Once I've booted the ISO image, how do I install it?**
 
-The :ref:`installation` section has steps for our Security Onion ISO image and for other ISO images.
+See the :ref:`installation` section.
 
 **After installation, how do I configure Security Onion?**
 
@@ -55,8 +51,6 @@ See the :ref:`post-installation` section.
    best-practices
    architecture
    hardware
-   os
-   partitioning
    download
    vmware
    virtualbox

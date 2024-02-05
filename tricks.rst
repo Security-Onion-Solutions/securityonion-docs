@@ -14,6 +14,7 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    icmp-anomaly-detection
    jupyter
    new-disk
+   network-installation
    pcaps
    removing-a-node
    syslog-output
