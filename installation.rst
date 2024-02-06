@@ -11,7 +11,7 @@ Installation
 
   If you want to deploy in the cloud using one of our official cloud images, you can skip to the :ref:`cloud-amazon`, :ref:`cloud-azure`, or :ref:`cloud-google` sections.
 
-Having downloaded your desired ISO according to the :ref:`download` section, it's now time to install! 
+Having downloaded our ISO image as shown in the :ref:`download` section, it's now time to install! 
 
 .. image:: images/01_grub.png
   :target: _images/01_grub.png
