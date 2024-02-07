@@ -226,6 +226,12 @@ To add an integration to an existing policy:
 
 From ``Fleet`` -> ``Agent policies`` -> ``$Policy name``, click ``Add Integration`` and follow the steps for adding the integration.
 
+When setting up a new integration, it is important that you add it to an appropriate Policy. 
+
+If an integration pulls the data, you should add it to the Fleet Server policy. Depending on complexity and log volume, it might make sense to stand up a Fleet Node and add your integrations to it.
+
+If an integration receives data pushed to it (for example - receiving syslog), once again, consider adding it to the Fleet Server policy. If that is not feasible, and it will be added to the Grid Ndoes policy, make sure to set the firewall rules correctly so that you are not opening ports on all of your nodes.
+
 If the integration is designed to listen on a port to receive data, it will most likely default to listening on ``localhost`` only. Depending on how you are sending data to the integration, you may need to change that to ``0.0.0.0`` so that it can receive data from other hosts.
 
 Adding a Custom Integration
