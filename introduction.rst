@@ -62,7 +62,7 @@ Security Onion Console (SOC)
 .. image:: images/50_alerts.png
   :target: _images/50_alerts.png
 
-:ref:`soc` also includes our :ref:`dashboards` interface which gives you a nice overview of not only your NIDS/HIDS alerts but also network metadata logs from :ref:`zeek` or :ref:`suricata` and any other logs that you may be collecting. 
+:ref:`soc` also includes our :ref:`dashboards` interface which gives you a nice overview of not only your NIDS alerts but also network metadata logs from :ref:`zeek` or :ref:`suricata` and any other logs that you may be collecting. 
 
 .. image:: images/51_dashboards.png
   :target: _images/51_dashboards.png
