@@ -168,6 +168,8 @@ The ``Actions`` sub-menu has several different options:
 
 - Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
 
+- Clicking the ``Process ancestors`` option will show all parent processes for the selected process.
+
 If you'd like to add your own custom actions, see the :ref:`soc-customization` section.
 
 OQL
