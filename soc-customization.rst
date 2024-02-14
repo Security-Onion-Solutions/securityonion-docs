@@ -79,7 +79,7 @@ Here is an example of a background action that submits a javascript fetch to a r
       "mode": "no-cors", 
       "headers": { 
         "header1": "header1value",
-        "header2:" "header2value" 
+        "header2": "header2value" 
       }
     }, 
     "body": "something={value|base64}",
