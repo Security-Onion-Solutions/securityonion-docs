@@ -85,8 +85,10 @@ Here is an example of a background action that submits a javascript fetch to a r
     "body": "something={value|base64}",
     "backgroundSuccessLink": "https://securityonion.net?code={responseCode}&text={responseStatus}",
     "backgroundFailureLink": "https://google.com?q={error}"
-  },
-  
+  }
+
+Note that the above JSON block cannot be pasted as-is into the SOC configuration screen, for the action field. Each custom action must be formatted onto a single line, as was shown in the earlier example. The immediate example above is formatted on multiple lines to make it easier to explain in the documentation below.
+
 The ``options`` object is the same options object that will be passed into the Javascript ``fetch()`` method. You can read more about that at `<https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>`_.
 
 There may come a time where you are not sure what fields to target for the request body, or you may want to forward events of different types that contain different field names.  This is ideal if you would like to send the event to a case management system, a SOAR platform, or something similar.  In this case, the ``eventJson`` variable can be used to pass the entire event as a JSON string.
