@@ -22,6 +22,37 @@ To resolve the issue, run the following command for each affected index (replaci
 
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
+2.4.50 [20240220] Changes
+----------------------
+
+- FEATURE: Add Suricata PCAP module to Sensoroni (currently disabled) `#12255 <https://github.com/Security-Onion-Solutions/securityonion/issues/12255>`_
+- FEATURE: Add new SOC action to show process ancestry `#12345 <https://github.com/Security-Onion-Solutions/securityonion/issues/12345>`_
+- FEATURE: Add new dashboards for community_id and firewall auth `#12323 <https://github.com/Security-Onion-Solutions/securityonion/issues/12323>`_
+- FEATURE: Additional Supported Integrations #4
+- FEATURE: Allow user to create custom elastic search pipelines without copying them over via ssh
+- FEATURE: Allow user to create custom logstash pipelines without copying them over via ssh
+- FEATURE: Dedicated Fleet node should have an nginx entry and cert that works for /artifacts `#11346 <https://github.com/Security-Onion-Solutions/securityonion/issues/11346>`_
+- FEATURE: Determine if Elastic is on its own mount point if so adjust size for watermark `#12364 <https://github.com/Security-Onion-Solutions/securityonion/issues/12364>`_
+- FEATURE: Improve Correlate and Hunt actions on SOC Actions menu `#12315 <https://github.com/Security-Onion-Solutions/securityonion/issues/12315>`_
+- FEATURE: RITA Logs `#12226 <https://github.com/Security-Onion-Solutions/securityonion/issues/12226>`_
+- FEATURE: Support PCAP pivots for ICMP packets in SOC
+- FIX:  suricata.ike ingest pipeline does not exist `#12174 <https://github.com/Security-Onion-Solutions/securityonion/issues/12174>`_
+- FIX: Add stenographer logging `#12282 <https://github.com/Security-Onion-Solutions/securityonion/issues/12282>`_
+- FIX: Change field groupby button to new groupby `#12228 <https://github.com/Security-Onion-Solutions/securityonion/issues/12228>`_
+- FIX: Correct SOC error messages related to malformed queries `#12269 <https://github.com/Security-Onion-Solutions/securityonion/issues/12269>`_
+- FIX: Endpoint diagnostic collection index created with replicas `#12256 <https://github.com/Security-Onion-Solutions/securityonion/issues/12256>`_
+- FIX: Expose node Reboot status as its own state; other grid/feature improvements
+- FIX: Network Transport for suricata alerts should be lowercase `#12217 <https://github.com/Security-Onion-Solutions/securityonion/issues/12217>`_
+- FIX: Strelka scan.pe.flags mapping `#12251 <https://github.com/Security-Onion-Solutions/securityonion/issues/12251>`_
+- FIX: Sync the event.dataset values between the Windows Sysmon and ElasticAgent defend logs
+- FIX: Syntax error running elastic fleet scripts during highstate
+- FIX: User count logic providing inconsistent results `#12258 <https://github.com/Security-Onion-Solutions/securityonion/issues/12258>`_
+- UPGRADE: CyberChef 10.6.0 `#12310 <https://github.com/Security-Onion-Solutions/securityonion/issues/12310>`_
+- UPGRADE: Salt 3006.6 `#12304 <https://github.com/Security-Onion-Solutions/securityonion/issues/12304>`_
+- UPGRADE: Strelka 0.24.01.18 `#12229 <https://github.com/Security-Onion-Solutions/securityonion/issues/12229>`_
+- UPGRADE: Suricata 7.0.3 `#12327 <https://github.com/Security-Onion-Solutions/securityonion/issues/12327>`_
+- UPGRADE: Zeek 6.0.3 `#12225 <https://github.com/Security-Onion-Solutions/securityonion/issues/12225>`_
+
 2.4.40 [20240116] Changes
 -------------------------
 
