@@ -25,15 +25,20 @@ Links
 
 You can also customize the links on the left side. To do so, go to :ref:`administration` --> Configuration --> soc --> server --> client --> tools.
 
+Reverse DNS Lookups
+-------------------
+
+When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you might want to enable automatic reverse DNS lookups to provide more information. You can do so by going to :ref:`administration` --> Configuration --> soc --> config --> server --> client --> enableReverseLookup.
+
+Cases
+-----
+
+:ref:`cases` comes with presets for things like category, severity, TLP, PAP, tags, and status. You can modify these presets by going to :ref:`administration` --> Configuration --> soc --> server --> client --> case --> presets.
+
 Session Timeout
 ---------------
 
 The default timeout for user login sessions is 24 hours. This is a fixed timespan and will expire regardless of whether the user is active or idle in SOC. You can configure this by going to :ref:`administration` --> Configuration --> kratos --> sessiontimeout.
-
-Reverse DNS Lookups
--------------------
-
-You can enable reverse DNS lookups by going to :ref:`administration` --> Configuration --> soc --> config --> server --> client --> enableReverseLookup.
 
 Custom Queries
 --------------
@@ -98,11 +103,6 @@ To use this variable, construct the body of the request within the action config
 ``"body": "{eventJson}"``
 
 *NOTE*: You may run into issues using the ``eventJson`` variable, depending on the size of the event and the amount of data being passed in the request.
-
-Cases
------
-
-:ref:`cases` comes with presets for things like category, severity, TLP, PAP, tags, and status. You can modify these presets by going to :ref:`administration` --> Configuration --> soc --> server --> client --> case --> presets.
 
 Escalation
 ----------
