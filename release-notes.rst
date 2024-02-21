@@ -10,9 +10,9 @@ If you notice an Elasticsearch status of ``Pending`` in the Grid interface, you 
 
 ::
 
-  sudo so-elasticsearch-indices-list | grep -vE "green|health"
+  sudo so-elasticsearch-query _cat/shards | grep UN
 
-Affected indices will be presented with a health value of yellow or red. Older metrics indices for Elastic Endpoint logs may have been assigned a replica, so if you are running a single-node Elastic cluster there will be nowhere for the replica to exist.
+The result of the query should display affected indices. Older metrics indices for Elastic Endpoint logs may have been assigned a replica, so if you are running a single-node Elastic cluster there will be nowhere for the replica to exist.
 
 To resolve the issue, run the following command for each affected index (replacing ``$index`` with the actual index name):
 
