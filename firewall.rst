@@ -26,6 +26,7 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 If you are using our ISO image, you will also need access to the following:
 
 - repo.securityonion.net (primary repo for Oracle Linux package updates)
+- repo-alt.securityonion.net (secondary repo for Oracle Linux package updates)
 - so-repo-east.s3.us-east-005.backblazeb2.com (secondary repo for Oracle Linux package updates)
 
 If you are not using our ISO image and are instead performing a :ref:`network-installation`, you will also need access to the following:
