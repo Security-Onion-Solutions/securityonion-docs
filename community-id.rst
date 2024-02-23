@@ -14,8 +14,10 @@ From https://github.com/corelight/community-id-spec:
     
 Security Onion enables the built-in Community ID support in both :ref:`zeek` and :ref:`suricata`. 
 
-| For logs that don’t naturally include Community ID, we use the Elasticsearch Community ID processor:
-| https://www.elastic.co/guide/en/elasticsearch/reference/current/community-id-processor.html
+For logs that don’t naturally include Community ID, we use the Elasticsearch Community ID processor:
+https://www.elastic.co/guide/en/elasticsearch/reference/current/community-id-processor.html
+
+:ref:`dashboards` includes a Community ID dashboard that will show all logs with that value.
 
 More Information
 ----------------
