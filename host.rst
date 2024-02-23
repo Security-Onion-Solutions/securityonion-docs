@@ -16,4 +16,3 @@ For Windows endpoints, you can optionally augment the standard Windows logging w
    elastic-agent
    syslog
    sysmon
-   autoruns
