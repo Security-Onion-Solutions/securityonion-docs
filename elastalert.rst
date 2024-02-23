@@ -101,12 +101,12 @@ With Security Onion's example rules, Elastalert is configured by default to only
 
 This is governed by the use of ``use_count_query: true`` in each rule file.
 
-If you would like to view the data for the match, you can simply remark this line in the rule file(s). Keep in mind, this may impact performance negatively, so testing the change in a single file at a time may be the best approach.
+If you would like to view the data for the match, you can simply remark this line in the rule file(s). This may impact performance negatively, so testing the change in a single file at a time may be the best approach.
 
 Timeframe
 ~~~~~~~~~
 
-Keep in mind, for queries that span greater than a minute back in time, you may want to add the following fields to your rule to ensure searching occurs as planned (for example, for 10 minutes):
+For queries that span greater than a minute back in time, you may want to add the following fields to your rule to ensure searching occurs as planned (for example, for 10 minutes):
 
 ::
 
