@@ -3,6 +3,12 @@
 Release Notes
 =============
 
+2.3.290 [20240229] Changes
+----------------------
+
+- UPGRADE: Suricata 6.0.16 `#12328 <https://github.com/Security-Onion-Solutions/securityonion/issues/12328>`_
+- UPGRADE: Zeek 6.0.3 `#12236 <https://github.com/Security-Onion-Solutions/securityonion/issues/12236>`_
+
 2.3.280 [20231128] Changes
 --------------------------
 
