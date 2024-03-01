@@ -27,4 +27,4 @@ This will open the Security Onion host-based firewall for access from the SMP to
 Pivot to Endgame Console
 ------------------------
 
-If Endgame support is enabled, a default `Endgame` pivot will be populated within SOC, based on the ``agent.id`` field.
+If Endgame support is enabled, then :ref:`dashboards` and :ref:`hunt` will have an ``Endgame`` action on the Actions menu. Clicking that action will pivto to Endgame Console based on the ``agent.id`` field.
