@@ -14,8 +14,6 @@ You can ingest Endgame data by following the steps below.
 Configuration
 -------------
 
-**During Security Onion Setup**
-
 To configure Endgame ingestion during setup, ensure the ``ENDGAMEHOST`` variable is set to the IP address of the Endgame SMP that you want to send data from:
 
 ::
