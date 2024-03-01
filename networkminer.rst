@@ -14,12 +14,6 @@ Usage
 
 NetworkMiner is a part of our :ref:`desktop` installation.
 
-Screenshot
-----------
-
-.. image:: images/networkminer.png
-  :target: _images/networkminer.png
-
 File Extraction
 ---------------
 

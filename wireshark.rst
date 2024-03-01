@@ -12,12 +12,6 @@ Usage
 
 Wireshark is a part of our :ref:`desktop` installation.
 
-Screenshot
-----------
-
-.. image:: images/wireshark.png
-  :target: _images/wireshark.png
-
 File Extraction
 ---------------
 
