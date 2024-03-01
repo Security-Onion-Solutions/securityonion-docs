@@ -159,13 +159,13 @@ To see your existing shards, run the following command and the number of shards 
 
 ::
 
-    sudo so-elasticsearch-query _cat/indices
+    sudo so-elasticsearch-indices-list
     
 If you want to view the detail for each of those shards:
 
 ::
 
-    sudo so-elasticsearch-query _cat/shards
+    sudo so-elasticsearch-shards-list
 
 Given the sizing tips above, if any of your indices are averaging more than 50GB per shard, then you should probably increase the shard count until you get below that recommended maximum of 50GB per shard.
 
