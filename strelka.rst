@@ -14,31 +14,12 @@ Security Onion checks file hashes before sending to Strelka to avoid analyzing t
 Alerts
 ------
 
-Strelka scans files using YARA rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. Here is an example of Strelka detecting Poison Ivy RAT:
-
-.. image:: images/strelka-alert-1.png
-  :target: _images/strelka-alert-1.png
-
-Drilling into that alert, we find more information about the file and the YARA rule:
-
-.. image:: images/strelka-alert-2.png
-  :target: _images/strelka-alert-2.png
-
-.. image:: images/strelka-alert-3.png
-  :target: _images/strelka-alert-3.png
-
-.. image:: images/strelka-alert-4.png
-  :target: _images/strelka-alert-4.png
-
-You can read more about YARA rules in the :ref:`local-rules` section.
+Strelka scans files using YARA rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`. You can read more about YARA rules in the :ref:`local-rules` section.
 
 Logs
 ----
 
-Even if Strelka doesn't detect a YARA match, it will still log metadata about the file. You can find Strelka logs in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of the default Strelka dashboard in :ref:`dashboards`:
-
-.. image:: images/strelka.png
-  :target: _images/strelka.png
+Even if Strelka doesn't detect a YARA match, it will still log metadata about the file. You can find Strelka logs in :ref:`dashboards` and :ref:`hunt`.
 
 Configuration
 -------------
