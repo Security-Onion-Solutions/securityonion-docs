@@ -24,19 +24,7 @@ To configure Endgame ingestion during setup, ensure the ``ENDGAMEHOST`` variable
 
 This will open the Security Onion host-based firewall for access from the SMP to Security Onion on TCP port 3765.
 
-Example Endgame Data
---------------------
-
-.. image:: images/endgame-data.png
- :target: _images/endgame-data.png
-
 Pivot to Endgame Console
 ------------------------
 
-If Endgame support is enabled, a default `Endgame` pivot will be populated within SOC, based on the ``agent.id`` field:
-
-.. image:: images/endgame-pivot.png
- :target: _images/endgame-pivot.png
- 
-.. image:: images/endgame-console.png
- :target: _images/endgame-console.png
+If Endgame support is enabled, a default `Endgame` pivot will be populated within SOC, based on the ``agent.id`` field.
