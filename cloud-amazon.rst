@@ -72,7 +72,7 @@ Search Nodes
 Sensor monitoring the VPN ingress
 
 - Quantity: 1
-- Type: c5a.xlarge
+- Type: c5a.2xlarge
 - Storage: 500GB EBS (Optimized) gp3
 
 Create Monitoring Interface 
