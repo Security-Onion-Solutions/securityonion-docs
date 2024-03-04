@@ -95,9 +95,6 @@ Playbook
 
 :ref:`playbook` allows you to create a Detection Playbook, which itself consists of individual plays. These plays are fully self-contained and describe the different aspects around the particular detection strategy.
 
-.. image:: images/playbook.png
-  :target: _images/playbook.png
-
 Workflow
 --------
 

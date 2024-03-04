@@ -5,9 +5,6 @@ Playbook
 
 :ref:`soc` includes a link on the sidebar that takes you to Playbook which allows you to create a **Detection Playbook**, which itself consists of individual **Plays**. These Plays are fully self-contained and describe the different aspects around a particular detection strategy.
 
-.. image:: images/playbook.png
-  :target: _images/playbook.png
-
 The key components of a Play are:
 
  #. Objective and context - what exactly are we trying to detect and why?
