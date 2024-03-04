@@ -40,12 +40,12 @@ Perform a standard installation:
 .. image:: images/05_setup_option.png
   :target: _images/05_setup_option.png
 
-When prompted for installation, type, select IMPORT:
+When prompted for installation type, select IMPORT:
 
 .. image:: images/06_setup_type.png
   :target: _images/06_setup_type.png
 
-If your Security Onion machine has full Internet access, select Standard. Otherwise, select :ref:`airgap`:
+If your Security Onion machine has full Internet access as described in the :ref:`firewall` section, select Standard. Otherwise, select :ref:`airgap`:
 
 .. image:: images/06_setup_airgap.png
   :target: _images/06_setup_airgap.png
@@ -150,7 +150,7 @@ Login to :ref:`soc`:
 .. image:: images/37_login.png
   :target: _images/37_login.png
 
-:ref:`soc` Overview page:
+After logging in, you will see the :ref:`soc` Overview page:
 
 .. image:: images/38_overview.png
   :target: _images/38_overview.png
@@ -205,22 +205,22 @@ IMPORT installations do not support remote agents, but if you were running anoth
 .. image:: images/58_downloads.png
   :target: _images/58_downloads.png
 
-Manage users via the Users page in the :ref:`administration` section:
+The :ref:`administration` section allows to you manage user accounts:
 
 .. image:: images/59_users.png
   :target: _images/59_users.png
 
-In an IMPORT installation, there will only be one grid member:
+It also allows you to manage grid members:
 
 .. image:: images/60_gridmembers.png
   :target: _images/60_gridmembers.png
 
-Configure various aspects of the system via the Configuration section of the :ref:`administration` page:
+The :ref:`administration` section also allows you to configure various aspects of the system:
 
 .. image:: images/61_config.png
   :target: _images/61_config.png
 
-The License Key page in the :ref:`administration` section allows to upload a license key for additional enterprise features:
+It also allows you to upload a license key for additional enterprise features:
 
 .. image:: images/62_licensekey.png
   :target: _images/62_licensekey.png
