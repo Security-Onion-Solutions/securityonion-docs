@@ -51,7 +51,16 @@ You can configure Stenographer by going to :ref:`administration` --> Configurati
 .. image:: images/config-item-pcap.png
   :target: _images/config-item-pcap.png
 
-For example, suppose you want to change the default value for purging old pcap. You could go to :ref:`administration` --> Configuration --> pcap --> config --> diskfreepercentage and set the value to something appropriate for your system.
+Disk Free Percentage
+--------------------
+
+An important configuration item to be aware of is steno's DiskFreePercentage setting. From https://github.com/google/stenographer/blob/master/INSTALL.md#threads:
+
+        DiskFreePercentage: The amount of space to keep free in the packets directory. `stenographer` will delete files in this thread's packets directory when free disk space decreases below this percentage.
+
+You can find this setting at :ref:`administration` --> Configuration --> pcap --> config --> diskfreepercentage. 
+
+If you have a distributed deployment, then your dedicated sensors are probably ok with the default value of 10 since steno should be the main consumer of disk space. However, if you have systems that run both steno and Elastic like eval and standalone installations, then you'll want to make sure that this value is no lower than 21 so that you avoid Elasticsearch hitting its watermark setting at 80% disk usage. If you have an older standalone installation, then you may need to manually change this value to 21.
 
 Maximum Files
 -------------
