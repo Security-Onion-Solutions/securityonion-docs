@@ -27,7 +27,7 @@ You can access full packet capture via the :ref:`pcap` interface:
 Command Line
 ------------
 
-You can also access packet capture from the command line of the box where the pcap is stored using a steno query as defined at https://github.com/google/stenographer#querying. In the following examples, replace "YourStenoQueryHere" with your actual steno query.
+You can also access packet capture from the command line of the box where the pcap is stored using a Stenographer query as defined at https://github.com/google/stenographer#querying. In the following examples, replace "YourStenoQueryHere" with your actual Stenographer query.
 
 The first option is using docker to run ``stenoread``. If the query succeeds, you can then find the resulting pcap file in ``/nsm/pcaptmp/`` in the host filesystem:
 
@@ -60,7 +60,7 @@ An important configuration item to be aware of is steno's DiskFreePercentage set
 
 You can find this setting at :ref:`administration` --> Configuration --> pcap --> config --> diskfreepercentage. 
 
-If you have a distributed deployment, then your forward nodes should be ok with the default value of 10 since steno should be the main consumer of disk space in the /nsm partition. However, if you have systems that run both steno and :ref:`elasticsearch` like eval and standalone installations, then you'll want to make sure that this value is no lower than 21 so that you avoid :ref:`elasticsearch` hitting its watermark setting at 80% disk usage. If you have an older standalone installation, then you may need to manually change this value to 21.
+If you have a distributed deployment, then your forward nodes should be ok with the default value of 10 since Stenographer should be the main consumer of disk space in the /nsm partition. However, if you have systems that run both Stenographer and :ref:`elasticsearch` like eval and standalone installations, then you'll want to make sure that this value is no lower than 21 so that you avoid :ref:`elasticsearch` hitting its watermark setting at 80% disk usage. If you have an older standalone installation, then you may need to manually change this value to 21.
 
 Maximum Files
 -------------
