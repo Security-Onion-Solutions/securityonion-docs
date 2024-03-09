@@ -39,6 +39,8 @@ Data Retention
 
 -  Review the :ref:`elasticsearch` section to see if you need to change any of the default index retention settings.
 
+-  Review the :ref:`stenographer` section to see if you need to change the Disk Free Percentage or Maximum Files settings.
+
 Other
 -----
 
