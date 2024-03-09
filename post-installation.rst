@@ -46,8 +46,8 @@ Other
 
 -  Go to :ref:`administration` and then click Configuration to see some of the options that you may want to configure. For example, you may want to enable reverse DNS lookups when viewing IP addresses in :ref:`soc`. For more information, please see the :ref:`soc-customization` section.
 
+-  While on the :ref:`administration` page, you may want to set your preferred :ref:`ntp` server.
+
 -  Full-time analysts may want to connect using a dedicated :ref:`desktop`.
 
 -  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the :ref:`tuning` section. 
-
--  Configure the OS to use your preferred :ref:`ntp` server.
