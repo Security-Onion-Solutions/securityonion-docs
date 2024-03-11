@@ -40,6 +40,11 @@ EXTERNAL_NET
 
 By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to detect lateral movement inside your environment. You can modify this default value by going to :ref:`administration` --> Configuration --> suricata --> config --> vars --> address-groups --> EXTERNAL_NET.
 
+PCAP
+----
+
+Starting in 2.4.60, users now have the option to migrate PCAP to be captured by Suricata instead of Stenographer. This feature is in BETA There are 2 modes for Suricata PCAP. The first mode is TRANSITION that will keep Stenographer running but not capturing traffic. This allows for retrieval of PCAP frmo older PCAP stored in Steno as well as new PCAP generated from Suricata.  
+
 Performance
 -----------
 
