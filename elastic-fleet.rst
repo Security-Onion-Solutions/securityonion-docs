@@ -222,6 +222,11 @@ Integrations
     - nginx
     - winlog
 
+    Security Onion 2.4.60 supports these additional Elastic integrations:
+
+    - journald
+    - ti_cybersixgill
+
 You can read more about Elastic integrations at https://docs.elastic.co/integrations.
 
 Adding an Integration
