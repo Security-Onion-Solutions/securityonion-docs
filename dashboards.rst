@@ -168,9 +168,11 @@ The ``Actions`` sub-menu has several different options:
 
 - Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
 
-- Clicking the ``Process ancestors`` option will show all parent processes for the selected process.
+- Clicking the ``Process Info`` option will show all logs for the selected process.
 
-Please note that some of these actions will only display on the Actions menu if you click on a specific log type. For example, the ``Process ancestors`` option will only appear if you click on a log that contains the ``process.entity_id`` field.
+- Clicking the ``Process Ancestors`` option will show all parent processes for the selected process.
+
+Please note that some of these actions will only display on the Actions menu if you click on a specific log type. For example, the ``Process Info`` and ``Process Ancestors`` options will only appear if you click on a log that contains the ``process.entity_id`` field.
 
 If you'd like to add your own custom actions, see the :ref:`soc-customization` section.
 
