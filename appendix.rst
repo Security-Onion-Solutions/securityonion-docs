@@ -58,13 +58,16 @@ Disable services and reboot:
 Make sure docker containers are stopped:
 ::
 
-    sudo systemctl restart docker
+    sudo su -c "systemctl stop docker"
     sudo docker ps
 
 If there are any remaining docker processes, stop them (replacing ``$CONT_ID`` with the actual ID):
 ::
 
     sudo docker stop $CONT_ID
+
+    This can be done in one command using:
+    sudo docker ps | awk '!/CONTAINER/ { system("sudo docker stop " $1 ) }'
 
 Unmount /nsm:
 ::
