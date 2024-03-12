@@ -68,6 +68,7 @@ If there are any remaining docker processes, stop them (replacing ``$CONT_ID`` w
 
 This can also be done in one command:
 ::
+
     sudo docker ps | awk '!/CONTAINER/&& !// { system("sudo docker stop " $1 ) }'
 
 Unmount /nsm:
