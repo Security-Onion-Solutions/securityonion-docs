@@ -58,7 +58,7 @@ Disable services and reboot:
 Make sure docker containers are stopped:
 ::
 
-    sudo systemctl restart docker
+    sudo systemctl stop docker
     sudo docker ps
 
 If there are any remaining docker processes, stop them (replacing ``$CONT_ID`` with the actual ID):
