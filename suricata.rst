@@ -65,7 +65,7 @@ To edit the thresholding configuration, please see the :ref:`managing-alerts` se
 Metadata
 --------
 
-Depending on what options you choose in Setup, it may ask if you want to use :ref:`zeek` or :ref:`suricata` for metadata. If you choose :ref:`suricata`, then here are some of the kinds of metadata you can expect to see in :ref:`dashboards` or :ref:`hunt`:
+By default, Security Onion uses :ref:`zeek` to record protocol metadata. If you don't need all of the protocol coverage that :ref:`zeek` provides, then you can switch to Suricata metadata to save some CPU cycles. If you choose to do this, then here are some of the kinds of metadata you can expect to see in :ref:`dashboards` or :ref:`hunt`:
 
 -  Connections
 
@@ -83,25 +83,10 @@ Depending on what options you choose in Setup, it may ask if you want to use :re
 
 If you later find that some of that metadata is unnecessary, you can filter out the unnecessary metadata by writing rules. We have included some examples at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules.
 
-The global pillar on your manager node controls the metadata engine on each sensor. Only one metadata engine at a time is supported.
+To change your grid's metadata engine from :ref:`zeek` to Suricata, go to :ref:`administration` --> Configuration --> global --> mdengine and change the value from ``ZEEK`` to ``SURICATA``:
 
-To change your grid's metadata engine from Zeek to Suricata:
-
--  On the manager, go to :ref:`administration` --> Configuration --> global --> mdengine and change the value from ``ZEEK`` to ``SURICATA``.
-
--  Stop Zeek on all nodes:
-
-   ::
-
-      sudo salt '*' cmd.run 'so-zeek-stop'
-
--  Update all nodes:
-
-   ::
-
-      sudo salt '*' state.highstate
-      
--  You may need to remove ``so-zeek`` from ``/opt/so/conf/so-status/so-status.conf`` on each sensor node.
+.. image:: images/config-item-global.png
+  :target: _images/config-item-global.png
 
 File Extraction
 ---------------
