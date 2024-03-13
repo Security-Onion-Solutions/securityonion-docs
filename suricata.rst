@@ -45,7 +45,7 @@ PCAP
 
 Starting in 2.4.60, users now have the option to migrate PCAP to be captured by Suricata instead of Stenographer. This feature is in BETA! 
 
-There are 2 modes for Suricata PCAP. The first mode is TRANSITION that will keep Stenographer running but not capturing traffic. This allows for retrieval of PCAP from older PCAP stored in Steno as well as new PCAP generated from Suricata. Steno will start writing 0 byte files and clean off old PCAP as Suricata uses more space. Once your old Stenographer PCAP has aged off you can change the pcap engine option to SURICATA. If you don't care about losing existing PCAP you can simply use this option at the beginning and delete the contents of the Stenographer pcap and index directories.
+There are 2 modes for Suricata PCAP. The first mode is TRANSITION that will keep Stenographer running but not capturing traffic. This allows for retrieval of PCAP from older PCAP stored in Stenographer as well as new PCAP generated from Suricata. Stenographer will start writing 0 byte files and clean off old PCAP as Suricata uses more space. Once your old Stenographer PCAP has aged off you can change the pcap engine option to SURICATA. If you don't care about losing existing PCAP you can simply use this option at the beginning and delete the contents of the Stenographer PCAP and index directories.
 
 Differences between Suricata and Stenographer for PCAP
 ------------------------------------------------------
@@ -53,14 +53,18 @@ Differences between Suricata and Stenographer for PCAP
 - PCAP is indexed in Stenographer. This allows instant retreival of PCAP sessions from disk. When a Suricata PCAP is requested, a process searches the PCAP files and retreives the appropriate packets for the flow.
 - PCAP in Stengrapher is stored in a special format due to this indexing. Suricata PCAP is stored as standard PCAP and can be copied off to other tools. 
 - PCAP in Suricata can be compressed with lz4. 
-- When Suricata sees an encrypted SSL session it will stop recording packets after the SSL key exchange saving disk space.
 - Conditional PCAP is supported with Suricata. There are three modes that are supported. "all" for all PCAP, "alert" for only capturing the flow that generated the alert, and "tag" to only PCAP specific tagged rules.
 - Suricata PCAP can be set only to capture PCAP for a flow to the stream depth. Security Onion sets this to 1mb by default. This means once the PCAP flow hits 1mb it will stop recording packets. This is similar to Trim PCAP in 16.04.
+- Currently there is NO SUPPORT for PCAP specific BPFs.
 
 PCAP Modes in Suricata
 ----------------------
 
-Using Suricata for PCAP allows you to use 3 different modes for catpruing PCAP. These modes are "all" which captures ALL pcap. 
+Using Suricata for PCAP allows you to use 3 different modes for catpruing PCAP. These modes are:
+
+- all - Capture all packets seen by Suricata
+- alerts - Capture only packets associated with an alert
+- tag - Capture packets based on a rule that is tagged
 
 Performance
 -----------
