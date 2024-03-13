@@ -47,6 +47,9 @@ Starting in 2.4.60, users now have the option to migrate PCAP to be captured by 
 
 There are 2 modes for Suricata PCAP. The first mode is TRANSITION that will keep Stenographer running but not capturing traffic. This allows for retrieval of PCAP from older PCAP stored in Stenographer as well as new PCAP generated from Suricata. Stenographer will start writing 0 byte files and clean off old PCAP as Suricata uses more space. Once your old Stenographer PCAP has aged off you can change the pcap engine option to SURICATA. If you don't care about losing existing PCAP you can simply use this option at the beginning and delete the contents of the Stenographer PCAP and index directories.
 
+.. image:: images/suricata-pcap-engine.png
+  :target: _images/suricata-pcap-engine.png
+
 Differences between Suricata and Stenographer for PCAP
 ------------------------------------------------------
 
@@ -60,11 +63,20 @@ Differences between Suricata and Stenographer for PCAP
 PCAP Modes in Suricata
 ----------------------
 
-Using Suricata for PCAP allows you to use 3 different modes for catpruing PCAP. These modes are:
+Using Suricata for PCAP allows you to use 3 different modes for catpruing PCAP. You can change this setting by going to Suricata -> pcap -> conditional and setting it to one of the following:
 
-- all - Capture all packets seen by Suricata
-- alerts - Capture only packets associated with an alert
-- tag - Capture packets based on a rule that is tagged
+- all: Capture all packets seen by Suricata
+- alerts: Capture only packets associated with an alert
+- tag: Capture packets based on a rule that is tagged
+
+Useful Suricata PCAP Configuration Options
+------------------------------------------
+
+- compression: "none" for no compression or "lz4" lz4 for lz4 compression. This will use more CPU for recording PCAP
+- lz4-level: Level of lz4 compression
+- maxsize: Max size in GB to use for PCAP stored on the sensor
+- filesize: File size for the PCAPs that get written.
+- use-stream-depth: Stop recording PCAP once the stream depth has been met.  
 
 Performance
 -----------
