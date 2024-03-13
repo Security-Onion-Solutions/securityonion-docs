@@ -22,6 +22,34 @@ To resolve the issue, run the following command for each affected index (replaci
 
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
+2.4.60 [20240318] Changes
+----------------------
+
+- FEATURE: Add Suricata classification.config for editing  `#12391 <https://github.com/Security-Onion-Solutions/securityonion/issues/12391>`_
+- FEATURE: Add Suricata support for full PCAP `#12571 <https://github.com/Security-Onion-Solutions/securityonion/issues/12571>`_
+- FEATURE: Add default columns for endpoint.events datasets `#12425 <https://github.com/Security-Onion-Solutions/securityonion/issues/12425>`_
+- FEATURE: Add new SOC action for Process Info `#12421 <https://github.com/Security-Onion-Solutions/securityonion/issues/12421>`_
+- FEATURE: Add new endpoint dashboards `#12428 <https://github.com/Security-Onion-Solutions/securityonion/issues/12428>`_
+- FEATURE: Additional Supported Integrations #5
+- FEATURE: Improve Grid page Reboot indicators `#12546 <https://github.com/Security-Onion-Solutions/securityonion/issues/12546>`_
+- FEATURE: Initial implementation of the new Detections system (currently disabled)
+- FIX: Accept Uppercase emails `#12559 <https://github.com/Security-Onion-Solutions/securityonion/issues/12559>`_
+- FIX: Change the default setting for steno diskfreepercentage on standalone installations to 21 `#12541 <https://github.com/Security-Onion-Solutions/securityonion/issues/12541>`_
+- FIX: Download only newest packages for network installs
+- FIX: EA packages are not downloadable once STIGs have been applied
+- FIX: Endpoint diagnostic template pattern `#12433 <https://github.com/Security-Onion-Solutions/securityonion/issues/12433>`_
+- FIX: Exclude templates from global overrides when necessary `#12382 <https://github.com/Security-Onion-Solutions/securityonion/issues/12382>`_
+- FIX: Improve the accuracy of the stenoloss script `#12477 <https://github.com/Security-Onion-Solutions/securityonion/issues/12477>`_
+- FIX: Receiver node Redis queue fills up using Managersearch without a Searchnode `#12535 <https://github.com/Security-Onion-Solutions/securityonion/issues/12535>`_
+- FIX: Support Oinkcode values containing leading 0's `#12506 <https://github.com/Security-Onion-Solutions/securityonion/issues/12506>`_
+- FIX: Update SOC annotations for Stenographer PCAP `#12539 <https://github.com/Security-Onion-Solutions/securityonion/issues/12539>`_
+- FIX: Update correlate quick action with new icon `#12387 <https://github.com/Security-Onion-Solutions/securityonion/issues/12387>`_
+- FIX: Update ks.cfg for appliances
+- FIX: error.message mapping for system.syslog `#12518 <https://github.com/Security-Onion-Solutions/securityonion/issues/12518>`_
+- FIX: so-saltstack-update should use the proper repo in 2.4 `#12570 <https://github.com/Security-Onion-Solutions/securityonion/issues/12570>`_
+- UPGRADE: CyberChef 10.8.2 `#12454 <https://github.com/Security-Onion-Solutions/securityonion/issues/12454>`_
+- UPGRADE: Kratos to 1.1.0 `#12479 <https://github.com/Security-Onion-Solutions/securityonion/issues/12479>`_
+
 2.4.50 [20240220] Changes
 -------------------------
 
