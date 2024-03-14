@@ -93,6 +93,45 @@ File Extraction
 
 If you choose Suricata for metadata, it will extract files from network traffic and :ref:`strelka` will then analyze those extracted files. If you would like to extract additional file types, then you can add file types as shown at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules.
 
+PCAP
+----
+
+Starting in Security Onion 2.4.60, you now have the option of using Suricata to write PCAP instead of :ref:`stenographer`.
+
+.. warning::
+
+        This Suricata PCAP feature is in BETA! We recommend that you test this feature thoroughly in a test environment.
+
+If you would like to experiment with Suricata PCAP, then you can go to :ref:`administration` --> Configuration --> Global and select the ``pcapengine`` setting. That setting should default to ``STENO`` but you can change it to either ``TRANSITION`` or ``SURICATA``. If you don't need your old :ref:`stenographer` PCAP at all, then you can immediately set ``pcapengine`` to ``SURICATA`` and manually delete the contents of the :ref:`stenographer` PCAP and index directories. However, most folks will probably want to use the ``TRANSITION`` option as it will keep :ref:`stenographer` running but not capturing traffic so that you can retrieve older :ref:`stenographer` PCAP as well as new Suricata PCAP. :ref:`stenographer` will then start purging its old PCAP as Suricata uses more space. Once your old :ref:`stenographer` PCAP has fully aged off, you can change the ``pcapengine`` setting to ``SURICATA`` to fully disable :ref:`stenographer`. 
+
+Differences between Suricata and Stenographer for PCAP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- :ref:`stenographer` indexes PCAP which allows instant retreival of PCAP sessions from disk. When a Suricata PCAP is requested, a process searches the PCAP files and retrieves the appropriate packets for the flow.
+- Since :ref:`stenographer` indexes PCAP, it stores the PCAP in a special format. Suricata writes standard PCAP files which can be copied off to another system and then opened with any standard libpcap tool.
+- Suricata can compress PCAP using lz4 compression.
+- Suricata supports conditional PCAP if you only want to write PCAP when certain conditions are met.
+- Suricata has the ability to stop capturing PCAP once a flow reaches a specific stream depth. Security Onion sets this stream depth to 1MB by default. This means that once the PCAP flow reaches 1MB, Suricata will stop recording packets for that flow.
+- Currently, there is NO SUPPORT for a PCAP specific :ref:`bpf` for Suricata. If you apply a :ref:`bpf` to Suricata, it will apply to not only PCAP but also standard NIDS alerts and metadata if enabled.
+
+Conditional PCAP
+~~~~~~~~~~~~~~~~
+
+If you switch to Suricata PCAP, it will write all traffic to PCAP by default. If you would like to limit Suricata to only writing PCAP when certain conditions are met, you can go to :ref:`administration` --> Configuration --> Suricata -> pcap -> conditional and change it to to either ``alerts`` or ``tag``:
+
+- all: Capture all packets seen by Suricata (default).
+- alerts: Capture only packets associated with a NIDS alert.
+- tag: Capture packets based on a rule that is tagged.
+
+PCAP Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- compression: Set to ``none`` to disable compression. Set to ``lz4`` to enable lz4 compression but note that this requires more CPU cycles.
+- lz4-level: Specify the level of lz4 compression. ``0`` for no compression. ``16`` for maximum compression.
+- maxsize: Max size in GB to use for PCAP stored on the sensor.
+- filesize: File size for the PCAP files that get written.
+- use-stream-depth: Set to ``no`` to ignore the stream depth and capture the entire flow. Set this to ``yes`` to truncate the flow based on the stream depth. 
+
 Disabling
 ---------
 
