@@ -126,6 +126,8 @@ If you switch to Suricata PCAP, it will write all traffic to PCAP by default. If
 PCAP Configuration Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Here are some other PCAP configuration options that can be found at :ref:`administration` --> Configuration --> Suricata -> pcap. Some settings are considered advanced settings so you will only see them if you enable the ``Show all configurable settings, including advanced settings.`` option.
+
 - compression: Set to ``none`` to disable compression. Set to ``lz4`` to enable lz4 compression but note that this requires more CPU cycles.
 - lz4-level: Specify the level of lz4 compression. ``0`` for no compression. ``16`` for maximum compression.
 - maxsize: Max size in GB to use for PCAP stored on the sensor.
