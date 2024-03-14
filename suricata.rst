@@ -96,7 +96,7 @@ If you choose Suricata for metadata, it will extract files from network traffic 
 PCAP
 ----
 
-Starting in Security Onion 2.4.60, you now have the option of using Suricata to write PCAP instead of :ref:`stenographer`.
+Starting in Security Onion 2.4.60, you now have the option of switching full packet capture from :ref:`stenographer` to Suricata.
 
 .. warning::
 
