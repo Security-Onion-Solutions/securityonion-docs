@@ -40,44 +40,6 @@ EXTERNAL_NET
 
 By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to detect lateral movement inside your environment. You can modify this default value by going to :ref:`administration` --> Configuration --> suricata --> config --> vars --> address-groups --> EXTERNAL_NET.
 
-PCAP
-----
-
-Starting in 2.4.60, users now have the option to migrate PCAP to be captured by Suricata instead of Stenographer. This feature is in BETA! 
-
-There are 2 modes for Suricata PCAP. The first mode is TRANSITION that will keep Stenographer running but not capturing traffic. This allows for retrieval of PCAP from older PCAP stored in Stenographer as well as new PCAP generated from Suricata. Stenographer will start writing 0 byte files and clean off old PCAP as Suricata uses more space. Once your old Stenographer PCAP has aged off you can change the pcap engine option to SURICATA. If you don't care about losing existing PCAP you can simply use this option at the beginning and delete the contents of the Stenographer PCAP and index directories.
-
-.. image:: images/suricata-pcap-engine.png
-  :target: _images/suricata-pcap-engine.png
-
-Differences between Suricata and Stenographer for PCAP
-------------------------------------------------------
-
-- PCAP is indexed in Stenographer. This allows instant retreival of PCAP sessions from disk. When a Suricata PCAP is requested, a process searches the PCAP files and retreives the appropriate packets for the flow.
-- PCAP in Stengrapher is stored in a special format due to this indexing. Suricata PCAP is stored as standard PCAP and can be copied off to other tools. 
-- PCAP in Suricata can be compressed with lz4. 
-- Conditional PCAP is supported with Suricata. There are three modes that are supported. "all" for all PCAP, "alert" for only capturing the flow that generated the alert, and "tag" to only PCAP specific tagged rules.
-- Suricata PCAP can be set only to capture PCAP for a flow to the stream depth. Security Onion sets this to 1mb by default. This means once the PCAP flow hits 1mb it will stop recording packets. This is similar to Trim PCAP in 16.04.
-- Currently there is NO SUPPORT for PCAP specific BPFs.
-
-PCAP Modes in Suricata
-----------------------
-
-Using Suricata for PCAP allows you to use 3 different modes for catpruing PCAP. You can change this setting by going to Suricata -> pcap -> conditional and setting it to one of the following:
-
-- all: Capture all packets seen by Suricata
-- alerts: Capture only packets associated with an alert
-- tag: Capture packets based on a rule that is tagged
-
-Useful Suricata PCAP Configuration Options
-------------------------------------------
-
-- compression: "none" for no compression or "lz4" lz4 for lz4 compression. This will use more CPU for recording PCAP
-- lz4-level: Level of lz4 compression
-- maxsize: Max size in GB to use for PCAP stored on the sensor
-- filesize: File size for the PCAPs that get written.
-- use-stream-depth: Stop recording PCAP once the stream depth has been met.  
-
 Performance
 -----------
 
@@ -145,6 +107,45 @@ File Extraction
 ---------------
 
 If you choose Suricata for metadata, it will extract files from network traffic and :ref:`strelka` will then analyze those extracted files. If you would like to extract additional file types, then you can add file types as shown at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules.
+
+PCAP
+----
+
+Starting in Security Onion 2.4.60, you now have the option of using Suricata to write PCAP instead of :ref:`stenographer`.
+
+.. warning::
+
+        This Suricata PCAP feature is in BETA! We recommend that you test this feature thoroughly in a test environment.
+
+If you would like to experiment with Suricata PCAP, then you can go to :ref:`administration` --> Configuration --> Global and select the ``pcapengine`` setting. That setting should default to ``STENO`` but you can change it to either ``TRANSITION`` or ``SURICATA``. If you don't need your old :ref:`stenographer` PCAP at all, then you can immediately set ``pcapengine`` to ``SURICATA`` and manually delete the contents of the :ref:`stenographer` PCAP and index directories. However, most folks will probably want to use the ``TRANSITION`` option as it will keep :ref:`stenographer` running but not capturing traffic so that you can retrieve older :ref:`stenographer` PCAP as well as new Suricata PCAP. :ref:`stenographer` will then start purging its old PCAP as Suricata uses more space. Once your old :ref:`stenographer` PCAP has fully aged off, you can change the ``pcapengine`` setting to ``SURICATA`` to fully disable :ref:`stenographer`. 
+
+Differences between Suricata and Stenographer for PCAP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- :ref:`stenographer` indexes PCAP which allows instant retreival of PCAP sessions from disk. When a Suricata PCAP is requested, a process searches the PCAP files and retrieves the appropriate packets for the flow.
+- Since :ref:`stenographer` indexes PCAP, it stores the PCAP in a special format. Suricata writes standard PCAP files which can be copied off to another system and then opened with any standard libpcap tool.
+- Suricata can compress PCAP using lz4 compression.
+- Suricata supports conditional PCAP if you only want to write PCAP when certain conditions are met.
+- Suricata has the ability to stop capturing PCAP once a flow reaches a specific stream depth. Security Onion sets this stream depth to 1MB by default. This means that once the PCAP flow reaches 1MB, Suricata will stop recording packets for that flow.
+- Currently, there is NO SUPPORT for a PCAP specific :ref:`bpf` for Suricata. If you apply a :ref:`bpf` to Suricata, it will apply to not only PCAP but also standard NIDS alerts and metadata if enabled.
+
+Conditional PCAP
+~~~~~~~~~~~~~~~~
+
+If you switch to Suricata PCAP, it will write all traffic to PCAP by default. If you would like to limit Suricata to only writing PCAP when certain conditions are met, you can go to :ref:`administration` --> Configuration --> Suricata -> pcap -> conditional and change it to to either ``alerts`` or ``tag``:
+
+- all: Capture all packets seen by Suricata (default).
+- alerts: Capture only packets associated with a NIDS alert.
+- tag: Capture packets based on a rule that is tagged.
+
+PCAP Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- compression: Set to ``none`` to disable compression. Set to ``lz4`` to enable lz4 compression but note that this requires more CPU cycles.
+- lz4-level: Specify the level of lz4 compression. ``0`` for no compression. ``16`` for maximum compression.
+- maxsize: Max size in GB to use for PCAP stored on the sensor.
+- filesize: File size for the PCAP files that get written.
+- use-stream-depth: Set to ``no`` to ignore the stream depth and capture the entire flow. Set this to ``yes`` to truncate the flow based on the stream depth. 
 
 Disabling
 ---------
