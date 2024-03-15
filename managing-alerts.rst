@@ -50,7 +50,7 @@ Rulesets come with a large number of rules enabled (over 20,000 by default). You
 
 ::
 
-    grep -v "^#" /opt/so/rules/nids/all.rules | cut -d\" -f2 | awk '{print $1, $2}' | grep -v "^$" | sort | uniq -c |sort -nr
+    grep -v "^#" /opt/so/rules/nids/suri/all.rules | cut -d\" -f2 | awk '{print $1, $2}' | grep -v "^$" | sort | uniq -c |sort -nr
 
 So what's next?
 ---------------
