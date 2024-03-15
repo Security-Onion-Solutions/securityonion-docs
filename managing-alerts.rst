@@ -35,11 +35,11 @@ Alternatively, you could also test for additional hits with a utility called ``t
 
       curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
     
-If everything is working correctly, you should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/all.rules``:
+If everything is working correctly, you should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. If you do not see this alert, try checking to see if the rule is enabled in ``/opt/so/rules/nids/suri/all.rules``:
 
    ::
    
-      grep 2100498 /opt/so/rules/nids/all.rules
+      grep 2100498 /opt/so/rules/nids/suri/all.rules
       
 You can also test using :ref:`so-test`.
 
