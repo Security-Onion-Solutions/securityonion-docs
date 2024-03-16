@@ -33,19 +33,7 @@ The easiest way to download pcaps for testing is our :ref:`so-test` tool. Altern
 
 -  https://github.com/chrissanders/packets
 
-You can download pcaps from the link above using a standard web browser or from the command line using a tool like ``wget`` or ``curl``. Here are some examples.
-
-To download the pcap from https://www.malware-traffic-analysis.net/2020/09/16/index.html using wget:
-
-::
-
-  wget https://www.malware-traffic-analysis.net/2020/09/16/2020-09-16-Qakbot-infection-traffic.pcap.zip
-
-To download a pcap from https://www.netresec.com/?page=MACCDC:
-
-::
-
-  wget https://download.netresec.com/pcap/maccdc-2012/maccdc2012_00000.pcap.gz
+You can download pcaps from the link above using a standard web browser or from the command line using a tool like ``wget`` or ``curl``.
 
 Replay
 ------
@@ -55,4 +43,4 @@ You can use ``tcpreplay`` to replay any standard pcap to the sniffing interface 
 Import
 ------
 
-A drawback to using tcpreplay is that it's replaying the pcap as new traffic and thus the timestamps that you see in :ref:`kibana` and other interfaces do not reflect the original timestamps from the pcap. To avoid this, you can import the pcap using the :ref:`grid` page.
+A drawback to using tcpreplay is that it's replaying the pcap as new traffic and thus the timestamps that you see in :ref:`soc` and other interfaces do not reflect the original timestamps from the pcap. To avoid this, you can import the pcap using the :ref:`grid` page.
