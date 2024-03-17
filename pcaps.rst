@@ -3,7 +3,7 @@
 PCAPs for Testing
 =================
 
-The easiest way to download pcaps for testing is our :ref:`so-test` tool. Alternatively, you could manually download pcaps from one or more of the following locations:
+The easiest way to download pcap files for testing is our :ref:`so-test` tool. Alternatively, you could manually download pcaps from one or more of the following locations:
 
 -  https://www.malware-traffic-analysis.net/
 
@@ -33,7 +33,7 @@ The easiest way to download pcaps for testing is our :ref:`so-test` tool. Altern
 
 -  https://github.com/chrissanders/packets
 
-You can download pcaps from the link above using a standard web browser or from the command line using a tool like ``wget`` or ``curl``.
+You can download pcap files from the links above using a standard web browser or from the command line using a tool like ``wget`` or ``curl``.
 
 Replay
 ------
