@@ -22,7 +22,7 @@ To resolve the issue, run the following command for each affected index (replaci
 
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
-2.4.60 [20240318] Changes
+2.4.60 [20240320] Changes
 -------------------------
 
 - FEATURE: Add Suricata classification.config for editing  `#12391 <https://github.com/Security-Onion-Solutions/securityonion/issues/12391>`_
