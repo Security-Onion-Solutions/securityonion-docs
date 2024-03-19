@@ -49,6 +49,7 @@ After running the command, the index should no longer use replicas and the statu
 - FIX: so-saltstack-update should use the proper repo in 2.4 `#12570 <https://github.com/Security-Onion-Solutions/securityonion/issues/12570>`_
 - UPGRADE: CyberChef 10.8.2 `#12454 <https://github.com/Security-Onion-Solutions/securityonion/issues/12454>`_
 - UPGRADE: Kratos to 1.1.0 `#12479 <https://github.com/Security-Onion-Solutions/securityonion/issues/12479>`_
+- UPGRADE: Suricata 7.0.4 `#12609 <https://github.com/Security-Onion-Solutions/securityonion/issues/12609>`_
 
 2.4.50 [20240220] Changes
 -------------------------
