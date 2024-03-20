@@ -7,6 +7,9 @@ Welcome first time users! You're going to be peeling back the layers of your net
 
 First, download our ISO image as shown in the :ref:`download` section. Then install the ISO image as shown below (also see the :ref:`installation` and :ref:`configuration` sections). This can be done in a minimal virtual machine with as little as 4GB RAM, 2 CPU cores, and 200GB of storage. For more information about virtualization, please see the :ref:`vmware`, :ref:`virtualbox`, and :ref:`proxmox` sections. (Once you're comfortable with your IMPORT installation, then you can move on to more advanced installations as shown in the :ref:`architecture` section.)
 
+Screenshot Tour
+---------------
+
 After booting the ISO image, the boot menu appears:
 
 .. image:: images/01_grub.png
