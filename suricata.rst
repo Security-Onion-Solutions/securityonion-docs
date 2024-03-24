@@ -129,7 +129,7 @@ PCAP Configuration Options
 Here are some other PCAP configuration options that can be found at :ref:`administration` --> Configuration --> Suricata -> pcap. Some settings are considered advanced settings so you will only see them if you enable the ``Show all configurable settings, including advanced settings.`` option.
 
 - compression: Set to ``none`` to disable compression. Set to ``lz4`` to enable lz4 compression but note that this requires more CPU cycles.
-- lz4-level: lz4 compression level of PCAP files. Set to 0 for no compression. Set to 16 for maximum compression.
+- lz4-level: lz4 compression level of PCAP files. Set to ``0`` for no compression. Set to ``16`` for maximum compression.
 - maxsize: Maximum size in GB for total disk usage of all PCAP files written by Suricata.
 - filesize: Maximum file size for individual PCAP files written by Suricata. Increasing this number could improve write performance at the expense of pcap retrieval time.
 - use-stream-depth: Set to ``no`` to ignore the stream depth and capture the entire flow. Set to ``yes`` to truncate the flow based on the stream depth. 
