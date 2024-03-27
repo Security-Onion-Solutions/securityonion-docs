@@ -3,6 +3,11 @@
 Release Notes
 =============
 
+2.3.300 [20240401] Changes
+-----------------------------------
+
+- UPGRADE: Suricata 6.0.17 `#12613 <https://github.com/Security-Onion-Solutions/securityonion/issues/12613>`_
+
 2.3.290 [20240229] Changes
 ----------------------
 
