@@ -6,6 +6,8 @@ Release Notes
 2.3.300 [20240401] Changes
 --------------------------
 
+- FIX: Ignore YARA rules `#12678 <https://github.com/Security-Onion-Solutions/securityonion/issues/12678>`_
+- UPGRADE: Strelka - 0.24.01.18 `#12676 <https://github.com/Security-Onion-Solutions/securityonion/issues/12676>`_
 - UPGRADE: Suricata 6.0.17 `#12613 <https://github.com/Security-Onion-Solutions/securityonion/issues/12613>`_
 
 2.3.290 [20240229] Changes
