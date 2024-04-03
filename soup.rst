@@ -146,6 +146,15 @@ Downloading images
 
 As ``soup`` is downloading container images, it may encounter errors if there are Internet connection issues or if the disk runs out of free space. Once you've resolved the underlying condition, you can manually refresh your container images using ``so-docker-refresh``.
 
+Docker Registry
+~~~~~~~~~~~~~~~
+
+If you see errors relating to ``so-dockerregistry`` (Docker Registry), then please take a look at the following discussions to see if your symptoms match and if their solutions may help you:
+
+https://github.com/Security-Onion-Solutions/securityonion/discussions/12078
+
+https://github.com/Security-Onion-Solutions/securityonion/discussions/12635
+
 Highstate already running
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
