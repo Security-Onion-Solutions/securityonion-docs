@@ -28,6 +28,7 @@ Security Onion Documentation
    utilities
    help
    security
+   telemetry
    release-notes
    appendix
    cheat-sheet
