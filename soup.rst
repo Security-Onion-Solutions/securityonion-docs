@@ -149,7 +149,7 @@ As ``soup`` is downloading container images, it may encounter errors if there ar
 Docker Registry
 ~~~~~~~~~~~~~~~
 
-If you see errors relating to ``so-dockerregistry`` (Docker Registry), then please take a look at the following discussions to see if your symptoms match and if their solutions may help you:
+If you see errors relating to ``so-dockerregistry`` (:ref:`docker` Registry), then please take a look at the following discussions to see if your symptoms match and if their solutions may help you:
 
 https://github.com/Security-Onion-Solutions/securityonion/discussions/12078
 
