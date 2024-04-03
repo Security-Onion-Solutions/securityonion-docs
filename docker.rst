@@ -47,6 +47,12 @@ The manager node runs a Docker registry. From https://docs.docker.com/registry/r
 
     If you have multiple instances of Docker running in your environment (e.g., multiple physical or virtual machines, all running the Docker daemon), each time one of them requires an image that it doesn’t have it will go out to the internet and fetch it from the public Docker registry. By running a local registry mirror, you can keep most of the redundant image fetch traffic on your local network.
 
+If you see errors relating to ``so-dockerregistry`` (Docker Registry), then please take a look at the following discussions to see if your symptoms match and if their solutions may help you:
+
+https://github.com/Security-Onion-Solutions/securityonion/discussions/12078
+
+https://github.com/Security-Onion-Solutions/securityonion/discussions/12635
+
 Networking and Bridging
 -----------------------
 
