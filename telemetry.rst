@@ -80,3 +80,7 @@ Airgap
 ------
 
 Grids installed within airgapped environments will automatically disable telemetry. In this scenario, the ``SOC Telemetry`` configuration setting will have no effect, and the automatic package updates will be disabled. See :ref:`airgap` for more information about environments detached from the internet.
+
+.. note::
+    
+    If a grid is switched from airgap to non-airgap, and if the SOC Telemetry is not explicitly disabled in the grid by an administrator, the SOC app running in the browser will send telemetry.
