@@ -28,7 +28,7 @@ Grid-specific data, such as usernames, event data, and node hostnames, are inten
 
 Due to the nature of how internet web requests work, the originating IP address and User-Agent information of the web browser is known at the time of the data collection. 
 
-See the :ref:`Retention Period` section below to learn more about how long this data is retained.
+See the Retention Period section below to learn more about how long this data is retained.
 
 Network Parameters
 ~~~~~~~~~~~~~~~~~~
