@@ -14,9 +14,9 @@ Options
 
 Starting at the top of the main Detections page, the Options menu allows you to set a few options.
 
-First, there is a toggle labeled ``Temporarily enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled tempo rarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
+First, there is a toggle labeled ``Temporarily enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
 
-Next, you have the option to synchronize a particular detection engine such as ref:`suricata`, :ref:`strelka`, or :ref:`elastlert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` buttons.
+Next, you have the option to synchronize a particular detection engine such as :ref:`suricata` :ref:`strelka`, or :ref:`elastalert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` buttons.
 
 Query Bar
 ---------
