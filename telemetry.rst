@@ -6,12 +6,12 @@ Telemetry
 SOC Telemetry
 -------------
 
-Starting in 2.4.70, Security Onion Console (SOC) will send telemetry data to Google Analytics. The purpose of this change is to help the Security Onion development team improve the product. Specifically, by knowing which user-interface features are being used, and how the user interacts with the SOC user interface, the development team can better prioritize new features, improvements to the existing user interface, and begin deprecating features that are rarely used. Deprecating unused features will help developers avoid spending their time and effort maintaining and upgrading areas of the product that aren't widely used. This allows more time to be spent on new features and bug fixes, directly benefiting Security Onion users.
+Starting in Security Onion 2.4.70, :ref:`soc` will send telemetry data to Google Analytics. The purpose of this change is to help the Security Onion development team improve the product. Specifically, by knowing which user-interface features are being used, and how the user interacts with the SOC user interface, the development team can better prioritize new features, improvements to the existing user interface, and begin deprecating features that are rarely used. Deprecating unused features will help developers avoid spending their time and effort maintaining and upgrading areas of the product that aren't widely used. This allows more time to be spent on new features and bug fixes, directly benefiting Security Onion users.
 
 Configuring
 ~~~~~~~~~~~
 
-During setup, or during non-automated ``soup`` invocations, the user is provided an opportunity to opt out of SOC telemetry collection.
+During setup, or during non-automated :ref:`soup` invocations, the user is provided an opportunity to opt out of SOC telemetry collection.
 
 After installation, grid administrators can enable or disable SOC Telemetry via the configuration interface. Search for ``SOC Telemetry`` in the Configuration screen.
 
@@ -22,7 +22,7 @@ Also, the browser will cache the previous configuration setting. Therefore, to e
 Included Data
 ~~~~~~~~~~~~~
 
-The primary objective of the SOC Telemetry data collection is to understand what features are being used in SOC. Specifically, the data being collected relates to user interface navigation flows. Additional context data, such as the version of the software, the viewed page path, etc. may also be included.
+The primary objective of the SOC Telemetry data collection is to understand what features are being used in :ref:`soc`. Specifically, the data being collected relates to user interface navigation flows. Additional context data, such as the version of the software, the viewed page path, etc. may also be included.
 
 Grid-specific data, such as usernames, event data, and node hostnames, are intentionally excluded from the data collection. 
 
@@ -33,7 +33,7 @@ See the Retention Period section below to learn more about how long this data is
 Network Parameters
 ~~~~~~~~~~~~~~~~~~
 
-The SOC Telemetry data originates from the SOC browser running on the analyst workstation. The domain being accessed from the SOC browser is ``www.googletagmanager.com``. 
+The SOC Telemetry data originates from the :ref:`soc` browser running on the analyst workstation. The domain being accessed from the :ref:`soc` browser is ``www.googletagmanager.com``. 
 
 The telemetry data is sent using TLS encryption.
 
@@ -79,7 +79,7 @@ The telemetry data is sent using TLS encryption.
 Airgap
 ------
 
-Grids installed within airgapped environments will automatically disable telemetry. In this scenario, the ``SOC Telemetry`` configuration setting will have no effect, and the automatic package updates will be disabled. See :ref:`airgap` for more information about environments detached from the internet.
+Grids installed within airgapped environments will automatically disable telemetry. In this scenario, the ``SOC Telemetry`` configuration setting will have no effect and the automatic package updates will be disabled. See :ref:`airgap` for more information about environments detached from the internet.
 
 .. note::
     
