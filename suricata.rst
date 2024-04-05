@@ -159,7 +159,7 @@ The first and easiest way to test Suricata is to access http://testmynids.org/ui
 
 If everything is working correctly, you should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`alerts`. You should also be able to find the alert in :ref:`dashboards` or :ref:`hunt`.
 
-If you do not see this alert, try checking to see if the rule is enabled by going to :ref:`detections` and searching for the SID of the rule which is `2100498`. One way to search for this rule is to specify it in the URL as follows:
+If you do not see this alert, try checking to see if the rule is enabled by going to :ref:`detections` and searching for the SID of the rule which is ``2100498``. One way to search for this rule is to specify it in the URL as follows:
 
 https://YourSecurityOnionHostHere.example.com/#/detections?q=2100498
 
