@@ -3,6 +3,8 @@
 NIDS
 ====
 
+:ref:`suricata` uses NIDS (Network Intrusion Detection System) rules to monitor network traffic for suspicious or noteworthy activity.
+
 Rulesets
 --------
 
@@ -11,7 +13,7 @@ You can modify your ruleset configuration by going to :ref:`administration` --> 
 .. image:: images/config-item-idstools.png
   :target: _images/config-item-idstools.png
 
-Security Onion offers the following choices for rulesets to be used by :ref:`suricata`.
+Security Onion offers the following choices for NIDS rulesets.
 
 ET Open
 ~~~~~~~
