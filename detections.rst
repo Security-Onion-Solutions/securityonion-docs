@@ -21,6 +21,17 @@ First, there is a toggle labeled ``Temporarily enable advanced interface feature
 
 Next, you have the option to synchronize a particular detection engine such as :ref:`suricata`, :ref:`strelka`, or :ref:`elastalert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button.
 
+Adding Detections
+-----------------
+
+To add a detection, click the blue + button between Options and the query bar. A form will appear where you will:
+
+- select the kind of detection you wish to add (:ref:`suricata`, Sigma, or YARA)
+- specify a license (optional)
+- add the signature
+
+Once you've filled out the form, click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle.
+
 Query Bar
 ---------
 
@@ -61,14 +72,3 @@ There are two main ways to tune a detection:
 - From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
 
 Once you've used one of these methods to reach the detection detail page, click the Tuning tab, click the blue + button, select the type of tuning, fill out the requested values, and then click the ``CREATE`` button.
-
-Adding Detections
------------------
-
-To add a detection, click the blue + button between Options and the query bar. A form will appear where you will:
-
-- select the kind of detection you wish to add (:ref:`suricata`, Sigma, or YARA)
-- specify a license (optional)
-- add the signature
-
-Once you've filled out the form, click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle.
