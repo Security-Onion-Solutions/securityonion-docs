@@ -14,11 +14,11 @@ Airgap mode works as follows:
 
 - During the install, all of the necessary RPM packages are copied from the ISO image to a new repo located in ``/nsm/repo/``. All devices in the grid will now use this repo for updates to packages.
 
-- :ref:`suricata` NIDS rules from Emerging Threats (ET) are copied to ``/nsm/rules/suricata``.
+- :ref:`nids` rules for :ref:`suricata` are copied to ``/nsm/rules/suricata``.
 
-- Yara rules for :ref:`strelka` are copied to ``/nsm/rules/yara``.
+- :ref:`yara` rules for :ref:`strelka` are copied to ``/nsm/rules/yara``.
 
-- Sigma rules for :ref:`playbook` are copied to ``/nsm/repo/rules/sigma``.
+- :ref:`sigma` rules for :ref:`elastalert` are copied to ``/nsm/repo/rules/sigma``.
 
 - When updating the system, :ref:`soup` will ask for the location of the latest ISO media and will then update using that media rather than pulling from the Internet.
 

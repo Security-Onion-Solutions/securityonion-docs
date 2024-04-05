@@ -92,38 +92,6 @@ VMware Tools
 
 If you have VMware Tools installed and you suspend and then resume, the Docker interfaces will no longer have IP addresses and the Elastic stack will no longer be able to communicate. One workaround is to remove ``/etc/vmware-tools/scripts/vmware/network`` to prevent VMware suspend/resume from modifying your network configuration.
 
-Dependencies
-------------
-
-Playbook
-~~~~~~~~
-
-| ``so-playbook`` - REQ - Playbook Web App
-| ``so-navigator`` - OPT - Navigator Web App
-| ``so-soctopus`` - REQ - Automation
-
-SOCtopus
-~~~~~~~~
-
-| ``so-soctopus`` - REQ - SOCtopus App
-| ``so-elasticsearch`` - OPT - Automation
-
-Suricata
-~~~~~~~~
-
-| ``so-suricata`` - REQ - Suricata app
-
-Kibana
-~~~~~~
-
-| ``so-kibana`` - REQ - Kibana Web App
-| ``so-elasticsearch`` - REQ -
-
-Zeek
-~~~~
-
-| ``so-zeek`` - REQ - Zeek app
-
 More Information
 ----------------
 

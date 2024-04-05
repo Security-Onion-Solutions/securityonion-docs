@@ -18,7 +18,7 @@ Once logged in, you'll notice the user menu in the upper right corner. This allo
 .. image:: images/63_usermenu.png
   :target: _images/63_usermenu.png
 
-On the left side of the page, you'll see links for analyst tools like :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, :ref:`cases`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, :ref:`playbook`, and :ref:`attack-navigator`. While :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, :ref:`cases`, and :ref:`pcap` are built into SOC itself, the remaining tools are external and will spawn separate browser tabs.
+On the left side of the page, you'll see links for analyst tools like :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, :ref:`cases`, :ref:`pcap`, :ref:`kibana`, :ref:`cyberchef`, and :ref:`attack-navigator`. While :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, :ref:`cases`, and :ref:`pcap` are built into SOC itself, the remaining tools are external and will spawn separate browser tabs.
 
 If you'd like to customize SOC, please see the :ref:`soc-customization` section. If you'd like to learn more about SOC logs, please see the :ref:`soc-logs` section.
 
@@ -39,5 +39,4 @@ If you'd like to customize SOC, please see the :ref:`soc-customization` section.
    osquery-manager
    influxdb
    cyberchef
-   playbook
    attack-navigator
