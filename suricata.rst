@@ -8,7 +8,9 @@ From https://suricata.io:
     Suricata is a free and open source, mature, fast and robust network threat detection engine. Suricata inspects the network traffic using
     a powerful and extensive rules and signature language, and has powerful Lua scripting support for detection of complex threats.
 
-Suricata NIDS alerts can be found in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Here's an example of Suricata NIDS alerts in :ref:`alerts`:
+Suricata :ref:`nids` alerts can be found in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. 
+
+Here's an example of Suricata :ref:`nids` alerts in :ref:`alerts`:
 
 .. image:: images/50_alerts.png
   :target: _images/50_alerts.png
@@ -20,6 +22,11 @@ Community ID
 
 Security Onion enables Suricata's built-in support for :ref:`community-id`.
 
+VLAN Tags
+---------
+
+If your network traffic has VLAN tags, then Suricata will log them. :ref:`dashboards` has a VLAN dashboard which will show this data.
+
 Configuration
 -------------
 
@@ -28,7 +35,7 @@ You can configure Suricata by going to :ref:`administration` --> Configuration -
 .. image:: images/config-item-suricata.png
   :target: _images/config-item-suricata.png
 
-If you would like to configure IDS rules, take a look at the :ref:`detections` interface.
+If you would like to configure :ref:`nids` rules, take a look at the :ref:`detections` interface.
 
 HOME_NET
 --------
@@ -43,7 +50,12 @@ By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to dete
 Performance
 -----------
 
-If Suricata is experiencing packet loss, then you may need to do one or more of the following: tune the ruleset (see the :ref:`nids` section), apply a :ref:`bpf`, adjust ``max-pending-packets`` in the Suricata configuration, or adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
+If :ref:`grid` shows that Suricata is experiencing packet loss, then you may need to do one or more of the following:
+
+- tune the :ref:`nids` ruleset
+- apply a :ref:`bpf`
+- adjust ``max-pending-packets`` in :ref:`administration` --> Configuration --> suricata --> config --> max-pending-packets.
+- adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
 
 .. note::
 
@@ -57,28 +69,17 @@ If you have multiple physical CPUs, you’ll most likely want to pin sniffing pr
     | For more information about determining NUMA domains using ``lscpu`` and ``lstopo``, please see:
     | https://github.com/brokenscripts/cpu_pinning
     
-Thresholding
-------------
-
-To edit the thresholding configuration, please see the :ref:`detections` section.
-
 Metadata
 --------
 
 By default, Security Onion uses :ref:`zeek` to record protocol metadata. If you don't need all of the protocol coverage that :ref:`zeek` provides, then you can switch to Suricata metadata to save some CPU cycles. If you choose to do this, then here are some of the kinds of metadata you can expect to see in :ref:`dashboards` or :ref:`hunt`:
 
 -  Connections
-
 -  DHCP
-
 -  DNS
-
 -  Files
-
 -  FTP
-
 -  HTTP
-
 -  SSL
 
 If you later find that some of that metadata is unnecessary, you can filter out the unnecessary metadata by writing rules. We have included some examples at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules.
@@ -96,7 +97,7 @@ If you choose Suricata for metadata, it will extract files from network traffic 
 PCAP
 ----
 
-Starting in Security Onion 2.4.60, you now have the option of switching full packet capture from :ref:`stenographer` to Suricata.
+By default, full packet capture is recorded by :ref:`stenographer` but you can optionally switch this to Suricata.
 
 .. warning::
 
@@ -112,7 +113,7 @@ Differences between Suricata and Stenographer for PCAP
 - Suricata can optionally compress PCAP using lz4 compression.
 - Suricata supports conditional PCAP if you only want to write PCAP when certain conditions are met.
 - Suricata has the ability to stop capturing PCAP once a flow reaches a specific stream depth. Security Onion sets this stream depth to 1MB by default. This means that once the PCAP flow reaches 1MB, Suricata will stop recording packets for that flow.
-- Currently, there is NO SUPPORT for a PCAP specific :ref:`bpf` for Suricata. If you apply a :ref:`bpf` to Suricata, it will apply to not only PCAP but also standard NIDS alerts and metadata if enabled.
+- Currently, there is NO SUPPORT for a PCAP specific :ref:`bpf` for Suricata. If you apply a :ref:`bpf` to Suricata, it will apply to not only PCAP but also standard :ref:`nids` alerts and metadata if enabled.
 
 Conditional PCAP
 ~~~~~~~~~~~~~~~~
@@ -120,7 +121,7 @@ Conditional PCAP
 If you switch to Suricata PCAP, it will write all network traffic to PCAP by default. If you would like to limit Suricata to only writing PCAP when certain conditions are met, you can go to :ref:`administration` --> Configuration --> Suricata -> pcap -> conditional and change it to to either ``alerts`` or ``tag``:
 
 - all: Capture all packets seen by Suricata (default).
-- alerts: Capture only packets associated with a NIDS alert.
+- alerts: Capture only packets associated with a :ref:`nids` alert.
 - tag: Capture packets based on a rule that is tagged.
 
 PCAP Configuration Options
@@ -133,11 +134,6 @@ Here are some other PCAP configuration options that can be found at :ref:`admini
 - maxsize: Maximum size in GB for total disk usage of all PCAP files written by Suricata. If you originally installed version 2.4.60 or newer, then this value should have been set based on a percentage of your disk space. If you originally installed a version older than 2.4.60, then this value should have been set to ``25`` by default. You may need to adjust this value based on your disk space and desired pcap retention.
 - filesize: Maximum file size for individual PCAP files written by Suricata. Increasing this number could improve write performance at the expense of pcap retrieval time.
 - use-stream-depth: Set to ``no`` to ignore the stream depth and capture the entire flow. Set to ``yes`` to truncate the flow based on the stream depth. 
-
-Disabling
----------
-
-If you need to disable Suricata, you can do so via :ref:`administration` --> Configuration --> suricata --> enabled.
 
 Diagnostic Logging
 ------------------
@@ -182,7 +178,7 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 
 - Check your HOME_NET configuration to make sure it includes the networks that you're watching traffic for.
 
-- Check to see if you have a full NIDS ruleset with rules that should specifically alert on the traffic and that those rules are enabled.
+- Check to see if you have a full :ref:`nids` ruleset with rules that should specifically alert on the traffic and that those rules are enabled.
 
 - Check to see if you have any threshold or suppression configuration that might be preventing alerts.
 
@@ -195,7 +191,7 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 Stats
 -----
 
-For detailed Suricata statistics, check ``/opt/so/log/suricata/stats.log``.
+For Suricata statistics, see :ref:`grid`, :ref:`influxdb`, and ``/opt/so/log/suricata/stats.log``.
 
 Testing Rules
 -------------
@@ -208,10 +204,10 @@ To test a new rule, use the following utility on a node that runs Suricata (ie F
 
 The file should contain the new rule that you would like to test. The pcap should contain network data that will trigger the rule.
 
-VLAN Tags
+Disabling
 ---------
 
-If your network traffic has VLAN tags, then Suricata will log them. :ref:`dashboards` has a VLAN dashboard which will show this data.
+If you need to disable Suricata, you can do so via :ref:`administration` --> Configuration --> suricata --> enabled.
 
 More Information
 ----------------
