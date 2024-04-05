@@ -3,7 +3,7 @@
 Sigma
 =====
 
-:ref:`elastalert` uses Sigma rules to monitor incoming logs for suspicious or noteworthy activity.
+Sigma rules are loaded into :ref:`elastalert` to monitor incoming logs for suspicious or noteworthy activity.
 
 From https://github.com/Neo23x0/sigma:
 

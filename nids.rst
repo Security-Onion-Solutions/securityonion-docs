@@ -3,7 +3,7 @@
 NIDS
 ====
 
-:ref:`suricata` uses NIDS (Network Intrusion Detection System) rules to monitor network traffic for suspicious or noteworthy activity.
+NIDS (Network Intrusion Detection System) rules are loaded into :ref:`suricata` to monitor network traffic for suspicious or noteworthy activity.
 
 Rulesets
 --------

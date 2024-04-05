@@ -3,7 +3,7 @@
 YARA
 ====
 
-:ref:`strelka` uses YARA rules to monitor files for suspicious or noteworthy characteristics.
+YARA rules are loaded into :ref:`strelka` to monitor files for suspicious or noteworthy characteristics.
 
 From https://virustotal.github.io/yara/:
 
