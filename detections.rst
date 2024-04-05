@@ -71,4 +71,4 @@ There are two main ways to tune a detection:
 - From the main Detections interface, you can search for the desired detection and click the binoculars icon.
 - From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
 
-Once you've used one of these methods to reach the detection detail page, click the Tuning tab, click the blue + button, select the type of tuning, fill out the requested values, and then click the ``CREATE`` button.
+Once you've used one of these methods to reach the detection detail page, click the TUNING tab, click the blue + button, select the type of tuning, fill out the requested values, and then click the ``CREATE`` button.
