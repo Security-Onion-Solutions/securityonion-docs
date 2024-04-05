@@ -47,6 +47,11 @@ EXTERNAL_NET
 
 By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to detect lateral movement inside your environment. You can modify this default value by going to :ref:`administration` --> Configuration --> suricata --> config --> vars --> address-groups --> EXTERNAL_NET.
 
+Stats
+-----
+
+For Suricata statistics, see :ref:`grid`, :ref:`influxdb`, and ``/opt/so/log/suricata/stats.log``.
+
 Performance
 -----------
 
@@ -187,11 +192,6 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 - Check the :ref:`elastic-agent`, :ref:`logstash`, and :ref:`elasticsearch` logs for any pipeline issues that may be preventing the alerts from being written to :ref:`elasticsearch`.
 
 - Try installing a simple import node (perhaps in a VM) following the steps in the :ref:`first-time-users` section and see if you get alerts there. If so, compare the working system to the non-working system and determine where the differences are.
-
-Stats
------
-
-For Suricata statistics, see :ref:`grid`, :ref:`influxdb`, and ``/opt/so/log/suricata/stats.log``.
 
 Testing Rules
 -------------
