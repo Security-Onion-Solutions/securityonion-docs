@@ -3,7 +3,7 @@
 Sigma
 =====
 
-Sigma rules are loaded into :ref:`elastalert` to monitor incoming logs for suspicious or noteworthy activity.
+Sigma rules are loaded into :ref:`elastalert` to monitor incoming logs for suspicious or noteworthy activity. Active sigma rules generate alerts that can then be found in :ref:`alerts`.
 
 From https://github.com/Neo23x0/sigma:
 
@@ -13,3 +13,8 @@ Managing Sigma Rules
 --------------------
 
 You can manage Sigma rules via :ref:`detections`.
+
+.. warning::
+
+	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` play as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
+
