@@ -35,7 +35,7 @@ Once you've filled out the form, click the ``CREATE`` button and the detection s
 Query Bar
 ---------
 
-The query bar defaults to All Detections. Clicking the drop-down box reveals other options such as Custom Detections, All Detections - Enabled, and All Detections - Disabled.
+The query bar defaults to All Detections. Clicking the drop-down box reveals other options such as ``Custom Detections``, ``All Detections - Enabled``, and ``All Detections - Disabled``.
 
 Under the query bar, you’ll notice colored bubbles that represent the individual components of the query. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
@@ -48,7 +48,7 @@ The remainder of the main Detections page is a data table that shows a high leve
 - Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search or copy text to the clipboard.
 - You can adjust the Rows per page setting in the bottom right and use the left and right arrow icons to page through the table.
 - When you click the arrow to expand a row in the data table, it will show the high level fields from that detection. Field names are shown on the left and field values on the right. You can click on values on the right to bring up the context menu to refine your search.
-- To the right of the arrow is a binoculars icon. Clicking this will take you to the detection detail page including the Overview, Operational Notes, Detection Source, Tuning, and History tabs.
+- To the right of the arrow is a binoculars icon. Clicking this will take you to the detection detail page.
 
 Detection Details
 -----------------
