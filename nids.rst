@@ -54,7 +54,7 @@ Snort Registered
 -  same rules as Snort Subscriber ruleset, except rules only retrievable after 30 days past release
 -  **free**
 
-Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'`` as described in the :ref:`managing-alerts` section.
+Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'``.
   
 | For more information, see:
 | https://www.snort.org/downloads/#rule-downloads
@@ -68,7 +68,7 @@ Snort Subscriber (Talos)
 -  rules retrievable as released
 -  license fee per sensor (you are responsible for purchasing enough licenses for your entire deployment)
 
-Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'`` as described in the :ref:`managing-alerts` section.
+Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'``.
 
 | For more information, see:
 | https://www.snort.org/downloads/#rule-downloads

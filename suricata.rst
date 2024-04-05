@@ -43,7 +43,7 @@ By default, EXTERNAL_NET is set to ``any`` (which includes ``HOME_NET``) to dete
 Performance
 -----------
 
-If Suricata is experiencing packet loss, then you may need to do one or more of the following: tune the ruleset (see the :ref:`managing-alerts` section), apply a :ref:`bpf`, adjust ``max-pending-packets`` in the Suricata configuration, or adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
+If Suricata is experiencing packet loss, then you may need to do one or more of the following: tune the ruleset (see the :ref:`nids` section), apply a :ref:`bpf`, adjust ``max-pending-packets`` in the Suricata configuration, or adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
 
 .. note::
 
@@ -60,7 +60,7 @@ If you have multiple physical CPUs, you’ll most likely want to pin sniffing pr
 Thresholding
 ------------
 
-To edit the thresholding configuration, please see the :ref:`managing-alerts` section.
+To edit the thresholding configuration, please see the :ref:`detections` section.
 
 Metadata
 --------

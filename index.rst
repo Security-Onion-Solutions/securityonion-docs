@@ -24,7 +24,6 @@ Security Onion Documentation
    accounts
    services
    customizing
-   tuning
    tricks
    utilities
    help
