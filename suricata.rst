@@ -148,6 +148,29 @@ If you need to troubleshoot Suricata, check ``/opt/so/log/suricata/suricata.log`
 
 	sudo docker logs so-suricata
 
+Testing
+-------
+
+The first and easiest way to test Suricata is to access http://testmynids.org/uid/index.html from a machine that is being monitored by your Security Onion deployment. You can do so via the command line using ``curl``:
+
+::
+
+   curl testmynids.org/uid/index.html
+
+If everything is working correctly, you should see a corresponding alert (``GPL ATTACK_RESPONSE id check returned root``) in :ref:`alerts`. You should also be able to find the alert in :ref:`dashboards` or :ref:`hunt`.
+
+If you do not see this alert, try checking to see if the rule is enabled by going to :ref:`detections` and searching for the SID of the rule which is `2100498`. One way to search for this rule is to specify it in the URL as follows:
+
+https://YourSecurityOnionHostHere.example.com/#/detections?q=2100498
+
+Another way to test Suricata is with a utility called ``tmNIDS``. You can run the tool in interactive mode like this:
+
+::
+
+   curl -sSL https://raw.githubusercontent.com/0xtf/testmynids.org/master/tmNIDS -o /tmp/tmNIDS && chmod +x /tmp/tmNIDS && /tmp/tmNIDS
+
+Finally, you can also test Suricata alerting by replaying some test pcap files via :ref:`so-test`.
+
 Troubleshooting Alerts
 ----------------------
 
