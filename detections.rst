@@ -34,11 +34,28 @@ Data Table
 The remainder of the main Detections page is a data table that shows a high level overview of the detections matching the current search criteria.
 
 - Clicking the table headers allows you to sort ascending or descending.
-
 - Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search or copy text to the clipboard.
-
 - You can adjust the Rows per page setting in the bottom right and use the left and right arrow icons to page through the table.
-
 - When you click the arrow to expand a row in the data table, it will show the high level fields from that detection. Field names are shown on the left and field values on the right. You can click on values on the right to bring up the context menu to refine your search.
-
 - To the right of the arrow is a binoculars icon. Clicking this will display the full detection including the Overview, Operational Notes, Detection Source, Tuning, and History tabs.
+
+Tuning Detections
+-----------------
+
+There are two main ways to tune a detection:
+
+- From the main Detections interface, you can search for the desired detection and click the binoculars icon.
+- From the Alerts interface, you can click an alert and then click the ``Tune Detection`` menu item.
+
+Once you've used one of these methods to reach the detection detail page, click the Tuning tab, click the blue + button, select the type of tuning, fill out the requested values, and then click the CREATE button.
+
+Adding Detections
+-----------------
+
+To add a detection, click the blue + button between Options and the query bar. A form will appear where you will:
+
+- select the engine (:ref:`suricata`, :ref:`sigma`, or :ref:`strelka`)
+- specify a license (optional)
+- add the signature
+
+Once you've filled out the form, click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle.
