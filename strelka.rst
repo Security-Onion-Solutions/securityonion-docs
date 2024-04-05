@@ -14,12 +14,12 @@ Security Onion checks file hashes before sending to Strelka to avoid analyzing t
 Alerts
 ------
 
-Strelka scans files using YARA rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`. You can read more about YARA rules in the :ref:`local-rules` section.
+Strelka scans files using :ref:`yara` rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`.
 
 Logs
 ----
 
-Even if Strelka doesn't detect a YARA match, it will still log metadata about the file. You can find Strelka logs in :ref:`dashboards` and :ref:`hunt`.
+Even if Strelka doesn't detect a :ref:`yara` match, it will still log metadata about the file. You can find Strelka logs in :ref:`dashboards` and :ref:`hunt`.
 
 Configuration
 -------------

@@ -1,21 +1,22 @@
-.. _rulesets:
+.. _nids:
+
+NIDS
+====
 
 Rulesets
-========
+--------
 
 You can modify your ruleset configuration by going to :ref:`administration` --> Configuration --> idstools.
 
 .. image:: images/config-item-idstools.png
   :target: _images/config-item-idstools.png
 
-Rulesets
---------
-
 Security Onion offers the following choices for rulesets to be used by :ref:`suricata`.
 
 ET Open
--------
+~~~~~~~
 
+-  default ruleset included in Security Onion
 -  optimized for :ref:`suricata`
 -  **free**
 
@@ -23,7 +24,7 @@ ET Open
 | https://rules.emergingthreats.net/open/
 
 ET Pro (Proofpoint)
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 -  optimized for :ref:`suricata`
 -  rules retrievable as released
@@ -33,7 +34,7 @@ ET Pro (Proofpoint)
 | https://www.proofpoint.com/us/threat-insight/et-pro-ruleset  
 
 Snort Community
----------------
+~~~~~~~~~~~~~~~
 
 -  NOT optimized for :ref:`suricata`
 -  community-contributed rules
@@ -44,7 +45,7 @@ Snort Community
 | https://www.snort.org/faq/what-are-community-rules
 
 Snort Registered
-----------------
+~~~~~~~~~~~~~~~~
 
 -  NOT optimized for :ref:`suricata`
 -  Snort SO (Shared Object) rules do NOT work with :ref:`suricata`
@@ -58,7 +59,7 @@ Since Shared Object rules won't work with :ref:`suricata`, you may want to disab
 | https://snort.org/documents/registered-vs-subscriber
 
 Snort Subscriber (Talos)
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  NOT optimized for :ref:`suricata`
 -  Snort SO (Shared Object) rules do NOT work with :ref:`suricata`
@@ -72,7 +73,12 @@ Since Shared Object rules won't work with :ref:`suricata`, you may want to disab
 | https://snort.org/documents/registered-vs-subscriber
 
 Other
------
+~~~~~
 
 - not officially managed/supported by Security Onion
 - license fee may or may not apply
+
+Managing NIDS Rules
+-------------------
+
+Once you've decided on a ruleset (either the default ET ruleset included in Security Onion or one of the other options above), you can manage the rules in that ruleset using :ref:`detections`.

@@ -18,6 +18,7 @@ Security Onion Documentation
    desktop
    network
    host
+   rules
    logs
    updating
    accounts
