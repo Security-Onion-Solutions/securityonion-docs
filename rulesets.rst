@@ -1,27 +1,9 @@
-.. _rules:
+.. _rulesets:
 
-Managing Rules
-==============
+Rulesets
+========
 
-Updating Rules
---------------
-
-Assuming you have Internet access, Security Onion will automatically update your NIDS rules on a daily basis. If you need to manually update your rules, you can run the following on your manager node:
-
-::
-
-  sudo so-rule-update
-  
-If you have a distributed deployment and you update the rules on your manager node, then those rules will automatically replicate from the manager node to your sensors within 15 minutes.  If you don't want to wait 15 minutes, you can force the sensors to update immediately by running the following command on your manager node:
-
-::
-
-  sudo salt \* state.highstate
-
-Configuration
--------------
-
-You can modify your rule configuration by going to :ref:`administration` --> Configuration --> idstools.
+You can modify your ruleset configuration by going to :ref:`administration` --> Configuration --> idstools.
 
 .. image:: images/config-item-idstools.png
   :target: _images/config-item-idstools.png
