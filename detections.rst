@@ -54,7 +54,7 @@ Adding Detections
 
 To add a detection, click the blue + button between Options and the query bar. A form will appear where you will:
 
-- select the engine (:ref:`suricata`, :ref:`sigma`, or :ref:`strelka`)
+- select the kind of detection you wish to add (:ref:`suricata`, Sigma, or YARA)
 - specify a license (optional)
 - add the signature
 
