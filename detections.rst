@@ -39,6 +39,19 @@ The remainder of the main Detections page is a data table that shows a high leve
 - When you click the arrow to expand a row in the data table, it will show the high level fields from that detection. Field names are shown on the left and field values on the right. You can click on values on the right to bring up the context menu to refine your search.
 - To the right of the arrow is a binoculars icon. Clicking this will take you to the detection detail page including the Overview, Operational Notes, Detection Source, Tuning, and History tabs.
 
+Detection Details
+-----------------
+
+The detection details page includes several tabs:
+
+- The OVERVIEW tab displays the Summary, References, and Detection Logic.
+- The OPERATIONAL NOTES tab allows you add your own local notes to this rule in markdown format.
+- The DETECTION SOURCE tab shows the full content of the detection.
+- The TUNING tab allows you to tune the detection. For NIDS rules, you can modify, suppress, or threshold. For Sigma rules, you can create a custom filter.
+- The HISTORY tab shows the history of the detection since it was added to your deployment.
+
+On the right side of the detection details page, there is a Status field that shows whether the detection is enabled or disabled. You can click the status to change it.
+
 Tuning Detections
 -----------------
 
