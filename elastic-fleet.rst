@@ -282,12 +282,6 @@ The section provides details such as:
 
     We do NOT recommend changing these settings, as they are managed by Security Onion.
 
-If you want more granular control over which Fleet Server an Agent will send logs to, there are two options:
-
-- The first option is to use firewall rules to only allow certain agents. Suppose you have two Fleet Server Nodes, one at 192.168.55.25 and the other at 192.168.58.25. If you want your endpoints in the 192.168.58.0/24 subnet to only connect to the Fleet server at 192.168.58.25, you would add custom firewall rules via :ref:`administration` --> Configuration --> firewall --> hostgroups --> elastic_agent_endpoint. Select the 192.168.58.25 Fleet Node and add ``192.168.58.0/24``. Endpoints in that subnet will still attempt to connect to the Fleet Server Node at 192.168.55.25, but since it is not accessible (no firewall rules that enable communication), they will connect to the Fleet Node at 192.168.58.25.
-
-- The second option is to purchase an Elastic license. A paid Elastic license offers the ability to customize different Outputs per Agent Policy.
-
 Custom FQDN URL
 ---------------
 

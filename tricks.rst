@@ -14,9 +14,7 @@ This section is a collection of miscellaneous tricks and tips for Security Onion
    new-disk
    network-installation
    pcaps
-   performance
    removing-a-node
-   salt
    syslog-output
    timezones
    pfsense

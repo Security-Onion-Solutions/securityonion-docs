@@ -18,7 +18,7 @@ Starting at the top of the page, there is a ``Grid EPS`` value in the upper righ
 
   The ``EPS`` column represents Events Per Second consumed, so it will only be relevant on nodes that ingest data. Pure sensors do not ingest events, so those nodes will show 0 EPS. If you want to identify sensors that are generating large volumes of events, you can sort by the ``Mgmt Out`` column, which shows the outbound traffic throughput on the management network interface.
 
-The options dropdown near the top of the page includes a checkbox which will show additional sensor-related columns in the table. You can use these sortable columns to help identify sensors that may be underperforming or due for a hardware upgrade. As these additional columns take up significant screen area, they will only be visible on wide displays where the SOC web browser window is wide enough to show a large number of tabular columns.
+Starting in Security Onion 2.4.40, there is a new checkbox in the options dropdown near the top of the page. This checkbox will show additional sensor-related columns in the table. You can use these sortable columns to help identify sensors that may be underperforming or due for a hardware upgrade. As these additional columns take up significant screen area, they will only be visible on wide displays where the SOC web browser window is wide enough to show a large number of tabular columns.
 
 You can drill into individual nodes to see detailed information including Node Status, Container Status, and Appliance Images.
 
@@ -26,6 +26,10 @@ Node Status
 -----------
 
 The ``Node Status`` section displays many different fields relating to each node's status.
+
+.. note::
+
+  Starting in Security Onion 2.4.40, a significant number of new metrics are included in the ``Node Status`` section. Older versions will not have all of the metrics shown below.
 
 .. note::
 

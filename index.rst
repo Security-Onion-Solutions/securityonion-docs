@@ -18,17 +18,16 @@ Security Onion Documentation
    desktop
    network
    host
-   rules
    logs
    updating
    accounts
    services
    customizing
+   tuning
    tricks
    utilities
    help
    security
-   telemetry
    release-notes
    appendix
    cheat-sheet
