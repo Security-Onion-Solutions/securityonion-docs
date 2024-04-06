@@ -1,7 +1,7 @@
 const banner_text = `
-NOTICE: You are viewing documentation for an older version of Security Onion.
+NOTICE: You are viewing documentation for a development version of Security Onion.
 <br>
-View the <a href="https://docs.securityonion.net/">latest documentation</a>.
+View the <a href="https://docs.securityonion.net/">documentation for the latest stable release</a>.
 `;
 
 function show_banner() {
