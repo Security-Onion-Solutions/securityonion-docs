@@ -24,9 +24,9 @@ Included Data
 
 The primary objective of the SOC Telemetry data collection is to understand what features are being used in :ref:`soc`. Specifically, the data being collected relates to user interface navigation flows. Additional context data, such as the version of the software, the viewed page path, etc. may also be included.
 
-Grid-specific data, such as usernames, event data, and node hostnames, are intentionally excluded from the data collection. 
+Grid-specific data is intentionally excluded from the data collection, where possible.
 
-Due to the nature of how internet web requests work, the originating IP address and User-Agent information of the web browser is known at the time of the data collection. 
+Due to the nature of how internet web requests work, the originating IP address and User-Agent information of the web browser as well as host referrer information is known at the time of the data collection.
 
 See the Retention Period section below to learn more about how long this data is retained.
 
@@ -66,7 +66,7 @@ Additional data may be included to provide the development team with information
 
 Also, grids with license keys installed will include the license key identifier. Grids using the standard unprovisioned license do not have a license key identifier.
 
-Due to the nature of how internet web requests work, the originating IP address and related data is known at the time of the data collection.
+Due to the nature of how internet web requests work, the originating IP address and User-Agent information of the web browser as well as host referrer information is known at the time of the data collection.
 
 Network Parameters
 ~~~~~~~~~~~~~~~~~~
