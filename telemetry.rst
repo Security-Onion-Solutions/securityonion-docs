@@ -33,7 +33,10 @@ See the Retention Period section below to learn more about how long this data is
 Network Parameters
 ~~~~~~~~~~~~~~~~~~
 
-The SOC Telemetry data originates from the :ref:`soc` browser running on the analyst workstation. The domain being accessed from the :ref:`soc` browser is ``www.googletagmanager.com``. 
+The SOC Telemetry data originates from the :ref:`soc` browser running on the analyst workstation. The domains being accessed from the :ref:`soc` browser are:
+
+- ``www.googletagmanager.com``
+- ``www.google-analytics.com``
 
 The telemetry data is sent using TLS encryption.
 
