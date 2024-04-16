@@ -89,6 +89,15 @@ Since Shared Object rules won't work with :ref:`suricata`, you may want to disab
 | https://www.snort.org/downloads/#rule-downloads
 | https://snort.org/documents/registered-vs-subscriber
 
+Git Repository
+------------------------
+
+You can add your custom url rules download by going to :ref:`administration` --> Configuration --> idstools --> config --> urls
+
+
+| Add your custom git RAW url in ``'["URL"]'``. (URL should be written as Python list ex: ["https://raw.github.com/test/nids.rules"])
+| With the next so-idstools-restart  rules will be added into all.rules [/opt/so/rules/nids/suri/all.rules]
+
 Other
 -----
 
