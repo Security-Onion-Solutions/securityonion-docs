@@ -38,21 +38,21 @@ This documentation is published online at https://securityonion.net/docs. If you
 
 This documentation is also available in PDF format at https://readthedocs.org/projects/securityonion/downloads/pdf/2.4/.
 
-Many folks have asked for a printed version of our documentation.  Whether you work on airgapped networks or simply want a portable reference that doesn't require an Internet connection or batteries, this is what you've been asking for.  Thanks to Richard Bejtlich for writing the inspiring foreword!  Proceeds go to the Rural Technology Fund! You can purchase your copy at https://securityonion.net/book.
+Many folks have asked for a printed version of our documentation. Whether you work on airgapped networks or simply want a portable reference that doesn't require an Internet connection or batteries, this is what you've been asking for. Thanks to Richard Bejtlich for writing the inspiring foreword! Proceeds go to the Rural Technology Fund! You can purchase your copy at https://securityonion.net/book.
 
 Authors
 ~~~~~~~
 
-Security Onion Solutions is the primary author and maintainer of this documentation.  Some content has been contributed by members of our community.  Thanks to all the folks who have contributed to this documentation over the years!
+Security Onion Solutions is the primary author and maintainer of this documentation. Some content has been contributed by members of our community. Thanks to all the folks who have contributed to this documentation over the years!
 
 Contributing
 ~~~~~~~~~~~~
 
-We welcome your contributions to our documentation!  We will review any suggestions and apply them if appropriate.
+We welcome your contributions to our documentation! We will review any suggestions and apply them if appropriate.
 
-If you are accessing the online version of the documentation and notice that a particular page has incorrect information, you can submit corrections by clicking the ``Edit on GitHub`` button in the upper right corner of each page.
+If you are accessing the online version of the documentation and notice that a particular page has incorrect information, you can submit corrections by clicking the ``Edit on GitHub`` button in the upper right corner of each page. Once you have made your corrections, you will need to submit your pull request (PR) to the ``dev`` branch.
 
-To submit a new page, you can submit a pull request (PR) to the 2.4 branch of the ``securityonion-docs`` repo at https://github.com/Security-Onion-Solutions/securityonion-docs.
+To submit a new page, you can submit a pull request (PR) to the ``dev`` branch of the ``securityonion-docs`` repo at https://github.com/Security-Onion-Solutions/securityonion-docs.
 
 Pages are written in RST format and you can find several RST guides on the Internet including https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html.
 
