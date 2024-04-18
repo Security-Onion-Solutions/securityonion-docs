@@ -26,7 +26,7 @@ Adding Detections
 
 To add a detection, click the blue + button between Options and the query bar. A form will appear where you will:
 
-- select the kind of detection you wish to add (:ref:`suricata`, :ref:`sigma`, or :ref:`yara`)
+- select the kind of detection you wish to add - :ref:`suricata` (:ref:`nids`), :ref:`elastalert` (:ref:`sigma`), or :ref:`strelka`(:ref:`yara`)
 - specify a license (optional)
 - add the signature
 
