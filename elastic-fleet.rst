@@ -227,6 +227,10 @@ Integrations
     - journald
     - ti_cybersixgill
 
+    Security Onion 2.4.70 supports these additional Elastic integrations:
+
+    - CEF
+
 You can read more about Elastic integrations at https://docs.elastic.co/integrations.
 
 Adding an Integration
