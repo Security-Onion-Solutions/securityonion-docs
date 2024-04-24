@@ -7,6 +7,18 @@ From https://www.elastic.co/products/elasticsearch:
 
     Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease.
 
+Querying
+--------
+
+You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. You can also query Elasticsearch from the command line using :ref:`so-elasticsearch-query`.
+
+Authentication
+--------------
+
+You can authenticate to Elasticsearch using the same username and password that you use for :ref:`soc`.
+
+You can add new user accounts to both Elasticsearch and :ref:`soc` at the same time as shown in the :ref:`adding-accounts` section. Please note that if you instead create accounts directly in Elastic, then those accounts will only have access to Elastic and not :ref:`soc`.
+
 Data
 ----
 
@@ -57,18 +69,6 @@ Elasticsearch indices are managed by the ``so-elasticsearch-indices-delete`` uti
 - time-based index deletion
 
 Default ILM policies are preconfigured and associated with various data streams and index templates in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yaml``.
-
-Querying
---------
-
-You can query Elasticsearch using web interfaces like :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. You can also query Elasticsearch from the command line using a tool like ``curl``. You can also use :ref:`so-elasticsearch-query`.
-
-Authentication
---------------
-
-You can authenticate to Elasticsearch using the same username and password that you use for :ref:`soc`.
-
-You can add new user accounts to both Elasticsearch and :ref:`soc` at the same time as shown in the :ref:`adding-accounts` section. Please note that if you instead create accounts directly in Elastic, then those accounts will only have access to Elastic and not :ref:`soc`.
 
 Diagnostic Logging
 ------------------
@@ -197,7 +197,7 @@ Size-based Index Deletion
 
 Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent. 
 
-To modify this value, first navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch -> retention -> retention_pct. The change will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
+To modify this value, first navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch -> retention -> retention_pct. Once you make the change and save it, the new setting will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
 If your indices are using more than ``retention_pct``, then ``so-elasticsearch-indices-delete`` will delete old indices until disk space is back under ``retention_pct``.
 
