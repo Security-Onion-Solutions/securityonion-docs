@@ -5,7 +5,7 @@ View the <a href="https://docs.securityonion.net/">documentation for the latest 
 `;
 
 function show_banner() {
-    if (READTHEDOCS_DATA['version'] == '2.4') return;
+    if (READTHEDOCS_DATA['version'] != 'dev') return;
 
     const banner = document.createElement('div');
     banner.className = "so-banner";
