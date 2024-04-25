@@ -73,18 +73,18 @@ Elasticsearch indices are managed by both the ``so-elasticsearch-indices-delete`
 
 .. tip::
 
-   Starting in Security Onion 2.4.70, you have the option of disabling ``so-elasticsearch-indices-delete`` and just managing indices using ILM. This may be useful for production deployments since ILM provides more granular index management. 
+   Starting in Security Onion 2.4.70, you have the option of disabling ``so-elasticsearch-indices-delete`` and just managing indices using ILM. This may be useful for production deployments since ILM provides more granular index management. You can find this option at :ref:`administration` --> Configuration --> elasticsearch --> index_clean.
    
 .. warning::
    
-   If you disable ``so-elasticsearch-indices-delete``, please note that you will need to ensure that ILM is configured properly to delete indices before Elasticsearch hits its watermark setting. Otherwise, Elasticsearch may stop ingesting new data.
+   If you disable ``so-elasticsearch-indices-delete``, please note that you will need to ensure that ILM is configured properly to delete indices before disk usage reaches the Elasticsearch watermark setting. Otherwise, Elasticsearch may stop ingesting new data.
 
 so-elasticsearch-indices-delete
 -------------------------------
 
 ``so-elasticsearch-indices-delete`` manages size-based deletion of Elasticsearch indices based on the value of the cluster-wide ``elasticsearch.retention.retention_pct`` setting. This setting is checked against the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. If your indices are using more than ``retention_pct``, then ``so-elasticsearch-indices-delete`` will delete old indices until disk space is back under ``retention_pct``. The default value for this setting is ``50`` percent. 
 
-To modify the ``retention_pct`` value, first navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch -> retention -> retention_pct. Once you make the change and save it, the new setting will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
+To modify the ``retention_pct`` value, first navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch --> retention --> retention_pct. Once you make the change and save it, the new setting will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
 ILM
 ---
@@ -101,7 +101,7 @@ Index Lifecycle Management (ILM) manages the following:
 
 Time-based index deletion occurs through the use of the $data_stream.policy.phases.delete.min_age setting within the lifecycle policy tied to each index. It is important to note that size-based deletion takes priority over time-based deletion, as disk may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
 
-ILM policies can be edited by navigating to :ref:`administration` -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age. Changes will take effect when a new index is created.
+ILM policies can be edited by navigating to :ref:`administration` --> Configuration --> elasticsearch --> $index --> policy --> phases --> delete --> min_age. Changes will take effect when a new index is created.
 
 Parsing
 -------

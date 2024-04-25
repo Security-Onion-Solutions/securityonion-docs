@@ -36,7 +36,7 @@ If you try to modify a default Kibana dashboard, your change will get overwritte
 Search Results
 --------------
 
-In Kibana, search results are limited to the first ``100`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Stack Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance for your deployment.
+In Kibana, search results are limited to the first ``100`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Stack Management`` --> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance for your deployment.
 
 Timestamps
 ----------

@@ -240,7 +240,7 @@ New integrations can be added to existing policies to provide increased visibili
 
 To add an integration to an existing policy:
 
-From ``Fleet`` -> ``Agent policies`` -> ``$Policy name``, click ``Add Integration`` and follow the steps for adding the integration.
+From ``Fleet`` --> ``Agent policies`` --> ``$Policy name``, click ``Add Integration`` and follow the steps for adding the integration.
 
 When setting up a new integration, it is important that you add it to an appropriate Policy. 
 

@@ -24,7 +24,7 @@ ElastAlert rules are stored in ``/opt/so/rules/elastalert/``.
 
 By default, ElastAlert rules are configured with an output type of ``debug``, which simply outputs to a log file found in ``/opt/so/log/elastalert/``.
 
-ElastAlert logs to :ref:`elasticsearch` indices. You can search those indices in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically search the ``elastalert`` indices by default so if you want to use :ref:`dashboards` or :ref:`hunt` to search ElastAlert logs, then you'll need to adjust the appropriate configuration setting. Find it in the Administration -> Configuration screen by filtering for ``elastic.index`` and selecting Options (at the top) and toggle on "Show all configurable settings". Add ``*:elastalert*`` to the ``index`` setting. The new setting value should resemble the following:
+ElastAlert logs to :ref:`elasticsearch` indices. You can search those indices in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically search the ``elastalert`` indices by default so if you want to use :ref:`dashboards` or :ref:`hunt` to search ElastAlert logs, then you'll need to adjust the appropriate configuration setting. Find it in the Administration --> Configuration screen by filtering for ``elastic.index`` and selecting Options (at the top) and toggle on "Show all configurable settings". Add ``*:elastalert*`` to the ``index`` setting. The new setting value should resemble the following:
 
 ::
 
