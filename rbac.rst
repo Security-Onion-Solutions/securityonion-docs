@@ -45,6 +45,18 @@ See the table below which explains the specific Security Onion privileges grante
       - X
       - 
       -
+    * - View detections
+      - X
+      - X
+      - X
+      - X
+      - X
+    * - Modify (and Delete) detections
+      - X
+      - X
+      - 
+      - 
+      - 
     * - View events in Hunt
       - X
       - X
