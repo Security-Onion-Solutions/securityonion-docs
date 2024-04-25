@@ -51,7 +51,7 @@ See the table below which explains the specific Security Onion privileges grante
       - X
       - X
       - X
-    * - Modify detections
+    * - Modify (and Delete) detections
       - X
       - X
       - 
