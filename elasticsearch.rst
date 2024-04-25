@@ -7,6 +7,16 @@ From https://www.elastic.co/products/elasticsearch:
 
     Elasticsearch is a distributed, RESTful search and analytics engine capable of addressing a growing number of use cases. As the heart of the Elastic Stack, it centrally stores your data for lightning fast search, fine‑tuned relevancy, and powerful analytics that scale with ease.
 
+Storage
+-------
+
+All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
+
+Schema
+------
+
+Security Onion tries to adhere to Elastic Common Schema (ECS) wherever possible. In some cases, additional fields or slight modifications to native Elastic field mappings may be found within the data. You can learn more about ECS at https://www.elastic.co/elasticsearch/common-schema.
+
 Querying
 --------
 
@@ -19,11 +29,8 @@ You can authenticate to Elasticsearch using the same username and password that 
 
 You can add new user accounts to both Elasticsearch and :ref:`soc` at the same time as shown in the :ref:`adding-accounts` section. Please note that if you instead create accounts directly in Elastic, then those accounts will only have access to Elastic and not :ref:`soc`.
 
-Data
-----
-
 Indexing
-~~~~~~~~
+--------
 
 Most data is associated with a data stream, which is an abstraction from traditional indices that leverages one or more backing indices to manage and represent the data within the data stream. The usage of data streams allows for greater flexibility in data management.
 
@@ -51,24 +58,45 @@ Similarly, you can target a single backing index with the following query:
 
 You can learn more about data streams at https://www.elastic.co/guide/en/elasticsearch/reference/current/data-streams.html.
 
-Schema
-~~~~~~
+Configuration
+-------------
 
-Security Onion tries to adhere to the Elastic Common Schema wherever possible. Otherwise, additional fields or slight modifications to native Elastic field mappings may be found within the data.
+You can configure Elasticsearch by going to :ref:`administration` --> Configuration --> elasticsearch.
 
-Management
-~~~~~~~~~~
+.. image:: images/config-item-elasticsearch.png
+  :target: _images/config-item-elasticsearch.png
 
-Elasticsearch indices are managed by the ``so-elasticsearch-indices-delete`` utility and ILM (https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html).
+Index Management
+----------------
 
-``so-elasticsearch-indices-delete`` handles size-based index deletion and ILM handles the following:
+Elasticsearch indices are managed by both the ``so-elasticsearch-indices-delete`` utility and Index Lifecycle Management (ILM). 
+
+.. tip::
+
+   Starting in Security Onion 2.4.70, you have the option of disabling ``so-elasticsearch-indices-delete`` and just managing indices using ILM. This may be useful for production deployments since ILM provides more granular index management. However, please note that you will need to ensure that ILM is deleting indices before Elasticsearch hits its watermark setting and stops ingesting new data.
+
+so-elasticsearch-indices-delete
+-------------------------------
+
+``so-elasticsearch-indices-delete`` manages size-based deletion of Elasticsearch indices based on the value of the cluster-wide ``elasticsearch.retention.retention_pct`` setting. This setting is checked against the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. If your indices are using more than ``retention_pct``, then ``so-elasticsearch-indices-delete`` will delete old indices until disk space is back under ``retention_pct``. The default value for this setting is ``50`` percent. 
+
+To modify the ``retention_pct`` value, first navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch -> retention -> retention_pct. Once you make the change and save it, the new setting will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
+
+ILM
+---
+
+Index Lifecycle Management (ILM) manages the following:
 
 - size-based index rollover
 - time-based index rollover
 - time-based content tiers
 - time-based index deletion
 
-Default ILM policies are preconfigured and associated with various data streams and index templates in ``/opt/so/saltstack/default/salt/elasticsearch/defaults.yaml``.
+You can learn more about ILM at https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html.
+
+Time-based deletion occurs through the use of the $data_stream.policy.phases.delete.min_age setting within the lifecycle policy tied to each index and is controlled by ILM. It is important to note that size-based deletion takes priority over time-based deletion, as disk may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
+
+Policies can be edited within the SOC administration interface by navigating to :ref:`administration` -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age. Changes will take effect when a new index is created.
 
 Diagnostic Logging
 ------------------
@@ -81,11 +109,6 @@ Depending on what you're looking for, you may also need to look at the :ref:`doc
 ::
 
         sudo docker logs so-elasticsearch
-
-Storage
--------
-
-All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
 
 Parsing
 -------
@@ -113,7 +136,6 @@ From https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templ
     
 Also see https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-component-template.html.
 
-
 Index Templates
 ~~~~~~~~~~~~~~~
 
@@ -131,21 +153,13 @@ Community ID
 | For logs that don’t naturally include :ref:`community-id`, we use the Elasticsearch Community ID processor:
 | https://www.elastic.co/guide/en/elasticsearch/reference/current/community-id-processor.html
 
-Configuration
--------------
-
-You can configure Elasticsearch by going to :ref:`administration` --> Configuration --> elasticsearch.
-
-.. image:: images/config-item-elasticsearch.png
-  :target: _images/config-item-elasticsearch.png
-
 field expansion matches too many fields
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 If you get errors like ``failed to create query: field expansion for [*] matches too many fields, limit: 3500, got: XXXX``, then this usually means that you're sending in additional logs and so you have more fields than our default ``max_clause_count`` value. To resolve this, you can go to :ref:`administration` --> Configuration --> elasticsearch --> config --> indices --> query --> bool --> max_clause_count and adjust the value for any boxes running Elasticsearch in your deployment.
       
 Shards
-~~~~~~
+------
 
 Here are a few tips from https://www.elastic.co/blog/how-many-shards-should-i-have-in-my-elasticsearch-cluster:
 
@@ -174,7 +188,7 @@ The number of shards for an index can be adjusted by going to :ref:`administrati
 Please keep in mind that old indices will retain previous shard settings and the above settings will only be applied to newly created indices.
 
 Heap Size
-~~~~~~~~~
+---------
 
 If total available memory is 8GB or greater, Setup configures the heap size to be 33% of available memory, but no greater than 25GB. You may need to adjust the value for heap size depending on your system's performance. You can modify this by going to :ref:`administration` --> Configuration --> elasticsearch --> esheap.
 
@@ -183,30 +197,11 @@ If total available memory is 8GB or greater, Setup configures the heap size to b
 | https://www.elastic.co/guide/en/elasticsearch/reference/current/important-settings.html#heap-size-settings
 
 Field limit
-~~~~~~~~~~~
+-----------
 
 Security Onion currently defaults to a field limit of 5000. If you receive error messages from Logstash, or you would simply like to increase this, you can do so by going to :ref:`administration` --> Configuration --> elasticsearch --> index_settings --> so-INDEX-NAME --> index_template --> template --> settings --> index --> mapping --> total_fields --> limit.
 
 Please note that the change to the field limit will not occur immediately, only on index creation.
-
-Deleting Indices
-----------------
-
-Size-based Index Deletion
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Size-based deletion of Elasticsearch indices occurs based on the value of cluster-wide ``elasticsearch.retention.retention_pct``, which is derived from the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. The default value for this setting is ``50`` percent. 
-
-To modify this value, first navigate to :ref:`administration` -> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch -> retention -> retention_pct. Once you make the change and save it, the new setting will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
-
-If your indices are using more than ``retention_pct``, then ``so-elasticsearch-indices-delete`` will delete old indices until disk space is back under ``retention_pct``.
-
-Time-based Index Deletion
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Time-based deletion occurs through the use of the $data_stream.policy.phases.delete.min_age setting within the lifecycle policy tied to each index and is controlled by ILM. It is important to note that size-based deletion takes priority over time-based deletion, as disk may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
-
-Policies can be edited within the SOC administration interface by navigating to :ref:`administration` -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age. Changes will take effect when a new index is created.
 
 Re-indexing
 -----------

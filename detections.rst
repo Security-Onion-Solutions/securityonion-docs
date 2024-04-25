@@ -39,6 +39,11 @@ The query bar defaults to All Detections. Clicking the drop-down box reveals oth
 
 Under the query bar, you’ll notice colored bubbles that represent the individual components of the query. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
+Group Metrics
+-------------
+
+The Group Metrics section of output consists of one or more data tables or visualizations that allow you to stack (aggregate) arbitrary fields.
+
 Data Table
 ----------
 
