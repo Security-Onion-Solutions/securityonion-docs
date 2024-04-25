@@ -73,7 +73,11 @@ Elasticsearch indices are managed by both the ``so-elasticsearch-indices-delete`
 
 .. tip::
 
-   Starting in Security Onion 2.4.70, you have the option of disabling ``so-elasticsearch-indices-delete`` and just managing indices using ILM. This may be useful for production deployments since ILM provides more granular index management. However, please note that you will need to ensure that ILM is deleting indices before Elasticsearch hits its watermark setting and stops ingesting new data.
+   Starting in Security Onion 2.4.70, you have the option of disabling ``so-elasticsearch-indices-delete`` and just managing indices using ILM. This may be useful for production deployments since ILM provides more granular index management. 
+   
+.. warning::
+   
+   If you disable ``so-elasticsearch-indices-delete``, please note that you will need to ensure that ILM is configured properly to delete indices before Elasticsearch hits its watermark setting. Otherwise, Elasticsearch may stop ingesting new data.
 
 so-elasticsearch-indices-delete
 -------------------------------
@@ -92,23 +96,12 @@ Index Lifecycle Management (ILM) manages the following:
 - time-based content tiers
 - time-based index deletion
 
-You can learn more about ILM at https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html.
+| You can learn more about ILM at:
+| https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html
 
-Time-based deletion occurs through the use of the $data_stream.policy.phases.delete.min_age setting within the lifecycle policy tied to each index and is controlled by ILM. It is important to note that size-based deletion takes priority over time-based deletion, as disk may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
+Time-based index deletion occurs through the use of the $data_stream.policy.phases.delete.min_age setting within the lifecycle policy tied to each index. It is important to note that size-based deletion takes priority over time-based deletion, as disk may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
 
-Policies can be edited within the SOC administration interface by navigating to :ref:`administration` -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age. Changes will take effect when a new index is created.
-
-Diagnostic Logging
-------------------
-
--  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
--  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.
-
-Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
-
-::
-
-        sudo docker logs so-elasticsearch
+ILM policies can be edited by navigating to :ref:`administration` -> Configuration -> elasticsearch -> $index -> policy -> phases -> delete -> min_age. Changes will take effect when a new index is created.
 
 Parsing
 -------
@@ -228,6 +221,18 @@ Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP 
         geoip:
           downloader:
             enabled: true
+
+Diagnostic Logging
+------------------
+
+-  Elasticsearch logs can be found in ``/opt/so/log/elasticsearch/``.
+-  Logging configuration can be found in ``/opt/so/conf/elasticsearch/log4j2.properties``.
+
+Depending on what you're looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+::
+
+        sudo docker logs so-elasticsearch
 
 More Information
 ----------------
