@@ -48,7 +48,7 @@ Eval
 
 An Eval installation runs the minimal processes required for a single machine to sniff live network traffic from a TAP or span port and view the results. Therefore, its hardware requirements are higher than Import as shown in the table above. Eval is designed for temporary installations or homelab installations on a budget. Unlike a full Standalone installation, Evaluation is NOT designed for production usage.
 
-In order to minimize RAM usage, Eval defaults to using :ref:`suricata` for full packet capture (instead of :ref:`stenographer`) and it does not run :ref:`logstash` or :ref:`redis` at all.
+In order to minimize RAM usage, Eval does not run :ref:`logstash` or :ref:`redis` at all. Also, Eval defaults to using :ref:`suricata` for writing full packet capture to disk (instead of :ref:`stenographer`).
 
 Production Deployments
 ----------------------

@@ -102,7 +102,7 @@ If you choose Suricata for metadata, it will extract files from network traffic 
 PCAP
 ----
 
-By default, full packet capture is recorded by :ref:`stenographer` but you can optionally switch this to Suricata.
+For most modes, full packet capture is written to disk by :ref:`stenographer` but you can optionally switch this to Suricata.
 
 .. warning::
 
