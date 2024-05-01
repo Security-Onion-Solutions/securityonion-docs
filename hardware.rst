@@ -17,7 +17,6 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 Minimum Specs
 -------------
 
-Please note these are the absolute bare minimum requirements. Your requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
 
 ================       ====== ===== ========= ======   
  Node Type              CPUs   RAM   Storage   NICs  
@@ -34,6 +33,29 @@ IDH node                  2    1GB    12GB      1
 Fleet node                4    12GB   200GB     1
 Receiver node             2    8GB    200GB     1
 ================       ====== ===== ========= ======   
+
+.. warning::
+
+   Please note these are the absolute bare minimum requirements. Your requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
+
+Import
+------
+
+An Import installation runs the minimal processes required to import PCAP or EVTX files. As such, it has the lowest hardware requirements as shown in the table above. You can read more about Import in the :ref:`first-time-users` section.
+
+Evaluation
+----------
+
+An Evaluation installation runs the minimal processes required for a single machine to sniff live network traffic and view the results. Therefore, its hardware requirements are higher than Import but lower than a full Standalone as shown in the table above. Unlike a full Standalone installation, Evaluation is NOT designed for production usage. Evaluation is designed for temporary installations only.
+
+Production Deployments
+----------------------
+
+For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
+
+.. tip::
+
+   If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open platform!
 
 Storage
 -------
@@ -62,25 +84,6 @@ Elastic Stack
 We recommend placing all Elastic storage (/nsm/elasticsearch) on SSD or fast spinning disk in a RAID 10 configuration.
 
 Please see the :ref:`architecture` section for detailed deployment scenarios.
-
-Import
-------
-
-An Import installation runs the minimal processes required to import PCAP or EVTX files. As such, it has the lowest hardware requirements as shown in the table above. You can read more about Import in the :ref:`first-time-users` section.
-
-Evaluation
-----------
-
-An Evaluation installation runs the minimal processes required for a single machine to sniff live network traffic and view the results. Therefore, its hardware requirements are higher than Import but lower than a full Standalone as shown in the table above. Unlike a full Standalone installation, Evaluation is NOT designed for production usage. Evaluation is designed for temporary installations only.
-
-Production Deployments
-----------------------
-
-For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
-
-.. tip::
-
-   If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open platform!
 
 Standalone Deployments
 ----------------------
