@@ -16,5 +16,20 @@ You can manage Sigma rules via :ref:`detections`.
 
 .. warning::
 
-	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` play as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
+	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` detection as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
+
+There are two main ways to manage Sigma rules:
+
+- From the main :ref:`detections` interface, you can search for the desired detection and click the binoculars icon.
+- From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
+
+Once you've used one of these methods to reach the detection detail page, you can check the Status field and use the slider to enable or disable the detection.
+
+To tune the detection:
+
+- click the TUNING tab
+- click the blue + button
+- select the type of tuning (Custom Filter)
+- enter your custom filter in the Custom Filter field
+- click the ``CREATE`` button
 

@@ -84,3 +84,18 @@ Managing NIDS Rules
 -------------------
 
 Once you've decided on a ruleset (either the default ET ruleset included in Security Onion or one of the other options above), you can manage the rules in that ruleset using :ref:`detections`.
+
+There are two main ways to manage NIDS rules:
+
+- From the main :ref:`detections` interface, you can search for the desired detection and click the binoculars icon.
+- From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
+
+Once you've used one of these methods to reach the detection detail page, you can check the Status field and use the slider to enable or disable the detection.
+
+To tune the detection:
+
+- click the TUNING tab
+- click the blue + button
+- select the type of tuning (Modify, Suppress, or Threshold)
+- fill out the requested values
+- click the ``CREATE`` button

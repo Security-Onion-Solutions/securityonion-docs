@@ -12,6 +12,10 @@ Starting in Security Onion 2.4.70, :ref:`soc` includes our Detections interface 
 .. image:: images/65_detections.png
   :target: _images/65_detections.png
 
+.. note::
+
+    Check out our Detections sneak peek video at https://youtu.be/oxR4q53N6OI!
+
 Options
 -------
 
@@ -63,17 +67,16 @@ The detection details page includes several tabs:
 - The OVERVIEW tab displays the Summary, References, and Detection Logic.
 - The OPERATIONAL NOTES tab allows you add your own local notes to this rule in markdown format.
 - The DETECTION SOURCE tab shows the full content of the detection.
-- The TUNING tab allows you to tune the detection. For NIDS rules, you can modify, suppress, or threshold. For Sigma rules, you can create a custom filter.
+- The TUNING tab allows you to tune the detection. For :ref:`nids` rules, you can modify, suppress, or threshold. For :ref:`sigma` rules, you can create a custom filter.
 - The HISTORY tab shows the history of the detection since it was added to your deployment.
 
 On the right side of the detection details page, there is a Status field that shows whether the detection is enabled or disabled. You can click the status to change it.
 
-Tuning Detections
------------------
+Managing Detections
+-------------------
 
-There are two main ways to tune a detection:
+To manage :ref:`nids` rules, please see the :ref:`nids` section.
 
-- From the main Detections interface, you can search for the desired detection and click the binoculars icon.
-- From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
+To manage :ref:`sigma` rules, please see the :ref:`sigma` section.
 
-Once you've used one of these methods to reach the detection detail page, click the TUNING tab, click the blue + button, select the type of tuning, fill out the requested values, and then click the ``CREATE`` button.
+To manage :ref:`yara` rules, please see the :ref:`yara` section.

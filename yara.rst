@@ -12,4 +12,4 @@ From https://virustotal.github.io/yara/:
 Managing YARA Rules
 -------------------
 
-You can manage YARA rules via :ref:`detections`.
+From the main :ref:`detections` interface, search for the desired detection and click the binoculars icon. You can then use the Status slider to enable or disable the detection.
