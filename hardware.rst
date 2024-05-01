@@ -23,7 +23,7 @@ Please note these are the absolute bare minimum requirements. Your requirements 
  Node Type              CPUs   RAM   Storage   NICs  
 ================       ====== ===== ========= ======     
 Import                    2    4GB    50GB      1
-Eval                      4    12GB   200GB     2
+Eval                      4    8GB    200GB     2
 Standalone                4    16GB   200GB     2
 Manager                   4    16GB   200GB     1
 ManagerSearch             8    16GB   200GB     1
@@ -34,15 +34,6 @@ IDH node                  2    1GB    12GB      1
 Fleet node                4    12GB   200GB     1
 Receiver node             2    8GB    200GB     1
 ================       ====== ===== ========= ======   
-
-Production Deployments
-----------------------
-
-For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
-
-.. tip::
-
-   If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open platform!
 
 Storage
 -------
@@ -58,19 +49,38 @@ If you plan to sniff network traffic from a tap or span port, then you will need
 
 Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
 
-Security Onion is designed to use wired interfaces.  You may be able to make wireless interfaces work, but we don't recommend or support it.
+Security Onion is designed to use wired interfaces. You may be able to make wireless interfaces work, but we don't recommend or support it.
 
 UPS
 ---
 
-Like most IT systems, Security Onion has databases and those databases don't like power outages or other ungraceful shutdowns. To avoid power outages and having to manually repair databases, please consider a UPS.
+As with most computer systems, you'll want to avoid power outages or other ungraceful shutdowns. Please consider a UPS (Uninterruptible Power Supply) for production deployments.
 
 Elastic Stack
 -------------
 
-Please refer to the :ref:`architecture` section for detailed deployment scenarios.
+We recommend placing all Elastic storage (/nsm/elasticsearch) on SSD or fast spinning disk in a RAID 10 configuration.
 
-**We recommend placing all Elastic storage (/nsm/elasticsearch) on SSD or fast spinning disk in a RAID 10 configuration.**
+Please see the :ref:`architecture` section for detailed deployment scenarios.
+
+Import
+------
+
+An Import installation runs the minimal processes required to import PCAP or EVTX files. As such, it has the lowest hardware requirements as shown in the table above. You can read more about Import in the :ref:`first-time-users` section.
+
+Evaluation
+----------
+
+An Evaluation installation runs the minimal processes required for a single machine to sniff live network traffic and view the results. Therefore, its hardware requirements are higher than Import but lower than a full Standalone as shown in the table above. Unlike a full Standalone installation, Evaluation is NOT designed for production usage. Evaluation is designed for temporary installations only.
+
+Production Deployments
+----------------------
+
+For best results, we recommend purchasing new hardware that meets the hardware requirements detailed below.
+
+.. tip::
+
+   If you're planning to purchase new hardware, please consider official Security Onion appliances from Security Onion Solutions (https://securityonionsolutions.com). Our custom appliances have already been designed for certain roles and traffic levels and have Security Onion pre-installed. Purchasing from Security Onion Solutions will save you time and effort **and** help to support development of Security Onion as a free and open platform!
 
 Standalone Deployments
 ----------------------
