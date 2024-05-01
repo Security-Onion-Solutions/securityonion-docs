@@ -30,7 +30,7 @@ Search node               4    16GB   200GB     1
 Sensor                    4    12GB   200GB     2
 Heavy node                4    16GB   200GB     2
 IDH node                  2    1GB    12GB      1
-Fleet node                4    12GB   200GB     1
+Fleet node                4    4GB    200GB     1
 Receiver node             2    8GB    200GB     1
 ================       ====== ===== ========= ======   
 
@@ -43,10 +43,10 @@ Import
 
 An Import installation runs the minimal processes required to import PCAP or EVTX files. As such, it has the lowest hardware requirements as shown in the table above. You can read more about Import in the :ref:`first-time-users` section.
 
-Evaluation
-----------
+Eval
+----
 
-An Evaluation installation runs the minimal processes required for a single machine to sniff live network traffic and view the results. Therefore, its hardware requirements are higher than Import but lower than a full Standalone as shown in the table above. Unlike a full Standalone installation, Evaluation is NOT designed for production usage. Evaluation is designed for temporary installations only.
+An Eval installation runs the minimal processes required for a single machine to sniff live network traffic from a TAP or span port and view the results. Therefore, its hardware requirements are higher than Import as shown in the table above. Eval is designed for temporary installations or homelab installations on a budget. Unlike a full Standalone installation, Evaluation is NOT designed for production usage.
 
 Production Deployments
 ----------------------
