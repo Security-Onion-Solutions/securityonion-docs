@@ -41,12 +41,14 @@ Receiver node             2    8GB    200GB     1
 Import
 ------
 
-An Import installation runs the minimal processes required to import PCAP or EVTX files. As such, it has the lowest hardware requirements as shown in the table above. You can read more about Import in the :ref:`first-time-users` section.
+An Import installation runs the minimal processes required to import PCAP or EVTX files and view the results. As such, it has the lowest hardware requirements as shown in the table above. You can read more about Import in the :ref:`first-time-users` section.
 
 Eval
 ----
 
 An Eval installation runs the minimal processes required for a single machine to sniff live network traffic from a TAP or span port and view the results. Therefore, its hardware requirements are higher than Import as shown in the table above. Eval is designed for temporary installations or homelab installations on a budget. Unlike a full Standalone installation, Evaluation is NOT designed for production usage.
+
+In order to minimize RAM usage, Eval defaults to using :ref:`suricata` for full packet capture (instead of :ref:`stenographer`) and it does not run :ref:`logstash` or :ref:`redis` at all.
 
 Production Deployments
 ----------------------
