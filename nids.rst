@@ -26,15 +26,15 @@ To tune the detection:
 Changing to a Different Ruleset
 -------------------------------
 
-Security Onion includes the Emerging Threats Open (ET Open) ruleset by default. If you would like to change to a different ruleset, you can do this via :ref:`administration` --> Configuration --> idstools.
+Security Onion includes the Emerging Threats Open (ETOPEN) ruleset by default. If you would like to change to a different ruleset, you can do this via :ref:`administration` --> Configuration --> idstools --> config --> ruleset.
 
 .. image:: images/config-item-idstools.png
   :target: _images/config-item-idstools.png
 
-Security Onion offers the following choices for NIDS rulesets.
+Security Onion offers the following choices for NIDS rulesets. The main options are ETOPEN (free) and ETPRO (commercial) but advanced users may choose a Snort ruleset if they understand the caveats as shown below.
 
-ET Open
-~~~~~~~
+ETOPEN
+~~~~~~
 
 -  default ruleset included in Security Onion
 -  optimized for :ref:`suricata`
@@ -43,9 +43,10 @@ ET Open
 | For more information, see:
 | https://rules.emergingthreats.net/open/
 
-ET Pro (Proofpoint)
-~~~~~~~~~~~~~~~~~~~
+ETPRO
+~~~~~
 
+-  includes ETOPEN and additional rules
 -  optimized for :ref:`suricata`
 -  rules retrievable as released
 -  license fee per sensor (you are responsible for purchasing enough licenses for your entire deployment)
