@@ -73,8 +73,7 @@ License Key
 .. image:: images/62_licensekey.png
   :target: _images/62_licensekey.png
 
-In 2022, we announced that we would be releasing enterprise features that would only be available to paid users of the platform:
-https://blog.securityonion.net/2022/08/security-onion-enterprise-features-and.html
+In 2022, we announced that we would be releasing enterprise features that would only be available to paid users of the platform. You can read the announcement at https://blog.securityonion.net/2022/08/security-onion-enterprise-features-and.html.
 
 Starting in Security Onion 2.4.70, it will be possible for licensed users of Security Onion Pro to activate the following features:
 
@@ -82,7 +81,7 @@ Starting in Security Onion 2.4.70, it will be possible for licensed users of Sec
 - LUKS Disk Encryption
 - FIPS OS Compliance
 - STIG OS Compliance
-- Time Tracking for :ref:`cases`
+- Time Tracking for Cases
 
 OIDC Single Sign-On to SOC
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,22 +93,23 @@ LUKS Disk Encryption
 
 Security Onion now supports several modes of LUKS disk encryption. This gives you the option to encrypt all disks or just the /nsm partition. You also have the option to have the disks automatically unlock on boot or require a password to boot. LUKS configuration is handled during the ISO installation. 
 
-FIPS
-~~~~
+FIPS OS Compliance
+~~~~~~~~~~~~~~~~~~
 
 FIPS is a requirement for many government customers.
 
-STIG
-~~~~
+STIG OS Compliance
+~~~~~~~~~~~~~~~~~~
 
 STIG is a requirement for many government customers.
 
-Time Tracking in Cases
+Time Tracking for Cases
+~~~~~~~~~~~~~~~~~~~~~~~
 
-Adds the ability to allocate a time duration for each case update and total time on case will be calculated automatically
+This feature allows you to specify how much time you've spent working on a particular case and it will then show the total time spent by all analysts working on a particular case. For more information, please see the :ref:`cases` section.
+
 
 Upcoming Pro Features
 ~~~~~~~~~~~~~~~~~~~~~
 
 - Guaranteed Message Delivery
-
