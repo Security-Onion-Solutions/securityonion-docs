@@ -61,6 +61,8 @@ If you're not sure of which component a particular setting may belong to, you ca
 
 Some settings can be applied across the entire grid or to specific nodes. If you apply a setting to a specific node, it will override the grid setting.
 
+Starting in Security Onion 2.4.70, some settings can be duplicated to more easily create new settings. If a setting is eligible for duplication, then it will have a DUPLICATE button on the right side of the page. Simply click the DUPLICATE button, provide a name for the new setting and then click the CREATE SETTING button.
+
 By default, the Configuration page only shows the most widely used settings. If you want to see all settings, you can go to the Options bar at the top of the page and then click the toggle labeled ``Show all configurable settings, including advanced settings``.
 
 .. warning::
