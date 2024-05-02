@@ -128,9 +128,16 @@ In a distributed deployment with a manager and one or more search nodes, the man
 
 When building a distributed deployment, the Security Onion manager has to start off with the ``data`` node role. If you later join a separate search node, then you may want to migrate the data from the manager to the search node and then remove the ``data`` node role from the manager. For more information, please see:
 
-https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html#change-node-role
-
 https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cluster.html#cluster-shard-allocation-filtering
+
+Node Roles
+----------
+
+.. warning::
+
+   Changing node roles is an advanced setting and you should be careful to avoid disruption to your cluster!
+
+To see and modify Elasticsearch node roles, first navigate to :ref:`administration` --> Configuration, clickthe ``Options`` menu at the top of the page, and enable ``Show all configurable settings, including advanced settings.``. Then navigate to elasticsearch --> so_roles and select the desired role. Then navigate to config --> node. When you select roles on the left side of the page, you should see the list of roles on the right.
 
 Templates
 ---------
