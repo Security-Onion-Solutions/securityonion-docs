@@ -12,13 +12,7 @@ From https://github.com/Neo23x0/sigma:
 Managing Sigma Rules
 --------------------
 
-You can manage Sigma rules via :ref:`detections`.
-
-.. warning::
-
-	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` detection as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
-
-There are two main ways to manage Sigma rules:
+You can manage Sigma rules via :ref:`detections`. There are two main ways to do so:
 
 - From the main :ref:`detections` interface, you can search for the desired detection and click the binoculars icon.
 - From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
@@ -33,3 +27,6 @@ To tune the detection:
 - enter your custom filter in the Custom Filter field
 - click the ``CREATE`` button
 
+.. warning::
+
+	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` detection as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
