@@ -81,10 +81,18 @@ Elastic Fleet nodes to Receiver nodes:
 Host Firewall
 -------------
 
-The remainder of this section will cover the host firewall built into Security Onion.
+The remainder of this section will cover the host firewall built into Security Onion. Security Onion locks down the Linux iptables firewall by default. 
 
-Configuration
--------------
+Reviewing Host Firewall
+-----------------------
+
+You can view the entire iptables configuration from the command line:
+::
+
+        sudo iptables -nvL
+
+Configuring Host Firewall
+-------------------------
 
 You can configure the firewall by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 

@@ -131,7 +131,7 @@ Component Templates
 
 From https://www.elastic.co/guide/en/elasticsearch/reference/current/index-templates.html:
 
-    Component templates are reusable building blocks that configure mappings, settings, and aliases. While you can use component templates to construct index  templates, they aren’t directly applied to a set of indices.
+    Component templates are reusable building blocks that configure mappings, settings, and aliases. While you can use component templates to construct index templates, they aren’t directly applied to a set of indices.
     
 Also see https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-component-template.html.
 
