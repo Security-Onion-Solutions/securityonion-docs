@@ -70,7 +70,27 @@ By default, the Configuration page only shows the most widely used settings. If 
 License Key
 -----------
 
-In the future, we will offer some new enterprise features for Security Onion. If you are interested in those features and purchase a license key, then this screen will allow you to enter your license key and then show the status of that license key.
+Security Onion `announced <https://blog.securityonion.net/2022/08/security-onion-enterprise-features-and.html>`_ in August of 2022 that we would be releasing enterprise features that would only be available to paid users of the platform. Beginning in 2.4.70 it will be possible for licensed users to activate these features. The following features are availble under the Pro license:
+
+- OIDC Support
+- LUKS Disk Encryption
+- FIPS OS Compliance
+- STIG OS Compliance
+- Time Tracking for Cases
+
+OIDC Single Signon to SOC:
+
+This feature allows the use of a 3rd party authentication for access to SOC. Examples of these are Active Directory, Github, and Google. Please see the _ref:OIDC<oidc> documentation for further details.
+
+LUKS Disk Encryption
+
+The ISO now supports several modes in which LUKS can be used with Security Onion. Users have the option to encrypt all disks or just /nsm. Other options include the ability to have the disks auto unlock on boot or require a password to boot.
+
+FIPS
+
+STIG
+
+
 
 .. image:: images/62_licensekey.png
   :target: _images/62_licensekey.png
