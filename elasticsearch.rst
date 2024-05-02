@@ -137,7 +137,7 @@ Node Roles
 
    Changing node roles is an advanced setting and you should be careful to avoid disruption to your cluster!
 
-To see and modify Elasticsearch node roles, first navigate to :ref:`administration` --> Configuration, clickthe ``Options`` menu at the top of the page, and enable ``Show all configurable settings, including advanced settings.``. Then navigate to elasticsearch --> so_roles and select the desired role. Then navigate to config --> node. When you select roles on the left side of the page, you should see the list of roles on the right.
+To see and modify Elasticsearch node roles, first navigate to :ref:`administration` --> Configuration, click the ``Options`` menu at the top of the page, and enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch --> so_roles and select the desired role. Finally, navigate to config --> node --> roles and the list of roles should appear on the right side of the page.
 
 Templates
 ---------
