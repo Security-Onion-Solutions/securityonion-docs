@@ -70,28 +70,36 @@ By default, the Configuration page only shows the most widely used settings. If 
 License Key
 -----------
 
-Security Onion `announced <https://blog.securityonion.net/2022/08/security-onion-enterprise-features-and.html>`_ in August of 2022 that we would be releasing enterprise features that would only be available to paid users of the platform. Beginning in 2.4.70 it will be possible for licensed users to activate these features. The following features are availble under the Pro license:
+.. image:: images/62_licensekey.png
+  :target: _images/62_licensekey.png
+
+In 2022, we announced that we would be releasing enterprise features that would only be available to paid users of the platform:
+https://blog.securityonion.net/2022/08/security-onion-enterprise-features-and.html
+
+Starting in Security Onion 2.4.70, it will be possible for licensed users of Security Onion Pro to activate the following features:
 
 - OIDC Support
 - LUKS Disk Encryption
 - FIPS OS Compliance
 - STIG OS Compliance
-- Time Tracking for Cases
+- Time Tracking for :ref:`cases`
 
-OIDC Single Signon to SOC:
+OIDC Single Signon to SOC
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This feature allows the use of a 3rd party authentication for access to SOC. Examples of these are Active Directory, Github, and Google. Please see the _ref:OIDC<oidc> documentation for further details.
+This feature allows 3rd party authentication for :ref:`soc`. Examples are Active Directory, Github, and Google. For more information, please see the :ref:`oidc` section.
 
 LUKS Disk Encryption
+~~~~~~~~~~~~~~~~~~~~
 
-The ISO now supports several modes in which LUKS can be used with Security Onion. Users have the option to encrypt all disks or just /nsm. Other options include the ability to have the disks auto unlock on boot or require a password to boot.
+Our Security Onion ISO image now supports several modes of LUKS disk encryption. This gives you the option to encrypt all disks or just the /nsm partition. You also have the option to have the disks automatically unlock on boot or require a password to boot.
 
 FIPS
+~~~~
+
+FIPS is a requirement for many government customers.
 
 STIG
+~~~~
 
-
-
-.. image:: images/62_licensekey.png
-  :target: _images/62_licensekey.png
-
+STIG is a requirement for many government customers.
