@@ -112,7 +112,7 @@ When modifying ILM settings, note that some settings will only take effect after
 Parsing
 -------
 
-Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`elastic-agent`. Elasticsearch then parses and stores those logs. Parsers are stored in ``/opt/so/conf/elasticsearch/ingest/``.  Custom ingest parsers can be placed in ``/opt/so/saltstack/local/salt/elasticsearch/files/ingest/``.   To make these changes take effect, restart Elasticsearch using ``so-elasticsearch-restart``.
+Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`elastic-agent`. Elasticsearch then parses and stores those logs. Parsers are stored in ``/opt/so/conf/elasticsearch/ingest/``. Custom ingest parsers can be placed in ``/opt/so/saltstack/local/salt/elasticsearch/files/ingest/``. To make these changes take effect, restart Elasticsearch using ``so-elasticsearch-restart``.
 
 :ref:`elastic-agent` may pre-parse or act on data before the data reaches Elasticsearch, altering the data stream or index to which it is written, or other characteristics such as the event dataset or other pertinent information. This configuration is maintained in the agent policy or integration configuration in :ref:`elastic-fleet`.
 
@@ -120,6 +120,17 @@ Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`elastic-agent
 
     | For more about Elasticsearch ingest parsing, please see:
     | https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest.html
+
+Cluster
+-------
+
+In a distributed deployment with a manager and one or more search nodes, the manager and search nodes are joined together as a multi-node Elastic cluster. 
+
+When building a distributed deployment, the Security Onion manager has to start off with the ``data`` node role. If you later join a separate search node, then you may want to migrate the data from the manager to the search node and then remove the ``data`` node role from the manager. For more information, please see:
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html#change-node-role
+
+https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cluster.html#cluster-shard-allocation-filtering
 
 Templates
 ---------
@@ -205,7 +216,7 @@ Please note that the change to the field limit will not occur immediately, only 
 Re-indexing
 -----------
 
-Re-indexing may need to occur if field data types have changed and conflicts arise.  This process can be VERY time-consuming, and we only recommend this if keeping data is absolutely critical.  
+Re-indexing may need to occur if field data types have changed and conflicts arise. This process can be VERY time-consuming, and we only recommend this if keeping data is absolutely critical.  
 
 | For more information about re-indexing, please see:
 | https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-reindex.html
