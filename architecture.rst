@@ -133,7 +133,11 @@ Each receiver node runs :ref:`logstash` and :ref:`redis` and allows for events t
    :width: 450
    :target: _images/receiver.png
 
-If you don't have any receiver nodes and the manager goes down, the search nodes do not index anything because they cannot connect to :ref:`redis`. The agents cannot connect to :ref:`logstash` so the pipeline starts backing up on the agents. In this same scenario with a receiver node the agents would not be able to talk to :ref:`logstash` on the manager and then would try to connect to the receiver node. Once connected they would send their logs to the receiver like nothing was wrong. The search nodes connect to both the manager and receiver nodes and pull events from the :ref:`redis` queue. If the manager goes down, the search nodes will keep pulling the log events from the queue on the receiver node. This allows for scaling of the pipeline. More receivers + more search nodes = more event ingestion volume.
+If you don't have any receiver nodes and the manager goes down, the search nodes do not index anything because they cannot connect to :ref:`redis`. The agents cannot connect to :ref:`logstash` so the pipeline starts backing up on the agents. 
+
+In this same scenario with a receiver node, the agents would not be able to connect to :ref:`logstash` on the manager and so they would try to connect to the receiver node. Once connected, they would send their logs to the receiver. 
+
+Search nodes connect to both the manager and receiver nodes and pull events from the :ref:`redis` queue. If the manager goes down, search nodes will keep pulling the log events from the queue on the receiver node. This allows for scaling of the pipeline. More receivers + more search nodes = more event ingestion volume.
 
 If you have a manager or managersearch that is under heavy load due to handling a high volume of events, then system resources can be freed by directing the Elastic Agent to only output events to the receiver node(s) in the environment. Once all configurable and advanced settings are enabled, this feature can be set in SOC Configuration UI under ``elasticfleet > enable_manager_output``. Setting this to ``False`` will prevent the Elastic Agent from sending events to the manager, managersearch, or standalone nodes.
 

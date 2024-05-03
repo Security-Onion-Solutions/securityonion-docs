@@ -244,4 +244,4 @@ At the top of the page, click the ``Options`` menu and then enable the ``Show al
 Developing Analyzers
 ~~~~~~~~~~~~~~~~~~~~
 
-If you'd like to develop a custom analyzer, take a look at the developer's guide at https://github.com/Security-Onion-Solutions/securityonion/tree/dev/salt/sensoroni/files/analyzers.
+If you'd like to develop a custom analyzer, take a look at the developer's guide at https://github.com/Security-Onion-Solutions/securityonion/tree/2.4/main/salt/sensoroni/files/analyzers.

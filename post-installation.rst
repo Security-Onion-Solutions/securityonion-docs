@@ -34,10 +34,10 @@ SSH
 
 You should be able to do most administration from :ref:`soc` but if you need access to the command line then we recommend using :ref:`ssh` rather than the :ref:`console`.
 
-Data Retention
---------------
+Data
+----
 
--  Review the :ref:`elasticsearch` section to see if you need to change any of the default index retention settings.
+-  Review the :ref:`elasticsearch` section to see if you need to change any of the default settings.
 
 -  Review the :ref:`stenographer` and :ref:`suricata` sections to see if you need to change the PCAP retention settings.
 

@@ -87,7 +87,7 @@ By default, Security Onion uses :ref:`zeek` to record protocol metadata. If you 
 -  HTTP
 -  SSL
 
-If you later find that some of that metadata is unnecessary, you can filter out the unnecessary metadata by writing rules. We have included some examples at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/filters.rules.
+If you later find that some of that metadata is unnecessary, you can filter out the unnecessary metadata by writing rules. We have included some examples at https://raw.githubusercontent.com/Security-Onion-Solutions/securityonion/2.4/main/salt/idstools/rules/filters.rules.
 
 To change your grid's metadata engine from :ref:`zeek` to Suricata, go to :ref:`administration` --> Configuration --> global --> mdengine and change the value from ``ZEEK`` to ``SURICATA``:
 
@@ -97,7 +97,7 @@ To change your grid's metadata engine from :ref:`zeek` to Suricata, go to :ref:`
 File Extraction
 ---------------
 
-If you choose Suricata for metadata, it will extract files from network traffic and :ref:`strelka` will then analyze those extracted files. If you would like to extract additional file types, then you can add file types as shown at https://github.com/Security-Onion-Solutions/securityonion/blob/dev/salt/idstools/sorules/extraction.rules.
+If you choose Suricata for metadata, it will extract files from network traffic and :ref:`strelka` will then analyze those extracted files. If you would like to extract additional file types, then you can add file types as shown at https://raw.githubusercontent.com/Security-Onion-Solutions/securityonion/2.4/main/salt/idstools/rules/extraction.rules.
 
 PCAP
 ----
