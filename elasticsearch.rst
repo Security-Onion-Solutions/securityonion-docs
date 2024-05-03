@@ -130,12 +130,12 @@ When building a distributed deployment, the Security Onion manager has to start 
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cluster.html#cluster-shard-allocation-filtering
 
-Node Roles
-----------
+Elasticsearch Node Roles
+------------------------
 
 .. warning::
 
-   Changing node roles is an advanced setting and you should be careful to avoid disruption to your cluster!
+   Elasticsearch node roles is an advanced setting and you should be careful to avoid disruption to your cluster!
 
 To see and modify Elasticsearch node roles, first navigate to :ref:`administration` --> Configuration, click the ``Options`` menu at the top of the page, and enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch --> so_roles and select the desired role. Finally, navigate to config --> node --> roles and the list of roles should appear on the right side of the page.
 

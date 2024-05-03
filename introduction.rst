@@ -5,7 +5,7 @@ Introduction
 
 Security Onion is a free and open platform built by defenders for defenders. It includes :ref:`network visibility<network>`, :ref:`host visibility<host>`, :ref:`intrusion detection honeypots<idh>`, :ref:`log management<elasticsearch>`, and :ref:`case management<cases>`. 
 
-For network visibility, we offer signature based detection via :ref:`suricata`, rich protocol metadata and file extraction using your choice of either :ref:`zeek` or :ref:`suricata`, full packet capture, and file analysis. For host visibility, we offer the :ref:`elastic-agent` which provides data collection, live queries via :ref:`osquery<osquery-manager>`, and centralized management using :ref:`elastic-fleet`. :ref:`Intrusion detection honeypots<idh>` based on OpenCanary can be added to your deployment for even more enterprise visibility. All of these logs flow into :ref:`elasticsearch` and we've built our own user interfaces for :ref:`alerts<alerts>`, :ref:`dashboards<dashboards>`, :ref:`threat hunting<hunt>`, :ref:`case management<cases>`, and :ref:`grid management<grid>`. 
+For network visibility, we offer signature based detection via :ref:`suricata`, rich protocol metadata and file extraction using either :ref:`zeek` or :ref:`suricata`, full packet capture using either :ref:`stenographer` or :ref:`suricata`, and file analysis. For host visibility, we offer the :ref:`elastic-agent` which provides data collection, live queries via :ref:`osquery<osquery-manager>`, and centralized management using :ref:`elastic-fleet`. :ref:`Intrusion detection honeypots<idh>` based on OpenCanary can be added to your deployment for even more enterprise visibility. All of these logs flow into :ref:`elasticsearch` and we've built our own user interfaces for :ref:`alerts<alerts>`, :ref:`dashboards<dashboards>`, :ref:`threat hunting<hunt>`, :ref:`case management<cases>`, and :ref:`grid management<grid>`. 
 
 In the diagram below, we see Security Onion in a traditional enterprise network with a firewall, workstations, and servers. You can use Security Onion to monitor north/south traffic to detect an adversary entering an environment, establishing command-and-control (C2), or perhaps data exfiltration. You'll probably also want to monitor east/west traffic to detect lateral movement. As more and more of our network traffic becomes encrypted, it's important to fill in those blind spots with additional visibility in the form of endpoint telemetry. Security Onion can consume logs from your servers and workstations so that you can then hunt across all of your network and host logs at the same time.
 
@@ -30,7 +30,7 @@ Unlike signature-based intrusion detection that looks for specific needles in th
 Full Packet Capture
 ~~~~~~~~~~~~~~~~~~~
 
-Full packet capture is like a video camera for your network, but better because not only can it tell us who came and went, but also exactly where they went and what they brought or took with them (exploit payloads, phishing emails, file exfiltration). It’s a crime scene recorder that can tell us a lot about the victim and the white chalk outline of a compromised host on the ground. There is certainly valuable evidence to be found on the victim’s body, but evidence at the host can be destroyed or manipulated; the camera doesn't lie, is hard to deceive, and can capture a bullet in transit. Full packet capture is recorded by :ref:`stenographer`.
+Full packet capture is like a video camera for your network, but better because not only can it tell us who came and went, but also exactly where they went and what they brought or took with them (exploit payloads, phishing emails, file exfiltration). It’s a crime scene recorder that can tell us a lot about the victim and the white chalk outline of a compromised host on the ground. There is certainly valuable evidence to be found on the victim’s body, but evidence at the host can be destroyed or manipulated; the camera doesn't lie, is hard to deceive, and can capture a bullet in transit. Full packet capture can be written to disk using either :ref:`stenographer` or :ref:`suricata`.
 
 File Analysis
 ~~~~~~~~~~~~~
@@ -82,6 +82,11 @@ Security Onion Console (SOC)
 .. image:: images/53_pcap.png
   :target: _images/53_pcap.png
 
+Starting in Security Onion 2.4.70, :ref:`soc` includes :ref:`detections` which makes it quick and easy to tune your :ref:`nids`, :ref:`sigma`, and :ref:`yara` rules.
+
+.. image:: images/65_detections.png
+  :target: _images/65_detections.png
+
 CyberChef
 ~~~~~~~~~
 
@@ -96,6 +101,7 @@ Workflow
 All of these analysis tools work together to provide efficient and comprehensive analysis capabilities. For example, here's one potential workflow:
 
      - Go to the :ref:`alerts` page and review any unacknowledged alerts.
+     - Use :ref:`detections` to tune your rules to increase the signal-to-noise ratio.
      - Review :ref:`dashboards` for anything that looks suspicious.
      - Once you've found something that you want to investigate, you might want to pivot to :ref:`hunt` to expand your search and look for additional logs relating to the source and destination IP addresses.
      - If any of those alerts or logs look interesting, you might want to pivot to :ref:`pcap` to review the full packet capture for the entire stream.
