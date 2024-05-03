@@ -50,6 +50,7 @@ The most common configuration options are shown in the quick links on the right 
 
 If you're not sure of which component a particular setting may belong to, you can use the Filter at the top of the list to look for a particular setting. To the right of the Filter field are buttons that do the following:
 
+- apply the search filter
 - expand all settings
 - collapse all settings
 - show settings that have been modified from the default value
@@ -61,6 +62,18 @@ If you're not sure of which component a particular setting may belong to, you ca
 
 Some settings can be applied across the entire grid or to specific nodes. If you apply a setting to a specific node, it will override the grid setting.
 
+Advanced Settings
+~~~~~~~~~~~~~~~~~
+
+By default, the Configuration page only shows the most widely used settings. If you want to see all settings, you can go to the Options bar at the top of the page and then click the toggle labeled ``Show all configurable settings, including advanced settings``.
+
+.. warning::
+
+	Changing advanced settings is unsupported and could result in requiring a full cluster re-installation.
+
+Duplicate Settings
+~~~~~~~~~~~~~~~~~~
+
 Starting in Security Onion 2.4.70, some settings can be duplicated to more easily create new settings. If a setting is eligible for duplication, then it will have a DUPLICATE button on the right side of the page, provided the Advanced Option is enabled at the top of the screen. Creating a duplicate setting is a TWO-STEP process.
 
 1. Click the DUPLICATE button and provide a name for the new setting, then click the CREATE SETTING button.
@@ -69,12 +82,6 @@ Starting in Security Onion 2.4.70, some settings can be duplicated to more easil
 .. note::
 
   Duplicated settings do not retain their original setting's full behavior. For example, if the original setting only allowed for CIDR values, this new setting will not have the same protections on later views in the Configuration screen. Further, duplicated settings are marked as advanced settings. In order to see the new setting at a later time the Advanced Option toggle must be enabled under the Configuration Options at the top of the Configuration screen.
-
-By default, the Configuration page only shows the most widely used settings. If you want to see all settings, you can go to the Options bar at the top of the page and then click the toggle labeled ``Show all configurable settings, including advanced settings``.
-
-.. warning::
-
-	Changing advanced settings is unsupported and could result in requiring a full cluster re-installation.
 
 License Key
 -----------
