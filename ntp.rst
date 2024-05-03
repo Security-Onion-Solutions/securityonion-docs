@@ -7,8 +7,3 @@ Depending on how you installed, the underlying operating system may be configure
 
 .. image:: images/config-item-ntp.png
   :target: _images/config-item-ntp.png
-
-IDS Alerts
-----------
-
-Anybody can join the NTP Pool Project and provide NTP service. Occasionally, somebody provides NTP service from a residential DHCP address that at some point in time may have also been used for Tor. This results in IDS alerts for Tor nodes where the port is 123 (NTP). This is another good reason to modify the NTP configuration to pull time updates from your preferred NTP provider.

@@ -83,7 +83,7 @@ Host Firewall
 
 The remainder of this section will cover the host firewall built into Security Onion. 
 
-.. tip::
+.. note::
 
    Security Onion locks down the firewall by default. 
 
