@@ -15,7 +15,7 @@ After running ``soup`` or rebooting a Security Onion node, it may take a few min
 
 ::
 
-	sudo salt-call state.highstate
+	sudo so-checkin
 
 .. warning::
 
@@ -174,7 +174,7 @@ and/or
     There is a problem downloading the so-xyz:2.4.0 image. Details: 
     gpg: Signature made Thu 18 Feb 2021 02:26:10 PM UTC using RSA key ID FE507013 gpg: BAD signature from "Security Onion Solutions, LLC <info@securityonionsolutions.com>"
     
-If you see these errors, it most likely means that a salt highstate process was already running when ``soup`` began. You can wait a few minutes and then try ``soup`` again. Alternatively, you can run ``sudo salt-call state.highstate`` and wait for it to complete before running ``soup`` again.
+If you see these errors, it most likely means that a salt highstate process was already running when ``soup`` began. You can wait a few minutes and then try ``soup`` again. Alternatively, you can run ``sudo so-checkin`` and wait for it to complete before running ``soup`` again.
 
 Distributed deployments
 -----------------------
@@ -187,7 +187,7 @@ If you have a distributed deployment with a manager node and separate sensor nod
 
     Each minion is on a random 15 minute check-in period and things like network bandwidth can be a factor in how long the actual upgrade takes. If you have a heavy node on a slow link, it is going to take a while to get the containers to it. Depending on what changes happened between the versions, :ref:`elasticsearch` might not be able to talk to said heavy node until the update is complete.
 
-    If it looks like you're missing data after the upgrade, please avoid restarting services and instead make sure at least one search node has completed its upgrade. The best way to do this is to run ``sudo salt-call state.highstate`` from a search node and make sure there are no errors. Typically if it works on one node it will work on the rest. Forward nodes are less complex and will update as they check in so you can monitor those from the :ref:`grid` section of :ref:`soc`.
+    If it looks like you're missing data after the upgrade, please avoid restarting services and instead make sure at least one search node has completed its upgrade. The best way to do this is to run ``sudo so-checkin`` from a search node and make sure there are no errors. Typically if it works on one node it will work on the rest. Forward nodes are less complex and will update as they check in so you can monitor those from the :ref:`grid` section of :ref:`soc`.
     
 When you run ``soup`` on the manager, it does the following:
 

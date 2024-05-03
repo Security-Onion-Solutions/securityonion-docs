@@ -23,7 +23,7 @@ IDH nodes are dedicated to just being IDH nodes and cannot run any other service
 Configuration
 -------------
 
-- Run Setup and select the ``DISTRIBUTED`` install option.
+- Run Setup and select the ``DISTRIBUTED`` deployment option.
 - Select the ``Existing Deployment`` option.
 - Select the ``IDH`` option.
 - You can optionally prevent the IDH services from listening on the management interface.
