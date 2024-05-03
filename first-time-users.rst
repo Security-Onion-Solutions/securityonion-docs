@@ -151,17 +151,17 @@ After logging in, you will see the :ref:`soc` Overview page:
 .. image:: images/38_overview.png
   :target: _images/38_overview.png
 
-Check :ref:`grid` to verify all services are running properly:
+Go to the :ref:`grid` page, click the button to expand the node, and then verify all services are running properly:
 
 .. image:: images/39_grid.png
   :target: _images/39_grid.png
 
-While on the :ref:`grid` page, you can upload a PCAP or EVTX file:
+While on the :ref:`grid` page, you can import a PCAP or EVTX file using the upload button at the bottom of the screen:
 
 .. image:: images/40_upload.png
   :target: _images/40_upload.png
 
-Review alerts on the :ref:`alerts` page:
+Once the import is complete, you can review alerts on the :ref:`alerts` page:
 
 .. image:: images/50_alerts.png
   :target: _images/50_alerts.png
@@ -196,7 +196,7 @@ If you need to refer back to previous PCAP jobs, you can find them on the :ref:`
 .. image:: images/56_jobs.png
   :target: _images/56_jobs.png
 
-IMPORT installations do not support remote agents, but if you were running another installation type you could download the Elastic Agent installer from :ref:`downloads`:
+IMPORT installations do not support remote agents, but if you were running a production installation you could download the Elastic Agent installer from :ref:`downloads`:
 
 .. image:: images/58_downloads.png
   :target: _images/58_downloads.png

@@ -121,7 +121,7 @@ Please see the :ref:`timezones` section.
 Why is my disk filling up?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Security Onion records full packet capture to disk via :ref:`stenographer`.
+In general, Security Onion attempts to make use of as much disk space as you give it. Most disk space is used by :ref:`elasticsearch` or full packet capture written to disk via :ref:`stenographer` or :ref:`suricata`.
 
 How is my data kept secure?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

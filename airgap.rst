@@ -5,7 +5,7 @@ Airgap
 
 Security Onion is committed to allowing users to run a full install on networks that do not have Internet access. Our ISO image includes everything you need to run without Internet access. Make sure that you choose the airgap option during Setup. 
 
-If your network has Internet access but has overly restrictive proxies, firewalls, or other network devices, then you may want to consider the airgap option as everything will install via the ISO image.
+If your network has Internet access but has overly restrictive proxies, firewalls, or other network devices that might prevent Security Onion from connecting to the sites shown in the :ref:`firewall` section, then you may want to consider the airgap option as everything will install from the ISO image itself.
 
 .. image:: images/06_setup_airgap.png
   :target: _images/06_setup_airgap.png
