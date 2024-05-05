@@ -8,7 +8,7 @@ Elastic Fleet
 Configuration
 -------------
 
-Elastic Fleet is pre-configured during Security Onion setup. If you need to make changes to the configuration, you can do so via :ref:`kibana`. Configuration options for various components are detailed below.
+Elastic Fleet is pre-configured during Security Onion setup. If you need to make changes to the configuration, you can do so via the Fleet page in :ref:`kibana` as detailed below.
 
 Agents
 ------
@@ -19,7 +19,11 @@ To view agent details, click the ``Host`` name.
 
 To assign the agent to a new policy, unenroll, upgrade the agent, or perform other actions, click the ``Actions`` menu on the right side of the agent listing and select the appropriate option.
 
-By default, Elastic Agent is installed on every Security Onion grid node. As a result, all grid node agents will be enrolled in the ``SO-Grid-Nodes`` agent policy. We do not recommend removing policy settings for Security Onion grid node agents.
+By default, Elastic Agent is installed on every Security Onion grid node. As a result, all grid node agents will be enrolled in the ``SO-Grid-Nodes`` agent policy. 
+
+.. warning::
+
+        We do not recommend removing policy settings for Security Onion grid node agents.
 
 Adding Agents
 -------------
@@ -234,6 +238,14 @@ Adding an Integration
 
 New integrations can be added to existing policies to provide increased visibility and more comprehensive monitoring.
 
+.. tip::
+
+        When adding a new integration, it is important that you add it to an appropriate policy. 
+
+        If an integration pulls the data, you should add it to the Fleet Server policy. Depending on complexity and log volume, it might make sense to stand up a Fleet Node and add your integrations to it.
+
+        If an integration receives data pushed to it (for example: receiving syslog), consider adding it to the Fleet Server policy. If that is not feasible, then you can add it to the Grid Nodes policy but make sure to set the firewall rules correctly so that you are not opening ports on all of your nodes.
+
 To add an integration to an existing policy:
 
 - From the main Fleet page, click the ``Agent policies`` tab.
@@ -241,13 +253,7 @@ To add an integration to an existing policy:
 - Click the ``Add Integration`` button.
 - Follow the steps for adding the integration.
 
-.. tip::
-
-        When setting up a new integration, it is important that you add it to an appropriate Policy. 
-
-        If an integration pulls the data, you should add it to the Fleet Server policy. Depending on complexity and log volume, it might make sense to stand up a Fleet Node and add your integrations to it.
-
-        If an integration receives data pushed to it (for example: receiving syslog), consider adding it to the Fleet Server policy. If that is not feasible, and it will be added to the Grid Nodes policy, make sure to set the firewall rules correctly so that you are not opening ports on all of your nodes.
+.. note::
 
         If the integration is designed to listen on a port to receive data, it will most likely default to listening on ``localhost`` only. Depending on how you are sending data to the integration, you may need to change that to ``0.0.0.0`` so that it can receive data from other hosts.
 
@@ -256,7 +262,7 @@ For an example of this process, please see the Elastic Integration for pfSense i
 Adding a Custom Integration
 ---------------------------
 
-A custom integration can be added by adding an integration such as the ``Custom Logs`` integration. We can specify various settings relative to the data source and define additional actions to be performed.
+A custom integration can be added by adding an integration such as the ``Custom Logs`` integration. You can specify various settings relative to the data source and define additional actions to be performed.
 
 Enrollment Tokens
 -----------------

@@ -16,7 +16,7 @@ After booting the ISO image, the boot menu appears:
 .. image:: images/01_grub.png
   :target: _images/01_grub.png
 
-When prompted, specify your username and password:
+When prompted, enter your desired username and password:
 
 .. image:: images/02_initial_install.png
   :target: _images/02_initial_install.png
