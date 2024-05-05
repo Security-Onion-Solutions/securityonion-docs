@@ -8,14 +8,12 @@ Elastic Fleet
 Configuration
 -------------
 
-Elastic Fleet is pre-configured during Security Onion setup, however, centralized management of configuration is provided within its user interface inside of Kibana.
-
-Configuration options for various components are detailed below.
+Elastic Fleet is pre-configured during Security Onion setup. If you need to make changes to the configuration, you can do so via :ref:`kibana`. Configuration options for various components are detailed below.
 
 Agents
 ------
 
-This section displays registered Elastic agents (https://docs.securityonion.net/en/2.4/elastic-agent.html) and allows the user to add additional agents.
+This section displays registered Elastic agents and allows the user to add additional agents. For more information about Elastic agents, please see the :ref:`elastic-agent` section.
 
 To view agent details, click the ``Host`` name. 
 
@@ -26,9 +24,7 @@ By default, Elastic Agent is installed on every Security Onion grid node. As a r
 Adding Agents
 -------------
 
-To add a new agent to your deployment, see the following:
-
-https://docs.securityonion.net/en/2.4/elastic-agent.html#deployment
+To add a new agent to your deployment, see the :ref:`elastic-agent` section.
 
 Agent Policies
 --------------
@@ -56,7 +52,7 @@ For example, the ``SO-Grid-Nodes`` agent policy is comprised of the following in
 Agent Policies - endpoints-initial
 ----------------------------------
 
-Agent installers downloaded from SOC --> Downloads, are deployed using the ``endpoints-initial`` Agent Policy. This policy includes the ``Elastic Defend``, ``Osquery Manager``, ``System``, and ``Windows`` integrations.
+Agent installers downloaded from :ref:`Downloads` are deployed using the ``endpoints-initial`` Agent Policy. This policy includes the ``Elastic Defend``, ``Osquery Manager``, ``System``, and ``Windows`` integrations.
 
 elastic-defend-endpoints (``Elastic Defend`` integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,7 +85,7 @@ The ``Elastic Defend`` integration has both free and paid features. By default, 
 osquery-endpoints (``Osquery Manager`` integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``Osquery Manager`` integration runs osquery as a daemon on the endpoint, and makes the endpoint available for Live or Scheduled queries through the Osquery manager interface in Kibana.
+The ``Osquery Manager`` integration runs osquery as a daemon on the endpoint and makes the endpoint available for Live or Scheduled queries through the Osquery manager interface in Kibana.
 
 system-endpoints (``System`` integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -240,15 +236,22 @@ New integrations can be added to existing policies to provide increased visibili
 
 To add an integration to an existing policy:
 
-From ``Fleet`` --> ``Agent policies`` --> ``$Policy name``, click ``Add Integration`` and follow the steps for adding the integration.
+- From the main Fleet page, click the ``Agent policies`` tab.
+- Select the desired agent policy.
+- Click the ``Add Integration`` button.
+- Follow the steps for adding the integration.
 
-When setting up a new integration, it is important that you add it to an appropriate Policy. 
+.. tip::
 
-If an integration pulls the data, you should add it to the Fleet Server policy. Depending on complexity and log volume, it might make sense to stand up a Fleet Node and add your integrations to it.
+        When setting up a new integration, it is important that you add it to an appropriate Policy. 
 
-If an integration receives data pushed to it (for example - receiving syslog), once again, consider adding it to the Fleet Server policy. If that is not feasible, and it will be added to the Grid Nodes policy, make sure to set the firewall rules correctly so that you are not opening ports on all of your nodes.
+        If an integration pulls the data, you should add it to the Fleet Server policy. Depending on complexity and log volume, it might make sense to stand up a Fleet Node and add your integrations to it.
 
-If the integration is designed to listen on a port to receive data, it will most likely default to listening on ``localhost`` only. Depending on how you are sending data to the integration, you may need to change that to ``0.0.0.0`` so that it can receive data from other hosts.
+        If an integration receives data pushed to it (for example: receiving syslog), consider adding it to the Fleet Server policy. If that is not feasible, and it will be added to the Grid Nodes policy, make sure to set the firewall rules correctly so that you are not opening ports on all of your nodes.
+
+        If the integration is designed to listen on a port to receive data, it will most likely default to listening on ``localhost`` only. Depending on how you are sending data to the integration, you may need to change that to ``0.0.0.0`` so that it can receive data from other hosts.
+
+For an example of this process, please see the Elastic Integration for pfSense in the :ref:`pfsense` section.
 
 Adding a Custom Integration
 ---------------------------
