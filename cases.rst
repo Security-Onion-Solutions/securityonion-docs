@@ -45,6 +45,8 @@ On the Comments tab, you can add comments about the case. The Comments field use
 .. image:: images/cases-comments.png
   :target: _images/cases-comments.png
 
+If you've enabled :ref:`pro`, then when adding a comment you can also specify how many hours you spent working on that activity. You can then see the total time spent by all analysts in the Summary in the upper right corner.
+
 Attachments
 -----------
 
