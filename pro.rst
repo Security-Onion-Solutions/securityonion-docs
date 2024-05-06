@@ -31,9 +31,7 @@ Starting in Security Onion 2.4.70, licensed users of Security Onion Pro can acti
 
   This feature allows you to specify how much time you've spent working on a particular case and it will then show the total time spent by all analysts working on a particular case. For more information, please see the :ref:`cases` section.
 
-**Upcoming Pro Features**
-
-- Guaranteed Message Delivery
+**Upcoming Pro Feature** - Guaranteed Message Delivery
 
 .. toctree::
    :maxdepth: 2
