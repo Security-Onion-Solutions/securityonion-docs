@@ -99,15 +99,15 @@ Starting in Security Onion 2.4.70, it will be possible for licensed users of Sec
 - STIG OS Compliance
 - Time Tracking for Cases
 
-OIDC Single Signon to SOC
+OIDC Single Sign-On to SOC
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This feature allows 3rd party authentication for :ref:`soc`. Examples are Active Directory, Github, and Google. For more information, please see the :ref:`oidc` section.
+This feature allows 3rd-party authentication for :ref:`soc`. Examples are Active Directory, Github, and Google. For more information, please see the :ref:`oidc` section.
 
 LUKS Disk Encryption
 ~~~~~~~~~~~~~~~~~~~~
 
-Our Security Onion ISO image now supports several modes of LUKS disk encryption. This gives you the option to encrypt all disks or just the /nsm partition. You also have the option to have the disks automatically unlock on boot or require a password to boot.
+Security Onion now supports several modes of LUKS disk encryption. This gives you the option to encrypt all disks or just the /nsm partition. You also have the option to have the disks automatically unlock on boot or require a password to boot. LUKS configuration is handled during the ISO installation. 
 
 FIPS OS Compliance
 ~~~~~~~~~~~~~~~~~~
@@ -123,3 +123,9 @@ Time Tracking for Cases
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 This feature allows you to specify how much time you've spent working on a particular case and it will then show the total time spent by all analysts working on a particular case. For more information, please see the :ref:`cases` section.
+
+
+Upcoming Pro Features
+~~~~~~~~~~~~~~~~~~~~~
+
+- Guaranteed Message Delivery
