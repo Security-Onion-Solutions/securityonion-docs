@@ -27,6 +27,7 @@ Security Onion Documentation
    tricks
    utilities
    help
+   pro
    security
    telemetry
    release-notes

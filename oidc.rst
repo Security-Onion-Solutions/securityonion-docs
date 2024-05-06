@@ -7,7 +7,7 @@ Starting with Security Onion version 2.4.30, SOC supports single sign-on (SSO) a
 
 .. note::
 
-    The OIDC feature is an enterprise-level feature of Security Onion. Contact Security Onion Solutions, LLC via our website at https://securityonionsolutions.com for more information about purchasing a license to enable this feature.
+    This is an enterprise-level feature of Security Onion. Contact Security Onion Solutions, LLC via our website at https://securityonionsolutions.com for more information about purchasing a Security Onion Pro license to enable this feature.
 
 .. warning::
 
