@@ -1,7 +1,7 @@
 FIPS  
 ====
 
-Security Technical Implementation Guide
+Federal Information Processing Standards  
 
 Enable FIPS During the ISO Install   
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
