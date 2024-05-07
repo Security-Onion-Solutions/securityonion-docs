@@ -124,16 +124,20 @@ Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`elastic-agent
 Cluster
 -------
 
-In a distributed deployment with a manager and one or more search nodes, the manager and search nodes are joined together as a multi-node Elastic cluster. 
+In a distributed deployment with a manager and one or more search nodes, the manager and search nodes are joined together as a multi-node Elastic cluster.
+
+For more information, please see the cluster information at https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html#modules-node.
+
+Elasticsearch Node Roles
+------------------------
+
+Please see the Elasticsearch node roles documentation at https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-node.html. 
 
 When building a distributed deployment, the Security Onion manager has to start off with the ``data`` node role. If you later join a separate search node, then you may want to migrate the data from the manager to the search node and then remove the ``data`` node role from the manager. For more information, please see:
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cluster.html#cluster-shard-allocation-filtering
 
 If you want to set certain search nodes to the ``data_hot``, ``data_warm``, or ``data_cold`` roles, make sure you remove the ``data`` role from them.
-
-Elasticsearch Node Roles
-------------------------
 
 .. warning::
 
