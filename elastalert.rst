@@ -20,6 +20,8 @@ You can modify ElastAlert configuration by going to :ref:`administration` --> Co
 ElastAlert Rules
 ----------------
 
+ElastAlert uses :ref:`sigma` rules and you can configure these rules via :ref:`detections`.
+
 ElastAlert rules are stored in ``/opt/so/rules/elastalert/``.
 
 By default, ElastAlert rules are configured with an output type of ``debug``, which simply outputs to a log file found in ``/opt/so/log/elastalert/``.

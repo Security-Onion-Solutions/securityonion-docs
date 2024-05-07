@@ -14,7 +14,7 @@ Security Onion checks file hashes before sending to Strelka to avoid analyzing t
 Alerts
 ------
 
-Strelka scans files using :ref:`yara` rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`.
+Strelka scans files using :ref:`yara` rules. If it detects a match, then it will generate an alert that can be found in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`. You can configure :ref:`yara` rules via :ref:`detections`.
 
 Logs
 ----

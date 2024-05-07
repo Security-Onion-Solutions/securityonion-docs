@@ -110,6 +110,16 @@ Only
 
 Clicking the ``Only`` option will start a new search for the selected value and retain any existing groupby terms.
 
+Drilldown
+~~~~~~~~~
+
+Clicking the ``Drilldown`` option will drill down into a group of alerts to show each individual alert.
+
+Tune Detection
+~~~~~~~~~~~~~~
+
+Clicking the ``Tune Detection`` option will take you to :ref:`detections` and allow you disable or modify the detection that fired the alert.
+
 Group By
 ~~~~~~~~
 

@@ -13,3 +13,13 @@ Managing YARA Rules
 -------------------
 
 You can enable or disable YARA rules using :ref:`detections`. From the main :ref:`detections` interface, search for the desired detection and click the binoculars icon. You can then use the Status slider to enable or disable the detection.
+
+Custom Repositories
+-------------------
+
+You can configure Security Onion to pull YARA rules from custom git repos via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> strelkaengine --> rulesRepos --> default. Repos can be accessed via https or from the local filesystem (for example: ``file://nsm/rules/detect-yara/repos/my-custom-rep``).
+
+Update Frequency
+----------------
+
+By default, Security Onion checks for new YARA rules every 8 hours. You can change this value via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> strelkaengine --> communityRulesImportFrequencySeconds.
