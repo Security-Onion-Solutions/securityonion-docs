@@ -130,6 +130,8 @@ When building a distributed deployment, the Security Onion manager has to start 
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-cluster.html#cluster-shard-allocation-filtering
 
+If you want to set certain search nodes to the ``data_hot``, ``data_warm``, or ``data_cold`` roles, make sure you remove the ``data`` role from them.
+
 Elasticsearch Node Roles
 ------------------------
 
