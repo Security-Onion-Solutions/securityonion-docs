@@ -30,3 +30,12 @@ To tune the detection:
 .. warning::
 
 	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` detection as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
+
+Sigma Packages
+--------------
+
+You can choose from different Sigma packages:
+
+https://github.com/SigmaHQ/sigma/blob/master/Releases.md
+
+You can modify this setting via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> elastalertengine --> sigmaRulePackages.
