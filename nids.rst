@@ -23,6 +23,15 @@ To tune the detection:
 - fill out the requested values
 - click the ``CREATE`` button
 
+Update Frequency
+----------------
+
+By default, Security Onion checks for new NIDS rules every 24 hours. You can change this value as follows:
+
+- Navigate to :ref:`administration` --> Configuration.
+- At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+- Navigate to soc --> config --> server --> modules --> suricataengine --> communityRulesImportFrequencySeconds.
+
 Changing to a Different Ruleset
 -------------------------------
 

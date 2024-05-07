@@ -48,4 +48,8 @@ You can configure Security Onion to pull Sigma rules from custom git repos via :
 Update Frequency
 ----------------
 
-By default, Security Onion checks for new Sigma rules every 8 hours. You can change this value via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> elastalertengine --> communityRulesImportFrequencySeconds.
+By default, Security Onion checks for new Sigma rules every 24 hours. You can change this value as follows:
+
+- Navigate to :ref:`administration` --> Configuration.
+- At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+- Navigate to soc --> config --> server --> modules --> elastalertengine --> communityRulesImportFrequencySeconds.

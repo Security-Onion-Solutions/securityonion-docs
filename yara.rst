@@ -22,4 +22,8 @@ You can configure Security Onion to pull YARA rules from custom git repos via :r
 Update Frequency
 ----------------
 
-By default, Security Onion checks for new YARA rules every 8 hours. You can change this value via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> strelkaengine --> communityRulesImportFrequencySeconds.
+By default, Security Onion checks for new YARA rules every 24 hours. You can change this value as follows:
+
+- Navigate to :ref:`administration` --> Configuration.
+- At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+- Navigate to soc --> config --> server --> modules --> strelkaengine --> communityRulesImportFrequencySeconds.
