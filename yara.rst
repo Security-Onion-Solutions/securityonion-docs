@@ -17,7 +17,13 @@ You can enable or disable YARA rules using :ref:`detections`. From the main :ref
 Custom Repositories
 -------------------
 
-You can configure Security Onion to pull YARA rules from custom git repos via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> strelkaengine --> rulesRepos --> default. Repos can be accessed via https or from the local filesystem (for example: ``file://nsm/rules/detect-yara/repos/my-custom-rep``).
+You can configure Security Onion to pull YARA rules from custom git repos via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> strelkaengine --> rulesRepos --> default. 
+
+Repos can be accessed via https or from the local filesystem. For example:
+
+::
+
+        file://nsm/rules/detect-yara/repos/my-custom-rep
 
 Update Frequency
 ----------------

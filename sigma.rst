@@ -43,7 +43,13 @@ You can modify this setting via :ref:`administration` --> Configuration --> soc 
 Custom Repositories
 -------------------
 
-You can configure Security Onion to pull Sigma rules from custom git repos via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> elastalertengine --> rulesRepos --> default. Repos can be accessed via https or from the local filesystem (for example: ``file://nsm/rules/detect-sigma/repos/my-custom-rep``).
+You can configure Security Onion to pull Sigma rules from custom git repos via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> elastalertengine --> rulesRepos --> default. 
+
+Repos can be accessed via https or from the local filesystem. For example:
+
+::
+
+        file://nsm/rules/detect-sigma/repos/my-custom-rep
 
 Update Frequency
 ----------------
