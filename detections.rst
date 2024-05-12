@@ -9,8 +9,8 @@ Starting in Security Onion 2.4.70, :ref:`soc` includes our Detections interface 
 - :ref:`sigma` rules that get loaded into :ref:`elastalert`
 - :ref:`yara` rules that get loaded into :ref:`strelka`
 
-.. image:: images/65_detections.png
-  :target: _images/65_detections.png
+.. image:: images/59_detections.png
+  :target: _images/59_detections.png
 
 .. note::
 

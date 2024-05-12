@@ -15,12 +15,6 @@ so-import-pcap
 
   You can run this command manually, but for most use cases it's easier to upload a pcap via :ref:`grid` and it will automatically run ``so-import-pcap`` for you.
 
-Screenshot
-----------
-
-.. image:: images/36_so-import-pcap.png
-  :target: _images/36_so-import-pcap.png
-
 Configuration
 -------------
       

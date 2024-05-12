@@ -21,8 +21,8 @@ SOC
 
 If you need to add a new account to :ref:`soc`, navigate to the :ref:`administration` interface, and then click ``Users``.
 
-.. image:: images/59_users.png
-  :target: _images/59_users.png
+.. image:: images/81_users.png
+  :target: _images/81_users.png
 
 Click the ``+`` button, fill out the necessary information, and then click the ``ADD`` button.
 

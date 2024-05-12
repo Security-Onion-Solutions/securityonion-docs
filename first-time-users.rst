@@ -168,60 +168,60 @@ Once the import is complete, you can review alerts on the :ref:`alerts` page:
 
 Review other logs on the :ref:`dashboards` page:
 
-.. image:: images/51_dashboards.png
-  :target: _images/51_dashboards.png
+.. image:: images/53_dashboards.png
+  :target: _images/53_dashboards.png
 
 If you find something interesting on the :ref:`alerts` or :ref:`dashboards` pages, you may want to use the Correlate or Hunt actions to find related logs on the :ref:`hunt` page:
 
-.. image:: images/52_hunt.png
-  :target: _images/52_hunt.png
+.. image:: images/56_hunt.png
+  :target: _images/56_hunt.png
 
 If you find interesting network traffic, you can pivot to full packet capture via the :ref:`pcap` action:
 
-.. image:: images/53_pcap.png
-  :target: _images/53_pcap.png
+.. image:: images/62_pcap.png
+  :target: _images/62_pcap.png
 
 You can change the view to ASCII transcript for a more human readable view of the traffic:
 
-.. image:: images/54_pcap_details.png
-  :target: _images/54_pcap_details.png
+.. image:: images/65_pcap_details.png
+  :target: _images/65_pcap_details.png
 
 If you find an interesting artifact, you can send it to :ref:`cyberchef`:
 
-.. image:: images/55_cyberchef.png
-  :target: _images/55_cyberchef.png
+.. image:: images/68_cyberchef.png
+  :target: _images/68_cyberchef.png
 
 If you need to refer back to previous PCAP jobs, you can find them on the :ref:`pcap` page:
 
-.. image:: images/56_jobs.png
-  :target: _images/56_jobs.png
+.. image:: images/72_jobs.png
+  :target: _images/72_jobs.png
 
 IMPORT installations do not support remote agents, but if you were running a production installation you could download the Elastic Agent installer from :ref:`downloads`:
 
-.. image:: images/58_downloads.png
-  :target: _images/58_downloads.png
+.. image:: images/78_downloads.png
+  :target: _images/78_downloads.png
 
 The :ref:`administration` section allows to you manage user accounts:
 
-.. image:: images/59_users.png
-  :target: _images/59_users.png
+.. image:: images/81_users.png
+  :target: _images/81_users.png
 
 It also allows you to manage grid members:
 
-.. image:: images/60_gridmembers.png
-  :target: _images/60_gridmembers.png
+.. image:: images/84_gridmembers.png
+  :target: _images/84_gridmembers.png
 
 The :ref:`administration` section also allows you to configure various aspects of the system:
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/87_config.png
+  :target: _images/87_config.png
 
 It also allows you to upload a license key for additional enterprise features:
 
-.. image:: images/62_licensekey.png
-  :target: _images/62_licensekey.png
+.. image:: images/91_licensekey.png
+  :target: _images/91_licensekey.png
 
 All this in a minimal VM with only 4GB RAM!
 
-.. image:: images/99_top.png
-  :target: _images/99_top.png
+.. image:: images/39_grid.png
+  :target: _images/39_grid.png

@@ -5,8 +5,8 @@ Dashboards
 
 :ref:`soc` includes a Dashboards interface which includes an entire set of pre-built dashboards for our standard data types.
 
-.. image:: images/51_dashboards.png
-  :target: _images/51_dashboards.png
+.. image:: images/53_dashboards.png
+  :target: _images/53_dashboards.png
 
 .. note::
 
@@ -45,7 +45,7 @@ Dashboards will try to detect your local time zone via your browser. You can man
 Query Bar
 ---------
 
-The easiest way to get started is to click the query drop down box and select one of the pre-defined dashboards. These pre-defined dashboards cover most of the major data types that you would expect to see in a Security Onion deployment: NIDS alerts from :ref:`suricata`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs.
+The easiest way to get started is to click the query drop down box and select one of the pre-defined dashboards. These pre-defined dashboards cover most of the major data types that you would expect to see in a Security Onion deployment: :ref:`nids` alerts from :ref:`suricata`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs.
 
 If you would like to save your own personal queries, you can bookmark them in your browser. If you would like to customize the default queries for all users, please see the :ref:`soc-customization` section.
 

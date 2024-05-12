@@ -16,8 +16,8 @@ Accessing
 
 To access Navigator, log into :ref:`soc` and then click the Navigator hyperlink on the left side.
 
-.. image:: images/64_navigator.png
-  :target: _images/64_navigator.png
+.. image:: images/97_navigator.png
+  :target: _images/97_navigator.png
 
 Configuration
 -------------
