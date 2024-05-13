@@ -161,15 +161,15 @@ While on the :ref:`grid` page, you can import a PCAP or EVTX file using the uplo
 .. image:: images/40_upload.png
   :target: _images/40_upload.png
 
-Once the import is complete, you can review alerts on the :ref:`alerts` page:
+Once the import is complete, the :ref:`grid` page should display a message at the of the page and provide a link to :ref:`dashboards` to view all alerts and logs from the import:
+
+.. image:: images/45_import.png
+  :target: _images/45_import.png
+
+If you want to see just the alerts, you can go to the :ref:`alerts` page although you may need to manually adjust the time range:
 
 .. image:: images/50_alerts.png
   :target: _images/50_alerts.png
-
-Review other logs on the :ref:`dashboards` page:
-
-.. image:: images/53_dashboards.png
-  :target: _images/53_dashboards.png
 
 If you find something interesting on the :ref:`alerts` or :ref:`dashboards` pages, you may want to use the Correlate or Hunt actions to find related logs on the :ref:`hunt` page:
 
