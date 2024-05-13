@@ -96,18 +96,22 @@ Index Lifecycle Management (ILM) manages the following:
 - time-based content tiers
 - time-based index deletion
 
-| You can learn more about ILM at:
-| https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html
-
 Time-based index deletion is based on the ``min_age`` setting within the global policy or the individual policy for the index itself. Please note that size-based deletion via ``so-elasticsearch-indices-delete`` takes priority over time-based deletion, as disk usage may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
 
 ILM settings can be found by navigating to :ref:`administration` --> Configuration --> elasticsearch --> index_settings. 
 
-To edit the global policy that applies to all indices, navigate to global_overrides --> policy --> phases and there you will see the cold, delete, hot, and warm ILM phases.
+To edit the global policy that applies to ALL indices, navigate to global_overrides --> policy --> phases and there you will see the cold, delete, hot, and warm ILM phases.
 
 To edit the policy for an individual index, first click the ``Options`` menu at the top of the page and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to $index --> policy --> phases. There you will see the cold, delete, hot, and warm ILM phases for that particular index.
 
+It's important to note that settings like ``min_age`` are calculated relative to the rollover date (NOT the original creation date of the index). For example, if you have an index that is set to rollover after 30 days and delete ``min_age`` set to 30 then there will be 30 days from index creation to rollover and then an additional 30 days before deletion.
+
 When modifying ILM settings, note that some settings will only take effect after a new index is created.
+
+.. note::
+
+        | You can learn more about ILM at:
+        | https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html
 
 Parsing
 -------
@@ -118,8 +122,8 @@ Elasticsearch receives unparsed logs from :ref:`logstash` or :ref:`elastic-agent
 
 .. note::
 
-    | For more about Elasticsearch ingest parsing, please see:
-    | https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest.html
+        | You can learn more about Elasticsearch ingest parsing at:
+        | https://www.elastic.co/guide/en/elasticsearch/reference/current/ingest.html
 
 Cluster
 -------
