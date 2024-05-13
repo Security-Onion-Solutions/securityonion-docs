@@ -29,7 +29,7 @@ What's the recommended procedure for installing Security Onion?
 Please see the :ref:`installation` section.
 
 What's the recommended procedure for configuring Security Onion?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the :ref:`configuration` section.
 
