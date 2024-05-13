@@ -48,7 +48,7 @@ If deploying the Elastic Agent to macOS, you will need to take a few steps. Firs
     chmod +x ./so-elastic-agent_darwin_amd64
     sudo ./so-elastic-agent_darwin_amd64
 
-After the installer has completed, review the Elastic docs for your version of macOS and approve the required settings (system extension and full drive access) as shown at https://www.elastic.co/guide/en/security/8.9/elastic-endpoint-deploy-reqs.html.
+After the installer has completed, review the Elastic docs for your version of macOS and approve the required settings (system extension and full drive access) as shown at https://www.elastic.co/guide/en/security/current/elastic-endpoint-deploy-reqs.html.
 
 Logs
 ----

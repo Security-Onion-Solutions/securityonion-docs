@@ -25,7 +25,8 @@ RSS
 Disk/Memory
 -----------
 
-If you have plenty of RAM, disable swap altogether.
+| If you have plenty of RAM, disable swap altogether:
+| https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration-memory.html#disable-swap-files
 
 | Use ``hdparm`` to gather drive statistics and alter settings, as described here:
 | https://www.linux-magazine.com/Online/Features/Tune-Your-Hard-Disk-with-hdparm
