@@ -28,6 +28,16 @@ What's the recommended procedure for installing Security Onion?
 
 Please see the :ref:`installation` section.
 
+What's the recommended procedure for configuring Security Onion?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please see the :ref:`configuration` section.
+
+What if I receive a ``The IP being routed by Linux is not the IP address assigned to the management interface`` error message?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please see the warning about this in the :ref:`configuration` section.
+
 What languages are supported?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,6 +62,7 @@ Can I run Security Onion on Raspberry Pi or some other non-x86 box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 No, we only support x86-64 (standard Intel/AMD 64-bit architectures). Please see the :ref:`hardware` section.
+
 
 `back to top <#top>`__
 

@@ -16,7 +16,7 @@ Security Onion is designed for many different use cases. Here are just a few exa
 
 .. warning::
 
-  If the network configuration portion displays a message like ``The IP being routed by Linux is not the IP address assigned to the management interface``, then you have multiple network interfaces with IP addresses. In most cases, you should only have an IP address on the management interface itself. Sometimes this is caused by a sniffing interface connected to a normal switch port (not a TAP/span port) and acquiring an IP address via DHCP. Double-check your NIC, wiring, and configuration.
+  If the network configuration portion displays a message like ``The IP being routed by Linux is not the IP address assigned to the management interface``, then you have multiple network interfaces with IP addresses. In most cases, sniffing interfaces should not have IP addresses and there should only be an IP address on the management interface itself. Sometimes this is caused by a sniffing interface connected to a normal switch port (not a TAP/span port) and acquiring an IP address via DHCP. Double-check your network interfaces, wiring, and configuration.
 
 Import
 ------
