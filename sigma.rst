@@ -31,19 +31,33 @@ To tune the detection:
 
 	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` detection as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
 
+Sigma Configuration
+-------------------
+
+- Navigate to :ref:`administration` --> Configuration.
+- At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+- Navigate to soc --> config --> server --> modules --> elastalertengine.
+
+Once you've reached this location, here are some common settings.
+
+Sigma Update Frequency
+~~~~~~~~~~~~~~~~~~~~~~
+
+By default, Security Onion checks for new Sigma rules every 24 hours. You can change this value at elastalertengine --> communityRulesImportFrequencySeconds.
+
 Sigma Packages
---------------
+~~~~~~~~~~~~~~
 
 You can choose from different Sigma packages:
 
 https://github.com/SigmaHQ/sigma/blob/master/Releases.md
 
-You can modify this setting via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> elastalertengine --> sigmaRulePackages.
+You can modify this setting via elastalertengine --> sigmaRulePackages.
 
-Custom Repositories
--------------------
+Custom Sigma Repositories
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can configure Security Onion to pull Sigma rules from custom git repos via :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> elastalertengine --> rulesRepos --> default. 
+You can configure Security Onion to pull Sigma rules from custom git repos via elastalertengine --> rulesRepos --> default. 
 
 Repos can be accessed via https or from the local filesystem. For example:
 
@@ -51,11 +65,3 @@ Repos can be accessed via https or from the local filesystem. For example:
 
         file://nsm/rules/detect-sigma/repos/my-custom-rep
 
-Update Frequency
-----------------
-
-By default, Security Onion checks for new Sigma rules every 24 hours. You can change this value as follows:
-
-- Navigate to :ref:`administration` --> Configuration.
-- At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
-- Navigate to soc --> config --> server --> modules --> elastalertengine --> communityRulesImportFrequencySeconds.
