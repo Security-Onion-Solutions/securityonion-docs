@@ -17,6 +17,7 @@ Security Onion Documentation
    soc
    desktop
    network
+   additional-network
    host
    rules
    logs
