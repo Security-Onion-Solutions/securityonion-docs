@@ -13,7 +13,7 @@ First, add the ``NetFlow Records`` integration (https://docs.elastic.co/en/integ
 #. The Elastic Integration page will show an overview of the NetFlow Integration. Review all information on the page and then click the ``Add NetFlow Records`` button.
 #. On the ``Add NetFlow Records integration`` screen, go to the ``UDP host to listen on`` field and change ``localhost`` to ``0.0.0.0``. Verify the ``UDP port to listen on`` field matches what your NetFlow exporter will be sending to. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
 
-Next, allow the traffic from the NetFlow exporter to the NetFlow listener port. These instructions assume that this is the first firewall change you have made and therefore refer to ``customhostgroup0`` and ``customportgroup0``. If those have already been used, select the next available hostgroup and portgroup.
+Next, allow the traffic from the NetFlow exporter through the firewall to the NetFlow listener port. These instructions assume that this is the first firewall change you have made and therefore refer to ``customhostgroup0`` and ``customportgroup0``. If those have already been used, select the next available hostgroup and portgroup.
 
 #. Navigate to :ref:`administration` --> Configuration.
 #. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
