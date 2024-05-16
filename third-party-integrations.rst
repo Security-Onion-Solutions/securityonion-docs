@@ -29,7 +29,7 @@ To add an integration to an existing policy:
 
         If the integration is designed to listen on a port to receive data, it will most likely default to listening on ``localhost`` only. Depending on how you are sending data to the integration, you may need to change that to ``0.0.0.0`` so that it can receive data from other hosts.
 
-For an example of this process, please see the Elastic Integration for pfSense in the :ref:`pfsense` section.
+For examples of this process, please see the :ref:`netflow` and :ref:`pfsense` sections.
 
 Adding a Custom Integration
 ---------------------------
