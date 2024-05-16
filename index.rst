@@ -19,6 +19,7 @@ Security Onion Documentation
    network
    additional-network
    host
+   third-party-integrations
    rules
    logs
    updating
