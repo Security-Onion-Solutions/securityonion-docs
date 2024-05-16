@@ -21,7 +21,7 @@ Options
 
 Starting at the top of the main Detections page, the Options menu allows you to synchronize a particular detection engine such as :ref:`suricata`, :ref:`strelka`, or :ref:`elastalert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. The differential update is a lightweight sync that will skip the thorough sync and comparison of each individual rule. For example, with Suricata it will compute and compare the hash of the source rule list with the hash of the deployed rules, and only if there's a mismatch will it perform the full sync. A full sync can involve inspecting and comparing individual rules, of which there can be thousands. This more thorough sync can take much longer than the differential sync. Note that each engine has its own unique synchronization process.
 
-To the right of the Options menu is a count of detections that matched the search query. Underneath the count is a status indicator for of the detection engines. The status can show whether a sync is in process, as well as whether the engine has detected errors. 
+To the right of the Options menu is a count of detections that matched the search query. Underneath the count is a status indicator for the detection engines. The status can show whether a sync is in process, as well as whether the engine has detected errors. 
 
 .. image:: images/detections_status.png
   :target: _images/detections_status.png
