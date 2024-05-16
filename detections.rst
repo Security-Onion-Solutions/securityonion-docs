@@ -26,7 +26,6 @@ To the right of the Options menu is a count of detections that matched the searc
 .. image:: images/detections_status.png
   :target: _images/detections_status.png
 
-
 Below is a list of statuses and their meaning.
 
 - *Pending*: The browser is waiting for the server to send an initial status report.
