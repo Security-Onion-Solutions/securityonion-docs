@@ -98,8 +98,8 @@ On the right side of the detection details page, there is a Status field that sh
 Managing Detections
 -------------------
 
-To manage :ref:`nids` rules, please see the :ref:`nids` section.
+To manage :ref:`nids` rules for :ref:`suricata`, please see the :ref:`nids` section.
 
-To manage :ref:`sigma` rules, please see the :ref:`sigma` section.
+To manage :ref:`sigma` rules for :ref:`elastalert`, please see the :ref:`sigma` section.
 
-To manage :ref:`yara` rules, please see the :ref:`yara` section.
+To manage :ref:`yara` rules for :ref:`strelka`, please see the :ref:`yara` section.
