@@ -19,25 +19,26 @@ Starting in Security Onion 2.4.70, :ref:`soc` includes our Detections interface 
 Options
 -------
 
-Starting at the top of the main Detections page, the Options menu allows you to synchronize a particular detection engine such as :ref:`suricata`, :ref:`strelka`, or :ref:`elastalert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. The differential update is a lightweight sync that will skip the thorough sync and comparison of each individual rule. For example, with Suricata it will compute and compare the hash of the source rule list with the hash of the deployed rules, and only if there's a mismatch will it perform the full sync. A full sync can involve inspecting and comparing individual rules, of which there can be thousands. This more thorough sync can take much longer than the differential sync. Note that each engine has its own unique synchronization process.
+Starting at the top of the main Detections page, the Options menu allows you to synchronize a particular detection engine such as :ref:`suricata`, :ref:`strelka`, or :ref:`elastalert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. 
+
+The differential update is a lightweight sync that will skip the thorough sync and comparison of each individual rule. For example, with Suricata it will compute and compare the hash of the source rule list with the hash of the deployed rules, and only if there's a mismatch will it perform the full sync. A full sync can involve inspecting and comparing individual rules, of which there can be thousands. This more thorough sync can take much longer than the differential sync. Note that each engine has its own unique synchronization process.
 
 To the right of the Options menu is a count of detections that matched the search query. Underneath the count is a status indicator for the detection engines. The status can show whether a sync is in process, as well as whether the engine has detected errors. 
 
 .. image:: images/detections_status.png
   :target: _images/detections_status.png
 
-Below is a list of statuses and their meaning.
+Below is a list of statuses and associated explanations.
 
-- *Pending*: The browser is waiting for the server to send an initial status report.
-- *Pending Import*: The import will start once the system stabilizes, usually within twenty minutes.
-- *Importing*: The previous version of Security Onion's rules are being imported into the new Detections system. This can take a an hour or more on some systems.
-- *Import Failed*: A failure occurred during the import process.
-- *Migrating*: Rules will be migrated between Security Onion versions following system upgrades. This can take some time if upgrading from a much older version.
-- *Migration Failure*: A failure occurred during the migration. The migration will stop on the first error and will not attempt to migrate to newer versions until the issue is resolved.
-- *Synchronizing*: A rule synchronization is in progress. This occurs daily, to ensure the Security Onion grid has the latest rules. 
-- *Sync Failed*: A failure occurred during the synchronization. The next sync will retry within a few minutes, in case of a temporary network issue.
-- *Rule Mismatch*: An integrity check process detected a mismatch between the deployed rules and the enabled rules. 
-- *OK*: No known issues with the rule engine.
+- **Pending**: The browser is waiting for the server to send an initial status report.
+- **Import Pending**: The import will start once the system stabilizes, usually within twenty minutes. Imports take place only once, after upgrading to Security Onion 2.4.70+.
+- **Importing**: The previous version of Security Onion's rules are being imported into the new Detections system. This can take a an hour or more on some systems.
+- **Migrating**: Rules will be migrated between Security Onion versions following system upgrades. This can take some time if upgrading from a much older version.
+- **Migration Failed**: A failure occurred during the migration. The migration will stop on the first error and will not attempt to migrate to newer versions until the issue is resolved.
+- **Synchronizing**: A rule synchronization is in progress. This occurs daily, to ensure the Security Onion grid has the latest rules. 
+- **Sync Failed**: A failure occurred during the synchronization procedure. The next sync will retry within a few minutes.
+- **Rule Mismatch**: An integrity check process detected a mismatch between the deployed rules and the enabled rules. The SOC log will note the specific mismatched rules.
+- **OK**: No known issues with the rule engine.
 
 Clicking the status text will navigate to the Hunt page and attempt to find related logs.
 
