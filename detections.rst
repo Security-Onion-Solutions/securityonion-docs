@@ -42,6 +42,9 @@ Below is a list of statuses and associated explanations.
 
 Clicking the status text will navigate to the Hunt page and attempt to find related logs.
 
+The Detections menu option on the left side of the application will show an exclamation mark if there is a recent failure in any of the detection engines. In this situation the web browser tab will also show an exclamation indicator. If no failures are detected, and if any of the detection engines has an import pending or is performing a rule import, synchronization, or migration, then a blue hourglass will appear next to the Detections menu option.
+
+
 Adding Detections
 -----------------
 
