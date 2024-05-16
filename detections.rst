@@ -23,6 +23,9 @@ Starting at the top of the main Detections page, the Options menu allows you to 
 
 The differential update is a lightweight sync that will skip the thorough sync and comparison of each individual rule. For example, with Suricata it will compute and compare the hash of the source rule list with the hash of the deployed rules, and only if there's a mismatch will it perform the full sync. A full sync can involve inspecting and comparing individual rules, of which there can be thousands. This more thorough sync can take much longer than the differential sync. Note that each engine has its own unique synchronization process.
 
+Rule Engine Status
+------------------
+
 To the right of the Options menu is a count of detections that matched the search query. Underneath the count is a status indicator for the detection engines. The status can show whether a sync is in process, as well as whether the engine has detected errors. 
 
 .. image:: images/detections_status.png
