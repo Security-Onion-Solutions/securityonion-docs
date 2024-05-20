@@ -59,6 +59,9 @@ To add a detection, click the blue + button between Options and the query bar. A
 
 Once you've filled out the form, click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle.
 
+.. image:: images/60_detection_create.png
+  :target: _images/60_detection_create.png
+
 Query Bar
 ---------
 
