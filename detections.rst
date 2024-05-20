@@ -9,8 +9,8 @@ Starting in Security Onion 2.4.70, :ref:`soc` includes our Detections interface 
 - :ref:`sigma` rules that get loaded into :ref:`elastalert`
 - :ref:`yara` rules that get loaded into :ref:`strelka`
 
-.. image:: images/59_detections.png
-  :target: _images/59_detections.png
+.. image:: images/57_detections.png
+  :target: _images/57_detections.png
 
 .. note::
 
@@ -103,6 +103,6 @@ To add a detection, click the blue + button between Options and the query bar. A
 
 Once you've filled out the form, click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle.
 
-.. image:: images/60_detection_create.png
-  :target: _images/60_detection_create.png
+.. image:: images/58_detection_create.png
+  :target: _images/58_detection_create.png
 

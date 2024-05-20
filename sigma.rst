@@ -19,6 +19,9 @@ You can manage Sigma rules via :ref:`detections`. There are two main ways to do 
 
 Once you've used one of these methods to reach the detection detail page, you can check the Status field and use the slider to enable or disable the detection.
 
+.. image:: images/60_detection_sigma.png
+  :target: _images/60_detection_sigma.png
+
 To tune the detection:
 
 - click the TUNING tab

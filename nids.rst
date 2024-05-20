@@ -15,6 +15,9 @@ You can manage NIDS rules using :ref:`detections`. There are two main ways to do
 
 Once you've used one of these methods to reach the detection detail page, you can check the Status field and use the slider to enable or disable the detection.
 
+.. image:: images/59_detection_nids.png
+  :target: _images/59_detection_nids.png
+
 To tune the detection:
 
 - click the TUNING tab

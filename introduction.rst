@@ -84,8 +84,8 @@ Security Onion Console (SOC)
 
 Starting in Security Onion 2.4.70, :ref:`soc` includes :ref:`detections` which makes it quick and easy to tune your :ref:`nids`, :ref:`sigma`, and :ref:`yara` rules.
 
-.. image:: images/59_detections.png
-  :target: _images/59_detections.png
+.. image:: images/57_detections.png
+  :target: _images/57_detections.png
 
 CyberChef
 ~~~~~~~~~
