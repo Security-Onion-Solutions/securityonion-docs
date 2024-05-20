@@ -47,21 +47,6 @@ Clicking the status text will navigate to the Hunt page and attempt to find rela
 
 The Detections menu option on the left side of the application will show an exclamation mark if there is a recent failure in any of the detection engines. In this situation the web browser tab will also show an exclamation indicator. If no failures are detected, and if any of the detection engines has an import pending or is performing a rule import, synchronization, or migration, then a blue hourglass will appear next to the Detections menu option.
 
-
-Adding Detections
------------------
-
-To add a detection, click the blue + button between Options and the query bar. A form will appear where you will:
-
-- select the kind of detection you wish to add - :ref:`suricata` (:ref:`nids`), :ref:`elastalert` (:ref:`sigma`), or :ref:`strelka` (:ref:`yara`)
-- specify a license (optional)
-- add the signature
-
-Once you've filled out the form, click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle.
-
-.. image:: images/60_detection_create.png
-  :target: _images/60_detection_create.png
-
 Query Bar
 ---------
 
@@ -106,3 +91,18 @@ To manage :ref:`nids` rules for :ref:`suricata`, please see the :ref:`nids` sect
 To manage :ref:`sigma` rules for :ref:`elastalert`, please see the :ref:`sigma` section.
 
 To manage :ref:`yara` rules for :ref:`strelka`, please see the :ref:`yara` section.
+
+Adding Detections
+-----------------
+
+To add a detection, click the blue + button between Options and the query bar. A form will appear where you will:
+
+- select the kind of detection you wish to add - :ref:`suricata` (:ref:`nids`), :ref:`elastalert` (:ref:`sigma`), or :ref:`strelka` (:ref:`yara`)
+- specify a license (optional)
+- add the signature
+
+Once you've filled out the form, click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle.
+
+.. image:: images/60_detection_create.png
+  :target: _images/60_detection_create.png
+
