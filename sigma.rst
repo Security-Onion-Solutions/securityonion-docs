@@ -28,22 +28,20 @@ To tune the detection:
 - click the blue + button
 - select the type of tuning (Custom Filter)
 - enter your custom filter in the Custom Filter field
-- click the ``CREATE`` button
-- this creates and enables the Override
-
+- click the ``CREATE`` button to create and enable the Override
 
 Custom Filters are Sigma Search Identifiers and will be applied like so: ``"($ORIGINAL_CONDITION) and not 1 of sofilter*"``
 
-For example, suppose that you have an Intrusion Detection Node installed with the HTTP webserver enabled. Your nighly vulnerablity scan is connecting to it and generating an alert from the `Security Onion IDH - HTTP Access` Detection. To filter out connection attempts from this scanner, you would add the following Custom Filter to this Detection:
+For example, suppose that you have an :ref:`idh` node installed with the HTTP webserver enabled. Your nightly vulnerablity scan is connecting to it and generating an alert from the ``Security Onion IDH - HTTP Access`` detection. To filter out connection attempts from this scanner, you would add the following Custom Filter to this detection:
 
-```
-sofilter:
-  src_ip|cidr: 192.168.55.45/32
-```
+::
 
-Once you save this filter, it is enabled by default for this Detection. Clicking on the "Detection Source" tab and then on "Convert" will show you what the new EQL query looks like, which should include a filter for the IP.
+        sofilter:
+          src_ip|cidr: 192.168.55.45/32
 
-Refer to the Sigma documentation for further information on Sigma rule syntax: https://sigmahq.io/docs/basics/rules.html#detection
+Once you save this filter, it is enabled by default for this detection. Clicking on the ``Detection Source`` tab and then on ``Convert`` will show you what the new EQL query looks like, which should include a filter for the IP address.
+
+For more information on Sigma rule syntax, please see the Sigma documentation at https://sigmahq.io/docs/basics/rules.html#detection.
 
 Sigma Configuration
 -------------------
