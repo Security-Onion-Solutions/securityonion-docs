@@ -5,9 +5,9 @@ Sigma
 
 Sigma rules are loaded into :ref:`elastalert` to monitor incoming logs for suspicious or noteworthy activity. Active sigma rules generate alerts that can then be found in :ref:`alerts`.
 
-From https://github.com/Neo23x0/sigma:
+From https://github.com/SigmaHQ/sigma:
 
-    Sigma is a generic and open signature format that allows you to describe relevant log events in a straightforward manner. The rule format is very flexible, easy to write and applicable to any type of log file. The main purpose of this project is to provide a structured form in which researchers or analysts can describe their once developed detection methods and make them shareable with others.
+    Sigma is a generic and open signature format that allows you to describe relevant log events in a straightforward manner. The rule format is very flexible, easy to write and applicable to any type of log file. The main purpose of this project is to provide a structured form in which researchers or analysts can describe their once developed detection methods and make them shareable with others. Sigma is for log files what Snort is for network traffic and YARA is for files.
 
 Managing Sigma Rules
 --------------------
@@ -29,10 +29,6 @@ To tune the detection:
 - select the type of tuning (Custom Filter)
 - enter your custom filter in the Custom Filter field
 - click the ``CREATE`` button
-
-.. warning::
-
-	Performance testing is still ongoing. We recommend avoiding the ``Malicious Nishang PowerShell Commandlets`` detection as it can cause serious performance problems. You may also want to avoid others with a status of ``experimental``.
 
 Sigma Configuration
 -------------------
@@ -66,5 +62,5 @@ Repos can be accessed via https or from the local filesystem. For example:
 
 ::
 
-        file://nsm/rules/detect-sigma/repos/my-custom-rep
+        file:///nsm/rules/detect-sigma/repos/my-custom-rep
 

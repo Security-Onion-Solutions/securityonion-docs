@@ -42,5 +42,5 @@ Repos can be accessed via https or from the local filesystem. For example:
 
 ::
 
-        file://nsm/rules/detect-yara/repos/my-custom-rep
+        file:///nsm/rules/detect-yara/repos/my-custom-rep
 
