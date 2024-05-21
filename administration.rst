@@ -10,19 +10,19 @@ Users
 
 The Users page shows all user accounts that have been created for the grid.
 
-.. image:: images/users.png
-  :target: _images/users.png
+.. image:: images/81_users.png
+  :target: _images/81_users.png
 
 The Note column allows administrators to include a short note on a user's account.
 
 The Role column lists roles assigned to the user as defined in the :ref:`rbac` section.
 
-The Status column will show different icons depending on the status of the account. In the screenshot above:
+The Status column will show different icons depending on the status of the account:
 
-- the first account is enabled and has TOTP :ref:`mfa` enabled
-- the second account is enabled and has changed their password but does not have :ref:`mfa` enabled
-- the third account is enabled but has not yet changed their password and does not have :ref:`mfa` enabled
-- the fourth account is locked
+- orange exclamation point - account enabled but has not yet changed their password and does not have :ref:`mfa` enabled
+- blue icon with shield - account enabled with :ref:`mfa` enabled
+- no icon - account enabled and has changed their password but does not have :ref:`mfa` enabled
+- grey user with slash - account locked
   
 Hovering over the icon in the Status column will show you these details as well.
 

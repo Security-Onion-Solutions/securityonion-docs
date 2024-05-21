@@ -108,9 +108,6 @@ Statistics
 
 The bottom left corner of the page shows statistics about the current query including the speed of the backend data fetch and the total round trip time.
 
-.. image:: images/dashboards-statistics.png
-  :target: _images/dashboards-statistics.png
-
 Context Menu
 ------------
 

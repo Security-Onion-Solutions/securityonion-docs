@@ -14,10 +14,7 @@ SOC auth is handled by Kratos and you can read more about that at https://github
 
         sudo zgrep "Identity authenticated successfully and was issued an Ory Kratos Session Cookie" /opt/so/log/kratos/*
 
-Those logs should be ingested into :ref:`elasticsearch` and available for searching in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Both :ref:`dashboards` and :ref:`hunt` have pre-defined queries for SOC auth logs.
-
-.. image:: images/soc-logins.png
-  :target: _images/soc-logins.png
+Those logs are ingested into :ref:`elasticsearch` and available for searching in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Both :ref:`dashboards` and :ref:`hunt` have pre-defined queries for SOC auth logs.
 
 identity_id
 ~~~~~~~~~~~
