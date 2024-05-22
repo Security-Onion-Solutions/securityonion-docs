@@ -1,86 +1,44 @@
 .. _elastalert:
 
-ElastAlert
-==========
+ElastAlert 2
+============
 
 From https://elastalert2.readthedocs.io/en/latest/elastalert.html#overview:
 
-    ElastAlert is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.
+    ElastAlert 2 is a simple framework for alerting on anomalies, spikes, or other patterns of interest from data in Elasticsearch.
 
 ElastAlert queries :ref:`elasticsearch` and provides an alerting mechanism with multiple output types, such as Slack, Email, JIRA, OpsGenie, and many more.
 
-Configuration
--------------
+Sigma Rules
+-----------
 
-You can modify ElastAlert configuration by going to :ref:`administration` --> Configuration --> elastalert.
+The Detections module will generate ElastAlert 2 compatible rules automatically, for all :ref:`sigma` detections. There is no need to manually modify the generated rules on disk. Further, any modifications will be overwritten during the next :ref:`sigma` rule synchronization.
 
-.. image:: images/config-item-elastalert.png
-  :target: _images/config-item-elastalert.png
+Adjusting a :ref:`sigma` rule should always be done via the :ref:`detections` screen.
 
-ElastAlert Rules
-----------------
+See the :ref:`notifications` section for information on how to enable outbound notifications via the Detections module.
 
-ElastAlert uses :ref:`sigma` rules and you can configure these rules via :ref:`detections`.
+Custom Rules
+------------
 
-ElastAlert rules are stored in ``/opt/so/rules/elastalert/``.
+Custom ElastAlert 2 rules, which are not associated to the Detections module, can be added to the Security Onion manager node, inside a custom subdirectory under the `/opt/so/rules/elastalert/rules` directory. For example, you can create a subdirectory called `/opt/so/rules/elastalert/rules/custom` and place custom rules within that directory. 
 
-By default, ElastAlert rules are configured with an output type of ``debug``, which simply outputs to a log file found in ``/opt/so/log/elastalert/``.
+Refer to the ElastAlert 2 documention, linked above, for detailed information on how to write custom rules. Be aware that writing rules requires an in-depth understanding of Elasticsearch document records, their data structure, and other related concepts.
 
-ElastAlert logs to :ref:`elasticsearch` indices. You can search those indices in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically search the ``elastalert`` indices by default so if you want to use :ref:`dashboards` or :ref:`hunt` to search ElastAlert logs, then you'll need to adjust the appropriate configuration setting. Find it in the Administration --> Configuration screen by filtering for ``elastic.index`` and selecting Options (at the top) and toggle on "Show all configurable settings". Add ``*:elastalert*`` to the ``index`` setting. The new setting value should resemble the following:
+.. note::
+
+    Do not modify or add rules to the `/opt/so/rules/elastalert/rules` directory itself, as those rules are overwritten by the Detections module.
+
+Diagnostic Logging
+------------------
+
+Elastalert diagnostic logs are in ``/opt/so/log/elastalert/``. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the container:
+
+ElastAlert 2 stores rule status information, such as number of hits, times each rule last ran, etc to :ref:`elasticsearch` indices. This data can helpful in assisting with troubleshooting custom rules. Searching in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically include the ``elastalert`` indices by default. To include them adjust the appropriate configuration setting. Find it in the Administration --> Configuration screen by filtering for ``elastic.index`` and selecting Options (at the top) and toggle on "Show all configurable settings". Add ``*:elastalert*`` to the ``index`` setting. The new setting value should resemble the following:
 
 ::
 
     *:so-*,*:endgame-*,*:logs-*,*:elastalert*
-
-Slack
-~~~~~
-
-To have ElastAlert send alerts to something like Slack, we can simply change the alert type and details for a rule like so:
-
-::
-
-    alert:
-    - "slack":
-        slack_webhook_url: "https://hooks.slack.com/services/YOUR_WEBHOOK_URI"
-
-Email - Internal
-~~~~~~~~~~~~~~~~
-
-To have ElastAlert send to email, we could do something like the following:
-
-::
-
-    alert:
-    - "email"
-    email:
-    - "youremail@yourcompany.com"
-    smtp_host: "your_company_smtp_server"
-    smtp_port: 25
-    from_addr: "elastalert@yourcompany.com"
-
-Email - External
-~~~~~~~~~~~~~~~~
-
-If we need to use an external email provider like Gmail, we can add something like the following:
-
-::
-
-    alert:
-    - "email"
-    email:
-    - "youremail@gmail.com"
-    smtp_host: "smtp.gmail.com"
-    smtp_port: 465
-    smtp_ssl: true
-    from_addr: "youremail@gmail.com"
-    smtp_auth_file: '/opt/elastalert/rules/smtp_auth_file.txt'
-
-Then create a new file called ``/opt/so/rules/elastalert/smtp_auth_file.txt`` and add the following:
-
-::
-
-    user: youremail@gmail.com
-    password: yourpassword   
 
 so-elastalert-create
 ~~~~~~~~~~~~~~~~~~~~
@@ -96,14 +54,10 @@ so-elastalert-test
 
     ``so-elastalert-test`` does not yet include all options available to ``elastalert-test-rule``.
 
-Defaults
-~~~~~~~~
+Performance
+~~~~~~~~~~~
 
-With Security Onion's example rules, Elastalert is configured by default to only count the number of hits for a particular match, and will not return the actual log entry for which an alert was generated.
-
-This is governed by the use of ``use_count_query: true`` in each rule file.
-
-If you would like to view the data for the match, you can simply remark this line in the rule file(s). This may impact performance negatively, so testing the change in a single file at a time may be the best approach.
+For better performance, avoid writing rules that return large numbers of records. Instead, use the ``use_count_query: true`` in each rule file. This will only return counts of matching records and not the records themselves.
 
 Timeframe
 ~~~~~~~~~
@@ -120,14 +74,14 @@ For queries that span greater than a minute back in time, you may want to add th
 | https://elastalert2.readthedocs.io/en/latest/ruletypes.html#buffer-time
 | https://github.com/Yelp/elastalert/issues/805
 
-Diagnostic Logging
-------------------
 
-Elastalert diagnostic logs are in ``/opt/so/log/elastalert/``. Depending on what you’re looking for, you may also need to look at the :ref:`docker` logs for the container:
+Configuration
+-------------
 
-::
+You can modify ElastAlert 2 configuration by going to :ref:`administration` --> Configuration --> elastalert.
 
-	sudo docker logs so-elastalert
+.. image:: images/config-item-elastalert.png
+  :target: _images/config-item-elastalert.png
 
 More Information
 ----------------
