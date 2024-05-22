@@ -14,8 +14,8 @@ Managing Existing YARA Rules
 
 You can enable or disable existing YARA rules using :ref:`detections`. From the main :ref:`detections` interface, search for the desired detection and click the binoculars icon. You can then use the Status slider in the upper-right corner to enable or disable the detection.
 
-.. image:: images/61_detection_yara.png
-  :target: _images/61_detection_yara.png
+.. image:: images/60_detection_yara.png
+  :target: _images/60_detection_yara.png
 
 Adding New YARA Rules
 ---------------------

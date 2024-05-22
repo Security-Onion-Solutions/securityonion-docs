@@ -31,7 +31,7 @@ Notice there are special settings for Jira and SMTP notifications. These are uni
 
 The files subtree includes a list of several file settings, which allows for populating the contents of certain files that the alerters can optionally utilize. Most alerters use the files for specifying a custom Certificate Authority, so that :ref:`elastalert` can securely and confidently connect to remote servers that may be using custom SSL/TLS certificates. Again, Security Onion's backend process will handle generating these files from the supplied configuration data provided in the user interface.
 
-Next, the **Alerter Parameter** setting is used to customize each alerter's own parameters. As :ref:`elastalert` already provides detailed documentation on the required parameters for each alerter, this documentation will not cover the same information, but instead will focus on two popular alerters: Slack and SMTP.
+Next, the **Alerter Parameters** setting is used to customize each alerter's own parameters. As :ref:`elastalert` already provides detailed documentation on the required parameters for each alerter, this documentation will not cover the same information, but instead will focus on two popular alerters: Slack and SMTP.
 
 .. note::
 
@@ -66,12 +66,12 @@ Once the alerter parameters are configured, as described above, the next step is
 
 Navigate to the :ref:`administration` -> Configuration screen. Next, locate the ``soc -> config -> server -> modules -> elastalertengine`` settings.
 
-In the **Additional Alerters** configuration setting, add the name of each alerter that should be activated, one alerter name per line. For example, to enable both Slack and Email (SMTP), the field would look like the following:
+In the **Additional Alerters** configuration setting, add the name of each alerter that should be activated, one alerter name per line. 
 
-.. image:: images/notifications_detections.png
-  :target: _images/notifications_detections.png
+.. image:: images/config-item-soc-additionalAlerters.png
+  :target: _images/config-item-soc-additionalAlerters.png
 
-Important! After activating (or removing) an alerter from this setting, the :ref:`elastalert` engine must be fully updated. This can be done via the :ref:`detections` screen, under the Options dropwdown.
+Important! After activating (or removing) an alerter from this setting, the :ref:`elastalert` engine must be fully updated. This can be done via the :ref:`detections` screen, under the Options dropdown.
 
-.. image:: images/notifications_full_update.png
-  :target: _images/notifications_full_update.png
+.. image:: images/58_detections_options.png
+  :target: _images/58_detections_options.png

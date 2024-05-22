@@ -40,14 +40,19 @@ The Detections menu option on the left side of the application will show an excl
 Options
 -------
 
-To the left of the status area, the Options menu allows you to synchronize a particular detection engine such as :ref:`suricata`, :ref:`strelka`, or :ref:`elastalert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. 
+.. image:: images/58_detections_options.png
+  :target: _images/58_detections_options.png
 
-The differential update is a lightweight sync that will skip the thorough sync and comparison of each individual rule. For example, with :ref:`suricata` it will compute and compare the hash of the source rule list with the hash of the deployed rules, and only if there's a mismatch will it perform the full sync. A full sync can involve inspecting and comparing individual rules, of which there can be thousands. This more thorough sync can take much longer than the differential sync. Note that each engine has its own unique synchronization process.
+The Options menu allows you to synchronize a particular detection engine such as :ref:`suricata`, :ref:`strelka`, or :ref:`elastalert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. 
+
+The differential update is a lightweight sync that will skip the thorough sync and comparison of each individual rule. For example, with :ref:`suricata` it will compute and compare the hash of the source rule list with the hash of the deployed rules, and only if there's a mismatch will it perform the full sync. 
+
+A full sync can involve inspecting and comparing individual rules, of which there can be thousands. This more thorough sync can take much longer than the differential sync. Note that each engine has its own unique synchronization process.
 
 Query Bar
 ---------
 
-The query bar defaults to All Detections. Clicking the drop-down box reveals other options such as ``Custom Detections``, ``All Detections - Enabled``, and ``All Detections - Disabled``.
+The query bar defaults to ``All Detections``. Clicking the drop-down box reveals other options such as ``Custom Detections``, ``All Detections - Enabled``, and ``All Detections - Disabled``.
 
 Under the query bar, you’ll notice colored bubbles that represent the individual components of the query. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
@@ -70,8 +75,8 @@ The remainder of the main Detections page is a data table that shows a high leve
 Detection Details
 -----------------
 
-.. image:: images/59_detection_nids.png
-  :target: _images/59_detection_nids.png
+.. image:: images/60_detection_nids.png
+  :target: _images/60_detection_nids.png
 
 The detection details page includes several tabs:
 
