@@ -9,13 +9,26 @@ From https://virustotal.github.io/yara/:
 
     YARA is a tool aimed at (but not limited to) helping malware researchers to identify and classify malware samples. With YARA you can create descriptions of malware families (or whatever you want to describe) based on textual or binary patterns. Each description, a.k.a rule, consists of a set of strings and a boolean expression which determine its logic.
 
-Managing YARA Rules
--------------------
+Managing Existing YARA Rules
+----------------------------
 
-You can enable or disable YARA rules using :ref:`detections`. From the main :ref:`detections` interface, search for the desired detection and click the binoculars icon. You can then use the Status slider to enable or disable the detection.
+You can enable or disable existing YARA rules using :ref:`detections`. From the main :ref:`detections` interface, search for the desired detection and click the binoculars icon. You can then use the Status slider in the upper-right corner to enable or disable the detection.
 
 .. image:: images/61_detection_yara.png
   :target: _images/61_detection_yara.png
+
+Adding New YARA Rules
+---------------------
+
+To add a new YARA rule, go to the main :ref:`detections` page and click the blue + button between Options and the query bar. A form will appear where you will:
+
+- click the Language drop-down and select ``YARA``
+- optionally specify a license
+- add the signature
+- click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle
+
+.. image:: images/58_detection_create.png
+  :target: _images/58_detection_create.png
 
 YARA Rules Options
 ------------------

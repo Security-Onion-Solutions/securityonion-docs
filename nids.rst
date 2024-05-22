@@ -5,15 +5,15 @@ NIDS
 
 NIDS (Network Intrusion Detection System) rules are loaded into :ref:`suricata` to monitor network traffic for suspicious or noteworthy activity. Active NIDS rules generate alerts that can be found in :ref:`alerts`.
 
-Managing NIDS Rules
--------------------
+Managing Existing NIDS Rules
+----------------------------
 
-You can manage NIDS rules using :ref:`detections`. There are two main ways to do so:
+You can manage existing NIDS rules using :ref:`detections`. There are two main ways to do so:
 
 - From the main :ref:`detections` interface, you can search for the desired detection and click the binoculars icon.
 - From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
 
-Once you've used one of these methods to reach the detection detail page, you can check the Status field and use the slider to enable or disable the detection.
+Once you've used one of these methods to reach the detection detail page, you can check the Status field in the upper-right corner and use the slider to enable or disable the detection.
 
 .. image:: images/59_detection_nids.png
   :target: _images/59_detection_nids.png
@@ -25,6 +25,19 @@ To tune the detection:
 - select the type of tuning (Modify, Suppress, or Threshold)
 - fill out the requested values
 - click the ``CREATE`` button
+
+Adding New NIDS Rules
+---------------------
+
+To add a new NIDS rule, go to the main :ref:`detections` page and click the blue + button between Options and the query bar. A form will appear where you will:
+
+- click the Language drop-down and select ``Suricata``
+- optionally specify a license
+- add the signature
+- click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle
+
+.. image:: images/58_detection_create.png
+  :target: _images/58_detection_create.png
 
 Update Frequency
 ----------------

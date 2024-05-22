@@ -91,17 +91,3 @@ To manage :ref:`nids` rules for :ref:`suricata`, please see the :ref:`nids` sect
 To manage :ref:`sigma` rules for :ref:`elastalert`, please see the :ref:`sigma` section.
 
 To manage :ref:`yara` rules for :ref:`strelka`, please see the :ref:`yara` section.
-
-Adding Detections
------------------
-
-To add a detection, click the blue + button between Options and the query bar. A form will appear where you will:
-
-- select the language of the detection you wish to add - :ref:`suricata` (:ref:`nids`), :ref:`elastalert` (:ref:`sigma`), or :ref:`strelka` (:ref:`yara`)
-- specify a license (optional)
-- add the signature
-- click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle
-
-.. image:: images/58_detection_create.png
-  :target: _images/58_detection_create.png
-

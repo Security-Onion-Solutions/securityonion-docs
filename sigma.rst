@@ -9,15 +9,15 @@ From https://github.com/SigmaHQ/sigma:
 
     Sigma is a generic and open signature format that allows you to describe relevant log events in a straightforward manner. The rule format is very flexible, easy to write and applicable to any type of log file. The main purpose of this project is to provide a structured form in which researchers or analysts can describe their once developed detection methods and make them shareable with others. Sigma is for log files what Snort is for network traffic and YARA is for files.
 
-Managing Sigma Rules
---------------------
+Managing Existing Sigma Rules
+-----------------------------
 
-You can manage Sigma rules via :ref:`detections`. There are two main ways to do so:
+You can manage existing Sigma rules via :ref:`detections`. There are two main ways to do so:
 
 - From the main :ref:`detections` interface, you can search for the desired detection and click the binoculars icon.
 - From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
 
-Once you've used one of these methods to reach the detection detail page, you can check the Status field and use the slider to enable or disable the detection.
+Once you've used one of these methods to reach the detection detail page, you can check the Status field in the upper-right corner and use the slider to enable or disable the detection.
 
 .. image:: images/60_detection_sigma.png
   :target: _images/60_detection_sigma.png
@@ -42,6 +42,19 @@ For example, suppose that you have an :ref:`idh` node installed with the HTTP we
 Once you save this filter, it is enabled by default for this detection. Clicking on the ``Detection Source`` tab and then on ``Convert`` will show you what the new EQL query looks like, which should include a filter for the IP address.
 
 For more information on Sigma rule syntax, please see the Sigma documentation at https://sigmahq.io/docs/basics/rules.html#detection.
+
+Adding New Sigma Rules
+----------------------
+
+To add a new Sigma rule, go to the main :ref:`detections` page and click the blue + button between Options and the query bar. A form will appear where you will:
+
+- click the Language drop-down and select ``Sigma``
+- optionally specify a license
+- add the signature
+- click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle
+
+.. image:: images/58_detection_create.png
+  :target: _images/58_detection_create.png
 
 Sigma Configuration
 -------------------
