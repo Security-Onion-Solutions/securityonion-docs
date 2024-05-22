@@ -57,18 +57,12 @@ By default, Dashboards searches the last 24 hours. If you want to search a diffe
 Basic Metrics
 -------------
 
-The first section of output contains a Most Occurrences visualization, a timeline visualization, and a Fewest Occurrences visualization. Bar charts are clickable, so you can click a value to update your search criteria. Aggregation defaults to 10 values, so Most Occurrences is the Top 10 and Fewest Occurrences is the Bottom 10 (long tail). The number of aggregation values is controlled by the Fetch Limit setting in the Group Metrics section.
-
-.. image:: images/dashboards-basic-metrics.png
-  :target: _images/dashboards-basic-metrics.png
+The Basic Metrics section of the page contains a Most Occurrences visualization, a timeline visualization, and a Fewest Occurrences visualization. Bar charts are clickable, so you can click a value to update your search criteria. Aggregation defaults to 10 values, so Most Occurrences is the Top 10 and Fewest Occurrences is the Bottom 10 (long tail). The number of aggregation values is controlled by the Fetch Limit setting in the Group Metrics section.
 
 Group Metrics
 -------------
 
-The middle section of output is the Group Metrics section. It consists of one or more data tables or visualizations that allow you to stack (aggregate) arbitrary fields.
-
-.. image:: images/dashboards-group-metrics.png
-  :target: _images/dashboards-group-metrics.png
+The Group Metrics section of the page consists of one or more data tables or visualizations that allow you to stack (aggregate) arbitrary fields.
 
 Group metrics are controlled by the ``groupby`` parameter in the search bar. You can read more about the ``groupby`` parameter in the OQL section below.
 
@@ -78,13 +72,7 @@ Clicking a value in the Group Metrics table brings up a context menu of actions 
 
 You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see an additional button that will convert the data table to a sankey diagram. There is a Maximize View button that will maximize the table to fill the pane (you can press the Esc key to return to normal view). Each of the groupby field headers has a trash button that will remove the field from the table.
 
-.. image:: images/dashboards-group-metrics-table.png
-  :target: _images/dashboards-group-metrics-table.png
-
 Once you have switched to a chart, you will see different buttons at the top of the chart. You can use the Show Table button to return to the data table, the Toggle Legend button to toggle the legend, and the Remove button to remove the chart altogether. There is a Maximize View button that will maximize the chart to fill the pane (you can press the Esc key to return to normal view).
-
-.. image:: images/dashboards-group-metrics-sankey.png
-  :target: _images/dashboards-group-metrics-sankey.png
 
 Events
 ------
@@ -95,13 +83,7 @@ Clicking a value in the Events table brings up a context menu of actions for tha
 
 The default Fetch Limit for the Events table is ``100``. If you need to see more than 100 events, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: images/soc-events-table.png
-  :target: _images/soc-events-table.png
-
 When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there are two icons to the left. The Groupby icon, the left most icon, will add a new groupby table for that field. The Toggle Column icon, to the right of the Groupby icon, will toggle that column in the Events table, and the icon will be a blue color if the column is visible. Additionally, clicking the Toggle Column icon will add a new ``| table xxx yyy zzz`` segment to the active query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
-
-.. image:: images/hunt-expanded.png
-  :target: _images/hunt-expanded.png
 
 Statistics
 ----------
