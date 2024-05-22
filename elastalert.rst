@@ -12,7 +12,7 @@ ElastAlert queries :ref:`elasticsearch` and provides an alerting mechanism with 
 Sigma Rules
 -----------
 
-The Detections module will generate ElastAlert 2 compatible rules automatically, for all :ref:`sigma` detections. There is no need to manually modify the generated rules on disk. Further, any modifications will be overwritten during the next :ref:`sigma` rule synchronization.
+The Detections module will generate ElastAlert 2 compatible rules automatically for all :ref:`sigma` detections. There is no need to manually modify the generated rules on disk. Further, any modifications will be overwritten during the next :ref:`sigma` rule synchronization.
 
 Adjusting a :ref:`sigma` rule should always be done via the :ref:`detections` screen.
 
@@ -21,13 +21,13 @@ See the :ref:`notifications` section for information on how to enable outbound n
 Custom Rules
 ------------
 
-Custom ElastAlert 2 rules, which are not associated to the Detections module, can be added to the Security Onion manager node, inside a custom subdirectory under the `/opt/so/rules/elastalert/rules` directory. For example, create a subdirectory called `/opt/so/rules/elastalert/rules/custom` and place custom rules within that directory. 
+Custom ElastAlert 2 rules, which are not associated to the Detections module, can be added to the Security Onion manager node inside a custom subdirectory under the ``/opt/so/rules/elastalert/rules/`` directory. For example, create a subdirectory called ``/opt/so/rules/elastalert/rules/custom/`` and place custom rules within that directory. 
+
+.. warning::
+
+    Do not modify or add rules to the ``/opt/so/rules/elastalert/rules/`` directory itself as those rules are overwritten by the Detections module.
 
 Refer to the ElastAlert 2 documention, linked above, for detailed information on how to write custom rules. Be aware that writing rules requires an in-depth understanding of Elasticsearch document records, their data structure, and other related concepts.
-
-.. note::
-
-    Do not modify or add rules to the `/opt/so/rules/elastalert/rules` directory itself, as those rules are overwritten by the Detections module.
 
 Diagnostic Logging
 ------------------
@@ -36,7 +36,7 @@ Elastalert diagnostic logs are in ``/opt/so/log/elastalert/`` and may also appea
 
 ::
 
-    docker logs so-elastalert
+    sudo docker logs so-elastalert
 
 ElastAlert 2 stores rule status information, such as number of hits, times each rule last ran, etc to :ref:`elasticsearch` indices. This data can helpful in assisting with troubleshooting custom rules. Searching in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically include the ``elastalert`` indices by default. To include them adjust the appropriate configuration setting. Find it in the Administration --> Configuration screen by filtering for ``elastic.index`` and selecting Options (at the top) and toggle on "Show all configurable settings". Add ``*:elastalert*`` to the ``index`` setting. The new setting value should resemble the following:
 
