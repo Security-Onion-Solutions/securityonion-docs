@@ -43,7 +43,7 @@ Options
 .. image:: images/58_detections_options.png
   :target: _images/58_detections_options.png
 
-The Options menu allows you to synchronize a particular detection engine such as :ref:`suricata`, :ref:`strelka`, or :ref:`elastalert`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. 
+The Options menu allows you to synchronize a particular detection engine such as :ref:`elastalert`, :ref:`strelka`, or :ref:`suricata`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. 
 
 The differential update is a lightweight sync that will skip the thorough sync and comparison of each individual rule. For example, with :ref:`suricata` it will compute and compare the hash of the source rule list with the hash of the deployed rules, and only if there's a mismatch will it perform the full sync. 
 
