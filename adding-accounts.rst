@@ -16,7 +16,7 @@ If you need to add a new OS user account, you can use the ``adduser`` command.  
 
         We recommend creating OS usernames in lower case for consistency.
 
-For more information adding OS user accounts, please see the adduser manual by typing ``man adduser``.
+For more information about adding OS user accounts, please see the adduser manual by typing ``man adduser``.
 
 SOC
 ---
