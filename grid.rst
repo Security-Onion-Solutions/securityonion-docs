@@ -20,6 +20,9 @@ Starting at the top of the page, there is a ``Grid EPS`` value in the upper righ
 
 The options dropdown near the top of the page includes a checkbox which will show additional sensor-related columns in the table. You can use these sortable columns to help identify sensors that may be underperforming or due for a hardware upgrade. As these additional columns take up significant screen area, they will only be visible on wide displays where the SOC web browser window is wide enough to show a large number of tabular columns.
 
+.. image:: images/76_grid_options.png
+  :target: _images/76_grid_options.png
+
 You can drill into individual nodes to see detailed information including Node Status, Container Status, and Appliance Images.
 
 Node Status

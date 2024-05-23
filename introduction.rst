@@ -74,8 +74,8 @@ Security Onion Console (SOC)
 
 :ref:`cases` is the case management interface. As you are working in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you may find alerts or logs that are interesting enough to send to :ref:`cases` and create a case. Other analysts can collaborate with you as you work to close that case.
 
-.. image:: images/cases.png
-  :target: _images/cases.png
+.. image:: images/57_0_cases.png
+  :target: _images/57_0_cases.png
 
 :ref:`soc` also includes an interface for full packet capture (:ref:`pcap`) retrieval.
 

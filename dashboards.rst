@@ -15,7 +15,10 @@ Dashboards
 Options
 -------
 
-At the top of the page, there is an Options menu that allows you to set options such as Auto Apply, Exclude case data, Exclude SOC Logs, Automatic Refresh Interval, and Time Zone.
+At the top of the page, there is an Options menu that allows you to set options such as Auto Apply, Exclude case data, Exclude Detections data, Exclude SOC Logs, Automatic Refresh Interval, and Time Zone.
+
+.. image:: images/54_dashboards_options.png
+  :target: _images/54_dashboards_options.png
 
 Auto Apply
 ~~~~~~~~~~
@@ -26,6 +29,11 @@ Exclude case data
 ~~~~~~~~~~~~~~~~~
 
 Dashboards excludes :ref:`cases` data by default. If you disable this option, then you can use Dashboards to query your :ref:`cases` data.
+
+Exclude Detections data
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Dashboards excludes :ref:`detections` data by default. If you disable this option, then you can use Dashboards to query your :ref:`detections` data.
 
 Exclude SOC Logs
 ~~~~~~~~~~~~~~~~

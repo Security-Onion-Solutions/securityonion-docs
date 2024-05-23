@@ -41,9 +41,6 @@ The installer includes a :ref:`desktop` option that builds a simple desktop envi
 
 For more information, please see the :ref:`desktop` section.
 
-.. image:: images/desktop.png
-  :target: _images/desktop.png
-
 Distributed
 -----------
 

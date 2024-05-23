@@ -13,6 +13,9 @@ Options
 
 At the top of the page, there is an Options menu that allows you to set options such as Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone.
 
+.. image:: images/51_alerts_options.png
+  :target: _images/51_alerts_options.png
+  
 Toggles
 ~~~~~~~
 
