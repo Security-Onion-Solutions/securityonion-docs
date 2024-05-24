@@ -77,7 +77,14 @@ The remainder of the main Detections page is a data table that shows a high leve
 Detection Details
 -----------------
 
-On the right side of the detection details page, there is a Status slider that shows whether the detection is enabled or disabled and you can click the status to change it. To the left of the Status field are several tabs. The OVERVIEW tab displays the Summary, References, and Detection Logic.
+There are two ways to reach the detail page for an individual detection:
+
+- From the main :ref:`detections` interface, you can search for the desired detection and click the binoculars icon.
+- From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
+
+Once you've used one of these methods to reach the detection detail page, you can check the Status field in the upper-right corner and use the slider to enable or disable the detection.
+
+To the left of the Status field are several tabs. The OVERVIEW tab displays the Summary, References, and Detection Logic.
 
 .. image:: images/60_detection_nids.png
   :target: _images/60_detection_nids.png

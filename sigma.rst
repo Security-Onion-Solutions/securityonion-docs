@@ -12,7 +12,7 @@ From https://github.com/SigmaHQ/sigma:
 Managing Existing Sigma Rules
 -----------------------------
 
-You can manage existing Sigma rules via :ref:`detections`. There are two main ways to do so:
+You can manage existing Sigma rules via :ref:`detections`. There are two ways to do so:
 
 - From the main :ref:`detections` interface, you can search for the desired detection and click the binoculars icon.
 - From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
