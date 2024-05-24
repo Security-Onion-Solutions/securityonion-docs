@@ -19,7 +19,7 @@ Starting in Security Onion 2.4.70, :ref:`soc` includes our Detections interface 
 Rule Engine Status
 ------------------
 
-The upper right corner shows a count of detections that matched the search query. To the left of that is a status indicator for each of the detection engines. The status can show whether a sync is in process, as well as whether the engine has detected errors. 
+The upper-right corner shows a count of detections that matched the search query. To the left of that is a status indicator for each of the detection engines. The status can show whether a sync is in process, as well as whether the engine has detected errors. 
 
 Here is the list of possible status messages and what they mean:
 

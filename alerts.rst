@@ -45,7 +45,7 @@ The query bar defaults to ``Group By Name, Module`` which groups the alerts by `
 Time Picker
 -----------
 
-By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen.
+By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper-right corner of the screen.
 
 Data Table
 ----------

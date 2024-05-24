@@ -13,7 +13,7 @@ Depending on the options you chose in the installer, connect to the IP address o
 .. image:: images/37_login.png
   :target: _images/37_login.png
 
-Once logged in, you'll notice the user menu in the upper right corner. This allows you to manage your user settings and access documentation and other resources.
+Once logged in, you'll notice the user menu in the upper-right corner. This allows you to manage your user settings and access documentation and other resources.
 
 .. image:: images/94_usermenu.png
   :target: _images/94_usermenu.png

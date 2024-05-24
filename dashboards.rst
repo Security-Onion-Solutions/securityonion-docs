@@ -60,7 +60,7 @@ If you would like to save your own personal queries, you can bookmark them in yo
 Time Picker
 -----------
 
-By default, Dashboards searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen. You can use the default relative time or click the clock icon to change to absolute time.
+By default, Dashboards searches the last 24 hours. If you want to search a different time frame, you can change it in the upper-right corner of the screen. You can use the default relative time or click the clock icon to change to absolute time.
 
 Basic Metrics
 -------------

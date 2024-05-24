@@ -8,7 +8,7 @@ Grid
 .. image:: images/39_grid.png
   :target: _images/39_grid.png
 
-Starting at the top of the page, there is a ``Grid EPS`` value in the upper right corner that shows the sum of all ``Consumption EPS`` measurements in the entire grid. Below that you will find a list of all nodes in your grid.
+Starting at the top of the page, there is a ``Grid EPS`` value in the upper-right corner that shows the sum of all ``Consumption EPS`` measurements in the entire grid. Below that you will find a list of all nodes in your grid.
 
 .. warning::
 

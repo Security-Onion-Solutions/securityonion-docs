@@ -50,7 +50,7 @@ Contributing
 
 We welcome your contributions to our documentation! We will review any suggestions and apply them if appropriate.
 
-If you are accessing the online version of the documentation and notice that a particular page has incorrect information, you can submit corrections by clicking the ``Edit on GitHub`` button in the upper right corner of each page. Once you have made your corrections, you will need to submit your pull request (PR) to the ``dev`` branch.
+If you are accessing the online version of the documentation and notice that a particular page has incorrect information, you can submit corrections by clicking the ``Edit on GitHub`` button in the upper-right corner of each page. Once you have made your corrections, you will need to submit your pull request (PR) to the ``dev`` branch.
 
 To submit a new page, you can submit a pull request (PR) to the ``dev`` branch of the ``securityonion-docs`` repo at https://github.com/Security-Onion-Solutions/securityonion-docs.
 

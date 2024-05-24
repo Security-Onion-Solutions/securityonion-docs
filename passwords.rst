@@ -26,7 +26,7 @@ Password Logins to SOC
 
 Log into :ref:`soc` using the username and password you created in the Setup wizard or the username and password provided by your administrator.
 
-You can change your password in :ref:`soc` by clicking the user icon in the upper right corner, clicking ``Settings``, and then going to the ``Security`` tab. Please note that, due to technical limitations, if you change your SOC password here it will not update your password in :ref:`influxdb`. However, resetting your password via :ref:`administration` will reset your :ref:`influxdb` password.
+You can change your password in :ref:`soc` by clicking the user icon in the upper-right corner, clicking ``Settings``, and then going to the ``Security`` tab. Please note that, due to technical limitations, if you change your SOC password here it will not update your password in :ref:`influxdb`. However, resetting your password via :ref:`administration` will reset your :ref:`influxdb` password.
 
 If you've forgotten your SOC password, an administrator can change it using the :ref:`administration` interface.
 
@@ -38,7 +38,7 @@ Once logged in to SOC using the username and password method, users can optional
 .. image:: images/37_login.png
   :target: _images/37_login.png
 
-Activate passwordless login for your :ref:`soc` user by clicking the user icon in the upper right corner, clicking ``Settings``, and then going to the ``Security`` tab. Scroll down to the ``Security Keys`` section and follow the provided instructions.
+Activate passwordless login for your :ref:`soc` user by clicking the user icon in the upper-right corner, clicking ``Settings``, and then going to the ``Security`` tab. Scroll down to the ``Security Keys`` section and follow the provided instructions.
 
 Similarly, disable passwordless logins by returning to the ``Security`` tab and clicking the delete icon next to any previously-created Security Key.
 

@@ -66,7 +66,7 @@ Comments
 
 On the Comments tab, you can add comments about the case. The Comments field uses markdown syntax and you can read more about that at https://www.markdownguide.org/cheat-sheet/.
 
-If you've enabled :ref:`pro`, then when adding a comment you can also specify how many hours you spent working on that activity. You can then see the total time spent by all analysts in the Summary in the upper right corner.
+If you've enabled :ref:`pro`, then when adding a comment you can also specify how many hours you spent working on that activity. You can then see the total time spent by all analysts in the Summary in the upper-right corner.
 
 Attachments
 -----------

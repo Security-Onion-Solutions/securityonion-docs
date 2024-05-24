@@ -3,7 +3,7 @@
 MFA
 ===
 
-You can enable Multi-Factor Authentication (MFA) to further protect your account. This can be enabled in :ref:`soc` by clicking the user icon in the upper right corner, clicking ``Settings``, and then going to the ``Security`` tab. 
+You can enable Multi-Factor Authentication (MFA) to further protect your account. This can be enabled in :ref:`soc` by clicking the user icon in the upper-right corner, clicking ``Settings``, and then going to the ``Security`` tab. 
 
 TOTP
 ----
