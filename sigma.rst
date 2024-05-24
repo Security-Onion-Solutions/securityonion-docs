@@ -30,6 +30,9 @@ To tune the detection:
 - enter your custom filter in the Custom Filter field
 - click the ``CREATE`` button to create and enable the Override
 
+.. image:: images/60_detection_sigma_2_tuning_2_add.png
+  :target: _images/60_detection_sigma_2_tuning_2_add.png
+
 Custom Filters are Sigma Search Identifiers and will be applied like so: ``"($ORIGINAL_CONDITION) and not 1 of sofilter*"``
 
 For example, suppose that you have an :ref:`idh` node installed with the HTTP webserver enabled. Your nightly vulnerablity scan is connecting to it and generating an alert from the ``Security Onion IDH - HTTP Access`` detection. To filter out connection attempts from this scanner, you would add the following Custom Filter to this detection:

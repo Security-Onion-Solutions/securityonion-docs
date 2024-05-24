@@ -26,6 +26,9 @@ To tune the detection:
 - fill out the requested values
 - click the ``CREATE`` button
 
+.. image:: images/60_detection_nids_2_tuning_2_add.png
+  :target: _images/60_detection_nids_2_tuning_2_add.png
+
 Adding New NIDS Rules
 ---------------------
 

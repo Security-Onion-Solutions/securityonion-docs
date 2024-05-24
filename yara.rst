@@ -12,7 +12,12 @@ From https://virustotal.github.io/yara/:
 Managing Existing YARA Rules
 ----------------------------
 
-You can enable or disable existing YARA rules using :ref:`detections`. From the main :ref:`detections` interface, search for the desired detection and click the binoculars icon. You can then use the Status slider in the upper-right corner to enable or disable the detection.
+You can manage existing YARA rules via :ref:`detections`. There are two main ways to do so:
+
+- From the main :ref:`detections` interface, you can search for the desired detection and click the binoculars icon.
+- From the :ref:`alerts` interface, you can click an alert and then click the ``Tune Detection`` menu item.
+
+Once you've used one of these methods to reach the detection detail page, you can check the Status field in the upper-right corner and use the slider to enable or disable the detection.
 
 .. image:: images/60_detection_yara.png
   :target: _images/60_detection_yara.png

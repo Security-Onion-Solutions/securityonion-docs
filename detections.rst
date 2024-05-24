@@ -77,18 +77,31 @@ The remainder of the main Detections page is a data table that shows a high leve
 Detection Details
 -----------------
 
-On the right side of the detection details page, there is a Status field that shows whether the detection is enabled or disabled. You can click the status to change it.
+On the right side of the detection details page, there is a Status slider that shows whether the detection is enabled or disabled and you can click the status to change it. To the left of the Status field are several tabs. The OVERVIEW tab displays the Summary, References, and Detection Logic.
 
 .. image:: images/60_detection_nids.png
   :target: _images/60_detection_nids.png
 
-The detection details page includes several tabs:
+The OPERATIONAL NOTES tab allows you to add your own local notes to this rule in markdown format.
 
-- The OVERVIEW tab displays the Summary, References, and Detection Logic.
-- The OPERATIONAL NOTES tab allows you add your own local notes to this rule in markdown format.
-- The DETECTION SOURCE tab shows the full content of the detection.
-- The TUNING tab allows you to tune the detection. For :ref:`nids` rules, you can modify, suppress, or threshold. For :ref:`sigma` rules, you can create a custom filter.
-- The HISTORY tab shows the history of the detection since it was added to your deployment.
+.. image:: images/60_detection_nids_0_comments.png
+  :target: _images/60_detection_nids_0_comments.png
+
+The DETECTION SOURCE tab shows the full content of the detection.
+
+.. image:: images/60_detection_nids_1_signature.png
+  :target: _images/60_detection_nids_1_signature.png
+
+The TUNING tab allows you to tune the detection. For :ref:`nids` rules, you can modify, suppress, or threshold. For :ref:`sigma` rules, you can create a custom filter.
+
+.. image:: images/60_detection_nids_2_tuning_1.png
+  :target: _images/60_detection_nids_2_tuning_1.png
+
+The HISTORY tab shows the history of the detection since it was added to your deployment.
+
+.. image:: images/60_detection_nids_3_history.png
+  :target: _images/60_detection_nids_3_history.png
+
 
 Managing Detections
 -------------------
