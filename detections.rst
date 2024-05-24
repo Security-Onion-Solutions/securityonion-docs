@@ -40,10 +40,12 @@ The Detections menu option on the left side of the application will show an excl
 Options
 -------
 
+The Options menu allows you to synchronize a particular detection engine such as :ref:`elastalert`, :ref:`strelka`, or :ref:`suricata`. 
+
 .. image:: images/58_detections_options.png
   :target: _images/58_detections_options.png
 
-The Options menu allows you to synchronize a particular detection engine such as :ref:`elastalert`, :ref:`strelka`, or :ref:`suricata`. Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. 
+Once you've selected the detection engine that you want to synchronize, you can then click either the ``DIFFERENTIAL UPDATE`` or ``FULL UPDATE`` button. 
 
 The differential update is a lightweight sync that will skip the thorough sync and comparison of each individual rule. For example, with :ref:`suricata` it will compute and compare the hash of the source rule list with the hash of the deployed rules, and only if there's a mismatch will it perform the full sync. 
 
@@ -75,6 +77,8 @@ The remainder of the main Detections page is a data table that shows a high leve
 Detection Details
 -----------------
 
+On the right side of the detection details page, there is a Status field that shows whether the detection is enabled or disabled. You can click the status to change it.
+
 .. image:: images/60_detection_nids.png
   :target: _images/60_detection_nids.png
 
@@ -85,8 +89,6 @@ The detection details page includes several tabs:
 - The DETECTION SOURCE tab shows the full content of the detection.
 - The TUNING tab allows you to tune the detection. For :ref:`nids` rules, you can modify, suppress, or threshold. For :ref:`sigma` rules, you can create a custom filter.
 - The HISTORY tab shows the history of the detection since it was added to your deployment.
-
-On the right side of the detection details page, there is a Status field that shows whether the detection is enabled or disabled. You can click the status to change it.
 
 Managing Detections
 -------------------
