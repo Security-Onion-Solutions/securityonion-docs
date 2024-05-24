@@ -71,6 +71,9 @@ By default, the Configuration page only shows the most widely used settings. If 
 
 	Changing advanced settings is unsupported and could result in requiring a full cluster re-installation.
 
+.. image:: images/88_config_options.png
+  :target: _images/88_config_options.png
+
 Duplicate Settings
 ~~~~~~~~~~~~~~~~~~
 

@@ -10,6 +10,9 @@ You can customize :ref:`soc` by going to :ref:`administration` --> Configuration
 
 Below are some ways in which you can customize SOC. Once all customizations are complete, you can make the changes take effect by clicking the ``Options`` bar at the top and then clicking the ``SYNCHRONIZE GRID`` button.
 
+.. image:: images/88_config_options.png
+  :target: _images/88_config_options.png
+
 Login Page
 ----------
 
@@ -19,6 +22,12 @@ Overview Page
 -------------
 
 After logging into SOC, you'll start on the main SOC Overview page which can be customized as well. You can customize this by going to :ref:`administration` --> Configuration --> soc --> files --> soc --> Overview Page. This uses Markdown format as mentioned above.
+
+You can add images but they must be hosted from another host that is accessible by the user's browser. For example, let's use one of the images from our online documentation. The markdown to add that image would look like this:
+
+::
+
+        ![SOC Dashboards](https://docs.securityonion.net/en/2.4/_images/51_dashboards.png)
 
 Links
 -----
