@@ -84,12 +84,12 @@ There are two ways to reach the detail page for an individual detection:
 
 Once you've used one of these methods to reach the detection detail page, you can check the Status field in the upper-right corner and use the slider to enable or disable the detection.
 
-To the left of the Status field are several tabs. The OVERVIEW tab displays the Summary, References, and Detection Logic.
+To the left of the Status field are several tabs. The OVERVIEW tab displays the Summary, References, and Detection Logic for the detection.
 
 .. image:: images/60_detection_nids.png
   :target: _images/60_detection_nids.png
 
-The OPERATIONAL NOTES tab allows you to add your own local notes to this rule in markdown format.
+The OPERATIONAL NOTES tab allows you to add your own local notes to the detection in markdown format.
 
 .. image:: images/60_detection_nids_0_comments.png
   :target: _images/60_detection_nids_0_comments.png
