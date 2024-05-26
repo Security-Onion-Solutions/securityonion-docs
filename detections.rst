@@ -109,12 +109,11 @@ The HISTORY tab shows the history of the detection since it was added to your de
 .. image:: images/60_detection_nids_3_history.png
   :target: _images/60_detection_nids_3_history.png
 
+More Information
+----------------
 
-Managing Detections
--------------------
+For more information about managing :ref:`nids` rules for :ref:`suricata`, please see the :ref:`nids` section.
 
-To manage :ref:`nids` rules for :ref:`suricata`, please see the :ref:`nids` section.
+For more information about managing :ref:`sigma` rules for :ref:`elastalert`, please see the :ref:`sigma` section.
 
-To manage :ref:`sigma` rules for :ref:`elastalert`, please see the :ref:`sigma` section.
-
-To manage :ref:`yara` rules for :ref:`strelka`, please see the :ref:`yara` section.
+For more information about managing :ref:`yara` rules for :ref:`strelka`, please see the :ref:`yara` section.
