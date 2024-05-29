@@ -25,7 +25,7 @@ Here is the list of possible status messages and what they mean:
 
 - **Pending**: The browser is waiting for the server to send an initial status report.
 - **Import Pending**: The import will start once the system stabilizes, usually within twenty minutes. Imports take place only once, after upgrading to Security Onion 2.4.70+.
-- **Importing**: The previous version of Security Onion's rules are being imported into the new Detections system. This can take a an hour or more on some systems.
+- **Importing**: The previous version of Security Onion's rules are being imported into the new Detections system. This can take an hour or more on some systems.
 - **Migrating**: Rules will be migrated between Security Onion versions following system upgrades. This can take some time if upgrading from a much older version.
 - **Migration Failed**: A failure occurred during the migration. The migration will stop on the first error and will not attempt to migrate to newer versions until the issue is resolved.
 - **Synchronizing**: A rule synchronization is in progress. This occurs daily, to ensure the Security Onion grid has the latest rules. 
