@@ -47,6 +47,12 @@ The manager node runs a Docker registry. From https://docs.docker.com/registry/r
 
     If you have multiple instances of Docker running in your environment (e.g., multiple physical or virtual machines, all running the Docker daemon), each time one of them requires an image that it doesn’t have it will go out to the internet and fetch it from the public Docker registry. By running a local registry mirror, you can keep most of the redundant image fetch traffic on your local network.
 
+If you see errors relating to ``so-dockerregistry`` (Docker Registry), then please take a look at the following discussions to see if your symptoms match and if their solutions may help you:
+
+https://github.com/Security-Onion-Solutions/securityonion/discussions/12078
+
+https://github.com/Security-Onion-Solutions/securityonion/discussions/12635
+
 Networking and Bridging
 -----------------------
 
@@ -85,38 +91,6 @@ VMware Tools
 ------------
 
 If you have VMware Tools installed and you suspend and then resume, the Docker interfaces will no longer have IP addresses and the Elastic stack will no longer be able to communicate. One workaround is to remove ``/etc/vmware-tools/scripts/vmware/network`` to prevent VMware suspend/resume from modifying your network configuration.
-
-Dependencies
-------------
-
-Playbook
-~~~~~~~~
-
-| ``so-playbook`` - REQ - Playbook Web App
-| ``so-navigator`` - OPT - Navigator Web App
-| ``so-soctopus`` - REQ - Automation
-
-SOCtopus
-~~~~~~~~
-
-| ``so-soctopus`` - REQ - SOCtopus App
-| ``so-elasticsearch`` - OPT - Automation
-
-Suricata
-~~~~~~~~
-
-| ``so-suricata`` - REQ - Suricata app
-
-Kibana
-~~~~~~
-
-| ``so-kibana`` - REQ - Kibana Web App
-| ``so-elasticsearch`` - REQ -
-
-Zeek
-~~~~
-
-| ``so-zeek`` - REQ - Zeek app
 
 More Information
 ----------------

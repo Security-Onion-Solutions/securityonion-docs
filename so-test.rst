@@ -3,7 +3,11 @@
 so-test
 ============
 
-``so-test`` will run ``so-tcpreplay`` to replay some pcap samples to your sniffing interface. 
+``so-test`` will run ``so-tcpreplay`` to replay some pcap samples to your sniffing interface.
+
+.. warning::
+
+  Please note that this action could trigger alerts on other enterprise monitoring systems, depending on your network and interface configuration.
 
 .. warning::
 

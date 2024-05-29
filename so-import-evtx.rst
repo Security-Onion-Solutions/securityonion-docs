@@ -5,6 +5,10 @@ so-import-evtx
 
 ``so-import-evtx`` will import one or more evtx files into Security Onion.
 
+.. tip::
+
+  You can run this command manually, but for most use cases it's easier to upload an evtx file via :ref:`grid` and it will automatically run ``so-import-evtx`` for you.
+
 Usage
 -----
 
@@ -20,4 +24,4 @@ To import multiple evtx files:
 
     sudo so-import-evtx /full/path/to/import2.evtx /full/path/to/import2.evtx
 
-so-import-evtx then provides a hyperlink for you to view all logs in :ref:`soc`. You can also find logs in :ref:`kibana`.
+so-import-evtx then provides a hyperlink for you to view all logs in :ref:`soc`.

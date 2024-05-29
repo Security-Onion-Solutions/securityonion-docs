@@ -26,12 +26,12 @@ Security Onion Documentation
    accounts
    services
    customizing
-   tuning
    tricks
    utilities
    help
    pro
    security
+   telemetry
    release-notes
    appendix
    cheat-sheet

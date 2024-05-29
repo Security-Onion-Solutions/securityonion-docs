@@ -12,6 +12,7 @@ When you log into :ref:`soc`, you may see alerts from :ref:`suricata` or :ref:`i
    :maxdepth: 2
 
    af-packet
+   bpf
    stenographer
    suricata
    zeek

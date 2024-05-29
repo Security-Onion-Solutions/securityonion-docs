@@ -39,7 +39,7 @@ Data
 
 -  Review the :ref:`elasticsearch` section to see if you need to change any of the default settings.
 
--  Review the :ref:`stenographer` section to see if you need to change the Disk Free Percentage or Maximum Files settings.
+-  Review the :ref:`stenographer` and :ref:`suricata` sections to see if you need to change the PCAP retention settings.
 
 Other
 -----
@@ -50,4 +50,4 @@ Other
 
 -  Full-time analysts may want to connect using a dedicated :ref:`desktop`.
 
--  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the :ref:`tuning` section. 
+-  Any IDS/NSM system needs to be tuned for the network it’s monitoring. Please see the :ref:`detections` and :ref:`rules` sections.

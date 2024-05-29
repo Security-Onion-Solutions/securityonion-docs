@@ -57,7 +57,7 @@ For example:
 Adding Comments
 ~~~~~~~~~~~~~~~
 
-Starting in Security Onion 2.4.30, comments can be added to the filters via the SOC UI. For example:
+To provide more context to your filters, you can add comments. For example:
 
 ::
 
