@@ -22,7 +22,7 @@ To resolve the issue, run the following command for each affected index (replaci
 
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
-2.4.70 [20240528] Changes
+2.4.70 [20240529] Changes
 ----------------------------------
 
 - FEATURE: Add confirmation dialog for "revert to default" button in Configuration
