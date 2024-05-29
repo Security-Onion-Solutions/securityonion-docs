@@ -95,6 +95,11 @@ CyberChef
 .. image:: images/68_cyberchef.png
   :target: _images/68_cyberchef.png
 
+Playbook
+~~~~~~~~
+
+:ref:`playbook` allows you to create a Detection Playbook, which itself consists of individual plays. These plays are fully self-contained and describe the different aspects around the particular detection strategy.
+
 Workflow
 --------
 
@@ -107,6 +112,7 @@ All of these analysis tools work together to provide efficient and comprehensive
      - If any of those alerts or logs look interesting, you might want to pivot to :ref:`pcap` to review the full packet capture for the entire stream.
      - Depending on what you see in the stream, you might want to send it to :ref:`cyberchef` for further analysis and decoding.
      - Escalate alerts and logs to :ref:`cases` and document any observables. Pivot to :ref:`hunt` to cast a wider net for those observables.
+     - Develop a play in :ref:`playbook` that will automatically alert on observables moving forward and update your coverage in :ref:`attack-navigator`.
      - If you have the :ref:`elastic-agent` deployed, then you might want to search for additional host logs or run live queries against your endpoints using :ref:`osquery<osquery-manager>`.
      - Finally, return to :ref:`cases` and document the entire investigation and close the case.
 

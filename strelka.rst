@@ -19,7 +19,7 @@ Strelka scans files using :ref:`yara` rules. If it detects a match, then it will
 Logs
 ----
 
-Even if Strelka doesn't detect a :ref:`yara` match, it will still log metadata about the file. You can find Strelka logs in :ref:`dashboards` and :ref:`hunt`.
+Even if Strelka doesn't detect a YARA match, it will still log metadata about the file. You can find Strelka logs in :ref:`dashboards` and :ref:`hunt`.
 
 Configuration
 -------------

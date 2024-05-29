@@ -29,7 +29,6 @@ If you'd like to customize SOC, please see the :ref:`soc-customization` section.
    dashboards
    hunt
    cases
-   detections
    pcap
    grid
    downloads
@@ -39,4 +38,5 @@ If you'd like to customize SOC, please see the :ref:`soc-customization` section.
    osquery-manager
    influxdb
    cyberchef
+   playbook
    attack-navigator

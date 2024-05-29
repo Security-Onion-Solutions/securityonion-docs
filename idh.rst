@@ -45,7 +45,7 @@ OpenCanary logs can be found through :ref:`dashboards`, :ref:`hunt`, or :ref:`ki
 
      event.dataset: idh
 
-Sigma rules within :ref:`detections` look for certain logs emitted by OpenCanary to generate alerts, which can be viewed in the :ref:`alerts` interface.
+Sigma Plays within :ref:`playbook` look for certain logs emitted by OpenCanary to generate alerts, which can be viewed in the :ref:`alerts` interface.
 
 Services Configuration
 ----------------------
