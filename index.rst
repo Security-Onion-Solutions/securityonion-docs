@@ -17,17 +17,21 @@ Security Onion Documentation
    soc
    desktop
    network
+   additional-network
    host
+   third-party-integrations
+   rules
    logs
    updating
    accounts
    services
    customizing
-   tuning
    tricks
    utilities
    help
+   pro
    security
+   telemetry
    release-notes
    appendix
    cheat-sheet

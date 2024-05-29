@@ -11,10 +11,7 @@ Security Onion Setup
 
 **Create Jupyter User**
 
-As a best practice, you'll want to create a dedicated Jupyter notebook user with just read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions:
-
-.. image:: images/jupyter-user.png
-  :target:  _images/jupyter-user.png
+As a best practice, you'll want to create a dedicated Jupyter notebook user with just read-only access to the data inside of :ref:`elasticsearch`. In :ref:`kibana`, navigate to Stack Management -> Users and create the user with appropriate permissions.
 
 **Security Onion Firewall**
 
@@ -76,10 +73,7 @@ In the next cell, we'll specify the :ref:`elasticsearch` instance address and po
 
 Again, we'll execute the code within the cell, by pressing **Shift+ENTER**.
 
-We may see a warning like the following due to the fact that we are not performing verification for certificates:
-
-.. image:: images/jupyter-warning.png
-  :target:  _images/jupyter-warning.png
+We may see a certificate warning due to the fact that we are not performing verification for certificates.
 
 For convenience during our testing, we can disable the warning in future runs, by pasting the following the next cell and executing it with **Shift+ENTER**:
 
@@ -105,10 +99,7 @@ Finally, we'll submit our query in the next cell using the following:
     df = pd.DataFrame((d.to_dict() for d in s.scan()))
   df
 
-The above code simply takes the results and converts them to a Python dict:
-
-.. image:: images/jupyter-python.png
-  :target:  _images/jupyter-python.png
+The above code simply takes the results and converts them to a Python dict.
 
 We can select a few fields, and modify the column values if we like:
 
@@ -120,9 +111,6 @@ We can select a few fields, and modify the column values if we like:
   df.columns=['Dataset','Executable', 'Target']
   df
 
-Then we end up with something a little bit more targeted (you may need to adjust ``pd.options.display.max_colwidth`` for it to display appropriately) :
-
-.. image:: images/jupyter-targeted.png
-  :target:  _images/jupyter-targeted.png
+Then we end up with something a little bit more targeted (you may need to adjust ``pd.options.display.max_colwidth`` for it to display appropriately).
 
 Obviously, there is much more we can do with this data other than just running the above example code. Happy hunting!

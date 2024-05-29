@@ -45,6 +45,18 @@ See the table below which explains the specific Security Onion privileges grante
       - X
       - 
       -
+    * - View detections
+      - X
+      - X
+      - X
+      - X
+      - X
+    * - Modify (and Delete) detections
+      - X
+      - X
+      - 
+      - 
+      - 
     * - View events in Hunt
       - X
       - X
@@ -244,11 +256,11 @@ These steps will guide you through an example where we wish to introduce a new r
             sudo so-elasticsearch-query _security/privilege/kibana-.kibana | jq '. | map_values(keys)'
 
 
-3. Run a salt highstate from the manager:
+3. Run so-checkin from the manager:
 
     ::
 
-        sudo salt-call state.highstate
+        sudo so-checkin
 
 
 Defining Security Onion Roles

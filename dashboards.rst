@@ -5,8 +5,8 @@ Dashboards
 
 :ref:`soc` includes a Dashboards interface which includes an entire set of pre-built dashboards for our standard data types.
 
-.. image:: images/51_dashboards.png
-  :target: _images/51_dashboards.png
+.. image:: images/53_dashboards.png
+  :target: _images/53_dashboards.png
 
 .. note::
 
@@ -15,7 +15,10 @@ Dashboards
 Options
 -------
 
-At the top of the page, there is an Options menu that allows you to set options such as Auto Apply, Exclude case data, Exclude SOC Logs, Automatic Refresh Interval, and Time Zone.
+At the top of the page, there is an Options menu that allows you to set options such as Auto Apply, Exclude case data, Exclude Detections data, Exclude SOC Logs, Automatic Refresh Interval, and Time Zone.
+
+.. image:: images/54_dashboards_options.png
+  :target: _images/54_dashboards_options.png
 
 Auto Apply
 ~~~~~~~~~~
@@ -26,6 +29,11 @@ Exclude case data
 ~~~~~~~~~~~~~~~~~
 
 Dashboards excludes :ref:`cases` data by default. If you disable this option, then you can use Dashboards to query your :ref:`cases` data.
+
+Exclude Detections data
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Dashboards excludes :ref:`detections` data by default. If you disable this option, then you can use Dashboards to query your :ref:`detections` data.
 
 Exclude SOC Logs
 ~~~~~~~~~~~~~~~~
@@ -45,30 +53,24 @@ Dashboards will try to detect your local time zone via your browser. You can man
 Query Bar
 ---------
 
-The easiest way to get started is to click the query drop down box and select one of the pre-defined dashboards. These pre-defined dashboards cover most of the major data types that you would expect to see in a Security Onion deployment: NIDS alerts from :ref:`suricata`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs.
+The easiest way to get started is to click the query drop down box and select one of the pre-defined dashboards. These pre-defined dashboards cover most of the major data types that you would expect to see in a Security Onion deployment: :ref:`nids` alerts from :ref:`suricata`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs.
 
 If you would like to save your own personal queries, you can bookmark them in your browser. If you would like to customize the default queries for all users, please see the :ref:`soc-customization` section.
 
 Time Picker
 -----------
 
-By default, Dashboards searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen. You can use the default relative time or click the clock icon to change to absolute time.
+By default, Dashboards searches the last 24 hours. If you want to search a different time frame, you can change it in the upper-right corner of the screen. You can use the default relative time or click the clock icon to change to absolute time.
 
 Basic Metrics
 -------------
 
-The first section of output contains a Most Occurrences visualization, a timeline visualization, and a Fewest Occurrences visualization. Bar charts are clickable, so you can click a value to update your search criteria. Aggregation defaults to 10 values, so Most Occurrences is the Top 10 and Fewest Occurrences is the Bottom 10 (long tail). The number of aggregation values is controlled by the Fetch Limit setting in the Group Metrics section.
-
-.. image:: images/dashboards-basic-metrics.png
-  :target: _images/dashboards-basic-metrics.png
+The Basic Metrics section of the page contains a Most Occurrences visualization, a timeline visualization, and a Fewest Occurrences visualization. Bar charts are clickable, so you can click a value to update your search criteria. Aggregation defaults to 10 values, so Most Occurrences is the Top 10 and Fewest Occurrences is the Bottom 10 (long tail). The number of aggregation values is controlled by the Fetch Limit setting in the Group Metrics section.
 
 Group Metrics
 -------------
 
-The middle section of output is the Group Metrics section. It consists of one or more data tables or visualizations that allow you to stack (aggregate) arbitrary fields.
-
-.. image:: images/dashboards-group-metrics.png
-  :target: _images/dashboards-group-metrics.png
+The Group Metrics section of the page consists of one or more data tables or visualizations that allow you to stack (aggregate) arbitrary fields.
 
 Group metrics are controlled by the ``groupby`` parameter in the search bar. You can read more about the ``groupby`` parameter in the OQL section below.
 
@@ -78,13 +80,7 @@ Clicking a value in the Group Metrics table brings up a context menu of actions 
 
 You can use the buttons in the Count column header to convert the data table to a pie chart or bar chart. If the data table is grouped by more than one field, then you will see an additional button that will convert the data table to a sankey diagram. There is a Maximize View button that will maximize the table to fill the pane (you can press the Esc key to return to normal view). Each of the groupby field headers has a trash button that will remove the field from the table.
 
-.. image:: images/dashboards-group-metrics-table.png
-  :target: _images/dashboards-group-metrics-table.png
-
 Once you have switched to a chart, you will see different buttons at the top of the chart. You can use the Show Table button to return to the data table, the Toggle Legend button to toggle the legend, and the Remove button to remove the chart altogether. There is a Maximize View button that will maximize the chart to fill the pane (you can press the Esc key to return to normal view).
-
-.. image:: images/dashboards-group-metrics-sankey.png
-  :target: _images/dashboards-group-metrics-sankey.png
 
 Events
 ------
@@ -95,21 +91,12 @@ Clicking a value in the Events table brings up a context menu of actions for tha
 
 The default Fetch Limit for the Events table is ``100``. If you need to see more than 100 events, you can increase the Fetch Limit and then page through the output using the left and right arrow icons or increase the ``Rows per page`` setting.
 
-.. image:: images/soc-events-table.png
-  :target: _images/soc-events-table.png
-
 When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there are two icons to the left. The Groupby icon, the left most icon, will add a new groupby table for that field. The Toggle Column icon, to the right of the Groupby icon, will toggle that column in the Events table, and the icon will be a blue color if the column is visible. Additionally, clicking the Toggle Column icon will add a new ``| table xxx yyy zzz`` segment to the active query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
-
-.. image:: images/hunt-expanded.png
-  :target: _images/hunt-expanded.png
 
 Statistics
 ----------
 
 The bottom left corner of the page shows statistics about the current query including the speed of the backend data fetch and the total round trip time.
-
-.. image:: images/dashboards-statistics.png
-  :target: _images/dashboards-statistics.png
 
 Context Menu
 ------------

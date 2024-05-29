@@ -5,103 +5,20 @@ Cases
 
 :ref:`soc` includes our Cases interface for case management. It allows you to escalate logs from :ref:`alerts`, :ref:`dashboards`, and :ref:`hunt`, and then assign analysts, add comments and attachments, and track observables. 
 
+On a new deployment, Cases will be empty until you create a new case. Once you have one or more cases, you can use the main Cases page to get an overview of all cases. 
+
+.. image:: images/57_0_cases.png
+  :target: _images/57_0_cases.png
+
 .. note::
 
     Check out our Cases video at https://youtu.be/y_kr_hrtqVc!
 
-Installation
-------------
-
-Cases is a part of :ref:`soc`. It's automatically enabled when doing an Import, Eval, Standalone, Manager, or ManagerSearch installation. If you want the quickest and easiest way to try out Cases, you can follow our :ref:`first-time-users` guide to install a minimal Import installation.
-
-Creating a New Case
--------------------
-
-On a new deployment, Cases will be empty until you create a new case.
-
-.. image:: images/cases-empty.png
-  :target: _images/cases-empty.png
-
-To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side including Assignee, Status, Severity, Priority, TLP, PAP, Category, and Tags. Clicking the fields on the right side reveals drop-down boxes with standard options. The Assignee field will only list user accounts that are currently enabled.
-
-.. image:: images/cases-add.png
-  :target: _images/cases-add.png
-
-Alternatively, if you find events of interest in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you can escalate directly to Cases using the escalate button (blue triangle with exclamation point). Clicking the escalate button will escalate the data from the row as it is displayed. This means that if you're looking at an aggregated view, you will get limited details in the resulting escalated case. If you want more details to be included in the case, then first drill into the aggregation and escalate one of the individual items in that aggregation.
-
-.. image:: images/cases-escalate-aggregation.png
-  :target: _images/cases-escalate-aggregation.png
-
-Once you click the escalate button, you can choose to escalate to a new case or an existing case. 
-
-.. image:: images/cases-escalate.png
-  :target: _images/cases-escalate.png
-  
-Comments
---------
-
-On the Comments tab, you can add comments about the case. The Comments field uses markdown syntax and you can read more about that at https://www.markdownguide.org/cheat-sheet/.
-
-.. image:: images/cases-comments.png
-  :target: _images/cases-comments.png
-
-Attachments
------------
-
-On the Attachments tab, you can upload attachments. For each attachment, you can optionally define TLP and add tags. Cases will automatically generate SHA256, SHA1, and MD5 hash values for each attachment. Buttons next to the hash values allow you to copy the value or add it as an observable.
-
-.. image:: images/cases-attachments.png
-  :target: _images/cases-attachments.png
-
-Observables
------------
-
-On the Observables tab, you can track observables like IP addresses, domain names, hashes, etc. You can add observables directly on this tab or you can add them from the Events tab as well.
-
-You can add multiple observables of the same type by selecting the option labeled ``Enable this checkbox to have a separate observable added for each line of the provided value above``.
-
-.. image:: images/cases-observables.png
-  :target: _images/cases-observables.png
-
-For each observable, you can click the icon on the far left of the row to drill into the observable and see more information about it. To the right of that is the the hunt icon which will start a new hunt for the observable. Clicking the lightning bolt icon will analyze the observable (see the Analyzers section later).
-
-You can also add observables directly from :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`. Click the observable and select the ``Add to Case`` option. You'll then have the option of adding the observable to a new case or an existing case.
-
-Events
-------
-
-On the Events tab, you can see any events that have been escalated to the case. This could be :ref:`suricata` alerts, network metadata from :ref:`suricata` or :ref:`zeek`, or endpoint logs. 
-
-.. image:: images/cases-events.png
-  :target: _images/cases-events.png
-
-For each event, you can click the icon on the far left of the row to drill in and see all the fields included in that event.
-
-.. image:: images/cases-events-drilldown.png
-  :target: _images/cases-events-drilldown.png
-
-If you find something that you would like to track as an Observable, you can click the eye icon on the far left of the row to add it to the Observables tab. It will attempt to automatically identify well known data types such as IP addresses.
-
-To the right of the eye icon is a Hunt icon that can be used to start a new hunt for that particular value.
-
-History
--------
-
-On the History tab, you can see the history of the case itself, including any changes made by each user. For each row of history, you can click the icon on the far left of the row to drill in and see more information.
-
-.. image:: images/cases-history.png
-  :target: _images/cases-history.png
-
-Overview Page
--------------
-
-Once you have one or more cases, you can use the main Cases page to get an overview of all cases. 
-
-.. image:: images/cases.png
-  :target: _images/cases.png
-
 Options
 -------
+
+.. image:: images/57_1_cases_options.png
+  :target: _images/57_1_cases_options.png
 
 Starting at the top of the main Cases page, the Options menu allows you to set options such as Automatic Refresh Interval and Time Zone.
 
@@ -133,6 +50,55 @@ The remainder of the main Cases page is a data table that shows a high level ove
 - When you click the arrow to expand a row in the data table, it will show the high level fields from that case. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search.
 
 - To the right of the arrow is a binoculars icon. Clicking this will display the full case including the Comments, Attachments, Observables, Events, and History tabs.
+
+Creating a New Case
+-------------------
+
+To create a new case, click the + icon and then fill out the Title and Description and optionally the fields on the right side including Assignee, Status, Severity, Priority, TLP, PAP, Category, and Tags. Clicking the fields on the right side reveals drop-down boxes with standard options. The Assignee field will only list user accounts that are currently enabled.
+
+.. image:: images/57_2_cases_create.png
+  :target: _images/57_2_cases_create.png
+
+Alternatively, if you find events of interest in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you can escalate directly to Cases using the escalate button (blue triangle with exclamation point). Clicking the escalate button will escalate the data from the row as it is displayed. This means that if you're looking at an aggregated view, you will get limited details in the resulting escalated case. If you want more details to be included in the case, then first drill into the aggregation and escalate one of the individual items in that aggregation. Once you click the escalate button, you can choose to escalate to a new case or an existing case. 
+ 
+Comments
+--------
+
+On the Comments tab, you can add comments about the case. The Comments field uses markdown syntax and you can read more about that at https://www.markdownguide.org/cheat-sheet/.
+
+If you've enabled :ref:`pro`, then when adding a comment you can also specify how many hours you spent working on that activity. You can then see the total time spent by all analysts in the Summary in the upper-right corner.
+
+Attachments
+-----------
+
+On the Attachments tab, you can upload attachments. For each attachment, you can optionally define TLP and add tags. Cases will automatically generate SHA256, SHA1, and MD5 hash values for each attachment. Buttons next to the hash values allow you to copy the value or add it as an observable.
+
+Observables
+-----------
+
+On the Observables tab, you can track observables like IP addresses, domain names, hashes, etc. You can add observables directly on this tab or you can add them from the Events tab as well.
+
+You can add multiple observables of the same type by selecting the option labeled ``Enable this checkbox to have a separate observable added for each line of the provided value above``.
+
+For each observable, you can click the icon on the far left of the row to drill into the observable and see more information about it. To the right of that is the the hunt icon which will start a new hunt for the observable. Clicking the lightning bolt icon will analyze the observable (see the Analyzers section later).
+
+You can also add observables directly from :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`. Click the observable and select the ``Add to Case`` option. You'll then have the option of adding the observable to a new case or an existing case.
+
+Events
+------
+
+On the Events tab, you can see any events that have been escalated to the case. This could be :ref:`suricata` alerts, network metadata from :ref:`suricata` or :ref:`zeek`, or endpoint logs. 
+
+For each event, you can click the icon on the far left of the row to drill in and see all the fields included in that event.
+
+If you find something that you would like to track as an Observable, you can click the eye icon on the far left of the row to add it to the Observables tab. It will attempt to automatically identify well known data types such as IP addresses.
+
+To the right of the eye icon is a Hunt icon that can be used to start a new hunt for that particular value.
+
+History
+-------
+
+On the History tab, you can see the history of the case itself, including any changes made by each user. For each row of history, you can click the icon on the far left of the row to drill in and see more information.
 
 Data
 ----
@@ -185,15 +151,7 @@ WhoisLookup                      ✓
 Running Analyzers
 ~~~~~~~~~~~~~~~~~
 
-To enqueue an analyzer job, click the lightning bolt icon on the left side of the observable menu:
-
-.. image:: images/analyzers-analyze-icon.png
-  :target: _images/analyzers-analyze-icon.png
-
-All configured analyzers supporting the observable's data type will then run and return their analysis:
-
-.. image:: images/analyzers-hash-results-summary.png
-  :target: _images/analyzers-hash-results-summary.png
+To enqueue an analyzer job, click the lightning bolt icon on the left side of the observable menu. All configured analyzers supporting the observable's data type will then run and return their analysis.
 
 .. note::
     Observable values must be formatted to correctly match the observable type in order for analyzers to properly execute against them. For example, an IP observable type should not contain more than one IP address.
@@ -201,15 +159,7 @@ All configured analyzers supporting the observable's data type will then run and
 Analyzer Output
 ~~~~~~~~~~~~~~~
 
-The collapsed job view for an analyzer will return a summary view of the analysis:
-
-.. image:: images/analyzers-job-summary.png
-  :target: _images/analyzers-job-summary.png
-  
-Expanding the collapsed row will reveal a more detailed view of the analysis:
-
-.. image:: images/analyzers-job-details.png
-  :target: _images/analyzers-job-details.png
+The collapsed job view for an analyzer will return a summary view of the analysis. Expanding the collapsed row will reveal a more detailed view of the analysis.
 
 .. warning::
 
@@ -234,14 +184,14 @@ The following analyzers require users to configure authentication or other param
 - Urlscan
 - VirusTotal
 
-To configure an analyzer, navigate to :ref:`administration` -> Configuration -> sensoroni.
+To configure an analyzer, navigate to :ref:`administration` --> Configuration --> sensoroni.
 
 .. image:: images/config-item-sensoroni.png
   :target: _images/config-item-sensoroni.png
    
-At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to sensoroni -> analyzers.
+At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to sensoroni --> analyzers.
 
 Developing Analyzers
 ~~~~~~~~~~~~~~~~~~~~
 
-If you'd like to develop a custom analyzer, take a look at the developer's guide at https://github.com/Security-Onion-Solutions/securityonion/tree/dev/salt/sensoroni/files/analyzers.
+If you'd like to develop a custom analyzer, take a look at the developer's guide at https://github.com/Security-Onion-Solutions/securityonion/tree/2.4/main/salt/sensoroni/files/analyzers.

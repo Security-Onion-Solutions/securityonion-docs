@@ -23,7 +23,12 @@ SOC
 
 You can get a list of users in :ref:`soc` by navigating to the :ref:`administration` interface and then clicking ``Users``:
 
-.. image:: images/users.png
-  :target: _images/users.png
+.. image:: images/81_users.png
+  :target: _images/81_users.png
+
+To see detail on an individual user account, click the button on the left side of the row to expand the user account:
+
+.. image:: images/82_users_detail.png
+  :target: _images/82_users_detail.png
 
 For more information about the Users page, please see the :ref:`administration` section.

@@ -23,7 +23,7 @@ IDH nodes are dedicated to just being IDH nodes and cannot run any other service
 Configuration
 -------------
 
-- Run Setup and select the ``DISTRIBUTED`` install option.
+- Run Setup and select the ``DISTRIBUTED`` deployment option.
 - Select the ``Existing Deployment`` option.
 - Select the ``IDH`` option.
 - You can optionally prevent the IDH services from listening on the management interface.
@@ -45,7 +45,7 @@ OpenCanary logs can be found through :ref:`dashboards`, :ref:`hunt`, or :ref:`ki
 
      event.dataset: idh
 
-Sigma Plays within :ref:`playbook` look for certain logs emitted by OpenCanary to generate alerts, which can be viewed in the :ref:`alerts` interface.
+Sigma rules within :ref:`detections` look for certain logs emitted by OpenCanary to generate alerts, which can be viewed in the :ref:`alerts` interface.
 
 Services Configuration
 ----------------------

@@ -13,6 +13,9 @@ Options
 
 At the top of the page, there is an Options menu that allows you to set options such as Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone.
 
+.. image:: images/51_alerts_options.png
+  :target: _images/51_alerts_options.png
+  
 Toggles
 ~~~~~~~
 
@@ -37,20 +40,12 @@ Alerts will try to detect your local time zone via your browser. You can manuall
 Query Bar
 ---------
 
-The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. If you want to send your current Alerts query to :ref:`hunt`, you can click the crosshair icon to the right of the query bar.
+The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. You can click the dropdown box to select other queries which will group by other fields. If you want to send your current Alerts query to :ref:`hunt`, you can click the crosshair icon to the right of the query bar.
 
-.. image:: images/alerts-query-bar.png
-  :target: _images/alerts-query-bar.png
-
-You can click the dropdown box to select other queries which will group by other fields.
-
-.. image:: images/alerts-queries.png
-  :target: _images/alerts-queries.png
-  
 Time Picker
 -----------
 
-By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper right corner of the screen.
+By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper-right corner of the screen.
 
 Data Table
 ----------
@@ -72,9 +67,6 @@ Grouped View
 
 By default, alerts are grouped by whatever criteria is selected in the query bar. Clicking a field value and then selecting the Drilldown option allows you to drill down into that value which switches to the detailed view. You can also click the value in the Count column to perform a quick drilldown. Note that this quick drilldown feature is only enabled for certain queries.
 
-.. image:: images/alerts-grouped.png
-  :target: _images/alerts-grouped.png
-
 If you'd like to remove a particular field from the grouped view, you can click the trash icon at the top of the table to the right of the field name.
 
 Detailed View
@@ -82,13 +74,8 @@ Detailed View
 
 If you click a value in the grouped view and then select the Drilldown option, the display will switch to the detailed view. This shows all search results and allows you to then drill into individual search results as necessary. Clicking the table headers allows you to sort ascending or descending. Starting from the left side of each row, there is an arrow which will expand the result to show all of its fields. To the right of that arrow is the ``Timestamp`` field. Next, a few standard fields are shown: ``rule.name``, ``event.severity_label``, ``source.ip``, ``source.port``, ``destination.ip``, and ``destination.port``. Depending on what kind of data you're looking at, there may be some additional data-specific fields as well. 
 
-.. image:: images/alerts-detailed.png
-  :target: _images/alerts-detailed.png
-
-When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there is an icon to the left that will add that field to the ``groupby`` section of your query. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
-
-.. image:: images/alerts-expanded.png
-  :target: _images/alerts-expanded.png
+When you click the arrow to expand a row in the Events table, it will show all of the individual fields from that event. Field names are shown on the left and field values on the right. When looking at the field names, there are two icons to the left. Th
+e Groupby icon, the left most icon, will add a new groupby table for that field. The Toggle Column icon, to the right of the Groupby icon, will toggle that column in the Events table, and the icon will be a blue color if the column is visible. You can click on values on the right to bring up the context menu to refine your search or pivot to other pages. 
 
 Context Menu
 ------------
@@ -109,6 +96,16 @@ Only
 ~~~~
 
 Clicking the ``Only`` option will start a new search for the selected value and retain any existing groupby terms.
+
+Drilldown
+~~~~~~~~~
+
+Clicking the ``Drilldown`` option will drill down into a group of alerts to show each individual alert.
+
+Tune Detection
+~~~~~~~~~~~~~~
+
+Clicking the ``Tune Detection`` option will take you to :ref:`detections` and allow you disable or modify the detection that fired the alert.
 
 Group By
 ~~~~~~~~

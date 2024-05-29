@@ -7,7 +7,7 @@ Security Onion uses Stenographer to write network traffic to disk. From https://
 
     Stenographer is a full-packet-capture utility for buffering packets to disk for intrusion detection and incident response purposes. It provides a high-performance implementation of NIC-to-disk packet writing, handles deleting those files as disk fills up, and provides methods for reading back specific sets of packets quickly and easily.
 
-Stenographer uses :ref:`af-packet` for packet acquisition. It's important to note that Stenographer is totally independent from :ref:`suricata` and :ref:`zeek`. This means that Stenographer has no impact on your NIDS alerts and protocol metadata.
+Stenographer uses :ref:`af-packet` for packet acquisition. It's important to note that Stenographer is totally independent from :ref:`suricata` and :ref:`zeek`. This means that Stenographer has no impact on your :ref:`nids` alerts and protocol metadata.
 
 Output
 ------
@@ -19,8 +19,8 @@ Analysis
 
 You can access full packet capture via the :ref:`pcap` interface:
 
-.. image:: images/54_pcap_details.png
-  :target: _images/54_pcap_details.png
+.. image:: images/65_pcap_details.png
+  :target: _images/65_pcap_details.png
 
 :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana` allow you to easily pivot to the :ref:`pcap` interface.
 

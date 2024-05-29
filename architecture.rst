@@ -16,6 +16,7 @@ The simplest architecture is an ``Import`` node. An import node is a single stan
 
 Evaluation
 ----------
+
 The next architecture is ``Evaluation``. It's a little more complicated than ``Import`` because it has a network interface dedicated to sniffing live traffic from a TAP or span port. Processes monitor the traffic on that sniffing interface and generate logs. :ref:`elastic-agent` collects those logs and sends them directly to :ref:`elasticsearch` where they are parsed and indexed. Evaluation mode is designed for a quick installation to temporarily test out Security Onion. It is **not** designed for production usage at all and it does not support adding Elastic agents or additional Security Onion nodes.
 
 .. image:: images/diagrams/eval.png
@@ -24,6 +25,7 @@ The next architecture is ``Evaluation``. It's a little more complicated than ``I
 
 Standalone
 ----------
+
 ``Standalone`` is similar to ``Evaluation`` in that all components run on one box. However, instead of :ref:`elastic-agent` sending logs directly to :ref:`elasticsearch`, it sends them to :ref:`logstash`, which sends them to :ref:`redis` for queuing. A second Logstash pipeline pulls the logs out of :ref:`redis` and sends them to :ref:`elasticsearch`, where they are parsed and indexed.
 
 This type of deployment is typically used for testing, labs, POCs, or **very** low-throughput environments. It's not as scalable as a distributed deployment.
@@ -31,6 +33,13 @@ This type of deployment is typically used for testing, labs, POCs, or **very** l
 .. image:: images/diagrams/standalone.png
    :align: center
    :target: _images/standalone.png
+
+Desktop
+-------
+
+The installer includes a :ref:`desktop` option that builds a simple desktop environment. This environment includes a web browser which allows you to log into an existing Security Onion deployment. It also includes some analyst utilities like :ref:`wireshark` and :ref:`networkminer`.
+
+For more information, please see the :ref:`desktop` section.
 
 Distributed
 -----------
@@ -55,7 +64,7 @@ Node Types
 Management
 ~~~~~~~~~~
 
-The ``manager node`` runs :ref:`soc` and :ref:`kibana`. It has its own local instance of :ref:`elasticsearch`, but that's mainly used for storing :ref:`cases` data and central configuration. An analyst connects to the manager node from a client workstation (perhaps :ref:`desktop`) to execute queries and retrieve data. Please keep in mind that a dedicated manager node requires separate search nodes.
+The ``manager node`` runs :ref:`soc` and :ref:`kibana`. It has its own local instance of :ref:`elasticsearch`, but that's mainly used for managing the :ref:`elasticsearch` cluster once search nodes join the cluster. An analyst connects to the manager node from a client workstation (perhaps :ref:`desktop`) to execute queries and retrieve data. Please keep in mind that a dedicated manager node requires separate search nodes.
 
 The manager node runs the following components:
 
@@ -93,7 +102,7 @@ A manager search node runs the following components:
 Forward Node
 ~~~~~~~~~~~~
 
-A ``forward node`` forwards alerts and logs from :ref:`suricata` and :ref:`zeek` via :ref:`elastic-agent` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). Full packet capture recorded by :ref:`stenographer` remains on the forward node itself.
+A ``forward node`` forwards alerts and logs from :ref:`suricata` and :ref:`zeek` via :ref:`elastic-agent` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). Full packet capture recorded by :ref:`stenographer` or :ref:`suricata` remains on the forward node itself.
 
 Forward nodes run the following components:
 
@@ -121,7 +130,11 @@ Each receiver node runs :ref:`logstash` and :ref:`redis` and allows for events t
    :width: 450
    :target: _images/receiver.png
 
-If you don't have any receiver nodes and the manager goes down, the search nodes do not index anything because they cannot connect to :ref:`redis`. The agents cannot connect to :ref:`logstash` so the pipeline starts backing up on the agents. In this same scenario with a receiver node the agents would not be able to talk to :ref:`logstash` on the manager and then would try to connect to the receiver node. Once connected they would send their logs to the receiver like nothing was wrong. The search nodes connect to both the manager and receiver nodes and pull events from the :ref:`redis` queue. If the manager goes down, the search nodes will keep pulling the log events from the queue on the receiver node. This allows for scaling of the pipeline. More receivers + more search nodes = more event ingestion volume.
+If you don't have any receiver nodes and the manager goes down, the search nodes do not index anything because they cannot connect to :ref:`redis`. The agents cannot connect to :ref:`logstash` so the pipeline starts backing up on the agents. 
+
+In this same scenario with a receiver node, the agents would not be able to connect to :ref:`logstash` on the manager and so they would try to connect to the receiver node. Once connected, they would send their logs to the receiver. 
+
+Search nodes connect to both the manager and receiver nodes and pull events from the :ref:`redis` queue. If the manager goes down, search nodes will keep pulling the log events from the queue on the receiver node. This allows for scaling of the pipeline. More receivers + more search nodes = more event ingestion volume.
 
 If you have a manager or managersearch that is under heavy load due to handling a high volume of events, then system resources can be freed by directing the Elastic Agent to only output events to the receiver node(s) in the environment. Once all configurable and advanced settings are enabled, this feature can be set in SOC Configuration UI under ``elasticfleet > enable_manager_output``. Setting this to ``False`` will prevent the Elastic Agent from sending events to the manager, managersearch, or standalone nodes.
 

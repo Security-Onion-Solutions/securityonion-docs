@@ -28,6 +28,16 @@ What's the recommended procedure for installing Security Onion?
 
 Please see the :ref:`installation` section.
 
+What's the recommended procedure for configuring Security Onion?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please see the :ref:`configuration` section.
+
+What if I receive a ``The IP being routed by Linux is not the IP address assigned to the management interface`` error message?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Please see the warning about this in the :ref:`configuration` section.
+
 What languages are supported?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,6 +62,7 @@ Can I run Security Onion on Raspberry Pi or some other non-x86 box?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 No, we only support x86-64 (standard Intel/AMD 64-bit architectures). Please see the :ref:`hardware` section.
+
 
 `back to top <#top>`__
 
@@ -121,7 +132,7 @@ Please see the :ref:`timezones` section.
 Why is my disk filling up?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Security Onion records full packet capture to disk via :ref:`stenographer`.
+In general, Security Onion attempts to make use of as much disk space as you give it. Depending on installation type, it should continue writing data to disk until disk usage reaches 80-90% at which point it should begin purging old data. Most disk space is used by :ref:`elasticsearch` or full packet capture written to disk via :ref:`stenographer` or :ref:`suricata`.
 
 How is my data kept secure?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -183,10 +194,10 @@ Should I backup my Security Onion box?
 
 Security Onion automatically backs up some important configuration as described in the :ref:`backup` section. However, there is no automated data backup. Network Security Monitoring as a whole is considered "best effort". It is not a "mission critical" resource like a file server or web server. Since we're dealing with "big data" (potentially terabytes of full packet capture) of a transient nature, backing up the data would be prohibitively expensive. Most organizations don't do any data backups and instead just rebuild boxes when necessary.
 
-How can I add and test local rules?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How can I add local rules?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Please see the :ref:`local-rules` section.
+Please see the :ref:`detections` section.
 
 Can I connect Security Onion to Active Directory or LDAP?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -3,7 +3,7 @@
 Alert Data Fields
 =================
 
-| :ref:`elasticsearch` receives NIDS alerts from :ref:`suricata` via :ref:`elastic-agent` or :ref:`logstash` and parses them using:
+| :ref:`elasticsearch` receives :ref:`nids` alerts from :ref:`suricata` via :ref:`elastic-agent` or :ref:`logstash` and parses them using:
 | ``/opt/so/conf/elasticsearch/ingest/suricata.alert``
 | ``/opt/so/conf/elasticsearch/ingest/common.nids``
 | ``/opt/so/conf/elasticsearch/ingest/common``
@@ -16,7 +16,7 @@ https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/salt/ela
 
 https://github.com/Security-Onion-Solutions/securityonion/blob/2.4/main/salt/elasticsearch/files/ingest-dynamic/common
 
-You can find parsed NIDS alerts in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana` via their predefined queries and dashboards or by manually searching for:
+You can find parsed :ref:`nids` alerts in :ref:`alerts`, :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana` via their predefined queries and dashboards or by manually searching for:
 
 | ``event.module:"suricata"``
 | ``event.dataset:"alert"``

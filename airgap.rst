@@ -5,7 +5,7 @@ Airgap
 
 Security Onion is committed to allowing users to run a full install on networks that do not have Internet access. Our ISO image includes everything you need to run without Internet access. Make sure that you choose the airgap option during Setup. 
 
-If your network has Internet access but has overly restrictive proxies, firewalls, or other network devices, then you may want to consider the airgap option as everything will install via the ISO image.
+If your network has Internet access but has overly restrictive proxies, firewalls, or other network devices that might prevent Security Onion from connecting to the sites shown in the :ref:`firewall` section, then you may want to consider the airgap option as everything will install from the ISO image itself.
 
 .. image:: images/06_setup_airgap.png
   :target: _images/06_setup_airgap.png
@@ -14,11 +14,11 @@ Airgap mode works as follows:
 
 - During the install, all of the necessary RPM packages are copied from the ISO image to a new repo located in ``/nsm/repo/``. All devices in the grid will now use this repo for updates to packages.
 
-- :ref:`suricata` NIDS rules from Emerging Threats (ET) are copied to ``/nsm/rules/suricata``.
+- :ref:`nids` rules for :ref:`suricata` are copied to ``/nsm/rules/suricata``.
 
-- Yara rules for :ref:`strelka` are copied to ``/nsm/rules/yara``.
+- :ref:`yara` rules for :ref:`strelka` are copied to ``/nsm/rules/yara``.
 
-- Sigma rules for :ref:`playbook` are copied to ``/nsm/repo/rules/sigma``.
+- :ref:`sigma` rules for :ref:`elastalert` are copied to ``/nsm/repo/rules/sigma``.
 
 - When updating the system, :ref:`soup` will ask for the location of the latest ISO media and will then update using that media rather than pulling from the Internet.
 

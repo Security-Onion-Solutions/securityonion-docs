@@ -22,6 +22,78 @@ To resolve the issue, run the following command for each affected index (replaci
 
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
+2.4.70 [20240529] Changes
+----------------------------------
+
+- FEATURE: Add confirmation dialog for "revert to default" button in Configuration
+- FEATURE: Add dashboard for NetFlow `#13009 <https://github.com/Security-Onion-Solutions/securityonion/issues/13009>`_
+- FEATURE: Add dashboard for SOC Login Failures `#12738 <https://github.com/Security-Onion-Solutions/securityonion/issues/12738>`_
+- FEATURE: Add dashboards specific to Elastic Agent `#12746 <https://github.com/Security-Onion-Solutions/securityonion/issues/12746>`_
+- FEATURE: Add event.dataset to all Events table layouts `#12641 <https://github.com/Security-Onion-Solutions/securityonion/issues/12641>`_
+- FEATURE: Add Events table columns for event.module elastic_agent `#12666 <https://github.com/Security-Onion-Solutions/securityonion/issues/12666>`_
+- FEATURE: Add Events table columns for event.module kratos `#12740 <https://github.com/Security-Onion-Solutions/securityonion/issues/12740>`_
+- FEATURE: Add Events table columns for event.module opencanary `#12655 <https://github.com/Security-Onion-Solutions/securityonion/issues/12655>`_
+- FEATURE: Add Events table columns for event.module playbook `#12703 <https://github.com/Security-Onion-Solutions/securityonion/issues/12703>`_
+- FEATURE: Add Events table columns for event.module sigma `#12743 <https://github.com/Security-Onion-Solutions/securityonion/issues/12743>`_
+- FEATURE: Add Events table columns for event.module strelka `#12716 <https://github.com/Security-Onion-Solutions/securityonion/issues/12716>`_
+- FEATURE: Add Events table columns for event.module system `#12628 <https://github.com/Security-Onion-Solutions/securityonion/issues/12628>`_
+- FEATURE: Add Events table columns for stun logs `#12940 <https://github.com/Security-Onion-Solutions/securityonion/issues/12940>`_
+- FEATURE: Add Events table columns for tunnel logs `#12937 <https://github.com/Security-Onion-Solutions/securityonion/issues/12937>`_
+- FEATURE: Add Events table columns for zeek ssl and suricata ssl `#12697 <https://github.com/Security-Onion-Solutions/securityonion/issues/12697>`_
+- FEATURE: Add groupby fields to Dashboards relating to sankey diagrams `#12657 <https://github.com/Security-Onion-Solutions/securityonion/issues/12657>`_
+- FEATURE: Add hyperlink to airgap screen in setup `#12925 <https://github.com/Security-Onion-Solutions/securityonion/issues/12925>`_
+- FEATURE: Add individual dashboards for Zeek SSL and Suricata SSL logs `#12699 <https://github.com/Security-Onion-Solutions/securityonion/issues/12699>`_
+- FEATURE: Additional Supported Integrations #6
+- FEATURE: Add more fields to the SOC Dashboards URL for so-import-pcap `#12972 <https://github.com/Security-Onion-Solutions/securityonion/issues/12972>`_
+- FEATURE: Add process.command_line to Process Info and Process Ancestry dashboards `#12694 <https://github.com/Security-Onion-Solutions/securityonion/issues/12694>`_
+- FEATURE: Add queue=True to so-checkin so that it will wait for any running states `#12815 <https://github.com/Security-Onion-Solutions/securityonion/issues/12815>`_
+- FEATURE: Add SOC Quick Link for Elasticsearch ILM Deletion `#12854 <https://github.com/Security-Onion-Solutions/securityonion/issues/12854>`_
+- FEATURE: Allow duplication of certain config settings
+- FEATURE: Allow users to disable Elasticsearch cleanup script `#12856 <https://github.com/Security-Onion-Solutions/securityonion/issues/12856>`_
+- FEATURE: Change default timeout period for Elastic Agent installation
+- FEATURE: Continuation of new Detections module rollout `#12903 <https://github.com/Security-Onion-Solutions/securityonion/issues/12903>`_
+- FEATURE: Delayed enrollment for Elastic Agents
+- FEATURE: Enable license checks for enterprise features `#12839 <https://github.com/Security-Onion-Solutions/securityonion/issues/12839>`_
+- FEATURE: Eval use Suricata for PCAP by default `#12878 <https://github.com/Security-Onion-Solutions/securityonion/issues/12878>`_
+- FEATURE: Hunting for SOC logs should show relevant columns
+- FEATURE: Introduce new readOnlyUi annotation
+- FEATURE: Kismet integration `#12849 <https://github.com/Security-Onion-Solutions/securityonion/issues/12849>`_
+- FEATURE: Lower EVAL memory requirement to 8GB RAM `#12896 <https://github.com/Security-Onion-Solutions/securityonion/issues/12896>`_
+- FEATURE: pfSense Suricata logs `#12653 <https://github.com/Security-Onion-Solutions/securityonion/issues/12653>`_
+- FEATURE: SOC Telemetry to provide feature usage feedback to dev team
+- FEATURE: SOS Sigma ruleset
+- FIX: Add annotations for BPF and Suricata PCAP `#12626 <https://github.com/Security-Onion-Solutions/securityonion/issues/12626>`_
+- FIX: Add missing options to Suricata af-packet config `#12637 <https://github.com/Security-Onion-Solutions/securityonion/issues/12637>`_
+- FIX: Add the write privilege to the analyst and limited-analyst roles to enable acking of alerts `#12770 <https://github.com/Security-Onion-Solutions/securityonion/issues/12770>`_
+- FIX: Adjust so-import-pcap so that suricata works when it is pcapengine `#12969 <https://github.com/Security-Onion-Solutions/securityonion/issues/12969>`_
+- FIX: Change Elasticsearch min_age setting for cold phase `#12890 <https://github.com/Security-Onion-Solutions/securityonion/issues/12890>`_
+- FIX: Configuration screen search filter causes long delays `#12923 <https://github.com/Security-Onion-Solutions/securityonion/issues/12923>`_
+- FIX: Detections alerts indices `#13005 <https://github.com/Security-Onion-Solutions/securityonion/issues/13005>`_
+- FIX: Detections alerts template not being loaded because load script is trying to match names `#13048 <https://github.com/Security-Onion-Solutions/securityonion/issues/13048>`_
+- FIX: Elastic retention setting not being honored when manager hostname is a subset of search node hostname `#12819 <https://github.com/Security-Onion-Solutions/securityonion/issues/12819>`_
+- FIX: Elasticsearch annotation file for ILM index settings `#12726 <https://github.com/Security-Onion-Solutions/securityonion/issues/12726>`_
+- FIX: Elasticsearch cleanup script should avoid Suricata alerts `#12855 <https://github.com/Security-Onion-Solutions/securityonion/issues/12855>`_
+- FIX: Elasticsearch min_age regex `#12885 <https://github.com/Security-Onion-Solutions/securityonion/issues/12885>`_
+- FIX: GitHub discussion/issue curator workflows fail on repo forks
+- FIX: IDH node installs, but won't configure `#12991 <https://github.com/Security-Onion-Solutions/securityonion/issues/12991>`_
+- FIX: idh.services is displayed in SOC Grid Configuration as an advanced setting  `#13012 <https://github.com/Security-Onion-Solutions/securityonion/issues/13012>`_
+- FIX: Improve File dashboard `#12914 <https://github.com/Security-Onion-Solutions/securityonion/issues/12914>`_
+- FIX: Input Validation for IPv6 addresses in Zeek and Suricata vars `#12675 <https://github.com/Security-Onion-Solutions/securityonion/issues/12675>`_
+- FIX: mapping conflict with field http.response.status_code `#12543 <https://github.com/Security-Onion-Solutions/securityonion/issues/12543>`_
+- FIX: Remove errant max_age setting from Elastic SOC config `#12851 <https://github.com/Security-Onion-Solutions/securityonion/issues/12851>`_
+- FIX: Rendering SLS 'base:elasticsearch.enabled' failed: Jinja error: Cannot update using non-dict types in dictupdate.update() `#13030 <https://github.com/Security-Onion-Solutions/securityonion/issues/13030>`_
+- FIX: Resetting a customized file to default should restore the default `#13008 <https://github.com/Security-Onion-Solutions/securityonion/issues/13008>`_
+- FIX: so-elasticsearch-ilm-policy-load trying to set policy for indices not managed by ILM `#13021 <https://github.com/Security-Onion-Solutions/securityonion/issues/13021>`_
+- FIX: so-index-list not working correctly `#12988 <https://github.com/Security-Onion-Solutions/securityonion/issues/12988>`_
+- FIX: Sorting for older and newer indices in Elasticsearch cleanup `#12857 <https://github.com/Security-Onion-Solutions/securityonion/issues/12857>`_
+- FIX: so-verify detects rare false error `#12811 <https://github.com/Security-Onion-Solutions/securityonion/issues/12811>`_
+- FIX: Specify that static IP address is recommended `#12643 <https://github.com/Security-Onion-Solutions/securityonion/issues/12643>`_
+- FIX: Update expected timestamp formats in ingest pipeline `#12887 <https://github.com/Security-Onion-Solutions/securityonion/issues/12887>`_
+- FIX: Update so-whiptail to make installation screen more consistent `#12921 <https://github.com/Security-Onion-Solutions/securityonion/issues/12921>`_
+- UPGRADE: CyberChef 10.17.0 `#12798 <https://github.com/Security-Onion-Solutions/securityonion/issues/12798>`_
+- UPGRADE: Suricata 7.0.5 `#12843 <https://github.com/Security-Onion-Solutions/securityonion/issues/12843>`_
+- UPGRADE: Zeek 6.0.4 `#13027 <https://github.com/Security-Onion-Solutions/securityonion/issues/13027>`_
+
 2.4.60 [20240320] Changes
 -------------------------
 

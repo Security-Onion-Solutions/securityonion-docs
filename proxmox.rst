@@ -18,7 +18,7 @@ If you plan to use :ref:`networkminer` or other Mono-based applications in a Pro
 NIC
 ---
 
-If you're going to install Security Onion in Proxmox and sniff live network traffic, you may need to do some additional configuration in Proxmox itself.
+If you're going to install Security Onion in Proxmox and sniff live network traffic, you may need to do some additional configuration in Proxmox itself. You can either passthrough a physical NIC to the VM or you can use a virtual NIC.
 
 Passthrough Physical NIC
 ~~~~~~~~~~~~~~~~~~~~~~~~

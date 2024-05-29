@@ -81,10 +81,14 @@ Elastic Fleet nodes to Receiver nodes:
 Host Firewall
 -------------
 
-The remainder of this section will cover the host firewall built into Security Onion.
+The remainder of this section will cover the host firewall built into Security Onion. 
 
-Configuration
--------------
+.. note::
+
+   Security Onion locks down the firewall by default. 
+
+Configuring Host Firewall
+-------------------------
 
 You can configure the firewall by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
 
@@ -95,6 +99,18 @@ If for some reason you can't access :ref:`soc`, you can use the so-firewall comm
 ::
 
     so-firewall includehost analyst <IP ADDRESS>
+
+Reviewing Host Firewall
+-----------------------
+
+You can view the entire firewall configuration from the command line using the ``iptables`` command like this:
+::
+
+        sudo iptables -nvL
+
+.. warning::
+
+   You can use this command to view the iptables configuration, but please do not modify the firewall manually using iptables as it is managed by :ref:`salt`. You should only make changes via the Configuration screen as shown above.
 
 Port Groups
 -----------

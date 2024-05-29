@@ -17,11 +17,11 @@ For more information, please see passwd manual by typing ``man passwd`` and the 
 SOC
 ---
 
-If you need to disable an account in :ref:`soc`, you can go to the :ref:`administration` interface, expand the user account, and click the ``LOCK USER`` button.
+If you need to disable an account in :ref:`soc`, you can go to :ref:`administration` --> Users, expand the user account, and click the ``LOCK USER`` button.
 
-After disabling a user account, the :ref:`administration` page will show the disabled user account with a disabled icon in the Status column:
+.. image:: images/82_users_detail.png
+  :target: _images/82_users_detail.png
 
-.. image:: images/users.png
-  :target: _images/users.png
+After disabling a user account, it will be shown with a disabled icon in the Status column.
 
 For more information about the Users page, please see the :ref:`administration` section.

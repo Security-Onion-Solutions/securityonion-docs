@@ -16,7 +16,7 @@ After booting the ISO image, the boot menu appears:
 .. image:: images/01_grub.png
   :target: _images/01_grub.png
 
-When prompted, specify your username and password:
+When prompted, enter your desired username and password:
 
 .. image:: images/02_initial_install.png
   :target: _images/02_initial_install.png
@@ -151,77 +151,77 @@ After logging in, you will see the :ref:`soc` Overview page:
 .. image:: images/38_overview.png
   :target: _images/38_overview.png
 
-Check :ref:`grid` to verify all services are running properly:
+Go to the :ref:`grid` page, click the button to expand the node, and then verify all services are running properly:
 
 .. image:: images/39_grid.png
   :target: _images/39_grid.png
 
-While on the :ref:`grid` page, you can upload a PCAP or EVTX file:
+While on the :ref:`grid` page, you can import a PCAP or EVTX file using the upload button at the bottom of the screen:
 
 .. image:: images/40_upload.png
   :target: _images/40_upload.png
 
-Review alerts on the :ref:`alerts` page:
+Once the import is complete, the :ref:`grid` page should display a message at the of the page and provide a link to :ref:`dashboards` to view all alerts and logs from the import:
+
+.. image:: images/45_import.png
+  :target: _images/45_import.png
+
+If you want to see just the alerts, you can go to the :ref:`alerts` page although you may need to manually adjust the time range:
 
 .. image:: images/50_alerts.png
   :target: _images/50_alerts.png
 
-Review other logs on the :ref:`dashboards` page:
-
-.. image:: images/51_dashboards.png
-  :target: _images/51_dashboards.png
-
 If you find something interesting on the :ref:`alerts` or :ref:`dashboards` pages, you may want to use the Correlate or Hunt actions to find related logs on the :ref:`hunt` page:
 
-.. image:: images/52_hunt.png
-  :target: _images/52_hunt.png
+.. image:: images/56_hunt.png
+  :target: _images/56_hunt.png
 
 If you find interesting network traffic, you can pivot to full packet capture via the :ref:`pcap` action:
 
-.. image:: images/53_pcap.png
-  :target: _images/53_pcap.png
+.. image:: images/62_pcap.png
+  :target: _images/62_pcap.png
 
 You can change the view to ASCII transcript for a more human readable view of the traffic:
 
-.. image:: images/54_pcap_details.png
-  :target: _images/54_pcap_details.png
+.. image:: images/65_pcap_details.png
+  :target: _images/65_pcap_details.png
 
 If you find an interesting artifact, you can send it to :ref:`cyberchef`:
 
-.. image:: images/55_cyberchef.png
-  :target: _images/55_cyberchef.png
+.. image:: images/68_cyberchef.png
+  :target: _images/68_cyberchef.png
 
 If you need to refer back to previous PCAP jobs, you can find them on the :ref:`pcap` page:
 
-.. image:: images/56_jobs.png
-  :target: _images/56_jobs.png
+.. image:: images/72_jobs.png
+  :target: _images/72_jobs.png
 
-IMPORT installations do not support remote agents, but if you were running another installation type you could download the Elastic Agent installer from :ref:`downloads`:
+IMPORT installations do not support remote agents, but if you were running a production installation you could download the Elastic Agent installer from :ref:`downloads`:
 
-.. image:: images/58_downloads.png
-  :target: _images/58_downloads.png
+.. image:: images/78_downloads.png
+  :target: _images/78_downloads.png
 
 The :ref:`administration` section allows to you manage user accounts:
 
-.. image:: images/59_users.png
-  :target: _images/59_users.png
+.. image:: images/81_users.png
+  :target: _images/81_users.png
 
 It also allows you to manage grid members:
 
-.. image:: images/60_gridmembers.png
-  :target: _images/60_gridmembers.png
+.. image:: images/84_gridmembers.png
+  :target: _images/84_gridmembers.png
 
 The :ref:`administration` section also allows you to configure various aspects of the system:
 
-.. image:: images/61_config.png
-  :target: _images/61_config.png
+.. image:: images/87_config.png
+  :target: _images/87_config.png
 
 It also allows you to upload a license key for additional enterprise features:
 
-.. image:: images/62_licensekey.png
-  :target: _images/62_licensekey.png
+.. image:: images/91_licensekey.png
+  :target: _images/91_licensekey.png
 
 All this in a minimal VM with only 4GB RAM!
 
-.. image:: images/99_top.png
-  :target: _images/99_top.png
+.. image:: images/39_grid.png
+  :target: _images/39_grid.png

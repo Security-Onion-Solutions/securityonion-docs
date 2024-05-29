@@ -8,27 +8,27 @@ Elastic Fleet
 Configuration
 -------------
 
-Elastic Fleet is pre-configured during Security Onion setup, however, centralized management of configuration is provided within its user interface inside of Kibana.
-
-Configuration options for various components are detailed below.
+Elastic Fleet is pre-configured during Security Onion setup. If you need to make changes to the configuration, you can do so via the Fleet page in :ref:`kibana` as detailed below.
 
 Agents
 ------
 
-This section displays registered Elastic agents (https://docs.securityonion.net/en/2.4/elastic-agent.html) and allows the user to add additional agents.
+This section displays registered Elastic agents and allows the user to add additional agents. For more information about Elastic agents, please see the :ref:`elastic-agent` section.
 
 To view agent details, click the ``Host`` name. 
 
 To assign the agent to a new policy, unenroll, upgrade the agent, or perform other actions, click the ``Actions`` menu on the right side of the agent listing and select the appropriate option.
 
-By default, Elastic Agent is installed on every Security Onion grid node. As a result, all grid node agents will be enrolled in the ``SO-Grid-Nodes`` agent policy. We do not recommend removing policy settings for Security Onion grid node agents.
+By default, Elastic Agent is installed on every Security Onion grid node. As a result, all grid node agents will be enrolled in the ``SO-Grid-Nodes`` agent policy. 
+
+.. warning::
+
+        We do not recommend removing policy settings for Security Onion grid node agents.
 
 Adding Agents
 -------------
 
-To add a new agent to your deployment, see the following:
-
-https://docs.securityonion.net/en/2.4/elastic-agent.html#deployment
+To add a new agent to your deployment, see the :ref:`elastic-agent` section.
 
 Agent Policies
 --------------
@@ -56,7 +56,7 @@ For example, the ``SO-Grid-Nodes`` agent policy is comprised of the following in
 Agent Policies - endpoints-initial
 ----------------------------------
 
-Agent installers downloaded from SOC --> Downloads, are deployed using the ``endpoints-initial`` Agent Policy. This policy includes the ``Elastic Defend``, ``Osquery Manager``, ``System``, and ``Windows`` integrations.
+Agent installers downloaded from :ref:`Downloads` are deployed using the ``endpoints-initial`` Agent Policy. This policy includes the ``Elastic Defend``, ``Osquery Manager``, ``System``, and ``Windows`` integrations.
 
 elastic-defend-endpoints (``Elastic Defend`` integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,7 +89,7 @@ The ``Elastic Defend`` integration has both free and paid features. By default, 
 osquery-endpoints (``Osquery Manager`` integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The ``Osquery Manager`` integration runs osquery as a daemon on the endpoint, and makes the endpoint available for Live or Scheduled queries through the Osquery manager interface in Kibana.
+The ``Osquery Manager`` integration runs osquery as a daemon on the endpoint and makes the endpoint available for Live or Scheduled queries through the Osquery manager interface in Kibana.
 
 system-endpoints (``System`` integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,130 +126,7 @@ The ``Windows`` integration collects the following logs from the endpoint, where
 Integrations
 ------------
 
-.. note::
-
-    Security Onion 2.4.10 supports the following Elastic integrations:
-    
-    - aws
-    - azure
-    - cloudflare
-    - elasticsearch
-    - endpoint
-    - fleet_server
-    - fim
-    - github
-    - google_workspace
-    - log
-    - osquery_manager
-    - redis
-    - system
-    - tcp
-    - udp
-    - windows
-    - 1password
-
-    Security Onion 2.4.20 supports these additional Elastic integrations:
-
-    - apache
-    - auditd
-    - barracuda
-    - cisco_asa
-    - crowdstrike
-    - darktrace
-    - f5_bigip
-    - fortinet
-    - fortinet_fortigate
-    - gcp
-    - http_endpoint
-    - httpjson
-    - juniper
-    - juniper_srx
-    - kafka_log
-    - lastpass
-    - m365_defender
-    - microsoft_defender_endpoint
-    - microsoft_dhcp
-    - netflow
-    - o365
-    - okta
-    - panw
-    - pfsense
-    - sentinel_one
-    - sonicwall_firewall
-    - symantec_endpoint
-    - ti_abusech
-    - ti_misp
-    - ti_otx
-    - ti_recordedfuture
-    - zscaler_zia
-    - zscaler_zpa
-
-    Security Onion 2.4.30 supports these additional Elastic integrations:
-
-    - auth0
-    - carbonblack_edr
-    - checkpoint
-    - cisco_duo
-    - cisco_meraki
-    - cisco_umbrella
-    - fireeye
-    - mimecast
-    - pulse_connect_secure
-    - snyk
-    - sophos
-    - sophos_central
-    - tenable_sc
-    - vsphere
-
-    Security Onion 2.4.40 supports these additional Elastic integrations:
-
-    - cisco_ftd
-    - cisco_ios
-    - cisco_ise
-    - iis
-    - microsoft_sqlserver
-    - mysql
-    - proofpoint_tap
-    - snort
-    - ti_anomali
-    - ti_cybersixgill
-    - ti_threatq
-
-    Security Onion 2.4.50 supports these additional Elastic integrations:
-
-    - citrix_adc
-    - citrix_waf
-    - nginx
-    - winlog
-
-    Security Onion 2.4.60 supports these additional Elastic integrations:
-
-    - journald
-    - ti_cybersixgill
-
-You can read more about Elastic integrations at https://docs.elastic.co/integrations.
-
-Adding an Integration
----------------------
-
-New integrations can be added to existing policies to provide increased visibility and more comprehensive monitoring.
-
-To add an integration to an existing policy:
-
-From ``Fleet`` -> ``Agent policies`` -> ``$Policy name``, click ``Add Integration`` and follow the steps for adding the integration.
-
-When setting up a new integration, it is important that you add it to an appropriate Policy. 
-
-If an integration pulls the data, you should add it to the Fleet Server policy. Depending on complexity and log volume, it might make sense to stand up a Fleet Node and add your integrations to it.
-
-If an integration receives data pushed to it (for example - receiving syslog), once again, consider adding it to the Fleet Server policy. If that is not feasible, and it will be added to the Grid Nodes policy, make sure to set the firewall rules correctly so that you are not opening ports on all of your nodes.
-
-If the integration is designed to listen on a port to receive data, it will most likely default to listening on ``localhost`` only. Depending on how you are sending data to the integration, you may need to change that to ``0.0.0.0`` so that it can receive data from other hosts.
-
-Adding a Custom Integration
----------------------------
-
-A custom integration can be added by adding an integration such as the ``Custom Logs`` integration. We can specify various settings relative to the data source and define additional actions to be performed.
+Elastic Fleet supports integrations and you can read more in the :ref:`third-party-integrations` section.
 
 Enrollment Tokens
 -----------------
@@ -281,6 +158,12 @@ The section provides details such as:
 .. warning::
 
     We do NOT recommend changing these settings, as they are managed by Security Onion.
+
+If you want more granular control over which Fleet Server an Agent will send logs to, there are two options:
+
+- The first option is to use firewall rules to only allow certain agents. Suppose you have two Fleet Server Nodes, one at 192.168.55.25 and the other at 192.168.58.25. If you want your endpoints in the 192.168.58.0/24 subnet to only connect to the Fleet server at 192.168.58.25, you would add custom firewall rules via :ref:`administration` --> Configuration --> firewall --> hostgroups --> elastic_agent_endpoint. Select the 192.168.58.25 Fleet Node and add ``192.168.58.0/24``. Endpoints in that subnet will still attempt to connect to the Fleet Server Node at 192.168.55.25, but since it is not accessible (no firewall rules that enable communication), they will connect to the Fleet Node at 192.168.58.25.
+
+- The second option is to purchase an Elastic license. A paid Elastic license offers the ability to customize different Outputs per Agent Policy.
 
 Custom FQDN URL
 ---------------

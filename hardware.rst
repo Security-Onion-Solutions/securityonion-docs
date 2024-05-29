@@ -17,23 +17,38 @@ Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit p
 Minimum Specs
 -------------
 
-Please note these are the absolute bare minimum requirements. Your requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
 
 ================       ====== ===== ========= ======   
  Node Type              CPUs   RAM   Storage   NICs  
 ================       ====== ===== ========= ======     
 Import                    2    4GB    50GB      1
-Eval                      4    12GB   200GB     2
+Eval                      4    8GB    200GB     2
 Standalone                4    16GB   200GB     2
 Manager                   4    16GB   200GB     1
 ManagerSearch             8    16GB   200GB     1
 Search node               4    16GB   200GB     1
-Forward node              4    12GB   200GB     2
+Sensor                    4    12GB   200GB     2
 Heavy node                4    16GB   200GB     2
 IDH node                  2    1GB    12GB      1
-Fleet node                4    12GB   200GB     1
+Fleet node                4    4GB    200GB     1
 Receiver node             2    8GB    200GB     1
 ================       ====== ===== ========= ======   
+
+.. warning::
+
+   Please note these are the absolute bare minimum requirements. Your requirements may increase drastically as you enable more services, monitor more traffic, and consume more logs. For more information, please see the detailed sections below.
+
+Import
+------
+
+An Import installation runs the minimal processes required to import PCAP or EVTX files and view the results. As such, it has the lowest hardware requirements as shown in the table above. You can read more about Import in the :ref:`first-time-users` section.
+
+Eval
+----
+
+An Eval installation runs the minimal processes required for a single machine to sniff live network traffic from a TAP or span port and view the results. Therefore, its hardware requirements are higher than Import as shown in the table above. Eval is designed for temporary installations or homelab installations on a budget. Unlike a full Standalone installation, Evaluation is NOT designed for production usage.
+
+In order to minimize RAM usage, Eval does not run :ref:`logstash` or :ref:`redis` at all. Also, Eval defaults to using :ref:`suricata` for writing full packet capture to disk (instead of :ref:`stenographer`).
 
 Production Deployments
 ----------------------
@@ -58,24 +73,24 @@ If you plan to sniff network traffic from a tap or span port, then you will need
 
 Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
 
-Security Onion is designed to use wired interfaces.  You may be able to make wireless interfaces work, but we don't recommend or support it.
+Security Onion is designed to use wired interfaces. You may be able to make wireless interfaces work, but we don't recommend or support it.
 
 UPS
 ---
 
-Like most IT systems, Security Onion has databases and those databases don't like power outages or other ungraceful shutdowns. To avoid power outages and having to manually repair databases, please consider a UPS.
+As with most computer systems, you'll want to avoid power outages or other ungraceful shutdowns. Please consider a UPS (Uninterruptible Power Supply) for production deployments.
 
 Elastic Stack
 -------------
 
-Please refer to the :ref:`architecture` section for detailed deployment scenarios.
+We recommend placing all Elastic storage (/nsm/elasticsearch) on SSD or fast spinning disk in a RAID 10 configuration.
 
-**We recommend placing all Elastic storage (/nsm/elasticsearch) on SSD or fast spinning disk in a RAID 10 configuration.**
+Please see the :ref:`architecture` section for detailed deployment scenarios.
 
 Standalone Deployments
 ----------------------
 
-In a standalone deployment, the manager components and the sensor components all run on a single box, therefore, your hardware requirements will reflect that. You'll need at minimum 16GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 16GB RAM, you will need swap space to avoid issues. We recommend a minimum of 24GB of RAM if you plan on monitoring traffic. The more traffic you plan on monitoring this RAM requirement will also increase. 
+In a standalone deployment, the manager components and the sensor components all run on a single box so your hardware requirements will reflect that. You'll need at minimum 16GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 16GB RAM, you will need swap space to avoid issues. We recommend a minimum of 24GB of RAM if you plan on monitoring even a small amount of network traffic. More network traffic means higher hardware requirements.
 
 This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
@@ -163,7 +178,7 @@ We recommend dedicated physical hardware (especially if you're monitoring lots o
 CPU
 ~~~
 
-:ref:`suricata` and :ref:`zeek` are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per :ref:`suricata` worker or :ref:`zeek` worker. So if you have a fully saturated 1Gbps link and are running :ref:`suricata` for NIDS alerts and :ref:`zeek` for metadata, then you'll want at least 5 :ref:`suricata` workers and 5 :ref:`zeek` workers. This means you'll need at least 10 CPU cores for :ref:`suricata` and :ref:`zeek` with additional CPU cores for :ref:`stenographer` and/or other services. If you are monitoring a high amount of traffic and/or have a small number of CPU cores, you might consider using :ref:`suricata` for both alerts and metadata. This eliminates the need for :ref:`zeek` and allows for more efficient CPU usage.
+:ref:`suricata` and :ref:`zeek` are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per :ref:`suricata` worker or :ref:`zeek` worker. So if you have a fully saturated 1Gbps link and are running :ref:`suricata` for :ref:`nids` alerts and :ref:`zeek` for metadata, then you'll want at least 5 :ref:`suricata` workers and 5 :ref:`zeek` workers. This means you'll need at least 10 CPU cores for :ref:`suricata` and :ref:`zeek` with additional CPU cores for :ref:`stenographer` and/or other services. If you are monitoring a high amount of traffic and/or have a small number of CPU cores, you might consider using :ref:`suricata` for both alerts and metadata. This eliminates the need for :ref:`zeek` and allows for more efficient CPU usage.
 
 RAM
 ~~~

@@ -17,7 +17,7 @@ Kibana Dashboards
 
 We've included a simple set of dashboards in Kibana. These Kibana dashboards are not as comprehensive as those in SOC :ref:`dashboards`.
 
-Once you log into Kibana, you should start on the ``Security Onion - Home`` dashboard. Notice the visualization in the upper left is labeled ``Security Onion - Navigation``. This navigation panel contains links to other dashboards and will change depending on what dashboard you're currently looking at. For example, when you're on the ``Security Onion - Home`` dashboard and click the ``Alert`` link, you will go to the ``Security Onion - Alerts`` dashboard and the Navigation panel will then contain links to more specific alert dashboards for :ref:`playbook` and :ref:`suricata`. When you're done looking at alerts, you can click the ``Home`` link in the navigation panel to go back to the main ``Security Onion - Home`` dashboard.
+Once you log into Kibana, you should start on the ``Security Onion - Home`` dashboard. Notice the visualization in the upper left is labeled ``Security Onion - Navigation``. This navigation panel contains links to other dashboards and will change depending on what dashboard you're currently looking at. For example, when you're on the ``Security Onion - Home`` dashboard and click the ``Alert`` link, you will go to the ``Security Onion - Alerts`` dashboard and the Navigation panel will then contain links to more specific alert dashboards for :ref:`suricata`. When you're done looking at alerts, you can click the ``Home`` link in the navigation panel to go back to the main ``Security Onion - Home`` dashboard.
 
 If you ever need to reload Kibana dashboards, you can run the following command on your manager:
 
@@ -36,7 +36,7 @@ If you try to modify a default Kibana dashboard, your change will get overwritte
 Search Results
 --------------
 
-In Kibana, search results are limited to the first ``100`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Stack Management`` -> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance for your deployment.
+In Kibana, search results are limited to the first ``100`` results for a particular query. If you don't feel like this is adequate after narrowing your search, you can adjust the value for ``discover:sampleSize`` in Kibana by navigating to ``Stack Management`` --> ``Advanced Settings`` and changing the value. It may be best to change this value incrementally to see how it affects performance for your deployment.
 
 Timestamps
 ----------
@@ -83,7 +83,7 @@ If you then are able to login to Kibana but your dashboards don't look right, yo
 Features
 --------
 
-You can enable or disable specific features by clicking the main menu in the upper left corner, then click ``Stack Management``, then click ``Spaces``, then click ``Default``. For more information, please see https://www.elastic.co/guide/en/kibana/master/xpack-spaces.html#spaces-control-feature-visibility.
+You can enable or disable specific features by clicking the main menu in the upper left corner, then click ``Stack Management``, then click ``Spaces``, then click ``Default``. For more information, please see https://www.elastic.co/guide/en/kibana/current/xpack-spaces.html#spaces-control-feature-visibility.
 
 More Information
 ----------------

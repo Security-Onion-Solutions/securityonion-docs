@@ -7,60 +7,66 @@ Here's an overview of how logs are ingested in various deployment types.
 
 Import
 ------
+
 | Core Pipeline: Elastic Agent [IMPORT Node] --> Elasticsearch Ingest [IMPORT Node]
 | Logs: Zeek, Suricata
 
 Eval
 ----
+
 | Core Pipeline: Elastic Agent [EVAL Node] --> Elasticsearch Ingest [EVAL Node]
-| Logs: Zeek, Suricata, Osquery/Fleet
-| 
-| Osquery Shipper Pipeline: Osquery [Endpoint] --> Fleet [EVAL Node] --> Elasticsearch Ingest via Core Pipeline
-| Logs: WEL, Osquery, syslog
+| Logs: Zeek, Suricata
 
 Standalone
 ----------
+
 | Core Pipeline: Elastic Agent [SA Node] --> Logstash [SA Node] --> Redis [SA Node] <--> Logstash [SA Node] --> Elasticsearch Ingest [SA Node]
-| Logs: Zeek, Suricata, Osquery/Fleet, syslog
+| Logs: Zeek, Suricata, syslog
 | 
-| WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [SA Node] --> Redis [SA Node] <--> Logstash [SA Node] --> Elasticsearch Ingest [SA Node]
+| Elastic Agent: Elastic Agent [Windows Endpoint]--> Logstash [SA Node] --> Redis [SA Node] <--> Logstash [SA Node] --> Elasticsearch Ingest [SA Node]
 | Logs: WEL, Sysmon
 
 Fleet Standalone
 ----------------
+
 | Pipeline: Elastic Agent [Fleet Node] --> Logstash [M | MS] --> Elasticsearch Ingest [S | MS]
-| Logs: Osquery
+| Logs: Elastic Agent
 
 Manager (separate search nodes)
 -------------------------------
+
 | Core Pipeline: Elastic Agent [Fleet | Forward] --> Logstash [Manager] --> Redis [Manager]
-| Logs: Zeek, Suricata, Osquery/Fleet, syslog
+| Logs: Zeek, Suricata, syslog
 | 
-| WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [Manager] --> Redis [Manager]
-| Logs: WEL
+| Elastic Agent: Elastic Agent [Windows Endpoint]--> Logstash [Manager] --> Redis [Manager]
+| Logs: WEL, Sysmon
 
 Manager Search
 --------------
+
 | Core Pipeline: Elastic Agent [Fleet | Forward] --> Logstash [MS] --> Redis [MS] <--> Logstash [MS] --> Elasticsearch Ingest [MS]
-| Logs: Zeek, Suricata, Osquery/Fleet, syslog
+| Logs: Zeek, Suricata, syslog
 | 
 | Pipeline: Elastic Agent [MS] --> Logstash [MS] --> Elasticsearch Ingest [MS]
-| Logs: Local Osquery/Fleet
+| Logs: Local Elastic Agent
 | 
-| WinLogbeat: Winlogbeat [Windows Endpoint]--> Logstash [MS] --> Elasticsearch Ingest [MS]
-| Logs: WEL
+| Elastic Agent: Elastic Agent [Windows Endpoint]--> Logstash [MS] --> Elasticsearch Ingest [MS]
+| Logs: WEL, Sysmon
 
 Heavy
 -----
+
 | Pipeline: Elastic Agent [Heavy Node] --> Logstash [Heavy] --> Redis [Heavy] <--> Logstash [Heavy] --> Elasticsearch Ingest [Heavy] 
-| Logs: Zeek, Suricata, Osquery/Fleet, syslog
+| Logs: Zeek, Suricata, syslog
 
 Search
 ------
+
 | Pipeline: Redis [Manager] --> Logstash [Search] --> Elasticsearch Ingest [Search] 
-| Logs: Zeek, Suricata, Osquery/Fleet, syslog
+| Logs: Zeek, Suricata, syslog
 
 Forward
 -------
+
 | Pipeline: Elastic Agent [Forward] --> Logstash [M | MS] --> Elasticsearch Ingest [S | MS]
 | Logs: Zeek, Suricata, syslog
