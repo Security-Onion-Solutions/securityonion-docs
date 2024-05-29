@@ -11,7 +11,7 @@ Starting in Security Onion 2.4.70, :ref:`soc` will send telemetry data to Google
 Configuring
 ~~~~~~~~~~~
 
-During setup, or during non-automated :ref:`soup` invocations, the user is provided an opportunity to opt out of SOC telemetry collection.
+During setup, or during non-automated :ref:`soup` invocations, the user must choose to enable or disable SOC telemetry collection.
 
 After installation, grid administrators can enable or disable SOC Telemetry via the configuration interface. Search for ``SOC Telemetry`` in the Configuration screen.
 
