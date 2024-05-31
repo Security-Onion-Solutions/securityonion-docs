@@ -64,6 +64,9 @@ Elastic Agent:
 - TCP/8443 (All nodes to Manager) - Elastic Agent binary updates
 - TCP/5055 (All nodes to Manager, Fleet nodes, Receiver nodes) - Elastic Agent data
 
+Search nodes to all Elastic cluster nodes (manager and all search nodes):
+- TCP/9200 - Logstash connecting to :ref:`elasticsearch`
+
 Search nodes from/to Manager:
 
 - TCP/9300 - Node-to-node for :ref:`elasticsearch`
