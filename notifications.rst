@@ -66,7 +66,12 @@ Once the alerter parameters are configured, as described above, the next step is
 
 Navigate to the :ref:`administration` -> Configuration screen. Next, locate the ``soc -> config -> server -> modules -> elastalertengine`` settings.
 
-In the **Additional Alerters** configuration setting, add the name of each alerter that should be activated, one alerter name per line. 
+In the **Additional Alerters** configuration setting, add the name of each alerter that should be activated, one alerter name per line. For example, to add both slack and email: 
+
+::
+
+  slack
+  email
 
 .. image:: images/config-item-soc-additionalAlerters.png
   :target: _images/config-item-soc-additionalAlerters.png
