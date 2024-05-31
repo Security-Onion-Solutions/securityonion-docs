@@ -64,7 +64,7 @@ By default, Docker configures its network bridge with an IP address of ``172.17.
 Containers
 ----------
 
-Our Docker containers all belong to a common Docker bridge network, called ``so-elastic-net``. Each container is also aliased, so that communication can occur between the different docker containers using said alias. For example, communication to the ``so-elasticsearch`` container would occur through an alias of ``elasticsearch``.
+Our Docker containers all belong to a common Docker bridge network, called ``sobridge``. Each container is also aliased, so that communication can occur between the different docker containers using said alias. For example, communication to the ``so-elasticsearch`` container would occur through an alias of ``elasticsearch``.
 
 You may come across interfaces in ``ifconfig`` with the format ``veth*``. These are the external interfaces for each of the Docker containers. These interfaces correspond to internal Docker container interfaces (within the Docker container itself).
 
