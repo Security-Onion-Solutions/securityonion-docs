@@ -22,6 +22,7 @@ When configuring network firewalls for Internet-connected deployments (non-:ref:
 - rules.emergingthreatspro.com (Emerging Threats IDS rules)  
 - rules.emergingthreats.net (Emerging Threats IDS open rules)  
 - github.com (Strelka and Sigma rules updates) 
+- objects.githubusercontent.com (Strelka and Sigma rules updates) 
 
 If you are using our ISO image, you will also need access to the following:
 
