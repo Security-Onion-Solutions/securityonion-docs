@@ -68,6 +68,11 @@ Navigate to the :ref:`administration` -> Configuration screen. Next, locate the 
 
 In the **Additional Alerters** configuration setting, add the name of each alerter that should be activated, one alerter name per line. 
 
+::
+
+  slack
+  email
+
 .. image:: images/config-item-soc-additionalAlerters.png
   :target: _images/config-item-soc-additionalAlerters.png
 
