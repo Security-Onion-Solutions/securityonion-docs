@@ -27,7 +27,7 @@ You can add images but they must be hosted from another host that is accessible 
 
 ::
 
-        ![SOC Dashboards](https://docs.securityonion.net/en/2.4/_images/51_dashboards.png)
+        ![SOC Dashboards](https://docs.securityonion.net/en/2.4/_images/53_dashboards.png)
 
 Links
 -----
