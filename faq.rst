@@ -199,8 +199,8 @@ How can I add local rules?
 
 Please see the :ref:`detections` section.
 
-Can I connect Security Onion to Active Directory or LDAP?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Can I connect Security Onion to Active Directory or another OIDC provider?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Please see the :ref:`oidc` section.
 
