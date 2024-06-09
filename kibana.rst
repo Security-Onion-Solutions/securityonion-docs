@@ -14,7 +14,7 @@ You can add new user accounts to both Kibana and :ref:`soc` at the same time as 
 
 .. warning::
 
-        If you create accounts directly in Kibana (rather than in SOC), then those accounts will only have access to Kibana and not SOC.
+        If you create accounts directly in Kibana (rather than in SOC), then those accounts will NOT be able to log into SOC.
 
 Kibana Dashboards
 -----------------
