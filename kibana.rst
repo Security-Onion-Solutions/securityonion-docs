@@ -10,7 +10,11 @@ Authentication
 
 Log into Kibana using the same username and password that you use for :ref:`soc`. 
 
-You can add new user accounts to both Kibana and :ref:`soc` at the same time as shown in the :ref:`adding-accounts` section. Please note that if you instead create accounts directly in Kibana, then those accounts will only have access to Kibana and not :ref:`soc`.
+You can add new user accounts to both Kibana and :ref:`soc` at the same time as shown in the :ref:`adding-accounts` section. 
+
+.. warning::
+
+        If you create accounts directly in Kibana (rather than in SOC), then those accounts will only have access to Kibana and not SOC.
 
 Kibana Dashboards
 -----------------
