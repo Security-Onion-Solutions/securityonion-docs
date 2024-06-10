@@ -52,11 +52,15 @@ The default timeout for user login sessions is 24 hours. This is a fixed timespa
 Custom Queries
 --------------
 
-If you'd like to add your own custom queries to :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you can go to :ref:`administration` --> Configuration --> soc --> server --> client and then select the specific app you'd like to modify.
+If you'd like to add your own custom queries to :ref:`alerts`, :ref:`cases`, :ref:`dashboards`, :ref:`detections` or :ref:`hunt`, you can go to :ref:`administration` --> Configuration --> soc --> config --> server --> client and then select the specific app you'd like to modify. 
+
+.. warning::
+
+        When you save your custom queries, SOC saves the entire list of queries (including our default queries included in the product). So if you update to a new version which includes new or updated default queries, you won't see the new or updated default queries since your custom query list is overriding the default.
 
 To see all available fields for your queries, go down to the Events table and then click the arrow to expand a row. It will show all of the individual fields from that particular event.
 
-For example, suppose you want to add GeoIP information like ``source.geo.region_iso_code`` or ``destination.geo.region_iso_code`` to :ref:`alerts`. You would go to :ref:`administration` --> Configuration --> soc --> server --> client --> alerts --> queries and insert the following line wherever you want it show up in the query list:
+For example, suppose you want to add GeoIP information like ``source.geo.region_iso_code`` or ``destination.geo.region_iso_code`` to :ref:`alerts`. You would go to :ref:`administration` --> Configuration --> soc --> config --> server --> client --> alerts --> queries and insert the following line wherever you want it show up in the query list:
 
 ::
 

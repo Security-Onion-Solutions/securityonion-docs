@@ -31,6 +31,8 @@ The query bar defaults to Open Cases. Clicking the drop-down box reveals other o
 
 Under the query bar, you’ll notice colored bubbles that represent the individual components of the query and the fields to group by. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
+If you would like to save your own personal queries, you can bookmark them in your browser. If you would like to customize the default queries for all users, please see the :ref:`soc-customization` section.
+
 Time Picker
 -----------
 

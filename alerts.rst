@@ -42,6 +42,8 @@ Query Bar
 
 The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. You can click the dropdown box to select other queries which will group by other fields. If you want to send your current Alerts query to :ref:`hunt`, you can click the crosshair icon to the right of the query bar.
 
+If you would like to save your own personal queries, you can bookmark them in your browser. If you would like to customize the default queries for all users, please see the :ref:`soc-customization` section.
+
 Time Picker
 -----------
 

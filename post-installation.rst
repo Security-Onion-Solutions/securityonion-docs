@@ -3,6 +3,21 @@
 After Installation
 ==================
 
+Adjust firewall rules
+---------------------
+
+Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to make other adjustments to firewall rules, you can do so by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
+
+.. image:: images/config-item-firewall.png
+  :target: _images/config-item-firewall.png
+
+If for some reason you can't access :ref:`soc` at all, you can use the so-firewall command to allow the IP address of your web browser to connect (replacing ``<IP ADDRESS>`` with the actual IP address of your web browser):
+::
+
+        sudo so-firewall includehost analyst <IP ADDRESS>
+
+For more information, please see the :ref:`firewall` section.
+
 Services
 --------
 
@@ -21,14 +36,6 @@ You can also verify services are running from the command line with the :ref:`so
 
 	sudo so-status
 	
-Adjust firewall rules
----------------------
-
-Depending on what kind of installation you did, the Setup wizard may have already walked you through adding firewall rules to allow your analyst IP address(es). If you need to make other adjustments to firewall rules, you can do so by going to :ref:`administration` --> Configuration --> firewall --> hostgroups.
-
-.. image:: images/config-item-firewall.png
-  :target: _images/config-item-firewall.png
-
 SSH
 ---
 

@@ -58,6 +58,8 @@ The query bar defaults to ``All Detections``. Clicking the drop-down box reveals
 
 Under the query bar, you’ll notice colored bubbles that represent the individual components of the query. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
+If you would like to save your own personal queries, you can bookmark them in your browser. If you would like to customize the default queries for all users, please see the :ref:`soc-customization` section.
+
 Group Metrics
 -------------
 
