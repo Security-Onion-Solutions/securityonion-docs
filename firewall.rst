@@ -82,7 +82,6 @@ Elastic Fleet nodes to Receiver nodes:
 
 - TCP/5056 - Logstash-to-Logstash for Elastic Agent data ingest
 
-
 Host Firewall
 -------------
 
@@ -100,10 +99,10 @@ You can configure the firewall by going to :ref:`administration` --> Configurati
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png
 
-If for some reason you can't access :ref:`soc`, you can use the so-firewall command to allow your IP address to connect (replacing ``<IP ADDRESS>`` with your actual IP address):
+If for some reason you can't access :ref:`soc` at all, you can use the so-firewall command to allow the IP address of your web browser to connect (replacing ``<IP ADDRESS>`` with the actual IP address of your web browser):
 ::
 
-    so-firewall includehost analyst <IP ADDRESS>
+        sudo so-firewall includehost analyst <IP ADDRESS>
 
 Reviewing Host Firewall
 -----------------------

@@ -29,6 +29,13 @@ Depending on what kind of installation you did, the Setup wizard may have alread
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png
 
+If for some reason you can't access :ref:`soc` at all, you can use the so-firewall command to allow the IP address of your web browser to connect (replacing ``<IP ADDRESS>`` with the actual IP address of your web browser):
+::
+
+        sudo so-firewall includehost analyst <IP ADDRESS>
+
+For more information, please see the :ref:`firewall` section.
+
 SSH
 ---
 
