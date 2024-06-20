@@ -58,6 +58,15 @@ Local Configurations
 
 ``soup`` will check for local configurations in ``/opt/so/saltstack/local/`` that may cause issues and flag them with the message ``Potentially breaking changes found in the following files``. Please examine the output of ``soup`` and review any local configurations for possible issues.
 
+Detections
+----------
+
+Starting in Security Onion 2.4.70, there is a new :ref:`detections` interface. To prepare for migration to :ref:`detections`, soup will do the following:
+
+- Playbook Plays will be backed up to ``/nsm/backup/detections-migration/`` and any active Elastalert rules will be backed up and removed.
+
+- Suricata tuning configurations will be backed to ``/nsm/backup/detections-migration/`` and any thresholds will be migrated over to :ref:`detections`.
+
 Log
 ---
 
