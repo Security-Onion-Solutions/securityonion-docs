@@ -5,7 +5,9 @@ Security Onion Pro
 
 In 2022, we announced that we would be releasing enterprise features that would only be available to paid users of the platform. You can read the announcement at https://blog.securityonion.net/2022/08/security-onion-enterprise-features-and.html.
 
-Starting in Security Onion 2.4.70, licensed users of Security Onion Pro can activate the following features: :ref:`oidc` 3rd-party authentication, :ref:`luks` disk encryption, :ref:`fips` OS compliance, :ref:`stig` OS compliance, :ref:`notifications`, and time tracking inside of :ref:`cases`. In a future release, we will add guaranteed message delivery as a Pro feature.
+Starting in Security Onion 2.4.70, licensed users of Security Onion Pro can activate the following features: :ref:`oidc` 3rd-party authentication, :ref:`luks` disk encryption, :ref:`fips` OS compliance, :ref:`stig` OS compliance, :ref:`notifications`, and time tracking inside of :ref:`cases`.
+
+With the release of Security Onion 2.4.80 we're introducing :ref:`Guaranteed Message Delivery <kafka>` support leveraging Kafka for Security Onion Pro.
 
 .. note::
 
@@ -19,3 +21,4 @@ Starting in Security Onion 2.4.70, licensed users of Security Onion Pro can acti
    fips   
    stig
    notifications
+   kafka
