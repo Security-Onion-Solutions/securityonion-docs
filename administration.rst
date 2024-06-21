@@ -62,6 +62,8 @@ If you're not sure of which component a particular setting may belong to, you ca
 
 Some settings can be applied across the entire grid or to specific nodes. If you apply a setting to a specific node, it will override the grid setting.
 
+.. _administration-advanced-settings:
+
 Advanced Settings
 ~~~~~~~~~~~~~~~~~
 
