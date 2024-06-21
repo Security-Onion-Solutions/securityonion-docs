@@ -35,6 +35,8 @@ Here is the list of possible status messages and what they mean:
 
 Clicking the status text will navigate to :ref:`hunt` and attempt to find related logs.
 
+As part of the sync process, Detections checks for duplicates. If duplicates are found, Detections will log information about the duplicate.
+
 The Detections menu option on the left side of the application will show an exclamation mark if there is a recent failure in any of the detection engines. In this situation the web browser tab will also show an exclamation indicator. If no failures are detected, and if any of the detection engines has an import pending or is performing a rule import, synchronization, or migration, then a blue hourglass will appear next to the Detections menu option.
 
 Options

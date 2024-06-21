@@ -7,7 +7,7 @@ In 2022, we announced that we would be releasing enterprise features that would 
 
 Starting in Security Onion 2.4.70, licensed users of Security Onion Pro can activate the following features: :ref:`oidc` 3rd-party authentication, :ref:`luks` disk encryption, :ref:`fips` OS compliance, :ref:`stig` OS compliance, :ref:`notifications`, and time tracking inside of :ref:`cases`.
 
-With the release of Security Onion 2.4.80 we're introducing :ref:`Guaranteed Message Delivery <kafka>` support leveraging Kafka for Security Onion Pro.
+Starting in Security Onion 2.4.80, licensed Pro users can also enable :ref:`Guaranteed Message Delivery <kafka>`.
 
 .. note::
 
