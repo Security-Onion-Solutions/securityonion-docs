@@ -23,7 +23,7 @@ To resolve the issue, run the following command for each affected index (replaci
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
 2.4.80 [20240624] Changes
-----------------------
+-------------------------
 
 - FEATURE: Add `IP/VAR` column to Suricata Overrides view
 - FEATURE: Add more links and descriptions to SOC MOTD `#13216 <https://github.com/Security-Onion-Solutions/securityonion/issues/13216>`_
