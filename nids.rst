@@ -126,3 +126,31 @@ Other
 
 - not officially managed/supported by Security Onion
 - license fee may or may not apply
+
+To add custom rulesets, navigate to :ref:`administration` --> Configuration, enable the ``Show all configurable settings`` option, then search for ``customRulesets``, and drilldown on the left side.
+
+Custom rulesets can be added either via URL or a local file placed on the Manager.
+
+For URLs, the format is:
+
+::
+
+        {"community":true,"license":"GPLv2","ruleset":"snort-community","target-file":"community.rules","url":"https://www.snort.org/downloads/community/community-rules.tar.gz"}
+
+Here's what each option means:
+
+- community: Required, true or false. This disables some management options for the imported rules - they can't be deleted or edited, just tuned, duplicated, and Enabled | Disabled.
+- license: Required, the license this ruleset falls under.
+- ruleset: Required, the ruleset name or identifier.
+- target-file: Required, the name of the file that contains the rules, once it is downloaded. The file extension must be ``.rules``.
+- url: Required, the URL that the rules should be downloaded from.
+
+For local files, the format is:
+
+::
+
+        {"community":true,"license":"DRL1.1","file":"/nsm/rules/detect-suricata/custom_file/SOS-Custom_suricata.rules","ruleset":"SOS-Custom"}
+
+file: This is the path for the local rules file, which must be in the ``/nsm/rules/detect-suricata/custom_file/`` directory.
+
+The new settings will be applied within 15 minutes. At that point, you will need to wait for the scheduled rule update to take place (by default, every 24 hours), or you can force the update by navigating to :ref:`detections` --> Options dropdown menu --> Suricata --> Full Update.

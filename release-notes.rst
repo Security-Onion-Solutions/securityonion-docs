@@ -22,6 +22,41 @@ To resolve the issue, run the following command for each affected index (replaci
 
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
+2.4.80 [20240624] Changes
+-------------------------
+
+- FEATURE: Add `IP/VAR` column to Suricata Overrides view
+- FEATURE: Add more links and descriptions to SOC MOTD `#13216 <https://github.com/Security-Onion-Solutions/securityonion/issues/13216>`_
+- FEATURE: Add new Process actions `#13226 <https://github.com/Security-Onion-Solutions/securityonion/issues/13226>`_
+- FEATURE: Add SOC Config Quick Links for Cold and Warm ILM Phases `#13203 <https://github.com/Security-Onion-Solutions/securityonion/issues/13203>`_
+- FEATURE: Bulk Delete Custom Detections `#13151 <https://github.com/Security-Onion-Solutions/securityonion/issues/13151>`_
+- FEATURE: Create Detection - Preload Rule Templates  `#13152 <https://github.com/Security-Onion-Solutions/securityonion/issues/13152>`_
+- FEATURE: Guaranteed Message Delivery `#13201 <https://github.com/Security-Onion-Solutions/securityonion/issues/13201>`_
+- FEATURE: Show notice in SOC if license will expire within 45 days
+- FEATURE: Support Custom Suricata Rulesets via URL and local file `#13195 <https://github.com/Security-Onion-Solutions/securityonion/issues/13195>`_
+- FEATURE: Support Suricata VARs for Overrides `#13194 <https://github.com/Security-Onion-Solutions/securityonion/issues/13194>`_
+- FEATURE: Syntax Highlighting
+- FEATURE: Toggle full query visibility in hunt screens
+- FIX: Add duplicate check to Integrity Check
+- FIX: Add file transfer status to ISO output
+- FIX: Bulk Actions - No banner at start `#13177 <https://github.com/Security-Onion-Solutions/securityonion/issues/13177>`_
+- FIX: Can not use suricata address-book names in address-group definitions `#13136 <https://github.com/Security-Onion-Solutions/securityonion/issues/13136>`_
+- FIX: Custom Sigma Detection - Description field `#13159 <https://github.com/Security-Onion-Solutions/securityonion/issues/13159>`_
+- FIX: Detections - Suricata Integrity Check `#13180 <https://github.com/Security-Onion-Solutions/securityonion/issues/13180>`_
+- FIX: Elasticsearch index templates not loading `#13161 <https://github.com/Security-Onion-Solutions/securityonion/issues/13161>`_
+- FIX: .items and .lists indices are created with a replica `#13111 <https://github.com/Security-Onion-Solutions/securityonion/issues/13111>`_
+- FIX: Page limit for Fleet Agent Policies `#13131 <https://github.com/Security-Onion-Solutions/securityonion/issues/13131>`_
+- FIX: Proxy support in Detections `#13153 <https://github.com/Security-Onion-Solutions/securityonion/issues/13153>`_
+- FIX: Quoting when duplication Suricata Detection `#13241 <https://github.com/Security-Onion-Solutions/securityonion/issues/13241>`_
+- FIX: Receiver nodes should allow connections from Elastic Agents `#13167 <https://github.com/Security-Onion-Solutions/securityonion/issues/13167>`_
+- FIX: Refactor DetectionParameters
+- FIX: Separate Suricata indices into alerts and metadata `#12868 <https://github.com/Security-Onion-Solutions/securityonion/issues/12868>`_
+- FIX: so-test and so-tcpreplay fail when manager offline `#13104 <https://github.com/Security-Onion-Solutions/securityonion/issues/13104>`_
+- FIX: Unable to add additional Suricata Overrides without page refresh `#13188 <https://github.com/Security-Onion-Solutions/securityonion/issues/13188>`_
+- FIX: Visual Glitch - dupe operational notes when updating custom rule `#13199 <https://github.com/Security-Onion-Solutions/securityonion/issues/13199>`_
+- UPGRADE: CyberChef 10.18.6 `#13174 <https://github.com/Security-Onion-Solutions/securityonion/issues/13174>`_
+- UPGRADE: Docker `#13181 <https://github.com/Security-Onion-Solutions/securityonion/issues/13181>`_
+
 2.4.70 [20240529] Changes
 ----------------------------------
 

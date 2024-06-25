@@ -25,3 +25,19 @@ LUKS Install Options with a TPM
 -------------------------------
 
 If a TPM module is installed in the system you will have the option of storing the key in the TPM to unlock the drives automatically at boot. This process uses clevis in order to manage this process.   
+
+LUKS TPM enrollment / re-enrollment
+-----------------------------------
+There may be a case where you have already installed Security Onion with LUKS enabled, but did not opt-in to use your TPM for automatic decryption at boot. In this case, you can use the ``so-luks-tpm-regen`` script to enroll the TPM and configure it for automatic decryption.
+
+SSH to the Security Onion node and run the following command:
+
+::
+
+    sudo so-luks-tpm-regen --enroll-tpm
+
+Similarly, if for any reason automatic decryption was previously enabled using the ISO and has now stopped working you can re-enroll the TPM.
+
+::
+
+    sudo so-luks-tpm-regen

@@ -53,7 +53,9 @@ Dashboards will try to detect your local time zone via your browser. You can man
 Query Bar
 ---------
 
-The easiest way to get started is to click the query drop down box and select one of the pre-defined dashboards. These pre-defined dashboards cover most of the major data types that you would expect to see in a Security Onion deployment: :ref:`nids` alerts from :ref:`suricata`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, endpoint logs, and firewall logs.
+The easiest way to get started is to click the query drop down box and select one of the pre-defined dashboards. These pre-defined dashboards cover most of the major data types that you would expect to see in a Security Onion deployment: :ref:`nids` alerts from :ref:`suricata`, protocol metadata logs from :ref:`zeek` or :ref:`suricata`, :ref:`elastic-agent` logs, and firewall logs.
+
+On the right side of the query bar are two buttons. The first button is an ellipsis (three dots) which toggles between showing the full query or only the search filter. The second button is a hunt button that will start a new hunt based on the current filters.
 
 Under the query bar, you’ll notice colored bubbles that represent the individual components of the query. If you want to remove part of the query, you can click the X in the corresponding bubble to remove it and run a new search.
 
@@ -157,11 +159,15 @@ The ``Actions`` sub-menu has several different options:
 
 - Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
 
-- Clicking the ``Process Info`` option will show all logs for the selected process.
+- Clicking the ``Process Info`` option will show all logs that include this process's entity_id in the ``process.entity_id`` field.
+
+- Clicking the ``Process and Child Info`` option will show all logs that include this process's entity_id in either the ``process.entity_id`` or ``process.parent.entity_id`` fields (depending on the process, this may show the same logs as the ``Process Info`` option or it may show more).
+
+- Clicking the ``Process All Info`` option will show all logs that include this process's entity_id in any field (depending on the process, this may show the same logs as the ``Process and Child Info`` option or it may show more).
 
 - Clicking the ``Process Ancestors`` option will show all parent processes for the selected process.
 
-Please note that some of these actions will only display on the Actions menu if you click on a specific log type. For example, the ``Process Info`` and ``Process Ancestors`` options will only appear if you click on a log that contains the ``process.entity_id`` field.
+Please note that some of these actions will only display on the Actions menu if you click on a specific log type. For example, the first three Process actions will only appear if you click on a log that contains the ``process.entity_id`` field and the ``Process Ancestors`` action will only appear if you click on a log that contains the ``process.Ext.ancestry`` field.
 
 If you'd like to add your own custom actions, see the :ref:`soc-customization` section.
 

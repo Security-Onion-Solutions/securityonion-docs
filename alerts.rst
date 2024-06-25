@@ -40,7 +40,9 @@ Alerts will try to detect your local time zone via your browser. You can manuall
 Query Bar
 ---------
 
-The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. You can click the dropdown box to select other queries which will group by other fields. If you want to send your current Alerts query to :ref:`hunt`, you can click the crosshair icon to the right of the query bar.
+The query bar defaults to ``Group By Name, Module`` which groups the alerts by ``rule.name`` and ``event.module``. You can click the dropdown box to select other queries which will group by other fields.
+
+On the right side of the query bar is a hunt button that will start a new hunt based on the current query.
 
 If you would like to save your own personal queries, you can bookmark them in your browser. If you would like to customize the default queries for all users, please see the :ref:`soc-customization` section.
 
@@ -146,10 +148,14 @@ The ``Actions`` sub-menu has several different options:
 
 - Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
 
-- Clicking the ``Process Info`` option will show all logs for the selected process.
+- Clicking the ``Process Info`` option will show all logs that include this process's entity_id in the ``process.entity_id`` field.
+
+- Clicking the ``Process and Child Info`` option will show all logs that include this process's entity_id in either the ``process.entity_id`` or ``process.parent.entity_id`` fields (depending on the process, this may show the same logs as the ``Process Info`` option or it may show more).
+
+- Clicking the ``Process All Info`` option will show all logs that include this process's entity_id in any field (depending on the process, this may show the same logs as the ``Process and Child Info`` option or it may show more).
 
 - Clicking the ``Process Ancestors`` option will show all parent processes for the selected process.
 
-Please note that some of these actions will only display on the Actions menu if you click on a specific log type. For example, the ``Process Info`` and ``Process Ancestors`` options will only appear if you click on a log that contains the ``process.entity_id`` field.
+Please note that some of these actions will only display on the Actions menu if you click on a specific log type. For example, the first three Process actions will only appear if you click on a log that contains the ``process.entity_id`` field and the ``Process Ancestors`` action will only appear if you click on a log that contains the ``process.Ext.ancestry`` field.
 
 If you'd like to add your own custom actions, see the :ref:`soc-customization` section.

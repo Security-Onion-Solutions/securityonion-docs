@@ -30,10 +30,12 @@ Here is the list of possible status messages and what they mean:
 - **Migration Failed**: A failure occurred during the migration. The migration will stop on the first error and will not attempt to migrate to newer versions until the issue is resolved.
 - **Synchronizing**: A rule synchronization is in progress. This occurs daily, to ensure the Security Onion grid has the latest rules. 
 - **Sync Failed**: A failure occurred during the synchronization procedure. The next sync will retry within a few minutes.
-- **Rule Mismatch**: An integrity check process detected a mismatch between the deployed rules and the enabled rules. The SOC log will note the specific mismatched rules. One way that this can happen is if you had previously added custom rules to /opt/so/saltstack/local/salt/idstools/rules/local.rules. If this is the case, you can remove the rules from that file and then re-add them using the Detections interface.
+- **Rule Mismatch**: An integrity check process detected a mismatch between the deployed rules and the enabled rules. The SOC log will note the specific mismatched rules. One possible reason for this is if you had previously added custom rules to /opt/so/saltstack/local/salt/idstools/rules/local.rules. If this is the case, you can remove the rules from that file and then re-add them using the Detections interface. Another possible reason is if you have changed the default metadata engine setting from :ref:`zeek` to :ref:`suricata`. When using :ref:`suricata` as the metadata engine, there are some metadata rules that are enabled which cause the mismatch. This issue will be resolved in a future release.
 - **OK**: No known issues with the rule engine.
 
 Clicking the status text will navigate to :ref:`hunt` and attempt to find related logs.
+
+As part of the sync process, Detections checks for duplicates. If duplicates are found, Detections will log information about the duplicate.
 
 The Detections menu option on the left side of the application will show an exclamation mark if there is a recent failure in any of the detection engines. In this situation the web browser tab will also show an exclamation indicator. If no failures are detected, and if any of the detection engines has an import pending or is performing a rule import, synchronization, or migration, then a blue hourglass will appear next to the Detections menu option.
 
