@@ -8,4 +8,4 @@ If you need to change the URL for web access to Security Onion (for example, fro
 .. image:: images/config-item-global.png
   :target: _images/config-item-global.png
 
-Then select the ``url_base`` option.
+Once there, select the ``url_base`` option, enter the new URL in the field on the right, and then click the checkmark to save the new setting.
