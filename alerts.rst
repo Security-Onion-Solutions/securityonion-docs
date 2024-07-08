@@ -134,7 +134,7 @@ The ``Clipboard`` sub-menu has several options that allow you to copy selected d
 Actions
 ~~~~~~~
 
-The ``Actions`` sub-menu has several different options:
+The ``Actions`` sub-menu has several different options. Please note that some of these actions will only display on the Actions menu if you click on a specific log type.
 
 - Clicking the ``Hunt`` option will start a new search for the selected value and will give you a good overview of what types of data are available for that indicator.
 
@@ -142,20 +142,18 @@ The ``Actions`` sub-menu has several different options:
 
 - Clicking the ``Correlate`` option will find related logs based on Community ID, uid, fuid, etc.
 
-- Clicking the ``PCAP`` option will pivot to the :ref:`pcap` interface to retrieve full packet capture for the selected stream.
+- Clicking the ``PCAP`` option will pivot to the :ref:`pcap` interface to retrieve full packet capture for the selected stream. This option will only appear if you click on a log that contains source IP, source port, destination IP, destination port, etc.
 
 - Clicking the ``Google`` option will search Google for the selected value. 
 
 - Clicking the ``VirusTotal`` option will search VirusTotal for the selected value.
 
-- Clicking the ``Process Info`` option will show all logs that include this process's entity_id in the ``process.entity_id`` field.
+- Clicking the ``Process Info`` option will show all logs that include this process's entity_id in the ``process.entity_id`` field. This option will only appear if you click on a log that contains the ``process.entity_id`` field.
 
-- Clicking the ``Process and Child Info`` option will show all logs that include this process's entity_id in either the ``process.entity_id`` or ``process.parent.entity_id`` fields (depending on the process, this may show the same logs as the ``Process Info`` option or it may show more).
+- Clicking the ``Process and Child Info`` option will show all logs that include this process's entity_id in either the ``process.entity_id`` or ``process.parent.entity_id`` fields. Depending on the process, this may show the same logs as the ``Process Info`` option or it may show more. This option will only appear if you click on a log that contains the ``process.entity_id`` field.
 
-- Clicking the ``Process All Info`` option will show all logs that include this process's entity_id in any field (depending on the process, this may show the same logs as the ``Process and Child Info`` option or it may show more).
+- Clicking the ``Process All Info`` option will show all logs that include this process's entity_id in any field. Depending on the process, this may show the same logs as the ``Process and Child Info`` option or it may show more. This option will only appear if you click on a log that contains the ``process.entity_id`` field.
 
-- Clicking the ``Process Ancestors`` option will show all parent processes for the selected process.
-
-Please note that some of these actions will only display on the Actions menu if you click on a specific log type. For example, the first three Process actions will only appear if you click on a log that contains the ``process.entity_id`` field and the ``Process Ancestors`` action will only appear if you click on a log that contains the ``process.Ext.ancestry`` field.
+- Clicking the ``Process Ancestors`` option will show all parent processes for the selected process. This option will only appear if you click on a log that contains the ``process.Ext.ancestry`` field.
 
 If you'd like to add your own custom actions, see the :ref:`soc-customization` section.
