@@ -178,7 +178,6 @@ Heavy nodes perform sensor duties and store their own logs in their own local :r
 Heavy Nodes run the following components:
 
 -  :ref:`elasticsearch`
--  :ref:`logstash`
 -  :ref:`zeek`
 -  :ref:`suricata`
 -  :ref:`stenographer`
