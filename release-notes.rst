@@ -22,6 +22,31 @@ To resolve the issue, run the following command for each affected index (replaci
 
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
+2.4.90 [20240724] Changes
+----------------------
+
+- FEATURE: Add new action to SOC Actions list to allow users to more easily add their own actions `#13346 <https://github.com/Security-Onion-Solutions/securityonion/issues/13346>`_
+- FEATURE: Include new Security Onion appliance images for v2 refresh
+- FEATURE: Provide maximize button on configuration screen
+- FEATURE: Support suricata regex enable | disable
+- FEATURE: Visualize diff of history edits
+- FIX: Better Timeout Error message `#12534 <https://github.com/Security-Onion-Solutions/securityonion/issues/12534>`_
+- FIX: Custom defined template causes SLS rendering error in base:elasticsearch.enabled `#13328 <https://github.com/Security-Onion-Solutions/securityonion/issues/13328>`_
+- FIX: Detections - Bulk Performance Revisit
+- FIX: Disable logstash on heavynodes `#13073 <https://github.com/Security-Onion-Solutions/securityonion/issues/13073>`_
+- FIX: Exclude policy phases if not defined in defaults `#13354 <https://github.com/Security-Onion-Solutions/securityonion/issues/13354>`_
+- FIX: Heavynode architecture documentation
+- FIX: Improve displayed metrics for Kafka in influxdb `#13235 <https://github.com/Security-Onion-Solutions/securityonion/issues/13235>`_
+- FIX: Refactor Sync Process
+- FIX: Update MOTD `#13317 <https://github.com/Security-Onion-Solutions/securityonion/issues/13317>`_
+- FIX: Update SOC MOTD `#13320 <https://github.com/Security-Onion-Solutions/securityonion/issues/13320>`_
+- UPGRADE: Base image for so-steno container to oracle9:latest `#13344 <https://github.com/Security-Onion-Solutions/securityonion/issues/13344>`_
+- UPGRADE: Base image for so-tcpreplay container to oracle9:latest `#13345 <https://github.com/Security-Onion-Solutions/securityonion/issues/13345>`_
+- UPGRADE: CyberChef 10.19.0 `#13267 <https://github.com/Security-Onion-Solutions/securityonion/issues/13267>`_
+- UPGRADE: so-idh to newer base image `#13265 <https://github.com/Security-Onion-Solutions/securityonion/issues/13265>`_
+- UPGRADE: so-nginx to nginx:1.26.1-alpine `#13264 <https://github.com/Security-Onion-Solutions/securityonion/issues/13264>`_
+- UPGRADE: Suricata 7.0.6 `#13283 <https://github.com/Security-Onion-Solutions/securityonion/issues/13283>`_
+
 2.4.80 [20240624] Changes
 -------------------------
 
