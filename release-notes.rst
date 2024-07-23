@@ -23,7 +23,7 @@ To resolve the issue, run the following command for each affected index (replaci
 After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
 
 2.4.90 [20240724] Changes
-----------------------
+-------------------------
 
 - FEATURE: Add new action to SOC Actions list to allow users to more easily add their own actions `#13346 <https://github.com/Security-Onion-Solutions/securityonion/issues/13346>`_
 - FEATURE: Include new Security Onion appliance images for v2 refresh
