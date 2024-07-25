@@ -87,9 +87,9 @@ Custom Sigma Repositories
 
 You can configure Security Onion to pull Sigma rules from custom git repos via elastalertengine --> rulesRepos --> default. 
 
-Repos can be accessed via https or from the local filesystem. For example:
+Repos can be accessed via https or from the local filesystem (it must be a git repo). For example:
 
 ::
 
-        file:///nsm/rules/detect-sigma/repos/my-custom-rep
+        file:///nsm/rules/detect-sigma/repos/my-custom-repo
 
