@@ -29,6 +29,33 @@ To tune the detection:
 .. image:: images/60_detection_nids_2_tuning_2_add.png
   :target: _images/60_detection_nids_2_tuning_2_add.png
 
+Enabling | Disabling with Regex
+---------------------
+
+In 2.4.90, NIDS rules can now be enabled or disabled in Detections using regex patterns. Navigate to SOC Configuration and filter for `regex`, then drill down into soc --> config --> server --> modules --> suricataengine --> disableRegex or enableRegex.
+
+The regex flavor is Google RE2: https://github.com/google/re2/wiki/Syntax
+
+So for example, to disable the following categories of ETOPEN rules:
+ET EXPLOIT_KIT
+ET MALWARE
+
+but not:
+ET EXPLOIT_KIT
+
+You would use the following regex patterns:
+ET EXPLOIT_KIT\s
+ET MALWARE\s
+
+The `\s` is a shortcut for whitespace and is useful in this situation to make sure we are only matching the specific categories that we want to disable.
+
+If a detection would be matched by both an enable and disable regex, it is enabled. If a Detection's status is changed via the Detections interface, but it is currently matched by a regex pattern, the change initiated from the Detections interface is reverted and a message is shown.
+
+Enable and disable operations that are based on regex patterns are actioned during rule updates, which defaults to every 24 hours. If you have made a change to the regex patterns and would like to have it implemented more immediately:
+- Under Grid configuration, click "Synchronize Grid", which will kick off a salt highstate - give that about 5 minutes.
+- Navigate to Detections and run a "Full Update" for Suricata. Once this completes, refresh the Detections page and you should see the relevant Detections statuses have changed.
+
+
 Adding New NIDS Rules
 ---------------------
 
