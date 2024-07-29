@@ -29,7 +29,7 @@ To tune the detection:
 .. image:: images/60_detection_nids_2_tuning_2_add.png
   :target: _images/60_detection_nids_2_tuning_2_add.png
 
-Enabling | Disabling with Regex
+Enabling and Disabling with Regex
 -------------------------------
 
 In 2.4.90, NIDS rules can now be enabled or disabled in Detections using regex patterns. Navigate to SOC Configuration and filter for `regex`, then drill down into soc --> config --> server --> modules --> suricataengine --> disableRegex or enableRegex.
