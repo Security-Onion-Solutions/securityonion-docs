@@ -10,7 +10,7 @@ In this section, we'll cover creating a virtual machine (VM) for our ISO image i
 
 .. note::
 
-   With the sniffing interface in ``bridged`` mode, you will be able to see all traffic to and from the host machine's physical NIC. If you would like to see **ALL** the traffic on your network, you will need a method of forwarding that traffic to the interface to which the virtual adapter is bridged. This can be achieved with a tap or SPAN port.
+   If you want to sniff live traffic, then you will need a second network interface dedicated to sniffing. You will need to set this sniffing interface to sniff from whatever network you want to monitor. With the sniffing interface in ``bridged`` mode, you should be able to see all traffic to and from the host machine's physical NIC. If you would like to see **ALL** the traffic on your network, you will need a method of forwarding that traffic to the interface to which the virtual adapter is bridged. This can be achieved with a tap or SPAN port. If you want to sniff traffic from other VMs, then the virtual sniffing interface needs to be set to the same virtual network that those VMs are set to (this may be ``NAT`` or ``bridged`` depending on how they are configured).
 
 Workstation Pro
 ---------------
@@ -24,8 +24,8 @@ VMware Workstation is available for many different host operating systems, inclu
 #. Specify virtual machine name and click ``Next``.
 #. Specify disk size (minimum 200GB), store as single file, click ``Next``.
 #. Customize hardware and increase Memory and Processors based on the :ref:`hardware` section.
-#. Network Adapter (NAT or Bridged -- if you want to be able to access your Security Onion machine from other devices in the network, then choose Bridged, otherwise choose NAT to leave it behind the host) -- in this tutorial, this will be the management interface.
-#. Add >> Network Adapter (Bridged) - this will be the sniffing (monitor) interface.
+#. Network Adapter (``NAT`` or ``Bridged`` -- if you want to be able to access your Security Onion machine from other devices in the network then choose Bridged, otherwise choose NAT to leave it behind the host). This will be the management interface.
+#. Add >> Network Adapter (``NAT`` or ``Bridged``). This will be the sniffing (monitor) interface.
 #. Click ``Close``.
 #. Click ``Finish``.
 #. Power on the virtual machine and then follow the installation steps for your desired installation type in the :ref:`installation` section.

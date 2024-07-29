@@ -56,7 +56,7 @@ Manager Search
 Heavy
 -----
 
-| Pipeline: Elastic Agent [Heavy Node] --> Logstash [Heavy] --> Redis [Heavy] <--> Logstash [Heavy] --> Elasticsearch Ingest [Heavy] 
+| Pipeline: Elastic Agent [Heavy Node] --> Elasticsearch Ingest [Heavy] 
 | Logs: Zeek, Suricata, syslog
 
 Search

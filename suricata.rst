@@ -177,7 +177,7 @@ Troubleshooting Alerts
 
 If you're not seeing the Suricata alerts that you expect to see, here are some things that you can check:
 
-- If you have metadata enabled, check to see if you have metadata for the connections. Depending on your configuration, this could be Suricata metadata or :ref:`zeek` metadata.
+- If you have metadata enabled, check to see if you have metadata for the connections. Depending on your configuration, this could be Suricata metadata or :ref:`zeek` metadata. Go to :ref:`dashboards`, click the dropdown menu, select the ``Connections seen by Zeek or Suricata`` dashboard, and see if the connections you expect to see in your network traffic are listed there.
 
 - If you have metadata enabled but aren't seeing any metadata, then something may be preventing the process from seeing the traffic. Check to see if you have any :ref:`bpf` configuration that may cause the process to ignore the traffic. If you're sniffing traffic from the network, verify that the traffic is reaching the NIC using tcpdump. If importing a pcap file, verify that file contains the traffic you expect and that the Suricata process can read the file and any parent directories.
 
