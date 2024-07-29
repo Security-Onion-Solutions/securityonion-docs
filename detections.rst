@@ -121,3 +121,48 @@ For more information about managing :ref:`nids` rules for :ref:`suricata`, pleas
 For more information about managing :ref:`sigma` rules for :ref:`elastalert`, please see the :ref:`sigma` section.
 
 For more information about managing :ref:`yara` rules for :ref:`strelka`, please see the :ref:`yara` section.
+
+Technical Background
+--------------------
+
+Detections abstracts the underlying alerting engine and simplifies writing detections for different rule types. Here's what happens behind the scenes.
+
+Enable and Disable (Bulk and Individual) Operations
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Elastalert/Sigma
+  - Immediate change in the UI and on disk
+
+Suricata/NIDS
+  - UI Bulk and Individual: Immediate change in the UI, disk change once the `idstools` state runs again
+  - Regex: UI and disk change once the `soc` state runs again and the :ref:`suricata` engine syncs
+
+Strelka/YARA
+  - Immediate change in the UI, disk change once the `strelka` state runs again
+
+Tuning
+~~~~~~
+
+Elastalert/Sigma
+  - Immediate change in the UI and on disk
+
+Suricata/NIDS
+  - Immediate change in the UI, disk change once the `idstools` state runs again
+
+Strelka/YARA
+  - N/A
+
+Ruleset Changes
+~~~~~~~~~~~~~~~
+
+Elastalert/Sigma
+  - Sigma Ruleset Packages: UI and disk change once the `soc` state runs again and the :ref:`elastalert` engine syncs
+  - Git repo (https or disk): UI and disk change once the `soc` state runs again and the :ref:`elastalert` engine syncs
+
+Suricata/NIDS
+  - ETOPEN/ETPRO: UI and disk change once the `soc` and  `idstools` states run again and the :ref:`suricata` engine syncs
+  - Custom URL: UI and disk change once the `soc` and `idstools` states run again and the :ref:`suricata` engine syncs
+  - Custom Local File: UI and disk change once the `soc` and `idstools` states run again and the :ref:`suricata` engine syncs
+
+Strelka/YARA
+  - Git repo (https or disk): UI and disk change once the `soc` state runs again and the :ref:`strelka` engine syncs

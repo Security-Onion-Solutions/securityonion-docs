@@ -29,6 +29,30 @@ To tune the detection:
 .. image:: images/60_detection_nids_2_tuning_2_add.png
   :target: _images/60_detection_nids_2_tuning_2_add.png
 
+Enabling and Disabling with Regex
+---------------------------------
+
+In 2.4.90, NIDS rules can now be enabled or disabled in Detections using regex patterns. Navigate to SOC :ref:`administration` - Configuration and filter for ``regex``, then drill down into soc --> config --> server --> modules --> suricataengine --> disableRegex or enableRegex.
+
+The regex flavor is Google RE2: https://github.com/google/re2/wiki/Syntax
+
+In ETOPEN, categories are prepended to the rule name. For example, the ``ET EXPLOIT PHP-Live-Chat Get Shell Attempt Inbound`` rule is in the ``ET EXPLOIT`` category. So suppose you want to disable the ``ET EXPLOIT`` and ``ET MALWARE`` categories but NOT the ``ET EXPLOIT_KIT`` category. You would use the following regex patterns:
+
+::
+
+        ET EXPLOIT\s
+        ET MALWARE\s
+
+The ``\s`` is a shortcut for whitespace and is useful in this situation to make sure we are only matching the specific categories that we want to disable.
+
+If a detection would be matched by both an enable and disable regex, it is enabled. If a detection's status is changed via the :ref:`detections` interface but it is currently matched by a regex pattern, the change initiated from the :ref:`detections` interface is reverted and a message is shown.
+
+Enable and disable operations that are based on regex patterns are actioned during the daily rule update. If you have made a change to the regex patterns and would like to have it implemented more immediately:
+
+- Under Grid Configuration, click the ``SYNCHRONIZE GRID`` button and wait about 5 minutes for it to complete.
+- Navigate to :ref:`detections`, click the Options menu, select :ref:`suricata` in the dropdown menu, click the ``FULL UPDATE`` button, and then wait for it to complete.
+- Refresh the :ref:`detections` page and you should see the relevant rule statuses have changed.
+
 Adding New NIDS Rules
 ---------------------
 
