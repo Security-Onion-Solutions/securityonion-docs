@@ -124,7 +124,7 @@ For more information about managing :ref:`yara` rules for :ref:`strelka`, please
 
 
 Technical Background
----------------------
+--------------------
 
 SOC Detections abstracts the underlying alerting engine and simplifies writing detections for different rule types. With this abstraction, it's not always clear how quickly changes are implemented. The following provides this information.
 
