@@ -199,6 +199,11 @@ What happened to Playbook?
 
 Playbook has been replaced by :ref:`detections`.
 
+What happened to Wazuh?
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Wazuh has been replaced by :ref:`elastic-agent`.
+
 How can I add local rules?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
