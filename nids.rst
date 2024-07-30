@@ -32,7 +32,7 @@ To tune the detection:
 Enabling and Disabling with Regex
 ---------------------------------
 
-In 2.4.90, NIDS rules can now be enabled or disabled in Detections using regex patterns. Navigate to SOC :ref:`administration` - Configuration and filter for ``regex``, then drill down into soc --> config --> server --> modules --> suricataengine --> disableRegex or enableRegex.
+Starting in Security Onion 2.4.90, NIDS rules can now be enabled or disabled in Detections using regex patterns. Navigate to SOC :ref:`administration` - Configuration and filter for ``regex``, then drill down into soc --> config --> server --> modules --> suricataengine --> disableRegex or enableRegex.
 
 The regex flavor is Google RE2: https://github.com/google/re2/wiki/Syntax
 
