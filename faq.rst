@@ -194,6 +194,11 @@ Should I backup my Security Onion box?
 
 Security Onion automatically backs up some important configuration as described in the :ref:`backup` section. However, there is no automated data backup. Network Security Monitoring as a whole is considered "best effort". It is not a "mission critical" resource like a file server or web server. Since we're dealing with "big data" (potentially terabytes of full packet capture) of a transient nature, backing up the data would be prohibitively expensive. Most organizations don't do any data backups and instead just rebuild boxes when necessary.
 
+What happened to Filebeat?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Filebeat has been replaced by :ref:`elastic-agent`.
+
 What happened to Playbook?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
