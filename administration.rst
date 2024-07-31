@@ -67,14 +67,14 @@ Some settings can be applied across the entire grid or to specific nodes. Applyi
 Extended Settings
 ~~~~~~~~~~~~~~~~~
 
-By default, SOC only retrieves and shows commonly configured settings, and excludes not include all settings. This improves the user experience when navigating to the configuration screen, as the screen is able to load more quickly. To see the extended settings, go to the Options bar at the top of the page and then click the toggle labeled ``Show extended settings, including index settings``.
+By default, SOC only retrieves and shows commonly configured settings, and excludes settings that aren't customized as often. This improves the user experience when navigating to the configuration screen, as the screen is able to load more quickly. To see the extended settings, go to the Options bar at the top of the page and then click the toggle labeled ``Show extended settings, including index settings``.
 
 .. _administration-advanced-settings:
 
 Advanced Settings
 ~~~~~~~~~~~~~~~~~
 
-By default, the Configuration page excludes settings that are not intended to be adjusted by most grid administrators. These advanced settings can cause loss of data and other issues if adjusted incorrectly. To see the advanced settings, go to the Options bar at the top of the page and then click the toggle labeled ``Show all configurable settings, including advanced settings``.
+By default, the Configuration page excludes settings that are not intended to be adjusted by most grid administrators. These advanced settings can cause loss of data and other issues if adjusted incorrectly. To see the advanced settings, go to the Options bar at the top of the page and then click the toggle labeled ``Show advanced settings``.
 
 .. warning::
 
