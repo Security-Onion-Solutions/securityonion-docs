@@ -25,7 +25,7 @@ Once there, select the ``elastic_agent_endpoint`` option.
 
 .. note::
 
-    If you'd like to see this in action, check out our Youtube video at https://youtu.be/cGmQMsFuAvw.
+    Check out our Elastic Agent video at https://youtu.be/cGmQMsFuAvw!
 
 Linux
 ~~~~~

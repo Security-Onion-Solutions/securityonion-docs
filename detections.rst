@@ -14,7 +14,7 @@ Starting in Security Onion 2.4.70, :ref:`soc` includes our Detections interface 
 
 .. note::
 
-    Check out our Detections sneak peek video at https://youtu.be/oxR4q53N6OI!
+    Check out our Detections video at https://youtu.be/DelAmqtU2hg!
 
 Rule Engine Status
 ------------------

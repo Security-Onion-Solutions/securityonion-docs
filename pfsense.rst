@@ -3,7 +3,7 @@
 pfSense
 =======
 
-pfSense is a free and open firewall that can be found at https://www.pfsense.org/. Security Onion has a couple of options for ingesting logs from pfSense firewalls: a simple parser and the more comprehensive Elastic Integration for pfSense. We recommend using the more comprehensive option by following the steps in the Elastic Integration section below. You can also follow along with our Youtube video at https://www.youtube.com/watch?v=aoH8qZwAxek.
+pfSense is a free and open firewall that can be found at https://www.pfsense.org/. Security Onion has a couple of options for ingesting logs from pfSense firewalls: a simple parser and the more comprehensive Elastic Integration for pfSense. We recommend using the more comprehensive option by following the steps in the Elastic Integration section below. You can also follow along with our video at https://www.youtube.com/watch?v=aoH8qZwAxek.
 
 Simple Parser
 -------------
