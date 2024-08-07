@@ -199,6 +199,11 @@ What happened to Filebeat?
 
 Filebeat has been replaced by :ref:`elastic-agent`.
 
+What happened to Grafana?
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Grafana has been replaced by :ref:`grid`.
+
 What happened to Playbook?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
