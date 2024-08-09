@@ -84,7 +84,7 @@ so-elasticsearch-indices-delete
 
 ``so-elasticsearch-indices-delete`` manages size-based deletion of Elasticsearch indices based on the value of the ``elasticsearch.retention.retention_pct`` setting. This setting is checked against the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. If your indices are using more than ``retention_pct``, then ``so-elasticsearch-indices-delete`` will delete old indices until available disk space is back under ``retention_pct``. The default value for this setting is ``50`` percent so that standalone deployments have sufficient space for not only Elasticsearch but also full packet capture and other logs. For distributed deployments with dedicated search nodes where Elasticsearch is main consumer of disk space, you may want to increase this default value.
 
-To modify the ``retention_pct`` value, first navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch --> retention --> retention_pct. Once you make the change and save it, the new setting will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
+To modify the ``retention_pct`` value, first navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then navigate to elasticsearch --> retention --> retention_pct. Once you make the change and save it, the new setting will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
 ILM
 ~~~
@@ -102,7 +102,7 @@ ILM settings can be found by navigating to :ref:`administration` --> Configurati
 
 To edit the global policy that applies to ALL indices, navigate to global_overrides --> policy --> phases and there you will see the cold, delete, hot, and warm ILM phases.
 
-To edit the policy for an individual index, first click the ``Options`` menu at the top of the page and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to $index --> policy --> phases. There you will see the cold, delete, hot, and warm ILM phases for that particular index.
+To edit the policy for an individual index, first click the ``Options`` menu at the top of the page and then enable the ``Show advanced settings`` option. Then navigate to $index --> policy --> phases. There you will see the cold, delete, hot, and warm ILM phases for that particular index.
 
 It's important to note that settings like ``min_age`` are calculated relative to the rollover date (NOT the original creation date of the index). For example, if you have an index that is set to rollover after 30 days and delete ``min_age`` set to 30 then there will be 30 days from index creation to rollover and then an additional 30 days before deletion.
 
@@ -147,7 +147,7 @@ If you want to set certain search nodes to the ``data_hot``, ``data_warm``, or `
 
    Elasticsearch node roles is an advanced setting and you should be careful to avoid disruption to your cluster!
 
-To see and modify Elasticsearch node roles, first navigate to :ref:`administration` --> Configuration, click the ``Options`` menu at the top of the page, and enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to elasticsearch --> so_roles and select the desired role. Finally, navigate to config --> node --> roles and the list of roles should appear on the right side of the page.
+To see and modify Elasticsearch node roles, first navigate to :ref:`administration` --> Configuration, click the ``Options`` menu at the top of the page, and enable the ``Show advanced settings`` option. Then navigate to elasticsearch --> so_roles and select the desired role. Finally, navigate to config --> node --> roles and the list of roles should appear on the right side of the page.
 
 Templates
 ---------
@@ -246,15 +246,18 @@ If you want to clear all Elasticsearch data including documents and indices, you
 GeoIP
 -----
 
-Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. To do this, add the following to your Elasticsearch :ref:`salt` config:
+Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. In :ref:`soc`, navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then navigate to elasticsearch --> advanced and add the following config on the right side of the screen.
 
 ::
 
-    config:
-      ingest:
-        geoip:
-          downloader:
-            enabled: true
+    elasticsearch:
+      config:
+        ingest:
+          geoip:
+            downloader:
+              enabled: true
+
+Once the config is added, click the green check mark to save the configuration.
 
 Diagnostic Logging
 ------------------

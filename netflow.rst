@@ -30,7 +30,7 @@ Next, allow the traffic from the NetFlow exporter through the firewall to the Ne
    The following instructions assume that this is the first firewall change you have made and therefore refer to ``customhostgroup0`` and ``customportgroup0``. If those have already been used, you can select the next available hostgroup and portgroup.
 
 #. Navigate to :ref:`administration` --> Configuration.
-#. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 #. On the left side, go to ``firewall``, select ``hostgroups``, and click the ``customhostgroup0`` group. On the right side, enter the IP address of the NetFlow exporter and click the checkmark to save.
 #. On the left side, go to ``firewall``, select ``portgroups``, select the ``customportgroup0`` group, and then click ``udp``. On the right side, enter your desired NetFlow listener port (2055 by default) and click the checkmark to save.
 #. On the left side, go to ``firewall``, select ``role``, and then select the node type that will receive the NetFlow records. Then drill into ``chain`` --> ``INPUT`` --> ``hostgroups`` --> ``customhostgroup0`` --> ``portgroups``. On the right side, enter ``customportgroup0`` and click the checkmark to save.

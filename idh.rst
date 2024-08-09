@@ -96,7 +96,7 @@ For example, suppose that we already have the HTTP service running but we want t
         Please be very careful when making changes!
 
 - Go to :ref:`administration` --> Configuration.
-- At the top of the page, click the ``Options`` menu and enable the ``Show all configurable settings, including advanced settings.`` option.
+- At the top of the page, click the ``Options`` menu and enable the ``Show advanced settings`` option.
 - On the left side, navigate to idh --> opencanary --> config --> http_x_port.
 - On the right side, change the port value and then click the checkmark to save the change.
 - At the top of the page, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu.

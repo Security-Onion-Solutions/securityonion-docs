@@ -38,7 +38,7 @@ Elastalert diagnostic logs are in ``/opt/so/log/elastalert/`` and may also appea
 
     sudo docker logs so-elastalert
 
-ElastAlert 2 stores rule status information, such as number of hits, times each rule last ran, etc to :ref:`elasticsearch` indices. This data can helpful in assisting with troubleshooting custom rules. Searching in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically include the ``elastalert`` indices by default. To include them adjust the appropriate configuration setting. Find it in the Administration --> Configuration screen by filtering for ``elastic.index`` and selecting Options (at the top) and toggle on "Show all configurable settings". Add ``*:elastalert*`` to the ``index`` setting. The new setting value should resemble the following:
+ElastAlert 2 stores rule status information, such as number of hits, times each rule last ran, etc to :ref:`elasticsearch` indices. This data can helpful in assisting with troubleshooting custom rules. Searching in :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`. :ref:`soc` does not automatically include the ``elastalert`` indices by default. If you would like to include them, you can adjust the appropriate configuration setting. In :ref:`soc`, navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then filter for ``elastic.index`` to locate the setting. On the right side of the screen, add ``*:elastalert*`` to the existing ``index`` setting. The updated setting should resemble the following:
 
 ::
 

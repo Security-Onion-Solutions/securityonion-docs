@@ -191,7 +191,7 @@ To configure an analyzer, navigate to :ref:`administration` --> Configuration --
 .. image:: images/config-item-sensoroni.png
   :target: _images/config-item-sensoroni.png
    
-At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to sensoroni --> analyzers.
+At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then navigate to sensoroni --> analyzers.
 
 Developing Analyzers
 ~~~~~~~~~~~~~~~~~~~~

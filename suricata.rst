@@ -132,7 +132,7 @@ If you switch to Suricata PCAP, it will write all network traffic to PCAP by def
 PCAP Configuration Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Here are some other PCAP configuration options that can be found at :ref:`administration` --> Configuration --> Suricata -> pcap. Some settings are considered advanced settings so you will only see them if you enable the ``Show all configurable settings, including advanced settings.`` option.
+Here are some other PCAP configuration options that can be found at :ref:`administration` --> Configuration --> Suricata -> pcap. Some settings are considered advanced settings so you will only see them if you enable the ``Show advanced settings`` option.
 
 - compression: Set to ``none`` to disable compression. Set to ``lz4`` to enable lz4 compression but note that this requires more CPU cycles.
 - lz4-level: lz4 compression level of PCAP files. Set to ``0`` for no compression. Set to ``16`` for maximum compression.

@@ -173,7 +173,7 @@ Conversely, locally logged in users that have not logged in via SSO yet can link
 .. image:: images/oidc/oidc_link.png
   :target: _images/oidc_link.png
 
-Administrators may choose to disable password logins when using SSO, to ensure all logins must go through the external OIDC provider. On the SOC Configuration screen, enter ``password.enabled`` into the filter to locate that Advanced setting (ensure the *Show all configurable settings* toggle is enabled).
+If you would like to ensure that all logins go through the external OIDC provider, then you can disable password logins. In :ref:`soc`, navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then filter for ``password.enabled`` to locate the setting.
 
 Similarly, the TOTP MFA and Passwordless options can also be disabled, if there is a desire to prevent users from altering all local authentication methods. Search for ``totp.enabled`` and ``webauthn.enabled``, respectively, to disable those authentication methods.
 

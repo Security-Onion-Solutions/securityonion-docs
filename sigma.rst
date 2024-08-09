@@ -63,7 +63,7 @@ Sigma Configuration
 -------------------
 
 - Navigate to :ref:`administration` --> Configuration.
-- At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+- At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 - Navigate to soc --> config --> server --> modules --> elastalertengine.
 
 Once you've reached this location, here are some common settings.
