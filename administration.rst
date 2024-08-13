@@ -81,14 +81,14 @@ Enabling advanced settings will result in longer load times when viewing the Con
 Duplicate Settings
 ~~~~~~~~~~~~~~~~~~
 
-Starting in Security Onion 2.4.70, some settings can be duplicated to more easily create new settings. If a setting is eligible for duplication, then it will have a DUPLICATE button on the right side of the page, provided the Advanced Option is enabled at the top of the screen. Creating a duplicate setting is a TWO-STEP process.
+Starting in Security Onion 2.4.70, some settings can be duplicated to more easily create new settings. If a setting is eligible for duplication, then it will have a DUPLICATE button on the right side of the page, provided the ``Show advanced settings`` option is enabled at the top of the screen. Creating a duplicate setting is a TWO-STEP process.
 
-1. Click the DUPLICATE button and provide a name for the new setting, then click the CREATE SETTING button.
+1. Click the ``DUPLICATE`` button, provide a name for the new setting, and then click the ``CREATE SETTING`` button.
 2. The new setting will automatically be shown in the Configuration screen. At this point it is not yet saved to the server. The setting's value must be modified explicitly to persist this new setting. Once the value has been modified, click the green checkmark button to save it.
 
 .. note::
 
-  Duplicated settings do not retain their original setting's full behavior. For example, if the original setting only allowed for CIDR values, this new setting will not have the same protections on later views in the Configuration screen. Further, duplicated settings are marked as advanced settings. In order to see the new setting at a later time the Advanced Option toggle must be enabled under the Configuration Options at the top of the Configuration screen.
+  Duplicated settings do not retain their original setting's full behavior. For example, if the original setting only allowed for CIDR values, this new setting will not have the same protections on later views in the Configuration screen. Further, duplicated settings are marked as advanced settings. In order to see the new setting at a later time the ``Show advanced settings`` option must be enabled under the Configuration Options at the top of the Configuration screen. Finally, please note that duplicated settings cannot be removed or renamed via the SOC user interface.
 
 License Key
 -----------
