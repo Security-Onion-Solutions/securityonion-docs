@@ -31,7 +31,7 @@ Notice there are special settings for Jira and SMTP notifications. These are uni
 
 The files subtree includes a list of several file settings, which allows for populating the contents of certain files that the alerters can optionally utilize. Most alerters use the files for specifying a custom Certificate Authority, so that :ref:`elastalert` can securely and confidently connect to remote servers that may be using custom SSL/TLS certificates. Again, Security Onion's backend process will handle generating these files from the supplied configuration data provided in the user interface.
 
-Next, the **Alerter Parameters** setting is used to customize each alerter's own parameters. As :ref:`elastalert` already provides detailed documentation on the required parameters for each alerter, this documentation will not cover the same information, but instead will focus on two popular alerters: Slack and SMTP.
+Next, the **soc > config > server > modules > elastalertengine > Notifications: Sev 0/Default Parameters** setting is used to customize each alerter's own parameters. As :ref:`elastalert` already provides detailed documentation on the required parameters for each alerter, this documentation will not cover the same information, but instead will focus on two popular alerters: Slack and SMTP.
 
 .. note::
 
@@ -40,7 +40,7 @@ Next, the **Alerter Parameters** setting is used to customize each alerter's own
 Slack
 ~~~~~
 
-To have :ref:`sigma` rules send notifications to Slack, add the following line to the **Alerter Parameters** configuration setting:
+To have :ref:`sigma` rules send notifications to Slack, add the following line to the **soc > config > server > modules > elastalertengine > Notifications: Sev 0/Default Parameters** configuration setting:
 
 ::
 
@@ -49,7 +49,7 @@ To have :ref:`sigma` rules send notifications to Slack, add the following line t
 Email (SMTP)
 ~~~~~~~~~~~~
 
-To have :ref:`sigma` rules send notifications via email, add the following lines to the **Alerter Parameters** configuration setting:
+To have :ref:`sigma` rules send notifications via email, add the following lines to the **soc > config > server > modules > elastalertengine > Notifications: Sev 0/Default Parameters** configuration setting:
 
 ::
 
@@ -64,9 +64,9 @@ SOC Detections
 
 Once the alerter parameters are configured, as described above, the next step is to configure :ref:`detections` in order to activate one or more notification alerters.
 
-Navigate to the :ref:`administration` -> Configuration screen. Next, locate the ``soc -> config -> server -> modules -> elastalertengine`` settings.
+Navigate to the :ref:`administration` -> Configuration screen. Next, locate the ``soc > config > server > modules > elastalertengine`` settings.
 
-In the **Additional Alerters** configuration setting, add the name of each alerter that should be activated, one alerter name per line. For example, to add both slack and email: 
+In the **Notifications: Sev 0/Default Alerters** configuration setting, add the name of each alerter that should be activated, one alerter name per line. For example, to add both slack and email: 
 
 ::
 
@@ -80,3 +80,23 @@ Important! After activating (or removing) an alerter from this setting, the :ref
 
 .. image:: images/58_detections_options.png
   :target: _images/58_detections_options.png
+
+Severity-Based Notifications
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The instructions above setup the default notification settings, for all outbound notifications. However, as of Security Onion 2.4.100, notification settings can be customized for higher level severities.
+
+Severity levels progress as follows, starting with the lowest, least significant severity:
+
+0. Uknown Severity
+1. Informational Severity
+2. Low Severity
+3. Medium Severity
+4. High Severity
+5. Critical Severity
+
+If notification settings are not specified for a particular severity level then it will assume use whatever settings are specified at the next lower severity. If that severity is also not specified, then it continues looking for lower severity settings.
+
+.. note::
+
+  Higher severity levels do not inherit parameters or alerters from lower severities. Consequently, if ``email`` is specified as the default (Severity 0) alerter, and it's desired to have both ``email`` and ``slack`` notifications sent with **High/Sev 4** severity or above, then both ``email`` and ``slack`` will need to be specified for the ``Notifications: Sev 4/Default Alerters`` setting, one per line. This same principle applies to the parameters, which are also not inherited. In order to inherit defaults across all severities, the parameters can be specified in the ``elastalert > Custom Configuration Parameters`` setting.
