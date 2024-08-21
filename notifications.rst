@@ -84,7 +84,7 @@ Important! After activating (or removing) an alerter from this setting, the :ref
 Severity-Based Notifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The instructions above setup the default notification settings, for all outbound notifications. However, as of Security Onion 2.4.100, notification settings can be customized for higher level severities.
+The instructions above setup the default notification settings, for all outbound notifications. However, as of Security Onion 2.4.100, notification settings can be customized for higher level severities. Severities are specified in Sigma :ref:`detections`.
 
 Severity levels progress as follows, starting with the lowest, least significant severity:
 
@@ -95,8 +95,8 @@ Severity levels progress as follows, starting with the lowest, least significant
 4. High Severity
 5. Critical Severity
 
-If notification settings are not specified for a particular severity level then it will assume use whatever settings are specified at the next lower severity. If that severity is also not specified, then it continues looking for lower severity settings.
+If notification settings are not specified for a particular severity level then it will use whatever settings are specified at the next lower severity. If that severity is also not specified, then it continues looking for lower severity settings.
 
 .. note::
 
-  Higher severity levels do not inherit parameters or alerters from lower severities. Consequently, if ``email`` is specified as the default (Severity 0) alerter, and it's desired to have both ``email`` and ``slack`` notifications sent with **High/Sev 4** severity or above, then both ``email`` and ``slack`` will need to be specified for the ``Notifications: Sev 4/Default Alerters`` setting, one per line. This same principle applies to the parameters, which are also not inherited. In order to inherit defaults across all severities, the parameters can be specified in the ``elastalert > Custom Configuration Parameters`` setting.
+  Higher severity levels do not inherit parameters or alerters from lower severities. Consequently, if ``email`` is specified as the default (Severity 0) alerter, and it's desired to have both ``email`` and ``slack`` notifications sent with **High/Sev 4** severity or above, then both ``email`` and ``slack`` will need to be specified for the ``Notifications: Sev 4/Default Alerters`` setting, one per line. This same principle applies to the parameters, which are also not inherited. In order to inherit default parameters across all severities, the parameters can be specified in the ``elastalert > Custom Configuration Parameters`` setting.
