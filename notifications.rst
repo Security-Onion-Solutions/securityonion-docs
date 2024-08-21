@@ -88,7 +88,7 @@ The instructions above setup the default notification settings, for all outbound
 
 Severity levels progress as follows, starting with the lowest, least significant severity:
 
-0. Uknown Severity
+0. Unknown Severity
 1. Informational Severity
 2. Low Severity
 3. Medium Severity
