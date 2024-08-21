@@ -110,17 +110,17 @@ Clicking a value in the page brings up a context menu that allows you to refine 
 Include
 ~~~~~~~
 
-Clicking the ``Include`` option will add the selected value to your existing search to only show search results that include that value.
+Clicking the ``Include`` option will add the selected field:value pair to your existing search with an ``AND``. This will only show search results that include that value in that field.
 
 Exclude
 ~~~~~~~
 
-Clicking the ``Exclude`` option will exclude the selected value from your existing search results.
+Clicking the ``Exclude`` option will add the selected field:value pair to your existing search with an ``AND NOT``. This will only show search results that do not include that value in that field.
 
 Only
 ~~~~
 
-Clicking the ``Only`` option will start a new search for the selected value and retain any existing groupby terms.
+Clicking the ``Only`` option will start a new search for the selected value in any field. It will remove any existing filters but retain any existing groupby terms.
 
 Group By
 ~~~~~~~~
