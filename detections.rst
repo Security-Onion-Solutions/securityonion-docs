@@ -33,7 +33,9 @@ Here is the list of possible status messages and what they mean:
 - **Rule Mismatch**: An integrity check process detected a mismatch between the deployed rules and the enabled rules. The SOC log will note the specific mismatched rules. One possible reason for this is if you had previously added custom rules to /opt/so/saltstack/local/salt/idstools/rules/local.rules. If this is the case, you can remove the rules from that file and then re-add them using the Detections interface. Another possible reason is if you have changed the default metadata engine setting from :ref:`zeek` to :ref:`suricata`. When using :ref:`suricata` as the metadata engine, there are some metadata rules that are enabled which cause the mismatch. This issue will be resolved in a future release.
 - **OK**: No known issues with the rule engine.
 
-Clicking the status text will navigate to :ref:`hunt` and attempt to find related logs.
+.. tip::
+
+        Clicking the status text will navigate to :ref:`hunt` and attempt to find related logs. If the status is reporting some kind of failure, then you might want to use :ref:`hunt` to hone in on things like ``integrity check failed`` or other errors.
 
 As part of the sync process, Detections checks for duplicates. If duplicates are found, Detections will log information about the duplicate.
 
