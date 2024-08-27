@@ -70,6 +70,16 @@ Integrations
 
 You can read more about integrations in the :ref:`elastic-fleet` section and at https://docs.elastic.co/integrations.
 
+Reinstalling
+------------
+
+If for some reason you need to uninstall and reinstall the Elastic Agent on one of your Security Onion grid members, you can do so as follows:
+
+::
+
+        sudo elastic-agent uninstall
+        sudo salt-call state.apply elasticfleet.install_agent_grid
+
 More Information
 ----------------
 
