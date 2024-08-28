@@ -104,7 +104,7 @@ If notification settings are not specified for a particular severity level then 
 User-Defined Notifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As of Security Oion 2.4.100, individual Sigma detections can be tagged to change the detection's alerting behavior. The tags are set inside the detection source. These tags are defined below:
+As of Security Onion 2.4.100, individual Sigma detections can be tagged to change the detection's alerting behavior. The tags are set inside the detection source. Tag details are defined below:
 
 - ``so.notification``: When this tag is present inside of a Sigma tag list, the detection will only perform outbound notifications. It will not add an alert to the SOC Alerts screen.
 - ``so.alerters.customAlerters``: When this tag is present inside of a Sigma tag list, the detection will perform notifications for an alternate set of ElastAlert 2 alerters. More information on how to choose these alerters is provided below.
