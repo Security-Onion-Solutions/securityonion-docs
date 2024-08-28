@@ -110,6 +110,14 @@ As of Security Onion 2.4.100, individual Sigma detections can be tagged to chang
 - ``so.alerters.customAlerters``: When this tag is present inside of a Sigma tag list, the detection will perform notifications for an alternate set of ElastAlert 2 alerters. More information on how to choose these alerters is provided below.
 - ``so.params.customAlertersParams``: When this tag is present inside of a Sigma tag list, and when the above tag is also included, then an alternate set of custom parameters will be applied to the ElastAlert 2 alerters.
 
+To customize the alerters and parameters to use when these tags are specified in a Sigma detection, navigate to the Configuration screen. Find the ``soc > config > server > modules > elastalertengine > additionalUserDefinedNotifications > customAlerters`` setting and add the custom alerters, one per line, similar to what is done for the Severity-Based notifications above. Similarly, find the sibling setting to define custom alerter parameters: ``soc > config > server > modules > elastalertengine > additionalUserDefinedNotifications > customAlertersParams``.
+
+.. note::
+
+  User-defined alerters will override severity-based alerters, provided the user-defined alerters are properly configured. If the Sigma tags specify custom alerters but the corresponding setting does not exist in the Configuration then the severity-based notifications will continue to be used.
+
+To create additional user-defined alerter configurations, enabled Advanced mode and navigate to the same ``customAlerters`` and ``customAlertersParams`` settings mentioned above. With Advanced mode enabled there will be a "Create Duplicate" button that allows for duplicating these settings. Follow the on-screen instructions to create the duplicate settings. Then, to make use of these new settings, in the Sigma tag list replace the ``so.alerters.customAlerters`` tag suffix with the name (case-sensitive) of the duplicated setting. For example, if the duplicated settings are named ``SysAdminAlerters`` and ``SysAdminParams`` then the two tags to specify in the Sigma detection source are ``so.alerters.SysAdminAlerters`` and ``so.params.SysAdminParams``. Only one user-defined alerters and parameters setting will be used if multiple tags match the ``so.alerters.`` and ``so.params.`` prefixes. In other words, attempting to specify multiple user-defined alerters within a single Sigma detection will result in an ambiguous outcome.
+
 Example:
 
 .. code::
@@ -140,20 +148,12 @@ Example:
   level: high
   license: Elastic-2.0
 
-To customize the alerters and parameters to use when these tags are specified in a Sigma detection, navigate to the Configuration screen. Find the ``soc > config > server > modules > elastalertengine > additionalUserDefinedNotifications > customAlerters`` setting and add the custom alerters, one per line, similar to what is done for the Severity-Based notifications above. Similarly, find the sibling setting to define custom alerter parameters: ``soc > config > server > modules > elastalertengine > additionalUserDefinedNotifications > customAlertersParams``.
-
-.. note::
-
-  User-Defined alerters will override severity-based alerters, provided the user-defined alerters are properly configured. If the Sigma tags specify custom alerters but the corresponding setting does not exist in the Configuration then the severity-based notifications will continue to be used.
-
-To create additional user-defined alerter configurations, enabled Advanced mode and navigate to the same ``customAlerters`` and ``customAlertersParams`` settings mentioned above. With Advanced mode enabled there will be a "Create Duplicate" button that allows for duplicating these settings. Follow the on-screen instructions to create the duplicate settings. Then, to make use of these new settings, in the Sigma tag list replace the ``so.alerters.customAlerters`` tag suffix with the name (case-sensitive) of the duplicated setting. For example, if the duplicated settings are named ``SysAdminAlerters`` and ``SysAdminParams`` then the two tags to specify in the Sigma detection source are ``so.alerters.SysAdminAlerters`` and ``so.params.SysAdminParams``. Only one user-defined alerters and parameters setting will be used if multiple tags match the ``so.alerters.`` and ``so.params.`` prefixes. In other words, attempting to specify multiple user-defined alerters within a single Sigma detection will result in an ambiguous outcome.
-
 Notification Formatting
 -----------------------
 
-There are a wide range of capabilities to format notification messages to the various endpoints supported by ElastAlert 2. Refer to the ElastAlert 2 documentation for all available alerter and formatting parameters: https://elastalert2.readthedocs.io/en/latest/alerts.html#alert-types.
+There are a wide range of capabilities to format notification messages to the various endpoints supported by ElastAlert 2. Refer to the ElastAlert 2 documentation for all available formatting parameters: https://elastalert2.readthedocs.io/en/latest/alerts.html#alert-subject
 
-Below is an example of customizing the notification message. This format is compatible with most of the ElastAlert 2 alerters but may only work with specific connection-related alerts, due to it referencing specific connection fields.
+Below is an example of customizing the notification message. This format is compatible with most of the ElastAlert 2 alerters but may only work with specific connection-related alerts, due to it referencing specific connection fields. To use, paste these settings into the desired configuration alerter params field, as discussed earlier in this section. Change the hostname as necessary in the included URLs.
 
 .. code::
 
@@ -177,9 +177,9 @@ Applying Changes
 In order for alerters and parameters to take effect, multiple synchronizations must occur. These are done automatically on a set schedule, but it is possible to force them earlier, if needed. Specifically, the following must take place for the changes to be applied to the ElastAlert 2 rules:
 
 1. Changes are saved in Configuration screen by the SOC Admin.
-2. Configuration is synchronized across the grid. To manually force a grid sync, go to the Configuration screen, open the _Options_ dropdown at the top, and click _Synchronize_.
+2. Configuration is synchronized across the grid. To manually force a grid sync, go to the Configuration screen, open the ``Options`` dropdown at the top, and click ``Synchronize``.
 3. Sigma Detection edits are saved, such as adding the user-defined notification tags, or changing the severity.
-4. Sigma Detections are synchronized. Click Full Synchronize for ElastAlert rules, or to force a single detection sync go to the Detection Source tab, make an edit to the source, and click _Update_.
+4. Sigma Detections are synchronized. Click Full Synchronize for ElastAlert rules, or to force a single detection sync go to the Detection Source tab, make an edit to the source, and click ``Update``.
 
 .. note::
 
