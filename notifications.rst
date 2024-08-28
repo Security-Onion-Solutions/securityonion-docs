@@ -100,3 +100,20 @@ If notification settings are not specified for a particular severity level then 
 .. note::
 
   Higher severity levels do not inherit parameters or alerters from lower severities. Consequently, if ``email`` is specified as the default (Severity 0) alerter, and it's desired to have both ``email`` and ``slack`` notifications sent with **High/Sev 4** severity or above, then both ``email`` and ``slack`` will need to be specified for the ``Notifications: Sev 4/Default Alerters`` setting, one per line. This same principle applies to the parameters, which are also not inherited. In order to inherit default parameters across all severities, the parameters can be specified in the ``elastalert > Custom Configuration Parameters`` setting.
+
+User-Defined Notifications
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+As of Security Oion 2.4.100, individual Sigma detections can be tagged to change the detection's alerting behavior. The tags are set inside the detection source. These tags are defined below:
+
+- ``so.notification``: When this tag is present inside of a Sigma tag list, the detection will only perform outbound notifications. It will not add an alert to the SOC Alerts screen.
+- ``so.alerters.customAlerters``: When this tag is present inside of a Sigma tag list, the detection will perform notifications for an alternate set of ElastAlert 2 alerters. More information on how to choose these alerters is provided below.
+- ``so.params.customAlertersParams``: When this tag is present inside of a Sigma tag list, and when the above tag is also included, then an alternate set of custom parameters will be applied to the ElastAlert 2 alerters.
+
+To customize the alerters and parameters to use when these tags are specified in a Sigma detection, navigate to the Configuration screen. Find the ``soc > config > server > modules > elastalertengine > additionalUserDefinedNotifications > customAlerters`` setting and add the custom alerters, one per line, similar to what is done for the Severity-Based notifications above. Similarly, find the sibling setting to define custom alerter parameters: ``soc > config > server > modules > elastalertengine > additionalUserDefinedNotifications > customAlertersParams``.
+
+.. note::
+
+  User-Defined alerters will override severity-based alerters, provided the user-defined alerters are properly configured. If the Sigma tags specify custom alerters but the corresponding setting does not exist in the Configuration then the severity-based notifications will continue to be used.
+
+To create additional user-defined alerter configurations, enabled Advanced mode and navigate to the same ``customAlerters`` and ``customAlertersParams`` settings mentioned above. With Advanced mode enabled there will be a "Create Duplicate" button that allows for duplicating these settings. Follow the on-screen instructions to create the duplicate settings. Then, to make use of these new settings, in the Sigma tag list replace the ``so.alerters.customAlerters`` tag suffix with the name (case-sensitive) of the duplicated setting. For example, if the duplicated settings are named ``SysAdminAlerters`` and ``SysAdminParams`` then the two tags to specify in the Sigma detection source are ``so.alerters.SysAdminAlerters`` and ``so.params.SysAdminParams``. Only one user-defined alerters and parameters setting will be used if multiple tags match the ``so.alerters.`` and ``so.params.`` prefixes. In other words, attempting to specify multiple user-defined alerters within a single Sigma detection will result in an ambiguous outcome.
