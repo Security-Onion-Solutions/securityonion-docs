@@ -20,7 +20,7 @@ In order to allow network-based access to :ref:`elasticsearch`, you'll need to a
 .. image:: images/config-item-firewall.png
   :target: _images/config-item-firewall.png
 
-At the top of the page, click the ``Options`` menu and enable the ``Show all configurable settings, including advanced settings.`` option. On the left side, select the ``elasticsearch_rest`` option. On the right side, add your IP address or CIDR blocks and click the checkmark to save.
+At the top of the page, click the ``Options`` menu and enable the ``Show advanced settings`` option. On the left side, select the ``elasticsearch_rest`` option. On the right side, add your IP address or CIDR blocks and click the checkmark to save.
 
 Once complete, you should be able to connect to the :ref:`elasticsearch` instance. You can confirm connectivity using tools like curl or Powershell's Test-NetConnection.
 

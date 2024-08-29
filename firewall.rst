@@ -136,14 +136,14 @@ The default allow rules for each node are defined by its role (manager, searchno
 Advanced Firewall Config
 ------------------------
 
-When you go to :ref:`administration` --> Configuration --> firewall, you will only see ``hostgroups`` by default. If you need to modify port groups, then you will need to click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+When you go to :ref:`administration` --> Configuration --> firewall, you will only see ``hostgroups`` by default. If you need to modify port groups, then you will need to click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 
 Modifying a default port group
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The analyst hostgroup is allowed access to the nginx ports which are 80 and 443 by default. In this example, we will extend the default nginx port group to include a custom port.
 
-#. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 #. On the left side, go to ``firewall``, select ``portgroups``, locate the ``nginx`` portgroup, and then select ``tcp``.
 #. On the right side, select the manager node, specify your custom port to be added, and then click the checkmark to save the value.
 #. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
@@ -153,7 +153,7 @@ Creating a custom host group with a custom port group
 
 In this example, we will add a new custom hostgroup to allow a custom set of hosts to connect to a custom port on an IDH node.
 
-#. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 #. On the left side, go to ``firewall``, select ``hostgroups``, and then select ``customhostgroup0``.
 #. On the right side, select the IDH node that you want to allow access to, add the list of hosts that require access, and then click the checkmark to save the value.
 #. On the left side, go to ``firewall``, select ``portgroups``, select ``customportgroup0``, and then select the appropriate protocol.

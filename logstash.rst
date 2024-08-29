@@ -74,7 +74,7 @@ For example, to forward all :ref:`zeek` events from the ``dns`` dataset, we coul
     
     Also keep in mind that when forwarding logs from the manager, some fields may not be set as expected since the events have not yet been processed by the Ingest Node configuration.
     
-In :ref:`soc`, navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option. Then navigate to logstash --> defined_pipelines --> manager and append the name of your newly created file to the list of config files used for the ``manager`` pipeline:
+In :ref:`soc`, navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then navigate to logstash --> defined_pipelines --> manager and append the name of your newly created file to the list of config files used for the ``manager`` pipeline:
 
 ::
 

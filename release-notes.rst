@@ -6,21 +6,56 @@ Release Notes
 Known Issues
 ~~~~~~~~~~~~
 
-If you notice an Elasticsearch status of ``Pending`` in the Grid interface, you can view affected indices by running the following command from the CLI on the manager node:
+- The ``malwarehashregistry`` analyzer (Case -> Observables Tab) is no longer working as of 2.4.100. This is due to a stale third-party library that is incompatible with the latest Python version. `#13571 <https://github.com/Security-Onion-Solutions/securityonion/issues/13571>`_
 
-::
+2.4.100 [20240829] Changes
+--------------------------
 
-  sudo so-elasticsearch-query _cat/shards | grep UN
-
-The result of the query should display affected indices. Older metrics indices for Elastic Endpoint logs may have been assigned a replica, so if you are running a single-node Elastic cluster there will be nowhere for the replica to exist.
-
-To resolve the issue, run the following command for each affected index (replacing ``$index`` with the actual index name):
-
-::
-
-  sudo so-elasticsearch-query $index/_settings -d '{"number_of_replicas":0}' -XPUT
-
-After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified. 
+- FEATURE: Add breadcrumbs to Grid Configuration
+- FEATURE: Add SOC Config Quick Link to allow Security Onion Desktop installations through firewall `#13412 <https://github.com/Security-Onion-Solutions/securityonion/issues/13412>`_
+- FEATURE: Add warning to soup about ssh `#13466 <https://github.com/Security-Onion-Solutions/securityonion/issues/13466>`_
+- FEATURE: Elastic Integration for tenable.io
+- FEATURE: Optional setting to force users to setup OTP/MFA upon login `#13388 <https://github.com/Security-Onion-Solutions/securityonion/issues/13388>`_
+- FEATURE: Enhanced notifications (Pro) and related configuration updates
+- FIX: Admin resetting of a user's password is not removing MFA `#13468 <https://github.com/Security-Onion-Solutions/securityonion/issues/13468>`_
+- FIX: Appliance kickstart updates
+- FIX: Detections: YARA Detection tuning pivot should take user to detection source instead of tuning
+- FIX: Duplicate variable causing Suricata failure `#13461 <https://github.com/Security-Onion-Solutions/securityonion/issues/13461>`_
+- FIX: Elastic Fleet disable TLS 1.1 by default
+- FIX: Exempt desktop nodes from license node count
+- FIX: Firewall annotations for Kafka
+- FIX: Reduce size of SOC image due to git
+- FIX: Reduce SOC Config Loading Time
+- FIX: Review and disable outdated ciphers for Fleet  `#11145 <https://github.com/Security-Onion-Solutions/securityonion/issues/11145>`_
+- FIX: Salt packages not versionlocked `#13438 <https://github.com/Security-Onion-Solutions/securityonion/issues/13438>`_
+- FIX: SOC logs ILM policy doesn't exist `#13555 <https://github.com/Security-Onion-Solutions/securityonion/issues/13555>`_
+- FIX: Suricata Alerts missing kafka.id field
+- FIX: Syntax Check before submitting New Rule `#13385 <https://github.com/Security-Onion-Solutions/securityonion/issues/13385>`_
+- FIX: Tuning details should be included as part of the history item `#13225 <https://github.com/Security-Onion-Solutions/securityonion/issues/13225>`_
+- FIX: Update Agent Builder Dependencies `#13142 <https://github.com/Security-Onion-Solutions/securityonion/issues/13142>`_
+- FIX: Update pipeline version for EVTX `#13563 <https://github.com/Security-Onion-Solutions/securityonion/issues/13563>`_
+- UPGRADE: Docker Registry 2.8.3 `#13510 <https://github.com/Security-Onion-Solutions/securityonion/issues/13510>`_
+- UPGRADE: ElastAlert 2.19.0 `#13496 <https://github.com/Security-Onion-Solutions/securityonion/issues/13496>`_
+- UPGRADE: Elastic 8.14.3 `#13263 <https://github.com/Security-Onion-Solutions/securityonion/issues/13263>`_
+- UPGRADE: Kratos 1.2.0 `#13471 <https://github.com/Security-Onion-Solutions/securityonion/issues/13471>`_
+- UPGRADE: Salt 3006.9 `#13423 <https://github.com/Security-Onion-Solutions/securityonion/issues/13423>`_
+- UPGRADE: SOC dependencies to latest versions `#13488 <https://github.com/Security-Onion-Solutions/securityonion/issues/13488>`_
+- UPGRADE: so-elastic-agent-builder base image `#13505 <https://github.com/Security-Onion-Solutions/securityonion/issues/13505>`_
+- UPGRADE: so-elastic-fleet-package-registry base image
+- UPGRADE: so-idh base image `#13503 <https://github.com/Security-Onion-Solutions/securityonion/issues/13503>`_
+- UPGRADE: so-idstools base image `#13500 <https://github.com/Security-Onion-Solutions/securityonion/issues/13500>`_
+- UPGRADE: so-influxdb base image and InfluxDB 2.7.9 `#13494 <https://github.com/Security-Onion-Solutions/securityonion/issues/13494>`_
+- UPGRADE: so-kafka base image and Kafka 3.8.0 `#13497 <https://github.com/Security-Onion-Solutions/securityonion/issues/13497>`_
+- UPGRADE: so-nginx base image `#13491 <https://github.com/Security-Onion-Solutions/securityonion/issues/13491>`_
+- UPGRADE: so-pcaptools base image `#13495 <https://github.com/Security-Onion-Solutions/securityonion/issues/13495>`_
+- UPGRADE: so-redis base image and Redis 7.2.5 `#13501 <https://github.com/Security-Onion-Solutions/securityonion/issues/13501>`_
+- UPGRADE: so-steno base image `#13498 <https://github.com/Security-Onion-Solutions/securityonion/issues/13498>`_
+- UPGRADE: so-strelka-backend base image
+- UPGRADE: so-strelka base images `#13504 <https://github.com/Security-Onion-Solutions/securityonion/issues/13504>`_
+- UPGRADE: so-suricata base image `#13492 <https://github.com/Security-Onion-Solutions/securityonion/issues/13492>`_
+- UPGRADE: so-tcpreplay base image `#13499 <https://github.com/Security-Onion-Solutions/securityonion/issues/13499>`_
+- UPGRADE: so-telegraf base image and Telegraf 1.31.3 `#13502 <https://github.com/Security-Onion-Solutions/securityonion/issues/13502>`_
+- UPGRADE: so-zeek base image `#13493 <https://github.com/Security-Onion-Solutions/securityonion/issues/13493>`_
 
 2.4.90 [20240729] Changes
 -------------------------

@@ -62,6 +62,8 @@ If you're using VMware ESXi, then you're likely familiar with VM creation and in
 - You may need to set your monitoring interface in the vSwitch to VLAN ID 4095 to allow all traffic through. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/7185.
 
 - If you're trying to monitor multiple network interfaces, then you may need to enable the ``Allow MAC Changes`` option at both the vSwitch and Port Group levels. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/2676.
+
+- If you happen to notice after rebooting that the :ref:`elastic-agent` takes signifantly longer than 15 minutes to initialize, then you may need to enable the following option in ESXi: Settings > VM Options > VMWare Tools > Synchronise Guest Time. You can read more about this at https://github.com/Security-Onion-Solutions/securityonion/discussions/13285.
    
 VMware Tools
 ------------

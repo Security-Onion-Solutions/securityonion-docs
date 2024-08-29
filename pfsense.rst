@@ -3,7 +3,7 @@
 pfSense
 =======
 
-pfSense is a free and open firewall that can be found at https://www.pfsense.org/. Security Onion has a couple of options for ingesting logs from pfSense firewalls: a simple parser and the more comprehensive Elastic Integration for pfSense. We recommend using the more comprehensive option by following the steps in the Elastic Integration section below. You can also follow along with our Youtube video at https://www.youtube.com/watch?v=aoH8qZwAxek.
+pfSense is a free and open firewall that can be found at https://www.pfsense.org/. Security Onion has a couple of options for ingesting logs from pfSense firewalls: a simple parser and the more comprehensive Elastic Integration for pfSense. We recommend using the more comprehensive option by following the steps in the Elastic Integration section below. You can also follow along with our video at https://www.youtube.com/watch?v=aoH8qZwAxek.
 
 Simple Parser
 -------------
@@ -44,7 +44,7 @@ Next, allow the traffic from the pfSense firewall to port 9001. These instructio
 used, select the next available hostgroup and portgroup.
 
 #. Navigate to :ref:`administration` --> Configuration.
-#. At the top of the page, click the ``Options`` menu and then enable the ``Show all configurable settings, including advanced settings.`` option.
+#. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 #. On the left side, go to ``firewall``, select ``hostgroups``, and click the ``customhostgroup0`` group. On the right side, enter the IP address of the pfSense firewall and click the checkmark to save.
 #. On the left side, go to ``firewall``, select ``portgroups``, select the ``customportgroup0`` group, and then click ``udp``. On the right side, enter ``9001`` and click the checkmark to save.
 #. On the left side, go to ``firewall``, select ``role``, and then select the node type that will receive the pfSense logs. Then drill into ``chain`` --> ``INPUT`` --> ``hostgroups`` --> ``customhostgroup0`` --> ``portgroups``. On the right side, enter ``customportgroup0`` and click the checkmark to save.

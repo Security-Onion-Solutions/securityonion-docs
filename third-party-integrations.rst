@@ -110,6 +110,7 @@ sophos_central                  https://docs.elastic.co/en/integrations/sophos_c
 symantec_endpoint               https://docs.elastic.co/en/integrations/symantec_endpoint
 system                          https://docs.elastic.co/en/integrations/system
 tcp                             https://docs.elastic.co/en/integrations/tcp
+tenable_io                      https://docs.elastic.co/en/integrations/tenable_io
 tenable_sc                      https://docs.elastic.co/en/integrations/tenable_sc
 ti_abusech                      https://docs.elastic.co/en/integrations/ti_abusech
 ti_anomali                      https://docs.elastic.co/en/integrations/ti_anomali
@@ -231,6 +232,10 @@ zscaler_zpa                     https://docs.elastic.co/en/integrations/zscaler_
     Security Onion 2.4.70 supports these additional Elastic integrations:
 
     - CEF
+
+    Security Onion 2.4.100 supports these additional Elastic integrations:
+
+    - tenable_io
 
 More Information
 ----------------

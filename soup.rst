@@ -72,10 +72,12 @@ Log
 
 If ``soup`` displays any errors, you can check ``/root/soup.log`` for additional clues.
 
-ssh
+SSH
 ---
 
-If you run soup via ssh and the ssh session terminates, then any processes running in that session would terminate. You should avoid leaving soup unattended especially if the machine you are ssh'ing from is configured to sleep after a period of time. You might also consider using something like screen or tmux so that if your ssh session terminates, the processes will continue running on the server.
+.. warning::
+
+        If you run soup via an :ref:`ssh` session and that :ref:`ssh` session terminates, then any processes running in that session would terminate. You should avoid leaving soup unattended especially if the machine you are SSHing from is configured to sleep after a period of time. You might also consider using something like screen or tmux so that if your :ref:`ssh` session terminates, the processes will continue running on the server.
 
 Airgap
 ------

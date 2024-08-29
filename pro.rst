@@ -11,7 +11,7 @@ Starting in Security Onion 2.4.80, licensed Pro users can also enable :ref:`Guar
 
 .. note::
 
-    Contact Security Onion Solutions, LLC via our website at https://securityonionsolutions.com for more information about purchasing a Security Onion Pro license to enable these features.
+    Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable these features.
 
 .. toctree::
    :maxdepth: 2

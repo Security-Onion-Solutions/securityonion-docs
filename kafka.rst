@@ -11,7 +11,7 @@ If you need guaranteed message delivery, then you can enable Kafka which replace
 
 .. note::
 
-    This is an enterprise-level feature of Security Onion. Contact Security Onion Solutions, LLC via our website at https://securityonionsolutions.com for more information about purchasing a Security Onion Pro license to enable this feature.
+    This is an enterprise-level feature of Security Onion. Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable this feature.
 
 Guaranteed Message Delivery
 ---------------------------
