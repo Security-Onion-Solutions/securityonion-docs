@@ -64,7 +64,6 @@ Detections
 Starting in Security Onion 2.4.70, there is a new :ref:`detections` interface. To prepare for migration to :ref:`detections`, soup will do the following:
 
 - Playbook Plays will be backed up to ``/nsm/backup/detections-migration/`` and any active Elastalert rules will be backed up and removed.
-
 - Suricata tuning configurations will be backed to ``/nsm/backup/detections-migration/`` and any thresholds will be migrated over to :ref:`detections`.
 
 Log
@@ -85,9 +84,7 @@ Airgap
 When you run ``soup`` on an :ref:`airgap` install, it will ask for the location of the upgrade media. You can do one of the following:
 
 - burn the latest ISO image to a DVD and insert it in the DVD drive
-
 - flash the ISO image to a USB drive and insert that USB drive
-
 - simply copy the ISO file itself to the airgapped manager
 
 You can also specify the path on the command line using the ``-f`` option. For example (change this to reflect the actual path to the ISO image):
@@ -96,10 +93,14 @@ You can also specify the path on the command line using the ``-f`` option. For e
 
 	sudo soup -y -f /home/YourUser/securityonion-2.4.XYZ-YYYYMMDD.iso
 	
-Agents
-------
+Elastic
+-------
 
-If soup updated to a new version of the Elastic stack, then you might need to update your Elastic Agents via :ref:`elastic-fleet`.
+If soup updated to a new version of the Elastic stack, then you'll want to go to :ref:`elastic-fleet` and:
+
+- drill into each of your active agent policies, check the Agent Binary Download setting, and adjust if necessary for your deployment
+- check for any integrations that need to be upgraded
+- check for any agents that need to be upgraded (grid node agents should automatically upgrade so you should just need to look for any additional endpoint agents that you've deployed)
 
 log_size_limit
 --------------
@@ -194,7 +195,7 @@ If you have a distributed deployment with a manager node and separate sensor nod
 
 .. warning::
 
-    Just because the update completed on the manager does NOT mean the upgrade is complete on other nodes in the grid. Do not manually restart anything until you know that all the search/heavy nodes in your deployment are updated. This is especially important if you are using true clustering for :ref:`elasticsearch`.
+    Just because the update completed on the manager does NOT mean the upgrade is complete on other nodes in the grid. Do not manually restart anything until you know that all the search nodes and heavy nodes are updated.
 
     Each minion is on a random 15 minute check-in period and things like network bandwidth can be a factor in how long the actual upgrade takes. If you have a heavy node on a slow link, it is going to take a while to get the containers to it. Depending on what changes happened between the versions, :ref:`elasticsearch` might not be able to talk to said heavy node until the update is complete.
 
@@ -217,5 +218,4 @@ When you run ``soup`` on the manager, it does the following:
 - Unlocks the :ref:`salt` master service and allows minions to connect again.
 - Issues a command to all minions to update :ref:`salt` if necessary. This is important to note as it takes time to to update the :ref:`salt` minion on all minions. If the minion doesn't respond for whatever reason, it will not be upgraded at this time. This is not an issue because the first thing that gets checked when a minion talks to the master is if :ref:`salt` needs to be updated and will apply the update if it does.
 - Nodes connect back to the manager and actually perform the upgrade to the new version.
-
 
