@@ -40,8 +40,7 @@ First, add the pfSense integration and configure the pfSense firewall:
 #. On the ``Edit pfSense integration`` screen, go to the ``Syslog Host`` field and change ``localhost`` to ``0.0.0.0``.
 #. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
 
-Next, allow the traffic from the pfSense firewall to port 9001. These instructions assume that this is the first firewall change you have made and therefore refer to ``customhostgroup0`` and ``customportgroup0``. If those have already been 
-used, select the next available hostgroup and portgroup.
+Next, allow the traffic from the pfSense firewall to port 9001. These instructions assume that this is the first firewall change you have made and therefore refer to ``customhostgroup0`` and ``customportgroup0``. If those have already been used, select the next available hostgroup and portgroup.
 
 #. Navigate to :ref:`administration` --> Configuration.
 #. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.

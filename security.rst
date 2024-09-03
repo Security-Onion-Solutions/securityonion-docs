@@ -6,15 +6,12 @@ Security
 Vulnerability Disclosure
 ------------------------
 
-If you have any security concerns regarding Security Onion or believe
-you have uncovered a vulnerability, please send an email to 
-security@securityonion.net per the following guidelines:
+If you have any security concerns regarding Security Onion or believe you have uncovered a vulnerability, please send an email to security@securityonion.net per the following guidelines:
 
 -  Include a description of the issue and steps to reproduce
 -  Use plain text format in the email (no Word documents or PDF files)
 
-Please do NOT disclose publicly until we have had sufficient time to 
-resolve the issue.
+Please do NOT disclose publicly until we have had sufficient time to resolve the issue.
 
 .. note::
 
