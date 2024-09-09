@@ -14,6 +14,8 @@ The simplest architecture is an ``Import`` node. An import node is a single stan
    :align: center
    :target: _images/import.png
 
+For a full walkthrough of the ``Import`` option, please see the :ref:`first-time-users` section.
+
 Evaluation
 ----------
 
