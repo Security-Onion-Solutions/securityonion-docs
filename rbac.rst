@@ -346,7 +346,8 @@ The available low-level Security Onion privileges are listed in the table below:
     * - *detections/write*
       - Create and update detections and overrides
     * - *events/read*
-      - Read from Elasticse    * - *events/read*
+      - Read from Elasticsearch
+    * - *events/read*
       - Read from Elasticsearch
     * - *events/write*
       - Write to Elasticsearch
