@@ -135,7 +135,7 @@ See the table below which explains the specific Security Onion privileges grante
       - X
       - X
       - X
-    * - Add and update SOC users
+    * - Add, update, and reset SOC users
       - X
       - 
       - 
