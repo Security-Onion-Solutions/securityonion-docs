@@ -153,7 +153,7 @@ See the table below which explains the specific Security Onion privileges grante
       - 
       - 
       - 
-    * - Initiate node actions (Ex: reboot, test sensors, etc)
+    * - Initiate node actions (Ex: reboot, test sensors, import events, etc)
       - X
       - 
       - 
