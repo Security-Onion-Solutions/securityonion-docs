@@ -141,7 +141,7 @@ See the table below which explains the specific Security Onion privileges grante
       - 
       - 
       - 
-    * - Modify and synchronize grid configuration
+    * - Modify and synchronize grid config
       - X
       - 
       - 
@@ -153,7 +153,7 @@ See the table below which explains the specific Security Onion privileges grante
       - 
       - 
       - 
-    * - Initiate node actions (Ex: reboot, test sensors, import events, etc)
+    * - Initiate node actions (Ex: reboot)
       - X
       - 
       - 
