@@ -135,7 +135,24 @@ See the table below which explains the specific Security Onion privileges grante
       - X
       - X
       - X
-
+    * - Add and update SOC users
+      - X
+      - 
+      - 
+      - 
+      - 
+    * - Modify configuration parameters
+      - X
+      - 
+      - 
+      - 
+      - 
+    * - Manage grid membership of nodes
+      - X
+      - 
+      - 
+      - 
+      - 
 
 .. note::
 
@@ -369,9 +386,9 @@ These discrete privileges are then collected into privilege groups as defined be
     * - case-monitor
       - *cases/read*
     * - config-admin
-      - *config-read*, *config-write*
+      - *config/read*, *config/write*
     * - config-monitor
-      - *config-read*
+      - *config/read*
     * - detections-admin
       - *detections/read*, *detections/write*
     * - detections-monitor
