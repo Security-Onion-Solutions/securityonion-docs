@@ -3,18 +3,17 @@
 Architecture
 ============
 
-If you're going to deploy Security Onion, you should first decide on what type of deployment you want. This could be anything from a temporary Import installation in a small virtual machine on your personal laptop all the way to a large scalable enterprise deployment consisting of a manager node, multiple search nodes, and lots of forward nodes. This section will discuss what those different deployment types look like from an architecture perspective.
+In the :ref:`use-cases` section, we looked at a few of the most common use cases. This section will discuss what those different use cases look like from an architecture perspective.
 
 Import
 ------
 
-The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import pcap or evtx files using the :ref:`grid` page. It does **not** support adding Elastic agents or additional Security Onion nodes.
+The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import pcap or evtx files using the :ref:`grid` page. It does **not** support adding Elastic agents or additional Security Onion nodes. For a full walkthrough of the ``Import`` option, please see the :ref:`first-time-users` section.
 
 .. image:: images/diagrams/import.png
    :align: center
    :target: _images/import.png
 
-For a full walkthrough of the ``Import`` option, please see the :ref:`first-time-users` section.
 
 Evaluation
 ----------
