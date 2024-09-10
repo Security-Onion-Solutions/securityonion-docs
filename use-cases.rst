@@ -25,16 +25,36 @@ Minimal Host Visibility
 
 Suppose you have a small network where you just want some basic host visibility. Install our ISO image on a machine, choose the ``ManagerSearch`` option, and then deploy the :ref:`elastic-agent` to your hosts. You can read more about the ``ManagerSearch`` option in the :ref:`architecture` section.
 
-Enterprise Deployment
----------------------
+Minimal Enterprise Deployment
+-----------------------------
 
-Suppose you have a large network where you want maximum visibility for both network and hosts. A distributed deployment would look like this:
+Suppose you have a small or medium network where you want some visibility for both network and hosts. A minimal enterprise deployment would look like this:
+
+- Install our ISO image on a machine and choose the ``ManagerSearch`` option.
+- Deploy the :ref:`elastic-agent` to hosts.
+- Install our ISO image on one or more machines and join them to the grid as forward nodes. They will analyze network traffic from your taps or span ports.
+
+More Scalable Enterprise Deployment
+-----------------------------------
+
+Suppose you have a medium or large network where you want some visibility for both network and hosts. A more scalable enterprise deployment would look like this:
 
 - Install our ISO image on a machine and choose the ``Manager`` option.
-- Install our ISO image on one or more machines and join them to the manager as search nodes.
-- At this point, you can deploy the :ref:`elastic-agent` to hosts. If you will be deploying the :ref:`elastic-agent` to laptops outside of your main network, then you may want to deploy a Fleet Node to your DMZ.
-- Install our ISO image on one or more machines and join them to the manager as forward nodes. They will analyze network traffic from your taps or span ports.
-- If you want some pipeline redundancy, then you may want to install a receiver node and join it to your manager.
-- Optionally install one or more :ref:`idh` nodes and deploy them in key locations throughout your enterprise.
+- Install our ISO image on one or more machines and join them to the grid as search nodes.
+- Deploy the :ref:`elastic-agent` to hosts.
+- Install our ISO image on one or more machines and join them to the grid as forward nodes. They will analyze network traffic from your taps or span ports.
+
+Comprehensive Enterprise Deployment
+-----------------------------------
+
+Suppose you have a large network where you want maximum visibility for both network and hosts. A comprehensive distributed deployment would look like this:
+
+- Install our ISO image on a machine and choose the ``Manager`` option.
+- Install our ISO image on one or more machines and join them to the grid as search nodes.
+- Install our ISO image on a machine in your DMZ and join it to the grid as a Fleet node.
+- Deploy the :ref:`elastic-agent` to hosts.
+- Install our ISO image on one or more machines and join them to the grid as forward nodes. They will analyze network traffic from your taps or span ports.
+- Install our ISO image on a machine and join it to the grid as a receiver node. This provides load balancing and pipeline redundancy.
+- Install our ISO image on one or more machines and join them to the grid as :ref:`idh` nodes. They will provide honeypot and deception capabilities.
 
 You can read more about distributed deployments in the :ref:`architecture` section.
