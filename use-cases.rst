@@ -13,17 +13,17 @@ Suppose you just want to import PCAP or EVTX files or suppose that you have limi
 Minimal Network Visibility
 --------------------------
 
-Suppose you have a small network where you just want some basic network visibility. This might be a homelab or other small network that doesn't require a production installation. Install Security Onion and choose the ``Evaluation`` option. This machine will then analyze network traffic from your tap or span port. You can read more about the ``Evaluation`` option in the :ref:`architecture` section.
+Suppose you have a small network where you just want some basic network visibility. This might be monitoring traffic from a tap or span port on a homelab or other small network that doesn't require a production installation. Install Security Onion and choose the ``Evaluation`` option. You can read more about the ``Evaluation`` option in the :ref:`architecture` section.
+
+Minimal Host Visibility
+-----------------------
+
+Suppose you have a small network where you just want some basic host visibility. This might be deploying agents to a small number of desktops and servers and/or collecting syslog from firewall or other devices. Install Security Onion, choose the ``ManagerSearch`` option, and then deploy the :ref:`elastic-agent` to your hosts and review the :ref:`host` and :ref:`third-party-integrations` sections. You can read more about the ``ManagerSearch`` option in the :ref:`architecture` section.
 
 Minimal Network and Host Visibility
 -----------------------------------
 
 Suppose you have a small network where you want both network visibility and host visibility. Install Security Onion and choose the ``Standalone`` option. This machine will then sniff network traffic from your tap or span port and also support deploying the :ref:`elastic-agent` to other hosts. You can read more about the ``Standalone`` option in the :ref:`architecture` section.
-
-Minimal Host Visibility
------------------------
-
-Suppose you have a small network where you just want some basic host visibility. Install Security Onion, choose the ``ManagerSearch`` option, and then deploy the :ref:`elastic-agent` to your hosts. You can read more about the ``ManagerSearch`` option in the :ref:`architecture` section.
 
 Minimal Enterprise Deployment
 -----------------------------
