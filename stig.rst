@@ -12,9 +12,9 @@ STIG stands for Security Technical Implementation Guide. For more information ab
 STIG During the ISO Install
 ---------------------------
 
-The recommended way to use STIG with Security Onion is to install via our Security Onion ISO image. At the ISO boot menu, you'll need to modify the boot command. This can be done using the ``e`` key in UEFI boot mode or the ``Tab`` key in BIOS boot mode before it automatically boots. Then append ``stig=1`` (and possibly other options like :ref:`fips` and :ref:`luks`) to the boot parameters and continue the boot process.
+The recommended way to use STIG with Security Onion is to install via our Security Onion ISO image. From the :ref:`installation` menu you'll select the ``Install Security Onion Pro`` option.
 
-Specifying ``stig=1`` before installing with the Security Onion ISO will create the following partitions:
+Installing using the Security Onion Pro menu options will create additional partitions on your system to meet the STIG requirements. The partitions created include:
 
 ==============       =========
  Partition            Storage
@@ -26,6 +26,8 @@ Specifying ``stig=1`` before installing with the Security Onion ISO will create 
 /var/log/audit         2GB
 /var/log/tmp           2GB
 ==============       =========
+
+In addition to the required partitions, using the STIG menu option will also configure the system to use :ref:`fips` mode, and enable :ref:`luks` disk encryption. Both of these options can be used independently of the STIG menu option depending on your requirements.
 
 Enabling STIG
 -------------
