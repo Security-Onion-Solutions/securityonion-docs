@@ -65,7 +65,9 @@ Node Types
 Management
 ~~~~~~~~~~
 
-The ``manager node`` runs :ref:`soc` and :ref:`kibana`. It has its own local instance of :ref:`elasticsearch`, but that's mainly used for managing the :ref:`elasticsearch` cluster once search nodes join the cluster. An analyst connects to the manager node from a client workstation (perhaps :ref:`desktop`) to execute queries and retrieve data. Please keep in mind that a dedicated manager node requires separate search nodes.
+The ``manager node`` runs :ref:`soc` and :ref:`kibana`. It has its own local instance of :ref:`elasticsearch`, but that's mainly used for managing the :ref:`elasticsearch` cluster once search nodes join the cluster. An analyst connects to the manager node from a client workstation (perhaps :ref:`desktop`) to execute queries and retrieve data. 
+
+Please note that a dedicated manager node requires separate search nodes. Also note that a dedicated manager node has to start off with the ``data`` node role. When you later join a separate search node, then you may want to migrate the data from the manager to the search node and then remove the ``data`` node role from the manager. For more information, please see the :ref:`elasticsearch` section.
 
 The manager node runs the following components:
 
