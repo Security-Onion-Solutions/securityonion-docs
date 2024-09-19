@@ -53,7 +53,7 @@ Since OPNsense doesn't allow enabling third-party repositories through the GUI, 
 
      .. code-block:: shell
 
-        sudo rm -rf /usr/local/opnsense/scripts/suricata/metadata/rules/*
+        rm -rf /usr/local/opnsense/scripts/suricata/metadata/rules/*
 
 2. **Create a New Repository File:**
 
@@ -61,7 +61,7 @@ Since OPNsense doesn't allow enabling third-party repositories through the GUI, 
 
      .. code-block:: shell
 
-        sudo vi /usr/local/opnsense/scripts/suricata/metadata/rules/onion.xml
+        vi /usr/local/opnsense/scripts/suricata/metadata/rules/onion.xml
 
    - Paste the following content into the file, replacing ``YOURMANAGER`` with the hostname or IP address of your grid manager:
 
