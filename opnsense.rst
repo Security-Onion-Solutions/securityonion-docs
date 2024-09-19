@@ -1,24 +1,24 @@
 OPNSense Integration Guide
 ==========================
 
-Integrate your OPNSense firewall with your Security Onion grid system to utilize it as a makeshift sensor, allowing management of Suricata rules through Detections. This is particularly useful for users or organizations that find it challenging to install network taps on their egress connections. To enable this feature, you must have SSH access to the firewall.
+Integrate your OPNSense firewall with your Security Onion grid system to utilize it as a makeshift sensor, allowing management of Suricata rules through Detections. This is particularly useful for users or organizations that find it challenging to install network taps on their egress connections.
 
 Prerequisites
 -------------
 
 - **SSH Access**: You must have SSH access to your OPNSense firewall.
-- **SO Manager Access**: Access to the manager of your grid system.
+- **SO Manager Access**: Access to the manager of your grid.
 - **Administrative Rights**: Ability to modify settings in the OPNSense GUI.
 
 Configuring Detections
 ----------------------
 
-The Detections module can now manage rules for external Suricata instances. Please refer to the :ref:`detections` for detailed instructions on how to set this up.
+The Detections module can now manage rules for external Suricata instances. Please refer to the :ref:`detections` documentation for detailed instructions on how to set this up.
 
 Trust the Grid CA
 -----------------
 
-To establish a secure connection between your OPNSense firewall and the grid manager, you need to trust the Grid Certificate Authority (CA) certificate on your firewall.
+To establish a secure connection between your OPNSense firewall and the grid manager, you need to trust the grid's Certificate Authority (CA) certificate on your firewall.
 
 **Steps:**
 
@@ -39,7 +39,7 @@ To establish a secure connection between your OPNSense firewall and the grid man
    - Navigate to **System** → **Trust** → **Authorities**.
    - Click the **+** button to add a new certificate authority.
    - Set **Method** to **Import an existing Certificate Authority**.
-   - **Descriptive Name**: Enter a name like "Grid CA".
+   - **Descriptive Name**: Enter a name like "Security Onion CA".
    - **Certificate Data**: Paste the copied CA certificate content.
    - Click **Save**.
 
