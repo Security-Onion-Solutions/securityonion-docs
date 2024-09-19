@@ -29,7 +29,7 @@ To establish a secure connection between your OPNSense firewall and the grid man
 
      .. code-block:: shell
 
-        cat /etc/pli/ca.crt
+        cat /etc/pki/ca.crt
 
    - Copy the entire output of the command.
 
