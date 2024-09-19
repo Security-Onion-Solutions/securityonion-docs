@@ -57,10 +57,10 @@ Performance
 
 If :ref:`grid` shows that Suricata is experiencing packet loss, then you may need to do one or more of the following:
 
-- tune the :ref:`nids` ruleset
-- apply a :ref:`bpf`
-- adjust ``max-pending-packets`` in :ref:`administration` --> Configuration --> suricata --> config --> max-pending-packets.
-- adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
+- Tune the :ref:`nids` ruleset.
+- Apply a :ref:`bpf`.
+- Adjust ``max-pending-packets`` in :ref:`administration` --> Configuration --> suricata --> config --> max-pending-packets.
+- Adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
 
 .. note::
 
