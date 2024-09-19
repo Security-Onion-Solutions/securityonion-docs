@@ -1,41 +1,38 @@
-OPNSense Integration Guide
-==========================
+.. _opnsense:
 
-Integrate your OPNSense firewall with your Security Onion grid system to utilize it as a makeshift sensor, allowing management of Suricata rules through Detections. This is particularly useful for users or organizations that find it challenging to install network taps on their egress connections.
+OPNsense
+========
+
+OPNsense is a free and open firewall that can be found at https://opnsense.org/. You can integrate your OPNsense firewall with your Security Onion grid system to utilize it as a makeshift sensor, allowing management of Suricata rules through :ref:`detections`. This is particularly useful for organizations that find it challenging to install network taps on their egress connections.
 
 Prerequisites
 -------------
 
-- **SSH Access**: You must have SSH access to your OPNSense firewall.
-- **SO Manager Access**: Access to the manager of your grid.
-- **Administrative Rights**: Ability to modify settings in the OPNSense GUI.
+- **Security Onion Manager Access**: Access to the manager of your grid.
+- **Administrative Rights**: Ability to modify settings in the OPNsense GUI.
+- **SSH Access**: You must have SSH access to your OPNsense firewall.
 
 Configuring Detections
 ----------------------
 
-The Detections module can now manage rules for external Suricata instances. Please refer to the :ref:`detections` documentation for detailed instructions on how to set this up.
+The :ref:`detections` module can now manage :ref:`nids` rules for external Suricata instances. Please refer to the :ref:`nids` section for detailed instructions on how to set this up.
 
 Trust the Grid CA
 -----------------
 
-To establish a secure connection between your OPNSense firewall and the grid manager, you need to trust the grid's Certificate Authority (CA) certificate on your firewall.
+To establish a secure connection between your OPNsense firewall and the grid manager, your firewall will need to trust the grid's Certificate Authority (CA) certificate.
 
 **Steps:**
 
 1. **Copy the Grid CA Certificate:**
 
    - SSH into your grid manager.
-   - Run the following command to display the CA certificate:
+   - Run the command ``cat /etc/pki/ca.crt`` to display the CA certificate.
+   - Copy the entire output of that command.
 
-     .. code-block:: shell
+2. **Import the CA Certificate into OPNsense:**
 
-        cat /etc/pki/ca.crt
-
-   - Copy the entire output of the command.
-
-2. **Import the CA Certificate into OPNSense:**
-
-   - Log in to the OPNSense GUI.
+   - Log into the OPNsense GUI.
    - Navigate to **System** → **Trust** → **Authorities**.
    - Click the **+** button to add a new certificate authority.
    - Set **Method** to **Import an existing Certificate Authority**.
@@ -46,13 +43,13 @@ To establish a secure connection between your OPNSense firewall and the grid man
 Setting Up the Suricata Rules Repository
 ----------------------------------------
 
-Since OPNSense doesn't allow enabling third-party repositories through the GUI, you'll need to modify the configuration manually.
+Since OPNsense doesn't allow enabling third-party repositories through the GUI, you'll need to modify the configuration manually.
 
 **Steps:**
 
 1. **Remove Existing Rule Repositories:**
 
-   - SSH into your OPNSense firewall and execute:
+   - SSH into your OPNsense firewall and run the following:
 
      .. code-block:: shell
 
@@ -81,9 +78,9 @@ Since OPNSense doesn't allow enabling third-party repositories through the GUI, 
 
    - Save and exit the editor.
 
-3. **Refresh Rule Sets in OPNSense:**
+3. **Refresh Rule Sets in OPNsense:**
 
-   - Navigate to **Services** → **Intrusion Detection** → **Administration** → **Download** in the OPNSense GUI.
+   - Navigate to **Services** → **Intrusion Detection** → **Administration** → **Download** in the OPNsense GUI.
    - You should see **Security Onion** listed as a ruleset.
    - Select **Security Onion** and click **Download & Update Rules**.
    - Once updated, the rules will appear under the **Rules** tab.
@@ -105,26 +102,26 @@ To keep your Suricata rules up to date, schedule regular updates.
 
 4. Click **Save**.
 
-OPNSense will now automatically download and reload the rules every 15 minutes.
+OPNsense will now automatically download and reload the rules every 15 minutes.
 
 .. note::
 
-   You can only enable and disable rules in Detections. Threshold settings are ignored.
+   When OPNsense downloads rules from Security Onion, it can only enable and disable rules. Threshold settings are ignored.
 
 Enable NetFlow
 --------------
 
-To collect network flow data similar to Zeek's connection logs, configure NetFlow on OPNSense to send data to your grid.
+To collect network flow data similar to Zeek's connection logs, configure NetFlow on OPNsense to send data to your grid.
 
 **Steps:**
 
 1. **Prepare Your Grid to Receive NetFlow Data:**
 
-   - Refer to the :ref:`detections` to set up your grid for receiving NetFlow data.
+   - Refer to the :ref:`netflow` section to set up your grid for receiving NetFlow data.
 
-2. **Configure NetFlow on OPNSense:**
+2. **Configure NetFlow on OPNsense:**
 
-   - Navigate to **Reporting** → **NetFlow** in the OPNSense GUI.
+   - Navigate to **Reporting** → **NetFlow** in the OPNsense GUI.
    - Under **Capture**, select the internal interfaces you wish to monitor.
    - Also, select your **WAN** interface to monitor external traffic.
    - Under **Destinations**, add a new destination:
@@ -138,11 +135,11 @@ To collect network flow data similar to Zeek's connection logs, configure NetFlo
 Sending Firewall Logs to the Grid
 ---------------------------------
 
-Centralize your logging by sending OPNSense firewall logs to your grid.
+Centralize your logging by sending OPNsense firewall logs to your grid.
 
 **Steps:**
 
-1. Navigate to **System** → **Settings** → **Logging** in the OPNSense GUI.
+1. Navigate to **System** → **Settings** → **Logging** in the OPNsense GUI.
 2. Click on the **Remote Logging** tab.
 3. Click the **+** button to add a new remote logging destination.
 4. **Configure Remote Logging:**
@@ -155,5 +152,3 @@ Centralize your logging by sending OPNSense firewall logs to your grid.
    - **Format**: Choose the appropriate format (e.g., Syslog).
 
 5. Click **Save** to apply the settings.
-
----

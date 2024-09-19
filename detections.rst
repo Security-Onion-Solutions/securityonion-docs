@@ -168,11 +168,3 @@ Suricata/NIDS
 
 Strelka/YARA
   - Git repo (https or disk): UI and disk change once the `soc` state runs again and the :ref:`strelka` engine syncs
-
-Allow External Access to Suricata Rules
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Starting in 2.4.110, users can enable external access to Suricata rules managed by detections. To enable this feature you will need to change the UI to show advanced settings.
-Under nginx there is a new setting called `external_suricata`. Change this to `True`` and apply the settings to the grid. 
-
-The manager will now listen on port 7789 for https connections from hosts defined in the external_suricata host group.

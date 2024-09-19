@@ -75,6 +75,18 @@ By default, Security Onion checks for new NIDS rules every 24 hours. You can cha
 - At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 - Navigate to soc --> config --> server --> modules --> suricataengine --> communityRulesImportFrequencySeconds.
 
+Allow External Access to NIDS Rules
+-----------------------------------
+
+Starting in Security Onion 2.4.110, you can enable external access to :ref:`suricata` rules managed by Detections. This is useful when configuring :ref:`opnsense` or other network devices to pull :ref:`suricata` rules from your Security Onion deployment.You can do this as follows:
+
+- Navigate to :ref:`administration` --> Configuration.
+- At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
+- Navigate to nginx --> config --> external_suricata.
+- On the right side of the page, change the value to ``true`` and then click the checkmark to save the new setting.
+- You can wait for the next grid update or click the ``SYNCHRONIZE GRID`` button under Options.
+- Once the grid is fully synchronized, the manager should listen on port 7789 for https connections from hosts defined in the ``external_suricata`` host group.
+
 Changing to a Different Ruleset
 -------------------------------
 
