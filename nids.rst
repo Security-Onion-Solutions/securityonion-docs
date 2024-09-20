@@ -32,7 +32,7 @@ To tune the detection:
 Enabling and Disabling with Regex
 ---------------------------------
 
-Starting in Security Onion 2.4.90, NIDS rules can now be enabled or disabled in Detections using regex patterns. Navigate to SOC :ref:`administration` - Configuration and filter for ``regex``, then drill down into soc --> config --> server --> modules --> suricataengine --> disableRegex or enableRegex.
+Starting in Security Onion 2.4.90, NIDS rules can now be enabled or disabled in :ref:`detections` using regex patterns. Navigate to SOC :ref:`administration` - Configuration and filter for ``regex``, then drill down into soc --> config --> server --> modules --> suricataengine --> disableRegex or enableRegex.
 
 The regex flavor is Google RE2: https://github.com/google/re2/wiki/Syntax
 
@@ -78,7 +78,7 @@ By default, Security Onion checks for new NIDS rules every 24 hours. You can cha
 Allow External Access to NIDS Rules
 -----------------------------------
 
-Starting in Security Onion 2.4.110, you can enable external access to :ref:`suricata` rules managed by Detections. This is useful when configuring :ref:`opnsense` or other network devices to pull :ref:`suricata` rules from your Security Onion deployment.You can do this as follows:
+Starting in Security Onion 2.4.110, you can enable external access to NIDS rules managed by :ref:`detections`. This is useful when configuring :ref:`opnsense` or other network devices to pull NIDS rules from your Security Onion deployment. You can do this as follows:
 
 - Navigate to :ref:`administration` --> Configuration.
 - At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
