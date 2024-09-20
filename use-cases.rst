@@ -15,6 +15,11 @@ Minimal Network Visibility
 
 Suppose you have a small network where you just want some basic network visibility. This might be monitoring traffic from a tap or span port on a homelab or other small network that doesn't require a production installation. Install Security Onion and choose the ``Evaluation`` option. You can read more about the ``Evaluation`` option in the :ref:`architecture` section.
 
+Minimal Network Visibility with OPNsense Firewall instead of Tap or SPAN
+------------------------------------------------------------------------
+
+Suppose you have a small network segment where you just want some basic network visibility but you don't have the ability to collect traffic via tap or span port but you do have an :ref:`opnsense` firewall. Install Security Onion, choose the ``ManagerSearch`` option, and then follow the :ref:`opnsense` section to collect firewall logs, :ref:`netflow` data, and Suricata :ref:`nids` alerts. You can read more about the ``ManagerSearch`` option in the :ref:`architecture` section.
+
 Minimal Netflow Collector
 -------------------------
 
