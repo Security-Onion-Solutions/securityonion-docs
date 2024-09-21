@@ -5,20 +5,6 @@ soup
 
 ``soup`` stands for ``Security Onion UPdater`` and you can use it to update your Security Onion deployment.  
 
-To install updates, run the ``soup`` command with sudo:
-
-::
-
-	sudo soup
-
-If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then check for other updates. This includes Security Onion version updates, Security Onion hotfixes, and operating system (OS) updates.
-
-After running ``soup`` or rebooting a Security Onion node, it may take a few minutes for services to display an ``OK`` status on the :ref:`grid` screen. This may be due to the intial on-boot :ref:`salt` highstate running. If services do not appear to be fully up and running within 15 minutes, try running the following command:
-
-::
-
-	sudo so-checkin
-
 SSH
 ---
 
@@ -32,6 +18,23 @@ Production Deployments
 .. warning::
 
 	If you have a production deployment, we recommend that you test the upgrade process on a test deployment if possible before deploying to production.
+
+Updating
+--------
+
+To update your Security Onion deployment, run the ``soup`` command with sudo:
+
+::
+
+	sudo soup
+
+If necessary, ``soup`` will update itself and then ask you to run ``soup`` again. Once ``soup`` is fully updated, it will then check for other updates. This includes Security Onion version updates, Security Onion hotfixes, and operating system (OS) updates.
+
+After running ``soup`` or rebooting a Security Onion node, it may take a few minutes for services to display an ``OK`` status on the :ref:`grid` screen. This may be due to the intial on-boot :ref:`salt` highstate running. If services do not appear to be fully up and running within 15 minutes, try running the following command:
+
+::
+
+	sudo so-checkin
 
 Security Onion Version Updates
 ------------------------------
