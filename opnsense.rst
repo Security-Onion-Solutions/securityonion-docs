@@ -53,7 +53,7 @@ To collect network flow data (similar to :ref:`zeek` connection logs), configure
 Integrating OPNsense Suricata into Security Onion
 -------------------------------------------------
 
-You can integrate your OPNsense firewall with your Security Onion grid system to utilize it as a makeshift sensor, allowing management of Suricata rules through :ref:`detections`. This is particularly useful for organizations that find it challenging to install network taps on their egress connections.
+You can integrate your OPNsense firewall with your Security Onion grid system to utilize it as a makeshift sensor, allowing management of Suricata :ref:`nids` rules through :ref:`detections`. This is particularly useful for organizations that find it challenging to install network taps on their egress connections.
 
 .. note::
 
