@@ -8,6 +8,38 @@ Known Issues
 
 - The ``malwarehashregistry`` analyzer (Case -> Observables Tab) is no longer working as of 2.4.100. This is due to a stale third-party library that is incompatible with the latest Python version. `#13571 <https://github.com/Security-Onion-Solutions/securityonion/issues/13571>`_
 
+2.4.110 [20241004] Changes
+----------------------
+
+- FEATURE: Activate generated detection summaries `#13454 <https://github.com/Security-Onion-Solutions/securityonion/issues/13454>`_
+- FEATURE: Add Elastic Integration for Barracuda CloudGen Firewall
+- FEATURE: Add Elastic Integration for Imperva Cloud WAF
+- FEATURE: Add new alerts for changes in SOC status `#13654 <https://github.com/Security-Onion-Solutions/securityonion/issues/13654>`_
+- FEATURE: AI-Generated Rule analysis / summary
+- FEATURE: Allow external access to suricata rules managed by Detections `#13655 <https://github.com/Security-Onion-Solutions/securityonion/issues/13655>`_
+- FEATURE: Allow for users to add custom skins for IDH http
+- FEATURE: Create ISO install options for SOS Appliances
+- FEATURE: Desktop ISO install STIG support
+- FEATURE: For improved upgrade experience, tag Elasticsearch image with Elastic version `#13606 <https://github.com/Security-Onion-Solutions/securityonion/issues/13606>`_
+- FEATURE: Handle Custom Integration Policy Upgrades `#13560 <https://github.com/Security-Onion-Solutions/securityonion/issues/13560>`_
+- FEATURE: SOS Process Filters for Elastic Agent 
+- FEATURE: Standalone use Suricata for PCAP by default `#13650 <https://github.com/Security-Onion-Solutions/securityonion/issues/13650>`_
+- FIX: Add additional warning text in Configuration screen when trying to disable key components
+- FIX: Analysts should be able to modify and disable Suricata rules `#13668 <https://github.com/Security-Onion-Solutions/securityonion/issues/13668>`_
+- FIX: Elastic integration field mappings `#13725 <https://github.com/Security-Onion-Solutions/securityonion/issues/13725>`_
+- FIX: Intermittent soup errors causing soup to exit with failure message `#13247 <https://github.com/Security-Onion-Solutions/securityonion/issues/13247>`_
+- FIX: Minion overrides in Config screen show global override values `#13689 <https://github.com/Security-Onion-Solutions/securityonion/issues/13689>`_
+- FIX: Resolve missing CA certs in Kratos container `#13722 <https://github.com/Security-Onion-Solutions/securityonion/issues/13722>`_
+- FIX: Sensor age in grid screen sometimes shows incorrect age of node `#13628 <https://github.com/Security-Onion-Solutions/securityonion/issues/13628>`_
+- FIX: Since OIDC emails can have uppercase, force lowercase prior to server side dispatch `#13730 <https://github.com/Security-Onion-Solutions/securityonion/issues/13730>`_
+- FIX: Stenographer packet loss differs from influxdb `#13626 <https://github.com/Security-Onion-Solutions/securityonion/issues/13626>`_
+- FIX: Update Parsing of Suricata logs from pfSense and OPNsense
+- FIX: When NIDS rules update, ask Suricata to reload rules rather than restart
+- UPGRADE: CyberChef 10.19.2 `#13637 <https://github.com/Security-Onion-Solutions/securityonion/issues/13637>`_
+- UPGRADE: Docker 27.2.0 `#13566 <https://github.com/Security-Onion-Solutions/securityonion/issues/13566>`_
+- UPGRADE: ElastAlert 2 to 2.20.0 `#13700 <https://github.com/Security-Onion-Solutions/securityonion/issues/13700>`_
+- UPGRADE: Zeek 6.0.7 `#13600 <https://github.com/Security-Onion-Solutions/securityonion/issues/13600>`_
+
 2.4.100 Hotfix [20240903] Changes
 ---------------------------------
 
