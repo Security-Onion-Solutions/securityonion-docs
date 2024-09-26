@@ -9,7 +9,7 @@ Known Issues
 - The ``malwarehashregistry`` analyzer (Case -> Observables Tab) is no longer working as of 2.4.100. This is due to a stale third-party library that is incompatible with the latest Python version. `#13571 <https://github.com/Security-Onion-Solutions/securityonion/issues/13571>`_
 
 2.4.110 [20241004] Changes
-----------------------
+--------------------------
 
 - FEATURE: Activate generated detection summaries `#13454 <https://github.com/Security-Onion-Solutions/securityonion/issues/13454>`_
 - FEATURE: Add Elastic Integration for Barracuda CloudGen Firewall
