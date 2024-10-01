@@ -125,6 +125,40 @@ Back in the Auth0 tab, scroll down to the Advance Settings section, and click on
 
 Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
+Generic (Ex: Ping)
+^^^^^^^^^^^^^^^^^^
+
+Security Onion can work with most OIDC providers, even if not mentioned as an explicitly-supported provider above. To show an example of how to configure a generic provider the below instructions will show how `Ping SSO <https://pingone.com>`_ can be used as an OIDC provider for Security Onion.
+
+Locate the ``provider`` setting in the SOC configuration screen. Specify the value ``generic`` for this setting.
+
+In a separate browser tab, login to a Ping Identity console and, under the desired workspace environment, create a new application called Security Onion. Choose the ``OIDC Web App`` and click Save. On the Configuration tab, specify a Redirect URI using the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``.
+
+.. image:: images/oidc/ping_redirect.png
+  :target: _images/ping_redirect.png
+
+Locate the ``client_id`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above Ping ``Client ID`` for this setting.
+
+Generate a new client secretm under the Ping ``Client ID`` field. Copy the generated secret to your clipboard. 
+
+Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
+
+On the Ping console browser tab, under the configuration tab, expend the URLs section, near the top. Copy and paste the three following URLs into the appopriate SOC configuration screen settings: 
+- Authorization URL -> auth_url
+- Issuer -> issuer_url
+- Token Endpoint -> token_url
+
+If forcing PKCE (Proof Key Code Exchange) to be enabled, set the ``PKCE Enforcement`` setting in the Ping console's configuration tab to ``S256_REQUIRED``.
+
+In the Ping console browser tab, navigate to the Resources tab and add ``email`` as an additional scope.
+
+.. image:: images/oidc/ping_resource.png
+  :target: _images/ping_resource.png
+
+Locate the ``scope`` setting in the SOC configuration screen back on the SOC browser tab. Change the default ``profile`` scope to ``openid``. There should now be both ``email`` and ``openid`` scopes list.
+
+Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
+
 Enabling OIDC
 ^^^^^^^^^^^^^
 
