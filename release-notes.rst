@@ -38,6 +38,7 @@ Known Issues
 - UPGRADE: CyberChef 10.19.2 `#13637 <https://github.com/Security-Onion-Solutions/securityonion/issues/13637>`_
 - UPGRADE: Docker 27.2.0 `#13566 <https://github.com/Security-Onion-Solutions/securityonion/issues/13566>`_
 - UPGRADE: ElastAlert 2 to 2.20.0 `#13700 <https://github.com/Security-Onion-Solutions/securityonion/issues/13700>`_
+- UPGRADE: Kratos to 1.3.0 `#13758 <https://github.com/Security-Onion-Solutions/securityonion/issues/13758>`_
 - UPGRADE: Zeek 6.0.7 `#13600 <https://github.com/Security-Onion-Solutions/securityonion/issues/13600>`_
 
 2.4.100 Hotfix [20240903] Changes

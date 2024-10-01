@@ -36,7 +36,7 @@ In a separate browser tab, login to the Microsoft Azure account you plan to use 
 
 Locate the ``microsoft_tenant`` setting in the SOC configuration screen back on the SOC browser tab. Specify the UUID value for this setting.
 
-Back in the Azure tab, under the desired Azure Tenant, register a new App named ``Security Onion``. Most organizations will only desire organization accounts to have access to Security Onion so be sure to choose the correct account type option. Failure to choose this correctly could expose your Security Onion installation to users outside of your organization. Specify the web Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click *Register*, and on the resulting screen find the application ID for this new app registration. It will also resemble a UUID.
+Back in the Azure tab, under the desired Azure Tenant, register a new App named ``Security Onion``. Most organizations will only desire organization accounts to have access to Security Onion so be sure to choose the correct account type option. Failure to choose this correctly could expose your Security Onion installation to users outside of your organization. Specify the application as Web, with Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Omit the `/SSO` suffix if forcing PKCE (Proof Key Code Exchange). Click *Register*, and on the resulting screen find the application ID for this new app registration. It will also resemble a UUID.
 
 .. image:: images/oidc/microsoft_app_registration.png
   :target: _images/microsoft_app_registration.png
@@ -49,6 +49,8 @@ Add a new client secret to the app registration created above. Specify the secre
   :target: _images/microsoft_secret.png
 
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
+
+If forcing PKCE (Proof Key Code Exchange) to be enabled, set the ``pkce`` setting in the SOC configuration screen to ``force``. When forcing PKCE, the redirect URI should omit the trailing ``/SSO`` suffix.
 
 Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
