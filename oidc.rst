@@ -137,13 +137,14 @@ In a separate browser tab, login to a Ping Identity console and, under the desir
 .. image:: images/oidc/ping_redirect.png
   :target: _images/ping_redirect.png
 
-Locate the ``client_id`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above Ping ``Client ID`` for this setting.
+Locate the ``client_id`` setting in the SOC configuration screen back on the SOC browser tab. Specify the Ping ``Client ID`` for this setting. That ID can be located on the Ping configuration tab, as shown above.
 
-Generate a new client secretm under the Ping ``Client ID`` field. Copy the generated secret to your clipboard. 
+Generate a new client secret under the Ping ``Client ID`` field. Copy the generated secret to your clipboard. 
 
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
 
 On the Ping console browser tab, under the configuration tab, expend the URLs section, near the top. Copy and paste the three following URLs into the appopriate SOC configuration screen settings: 
+
 - Authorization URL -> auth_url
 - Issuer -> issuer_url
 - Token Endpoint -> token_url
@@ -155,7 +156,7 @@ In the Ping console browser tab, navigate to the Resources tab and add ``email``
 .. image:: images/oidc/ping_resource.png
   :target: _images/ping_resource.png
 
-Locate the ``scope`` setting in the SOC configuration screen back on the SOC browser tab. Change the default ``profile`` scope to ``openid``. There should now be both ``email`` and ``openid`` scopes list.
+Locate the ``scope`` setting in the SOC configuration screen back on the SOC browser tab. Change the default ``profile`` scope to ``openid``. There should now be both ``email`` and ``openid`` scopes listed.
 
 Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
