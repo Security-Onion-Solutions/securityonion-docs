@@ -40,7 +40,7 @@ Known Issues
 - UPGRADE: ElastAlert 2 to 2.20.0 `#13700 <https://github.com/Security-Onion-Solutions/securityonion/issues/13700>`_
 - UPGRADE: Kratos to 1.3.0 `#13758 <https://github.com/Security-Onion-Solutions/securityonion/issues/13758>`_
 - UPGRADE: Suricata to 7.0.7 `#13760 <https://github.com/Security-Onion-Solutions/securityonion/issues/13760>`_
-- UPGRADE: Zeek 6.0.7 `#13600 <https://github.com/Security-Onion-Solutions/securityonion/issues/13600>`_
+- UPGRADE: Zeek 6.0.8 `#13600 <https://github.com/Security-Onion-Solutions/securityonion/issues/13600>`_
 
 2.4.100 Hotfix [20240903] Changes
 ---------------------------------
