@@ -135,7 +135,30 @@ See the table below which explains the specific Security Onion privileges grante
       - X
       - X
       - X
-
+    * - Add, update, and reset SOC users
+      - X
+      - 
+      - 
+      - 
+      - 
+    * - Modify and synchronize grid config
+      - X
+      - 
+      - 
+      - 
+      - 
+    * - Manage grid membership of nodes
+      - X
+      - 
+      - 
+      - 
+      - 
+    * - Initiate node actions (Ex: reboot)
+      - X
+      - 
+      - 
+      - 
+      - 
 
 .. note::
 
@@ -314,12 +337,26 @@ The available low-level Security Onion privileges are listed in the table below:
       - Read all case-related information for all cases
     * - *cases/write*
       - Create and update cases, and escalate events to cases
+    * - *config/read*
+      - Read system configuration parameters
+    * - *config/write*
+      - Update and in some cases duplicate system configuration parameters
+    * - *detections/read*
+      - Read all detection related details
+    * - *detections/write*
+      - Create and update detections and overrides
+    * - *events/read*
+      - Read from Elasticsearch
     * - *events/read*
       - Read from Elasticsearch
     * - *events/write*
       - Write to Elasticsearch
     * - *events/ack*
       - Acknowledge alerts
+    * - *grid/read*
+      - Read information about the grid and its node memberships
+    * - *grid/write*
+      - Accept and reject grid memberships from new and existing nodes
     * - *jobs/read*
       - View all PCAP jobs
     * - *jobs/pivot*
@@ -352,13 +389,25 @@ These discrete privileges are then collected into privilege groups as defined be
     :header-rows: 0
 
     * - case-admin
-      - *cases/write*
+      - *cases/read*, *cases/write*
     * - case-monitor
       - *cases/read*
+    * - config-admin
+      - *config/read*, *config/write*
+    * - config-monitor
+      - *config/read*
+    * - detections-admin
+      - *detections/read*, *detections/write*
+    * - detections-monitor
+      - *detections/read*
     * - event-admin
       - *events/read*, *events/write*, *events/ack*
     * - event-monitor
       - *events/read*
+    * - grid-admin
+      - *grid/read*, *grid/write*
+    * - grid-monitor
+      - *grid/read*
     * - job-admin
       - *jobs/read*, *jobs/pivot*, *jobs/write*, *jobs/delete*
     * - job-monitor

@@ -11,7 +11,7 @@ See the :ref:`best-practices` section.
 
 **How many machines do I need?**
 
-Depending on what you're trying to do, you may need anywhere from one machine to thousands of machines. The :ref:`architecture` section will help you decide.
+Depending on what you're trying to do, you may need anywhere from one machine to thousands of machines. The :ref:`use-cases` and :ref:`architecture` sections will help you decide.
 
 **What kind of hardware does each of those machines need?**
 
@@ -49,6 +49,7 @@ See the :ref:`post-installation` section.
    :maxdepth: 2
 
    best-practices
+   use-cases
    architecture
    hardware
    download

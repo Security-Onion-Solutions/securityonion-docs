@@ -57,10 +57,10 @@ Performance
 
 If :ref:`grid` shows that Suricata is experiencing packet loss, then you may need to do one or more of the following:
 
-- tune the :ref:`nids` ruleset
-- apply a :ref:`bpf`
-- adjust ``max-pending-packets`` in :ref:`administration` --> Configuration --> suricata --> config --> max-pending-packets.
-- adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
+- Tune the :ref:`nids` ruleset.
+- Apply a :ref:`bpf`.
+- Adjust ``max-pending-packets`` in :ref:`administration` --> Configuration --> suricata --> config --> max-pending-packets.
+- Adjust :ref:`af-packet` workers in :ref:`administration` --> Configuration --> suricata --> config --> af-packet --> threads.
 
 .. note::
 
@@ -102,13 +102,16 @@ If you choose Suricata for metadata, it will extract files from network traffic 
 PCAP
 ----
 
-For most modes, full packet capture is written to disk by :ref:`stenographer` but you can optionally switch this to Suricata.
+For new installations in either ``Eval`` or ``Standalone`` mode, full packet capture is written to disk by Suricata. For other deployments, full packet capture is written to disk by :ref:`stenographer` but you can optionally switch this to Suricata.
+
+Switching PCAP from Stenographer to Suricata
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
 
-        This Suricata PCAP feature is in BETA! We recommend that you test this feature thoroughly in a test environment.
+        If you are considering switching your existing deployment from :ref:`stenographer` to Suricata PCAP, then we recommend that you test this feature thoroughly in a test environment first.
 
-If you would like to experiment with Suricata PCAP, then you can go to :ref:`administration` --> Configuration --> Global and select the ``pcapengine`` setting. That setting should default to ``STENO`` but you can change it to either ``TRANSITION`` or ``SURICATA``. If you don't need your old :ref:`stenographer` PCAP at all, then you can immediately set ``pcapengine`` to ``SURICATA`` and manually delete the contents of the :ref:`stenographer` PCAP and index directories. However, most folks will probably want to use the ``TRANSITION`` option as it will keep :ref:`stenographer` running but not capturing traffic so that you can retrieve older :ref:`stenographer` PCAP as well as new Suricata PCAP. :ref:`stenographer` will then start purging its old PCAP as Suricata uses more space. Once your old :ref:`stenographer` PCAP has fully aged off, you can change the ``pcapengine`` setting to ``SURICATA`` to fully disable :ref:`stenographer`. 
+To switch from Stenographer to Suricata for PCAP, go to :ref:`administration` --> Configuration --> Global and select the ``pcapengine`` setting. That setting should default to ``STENO`` but you can change it to either ``TRANSITION`` or ``SURICATA``. If you don't need your old :ref:`stenographer` PCAP at all, then you can immediately set ``pcapengine`` to ``SURICATA`` and manually delete the contents of the :ref:`stenographer` PCAP and index directories. However, most folks will probably want to use the ``TRANSITION`` option as it will keep :ref:`stenographer` running but not capturing traffic so that you can retrieve older :ref:`stenographer` PCAP as well as new Suricata PCAP. :ref:`stenographer` will then start purging its old PCAP as Suricata uses more space. Once your old :ref:`stenographer` PCAP has fully aged off, you can change the ``pcapengine`` setting to ``SURICATA`` to fully disable :ref:`stenographer`. 
 
 Differences between Suricata and Stenographer for PCAP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

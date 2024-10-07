@@ -3,16 +3,17 @@
 Architecture
 ============
 
-If you're going to deploy Security Onion, you should first decide on what type of deployment you want. This could be anything from a temporary Import installation in a small virtual machine on your personal laptop all the way to a large scalable enterprise deployment consisting of a manager node, multiple search nodes, and lots of forward nodes. This section will discuss what those different deployment types look like from an architecture perspective.
+In the :ref:`use-cases` section, we looked at a few of the most common use cases. This section will discuss what those different use cases look like from an architecture perspective.
 
 Import
 ------
 
-The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import pcap or evtx files using the :ref:`grid` page. It does **not** support adding Elastic agents or additional Security Onion nodes.
+The simplest architecture is an ``Import`` node. An import node is a single standalone box that runs just enough components to be able to import pcap or evtx files using the :ref:`grid` page. It does **not** support adding Elastic agents or additional Security Onion nodes. For a full walkthrough of the ``Import`` option, please see the :ref:`first-time-users` section.
 
 .. image:: images/diagrams/import.png
    :align: center
    :target: _images/import.png
+
 
 Evaluation
 ----------
@@ -64,7 +65,9 @@ Node Types
 Management
 ~~~~~~~~~~
 
-The ``manager node`` runs :ref:`soc` and :ref:`kibana`. It has its own local instance of :ref:`elasticsearch`, but that's mainly used for managing the :ref:`elasticsearch` cluster once search nodes join the cluster. An analyst connects to the manager node from a client workstation (perhaps :ref:`desktop`) to execute queries and retrieve data. Please keep in mind that a dedicated manager node requires separate search nodes.
+The ``manager node`` runs :ref:`soc` and :ref:`kibana`. It has its own local instance of :ref:`elasticsearch`, but that's mainly used for managing the :ref:`elasticsearch` cluster once search nodes join the cluster. An analyst connects to the manager node from a client workstation (perhaps :ref:`desktop`) to execute queries and retrieve data. 
+
+Please note that a dedicated manager node requires separate search nodes. Also note that a dedicated manager node has to start off with the ``data`` node role. When you later join a separate search node, then you may want to migrate the data from the manager to the search node and then remove the ``data`` node role from the manager. For more information, please see the :ref:`elasticsearch` section.
 
 The manager node runs the following components:
 

@@ -3,7 +3,26 @@
 soup
 ====
 
-``soup`` stands for ``Security Onion UPdater``.  To install updates, run the ``soup`` command:
+``soup`` stands for ``Security Onion UPdater`` and you can use it to update your Security Onion deployment.  
+
+SSH
+---
+
+.. warning::
+
+        If you run ``soup`` via an :ref:`ssh` session and that :ref:`ssh` session terminates, then any processes running in that session would terminate. You should avoid leaving ``soup`` unattended especially if the machine you are SSHing from is configured to sleep after a period of time. You might also consider using something like screen or tmux so that if your :ref:`ssh` session terminates, the processes will continue running on the server.
+
+Production Deployments
+----------------------
+
+.. warning::
+
+	If you have a production deployment, we recommend that you test the upgrade process on a test deployment if possible before deploying to production.
+
+Updating
+--------
+
+To update your Security Onion deployment, run the ``soup`` command with sudo:
 
 ::
 
@@ -16,10 +35,6 @@ After running ``soup`` or rebooting a Security Onion node, it may take a few min
 ::
 
 	sudo so-checkin
-
-.. warning::
-
-	If you have a production deployment, we recommend that you test the upgrade process on a test deployment if possible before deploying to production.
 
 Security Onion Version Updates
 ------------------------------
@@ -61,7 +76,7 @@ Local Configurations
 Detections
 ----------
 
-Starting in Security Onion 2.4.70, there is a new :ref:`detections` interface. To prepare for migration to :ref:`detections`, soup will do the following:
+Starting in Security Onion 2.4.70, there is a new :ref:`detections` interface. To prepare for migration to :ref:`detections`, ``soup`` will do the following:
 
 - Playbook Plays will be backed up to ``/nsm/backup/detections-migration/`` and any active Elastalert rules will be backed up and removed.
 - Suricata tuning configurations will be backed to ``/nsm/backup/detections-migration/`` and any thresholds will be migrated over to :ref:`detections`.
@@ -70,13 +85,6 @@ Log
 ---
 
 If ``soup`` displays any errors, you can check ``/root/soup.log`` for additional clues.
-
-SSH
----
-
-.. warning::
-
-        If you run soup via an :ref:`ssh` session and that :ref:`ssh` session terminates, then any processes running in that session would terminate. You should avoid leaving soup unattended especially if the machine you are SSHing from is configured to sleep after a period of time. You might also consider using something like screen or tmux so that if your :ref:`ssh` session terminates, the processes will continue running on the server.
 
 Airgap
 ------
@@ -96,16 +104,11 @@ You can also specify the path on the command line using the ``-f`` option. For e
 Elastic
 -------
 
-If soup updated to a new version of the Elastic stack, then you'll want to go to :ref:`elastic-fleet` and:
+If ``soup`` updated to a new version of the Elastic stack, then you'll want to go to :ref:`elastic-fleet` and:
 
 - drill into each of your active agent policies, check the Agent Binary Download setting, and adjust if necessary for your deployment
 - check for any integrations that need to be upgraded
 - check for any agents that need to be upgraded (grid node agents should automatically upgrade so you should just need to look for any additional endpoint agents that you've deployed)
-
-log_size_limit
---------------
-
-``soup`` will check your :ref:`elasticsearch` ``log_size_limit`` values to see if they are over the recommended values. If so, it will ask you to update the values in ``/opt/so/saltstack/local/pillar/minions/``. When updating these files, please update any and all instances of ``log_size_limit`` as it may exist as ``elasticsearch:log_size_limit`` or ``manager:log_size_limit``.
 
 Kibana
 ------
@@ -122,7 +125,7 @@ If Kibana loads but the dashboards display errors that they didn't before the up
 Automation
 ----------
 
-``soup`` can be automated as follows (assuming you've previously accepted the Elastic license):
+``soup`` can be automated as follows:
 
 ::
 
@@ -140,7 +143,7 @@ Errors
 Data failed to compile
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Occasionally, soup may output a ``Data failed to compile`` error that says something like ``Rendering SLS failed: Jinja variable 'None' has no attribute``. In most cases, this error corrects itself on the next :ref:`salt` run.
+Occasionally, ``soup`` may output a ``Data failed to compile`` error that says something like ``Rendering SLS failed: Jinja variable 'None' has no attribute``. In most cases, this error corrects itself on the next :ref:`salt` run.
 
 Pillars and sls files
 ~~~~~~~~~~~~~~~~~~~~~

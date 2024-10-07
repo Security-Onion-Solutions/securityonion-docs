@@ -3,12 +3,16 @@
 pfSense
 =======
 
-pfSense is a free and open firewall that can be found at https://www.pfsense.org/. Security Onion has a couple of options for ingesting logs from pfSense firewalls: a simple parser and the more comprehensive Elastic Integration for pfSense. We recommend using the more comprehensive option by following the steps in the Elastic Integration section below. You can also follow along with our video at https://www.youtube.com/watch?v=aoH8qZwAxek.
+pfSense is a free and open firewall that can be found at https://www.pfsense.org/. There are a few different ways in which you can integrate pfSense into your Security Onion deployment.
+
+The simplest method of integrating pfSense into your Security Onion deployment is to configure pfSense to send its firewall logs to Security Onion. Security Onion has a couple of options for ingesting logs from pfSense firewalls: a simple parser and the more comprehensive Elastic Integration for pfSense. We recommend using the more comprehensive option by following the steps in the Elastic Integration section below. You can also follow along with our video at https://www.youtube.com/watch?v=aoH8qZwAxek.
+
+You can also configure pfSense to send :ref:`netflow` data to your Security Onion deployment. This may provide some additional visibility if you can't deploy a full Security Onion network sensor to monitor that network segment.
 
 Simple Parser
 -------------
 
-The first option is to use our simple parser for pfSense firewall logs. Please note that this only supports filterlog (actual firewall logs) and no other logs.
+The first option for collecting pfSense firewall logs is to use our simple parser. Please note that this only supports filterlog (actual firewall logs) and no other logs.
 
 .. warning::
 
@@ -28,7 +32,7 @@ Once all configuration is complete, you should be able to go to :ref:`dashboards
 Elastic Integration for pfSense
 -------------------------------
 
-The second option is using the Elastic Integration for pfSense (https://docs.elastic.co/integrations/pfsense). This integration is more comprehensive than the simple parser above and supports more log types.
+The second option for collecting pfSense firewall logs is using the Elastic Integration for pfSense (https://docs.elastic.co/integrations/pfsense). This integration is more comprehensive than the simple parser above and supports more log types.
 
 First, add the pfSense integration and configure the pfSense firewall:
 

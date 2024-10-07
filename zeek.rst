@@ -70,13 +70,13 @@ Zeek logs are stored in ``/nsm/zeek/logs``. They are collected by :ref:`elastic-
 
 We configure Zeek to output logs in JSON format. If you need to parse those JSON logs from the command line, you can use :ref:`jq`.
 
-Zeek monitors your network traffic and creates logs, such as:
+Zeek monitors your network traffic and logs protocol metadata. Here are just a few examples.
 
 conn.log
 ~~~~~~~~
 
 -  TCP/UDP/ICMP connections
-
+-  For ICMP connections, ICMP type is logged as source port and ICMP code as destination port
 -  For more information, see:
 
 https://docs.zeek.org/en/latest/scripts/base/protocols/conn/main.zeek.html#type-Conn::Info
@@ -85,25 +85,14 @@ dns.log
 ~~~~~~~
 
 -  DNS activity
-
 -  For more information, see:
 
 https://docs.zeek.org/en/latest/scripts/base/protocols/dns/main.zeek.html#type-DNS::Info
-
-ftp.log
-~~~~~~~
-
--  FTP activity
-
--  For more information, see:
-
-https://docs.zeek.org/en/latest/scripts/base/protocols/ftp/info.zeek.html#type-FTP::Info
 
 http.log
 ~~~~~~~~
 
 -  HTTP requests and replies
-
 -  For more information, see:
 
 https://docs.zeek.org/en/latest/scripts/base/protocols/http/main.zeek.html#type-HTTP::Info
@@ -112,7 +101,6 @@ ssl.log
 ~~~~~~~
 
 -  SSL/TLS handshake info
-
 -  For more information, see:
 
 https://docs.zeek.org/en/latest/scripts/base/protocols/ssl/main.zeek.html#type-SSL::Info
@@ -121,7 +109,6 @@ notice.log
 ~~~~~~~~~~
 
 -  Zeek notices
-
 -  For more information, see:
 
 https://docs.zeek.org/en/latest/scripts/base/frameworks/notice/main.zeek.html#type-Notice::Info

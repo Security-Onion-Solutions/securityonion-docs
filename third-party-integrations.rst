@@ -51,6 +51,7 @@ auth0                           https://docs.elastic.co/en/integrations/auth0
 aws                             https://docs.elastic.co/en/integrations/aws
 azure                           https://docs.elastic.co/en/integrations/azure
 barracuda                       https://docs.elastic.co/en/integrations/barracuda
+barracuda_cloudgen_firewall     https://docs.elastic.co/en/integrations/barracuda_cloudgen_firewall
 carbonblack_edr                 https://docs.elastic.co/en/integrations/carbonblack_edr
 cef                             https://docs.elastic.co/en/integrations/cef
 checkpoint                      https://docs.elastic.co/en/integrations/checkpoint
@@ -80,6 +81,7 @@ google_workspace                https://docs.elastic.co/en/integrations/google_w
 http_endpoint                   https://docs.elastic.co/en/integrations/http_endpoint
 httpjson                        https://docs.elastic.co/en/integrations/httpjson
 iis                             https://docs.elastic.co/en/integrations/iis
+imperva_cloud_waf               https://docs.elastic.co/en/integrations/imperva_cloud_waf
 journald                        https://docs.elastic.co/en/integrations/journald
 juniper_srx                     https://docs.elastic.co/en/integrations/juniper_srx
 kafka_log                       https://docs.elastic.co/en/integrations/kafka_log
@@ -236,6 +238,11 @@ zscaler_zpa                     https://docs.elastic.co/en/integrations/zscaler_
     Security Onion 2.4.100 supports these additional Elastic integrations:
 
     - tenable_io
+
+    Security Onion 2.4.110 supports these additional Elastic integrations:
+
+    - barracuda_cloudgen_firewall
+    - imperva_cloud_waf
 
 More Information
 ----------------

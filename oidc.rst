@@ -36,7 +36,7 @@ In a separate browser tab, login to the Microsoft Azure account you plan to use 
 
 Locate the ``microsoft_tenant`` setting in the SOC configuration screen back on the SOC browser tab. Specify the UUID value for this setting.
 
-Back in the Azure tab, under the desired Azure Tenant, register a new App named ``Security Onion``. Most organizations will only desire organization accounts to have access to Security Onion so be sure to choose the correct account type option. Failure to choose this correctly could expose your Security Onion installation to users outside of your organization. Specify the web Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Click *Register*, and on the resulting screen find the application ID for this new app registration. It will also resemble a UUID.
+Back in the Azure tab, under the desired Azure Tenant, register a new App named ``Security Onion``. Most organizations will only desire organization accounts to have access to Security Onion so be sure to choose the correct account type option. Failure to choose this correctly could expose your Security Onion installation to users outside of your organization. Specify the application as Web, with Redirect URI using the URL that the analysts will use to access SOC after finalizing their login to Azure. This is typically going to resemble the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``. Omit the `/SSO` suffix if forcing PKCE (Proof Key Code Exchange). Click *Register*, and on the resulting screen find the application ID for this new app registration. It will also resemble a UUID.
 
 .. image:: images/oidc/microsoft_app_registration.png
   :target: _images/microsoft_app_registration.png
@@ -49,6 +49,8 @@ Add a new client secret to the app registration created above. Specify the secre
   :target: _images/microsoft_secret.png
 
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
+
+If forcing PKCE (Proof Key Code Exchange) to be enabled, set the ``pkce`` setting in the SOC configuration screen to ``force``. When forcing PKCE, the redirect URI should omit the trailing ``/SSO`` suffix.
 
 Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
@@ -120,6 +122,41 @@ Locate the ``client_id`` setting in the SOC configuration screen back on the SOC
 Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
 
 Back in the Auth0 tab, scroll down to the Advance Settings section, and click on *Endpoints*. Copy the OAuth Authorization URL, but without the ``/authorize`` path. Locate the ``issuer_url`` setting in the SOC configuration screen back on the SOC browser tab. Paste the copied URL into this setting. It should resemble the following: ``https://dev-xyz123abc456.us.auth0.com``
+
+Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
+
+Generic (Ex: Ping)
+^^^^^^^^^^^^^^^^^^
+
+Security Onion can work with most OIDC providers, even if not mentioned as an explicitly-supported provider above. To show an example of how to configure a generic provider the below instructions will show how `Ping SSO <https://pingone.com>`_ can be used as an OIDC provider for Security Onion.
+
+Locate the ``provider`` setting in the SOC configuration screen. Specify the value ``generic`` for this setting.
+
+In a separate browser tab, login to a Ping Identity console and, under the desired workspace environment, create a new application called Security Onion. Choose the ``OIDC Web App`` and click Save. On the Configuration tab, specify a Redirect URI using the following pattern: ``https://<my-soc-base-url>/auth/self-service/methods/oidc/callback/SSO``.
+
+.. image:: images/oidc/ping_redirect.png
+  :target: _images/ping_redirect.png
+
+Locate the ``client_id`` setting in the SOC configuration screen back on the SOC browser tab. Specify the Ping ``Client ID`` for this setting. That ID can be located on the Ping configuration tab, as shown above.
+
+Generate a new client secret under the Ping ``Client ID`` field. Copy the generated secret to your clipboard. 
+
+Locate the ``client_secret`` setting in the SOC configuration screen back on the SOC browser tab. Specify the above client secret for this setting.
+
+On the Ping console browser tab, under the configuration tab, expend the URLs section, near the top. Copy and paste the three following URLs into the appopriate SOC configuration screen settings: 
+
+- Authorization URL -> auth_url
+- Issuer -> issuer_url
+- Token Endpoint -> token_url
+
+If forcing PKCE (Proof Key Code Exchange) to be enabled, set the ``PKCE Enforcement`` setting in the Ping console's configuration tab to ``S256_REQUIRED``.
+
+In the Ping console browser tab, navigate to the Resources tab and add ``email`` as an additional scope.
+
+.. image:: images/oidc/ping_resource.png
+  :target: _images/ping_resource.png
+
+Locate the ``scope`` setting in the SOC configuration screen back on the SOC browser tab. Change the default ``profile`` scope to ``openid``. There should now be both ``email`` and ``openid`` scopes listed.
 
 Next, skip to the *Enabling OIDC* section to enable the newly configured OIDC authentication.
 
