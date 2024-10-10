@@ -6,7 +6,36 @@ Release Notes
 Known Issues
 ~~~~~~~~~~~~
 
-- The ``malwarehashregistry`` analyzer (Case -> Observables Tab) is no longer working as of 2.4.100. This is due to a stale third-party library that is incompatible with the latest Python version. `#13571 <https://github.com/Security-Onion-Solutions/securityonion/issues/13571>`_
+If you had previously updated to version 2.4.100 and had indices with incorrect data like source IP address, then you may need to delete the incorrect indices via the command line as follows.
+
+First, become root:
+
+::
+
+        sudo -i
+
+Next, roll over each of the affected data streams (replacing ``YOUR-DATASTREAM`` as necessary):
+
+::
+
+        for i in YOUR-DATASTREAM-1 YOUR-DATASTREAM-2; do 
+            so-elasticsearch-query $i/_rollover -XPOST
+        done
+
+Then, delete the previous index for each of the affected data streams (replacing ``YOUR-DATASTREAM`` as necessary):
+
+::
+
+        for i in YOUR-DATASTREAM-1 YOUR-DATASTREAM-2; do
+            INDEX_TO_DELETE=$(so-elasticsearch-query $i | jq -r 'keys[]' | tail -2 | head -1); so-elasticsearch-query $INDEX_TO_DELETE -XDELETE
+        done
+
+Finally, check to see that the fields now display as expected.
+
+2.4.110 Hotfix [20241010] Changes
+---------------------------------
+
+- FIX: Use ID instead of name for getting integrations from agent policies `#13795 <https://github.com/Security-Onion-Solutions/securityonion/issues/13795>`_
 
 2.4.110 [20241004] Changes
 --------------------------

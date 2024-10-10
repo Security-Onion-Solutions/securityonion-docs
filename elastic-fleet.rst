@@ -153,7 +153,7 @@ The section provides details such as:
   
 - Method in which agent binaries will be downloaded
 
-  - this will be a a local artifact repository if running an airgapped deployment)
+  - this will be a local artifact repository if running an airgapped deployment
 
 .. warning::
 
