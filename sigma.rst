@@ -56,8 +56,8 @@ To add a new Sigma rule, go to the main :ref:`detections` page and click the blu
 - add the signature
 - click the ``CREATE`` button and the detection should deploy to your grid at the next 15-minute cycle
 
-.. image:: images/58_detection_create.png
-  :target: _images/58_detection_create.png
+.. image:: images/59_detection_create.png
+  :target: _images/59_detection_create.png
 
 Sigma Configuration
 -------------------
