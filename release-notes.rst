@@ -30,7 +30,7 @@ Then, delete the previous index for each of the affected data streams (replacing
             INDEX_TO_DELETE=$(so-elasticsearch-query $i | jq -r 'keys[]' | tail -2 | head -1); so-elasticsearch-query $INDEX_TO_DELETE -XDELETE
         done
 
-Finally, navigate to Kibana -> Security Onion - Home -> Network dashboard to confirm that the fields now display as expected.
+Finally, check to see that the fields now display as expected.
 
 2.4.110 Hotfix [20241010] Changes
 ---------------------------------
