@@ -150,6 +150,10 @@ Virustotal                       ✓         ✓   ✓                 ✓
 WhoisLookup                      ✓        
 =======================       ======= === ==== == ==== ===== === === ==========
 
+.. note::
+
+   The ``malwarehashregistry`` analyzer is no longer working as of 2.4.100. This is due to a stale third-party library that is incompatible with the latest Python version. `#13571 <https://github.com/Security-Onion-Solutions/securityonion/issues/13571>`_
+
 Running Analyzers
 ~~~~~~~~~~~~~~~~~
 
