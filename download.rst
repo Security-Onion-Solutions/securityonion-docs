@@ -13,7 +13,7 @@ Download and verify our ISO image as shown at https://github.com/Security-Onion-
 
 .. warning::
 
-   If you download our ISO image and then scan it with antivirus software, it is possible that one or more of the files included in the ISO image may generate false positives. If you look at the antivirus scan details, it will most likely tell you that it alerted on a file in ``SecurityOnion\agrules\``.
+   Antivirus software may alert on the ISO image but any alerts are most likely false positives. If you look at the antivirus scan details, it will most likely tell you that it alerted on a file in ``SecurityOnion\agrules\``. These are rules that look for malicious activity but the rules themselves are not actually malicious.
    
 .. note::
 
