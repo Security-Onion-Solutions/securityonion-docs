@@ -36,7 +36,7 @@ Then, delete the previous index for each of the affected data streams:
             INDEX_TO_DELETE=$(so-elasticsearch-query $i | jq -r 'keys[]' | tail -2 | head -1); so-elasticsearch-query $INDEX_TO_DELETE -XDELETE
         done
 
-Finally, check the `logs-*` data view to see if the field conflict is now resloved.
+Finally, check the ``logs-*`` data view to see if the field conflict is now resloved.
 
 2.4.110 Hotfix [20241010] Changes
 ---------------------------------
