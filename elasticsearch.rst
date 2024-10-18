@@ -259,6 +259,33 @@ Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP 
 
 Once the config is added, click the green check mark to save the configuration.
 
+Health
+------
+
+To check Elasticsearch health, go to the :ref:`grid` interface and check the Elasticsearch Status field. If it shows anything other than OK, then run the following command from the CLI on the manager node to check for additional clues:
+
+::
+
+        sudo so-elasticsearch-query _cluster/health?pretty
+
+Status Pending
+--------------
+
+If the :ref:`grid` interface shows Elasticsearch Status as ``Pending``, check for unassigned shards by running the following command from the CLI on the manager node:
+
+::
+
+       sudo so-elasticsearch-query _cat/shards | grep UN
+
+The result of the query should display affected indices. Older metrics indices for Elastic Endpoint logs may have been assigned a replica, so if you are running a single-node Elastic cluster there will be nowhere for the replica to exist.
+To resolve the issue, run the following command for each affected index (replacing ``$index`` with the actual index name):
+
+::
+
+        sudo so-elasticsearch-query $index/_settings -d '{"number_of_replicas":0}' -XPUT
+
+After running the command, the index should no longer use replicas and the status should change from "Pending" to "OK" once all indices have been successfully modified.
+
 Diagnostic Logging
 ------------------
 

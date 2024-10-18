@@ -124,6 +124,11 @@ We also include MITRE BZAR scripts and you can read more about them at https://g
 
 As you can see, Zeek log data can provide a wealth of information to the analyst, all easily accessible through :ref:`dashboards`, :ref:`hunt`, or :ref:`kibana`.
 
+File Extraction
+---------------
+
+By default, Zeek will extract files from network traffic and :ref:`strelka` will then analyze those extracted files.
+
 VLAN Tags
 ---------
 
