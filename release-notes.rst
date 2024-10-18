@@ -12,6 +12,12 @@ Field conflicts can be identified by navigating to ``Kibana -> Management -> Dat
 
 For example, you may have a conflict for ``source.ip``, where it was previously correctly mapped as field type of ``ip``, but the index mappings were inadvertently changed and ``source.ip`` is now mapped as a field type of ``keyword`` in the ``logs-system.security`` and ``logs-system.syslog`` data streams.  The mappings have been fixed, but the data streams need to be rolled over to pick up the correct mappings, and the affected index containing ``source.ip`` mapped as a field type of ``keyword`` needs to be deleted to resolve the conflict.  
 
+Conflicts for the following fields can be ignored for now, as they will be fixed in a future version:
+
+- metadata.input.beats.host ipkeyword, ip
+- recordedfuture.evidence_details flattened, object
+- version keyword, object
+
 You can issue the following commands from the CLI to resolve the conflict.
 
 First, become root:
