@@ -3,7 +3,7 @@
 First Time Users
 ================
 
-Welcome first time users! You're going to be peeling back the layers of your network in just a few minutes! 
+Welcome, first time users! You're going to be peeling back the layers of your network in just a few minutes! 
 
 First, download our ISO image as shown in the :ref:`download` section. 
 
@@ -225,3 +225,5 @@ All this in a minimal VM with only 4GB RAM!
 
 .. image:: images/39_grid.png
   :target: _images/39_grid.png
+
+If you made it to the end of this First Time Users section, congratulations! If you have any questions or problems, please see the :ref:`help` section. If you like Security Onion, please consider sharing on social media about Security Onion to help spread the word. Thanks!
