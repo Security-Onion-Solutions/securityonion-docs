@@ -14,9 +14,9 @@ For example, you may have a conflict for ``source.ip``, where it was previously 
 
 Conflicts for the following fields can be ignored for now, as they will be fixed in a future version:
 
-- metadata.input.beats.host ipkeyword, ip
-- recordedfuture.evidence_details flattened, object
-- version keyword, object
+- metadata.input.beats.host.ip
+- recordedfuture.evidence_details
+- version keyword
 
 You can issue the following commands from the CLI to resolve the conflict.
 
