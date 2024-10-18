@@ -6,7 +6,13 @@ Release Notes
 Known Issues
 ~~~~~~~~~~~~
 
-If you had previously updated to version 2.4.100 and had indices with incorrect data like source IP address, then you may need to delete the incorrect indices via the command line as follows.
+If you had previously updated to version 2.4.100 and had indices with conflicting data types for fields like source IP address, then you may need to delete affected indices. Field conflicts typically occur when a field is indexed using a different set of mappings than other indices. This can occur if a component template or index template changes and a data stream rolls over to create a new backing index, causing issues with field value aggregation and data tables not being rendered as expected.
+
+Field conflicts can be identified by navigating to ``Kibana -> Management -> Data Views -> logs-*``. They are typically noted via a yellow banner on the data view page, or they can be found by filtering by a field type of ``conflict``. For each affected field, clicking the yellow ``Conflict`` icon in the ``Type`` column will display the conflicting field types and indices.
+
+For example, you may have a conflict for ``source.ip``, where it was previously correctly mapped as field type of ``ip``, but the index mappings were inadvertently changed and ``source.ip`` is now mapped as a field type of ``keyword`` in the ``logs-system.security`` and ``logs-system.syslog`` data streams.  The mappings have been fixed, but the data streams need to be rolled over to pick up the correct mappings, and the affected index containing ``source.ip`` mapped as a field type of ``keyword`` needs to be deleted to resolve the conflict.  
+
+You can issue the following commands from the CLI to resolve the conflict.
 
 First, become root:
 
@@ -14,23 +20,23 @@ First, become root:
 
         sudo -i
 
-Next, roll over each of the affected data streams (replacing ``YOUR-DATASTREAM`` as necessary):
+Next, roll over each of the affected data streams:
 
 ::
 
-        for i in YOUR-DATASTREAM-1 YOUR-DATASTREAM-2; do 
+        for i in logs-system.security logs-system.syslog; do 
             so-elasticsearch-query $i/_rollover -XPOST
         done
 
-Then, delete the previous index for each of the affected data streams (replacing ``YOUR-DATASTREAM`` as necessary):
+Then, delete the previous index for each of the affected data streams:
 
 ::
 
-        for i in YOUR-DATASTREAM-1 YOUR-DATASTREAM-2; do
+        for i in logs-system.security logs-system.syslog; do
             INDEX_TO_DELETE=$(so-elasticsearch-query $i | jq -r 'keys[]' | tail -2 | head -1); so-elasticsearch-query $INDEX_TO_DELETE -XDELETE
         done
 
-Finally, check to see that the fields now display as expected.
+Finally, check the ``logs-*`` data view to see if the field conflict is now resloved.
 
 2.4.110 Hotfix [20241010] Changes
 ---------------------------------
