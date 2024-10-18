@@ -16,7 +16,7 @@ Conflicts for the following fields can be ignored for now, as they will be fixed
 
 - metadata.input.beats.host.ip
 - recordedfuture.evidence_details
-- version keyword
+- version
 
 You can issue the following commands from the CLI to resolve the conflict.
 
