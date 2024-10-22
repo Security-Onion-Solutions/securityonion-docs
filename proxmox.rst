@@ -3,7 +3,7 @@
 Proxmox
 =======
 
-Proxmox Virtual Environment is a virtualization platform similar to :ref:`vmware` or :ref:`virtualbox`. You can read more about Proxmox VE at https://www.proxmox.com/en/proxmox-ve.
+Proxmox Virtual Environment is a virtualization platform similar to :ref:`vmware` or :ref:`virtualbox`. You can read more about Proxmox VE at https://www.proxmox.com/en/proxmox-ve. If you would like to run Security Onion in a Proxmox VM, then here are some additional things you need to be aware of.
 
 CPU
 ---
