@@ -105,7 +105,7 @@ The ``Connection Status`` field shows whether or not the node is currently conne
 Elasticsearch Status
 ~~~~~~~~~~~~~~~~~~~~
 
-If the node runs Elasticsearch, then the ``Elasticsearch Status`` field will show the status of it.
+If the node runs :ref:`elasticsearch`, then the ``Elasticsearch Status`` field will show the status of it. If the status is anything other than OK, then see the :ref:`elasticsearch` section to troubleshoot.
 
 RAID Status
 ~~~~~~~~~~~
