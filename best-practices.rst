@@ -18,7 +18,7 @@ Installation
 
 - Adequately spec your hardware to meet your current usage and allow for growth over time.
 
-- Prefer taps to span ports when possible.
+- When possible, we recommend using a dedicated TAP rather than SPAN ports.
 
 - Make sure that any network firewalls have the proper firewall rules in place to allow ongoing operation and updates (see the :ref:`firewall` section).
 

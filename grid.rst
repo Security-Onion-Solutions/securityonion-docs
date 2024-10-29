@@ -140,7 +140,7 @@ The ``I/O Wait`` field shows the system I/O wait percentage. Higher values indic
 Capture Loss
 ~~~~~~~~~~~~
 
-The ``Capture Loss`` field shows the percentage of packet capture loss reported by :ref:`zeek`. Higher values indicate a reduced visibility into packets traversing the network. If :ref:`zeek` is reporting capture loss but no packet loss, this usually means that the capture loss is happening upstream in the tap or span port itself.
+The ``Capture Loss`` field shows the percentage of packet capture loss reported by :ref:`zeek`. Higher values indicate a reduced visibility into packets traversing the network. If :ref:`zeek` is reporting capture loss but no packet loss, this usually means that the capture loss is happening upstream in the TAP or SPAN port itself.
 
 Zeek Loss
 ~~~~~~~~~
