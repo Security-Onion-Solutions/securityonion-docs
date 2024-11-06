@@ -11,6 +11,7 @@ FAQ
 | `IDS engines <#ids-engines>`__\ 
 | `Security Onion internals <#security-onion-internals>`__\ 
 | `Tuning <#tuning>`__\ 
+| `Common Problems <#common-problems>`__\ 
 | `Miscellaneous <#miscellaneous>`__\ 
 | 
 | 
@@ -175,6 +176,28 @@ What do I need to modify in order to have the log files stored on a different mo
 Please see the :ref:`new-disk` section.
 
  `back to top <#top>`__
+
+Common Problems
+---------------
+
+Why do containers go missing?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Docker containers that stop running, due to exiting from errors or other reasons, will be automatically removed by the scheduled cleanup process.
+
+Most container logs are redirected to their application log directory, located in ``/opt/so/log``. In some cases the logs may not get written to disk, and instead must be viewed via ``docker logs <container-name>`` before the container is cleaned up.
+
+Why does ElastAlert often go missing on my grid?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ElastAlert 2 will exit upon encountering syntax errors with rules or when Elasticsearch is not in a healthy state.
+
+Why does Elasticsearch go to the unhealthy state?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Elasticsearch will become unhealthy for a variety of reasons, but the most common reasons are running out of disk space and having indices with unallocated shards.
+
+`back to top <#top>`__
 
 Miscellaneous
 -------------
