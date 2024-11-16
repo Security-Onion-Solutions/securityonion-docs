@@ -93,3 +93,50 @@ Repos can be accessed via https or from the local filesystem. For example:
 
         file:///nsm/rules/detect-sigma/repos/my-custom-rep
 
+
+Enable Sigma Rules on Import
+~~~~~~~~~~~~~~
+
+::
+
+        soc > config > server > modules > elastalertengine > autoEnabledSigmaRules > default [adv]
+
+
+This configuration options allows you to specify which rules are automatically enabled upon initial import. The format for this filter is a YAML list that supports flexible filtering criteria based on a number of fields in a Sigma rule. A rule is enabled only if it matches all specified filters - if there is more than one filter for a field, then it has to match at least one.
+
+Configuration Format
+
+Each item in the YAML list represents a set of filters, using the following fields:
+
+    ruleset
+        Type: List of strings  
+        Description: Specifies the ruleset(s) to filter by (e.g., "core", "securityonion-resources",  "*" for any ruleset).
+
+    level
+        Type: List of strings  
+        Description: Specifies the severity level(s) (e.g., "critical", "high",  "*" for any level).
+
+    product
+        Type: List of strings  
+        Description: Specifies the product(s) to filter by (e.g., "windows", "*" for all products).
+
+    category
+        Type: List of strings  
+        Description: Specifies the event category or categories (e.g., "process_creation", "registry_event",  "*" for any category).
+
+    service
+        Type: List of strings  
+        Description: Specifies the service(s) to filter by (e.g., "security", "dns-client", "*" for any service).
+
+For example:
+
+::
+
+    Enabled_On_Import:
+      # Enable all critical and high rules from the "securityonion-resources" ruleset
+      - ruleset: ["securityonion-resources"]
+        level: ["critical", "high"]
+        product: ["*"]
+        category: ["*"]
+        service: ["*"]
+
