@@ -114,7 +114,7 @@ Each item in the YAML list represents a set of filters, using the following fiel
 
     level
         Type: List of strings  
-        Description: Specifies the severity level(s) (e.g., "critical", "high",  "*" for any level).
+        Description: Specifies the severity level(s) (e.g., "critical", "high",  "*" for any level. This is not a greater than or equal check - just a string match).
 
     product
         Type: List of strings  
