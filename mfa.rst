@@ -10,8 +10,6 @@ TOTP
 
 Time-based One-Time Passwords (TOTP) can be activated on a user account. TOTP requires the use of an authenticator app. Currently only Google Authenticator has been tested, however other authenticator apps that implement the time-based one-time password (TOTP) specification could also work.
 
-If you have a user account on multiple Security Onion deployments with TOTP activated, they may be listed identically in your authenticator app. If so, you should be able to edit the listing in your authenticator app so that you can distinguish between them.
-
 To require all users setup TOTP upon login, enable the ``Require TOTP`` configuration setting, located on the Configuration screen: ``soc > config > server > Require TOTP``.
 
 .. warning::
