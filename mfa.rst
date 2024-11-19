@@ -22,6 +22,14 @@ To require all users setup TOTP upon login, enable the ``Require TOTP`` configur
 
   If you lose access to your authenticator app, an administrator can reset your password using the :ref:`administration` interface which will also remove the TOTP from your account.
 
+Customizing the MFA Name
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you utilize multiple Security Onion environments, such as one for testing and one for production, and both are setup with TOTP MFA, SOC users may have trouble distinguishing them in their authenticator app. There are two options for handling this situation:
+
+1. Most authenticator apps allow the user to edit or rename the entry. For example, in Google Authenticator on Android, swiping right on the entry provides an Edit screen. This is useful if it's just affecting one or two users.
+2. Edit the TOTP issuer via the SOC Configuration screen, specifically the ``kratos > config > selfservice > methods > totp > config > issuer`` setting. This should be done prior to enabling TOTP since it will not help users that already setup TOTP.
+
 WebAuthn Security Keys
 ----------------------
 
