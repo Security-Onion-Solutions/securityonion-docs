@@ -99,7 +99,7 @@ Enable Sigma Rules on Import
 
 ::
 
-        soc > config > server > modules > elastalertengine > autoEnabledSigmaRules > default [adv]
+        soc > config > server > modules > elastalertengine > enabledSigmaRules > default
 
 
 This configuration options allows you to specify which rules are automatically enabled upon initial import. The format for this filter is a YAML list that supports flexible filtering criteria based on a number of fields in a Sigma rule. A rule is enabled only if it matches all specified filters - if there is more than one filter for a field, then it has to match at least one.
@@ -118,7 +118,7 @@ Each item in the YAML list represents a set of filters, using the following fiel
 
     product
         Type: List of strings  
-        Description: Specifies the product(s) to filter by (e.g., "windows", "*" for all products).
+        Description: Specifies the product(s) to filter by (e.g., "windows", "*" for any products).
 
     category
         Type: List of strings  
@@ -132,7 +132,6 @@ For example:
 
 ::
 
-    Enabled_On_Import:
       # Enable all critical and high rules from the "securityonion-resources" ruleset
       - ruleset: ["securityonion-resources"]
         level: ["critical", "high"]
