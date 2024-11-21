@@ -95,7 +95,7 @@ Repos can be accessed via https or from the local filesystem. For example:
 
 
 Enable Sigma Rules on Import
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ::
 
@@ -109,24 +109,24 @@ Configuration Format
 Each item in the YAML list represents a set of filters, using the following fields:
 
     ruleset
-        Type: List of strings  
-        Description: Specifies the ruleset(s) to filter by (e.g., "core", "securityonion-resources",  "*" for any ruleset).
+        - Type: List of strings  
+        - Description: Specifies the ruleset(s) to filter by (e.g., "core", "securityonion-resources",  "*" for any ruleset).
 
     level
-        Type: List of strings  
-        Description: Specifies the severity level(s) (e.g., "critical", "high",  "*" for any level. This is not a greater than or equal check - just a string match).
+        - Type: List of strings  
+        - Description: Specifies the severity level(s) (e.g., "critical", "high",  "*" for any level. This is not a greater than or equal check - just a string match).
 
     product
-        Type: List of strings  
-        Description: Specifies the product(s) to filter by (e.g., "windows", "*" for any products).
+        - Type: List of strings  
+        - Description: Specifies the product(s) to filter by (e.g., "windows", "*" for any products).
 
     category
-        Type: List of strings  
-        Description: Specifies the event category or categories (e.g., "process_creation", "registry_event",  "*" for any category).
+        - Type: List of strings  
+        - Description: Specifies the event category or categories (e.g., "process_creation", "registry_event",  "*" for any category).
 
     service
-        Type: List of strings  
-        Description: Specifies the service(s) to filter by (e.g., "security", "dns-client", "*" for any service).
+        - Type: List of strings  
+        - Description: Specifies the service(s) to filter by (e.g., "security", "dns-client", "*" for any service).
 
 For example:
 
