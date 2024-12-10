@@ -138,7 +138,7 @@ In general, Security Onion attempts to make use of as much disk space as you giv
 How is my data kept secure?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Standard network connections to or from Security Onion are encrypted. This includes SSH, HTTPS, :ref:`elasticsearch` network queries, and :ref:`salt` minion traffic. Endpoint agent traffic is encrypted where supported. This includes the :ref:`elastic-agent` which supports encryption with additional configuration. SOC user account passwords are hashed via bcrypt in Kratos and you can read more about that at https://github.com/ory/kratos.
+Standard network connections to or from Security Onion are encrypted. This includes SSH, HTTPS, :ref:`elasticsearch` network queries, and :ref:`salt` minion traffic. All endpoint agent (Elastic Agent) traffic is encrypted except for binary updates, which are served from the Manager over http - these update files are cryptographically signed by Elastic and are verified before they are used. There is also the option to pull these updates via https directly from Elastic. SOC user account passwords are hashed via bcrypt in Kratos and you can read more about that at https://github.com/ory/kratos.
 
 `back to top <#top>`__
 
