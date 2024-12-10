@@ -77,4 +77,4 @@ Currently OAuth 2.0 scopes are not utilized, since these permissions are assigne
 API Reference
 -------------
 
-An interactive API view is available online at https://doc.securityonion.net/api, and is also available locally for airgap deployments: `Local Interactive API <api/>`__
+An interactive API view is available: `Interactive API <api/>`__
