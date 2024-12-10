@@ -11,6 +11,10 @@ Starting with Security Onion version 2.4.30, SOC supports single sign-on (SSO) a
 
 .. warning::
 
+  LDAP and SAML integrations are not supported.
+
+.. warning::
+
     Integrating Security Onion into an organization's global identity management platform is generally not recommended. If an attacker compromises the identity management platform, which is typically a high priority target, then that attacker could use compromised SSO credentials to access Security Onion and potentially undermine the benefits provided by Security Onion. This integration is made available for those who understand these risks and have appropriate mitigations in place.
 
 Configuration
@@ -58,6 +62,16 @@ Active Directory (Self-hosted)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Contact the Security Onion Solutions support team to determine the specific configuration changes required to integrate your Security Onion grid with your organization's Active Directory installation. They will review your current Windows Server version, assist with TLS certificate configurations applicable to your organization, and walk you through the steps needed to complete the integration.
+
+Integration with on-premise Active Directory has several prerequisites:
+
+- Fully-functioning installation of Active Directory on Windows Server 2022
+- Administrator access to Windows Active Directory server
+- Administrator access to Security Onion manager via SSH and SOC
+- Ability to obtain TLS certificates that are trusted on client and SO systems
+- Ability to activate Active Directory Federated Services (ADFS) on Active Directory server
+- HTTPS access from Security Onion analyst browsers to the ADFS server.
+- HTTPS access from the Security Onion manager to the ADFS server
 
 Google
 ^^^^^^
