@@ -11,9 +11,9 @@ Salt Repo Location Changed
 
 Salt is an external project used by Security Onion. After 2.4.100 was released the maintainers of Salt changed the package repository URL, which prevents Security Onion from installing on unsupported operating systems.
 
-While we are looking to update Security Onion to use the new URL in the next major release of Security Onion, this issue persists with the 2.4.111 patch. We recommend only installing Security Onion on the supported operating system, and suggest using the ISO image to avoid network installation complications. 
+While we are looking to update Security Onion to use the new URL in the next minor release of Security Onion, this issue persists with the 2.4.111 patch. We recommend installing Security Onion using the ISO image to avoid these network installation and unsupported operating system complications.
 
-However, if you choose to continue installing on an unsupport operating system you can look into applying the fix manually, as shown in this [PR](https://github.com/Security-Onion-Solutions/securityonion/pull/13900): https://github.com/Security-Onion-Solutions/securityonion/pull/13900.
+If you choose to continue installing via the network you can consider applying the fix manually, as shown in this [PR](https://github.com/Security-Onion-Solutions/securityonion/pull/13900): https://github.com/Security-Onion-Solutions/securityonion/pull/13900.
 
 
 IP Address Data Type Conflict
