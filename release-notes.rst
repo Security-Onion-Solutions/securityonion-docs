@@ -6,6 +6,18 @@ Release Notes
 Known Issues
 ~~~~~~~~~~~~
 
+Salt Repo Location Changed
+--------------------------
+
+Salt is an external project used by Security Onion. After 2.4.100 was released the maintainers of Salt changed the package repository URL, which prevents Security Onion from installing on unsupported operating systems.
+
+While we are looking to update Security Onion to use the new URL in the next major release of Security Onion, this issue persists with the 2.4.111 patch. We recommend only installing Security Onion on the supported operating system, and suggest using the ISO image to avoid network installation complications. 
+
+However, if you choose to continue installing on an unsupport operating system you can look into applying the fix manually, as shown in this [PR](https://github.com/Security-Onion-Solutions/securityonion/pull/13900): https://github.com/Security-Onion-Solutions/securityonion/pull/13900.
+
+
+IP Address Data Type Conflict
+-----------------------------
 If you had previously updated to version 2.4.100 and had indices with conflicting data types for fields like source IP address, then you may need to delete affected indices. Field conflicts typically occur when a field is indexed using a different set of mappings than other indices. This can occur if a component template or index template changes and a data stream rolls over to create a new backing index, causing issues with field value aggregation and data tables not being rendered as expected.
 
 Field conflicts can be identified by navigating to ``Kibana -> Management -> Data Views -> logs-*``. They are typically noted via a yellow banner on the data view page, or they can be found by filtering by a field type of ``conflict``. For each affected field, clicking the yellow ``Conflict`` icon in the ``Type`` column will display the conflicting field types and indices.
@@ -43,6 +55,14 @@ Then, delete the previous index for each of the affected data streams:
         done
 
 Finally, check the ``logs-*`` data view to see if the field conflict is now resloved.
+
+Release History
+~~~~~~~~~~~~~~~
+
+2.4.111 Patch [20241217] Changes
+--------------------------------
+
+- UPGRADE: Suricata 7.0.8 `#14024 <https://github.com/Security-Onion-Solutions/securityonion/issues/14024>`_
 
 2.4.110 Hotfix [20241010] Changes
 ---------------------------------
