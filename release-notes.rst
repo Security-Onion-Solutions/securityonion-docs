@@ -13,7 +13,7 @@ Salt is an external project used by Security Onion. After 2.4.100 was released t
 
 While we are looking to update Security Onion to use the new URL in the next minor release of Security Onion, this issue persists with the 2.4.111 patch. We recommend installing Security Onion using the ISO image to avoid these network installation and unsupported operating system complications.
 
-If you choose to continue installing on an unsupported operating system you can consider applying the fix manually, as shown in this [PR](https://github.com/Security-Onion-Solutions/securityonion/pull/13900): https://github.com/Security-Onion-Solutions/securityonion/pull/13900.
+If you choose to continue installing on an unsupported operating system you can consider applying the fix manually, as shown in this PR: https://github.com/Security-Onion-Solutions/securityonion/pull/13900
 
 
 IP Address Data Type Conflict
