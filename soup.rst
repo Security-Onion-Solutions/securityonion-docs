@@ -61,12 +61,20 @@ After applying a hotfix, you may notice that the Security Onion version in ``/et
 OS Updates
 ----------
 
-``soup`` checks for missing OS updates and ask if you want to install them.
+In addition to Security Onion docker image updates, ``soup`` also checks for missing OS updates and asks if you want to install them.
+
+Automatic OS Updates
+~~~~~~~~~~~~~~~~~~~~
 
 You can configure automatic OS updates by going to :ref:`administration` --> Configuration --> patch.
 
 .. image:: images/config-item-patch.png
   :target: _images/config-item-patch.png
+
+Holding OS Updates
+~~~~~~~~~~~~~~~~~~
+
+Starting in Security Onion 2.4.120, there is a new setting that you can use if there are certain packages that you would like to prevent from being upgraded automatically. This is commonly referred to as "locking" or "holding" packages. The most frequent use case is holding the kernel to prevent frequent system reboots. To hold a package, add the package name to the ``hold`` list in :ref:`administration` --> Configuration --> versionlock --> hold.
 
 Local Configurations
 --------------------

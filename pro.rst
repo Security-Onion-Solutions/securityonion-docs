@@ -9,6 +9,8 @@ Starting in Security Onion 2.4.70, licensed users of Security Onion Pro can acti
 
 Starting in Security Onion 2.4.80, licensed Pro users can also enable :ref:`Guaranteed Message Delivery <kafka>`.
 
+Starting in Security Onion 2.4.120, licensed Pro users can also enable :ref:`Security Onion Connect API <connect>`.
+
 .. note::
 
     Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable these features.
@@ -22,3 +24,4 @@ Starting in Security Onion 2.4.80, licensed Pro users can also enable :ref:`Guar
    stig
    notifications
    kafka
+   connect

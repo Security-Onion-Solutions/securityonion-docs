@@ -1,1 +1,3 @@
+setuptools
+sphinxcontrib-redoc
 sphinx-rtd-theme

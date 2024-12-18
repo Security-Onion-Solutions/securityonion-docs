@@ -10,8 +10,6 @@ TOTP
 
 Time-based One-Time Passwords (TOTP) can be activated on a user account. TOTP requires the use of an authenticator app. Currently only Google Authenticator has been tested, however other authenticator apps that implement the time-based one-time password (TOTP) specification could also work.
 
-If you have a user account on multiple Security Onion deployments with TOTP activated, they may be listed identically in your authenticator app. If so, you should be able to edit the listing in your authenticator app so that you can distinguish between them.
-
 To require all users setup TOTP upon login, enable the ``Require TOTP`` configuration setting, located on the Configuration screen: ``soc > config > server > Require TOTP``.
 
 .. warning::
@@ -21,6 +19,14 @@ To require all users setup TOTP upon login, enable the ``Require TOTP`` configur
 .. note::
 
   If you lose access to your authenticator app, an administrator can reset your password using the :ref:`administration` interface which will also remove the TOTP from your account.
+
+Customizing the MFA Name
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you utilize multiple Security Onion environments, such as one for testing and one for production, and both are setup with TOTP MFA, SOC users may have trouble distinguishing them in their authenticator app. There are two options for handling this situation:
+
+1. Most authenticator apps allow the user to edit or rename the entry. For example, in Google Authenticator on Android, swiping right on the entry provides an Edit screen. This is useful if it's just affecting one or two users.
+2. Edit the TOTP issuer via the SOC Configuration screen, specifically the ``kratos > config > selfservice > methods > totp > config > issuer`` setting. This should be done prior to enabling TOTP since it will not help users that already setup TOTP.
 
 WebAuthn Security Keys
 ----------------------

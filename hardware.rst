@@ -46,7 +46,7 @@ An Import installation runs the minimal processes required to import PCAP or EVT
 Eval
 ----
 
-An Eval installation runs the minimal processes required for a single machine to sniff live network traffic from a TAP or span port and view the results. Therefore, its hardware requirements are higher than Import as shown in the table above. Eval is designed for temporary installations or homelab installations on a budget. Unlike a full Standalone installation, Evaluation is NOT designed for production usage.
+An Eval installation runs the minimal processes required for a single machine to sniff live network traffic from a TAP or SPAN port and view the results. Therefore, its hardware requirements are higher than Import as shown in the table above. Eval is designed for temporary installations or homelab installations on a budget. Unlike a full Standalone installation, Evaluation is NOT designed for production usage.
 
 In order to minimize RAM usage, Eval does not run :ref:`logstash` or :ref:`redis` at all. Also, Eval defaults to using :ref:`suricata` for writing full packet capture to disk (instead of :ref:`stenographer`).
 
@@ -69,7 +69,7 @@ NIC
 
 You'll need at least one wired network interface dedicated to management (preferably connected to a dedicated management network). We recommend using static IP addresses where possible.
 
-If you plan to sniff network traffic from a tap or span port, then you will need one or more interfaces dedicated to sniffing (no IP address). The installer will automatically disable NIC offloading functions such as ``tso``, ``gso``, and ``gro`` on sniffing interfaces to ensure that :ref:`suricata` and :ref:`zeek` get an accurate view of the traffic.
+If you plan to sniff network traffic from a TAP or SPAN port, then you will need one or more interfaces dedicated to sniffing (no IP address). The installer will automatically disable NIC offloading functions such as ``tso``, ``gso``, and ``gro`` on sniffing interfaces to ensure that :ref:`suricata` and :ref:`zeek` get an accurate view of the traffic.
 
 Make sure you get good quality network cards, especially for sniffing. Most users report good experiences with Intel cards. 
 
@@ -208,16 +208,16 @@ Sensors that have full packet capture enabled need LOTS of storage. For example,
 Packets
 ~~~~~~~
 
-You'll need some way of getting packets into your sensor interface(s). If you're just evaluating Security Onion, you can replay :ref:`pcaps`. For a production deployment, you'll need a SPAN/monitor port on an existing switch or a dedicated TAP. We recommend dedicated TAPs where possible. If collecting traffic near a NAT boundary, make sure you collect from inside the NAT boundary so that you see the true internal IP addresses.
+You'll need some way of getting packets into your sensor interface(s). If you're just evaluating Security Onion, you can replay :ref:`pcaps`. For a production deployment, you'll need a SPAN port on an existing switch or a dedicated TAP. We recommend using a dedicated TAP where possible. If collecting traffic near a NAT boundary, make sure you collect from inside the NAT boundary so that you see the true internal IP addresses.
 
-Inexpensive tap/span options (listed alphabetically):
+Inexpensive TAP/SPAN options (listed alphabetically):
 
 - `Dualcomm <https://www.dualcomm.com/collections/network-tap>`_
 - `Midbit SharkTap <https://www.midbittech.com>`_
 - `Mikrotik <https://mikrotik.com/product/RB260GS>`_
 - `Netgear GS105Ev2 <https://www.netgear.com/support/product/GS105Ev2>`_
 
-Enterprise Tap options (listed alphabetically):
+Enterprise TAP options (listed alphabetically):
 
 -  `APCON <https://www.apcon.com/products>`__
 -  `Arista <https://www.arista.com/>`__
