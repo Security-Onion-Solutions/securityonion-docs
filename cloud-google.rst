@@ -69,7 +69,7 @@ Search Nodes
 - Quantity: 2 or more
 - Type: n2-standard-4
 - Storage: 256GB Balanced Persistent Disk
-- Storage: 375GB Local Disk (NVMe)
+- Storage: 375GB Local Disk (NVMe) [optional]
   
 Sensor monitoring the VPN ingress
 
@@ -143,13 +143,13 @@ To configure a Security Onion instance (repeat for each node in a distributed gr
 
 - Access the Google Cloud Marketplace at https://console.cloud.google.com/marketplace.
 - Ensure you have a means of authenticating to VM instances over SSH. One method to authenticate is via a project-wide SSH key, which can be defined in Compute Engine -> Metadata -> SSH Keys.
-- Search the Marketplace for ``Security Onion`` and Launch the latest version of the Security Onion 2 official VM image.
+- Search the Marketplace for ``Security Onion`` and Launch the latest version of the Security Onion 2 official VM image. This may require clicking the "Get Started" button.
 - Choose the appropriate machine type based on the desired hardware requirements.  For assistance on determining resource requirements please review the Requirements section above.
 - Under the Networking interfaces section, expand the pre-added Network interface and select the Security Onion VPC network and desired subnet. External ephemeral IP is sufficient, unless you are planning to use a VPN to access the Security Onion Console, in which case no external ephemeral IP is necessary. Using a VPN is recommended, but setup of a VPN in GCP is out of scope of this guide.
-- (Distributed "Sensor" node or Single-Node grid only) Add a second Network interface and select the monitoring VPC network, and the appropriate subnet. No external ephemeral IP is necessary for this interface. Specify the network tag ``so-collector`` for this VM.
-- (Distributed "Manager" node or Single-Node grid only) If not using a VPN, enable the Allow HTTPS traffic from the Internet checkbox, and specify allowed source IP ranges. Under network tags, type ``https-server`` and press <ENTER>.
+- (Distributed "Sensor" node or Single-Node grid only) Add a second Network interface and select the monitoring VPC network, and the appropriate subnet. No external ephemeral IP is necessary for this interface.
+- (Distributed "Manager" node or Single-Node grid only) If not using a VPN, enable the Allow SSH and HTTPS traffic from the the desired IPs/CIDRs.
 - Adjust the boot disk size and type as necessary, using the guidance in the above Requirements section and elsewhere in the Security Onion documentation.
-- (Distributed "Search" node or Evaluation grid only) Under Disks, click ``Add Local SSD``. Choose NVMe and select the desired disk capacity based on anticipated log/event retention.
+- (Distributed "Search" node or Evaluation grid only) If high-speed local NVMe disks are needed a manual Terraform deployment will be required, with local disks added to the compute instance. Note that the local disks support 375GB only, so if larger volumes are required the system will need to be configured to present the multiple local disks as one virtual disk. This is out of scope of this document. Also, be aware that local disks are not replicated and will result in data loss if the instance is deleted.
 - If requested, review GCP Marketplace Terms, and if acceptable click the corresponding checkbox.
 - Select: ``Create``
 
@@ -157,6 +157,10 @@ Prepare Nodes with Ephemeral, Local Disk Storage
 ------------------------------------------------
 
 For distributed search nodes, or an evaluation node if using local disk storage, SSH into the node and cancel out of the setup. Prepare the local disk partition by executing the following command:
+
+.. note::
+
+    This assumes a single NVMe disk will be used for storing all search data. Combining multiple disks into a single partition mount is out of scope of this document.
 
 ::
 
