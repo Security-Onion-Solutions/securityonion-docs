@@ -12,6 +12,10 @@ Storage
 
 All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
 
+.. warning::
+
+   Do not manually delete any files in ``/nsm/elasticsearch``! If you need to delete Elasticsearch indices, this should be done through Elasticsearch itself rather than deleting files from the filesystem.
+
 Schema
 ------
 
