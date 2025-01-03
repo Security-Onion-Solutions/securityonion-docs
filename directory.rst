@@ -46,4 +46,4 @@ The vast majority of data is stored in ``/nsm/``.
 /nsm/suripcap
 -------------
 
-:ref:`suricata` stores full packet capture in ``/nsm/pcap/``.
+:ref:`suricata` stores full packet capture in ``/nsm/suripcap/``.
