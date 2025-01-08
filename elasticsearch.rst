@@ -250,18 +250,11 @@ If you want to clear all Elasticsearch data including documents and indices, you
 GeoIP
 -----
 
-Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. In :ref:`soc`, navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then navigate to elasticsearch --> advanced and add the following config on the right side of the screen.
+Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. To do so, run the following command on your manager:
 
 ::
 
-    elasticsearch:
-      config:
-        ingest:
-          geoip:
-            downloader:
-              enabled: true
-
-Once the config is added, click the green check mark to save the configuration.
+    sudo so-elasticsearch-query _cluster/settings -d '{"persistent":{"ingest.geoip.downloader.enabled":true}}' -XPUT
 
 Health
 ------
