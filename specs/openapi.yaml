@@ -939,7 +939,7 @@ components:
         searchFilter:
           description: The search filter to utilize when searching for matching events
             to acknowledge.
-          example: (*) AND tags:alert AND NOT event.acknowledged:true AND NOT event.escalated:true
+          example: tags:alert AND NOT event.acknowledged:true AND NOT event.escalated:true
             | groupby rule.name event.module* event.severity_label rule.uuid
           type: string
         timezone:
@@ -1945,6 +1945,13 @@ components:
             if one is available.
           example: Custom Configuration Parameters
           type: string
+        uiElements:
+          description: (metadata) List of UiElement objects describing how the UI
+            should present the field for input
+          items:
+            $ref: '#/components/schemas/model.UiElement'
+          type: array
+          uniqueItems: false
         value:
           description: The value of this specific configuration setting. Note that
             a setting exist multiple times if different values are applied to specific
@@ -1993,6 +2000,15 @@ components:
         order:
           description: 'The direction of the sort: asc, desc'
           example: asc
+          type: string
+      type: object
+    model.UiElement:
+      properties:
+        field:
+          example: some_key
+          type: string
+        label:
+          example: An Important Key
           type: string
       type: object
     model.User:
@@ -2244,7 +2260,9 @@ paths:
       - Cases
   /connect/case/{id}:
     get:
-      description: Searches for a given case ID and returns the case details.
+      description: |-
+        Retrieves a case given the provided case ID and returns the case details.
+        Use the "Query Data" API to search for cases using other criteria, specifying a query parameter that includes the following, at a minimum: _index:"*:so-case"
       parameters:
       - description: The case ID to retrieve
         in: path
@@ -3281,8 +3299,9 @@ paths:
       tags:
       - Detections
     get:
-      description: Retrieves a specific detection given an internal detection ID.
-        This ID is unique only to this particular grid.
+      description: |-
+        Retrieves a specific detection given an internal detection ID. This ID is unique only to this particular grid.
+        Use the "Query Data" API to search for detections using other criteria, specifying a query parameter that includes the following, at a minimum: _index:"*:so-detection"
       parameters:
       - description: The detection ID to retrieve
         example: zC73PJABrNRFAsnEYkqy
@@ -3848,15 +3867,16 @@ paths:
       security:
       - bearer:
         - events/read
-      summary: Search for Events
+      summary: Query Data
       tags:
-      - Events
+      - Query
   /connect/events/ack:
     post:
-      description: Acknowledges the alert event. Note that this will not remove the
-        event from connected SOC users' Alert screens when the same alert event happens
-        to be also present on their Alert screen. However, if they refresh the Alert
-        screen the alert event will no longer be list.
+      description: Acknowledges the alert event(s) matching the given query. Note
+        that this will not remove the event from connected SOC users' Alert screens
+        when the same alert event happens to be also present on their Alert screen.
+        However, if they refresh the Alert screen the alert event will no longer be
+        listed.
       requestBody:
         content:
           application/json:
@@ -3883,9 +3903,9 @@ paths:
       - bearer:
         - events/ack
         - events/write
-      summary: Acknowledge Events
+      summary: Acknowledge Alerts
       tags:
-      - Events
+      - Query
   /connect/grid/:
     get:
       description: |-
@@ -4298,7 +4318,7 @@ paths:
       - Jobs
   /connect/query/{operation}:
     get:
-      description: Requests the server provide a new query for the client to show,
+      description: Requests the server provide a new query for the SOC client to show,
         given a particular change needed in the query.
       parameters:
       - description: 'The type of operation for this query update. Supports: grouped,
@@ -4336,10 +4356,10 @@ paths:
       - bearer: []
       summary: Build Query
       tags:
-      - Events
+      - Query
   /connect/reverse-lookup:
     put:
-      description: Performs a reverse name lookup on a list of provided IP addresses.
+      description: Performs a reverse name lookup query on a list of provided IP addresses.
         The configured list of DNS overrides is checked first, and if no match is
         found a DNS reverse lookup is performed. The input listed is deduplicated
         first to avoid repeated lookups in the same request.
@@ -4374,7 +4394,7 @@ paths:
       - bearer: []
       summary: DNS Reverse Lookup
       tags:
-      - Events
+      - Query
   /connect/stream/{jobId}:
     get:
       description: Returns the full job output stream for the given job ID. An example
