@@ -76,6 +76,9 @@ Holding OS Updates
 
 Starting in Security Onion 2.4.120, there is a new setting that you can use if there are certain packages that you would like to prevent from being upgraded automatically. This is commonly referred to as "locking" or "holding" packages. The most frequent use case is holding the kernel to prevent frequent system reboots. To hold a package, add the package name to the ``hold`` list in :ref:`administration` --> Configuration --> versionlock --> hold.
 
+.. image:: images/config-item-versionlock.png
+  :target: _images/config-item-versionlock.png
+
 Local Configurations
 --------------------
 

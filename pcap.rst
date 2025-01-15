@@ -5,7 +5,12 @@ PCAP
 
 :ref:`soc` includes a PCAP interface which allows you to access your full packet capture that was written to disk by :ref:`stenographer` or :ref:`suricata`. 
 
-You can access PCAP in two different ways. The first and most common option is to pivot to PCAP from a particular event in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt` by choosing the PCAP action on the action menu. The second and less common option is to go directly to the PCAP interface, click the blue + button, and then put in your search criteria to search for a particular stream.
+You can access PCAP in two different ways. The first and most common option is to pivot to PCAP from a particular event in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt` by choosing the PCAP action on the action menu. 
+
+.. image:: images/61_actions.png
+  :target: _images/61_actions.png
+
+The second and less common option is to go directly to the PCAP interface, click the blue + button, and then put in your search criteria to search for a particular stream.
 
 .. image:: images/73_jobs_add.png
   :target: _images/73_jobs_add.png
