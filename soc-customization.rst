@@ -34,10 +34,20 @@ Links
 
 You can also customize the links on the left side. To do so, go to :ref:`administration` --> Configuration --> soc --> server --> client --> tools.
 
-Reverse DNS Lookups
--------------------
+Reverse DNS & Local Lookups
+--------------------------
 
 When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you might want to enable automatic reverse DNS lookups to provide more information. You can do so by going to :ref:`administration` --> Configuration --> soc --> config --> server --> client --> enableReverseLookup.
+
+Added in 2.4.120, this option also enables a local lookup. You can utilize it like so:
+
+Create a CSV with the following format to `/nsm/custom-mappings/ip-descriptions.csv` on your Manager:
+
+`IP,Description`
+
+This will create a new index called `so-ip-mappings`; If reverse lookups are enabled, SOC will check the static mappings first - if it doesn't find a match it will then attempt a reverse DNS lookup.
+
+As your IP/Descriptions change, contine to update the ip-descriptions.csv file - it will keep the `so-ip-mappings` index updated.
 
 Cases
 -----
