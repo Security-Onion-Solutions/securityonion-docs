@@ -50,9 +50,9 @@ Starting in Security Onion 2.4.120, enabling reverse lookups also enables local 
 
 :ref:`elasticsearch` will then ingest the CSV and use the contents to populate a new index called ``so-ip-mappings``.
 
-When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt` with reverse lookups are enabled, :ref:`soc` will check the local mappings first. If it doesn't find a match, then it will then attempt a reverse DNS lookup.
+When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt` with reverse lookups enabled, :ref:`soc` will check the local mappings first. If it doesn't find a match, then it will attempt a reverse DNS lookup.
 
-If you later need to make changes to your local IP/Descriptions mappings, make the changes in ``/nsm/custom-mappings/ip-descriptions.csv`` and the ``so-ip-mappings`` index will automatically get updated with your changes.
+If you later need to make changes to your local IP/Descriptions mappings, make the changes in ``/nsm/custom-mappings/ip-descriptions.csv`` and :ref:`elasticsearch` will automatically update the ``so-ip-mappings`` index.
 
 Cases
 -----
