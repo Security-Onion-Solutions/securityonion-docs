@@ -298,6 +298,17 @@ components:
           type: array
           uniqueItems: false
       type: object
+    config.Subgrid:
+      properties:
+        client_id:
+          type: string
+        client_secret:
+          type: string
+        description:
+          type: string
+        manager_url:
+          type: string
+      type: object
     config.ToggleFilter:
       properties:
         disablesToggles:
@@ -353,6 +364,10 @@ components:
             issued
           example: Acme Corp
           type: string
+        mgmtMac:
+          description: The management NIC MAC address pinned to this license
+          example: 10:20:30:A0:B0:C0
+          type: string
         name:
           description: The name of the license key.
           example: Security Onion Pro
@@ -366,6 +381,11 @@ components:
           description: The base URL required to be used by this license key
           example: acme-so-manager
           type: string
+        subgrids:
+          description: The maximum allowed count of suboordinate grids managed by
+            this grid
+          example: 2
+          type: integer
         users:
           description: The count of users supported by this license key; 0 = unlimited
           example: 0
@@ -1262,11 +1282,21 @@ components:
             Pro license, unprovisioned = Community license'
           example: active
           type: string
+        mgmtMac:
+          description: The MAC address assigned to the management interface.
+          example: 11:22:33:AA:BB:CC
+          type: string
         parameters:
           $ref: '#/components/schemas/config.ClientParameters'
         srvToken:
           description: The server token; unavailable to API clients
           type: string
+        subgrids:
+          description: The list of subordinate grids configured for this grid.
+          items:
+            $ref: '#/components/schemas/config.Subgrid'
+          type: array
+          uniqueItems: false
         timezones:
           description: The timezones that are configured for this server.
           example:
@@ -1471,6 +1501,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load15m:
+          description: The node's 15-minute load metric
+          example: 1.09
+          type: number
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
@@ -1478,10 +1512,6 @@ components:
         load5m:
           description: The node's 5-minute load metric
           example: 0.96
-          type: number
-        load15m:
-          description: The node's 15-minute load metric
-          example: 1.09
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -1495,6 +1525,10 @@ components:
           description: Indicates whether the metric subsytem is available
           example: true
           type: boolean
+        mgmtMac:
+          description: The MAC address assigned to this node's management NIC
+          example: AA:BB:CC:11:22:33
+          type: string
         model:
           description: The Seurity Onion appliance model, or N/A if this is not an
             official Security Onion appliance
@@ -4224,10 +4258,11 @@ paths:
       summary: Get Jobs
       tags:
       - Jobs
-  /connect/node/{jobId}:
+  /connect/node:
     post:
-      description: Used by Security Onion agent nodes to check-in with their current
-        metrics and request any pending jobs assigned to it.
+      description: |-
+        Used by Security Onion agent nodes to check-in with their current metrics and request any pending jobs assigned to it.
+        It is not recommended to make calls to this API endpoint, as this is intended to be used exclusively by official Security Onion nodes only.
       requestBody:
         content:
           application/json:
@@ -4255,10 +4290,9 @@ paths:
       - bearer:
         - nodes/write
         - jobs/process
-      summary: Node Check-in / Get Pending Jobs
+      summary: Node Check-in
       tags:
       - Grid
-      - Jobs
   /connect/packets/{jobId}:
     get:
       description: Retrieves the packets collected and attached to the job represented
