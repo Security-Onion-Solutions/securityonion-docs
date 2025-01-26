@@ -298,17 +298,6 @@ components:
           type: array
           uniqueItems: false
       type: object
-    config.Subgrid:
-      properties:
-        client_id:
-          type: string
-        client_secret:
-          type: string
-        description:
-          type: string
-        manager_url:
-          type: string
-      type: object
     config.ToggleFilter:
       properties:
         disablesToggles:
@@ -364,10 +353,6 @@ components:
             issued
           example: Acme Corp
           type: string
-        mgmtMac:
-          description: The management NIC MAC address pinned to this license
-          example: 10:20:30:A0:B0:C0
-          type: string
         name:
           description: The name of the license key.
           example: Security Onion Pro
@@ -381,11 +366,6 @@ components:
           description: The base URL required to be used by this license key
           example: acme-so-manager
           type: string
-        subgrids:
-          description: The maximum allowed count of suboordinate grids managed by
-            this grid
-          example: 2
-          type: integer
         users:
           description: The count of users supported by this license key; 0 = unlimited
           example: 0
@@ -1282,21 +1262,11 @@ components:
             Pro license, unprovisioned = Community license'
           example: active
           type: string
-        mgmtMac:
-          description: The MAC address assigned to the management interface.
-          example: 11:22:33:AA:BB:CC
-          type: string
         parameters:
           $ref: '#/components/schemas/config.ClientParameters'
         srvToken:
           description: The server token; unavailable to API clients
           type: string
-        subgrids:
-          description: The list of subordinate grids configured for this grid.
-          items:
-            $ref: '#/components/schemas/config.Subgrid'
-          type: array
-          uniqueItems: false
         timezones:
           description: The timezones that are configured for this server.
           example:
@@ -1501,6 +1471,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load5m:
+          description: The node's 5-minute load metric
+          example: 0.96
+          type: number
         load15m:
           description: The node's 15-minute load metric
           example: 1.09
@@ -1508,10 +1482,6 @@ components:
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
-          type: number
-        load5m:
-          description: The node's 5-minute load metric
-          example: 0.96
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -1525,10 +1495,6 @@ components:
           description: Indicates whether the metric subsytem is available
           example: true
           type: boolean
-        mgmtMac:
-          description: The MAC address assigned to this node's management NIC
-          example: AA:BB:CC:11:22:33
-          type: string
         model:
           description: The Seurity Onion appliance model, or N/A if this is not an
             official Security Onion appliance
@@ -3253,6 +3219,8 @@ paths:
           description: Request was not properly authenticated
         "403":
           description: Insufficient permissions for this request
+        "404":
+          description: Detection not found
         "409":
           description: Public ID conflicts with existing detection
         "500":
@@ -3321,6 +3289,8 @@ paths:
           description: Request was not properly authenticated
         "403":
           description: Insufficient permissions for this request
+        "404":
+          description: Detection not found
         "500":
           description: Internal SOC error; review SOC logs
       security:
@@ -4217,6 +4187,55 @@ paths:
       - bearer:
         - jobs/read
       summary: Get Job
+      tags:
+      - Jobs
+  /connect/joblookup/:
+    get:
+      description: Given a TCP or UDP network connection log event, create a PCAP
+        lookup job that would best locate the PCAP from that event.
+      parameters:
+      - description: Time timestamp of the event
+        example: "2024-01-29T12:31:59.220Z"
+        in: query
+        name: time
+        required: true
+        schema:
+          type: string
+      - description: The event document ID. If this is not specified then the ncid
+          param is required.
+        example: P5mgnpEB0JpjNDZz1bIN
+        in: query
+        name: esid
+        schema:
+          type: string
+      - description: The network.community_id value for the event. Ignored if the
+          esid param is provided.
+        example: 1:URggUwcolUh/BgIWApL6rUUZUK4=
+        in: query
+        name: ncid
+        schema:
+          type: string
+      responses:
+        "302":
+          description: Responds with a Location redirect header when the job was successfully
+            created. Note that this does not necessarily mean that the job will find
+            matching PCAP data.
+          headers:
+            Location:
+              description: The SOC UI URL to the newly created PCAP job. Note that
+                the job may not yet be processed.
+              schema:
+                type: string
+        "404":
+          description: There was no document found that matched the provided input
+            time and document or network community ID
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - events/read
+        - jobs/write
+      summary: Create PCAP Job from Event
       tags:
       - Jobs
   /connect/jobs/:
