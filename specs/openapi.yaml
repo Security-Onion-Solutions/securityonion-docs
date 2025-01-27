@@ -1471,6 +1471,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load1m:
+          description: The node's 1-minute load metric
+          example: 0.43
+          type: number
         load5m:
           description: The node's 5-minute load metric
           example: 0.96
@@ -1478,10 +1482,6 @@ components:
         load15m:
           description: The node's 15-minute load metric
           example: 1.09
-          type: number
-        load1m:
-          description: The node's 1-minute load metric
-          example: 0.43
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -4013,10 +4013,33 @@ paths:
       description: |-
         Imports the data from the given file. This is commonly used for importing PCAP and EVTX data directly into the node.
         The max file size defaults to 25MB unless customized in the server configuration.
-        The multipart-form value must include an attachment with a filename and associated data stream.
+        Example directory listing of a PCAP file being uploaded for import:
+
+        ```
+        -rw-r--r--  1 jertel jertel    1355 Jan 27 18:15  hdcp_authentication_sample.pcap
+        ```
+
+        Example POST request, with some of the noteworthy headers shown:
+
+        ```
+        POST /connect/gridmembers/manager_standalone/import
+
+        ...
+        content-length: 1584
+        content-type: multipart/form-data; boundary=----WebKitFormBoundaryaKfZhnMSKrgA9HJh
+        ...
+
+        ------WebKitFormBoundaryaKfZhnMSKrgA9HJh
+        Content-Disposition: form-data; name="attachment"; filename="hdcp_authentication_sample.pcap"
+        Content-Type: application/vnd.tcpdump.pcap
+
+        << raw bytes >>
+
+        ------WebKitFormBoundaryaKfZhnMSKrgA9HJh--
+        ```
       parameters:
-      - description: The node ID into which this data will be imported
-        example: so_standalone
+      - description: The full node ID (name_role) into which this data will be imported
+        example: manager_standalone
         in: path
         name: id
         required: true
@@ -4024,11 +4047,14 @@ paths:
           type: string
       requestBody:
         content:
-          application/x-www-form-urlencoded:
+          multipart/form-data:
             schema:
               type: file
-        description: The data to import (note this request must use multipart/form-data
-          content type)
+        description: The raw file data to import. This request must use multipart/form-data
+          content type and the body must include one form part containing form-data
+          content named 'attachment' with a filename attribute, a Content-Type header
+          representing the file stream MIME type, and then the associated raw data
+          stream.
         required: true
       responses:
         "202":
@@ -4410,44 +4436,58 @@ paths:
       summary: Build Query
       tags:
       - Query
-  /connect/reverse-lookup:
-    put:
-      description: Performs a reverse name lookup query on a list of provided IP addresses.
-        The configured list of DNS overrides is checked first, and if no match is
-        found a DNS reverse lookup is performed. The input listed is deduplicated
-        first to avoid repeated lookups in the same request.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                type: string
-              type: array
-        description: List of IP addresses to reverse lookup
-        required: true
+  /connect/roles:
+    get:
+      description: Retrieves the set of available user roles.
       responses:
         "200":
           content:
             application/json:
               schema:
-                additionalProperties:
-                  items:
-                    type: string
-                  type: array
-                type: object
-          description: Outputs mapping of IP address to a list of resolved domain
-            names
-        "400":
-          description: The provided input object or parameters are malformed or invalid
+                items:
+                  type: string
+                type: array
+          description: List of user role names
         "401":
           description: Request was not properly authenticated
+        "405":
+          description: Roles module not configured on server
         "500":
           description: Internal SOC error; review SOC logs
       security:
-      - bearer: []
-      summary: DNS Reverse Lookup
+      - bearer:
+        - roles/read
+      summary: Get Roles
       tags:
-      - Query
+      - Users
+  /connect/roles/permissions:
+    get:
+      description: |-
+        Retrieves the set of available client permissions.
+        Note: User roles are made up of assigned permissions. API clients do not
+        use roles and instead are directly assigned individual permissions since
+        each API client is expected to be configured for a specific task.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  type: string
+                type: array
+          description: List of permission names
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: Roles module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - permissions/read
+      summary: Get Permissions
+      tags:
+      - Clients
   /connect/stream/{jobId}:
     get:
       description: Returns the full job output stream for the given job ID. An example
@@ -4847,6 +4887,44 @@ paths:
       summary: Synchronize Users
       tags:
       - Users
+  /connect/util/reverse-lookup:
+    put:
+      description: Performs a reverse name lookup query on a list of provided IP addresses.
+        The configured list of DNS overrides is checked first, and if no match is
+        found a DNS reverse lookup is performed. The input listed is deduplicated
+        first to avoid repeated lookups in the same request.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                type: string
+              type: array
+        description: List of IP addresses to reverse lookup
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                additionalProperties:
+                  items:
+                    type: string
+                  type: array
+                type: object
+          description: Outputs mapping of IP address to a list of resolved domain
+            names
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer: []
+      summary: DNS Reverse Lookup
+      tags:
+      - Query
   /oauth2/token:
     post:
       description: |-
@@ -4881,55 +4959,3 @@ paths:
       summary: Obtain Access Token
       tags:
       - Authentication
-  /permissions:
-    get:
-      description: |-
-        Retrieves the set of available client permissions.
-        Note: User roles are made up of assigned permissions. API clients do not
-        use roles and instead are directly assigned individual permissions since
-        each API client is expected to be configured for a specific task.
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                items:
-                  type: string
-                type: array
-          description: List of permission names
-        "401":
-          description: Request was not properly authenticated
-        "405":
-          description: Roles module not configured on server
-        "500":
-          description: Internal SOC error; review SOC logs
-      security:
-      - bearer:
-        - permissions/read
-      summary: Get Permissions
-      tags:
-      - Clients
-  /roles:
-    get:
-      description: Retrieves the set of available user roles.
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                items:
-                  type: string
-                type: array
-          description: List of user role names
-        "401":
-          description: Request was not properly authenticated
-        "405":
-          description: Roles module not configured on server
-        "500":
-          description: Internal SOC error; review SOC logs
-      security:
-      - bearer:
-        - roles/read
-      summary: Get Roles
-      tags:
-      - Users
