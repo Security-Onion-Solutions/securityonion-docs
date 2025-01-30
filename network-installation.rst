@@ -24,7 +24,7 @@ If NONE of the above apply to you, you MAY be able to install one of the followi
 - Ubuntu 22.04
 - Debian 12
 
-For the least amount of issues, choose Oracle Linux 9 since it's used for our official images. Rocky Linux 9, CentOS Stream 9, and Alma Linux 9 should also work but they are not fully tested. Another option might be RHEL 9 itself although that is a paid option.
+For the least amount of issues, choose Oracle Linux 9 since it's used for our official images. Rocky Linux 9, and Alma Linux 9 should also work but they are not fully tested. Another option might be RHEL 9 itself although that is a paid option.
 
 If you really want to run Ubuntu 22.04 or Debian 12, then please note that these distros may work but they get even less testing and therefore you will be more likely to run into issues. If you choose Ubuntu 22.04, we recommend the Ubuntu 22.04 Server ISO image and selecting the ``Ubuntu Server`` installation option as there are known issues when choosing the ``Ubuntu Server (minimized)`` option.
 
