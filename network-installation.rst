@@ -20,7 +20,6 @@ If NONE of the above apply to you, you MAY be able to install one of the followi
 - Oracle Linux 9
 - Rocky Linux 9
 - Alma Linux 9
-- CentOS Stream 9
 - RHEL 9
 - Ubuntu 22.04
 - Debian 12
