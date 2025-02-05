@@ -1,324 +1,5 @@
 components:
   schemas:
-    config.CaseParameters:
-      properties:
-        analyzerNodeId:
-          type: string
-        mostRecentlyUsedLimit:
-          type: integer
-        presets:
-          additionalProperties:
-            $ref: '#/components/schemas/config.PresetParameters'
-          type: object
-        renderAbbreviatedCount:
-          type: integer
-      type: object
-    config.ClientParameters:
-      description: Web UI parameters; unavailable to API clients
-      properties:
-        alerts:
-          $ref: '#/components/schemas/config.HuntingParameters'
-        apiTimeoutMs:
-          type: integer
-        cacheExpirationMs:
-          type: integer
-        case:
-          $ref: '#/components/schemas/config.CaseParameters'
-        cases:
-          $ref: '#/components/schemas/config.HuntingParameters'
-        casesEnabled:
-          type: boolean
-        cheatsheetUrl:
-          type: string
-        dashboards:
-          $ref: '#/components/schemas/config.HuntingParameters'
-        detection:
-          $ref: '#/components/schemas/config.DetectionParameters'
-        detections:
-          $ref: '#/components/schemas/config.DetectionsParameters'
-        detectionsEnabled:
-          type: boolean
-        docsUrl:
-          type: string
-        enableReverseLookup:
-          type: boolean
-        grid:
-          $ref: '#/components/schemas/config.GridParameters'
-        hunt:
-          $ref: '#/components/schemas/config.HuntingParameters'
-        inactiveTools:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        job:
-          $ref: '#/components/schemas/config.HuntingParameters'
-        releaseNotesUrl:
-          type: string
-        tipTimeoutMs:
-          type: integer
-        tools:
-          items:
-            $ref: '#/components/schemas/config.ClientTool'
-          type: array
-          uniqueItems: false
-        webSocketTimeoutMs:
-          type: integer
-      type: object
-    config.ClientTool:
-      properties:
-        description:
-          type: string
-        icon:
-          type: string
-        link:
-          type: string
-        name:
-          type: string
-        target:
-          type: string
-      type: object
-    config.DetectionParameters:
-      properties:
-        presets:
-          additionalProperties:
-            $ref: '#/components/schemas/config.PresetParameters'
-          type: object
-        severityTranslations:
-          additionalProperties:
-            type: string
-          type: object
-        showUnreviewedAiSummaries:
-          type: boolean
-        templateDetections:
-          additionalProperties:
-            type: string
-          type: object
-      type: object
-    config.DetectionsParameters:
-      properties:
-        ackEnabled:
-          type: boolean
-        actions:
-          items:
-            $ref: '#/components/schemas/config.HuntingAction'
-          type: array
-          uniqueItems: false
-        advanced:
-          type: boolean
-        aggregationActionsEnabled:
-          type: boolean
-        chartLabelFieldSeparator:
-          type: string
-        chartLabelMaxLength:
-          type: integer
-        chartLabelOtherLimit:
-          type: integer
-        createLink:
-          type: string
-        detectionEngineStatusQueries:
-          type: string
-        escalateEnabled:
-          type: boolean
-        escalateRelatedEventsEnabled:
-          type: boolean
-        eventFetchLimit:
-          type: integer
-        eventFields:
-          additionalProperties:
-            items:
-              type: string
-            type: array
-          type: object
-        eventItemsPerPage:
-          type: integer
-        groupFetchLimit:
-          type: integer
-        groupItemsPerPage:
-          type: integer
-        mostRecentlyUsedLimit:
-          type: integer
-        presets:
-          additionalProperties:
-            $ref: '#/components/schemas/config.PresetParameters'
-          type: object
-        queries:
-          items:
-            $ref: '#/components/schemas/config.HuntingQuery'
-          type: array
-          uniqueItems: false
-        queryBaseFilter:
-          type: string
-        queryToggleFilters:
-          items:
-            $ref: '#/components/schemas/config.ToggleFilter'
-          type: array
-          uniqueItems: false
-        relativeTimeUnit:
-          type: integer
-        relativeTimeValue:
-          type: integer
-        safeStringMaxLength:
-          type: integer
-        viewEnabled:
-          type: boolean
-      type: object
-    config.GridParameters:
-      properties:
-        maxUploadSize:
-          type: integer
-        staleMetricsMs:
-          type: integer
-      type: object
-    config.HuntingAction:
-      properties:
-        background:
-          type: boolean
-        backgroundFailureLink:
-          type: string
-        backgroundSuccessLink:
-          type: string
-        body:
-          type: string
-        categories:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        description:
-          type: string
-        fields:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        icon:
-          type: string
-        jsCall:
-          type: string
-        link:
-          type: string
-        links:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        method:
-          type: string
-        name:
-          type: string
-        options:
-          additionalProperties: {}
-          type: object
-        target:
-          type: string
-      type: object
-    config.HuntingParameters:
-      properties:
-        ackEnabled:
-          type: boolean
-        actions:
-          items:
-            $ref: '#/components/schemas/config.HuntingAction'
-          type: array
-          uniqueItems: false
-        advanced:
-          type: boolean
-        aggregationActionsEnabled:
-          type: boolean
-        chartLabelFieldSeparator:
-          type: string
-        chartLabelMaxLength:
-          type: integer
-        chartLabelOtherLimit:
-          type: integer
-        createLink:
-          type: string
-        detectionEngineStatusQueries:
-          type: string
-        escalateEnabled:
-          type: boolean
-        escalateRelatedEventsEnabled:
-          type: boolean
-        eventFetchLimit:
-          type: integer
-        eventFields:
-          additionalProperties:
-            items:
-              type: string
-            type: array
-          type: object
-        eventItemsPerPage:
-          type: integer
-        groupFetchLimit:
-          type: integer
-        groupItemsPerPage:
-          type: integer
-        mostRecentlyUsedLimit:
-          type: integer
-        queries:
-          items:
-            $ref: '#/components/schemas/config.HuntingQuery'
-          type: array
-          uniqueItems: false
-        queryBaseFilter:
-          type: string
-        queryToggleFilters:
-          items:
-            $ref: '#/components/schemas/config.ToggleFilter'
-          type: array
-          uniqueItems: false
-        relativeTimeUnit:
-          type: integer
-        relativeTimeValue:
-          type: integer
-        safeStringMaxLength:
-          type: integer
-        viewEnabled:
-          type: boolean
-      type: object
-    config.HuntingQuery:
-      properties:
-        description:
-          type: string
-        name:
-          type: string
-        query:
-          type: string
-        showSubtitle:
-          type: boolean
-      type: object
-    config.PresetParameters:
-      properties:
-        customEnabled:
-          type: boolean
-        labels:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-      type: object
-    config.ToggleFilter:
-      properties:
-        disablesToggles:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        enabled:
-          type: boolean
-        enablesToggles:
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        exclusive:
-          type: boolean
-        filter:
-          type: string
-        name:
-          type: string
-      type: object
     licensing.LicenseKey:
       description: The configured license key; available only if this is a Security
         Onion Pro grid
@@ -353,6 +34,10 @@ components:
             issued
           example: Acme Corp
           type: string
+        mgmtMac:
+          description: The management NIC MAC address pinned to this license
+          example: 10:20:30:A0:B0:C0
+          type: string
         name:
           description: The name of the license key.
           example: Security Onion Pro
@@ -366,6 +51,11 @@ components:
           description: The base URL required to be used by this license key
           example: acme-so-manager
           type: string
+        subgrids:
+          description: The maximum allowed count of suboordinate grids managed by
+            this grid
+          example: 2
+          type: integer
         users:
           description: The count of users supported by this license key; 0 = unlimited
           example: 0
@@ -625,6 +315,19 @@ components:
           example: socl_my_new_client
           type: string
       type: object
+    model.CaseParameters:
+      properties:
+        analyzerNodeId:
+          type: string
+        mostRecentlyUsedLimit:
+          type: integer
+        presets:
+          additionalProperties:
+            $ref: '#/components/schemas/model.PresetParameters'
+          type: object
+        renderAbbreviatedCount:
+          type: integer
+      type: object
     model.Client:
       properties:
         createTime:
@@ -666,6 +369,71 @@ components:
         updateTime:
           description: The date and time when this API client was last modified
           example: "0001-01-01T00:00:00Z"
+          type: string
+      type: object
+    model.ClientParameters:
+      description: Web UI parameters; unavailable to API clients
+      properties:
+        alerts:
+          $ref: '#/components/schemas/model.HuntingParameters'
+        apiTimeoutMs:
+          type: integer
+        cacheExpirationMs:
+          type: integer
+        case:
+          $ref: '#/components/schemas/model.CaseParameters'
+        cases:
+          $ref: '#/components/schemas/model.HuntingParameters'
+        casesEnabled:
+          type: boolean
+        cheatsheetUrl:
+          type: string
+        dashboards:
+          $ref: '#/components/schemas/model.HuntingParameters'
+        detection:
+          $ref: '#/components/schemas/model.DetectionParameters'
+        detections:
+          $ref: '#/components/schemas/model.DetectionsParameters'
+        detectionsEnabled:
+          type: boolean
+        docsUrl:
+          type: string
+        enableReverseLookup:
+          type: boolean
+        grid:
+          $ref: '#/components/schemas/model.GridParameters'
+        hunt:
+          $ref: '#/components/schemas/model.HuntingParameters'
+        inactiveTools:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        job:
+          $ref: '#/components/schemas/model.HuntingParameters'
+        releaseNotesUrl:
+          type: string
+        tipTimeoutMs:
+          type: integer
+        tools:
+          items:
+            $ref: '#/components/schemas/model.ClientTool'
+          type: array
+          uniqueItems: false
+        webSocketTimeoutMs:
+          type: integer
+      type: object
+    model.ClientTool:
+      properties:
+        description:
+          type: string
+        icon:
+          type: string
+        link:
+          type: string
+        name:
+          type: string
+        target:
           type: string
       type: object
     model.Comment:
@@ -898,6 +666,91 @@ components:
           description: The comment text or markdown content
           example: This detection is known to trigger FPs on the first of the month
           type: string
+      type: object
+    model.DetectionParameters:
+      properties:
+        presets:
+          additionalProperties:
+            $ref: '#/components/schemas/model.PresetParameters'
+          type: object
+        severityTranslations:
+          additionalProperties:
+            type: string
+          type: object
+        showUnreviewedAiSummaries:
+          type: boolean
+        templateDetections:
+          additionalProperties:
+            type: string
+          type: object
+      type: object
+    model.DetectionsParameters:
+      properties:
+        ackEnabled:
+          type: boolean
+        actions:
+          items:
+            $ref: '#/components/schemas/model.HuntingAction'
+          type: array
+          uniqueItems: false
+        advanced:
+          type: boolean
+        aggregationActionsEnabled:
+          type: boolean
+        chartLabelFieldSeparator:
+          type: string
+        chartLabelMaxLength:
+          type: integer
+        chartLabelOtherLimit:
+          type: integer
+        createLink:
+          type: string
+        detectionEngineStatusQueries:
+          type: string
+        escalateEnabled:
+          type: boolean
+        escalateRelatedEventsEnabled:
+          type: boolean
+        eventFetchLimit:
+          type: integer
+        eventFields:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+        eventItemsPerPage:
+          type: integer
+        groupFetchLimit:
+          type: integer
+        groupItemsPerPage:
+          type: integer
+        mostRecentlyUsedLimit:
+          type: integer
+        presets:
+          additionalProperties:
+            $ref: '#/components/schemas/model.PresetParameters'
+          type: object
+        queries:
+          items:
+            $ref: '#/components/schemas/model.HuntingQuery'
+          type: array
+          uniqueItems: false
+        queryBaseFilter:
+          type: string
+        queryToggleFilters:
+          items:
+            $ref: '#/components/schemas/model.ToggleFilter'
+          type: array
+          uniqueItems: false
+        relativeTimeUnit:
+          type: integer
+        relativeTimeValue:
+          type: integer
+        safeStringMaxLength:
+          type: integer
+        viewEnabled:
+          type: boolean
       type: object
     model.EngineName:
       description: The engine that processes this detection
@@ -1242,6 +1095,131 @@ components:
           example: accepted
           type: string
       type: object
+    model.GridParameters:
+      properties:
+        maxUploadSize:
+          type: integer
+        staleMetricsMs:
+          type: integer
+      type: object
+    model.HuntingAction:
+      properties:
+        background:
+          type: boolean
+        backgroundFailureLink:
+          type: string
+        backgroundSuccessLink:
+          type: string
+        body:
+          type: string
+        categories:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        description:
+          type: string
+        fields:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        icon:
+          type: string
+        jsCall:
+          type: string
+        link:
+          type: string
+        links:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        method:
+          type: string
+        name:
+          type: string
+        options:
+          additionalProperties: {}
+          type: object
+        target:
+          type: string
+      type: object
+    model.HuntingParameters:
+      properties:
+        ackEnabled:
+          type: boolean
+        actions:
+          items:
+            $ref: '#/components/schemas/model.HuntingAction'
+          type: array
+          uniqueItems: false
+        advanced:
+          type: boolean
+        aggregationActionsEnabled:
+          type: boolean
+        chartLabelFieldSeparator:
+          type: string
+        chartLabelMaxLength:
+          type: integer
+        chartLabelOtherLimit:
+          type: integer
+        createLink:
+          type: string
+        detectionEngineStatusQueries:
+          type: string
+        escalateEnabled:
+          type: boolean
+        escalateRelatedEventsEnabled:
+          type: boolean
+        eventFetchLimit:
+          type: integer
+        eventFields:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+        eventItemsPerPage:
+          type: integer
+        groupFetchLimit:
+          type: integer
+        groupItemsPerPage:
+          type: integer
+        mostRecentlyUsedLimit:
+          type: integer
+        queries:
+          items:
+            $ref: '#/components/schemas/model.HuntingQuery'
+          type: array
+          uniqueItems: false
+        queryBaseFilter:
+          type: string
+        queryToggleFilters:
+          items:
+            $ref: '#/components/schemas/model.ToggleFilter'
+          type: array
+          uniqueItems: false
+        relativeTimeUnit:
+          type: integer
+        relativeTimeValue:
+          type: integer
+        safeStringMaxLength:
+          type: integer
+        viewEnabled:
+          type: boolean
+      type: object
+    model.HuntingQuery:
+      properties:
+        description:
+          type: string
+        name:
+          type: string
+        query:
+          type: string
+        showSubtitle:
+          type: boolean
+      type: object
     model.Info:
       properties:
         elasticVersion:
@@ -1262,11 +1240,21 @@ components:
             Pro license, unprovisioned = Community license'
           example: active
           type: string
+        mgmtMac:
+          description: The MAC address assigned to the management interface.
+          example: 11:22:33:AA:BB:CC
+          type: string
         parameters:
-          $ref: '#/components/schemas/config.ClientParameters'
+          $ref: '#/components/schemas/model.ClientParameters'
         srvToken:
           description: The server token; unavailable to API clients
           type: string
+        subgrids:
+          description: The list of subordinate grids configured for this grid.
+          items:
+            $ref: '#/components/schemas/model.Subgrid'
+          type: array
+          uniqueItems: false
         timezones:
           description: The timezones that are configured for this server.
           example:
@@ -1446,6 +1434,10 @@ components:
             this node
           example: 0
           type: integer
+        gridId:
+          description: Grid ID, used for subgrids
+          example: so1
+          type: string
         highstateAgeSeconds:
           description: How long ago, in seconds, the last highstate completed on this
             node
@@ -1471,10 +1463,6 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
-        load1m:
-          description: The node's 1-minute load metric
-          example: 0.43
-          type: number
         load5m:
           description: The node's 5-minute load metric
           example: 0.96
@@ -1482,6 +1470,10 @@ components:
         load15m:
           description: The node's 15-minute load metric
           example: 1.09
+          type: number
+        load1m:
+          description: The node's 1-minute load metric
+          example: 0.43
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -1495,6 +1487,10 @@ components:
           description: Indicates whether the metric subsytem is available
           example: true
           type: boolean
+        mgmtMac:
+          description: The MAC address assigned to this node's management NIC
+          example: AA:BB:CC:11:22:33
+          type: string
         model:
           description: The Seurity Onion appliance model, or N/A if this is not an
             official Security Onion appliance
@@ -1782,6 +1778,16 @@ components:
           example: 64296
           type: integer
       type: object
+    model.PresetParameters:
+      properties:
+        customEnabled:
+          type: boolean
+        labels:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+      type: object
     model.Query:
       properties:
         segments:
@@ -2002,14 +2008,84 @@ components:
           example: asc
           type: string
       type: object
+    model.Subgrid:
+      properties:
+        caCertificate:
+          description: Subgrid Certificate Authority cert in PEM format, if available"
+          example: |
+            -----BEGIN CERTIFICATE-----
+            ...-----END CERTIFICATE-----
+          type: string
+        clientId:
+          description: The Client ID generated by the API Client interface, used to
+            authenticate to this subgrid
+          example: socl_my_client_id
+          type: string
+        clientSecret:
+          description: The Client Secret generated by the API Client interface, used
+            to authenticate to this subgrid
+          example: xSff24sSvkKJaMN24
+          type: string
+        enabled:
+          description: Flag that controls whether this subgrid is enabled or not
+          example: false
+          type: boolean
+        id:
+          description: A unique, admin-assigned identifier string for this subgrid
+          example: subgrid_b
+          type: string
+        managerUrl:
+          description: The base URL for this subgrid, used by manager overseer nodes
+            to access this subgrid
+          example: https://subgrid_host_name
+          type: string
+        skipTlsVerify:
+          description: Flag that allows the skipping of TLS certification validation;
+            useful for test environments
+          example: true
+          type: boolean
+      type: object
+    model.ToggleFilter:
+      properties:
+        disablesToggles:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        enabled:
+          type: boolean
+        enablesToggles:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        exclusive:
+          type: boolean
+        filter:
+          type: string
+        name:
+          type: string
+      type: object
     model.UiElement:
       properties:
         field:
+          description: (metadata) The field name to save this value as
           example: some_key
           type: string
+        forcedType:
+          description: (metadata) The type that the value will be converted to internally
+            before applied to the component that uses it.
+          example: '[]string'
+          type: string
         label:
+          description: (metadata) The label to show on the UI
           example: An Important Key
           type: string
+        multiline:
+          description: (metadata) Indicates whether this setting's user interface
+            display should allow the user to enter values onto multiple lines
+          example: true
+          type: boolean
       type: object
     model.User:
       properties:
@@ -2975,7 +3051,7 @@ paths:
       tags:
       - Clients
   /connect/clients/{id}/secret/:
-    get:
+    put:
       description: |-
         Regenerates a new client secret for the given API client ID.
         Pre-existing access tokens that have not yet expired will remain valid through their expiration.
@@ -3924,7 +4000,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/model.Node'
                 type: array
-          description: The list of grid nodes
+          description: The list of grid nodes or an empty list is insufficient permissions
         "401":
           description: Request was not properly authenticated
         "403":
