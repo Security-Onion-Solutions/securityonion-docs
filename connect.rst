@@ -77,7 +77,7 @@ Currently OAuth 2.0 scopes are not utilized, since these permissions are assigne
 API Reference
 -------------
 
-.. warn::
+.. warning::
 
     New releases of Security Onion may contain additional fields in API responses. Consequently, it is important that the API output be properly parsed by official libraries that can handle these scenarios. Using custom parsing of API outputs may lead to upgrade-related malfunctions.
 
