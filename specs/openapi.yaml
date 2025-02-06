@@ -560,6 +560,11 @@ components:
       type: object
     model.AttachEventCriteria:
       properties:
+        acknowledged:
+          description: 'Whether to attach events that are already acknowledged: true
+            = act on acknowledged events, false = act on unacknowledged events'
+          example: true
+          type: boolean
         caseId:
           description: The case ID for which this related event is to be attached,
             or is already attached.
@@ -574,6 +579,11 @@ components:
             example value exactly as shown.
           example: 2006/01/02 3:04:05 PM
           type: string
+        escalated:
+          description: 'Whether to attach events that are already escalated to a case:
+            true = act on escalated events, false = act on unescalated events'
+          example: false
+          type: boolean
         fields:
           additionalProperties: {}
           description: A mapping of related event field names and their values.
@@ -1568,6 +1578,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load5m:
+          description: The node's 5-minute load metric
+          example: 0.96
+          type: number
         load15m:
           description: The node's 15-minute load metric
           example: 1.09
@@ -1575,10 +1589,6 @@ components:
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
-          type: number
-        load5m:
-          description: The node's 5-minute load metric
-          example: 0.96
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
