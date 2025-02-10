@@ -7,7 +7,7 @@ Release History
 ~~~~~~~~~~~~~~~
 
 2.4.120 [20240211] Changes
-----------------------
+--------------------------
 
 - FEATURE: API Clients `#13928 <https://github.com/Security-Onion-Solutions/securityonion/issues/13928>`_
 - FEATURE: ATT&CK Layer for Detections `#13885 <https://github.com/Security-Onion-Solutions/securityonion/issues/13885>`_
