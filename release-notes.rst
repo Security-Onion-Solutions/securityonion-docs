@@ -6,14 +6,14 @@ Release Notes
 Release History
 ~~~~~~~~~~~~~~~
 
-2.4.120 [20240211] Changes
+2.4.120 [20240212] Changes
 --------------------------
 
+- FEATURE: Additional supported integrations
+- FEATURE: Add template Sigma & YARA local custom repo
+- FEATURE: Allow users to prevent the kernel and other packages from being upgraded
 - FEATURE: API Clients `#13928 <https://github.com/Security-Onion-Solutions/securityonion/issues/13928>`_
 - FEATURE: ATT&CK Layer for Detections `#13885 <https://github.com/Security-Onion-Solutions/securityonion/issues/13885>`_
-- FEATURE: Add template Sigma & YARA local custom repo
-- FEATURE: Additional supported integrations
-- FEATURE: Allow users to prevent the kernel and other packages from being upgraded
 - FEATURE: Custom Local IP to Hostname Mapping
 - FEATURE: Elastic Agent MSI `#13744 <https://github.com/Security-Onion-Solutions/securityonion/issues/13744>`_
 - FEATURE: Expose new rule summary to Alerts page `#13770 <https://github.com/Security-Onion-Solutions/securityonion/issues/13770>`_
@@ -37,19 +37,20 @@ Release History
 - FIX: Configuration YAML validator fails on valid YAML `#13965 <https://github.com/Security-Onion-Solutions/securityonion/issues/13965>`_
 - FIX: Detections - Overrides list only displays 10 `#13950 <https://github.com/Security-Onion-Solutions/securityonion/issues/13950>`_
 - FIX: Ensure createrepo_c is installed on airgapped manager nodes `#13857 <https://github.com/Security-Onion-Solutions/securityonion/issues/13857>`_
+- FIX: Flickering Sankey chart `#14215 <https://github.com/Security-Onion-Solutions/securityonion/issues/14215>`_
 - FIX: Have soup ensure that top.sls is in normal mode even if there are no soup changes `#13808 <https://github.com/Security-Onion-Solutions/securityonion/issues/13808>`_
 - FIX: Invalidate a user's sessions when an administrator changes the user's password `#14076 <https://github.com/Security-Onion-Solutions/securityonion/issues/14076>`_
 - FIX: Non Oracle nodes failing soup / Salt upgrade `#13926 <https://github.com/Security-Onion-Solutions/securityonion/issues/13926>`_
+- FIX: null pointer exception in global@custom pipeline `#14117 <https://github.com/Security-Onion-Solutions/securityonion/issues/14117>`_
 - FIX: Okta index template missing okta-mappings component template `#14106 <https://github.com/Security-Onion-Solutions/securityonion/issues/14106>`_
 - FIX: Records being partially displayed in the Alerts interface when expanded `#14108 <https://github.com/Security-Onion-Solutions/securityonion/issues/14108>`_
 - FIX: Review ILM settings for Detection History index
+- FIX: rsync error during non-airgapped manager setup `#13860 <https://github.com/Security-Onion-Solutions/securityonion/issues/13860>`_
 - FIX: Salt Repo has moved `#13898 <https://github.com/Security-Onion-Solutions/securityonion/issues/13898>`_
 - FIX: Salt state warnings `#13851 <https://github.com/Security-Onion-Solutions/securityonion/issues/13851>`_
+- FIX: so-repo-sync errors on non Oracle OS `#13919 <https://github.com/Security-Onion-Solutions/securityonion/issues/13919>`_
 - FIX: Suricata Integrity Check fails when Suricata Metadata rules are enabled
 - FIX: Update crowdstrike integration support `#13913 <https://github.com/Security-Onion-Solutions/securityonion/issues/13913>`_
-- FIX: null pointer exception in global@custom pipeline `#14117 <https://github.com/Security-Onion-Solutions/securityonion/issues/14117>`_
-- FIX: rsync error during non-airgapped manager setup `#13860 <https://github.com/Security-Onion-Solutions/securityonion/issues/13860>`_
-- FIX: so-repo-sync errors on non Oracle OS `#13919 <https://github.com/Security-Onion-Solutions/securityonion/issues/13919>`_
 - UPGRADE: ATT&CK Navigator to 5.1.0
 - UPGRADE: CyberChef to 10.19.4 `#14131 <https://github.com/Security-Onion-Solutions/securityonion/issues/14131>`_
 - UPGRADE: ElastAlert 2 to 2.22.0 `#14082 <https://github.com/Security-Onion-Solutions/securityonion/issues/14082>`_
