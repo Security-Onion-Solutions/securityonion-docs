@@ -6,7 +6,7 @@ Release Notes
 Release History
 ~~~~~~~~~~~~~~~
 
-2.4.120 [20240212] Changes
+2.4.120 [20250212] Changes
 --------------------------
 
 - FEATURE: Additional supported integrations
