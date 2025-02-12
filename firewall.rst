@@ -48,7 +48,7 @@ If you choose to enable the Snort Talos ruleset, you will also need access to th
 Node Communication
 ~~~~~~~~~~~~~~~~~~
 
-When configuring network firewalls for distributed deployments, you'll want to ensure that nodes can connect as shown below. 
+When configuring network firewalls for distributed deployments, you'll want to ensure that nodes can connect as shown below. Please read through this entire list because your deployment may need firewall rules from multiple sections. For example, please note that grid nodes will need all ports in the ``All nodes to Manager`` and ``Elastic Agent`` sections and may also need ports from other sections as well.
 
 All nodes to Manager:
 

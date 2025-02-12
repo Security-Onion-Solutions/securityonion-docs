@@ -16,7 +16,7 @@ release = '2.4'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ['sphinxcontrib.redoc']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '.venv']
@@ -40,3 +40,13 @@ html_css_files = [
 html_js_files = [
     'theme_overrides.js'
 ]
+
+redoc = [
+    {
+        'name': 'Security Onion Connect API',
+        'page': 'api/index',
+        'spec': 'specs/openapi.yaml',
+        'embed': True,
+    },
+]
+redoc_uri = 'https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js'

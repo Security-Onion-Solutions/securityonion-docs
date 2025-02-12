@@ -3,9 +3,9 @@
 Salt
 ====
 
-From https://docs.saltstack.com/en/latest/:
+From https://docs.saltproject.io/en/latest/topics/about_salt_project.html#about-salt:
 
-   Salt is a new approach to infrastructure management built on a dynamic communication bus. Salt can be used for data-driven orchestration, remote execution for any infrastructure, configuration management for any app stack, and much more.
+   Built on Python, Salt is an event-driven automation tool and framework to deploy, configure, and manage complex IT systems. Use Salt to automate common infrastructure administration tasks and ensure that all the components of your infrastructure are operating in a consistent desired state.
 
 .. note::
 
@@ -14,8 +14,7 @@ From https://docs.saltstack.com/en/latest/:
 Firewall Requirements
 ---------------------
 
-| Salt minions must be able to connect to the manager node on ports ``4505/tcp`` and ``4506/tcp``:
-| https://docs.saltproject.io/en/getstarted/system/communication.html
+Salt minions must be able to connect to the manager node on ports ``4505/tcp`` and ``4506/tcp``.
 
 Checking Status
 ---------------
@@ -75,4 +74,4 @@ More Information
 
 .. note::
 
-    For more information about Salt, please see https://docs.saltstack.com/en/latest/.
+    For more information about Salt, please see https://docs.saltproject.io/en/latest/contents.html.

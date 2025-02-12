@@ -5,9 +5,11 @@ First Time Users
 
 Welcome, first time users! You're going to be peeling back the layers of your network in just a few minutes! 
 
-First, download our ISO image as shown in the :ref:`download` section. 
+First, please note that Security Onion only supports x86-64 architecture (standard Intel or AMD 64-bit processors). If you don't have an x86-64 box available, then one option may be to run Security Onion in the cloud. For more information, please see the :ref:`cloud-amazon`, :ref:`cloud-azure`, and :ref:`cloud-google` sections. 
 
-Then install the ISO image and configure for IMPORT as shown below (also see the :ref:`installation` and :ref:`configuration` sections). This can be done in a minimal virtual machine with as little as 4GB RAM, 2 CPU cores, and 200GB of storage. For more information about virtualization, please see the :ref:`vmware`, :ref:`virtualbox`, and :ref:`proxmox` sections.
+Otherwise, if you have an x86-64 box for your Security Onion IMPORT installation, then check to make sure it meets the MINIMUM hardware requirements of 4GB RAM, 2 CPU cores, and 200GB of storage. If you will be installing Security Onion in a virtual machine, then the VM will need those specs at minimum and the host machine will have higher hardware requirements since it will be running the host operating system and possibly other VMs or apps. For more information about virtualization, please see the :ref:`vmware`, :ref:`virtualbox`, and :ref:`proxmox` sections. Once you've verified that you have an appropriate installation target, you can proceed to download our ISO image as shown in the :ref:`download` section and then install the ISO image as shown in the :ref:`installation` section.
+
+Once you have Security Onion installed either in the cloud or on-prem, you can configure for IMPORT as shown below (also see the :ref:`configuration` section). 
 
 Once you're comfortable with your IMPORT installation, then you can move on to more advanced installations as shown in the :ref:`architecture` section.
 

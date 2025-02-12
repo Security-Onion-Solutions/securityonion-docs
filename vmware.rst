@@ -6,11 +6,11 @@ VMware
 Overview
 --------
 
-In this section, we'll cover creating a virtual machine (VM) for our ISO image in VMware Workstation Pro and VMware Fusion. These steps should be fairly similar for most VMware installations. If you don't already have VMware, you can download VMware Workstation Player from https://www.vmware.com/products/player/playerpro-evaluation.html.
+In this section, we'll cover creating a virtual machine (VM) for our ISO image in VMware Workstation Pro and VMware Fusion. These steps should be fairly similar for most VMware installations.
 
 .. note::
 
-   If you want to sniff live traffic, then you will need a second network interface dedicated to sniffing. You will need to set this sniffing interface to sniff from whatever network you want to monitor. With the sniffing interface in ``bridged`` mode, you should be able to see all traffic to and from the host machine's physical NIC. If you would like to see **ALL** the traffic on your network, you will need a method of forwarding that traffic to the interface to which the virtual adapter is bridged. This can be achieved with a tap or SPAN port. If you want to sniff traffic from other VMs, then the virtual sniffing interface needs to be set to the same virtual network that those VMs are set to (this may be ``NAT`` or ``bridged`` depending on how they are configured).
+   If you want to sniff live traffic, then you will need a second network interface dedicated to sniffing. You will need to set this sniffing interface to sniff from whatever network you want to monitor. With the sniffing interface in ``bridged`` mode, you should be able to see all traffic to and from the host machine's physical NIC. If you would like to see **ALL** the traffic on your network, you will need a method of forwarding that traffic to the interface to which the virtual adapter is bridged. This can be achieved with a TAP or SPAN port. If you want to sniff traffic from other VMs, then the virtual sniffing interface needs to be set to the same virtual network that those VMs are set to (this may be ``NAT`` or ``bridged`` depending on how they are configured).
 
 Workstation Pro
 ---------------

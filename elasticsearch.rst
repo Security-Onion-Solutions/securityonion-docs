@@ -12,6 +12,10 @@ Storage
 
 All of the data Elasticsearch collects is stored under ``/nsm/elasticsearch/``.
 
+.. warning::
+
+   Do not manually delete any files in ``/nsm/elasticsearch``! If you need to delete Elasticsearch indices, this should be done through Elasticsearch itself rather than deleting files from the filesystem.
+
 Schema
 ------
 
@@ -82,7 +86,7 @@ Elasticsearch indices are managed by both the ``so-elasticsearch-indices-delete`
 so-elasticsearch-indices-delete
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``so-elasticsearch-indices-delete`` manages size-based deletion of Elasticsearch indices based on the value of the ``elasticsearch.retention.retention_pct`` setting. This setting is checked against the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. If your indices are using more than ``retention_pct``, then ``so-elasticsearch-indices-delete`` will delete old indices until available disk space is back under ``retention_pct``. The default value for this setting is ``50`` percent so that standalone deployments have sufficient space for not only Elasticsearch but also full packet capture and other logs. For distributed deployments with dedicated search nodes where Elasticsearch is main consumer of disk space, you may want to increase this default value.
+``so-elasticsearch-indices-delete`` manages size-based deletion of Elasticsearch indices based on the value of the ``elasticsearch.retention.retention_pct`` setting. This setting is checked against the total disk space available for ``/nsm/elasticsearch`` across all nodes in the Elasticsearch cluster. If your indices are using more than ``retention_pct``, then ``so-elasticsearch-indices-delete`` will delete old indices until disk space consumed by indices is back under ``retention_pct``. The default value for this setting is ``50`` percent so that standalone deployments have sufficient space for not only Elasticsearch but also full packet capture and other logs. For distributed deployments with dedicated search nodes where Elasticsearch is main consumer of disk space, you may want to increase this default value.
 
 To modify the ``retention_pct`` value, first navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then navigate to elasticsearch --> retention --> retention_pct. Once you make the change and save it, the new setting will take effect at the next 15 minute interval. If you would like to make the change immediately, you can click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
@@ -246,18 +250,11 @@ If you want to clear all Elasticsearch data including documents and indices, you
 GeoIP
 -----
 
-Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. In :ref:`soc`, navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then navigate to elasticsearch --> advanced and add the following config on the right side of the screen.
+Elasticsearch 8 no longer includes GeoIP databases by default. We include GeoIP databases for Elasticsearch so that all users will have GeoIP functionality. If your search nodes have Internet access and can reach geoip.elastic.co and storage.googleapis.com, then you can opt-in to database updates if you want more recent information. To do so, run the following command on your manager:
 
 ::
 
-    elasticsearch:
-      config:
-        ingest:
-          geoip:
-            downloader:
-              enabled: true
-
-Once the config is added, click the green check mark to save the configuration.
+    sudo so-elasticsearch-query _cluster/settings -d '{"persistent":{"ingest.geoip.downloader.enabled":true}}' -XPUT
 
 Health
 ------

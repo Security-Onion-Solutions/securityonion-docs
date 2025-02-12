@@ -1,0 +1,5069 @@
+components:
+  schemas:
+    config.AlertParameters:
+      properties:
+        ackEnabled:
+          type: boolean
+        actions:
+          items:
+            $ref: '#/components/schemas/config.HuntingAction'
+          type: array
+          uniqueItems: false
+        advanced:
+          type: boolean
+        aggregationActionsEnabled:
+          type: boolean
+        chartLabelFieldSeparator:
+          type: string
+        chartLabelMaxLength:
+          type: integer
+        chartLabelOtherLimit:
+          type: integer
+        createLink:
+          type: string
+        detectionEngineStatusQueries:
+          type: string
+        escalateEnabled:
+          type: boolean
+        escalateRelatedEventsEnabled:
+          type: boolean
+        eventFetchLimit:
+          type: integer
+        eventFields:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+        eventItemsPerPage:
+          type: integer
+        groupFetchLimit:
+          type: integer
+        groupItemsPerPage:
+          type: integer
+        maxBulkEscalateEvents:
+          type: integer
+        mostRecentlyUsedLimit:
+          type: integer
+        queries:
+          items:
+            $ref: '#/components/schemas/config.HuntingQuery'
+          type: array
+          uniqueItems: false
+        queryBaseFilter:
+          type: string
+        queryToggleFilters:
+          items:
+            $ref: '#/components/schemas/config.ToggleFilter'
+          type: array
+          uniqueItems: false
+        relativeTimeUnit:
+          type: integer
+        relativeTimeValue:
+          type: integer
+        safeStringMaxLength:
+          type: integer
+        viewEnabled:
+          type: boolean
+      type: object
+    config.CaseParameters:
+      properties:
+        analyzerNodeId:
+          type: string
+        mostRecentlyUsedLimit:
+          type: integer
+        presets:
+          additionalProperties:
+            $ref: '#/components/schemas/config.PresetParameters'
+          type: object
+        renderAbbreviatedCount:
+          type: integer
+      type: object
+    config.ClientParameters:
+      description: Web UI parameters; unavailable to API clients
+      properties:
+        alerts:
+          $ref: '#/components/schemas/config.AlertParameters'
+        apiTimeoutMs:
+          type: integer
+        cacheExpirationMs:
+          type: integer
+        case:
+          $ref: '#/components/schemas/config.CaseParameters'
+        cases:
+          $ref: '#/components/schemas/config.HuntingParameters'
+        casesEnabled:
+          type: boolean
+        cheatsheetUrl:
+          type: string
+        dashboards:
+          $ref: '#/components/schemas/config.HuntingParameters'
+        detection:
+          $ref: '#/components/schemas/config.DetectionParameters'
+        detections:
+          $ref: '#/components/schemas/config.DetectionsParameters'
+        detectionsEnabled:
+          type: boolean
+        docsUrl:
+          type: string
+        enableReverseLookup:
+          type: boolean
+        grid:
+          $ref: '#/components/schemas/config.GridParameters'
+        hunt:
+          $ref: '#/components/schemas/config.HuntingParameters'
+        inactiveTools:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        job:
+          $ref: '#/components/schemas/config.HuntingParameters'
+        releaseNotesUrl:
+          type: string
+        tipTimeoutMs:
+          type: integer
+        tools:
+          items:
+            $ref: '#/components/schemas/config.ClientTool'
+          type: array
+          uniqueItems: false
+        webSocketTimeoutMs:
+          type: integer
+      type: object
+    config.ClientTool:
+      properties:
+        description:
+          type: string
+        icon:
+          type: string
+        link:
+          type: string
+        name:
+          type: string
+        target:
+          type: string
+      type: object
+    config.DetectionParameters:
+      properties:
+        presets:
+          additionalProperties:
+            $ref: '#/components/schemas/config.PresetParameters'
+          type: object
+        severityTranslations:
+          additionalProperties:
+            type: string
+          type: object
+        showUnreviewedAiSummaries:
+          type: boolean
+        templateDetections:
+          additionalProperties:
+            type: string
+          type: object
+      type: object
+    config.DetectionsParameters:
+      properties:
+        ackEnabled:
+          type: boolean
+        actions:
+          items:
+            $ref: '#/components/schemas/config.HuntingAction'
+          type: array
+          uniqueItems: false
+        advanced:
+          type: boolean
+        aggregationActionsEnabled:
+          type: boolean
+        chartLabelFieldSeparator:
+          type: string
+        chartLabelMaxLength:
+          type: integer
+        chartLabelOtherLimit:
+          type: integer
+        createLink:
+          type: string
+        detectionEngineStatusQueries:
+          type: string
+        escalateEnabled:
+          type: boolean
+        escalateRelatedEventsEnabled:
+          type: boolean
+        eventFetchLimit:
+          type: integer
+        eventFields:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+        eventItemsPerPage:
+          type: integer
+        groupFetchLimit:
+          type: integer
+        groupItemsPerPage:
+          type: integer
+        mostRecentlyUsedLimit:
+          type: integer
+        presets:
+          additionalProperties:
+            $ref: '#/components/schemas/config.PresetParameters'
+          type: object
+        queries:
+          items:
+            $ref: '#/components/schemas/config.HuntingQuery'
+          type: array
+          uniqueItems: false
+        queryBaseFilter:
+          type: string
+        queryToggleFilters:
+          items:
+            $ref: '#/components/schemas/config.ToggleFilter'
+          type: array
+          uniqueItems: false
+        relativeTimeUnit:
+          type: integer
+        relativeTimeValue:
+          type: integer
+        safeStringMaxLength:
+          type: integer
+        viewEnabled:
+          type: boolean
+      type: object
+    config.GridParameters:
+      properties:
+        maxUploadSize:
+          type: integer
+        staleMetricsMs:
+          type: integer
+      type: object
+    config.HuntingAction:
+      properties:
+        background:
+          type: boolean
+        backgroundFailureLink:
+          type: string
+        backgroundSuccessLink:
+          type: string
+        body:
+          type: string
+        categories:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        description:
+          type: string
+        fields:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        icon:
+          type: string
+        jsCall:
+          type: string
+        link:
+          type: string
+        links:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        method:
+          type: string
+        name:
+          type: string
+        options:
+          additionalProperties: {}
+          type: object
+        target:
+          type: string
+      type: object
+    config.HuntingParameters:
+      properties:
+        ackEnabled:
+          type: boolean
+        actions:
+          items:
+            $ref: '#/components/schemas/config.HuntingAction'
+          type: array
+          uniqueItems: false
+        advanced:
+          type: boolean
+        aggregationActionsEnabled:
+          type: boolean
+        chartLabelFieldSeparator:
+          type: string
+        chartLabelMaxLength:
+          type: integer
+        chartLabelOtherLimit:
+          type: integer
+        createLink:
+          type: string
+        detectionEngineStatusQueries:
+          type: string
+        escalateEnabled:
+          type: boolean
+        escalateRelatedEventsEnabled:
+          type: boolean
+        eventFetchLimit:
+          type: integer
+        eventFields:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+        eventItemsPerPage:
+          type: integer
+        groupFetchLimit:
+          type: integer
+        groupItemsPerPage:
+          type: integer
+        mostRecentlyUsedLimit:
+          type: integer
+        queries:
+          items:
+            $ref: '#/components/schemas/config.HuntingQuery'
+          type: array
+          uniqueItems: false
+        queryBaseFilter:
+          type: string
+        queryToggleFilters:
+          items:
+            $ref: '#/components/schemas/config.ToggleFilter'
+          type: array
+          uniqueItems: false
+        relativeTimeUnit:
+          type: integer
+        relativeTimeValue:
+          type: integer
+        safeStringMaxLength:
+          type: integer
+        viewEnabled:
+          type: boolean
+      type: object
+    config.HuntingQuery:
+      properties:
+        description:
+          type: string
+        name:
+          type: string
+        query:
+          type: string
+        showSubtitle:
+          type: boolean
+      type: object
+    config.PresetParameters:
+      properties:
+        customEnabled:
+          type: boolean
+        labels:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+      type: object
+    config.ToggleFilter:
+      properties:
+        disablesToggles:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        enabled:
+          type: boolean
+        enablesToggles:
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        exclusive:
+          type: boolean
+        filter:
+          type: string
+        name:
+          type: string
+      type: object
+    licensing.LicenseKey:
+      description: The configured license key; available only if this is a Security
+        Onion Pro grid
+      properties:
+        dataUrl:
+          description: The backend data event storage hostname required to be used
+            by this license key
+          example: ""
+          type: string
+        effective:
+          description: The date and time when this license key becomes effective
+          example: "2024-08-22T00:00:00Z"
+          type: string
+        expiration:
+          description: The date and time when this license key expires
+          example: "2025-08-22T23:59:59Z"
+          type: string
+        features:
+          description: The features included with this license key
+          example:
+          - NTF
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        id:
+          description: The unique ID for this license key
+          example: acme_corp_20240822
+          type: string
+        licensee:
+          description: The name of the organization to which this license key was
+            issued
+          example: Acme Corp
+          type: string
+        name:
+          description: The name of the license key.
+          example: Security Onion Pro
+          type: string
+        nodes:
+          description: The count of critical grid nodes supported by this license
+            key; 0 = unlimited
+          example: 5
+          type: integer
+        socUrl:
+          description: The base URL required to be used by this license key
+          example: acme-so-manager
+          type: string
+        users:
+          description: The count of users supported by this license key; 0 = unlimited
+          example: 0
+          type: integer
+      type: object
+    model.Artifact:
+      properties:
+        artifactType:
+          description: The artifact type as set by the server. This is an internal,
+            read-only field.
+          example: ip
+          type: string
+        caseId:
+          description: The case ID for which this artifact is to be attached, or is
+            already attached.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        description:
+          description: A description that explains how this artifact relates to the
+            case.
+          example: Additional supporting evidence
+          type: string
+        groupId:
+          description: The group ID as set by the server. This is an internal, read-only
+            field.
+          example: ""
+          type: string
+        groupType:
+          description: The group type as set by the server. This is an internal, read-only
+            field.
+          example: evidence
+          type: string
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        ioc:
+          description: A flag representing whether this artifact is an indicator of
+            compromise (IoC).
+          example: false
+          type: boolean
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        md5:
+          description: An MD5 hash of the artifact stream. This field is determined
+            by the server upon file upload and is ready-only.
+          example: d9cca721a735dac4efe709e0f3518373
+          type: string
+        mimeType:
+          description: The mime type of the artifact stream. This field is determined
+            by the server upon file upload and is read-only.
+          example: application/json
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        protected:
+          description: A flag representing whether this file artifact is protected.
+            A protected file will be automatically zipped by the server before being
+            retrieved, to avoid accidentally executing a potentially harmful attachment.
+          example: false
+          type: boolean
+        sha1:
+          description: A SHA-1 hash of the artifact stream. This field is determined
+            by the server upon file upload and is ready-only.
+          example: a0571c5b9493187adb5bd07ad0faf279a86251df
+          type: string
+        sha256:
+          description: A SHA-256 hash of the artifact stream. This field is determined
+            by the server upon file upload and is ready-only.
+          example: 9c1f8398f5a92eee44aee58d000a4dc1705f9c25e29683f7730215bc1274cff1
+          type: string
+        streamId:
+          description: The stream ID of the artifact stream. This field is determined
+            by the server upon file upload and is ready-only.
+          example: f2fS-DajPqlMo-221Nmn
+          type: string
+        streamLength:
+          description: The length of the artifact stream. This field is determined
+            by the server upon file upload and is ready-only.
+          example: 4096
+          type: integer
+        tags:
+          description: Tags to assign to this artifact.
+          example:
+          - pending
+          - unconfirmed
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        tlp:
+          description: The traffic light protocol value for this artifact.
+          example: red
+          type: string
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+        value:
+          description: The value of this artifact. Essentially this is the content
+            of the artifact itself, such as an IP address, a hostname, a stream of
+            file bytes, etc.
+          example: 1.2.3.4
+          type: string
+      required:
+      - artifactType
+      - caseId
+      - value
+      type: object
+    model.AttachEventCriteria:
+      properties:
+        acknowledged:
+          description: 'Whether to attach events that are already acknowledged: true
+            = act on acknowledged events, false = act on unacknowledged events'
+          example: true
+          type: boolean
+        caseId:
+          description: The case ID for which this related event is to be attached,
+            or is already attached.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        dateRange:
+          description: The date range to use for searching for matching events
+          example: 2024/12/03 02:31:35 PM - 2024/12/04 02:31:35 PM
+          type: string
+        dateRangeFormat:
+          description: The date range format. If unsure how to use this then use the
+            example value exactly as shown.
+          example: 2006/01/02 3:04:05 PM
+          type: string
+        escalated:
+          description: 'Whether to attach events that are already escalated to a case:
+            true = act on escalated events, false = act on unescalated events'
+          example: false
+          type: boolean
+        fields:
+          additionalProperties: {}
+          description: A mapping of related event field names and their values.
+          example:
+            client.ip: 1.2.3.4
+            client.port: "1099"
+          type: object
+        timezone:
+          description: The timezone to use with the date range
+          example: America/New_York
+          type: string
+      required:
+      - caseId
+      - fields
+      type: object
+    model.Auditable:
+      description: The Auditable fields are read-only. They are generated by the server.
+      properties:
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+      type: object
+    model.Case:
+      properties:
+        assigneeId:
+          description: The user ID that is assigned to work on this case.
+          example: 022d1936-6ca3-49c1-b3ee-6a5b27d1b8b1
+          type: string
+        category:
+          description: A category is a way to group similar cases together and can
+            be arbitrary values, or static values, depending on how the system if
+            configured.
+          example: general
+          type: string
+        completeTime:
+          description: The date and time that the case was completed. A case is completed
+            when the status is changed to 'closed'. This is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        description:
+          description: The full description of the case.
+          example: Discovered anomalous events during the overnight hours of November
+            14-15. Atypical large network volumes passed through SMTP server.
+          type: string
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        pap:
+          description: The Permissiable Actions Protocol value.
+          example: white
+          type: string
+        priority:
+          description: The priority of the case. Lower values typically represent
+            increasing importance.
+          example: 1
+          type: integer
+        severity:
+          description: 'The serverity of the case. Typical values are: critical, high,
+            medium, low'
+          example: high
+          type: string
+        startTime:
+          description: The date and time that the case status was changed to 'in progress'.
+            This is a read-only field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        status:
+          description: 'The state of the case. Typical values are: new, in progress,
+            closed'
+          example: new
+          type: string
+        tags:
+          description: A tag is another way to group similar cases together and can
+            be arbitrary values, or static values, depending on how the system if
+            configured.
+          example:
+          - pending
+          - confirmed
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        template:
+          description: A case ID representing the case to use as a template when creating
+            this case. The template case fields will be copied into the new case.
+          example: some_case_id_to_be_used_as_template
+          type: string
+        title:
+          description: The brief case title or summary
+          example: Possible intrusion via SMTP server
+          type: string
+        tlp:
+          description: The Traffic Light Protocol value.
+          example: red
+          type: string
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+      type: object
+    model.Client:
+      properties:
+        createTime:
+          description: The date and time when this API client was created
+          example: "2024-12-03T21:04:59.970640998Z"
+          type: string
+        id:
+          description: The ID assigned to this API client
+          example: socl_my_new_api_client
+          type: string
+        name:
+          description: The client name
+          example: My New API Client
+          type: string
+        note:
+          description: An optional note to associate with this API client
+          example: This client is used for automating case observable attachments
+          type: string
+        permissions:
+          description: The list of permissions assigned to this client
+          example:
+          - events/read
+          - cases/read
+          - cases/write
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        searchUsername:
+          description: An optional Elasticsearch user that this client will run as
+            when accessing event data
+          example: ""
+          type: string
+        secret:
+          description: The generated client secret (only returned on new client creation
+            and regeneration of the secret)
+          example: ERa5jp9Z6WbLm1YC5FCM
+          type: string
+        updateTime:
+          description: The date and time when this API client was last modified
+          example: "0001-01-01T00:00:00Z"
+          type: string
+      type: object
+    model.Comment:
+      properties:
+        caseId:
+          description: The case ID for which this comment is to be attached, or is
+            already attached.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        description:
+          description: The comment content itself. Can contain limited markdown syntax.
+          example: Discovered another anomaly around the same time involving missing
+            logs on server xyz.
+          type: string
+        hours:
+          description: The number of hours spent on the work referenced in this comment.
+            Can be a decimal value.
+          example: 2.5
+          type: number
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+      required:
+      - caseId
+      - description
+      type: object
+    model.Detection:
+      properties:
+        aiSummary:
+          description: The detection summary generated by artificial intelligence
+          example: This rule detects antivirus alerts reporting the presence of ransomware,...
+          type: string
+        aiSummaryReviewed:
+          description: Reserved for future use
+          example: false
+          type: boolean
+        author:
+          description: The original author of this detection. This can be a mixture
+            of email address, organization name, first name, or any freeform value
+          example: Security Onion Solutions
+          type: string
+        category:
+          description: Used for categorizing this detection into a broader grouping
+            such as firewalls or web servers
+          example: ps_script
+          type: string
+        content:
+          description: The underlying detection rule source content
+          example: |-
+            title: CobaltStrike Named Pipe
+            id: ...
+             logsource:
+             ...
+            condition: selection
+            falsepositives:
+            ...
+          type: string
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        description:
+          description: Brief explanation of this detection
+          example: Detects when a user fails to login to a grid node via SSH. Review
+            associated logs for username and source IP.
+          type: string
+        engine:
+          $ref: '#/components/schemas/model.EngineName'
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        isCommunity:
+          description: Indicates whether this detection originated from a community
+            ruleset. Duplicated detections will show 'false'.
+          example: true
+          type: boolean
+        isEnabled:
+          description: Indicates whether this detection is currently enabled in the
+            Security Onion grid
+          example: true
+          type: boolean
+        isReporting:
+          description: Indicates whether this detection is currently triggering alerts.
+            Not yet fully implemented.
+          example: false
+          type: boolean
+        isSummaryStale:
+          description: Indicates whether this detection's AI summary is current (true)
+            or if the detection source has changed but the generated summary has not
+            yet been updated to reflect the change"
+          example: false
+          type: boolean
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        language:
+          $ref: '#/components/schemas/model.SigLanguage'
+        license:
+          description: The license that applies to this detection
+          example: DRL
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        overrides:
+          description: A list of tuning overrides that apply to this detection.
+          items:
+            $ref: '#/components/schemas/model.Override'
+          type: array
+          uniqueItems: false
+        product:
+          description: Used by Sigma rules for filtering log outputs to a specific
+            product, such as the Windows eventlog types
+          example: windows
+          type: string
+        publicId:
+          description: The public ID shared across all Security Onion grids
+          example: 923421c7-9b1e-45d4-80cc-e21d060c8723
+          type: string
+        ruleset:
+          description: The name of the ruleset from which this detection originated,
+            or __custom__ if the ruleset was created outside of a ruleset
+          example: __custom__
+          type: string
+        service:
+          description: Used by Sigma rules for filtering a subset of log ouputs to
+            a specific server.
+          example: sshd
+          type: string
+        severity:
+          $ref: '#/components/schemas/model.Severity'
+        sourceCreated:
+          description: The date and time when the underlying detection rule source
+            was created. This is not when the detection was added to this grid.
+          type: string
+        sourceUpdated:
+          description: The date and time when the underlying detection rule source
+            was last updated. This is not when the detection was updated in this grid.
+          type: string
+        tags:
+          description: An optional list of user-defined tags, useful for grouping
+            similar detections together
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        title:
+          description: Summarized title of the detection
+          example: Security Onion - Grid Node Login Failure (SSH)
+          type: string
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+      type: object
+    model.DetectionComment:
+      properties:
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        detectionId:
+          description: The detection ID to which this comment was added
+          example: CwR86o8B-vS4HfrbMV5Y
+          type: string
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+        value:
+          description: The comment text or markdown content
+          example: This detection is known to trigger FPs on the first of the month
+          type: string
+      type: object
+    model.EngineName:
+      description: The engine that processes this detection
+      type: string
+      x-enum-varnames:
+      - EngineNameSuricata
+      - EngineNameStrelka
+      - EngineNameElastAlert
+    model.EventAckCriteria:
+      properties:
+        acknowledge:
+          description: 'Whether to acknowledge or unacknowledge the events: true =
+            acknowledge, false = unacknowledge'
+          example: true
+          type: boolean
+        dateRange:
+          description: The date range to use for searching for matching events
+          example: 2024/12/03 02:31:35 PM - 2024/12/04 02:31:35 PM
+          type: string
+        dateRangeFormat:
+          description: The date range format. If unsure how to use this then use the
+            example value exactly as shown.
+          example: 2006/01/02 3:04:05 PM
+          type: string
+        escalate:
+          description: 'Whether the events have also been escalated to a case: true
+            = escalated, false = has not been escalated'
+          example: false
+          type: boolean
+        eventFilter:
+          additionalProperties: {}
+          description: Optional event filters to further narrow down matching events
+            to acknowledge. These are field:value pairs.
+          example:
+            event.module: sigma
+            rule.name: Security Onion - SOC Login Failure
+            rule.uuid: bf86ef21-41e6-417b-9a05-b9ea6bf28a38
+          type: object
+        searchFilter:
+          description: The search filter to utilize when searching for matching events
+            to acknowledge.
+          example: tags:alert AND NOT event.acknowledged:true AND NOT event.escalated:true
+            | groupby rule.name event.module* event.severity_label rule.uuid
+          type: string
+        timezone:
+          description: The timezone to use with the date range
+          example: America/New_York
+          type: string
+      type: object
+    model.EventRecord:
+      properties:
+        id:
+          description: The event's unique document ID
+          example: ru5Jk5MB4OVrR03M8ee8
+          type: string
+        payload:
+          additionalProperties: {}
+          description: The event data fields
+          example:
+            '@timestamp': "2024-12-04T20:06:04.725Z"
+            '@version': "1"
+            client.ip: 4.33.51.1
+            client.port: "5544"
+          type: object
+        score:
+          description: The score of the event, often left 0
+          example: 0
+          type: number
+        sort:
+          description: The values used for the purposes of sorting across the returned
+            event list
+          example:
+          - 0:33.32.12.56
+          items: {}
+          type: array
+          uniqueItems: false
+        source:
+          description: The source index of the event
+          example: so:.ds-logs-zeek-so-2024.11.21-000017
+          type: string
+        time:
+          description: The parsed event time
+          example: "2024-12-04T20:08:15.97Z"
+          type: string
+        timestamp:
+          description: The event timestamp
+          example: "2024-12-04T20:08:15.970Z"
+          type: string
+        type:
+          description: The type of event, often left blank
+          example: ""
+          type: string
+      type: object
+    model.EventSearchCriteria:
+      description: The search criteria used in to locate these search results
+      properties:
+        beginTime:
+          description: The start of the search time range, in the requestor's timezone
+          example: "2024-12-03T14:31:35-05:00"
+          type: string
+        createTime:
+          description: The UTC date and time when the search request was submitted
+          example: "2024-12-04T19:31:42.73865332Z"
+          type: string
+        dateRange:
+          description: The date range to use for searching for matching events
+          example: ""
+          type: string
+        endTime:
+          description: The end of the search time range, in the requestor's timezone
+          example: "2024-12-04T14:31:35-05:00"
+          type: string
+        eventLimit:
+          description: The maximum number of events to retrieve
+          example: 100
+          type: integer
+        metricLimit:
+          description: The maximum number of metrics to limit in aggregate groups
+          example: 10
+          type: integer
+        parsedQuery:
+          $ref: '#/components/schemas/model.Query'
+        query:
+          description: The base query used to conduct the event search
+          example: (*) AND tags:alert AND NOT event.acknowledged:true AND NOT event.escalated:true
+            | groupby rule.name event.module* event.severity_label rule.uuid
+          type: string
+        searchAfter:
+          items: {}
+          type: array
+        sortFields:
+          items:
+            $ref: '#/components/schemas/model.SortCriteria'
+          type: array
+      type: object
+    model.EventSearchResults:
+      properties:
+        completeTime:
+          description: The date and time when the search completed
+          example: "2024-12-04T19:54:33.822293482Z"
+          type: string
+        createTime:
+          description: The date and time when the search was submitted
+          example: "2024-12-04T19:54:33.519514906Z"
+          type: string
+        criteria:
+          $ref: '#/components/schemas/model.EventSearchCriteria'
+        elapsedMs:
+          description: The number of milliseconds it took to complete the search
+          example: 299
+          type: integer
+        errors:
+          description: A list of errors that the search encountered. The presence
+            of errors does not necessarily preclude the search from returning events."
+          example:
+          - all shards failed
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        events:
+          description: The events that matched the search criteria (limited to the
+            specified eventLimit value, or the max result length as configured in
+            the backend data server)
+          items:
+            $ref: '#/components/schemas/model.EventRecord'
+          type: array
+          uniqueItems: false
+        metrics:
+          additionalProperties:
+            type: object
+          description: The collection of aggregated metrics associated with this search
+          type: object
+        totalEvents:
+          description: The total number of matching events (not necessarily the total
+            number returned)
+          example: 5109848
+          type: integer
+      type: object
+    model.EventUpdateCriteria:
+      description: The criteria used for performing the update
+      properties:
+        async:
+          description: Whether the update was performed asynchronously or not
+          example: false
+          type: boolean
+        beginTime:
+          description: The start of the search time range, in the requestor's timezone
+          example: "2024-12-03T14:31:35-05:00"
+          type: string
+        createTime:
+          description: The UTC date and time when the search request was submitted
+          example: "2024-12-04T19:31:42.73865332Z"
+          type: string
+        dateRange:
+          description: The date range to use for searching for matching events
+          example: ""
+          type: string
+        endTime:
+          description: The end of the search time range, in the requestor's timezone
+          example: "2024-12-04T14:31:35-05:00"
+          type: string
+        eventLimit:
+          description: The maximum number of events to retrieve
+          example: 100
+          type: integer
+        metricLimit:
+          description: The maximum number of metrics to limit in aggregate groups
+          example: 10
+          type: integer
+        parsedQuery:
+          $ref: '#/components/schemas/model.Query'
+        query:
+          description: The base query used to conduct the event search
+          example: (*) AND tags:alert AND NOT event.acknowledged:true AND NOT event.escalated:true
+            | groupby rule.name event.module* event.severity_label rule.uuid
+          type: string
+        searchAfter:
+          items: {}
+          type: array
+        sortFields:
+          items:
+            $ref: '#/components/schemas/model.SortCriteria'
+          type: array
+        updateScripts:
+          description: Any scripts used in the event update
+          example:
+          - <Painless Script Syntax>
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+      type: object
+    model.EventUpdateResults:
+      properties:
+        completeTime:
+          description: The date and time when the search completed
+          example: "2024-12-04T19:54:33.822293482Z"
+          type: string
+        createTime:
+          description: The date and time when the search was submitted
+          example: "2024-12-04T19:54:33.519514906Z"
+          type: string
+        criteria:
+          $ref: '#/components/schemas/model.EventUpdateCriteria'
+        elapsedMs:
+          description: The number of milliseconds it took to complete the search
+          example: 299
+          type: integer
+        errors:
+          description: A list of errors that the search encountered. The presence
+            of errors does not necessarily preclude the search from returning events."
+          example:
+          - all shards failed
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        unchangedCount:
+          description: The number of events the were left unmodified
+          example: 0
+          type: integer
+        updatedCount:
+          description: The number of events that were updated
+          example: 1
+          type: integer
+      type: object
+    model.Filter:
+      description: Optional filter for the job, typically used for packet filtering
+      properties:
+        beginTime:
+          description: The begin time for the packet filtering; only packets with
+            timestamps between the BeginTime and EndTime will be included in this
+            filter
+          example: "2024-12-03T00:25:09.899Z"
+          type: string
+        dstIp:
+          description: The destintion IP to capture; Note that the PCAP job will allow
+            destination and source data to be interchanged to ensure packets are not
+            missed in certain capture scenarios"
+          example: 1.2.3.4
+          type: string
+        dstPort:
+          description: The destination port to capture; Note that the PCAP job will
+            allow destination and source data to be interchanged to ensure packets
+            are not missed in certain capture scenarios"
+          example: 80
+          type: integer
+        endTime:
+          description: The end time for the packet filtering; only packets with timestamps
+            between the BeginTime and EndTime will be included in this filter
+          example: "2024-12-03T00:29:09.899Z"
+          type: string
+        importId:
+          description: An optional import ID to use for locating related import packets
+          example: bd77c8bc7498c795cc6608c5d45bd51b
+          type: string
+        parameters:
+          additionalProperties: {}
+          description: Additional, untyped filter parameters; used by non-PCAP job
+            processors
+          type: object
+        protocol:
+          description: Require the captured packets to be using this protocol"
+          example: tcp
+          type: string
+        srcIp:
+          description: The source IP to capture; Note that the PCAP job will allow
+            destination and source data to be interchanged to ensure packets are not
+            missed in certain capture scenarios"
+          example: 44.2.12.63
+          type: string
+        srcPort:
+          description: The source port to capture; Note that the PCAP job will allow
+            destination and source data to be interchanged to ensure packets are not
+            missed in certain capture scenarios"
+          example: 55312
+          type: integer
+      type: object
+    model.GridMember:
+      properties:
+        fingerprint:
+          description: The security fingerprint to ensure the grid member requesting
+            to join the grid matches is the actual grid member that was just setup
+          example: 89:b2:75:46:7e:a7:5d:b2:bf:3a:d8:5d:62:fa:23:cf:43:e7:74:f5:68:4f:03:02:3c:24:0c:47:d6:29:86:af
+          type: string
+        id:
+          description: The unique ID for this grid member
+          example: myserver_standalone
+          type: string
+        name:
+          description: The name of the grid member
+          example: myserver
+          type: string
+        role:
+          description: The role of this grid member, assigned during Security Onion
+            setup
+          example: standalone
+          type: string
+        status:
+          description: The current membership status of this grid member
+          example: accepted
+          type: string
+      type: object
+    model.Info:
+      properties:
+        elasticVersion:
+          description: The version of the Elasticsearch cluster
+          example: 8.14.3
+          type: string
+        forceUserOtp:
+          description: OTP indicator; unavailable to API clients
+          type: boolean
+        license:
+          description: The copyright license applicable to the Security Onion software
+          example: Elastic License 2.0 (ELv2)
+          type: string
+        licenseKey:
+          $ref: '#/components/schemas/licensing.LicenseKey'
+        licenseStatus:
+          description: 'The license status of the grid: active = Valid Security Onion
+            Pro license, unprovisioned = Community license'
+          example: active
+          type: string
+        parameters:
+          $ref: '#/components/schemas/config.ClientParameters'
+        srvToken:
+          description: The server token; unavailable to API clients
+          type: string
+        timezones:
+          description: The timezones that are configured for this server.
+          example:
+          - Africa/Abidjan
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        userId:
+          description: The authenticated API client ID
+          example: socl_my_so_api_client
+          type: string
+        version:
+          description: The version of the Security Onion grid
+          example: 2.4.110
+          type: string
+      type: object
+    model.Job:
+      properties:
+        completeTime:
+          description: The date and time when the job was completed
+          example: "2024-10-07T12:15:09.12424556Z"
+          type: string
+        createTime:
+          description: The date and time when the job was created
+          example: "2024-10-07T06:45:49.52456415Z"
+          type: string
+        failCount:
+          description: The number of times the job was processed but failed
+          example: 0
+          type: integer
+        failTime:
+          description: The date and time when the job last failed and was marked incomplete
+          example: "0001-01-01T00:00:00Z"
+          type: string
+        failure:
+          description: The failure reason
+          example: ""
+          type: string
+        fileExtension:
+          description: The file extension for any attached job result/output data
+          example: bin
+          type: string
+        filter:
+          $ref: '#/components/schemas/model.Filter'
+        id:
+          description: The unique Job ID
+          example: 1004
+          type: integer
+        kind:
+          description: The kind of job that this object represents; blank values represent
+            pcap jobs
+          example: analyze
+          type: string
+        nodeId:
+          description: The unique node ID that is responsible for completing this
+            job
+          example: sensor-001
+          type: string
+        owner:
+          description: Owner field [not actively used by the API]
+          example: ""
+          type: string
+        results:
+          description: The array of job results; will be empty for jobs that only
+            attach output streams
+          items:
+            $ref: '#/components/schemas/model.JobResult'
+          type: array
+          uniqueItems: false
+        sensorId:
+          description: Legacy sensor ID field
+          type: string
+        size:
+          description: The size of the job stream output, if a stream output was attached
+          example: 3781
+          type: integer
+        status:
+          description: The current state of the job. 0 = pending, 1 = complete, 2
+            = incomplete, 3 = deleted
+          example: 1
+          type: integer
+        userId:
+          description: The unique user ID that created this job
+          example: 39314a6b-0b79-4210-1233-4e3fbcd7bfec
+          type: string
+      type: object
+    model.JobResult:
+      properties:
+        data:
+          description: The job processor specific data outputs; varies depending on
+            the job processor
+        id:
+          description: The ID or name of the result; varies depending on the job processor
+          example: malwarebazaar
+          type: string
+        summary:
+          description: Brief summarization of the job result
+          example: no result
+          type: string
+      type: object
+    model.Node:
+      properties:
+        address:
+          description: The IP address of this node
+          example: 4.3.2.1
+          type: string
+        captureLossPct:
+          description: The current percentage capture loss experienced by the network,
+            if applicable to this node
+          example: 24.0605
+          type: number
+        connectionStatus:
+          description: 'The connectivity status between this node and the manager
+            node: unknown, ok, fault'
+          example: fault
+          type: string
+        consumptionEps:
+          description: The events per second (EPS) consumed by this node
+          example: 110
+          type: integer
+        cpuUsedPct:
+          description: The current CPU usage of the node, across all cores
+          example: 5.0035165275079265
+          type: number
+        description:
+          description: The node's optional description
+          example: East coast sensor
+          type: string
+        diskTotalNsmGB:
+          description: Total size, in gigabytes, of the NSM data disk/partition
+          example: 772.7962808320001
+          type: number
+        diskTotalRootGB:
+          description: Total size, in gigabytes, of the root operating system disk/partition
+          example: 314.41920000000005
+          type: number
+        diskUsedElasticGB:
+          description: The disk space used, in gigabytes, on the backend data store
+            system (Elasticsearch)
+          example: 386.948
+          type: number
+        diskUsedInfluxDbGB:
+          description: The disk space used, in gigabytes, on the metrics data store
+            system (InfluxDB)
+          example: 1.922272
+          type: number
+        diskUsedNsmPct:
+          description: Percentage usage of the NSM data disk/partition
+          example: 84.28509193998036
+          type: number
+        diskUsedRootPct:
+          description: Percentage usage of the root system disk/partition
+          example: 20.944604461814038
+          type: number
+        epochTime:
+          description: The node's data epoch; this is the date and time of the oldest
+            known PCAP data available to the node
+          example: "2024-12-01T03:24:01Z"
+          type: string
+        eventstoreStatus:
+          description: 'The event storage status; this refers to the backend status,
+            such as Elasticsearch: unknown, ok, fault'
+          example: ok
+          type: string
+        failedEvents:
+          description: The count of failed events (currently not in use)"
+          example: 0
+          type: integer
+        fpsEnabled:
+          description: Indicates whether federal information processing standards
+            are enabled on this node
+          example: 0
+          type: integer
+        gmdEnabled:
+          description: Indicates whether guaranteed message delivery is enabled on
+            this node
+          example: 0
+          type: integer
+        highstateAgeSeconds:
+          description: How long ago, in seconds, the last highstate completed on this
+            node
+          example: 220
+          type: integer
+        id:
+          description: The node ID
+          example: sensor-001
+          type: string
+        imageBack:
+          description: The Security Onion appliance back image, if available
+          example: 5000v2_back_thumb.jpg
+          type: string
+        imageFront:
+          description: The Security Onion appliance front image, if available
+          example: 5000v2_front_thumb.jpg
+          type: string
+        ioWaitPct:
+          description: The IO wait percentage for this node
+          example: 0.21099
+          type: number
+        lksEnabled:
+          description: Indicates whether disk encryption is enabled on this node
+          example: 1
+          type: integer
+        load5m:
+          description: The node's 5-minute load metric
+          example: 0.96
+          type: number
+        load15m:
+          description: The node's 15-minute load metric
+          example: 1.09
+          type: number
+        load1m:
+          description: The node's 1-minute load metric
+          example: 0.43
+          type: number
+        memoryTotalGB:
+          description: Total size, in gigabytes, of the system memory, or RAM
+          example: 33.176731648
+          type: number
+        memoryUsedPct:
+          description: Percentage usage of the system memory, or RAM
+          example: 60.66793353109983
+          type: number
+        metricsEnabled:
+          description: Indicates whether the metric subsytem is available
+          example: true
+          type: boolean
+        model:
+          description: The Seurity Onion appliance model, or N/A if this is not an
+            official Security Onion appliance
+          example: SOS5000-DE02
+          type: string
+        nonCriticalNode:
+          description: Indicates whether this node is a non-critical node of the overall
+            grid. An examples of a non-critical nodes is a desktop node
+          example: false
+          type: boolean
+        onlineTime:
+          description: The date and time when this node first came online; best estimate
+            based on the node's apparent file system age
+          example: "2024-01-26T21:17:25Z"
+          type: string
+        osNeedsRestart:
+          description: 'Indicates whether the node needs to be restarted to apply
+            kernel updates: 0 = no restart needed, 1 = needs restarted'
+          example: 1
+          type: integer
+        osUptimeSeconds:
+          description: The number of seconds that the operating system has been "up"
+            since its last reboot
+          example: 1384801
+          type: integer
+        pcapDays:
+          description: The number of days of PCAP storage available to this node
+          example: 1.8762268518518517
+          type: number
+        processJson:
+          description: The status of each individual process on the node, in JSON
+            format
+          example: '{"status_code":0, "containers":[{"Name":"so-dockerregistry", "Status":"running","Details":"Up
+            2 weeks"}, ... ]}'
+          type: string
+        processStatus:
+          description: 'The overall status of the node''s Security Onion processes:
+            unknown, ok, fault'
+          example: ok
+          type: string
+        productionEps:
+          description: The events per second (EPS) produced by this node (not currently
+            populated)
+          example: 0
+          type: integer
+        raidStatus:
+          description: 'The raid status, if applicable: unknown, ok, fault'
+          example: unknown
+          type: string
+        redisQueueSize:
+          description: The backlog of events waiting to be processed
+          example: 0
+          type: integer
+        role:
+          description: The node's assigned role; assigned during node setup
+          example: so-standalone
+          type: string
+        status:
+          description: 'The current state of the node: unknown, ok, fault, pending,
+            restart'
+          example: ok
+          type: string
+        stenoLossPct:
+          description: The current percentage packet loss experienced by Stenographer,
+            if applicable to this node
+          example: 0
+          type: number
+        suriLossPct:
+          description: The current percentage packet loss experienced by Suricata,
+            if applicable to this node
+          example: 1.1345
+          type: number
+        swapTotalGB:
+          description: Total size, in gigabytes, of the system swap memory
+          example: 8.589930496000001
+          type: number
+        swapUsedPct:
+          description: Percentage usage of the system swap memory
+          example: 63.27341235800379
+          type: number
+        trafficManInMbs:
+          description: The inbound traffic rate, in megabytes per second, to this
+            node's management network interface
+          example: 0.031592
+          type: number
+        trafficManOutMbs:
+          description: The outbound traffic rate, in megabytes per second, from this
+            node's management network interface
+          example: 0.030966666666666667
+          type: number
+        trafficMonInDropsMbs:
+          description: The inbound traffic packet drop rate, in megabytes per second,
+            to this node's monitor network interface
+          example: 0
+          type: number
+        trafficMonInMbs:
+          description: The inbound traffic rate, in megabytes per second, to this
+            node's monitor network interface
+          example: 1.6864359999999998
+          type: number
+        updateTime:
+          description: The date and time when this node was most recently updated"
+          example: "2024-12-03T15:42:21.723166638Z"
+          type: string
+        uptimeSeconds:
+          description: The number of seconds since this node first came online and
+            joined the grid
+          example: 26936696
+          type: integer
+        version:
+          description: The version of Security Onion installed on this node
+          example: 2.4.110
+          type: string
+        zeekLossPct:
+          description: The current percentage packet loss experienced by Zeek, if
+            applicable to this node
+          example: 0
+          type: number
+      type: object
+    model.Override:
+      properties:
+        count:
+          description: (suricata only) For treshold overrides, this is the number
+            of occurrences allowed, within the given seconds interval, before this
+            detection triggers an alert. Must be non-negative and greater than 0.
+          example: 10
+          type: integer
+        createdAt:
+          description: The date and time when this override was created
+          example: "2024-12-06T14:36:45.579994541Z"
+          type: string
+        customFilter:
+          description: (elastalert only) The custom filter applied to Sigma detections
+            before the detection will trigger an alert.
+          example: |-
+            sofilter:
+              user.name: dresden
+          type: string
+        ip:
+          description: '(suricata only) The IP address or network value, must be in
+            CIDR format: x.x.x.x/y'
+          example: 1.2.3.4/32
+          type: string
+        isEnabled:
+          description: Indicates whether this override is enabled
+          example: true
+          type: boolean
+        note:
+          description: An optional operational note for this override
+          example: Exclude the SMTP server due to FPs
+          type: string
+        regex:
+          description: (suricata only) Regular expression for matching modify overrides
+          example: content:xyz
+          type: string
+        seconds:
+          description: (suricata only) For treshold overrides, this is the number
+            of seconds that the occurrence threshold must occur within. Must be non-negative
+            and greater than 0.
+          example: 120
+          type: integer
+        thresholdType:
+          description: (suricata only) Threshold type, for threshold overrides
+          enum:
+          - threshold
+          - limit
+          - both
+          type: string
+        track:
+          description: (suricata only) Track type for suppress and threshold overrides
+            (by_either only applies to suppress overrides)
+          enum:
+          - by_src
+          - by_dst
+          - by_either
+          type: string
+        type:
+          $ref: '#/components/schemas/model.OverrideType'
+        updatedAt:
+          description: The date and time when this override was last modified
+          example: "2024-12-06T14:36:45.579994541Z"
+          type: string
+        value:
+          description: (suricata only) The value needing to match the regex in order
+            for this override to apply
+          example: content:xyz content:!1.2.3.4/32
+          type: string
+      type: object
+    model.OverrideNoteUpdate:
+      properties:
+        note:
+          description: The note content to replace on an existing override.
+          example: corrected note
+          type: string
+      type: object
+    model.OverrideType:
+      description: The type of override; available values vary between detection engines
+      enum:
+      - customFilter
+      - modify
+      - suppress
+      - threshold
+      type: string
+      x-enum-varnames:
+      - OverrideTypeSuppress
+      - OverrideTypeThreshold
+      - OverrideTypeModify
+      - OverrideTypeCustomFilter
+    model.Packet:
+      properties:
+        acknowledge:
+          description: An optional packet sequence number this packet is acknowledging
+            having been received
+          example: 1400892081
+          type: integer
+        checksum:
+          description: The packet checksum value, used for integrity checking
+          example: 4868
+          type: integer
+        dstIp:
+          description: The packet destination IP address
+          example: 41.51.61.71
+          type: string
+        dstMac:
+          description: The packet destination MAC address
+          example: a0:b1:c2:d3:e4:f5
+          type: string
+        dstPort:
+          description: The packet destination port
+          example: 55423
+          type: integer
+        flags:
+          description: 'The optional packet flags. Ex: SYN PSH FIN'
+          example:
+          - SYN
+          - ACK
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        length:
+          description: The size of the packet, including headers.
+          example: 79
+          type: integer
+        number:
+          description: The sequential packet number in the packet stream
+          example: 0
+          type: integer
+        payload:
+          description: The packet payload base64-encoded bytes
+          example: oDaf1FD=
+          type: string
+        payloadOffset:
+          description: The offset in the packet payload where the application-specific
+            payload begins, if an application payload is applicable to this packet.
+          example: 0
+          type: integer
+        sequence:
+          description: This packet's sequence number
+          example: 2023436470
+          type: integer
+        srcIp:
+          description: The packet source IP address
+          example: 1.2.3.4
+          type: string
+        srcMac:
+          description: The packet source MAC address
+          example: 0a:1b:2c:3d:4e:5f
+          type: string
+        srcPort:
+          description: The packet source port
+          example: 80
+          type: integer
+        timestamp:
+          description: The timestamp when the packet was captured
+          example: "2024-10-06T19:29:39.332211Z"
+          type: string
+        type:
+          description: The packet type. Note that Security Onion only supports specific
+            packet types in the PCAP retrieval and viewing system.
+          example: DNS
+          type: string
+        window:
+          description: The packet window size
+          example: 64296
+          type: integer
+      type: object
+    model.Query:
+      properties:
+        segments:
+          items: {}
+          type: array
+      type: object
+    model.RelatedEvent:
+      properties:
+        caseId:
+          description: The case ID for which this related event is to be attached,
+            or is already attached.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        fields:
+          additionalProperties: {}
+          description: A mapping of related event field names and their values.
+          example:
+            client.ip: 1.2.3.4
+            client.port: "1099"
+          type: object
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+      required:
+      - caseId
+      - fields
+      type: object
+    model.Setting:
+      properties:
+        advanced:
+          description: (metadata) Indicates whether this setting should only be shown
+            when the 'Show advanced settings' option is enabled in the user interface.
+          example: false
+          type: boolean
+        default:
+          description: (metadata) The default value for this configuration setting,
+            if available
+          example: some default value
+          type: string
+        defaultAvailable:
+          description: (metadata) Indicates whether there is a default value available
+            for this configuration setting
+          example: true
+          type: boolean
+        description:
+          description: (metadata) A description explaining the purpose of the configuration
+            setting, if one is available.
+          example: Optional configuration parameters made available as defaults for
+            all rules and alerters
+          type: string
+        duplicates:
+          description: (metadata) Indicates whether this setting can be duplicated.
+            Duplicating settings is a complex area that can lead to system or upgrade
+            failures so this is used sparingly.
+          example: false
+          type: boolean
+        file:
+          description: (metadata) Indicates whether the ID of this setting refers
+            to a file on disk, in which case the changing the setting's value will
+            replace the contents of the file on disk.
+          example: false
+          type: boolean
+        forcedType:
+          description: (metadata) The type that the value will be converted to internally
+            before applied to the component that uses it.
+          example: '[]string'
+          type: string
+        global:
+          description: (metadata) Indicates whether this setting only applies to the
+            grid as a whole
+          example: true
+          type: boolean
+        helpLink:
+          description: (metadata) An HTML page, relative to the doc URL, that may
+            assist the user in understanding the purpose of this setting.
+          example: elastalert.html
+          type: string
+        id:
+          description: The ID of the configuration setting. Each period represents
+            a nested level.
+          example: elastalert.alerter_parameters
+          type: string
+        jinjaEscaped:
+          description: (metadata) Indicates whether the setting value allows Jinja2
+            escape characters. By default these are prohibited as a security precaution.
+          example: false
+          type: boolean
+        multiline:
+          description: (metadata) Indicates whether this setting's user interface
+            display should allow the user to enter values onto multiple lines
+          example: true
+          type: boolean
+        node:
+          description: (metadata) Indicates whether this setting can be applied differently
+            per each node in the grid
+          example: false
+          type: boolean
+        nodeId:
+          description: The node ID to which this setting's value applies
+          example: chi-so-001_standalone
+          type: string
+        readonly:
+          description: (metadata) Indicates whether this setting is read-only. Read-only
+            settings should not be modified.
+          example: false
+          type: boolean
+        readonlyUi:
+          description: (metadata) Indicates whether this setting is read-only in the
+            user interface only, but may be adjusted by the system itself.
+          example: false
+          type: boolean
+        regex:
+          description: (metadata) An optional regular expression pattern that the
+            value of this setting must match
+          example: ^(true|false)$
+          type: string
+        regexFailureMessage:
+          description: (metadata) The failure message to show on the user interface
+            when the user enters a value that fails to match the regex.
+          example: Only true or false values are accepted
+          type: string
+        sensitive:
+          description: (metadata) Indicates whether this setting's value should be
+            masked in the user interface to prevent obtaining the existing value,
+            while still permitting new values to be applied.
+          example: true
+          type: boolean
+        syntax:
+          description: (metadata) An optional syntax designator for validating the
+            given setting value.
+          example: yaml
+          type: string
+        title:
+          description: (metadata) The configuration setting more human-friendly title,
+            if one is available.
+          example: Custom Configuration Parameters
+          type: string
+        uiElements:
+          description: (metadata) List of UiElement objects describing how the UI
+            should present the field for input
+          items:
+            $ref: '#/components/schemas/model.UiElement'
+          type: array
+          uniqueItems: false
+        value:
+          description: The value of this specific configuration setting. Note that
+            a setting exist multiple times if different values are applied to specific
+            nodes
+          example: some custom value
+          type: string
+      type: object
+    model.Severity:
+      description: The severity classification of this detection
+      enum:
+      - unknown
+      - informational
+      - low
+      - medium
+      - high
+      - critical
+      type: string
+      x-enum-varnames:
+      - SeverityUnknown
+      - SeverityInformational
+      - SeverityLow
+      - SeverityMedium
+      - SeverityHigh
+      - SeverityCritical
+    model.SigLanguage:
+      description: The language that this detection uses.
+      enum:
+      - sigma
+      - suricata
+      - yara
+      type: string
+      x-enum-comments:
+        SigLangSigma: yaml
+        SigLangSuricata: action, header, options
+        SigLangYara: meta, strings, condition
+      x-enum-varnames:
+      - SigLangSigma
+      - SigLangSuricata
+      - SigLangYara
+    model.SortCriteria:
+      properties:
+        field:
+          description: The field to sort on
+          example: some_field_name
+          type: string
+        order:
+          description: 'The direction of the sort: asc, desc'
+          example: asc
+          type: string
+      type: object
+    model.UiElement:
+      properties:
+        field:
+          example: some_key
+          type: string
+        label:
+          example: An Important Key
+          type: string
+      type: object
+    model.User:
+      properties:
+        createTime:
+          description: The date and time that this user was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        email:
+          description: The email address for this user.
+          example: someone@somewhere.invalid
+          type: string
+        firstName:
+          description: The user's first name.
+          example: John
+          type: string
+        id:
+          description: The ID assigned to this user by the server. This is a read-only
+            field.
+          example: 3610b2cf-a2e7-4037-9c51-227f0c2e79ff
+          type: string
+        lastName:
+          description: The user's last name, or family name.
+          example: Smith
+          type: string
+        note:
+          description: A custom note about this user.
+          example: Employment terminated on Nov 10, 2023
+          type: string
+        oidcStatus:
+          description: The OIDC status for this user. This is a read-only field.
+          example: enabled
+          type: string
+        password:
+          description: 'The password must have a length of at least 8 characters and
+            no more than 72 characters and cannot contain the following: '' " $ \'
+          type: string
+        passwordChanged:
+          description: A rough determination of whether this user has changed their
+            password since the user was created. Technically this can only detect
+            if the user has been updated after creation and is therefore an imperfect
+            estimator for whether the password has been changed. This is a read-only
+            field.
+          type: boolean
+        roles:
+          description: A list of assigned roles to this user.
+          example:
+          - limited-analyst
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        searchUsername:
+          description: 'An alternate username (typically an email address) to use
+            when performing backend (Ex: Elasticsearch) data searches and updates.'
+          example: someoneelse@somewhere.invalid
+          type: string
+        status:
+          description: The login status of this user.
+          example: locked
+          type: string
+        totpStatus:
+          description: The TOTP MFA status for this user. This is a read-only field.
+          example: enabled
+          type: string
+        updateTime:
+          description: The date and time that this user was last modified. This is
+            a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        webauthnStatus:
+          description: The WebAuthn (Passwordless) status for this user. This status
+            field is not ready for production use. This is a read-only field.
+          example: enabled
+          type: string
+      type: object
+    server.AccessTokenRequest:
+      properties:
+        grant_type:
+          description: Must be set to client_credentials
+          example: client_credentials
+          type: string
+      required:
+      - grant_type
+      type: object
+    server.AccessTokenResponse:
+      properties:
+        access_token:
+          description: The access token to be used for all other Connect API requests."
+          example: ory_at_arkgYuJXYp5zwU8Xyh8-URW6QIUbaZVf4JwDPoNZh0g.YcF4W5i2qoQ2RTWZvLYLNIeUjGaUhYuewz9Gua0y7YA
+          type: string
+        expires_in:
+          description: Amount of time, in seconds, before the access token expires."
+          example: 3599
+          type: integer
+        scope:
+          description: Scope will be blank due to the use of application-level RBAC
+            for authorization.
+          example: ""
+          type: string
+        token_type:
+          description: Token type will always be 'bearer' for access token exchanges.
+          example: bearer
+          type: string
+      type: object
+    server.BulkOp:
+      properties:
+        ids:
+          description: The list of detection IDs to bulk update when a specific query
+            is not provided
+          example:
+          - zC73PJABrNRFAsnEYkqy
+          - XgaI6o8B-vS4HfrbYcce
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        query:
+          description: The query string to use for matching detections, or leave empty
+            if providing a list of internal detection IDs"
+          example: 'severity: low AND ruleset: ETOPEN'
+          type: string
+      type: object
+    server.BulkResp:
+      properties:
+        count:
+          description: The count of detections that were submitted to be updated or
+            deleted in bulk
+          example: 120
+          type: integer
+      type: object
+    server.ConvertContentResp:
+      properties:
+        query:
+          example: 'somefield: somevalue AND anotherfield: 123'
+          type: string
+      type: object
+    server.GenPublicIdResp:
+      properties:
+        publicId:
+          example: fb58abf3-0a6d-49af-b1a0-1eeabec07716
+          type: string
+      type: object
+  securitySchemes:
+    basic:
+      scheme: basic
+      type: http
+    bearer:
+      description: This API call requires an access token be provided in the Authorization
+        header via the Bearer scheme. Obtain an access token as documented in the
+        /oauth2/token authorization endpoint. The required RBAC permissions for this
+        API method are listed above.
+      flows:
+        clientCredentials:
+          tokenUrl: /oauth2/token
+      in: header
+      type: oauth2
+externalDocs:
+  description: Security Onion Documentation Online
+  url: https://docs.securityonion.net
+info:
+  contact:
+    name: Community Support
+    url: http://github.com/security-onion-solutions/securityonion/discussions
+  description: Perform SOC operations via server-to-server integration using a client
+    API account via OAuth2.0.
+  license:
+    name: Elastic 2.0
+    url: https://securityonion.net/terms/
+  termsOfService: https://securityonion.net/terms/
+  title: Security Onion Connect API
+  version: "1.0"
+openapi: 3.1.0
+paths:
+  /connect/case/:
+    post:
+      description: Create a new case given a populated case object as input.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Case'
+        description: New case object. ID will be generated by the server.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Case'
+          description: Outputs the case object including its generated ID.
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Create Case
+      tags:
+      - Cases
+    put:
+      description: Updates an existing case with a provided case object as input.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Case'
+        description: Replacement case object. The provided ID will be used to match
+          the existing case.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Case'
+          description: Outputs the case object.
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Case not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Update Case
+      tags:
+      - Cases
+  /connect/case/{id}:
+    get:
+      description: |-
+        Retrieves a case given the provided case ID and returns the case details.
+        Use the "Query Data" API to search for cases using other criteria, specifying a query parameter that includes the following, at a minimum: _index:"*:so-case"
+      parameters:
+      - description: The case ID to retrieve
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Case'
+          description: The case object
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Case not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - events/read
+      summary: Get Case
+      tags:
+      - Cases
+  /connect/case/artifacts:
+    put:
+      description: 'Updates an existing case artifact with a provided artifact object
+        as input. Important: The artifact value and type cannot be modified.'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Artifact'
+        description: Replacement artifact object. The provided ID will be used to
+          match the existing artifact.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Artifact'
+          description: Outputs the case artifact object.
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Case artifact not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Update Case Artifact
+      tags:
+      - Cases
+  /connect/case/artifacts/:
+    post:
+      description: |-
+        Attach an observable to an existing case.
+        Observables are considered "artifacts" in SOC internal terminology.
+        If not creating a file artifact then only the artifact itself should be sent as the body, in JSON format.
+        If creating a file artifact then two multipart-form values should be supplied: "json" (the artifact object), and "attachment" (the file bytes). The file size, hashes, mime type will be automatically generated and populated into the artifact object on the server.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Artifact'
+        description: New case artifact object. ID will be generated by the server.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Artifact'
+          description: Outputs the artifact object including its generated ID.
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Create Case Artifact
+      tags:
+      - Cases
+  /connect/case/artifacts/{id}:
+    delete:
+      description: |-
+        Removes a case artifact.
+        Observables are considered "artifacts" in SOC internal terminology.
+      parameters:
+      - description: The artifact ID to remove
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The artifact was successfully removed from the case
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Case artifact not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Delete Case Artifact
+      tags:
+      - Cases
+    get:
+      description: |-
+        Searches for all artifacts attached to the given case ID and returns the matching artifacts, if any.
+        Observables are considered "artifacts" in SOC internal terminology.
+        If the case does not exist, this method will respond with a 200 status and an empty list.
+      parameters:
+      - description: The case ID to use for searching all artifacts
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Artifact'
+                type: array
+          description: The array of artifacts, or an empty array if no matching artifacts
+            found
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - events/read
+      summary: Get Case Artifacts
+      tags:
+      - Cases
+  /connect/case/artifactstream/{id}:
+    get:
+      description: Returns the artifact stream for the given artifact ID. Artifact
+        streams are typically file artifacts.
+      parameters:
+      - description: The artifact's stream ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/octet-stream:
+              schema:
+                format: binary
+                type: string
+          description: The artifact stream has been successfully retrieved
+          headers:
+            Content-Disposition:
+              description: 'The stream''s attachment meta-data. Ex: attachment; filename=foo.zip'
+              schema:
+                type: string
+            Content-Transfer-Encoding:
+              description: 'The encoding type of the response stream. Ex: binary'
+              schema:
+                type: string
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Artifact stream not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - events/read
+      summary: Get Artifact Stream
+      tags:
+      - Cases
+  /connect/case/comments:
+    put:
+      description: Updates an existing case comment with a provided comment object
+        as input.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Comment'
+        description: Replacement comment object. The provided ID will be used to match
+          the existing comment.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Comment'
+          description: Outputs the case comment object.
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Case comment not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Update Case Comment
+      tags:
+      - Cases
+  /connect/case/comments/:
+    post:
+      description: Add a new comment to an existing case.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Comment'
+        description: New comment object. ID will be generated by the server.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.RelatedEvent'
+          description: Outputs the comment object including its generated ID.
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Create Case Comment
+      tags:
+      - Cases
+  /connect/case/comments/{id}:
+    delete:
+      description: Removes a case comment from a case and deletes the comment.
+      parameters:
+      - description: The comment ID to remove
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The comment was successfully removed
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Case comment not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Delete Case Comment
+      tags:
+      - Cases
+    get:
+      description: |-
+        Searches for all comments assigned to the given case ID and returns the matching comments, if any.
+        If the case does not exist, this method will respond with a 200 status and an empty list.
+      parameters:
+      - description: The case ID to use for searching all related comments
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Comment'
+                type: array
+          description: The array of case comments, or an empty array if no matching
+            comments found
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - events/read
+      summary: Get Case Comments
+      tags:
+      - Cases
+  /connect/case/events/:
+    post:
+      description: Attach a related event to an existing case.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.AttachEventCriteria'
+        description: Query object used to find original events to attach to a given
+          case. RelatedEvent IDs will be generated by the server.
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/server.BulkResp'
+          description: Returns the bulk operation response
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Create Case Related Event
+      tags:
+      - Cases
+  /connect/case/events/{id}:
+    delete:
+      description: Removes a related event from a case.
+      parameters:
+      - description: The related event ID to remove
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The related event was successfully removed from the case
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Case related event not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - cases/write
+        - events/read
+        - events/write
+      summary: Delete Case Related Event
+      tags:
+      - Cases
+    get:
+      description: |-
+        Searches for all related events associated with the given case ID and returns the matching events, if any.
+        If the case does not exist, this method will respond with a 200 status and an empty list.
+      parameters:
+      - description: The case ID to use for searching all related events
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.RelatedEvent'
+                type: array
+          description: The array of related events, or an empty array if no matching
+            events found
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - events/read
+      summary: Get Related Events
+      tags:
+      - Cases
+  /connect/case/history/{id}:
+    get:
+      description: Returns all audit history associated with the given case ID.
+      parameters:
+      - description: The case ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Auditable'
+                type: array
+          description: The array of history audit objects. Note that these objects
+            will also contain either the Case fields, Comment fields, Artifact fields,
+            or RelatedEvent fields.
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Case not found
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - events/read
+      summary: Get Case History
+      tags:
+      - Cases
+  /connect/clients/:
+    get:
+      description: Returns all existing API clients.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Client'
+                type: array
+          description: The array of Client objects
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - clients/read
+      summary: Get API Clients
+      tags:
+      - Clients
+    post:
+      description: Creates a new API client with the given Client object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Client'
+        description: The Client object to create. Only the 'name' and 'note' properties
+          are used.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Client'
+          description: The new Client object with its newly assigned ID and secret
+            included
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - clients/write
+      summary: Create API Clients
+      tags:
+      - Clients
+  /connect/clients/{id}:
+    put:
+      description: Updates an existing API client with the given Client object
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Client'
+        description: The Client object to update. Only the 'name', and 'note' properties
+          are used.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Client'
+          description: The updated Client object
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - clients/write
+      summary: Update API Clients
+      tags:
+      - Clients
+  /connect/clients/{id}/:
+    delete:
+      description: Removes an API client. Future API requests from this client will
+        immediately be rejected.
+      parameters:
+      - description: The API client ID
+        example: socl_my_new_api_client
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The API client was successfully removed
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - clients/write
+      summary: Remove API Client
+      tags:
+      - Clients
+  /connect/clients/{id}/permission/{perm}:
+    delete:
+      description: |-
+        Removes a permission from an existing API client.
+        A new access token is not required. Future API calls will immediately be affected.
+      parameters:
+      - description: The API client ID from which the permission will be removed
+        example: socl_my_new_api_client
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: The permission to remove
+        example: events/read
+        in: path
+        name: perm
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The permission was successfully removed
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - clients/write
+      summary: Remove Client Permission
+      tags:
+      - Clients
+    post:
+      description: |-
+        Assigns a permission to an existing API client.
+        A new access token is not required. Future API calls will immediately be affected.
+      parameters:
+      - description: The API client ID to which the permission will be assigned
+        example: socl_my_new_api_client
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: The permission to assign
+        example: events/read
+        in: path
+        name: perm
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The permission was successfully assigned
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - clients/write
+      summary: Assign Client Permission
+      tags:
+      - Clients
+  /connect/clients/{id}/secret/:
+    put:
+      description: |-
+        Regenerates a new client secret for the given API client ID.
+        Pre-existing access tokens that have not yet expired will remain valid through their expiration.
+      parameters:
+      - description: The API client ID
+        example: socl_my_new_api_client
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Client'
+          description: A client object with the new secret populated
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - clients/write
+      summary: Regenerate Client Secret
+      tags:
+      - Clients
+  /connect/config/:
+    get:
+      description: |-
+        Retrieves the full set of configuration settings and associated metadata.
+        This response can be very large, particularly when the advanced parameter is set to 'true'.
+      parameters:
+      - description: If true, all configuration settings will be retrieved, otherwise
+          only the commonly adjusted settings are retrieved
+        example: true
+        in: query
+        name: advanced
+        schema:
+          type: boolean
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Setting'
+                type: array
+          description: The configuration setting objects
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Configuration module has not been loaded
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - config/read
+      summary: Get Configuration
+      tags:
+      - Config
+    put:
+      description: Sets a configuration setting to a new value.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Setting'
+        description: The setting to update. Only non-metadata fields are required,
+          specifically 'id' and 'value', and optionally the 'nodeId' field if this
+          is being applied to a specific node
+        required: true
+      responses:
+        "200":
+          description: The new setting values has been saved
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Configuration module has not been loaded
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - config/read
+        - config/write
+      summary: Save Setting
+      tags:
+      - Config
+  /connect/config/{id}/{minion}:
+    delete:
+      description: Removes a custom setting value. This effectively reverts to the
+        default setting value.
+      parameters:
+      - description: The setting ID to remove
+        example: elastalert.alerter_parameters
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: The optional node ID from which to remove this setting. If omitted,
+          the setting will be removed from the global grid and any node-specific setting
+          values will remain in place.
+        example: chi-so-001_standalone
+        in: path
+        name: minion
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The setting was successfully removed
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Configuration module has not been loaded
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - config/read
+        - config/write
+      summary: Delete Setting
+      tags:
+      - Config
+  /connect/config/sync:
+    put:
+      description: Synchronizes the grid to apply recent configuration changes to
+        the grid. Internally this is queuing up a Salt highstate, which can take several
+        minutes to complete, or longer if another highstate is already in progress.
+      responses:
+        "200":
+          description: The synchronization request has been successfully queued
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Configuration module has not been loaded
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - config/write
+      summary: Sync Configuration
+      tags:
+      - Config
+  /connect/detection/:
+    post:
+      description: |-
+        Creates a new detection by providing the detection object as the request body, in JSON format.
+        Detections marked as community detections cannot be created with this API.
+        While the public ID is required for some engines, the internal ID will always be populated by the server.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Detection'
+        description: The detection object to create
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Detection'
+          description: Returns the detection that was successfully created
+        "205":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Detection'
+          description: Returns the detection that was successfully created and the
+            status has been modified by a filter
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "409":
+          description: Public ID conflicts with existing detection
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+        - users/read
+      summary: Create Detection
+      tags:
+      - Detections
+    put:
+      description: Updates an existing detection by providing the new detection object
+        as the request body, in JSON format.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Detection'
+        description: The detection object to create
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Detection'
+          description: Returns the detection that was successfully updated
+        "205":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Detection'
+          description: Returns the detection that was successfully updated; note that
+            the status has been modified by a filter
+        "206":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Detection'
+          description: Returns the detection that was successfully updated; note that
+            the detection was disabled in order to complete the sync
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection not found
+        "409":
+          description: Public ID conflicts with existing detection
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+      summary: Update Detection
+      tags:
+      - Detections
+  /connect/detection/{engine}/genpublicid:
+    get:
+      description: Requests the server generate an unused public ID.
+      parameters:
+      - description: The detection engine
+        in: path
+        name: engine
+        required: true
+        schema:
+          enum:
+          - elastalert
+          - suricata"
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/server.GenPublicIdResp'
+          description: The ID has been generated
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+        "501":
+          description: The specified detection engine does not support public IDs
+      security:
+      - bearer: []
+      summary: Generate Public ID
+      tags:
+      - Detections
+  /connect/detection/{id}:
+    delete:
+      description: Deletes an existing detection.
+      parameters:
+      - description: The internal detection ID
+        example: zC73PJABrNRFAsnEYkqy
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The override note was deleted successfully
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+      summary: Delete Detection
+      tags:
+      - Detections
+    get:
+      description: |-
+        Retrieves a specific detection given an internal detection ID. This ID is unique only to this particular grid.
+        Use the "Query Data" API to search for detections using other criteria, specifying a query parameter that includes the following, at a minimum: _index:"*:so-detection"
+      parameters:
+      - description: The detection ID to retrieve
+        example: zC73PJABrNRFAsnEYkqy
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Detection'
+          description: The detection was successfully retrieved
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+      summary: Get Detection
+      tags:
+      - Detections
+  /connect/detection/{id}/comment:
+    get:
+      description: Retrieves the comments associated with the given detection ID.
+      parameters:
+      - description: The internal detection ID
+        example: zC73PJABrNRFAsnEYkqy
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.DetectionComment'
+                type: array
+          description: The comments have been successfully retrieved
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection was not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+      summary: Get Detection Comments
+      tags:
+      - Detections
+  /connect/detection/{id}/duplicate:
+    post:
+      description: Copies the detection associated with the given ID into a new detection.
+        A new ID will be assigned to the duplicated detection.
+      parameters:
+      - description: The detection ID to duplicate
+        example: zC73PJABrNRFAsnEYkqy
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Detection'
+          description: The duplicated detection object.
+        "400":
+          description: The detection engine specified in the detection object does
+            not support duplicated detections
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+      summary: Duplicate Detection
+      tags:
+      - Detections
+  /connect/detection/{id}/history:
+    get:
+      description: Retrieves a specific detection's audit history given an internal
+        detection ID.
+      parameters:
+      - description: The detection ID to retrieve
+        example: zC73PJABrNRFAsnEYkqy
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Auditable'
+                type: array
+          description: The array of history audit objects. Note that these objects
+            will also contain either the Detection fields or a DetectionComment fields.
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+      summary: Get Detection History
+      tags:
+      - Detections
+  /connect/detection/{id}/override/{overrideIndex}/note:
+    put:
+      description: Updates an existing override note.
+      parameters:
+      - description: The internal detection ID
+        example: zC73PJABrNRFAsnEYkqy
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: The 0-based index of the override within the detection
+        example: 0
+        in: path
+        name: overrideIndex
+        required: true
+        schema:
+          type: number
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.OverrideNoteUpdate'
+        description: The note object that will replace the existing override note
+        required: true
+      responses:
+        "200":
+          description: The override note was updated successfully
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+      summary: Update Override Note
+      tags:
+      - Detections
+  /connect/detection/bulk/{newStatus}:
+    post:
+      description: Enables, disables, or deletes multiple detections asynchronously.
+      parameters:
+      - description: The new status of the detection
+        in: path
+        name: newStatus
+        required: true
+        schema:
+          enum:
+          - enable
+          - disable
+          - delete
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/server.BulkOp'
+        description: The bulk detection search criteria
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/server.BulkResp'
+          description: Returns the bulk operation response
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+      summary: Manage Detections in Bulk
+      tags:
+      - Detections
+  /connect/detection/comment/{id}:
+    delete:
+      description: Deletes the comment associated with the given comment ID.
+      parameters:
+      - description: The detection comment ID
+        example: MeEcnpMB4OVrR03M4und
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The comment has been successfully deleted
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection was not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+      summary: Delete Detection Comment
+      tags:
+      - Detections
+    get:
+      description: Retrieves the comment associated with the given comment ID.
+      parameters:
+      - description: The detection comment ID
+        example: MeEcnpMB4OVrR03M4und
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.DetectionComment'
+          description: The comment has been successfully retrieved
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection was not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+      summary: Get Detection Comment
+      tags:
+      - Detections
+    post:
+      description: Creates a new detection comment for the detection associated with
+        the provided detection ID.
+      parameters:
+      - description: The internal detection ID
+        example: zC73PJABrNRFAsnEYkqy
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.DetectionComment'
+        description: A detection comment object with the new content; any provided
+          detection ID will be ignored
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.DetectionComment'
+          description: The comment has been successfully created
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+      summary: Create Detection Comment
+      tags:
+      - Detections
+    put:
+      description: Updates the comment associated with the given comment ID with the
+        provided content.
+      parameters:
+      - description: The detection comment ID
+        example: MeEcnpMB4OVrR03M4und
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.DetectionComment'
+        description: A detection object with the new content
+        required: true
+      responses:
+        "200":
+          description: The comment has been successfully deleted
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection was not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+        - detections/write
+        - events/write
+      summary: Update Detection Comment
+      tags:
+      - Detections
+  /connect/detection/convert:
+    post:
+      description: |-
+        Converts the given Sigma Detection rule into an Elasticsearch query.
+        NOTE: The API method only works with Sigma rules.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Detection'
+        description: The Sigma detection object with the Content and optional Overrides
+          populated
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/server.ConvertContentResp'
+          description: The rule has been converted successfully
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer: []
+      summary: Convert Rule Query
+      tags:
+      - Detections
+  /connect/detection/public/{id}:
+    get:
+      description: Retrieves a specific detection given a public detection ID. This
+        ID is assigned by the ruleset author.
+      parameters:
+      - description: The detection public ID to retrieve
+        example: "2038279"
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Detection'
+          description: The detection was successfully retrieved
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Detection not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/read
+        - events/read
+      summary: Get Detection By Public ID
+      tags:
+      - Detections
+  /connect/detection/sync/{engine}/{type}:
+    post:
+      description: Initiates an asynchronous synchronization of the specified detection
+        engine.
+      parameters:
+      - description: The detection engine to sync
+        in: path
+        name: engine
+        required: true
+        schema:
+          enum:
+          - all
+          - elastalert
+          - suricata
+          - strelka"
+          type: string
+      - description: The type of sync to perform
+        in: path
+        name: type
+        required: true
+        schema:
+          enum:
+          - full
+          - update
+          type: string
+      responses:
+        "200":
+          description: The sync has been queued
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - detections/write
+      summary: Sync Detections
+      tags:
+      - Detections
+  /connect/events/:
+    get:
+      description: |-
+        Given a search query, fetch all matching results, up to the maximum number requested, or the maximum that the backend data server will provide.
+        ### Query Structure
+
+        The query structure resembles the following:
+
+        ```
+        (field_name1:required_value AND field_name2:>50) OR field_name3:"some string value" | groupby field_name1 field_name2 | sortby field_name1 field_name3 | ...
+        ```
+
+        Everything the left of the | "pipe" character must be in Lucene syntax.
+
+        The operation keywords, such as AND, OR, NOT must always be capitalized.
+
+        For more information on the query syntax, refer to the Security Onion documentation and search for `OQL`.
+      parameters:
+      - description: User defined search query
+        example: tags:conn | groupby source.ip destination.ip network.protocol destination.port
+        in: query
+        name: query
+        required: true
+        schema:
+          type: string
+      - description: Date range, in the specified timezone
+        example: 2024/12/03 03:09:31 PM - 2024/12/04 03:09:31 PM
+        in: query
+        name: range
+        required: true
+        schema:
+          type: string
+      - description: Timezone of the date range
+        example: America/New_York
+        in: query
+        name: zone
+        required: true
+        schema:
+          type: string
+      - description: Date range date format. Use the example, exactly as shown, if
+          not familiar with date formats
+        example: 2006/01/02 3:04:05 PM
+        in: query
+        name: format
+        required: true
+        schema:
+          type: string
+      - description: Maximum number of metrics to include in each aggregation
+        example: 10
+        in: query
+        name: metricLimit
+        required: true
+        schema:
+          type: integer
+      - description: Maximum number of events to return
+        example: 100
+        in: query
+        name: eventLimit
+        required: true
+        schema:
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.EventSearchResults'
+                type: array
+          description: Outputs the list of search results
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: The event module is not loaded on the server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - events/read
+      summary: Query Data
+      tags:
+      - Query
+  /connect/events/ack:
+    post:
+      description: Acknowledges the alert event(s) matching the given query. Note
+        that this will not remove the event from connected SOC users' Alert screens
+        when the same alert event happens to be also present on their Alert screen.
+        However, if they refresh the Alert screen the alert event will no longer be
+        listed.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.EventAckCriteria'
+        description: Ack criteria
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.EventUpdateResults'
+          description: Outputs the list of update results
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: The event module is not loaded on the server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - events/ack
+        - events/write
+      summary: Acknowledge Alerts
+      tags:
+      - Query
+  /connect/grid/:
+    get:
+      description: |-
+        Retrieves the list of nodes that have recently checked-in with SOC. Nodes are grid members that have recently checked in with SOC.
+        Under certain scenarios this may not include nodes that are accepted members of the grid but currently offline.
+        Effectively, the results of this API call will match the view of the Grid screen in SOC (Not the Grid Members screen).
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Node'
+                type: array
+          description: The list of grid nodes
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - nodes/read
+      summary: Get Grid Nodes
+      tags:
+      - Grid
+  /connect/gridmembers/:
+    get:
+      description: |-
+        Retrieves the complete list of all machine members associated, in some capacity, with this grid. A grid member is not necessarily an official grid node.
+        For example, this list includes members that are not yet accepted into the grid, as well as members that have been rejected from joining the grid.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.GridMember'
+                type: array
+          description: The list of grid members
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Grid member module has not been enabled on the server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - grid/read
+      summary: Get Grid Members
+      tags:
+      - Grid
+  /connect/gridmembers/{id}/{operation}:
+    post:
+      description: |
+        Manages a grid member by performing the specified operation.
+        ### Available grid membership operations:
+
+        - *reject*: Explicitly deny the node that is attempting to join the grid. The node will remain in the list of nodes that have been rejected unless a subsequent request uses the delete operation on the node.
+        - *add*: Accepts the new grid member into this grid and allow it to participate in the grid synchronization process. For newly setup nodes, this will cause the remainder of the node setup to begin, which can take up to an hour to complete on some systems.
+        - *delete*: Deletes the grid member. If the node was previously accepted into the grid it will be removed from the grid and removed from the grid member list. The SOC grid list will continue to show the node until the SOC process (or the manager node itself) is restarted.
+        - *test*: Ingests preselected test data into the node. This should only be executed on sensor nodes, such as standalone nodes, forward nodes, etc.
+        - *restart*: Restarts the operating system on the given node. Note that restarting the manager node will take SOC offline for several minutes. Restarting all grid nodes concurrently can result in missed network data.
+      parameters:
+      - description: The grid member ID to be managed
+        example: so_standalone
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: 'The operation to perform: add, reject, delete, test, restart'
+        example: reject
+        in: path
+        name: operation
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The operation was executed successfully
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Grid member module has not been enabled on the server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - grid/write
+      summary: Manage Grid Member
+      tags:
+      - Grid
+  /connect/gridmembers/{id}/import:
+    post:
+      description: |-
+        Imports the data from the given file. This is commonly used for importing PCAP and EVTX data directly into the node.
+        The max file size defaults to 25MB unless customized in the server configuration.
+        Example directory listing of a PCAP file being uploaded for import:
+
+        ```
+        -rw-r--r--  1 jertel jertel    1355 Jan 27 18:15  hdcp_authentication_sample.pcap
+        ```
+
+        Example POST request, with some of the noteworthy headers shown:
+
+        ```
+        POST /connect/gridmembers/manager_standalone/import
+
+        ...
+        content-length: 1584
+        content-type: multipart/form-data; boundary=----WebKitFormBoundaryaKfZhnMSKrgA9HJh
+        ...
+
+        ------WebKitFormBoundaryaKfZhnMSKrgA9HJh
+        Content-Disposition: form-data; name="attachment"; filename="hdcp_authentication_sample.pcap"
+        Content-Type: application/vnd.tcpdump.pcap
+
+        << raw bytes >>
+
+        ------WebKitFormBoundaryaKfZhnMSKrgA9HJh--
+        ```
+      parameters:
+      - description: The full node ID (name_role) into which this data will be imported
+        example: manager_standalone
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: file
+        description: The raw file data to import. This request must use multipart/form-data
+          content type and the body must include one form part containing form-data
+          content named 'attachment' with a filename attribute, a Content-Type header
+          representing the file stream MIME type, and then the associated raw data
+          stream.
+        required: true
+      responses:
+        "202":
+          description: The data upload succeeded and the import has started
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Grid member module has not been enabled on the server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - events/write
+      summary: Import Data
+      tags:
+      - Grid
+  /connect/info/:
+    get:
+      description: Requests the Security Onion grid general details.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Info'
+          description: The retrieved Info object
+        "401":
+          description: Request was not properly authenticated
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer: []
+      summary: Get Server Information
+      tags:
+      - Grid
+  /connect/job/:
+    post:
+      description: Create a new job.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Job'
+        description: The job details. The job ID, create timestamp, status, and other
+          processing-related fields will be populated by the server. For a new analyze
+          job, only the kind (analyze), nodeId, and parameters should be specified.
+          For the parameters, the caseId, artifactType, and other relevant fields
+          needed by the analyzers should be submitted.
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Job'
+          description: The created Job object
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - jobs/write
+      summary: Create Job
+      tags:
+      - Jobs
+    put:
+      description: Update an existing job with the provided job details.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Job'
+        description: The job details. Any provided user ID or node ID will be ignored
+          as those fields are read-only after initial job creation.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Job'
+          description: The updated Job object
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "404":
+          description: The job was not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - jobs/write
+      summary: Update Job
+      tags:
+      - Jobs
+  /connect/job/{jobId}:
+    delete:
+      description: Deletes an existing job and its related output results.
+      parameters:
+      - description: The job ID
+        example: 1004
+        in: path
+        name: jobId
+        required: true
+        schema:
+          type: integer
+      responses:
+        "200":
+          description: The job was successfully deleted
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "404":
+          description: The job was not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - jobs/delete
+      summary: Delete Job
+      tags:
+      - Jobs
+    get:
+      description: Retrieves a specific job that matches the given job ID.
+      parameters:
+      - description: The job ID
+        example: 1004
+        in: path
+        name: jobId
+        required: true
+        schema:
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Job'
+          description: The retrieved Job object
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "404":
+          description: The job was not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - jobs/read
+      summary: Get Job
+      tags:
+      - Jobs
+  /connect/joblookup/:
+    get:
+      description: Given a TCP or UDP network connection log event, create a PCAP
+        lookup job that would best locate the PCAP from that event.
+      parameters:
+      - description: Time timestamp of the event
+        example: "2024-01-29T12:31:59.220Z"
+        in: query
+        name: time
+        required: true
+        schema:
+          type: string
+      - description: The event document ID. If this is not specified then the ncid
+          param is required.
+        example: P5mgnpEB0JpjNDZz1bIN
+        in: query
+        name: esid
+        schema:
+          type: string
+      - description: The network.community_id value for the event. Ignored if the
+          esid param is provided.
+        example: 1:URggUwcolUh/BgIWApL6rUUZUK4=
+        in: query
+        name: ncid
+        schema:
+          type: string
+      responses:
+        "302":
+          description: Responds with a Location redirect header when the job was successfully
+            created. Note that this does not necessarily mean that the job will find
+            matching PCAP data.
+          headers:
+            Location:
+              description: The SOC UI URL to the newly created PCAP job. Note that
+                the job may not yet be processed.
+              schema:
+                type: string
+        "404":
+          description: There was no document found that matched the provided input
+            time and document or network community ID
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - events/read
+        - jobs/write
+      summary: Create PCAP Job from Event
+      tags:
+      - Jobs
+  /connect/jobs/:
+    get:
+      description: Retrieves the list of jobs that match the given parameters.
+      parameters:
+      - description: The job kind, such as 'analyze'. Specify an empty value for PCAP
+          jobs
+        example: analyzer
+        in: query
+        name: kind
+        required: true
+        schema:
+          type: string
+      - description: Optional case ID to locate matching analyze jobs
+        example: P5mgnpEB0JpjNDZz1bIN
+        in: query
+        name: parameters[artifact][id]
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Job'
+                type: array
+          description: The array of retrieved jobs
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - jobs/read
+      summary: Get Jobs
+      tags:
+      - Jobs
+  /connect/node:
+    post:
+      description: |-
+        Used by Security Onion agent nodes to check-in with their current metrics and request any pending jobs assigned to it.
+        It is not recommended to make calls to this API endpoint, as this is intended to be used exclusively by official Security Onion nodes only.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.Node'
+        description: The node object with recent metrics
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Job'
+                type: array
+          description: The array of assigned, pending jobs that this node is responsible
+            for processing, if any
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - nodes/write
+        - jobs/process
+      summary: Node Check-in
+      tags:
+      - Grid
+  /connect/packets/{jobId}:
+    get:
+      description: Retrieves the packets collected and attached to the job represented
+        by the given job ID. This request assumes the job is a PCAP job.
+      parameters:
+      - description: The job ID
+        example: 1004
+        in: path
+        name: jobId
+        required: true
+        schema:
+          type: integer
+      - description: If true, and if the stream data is eligible the stream data will
+          be unwrapped. An example of wrapped stream data is VXLAN packet data.
+        example: true
+        in: query
+        name: unwrap
+        schema:
+          type: boolean
+      - description: The starting offset of the packet to retrieve; used for paging
+          large packet results. Defaults to 0.
+        example: 100
+        in: query
+        name: offset
+        schema:
+          type: integer
+      - description: The maximum number of packets to retrieve; used for paging large
+          packet results. Defaults to 5000, or an optional server-side configuration
+          value/
+        example: 100
+        in: query
+        name: count
+        schema:
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Packet'
+                type: array
+          description: The array of retrieved Packet objects
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "404":
+          description: The job was not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - jobs/read
+      summary: Get PCAP Packets
+      tags:
+      - Jobs
+  /connect/query/{operation}:
+    get:
+      description: Requests the server provide a new query for the SOC client to show,
+        given a particular change needed in the query.
+      parameters:
+      - description: 'The type of operation for this query update. Supports: grouped,
+          filtered, sorted'
+        example: grouped
+        in: path
+        name: operation
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              example: "true"
+              type: string
+        description: The operation mode.
+        required: true
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                type: string
+          description: 'The job output stream was successfully saved and is being
+            returned in the response body. Ex: somefield: somevalue | groupby anotherfield
+            | groupby newfield'
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer: []
+      summary: Build Query
+      tags:
+      - Query
+  /connect/roles:
+    get:
+      description: Retrieves the set of available user roles.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  type: string
+                type: array
+          description: List of user role names
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: Roles module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - roles/read
+      summary: Get Roles
+      tags:
+      - Users
+  /connect/roles/permissions:
+    get:
+      description: |-
+        Retrieves the set of available client permissions.
+        Note: User roles are made up of assigned permissions. API clients do not
+        use roles and instead are directly assigned individual permissions since
+        each API client is expected to be configured for a specific task.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  type: string
+                type: array
+          description: List of permission names
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: Roles module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - permissions/read
+      summary: Get Permissions
+      tags:
+      - Clients
+  /connect/stream/{jobId}:
+    get:
+      description: Returns the full job output stream for the given job ID. An example
+        of a job stream is a packet capture (PCAP) file.
+      parameters:
+      - description: The job ID
+        example: 1004
+        in: path
+        name: jobId
+        required: true
+        schema:
+          type: integer
+      - description: Optional filename extension to use on the returned stream. Appends
+          extension to stream name, unless stream name already contains '.bin' in
+          which case it replaces that extension.
+        example: pcap
+        in: query
+        name: ext
+        schema:
+          type: string
+      - description: If true, and if the stream data is eligible the stream data will
+          be unwrapped. An example of wrapped stream data is VXLAN packet data.
+        example: true
+        in: query
+        name: unwrap
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: The job output stream has been successfully retrieved
+          headers:
+            Content-Disposition:
+              description: 'The stream''s file meta-data. Ex: inline; filename=foo.bin'
+              schema:
+                type: string
+            Content-Transfer-Encoding:
+              description: 'The encoding type of the response stream. Ex: binary"vnd.tcpdump.pcap'
+              schema:
+                type: string
+            Content-Type:
+              description: The MIME type of the returned stream. For PCAP this will
+                be vnd.tcpdump.pcap
+              schema:
+                type: string
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Job not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - jobs/read
+      summary: Download Job Output
+      tags:
+      - Jobs
+    post:
+      description: Sends the job output up to the server for posterity and future
+        retrieval. Not all jobs will have binary job output to upload. The job ID
+        is used to reference the job for this output stream.
+      parameters:
+      - description: The job ID
+        example: 1004
+        in: path
+        name: jobId
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/octet-stream:
+            schema:
+              format: binary
+              type: string
+          text/plain:
+            schema:
+              type: object
+        description: The job output stream byte content
+        required: true
+      responses:
+        "200":
+          description: The job output stream was successfully saved
+        "400":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Request was not properly authenticated
+        "403":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Insufficient permissions for this request
+        "404":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Job not found
+        "500":
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - jobs/process
+      summary: Upload Job Output
+      tags:
+      - Jobs
+  /connect/users:
+    get:
+      description: Returns all SOC users.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.User'
+                type: array
+          description: List of user objects, or empty list if not permitted to view
+            user list
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/read
+      summary: Get Users
+      tags:
+      - Users
+    post:
+      description: Creates a new SOC user.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.User'
+        description: User object to be created. The provided email address, firstname,
+          lastname, note, roles, and password will be used. All other fields are ignored.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.User'
+          description: Returns the same user object that was provided as input
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/write
+      summary: Create User
+      tags:
+      - Users
+  /connect/users/{id}:
+    delete:
+      description: Deletes the provided user ID.
+      parameters:
+      - description: The user ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: User successfully deleted
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/write
+      summary: Delete User
+      tags:
+      - Users
+    put:
+      description: Update a user with the provided user object data.
+      parameters:
+      - description: The user ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.User'
+        description: User object containing new updates. The provided email address,
+          firstname, lastname, and note will be updated. All other fields are ignored.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.User'
+          description: Returns the same user object that was provided as input, with
+            the requested id populated
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/write
+      summary: Update User
+      tags:
+      - Users
+  /connect/users/{id}/{toggle}:
+    put:
+      description: Update a user's status to enabled or disabled
+      parameters:
+      - description: The user ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: Desired toggle action. Set to 'enable' or 'disable'.
+        in: path
+        name: toggle
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: User status successfully updated
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/write
+      summary: Toggle User Enabled
+      tags:
+      - Users
+  /connect/users/{id}/password:
+    put:
+      description: Update a user's password with the provided value.
+      parameters:
+      - description: The user ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.User'
+        description: User object containing the new password. All other fields are
+          ignored.
+        required: true
+      responses:
+        "200":
+          description: Password successfully updated.
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/write
+      summary: Change Password
+      tags:
+      - Users
+  /connect/users/{id}/role/{role}:
+    delete:
+      description: Denies an existing user a role. The user will no longer have permissions
+        that this role provides.
+      parameters:
+      - description: The user ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: The role name
+        in: path
+        name: role
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The role was successfully removed from the user
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/write
+      summary: Deny User Role
+      tags:
+      - Users
+    post:
+      description: Grants an existing user a role. The user will then have permissions
+        that this role provides.
+      parameters:
+      - description: The user ID
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: The role name
+        in: path
+        name: role
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The role was successfully granted to the user
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/write
+      summary: Grant User Role
+      tags:
+      - Users
+  /connect/users/sync:
+    put:
+      description: |-
+        Synchronizes all SOC users across the grid. This is an asynchronous request.
+        The background operation can take several minutes to complete.
+      responses:
+        "200":
+          description: The synchronization request has been submitted
+        "401":
+          description: Request was not properly authenticated
+        "405":
+          description: User module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - users/write
+      summary: Synchronize Users
+      tags:
+      - Users
+  /connect/util/reverse-lookup:
+    put:
+      description: Performs a reverse name lookup query on a list of provided IP addresses.
+        The configured list of DNS overrides is checked first, and if no match is
+        found a DNS reverse lookup is performed. The input listed is deduplicated
+        first to avoid repeated lookups in the same request.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                type: string
+              type: array
+        description: List of IP addresses to reverse lookup
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                additionalProperties:
+                  items:
+                    type: string
+                  type: array
+                type: object
+          description: Outputs mapping of IP address to a list of resolved domain
+            names
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer: []
+      summary: DNS Reverse Lookup
+      tags:
+      - Query
+  /oauth2/token:
+    post:
+      description: |-
+        Exchanges a client ID and client secret for a temporary access token needed for calling Security Onion Connect API methods.
+        The client ID and client secret are provided within the SOC Administration -> API Clients screen, when creating a new API client or when regenerating an API client's secret.
+        The client secrets are only temporarily visible during those two specific times.
+        The returned access token will expire within 1-2 hours, by default. Ensure the custom integration application is capable of exchanging for a new access token prior to the expiration.
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/server.AccessTokenRequest'
+        description: The body of this POST request must contain the required fields
+          as shown below.
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/server.AccessTokenResponse'
+          description: The access token response object.
+        "400":
+          description: Missing basic authorization credentials or missing grant_type
+            form parameter in request body
+        "401":
+          description: Invalid client credentials
+        "500":
+          description: Internal error; review Hydra logs
+      security:
+      - basic: []
+      summary: Obtain Access Token
+      tags:
+      - Authentication

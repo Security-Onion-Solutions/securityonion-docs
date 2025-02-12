@@ -5,29 +5,32 @@ Network Installation
 
 .. warning::
 
-        Network installations are not supported and should only be used as a last resort in case there is some reason you can't use our official Security Onion ISO image as shown in the :ref:`installation` section.
+        Network installations are NOT supported and should only be used as a last resort in case there is some reason you can't use our official Security Onion images as shown in the :ref:`installation` section.
 
-Our official Security Onion ISO image is the only fully supported installation method and you should use it if any of the following apply to you:
+Our official Security Onion images (ISO image and cloud images) are the ONLY supported installation method and you should use them if any of the following apply to you:
 
 - You are deploying in an enterprise environment.
 - You are deploying in an airgap environment.
 - You are performing a distributed deployment.
 - You want the quickest and easiest installation with the fewest issues.
-- You need full support.
+- You need any kind of support.
 
-If NONE of the above apply to you, you MAY be able to install one of the following operating systems and then perform a network installation:
+If NONE of the above apply to you, then you MAY be able to install one of the following operating systems and then perform a network installation:
 
 - Oracle Linux 9
 - Rocky Linux 9
 - Alma Linux 9
-- CentOS Stream 9
 - RHEL 9
 - Ubuntu 22.04
 - Debian 12
 
-For the least amount of issues, choose Oracle Linux 9 since it's used for our official images. Rocky Linux 9, CentOS Stream 9, and Alma Linux 9 should also work but they are not fully tested. Another option might be RHEL 9 itself although that is a paid option.
+For the least amount of issues, choose Oracle Linux 9 since it's used for our official images. If for some reason you can't use Oracle Linux 9, then Rocky Linux 9 and Alma Linux 9 SHOULD work but they are not fully tested. Another option MIGHT be RHEL 9 itself although that is a paid option.
 
-If you really want to run Ubuntu 22.04 or Debian 12, then please note that these distros may work but they get even less testing and therefore you will be more likely to run into issues. If you choose Ubuntu 22.04, we recommend the Ubuntu 22.04 Server ISO image and selecting the ``Ubuntu Server`` installation option as there are known issues when choosing the ``Ubuntu Server (minimized)`` option.
+If you really want to run Ubuntu 22.04 or Debian 12, then please note that these distros MAY work but they get even less testing and therefore you will be more likely to run into issues. If you choose Ubuntu 22.04, we recommend the Ubuntu 22.04 Server ISO image and selecting the ``Ubuntu Server`` installation option as there are known issues when choosing the ``Ubuntu Server (minimized)`` option.
+
+.. warning::
+
+        Just because a distro is listed above and works today does NOT guarantee that it will work in the future. If at some point in the future a distro listed above stops working, then we will simply remove it from the list rather than trying to fix an unsupported distro.
 
 Partitioning
 ------------
@@ -96,13 +99,13 @@ If you understand all of the warnings above and still want to perform a network 
 #. Follow the prompts in the installer. If you're building a production deployment, you'll probably want to use LVM and dedicate most of your disk space to ``/nsm`` as discussed in the Partitioning section above.
 #. Reboot into your new installation.
 #. Login using the username and password you specified during installation.
-#. Install prerequisites. If you're using a RHEL flavor like Oracle Linux 9:
+#. Install prerequisites. If you're using Oracle Linux 9 or another RHEL derivative:
 
    ::
 
      sudo dnf -y install git
 
-   If you're using a Debian flavor like Ubuntu:
+   If you're using Ubuntu or Debian:
 
    ::
 

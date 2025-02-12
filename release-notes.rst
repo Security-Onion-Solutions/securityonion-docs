@@ -3,61 +3,63 @@
 Release Notes
 =============
 
-Known Issues
-~~~~~~~~~~~~
-
-Salt Repo Location Changed
---------------------------
-
-Salt is an external project used by Security Onion. After 2.4.100 was released the maintainers of Salt changed the package repository URL, which prevents Security Onion from installing on unsupported operating systems.
-
-While we are looking to update Security Onion to use the new URL in the next minor release of Security Onion, this issue persists with the 2.4.111 patch. We recommend installing Security Onion using the ISO image to avoid these network installation and unsupported operating system complications.
-
-If you choose to continue installing on an unsupported operating system you can consider applying the fix manually, as shown in this PR: https://github.com/Security-Onion-Solutions/securityonion/pull/13900
-
-
-IP Address Data Type Conflict
------------------------------
-If you had previously updated to version 2.4.100 and had indices with conflicting data types for fields like source IP address, then you may need to delete affected indices. Field conflicts typically occur when a field is indexed using a different set of mappings than other indices. This can occur if a component template or index template changes and a data stream rolls over to create a new backing index, causing issues with field value aggregation and data tables not being rendered as expected.
-
-Field conflicts can be identified by navigating to ``Kibana -> Management -> Data Views -> logs-*``. They are typically noted via a yellow banner on the data view page, or they can be found by filtering by a field type of ``conflict``. For each affected field, clicking the yellow ``Conflict`` icon in the ``Type`` column will display the conflicting field types and indices.
-
-For example, you may have a conflict for ``source.ip``, where it was previously correctly mapped as field type of ``ip``, but the index mappings were inadvertently changed and ``source.ip`` is now mapped as a field type of ``keyword`` in the ``logs-system.security`` and ``logs-system.syslog`` data streams.  The mappings have been fixed, but the data streams need to be rolled over to pick up the correct mappings, and the affected index containing ``source.ip`` mapped as a field type of ``keyword`` needs to be deleted to resolve the conflict.  
-
-Conflicts for the following fields can be ignored for now, as they will be fixed in a future version:
-
-- metadata.input.beats.host.ip
-- recordedfuture.evidence_details
-- version
-
-You can issue the following commands from the CLI to resolve the conflict.
-
-First, become root:
-
-::
-
-        sudo -i
-
-Next, roll over each of the affected data streams:
-
-::
-
-        for i in logs-system.security logs-system.syslog; do 
-            so-elasticsearch-query $i/_rollover -XPOST
-        done
-
-Then, delete the previous index for each of the affected data streams:
-
-::
-
-        for i in logs-system.security logs-system.syslog; do
-            INDEX_TO_DELETE=$(so-elasticsearch-query $i | jq -r 'keys[]' | tail -2 | head -1); so-elasticsearch-query $INDEX_TO_DELETE -XDELETE
-        done
-
-Finally, check the ``logs-*`` data view to see if the field conflict is now resloved.
-
 Release History
 ~~~~~~~~~~~~~~~
+
+2.4.120 [20250212] Changes
+--------------------------
+
+- FEATURE: Additional supported integrations
+- FEATURE: Add template Sigma & YARA local custom repo
+- FEATURE: Allow users to prevent the kernel and other packages from being upgraded
+- FEATURE: API Clients `#13928 <https://github.com/Security-Onion-Solutions/securityonion/issues/13928>`_
+- FEATURE: ATT&CK Layer for Detections `#13885 <https://github.com/Security-Onion-Solutions/securityonion/issues/13885>`_
+- FEATURE: Custom Local IP to Hostname Mapping
+- FEATURE: Elastic Agent MSI `#13744 <https://github.com/Security-Onion-Solutions/securityonion/issues/13744>`_
+- FEATURE: Expose new rule summary to Alerts page `#13770 <https://github.com/Security-Onion-Solutions/securityonion/issues/13770>`_
+- FEATURE: Extract additional metadata - Created & Updated 
+- FEATURE: Improve Operational Notes & Overrides
+- FEATURE: Make TRACK column visible
+- FEATURE: More configurable options to enable|disable Sigma rules on import
+- FEATURE: Override Note `#13766 <https://github.com/Security-Onion-Solutions/securityonion/issues/13766>`_
+- FEATURE: Show available Pro features on unprovisioned license screen `#14072 <https://github.com/Security-Onion-Solutions/securityonion/issues/14072>`_
+- FEATURE: Suppress the Context Menu when highlighting text `#13184 <https://github.com/Security-Onion-Solutions/securityonion/issues/13184>`_
+- FEATURE: Toggle Enabled|Disabled for Detection Engine syncs
+- FEATURE: Trend Micro Integration
+- FEATURE: When Clicking a Detection Engine Status, Run a Specific, Configurable Hunt Query `#13865 <https://github.com/Security-Onion-Solutions/securityonion/issues/13865>`_
+- FEATURE: Zeek HTTP2
+- FEATURE: Zeek IPSec `#14006 <https://github.com/Security-Onion-Solutions/securityonion/issues/14006>`_
+- FEATURE: Zeek LDAP
+- FEATURE: Zeek OpenVPN `#14005 <https://github.com/Security-Onion-Solutions/securityonion/issues/14005>`_
+- FEATURE: Zeek QUIC `#6925 <https://github.com/Security-Onion-Solutions/securityonion/issues/6925>`_
+- FIX: Better handling of Detections' custom git repo errors
+- FIX: Cloud installs should use pre-installed docker registry data `#14044 <https://github.com/Security-Onion-Solutions/securityonion/issues/14044>`_
+- FIX: Configuration YAML validator fails on valid YAML `#13965 <https://github.com/Security-Onion-Solutions/securityonion/issues/13965>`_
+- FIX: Detections - Overrides list only displays 10 `#13950 <https://github.com/Security-Onion-Solutions/securityonion/issues/13950>`_
+- FIX: Ensure createrepo_c is installed on airgapped manager nodes `#13857 <https://github.com/Security-Onion-Solutions/securityonion/issues/13857>`_
+- FIX: Flickering Sankey chart `#14215 <https://github.com/Security-Onion-Solutions/securityonion/issues/14215>`_
+- FIX: Have soup ensure that top.sls is in normal mode even if there are no soup changes `#13808 <https://github.com/Security-Onion-Solutions/securityonion/issues/13808>`_
+- FIX: Invalidate a user's sessions when an administrator changes the user's password `#14076 <https://github.com/Security-Onion-Solutions/securityonion/issues/14076>`_
+- FIX: Non Oracle nodes failing soup / Salt upgrade `#13926 <https://github.com/Security-Onion-Solutions/securityonion/issues/13926>`_
+- FIX: null pointer exception in global@custom pipeline `#14117 <https://github.com/Security-Onion-Solutions/securityonion/issues/14117>`_
+- FIX: Okta index template missing okta-mappings component template `#14106 <https://github.com/Security-Onion-Solutions/securityonion/issues/14106>`_
+- FIX: Records being partially displayed in the Alerts interface when expanded `#14108 <https://github.com/Security-Onion-Solutions/securityonion/issues/14108>`_
+- FIX: Review ILM settings for Detection History index
+- FIX: rsync error during non-airgapped manager setup `#13860 <https://github.com/Security-Onion-Solutions/securityonion/issues/13860>`_
+- FIX: Salt Repo has moved `#13898 <https://github.com/Security-Onion-Solutions/securityonion/issues/13898>`_
+- FIX: Salt state warnings `#13851 <https://github.com/Security-Onion-Solutions/securityonion/issues/13851>`_
+- FIX: so-repo-sync errors on non Oracle OS `#13919 <https://github.com/Security-Onion-Solutions/securityonion/issues/13919>`_
+- FIX: Suricata Integrity Check fails when Suricata Metadata rules are enabled
+- FIX: Update crowdstrike integration support `#13913 <https://github.com/Security-Onion-Solutions/securityonion/issues/13913>`_
+- UPGRADE: ATT&CK Navigator to 5.1.0
+- UPGRADE: CyberChef to 10.19.4 `#14131 <https://github.com/Security-Onion-Solutions/securityonion/issues/14131>`_
+- UPGRADE: ElastAlert 2 to 2.22.0 `#14082 <https://github.com/Security-Onion-Solutions/securityonion/issues/14082>`_
+- UPGRADE: Go dependencies in SOC `#14020 <https://github.com/Security-Onion-Solutions/securityonion/issues/14020>`_
+- UPGRADE: InfluxDB to 2.7.10 `#14084 <https://github.com/Security-Onion-Solutions/securityonion/issues/14084>`_
+- UPGRADE: Kratos to 1.3.1 `#14083 <https://github.com/Security-Onion-Solutions/securityonion/issues/14083>`_
+- UPGRADE: NGINX to 1.26.2 `#14086 <https://github.com/Security-Onion-Solutions/securityonion/issues/14086>`_
+- UPGRADE: Vue.js front-end UI framework to v3 `#13806 <https://github.com/Security-Onion-Solutions/securityonion/issues/13806>`_
+- UPGRADE: Zeek 7
 
 2.4.111 Patch [20241217] Changes
 --------------------------------

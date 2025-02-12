@@ -159,7 +159,18 @@ See the table below which explains the specific Security Onion privileges grante
       - 
       - 
       - 
-
+    * - Manage API clients
+      - X
+      - 
+      - 
+      - 
+      - 
+    * - View and list existing API clients
+      - X
+      - 
+      -
+      - X
+      - 
 .. note::
 
     Both ``auditor`` and ``limited-auditor`` roles can interact with previously created PCAPs if they were created before a user was converted to that role (e.g. user was downgraded from ``analyst`` to ``auditor``). This is denoted by **O** in the above table.
@@ -268,6 +279,10 @@ These steps will guide you through an example where we wish to introduce a new r
 
     .. note::
 
+        Elasticsearch requires that a subscription be purchased in order to use field or document-level security, as referenced in the above example.
+
+    .. note::
+
         The format of the json in this file must match the request body outlined in the Elastic docs here: https://www.elastic.co/guide/en/elasticsearch/reference/current/security-api-put-role.html#security-api-put-role-request-body.
 
         The available cluster and indices permissions are explained in the Elastic docs here: https://www.elastic.co/guide/en/elasticsearch/reference/current/security-privileges.html.
@@ -337,6 +352,12 @@ The available low-level Security Onion privileges are listed in the table below:
       - Read all case-related information for all cases
     * - *cases/write*
       - Create and update cases, and escalate events to cases
+    * - *clients/read*
+      - List and view existing API clients. Client secrets are inaccessible.
+    * - *clients/write*
+      - Create and update API clients, and regenerate secrets
+    * - *clients/delete*
+      - Delete API clients
     * - *config/read*
       - Read system configuration parameters
     * - *config/write*
@@ -392,6 +413,10 @@ These discrete privileges are then collected into privilege groups as defined be
       - *cases/read*, *cases/write*
     * - case-monitor
       - *cases/read*
+    * - client-admin
+      - *clients/read*, *clients/write*, *clients/delete*
+    * - client-monitor
+      - *clients/read*
     * - config-admin
       - *config/read*, *config/write*
     * - config-monitor
