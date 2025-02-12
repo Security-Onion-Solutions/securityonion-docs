@@ -61,10 +61,12 @@ cisco_ftd                       https://docs.elastic.co/en/integrations/cisco_ft
 cisco_ios                       https://docs.elastic.co/en/integrations/cisco_ios
 cisco_ise                       https://docs.elastic.co/en/integrations/cisco_ise
 cisco_meraki                    https://docs.elastic.co/en/integrations/cisco_meraki
+cisco_secure_email_gateway      https://docs.elastic.co/en/integrations/cisco_secure_email_gateway
 cisco_umbrella                  https://docs.elastic.co/en/integrations/cisco_umbrella
 citrix_adc                      https://docs.elastic.co/en/integrations/citrix_adc
 citrix_waf                      https://docs.elastic.co/en/integrations/citrix_waf
 cloudflare                      https://docs.elastic.co/en/integrations/cloudflare
+cloudflare_logpush              https://docs.elastic.co/en/integrations/cloudflare_logpush
 crowdstrike                     https://docs.elastic.co/en/integrations/crowdstrike
 darktrace                       https://docs.elastic.co/en/integrations/darktrace
 elasticsearch                   https://docs.elastic.co/en/integrations/elasticsearch
@@ -118,9 +120,13 @@ ti_abusech                      https://docs.elastic.co/en/integrations/ti_abuse
 ti_anomali                      https://docs.elastic.co/en/integrations/ti_anomali
 ti_cybersixgill                 https://docs.elastic.co/en/integrations/ti_cybersixgill
 ti_misp                         https://docs.elastic.co/en/integrations/ti_misp
+ti_opencti                      https://docs.elastic.co/en/integrations/ti_opencti
 ti_otx                          https://docs.elastic.co/en/integrations/ti_otx
+ti_rapid7_threat_command        https://docs.elastic.co/en/integrations/ti_rapid7_threat_command
 ti_recordedfuture               https://docs.elastic.co/en/integrations/ti_recordedfuture
 ti_threatq                      https://docs.elastic.co/en/integrations/ti_threatq
+trendmicro                      https://docs.elastic.co/en/integrations/trendmicro
+trend_micro_vision_one          https://docs.elastic.co/en/integrations/trend_micro_vision_one
 udp                             https://docs.elastic.co/en/integrations/udp
 vsphere                         https://docs.elastic.co/en/integrations/vsphere
 windows                         https://docs.elastic.co/en/integrations/windows
@@ -243,6 +249,15 @@ zscaler_zpa                     https://docs.elastic.co/en/integrations/zscaler_
 
     - barracuda_cloudgen_firewall
     - imperva_cloud_waf
+
+    Security Onion 2.4.120 supports these additional Elastic integrations:
+
+    - cisco_secure_email_gateway
+    - cloudflare_logpush
+    - ti_opencti
+    - ti_rapid7_threat_command
+    - trendmicro
+    - trend_micro_vision_one
 
 More Information
 ----------------
