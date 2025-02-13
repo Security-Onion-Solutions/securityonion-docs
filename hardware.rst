@@ -67,7 +67,7 @@ We only support local storage. Remote storage like SAN/iSCSI/FibreChannel/NFS in
 NIC
 ---
 
-You'll need at least one wired network interface dedicated to management (preferably connected to a dedicated management network). We recommend using static IP addresses where possible.
+You'll need one wired network interface dedicated to management (preferably connected to a dedicated management network). We recommend using static IP addresses where possible. To keep things simple, we recommend only one network interface with an IP address. If you have multiple network interfaces with IP addresses, then Security Onion traffic will default to the interface with the default gateway.
 
 If you plan to sniff network traffic from a TAP or SPAN port, then you will need one or more interfaces dedicated to sniffing (no IP address). The installer will automatically disable NIC offloading functions such as ``tso``, ``gso``, and ``gro`` on sniffing interfaces to ensure that :ref:`suricata` and :ref:`zeek` get an accurate view of the traffic.
 
