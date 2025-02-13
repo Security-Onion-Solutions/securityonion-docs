@@ -11,7 +11,7 @@ Alerts
 Options
 -------
 
-At the top of the page, there is an Options menu that allows you to set options such as Acknowledged/Escalated, Automatic Refresh Interval, and Time Zone.
+At the top of the page, there is an Options menu that allows you to set several different options for the Alerts page.
 
 .. image:: images/51_alerts_options.png
   :target: _images/51_alerts_options.png
@@ -24,8 +24,9 @@ The first toggle is labeled ``Temporarily enable advanced interface features``. 
 The ``Acknowledged`` and ``Escalated`` toggles control what alerts are displayed:
 
 - Enabling the ``Acknowledged`` toggle will only show alerts that have previously been acknowledged by an analyst. 
-
 - Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst to :ref:`cases`.
+
+Starting in Security Onion 2.4.120, the ``Show Details Panel`` toggle controls the Details panel on the right side. For more information, see the Details Panel section below.
 
 Automatic Refresh Interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -50,6 +51,11 @@ Time Picker
 -----------
 
 By default, Alerts searches the last 24 hours. If you want to search a different time frame, you can change it in the upper-right corner of the screen.
+
+Details Panel
+-------------
+
+Starting in Security Onion 2.4.120, there is a details panel on the right side that shows details for the currently selected alert. This includes an AI summary (if available) and options for tuning the rule that generated the alert. This functionality is part of :ref:`detections` so you can read more in that section. This panel can be disabled under the Options dropdown (see above).
 
 Data Table
 ----------
