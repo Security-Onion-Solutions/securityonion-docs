@@ -11,4 +11,4 @@ More Information
 .. note::
 
     | For more information about Chromium, please see:
-    | https://www.chromium.org/chromium-projects/
+    | https://www.chromium.org/Home/
