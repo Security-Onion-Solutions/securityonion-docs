@@ -3,6 +3,13 @@
 Release Notes
 =============
 
+Known Issues
+~~~~~~~~~~~~
+
+- SOC Light Mode Icon Colors `#14237 <https://github.com/Security-Onion-Solutions/securityonion/issues/14237>`_
+- SOC PCAP column headers hidden from view `#14234 <https://github.com/Security-Onion-Solutions/securityonion/issues/14234>`_
+- SOC Alerts Column Sorting `#14242 <https://github.com/Security-Onion-Solutions/securityonion/issues/14242>`_
+
 Release History
 ~~~~~~~~~~~~~~~
 
