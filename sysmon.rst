@@ -11,14 +11,6 @@ From https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon:
     SIEM agents and subsequently analyzing them, you can identify malicious or anomalous activity and understand how intruders and
     malware operate on your network.
 
-Integration
------------
-
-| Josh Brower wrote a great paper on integrating sysmon into Security Onion:
-| https://www.sans.org/reading-room/whitepapers/forensics/sysmon-enrich-security-onion-039-s-host-level-capabilities-35837
-
-Please note that the paper is a few years old and was therefore written for an older version of Security Onion.
-
 Downloads
 ---------
 
