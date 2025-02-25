@@ -7,6 +7,10 @@ Security Onion is a free and open platform built by defenders for defenders. It 
 
 For network visibility, we offer signature based detection via :ref:`suricata`, rich protocol metadata and file extraction using either :ref:`zeek` or :ref:`suricata`, full packet capture using either :ref:`stenographer` or :ref:`suricata`, and file analysis. For host visibility, we offer the :ref:`elastic-agent` which provides data collection, live queries via :ref:`osquery<osquery-manager>`, and centralized management using :ref:`elastic-fleet`. :ref:`Intrusion detection honeypots<idh>` based on OpenCanary can be added to your deployment for even more enterprise visibility. All of these logs flow into :ref:`elasticsearch` and we've built our own user interfaces for :ref:`alerts<alerts>`, :ref:`dashboards<dashboards>`, :ref:`threat hunting<hunt>`, :ref:`case management<cases>`, and :ref:`grid management<grid>`. 
 
+.. note::
+
+    Check out our Introduction to Security Onion video at https://securityonion.com/demo!
+
 In the diagram below, we see Security Onion in a traditional enterprise network with a firewall, workstations, and servers. You can use Security Onion to monitor north/south traffic to detect an adversary entering an environment, establishing command-and-control (C2), or perhaps data exfiltration. You'll probably also want to monitor east/west traffic to detect lateral movement. As more and more of our network traffic becomes encrypted, it's important to fill in those blind spots with additional visibility in the form of endpoint telemetry. Security Onion can consume logs from your servers and workstations so that you can then hunt across all of your network and host logs at the same time.
 
 .. image:: images/diagrams/network-horiz.png
