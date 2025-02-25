@@ -8,3 +8,7 @@ The :ref:`best-practices` section recommends that you avoid changing IP addresse
 .. warning::
 
    ``so-ip-update`` is an experimental utility and only supports standalone machines, not distributed deployments.
+
+.. warning::
+
+   You may still need to manually update the IP address in some settings like the Elastic Fleet Agent Binary Download setting.
