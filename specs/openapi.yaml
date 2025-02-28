@@ -1570,6 +1570,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load15m:
+          description: The node's 15-minute load metric
+          example: 1.09
+          type: number
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
@@ -1577,10 +1581,6 @@ components:
         load5m:
           description: The node's 5-minute load metric
           example: 0.96
-          type: number
-        load15m:
-          description: The node's 15-minute load metric
-          example: 1.09
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -1900,6 +1900,34 @@ components:
         segments:
           items: {}
           type: array
+      type: object
+    model.QueryTask:
+      properties:
+        cancellable:
+          description: True if this task can be cancelled
+          example: true
+          type: boolean
+        details:
+          description: Details of the task
+          example: transport (cluster:monitor/tasks/lists)
+          type: string
+        elapsedMs:
+          description: Elapsed runtime of this task
+          example: 100023
+          type: integer
+        gridId:
+          description: Grid ID on which this task is running, or empty for the local
+            grid
+          example: SubgridA
+          type: string
+        startTime:
+          description: Start time of this task
+          example: "2024-10-06T19:29:39.332211Z"
+          type: string
+        taskId:
+          description: Unique Task ID representing this active task
+          example: jSliTqa12bOPhdW195TuuZ:443
+          type: string
       type: object
     model.RelatedEvent:
       properties:
@@ -4686,7 +4714,9 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                items:
+                  $ref: '#/components/schemas/model.QueryTask'
+                type: array
           description: The list of active queries
         "401":
           description: Request was not properly authenticated
