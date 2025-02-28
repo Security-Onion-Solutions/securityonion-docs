@@ -1570,10 +1570,6 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
-        load15m:
-          description: The node's 15-minute load metric
-          example: 1.09
-          type: number
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
@@ -1581,6 +1577,10 @@ components:
         load5m:
           description: The node's 5-minute load metric
           example: 0.96
+          type: number
+        load15m:
+          description: The node's 15-minute load metric
+          example: 1.09
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -4691,7 +4691,7 @@ paths:
         "401":
           description: Request was not properly authenticated
         "403":
-          description: Insufficiant permissions for this request
+          description: Insufficient permissions for this request
         "500":
           description: Internal SOC error; review SOC logs
       security:
@@ -4727,7 +4727,7 @@ paths:
         "401":
           description: Request was not properly authenticated
         "403":
-          description: Insufficiant permissions for this request
+          description: Insufficient permissions for this request
         "404":
           description: Query was not found
         "500":
