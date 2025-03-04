@@ -155,8 +155,7 @@ When finished editing ``intel.dat``, run ``sudo salt $SENSORNAME_$ROLE state.hig
 
 If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues. You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
 
-| For more information, please see:
-| https://docs.zeek.org/en/latest/frameworks/intel.html\ 
+For more information, please see https://docs.zeek.org/en/latest/frameworks/intel.html.
 
 Diagnostic Logging
 ------------------
