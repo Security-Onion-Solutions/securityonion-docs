@@ -25,3 +25,4 @@ Starting in Security Onion 2.4.120, licensed Pro users can also enable :ref:`Sec
    notifications
    kafka
    connect
+   aqm
