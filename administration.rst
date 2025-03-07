@@ -81,7 +81,7 @@ Enabling advanced settings will result in longer load times when viewing the Con
 Duplicate Settings
 ~~~~~~~~~~~~~~~~~~
 
-Starting in Security Onion 2.4.70, some settings can be duplicated to more easily create new settings. If a setting is eligible for duplication, then it will have a DUPLICATE button on the right side of the page, provided the ``Show advanced settings`` option is enabled at the top of the screen. Creating a duplicate setting is a TWO-STEP process.
+Some settings can be duplicated to more easily create new settings. If a setting is eligible for duplication, then it will have a DUPLICATE button on the right side of the page, provided the ``Show advanced settings`` option is enabled at the top of the screen. Creating a duplicate setting is a TWO-STEP process.
 
 1. Click the ``DUPLICATE`` button, provide a name for the new setting, and then click the ``CREATE SETTING`` button.
 2. The new setting will automatically be shown in the Configuration screen. At this point it is not yet saved to the server. The setting's value must be modified explicitly to persist this new setting. Once the value has been modified, click the green checkmark button to save it.
@@ -96,4 +96,4 @@ License Key
 .. image:: images/91_licensekey.png
   :target: _images/91_licensekey.png
 
-Starting in Security Onion 2.4.70 a new option will be available to add a license key for :ref:`pro`.
+The License Key screen allows you to add a license key for :ref:`pro`. Once you've added a license key, the screen will show details about your license key.

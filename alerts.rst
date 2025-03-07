@@ -54,7 +54,7 @@ By default, Alerts searches the last 24 hours. If you want to search a different
 Details Panel
 -------------
 
-Starting in Security Onion 2.4.120, there is a details panel on the right side that shows details for the currently selected alert. This includes an AI summary (if available) and options for tuning the rule that generated the alert. This functionality is part of :ref:`detections` so you can read more in that section. This panel can be disabled under the Options dropdown (see above).
+The details panel on the right side shows details for the currently selected alert. This includes an AI summary (if available) and options for tuning the rule that generated the alert. This functionality is part of :ref:`detections` so you can read more in that section. This panel can be disabled under the Options dropdown (see above).
 
 Data Table
 ----------
