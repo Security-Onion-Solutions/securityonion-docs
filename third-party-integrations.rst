@@ -39,101 +39,7 @@ A custom integration can be added by adding an integration such as the ``Custom 
 Supported Integrations
 ----------------------
 
-The current release of Security Onion supports the following Elastic integrations:
-
-==============================  ==========================================================
-Elastic Integration             Elastic Documentation
-==============================  ==========================================================
-1password                       https://docs.elastic.co/en/integrations/1password
-apache                          https://docs.elastic.co/en/integrations/apache
-auditd                          https://docs.elastic.co/en/integrations/auditd
-auth0                           https://docs.elastic.co/en/integrations/auth0
-aws                             https://docs.elastic.co/en/integrations/aws
-azure                           https://docs.elastic.co/en/integrations/azure
-barracuda                       https://docs.elastic.co/en/integrations/barracuda
-barracuda_cloudgen_firewall     https://docs.elastic.co/en/integrations/barracuda_cloudgen_firewall
-carbonblack_edr                 https://docs.elastic.co/en/integrations/carbonblack_edr
-cef                             https://docs.elastic.co/en/integrations/cef
-checkpoint                      https://docs.elastic.co/en/integrations/checkpoint
-cisco_asa                       https://docs.elastic.co/en/integrations/cisco_asa
-cisco_duo                       https://docs.elastic.co/en/integrations/cisco_duo
-cisco_ftd                       https://docs.elastic.co/en/integrations/cisco_ftd
-cisco_ios                       https://docs.elastic.co/en/integrations/cisco_ios
-cisco_ise                       https://docs.elastic.co/en/integrations/cisco_ise
-cisco_meraki                    https://docs.elastic.co/en/integrations/cisco_meraki
-cisco_secure_email_gateway      https://docs.elastic.co/en/integrations/cisco_secure_email_gateway
-cisco_umbrella                  https://docs.elastic.co/en/integrations/cisco_umbrella
-citrix_adc                      https://docs.elastic.co/en/integrations/citrix_adc
-citrix_waf                      https://docs.elastic.co/en/integrations/citrix_waf
-cloudflare                      https://docs.elastic.co/en/integrations/cloudflare
-cloudflare_logpush              https://docs.elastic.co/en/integrations/cloudflare_logpush
-crowdstrike                     https://docs.elastic.co/en/integrations/crowdstrike
-darktrace                       https://docs.elastic.co/en/integrations/darktrace
-elasticsearch                   https://docs.elastic.co/en/integrations/elasticsearch
-endpoint                        https://docs.elastic.co/en/integrations/endpoint
-f5_bigip                        https://docs.elastic.co/en/integrations/f5_bigip
-fim                             https://docs.elastic.co/en/integrations/fim
-fireeye                         https://docs.elastic.co/en/integrations/fireeye
-fleet_server                    https://docs.elastic.co/en/integrations/fleet_server
-fortinet                        https://docs.elastic.co/en/integrations/fortinet
-fortinet_fortigate              https://docs.elastic.co/en/integrations/fortinet_fortigate
-gcp                             https://docs.elastic.co/en/integrations/gcp
-github                          https://docs.elastic.co/en/integrations/github
-google_workspace                https://docs.elastic.co/en/integrations/google_workspace
-http_endpoint                   https://docs.elastic.co/en/integrations/http_endpoint
-httpjson                        https://docs.elastic.co/en/integrations/httpjson
-iis                             https://docs.elastic.co/en/integrations/iis
-imperva_cloud_waf               https://docs.elastic.co/en/integrations/imperva_cloud_waf
-journald                        https://docs.elastic.co/en/integrations/journald
-juniper_srx                     https://docs.elastic.co/en/integrations/juniper_srx
-kafka_log                       https://docs.elastic.co/en/integrations/kafka_log
-lastpass                        https://docs.elastic.co/en/integrations/lastpass
-log                             https://docs.elastic.co/en/integrations/log
-m365_defender                   https://docs.elastic.co/en/integrations/m365_defender
-microsoft_defender_endpoint     https://docs.elastic.co/en/integrations/microsoft_defender_endpoint
-microsoft_dhcp                  https://docs.elastic.co/en/integrations/microsoft_dhcp
-microsoft_sqlserver             https://docs.elastic.co/en/integrations/microsoft_sqlserver
-mimecast                        https://docs.elastic.co/en/integrations/mimecast
-mysql                           https://docs.elastic.co/en/integrations/mysql
-:ref:`netflow`                  https://docs.elastic.co/en/integrations/netflow
-nginx                           https://docs.elastic.co/en/integrations/nginx
-o365                            https://docs.elastic.co/en/integrations/o365
-okta                            https://docs.elastic.co/en/integrations/okta
-osquery_manager                 https://docs.elastic.co/en/integrations/osquery_manager
-panw                            https://docs.elastic.co/en/integrations/panw
-:ref:`pfsense`                  https://docs.elastic.co/en/integrations/pfsense
-proofpoint_tap                  https://docs.elastic.co/en/integrations/proofpoint_tap
-pulse_connect_secure            https://docs.elastic.co/en/integrations/pulse_connect_secure
-redis                           https://docs.elastic.co/en/integrations/redis
-sentinel_one                    https://docs.elastic.co/en/integrations/sentinel_one
-snort                           https://docs.elastic.co/en/integrations/snort
-snyk                            https://docs.elastic.co/en/integrations/snyk
-sonicwall_firewall              https://docs.elastic.co/en/integrations/sonicwall_firewall
-sophos                          https://docs.elastic.co/en/integrations/sophos
-sophos_central                  https://docs.elastic.co/en/integrations/sophos_central
-symantec_endpoint               https://docs.elastic.co/en/integrations/symantec_endpoint
-system                          https://docs.elastic.co/en/integrations/system
-tcp                             https://docs.elastic.co/en/integrations/tcp
-tenable_io                      https://docs.elastic.co/en/integrations/tenable_io
-tenable_sc                      https://docs.elastic.co/en/integrations/tenable_sc
-ti_abusech                      https://docs.elastic.co/en/integrations/ti_abusech
-ti_anomali                      https://docs.elastic.co/en/integrations/ti_anomali
-ti_cybersixgill                 https://docs.elastic.co/en/integrations/ti_cybersixgill
-ti_misp                         https://docs.elastic.co/en/integrations/ti_misp
-ti_opencti                      https://docs.elastic.co/en/integrations/ti_opencti
-ti_otx                          https://docs.elastic.co/en/integrations/ti_otx
-ti_rapid7_threat_command        https://docs.elastic.co/en/integrations/ti_rapid7_threat_command
-ti_recordedfuture               https://docs.elastic.co/en/integrations/ti_recordedfuture
-ti_threatq                      https://docs.elastic.co/en/integrations/ti_threatq
-trendmicro                      https://docs.elastic.co/en/integrations/trendmicro
-trend_micro_vision_one          https://docs.elastic.co/en/integrations/trend_micro_vision_one
-udp                             https://docs.elastic.co/en/integrations/udp
-vsphere                         https://docs.elastic.co/en/integrations/vsphere
-windows                         https://docs.elastic.co/en/integrations/windows
-winlog                          https://docs.elastic.co/en/integrations/winlog
-zscaler_zia                     https://docs.elastic.co/en/integrations/zscaler_zia
-zscaler_zpa                     https://docs.elastic.co/en/integrations/zscaler_zpa
-==============================  ==========================================================
+The current release of Security Onion supports all standard Elastic integrations as shown at https://docs.elastic.co/integrations.
 
 .. note::
 
@@ -258,6 +164,8 @@ zscaler_zpa                     https://docs.elastic.co/en/integrations/zscaler_
     - ti_rapid7_threat_command
     - trendmicro
     - trend_micro_vision_one
+
+    Security Onion 2.4.130 supports the remaining Elastic integrations.
 
 More Information
 ----------------
