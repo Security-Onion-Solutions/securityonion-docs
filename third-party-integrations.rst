@@ -36,6 +36,11 @@ Adding a Custom Integration
 
 A custom integration can be added by adding an integration such as the ``Custom Logs`` integration. You can specify various settings relative to the data source and define additional actions to be performed.
 
+Managing Third Party Integration index templates
+------------------------------------------------
+
+Index templates for third party integrations can be managed as described in :ref:`elasticsearch`, but first ``managed_integrations`` must be updated by navigating to :ref:`administration-advanced-settings` --> Configuration --> elasticsearch --> managed_integrations.
+
 Supported Integrations
 ----------------------
 
