@@ -27,6 +27,7 @@ Release History
 - FEATURE: Zeek parsing
 - FIX: API unauthorized vs forbidden response `#14304 <https://github.com/Security-Onion-Solutions/securityonion/issues/14304>`_
 - FIX: Add TLSv1.3 to nginx config `#14252 <https://github.com/Security-Onion-Solutions/securityonion/issues/14252>`_
+- FIX: Alert Overview summary overflows beyond border `#14365 <https://github.com/Security-Onion-Solutions/securityonion/issues/14365>`_
 - FIX: Check for metrics indices with replicas configured causing ES to go YELLOW
 - FIX: Elastic Agent Security Events dashboard should reference user.effective.name `#14325 <https://github.com/Security-Onion-Solutions/securityonion/issues/14325>`_
 - FIX: No license file in repo `#14266 <https://github.com/Security-Onion-Solutions/securityonion/issues/14266>`_

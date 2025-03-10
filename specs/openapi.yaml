@@ -1570,6 +1570,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load5m:
+          description: The node's 5-minute load metric
+          example: 0.96
+          type: number
         load15m:
           description: The node's 15-minute load metric
           example: 1.09
@@ -1577,10 +1581,6 @@ components:
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
-          type: number
-        load5m:
-          description: The node's 5-minute load metric
-          example: 0.96
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
