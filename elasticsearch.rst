@@ -77,7 +77,7 @@ Elasticsearch indices are managed by both the ``so-elasticsearch-indices-delete`
 
 .. tip::
 
-   Starting in Security Onion 2.4.70, you have the option of disabling ``so-elasticsearch-indices-delete`` and just managing indices using ILM. This may be useful for production deployments since ILM provides more granular index management. You can find this option at :ref:`administration` --> Configuration --> elasticsearch --> index_clean.
+   You have the option of disabling ``so-elasticsearch-indices-delete`` and just managing indices using ILM. We recommend this for production deployments since ILM provides more granular index management. You can find this option at :ref:`administration` --> Configuration --> elasticsearch --> index_clean.
    
 .. warning::
    
@@ -157,6 +157,10 @@ Templates
 ---------
 
 Fields are mapped to their appropriate data type using templates. When making changes for parsing, it is necessary to ensure fields are mapped to a data type to allow for indexing, which in turn allows for effective aggregation and searching in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Elasticsearch leverages both component and index templates.
+
+.. note::
+
+   For managing templates for third party integrations, please see the :ref:`third-party-integrations` section.
 
 Component Templates
 ~~~~~~~~~~~~~~~~~~~

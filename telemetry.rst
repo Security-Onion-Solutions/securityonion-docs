@@ -6,7 +6,7 @@ Telemetry
 SOC Telemetry
 -------------
 
-Starting in Security Onion 2.4.70, :ref:`soc` will send telemetry data to Google Analytics. The purpose of this change is to help the Security Onion development team improve the product. Specifically, by knowing which user-interface features are being used, and how the user interacts with the SOC user interface, the development team can better prioritize new features, improvements to the existing user interface, and begin deprecating features that are rarely used. Deprecating unused features will help developers avoid spending their time and effort maintaining and upgrading areas of the product that aren't widely used. This allows more time to be spent on new features and bug fixes, directly benefiting Security Onion users.
+:ref:`soc` can optionally send telemetry data to Google Analytics. This telemetry helps the Security Onion development team improve the product. Specifically, by knowing which user-interface features are being used, and how the user interacts with the SOC user interface, the development team can better prioritize new features, improvements to the existing user interface, and begin deprecating features that are rarely used. Deprecating unused features will help developers avoid spending their time and effort maintaining and upgrading areas of the product that aren't widely used. This allows more time to be spent on new features and bug fixes, directly benefiting Security Onion users.
 
 Configuring
 ~~~~~~~~~~~

@@ -24,7 +24,7 @@ Installing using the Security Onion Pro menu options will create additional part
 /var                   50GB
 /var/log               5GB
 /var/log/audit         2GB
-/var/log/tmp           2GB
+/var/tmp               2GB
 ==============       =========
 
 In addition to the required partitions, using the STIG menu option will also configure the system to use :ref:`fips` mode, and enable :ref:`luks` disk encryption. Both of these options can be used independently of the STIG menu option depending on your requirements.

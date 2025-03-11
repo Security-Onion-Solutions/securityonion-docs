@@ -3,7 +3,7 @@
 Detections
 ==========
 
-Starting in Security Onion 2.4.70, :ref:`soc` includes our Detections interface for managing all of your rules:
+:ref:`soc` includes our Detections interface for managing all of your rules:
 
 - :ref:`nids` rules that get loaded into :ref:`suricata`
 - :ref:`sigma` rules that get loaded into :ref:`elastalert`
@@ -92,7 +92,7 @@ Once you've used one of these methods to reach the detection detail page, you ca
 
 To the left of the Status field are several tabs. 
 
-The OVERVIEW tab displays the Summary, References, and Detection Logic for the detection. Starting in Security Onion 2.4.110, the Summary field may contain an AI summary of the rule if one is available. These AI summaries are pre-generated so nothing is ever sent from your system to generate this information. That also means that AI summaries only exist for our default rules and will not exist for any of your custom rules.
+The OVERVIEW tab displays the Summary, References, and Detection Logic for the detection. The Summary field may contain an AI summary of the rule if one is available. These AI summaries are pre-generated so nothing is ever sent from your system to generate this information. That also means that AI summaries only exist for our default rules and will not exist for any of your custom rules.
 
 .. image:: images/60_detection_nids.png
   :target: _images/60_detection_nids.png

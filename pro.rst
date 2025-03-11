@@ -11,6 +11,8 @@ Starting in Security Onion 2.4.80, licensed Pro users can also enable :ref:`Guar
 
 Starting in Security Onion 2.4.120, licensed Pro users can also enable :ref:`Security Onion Connect API <connect>`.
 
+Starting in Security Onion 2.4.130, licensed Pro users can also access :ref:`aqm`.
+
 .. note::
 
     Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable these features.
@@ -25,3 +27,4 @@ Starting in Security Onion 2.4.120, licensed Pro users can also enable :ref:`Sec
    notifications
    kafka
    connect
+   aqm

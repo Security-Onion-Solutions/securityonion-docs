@@ -42,7 +42,7 @@ When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`
 Local Lookups
 ~~~~~~~~~~~~~
 
-Starting in Security Onion 2.4.120, enabling reverse lookups also enables local lookups. To add your own local lookups, create a CSV file at ``/nsm/custom-mappings/ip-descriptions.csv`` on your Manager and populate the file with IP addresses and descriptions as follows:
+Enabling reverse lookups also enables local lookups. To add your own local lookups, create a CSV file at ``/nsm/custom-mappings/ip-descriptions.csv`` on your Manager and populate the file with IP addresses and descriptions as follows:
 
 ::
 
@@ -86,51 +86,7 @@ Please note that some events may not have GeoIP information and this query would
 Action Menu
 -----------
 
-:ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` have an action menu with several default actions. If you'd like to add your own custom HTTP GET or POST actions, you can go to :ref:`administration` --> Configuration --> soc --> actions. For example, suppose you want to add ``AbuseIPDB`` with URL ``https://www.abuseipdb.com/check/{value}``. Insert the following as the next to last line:
-
-::
-
-  { "name": "AbuseIPDB", "description": "Search for this value at AbuseIPDB", "icon": "fa-external-link-alt", "target": "_blank","links": [ "https://www.abuseipdb.com/check/{value}" ]}
-
-You can also create background actions that don't necessarily result in the user being taken to a new page or tab. For example, if you want to have a new action submit a case to JIRA, you would define it as a background POST action. When it completes the POST, it will show an auto-fading message in SOC telling you that the action completed. Alternatively, instead of the auto-fading message you can have it pop a new tab (or redirect SOC tab) to JIRA. Because of CORS restrictions, SOC can't expect to have visibility into the result of the background POST so there is no attempt to parse the response of any background action, other than the status code/text from the request's response.
-
-Here is an example of a background action that submits a javascript fetch to a remote resource and then optionally shows the user a second URL:
-
-::
-
-  { 
-    "name": "My Background Action", 
-    "description": "Something wonderful!", 
-    "icon": "fa-star", 
-    "target": "_blank", 
-    "links": [
-      "http://somewhere.invalid/?somefield={:client.ip|base64}"
-    ],
-    "background": true, 
-    "method": "POST", 
-    "options": { 
-      "mode": "no-cors", 
-      "headers": { 
-        "header1": "header1value",
-        "header2": "header2value" 
-      }
-    }, 
-    "body": "something={value|base64}",
-    "backgroundSuccessLink": "https://securityonion.net?code={responseCode}&text={responseStatus}",
-    "backgroundFailureLink": "https://google.com?q={error}"
-  }
-
-Note that the above JSON block cannot be pasted as-is into the SOC configuration screen, for the action field. Each custom action must be formatted onto a single line, as was shown in the earlier example. The immediate example above is formatted on multiple lines to make it easier to explain in the documentation below.
-
-The ``options`` object is the same options object that will be passed into the Javascript ``fetch()`` method. You can read more about that at `<https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch>`_.
-
-There may come a time where you are not sure what fields to target for the request body, or you may want to forward events of different types that contain different field names.  This is ideal if you would like to send the event to a case management system, a SOAR platform, or something similar.  In this case, the ``eventJson`` variable can be used to pass the entire event as a JSON string.
-
-To use this variable, construct the body of the request within the action configuration, like so:
-
-``"body": "{eventJson}"``
-
-*NOTE*: You may run into issues using the ``eventJson`` variable, depending on the size of the event and the amount of data being passed in the request.
+:ref:`alerts`, :ref:`dashboards`, and :ref:`hunt` have an action menu with several default actions. If you'd like to add your own custom HTTP GET or POST actions, you can go to :ref:`administration` --> Configuration --> soc --> actions and click the plus sign at the bottom of the list. Then fill out the fields and save the new action.
 
 Escalation
 ----------

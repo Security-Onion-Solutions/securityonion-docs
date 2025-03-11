@@ -19,14 +19,13 @@ At the top of the page, there is an Options menu that allows you to set several 
 Toggles
 ~~~~~~~
 
-The first toggle is labeled ``Temporarily enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. These advanced features are only enabled temporarily so if you navigate away from the page and then return to the page, it will default back to its simplified view.
+The first toggle is labeled ``Enable advanced interface features``. If you enable this option, then the interface will show more advanced features similar to :ref:`dashboards` and :ref:`hunt`. This includes an extra toggle labeled ``Automatically apply filters, groupings, and date ranges``.
 
-The ``Acknowledged`` and ``Escalated`` toggles control what alerts are displayed:
+Enabling the ``Acknowledged`` toggle will only show alerts that have previously been acknowledged by an analyst. 
 
-- Enabling the ``Acknowledged`` toggle will only show alerts that have previously been acknowledged by an analyst. 
-- Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst to :ref:`cases`.
+Enabling the ``Escalated`` toggle will only show alerts that have previously been escalated by an analyst to :ref:`cases`.
 
-Starting in Security Onion 2.4.120, the ``Show Details Panel`` toggle controls the Details panel on the right side. For more information, see the Details Panel section below.
+Finally, the ``Show Details Panel`` toggle controls the Details panel on the right side. For more information, see the Details Panel section below.
 
 Automatic Refresh Interval
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -55,7 +54,7 @@ By default, Alerts searches the last 24 hours. If you want to search a different
 Details Panel
 -------------
 
-Starting in Security Onion 2.4.120, there is a details panel on the right side that shows details for the currently selected alert. This includes an AI summary (if available) and options for tuning the rule that generated the alert. This functionality is part of :ref:`detections` so you can read more in that section. This panel can be disabled under the Options dropdown (see above).
+The details panel on the right side shows details for the currently selected alert. This includes an AI summary (if available) and options for tuning the rule that generated the alert. This functionality is part of :ref:`detections` so you can read more in that section. This panel can be disabled under the Options dropdown (see above).
 
 Data Table
 ----------

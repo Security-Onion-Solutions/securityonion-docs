@@ -86,7 +86,7 @@ Security Onion Console (SOC)
 .. image:: images/62_pcap.png
   :target: _images/62_pcap.png
 
-Starting in Security Onion 2.4.70, :ref:`soc` includes :ref:`detections` which makes it quick and easy to tune your :ref:`nids`, :ref:`sigma`, and :ref:`yara` rules.
+:ref:`soc` also includes :ref:`detections` which makes it quick and easy to tune your :ref:`nids`, :ref:`sigma`, and :ref:`yara` rules.
 
 .. image:: images/57_detections.png
   :target: _images/57_detections.png

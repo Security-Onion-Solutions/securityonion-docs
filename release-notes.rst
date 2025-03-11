@@ -6,14 +6,46 @@ Release Notes
 Known Issues
 ~~~~~~~~~~~~
 
-- SOC Light Mode Icon Colors `#14237 <https://github.com/Security-Onion-Solutions/securityonion/issues/14237>`_
-- SOC PCAP column headers hidden from view `#14234 <https://github.com/Security-Onion-Solutions/securityonion/issues/14234>`_
-- SOC Alerts Column Sorting `#14242 <https://github.com/Security-Onion-Solutions/securityonion/issues/14242>`_
-- Custom SSL Certs Need TLSv1.3 `#14252 <https://github.com/Security-Onion-Solutions/securityonion/issues/14252>`_
-- SOC PCAP Transcript Context Menu `#14294 <https://github.com/Security-Onion-Solutions/securityonion/issues/14294>`_
+For all known issues, please see https://github.com/Security-Onion-Solutions/securityonion/issues.
 
 Release History
 ~~~~~~~~~~~~~~~
+
+2.4.130 [20250311] Changes
+--------------------------
+
+- FEATURE: Add a pop-up calendar for the start and end time in the PCAP interface `#14115 <https://github.com/Security-Onion-Solutions/securityonion/issues/14115>`_
+- FEATURE: Add notes to SOC Config about Elasticsearch ILM rollover `#14353 <https://github.com/Security-Onion-Solutions/securityonion/issues/14353>`_
+- FEATURE: Add sankey chart to Elastic Agent API dashboard to show relationship between process.name and process.Ext.api.name `#14339 <https://github.com/Security-Onion-Solutions/securityonion/issues/14339>`_
+- FEATURE: Additional licensing enhancements
+- FEATURE: Allow query cancellation from Security Onion Console `#4161 <https://github.com/Security-Onion-Solutions/securityonion/issues/4161>`_
+- FEATURE: Allow users to switch Alerts to advanced interface permanently `#14348 <https://github.com/Security-Onion-Solutions/securityonion/issues/14348>`_
+- FEATURE: Enhance config UI Element capabilities
+- FEATURE: Improve management of ES index templates for integrations
+- FEATURE: Review ES field mapping conflicts
+- FEATURE: Use new annotations to improve configuration interface `#14209 <https://github.com/Security-Onion-Solutions/securityonion/issues/14209>`_
+- FEATURE: Zeek parsing
+- FIX: API unauthorized vs forbidden response `#14304 <https://github.com/Security-Onion-Solutions/securityonion/issues/14304>`_
+- FIX: Add TLSv1.3 to nginx config `#14252 <https://github.com/Security-Onion-Solutions/securityonion/issues/14252>`_
+- FIX: Alert Overview summary overflows beyond border `#14365 <https://github.com/Security-Onion-Solutions/securityonion/issues/14365>`_
+- FIX: Check for metrics indices with replicas configured causing ES to go YELLOW
+- FIX: Elastic Agent Security Events dashboard should reference user.effective.name `#14325 <https://github.com/Security-Onion-Solutions/securityonion/issues/14325>`_
+- FIX: No license file in repo `#14266 <https://github.com/Security-Onion-Solutions/securityonion/issues/14266>`_
+- FIX: Reduce so-setup and soup console output `#14330 <https://github.com/Security-Onion-Solutions/securityonion/issues/14330>`_
+- FIX: SOC Actions for process.entity_id value must be quoted `#14311 <https://github.com/Security-Onion-Solutions/securityonion/issues/14311>`_
+- FIX: SOC Alerts Column Sorting `#14242 <https://github.com/Security-Onion-Solutions/securityonion/issues/14242>`_
+- FIX: SOC Detections table showing incorrect numbers `#14317 <https://github.com/Security-Onion-Solutions/securityonion/issues/14317>`_
+- FIX: SOC Grid Members improve REVIEW button in light mode `#14332 <https://github.com/Security-Onion-Solutions/securityonion/issues/14332>`_
+- FIX: SOC Light Mode Icon Colors `#14237 <https://github.com/Security-Onion-Solutions/securityonion/issues/14237>`_
+- FIX: SOC PCAP Transcript Context Menu `#14294 <https://github.com/Security-Onion-Solutions/securityonion/issues/14294>`_
+- FIX: SOC PCAP column headers hidden from view `#14234 <https://github.com/Security-Onion-Solutions/securityonion/issues/14234>`_
+- FIX: SOC logging 404 requests with url field that should be a string `#14293 <https://github.com/Security-Onion-Solutions/securityonion/issues/14293>`_
+- FIX: Verify geoip database
+- FIX: pfSense Suricata integration
+- FIX: so-import-pcap not working on STIG installation
+- UPGRADE: Elastic Fleet to support Elastic Defend on macOS 15.x (Sequoia) `#14010 <https://github.com/Security-Onion-Solutions/securityonion/issues/14010>`_
+- UPGRADE: Elastic to 8.17.3 `#14356 <https://github.com/Security-Onion-Solutions/securityonion/issues/14356>`_
+- UPGRADE: SOC Golang to 1.24 `#14230 <https://github.com/Security-Onion-Solutions/securityonion/issues/14230>`_
 
 2.4.120 [20250212] Changes
 --------------------------

@@ -74,7 +74,7 @@ You can configure automatic OS updates by going to :ref:`administration` --> Con
 Holding OS Updates
 ~~~~~~~~~~~~~~~~~~
 
-Starting in Security Onion 2.4.120, there is a new setting that you can use if there are certain packages that you would like to prevent from being upgraded automatically. This is commonly referred to as "locking" or "holding" packages. The most frequent use case is holding the kernel to prevent frequent system reboots. To hold a package, add the package name to the ``hold`` list in :ref:`administration` --> Configuration --> versionlock --> hold.
+If you would like to prevent certain packages from being upgraded automatically (commonly referred to as "locking" or "holding" packages), then you can do that via the ``hold`` setting. The most frequent use case is holding the kernel to prevent frequent system reboots. To hold a package, add the package name to the ``hold`` list in :ref:`administration` --> Configuration --> versionlock --> hold.
 
 .. image:: images/config-item-versionlock.png
   :target: _images/config-item-versionlock.png
@@ -87,7 +87,7 @@ Local Configurations
 Detections
 ----------
 
-Starting in Security Onion 2.4.70, there is a new :ref:`detections` interface. To prepare for migration to :ref:`detections`, ``soup`` will do the following:
+If you are upgrading from a version older than 2.4.70, ``soup`` will do the following to prepare for migration to :ref:`detections`:
 
 - Playbook Plays will be backed up to ``/nsm/backup/detections-migration/`` and any active Elastalert rules will be backed up and removed.
 - Suricata tuning configurations will be backed to ``/nsm/backup/detections-migration/`` and any thresholds will be migrated over to :ref:`detections`.

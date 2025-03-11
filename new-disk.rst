@@ -12,7 +12,7 @@ If you ever need to add a new disk to expand your ``/nsm`` partition, there are 
 Recommend Method: LVM (Logical Volume Management)
 -------------------------------------------------
 
-If your disk is partitioned using LVM (the default for our Security Onion ISO image), then you should be able to use LVM to add new disk space to your LVM partitions.
+If your disk is partitioned using LVM (the default for our Security Onion ISO image), then you should be able to use LVM to add new disk space to your LVM partitions. For more information about LVM, please see https://docs.oracle.com/en/operating-systems/oracle-linux/9/stordev/stordev-WorkingWithLogicalVolumeManager.html#using-lvm.
 
 Unsupported Methods
 -------------------
