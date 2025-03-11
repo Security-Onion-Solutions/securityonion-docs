@@ -159,7 +159,8 @@ Templates
 Fields are mapped to their appropriate data type using templates. When making changes for parsing, it is necessary to ensure fields are mapped to a data type to allow for indexing, which in turn allows for effective aggregation and searching in :ref:`dashboards`, :ref:`hunt`, and :ref:`kibana`. Elasticsearch leverages both component and index templates.
 
 .. note::
-        | For managing third party integrations index templates, please see :ref:`third-party-integrations`
+
+   For managing templates for third party integrations, please see the :ref:`third-party-integrations` section.
 
 Component Templates
 ~~~~~~~~~~~~~~~~~~~
