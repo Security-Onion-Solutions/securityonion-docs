@@ -3,6 +3,8 @@
 ARP Visibility
 ==============
 
+Most enterprise deployments are monitoring network traffic from a choke point where the only ARP/MAC traffic seen would be firewalls and routers and not actual endpoint devices. However, if you are monitoring network traffic from a location where you can view actual endpoint ARP traffic, then you can enable ARP/MAC ingestion as follows.
+
 By default, our :ref:`zeek` configuration should be writing ARP and MAC data to ``/nsm/zeek/logs/current/ecat_arp_info.log``. However, this log is not ingested into :ref:`elasticsearch` by default.
 
 To ingest the data into :ref:`elasticsearch`, go to your :ref:`zeek` excluded configuration as shown in the :ref:`zeek` configuration section, remove ``ecat_arp_info`` from the list, and save the configuration. Wait 15 minutes for the configuration to take effect or force it immediately.
