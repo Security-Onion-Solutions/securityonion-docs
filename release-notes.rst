@@ -6,6 +6,8 @@ Release Notes
 Known Issues
 ~~~~~~~~~~~~
 
+- Creating a PCAP job with the new popup calendar fails to retrieve PCAP `#14387 <https://github.com/Security-Onion-Solutions/securityonion/issues/14387>`_
+
 For all known issues, please see https://github.com/Security-Onion-Solutions/securityonion/issues.
 
 Release History
