@@ -13,6 +13,25 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.140 [20250320] Changes
+--------------------------
+
+- FEATURE: Allow moving configuration entries up or down
+- FIX: Adding new user with non-analyst rule will default to analyst role `#14395 <https://github.com/Security-Onion-Solutions/securityonion/issues/14395>`_
+- FIX: Allow single entry for Zeek file extracts
+- FIX: AQM menu option should only be visible to superusers when Pro license is applied `#14393 <https://github.com/Security-Onion-Solutions/securityonion/issues/14393>`_
+- FIX: Creating a PCAP job with the new popup calendar fails to retrieve PCAP `#14387 <https://github.com/Security-Onion-Solutions/securityonion/issues/14387>`_
+- FIX: Detection title under Alert Details panel overflows beyond border `#14369 <https://github.com/Security-Onion-Solutions/securityonion/issues/14369>`_
+- FIX: Grid Configuration Zoom Level `#14366 <https://github.com/Security-Onion-Solutions/securityonion/issues/14366>`_
+- FIX: limited-analyst and limited-auditor roles receive 403 error upon login `#14392 <https://github.com/Security-Onion-Solutions/securityonion/issues/14392>`_
+- FIX: Pro license message invisible in light mode `#14382 <https://github.com/Security-Onion-Solutions/securityonion/issues/14382>`_
+- FIX: Unable to add more than one Suricata tuning rule without navigating away `#14374 <https://github.com/Security-Onion-Solutions/securityonion/issues/14374>`_
+- FIX: Unable to load YARA rules with multiline comments `#14400 <https://github.com/Security-Onion-Solutions/securityonion/issues/14400>`_
+- FIX: Update global.pipeline annotation
+- FIX: Zeek ldap_search missing observer.name `#14370 <https://github.com/Security-Onion-Solutions/securityonion/issues/14370>`_
+- UPGRADE: SOC golang.org/x/net to 0.36.0 `#14399 <https://github.com/Security-Onion-Solutions/securityonion/issues/14399>`_
+- UPGRADE: Suricata to 7.0.9 `#14401 <https://github.com/Security-Onion-Solutions/securityonion/issues/14401>`_
+
 2.4.130 [20250311] Changes
 --------------------------
 
