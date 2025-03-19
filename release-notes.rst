@@ -15,7 +15,7 @@ Release History
 --------------------------
 
 - FEATURE: Allow moving configuration entries up or down
-- FIX: Adding new user with non-analyst rule will default to analyst role `#14395 <https://github.com/Security-Onion-Solutions/securityonion/issues/14395>`_
+- FIX: Adding new user with non-analyst role will default to analyst role `#14395 <https://github.com/Security-Onion-Solutions/securityonion/issues/14395>`_
 - FIX: Allow single entry for Zeek file extracts
 - FIX: AQM menu option should only be visible to superusers when Pro license is applied `#14393 <https://github.com/Security-Onion-Solutions/securityonion/issues/14393>`_
 - FIX: Creating a PCAP job with the new popup calendar fails to retrieve PCAP `#14387 <https://github.com/Security-Onion-Solutions/securityonion/issues/14387>`_
