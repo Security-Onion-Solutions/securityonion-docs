@@ -24,6 +24,8 @@ Release History
 - FIX: limited-analyst and limited-auditor roles receive 403 error upon login `#14392 <https://github.com/Security-Onion-Solutions/securityonion/issues/14392>`_
 - FIX: Pro license message invisible in light mode `#14382 <https://github.com/Security-Onion-Solutions/securityonion/issues/14382>`_
 - FIX: Unable to add more than one Suricata tuning rule without navigating away `#14374 <https://github.com/Security-Onion-Solutions/securityonion/issues/14374>`_
+- FIX: Unable to extract PCAP from imported PCAPs when using Suricata for PCAP `#14426 <https://github.com/Security-Onion-Solutions/securityonion/issues/14426>`_
+- FIX: Unable to import PCAP on remote sensor nodes via SOC UI `#14424 <https://github.com/Security-Onion-Solutions/securityonion/issues/14424>`_
 - FIX: Unable to load YARA rules with multiline comments `#14400 <https://github.com/Security-Onion-Solutions/securityonion/issues/14400>`_
 - FIX: Update global.pipeline annotation
 - FIX: Zeek ldap_search missing observer.name `#14370 <https://github.com/Security-Onion-Solutions/securityonion/issues/14370>`_
