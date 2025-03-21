@@ -11,7 +11,7 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
-2.4.140 [20250320] Changes
+2.4.140 [20250324] Changes
 --------------------------
 
 - FEATURE: Allow moving configuration entries up or down
