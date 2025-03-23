@@ -30,7 +30,6 @@ Release History
 - FIX: Update global.pipeline annotation
 - FIX: Zeek ldap_search missing observer.name `#14370 <https://github.com/Security-Onion-Solutions/securityonion/issues/14370>`_
 - UPGRADE: SOC golang.org/x/net to 0.36.0 `#14399 <https://github.com/Security-Onion-Solutions/securityonion/issues/14399>`_
-- UPGRADE: Salt to 3006.10 `#14414 <https://github.com/Security-Onion-Solutions/securityonion/issues/14414>`_
 - UPGRADE: Suricata to 7.0.9 `#14401 <https://github.com/Security-Onion-Solutions/securityonion/issues/14401>`_
 - UPGRADE: Zeek to 7.0.6 `#14421 <https://github.com/Security-Onion-Solutions/securityonion/issues/14421>`_
 
