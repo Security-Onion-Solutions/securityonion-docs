@@ -171,6 +171,13 @@ See the table below which explains the specific Security Onion privileges grante
       -
       - X
       - 
+    * - Manage Active Queries
+      - X
+      -
+      -
+      -
+      -
+ 
 .. note::
 
     Both ``auditor`` and ``limited-auditor`` roles can interact with previously created PCAPs if they were created before a user was converted to that role (e.g. user was downgraded from ``analyst`` to ``auditor``). This is denoted by **O** in the above table.
@@ -396,6 +403,10 @@ The available low-level Security Onion privileges are listed in the table below:
       - View all users' roles
     * - *roles/write*
       - Change any user's role
+    * - *queries/delete*
+      - Cancel active queries
+    * - *queries/read*
+      - View active queries
     * - *users/read*
       - View all users
     * - *users/write*
@@ -445,6 +456,10 @@ These discrete privileges are then collected into privilege groups as defined be
       - *nodes/read*, *nodes/write*
     * - node-monitor
       - *nodes/read*
+    * - query-admin
+      - *queries/read*, *queries/delete*
+    * - query-monitor
+      - *queries/read*
     * - user-admin
       - *roles/read*, *roles/write*, *users/read*, *users/write*, *users/delete*
     * - user-monitor

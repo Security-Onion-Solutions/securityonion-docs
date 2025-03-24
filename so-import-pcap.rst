@@ -18,7 +18,11 @@ so-import-pcap
 Configuration
 -------------
       
-so-import-pcap requires you to run through Setup and choose a configuration that supports so-import-pcap. This includes Import Node and other nodes that include sensor services like Eval and Standalone. The quickest and easiest option is to choose Import Node which gives you the minimal services necessary to import a pcap.
+so-import-pcap requires you to run through Setup and choose a configuration that supports so-import-pcap. This includes Import Node and other nodes that include sensor services like Eval and Standalone. The quickest and easiest option is to choose Import Node which gives you the minimal services necessary to import a pcap. 
+
+.. warning::
+
+        Please note that so-import-pcap is not supported on heavy nodes.
 
 Usage
 -----
