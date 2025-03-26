@@ -11,6 +11,14 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.141 [20250327] Changes
+--------------------------
+
+- FIX: Clicking Absolute DateRange Drop Down Refreshes the Page `#14450 <https://github.com/Security-Onion-Solutions/securityonion/issues/14450>`_
+- FIX: Config toggles fail to save if original value is raw boolean `#14449 <https://github.com/Security-Onion-Solutions/securityonion/issues/14449>`_
+- FIX: Dark mode disabled toggles difficult to read `#14454 <https://github.com/Security-Onion-Solutions/securityonion/issues/14454>`_
+- FIX: Improve handling of Elastic Fleet integration upgrades `#14455 <https://github.com/Security-Onion-Solutions/securityonion/issues/14455>`_
+
 2.4.140 [20250324] Changes
 --------------------------
 
