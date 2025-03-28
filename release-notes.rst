@@ -11,7 +11,7 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
-2.4.141 [20250327] Changes
+2.4.141 [20250331] Changes
 --------------------------
 
 - FIX: Clicking Absolute DateRange Drop Down Refreshes the Page `#14450 <https://github.com/Security-Onion-Solutions/securityonion/issues/14450>`_
