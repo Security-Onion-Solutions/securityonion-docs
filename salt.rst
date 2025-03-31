@@ -48,11 +48,6 @@ Configuration
 
 Many of the options that are configurable in Security Onion are done by going to :ref:`administration` and then Configuration.
 
-Salt Minion Startup Options
----------------------------
-
-Currently, the salt-minion service startup is delayed by 30 seconds. This was implemented to avoid some issues that we have seen regarding Salt states that used the ip_interfaces grain to grab the management interface IP.
-
 Diagnostic Logs
 ---------------
 

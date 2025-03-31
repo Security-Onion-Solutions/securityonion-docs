@@ -5,6 +5,10 @@ Third Party Integrations
 
 In addition to :ref:`network` and :ref:`host`, you may want to pull in data from other third party systems. You can do that via Elastic integrations which support many of the most common products and services. You can read more about Elastic integrations at https://docs.elastic.co/integrations.
 
+.. warning::
+
+        Third party integrations are provided by Elastic and are not specifically tested by the Security Onion team. Support provided by the Security Onion team for third party integrations is considered best-effort.
+
 Adding an Integration
 ---------------------
 
