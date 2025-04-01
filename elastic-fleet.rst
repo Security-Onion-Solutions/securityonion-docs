@@ -5,15 +5,14 @@ Elastic Fleet
 
 :ref:`soc` includes a link on the sidebar that takes you to the Fleet page inside :ref:`kibana`.
 
-Configuration
--------------
-
 Elastic Fleet is pre-configured during Security Onion setup. If you need to make changes to the configuration, you can do so via the Fleet page in :ref:`kibana` as detailed below.
+
+The Fleet page has multiple tabs across the top: Agents, Agent policies, Enrollment tokens, Uninstall tokens, Data streams, and Settings. Each of these tabs is described below.
 
 Agents
 ------
 
-This section displays registered Elastic agents and allows the user to add additional agents. For more information about Elastic agents, please see the :ref:`elastic-agent` section.
+The Agents tab displays registered Elastic agents.
 
 To view agent details, click the ``Host`` name. 
 
@@ -26,9 +25,18 @@ By default, Elastic Agent is installed on every Security Onion grid node. As a r
         We do not recommend removing policy settings for Security Onion grid node agents.
 
 Adding Agents
--------------
+~~~~~~~~~~~~~
 
 To add a new agent to your deployment, see the :ref:`elastic-agent` section.
+
+Upgrading Agents
+~~~~~~~~~~~~~~~~
+
+Fleet automatically checks to see if agents are the latest version. If not, agents will display ``Upgrade available``. If you would like to upgrade an agent, click the ``Actions`` menu on the right side and select the ``Upgrade agent`` option. You will then have the opportunity to select which version to upgrade to. Please choose the version number that matches the version of the Elastic stack that you are currently running. For example, if you are currently running Elastic 8.17.3 then you should select the 8.17.3 agent version.
+
+.. warning::
+
+        If you try to upgrade to a version of the agent that is newer than the version of your Elastic stack, then you may run into errors. For example, if you are currently running Elastic 8.17.3 and try to upgrade to agent version 8.17.4 or 9.0.0 then you may run into errors.
 
 Agent Policies
 --------------
@@ -123,11 +131,6 @@ The ``Windows`` integration collects the following logs from the endpoint, where
         - Microsoft-Windows-Powershell/Operational channel
         - Microsoft-Windows-Sysmon/Operational channel
 
-Integrations
-------------
-
-Elastic Fleet supports integrations and you can read more in the :ref:`third-party-integrations` section.
-
 Enrollment Tokens
 -----------------
 
@@ -164,6 +167,11 @@ If you want more granular control over which Fleet Server an Agent will send log
 - The first option is to use firewall rules to only allow certain agents. Suppose you have two Fleet Server Nodes, one at 192.168.55.25 and the other at 192.168.58.25. If you want your endpoints in the 192.168.58.0/24 subnet to only connect to the Fleet server at 192.168.58.25, you would add custom firewall rules via :ref:`administration` --> Configuration --> firewall --> hostgroups --> elastic_agent_endpoint. Select the 192.168.58.25 Fleet Node and add ``192.168.58.0/24``. Endpoints in that subnet will still attempt to connect to the Fleet Server Node at 192.168.55.25, but since it is not accessible (no firewall rules that enable communication), they will connect to the Fleet Node at 192.168.58.25.
 
 - The second option is to purchase an Elastic license. A paid Elastic license offers the ability to customize different Outputs per Agent Policy.
+
+Integrations
+------------
+
+Elastic Fleet supports integrations and you can read more in the :ref:`third-party-integrations` section.
 
 Custom FQDN URL
 ---------------
