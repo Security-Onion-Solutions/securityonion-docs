@@ -75,13 +75,9 @@ Index Management
 
 Elasticsearch indices are managed by both the ``so-elasticsearch-indices-delete`` utility and Index Lifecycle Management (ILM). 
 
-.. tip::
-
-   You have the option of disabling ``so-elasticsearch-indices-delete`` and just managing indices using ILM. We recommend this for production deployments since ILM provides more granular index management. You can find this option at :ref:`administration` --> Configuration --> elasticsearch --> index_clean.
-   
 .. warning::
    
-   If you disable ``so-elasticsearch-indices-delete`` via the index_clean setting, then you will need to ensure that ILM is configured properly to delete indices before disk usage reaches the Elasticsearch watermark setting. Otherwise, Elasticsearch may stop ingesting new data.
+   ``so-elasticsearch-indices-delete`` is primarily designed for single-node deployments (IMPORT, EVAL, and STANDALONE). Running it on a multi-node deployment with one or more search nodes has the possibility of getting into a corner case state where more data is deleted than intended. Because of this, we will most likely disable this script on multi-node deployments in a future release. In the meantime, if you have a multi-node deployment then we HIGHLY recommend that you go ahead and manually disable this script. You can find this setting at :ref:`administration` --> Configuration --> elasticsearch --> index_clean. You will also need to ensure that ILM is configured properly to delete indices before disk usage reaches the Elasticsearch watermark setting. Otherwise, Elasticsearch may stop ingesting new data.
 
 so-elasticsearch-indices-delete
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -102,15 +98,20 @@ Index Lifecycle Management (ILM) manages the following:
 
 Time-based index deletion is based on the ``min_age`` setting within the global policy or the individual policy for the index itself. Please note that size-based deletion via ``so-elasticsearch-indices-delete`` takes priority over time-based deletion, as disk usage may reach ``retention_pct`` and indices will be deleted before the ``min_age`` value is reached.
 
-ILM settings can be found by navigating to :ref:`administration` --> Configuration --> elasticsearch --> index_settings. 
+ILM settings can be found by navigating to :ref:`administration` --> Configuration --> elasticsearch --> index_settings: 
 
-To edit the global policy that applies to ALL indices, navigate to global_overrides --> policy --> phases and there you will see the cold, delete, hot, and warm ILM phases.
+- To edit the global policy that applies to ALL indices, navigate to global_overrides --> policy --> phases and there you will see the cold, delete, hot, and warm ILM phases.
+- To edit the policy for an individual index, first click the ``Options`` menu at the top of the page and then enable the ``Show advanced settings`` option. Then navigate to $index --> policy --> phases. There you will see the cold, delete, hot, and warm ILM phases for that particular index.
+- It's important to note that settings like ``min_age`` are calculated relative to the rollover date (NOT the original creation date of the index). For example, if you have an index that is set to rollover after 30 days and delete ``min_age`` set to 30 then there will be 30 days from index creation to rollover and then an additional 30 days before deletion.
+- When modifying ILM settings, note that some settings will only take effect after a new index is created.
 
-To edit the policy for an individual index, first click the ``Options`` menu at the top of the page and then enable the ``Show advanced settings`` option. Then navigate to $index --> policy --> phases. There you will see the cold, delete, hot, and warm ILM phases for that particular index.
+Now that you have an overview of all that ILM can do, let's look at ILM deletion in more detail. If you have a multi-node deployment, then we HIGHLY recommend disabling ``so-elasticsearch-indices-delete`` script as mentioned in the warning above and then configuring ILM deletion to ensure that old data is deleted before Elasticsearch reaches its watermark setting. Here's a very high level overview of that process:
 
-It's important to note that settings like ``min_age`` are calculated relative to the rollover date (NOT the original creation date of the index). For example, if you have an index that is set to rollover after 30 days and delete ``min_age`` set to 30 then there will be 30 days from index creation to rollover and then an additional 30 days before deletion.
+#. Determine your data retention requirements. This might be 1 week, 1 month, or more. It may also be different for different kinds of data.
+#. Determine your current daily ingestion. One way to do this is to go to :ref:`kibana`, select the menu on the left, select Stack Management, and then go to Index Management to see what your current indices look like.
+#. Now that you have your data retention requirements and current daily ingestion, use those values to determine your storage requirements. Keep in mind that Elasticsearch's default watermark setting of 80% means that you will want to keep 20% of your disk free and this will need to be accounted for in your storage requirements. If your storage requirements are greater than the amount of storage that you have available, then you may need to add additional search nodes.
+#. Configure ILM Deletion to delete logs before hitting the Elasticsearch 80% watermark. This can be done globally for all indices by going to :ref:`administration` -> Configuration -> elasticsearch > index_settings > global_overrides > policy > phases > delete > min_age. Again, keep in mind that the ``min_age`` setting is calculated relative to the index rollover date and NOT the original creation date of the index. If you want to specify different deletion values for different kinds of data, then you can enable advanced settings and then drill into specific policies to do so.
 
-When modifying ILM settings, note that some settings will only take effect after a new index is created.
 
 .. note::
 
