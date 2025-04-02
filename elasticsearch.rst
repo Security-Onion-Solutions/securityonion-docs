@@ -105,7 +105,7 @@ ILM settings can be found by navigating to :ref:`administration` --> Configurati
 - It's important to note that settings like ``min_age`` are calculated relative to the rollover date (NOT the original creation date of the index). For example, if you have an index that is set to rollover after 30 days and delete ``min_age`` is set to 30 then there will be 30 days from index creation to rollover and then an additional 30 days before deletion.
 - When modifying ILM settings, note that some settings will only take effect after a new index is created.
 
-Now that you have an overview of all that ILM can do, let's look at ILM deletion in more detail. If you have a multi-node deployment, then we HIGHLY recommend disabling ``so-elasticsearch-indices-delete`` script as mentioned in the warning above and then configuring ILM deletion to ensure that old data is deleted before Elasticsearch reaches its watermark setting. Here's a very high level overview of that process:
+Now that you have an overview of all that ILM can do, let's look at ILM deletion in more detail. If you have a multi-node deployment, then we HIGHLY recommend disabling the ``so-elasticsearch-indices-delete`` script as mentioned in the warning above and then configuring ILM deletion to ensure that old data is deleted before Elasticsearch reaches its watermark setting. Here's a very high level overview of that process:
 
 #. Determine your data retention requirements. This might be 1 week, 1 month, or more. It may also be different for different kinds of data.
 #. Determine your current daily ingestion. One way to do this is to go to :ref:`kibana`, select the menu on the left, select Stack Management, and then go to Index Management to see what your current indices look like.
