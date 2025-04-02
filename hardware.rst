@@ -18,21 +18,21 @@ Minimum Specs
 -------------
 
 
-================       ====== ===== ========= ======   
- Node Type              CPUs   RAM   Storage   NICs  
-================       ====== ===== ========= ======     
-Import                    2    4GB    50GB      1
-Eval                      4    8GB    200GB     2
-Standalone                4    16GB   200GB     2
-Manager                   4    16GB   200GB     1
-ManagerSearch             8    16GB   200GB     1
-Search node               4    16GB   200GB     1
-Sensor                    4    12GB   200GB     2
-Heavy node                4    16GB   200GB     2
-IDH node                  2    1GB    12GB      1
-Fleet node                4    4GB    200GB     1
-Receiver node             2    8GB    200GB     1
-================       ====== ===== ========= ======   
+================       =========== ===== ========= ======   
+ Node Type              CPU cores   RAM   Storage   NICs  
+================       =========== ===== ========= ======   
+Import                    2         4GB    50GB      1
+Eval                      4         8GB    200GB     2
+Standalone                4         24GB   200GB     2
+Manager                   4         16GB   200GB     1
+ManagerSearch             8         16GB   200GB     1
+Search node               4         16GB   200GB     1
+Sensor                    4         12GB   200GB     2
+Heavy node                4         16GB   200GB     2
+IDH node                  2         1GB    12GB      1
+Fleet node                4         4GB    200GB     1
+Receiver node             2         8GB    200GB     1
+================       =========== ===== ========= ======   
 
 .. warning::
 
@@ -90,7 +90,7 @@ Please see the :ref:`architecture` section for detailed deployment scenarios.
 Standalone Deployments
 ----------------------
 
-In a standalone deployment, the manager components and the sensor components all run on a single box so your hardware requirements will reflect that. You'll need at minimum 16GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 16GB RAM, you will need swap space to avoid issues. We recommend a minimum of 24GB of RAM if you plan on monitoring even a small amount of network traffic. More network traffic means higher hardware requirements.
+In a standalone deployment, the manager components and the sensor components all run on a single box so your hardware requirements will reflect that. You'll need at minimum 24GB RAM, 4 CPU cores, and 200GB storage. At the bare minimum of 24GB RAM, you may need swap space to avoid issues. Consider 32GB of RAM or more if you plan on monitoring even a small amount of network traffic. More network traffic means higher hardware requirements.
 
 This deployment type is recommended for evaluation purposes, POCs (proof-of-concept) and small to medium size single sensor deployments. Although you can deploy Security Onion in this manner, it is recommended that you separate the backend components and sensor components.
 
