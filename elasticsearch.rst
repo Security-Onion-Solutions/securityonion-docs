@@ -75,6 +75,10 @@ Index Management
 
 Elasticsearch indices are managed by both the ``so-elasticsearch-indices-delete`` utility and Index Lifecycle Management (ILM). 
 
+.. note::
+
+   Check out our Index Lifecycle Management video at https://youtu.be/Y6HVein7nP8!
+
 .. warning::
    
    ``so-elasticsearch-indices-delete`` is primarily designed for single-node deployments (IMPORT, EVAL, and STANDALONE). Running it on a multi-node deployment with one or more search nodes has the possibility of getting into a corner case state where more data is deleted than intended. Because of this, we will most likely disable this script on multi-node deployments in a future release. In the meantime, if you have a multi-node deployment then we HIGHLY recommend that you go ahead and manually disable this script. You can find this setting at :ref:`administration` --> Configuration --> elasticsearch --> index_clean. You will also need to ensure that ILM is configured properly to delete indices before disk usage reaches the Elasticsearch watermark setting. Otherwise, Elasticsearch may stop ingesting new data.
