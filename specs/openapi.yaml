@@ -127,6 +127,13 @@ components:
         viewEnabled:
           type: boolean
       type: object
+    model.AlertsStatus:
+      properties:
+        newCount:
+          description: The number of new alerts (currently unused)
+          example: 132
+          type: integer
+      type: object
     model.Artifact:
       properties:
         artifactType:
@@ -859,6 +866,15 @@ components:
         viewEnabled:
           type: boolean
       type: object
+    model.DetectionsStatus:
+      properties:
+        elastalert:
+          $ref: '#/components/schemas/model.EngineState'
+        strelka:
+          $ref: '#/components/schemas/model.EngineState'
+        suricata:
+          $ref: '#/components/schemas/model.EngineState'
+      type: object
     model.EngineName:
       description: The engine that processes this detection
       type: string
@@ -866,6 +882,40 @@ components:
       - EngineNameSuricata
       - EngineNameStrelka
       - EngineNameElastAlert
+    model.EngineState:
+      description: The state of the Strelka detection engine
+      properties:
+        importing:
+          description: True if new detections are currently being imported into the
+            engine.
+          example: false
+          type: boolean
+        integrityFailure:
+          description: True if this engine has failed the detection integrity check.
+            This indicates a mismatch between running detections and the backend detection
+            store.
+          example: false
+          type: boolean
+        migrating:
+          description: True if the detections are currently being migrated from an
+            older release.
+          example: false
+          type: boolean
+        migrationFailure:
+          description: True if there was a migration failure during the most recent
+            migration attempt.
+          example: false
+          type: boolean
+        syncFailure:
+          description: True if a failure occurred during the most recent sync attempt.
+          example: false
+          type: boolean
+        syncing:
+          description: True if the detection engine is currently syncing the backend
+            detection store with the running detection process.
+          example: true
+          type: boolean
+      type: object
     model.EventAckCriteria:
       properties:
         acknowledge:
@@ -1207,6 +1257,27 @@ components:
         maxUploadSize:
           type: integer
         staleMetricsMs:
+          type: integer
+      type: object
+    model.GridStatus:
+      properties:
+        awaitingRebootNodeCount:
+          description: The number of nodes that are awaiting reboot for kernel updates
+          example: 1
+          type: integer
+        eps:
+          description: The current Events Per Second ingest rate for this grid
+          example: 2311
+          type: integer
+        totalNodeCount:
+          description: The total number of nodes that have checked-in to the grid
+            manager since the manager SOC process was last restarted
+          example: 4
+          type: integer
+        unhealthyNodeCount:
+          description: The number of nodes that are not in a healthy state, typically
+            due to a fault.
+          example: 0
           type: integer
       type: object
     model.HuntingAction:
@@ -1570,10 +1641,6 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
-        load5m:
-          description: The node's 5-minute load metric
-          example: 0.96
-          type: number
         load15m:
           description: The node's 15-minute load metric
           example: 1.09
@@ -1581,6 +1648,10 @@ components:
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
+          type: number
+        load5m:
+          description: The node's 5-minute load metric
+          example: 0.96
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -2159,6 +2230,19 @@ components:
         order:
           description: 'The direction of the sort: asc, desc'
           example: asc
+          type: string
+      type: object
+    model.Status:
+      properties:
+        alerts:
+          $ref: '#/components/schemas/model.AlertsStatus'
+        detections:
+          $ref: '#/components/schemas/model.DetectionsStatus'
+        grid:
+          $ref: '#/components/schemas/model.GridStatus'
+        gridId:
+          description: The grid ID for this status update, can be '' for local grids
+          example: my_subgrid_a
           type: string
       type: object
     model.Subgrid:
@@ -4194,6 +4278,32 @@ paths:
       - bearer:
         - nodes/read
       summary: Get Grid Nodes
+      tags:
+      - Grid
+  /connect/grid/status:
+    get:
+      description: |-
+        Retrieves the status of the grid overall.
+        Includes grid health status information related to nodes, alerts, detection engines, etc.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Status'
+                type: array
+          description: The grid Status summary
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - grid/read
+      summary: Get Grid Status
       tags:
       - Grid
   /connect/gridmembers/:
