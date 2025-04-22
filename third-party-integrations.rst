@@ -40,6 +40,20 @@ Adding a Custom Integration
 
 A custom integration can be added by adding an integration such as the ``Custom Logs`` integration. You can specify various settings relative to the data source and define additional actions to be performed.
 
+Managing Integration Upgrades
+-----------------------------
+.. tip::
+
+        By default integrations are not automatically kept up to date. This behavior can be modified via Elasticfleet -> config -> auto_upgrade_integrations. Not automatically upgrading integrations avoids potential log ingest downtime if there is an issue with the latest package or if the latest package requires a manual update to your integration configuration.
+
+To view which integrations have upgrades available:
+
+- Navigate to Elastic Fleet
+- Open the menu at the top-left of the page
+- Under "Management" click "Integrations"
+- Click on the "Installed Integrations" tab
+- Review any integrations listed under "Updates available"
+
 Managing Third Party Integration Index Templates
 ------------------------------------------------
 
