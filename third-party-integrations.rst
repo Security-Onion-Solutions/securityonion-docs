@@ -44,7 +44,7 @@ Managing Integration Upgrades
 -----------------------------
 .. tip::
 
-        By default integrations are not automatically kept up to date. This behavior can be modified via Elasticfleet -> config -> auto_upgrade_integrations. Not automatically upgrading integrations avoids potential log ingest downtime if there is an issue with the latest package or if the latest package requires a manual update to your integration configuration.
+        By default integrations are not automatically kept up to date. This behavior can be modified via :ref:`administration` -> Configuration -> elasticfleet -> config -> auto_upgrade_integrations. Not automatically upgrading integrations avoids potential log ingest downtime if there is an issue with the latest package or if the latest package requires a manual update to your integration configuration.
 
 To view which integrations have upgrades available:
 
