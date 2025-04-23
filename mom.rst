@@ -42,7 +42,7 @@ If a subgrid is expected to remain in a disconnected state for a longer period i
 
 .. note::
 
-    Did you know that Security Onion Solutions offers ATA-compliant Security Onion servers that are specifically made for recurring incident response scenarios and transportable via commercial airlines? Visit our website at https://securityonion.com/hardware for more information.
+    Did you know that Security Onion Solutions offers ATA-compliant Security Onion servers that are specifically made for recurring incident response scenarios and are transportable via commercial airlines? Visit our website at https://securityonion.com/hardware for more information.
 
 Configuration
 -------------
