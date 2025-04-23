@@ -31,12 +31,12 @@ In a Manager of Managers configuration the data from each subgrid resides at res
 
     Manager of Managers currently does not attempt to merge data from multiple grids into a single SOC view.
 
-    The suggested method for accessing data across multiple grids, such as when searching for alerts across all grids, is to utilize cross-cluster search (CCS). Keep in mind that this should be configured such that internal Security Onion indices are excluded from CCS, otherwise there is a risk of data duplicated and/or corruption of internal SOC entities such as Cases, Detections, etc.
+    The suggested method for accessing data across multiple grids, such as when searching for alerts across all grids, is to utilize cross-cluster search (CCS). Keep in mind that this should be configured such that internal Security Onion indices are excluded from CCS, otherwise there is a risk of data duplication and/or corruption of internal SOC entities such as Cases, Detections, etc.
 
 Subgrid Outages
 ---------------
 
-The MoM node will expect all subgrids to be reachable. In the event a subgrid is not reachable, or is in a state where it cannot respond successfully to incoming MoM requests, the MoM SOC interface will display an error notifying the logged in users that it cannot complete the request. This could delay retrieving state information from other subgrids.
+The MoM node will expect all subgrids to be reachable. In the event a subgrid is not reachable, or is in a state where it cannot respond successfully to incoming MoM requests, the MoM SOC interface will display an error notifying the logged in users that it cannot complete the request. Subgrid outages could delay retrieving state information from other subgrids.
 
 If a subgrid is expected to remain in a disconnected state for a longer period it is recommended to disable that subgrid in the Configuration screen and then synchronize the MoM grid state. This scenario can occur more frequently with subgrid "kits" that are transported between field locations for forensic collection purposes.
 
