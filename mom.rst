@@ -70,6 +70,9 @@ Subgrid Config
 
 Once the subgrid API Client credentials are known that subgrid can then be added to the MoM's ``Subordinate Grids`` Configuration screen. 
 
+.. image:: images/config-item-soc-subgrids.png
+  :target: _images/config-item-soc-subgrids.png
+
 - As a superuser, navigate to the Configuration screen of the MoM SOC user interface. 
 - Find the ``soc > config > server > Subordinate Grids`` setting.
 - Click the ``+`` icon to add a new subgrid
