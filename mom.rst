@@ -40,7 +40,7 @@ The MoM node will expect all subgrids to be reachable. In the event a subgrid is
 
 If a subgrid is expected to remain in a disconnected state for a longer period it is recommended to disable that subgrid in the Configuration screen and then synchronize the MoM grid state. This scenario can occur more frequently with subgrid "kits" that are transported between field locations for forensic collection purposes.
 
-.. note::
+.. tip::
 
     Did you know that Security Onion Solutions offers ATA-compliant Security Onion servers that are specifically made for recurring incident response scenarios and are transportable via commercial airlines? Visit our website at https://securityonion.com/hardware for more information.
 
@@ -53,7 +53,7 @@ Configuration
 
 Configuration of Manager of Managers requires two steps:
 
-1. API Client: Creation of an API Client on each subgrid manager via the subgrid's API Client screen.
+1. API Client: Creation of an API Client on each subgrid manager via the subgrid's API Client screen
 2. Subgrid Config: Configuration of the subgrids on the MoM Configuration screen
 
 API Client
@@ -75,16 +75,16 @@ Once the subgrid API Client credentials are known that subgrid can then be added
 
 - As a superuser, navigate to the Configuration screen of the MoM SOC user interface. 
 - Find the ``soc > config > server > Subordinate Grids`` setting.
-- Click the ``+`` icon to add a new subgrid
+- Click the ``+`` icon to add a new subgrid.
 - Give the new subgrid a unique ID that accurately describes this subgrid from the MoM's perspective.
 - Enter in the subgrid's Manager URL (``base_url``). Note that this URL must be accessible from the MoM grid node.
-- Paste or enter the subgrid's API Client credentials
+- Paste or enter the subgrid's API Client credentials.
 - Paste the subgrid's API Client Certificate Authority (CA) contents into the ``Subgrid CA Certificate`` field.
 - If this subgrid is ready, enable it.
 
 Add additional subgrids as your Security Onion Pro license allows, and then click the green checkmark to save the configuration. 
 
-Finally, Synchronize the MoM grid to apply the subgrid configuration.
+The configuration will be applied at the next 15-minute interval or you can apply it immediately by clicking the ``SYNCHRONIZE GRID`` button under the ``Options`` menu.
 
 Licensing
 ---------
