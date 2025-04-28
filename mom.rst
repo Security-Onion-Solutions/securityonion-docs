@@ -15,10 +15,12 @@ Appropriately privileged users logging into the MoM will be able to interact wit
 
 Users logging into a subgrid :ref:`soc` user interface will have no knowledge or visibility into other sibling grids or the MoM grid.
 
-Network Requirements
---------------------
+MoM Requirements
+----------------
 
 The Manager of Managers feature has been designed such that only the MoM grid node requires network access to the subgrid manager nodes. This simplifies network and firewall configuration by ensuring end-user connections are isolated to a single endpoint. Therefore, users logged into the MoM :ref:`soc` only need web access to the MoM manager.
+
+Please note that Manager of Managers is intended for production deployments so it is only supported on MANAGER, MANAGERSEARCH, and STANDALONE installations. It is not supported for IMPORT or EVAL installations.
 
 Data Isolation
 --------------
