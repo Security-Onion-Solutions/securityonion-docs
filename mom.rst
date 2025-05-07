@@ -65,6 +65,10 @@ The API Client ID and Secret will be needed on the next step, so ensure those ar
 
 While on the API Client screen, click the ⤓ icon to download the Certificate Authority (CA) certificate file. This file is in a text format and the contents will be pasted into the subgrid setting in the next step.
 
+.. note::
+
+        Please be aware that any users in the MoM grid will be able to connect to the subgrid using the permissions defined for the API client. For example, suppose that you create an API client ID in the subgrid called ``supermom`` and you grant it all permissions. Once the MoM is configured to connect to the subgrid as shown in the next section, then any users in the MoM grid will connect to the subgrid as ``supermom`` and have all permissions to the subgrid regardless of whether the user has equivalent permissions in the MoM.
+
 Subgrid Config
 ~~~~~~~~~~~~~~
 
