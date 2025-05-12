@@ -13,6 +13,8 @@ Starting in Security Onion 2.4.120, licensed Pro users can also enable :ref:`Sec
 
 Starting in Security Onion 2.4.130, licensed Pro users can also access :ref:`aqm`.
 
+Starting in Security Onion 2.4.150, licensed Pro users can also access :ref:`mom`.
+
 .. note::
 
     Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable these features.
@@ -28,3 +30,4 @@ Starting in Security Onion 2.4.130, licensed Pro users can also access :ref:`aqm
    kafka
    connect
    aqm
+   mom

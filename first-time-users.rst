@@ -223,9 +223,4 @@ It also allows you to upload a license key for additional enterprise features:
 .. image:: images/91_licensekey.png
   :target: _images/91_licensekey.png
 
-All this in a minimal VM with only 4GB RAM!
-
-.. image:: images/39_grid.png
-  :target: _images/39_grid.png
-
 If you made it to the end of this First Time Users section, congratulations! If you have any questions or problems, please see the :ref:`help` section. If you like Security Onion, please consider sharing on social media about Security Onion to help spread the word. Thanks!

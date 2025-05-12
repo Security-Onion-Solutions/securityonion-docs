@@ -11,6 +11,44 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.150 [20250512] Changes
+--------------------------
+
+- FEATURE: Additional grid management (MoM) `#14552 <https://github.com/Security-Onion-Solutions/securityonion/issues/14552>`_
+- FEATURE: Add refresh button to more SOC screens
+- FEATURE: Add setting direct hyperlink copy-to-clipboard button icon
+- FEATURE: Collect ES index metrics
+- FEATURE: Convert Kratos identity_id to user.name `#14598 <https://github.com/Security-Onion-Solutions/securityonion/issues/14598>`_
+- FEATURE: Disable auto-upgrading non-default integrations `#14516 <https://github.com/Security-Onion-Solutions/securityonion/issues/14516>`_
+- FEATURE: Enable external access to Kafka `#13754 <https://github.com/Security-Onion-Solutions/securityonion/issues/13754>`_
+- FEATURE: Support wrapping UI config entries at top/bottom of list
+- FIX: Add log.origin.file.line to base templates `#14417 <https://github.com/Security-Onion-Solutions/securityonion/issues/14417>`_
+- FIX: Allow configuration of background actions via config UI `#14503 <https://github.com/Security-Onion-Solutions/securityonion/issues/14503>`_
+- FIX: Correct joblookup route for Connect API `#14515 <https://github.com/Security-Onion-Solutions/securityonion/issues/14515>`_
+- FIX: Detection Overrides should not trigger "updated" state during sync `#14361 <https://github.com/Security-Onion-Solutions/securityonion/issues/14361>`_
+- FIX: Detections index refresh_interval `#14572 <https://github.com/Security-Onion-Solutions/securityonion/issues/14572>`_
+- FIX: Disable import pcap button on SOC UI for heavynodes `#14430 <https://github.com/Security-Onion-Solutions/securityonion/issues/14430>`_
+- FIX: Elastic Delete Cleanup Changes `#14491 <https://github.com/Security-Onion-Solutions/securityonion/issues/14491>`_
+- FIX: First highstate failure after reboot `#14442 <https://github.com/Security-Onion-Solutions/securityonion/issues/14442>`_
+- FIX: Influxdb not properly calculating root partition usage on STIG installations
+- FIX: Issue Reboot request as async when submitted via SOC UI `#14553 <https://github.com/Security-Onion-Solutions/securityonion/issues/14553>`_
+- FIX: Kafka server logs
+- FIX: Logstash log rollover `#14065 <https://github.com/Security-Onion-Solutions/securityonion/issues/14065>`_
+- FIX: null pointer exception in global custom pipeline `#14602 <https://github.com/Security-Onion-Solutions/securityonion/issues/14602>`_
+- FIX: PCAP filter is unable to collect IPV6 ICMP `#14492 <https://github.com/Security-Onion-Solutions/securityonion/issues/14492>`_
+- FIX: Remove unmaintained archiver dependency `#14597 <https://github.com/Security-Onion-Solutions/securityonion/issues/14597>`_
+- FIX: SOC PCAP Rows per page setting is not remembered `#14487 <https://github.com/Security-Onion-Solutions/securityonion/issues/14487>`_
+- FIX: so-import-pcap should not be installed on heavy nodes `#14431 <https://github.com/Security-Onion-Solutions/securityonion/issues/14431>`_
+- FIX: Strelka backend scanner yaml config syntax error `#14406 <https://github.com/Security-Onion-Solutions/securityonion/issues/14406>`_
+- FIX: Strelka containers restart when the config changes `#14498 <https://github.com/Security-Onion-Solutions/securityonion/issues/14498>`_
+- FIX: Suricata Regex not working as expected `#14571 <https://github.com/Security-Onion-Solutions/securityonion/issues/14571>`_
+- FIX: Configuration screen default toggle value hard to read when disabled
+- FIX: Web server cert should include the url_base in alternate subject `#14573 <https://github.com/Security-Onion-Solutions/securityonion/issues/14573>`_
+- FIX: x509_v2.py TypeError: list indices must be integers or slices, not str `#14452 <https://github.com/Security-Onion-Solutions/securityonion/issues/14452>`_
+- UPGRADE: Analyzer depedencies `#14606 <https://github.com/Security-Onion-Solutions/securityonion/issues/14606>`_
+- UPGRADE: Kafka 3.9.0 `#14485 <https://github.com/Security-Onion-Solutions/securityonion/issues/14485>`_
+- UPGRADE: SOC Go external libraries
+
 2.4.141 [20250331] Changes
 --------------------------
 
