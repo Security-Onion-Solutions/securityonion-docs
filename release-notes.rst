@@ -45,7 +45,7 @@ Release History
 - FIX: Configuration screen default toggle value hard to read when disabled
 - FIX: Web server cert should include the url_base in alternate subject `#14573 <https://github.com/Security-Onion-Solutions/securityonion/issues/14573>`_
 - FIX: x509_v2.py TypeError: list indices must be integers or slices, not str `#14452 <https://github.com/Security-Onion-Solutions/securityonion/issues/14452>`_
-- UPGRADE: Analyzer depedencies `#14606 <https://github.com/Security-Onion-Solutions/securityonion/issues/14606>`_
+- UPGRADE: Analyzer dependencies `#14606 <https://github.com/Security-Onion-Solutions/securityonion/issues/14606>`_
 - UPGRADE: Kafka 3.9.0 `#14485 <https://github.com/Security-Onion-Solutions/securityonion/issues/14485>`_
 - UPGRADE: SOC Go external libraries
 
