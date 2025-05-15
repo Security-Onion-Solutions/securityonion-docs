@@ -33,6 +33,20 @@ Once there, select the ``elastic_agent_endpoint`` option.
 
     Check out our Elastic Agent video at https://youtu.be/cGmQMsFuAvw!
 
+There are additional installer runtime options:
+
+-token=$TOKEN
+This option allows you to override the agent policy that the installer uses by default - the token comes from the Fleet interface, under `Enrollment Tokens`
+
+-fleet=$FLEETHOST
+This option allows you to override the default Fleet host used for enrollment
+
+-delay-enroll=true|false
+Defaults to false. If set to true, it adds the builtin `delay-enroll` flag when enrolling the agent.
+
+-timeout=$MINUTES
+Defaults to 5 minutes.
+
 Linux
 ~~~~~
 
