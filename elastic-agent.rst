@@ -9,9 +9,6 @@ From https://www.elastic.co/elastic-agent:
       
 Each Security Onion node uses the Elastic Agent to transport logs to :ref:`elasticsearch`. You can also deploy the Elastic Agent to your endpoints to transport logs to your Security Onion deployment.
 
-Deployment
-----------
-
 .. note::
 
    In order to receive logs from the Elastic Agent, Security Onion must be running :ref:`logstash`. Evaluation Mode and Import Mode do not run :ref:`logstash`, so you'll need Standalone or a full Distributed Deployment. In a Distributed Deployment, forward nodes do not run :ref:`logstash`, so you'll need to configure agents to send to your manager or receiver nodes. For more information, please see the :ref:`architecture` section.
@@ -33,22 +30,29 @@ Once there, select the ``elastic_agent_endpoint`` option.
 
     Check out our Elastic Agent video at https://youtu.be/cGmQMsFuAvw!
 
+Elastic Agent Options
+---------------------
+
 There are additional installer runtime options:
 
--token=$TOKEN
-This option allows you to override the agent policy that the installer uses by default - the token comes from the Fleet interface, under `Enrollment Tokens`
+``-token=$TOKEN``
 
--fleet=$FLEETHOST
-This option allows you to override the default Fleet host used for enrollment
+This option allows you to override the agent policy that the installer uses by default. The token comes from the :ref:`elastic-fleet` interface under ``Enrollment Tokens``.
 
--delay-enroll=true|false
-Defaults to false. If set to true, it adds the builtin `delay-enroll` flag when enrolling the agent.
+``-fleet=$FLEETHOST``
 
--timeout=$MINUTES
+This option allows you to override the default Fleet host used for enrollment.
+
+``-delay-enroll=true|false``
+
+Defaults to false. If set to true, it adds the builtin ``delay-enroll`` flag when enrolling the agent.
+
+``-timeout=$MINUTES``
+
 Defaults to 5 minutes.
 
-Linux
-~~~~~
+Installing Elastic Agent on Linux
+---------------------------------
 
 If deploying the Elastic Agent to a Linux host, make the file executable and then execute using sudo:
 
@@ -57,8 +61,8 @@ If deploying the Elastic Agent to a Linux host, make the file executable and the
     chmod +x ./so-elastic-agent_linux_amd64
     sudo ./so-elastic-agent_linux_amd64
 
-MacOS
-~~~~~
+Installing Elastic Agent on MacOS
+---------------------------------
 
 If deploying the Elastic Agent to macOS, you will need to take a few steps. First, remove the quarantine attribute. Then, make the file executable. Finally, execute the file using sudo:
 
