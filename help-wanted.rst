@@ -56,6 +56,7 @@ The following folks have made significant contributions to Security Onion over t
 -  Phil Plantamura
 -  Liam Randall
 -  Mike Reeves
+-  Jorge Reyes
 -  Scott Runnels
 -  Jon Schipp
 -  Brad Shoop
