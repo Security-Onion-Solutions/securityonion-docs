@@ -11,6 +11,11 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.150 Hotfix [20250522] Changes
+---------------------------------
+
+- FIX: Remove python docker module from so-docker-prune `#14647 <https://github.com/Security-Onion-Solutions/securityonion/issues/14647>`_
+
 2.4.150 [20250512] Changes
 --------------------------
 
