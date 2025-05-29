@@ -40,10 +40,6 @@ The MoM node will expect all subgrids to be reachable. In the event a subgrid is
 
 If a subgrid is expected to remain in a disconnected state for a longer period it is recommended to disable that subgrid in the Configuration screen and then synchronize the MoM grid state. This scenario can occur more frequently with subgrid "kits" that are transported between field locations for forensic collection purposes.
 
-.. tip::
-
-    Did you know that Security Onion Solutions offers ATA-compliant Security Onion servers that are specifically made for recurring incident response scenarios and are transportable via commercial airlines? Visit our website at https://securityonion.com/hardware for more information.
-
 Configuration
 -------------
 
