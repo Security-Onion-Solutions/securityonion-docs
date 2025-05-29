@@ -30,7 +30,7 @@ Here is the list of possible status messages and what they mean:
 - **Migration Failed**: A failure occurred during the migration. The migration will stop on the first error and will not attempt to migrate to newer versions until the issue is resolved.
 - **Synchronizing**: A rule synchronization is in progress. This occurs daily, to ensure the Security Onion grid has the latest rules. 
 - **Sync Failed**: A failure occurred during the synchronization procedure. The next sync will retry within a few minutes.
-- **Rule Mismatch**: An integrity check process detected a mismatch between the deployed rules and the enabled rules. The SOC log will note the specific mismatched rules. One possible reason for this is if you had previously added custom rules to /opt/so/saltstack/local/salt/idstools/rules/local.rules. If this is the case, you can remove the rules from that file and then re-add them using the Detections interface. 
+- **Rule Mismatch**: An integrity check process detected a mismatch between the deployed rules and the enabled rules. The SOC log will note the specific mismatched rules. One possible reason for this is if you had previously added custom rules to /opt/so/saltstack/local/salt/idstools/rules/local.rules and, if this is the case, then you can remove the rules from that file and re-add them using the Detections interface. Another possible reason is that :ref:`elasticsearch` has reached its disk watermark setting and is no longer allowing updates to the Detections indices.
 - **OK**: No known issues with the rule engine.
 
 .. tip::
