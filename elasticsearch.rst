@@ -117,7 +117,7 @@ Now that you have an overview of all that ILM can do, let's look at ILM deletion
 #. Configure ILM Deletion to delete logs before hitting the Elasticsearch 80% watermark. This can be done globally for all indices by going to :ref:`administration` -> Configuration -> elasticsearch > index_settings > global_overrides > policy > phases > delete > min_age. Again, keep in mind that the ``min_age`` setting is calculated relative to the index rollover date and NOT the original creation date of the index. If you want to specify different deletion values for different kinds of data, then you can enable advanced settings and then drill into specific policies to do so.
 
 .. tip::
-       | Try using ``so-elasticsearch-index-growth`` for some per-index size metrics.
+       | Try using ``so-elasticsearch-indices-growth`` for some per-index size metrics.
 
 .. note::
 
