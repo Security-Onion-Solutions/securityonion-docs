@@ -188,11 +188,6 @@ You can change the view to ASCII transcript for a more human readable view of th
 .. image:: images/65_pcap_details.png
   :target: _images/65_pcap_details.png
 
-If you find an interesting artifact, you can send it to :ref:`cyberchef`:
-
-.. image:: images/68_cyberchef.png
-  :target: _images/68_cyberchef.png
-
 If you need to refer back to previous PCAP jobs, you can find them on the :ref:`pcap` page:
 
 .. image:: images/72_jobs.png
