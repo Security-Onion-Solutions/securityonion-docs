@@ -13,8 +13,8 @@ Options
 
 At the top of the page, there is an Options menu that allows you to set several different options for the Alerts page.
 
-.. image:: images/51_alerts_options.png
-  :target: _images/51_alerts_options.png
+.. image:: images/52_alerts_options.png
+  :target: _images/52_alerts_options.png
   
 Toggles
 ~~~~~~~
@@ -63,13 +63,29 @@ The remainder of the page is a data table that starts in the grouped view and ca
 
 - Clicking the table headers allows you to sort ascending or descending. 
 
-- Clicking the bell icon acknowledges an alert. That alert can then be seen by selecting the ``Acknowledged`` toggle at the top of the page. In the ``Acknowledged`` view, clicking the bell icon removes the acknowledgement.
+- Starting from the left side of each row, there is an arrow which will expand the row to show more details.
 
-- Clicking the blue exclamation icon escalates the alert to :ref:`cases` and allows you to create a new case or add to an existing case. If you need to find that original escalated alert in the Alerts page, you can enable the ``Escalated`` toggle (which will automatically enable the ``Acknowledged`` toggle as well).
+- To the right of that arrow is a bell icon that acknowledges the alert. That alert can then be seen by selecting the ``Acknowledged`` toggle at the top of the page. In the ``Acknowledged`` view, clicking the bell icon removes the acknowledgement.
+
+- To the right of that is a blue exclamation icon that escalates the alert to :ref:`cases` and allows you to create a new case or add to an existing case. If you need to find that original escalated alert in the Alerts page, you can enable the ``Escalated`` toggle (which will automatically enable the ``Acknowledged`` toggle as well).
+
+- To the right of that is an information icon that populates the Details Panel on the right with information about the alert.
 
 - Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
 
 - You can adjust the ``Rows per page`` setting in the bottom right and use the left and right arrow icons to page through the table.
+
+Guided Analysis
+~~~~~~~~~~~~~~~
+
+When you click the arrow to expand the alert, it starts on the ``ALERT DETAILS`` tab. If you switch to the ``GUIDED ANALYSIS`` tab, then you will see some suggested questions and queries to guide your analysis. If you are a free user, then you can manually run the queries by clicking the :ref:`hunt` icon to the left of the query.
+
+.. image:: images/51_alerts_play.png
+  :target: _images/51_alerts_play.png
+
+.. tip::
+
+        If you are a :ref:`pro` customer, then you have access to :ref:`instant-insight` and so it will automatically run the queries for you and show you the results inline.
 
 Grouped View
 ~~~~~~~~~~~~
