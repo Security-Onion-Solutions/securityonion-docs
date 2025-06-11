@@ -15,8 +15,6 @@ Starting in Security Onion 2.4.130, licensed Pro users can also access :ref:`aqm
 
 Starting in Security Onion 2.4.150, licensed Pro users can also access :ref:`mom`.
 
-Starting in Security Onion 2.4.160, licensed Pro users can also access :ref:`instant-insight`.
-
 .. note::
 
     Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable these features.
@@ -33,4 +31,3 @@ Starting in Security Onion 2.4.160, licensed Pro users can also access :ref:`ins
    connect
    aqm
    mom
-   instant-insight

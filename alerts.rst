@@ -78,14 +78,10 @@ The remainder of the page is a data table that starts in the grouped view and ca
 Guided Analysis
 ~~~~~~~~~~~~~~~
 
-When you click the arrow to expand the alert, it starts on the ``ALERT DETAILS`` tab. If you switch to the ``GUIDED ANALYSIS`` tab, then you will see some suggested questions and queries to guide your analysis. If you are a free user, then you can manually run the queries by clicking the :ref:`hunt` icon to the left of the query.
+When you click the arrow to expand the alert, it starts on the ``ALERT DETAILS`` tab. If you switch to the ``GUIDED ANALYSIS`` tab, there will be several different questions that help guide your analysis.
 
 .. image:: images/51_alerts_play.png
   :target: _images/51_alerts_play.png
-
-.. tip::
-
-        If you are a :ref:`pro` customer, then you have access to :ref:`instant-insight` and so it will automatically run the queries for you and show you the results inline.
 
 Grouped View
 ~~~~~~~~~~~~
