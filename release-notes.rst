@@ -20,6 +20,7 @@ Release History
 
 - FEATURE: Keyboard Accessibility and Screen Reader Support `#14715 <https://github.com/Security-Onion-Solutions/securityonion/issues/14715>`_
 - FEATURE: Playbooks `#14694 <https://github.com/Security-Onion-Solutions/securityonion/issues/14694>`_
+- FEATURE: Splunk App
 - FEATURE: so-elasticsearch-indices-growth script `#14699 <https://github.com/Security-Onion-Solutions/securityonion/issues/14699>`_
 - FIX: Disallow upper case email addresses on new user form `#14655 <https://github.com/Security-Onion-Solutions/securityonion/issues/14655>`_
 - FIX: Improve annotation for Elasticsearch index deletion `#14682 <https://github.com/Security-Onion-Solutions/securityonion/issues/14682>`_
