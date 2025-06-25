@@ -5,7 +5,7 @@ Release Notes
 
 .. warning::
 
-        Security Onion 2.4.150 includes changes for the :ref:`elasticsearch` deletion process. :ref:`elasticsearch` indices are managed by both the so-elasticsearch-indices-delete utility and Index Lifecycle Management (ILM). so-elasticsearch-indices-delete is primarily designed for single-node deployments like EVAL and STANDALONE configurations. Running it on a multi-node deployment with one or more search nodes has the possibility of getting into a corner case state where more data is deleted than intended. Because of this, we will disable this script on multi-node deployments when you update to this 2.4.150 release. You will need to ensure that ILM is configured properly to delete indices before disk usage reaches the :ref:`elasticsearch` watermark setting. Otherwise, :ref:`elasticsearch` may stop ingesting new data. For more information, please see the :ref:`elasticsearch` section.
+        Security Onion 2.4.150 included changes for the :ref:`elasticsearch` deletion process. :ref:`elasticsearch` indices are managed by both the ``so-elasticsearch-indices-delete`` utility and Index Lifecycle Management (ILM). The ``so-elasticsearch-indices-delete`` utility is primarily designed for single-node deployments like EVAL and STANDALONE configurations. Running it on a multi-node deployment with one or more search nodes has the possibility of getting into a corner case state where more data is deleted than intended. If you have a multi-node deployment and haven't already updated to 2.4.150, then ``so-elasticsearch-indices-delete`` will be disabled when you update. You will need to ensure that ILM is configured properly to delete indices before disk usage reaches the :ref:`elasticsearch` watermark setting. Otherwise, :ref:`elasticsearch` may stop ingesting new data. For more information, please see the :ref:`elasticsearch` section.
 
 Known Issues
 ~~~~~~~~~~~~
@@ -14,6 +14,40 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 
 Release History
 ~~~~~~~~~~~~~~~
+
+2.4.160 [20250625] Changes
+--------------------------
+
+- FEATURE: Keyboard Accessibility and Screen Reader Support `#14715 <https://github.com/Security-Onion-Solutions/securityonion/issues/14715>`_
+- FEATURE: Playbooks `#14694 <https://github.com/Security-Onion-Solutions/securityonion/issues/14694>`_
+- FEATURE: so-elasticsearch-indices-growth script `#14699 <https://github.com/Security-Onion-Solutions/securityonion/issues/14699>`_
+- FIX: Disallow upper case email addresses on new user form `#14655 <https://github.com/Security-Onion-Solutions/securityonion/issues/14655>`_
+- FIX: Improve annotation for Elasticsearch index deletion `#14682 <https://github.com/Security-Onion-Solutions/securityonion/issues/14682>`_
+- FIX: Improve subgrid error handling
+- FIX: License system improvements
+- FIX: Provide HSTS header on initial page redirect `#14713 <https://github.com/Security-Onion-Solutions/securityonion/issues/14713>`_
+- FIX: SOC PCAP jobs page doesn't remember the Items per page setting `#14630 <https://github.com/Security-Onion-Solutions/securityonion/issues/14630>`_
+- FIX: Show OIDC users message if attempting to login with same email as a local user `#14726 <https://github.com/Security-Onion-Solutions/securityonion/issues/14726>`_
+- FIX: Sigma rule repos can't have same name `#14615 <https://github.com/Security-Onion-Solutions/securityonion/issues/14615>`_
+- FIX: ``global@custom`` pipeline overwriting system integration timestamps `#14693 <https://github.com/Security-Onion-Solutions/securityonion/issues/14693>`_
+- FIX: so-elasticsearch-ilm-start needs shebang `#14688 <https://github.com/Security-Onion-Solutions/securityonion/issues/14688>`_
+- FIX: so-suricata-testrule should disable pcap logging `#14685 <https://github.com/Security-Onion-Solutions/securityonion/issues/14685>`_
+- UPGRADE: Alpine base image to 3.21.3 `#14710 <https://github.com/Security-Onion-Solutions/securityonion/issues/14710>`_
+- UPGRADE: Base image for so-strelka-filestream `#14678 <https://github.com/Security-Onion-Solutions/securityonion/issues/14678>`_
+- UPGRADE: Base image for so-strelka-frontend `#14679 <https://github.com/Security-Onion-Solutions/securityonion/issues/14679>`_
+- UPGRADE: Base image for so-strelka-manager `#14680 <https://github.com/Security-Onion-Solutions/securityonion/issues/14680>`_
+- UPGRADE: Docker registry to 3.0.0 `#14702 <https://github.com/Security-Onion-Solutions/securityonion/issues/14702>`_
+- UPGRADE: ElastAlert2 to 2.24.0 `#14671 <https://github.com/Security-Onion-Solutions/securityonion/issues/14671>`_
+- UPGRADE: Hydra to 2.3.0 `#14692 <https://github.com/Security-Onion-Solutions/securityonion/issues/14692>`_
+- UPGRADE: IDS tool base image update to 3.13.3-slim `#14707 <https://github.com/Security-Onion-Solutions/securityonion/issues/14707>`_
+- UPGRADE: ISO base image to Oracle Linux 9.5 `#14681 <https://github.com/Security-Onion-Solutions/securityonion/issues/14681>`_
+- UPGRADE: InfluxDB to 2.7.12 `#14670 <https://github.com/Security-Onion-Solutions/securityonion/issues/14670>`_
+- UPGRADE: Nginx base image to 1.27.5 `#14709 <https://github.com/Security-Onion-Solutions/securityonion/issues/14709>`_
+- UPGRADE: PCAP Tools docker base image to 3.13.3-slim `#14708 <https://github.com/Security-Onion-Solutions/securityonion/issues/14708>`_
+- UPGRADE: Redis docker to 7.2.9 `#14706 <https://github.com/Security-Onion-Solutions/securityonion/issues/14706>`_
+- UPGRADE: SOC related dependencies `#14672 <https://github.com/Security-Onion-Solutions/securityonion/issues/14672>`_
+- UPGRADE: Telegraf to 1.34.4 `#14705 <https://github.com/Security-Onion-Solutions/securityonion/issues/14705>`_
+- UPGRADE: Zeek to 7.0.8 `#14616 <https://github.com/Security-Onion-Solutions/securityonion/issues/14616>`_
 
 2.4.150 Hotfix [20250522] Changes
 ---------------------------------
