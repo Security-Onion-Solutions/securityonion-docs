@@ -31,3 +31,4 @@ Starting in Security Onion 2.4.150, licensed Pro users can also access :ref:`mom
    connect
    aqm
    mom
+   mcp
