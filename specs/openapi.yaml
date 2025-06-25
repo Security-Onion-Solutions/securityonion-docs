@@ -240,7 +240,7 @@ components:
           example: "2024-11-14T15:33:02Z"
           type: string
         userId:
-          description: The user ID (or API client ID) that initated this event. This
+          description: The user ID (or API client ID) that initiated this event. This
             is a read-only field.
           example: socl_my_new_client
           type: string
@@ -324,7 +324,7 @@ components:
           example: "2024-11-14T15:33:02Z"
           type: string
         userId:
-          description: The user ID (or API client ID) that initated this event. This
+          description: The user ID (or API client ID) that initiated this event. This
             is a read-only field.
           example: socl_my_new_client
           type: string
@@ -424,7 +424,7 @@ components:
           example: "2024-11-14T15:33:02Z"
           type: string
         userId:
-          description: The user ID (or API client ID) that initated this event. This
+          description: The user ID (or API client ID) that initiated this event. This
             is a read-only field.
           example: socl_my_new_client
           type: string
@@ -592,13 +592,26 @@ components:
           example: "2024-11-14T15:33:02Z"
           type: string
         userId:
-          description: The user ID (or API client ID) that initated this event. This
+          description: The user ID (or API client ID) that initiated this event. This
             is a read-only field.
           example: socl_my_new_client
           type: string
       required:
       - caseId
       - description
+      type: object
+    model.ConvertedQuery:
+      properties:
+        fields:
+          description: Fields that the query will return that should be made visible
+            in the UI.
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        query:
+          description: The OQL result of the converted Sigma query.
+          type: string
       type: object
     model.Detection:
       properties:
@@ -736,7 +749,7 @@ components:
           example: "2024-11-14T15:33:02Z"
           type: string
         userId:
-          description: The user ID (or API client ID) that initated this event. This
+          description: The user ID (or API client ID) that initiated this event. This
             is a read-only field.
           example: socl_my_new_client
           type: string
@@ -772,7 +785,7 @@ components:
           example: "2024-11-14T15:33:02Z"
           type: string
         userId:
-          description: The user ID (or API client ID) that initated this event. This
+          description: The user ID (or API client ID) that initiated this event. This
             is a read-only field.
           example: socl_my_new_client
           type: string
@@ -1641,6 +1654,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load5m:
+          description: The node's 5-minute load metric
+          example: 0.96
+          type: number
         load15m:
           description: The node's 15-minute load metric
           example: 1.09
@@ -1648,10 +1665,6 @@ components:
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
-          type: number
-        load5m:
-          description: The node's 5-minute load metric
-          example: 0.96
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -1956,6 +1969,88 @@ components:
           example: 64296
           type: integer
       type: object
+    model.Playbook:
+      properties:
+        contributors:
+          description: Authors of the playbook.
+          example:
+          - '[''John Doe'''
+          - ' ''Jane Smith'']'
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        date:
+          description: The date the playbook was created.
+          example: "2023-10-01T12:00:00Z"
+          type: string
+        description:
+          description: The description of the playbook.
+          example: This is a sample playbook
+          type: string
+        detection_category:
+          description: The category of detections this playbook applies to. May be
+            empty.
+          example: process_creation
+          type: string
+        detection_id:
+          description: The specific Detection's public Id. May be empty if not specific
+            to any 1 detection.
+          example: ac5856cd-7e4c-4a61-8b15-6fc9148ff7f2
+          type: string
+        detection_type:
+          description: The type of detection this playbook applies to. This is analogous
+            to which detection engine the playbook is for.
+          enum:
+          - nids
+          - sigma
+          - yara
+          type: string
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        modified:
+          description: The date the playbook was last modified.
+          example: "2023-10-01T12:00:00Z"
+          type: string
+        name:
+          description: The name of the playbook.
+          example: Sample Playbook
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        questions:
+          description: The questions of this playbook that guide the user in response
+            to an alert.
+          items:
+            $ref: '#/components/schemas/model.Question'
+          type: array
+          uniqueItems: false
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initiated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+      type: object
     model.PresetParameters:
       properties:
         customEnabled:
@@ -2000,6 +2095,35 @@ components:
           example: jSliTqa12bOPhdW195TuuZ:443
           type: string
       type: object
+    model.Question:
+      properties:
+        answer_sources:
+          description: Where the answer to this question can be found.
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        context:
+          description: Some context to be provided to the user. This describes why
+            the answer might be useful.
+          example: Knowing if the attack comes from inside or outside the network
+            can help determine if this is a false positive or a real attack.
+          type: string
+        query:
+          description: A raw YAML Sigma query that can be used to find the answer
+            to this question. May contain variables that will be replaced with values
+            from the alert.
+          type: string
+        question:
+          description: The human readable question to be asked.
+          example: What is the source IP address of the alert?
+          type: string
+        range:
+          description: An indicator for what time range the query should be limited
+            to in order to find the answer.
+          example: +/-3d
+          type: string
+      type: object
     model.RelatedEvent:
       properties:
         caseId:
@@ -2039,7 +2163,7 @@ components:
           example: "2024-11-14T15:33:02Z"
           type: string
         userId:
-          description: The user ID (or API client ID) that initated this event. This
+          description: The user ID (or API client ID) that initiated this event. This
             is a read-only field.
           example: socl_my_new_client
           type: string
@@ -4764,6 +4888,109 @@ paths:
       summary: Get PCAP Packets
       tags:
       - Jobs
+  /connect/playbook/{id}:
+    get:
+      description: Retrieves playbooks given an internal playbook ID.
+      parameters:
+      - description: The playbook ID to retrieve
+        example: 6F64990A-ACDA-40B6-AB71-134C073013B5
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Playbook'
+          description: The playbook was successfully retrieved
+        "401":
+          description: Request was not properly authenticated
+        "404":
+          description: Playbook not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - playbooks/read
+      summary: Get Playbook by ID
+      tags:
+      - Playbooks
+  /connect/playbook/convert:
+    post:
+      description: Converts the questions of a playbook from Sigma to OQL.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              items:
+                type: string
+              type: array
+        description: The variable substituted Sigma queries to convert
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.ConvertedQuery'
+                type: array
+          description: The queries were successfully converted
+        "401":
+          description: Request was not properly authenticated
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - playbooks/read
+      summary: Convert Playbook Questions
+      tags:
+      - Playbooks
+  /connect/playbook/detection/{id}:
+    get:
+      description: Retrieves playbooks that apply to the indicated detection.
+      parameters:
+      - description: The public Id for the detection
+        example: 6F64990A-ACDA-40B6-AB71-134C073013B5
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      - description: If true, return the playbook in raw YAML format
+        in: query
+        name: raw
+        schema:
+          type: boolean
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Playbook'
+                type: array
+            application/x-yaml:
+              schema:
+                type: string
+          description: The playbook was successfully retrieved
+        "401":
+          description: Request was not properly authenticated
+        "404":
+          description: Detection not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - playbooks/read
+        - detections/read
+        - events/read
+      summary: Get Playbook For Detection
+      tags:
+      - Playbooks
   /connect/query/{operation}:
     get:
       description: Requests the server provide a new query for the SOC client to show,

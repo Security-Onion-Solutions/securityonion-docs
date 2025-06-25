@@ -20,12 +20,6 @@ From https://github.com/gchq/CyberChef:
     3. The operations list on the far left, where you can find all the operations that CyberChef is capable of in categorised lists, or by searching.
     4. The recipe area in the middle, where you can drag the operations that you want to use and specify arguments and options.
 
-Screenshot
-----------
-
-.. image:: images/68_cyberchef.png
-  :target: _images/68_cyberchef.png
-
 Accessing
 ---------
 
