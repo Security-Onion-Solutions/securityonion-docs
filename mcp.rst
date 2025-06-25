@@ -20,7 +20,7 @@ See https://github.com/Security-Onion-Solutions/securityonion-mcp to get started
 
 .. note::
 
-    A Connect API Client must be created in the Security Onion API Clients screen. The API Client should be granted sufficient permissions needed to perform the tasks that the LLM will need to executed. 
+    A Connect API Client must be created in the Security Onion API Clients screen. The API Client should be granted sufficient permissions needed to perform the tasks that the LLM will need to execute. 
 
     For example, if the LLM will be querying events and playbooks then the API Client will need *events/read*, *playbooks/read*, and *detections/read* permissions.
 
