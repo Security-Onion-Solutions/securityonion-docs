@@ -31,7 +31,7 @@ Once there, select the ``elastic_agent_endpoint`` option.
     Check out our Elastic Agent video at https://youtu.be/cGmQMsFuAvw!
 
 Elastic Agent Options (Non-MSI)
----------------------
+-------------------------------
 
 There are additional installer runtime options:
 
@@ -53,6 +53,7 @@ Defaults to 5 minutes.
 
 Elastic Agent Options (MSI)
 ---------------------------
+
 When using the MSI installer runtime options are:
 
 ``TOKEN=$TOKEN``
@@ -95,7 +96,7 @@ If deploying the Elastic Agent to macOS, you will need to take a few steps. Firs
 After the installer has completed, review the Elastic docs for your version of macOS and approve the required settings (system extension and full drive access) as shown at https://www.elastic.co/guide/en/security/current/elastic-endpoint-deploy-reqs.html.
 
 Installing Elastic Agent on Windows via MSI
-----------------------------
+-------------------------------------------
 
 When deploying via MSI, installation can be as simple as double-clicking the MSI installer. If you require additional runtime flags, use ``msiexec /i`` :
 
