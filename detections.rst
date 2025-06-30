@@ -112,7 +112,7 @@ The TUNING tab allows you to tune the detection. For :ref:`nids` rules, you can 
 .. image:: images/60_detection_nids_2_tuning_1.png
   :target: _images/60_detection_nids_2_tuning_1.png
 
-The PLAYBOOKS tab shows any applicable plays for this detection.
+The PLAYBOOKS tab shows any applicable plays for this detection. These playbooks are used for the Guided Analysis tab in :ref:`alerts`.
 
 .. warning::
 
