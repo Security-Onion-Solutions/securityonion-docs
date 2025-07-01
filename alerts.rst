@@ -82,7 +82,9 @@ The remainder of the page is a data table that starts in the grouped view and ca
 Guided Analysis
 ~~~~~~~~~~~~~~~
 
-When you click the arrow to expand the alert, it starts on the ``ALERT DETAILS`` tab but you can switch to the ``GUIDED ANALYSIS`` tab which leverages Playbooks to show you plays associated with the alert. These plays include questions which help guide your investigation. Each question has an associated query and the results of that query will be displayed to help you answer the question. A maximum of 5 query results will be displayed but if you want to see more, then you can click the crosshairs icon to open the query in :ref:`hunt`. This also allows you to tweak the query if necessary. If you don't get any results, you could try changing the date range or other query parameters. In some cases, the query may be looking for data that you don't currently collect. For example, the query may be looking for endpoint data and so you may need to deploy the :ref:`elastic-agent` to start collecting this information.
+When you click the arrow to expand the alert, it starts on the ``ALERT DETAILS`` tab but you can switch to the ``GUIDED ANALYSIS`` tab which leverages Playbooks to show you plays associated with the alert. These plays include questions which help guide your investigation. You can expand all questions at once using the maximize button on the right side of the ``GUIDED ANALYSIS`` tab. 
+
+Each question has an associated query and the results of that query will be displayed to help you answer the question. A maximum of 5 query results will be displayed but if you want to see more, then you can click the crosshairs icon to open the query in :ref:`hunt`. This also allows you to tweak the query if necessary. If you don't get any results, you could try changing the date range or other query parameters. In some cases, the query may be looking for data that you don't currently collect. For example, the query may be looking for endpoint data and so you may need to deploy the :ref:`elastic-agent` to start collecting this information.
 
 For more information about Playbooks, please see the :ref:`detections` section.
 
