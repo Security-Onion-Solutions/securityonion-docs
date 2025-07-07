@@ -86,6 +86,10 @@ When you click the arrow to expand the alert, it starts on the ``ALERT DETAILS``
 
 Each question has an associated query and the results of that query will be displayed to help you answer the question. A maximum of 5 query results will be displayed but if you want to see more, then you can click the crosshairs icon to open the query in :ref:`hunt`. This also allows you to tweak the query if necessary. If you don't get any results, you could try changing the date range or other query parameters. In some cases, the query may be looking for data that you don't currently collect. For example, the query may be looking for endpoint data and so you may need to deploy the :ref:`elastic-agent` to start collecting this information.
 
+.. note::
+
+   To see Guided Analysis in action, check out our sneak peek video at https://youtu.be/SLGRB3PxB-o.
+
 For more information about Playbooks, please see the :ref:`detections` section.
 
 .. warning::
