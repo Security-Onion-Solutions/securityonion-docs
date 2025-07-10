@@ -108,7 +108,7 @@ If you choose Suricata for metadata, it will extract files from network traffic 
 PCAP
 ----
 
-For new installations in either ``Eval`` or ``Standalone`` mode, full packet capture is written to disk by Suricata. For other deployments, full packet capture is written to disk by :ref:`stenographer` but you can optionally switch this to Suricata.
+For new installations in either ``Eval`` or ``Standalone`` mode, full packet capture is written to ``/nsm/suripcap/`` by Suricata. For other deployments, full packet capture is written to disk by :ref:`stenographer` but you can optionally switch this to Suricata.
 
 Switching PCAP from Stenographer to Suricata
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
