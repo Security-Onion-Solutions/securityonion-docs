@@ -6,7 +6,7 @@ NetFlow
 You may have devices on your network such as firewalls, routers, and switches that are capable of exporting NetFlow records. If you would like to collect these NetFlow records, add the Elastic integration for ``NetFlow Records`` and then allow the Netflow traffic through the firewall.
 
 Add the NetFlow Records integration
----------------------------------------
+-----------------------------------
 
 First, add the Elastic integration for ``NetFlow Records``.
 
