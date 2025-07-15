@@ -17,6 +17,12 @@ Please do NOT disclose publicly until we have had sufficient time to resolve the
 
    This security address should be used only for undisclosed vulnerabilities. Dealing with fixed issues or general questions on how to use Security Onion should be handled via the normal :ref:`support` channels.
 
+Beg Bounties
+------------
+
+We do not participate in "beg bounties":
+https://www.troyhunt.com/beg-bounties/
+
 Product and Supply Chain Integrity
 ----------------------------------
 
