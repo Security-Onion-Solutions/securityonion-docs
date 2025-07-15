@@ -18,7 +18,8 @@ First, add the Elastic integration for ``iptables``.
 #. Click the ``Add integration`` button.
 #. Search for ``iptables`` and then click on the ``iptables`` integration.
 #. The Elastic Integration page will show an overview of the iptables Integration. Review all information on the page and then click the ``Add iptables`` button.
-#. On the ``Add iptables integration`` screen, go to the ``UDP host to listen on`` field and change ``localhost`` to ``0.0.0.0``. Check the ``UDP port to listen on`` field and update if necessary. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
+#. On the ``Add iptables integration`` screen, disable the options labeled ``Collect iptables application logs (input: logfile)`` and ``Collect iptables application logs (input: journald)``. Make sure that ``Collect iptables application logs (input: udp)
+`` is enabled and then change the ``Syslog host`` setting from ``localhost`` to ``0.0.0.0``. The ``Syslog Port`` should be set to ``9001`` by default. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
 
 Allow iptables logs through firewall
 ------------------------------------
@@ -32,7 +33,7 @@ Next, allow the traffic from the iptables host through the firewall to the iptab
 #. Navigate to :ref:`administration` --> Configuration.
 #. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 #. On the left side, go to ``firewall``, select ``hostgroups``, and click the ``customhostgroup0`` group. On the right side, enter the IP address of the iptables host and click the checkmark to save.
-#. On the left side, go to ``firewall``, select ``portgroups``, select the ``customportgroup0`` group, and then click ``udp``. On the right side, enter your desired NetFlow listener port (9001 by default) and click the checkmark to save.
+#. On the left side, go to ``firewall``, select ``portgroups``, select the ``customportgroup0`` group, and then click ``udp``. On the right side, enter your desired listener port (9001 by default) and click the checkmark to save.
 #. On the left side, go to ``firewall``, select ``role``, and then select the node type that will receive the iptables logs. Then drill into ``chain`` --> ``INPUT`` --> ``hostgroups`` --> ``customhostgroup0`` --> ``portgroups``. On the right side, enter ``customportgroup0`` and click the checkmark to save.
 #. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 

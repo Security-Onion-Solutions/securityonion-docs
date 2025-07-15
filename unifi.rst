@@ -3,39 +3,54 @@
 UniFi
 =====
 
-If you have UniFi firewalls on your network, you can send their logs to Security Onion. Typically, UniFi firewalls have two different kinds of logs. The first is standard :ref:`iptables` firewall logs. The second is system logs in :ref:`cef` format. To get all of these logs into :ref:`elasticsearch`, you'll need to add the Elastic integrations for :ref:`iptables` and :ref:`cef` and then configure the Security Onion firewall to allow the remote device to send both types of logs.
+If you have UniFi firewalls on your network, you can send their logs to Security Onion. Typically, UniFi firewalls can send two different kinds of logs. The first is :ref:`iptables` firewall logs and the second is system logs in :ref:`cef` format. To get all of these logs into :ref:`elasticsearch`, you'll need to add the Elastic integrations for :ref:`iptables` and :ref:`cef`, configure the UniFi device to send those logs, and then configure the Security Onion firewall to allow those logs.
 
-Add the CEF and iptables integrations
+Add the iptables and CEF integrations
 -------------------------------------
 
-First, add the Elastic integration for ``CEF``.
+First, add the Elastic integration for :ref:`iptables` and :ref:`cef`.
 
 .. note::
 
-   For more information about the ``CEF`` integration, please see https://www.elastic.co/docs/reference/integrations/cef.
-
-#. Go to :ref:`elastic-fleet`, click the ``Agent policies`` tab, and then click the desired policy (for example ``so-grid-nodes_general``).
-#. Click the ``Add integration`` button.
-#. Search for ``cef`` and then click on the ``CEF`` integration.
-#. The Elastic Integration page will show an overview of the CEF Integration. Review all information on the page and then click the ``Add CEF`` button.
-#. On the ``Add CEF integration`` screen, go to the ``UDP host to listen on`` field and change ``localhost`` to ``0.0.0.0``. Check the ``UDP port to listen on`` field and update if necessary. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
-
-Next, add the Elastic integration for ``iptables``.
-
-.. note::
-
-   For more information about the ``iptables`` integration, please see https://www.elastic.co/docs/reference/integrations/iptables.
+        For more information about the :ref:`iptables` and :ref:`cef` integrations, see the :ref:`iptables` and :ref:`cef` sections. Each of those sections has instructions for enabling each integration independently but the instructions below will walk you through enabling both integrations at the same time.
 
 #. Go to :ref:`elastic-fleet`, click the ``Agent policies`` tab, and then click the desired policy (for example ``so-grid-nodes_general``).
 #. Click the ``Add integration`` button.
 #. Search for ``iptables`` and then click on the ``iptables`` integration.
 #. The Elastic Integration page will show an overview of the iptables Integration. Review all information on the page and then click the ``Add iptables`` button.
-#. On the ``Add iptables integration`` screen, go to the ``UDP host to listen on`` field and change ``localhost`` to ``0.0.0.0``. Check the ``UDP port to listen on`` field and update if necessary. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
+#. On the ``Add iptables integration`` screen, disable the options labeled ``Collect iptables application logs (input: logfile)`` and ``Collect iptables application logs (input: journald)``. Make sure that ``Collect iptables application logs (input: udp)`` is enabled and then change the ``Syslog host`` setting from ``localhost`` to ``0.0.0.0``. The ``Syslog Port`` should be set to ``9001`` by default. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
+#. Back at the desired policy screen, click the ``Add integration`` button.
+#. Search for ``cef`` and then click on the ``Common Event Format (CEF)`` integration.
+#. The Elastic Integration page will show an overview of the CEF Integration. Review all information on the page and then click the ``Add Common Event Format (CEF)`` button.
+#. On the ``Add Common Event Format (CEF) integration`` screen, disable the options labeled ``Collect CEF application logs (input: logfile)`` and ``Collect CEF application logs (input: tcp)``.  Make sure that ``Collect CEF application logs (input: udp)`` is enabled and then change the ``Syslog Host`` setting from ``localhost`` to ``0.0.0.0``. The ``Syslog Port`` should be set to ``9003`` by default. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
 
-Allow UniFi logs through firewall
----------------------------------
+Configure UniFi
+---------------
 
-Next, allow the traffic from the UniFi device through the firewall to the Elastic integration ports.
+Next, configure UniFi to send both types of logs to Security Onion.
+
+.. note::
+
+        UniFi configuration may be different depending on what specific UniFi device you have and what software it is running. These instructions are based on a Cloud Gateway Fiber device running control plane version 4.2.12 and Network application version 9.3.43.
+
+To configure UniFi to send iptables firewall logs to the Elastic integration for iptables:
+
+#. In the UniFi web interface, navigate to Settings - CyberSecure - Traffic Logging.
+#. Next to ``Activity Logging (Syslog)``, choose the ``SIEM Server`` option.
+#. Set the ``Server Address`` to the IP address of the Security Onion node to send the logs to.
+#. Set the ``Port`` to 9001.
+
+To configure UniFi to send system logs to the Elastic integration for CEF:
+
+#. In the UniFi web interface, navigate to Settings - Control Plane - Integrations.
+#. Next to ``Activity Logging (Syslog)``, choose the ``SIEM Server`` option.
+#. Set the ``Server Address`` to the IP address of the Security Onion node to send the logs to.
+#. Set the ``Port`` to 9003.
+
+Allow UniFi logs through Security Onion firewall
+------------------------------------------------
+
+Finally, allow the traffic from the UniFi device through the Security Onion firewall to the Elastic integration ports.
 
 .. note::
 
