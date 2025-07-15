@@ -3,16 +3,20 @@
 UniFi
 =====
 
-If you have UniFi firewalls on your network, you can send their logs to Security Onion. Typically, UniFi firewalls can send two different kinds of logs. The first is :ref:`iptables` firewall logs and the second is system logs in :ref:`cef` format. To get all of these logs into :ref:`elasticsearch`, you'll need to add the Elastic integrations for :ref:`iptables` and :ref:`cef`, configure the UniFi device to send those logs, and then configure the Security Onion firewall to allow those logs.
+If you have UniFi firewalls on your network, you can send their logs to Security Onion. Typically, UniFi firewalls can send two different kinds of logs. The first is iptables firewall logs and the second is system logs in CEF format. To get all of these logs into :ref:`elasticsearch`, you'll need to add the Elastic integrations for iptables and CEF, configure the UniFi device to send those logs, and then configure the Security Onion firewall to allow those logs.
 
 Add the iptables and CEF integrations
 -------------------------------------
 
-First, add the Elastic integration for :ref:`iptables` and :ref:`cef`.
+First, add the Elastic integration for iptables and CEF.
 
 .. note::
 
-        For more information about the :ref:`iptables` and :ref:`cef` integrations, see the :ref:`iptables` and :ref:`cef` sections. Each of those sections has instructions for enabling each integration independently but the instructions below will walk you through enabling both integrations at the same time.
+        For more information about the iptables integration, see:
+        https://www.elastic.co/docs/reference/integrations/iptables
+        
+        For more information about the CEF integration, see:
+        https://www.elastic.co/docs/reference/integrations/cef
 
 #. Go to :ref:`elastic-fleet`, click the ``Agent policies`` tab, and then click the desired policy (for example ``so-grid-nodes_general``).
 #. Click the ``Add integration`` button.
