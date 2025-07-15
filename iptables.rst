@@ -18,8 +18,7 @@ First, add the Elastic integration for ``iptables``.
 #. Click the ``Add integration`` button.
 #. Search for ``iptables`` and then click on the ``iptables`` integration.
 #. The Elastic Integration page will show an overview of the iptables Integration. Review all information on the page and then click the ``Add iptables`` button.
-#. On the ``Add iptables integration`` screen, disable the options labeled ``Collect iptables application logs (input: logfile)`` and ``Collect iptables application logs (input: journald)``. Make sure that ``Collect iptables application logs (input: udp)
-`` is enabled and then change the ``Syslog host`` setting from ``localhost`` to ``0.0.0.0``. The ``Syslog Port`` should be set to ``9001`` by default. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
+#. On the ``Add iptables integration`` screen, disable the options labeled ``Collect iptables application logs (input: logfile)`` and ``Collect iptables application logs (input: journald)``. Make sure that ``Collect iptables application logs (input: udp)`` is enabled and then change the ``Syslog host`` setting from ``localhost`` to ``0.0.0.0``. The ``Syslog Port`` should be set to ``9001`` by default. Click the ``Save and continue`` button and then click ``Save and deploy changes``.
 
 Allow iptables logs through firewall
 ------------------------------------

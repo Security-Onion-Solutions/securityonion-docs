@@ -35,14 +35,14 @@ Next, configure UniFi to send both types of logs to Security Onion.
 
 To configure UniFi to send iptables firewall logs to the Elastic integration for iptables:
 
-#. In the UniFi web interface, navigate to Settings - CyberSecure - Traffic Logging.
+#. In the UniFi web interface, navigate to Settings --> CyberSecure --> Traffic Logging.
 #. Next to ``Activity Logging (Syslog)``, choose the ``SIEM Server`` option.
 #. Set the ``Server Address`` to the IP address of the Security Onion node to send the logs to.
 #. Set the ``Port`` to 9001.
 
 To configure UniFi to send system logs to the Elastic integration for CEF:
 
-#. In the UniFi web interface, navigate to Settings - Control Plane - Integrations.
+#. In the UniFi web interface, navigate to Settings --> Control Plane --> Integrations.
 #. Next to ``Activity Logging (Syslog)``, choose the ``SIEM Server`` option.
 #. Set the ``Server Address`` to the IP address of the Security Onion node to send the logs to.
 #. Set the ``Port`` to 9003.
