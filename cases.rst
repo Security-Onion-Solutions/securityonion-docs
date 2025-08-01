@@ -201,3 +201,10 @@ Developing Analyzers
 ~~~~~~~~~~~~~~~~~~~~
 
 If you'd like to develop a custom analyzer, take a look at the developer's guide at https://github.com/Security-Onion-Solutions/securityonion/tree/2.4/main/salt/sensoroni/files/analyzers.
+
+Templates
+---------
+
+SOC can use case templates to auto-populate default values of new cases. A template is itself a case, with its category set to ``template``. To utilize that template case, the new case should specify the template case ID in the ``template`` field of the case object.
+
+SOC automatically populates new case template fields with the value stored in the ``rule.case_template`` field of the alert being escalated. This allows for specific templates to be assigned to certain detection rules. For example, if alerts triggered from a certain rule are known to require a consistent set of resolution steps then the description of a case template can be prepopulated with that checklist (in markdown format). Then, the backing rule that triggered the alert can have its ``case_template`` field set to that case template ID.
