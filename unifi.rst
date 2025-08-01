@@ -51,6 +51,11 @@ To configure UniFi to send system logs to the Elastic integration for CEF:
 #. Set the ``Server Address`` to the IP address of the Security Onion node to send the logs to.
 #. Set the ``Port`` to 9003.
 
+While in UniFI, check your UniFi firewall rules and update if necessary:
+
+#. In the UniFi web interface, navigate to Settings --> Policy Engine.
+#. For any firewall rule that you want to see in Security Onion, make sure that ``Syslog Logging`` is enabled and the description starts with either ``Block`` or ``Allow``.
+
 Allow UniFi logs through Security Onion firewall
 ------------------------------------------------
 
@@ -70,4 +75,4 @@ Finally, allow the traffic from the UniFi device through the Security Onion fire
 UniFi dashboards
 ----------------
 
-Once all configuration is complete, you should be able to go to :ref:`dashboards` and select one of the ``Firewall - UniFi`` dashboards to see your UniFi logs. Please note that these dashboards assume that your firewall rules start with either ``Block`` or ``Allow`` in the description. Also note that you may need to manually enable logging on your firewall rules.
+Once all configuration is complete, you should be able to go to :ref:`dashboards` and select one of the ``Firewall - UniFi`` dashboards to see your UniFi logs.
