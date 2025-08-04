@@ -96,6 +96,7 @@ The ``Elastic Defend`` integration has both free and paid features. By default, 
         - Process
 
 .. tip::
+
         If you are upgrading from 2.4.160 or earlier you will need to manually enable the 'DNS' event collection feature for macOS found under the 'endpoints-initial' policy.
 
 osquery-endpoints (``Osquery Manager`` integration)
