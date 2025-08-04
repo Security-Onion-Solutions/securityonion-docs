@@ -32,11 +32,11 @@ To add a new agent to your deployment, see the :ref:`elastic-agent` section.
 Upgrading Agents
 ~~~~~~~~~~~~~~~~
 
-Fleet automatically checks to see if agents are the latest version. If not, agents will display ``Upgrade available``. If you would like to upgrade an agent, click the ``Actions`` menu on the right side and select the ``Upgrade agent`` option. You will then have the opportunity to select which version to upgrade to. Please choose the version number that matches the version of the Elastic stack that you are currently running. For example, if you are currently running Elastic 8.17.3 then you should select the 8.17.3 agent version.
+Fleet automatically checks to see if agents are the latest version. If not, agents will display ``Upgrade available``. If you would like to upgrade an agent, click the ``Actions`` menu on the right side and select the ``Upgrade agent`` option. You will then have the opportunity to select which version to upgrade to. Please choose the version number that matches the version of the Elastic stack that you are currently running. For example, if you are currently running Elastic 8.18.4 then you should select the 8.18.4 agent version.
 
 .. warning::
 
-        If you try to upgrade to a version of the agent that is newer than the version of your Elastic stack, then you may run into errors. For example, if you are currently running Elastic 8.17.3 and try to upgrade to agent version 8.17.4 or 9.0.0 then you may run into errors.
+        If you try to upgrade to a version of the agent that is newer than the version of your Elastic stack, then you may run into errors. For example, if you are currently running Elastic 8.18.4 and try to upgrade to agent version 8.19.0 or 9.1.0 then you may run into errors.
 
 Agent Policies
 --------------
@@ -84,6 +84,7 @@ The ``Elastic Defend`` integration has both free and paid features. By default, 
 
 - Event Collection - macOS
 
+        - DNS
         - File
         - Process
         - Network
@@ -93,6 +94,10 @@ The ``Elastic Defend`` integration has both free and paid features. By default, 
         - File
         - Network
         - Process
+
+.. tip::
+
+        If you are upgrading from 2.4.160 or earlier you will need to manually enable the 'DNS' event collection feature for macOS found under the 'endpoints-initial' policy.
 
 osquery-endpoints (``Osquery Manager`` integration)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
