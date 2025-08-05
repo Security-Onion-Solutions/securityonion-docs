@@ -48,7 +48,7 @@ Fill out the form and then click the green check to save and create the VM:
 .. image:: images/hypervisor/hyper-4.png
   :target: _images/hyper-4.png
 
-Once the VM is created and the first highstate is initiated, it will look like this:
+Once the VM is created and the first highstate is initiated, it should look like this:
 
 .. image:: images/hypervisor/hyper-5.png
   :target: _images/hyper-5.png
