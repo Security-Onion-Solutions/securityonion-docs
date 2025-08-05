@@ -9,6 +9,14 @@ Starting with Security Onion version 2.4.170, Security Onion Pro users can creat
 
     This is an enterprise-level feature of Security Onion. Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable this feature.
 
+Minimum Requirements
+--------------------
+
+Please note the following MINIMUM requirements for a Hypervisor node:
+
+- 32 CPU cores
+- 64GB RAM
+
 Adding a Hypervisor
 -------------------
 
