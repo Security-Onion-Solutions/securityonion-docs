@@ -25,12 +25,12 @@ Install a new node, select the ``DISTRIBUTED`` deployment option, choose ``Exist
 .. image:: images/hypervisor/hyper-0.png
   :target: _images/hyper-0.png
 
-Once the new hypervisor node has been accepted into the grid, it will look like this:
+Once the new hypervisor node has been accepted into the grid, go to SOC Configuration, click the Options menu, enable advanced settings, and then navigate to ``hypervisor`` settings. It should look like this:
 
 .. image:: images/hypervisor/hyper-1.png
   :target: _images/hyper-1.png
 
-Once the base domain has been configured on the hypervisor (allowing VMs to be created), it will look like this:
+Once the base domain has been configured on the hypervisor (allowing VMs to be created), it should look like this:
 
 .. image:: images/hypervisor/hyper-2.png
   :target: _images/hyper-2.png
