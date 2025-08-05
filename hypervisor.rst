@@ -17,6 +17,15 @@ Please note the following MINIMUM requirements for a Hypervisor node:
 - 32 CPU cores
 - 64GB RAM
 
+Airgap
+------
+
+Users in an airgapped environment will need to follow these steps prior to accepting the hypervisor node in SOC Grid Members:
+ 
+1. Download the Oracle 9 Qcow2 image from https://download.securityonion.net/file/securityonion/OL9U5_x86_64-kvm-b253.qcow2
+
+2. Place OL9U5_x86_64-kvm-b253.qcow2 into /nsm/libvirt/boot/ on your manager node
+
 Adding a Hypervisor
 -------------------
 
@@ -39,6 +48,8 @@ Once the base domain has been configured on the hypervisor (allowing VMs to be c
 
 Adding a Security Onion VM
 --------------------------
+
+Please note that hardware for a vm cannot be modified once a vm is created.
 
 To create a new VM, click the plus sign:
 
