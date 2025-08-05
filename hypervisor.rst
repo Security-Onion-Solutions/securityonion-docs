@@ -51,7 +51,7 @@ Adding a Security Onion VM
 
 Please note that hardware for a vm cannot be modified once a vm is created.
 
-To create a new VM, click the plus sign:
+To create a new VM, click the plus sign. You should see a form like this. If using DHCP, please pay special attention to the DHCP notes:
 
 .. image:: images/hypervisor/hyper-3.png
   :target: _images/hyper-3.png
