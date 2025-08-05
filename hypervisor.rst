@@ -20,7 +20,7 @@ Please note the following MINIMUM requirements for a Hypervisor node:
 Adding a Hypervisor
 -------------------
 
-Install a new node and choose the Hypervisor option:
+Install a new node, select the ``DISTRIBUTED`` deployment option, choose ``Existing Deployment``, and then select the ``Hypervisor`` option:
 
 .. image:: images/hypervisor/hyper-0.png
   :target: _images/hyper-0.png
