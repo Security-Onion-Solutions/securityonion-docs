@@ -12,7 +12,12 @@ Starting with Security Onion version 2.4.170, Security Onion Pro users can creat
 Adding a Hypervisor
 -------------------
 
-Once a hypervisor has been accepted into the grid, it will look like this:
+Install a new node and choose the Hypervisor option:
+
+.. image:: images/hypervisor/hyper-0.png
+  :target: _images/hyper-0.png
+
+Once the new hypervisor node has been accepted into the grid, it will look like this:
 
 .. image:: images/hypervisor/hyper-1.png
   :target: _images/hyper-1.png
