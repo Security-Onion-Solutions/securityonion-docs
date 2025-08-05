@@ -20,7 +20,7 @@ Please note the following MINIMUM requirements for a Hypervisor node:
 Airgap
 ------
 
-Users in an airgapped environment will need to follow these steps prior to accepting the hypervisor node in SOC Grid Members:
+If you are in an :ref:`airgap` environment, you will need to perform these steps prior to accepting the new hypervisor node in SOC Grid Members:
  
 1. Download the Oracle 9 Qcow2 image from https://download.securityonion.net/file/securityonion/OL9U5_x86_64-kvm-b253.qcow2
 
