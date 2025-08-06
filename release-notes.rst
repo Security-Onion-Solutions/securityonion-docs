@@ -17,6 +17,34 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.170 [20250812] Changes
+----------------------
+
+- FEATURE: Add JA4 Support `#14864 <https://github.com/Security-Onion-Solutions/securityonion/issues/14864>`_
+- FEATURE: Add SOC dashboard for CEF logs `#14837 <https://github.com/Security-Onion-Solutions/securityonion/issues/14837>`_
+- FEATURE: Add SOC dashboard for iptables logs `#14836 <https://github.com/Security-Onion-Solutions/securityonion/issues/14836>`_
+- FEATURE: Add SOC dashboards for UniFi logs `#14838 <https://github.com/Security-Onion-Solutions/securityonion/issues/14838>`_
+- FEATURE: Allow Custom Playbook Repo Import `#14780 <https://github.com/Security-Onion-Solutions/securityonion/issues/14780>`_
+- FEATURE: Elasticsearch troubleshooting helper script `#14523 <https://github.com/Security-Onion-Solutions/securityonion/issues/14523>`_
+- FEATURE: Playbooks UI - AutoExpand & Styling `#14851 <https://github.com/Security-Onion-Solutions/securityonion/issues/14851>`_
+- FEATURE: Zeek JA4+ parsing `#14465 <https://github.com/Security-Onion-Solutions/securityonion/issues/14465>`_
+- FIX: Add reminder to API Client dialog about permissions `#14847 <https://github.com/Security-Onion-Solutions/securityonion/issues/14847>`_
+- FIX: Analyst permissions for Playbooks `#14811 <https://github.com/Security-Onion-Solutions/securityonion/issues/14811>`_
+- FIX: Config Backup should exclude agent installers `#14351 <https://github.com/Security-Onion-Solutions/securityonion/issues/14351>`_
+- FIX: Duplicate Detections when using local git repo `#14829 <https://github.com/Security-Onion-Solutions/securityonion/issues/14829>`_
+- FIX: IDH startup message not parsed correctly `#11467 <https://github.com/Security-Onion-Solutions/securityonion/issues/11467>`_
+- FIX: Incorrect file ownership for idstools/idh scripts
+- FIX: JS error during Playbook usage `#14802 <https://github.com/Security-Onion-Solutions/securityonion/issues/14802>`_
+- FIX: Remove atop from ISO build to address CVE-2025-31160 `#14642 <https://github.com/Security-Onion-Solutions/securityonion/issues/14642>`_
+- FIX: Review ISO Size
+- FIX: Sorting in the Alerts Interface Causing Duplicate Data to Appear `#14786 <https://github.com/Security-Onion-Solutions/securityonion/issues/14786>`_
+- FIX: Update common pipeline to rename geoip ASN data `#14884 <https://github.com/Security-Onion-Solutions/securityonion/issues/14884>`_
+- UPGRADE: Elastic to 8.18.4 `#14799 <https://github.com/Security-Onion-Solutions/securityonion/issues/14799>`_
+- UPGRADE: Suricata to 7.0.11 `#14817 <https://github.com/Security-Onion-Solutions/securityonion/issues/14817>`_
+- UPGRADE: Ubuntu 24.10 base images switch to LTS 24.04 `#14798 <https://github.com/Security-Onion-Solutions/securityonion/issues/14798>`_
+- UPGRADE: Zeek Ethercat plugin `#14783 <https://github.com/Security-Onion-Solutions/securityonion/issues/14783>`_
+- UPGRADE: Zeek to 7.0.9 `#14861 <https://github.com/Security-Onion-Solutions/securityonion/issues/14861>`_
+
 2.4.160 [20250625] Changes
 --------------------------
 
