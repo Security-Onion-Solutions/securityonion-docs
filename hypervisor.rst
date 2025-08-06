@@ -66,6 +66,14 @@ Once the VM is created and the first highstate is initiated, it should look like
 .. image:: images/hypervisor/hyper-5.png
   :target: _images/hyper-5.png
 
+Stopping or Starting a VM
+--------------------------
+
+If you need to stop or start a VM, you can use the ``Execute VM power operations`` menu at the bottom of the VM form:
+
+.. image:: images/hypervisor/hyper-6.png
+  :target: _images/hyper-6.png
+
 Deleting a VM
 -------------
 
