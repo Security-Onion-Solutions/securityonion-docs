@@ -18,7 +18,7 @@ Release History
 ~~~~~~~~~~~~~~~
 
 2.4.170 [20250812] Changes
-----------------------
+--------------------------
 
 - FEATURE: Add JA4 Support `#14864 <https://github.com/Security-Onion-Solutions/securityonion/issues/14864>`_
 - FEATURE: Add SOC dashboard for CEF logs `#14837 <https://github.com/Security-Onion-Solutions/securityonion/issues/14837>`_

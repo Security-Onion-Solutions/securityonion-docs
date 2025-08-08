@@ -74,6 +74,13 @@ If you need to stop or start a VM, you can use the ``Execute VM power operations
 .. image:: images/hypervisor/hyper-6.png
   :target: _images/hyper-6.png
 
+Here is the list of VM power operations and what they actually do:
+- Reboot: gracefully reboot the VM (virt.reboot)
+- Reset: forcefully reset the VM (virt.reset)
+- Shutdown: gracefully shut down the VM (virt.shutdown)
+- Start: start the VM (virt.start)
+- Stop: forcefully stop the VM (virt.stop)
+
 Deleting a VM
 -------------
 
@@ -92,3 +99,10 @@ Once you've confirmed, it will show that it is pending deletion:
 .. image:: images/hypervisor/hyper-8.png
   :target: _images/hyper-8.png
 
+The backend then deletes the VM, releases the hardware used by the VM, and updates the hypervisor annotation used by SOC. This process should take less than 30 seconds.
+
+You will then need to refresh your web browser to see that CPU, memory, and free hardware have been updated. The deleted VM should then be listed as ``Destroyed Instance``.
+
+.. warning::
+
+        If you delete a VM and attempt to immediately create a new VM prior to the backend releasing the hardware, then you will not be able to pass through the hardware that was previously used by the deleted VM.
