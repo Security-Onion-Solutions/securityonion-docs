@@ -100,13 +100,13 @@ If ``soup`` displays any errors, you can check ``/root/soup.log`` for additional
 Airgap
 ------
 
-When you run ``soup`` on an :ref:`airgap` install, it will ask for the location of the upgrade media. You can do one of the following:
+To update an :ref:`airgap` deployment, you'll need to get the latest ISO image to the airgapped manager and then run ``soup`` which will ask where to find it:
 
-- burn the latest ISO image to a DVD and insert it in the DVD drive
-- flash the ISO image to a USB drive and insert that USB drive
-- simply copy the ISO file itself to the airgapped manager
+- burn the latest ISO image to a DVD and insert it in the DVD drive of the manager (example: ``/dev/cdrom``)
+- flash the ISO image to a USB drive and connect that USB drive to the manager (example: ``/dev/sdb``)
+- simply copy the ISO file itself to the manager (example: ``/home/YourUser/securityonion-2.4.XYZ-YYYYMMDD.iso``)
 
-You can also specify the path on the command line using the ``-f`` option. For example (change this to reflect the actual path to the ISO image):
+Instead of waiting for soup to prompt for the location, you can also specify the path on the command line using the ``-f`` option. For example (change this to reflect the actual path to the ISO file or disk device containing the ISO media):
 
 ::
 

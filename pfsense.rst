@@ -53,4 +53,4 @@ Next, allow the traffic from the pfSense firewall to port 9001. These instructio
 #. On the left side, go to ``firewall``, select ``role``, and then select the node type that will receive the pfSense logs. Then drill into ``chain`` --> ``INPUT`` --> ``hostgroups`` --> ``customhostgroup0`` --> ``portgroups``. On the right side, enter ``customportgroup0`` and click the checkmark to save.
 #. If you would like to apply the rules immediately, click the ``SYNCHRONIZE GRID`` button under the ``Options`` menu at the top of the page.
 
-Once all configuration is complete, you should be able to go to :ref:`dashboards` and select the Firewall dashboard to see your firewall logs.
+Once all configuration is complete, you should be able to go to :ref:`dashboards` and select the ``Firewall - pfSense`` dashboard to see your firewall logs.

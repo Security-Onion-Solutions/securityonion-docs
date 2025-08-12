@@ -17,6 +17,8 @@ Starting in Security Onion 2.4.150, licensed Pro users can also access :ref:`mom
 
 Starting in Security Onion 2.4.160, licensed Pro users can also access :ref:`mcp` and :ref:`splunk`.
 
+Starting in Security Onion 2.4.170, licensed Pro users can also create a :ref:`hypervisor` node to run Security Onion virtual machines.
+
 .. note::
 
     Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable these features.
@@ -35,3 +37,4 @@ Starting in Security Onion 2.4.160, licensed Pro users can also access :ref:`mcp
    mom
    mcp
    splunk
+   hypervisor
