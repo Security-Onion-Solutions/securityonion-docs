@@ -8,7 +8,7 @@ If you have UniFi firewalls on your network, you can send their logs to Security
 Add the iptables and CEF integrations
 -------------------------------------
 
-First, add the Elastic integration for iptables and CEF.
+First, add the Elastic integrations for iptables and CEF.
 
 .. note::
 
