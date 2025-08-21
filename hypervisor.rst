@@ -75,6 +75,7 @@ If you need to stop or start a VM, you can use the ``Execute VM power operations
   :target: _images/hyper-6.png
 
 Here is the list of VM power operations and what they actually do:
+
 - Reboot: gracefully reboot the VM (virt.reboot)
 - Reset: forcefully reset the VM (virt.reset)
 - Shutdown: gracefully shut down the VM (virt.shutdown)
