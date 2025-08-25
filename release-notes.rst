@@ -161,7 +161,7 @@ Release History
 - FEATURE: Add notes to SOC Config about Elasticsearch ILM rollover `#14353 <https://github.com/Security-Onion-Solutions/securityonion/issues/14353>`_
 - FEATURE: Add sankey chart to Elastic Agent API dashboard to show relationship between process.name and process.Ext.api.name `#14339 <https://github.com/Security-Onion-Solutions/securityonion/issues/14339>`_
 - FEATURE: Additional licensing enhancements
-- FEATURE: Allow query cancellation from Security Onion Console `#4161 <https://github.com/Security-Onion-Solutions/securityonion/issues/4161>`_
+- FEATURE: Allow query cancelation from Security Onion Console `#4161 <https://github.com/Security-Onion-Solutions/securityonion/issues/4161>`_
 - FEATURE: Allow users to switch Alerts to advanced interface permanently `#14348 <https://github.com/Security-Onion-Solutions/securityonion/issues/14348>`_
 - FEATURE: Enhance config UI Element capabilities
 - FEATURE: Improve management of ES index templates for integrations
