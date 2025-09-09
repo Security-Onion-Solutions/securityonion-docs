@@ -160,7 +160,7 @@ CSV exports are limited to at most 10,000 records, by default.
 
     This CSV export feature is not intended for Elasticsearch data migration purposes.
 
-Report Customization reference
+Report Customization Reference
 ------------------------------
 
 PDF Render Instructions
