@@ -249,7 +249,7 @@ Sorters
     
     {{ range sortMetrics .Value "desc" .Results.mySpecialQuery.Metrics.groupby_1_fieldx }}
 
-- Sort the given case data by the .CreateTime (or event's timestamp) in ascending order (applicable to Case Report):
+- Sort the given case data by the .CreateTime field (or event's timestamp) in ascending order (applicable to Case Report):
 
 ::
 
