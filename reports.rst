@@ -243,13 +243,13 @@ Formatters
 Sorters
 ~~~~~~~
 
-- Sorts the given metrics by the .Value field in descending order:
+- Sort the given metrics by the .Value field in descending order:
 
 ::
     
     {{ range sortMetrics .Value "desc" .Results.mySpecialQuery.Metrics.groupby_1_fieldx }}
 
-- Sorts the given case data by the .CreateTime (or event's timestamp) in ascending order (applicable to Case Report):
+- Sort the given case data by the .CreateTime (or event's timestamp) in ascending order (applicable to Case Report):
 
 ::
 
