@@ -112,11 +112,9 @@ Next is the title of the report. Notice how the full length of the title is foll
 
 Following the title is a ``{{ if .Error }} ... {{ end }}`` block. This is useful for presenting errors encountered during the rendering of the report. If there is no error then this section will not be visible in the final generated report.
 
-Next is the content of the report itself. You'll see report text content mixed with data outputs. For example, the line containing ``**Total Events:**`` will be rendered as 
+Next is the content of the report itself. You'll see report text content mixed with data outputs. For example, if 12 events matched the OQL query provided at the top of this report, then the line containing ``**Total Events:**`` will be rendered as: 
 
 **Total Events**: 12
-
-in the scenario where 12 events matched the OQL query provided at the top of this report.
 
 Finally, there are two tabular outputs included. The first is showing "Event counts by Module and Dataset" and, according to markdown format, will be rendered in a table structure including the column headers "Count, Proportion, Module, and Dataset". Note that those ``|`` characters are used to separate the column data. The first column will output the Value of the first groupby Metric (referenced as ``groupby_0_event_module_event_dataset``), which will be a "count" value. The ``%.0f`` is instructing the output to hide the decimal place values, and the ``en`` is instructing that the number be formatted in the English locale (1,220 vs 1.220). The second column will show the proportion of events that matched this row out of the full set of events, the third column will show the event module for that row, and the last column will show the event dataset for that row.
 
