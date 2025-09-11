@@ -74,6 +74,11 @@ This ensures that remote systems will only have access to the minimum necessary 
 
 Currently OAuth 2.0 scopes are not utilized, since these permissions are assigned outside of the OAuth 2.0 flow.
 
+Manager of Managers
+-------------------
+
+To interact with subgrid data, while still communicating with the primary **Manager of Managers (MoM)** node, include an additional query string parameter on the API URL. The parameter key is ``gridId`` and the value should be set to the desired subgrid ID.
+
 API Reference
 -------------
 
