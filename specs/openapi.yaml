@@ -512,8 +512,6 @@ components:
           type: boolean
         docsUrl:
           type: string
-        enableReverseLookup:
-          type: boolean
         exportNodeId:
           type: string
         grid:
