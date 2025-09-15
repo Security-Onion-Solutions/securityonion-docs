@@ -38,6 +38,19 @@ Fleet automatically checks to see if agents are the latest version. If not, agen
 
         If you try to upgrade to a version of the agent that is newer than the version of your Elastic stack, then you may run into errors. For example, if you are currently running Elastic 8.18.4 and try to upgrade to agent version 8.19.0 or 9.1.0 then you may run into errors.
 
+Monitoring Agents
+~~~~~~~~~~~~~~~~~
+
+Agent health can be monitored in Elastic Fleet under the Agents tab, however you may want to generate alerts when an Agent reports a degraded or offline state. Via :ref:`administration` --> Configuration --> manager -> agent_monitoring you can enable a script that will periodically poll Elastic Fleet. Agents in an offline or degraded state for longer than the configured threshold (default is 5h) will generate an Alert in the :ref:`Alerts` interface of SOC.
+
+
+For more granular control over what Agents generate an alert, you can leverage fleet 'tags' to tag those agents. Then under :ref:`administration` --> Configuration --> manager -> agent_monitoring -> config -> custom_kquery you can enter a kql search like ``tags: critical``. Then only those Agents tagged as 'critical' would generate an Alert.
+
+For more information on Elastic Fleet tags see https://www.elastic.co/docs/reference/fleet/filter-agent-list-by-tags#add-tags-in-fleet.
+
+.. tip::
+        Security Onion Pro users can configure external :ref:`notifications`.
+
 Agent Policies
 --------------
 
