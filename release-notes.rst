@@ -38,6 +38,7 @@ Release History
 - FIX: Review additional STIGs
 - FIX: Set NIC Channels combined to 1 for monitor interfaces `#14951 <https://github.com/Security-Onion-Solutions/securityonion/issues/14951>`_
 - FIX: Spacing issue on certain Configuration screens `#14989 <https://github.com/Security-Onion-Solutions/securityonion/issues/14989>`_
+- FIX: Subgrid PCAP downloads `#15030 <https://github.com/Security-Onion-Solutions/securityonion/issues/15030>`_
 - FIX: Suricata metadata index rollover `#15021 <https://github.com/Security-Onion-Solutions/securityonion/issues/15021>`_
 - FIX: Unable to remove passkey for passwordless logins `#14926 <https://github.com/Security-Onion-Solutions/securityonion/issues/14926>`_
 - FIX: Zeek DNS ingest error
