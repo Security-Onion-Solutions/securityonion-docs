@@ -18,7 +18,7 @@ Release History
 ~~~~~~~~~~~~~~~
 
 2.4.180 [20250916] Changes
-----------------------
+--------------------------
 
 - FEATURE: Add contextual help buttons to screen toolbars `#15027 <https://github.com/Security-Onion-Solutions/securityonion/issues/15027>`_
 - FEATURE: Alert on offline agent `#14898 <https://github.com/Security-Onion-Solutions/securityonion/issues/14898>`_
@@ -46,6 +46,7 @@ Release History
 - UPGRADE: Elasticsearch 8.18.6 `#15014 <https://github.com/Security-Onion-Solutions/securityonion/issues/15014>`_
 - UPGRADE: ISO base image to Oracle 9.6 `#15007 <https://github.com/Security-Onion-Solutions/securityonion/issues/15007>`_
 - UPGRADE: Kafka base image
+- UPGRADE: Suricata to 7.0.12 `#15038 <https://github.com/Security-Onion-Solutions/securityonion/issues/15038>`_
 - UPGRADE: Zeek to 7.0.10 `#14967 <https://github.com/Security-Onion-Solutions/securityonion/issues/14967>`_
 
 2.4.170 [20250812] Changes
