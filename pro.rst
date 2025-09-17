@@ -19,6 +19,8 @@ Starting in Security Onion 2.4.160, licensed Pro users can also access :ref:`mcp
 
 Starting in Security Onion 2.4.170, licensed Pro users can also create a :ref:`hypervisor` node to run Security Onion virtual machines.
 
+Starting in Security Onion 2.4.180, licensed Pro users can also generate :ref:`reports`.
+
 .. note::
 
     Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable these features.
@@ -38,3 +40,4 @@ Starting in Security Onion 2.4.170, licensed Pro users can also create a :ref:`h
    mcp
    splunk
    hypervisor
+   reports

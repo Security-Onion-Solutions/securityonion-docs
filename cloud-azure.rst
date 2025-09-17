@@ -12,7 +12,7 @@ https://securityonion.net/azure
     
 .. note::
 
-   Azure has put on hold their Virtual TAP preview feature, which means in order to install a Security Onion sensor in the Azure cloud you will need to use a packet broker offering from the Azure Marketplace. See more information here: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
+   As of Septemeber, 2025, Azure has released a preview of their Virtual TAP feature. See more information here: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
 
 .. note::
 
@@ -113,6 +113,13 @@ Prior to launching the Security Onion sensor virtual machine you will need to cr
 - Review the summary
 - Select: ``Create``
 
+Setup Virtual Network TAP
+#########################
+
+To accomplish traffic monitoring in Azure, a virtual network TAP must be created. This can be created in any resource group but must exist in the same region as the source and destination interfaces. Locate the VTAP screen in the Azure portal by searching for ``vtap`` and a list of results will include "Virtual network termination access points". Choose that and then click the ``Create`` button. Choose the region that matches your source and destination VMs. Choose the destination by locating the sniffing interface created earlier. It will show port 4789 since the monitored traffic will arrive at the sniffing interface as VxLAN traffic. Finally, choose the source network interface(s) to monitor. Multiple interfaces can be selected if needing to monitor multiple VMs.
+
+Review the Azure VTAP documentation located at https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview to ensure all other requirements have been satisfied.
+
 Create Security Onion Instances
 ###############################
 
@@ -175,10 +182,6 @@ Azure Sensor Setup
 ##################
 
 SSH into the sensor node and run through setup to set this node up as a sensor. Choose ``eth0`` as the main interface and ``eth1`` as the monitoring interface.
-
-.. note::
-
-   Azure has put on hold their Virtual TAP preview feature, which means in order to install a Security Onion sensor in the Azure cloud you will need to use a packet broker offering from the Azure Marketplace. See more information here: https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview
 
 Verify Monitoring Traffic
 -------------------------

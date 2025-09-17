@@ -246,8 +246,8 @@ components:
           type: string
         value:
           description: The value of this artifact. Essentially this is the content
-            of the artifact itself, such as an IP address, a hostname, a stream of
-            file bytes, etc.
+            of the artifact itself, such as an IP address, a hostname, a filename,
+            etc.
           example: 1.2.3.4
           type: string
       required:
@@ -512,8 +512,8 @@ components:
           type: boolean
         docsUrl:
           type: string
-        enableReverseLookup:
-          type: boolean
+        exportNodeId:
+          type: string
         grid:
           $ref: '#/components/schemas/model.GridParameters'
         hunt:
@@ -1041,20 +1041,11 @@ components:
           description: The maximum number of metrics to limit in aggregate groups
           example: 10
           type: integer
-        parsedQuery:
-          $ref: '#/components/schemas/model.Query'
         query:
           description: The base query used to conduct the event search
           example: (*) AND tags:alert AND NOT event.acknowledged:true AND NOT event.escalated:true
             | groupby rule.name event.module* event.severity_label rule.uuid
           type: string
-        searchAfter:
-          items: {}
-          type: array
-        sortFields:
-          items:
-            $ref: '#/components/schemas/model.SortCriteria'
-          type: array
       type: object
     model.EventSearchResults:
       properties:
@@ -1131,20 +1122,11 @@ components:
           description: The maximum number of metrics to limit in aggregate groups
           example: 10
           type: integer
-        parsedQuery:
-          $ref: '#/components/schemas/model.Query'
         query:
           description: The base query used to conduct the event search
           example: (*) AND tags:alert AND NOT event.acknowledged:true AND NOT event.escalated:true
             | groupby rule.name event.module* event.severity_label rule.uuid
           type: string
-        searchAfter:
-          items: {}
-          type: array
-        sortFields:
-          items:
-            $ref: '#/components/schemas/model.SortCriteria'
-          type: array
         updateScripts:
           description: Any scripts used in the event update
           example:
@@ -1413,6 +1395,12 @@ components:
       type: object
     model.Info:
       properties:
+        customReports:
+          additionalProperties:
+            type: string
+          description: The list of custom reports configured for this grid. The key
+            is the filename and the value is the report title.
+          type: object
         elasticVersion:
           description: The version of the Elasticsearch cluster
           example: 8.14.3
@@ -1654,6 +1642,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load15m:
+          description: The node's 15-minute load metric
+          example: 1.09
+          type: number
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
@@ -1661,10 +1653,6 @@ components:
         load5m:
           description: The node's 5-minute load metric
           example: 0.96
-          type: number
-        load15m:
-          description: The node's 15-minute load metric
-          example: 1.09
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -2061,16 +2049,10 @@ components:
           type: array
           uniqueItems: false
       type: object
-    model.Query:
-      properties:
-        segments:
-          items: {}
-          type: array
-      type: object
     model.QueryTask:
       properties:
-        cancellable:
-          description: True if this task can be cancelled
+        cancelable:
+          description: True if this task can be canceled
           example: true
           type: boolean
         details:
@@ -2345,17 +2327,6 @@ components:
       - SigLangSigma
       - SigLangSuricata
       - SigLangYara
-    model.SortCriteria:
-      properties:
-        field:
-          description: The field to sort on
-          example: some_field_name
-          type: string
-        order:
-          description: 'The direction of the sort: asc, desc'
-          example: asc
-          type: string
-      type: object
     model.Status:
       properties:
         alerts:
@@ -2842,6 +2813,53 @@ paths:
       summary: Create Case Artifact
       tags:
       - Cases
+  /connect/case/artifacts/{groupType}/{groupId}/{id}:
+    get:
+      description: |-
+        Searches for all artifacts attached to the given case ID and returns the matching artifacts, if any.
+        Observables are considered "artifacts" in SOC internal terminology.
+        If the case does not exist, this method will respond with a 200 status and an empty list.
+      parameters:
+      - description: The type of artifacts to retrieve [attachments, evidence]
+        example: attachments
+        in: path
+        name: groupType
+        required: true
+        schema:
+          type: string
+      - description: The case ID to use for searching all artifacts
+        in: query
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Artifact'
+                type: array
+          description: The array of artifacts, or an empty array if no matching artifacts
+            found
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Case module not configured on server
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - cases/read
+        - events/read
+      summary: Get Case Artifacts
+      tags:
+      - Cases
   /connect/case/artifacts/{id}:
     delete:
       description: |-
@@ -2876,45 +2894,6 @@ paths:
         - events/read
         - events/write
       summary: Delete Case Artifact
-      tags:
-      - Cases
-    get:
-      description: |-
-        Searches for all artifacts attached to the given case ID and returns the matching artifacts, if any.
-        Observables are considered "artifacts" in SOC internal terminology.
-        If the case does not exist, this method will respond with a 200 status and an empty list.
-      parameters:
-      - description: The case ID to use for searching all artifacts
-        in: path
-        name: id
-        required: true
-        schema:
-          type: string
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/model.Artifact'
-                type: array
-          description: The array of artifacts, or an empty array if no matching artifacts
-            found
-        "400":
-          description: The provided input object or parameters are malformed or invalid
-        "401":
-          description: Request was not properly authenticated
-        "403":
-          description: Insufficient permissions for this request
-        "405":
-          description: Case module not configured on server
-        "500":
-          description: Internal SOC error; review SOC logs
-      security:
-      - bearer:
-        - cases/read
-        - events/read
-      summary: Get Case Artifacts
       tags:
       - Cases
   /connect/case/artifactstream/{id}:
@@ -5039,7 +5018,7 @@ paths:
         queries unless they have privileged access to see active queries across all users.
         Requires a Security Onion Pro license.
       parameters:
-      - description: If set to true the internal, child, uncancellable, and related
+      - description: If set to true the internal, child, uncancelable, and related
           queries will be filtered out of the results
         example: true
         in: query
@@ -5071,7 +5050,7 @@ paths:
     get:
       description: |-
         Requests that the event storage system cancel a specific query identified by the provided input ID.
-        Note that not all queries can be cancelled.
+        Note that not all queries can be canceled.
         Requires a Security Onion Pro license.
       parameters:
       - description: The unique query ID to cancel
@@ -5087,10 +5066,10 @@ paths:
             application/json:
               schema:
                 type: object
-          description: The query cancellation was submitted (may or may not actually
-            get cancelled)
+          description: The query cancelation was submitted (may or may not actually
+            get canceled)
         "400":
-          description: Query could not be cancelled
+          description: Query could not be canceled
         "401":
           description: Request was not properly authenticated
         "403":

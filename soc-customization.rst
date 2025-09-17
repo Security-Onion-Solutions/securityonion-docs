@@ -37,12 +37,12 @@ You can also customize the links on the left side. To do so, go to :ref:`adminis
 Reverse DNS
 -----------
 
-When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you might want to enable automatic reverse DNS lookups to provide more information. You can do so by going to :ref:`administration` --> Configuration --> soc --> config --> server --> client --> enableReverseLookup.
+When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, you might want to enable automatic reverse DNS lookups to provide more information. You can do so by going to :ref:`administration` --> Configuration --> soc --> config --> server --> enableReverseLookup.
 
 Local Lookups
-~~~~~~~~~~~~~
+-------------
 
-Enabling reverse lookups also enables local lookups. To add your own local lookups, create a CSV file at ``/nsm/custom-mappings/ip-descriptions.csv`` on your Manager and populate the file with IP addresses and descriptions as follows:
+If you don't want to enable reverse DNS lookups for all IP addresses but do have a subset of IP addresses that you would like to resolve to hostnames in SOC, then you can create a CSV file at ``/nsm/custom-mappings/ip-descriptions.csv`` on your Manager and populate the file with IP addresses and descriptions as follows:
 
 ::
 
@@ -50,7 +50,7 @@ Enabling reverse lookups also enables local lookups. To add your own local looku
 
 :ref:`elasticsearch` will then ingest the CSV and use the contents to populate a new index called ``so-ip-mappings``.
 
-When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt` with reverse lookups enabled, :ref:`soc` will check the local mappings first. If it doesn't find a match, then it will attempt a reverse DNS lookup.
+When you are viewing IP addresses in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt`, :ref:`soc` will check the local mappings first. If it doesn't find a match, then it will attempt a reverse DNS lookup (if enabled).
 
 If you later need to make changes to your local IP/Descriptions mappings, make the changes in ``/nsm/custom-mappings/ip-descriptions.csv`` and :ref:`elasticsearch` will automatically update the ``so-ip-mappings`` index.
 

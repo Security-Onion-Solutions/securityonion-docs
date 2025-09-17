@@ -17,6 +17,38 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.180 [20250916] Changes
+--------------------------
+
+- FEATURE: Add contextual help buttons to screen toolbars `#15027 <https://github.com/Security-Onion-Solutions/securityonion/issues/15027>`_
+- FEATURE: Alert on offline agent `#14898 <https://github.com/Security-Onion-Solutions/securityonion/issues/14898>`_
+- FEATURE: Allow alerts, dashboards, hunt query to be canceled by the submitter
+- FEATURE: Enable static hostname mapping without reverse DNS lookups `#14900 <https://github.com/Security-Onion-Solutions/securityonion/issues/14900>`_
+- FEATURE: Kafka output policy
+- FEATURE: Manager with hypervisor capabilities `#14997 <https://github.com/Security-Onion-Solutions/securityonion/issues/14997>`_
+- FEATURE: Preparation work for upcoming features
+- FEATURE: Reporting and Exporting
+- FIX: Autofocus OTP field `#14984 <https://github.com/Security-Onion-Solutions/securityonion/issues/14984>`_
+- FIX: Disable Elastic Telemetry by default `#14924 <https://github.com/Security-Onion-Solutions/securityonion/issues/14924>`_
+- FIX: Elastalert - verify that empty file has not been written `#14822 <https://github.com/Security-Onion-Solutions/securityonion/issues/14822>`_
+- FIX: Filter out salt INFO logs for ingest `#14447 <https://github.com/Security-Onion-Solutions/securityonion/issues/14447>`_
+- FIX: Hypervisor firewall rules don't get applied to Managersearch or Standalone `#14923 <https://github.com/Security-Onion-Solutions/securityonion/issues/14923>`_
+- FIX: Receiver custom_fqdn `#15023 <https://github.com/Security-Onion-Solutions/securityonion/issues/15023>`_
+- FIX: Refactor IDH Dockerfile `#14473 <https://github.com/Security-Onion-Solutions/securityonion/issues/14473>`_
+- FIX: Review additional STIGs
+- FIX: Set NIC Channels combined to 1 for monitor interfaces `#14951 <https://github.com/Security-Onion-Solutions/securityonion/issues/14951>`_
+- FIX: Spacing issue on certain Configuration screens `#14989 <https://github.com/Security-Onion-Solutions/securityonion/issues/14989>`_
+- FIX: Subgrid PCAP downloads `#15030 <https://github.com/Security-Onion-Solutions/securityonion/issues/15030>`_
+- FIX: Suricata metadata index rollover `#15021 <https://github.com/Security-Onion-Solutions/securityonion/issues/15021>`_
+- FIX: Unable to remove passkey for passwordless logins `#14926 <https://github.com/Security-Onion-Solutions/securityonion/issues/14926>`_
+- FIX: Zeek DNS ingest error
+- UPGRADE: Analyzer dependencies
+- UPGRADE: Elasticsearch 8.18.6 `#15014 <https://github.com/Security-Onion-Solutions/securityonion/issues/15014>`_
+- UPGRADE: ISO base image to Oracle 9.6 `#15007 <https://github.com/Security-Onion-Solutions/securityonion/issues/15007>`_
+- UPGRADE: Kafka base image
+- UPGRADE: Suricata to 7.0.12 `#15038 <https://github.com/Security-Onion-Solutions/securityonion/issues/15038>`_
+- UPGRADE: Zeek to 7.0.10 `#14967 <https://github.com/Security-Onion-Solutions/securityonion/issues/14967>`_
+
 2.4.170 [20250812] Changes
 --------------------------
 
@@ -161,7 +193,7 @@ Release History
 - FEATURE: Add notes to SOC Config about Elasticsearch ILM rollover `#14353 <https://github.com/Security-Onion-Solutions/securityonion/issues/14353>`_
 - FEATURE: Add sankey chart to Elastic Agent API dashboard to show relationship between process.name and process.Ext.api.name `#14339 <https://github.com/Security-Onion-Solutions/securityonion/issues/14339>`_
 - FEATURE: Additional licensing enhancements
-- FEATURE: Allow query cancellation from Security Onion Console `#4161 <https://github.com/Security-Onion-Solutions/securityonion/issues/4161>`_
+- FEATURE: Allow query cancelation from Security Onion Console `#4161 <https://github.com/Security-Onion-Solutions/securityonion/issues/4161>`_
 - FEATURE: Allow users to switch Alerts to advanced interface permanently `#14348 <https://github.com/Security-Onion-Solutions/securityonion/issues/14348>`_
 - FEATURE: Enhance config UI Element capabilities
 - FEATURE: Improve management of ES index templates for integrations

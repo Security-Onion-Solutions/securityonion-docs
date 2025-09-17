@@ -8,7 +8,7 @@ If you have UniFi firewalls on your network, you can send their logs to Security
 Add the iptables and CEF integrations
 -------------------------------------
 
-First, add the Elastic integration for iptables and CEF.
+First, add the Elastic integrations for iptables and CEF.
 
 .. note::
 
@@ -43,6 +43,7 @@ To configure UniFi to send iptables firewall logs to the Elastic integration for
 #. Next to ``Activity Logging (Syslog)``, choose the ``SIEM Server`` option.
 #. Set the ``Server Address`` to the IP address of the Security Onion node to send the logs to.
 #. Set the ``Port`` to 9001.
+#. Click the ``Apply Changes`` button.
 
 To configure UniFi to send system logs to the Elastic integration for CEF:
 
@@ -50,6 +51,7 @@ To configure UniFi to send system logs to the Elastic integration for CEF:
 #. Next to ``Activity Logging (Syslog)``, choose the ``SIEM Server`` option.
 #. Set the ``Server Address`` to the IP address of the Security Onion node to send the logs to.
 #. Set the ``Port`` to 9003.
+#. Click the ``Apply Changes`` button.
 
 While in UniFI, check your UniFi firewall rules and update if necessary:
 
