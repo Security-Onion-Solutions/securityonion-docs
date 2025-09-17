@@ -12,7 +12,7 @@ Starting with Security Onion version 2.4.170, Security Onion Pro users can creat
 Minimum Requirements
 --------------------
 
-Please note the following MINIMUM requirements for a Hypervisor node:
+Please note the following MINIMUM requirements for a Hypervisor or Managerhype node:
 
 - 32 CPU cores
 - 64GB RAM
@@ -25,6 +25,22 @@ If you are in an :ref:`airgap` environment, you will need to perform these steps
 1. Download the Oracle 9 Qcow2 image from https://download.securityonion.net/file/securityonion/OL9U5_x86_64-kvm-b253.qcow2
 
 2. Place OL9U5_x86_64-kvm-b253.qcow2 into /nsm/libvirt/boot/ on your manager node
+
+Adding a Manager + Hypervisor
+-----------------------------
+
+Starting in 2.4.180, Security Onion Pro users can create a manager node that also has hypervisor capabilities. This node type is called a ``managerhype``.
+
+Install a new node, select the ``DISTRIBUTED`` deployment option, choose ``New Deployment``, and then select the ``Managerhype`` option:
+
+.. image:: images/hypervisor/manhype-0.png
+  :target: _images/manhype-0.png
+
+Once installation has completed, the new node will act as a manager node until a license key is added in SOC. After adding the license, it will take approximately 45 minutes for the hypervisor portion of the managerhype to be ready. This is due to the three highstates that are required to complete setup of the node.
+
+If this is an airgap installation, then the instructions above will need to be followed prior to adding the license to SOC. The user will need to run ``mkdir -p /nsm/libvirt/boot``.
+
+The details under ``Adding a Hypervisor``, regarding when the base domain is ready and VMs can be created, applies to the managerhype node as well as ``Adding a Security Onion VM``.
 
 Adding a Hypervisor
 -------------------
