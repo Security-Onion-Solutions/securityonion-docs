@@ -198,7 +198,7 @@ IMPORT installations do not support remote agents, but if you were running a pro
 .. image:: images/78_downloads.png
   :target: _images/78_downloads.png
 
-The :ref:`administration` section allows to you manage user accounts:
+The :ref:`administration` section allows you to manage user accounts:
 
 .. image:: images/81_users.png
   :target: _images/81_users.png
