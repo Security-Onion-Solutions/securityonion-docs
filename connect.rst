@@ -35,8 +35,8 @@ This ensures that remote systems will only have access to the minimum necessary 
 
 Currently OAuth 2.0 scopes are not utilized, since these permissions are assigned outside of the OAuth 2.0 flow.
 
-OIDC Authentication Flow
-------------------------
+OAuth 2.0 Authentication Flow
+-----------------------------
 
 API clients must use The OAuth 2.0 client credentials flow to authenticate to the Security Onion manager node. 
 
