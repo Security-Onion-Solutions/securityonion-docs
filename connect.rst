@@ -20,8 +20,23 @@ By default, newly setup grids will not be configured for API client access. To e
 2. The Hydra feature must be enabled via the ``hydra > enabled`` setting in the Configuration screen.
 3. Synchronize the grid to apply the license key and configuration changes. This can be done via the Configuration screen options dropdown.
 
-Authentication
---------------
+API Client Credentials
+----------------------
+
+In order to communicate with the Connect API, an API client must be created. Navigate to the Administration menu using a superuser account. Under the Administration menu click the API Clients. Create a new API client using a name that reflects the intended usage of this client. Upon saving the new client a generated secret will be issued. This client ID and secret pair is used to authenticate to the Connect API. 
+
+Authorization / RBAC
+--------------------
+
+API clients are permitted access to various components within Security Onion using the same RBAC system for users. 
+However, rather than assign *roles* to API clients, the more granular *permissions* are assigned. 
+For example, while a *user* might be assigned the ``analyst`` role, an API *client* would be assigned the ``events/read``, ``events/write``, ``cases/read``, etc. 
+This ensures that remote systems will only have access to the minimum necessary permissions required for the integration.
+
+Currently OAuth 2.0 scopes are not utilized, since these permissions are assigned outside of the OAuth 2.0 flow.
+
+OIDC Authentication Flow
+------------------------
 
 API clients must use The OAuth 2.0 client credentials flow to authenticate to the Security Onion manager node. 
 
@@ -63,16 +78,6 @@ Example:
     curl --cacert ca.crt -X GET --oauth2-bearer ory_at_U74544Scqho5KGOci-qemWsOjxOU8TALqddAnrfxAGg.7GlO4SYPUAllO23LVqs9e_FXl0tAdRlUk3AH9IplWRU https://BASE_URL/connect/info
 
 Where the provided bearer token above must be replaced with the access token extracted from the client credential exchange response.
-
-Authorization / RBAC
---------------------
-
-API clients are permitted access to various components within Security Onion using the same RBAC system for users. 
-However, rather than assign *roles* to API clients, the more granular *permissions* are assigned. 
-For example, while a *user* might be assigned the ``analyst`` role, an API *client* would be assigned the ``events/read``, ``events/write``, ``cases/read``, etc. 
-This ensures that remote systems will only have access to the minimum necessary permissions required for the integration.
-
-Currently OAuth 2.0 scopes are not utilized, since these permissions are assigned outside of the OAuth 2.0 flow.
 
 Manager of Managers
 -------------------

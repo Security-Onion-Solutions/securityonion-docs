@@ -77,8 +77,8 @@ Once the subgrid API Client credentials are known that subgrid can then be added
 - Find the ``soc > config > server > Subordinate Grids`` setting.
 - Click the ``+`` icon to add a new subgrid.
 - Give the new subgrid a unique ID that accurately describes this subgrid from the MoM's perspective.
-- Enter in the subgrid's Manager URL (``base_url``). Note that this URL must be accessible from the MoM grid node.
-- Paste or enter the subgrid's API Client credentials.
+- Enter in the subgrid's Manager URL (reference the subgrid's ``base_url`` value in this fully formed URL). Ex: ``https://mysubgrid``. Note that this URL must be accessible from the MoM grid node.
+- Paste or enter the subgrid's API Client credentials. This refers to the Client API ID and generated secret.
 - Paste the subgrid's API Client Certificate Authority (CA) contents into the ``Subgrid CA Certificate`` field.
 - If this subgrid is ready, enable it.
 
