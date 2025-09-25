@@ -23,7 +23,7 @@ By default, newly setup grids will not be configured for API client access. To e
 API Client Credentials
 ----------------------
 
-In order to communicate with the Connect API, an API client must be created. Navigate to the Administration menu using a superuser account. Under the Administration menu click the API Clients. Create a new API client using a name that reflects the intended usage of this client. Upon saving the new client a generated secret will be issued. This client ID and secret pair is used to authenticate to the Connect API. 
+In order to communicate with the Connect API, an API Client must be created. Navigate to the Administration menu using a superuser account. Under the Administration menu click the API Clients menu option. Create a new API client using a short name that reflects the intended usage of this client. Use the Notes field to provide more information, if desired. Upon saving the new client a generated secret will be issued. This client ID and secret pair is needed to authenticate to the Connect API. Protect these credentials using industry best practices.
 
 Authorization / RBAC
 --------------------
