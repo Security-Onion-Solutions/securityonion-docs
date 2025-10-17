@@ -17,6 +17,21 @@ Please note the following MINIMUM requirements for a Hypervisor or Managerhype n
 - 32 CPU cores
 - 64GB RAM
 
+Host Hardware Reservation
+-------------------------
+
+The following resources will be reserved for the host machine and will be subtracted from the ``Available`` row under ``Resource Summary``:
+
+- **Hypervisor**
+  
+  - 8 CPU cores
+  - 16GB RAM
+
+- **Managerhype**
+  
+  - 16 CPU cores
+  - 32GB RAM
+
 Airgap
 ------
 
@@ -62,6 +77,27 @@ Once the base domain has been configured on the hypervisor (allowing VMs to be c
 .. image:: images/hypervisor/hyper-2.png
   :target: _images/hyper-2.png
 
+VM Storage Options for /nsm
+---------------------------
+
+The vast majority of data, for all node types, is stored in /nsm/. For a VM, there are three options available for /nsm storage. 
+
+#. **Directory under /**
+
+   This option uses a simple directory structure within the root filesystem. This is the default option if neither disk pass through or virtual disk are selected. The default image used for the VMs is 220GB, so this leaves about 200GB for storage on a fresh VM.
+
+#. **Disk pass through**
+
+   This method passes a physical disk directly to the VM, providing a dedicated disk to the node. It provides near-native disk performance and is ideal for production environments with high throughput requirements.
+
+#. **Virtual disk**
+
+   Added in 2.4.190, a virtual disk is created based on the size specified by the user in the SOC Grid Configuration and the space is pre-allocated on the hypervisor. The disk image file is not removed when the VM is deleted. A user may decide to leave this data around for a while, or delete it manually from the hypervisor where it is stored under ``/nsm/libvirt/volumes``
+
+.. note::
+
+    If a user selects both a disk pass through and assigns a size for the virtual disk, then the disk pass through will be used for /nsm and the virtual disk will be ignored.
+
 Adding a Security Onion VM
 --------------------------
 
@@ -81,6 +117,47 @@ Once the VM is created and the first highstate is initiated, it should look like
 
 .. image:: images/hypervisor/hyper-5.png
   :target: _images/hyper-5.png
+
+VM Creation Status
+------------------
+
+After a user has created a VM by filling out the form and clicking the green check mark, the web browser can be periodically refreshed to check the status of the VM creation. This is shown in the status column of the previous screenshot showing the highstate initiated.
+
+Processing
+  We detected that the user has requested to create a VM.
+
+Hypervisor NSM Disk Full
+  If the user requested a virtual disk for /nsm and there is not enough space on /nsm of the hypervisor, then this error will be seen. The user should delete this VM from the SOC Grid Configuration and either free up space on the hypervisor or create a new VM with a smaller /nsm.
+
+IP Configuration
+  Static or DHCP is being configured within the VM image before creation.
+
+Starting Create
+  The hypervisor has cloned the base image and has created the new VM image.
+
+Executing Deploy Script
+  The VM is being provisioned and the salt-minion is being bootstrapped.
+
+Initialize Minion Pillars
+  The VM has told the Security Onion manager to create its minion pillars.
+
+Created Instance
+  The VM creation process is complete.
+
+Volume Creation
+  If the user chose a virtual disk for /nsm, then this process creates it and fully allocates the space on the hypervisor. This step may take a while depending on the size of /nsm that was requested.
+
+Volume Configuration
+  The disk is being assigned to the VM.
+
+Hardware Configuration
+  The requested hardware has assigned to the VM.
+
+Highstate Initiated
+  The VM has been started and the first highstate is currently running. Subsequent highstates will not update the ``Last Updated`` column.
+
+Destroyed Instance
+  The instance has been destroyed. This VM will be removed from the ``Virtual Machines`` table after 48 hours.
 
 Stopping or Starting a VM
 --------------------------
