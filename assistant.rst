@@ -19,10 +19,14 @@ Available Tools
 
 The assistant currently runs in the cloud. In order to reference local information, SOC makes the following tools available to the assistant:
 
- - query_events: This read-only tool allows the assistant to query security events from your local Security Onion instance similar to how you would use the :ref:`hunt` page.
- - get_playbooks: When the assistant uses this read-only tool, SOC will gather the playbooks, execute their queries, and return all the data ready for analysis.
- - ack_alerts: The assistant can use this tool to query and acknowledge :ref:`alerts` in your local Security Onion instance.
- - escalate_alerts: Similar to the ack tool, this tool allows the assistant to query for alerts and escalate them to a new case.
+ - **query_events**: This read-only tool allows the assistant to query security events from your local Security Onion instance similar to how you would use the :ref:`hunt` page.
+ - **get_playbooks**: When the assistant uses this read-only tool, SOC will gather the playbooks, execute their queries, and return all the data ready for analysis.
+ - **ack_alerts**: The assistant can use this tool to query and acknowledge :ref:`alerts` in your local Security Onion instance.
+ - **escalate_alerts**: Similar to the ack tool, this tool allows the assistant to query for alerts and escalate them to a new case.
+
+.. tip::
+
+		Currently this feature requires an internet connection. Local model support is coming soon!
 
 Permissions
 ~~~~~~~~~~~
@@ -54,7 +58,9 @@ Your system prompt addendum will be added after Security Onion's default system 
 
 		Be cautious when customizing the system prompt, as it can significantly influence the assistant's behavior and responses. A longer prompt will also use more credits.
 
-Management
-----------
+Metrics
+-------
 
-Superusers can manage token usage and view conversation history for all users from the management page under Administration --> AI Metrics. This page provides usage statistics for a given date range. The page starts with a table of usage by user. Clicking a user's binoculars icon on the right hand side will show any sessions the user interacted with during the selected date range, even deleted sessions. Clicking on a session's binoculars icon will show the full conversation.
+Superusers can review token usage and conversation history for all users by going to Administration --> AI Metrics. This page provides usage statistics for a given date range. The page starts with a table of usage by user. Clicking a user's binoculars icon on the right hand side will show any sessions the user interacted with during the selected date range, even deleted sessions. Clicking on a session's binoculars icon will show the full conversation. Administractors can adjust who has permissions via RBAC roles.
+
+To provide an accurate history, deleted sessions are retained on the metrics page even after being deleted by the user.
