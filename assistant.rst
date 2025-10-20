@@ -12,8 +12,7 @@ The Onion AI Assistant is your personal AI helper designed to assist you with a 
 Credits
 -------
 
-Use of the AI assistant will require the consumption of credits that can be purchased. Credits are consumed based on the number of tokens used in the conversation, including both user input and assistant output. The longer the text, the more credits used. Your organization's balance can be viewed at the top right of the assistant page or on the management page under Administration > AI Metrics.
-
+The Security Onion Pro license includes an initial amount of credits to get started. For long term usage planning contact your Security Onion account representative. They will assist with estimating credit usage rates as well as the provisioning of additional credits. Credits are consumed based on the number of tokens used in the conversation, including both user input and assistant output. The longer the text, the more credits used. Your organization's balance can be viewed at the top right of the assistant page or on the management page under Administration > AI Metrics.
 
 Available Tools
 ---------------
