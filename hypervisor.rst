@@ -92,7 +92,7 @@ The vast majority of data, for all node types, is stored in /nsm/. For a VM, the
 
 #. **Virtual disk**
 
-   Added in 2.4.190, a virtual disk is created based on the size specified by the user in the SOC Grid Configuration and the space is pre-allocated on the hypervisor. The disk image file is not removed when the VM is deleted. A user may decide to leave this data around for a while, or delete it manually from the hypervisor where it is stored under ``/nsm/libvirt/volumes``
+   Added in 2.4.190, a virtual disk is created based on the size specified by the user in the SOC Grid Configuration and the space is pre-allocated on the hypervisor. The disk image file is not removed when the VM is deleted. A user may decide to leave this data around for a while, or delete it manually from the hypervisor where it is stored under ``/nsm/libvirt/volumes``.
 
 .. note::
 
