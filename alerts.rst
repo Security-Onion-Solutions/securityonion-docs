@@ -71,6 +71,8 @@ The remainder of the page is a data table that starts in the grouped view and ca
 
 - To the right of that is an information icon that populates the Details Panel on the right with information about the alert.
 
+- Security Onion Pro users will find one more button. The last is a computer chip icon that investigates the alert with :ref:`onionai`.
+
 - Clicking a value in the table brings up a context menu of actions for that value. This allows you to refine your existing search, start a new search, or even pivot to external sites like Google and VirusTotal.
 
 - You can adjust the ``Rows per page`` setting in the bottom right and use the left and right arrow icons to page through the table.
