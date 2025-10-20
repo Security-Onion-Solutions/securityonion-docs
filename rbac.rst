@@ -177,7 +177,37 @@ See the table below which explains the specific Security Onion privileges grante
       -
       -
       -
- 
+    * - View Playbooks
+      - X
+      - X
+      - X
+      - X
+      - X
+    * - Chat with Onion AI
+      - X
+      - X
+      - 
+      - 
+      - 
+    * - Delete Own sessions
+      - X
+      - X
+      - 
+      - 
+      -
+    * - View Own History
+      - X
+      - X
+      - 
+      - 
+      -
+    * - View All Users' History
+      - X
+      - 
+      - 
+      - 
+      -
+
 .. note::
 
     Both ``auditor`` and ``limited-auditor`` roles can interact with previously created PCAPs if they were created before a user was converted to that role (e.g. user was downgraded from ``analyst`` to ``auditor``). This is denoted by **O** in the above table.
@@ -413,6 +443,24 @@ The available low-level Security Onion privileges are listed in the table below:
       - Change any user's password
     * - *users/delete*
       - Delete any user
+    * - *playbooks/read*
+      - View all playbooks
+    * - *playbooks/write*
+      - Currently unused
+    * - *playbooks/delete*
+      - Currently unused
+    * - *assistant/read_authored*
+      - View own Onion AI conversation history
+    * - *assistant/write_authored*
+      - Chat with Onion AI
+    * - *assistant/delete_authored*
+      - Delete own Onion AI conversation history
+    * - *assistant/read_all*
+      - View all Onion AI conversation history
+    * - *assistant/write_all*
+      - Currently unused
+    * - *assistant/delete_all*
+      - Currently unused
 
 These discrete privileges are then collected into privilege groups as defined below:
 
@@ -464,5 +512,13 @@ These discrete privileges are then collected into privilege groups as defined be
       - *roles/read*, *roles/write*, *users/read*, *users/write*, *users/delete*
     * - user-monitor
       - *roles/read*, *users/read*
+    * - playbook-monitor
+      - *playbooks/read*
+    * - playbook-admin
+      - *playbooks/read*, *playbooks/write*, *playbooks/delete*
+    * - assistant-user
+      - *assistant/read_authored*, *assistant/write_authored*, *assistant/delete_authored*
+    * - assistant-admin
+      - *assistant/read_authored*, *assistant/write_authored*, *assistant/delete_authored*, *assistant/read_all*, *assistant/write_all*, *assistant/delete_all*
 
 † intended for use by Sensoroni agents only
