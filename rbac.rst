@@ -189,19 +189,19 @@ See the table below which explains the specific Security Onion privileges grante
       - 
       - 
       - 
-    * - Delete Own sessions
+    * - Delete Own Onion AI Sessions
       - X
       - X
       - 
       - 
       -
-    * - View Own History
+    * - View Own Onion AI History
       - X
       - X
       - 
       - 
       -
-    * - View All Users' History
+    * - View All Users' Onion AI History
       - X
       - 
       - 
