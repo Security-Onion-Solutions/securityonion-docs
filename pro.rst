@@ -21,6 +21,8 @@ Starting in Security Onion 2.4.170, licensed Pro users can also create a :ref:`h
 
 Starting in Security Onion 2.4.180, licensed Pro users can also generate :ref:`reports`.
 
+Starting in Security Onion 2.4.190, licensed Pro users can also access the :ref:`onionai` Assistant.
+
 .. note::
 
     Contact Security Onion Solutions, LLC via our website at https://securityonion.com/pro for more information about purchasing a Security Onion Pro license to enable these features.
@@ -41,3 +43,4 @@ Starting in Security Onion 2.4.180, licensed Pro users can also generate :ref:`r
    splunk
    hypervisor
    reports
+   assistant
