@@ -17,6 +17,37 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.190 [20251024] Changes
+----------------------
+
+- FEATURE: Add ability to force a fleet agent installer via the --force flag `#15146 <https://github.com/Security-Onion-Solutions/securityonion/issues/15146>`_
+- FEATURE: Allow customization of export CSV delimiter `#15129 <https://github.com/Security-Onion-Solutions/securityonion/issues/15129>`_
+- FEATURE: Allow user to map a virtual disk to /nsm when creating a VM `#15121 <https://github.com/Security-Onion-Solutions/securityonion/issues/15121>`_
+- FEATURE: BYOD hypervisor and managerhype `#15102 <https://github.com/Security-Onion-Solutions/securityonion/issues/15102>`_
+- FEATURE: New grain: nsm_total `#15120 <https://github.com/Security-Onion-Solutions/securityonion/issues/15120>`_
+- FEATURE: Provide notice with option to sync recently modified module `#15119 <https://github.com/Security-Onion-Solutions/securityonion/issues/15119>`_
+- FEATURE: Remember Auto-Refresh Interval for Hunt, Alerts, Dashboards, etc `#15077 <https://github.com/Security-Onion-Solutions/securityonion/issues/15077>`_
+- FEATURE: Security Onion AI Assistant
+- FEATURE: Show query name under query input `#15128 <https://github.com/Security-Onion-Solutions/securityonion/issues/15128>`_
+- FIX: Action links should replace all vars `#15084 <https://github.com/Security-Onion-Solutions/securityonion/issues/15084>`_
+- FIX: Add event.module to Elasticsearch logs `#15074 <https://github.com/Security-Onion-Solutions/securityonion/issues/15074>`_
+- FIX: Import node fleet output policy `#15037 <https://github.com/Security-Onion-Solutions/securityonion/issues/15037>`_
+- FIX: Logstash fleet output corrupt ssl config `#15101 <https://github.com/Security-Onion-Solutions/securityonion/issues/15101>`_
+- FIX: PCAP Upload validation issues `#15143 <https://github.com/Security-Onion-Solutions/securityonion/issues/15143>`_
+- FIX: Setup occasionally fails if the registry container takes more than a couple seconds to start. `#15073 <https://github.com/Security-Onion-Solutions/securityonion/issues/15073>`_
+- FIX: Subgrid count calculation `#15078 <https://github.com/Security-Onion-Solutions/securityonion/issues/15078>`_
+- FIX: so-hypervisor bridge not created during setup `#15050 <https://github.com/Security-Onion-Solutions/securityonion/issues/15050>`_
+- UPGRADE: SOC Dependencies `#15059 <https://github.com/Security-Onion-Solutions/securityonion/issues/15059>`_
+- UPGRADE: Attack Navigator to 5.1.1 `#15097 <https://github.com/Security-Onion-Solutions/securityonion/issues/15097>`_
+- UPGRADE: Docker base images to latest respective versions `#15093 <https://github.com/Security-Onion-Solutions/securityonion/issues/15093>`_
+- UPGRADE: ElastAlert 2 to 2.26.0 `#15094 <https://github.com/Security-Onion-Solutions/securityonion/issues/15094>`_
+- UPGRADE: Elastic to 8.18.8 `#15117 <https://github.com/Security-Onion-Solutions/securityonion/issues/15117>`_
+- UPGRADE: Golang to 1.25.1 `#15079 <https://github.com/Security-Onion-Solutions/securityonion/issues/15079>`_
+- UPGRADE: Nginx to 1.29.1 `#15096 <https://github.com/Security-Onion-Solutions/securityonion/issues/15096>`_
+- UPGRADE: Redis to 7.2.11 `#15116 <https://github.com/Security-Onion-Solutions/securityonion/issues/15116>`_
+- UPGRADE: Telegraf to 1.36.1 `#15095 <https://github.com/Security-Onion-Solutions/securityonion/issues/15095>`_
+- UPGRADE: Zeek to 7.0.11 `#15135 <https://github.com/Security-Onion-Solutions/securityonion/issues/15135>`_
+
 2.4.180 [20250916] Changes
 --------------------------
 
