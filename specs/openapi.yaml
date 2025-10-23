@@ -2842,7 +2842,7 @@ info:
     url: https://securityonion.net/terms/
   termsOfService: https://securityonion.net/terms/
   title: Security Onion Connect API
-  version: "1.0"
+  version: 2.4.190
 openapi: 3.1.0
 paths:
   /api/assistant/admin/{userId}/sessions:
