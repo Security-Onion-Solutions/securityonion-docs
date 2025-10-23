@@ -255,6 +255,81 @@ components:
       - caseId
       - value
       type: object
+    model.AssistantParameters:
+      properties:
+        contextLimitLarge:
+          type: integer
+        contextLimitSmall:
+          type: integer
+        enabled:
+          type: boolean
+        investigationPrompt:
+          type: string
+        lowBalanceColorAlert:
+          type: integer
+        thresholdColorRatioLow:
+          type: number
+        thresholdColorRatioMax:
+          type: number
+        thresholdColorRatioMed:
+          type: number
+      type: object
+    model.AssistantSession:
+      description: A session for a user chatting with the Assistant.
+      properties:
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        deleteTime:
+          description: The time the session was deleted.
+          example: "2025-09-05T15:33:00.000Z"
+          type: string
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        sessionId:
+          description: The session identifier.
+          example: chat_1757086398900_ykhmndscn
+          type: string
+        tags:
+          description: Metadata about the session.
+          example:
+          - investigation
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        title:
+          description: The title of the session. Usually the first message sent by
+            the user.
+          example: Can you write a suricata rule for me?
+          type: string
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        usage:
+          $ref: '#/components/schemas/model.SessionUsage'
+        userId:
+          description: The user ID (or API client ID) that initiated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+      type: object
     model.AttachEventCriteria:
       properties:
         acknowledged:
@@ -492,6 +567,8 @@ components:
           $ref: '#/components/schemas/model.AlertingParameters'
         apiTimeoutMs:
           type: integer
+        assistant:
+          $ref: '#/components/schemas/model.AssistantParameters'
         cacheExpirationMs:
           type: integer
         case:
@@ -1535,6 +1612,28 @@ components:
           example: no result
           type: string
       type: object
+    model.Message:
+      description: The message content.
+      properties:
+        id:
+          description: The unique identifier for the message. Not required.
+          example: c3d44fb8-3bc2-46e2-a7d2-8a8983556d1a
+          type: string
+        role:
+          description: Indicates who authored the message. Either `user` or `assistant`.
+          example: user
+          type: string
+        stop_reason:
+          description: The reason the message was stopped.
+          example: user_request
+          type: string
+        stop_sequence:
+          description: The sequence in which the message was stopped.
+          example: end_turn
+          type: string
+        usage:
+          $ref: '#/components/schemas/model.Usage'
+      type: object
     model.Node:
       properties:
         address:
@@ -1642,10 +1741,6 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
-        load15m:
-          description: The node's 15-minute load metric
-          example: 1.09
-          type: number
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
@@ -1653,6 +1748,10 @@ components:
         load5m:
           description: The node's 5-minute load metric
           example: 0.96
+          type: number
+        load15m:
+          description: The node's 15-minute load metric
+          example: 1.09
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -2091,11 +2190,21 @@ components:
           example: Knowing if the attack comes from inside or outside the network
             can help determine if this is a false positive or a real attack.
           type: string
+        filledQuery:
+          description: The query after variable substitution has been performed.
+          type: string
         query:
           description: A raw YAML Sigma query that can be used to find the answer
             to this question. May contain variables that will be replaced with values
             from the alert.
           type: string
+        queryResults:
+          description: The results after the queries have been substituted, converted,
+            and executed.
+          items:
+            $ref: '#/components/schemas/model.EventRecord'
+          type: array
+          uniqueItems: false
         question:
           description: The human readable question to be asked.
           example: What is the source IP address of the alert?
@@ -2152,6 +2261,26 @@ components:
       required:
       - caseId
       - fields
+      type: object
+    model.SessionUsage:
+      description: Usage statistics for the session.
+      properties:
+        totalCredits:
+          description: The total credits used during the session.
+          example: 5
+          type: integer
+        totalInputTokens:
+          description: The total input tokens used during the session.
+          example: 1500
+          type: integer
+        totalMessages:
+          description: The total messages sent during the session.
+          example: 25
+          type: integer
+        totalOutputTokens:
+          description: The total output tokens used during the session.
+          example: 3000
+          type: integer
       type: object
     model.Setting:
       properties:
@@ -2340,6 +2469,54 @@ components:
           example: my_subgrid_a
           type: string
       type: object
+    model.StoredMessage:
+      description: A stored message in the chat session. This contains metadata about
+        the message and its context not necessary for the conversation with the Assistant.
+      properties:
+        createTime:
+          description: The date and time that this object was created. This is a read-only
+            field.
+          example: "2024-11-14T15:03:22Z"
+          type: string
+        id:
+          description: The ID assigned to this object by the server. This is a read-only
+            field.
+          example: PdFc-JIBLkNJ8-bDfz47
+          type: string
+        kind:
+          description: The kind of object. This is a read-only field.
+          example: case
+          type: string
+        message:
+          $ref: '#/components/schemas/model.Message'
+        operation:
+          description: The operation that was applied to the object. This is a read-only
+            field.
+          example: create
+          type: string
+        session_id:
+          description: What session this message belongs to.
+          example: chat_1757086398900_ykhmndscn
+          type: string
+        tags:
+          description: Metadata about the message.
+          example:
+          - investigation
+          items:
+            type: string
+          type: array
+          uniqueItems: false
+        updateTime:
+          description: The date and time that this object was last modified. This
+            is a read-only field.
+          example: "2024-11-14T15:33:02Z"
+          type: string
+        userId:
+          description: The user ID (or API client ID) that initiated this event. This
+            is a read-only field.
+          example: socl_my_new_client
+          type: string
+      type: object
     model.Subgrid:
       properties:
         caCertificate:
@@ -2398,6 +2575,8 @@ components:
         name:
           type: string
       type: object
+    model.ToolRequest:
+      type: object
     model.UiElement:
       properties:
         default:
@@ -2447,6 +2626,22 @@ components:
           description: (metadata) If true this UI element must be specified by the
             user before it can be saved
           type: boolean
+      type: object
+    model.Usage:
+      description: Usage statistics after deducting the costs of the message.
+      properties:
+        credits:
+          description: The number of credits remaining after this message.
+          example: 1
+          type: integer
+        input_tokens:
+          description: The number of input tokens used.
+          example: 5
+          type: integer
+        output_tokens:
+          description: The number of output tokens used.
+          example: 10
+          type: integer
       type: object
     model.User:
       properties:
@@ -2521,6 +2716,35 @@ components:
           description: The WebAuthn (Passwordless) status for this user. This status
             field is not ready for production use. This is a read-only field.
           example: enabled
+          type: string
+      type: object
+    model.UserUsage:
+      properties:
+        totalCredits:
+          description: The total credits used by the user in the date range.
+          example: 5
+          type: integer
+        totalInputTokens:
+          description: The total input tokens used by the user in the date range.
+          example: 1500
+          type: integer
+        totalMessages:
+          description: The total messages sent and received by the user in the date
+            range.
+          example: 25
+          type: integer
+        totalOutputTokens:
+          description: The total output tokens used by the user in the date range.
+          example: 3000
+          type: integer
+        totalSessions:
+          description: The total sessions the user has added a message to in the date
+            range.
+          example: 3
+          type: integer
+        userId:
+          description: The Id of the user.
+          example: 8beae4b5-275b-4669-b678-8cff894911b5
           type: string
       type: object
     server.AccessTokenRequest:
@@ -2621,6 +2845,345 @@ info:
   version: "1.0"
 openapi: 3.1.0
 paths:
+  /api/assistant/admin/{userId}/sessions:
+    get:
+      description: Get chat session metadata from a specific user.
+      parameters:
+      - description: ID of the user to retrieve sessions from
+        in: path
+        name: userId
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.AssistantSession'
+                type: array
+          description: List of previous conversation sessions
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/read_all
+      summary: Get Assistant Sessions
+      tags:
+      - Assistant
+  /api/assistant/admin/{userId}/sessions/{sessionId}/history:
+    get:
+      description: Retrieve a chat session's messages for a given user and session.
+      parameters:
+      - description: ID of the user to retrieve the session from
+        in: path
+        name: userId
+        required: true
+        schema:
+          type: string
+      - description: ID of the session to retrieve, it must belong to the indicated
+          user
+        in: path
+        name: sessionId
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.StoredMessage'
+                type: array
+          description: List of messages belonging to the session
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/read_all
+      summary: Get Assistant Session History
+      tags:
+      - Assistant
+  /api/assistant/admin/sessions:
+    get:
+      description: Get a list of all previous chat session metadata across all users.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.AssistantSession'
+                type: array
+          description: List of previous chat session metadata
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/read_all
+      summary: Get Assistant Sessions
+      tags:
+      - Assistant
+  /api/assistant/admin/stats:
+    get:
+      description: Retrieve usage statistics of the AI assistant over a specified
+        date range for every user.
+      parameters:
+      - description: Date range, in the specified timezone
+        example: 2024/12/03 03:09:31 PM - 2024/12/04 03:09:31 PM
+        in: query
+        name: range
+        required: true
+        schema:
+          type: string
+      - description: Timezone of the date range
+        example: America/New_York
+        in: query
+        name: zone
+        required: true
+        schema:
+          type: string
+      - description: Date range date format. Use the example, exactly as shown, if
+          not familiar with date formats
+        example: 2006/01/02 3:04:05 PM
+        in: query
+        name: format
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.UserUsage'
+                type: array
+          description: Usage statistics for the AI assistant
+        "400":
+          description: The provided date range is invalid or missing
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/read_all
+      summary: Get Usage Statistics
+      tags:
+      - Assistant
+  /api/assistant/balance:
+    get:
+      description: Retrieve the current balance/usage information for the AI assistant.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/model.Usage'
+          description: Current assistant balance and usage information
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/read_authored
+      - bearer:
+        - assistant/read_all
+      summary: Get Assistant Balance
+      tags:
+      - Assistant
+  /api/assistant/chat:
+    post:
+      description: Send a message to the AI assistant and receive a response. Supports
+        both streaming (SSE) and non-streaming responses.
+      requestBody:
+        content:
+          application/json:
+            schema:
+              properties:
+                msg:
+                  type: string
+                sessionId:
+                  type: string
+              type: object
+        description: Chat message object with message text and optional session ID
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Message'
+                type: array
+            text/event-stream:
+              schema:
+                type: string
+          description: AI assistant response messages
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/write_authored
+      summary: Send Chat Message
+      tags:
+      - Assistant
+  /api/assistant/sessions:
+    get:
+      description: Retrieve a list of all previous chat session metadata for the authenticated
+        user.
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.AssistantSession'
+                type: array
+          description: List of previous conversation session metadata
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/read_authored
+      summary: Get Assistant Sessions
+      tags:
+      - Assistant
+  /api/assistant/sessions/{sessionId}:
+    delete:
+      description: Delete a specific chat session and all its associated messages.
+      parameters:
+      - description: Session ID to delete
+        in: path
+        name: sessionId
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          description: Session successfully deleted
+        "400":
+          description: The provided session ID is invalid or missing
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/delete_authored
+      summary: Delete Session
+      tags:
+      - Assistant
+    get:
+      description: Retrieve the complete chat history for a specific session.
+      parameters:
+      - description: Session ID to retrieve history for
+        in: path
+        name: sessionId
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.StoredMessage'
+                type: array
+          description: Complete chat history for the session
+        "400":
+          description: The provided session ID is invalid or missing
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/read_authored
+      summary: Get Session History
+      tags:
+      - Assistant
+  /api/assistant/tool/{name}:
+    post:
+      description: Execute a tool on behalf of the assistant and continue the conversation
+        with the result. Note that more permissions may be checked depending on the
+        tool being executed.
+      parameters:
+      - description: Name of the tool to execute
+        in: path
+        name: name
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.ToolRequest'
+        description: Tool execution request containing session ID, tool use ID, and
+          parameters
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Message'
+                type: array
+            text/event-stream:
+              schema:
+                type: string
+          description: AI assistant response messages after tool execution
+        "400":
+          description: The provided input object or parameters are malformed or invalid
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/write_authored
+      summary: Execute Tool
+      tags:
+      - Assistant
   /connect/case/:
     post:
       description: Create a new case given a populated case object as input.
@@ -3579,6 +4142,44 @@ paths:
       - bearer:
         - config/write
       summary: Sync Configuration
+      tags:
+      - Config
+  /connect/config/sync/{module}:
+    put:
+      description: Synchronizes a specific module's state to apply recent configuration
+        changes to the grid. If async is true, this will queue up a Salt state.apply,
+        which can take several minutes to complete, or longer if another highstate
+        is already in progress. If async is false and another state is already in
+        progress, this will return an error.
+      parameters:
+      - description: The module name to sync
+        example: soc
+        in: path
+        name: module
+        required: true
+        schema:
+          type: string
+      - description: If true, runs the synchronization in the background
+        example: "true"
+        in: query
+        name: async
+        schema:
+          type: string
+      responses:
+        "200":
+          description: The synchronization request has been successfully queued
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "405":
+          description: Configuration module has not been loaded
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - config/write
+      summary: Sync Specific Module Configuration
       tags:
       - Config
   /connect/detection/:
