@@ -18,7 +18,7 @@ Release History
 ~~~~~~~~~~~~~~~
 
 2.4.190 [20251024] Changes
-----------------------
+--------------------------
 
 - FEATURE: Add ability to force a fleet agent installer via the --force flag `#15146 <https://github.com/Security-Onion-Solutions/securityonion/issues/15146>`_
 - FEATURE: Allow customization of export CSV delimiter `#15129 <https://github.com/Security-Onion-Solutions/securityonion/issues/15129>`_
