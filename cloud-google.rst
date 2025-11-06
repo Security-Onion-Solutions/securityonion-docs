@@ -225,7 +225,7 @@ If connecting sensors through the VPN instance you will need to add the inside i
     Location: Remote    Location: Remote                Location: Googe  Location: Google
     192.168.33.13       192.168.33.10                   10.55.1.10       10.55.1.20
 
-In order to add the Remote Network Forward Node to the Grid, you would have to add ``10.55.1.10`` to the ``sensor`` firewall hostgroup.
+In order to add the Remote Network Sensor Node to the Grid, you would have to add ``10.55.1.10`` to the ``sensor`` firewall hostgroup.
 
 This change can be done in the SOC Configuration screen. Then, either wait up to 15 minutes for the scheduled configuration sync to run, or force a synchronization immediately via the SOC Configuration Options. Once the firewall hostgroup configuration has been synchronized your Manager will be ready for remote minions to start connecting.
 

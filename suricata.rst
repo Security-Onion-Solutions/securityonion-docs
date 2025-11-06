@@ -207,7 +207,7 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 Testing Rules
 -------------
 
-To test a new rule, use the following utility on a node that runs Suricata (ie Forward or Import).
+To test a new rule, use the following utility on a node that runs Suricata (ie Sensor or Import).
 
 ::
 

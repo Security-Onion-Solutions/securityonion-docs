@@ -11,7 +11,7 @@ Each Security Onion node uses the Elastic Agent to transport logs to :ref:`elast
 
 .. note::
 
-   In order to receive logs from the Elastic Agent, Security Onion must be running :ref:`logstash`. Evaluation Mode and Import Mode do not run :ref:`logstash`, so you'll need Standalone or a full Distributed Deployment. In a Distributed Deployment, forward nodes do not run :ref:`logstash`, so you'll need to configure agents to send to your manager or receiver nodes. For more information, please see the :ref:`architecture` section.
+   In order to receive logs from the Elastic Agent, Security Onion must be running :ref:`logstash`. Evaluation Mode and Import Mode do not run :ref:`logstash`, so you'll need Standalone or a full Distributed Deployment. In a Distributed Deployment, sensor nodes do not run :ref:`logstash`, so you'll need to configure agents to send to your manager or receiver nodes. For more information, please see the :ref:`architecture` section.
 
 To deploy an Elastic agent to an endpoint, go to the :ref:`soc` :ref:`downloads` page and download the proper Elastic agent for the operating system of that endpoint. 
 

@@ -35,7 +35,7 @@ Fleet Standalone
 Manager (separate search nodes)
 -------------------------------
 
-| Core Pipeline: Elastic Agent [Fleet | Forward] --> Logstash [Manager] --> Redis [Manager]
+| Core Pipeline: Elastic Agent [Fleet | Sensor] --> Logstash [Manager] --> Redis [Manager]
 | Logs: Zeek, Suricata, syslog
 | 
 | Elastic Agent: Elastic Agent [Windows Endpoint]--> Logstash [Manager] --> Redis [Manager]
@@ -44,7 +44,7 @@ Manager (separate search nodes)
 Manager Search
 --------------
 
-| Core Pipeline: Elastic Agent [Fleet | Forward] --> Logstash [MS] --> Redis [MS] <--> Logstash [MS] --> Elasticsearch Ingest [MS]
+| Core Pipeline: Elastic Agent [Fleet | Sensor] --> Logstash [MS] --> Redis [MS] <--> Logstash [MS] --> Elasticsearch Ingest [MS]
 | Logs: Zeek, Suricata, syslog
 | 
 | Pipeline: Elastic Agent [MS] --> Logstash [MS] --> Elasticsearch Ingest [MS]
@@ -65,8 +65,8 @@ Search
 | Pipeline: Redis [Manager] --> Logstash [Search] --> Elasticsearch Ingest [Search] 
 | Logs: Zeek, Suricata, syslog
 
-Forward
+Sensor
 -------
 
-| Pipeline: Elastic Agent [Forward] --> Logstash [M | MS] --> Elasticsearch Ingest [S | MS]
+| Pipeline: Elastic Agent [Sensor] --> Logstash [M | MS] --> Elasticsearch Ingest [S | MS]
 | Logs: Zeek, Suricata, syslog

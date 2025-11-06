@@ -41,7 +41,7 @@ Where:
     ``<hostname>`` is the hostname of the Security Onion box.
    
 .. note::
-    You may also need to include the IP address and hostname of the manager in the ``no_proxy`` variable above if configuring the proxy on a forward node.
+    You may also need to include the IP address and hostname of the manager in the ``no_proxy`` variable above if configuring the proxy on a sensor node.
    
 To configure Docker proxy settings, please see https://docs.docker.com/network/proxy/.
 

@@ -3,7 +3,7 @@
 Use Cases
 =========
 
-If you’re going to deploy Security Onion, you should first decide what your use case is. In this section, we'll discuss some common use cases and how they map to our different kinds of architecture. This could be anything from a temporary Import installation in a small virtual machine on your personal laptop all the way to a large scalable enterprise deployment consisting of a manager node, multiple search nodes, and lots of forward nodes.
+If you’re going to deploy Security Onion, you should first decide what your use case is. In this section, we'll discuss some common use cases and how they map to our different kinds of architecture. This could be anything from a temporary Import installation in a small virtual machine on your personal laptop all the way to a large scalable enterprise deployment consisting of a manager node, multiple search nodes, and lots of sensor nodes.
 
 Minimal Import
 --------------
@@ -42,7 +42,7 @@ Suppose you have a small or medium network where you want some visibility for bo
 
 - Install the first Security Onion instance and choose the ``ManagerSearch`` option.
 - Deploy the :ref:`elastic-agent` to hosts.
-- Install Security Onion on one or more additional machines and join them to the grid as forward nodes. They will analyze network traffic from your TAP or SPAN port.
+- Install Security Onion on one or more additional machines and join them to the grid as sensor nodes. They will analyze network traffic from your TAP or SPAN port.
 
 You can read more about distributed deployments in the :ref:`architecture` section.
 
@@ -54,7 +54,7 @@ Suppose you have a medium or large network where you want some visibility for bo
 - Install the first Security Onion instance and choose the ``Manager`` option.
 - Install Security Onion on one or more additional machines and join them to the grid as search nodes. They will store logs and allow you to search them.
 - Deploy the :ref:`elastic-agent` to hosts. They will collect logs and send them to the grid.
-- Install Security Onion on one or more additional machines and join them to the grid as forward nodes. They will analyze network traffic from your TAP or SPAN port.
+- Install Security Onion on one or more additional machines and join them to the grid as sensor nodes. They will analyze network traffic from your TAP or SPAN port.
 
 You can read more about distributed deployments in the :ref:`architecture` section.
 
@@ -67,7 +67,7 @@ Suppose you have a large network where you want maximum visibility for both netw
 - Install Security Onion on one or more additional machines and join them to the grid as search nodes. They will store logs and allow you to search them.
 - Install Security Onion on a machine in your DMZ and join it to the grid as a Fleet node. This node will manage your Elastic agents whether they are onsite or offsite.
 - Deploy the :ref:`elastic-agent` to hosts. They will collect logs and send them to the grid.
-- Install Security Onion on one or more additional machines and join them to the grid as forward nodes. They will analyze network traffic from your TAP or SPAN port.
+- Install Security Onion on one or more additional machines and join them to the grid as sensor nodes. They will analyze network traffic from your TAP or SPAN port.
 - Install Security Onion on one or more additional machines and join them to the grid as receiver nodes. This provides load balancing and pipeline redundancy.
 - Install Security Onion on one or more additional machines and join them to the grid as :ref:`idh` nodes. They will provide honeypot and deception capabilities.
 
