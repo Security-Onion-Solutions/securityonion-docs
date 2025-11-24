@@ -54,7 +54,7 @@ and the following to the ``vmbr1`` section:
 
 For more information about NIC offloading, please see https://blog.securityonion.net/2011/10/when-is-full-packet-capture-not-full.html.
 
-If you are running Proxmox 9, then you may also need to set ``mtu 9000`` for the Proxmox physical sniffing interface and its corresponding bridge interface.
+If you are running Proxmox 9 or higher, then you may also need to set ``mtu 9000`` for the Proxmox physical sniffing interface and its corresponding bridge interface.
 
 Once your Security Onion VM is receiving traffic as expecte, if :ref:`grid` reports Capture Loss but no Zeek Loss and you are confident that the loss is not occuring in your tap or span port, then it may be related to the Proxmox host physical interface. Certain NICs like the Intel X710 may have pre-set channels and you can check with the ``ethtool -l`` command. For more information, please see the ``ethtool`` man page at https://man7.org/linux/man-pages/man8/ethtool.8.html.
 
