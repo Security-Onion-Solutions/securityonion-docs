@@ -125,6 +125,56 @@ Now that you have an overview of all that ILM can do, here's a very high level o
         | You can learn more about ILM at:
         | https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html
 
+ILM continued
+"""""""""""""
+
+In addition to ``sudo so-elasticsearch-indices-growth``, there is ``sudo so-elasticsearch-retention-estimate``. The latter can help you get an approximation of how many days' worth of logs you can store. Running so-elasticsearch-retention-estimate yields output similar to:
+
+::
+
+    DISCLAIMER: Script output is based on current data patterns, but are approximations solely 
+      intended to assist with getting a general ILM policy configured.
+
+    ================ Storage Overview ================
+
+    Indexed data size:       141.12 GB (Elasticsearch)
+    Cluster capacity:        498.69 GB total
+    Cluster used:            245.32 GB
+    Low watermark:           80% (398.96 GB threshold)
+    Remaining space:         153.63 GB before low watermark
+    Cluster shards:          498 / 4000 (12.4%)
+    Cluster data nodes:      4
+      example-search1: data_hot,data_warm,data_content
+      example-search2: data_hot,data_warm,data_content
+      example-search3: data_cold
+      example-man: data_content
+
+    ================ ES Growth ================
+
+    Daily growth rate:       4.08 GB/day
+    ILM deletion rate:       0.47 GB/day (scheduled)
+    Net growth rate:         3.62 GB/day
+    Daily shard creation:    ~3 shards/day
+    Storage to be freed (30d): 2 indices (~13.97 GB, 4 shards)
+
+    ================ Retention Projection ================
+
+    Oldest index:            ~55 days (.ds-logs-auditd_manager.auditd-default-2025.09.30-000001)
+    Estimated retention:     ~98 days (until configured low watermark setting)
+
+     Low watermark breach estimated in ~42.47 days (2026-01-06)
+
+For maximum retention, our goal is to get the cluster balanced as close to the low watermark setting as possible. Here "balanced" is referring to 4GB of data coming in should equal about 4GB worth of the oldest data being deleted.
+
+From this output it appears the cluster is gaining about 4GB worth of logs per day. ILM is currently deleting roughly 0.5GB per day, so overall my cluster's storage usage is increasing. Without tweaking ILM configuration this cluster will hit the watermark in roughly 42 days (total retention being roughly 98 days). To combat this, one option is to set a global_overrides for the delete phase as described above setting the delete phase to something like 90 days. This gives us a bit of space between the estimated retention and our actual delete phase.
+
+In addition to global overrides, which apply to all indices. It is possible to tweak per index ILM policies. Perhaps Suricata alert data is something you need to keep in storage for 120 days. You can configure the so-suricata.alerts policy to have a delete phase of 120d. This comes at the cost of needing to reduce retention on other indices in order to free up the needed storage for Suricata alerts.
+
+.. tip::
+
+       Once you have ILM configured, you can consider increasing the cluster low / high watermark settings to allow Elasticsearch to use more of the available disk space. This can be done by going to :ref:`administration` --> Configuration --> elasticsearch --> config --> cluster --> routing --> allocation --> disk --> watermark.
+
+
 Parsing
 -------
 
