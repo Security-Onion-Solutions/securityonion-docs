@@ -290,9 +290,7 @@ Now that you have an overview of all that ILM can do, here's a very high level o
 
        You might want to run ``sudo so-elasticsearch-indices-growth`` on a regular basis to keep an eye on the size of your indices.
 
-In addition to ``sudo so-elasticsearch-indices-growth``, you can also run ``sudo so-elasticsearch-retention-estimate`` which will give you an approximation of how many days' worth of logs you can store.
-
-For example:
+In addition to ``sudo so-elasticsearch-indices-growth``, you can also run ``sudo so-elasticsearch-retention-estimate`` which will give you an approximation of how many days' worth of logs you can store. For example:
 
 ::
 
