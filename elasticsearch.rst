@@ -125,10 +125,9 @@ Now that you have an overview of all that ILM can do, here's a very high level o
         | You can learn more about ILM at:
         | https://www.elastic.co/guide/en/elasticsearch/reference/current/index-lifecycle-management.html
 
-ILM continued
-"""""""""""""
+In addition to ``sudo so-elasticsearch-indices-growth``, you can also run ``sudo so-elasticsearch-retention-estimate`` which will give you an approximation of how many days' worth of logs you can store.
 
-In addition to ``sudo so-elasticsearch-indices-growth``, there is ``sudo so-elasticsearch-retention-estimate``. The latter can help you get an approximation of how many days' worth of logs you can store. Running so-elasticsearch-retention-estimate yields output similar to:
+For example:
 
 ::
 
@@ -164,11 +163,9 @@ In addition to ``sudo so-elasticsearch-indices-growth``, there is ``sudo so-elas
 
      Low watermark breach estimated in ~42.47 days (2026-01-06)
 
-For maximum retention, our goal is to get the cluster balanced as close to the low watermark setting as possible. Here "balanced" is referring to 4GB of data coming in should equal about 4GB worth of the oldest data being deleted.
+For maximum retention, our goal is to get the cluster balanced as close to the low watermark setting as possible. In this example, it appears the cluster is gaining about 4GB worth of logs per day. However, ILM is currently deleting roughly 0.5GB per day, so overall storage usage is increasing. Without tweaking ILM configuration, this cluster will hit the watermark in roughly 42 days (total retention being roughly 98 days). To combat this, one option is to set a global_overrides for the delete phase as described above setting the delete phase to something like 90 days. This gives us a bit of space between the estimated retention and our actual delete phase.
 
-From this output it appears the cluster is gaining about 4GB worth of logs per day. ILM is currently deleting roughly 0.5GB per day, so overall my cluster's storage usage is increasing. Without tweaking ILM configuration this cluster will hit the watermark in roughly 42 days (total retention being roughly 98 days). To combat this, one option is to set a global_overrides for the delete phase as described above setting the delete phase to something like 90 days. This gives us a bit of space between the estimated retention and our actual delete phase.
-
-In addition to global overrides, which apply to all indices. It is possible to tweak per index ILM policies. Perhaps Suricata alert data is something you need to keep in storage for 120 days. You can configure the so-suricata.alerts policy to have a delete phase of 120d. This comes at the cost of needing to reduce retention on other indices in order to free up the needed storage for Suricata alerts.
+In addition to global overrides, which apply to all indices, it is possible to tweak per index ILM policies. For example, perhaps Suricata alert data is something you need to keep in storage for 120 days. You can configure the so-suricata.alerts policy to have a delete phase of 120d. This comes at the cost of needing to reduce retention on other indices in order to free up the needed storage for Suricata alerts.
 
 .. tip::
 
