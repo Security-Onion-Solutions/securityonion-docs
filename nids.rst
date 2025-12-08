@@ -137,7 +137,7 @@ Emerging Threats (ETOPEN/ETPRO)
   | https://www.proofpoint.com/us/threat-insight/et-pro-ruleset
 
 Abuse.ch SSL Blacklist (ABUSECH-SSLBL)
-  SSL certificate blacklist from Abuse.ch. Disabled by default.
+  SSL certificate blacklist from Abuse.ch. Only available in non-Airgap, disabled by default.
 
   | For more information, see:
   | https://sslbl.abuse.ch/
@@ -151,10 +151,10 @@ Suricata Metadata Rulesets
 When Suricata is configured as the metadata engine (instead of :ref:`zeek`), two additional rulesets become available:
 
 SO_EXTRACTIONS
-  Extraction rules that control which file types Suricata extracts from network traffic for analysis by :ref:`strelka`. This ruleset is **enabled by default** when Suricata is the metadata engine.
+  Extraction rules that control which file types Suricata extracts from network traffic for analysis by :ref:`strelka`. This ruleset is imported and **enabled by default** when Suricata is the metadata engine.
 
 SO_FILTERS
-  Filter rules that control which metadata Suricata logs. Use these to reduce unnecessary metadata logging. This ruleset is **disabled by default** when Suricata is the metadata engine.
+  Filter rules that control which metadata Suricata logs. Use these to reduce unnecessary metadata logging. This ruleset is imported but **disabled by default** when Suricata is the metadata engine.
 
 Adding Additional Rulesets
 ~~~~~~~~~~~~~~~~~~~~~~
