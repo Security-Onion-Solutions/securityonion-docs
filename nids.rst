@@ -127,7 +127,7 @@ Default Rulesets
 ~~~~~~~~~~~~~~~~
 
 Emerging Threats (ETOPEN/ETPRO)
-  Security Onion includes the Emerging Threats ruleset by default. To enable ET Pro (commercial), enter your license key in the License Key field. Leave empty for ET Open (free) rules.
+  Security Onion includes the Emerging Threats ruleset by default. To enable ET Pro (commercial), enter your license key in the License Key field. Leave empty for ET Open (free) rules. The ruleset will be downloaded and imported within 15 minutes.
 
   - Optimized for :ref:`suricata`
   - ET Open is **free**, ET Pro requires a license fee per sensor
@@ -156,10 +156,10 @@ SO_EXTRACTIONS
 SO_FILTERS
   Filter rules that control which metadata Suricata logs. Use these to reduce unnecessary metadata logging. This ruleset is **disabled by default** when Suricata is the metadata engine.
 
-Adding Custom Rulesets
+Adding Additional Rulesets
 ~~~~~~~~~~~~~~~~~~~~~~
 
-You can add custom rulesets via the web interface. Navigate to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources and click the add button to create a new ruleset entry. Fill in the required fields (Ruleset Name, Source Type, Source Path, Ruleset License, and Enabled) and any optional fields as needed.
+You can add additional rulesets via the web interface. Navigate to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources and click the add button to create a new ruleset entry. Fill in the required fields (Ruleset Name, Source Type, Source Path, Ruleset License, and Enabled) and any optional fields as needed.
 
 .. note::
 
