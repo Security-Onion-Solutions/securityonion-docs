@@ -87,106 +87,82 @@ You can enable external access to NIDS rules managed by :ref:`detections`. This 
 - You can wait for the next grid update or click the ``SYNCHRONIZE GRID`` button under Options.
 - Once the grid is fully synchronized, the manager should listen on port 7789 for https connections from hosts defined in the ``external_suricata`` host group.
 
-Changing to a Different Ruleset
--------------------------------
+Configuring Rulesets
+--------------------
 
-Security Onion includes the Emerging Threats Open (ETOPEN) ruleset by default. If you would like to change to a different ruleset, you can do this via :ref:`administration` --> Configuration --> idstools --> config --> ruleset.
+Security Onion allows you to configure multiple NIDS rulesets. You can manage these rulesets by navigating to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources.
 
-.. image:: images/config-item-idstools.png
-  :target: _images/config-item-idstools.png
+By default, Security Onion includes the Emerging Threats Open (ETOPEN) ruleset. You can enable additional rulesets, add custom rulesets, or disable existing ones.
 
-Security Onion offers the following choices for NIDS rulesets. The main options are ETOPEN (free) and ETPRO (commercial) but advanced users may choose a Snort ruleset if they understand the caveats as shown below.
+Ruleset Configuration Options
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-ETOPEN
-~~~~~~
+Each ruleset source has the following configuration options:
 
--  default ruleset included in Security Onion
--  optimized for :ref:`suricata`
--  **free**
+- **Ruleset Name**: Required. The unique name for this ruleset (e.g., "Emerging-Threats", "ABUSECH-SSLBL", "local-rules"). This is the name displayed in the UI.
+- **Description**: Optional description of the ruleset.
+- **Enabled**: Required. If set to false, existing rules and overrides from this ruleset will be removed.
+- **License Key**: Optional. Required for commercial rulesets like ET Pro.
+- **Source Type**: Required. Either ``url`` (downloads rules from HTTPS) or ``directory`` (reads .rules files from local filesystem).
+- **Source Path**: Required. The full URL or directory path depending on Source Type.
+- **Exclude Files**: Optional. List of file names to exclude, separated by commas (e.g., ``*deleted*, *retired*``).
+- **Ruleset License**: Required. The license type for this ruleset (e.g., "BSD", "Commercial", "CC0-1.0").
+- **Read Only**: Optional. Prevents changes to the rule itself - rules can still be enabled/disabled/tuned.
+- **Delete Unreferenced**: Optional. Deletes rules that are no longer referenced by the ruleset source.
 
-| For more information, see:
-| https://rules.emergingthreats.net/open/
+URL Source Options
+~~~~~~~~~~~~~~~~~~
 
-ETPRO
-~~~~~
+When using ``url`` as the Source Type, additional options are available:
 
--  includes ETOPEN and additional rules
--  optimized for :ref:`suricata`
--  rules retrievable as released
--  license fee per sensor (you are responsible for purchasing enough licenses for your entire deployment)
+- **urlHash**: URL to a hash file (.md5 or .sha256) for verifying the downloaded ruleset.
+- **proxyURL**: HTTP/HTTPS/SOCKS5 proxy URL for downloading the ruleset.
+- **proxyUsername**: Proxy authentication username.
+- **proxyPassword**: Proxy authentication password.
+- **proxyCACert**: Path to CA certificate file for MITM proxy verification.
+- **insecureSkipVerify**: Set to true to skip TLS certificate validation (not recommended for production).
 
-| For more information, see:
-| https://www.proofpoint.com/us/threat-insight/et-pro-ruleset  
 
-Snort Community
-~~~~~~~~~~~~~~~
-
--  NOT optimized for :ref:`suricata`
--  community-contributed rules
--  **free**
-
-| For more information, see:
-| https://www.snort.org/downloads/#rule-downloads
-| https://www.snort.org/faq/what-are-community-rules
-
-Snort Registered
+Default Rulesets
 ~~~~~~~~~~~~~~~~
 
--  NOT optimized for :ref:`suricata`
--  Snort SO (Shared Object) rules do NOT work with :ref:`suricata`
--  same rules as Snort Subscriber ruleset, except rules only retrievable after 30 days past release
--  **free**
+Emerging Threats (ETOPEN/ETPRO)
+  Security Onion includes the Emerging Threats ruleset by default. To enable ET Pro (commercial), enter your license key in the License Key field. Leave empty for ET Open (free) rules.
 
-Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'``.
-  
-| For more information, see:
-| https://www.snort.org/downloads/#rule-downloads
-| https://snort.org/documents/registered-vs-subscriber
+  - Optimized for :ref:`suricata`
+  - ET Open is **free**, ET Pro requires a license fee per sensor
 
-Snort Subscriber (Talos)
-~~~~~~~~~~~~~~~~~~~~~~~~
+  | For more information, see:
+  | https://rules.emergingthreats.net/open/
+  | https://www.proofpoint.com/us/threat-insight/et-pro-ruleset
 
--  NOT optimized for :ref:`suricata`
--  Snort SO (Shared Object) rules do NOT work with :ref:`suricata`
--  rules retrievable as released
--  license fee per sensor (you are responsible for purchasing enough licenses for your entire deployment)
+Abuse.ch SSL Blacklist (ABUSECH-SSLBL)
+  SSL certificate blacklist from Abuse.ch. Disabled by default.
 
-Since Shared Object rules won't work with :ref:`suricata`, you may want to disable them using a regex like ``'re:soid [0-9]+'``.
+  | For more information, see:
+  | https://sslbl.abuse.ch/
 
-| For more information, see:
-| https://www.snort.org/downloads/#rule-downloads
-| https://snort.org/documents/registered-vs-subscriber
+Local Rules
+  A directory-based ruleset source for custom local rules. Rules are read from ``/nsm/rules/custom-local-repos/local-suricata``. This ruleset is enabled by default with Read Only set to false, allowing you to edit rules directly once they are imported.
 
-Other
-~~~~~
+Suricata Metadata Rulesets
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- not officially managed/supported by Security Onion
-- license fee may or may not apply
+When Suricata is configured as the metadata engine (instead of :ref:`zeek`), two additional rulesets become available:
 
-If you would like to add custom rulesets, then you can do this with a configuration setting. In :ref:`soc`, navigate to :ref:`administration` --> Configuration. At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option. Then filter for ``customRulesets`` and drilldown on the left side.
+SO_EXTRACTIONS
+  Extraction rules that control which file types Suricata extracts from network traffic for analysis by :ref:`strelka`. This ruleset is **enabled by default** when Suricata is the metadata engine.
 
-Custom rulesets can be added either via URL or a local file placed on the Manager.
+SO_FILTERS
+  Filter rules that control which metadata Suricata logs. Use these to reduce unnecessary metadata logging. This ruleset is **disabled by default** when Suricata is the metadata engine.
 
-For URLs, the format is:
+Adding Custom Rulesets
+~~~~~~~~~~~~~~~~~~~~~~
 
-::
+You can add custom rulesets via the web interface. Navigate to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources and click the add button to create a new ruleset entry. Fill in the required fields (Ruleset Name, Source Type, Source Path, Ruleset License, and Enabled) and any optional fields as needed.
 
-        {"community":true,"license":"GPLv2","ruleset":"snort-community","target-file":"community.rules","url":"https://www.snort.org/downloads/community/community-rules.tar.gz"}
+.. note::
 
-Here's what each option means:
+        Each ruleset must have a unique name. Duplicate names will cause sync failures.
 
-- community: Required, true or false. This disables some management options for the imported rules - they can't be deleted or edited, just tuned, duplicated, and Enabled | Disabled.
-- license: Required, the license this ruleset falls under.
-- ruleset: Required, the ruleset name or identifier.
-- target-file: Required, the name of the file that contains the rules, once it is downloaded. The file extension must be ``.rules``.
-- url: Required, the URL that the rules should be downloaded from.
-
-For local files, the format is:
-
-::
-
-        {"community":true,"license":"DRL1.1","file":"/nsm/rules/detect-suricata/custom_file/SOS-Custom_suricata.rules","ruleset":"SOS-Custom"}
-
-file: This is the path for the local rules file, which must be in the ``/nsm/rules/detect-suricata/custom_file/`` directory.
-
-The new settings will be applied within 15 minutes. At that point, you will need to wait for the scheduled rule update to take place (by default, every 24 hours), or you can force the update by navigating to :ref:`detections` --> Options dropdown menu --> Suricata --> Full Update.
+After adding or updating ruleset configuration, changes will be applied within 15 minutes.
