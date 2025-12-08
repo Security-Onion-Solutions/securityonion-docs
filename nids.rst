@@ -90,9 +90,16 @@ You can enable external access to NIDS rules managed by :ref:`detections`. This 
 Configuring Rulesets
 --------------------
 
-Security Onion allows you to configure multiple NIDS rulesets. You can manage these rulesets by navigating to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources.
+Security Onion allows you to configure multiple NIDS rulesets. You can manage these rulesets by navigating to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources. This setting is also available via the Configuration quicklinks.
+
+There are two configuration profiles:
+
+- **default**: Used for standard (non-Airgap) deployments
+- **airgap**: Used for :ref:`airgap` deployments
 
 By default, Security Onion includes the Emerging Threats Open (ETOPEN) ruleset. You can enable additional rulesets, add custom rulesets, or disable existing ones.
+
+When you save a ruleset configuration change and apply the SOC state, Security Onion will detect the change and automatically sync all configured rulesets.
 
 Ruleset Configuration Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -103,12 +110,28 @@ Each ruleset source has the following configuration options:
 - **Description**: Optional description of the ruleset.
 - **Enabled**: Required. If set to false, existing rules and overrides from this ruleset will be removed.
 - **License Key**: Optional. Required for commercial rulesets like ET Pro.
-- **Source Type**: Required. Either ``url`` (downloads rules from HTTPS) or ``directory`` (reads .rules files from local filesystem).
-- **Source Path**: Required. The full URL or directory path depending on Source Type.
+- **Source Type**: Required. Either ``url`` (downloads rules from HTTPS) or ``directory`` (reads rules from local filesystem).
+- **Source Path**: Required. The full URL or directory/file path depending on Source Type. See `Supported Source Path Formats`_ below.
 - **Exclude Files**: Optional. List of file names to exclude, separated by commas (e.g., ``*deleted*, *retired*``).
 - **Ruleset License**: Required. The license type for this ruleset (e.g., "BSD", "Commercial", "CC0-1.0").
 - **Read Only**: Optional. Prevents changes to the rule itself - rules can still be enabled/disabled/tuned.
 - **Delete Unreferenced**: Optional. Deletes rules that are no longer referenced by the ruleset source.
+
+Supported Source Path Formats
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For **url** Source Type:
+
+- URL to a ``.rules`` file (e.g., ``https://example.com/rules/custom.rules``)
+- URL to a ``.tar.gz`` archive (e.g., ``https://example.com/rules/ruleset.tar.gz``)
+- URL to a ``.gz`` compressed file (e.g., ``https://example.com/rules/custom.rules.gz``)
+
+For **directory** Source Type:
+
+- Directory containing multiple ``.rules`` files (e.g., ``/nsm/rules/custom-local-repos/my-rules/``)
+- Directory containing a single ``.rules`` file
+- Direct path to a ``.rules`` file (e.g., ``/nsm/rules/custom/myrules.rules``)
+- Direct path to a ``.tar.gz`` archive (e.g., ``/nsm/rules/custom/myrules.tar.gz``)
 
 URL Source Options
 ~~~~~~~~~~~~~~~~~~
@@ -127,7 +150,7 @@ Default Rulesets
 ~~~~~~~~~~~~~~~~
 
 Emerging Threats (ETOPEN/ETPRO)
-  Security Onion includes the Emerging Threats ruleset by default. To enable ET Pro (commercial), enter your license key in the License Key field. Leave empty for ET Open (free) rules. The ruleset will be downloaded and imported within 15 minutes.
+  Security Onion includes the Emerging Threats ruleset by default. To switch to ET Pro (commercial), edit the Emerging-Threats ruleset and enter your license key in the License Key field. Click the green checkmark to save, then apply the SOC state. Leave the License Key empty for ET Open (free) rules.
 
   - Optimized for :ref:`suricata`
   - ET Open is **free**, ET Pro requires a license fee per sensor
