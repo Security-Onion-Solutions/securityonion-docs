@@ -97,9 +97,13 @@ There are two configuration profiles:
 - **default**: Used for standard (non-Airgap) deployments
 - **airgap**: Used for :ref:`airgap` deployments
 
-By default, Security Onion includes the Emerging Threats Open (ETOPEN) ruleset. You can enable additional rulesets, add custom rulesets, or disable existing ones.
+If your system is in Airgap mode, the airgap configuration profile will automatically be used - otherwise the default is in use. 
 
-When you save a ruleset configuration change and apply the SOC state, Security Onion will detect the change and automatically sync all configured rulesets.
+Within this configuration, you can enable additional rulesets, add custom rulesets, or disable existing ones. When you save a ruleset configuration change and apply the SOC state, Security Onion will detect the change and automatically sync all configured rulesets within 15 minutes.
+
+.. note::
+
+        Each ruleset must have a unique name. Duplicate names will cause sync failures.
 
 Ruleset Configuration Options
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,19 +116,18 @@ Each ruleset source has the following configuration options:
 - **License Key**: Optional. Required for commercial rulesets like ET Pro.
 - **Source Type**: Required. Either ``url`` (downloads rules from HTTPS) or ``directory`` (reads rules from local filesystem).
 - **Source Path**: Required. The full URL or directory/file path depending on Source Type. See `Supported Source Path Formats`_ below.
-- **Exclude Files**: Optional. List of file names to exclude, separated by commas (e.g., ``*deleted*, *retired*``).
+- **Exclude Files**: Optional. List of rule file names to exclude, separated by commas (e.g., ``*deleted*, *retired*``).
 - **Ruleset License**: Required. The license type for this ruleset (e.g., "BSD", "Commercial", "CC0-1.0").
-- **Read Only**: Optional. Prevents changes to the rule itself - rules can still be enabled/disabled/tuned.
-- **Delete Unreferenced**: Optional. Deletes rules that are no longer referenced by the ruleset source.
+- **Read Only**: Optional, defaults to false. Prevents changes to the rule itself - rules can still be enabled/disabled/tuned.
+- **Delete Unreferenced**: Optional, defaults to false. Deletes rules that are no longer referenced by the ruleset source.
 
 Supported Source Path Formats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For **url** Source Type:
 
-- URL to a ``.rules`` file (e.g., ``https://example.com/rules/custom.rules``)
-- URL to a ``.tar.gz`` archive (e.g., ``https://example.com/rules/ruleset.tar.gz``)
-- URL to a ``.gz`` compressed file (e.g., ``https://example.com/rules/custom.rules.gz``)
+- URL to a ``.rules`` file (e.g., ``https://rules.emergingthreats.net/open/suricata-7.0.3/emerging-all.rules``)
+- URL to a ``.tar.gz`` archive (e.g., ``https://rules.emergingthreats.net/open/suricata-7.0.3/emerging-all.rules.tar.gz``)
 
 For **directory** Source Type:
 
@@ -139,7 +142,7 @@ URL Source Options
 When using ``url`` as the Source Type, additional options are available:
 
 - **urlHash**: URL to a hash file (.md5 or .sha256) for verifying the downloaded ruleset.
-- **proxyURL**: HTTP/HTTPS/SOCKS5 proxy URL for downloading the ruleset.
+- **proxyURL**: HTTP/HTTPS/SOCKS5 proxy URL for downloading the ruleset. (e.g., ``https://rules.emergingthreats.net/open/suricata-7.0.3/emerging-all.rules.tar.gz.md5``)
 - **proxyUsername**: Proxy authentication username.
 - **proxyPassword**: Proxy authentication password.
 - **proxyCACert**: Path to CA certificate file for MITM proxy verification.
@@ -150,7 +153,7 @@ Default Rulesets
 ~~~~~~~~~~~~~~~~
 
 Emerging Threats (ETOPEN/ETPRO)
-  Security Onion includes the Emerging Threats ruleset by default. To switch to ET Pro (commercial), edit the Emerging-Threats ruleset and enter your license key in the License Key field. Click the green checkmark to save, then apply the SOC state. Leave the License Key empty for ET Open (free) rules.
+  Security Onion includes the Emerging Threats Open ruleset by default. To switch to ET Pro (commercial), edit the Emerging-Threats ruleset and enter your license key in the License Key field. Click the green checkmark to save, then apply the SOC state. Leave the License Key empty for ET Open (free) rules.
 
   - Optimized for :ref:`suricata`
   - ET Open is **free**, ET Pro requires a license fee per sensor
@@ -178,14 +181,3 @@ SO_EXTRACTIONS
 
 SO_FILTERS
   Filter rules that control which metadata Suricata logs. Use these to reduce unnecessary metadata logging. This ruleset is imported but **disabled by default** when Suricata is the metadata engine.
-
-Adding Additional Rulesets
-~~~~~~~~~~~~~~~~~~~~~~
-
-You can add additional rulesets via the web interface. Navigate to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources and click the add button to create a new ruleset entry. Fill in the required fields (Ruleset Name, Source Type, Source Path, Ruleset License, and Enabled) and any optional fields as needed.
-
-.. note::
-
-        Each ruleset must have a unique name. Duplicate names will cause sync failures.
-
-After adding or updating ruleset configuration, changes will be applied within 15 minutes.
