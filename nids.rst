@@ -101,6 +101,8 @@ If your system is in Airgap mode, the airgap configuration profile will automati
 
 Within this configuration, you can enable additional rulesets, add custom rulesets, or disable existing ones. When you save a ruleset configuration change and apply the SOC state, Security Onion will detect the change and automatically sync all configured rulesets within 15 minutes.
 
+OISF-maintained list of Suricata-compatible rulesets: https://github.com/OISF/suricata-intel-index
+
 .. note::
 
         Each ruleset must have a unique name. Duplicate names will cause sync failures.
