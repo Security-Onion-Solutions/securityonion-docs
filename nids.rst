@@ -53,6 +53,10 @@ Enable and disable operations that are based on regex patterns are actioned duri
 - Navigate to :ref:`detections`, click the Options menu, select :ref:`suricata` in the dropdown menu, click the ``FULL UPDATE`` button, and then wait for it to complete.
 - Refresh the :ref:`detections` page and you should see the relevant rule statuses have changed.
 
+Note:
+
+   If a disable regex is applied to a setter flowbit rule and that rule is still required, it will be written out to the rules file as enabled, but `noalert`
+
 Adding New NIDS Rules
 ---------------------
 
@@ -183,3 +187,83 @@ SO_EXTRACTIONS
 
 SO_FILTERS
   Filter rules that control which metadata Suricata logs. Use these to reduce unnecessary metadata logging. This ruleset is imported but **disabled by default** when Suricata is the metadata engine.
+
+
+Flowbit Dependency Handling
+===========================
+
+Overview
+--------
+
+Suricata rules can use **flowbits** to share state between rules. A common pattern is for one rule to detect an initial condition and "set" a flowbit, while other rules check if that flowbit is set before alerting. This creates a dependency between rules.
+
+Security Onion automatically manages these dependencies to ensure your enabled rules function correctly, even when you disable related rules.
+
+How Flowbits Work
+-----------------
+
+Flowbits allow rules to communicate within a single network flow:
+
+* **Setter rules** use ``flowbits:set,<name>`` to mark a flow
+* **Getter rules** use ``flowbits:isset,<name>`` to check if a flow was marked
+
+For example, a malware detection might work like this:
+
+#. **Rule A** (setter): Detects initial malware handshake, sets ``flowbits:set,malware.detected``
+#. **Rule B** (getter): Detects follow-up command, requires ``flowbits:isset,malware.detected``
+
+Rule B will only alert if Rule A has already matched on the same flow. If Rule A is disabled, Rule B can never trigger.
+
+Automatic Dependency Resolution
+-------------------------------
+
+When you disable a rule that sets a flowbit needed by other enabled rules, Security Onion automatically handles this:
+
+#. **Your preference is preserved** - The rule remains marked as "disabled" in Elasticsearch & SOC
+#. **The rule still runs** - It is included in the active ruleset so dependent rules can function
+#. **No alerts are generated** - The ``noalert`` option is automatically added so the disabled rule runs silently
+
+Example
+~~~~~~~
+
+Consider these rules:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 40 30 15
+
+   * - SID
+     - Rule Name
+     - Flowbit
+     - Your Setting
+   * - 2012236
+     - x0Proto Init
+     - ``flowbits:set,et.x0proto``
+     - **Disabled**
+   * - 2012237
+     - x0Proto Client Info
+     - ``flowbits:isset,et.x0proto``
+     - Enabled
+   * - 2012238
+     - x0Proto Pong
+     - ``flowbits:isset,et.x0proto``
+     - Enabled
+
+Even though you disabled rule 2012236, it will still run because rules 2012237 and 2012238 depend on it. However:
+
+* Rule 2012236 will **not** generate alerts
+* Rules 2012237 and 2012238 will alert normally when their conditions match
+
+In the rules file, you will see a comment explaining the automatic inclusion:
+
+.. code-block:: text
+
+   # AUTO-ENABLED (flowbit: et.x0proto, required by 2 rule(s)): This disabled rule runs with noalert
+   alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"x0Proto Init"; ... noalert; sid:2012236; ...)
+
+When Disabled Rules Are Excluded
+--------------------------------
+
+A disabled setter rule is only auto-enabled if at least one getter rule depends on it. If you disable **all** rules that check a particular flowbit, the setter rule will be excluded from the active ruleset entirely.
+
+Using the example above, if you disable all three rules (2012236, 2012237, and 2012238), then rule 2012236 will not be included in the rules file since no enabled rules need its flowbit.
