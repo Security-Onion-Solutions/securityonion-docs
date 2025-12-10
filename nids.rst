@@ -147,12 +147,11 @@ URL Source Options
 
 When using ``url`` as the Source Type, additional options are available:
 
-- **urlHash**: URL to a hash file (.md5 or .sha256) for verifying the downloaded ruleset.
-- **proxyURL**: HTTP/HTTPS/SOCKS5 proxy URL for downloading the ruleset. (e.g., ``https://rules.emergingthreats.net/open/suricata-7.0.3/emerging-all.rules.tar.gz.md5``)
-- **proxyUsername**: Proxy authentication username.
-- **proxyPassword**: Proxy authentication password.
-- **proxyCACert**: Path to CA certificate file for MITM proxy verification.
-- **insecureSkipVerify**: Set to true to skip TLS certificate validation (not recommended for production).
+- **URL Hash**: URL to a hash file (.md5 or .sha256) for verifying the downloaded ruleset.
+- **Proxy URL**: HTTP/HTTPS proxy URL for downloading the ruleset. (e.g., ``http://192.168.1.50:3128``)
+- **Proxy Username**: Proxy authentication username.
+- **Proxy Password**: Proxy authentication password.
+- **Proxy CA Path**: Path to CA certificate file for MITM proxy verification.  (e.g., ``/opt/so/saltstack/local/salt/suricata/files/ruleset_ca.crt ``)
 
 
 Default Rulesets
