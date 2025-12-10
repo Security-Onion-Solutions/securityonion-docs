@@ -267,3 +267,29 @@ When Disabled Rules Are Excluded
 A disabled setter rule is only auto-enabled if at least one getter rule depends on it. If you disable **all** rules that check a particular flowbit, the setter rule will be excluded from the active ruleset entirely.
 
 Using the example above, if you disable all three rules (2012236, 2012237, and 2012238), then rule 2012236 will not be included in the rules file since no enabled rules need its flowbit.
+
+
+Sync Block
+----------
+
+For the upgrade to 2.4.200, the dependency on idstools has been removed and all functionality has been moved directly into SOC. Because of the complexity of this change, if SOUP detects a non-default Suricata ruleset config it puts a block file into place that stops any further Suricata ruleset changes until the block file has been removed. This is important because if the Suricata rulesets are synced without the configuration migrated, all current rules & overrides in SOC Detections will be removed and will need to be recreated.
+
+To resolve this block, use the following procedure:
+
+#. **Review the syncBlock file**
+
+   Login to the Manager and view the syncblock file to see what non-default config was detected. For example, if you have ETPRO configured, you would see the following message:
+
+   .. code-block:: text
+
+      
+
+#. **Configure Suricata rulesets**
+
+   Within SOC, navigate to ...
+
+#. **Remove the syncBlock file**
+
+#. **Sync the rulesets**
+
+
