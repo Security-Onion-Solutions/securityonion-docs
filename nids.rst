@@ -124,8 +124,15 @@ Each ruleset source has the following configuration options:
 - **Source Path**: Required. The full URL or directory/file path depending on Source Type. See `Supported Source Path Formats`_ below.
 - **Exclude Files**: Optional. List of rule file names to exclude, separated by commas (e.g., ``*deleted*, *retired*``).
 - **Ruleset License**: Required. The license type for this ruleset (e.g., "BSD", "Commercial", "CC0-1.0").
-- **Read Only**: Optional, defaults to false. Prevents changes to the rule itself - rules can still be enabled/disabled/tuned.
-- **Delete Unreferenced**: Optional, defaults to false. Deletes rules that are no longer referenced by the ruleset source.
+- **Read Only**: Optional, defaults to false. When enabled, prevents modification of rule content via the UI - users can still enable/disable rules and add tuning overrides (suppress, threshold, modify). Use this for vendor-managed rulesets where you want to preserve the original rule text.
+- **Delete Unreferenced**: Optional, defaults to false. Controls what happens to rules in Elasticsearch when they are removed from the source.
+
+  - **false** (default): Rules removed from the source remain in Elasticsearch. This preserves user modifications and prevents accidental data loss.
+  - **true**: Rules removed from the source are automatically deleted from Elasticsearch. Use this when the source is authoritative (e.g., git-managed rulesets).
+
+  .. warning::
+
+     Changing this setting from ``false`` to ``true`` will delete any rules that no longer exist in the source. If you have orphaned rules (rules in ES but not in source), they will be permanently removed on the next sync.
 
 Supported Source Path Formats
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -186,6 +193,154 @@ SO_EXTRACTIONS
 
 SO_FILTERS
   Filter rules that control which metadata Suricata logs. Use these to reduce unnecessary metadata logging. This ruleset is imported but **disabled by default** when Suricata is the metadata engine.
+
+
+Common Ruleset Configurations
+=============================
+
+This section provides configuration examples for common deployment scenarios.
+
+One-Time Import of Local Rules
+------------------------------
+
+If you have a ``.rules`` file that you want to import once and then manage entirely within the SOC Detections UI (without the source file overwriting your changes), follow this procedure:
+
+.. warning::
+
+   This workflow requires careful attention to timing. If the source file remains in place during a sync, any UI edits will be overwritten by the source file content.
+
+**Procedure:**
+
+#. **Configure the ruleset source**
+
+   Create a new ruleset source with the following settings:
+
+   - **Ruleset Name**: A descriptive name (e.g., ``imported-custom-rules``)
+   - **Source Type**: ``directory``
+   - **Source Path**: Path to your rules file or directory (e.g., ``/nsm/rules/custom-local-repos/one-time-import/``)
+   - **Read Only**: ``false`` (allows editing in UI after import)
+   - **Delete Unreferenced**: ``false`` (critical - prevents deletion when file is removed)
+   - **Enabled**: ``true``
+
+#. **Place your rules file**
+
+   Copy your ``.rules`` file to the configured source path:
+
+   .. code-block:: bash
+
+      cp /path/to/your/custom.rules /nsm/rules/custom-local-repos/one-time-import/
+
+#. **Wait for sync or trigger manually**
+
+   Either wait for the next automatic sync (up to 15 minutes) or trigger a manual sync:
+
+   - Navigate to :ref:`detections`
+   - Click Options menu
+   - Select :ref:`suricata` engine
+   - Click ``FULL UPDATE``
+
+#. **Verify import**
+
+   Confirm your rules appear in :ref:`detections` with the correct ruleset name.
+
+#. **Remove the source file**
+
+   Once imported, remove the source file to prevent future syncs from overwriting your UI changes:
+
+   .. code-block:: bash
+
+      rm /nsm/rules/custom-local-repos/one-time-import/custom.rules
+
+   With ``Delete Unreferenced: false``, the rules remain in Elasticsearch even though the source file is gone.
+
+#. **Manage rules in UI**
+
+   You can now enable, disable, edit, and tune your imported rules entirely through the SOC Detections interface.
+
+.. note::
+
+   **Important considerations:**
+
+   - Never change ``Delete Unreferenced`` to ``true`` after removing the source file, or all imported rules will be deleted on the next sync.
+   - If you accidentally leave the source file in place, any UI edits will be overwritten on the next sync.
+   - Disabling the ruleset in the configuration after import will remove the rules from Elasticsearch.
+
+ETPRO in Airgap Environments
+----------------------------
+
+For airgap deployments using ET PRO (commercial) rules, you must manually transfer the ruleset to your Security Onion manager since it cannot download from the internet.
+
+**Prerequisites:**
+
+- Valid ET PRO license key
+- A system with internet access to download the ruleset
+
+**Procedure:**
+
+#. **Download the ET PRO ruleset (on internet-connected system)**
+
+   Use your license key to download the latest ruleset:
+
+   .. code-block:: bash
+
+      # Replace YOUR_LICENSE_KEY with your actual ET PRO license key
+      curl -o etpro.rules.tar.gz \
+        "https://rules.emergingthreatspro.com/YOUR_LICENSE_KEY/suricata-7.0.3/etpro.rules.tar.gz"
+
+
+#. **Transfer to airgapped manager**
+
+   Use your approved file transfer method to copy the archive to the Manager node.
+
+#. **Place the ruleset on the manager**
+
+   Copy the archive to a directory accessible by SOC:
+
+   .. code-block:: bash
+
+      sudo cp etpro.rules.tar.gz /nsm/rules/custom-local-repos/local-etpro-suricata/
+      sudo chown -R socore:socore /nsm/rules/custom-local-repos/local-etpro-suricata
+
+#. **Configure the ruleset source**
+
+   Navigate to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources.
+
+   Modify the existing ``Emerging-Threats`` ruleset (recommended):
+   - **License Key**: ``YOUR_LICENSE_KEY``
+      
+   You can also create a new ruleset source (make sure to disable the existing Emerging-Threats ruleset):
+   - **Ruleset Name**: ``ETPRO-Airgap``
+   - **Source Type**: ``directory``
+   - **Source Path**: ``/nsm/rules/custom-local-repos/local-etpro-suricata/etpro.rules.tar.gz``
+   - **Read Only**: ``true`` (recommended - preserves vendor rule content)
+   - **Delete Unreferenced**: ``true`` (recommended - removes outdated rules when you update the archive)
+   - **Ruleset License**: ``Commercial``
+   - **Enabled**: ``true``
+
+#. **Apply configuration and sync**
+
+   Save the configuration and apply the SOC state. Then either wait for the next automatic sync (up to 15 minutes) or trigger a manual sync:
+
+   - Navigate to :ref:`detections`
+   - Click Options menu
+   - Select :ref:`suricata` engine
+   - Click ``FULL UPDATE``
+
+**Updating Rules:**
+
+To update your ET PRO rules in an airgap environment:
+
+#. Download the latest ``etpro.rules.tar.gz`` on an internet-connected system
+#. Transfer to the airgapped manager
+#. Replace the existing archive:
+
+   .. code-block:: bash
+
+      sudo cp etpro.rules.tar.gz /nsm/rules/custom-local-repos/local-etpro-suricata/
+
+#. Wait for the next automatic sync or trigger a manual ``FULL UPDATE``
+
+With ``Delete Unreferenced: true``, rules that were removed in the new version will be automatically cleaned up from Elasticsearch.
 
 
 Flowbit Dependency Handling
@@ -271,24 +426,90 @@ Using the example above, if you disable all three rules (2012236, 2012237, and 2
 Sync Block
 ----------
 
-For the upgrade to 2.4.200, the dependency on idstools has been removed and all functionality has been moved directly into SOC. Because of the complexity of this change, if SOUP detects a non-default Suricata ruleset config it puts a block file into place that stops any further Suricata ruleset changes until the block file has been removed. This is important because if the Suricata rulesets are synced without the configuration migrated, all current rules & overrides in SOC Detections will be removed and will need to be recreated.
+For the upgrade to 2.4.200, the dependency on idstools has been removed and all functionality has been moved directly into SOC. Because of the complexity of this change, if SOUP detects a non-default Suricata ruleset configuration, it creates a block file that stops any further Suricata ruleset changes until the block file has been removed.
+
+.. warning::
+
+   This block is critical because if the Suricata rulesets are synced without the configuration properly migrated, all current rules and overrides in SOC Detections will be removed and will need to be recreated.
 
 To resolve this block, use the following procedure:
 
 #. **Review the syncBlock file**
 
-   Login to the Manager and view the syncblock file to see what non-default config was detected. For example, if you have ETPRO configured, you would see the following message:
+   Login to the Manager and view the syncBlock file to see what non-default configuration was detected:
+
+   .. code-block:: bash
+
+      cat /opt/so/conf/soc/fingerprints/suricataengine.syncBlock
+
+   Example output showing ETPRO was detected:
 
    .. code-block:: text
 
-      
+      Suricata ruleset sync is blocked until this file is removed.
+      **CRITICAL** Make sure that you have manually added any custom Suricata
+      rulesets via SOC config before removing this file - review the documentation
+      for more details: https://docs.securityonion.net/en/2.4/nids.html#sync-block
+      Custom so-rule-update detected (hash: 207d8918a2d963bb7dcc0f1ebf28d6f7b5778019fedf0cc36d5d0850cbd8a529)
+      ETPRO code found: YOUR_LICENSE_KEY
 
-#. **Configure Suricata rulesets**
+   Note any license codes or custom configurations mentioned - you will need to enter these in the next step.
 
-   Within SOC, navigate to ...
+#. **Configure Suricata rulesets in SOC**
+
+   Navigate to SOC Configuration:
+
+   - :ref:`administration` --> Configuration --> Quicklinks --> **Configure NIDS Rulesets**
+
+   There are two configuration profiles:
+
+   - **default**: Used for standard (non-Airgap) deployments
+   - **airgap**: Used for :ref:`airgap` deployments
+
+   Select the appropriate profile for your environment.
+
+   **For ETPRO configurations:**
+
+   - Find the ``Emerging-Threats`` ruleset entry
+   - Copy and paste your ETPRO license code (shown in the syncBlock file) into the ``License Key`` field
+
+   **For proxy configurations:**
+
+   If your environment requires a proxy to download rulesets, configure the proxy settings on the ruleset entry:
+
+   - **Proxy URL**: Your proxy server URL (e.g., ``http://192.168.1.50:3128``)
+   - **Proxy Username** / **Proxy Password**: If proxy authentication is required
+   - **Proxy CA Path**: Path to CA certificate if using a MITM proxy
+
+   **For custom rulesets:**
+
+   If you had custom rulesets configured, add new ruleset entries with the appropriate Source Type, Source Path, and other settings. See `Configuring Rulesets`_ for details.
+
+#. **Save and synchronize configuration**
+
+   - Click the green checkmark to save your changes
+   - Click ``SYNCHRONIZE SOC`` and wait for it to complete
 
 #. **Remove the syncBlock file**
 
-#. **Sync the rulesets**
+   Once the configuration is saved and synchronized, remove the block file:
 
+   .. code-block:: bash
+
+      sudo rm /opt/so/conf/soc/fingerprints/suricataengine.syncBlock
+
+#. **Trigger a full ruleset sync**
+
+   - Navigate to :ref:`detections`
+   - Click the ``Options`` menu
+   - In the engine dropdown, select ``Suricata``
+   - Click ``FULL UPDATE``
+
+#. **Verify successful sync**
+
+   Within a minute or so, you should see a success message: ``Synchronized Suricata rules successfully.``
+
+   The engine status indicator should clear to ``OK``.
+
+   If the sync fails, click the ``Sync Failure`` crosshair icon in the top-right corner of the Suricata engine to view the error details.
 
