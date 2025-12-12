@@ -513,3 +513,89 @@ To resolve this block, use the following procedure:
 
    If the sync fails, click the ``Sync Failure`` crosshair icon in the top-right corner of the Suricata engine to view the error details.
 
+Modify Override
+===============
+
+The modify override allows you to change the content of a Suricata rule using regular expression pattern matching. This is useful for tuning rules without creating custom copies.
+
+How It Works
+------------
+
+The modify override applies a regex find-and-replace to the rule content at sync time. The original rule in the database is unchanged; the modification is applied when writing the rules file that Suricata reads.
+
+- **Regex**: A Go-compatible regular expression pattern to match
+- **Value**: The literal replacement string
+
+.. note::
+
+   The replacement string is treated as literal text. Backreferences (``\1``, ``\2``, etc.) are not supported. If you need to capture part of the match, use multiple specific overrides instead.
+
+Examples
+--------
+
+Exclude IP Range from Variable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+To exclude ``$DC_SERVERS`` from ``$EXTERNAL_NET``:
+
+:Regex: ``\$EXTERNAL_NET``
+:Value: ``[$EXTERNAL_NET,!$DC_SERVERS]``
+
+**Before:**
+
+.. code-block:: text
+
+   alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"Example"; sid:1001;)
+
+**After:**
+
+.. code-block:: text
+
+   alert tcp [$EXTERNAL_NET,!$DC_SERVERS] any -> $HOME_NET any (msg:"Example"; sid:1001;)
+
+Change Threshold Seconds
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+To change a rule's threshold from 60 seconds to 3600:
+
+:Regex: ``seconds \d+``
+:Value: ``seconds 3600``
+
+**Before:**
+
+.. code-block:: text
+
+   alert http any any -> any any (msg:"Test"; threshold:type limit,track by_src,count 1,seconds 60; sid:1001;)
+
+**After:**
+
+.. code-block:: text
+
+   alert http any any -> any any (msg:"Test"; threshold:type limit,track by_src,count 1,seconds 3600; sid:1001;)
+
+Modify Content Match
+~~~~~~~~~~~~~~~~~~~~
+
+To change a specific content match value:
+
+:Regex: ``content:"67:98:30``
+:Value: ``content:"88:98:30``
+
+**Before:**
+
+.. code-block:: text
+
+   alert tls any any -> any any (msg:"SSL Cert"; content:"67:98:30:81:90"; sid:1001;)
+
+**After:**
+
+.. code-block:: text
+
+   alert tls any any -> any any (msg:"SSL Cert"; content:"88:98:30:81:90"; sid:1001;)
+
+Limitations
+-----------
+
+- **No backreferences**: Python-style backreferences (``\1``, ``\2``) in the replacement string are not supported. The sync will fail with an error if these are detected.
+- **PCRE exception**: Backslash sequences inside ``pcre:"..."`` sections are allowed, as these are valid PCRE syntax.
+- **Literal replacement**: The replacement value is always treated as literal text. Special regex characters in the replacement do not have special meaning.
