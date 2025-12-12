@@ -241,9 +241,11 @@ For airgap deployments using ET PRO (commercial) rules, you must manually transf
    Navigate to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources.
 
    Modify the existing ``Emerging-Threats`` ruleset (recommended):
+
    - **License Key**: ``YOUR_LICENSE_KEY``
-      
+
    You can also create a new ruleset source (make sure to disable the existing Emerging-Threats ruleset):
+
    - **Ruleset Name**: ``ETPRO-Airgap``
    - **Source Type**: ``directory``
    - **Source Path**: ``/nsm/rules/custom-local-repos/local-etpro-suricata/etpro.rules.tar.gz``
@@ -539,3 +541,79 @@ Limitations
 - **No backreferences**: Python-style backreferences (``\1``, ``\2``) in the replacement string are not supported. The sync will fail with an error if these are detected.
 - **PCRE exception**: Backslash sequences inside ``pcre:"..."`` sections are allowed, as these are valid PCRE syntax.
 - **Literal replacement**: The replacement value is always treated as literal text. Special regex characters in the replacement do not have special meaning.
+
+Threshold Override
+==================
+
+The threshold override limits how often a rule generates alerts. Use this when a rule is generating too many alerts and you want to reduce alert volume without disabling the detection entirely.
+
+How It Works
+------------
+
+Thresholds are written to Suricata's ``threshold.conf`` file. The configuration controls alert frequency based on occurrence count and time window.
+
+- **Threshold Type**: ``limit``, ``threshold``, or ``both``
+
+  - ``limit``: Alert at most N times per time window
+  - ``threshold``: Alert only after N occurrences per time window
+  - ``both``: Alert once per time window after N occurrences
+
+- **Track**: ``by_src`` or ``by_dst`` - whether to track occurrences per source or destination IP
+- **Count**: Number of occurrences for the threshold logic
+- **Seconds**: Time window in seconds
+
+Example
+-------
+
+To limit alerts to once per hour per source IP:
+
+:Threshold Type: ``limit``
+:Track: ``by_src``
+:Count: ``1``
+:Seconds: ``3600``
+
+**Result in threshold.conf:**
+
+.. code-block:: text
+
+   threshold gen_id 1, sig_id 2001219, type limit, track by_src, count 1, seconds 3600
+
+This means SID 2001219 will generate at most 1 alert per source IP per hour.
+
+Suppress Override
+=================
+
+The suppress override silences alerts from specific IP addresses or networks. Use this when a rule is valid but generates false positives from known-good sources.
+
+How It Works
+------------
+
+Suppressions are written to Suricata's ``threshold.conf`` file. When traffic matches the rule and originates from (or is destined to) the specified IP, no alert is generated.
+
+- **Track**: ``by_src`` or ``by_dst`` - suppress based on source or destination IP
+- **IP**: IP address, CIDR network, or Suricata variable (e.g., ``192.168.1.100``, ``10.0.0.0/8``, or ``$HOME_NET``)
+
+Example
+-------
+
+To suppress alerts from a known vulnerability scanner at ``192.168.50.10``:
+
+:Track: ``by_src``
+:IP: ``192.168.50.10``
+
+**Result in threshold.conf:**
+
+.. code-block:: text
+
+   suppress gen_id 1, sig_id 2001219, track by_src, ip 192.168.50.10
+
+To suppress alerts from hosts defined in a Suricata variable:
+
+:Track: ``by_src``
+:IP: ``$SCANNERS``
+
+**Result in threshold.conf:**
+
+.. code-block:: text
+
+   suppress gen_id 1, sig_id 2001219, track by_src, ip $SCANNERS
