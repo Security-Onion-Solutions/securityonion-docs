@@ -181,7 +181,7 @@ Abuse.ch SSL Blacklist (ABUSECH-SSLBL)
   | https://sslbl.abuse.ch/
 
 Local Rules
-  A directory-based ruleset source for custom local rules. Rules are read from ``/nsm/rules/custom-local-repos/local-suricata``. This ruleset is enabled by default with Read Only set to false, allowing you to edit rules directly once they are imported.
+  A directory-based ruleset source for custom local rules. Rules are read from ``/nsm/rules/custom-local-repos/local-suricata``. This ruleset is enabled by default with Read Only set to false, allowing you to edit rules directly once they are imported. Keep in mind that if the local .rules file remains on disk in this location, each sync will attempt to re-import the rules and potentially overwrite any changes made within the web interface.
 
 Suricata Metadata Rulesets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -199,71 +199,6 @@ Common Ruleset Configurations
 =============================
 
 This section provides configuration examples for common deployment scenarios.
-
-One-Time Import of Local Rules
-------------------------------
-
-If you have a ``.rules`` file that you want to import once and then manage entirely within the SOC Detections UI (without the source file overwriting your changes), follow this procedure:
-
-.. warning::
-
-   This workflow requires careful attention to timing. If the source file remains in place during a sync, any UI edits will be overwritten by the source file content.
-
-**Procedure:**
-
-#. **Configure the ruleset source**
-
-   Create a new ruleset source with the following settings:
-
-   - **Ruleset Name**: A descriptive name (e.g., ``imported-custom-rules``)
-   - **Source Type**: ``directory``
-   - **Source Path**: Path to your rules file or directory (e.g., ``/nsm/rules/custom-local-repos/one-time-import/``)
-   - **Read Only**: ``false`` (allows editing in UI after import)
-   - **Delete Unreferenced**: ``false`` (critical - prevents deletion when file is removed)
-   - **Enabled**: ``true``
-
-#. **Place your rules file**
-
-   Copy your ``.rules`` file to the configured source path:
-
-   .. code-block:: bash
-
-      cp /path/to/your/custom.rules /nsm/rules/custom-local-repos/one-time-import/
-
-#. **Wait for sync or trigger manually**
-
-   Either wait for the next automatic sync (up to 15 minutes) or trigger a manual sync:
-
-   - Navigate to :ref:`detections`
-   - Click Options menu
-   - Select :ref:`suricata` engine
-   - Click ``FULL UPDATE``
-
-#. **Verify import**
-
-   Confirm your rules appear in :ref:`detections` with the correct ruleset name.
-
-#. **Remove the source file**
-
-   Once imported, remove the source file to prevent future syncs from overwriting your UI changes:
-
-   .. code-block:: bash
-
-      rm /nsm/rules/custom-local-repos/one-time-import/custom.rules
-
-   With ``Delete Unreferenced: false``, the rules remain in Elasticsearch even though the source file is gone.
-
-#. **Manage rules in UI**
-
-   You can now enable, disable, edit, and tune your imported rules entirely through the SOC Detections interface.
-
-.. note::
-
-   **Important considerations:**
-
-   - Never change ``Delete Unreferenced`` to ``true`` after removing the source file, or all imported rules will be deleted on the next sync.
-   - If you accidentally leave the source file in place, any UI edits will be overwritten on the next sync.
-   - Disabling the ruleset in the configuration after import will remove the rules from Elasticsearch.
 
 ETPRO in Airgap Environments
 ----------------------------
