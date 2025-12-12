@@ -468,10 +468,15 @@ To resolve this block, use the following procedure:
 
    Select the appropriate profile for your environment.
 
-   **For ETPRO configurations:**
+   **For ETPRO configurations - Non-Airgap:**
 
    - Find the ``Emerging-Threats`` ruleset entry
    - Copy and paste your ETPRO license code (shown in the syncBlock file) into the ``License Key`` field
+
+   **For ETPRO configurations - Airgap:**
+
+    Following the procedure outlined here: `ETPRO in Airgap Environments`_
+    During this migration, it is imporant to use the builtin ``Emerging Threats`` Airgap config profile.
 
    **For proxy configurations:**
 
