@@ -5,6 +5,10 @@ Release Notes
 
 .. warning::
 
+        Security Onion 2.4.200 changed the way Suricata detections are synchronized. Grids with custom Suricata rulesets will pause all Suricata detection syncing. For more information and required steps, see the :ref:`sync-block` section.
+
+.. warning::
+
         Security Onion 2.4.150 included changes for the :ref:`elasticsearch` deletion process. :ref:`elasticsearch` indices are managed by both the ``so-elasticsearch-indices-delete`` utility and Index Lifecycle Management (ILM). The ``so-elasticsearch-indices-delete`` utility is primarily designed for single-node deployments like EVAL and STANDALONE configurations. Running it on a multi-node deployment with one or more search nodes has the possibility of getting into a corner case state where more data is deleted than intended. 
         
         If you have a multi-node deployment and haven't already updated to 2.4.150, then ``so-elasticsearch-indices-delete`` will be disabled when you update. You will need to ensure that ILM is configured properly to delete indices before disk usage reaches the :ref:`elasticsearch` watermark setting. Otherwise, :ref:`elasticsearch` may stop ingesting new data. For more information, please see the :ref:`elasticsearch` section.
