@@ -68,6 +68,7 @@ Release History
 - FIX: longer timeout for esindexsize.sh telegraf script `#15149 <https://github.com/Security-Onion-Solutions/securityonion/issues/15149>`_
 - FIX: so-setup bond0 being recreated `#15233 <https://github.com/Security-Onion-Solutions/securityonion/issues/15233>`_
 - UPGRADE: Salt to 3006.16 `#15173 <https://github.com/Security-Onion-Solutions/securityonion/issues/15173>`_
+- UPGRADE: Strelka to 1.0.1
 - UPGRADE: Suricata to 8.0.2 `#15203 <https://github.com/Security-Onion-Solutions/securityonion/issues/15203>`_
 - UPGRADE: Zeek to 8.0.4 `#15060 <https://github.com/Security-Onion-Solutions/securityonion/issues/15060>`_
 - UPGRADE: golang.org/x/crypto from 0.42.0 to 0.45.0 `#15258 <https://github.com/Security-Onion-Solutions/securityonion/issues/15258>`_
