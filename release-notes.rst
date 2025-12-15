@@ -17,6 +17,55 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.200 [20251215] Changes
+--------------------------
+
+- FEATURE: Elastic agent high performance tuning in SOC `#14965 <https://github.com/Security-Onion-Solutions/securityonion/issues/14965>`_
+- FEATURE: Add QWEN 235B as a lower cost option for an OnionAI model
+- FEATURE: Add info icon to the right of sync error states on detection header bar `#15256 <https://github.com/Security-Onion-Solutions/securityonion/issues/15256>`_
+- FEATURE: Additional ILM config via SOC ui
+- FEATURE: Make OnionAI more accurate and curious
+- FEATURE: Notify user of hypervisor environment setup failures `#15245 <https://github.com/Security-Onion-Solutions/securityonion/issues/15245>`_
+- FEATURE: Onion AI add tool for creating / updating / disabling / enabling detections
+- FEATURE: Onion AI auto compact context support
+- FEATURE: Onion AI escalate to existing case
+- FEATURE: Onion AI model metrics
+- FEATURE: OnionAI additional UI metrics
+- FEATURE: Refactor SOC Detections NIDS for idstools removal `#15306 <https://github.com/Security-Onion-Solutions/securityonion/issues/15306>`_
+- FEATURE: Remember Configuration screen Advanced toggle `#15215 <https://github.com/Security-Onion-Solutions/securityonion/issues/15215>`_
+- FEATURE: Stop retrying PCAP jobs after 5 failures (configurable) `#15227 <https://github.com/Security-Onion-Solutions/securityonion/issues/15227>`_
+- FEATURE: so-elasticsearch-retention-estimate `#15178 <https://github.com/Security-Onion-Solutions/securityonion/issues/15178>`_
+- FIX: "Context Starts Here" line sometimes disappears depending on screen width
+- FIX: Add guardrails for when users are allowed to click context compression button
+- FIX: Compaction throws server error
+- FIX: Creating VM with virtual disk fails with "Hypervisor NSM Disk Full" error `#15179 <https://github.com/Security-Onion-Solutions/securityonion/issues/15179>`_
+- FIX: Do not prompt to continue if memory capacity is too low for certain install types `#15255 <https://github.com/Security-Onion-Solutions/securityonion/issues/15255>`_
+- FIX: Docker registry may not be ready for connections when Salt pulls first container `#15058 <https://github.com/Security-Onion-Solutions/securityonion/issues/15058>`_
+- FIX: Failed setup a while ago `#14945 <https://github.com/Security-Onion-Solutions/securityonion/issues/14945>`_
+- FIX: Failure to download the OL9 qcow2 image can cause the setup_hypervisor runner to hang `#15246 <https://github.com/Security-Onion-Solutions/securityonion/issues/15246>`_
+- FIX: ISO swap partition on multi disk install `#15158 <https://github.com/Security-Onion-Solutions/securityonion/issues/15158>`_
+- FIX: Improved chat input field
+- FIX: List of users empty in SOC interface after a sort on a column `#15249 <https://github.com/Security-Onion-Solutions/securityonion/issues/15249>`_
+- FIX: OIDC Link and Unlink `#15214 <https://github.com/Security-Onion-Solutions/securityonion/issues/15214>`_
+- FIX: Onion AI improve error handling from API gateway
+- FIX: Reduce Sensoroni pcapMaxCount default setting `#15208 <https://github.com/Security-Onion-Solutions/securityonion/issues/15208>`_
+- FIX: Refactor Playbooks variable substitution
+- FIX: Remove newline that appears for "&nbsp;" tool responses
+- FIX: Rename Foward to Sensor `#15172 <https://github.com/Security-Onion-Solutions/securityonion/issues/15172>`_
+- FIX: Reserve group IDs to prevent collisions `#15288 <https://github.com/Security-Onion-Solutions/securityonion/issues/15288>`_
+- FIX: Show message when Onion AI is experiencing an outage
+- FIX: Stop collecting PCAP packets if filter covers multiple stream paths `#15226 <https://github.com/Security-Onion-Solutions/securityonion/issues/15226>`_
+- FIX: Tool Calls with OnionAI time out
+- FIX: UI needs to be notified if context compaction fails `#15295 <https://github.com/Security-Onion-Solutions/securityonion/issues/15295>`_
+- FIX: VM is created without virtual disk mounted `#15250 <https://github.com/Security-Onion-Solutions/securityonion/issues/15250>`_
+- FIX: get_playbooks tool doesn't respect aggregate: true
+- FIX: longer timeout for esindexsize.sh telegraf script `#15149 <https://github.com/Security-Onion-Solutions/securityonion/issues/15149>`_
+- FIX: so-setup bond0 being recreated `#15233 <https://github.com/Security-Onion-Solutions/securityonion/issues/15233>`_
+- UPGRADE: Salt to 3006.16 `#15173 <https://github.com/Security-Onion-Solutions/securityonion/issues/15173>`_
+- UPGRADE: Suricata to 8.0.2 `#15203 <https://github.com/Security-Onion-Solutions/securityonion/issues/15203>`_
+- UPGRADE: Zeek to 8.0.4 `#15060 <https://github.com/Security-Onion-Solutions/securityonion/issues/15060>`_
+- UPGRADE: golang.org/x/crypto from 0.42.0 to 0.45.0 `#15258 <https://github.com/Security-Onion-Solutions/securityonion/issues/15258>`_
+
 2.4.190 [20251024] Changes
 --------------------------
 
