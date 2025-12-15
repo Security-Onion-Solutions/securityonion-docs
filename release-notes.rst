@@ -49,6 +49,7 @@ Release History
 - FIX: Docker registry may not be ready for connections when Salt pulls first container `#15058 <https://github.com/Security-Onion-Solutions/securityonion/issues/15058>`_
 - FIX: Failed setup a while ago `#14945 <https://github.com/Security-Onion-Solutions/securityonion/issues/14945>`_
 - FIX: Failure to download the OL9 qcow2 image can cause the setup_hypervisor runner to hang `#15246 <https://github.com/Security-Onion-Solutions/securityonion/issues/15246>`_
+- FIX: Ignore control characters in minion install.txt `#15315 <https://github.com/Security-Onion-Solutions/securityonion/issues/15315>`_
 - FIX: ISO swap partition on multi disk install `#15158 <https://github.com/Security-Onion-Solutions/securityonion/issues/15158>`_
 - FIX: Improved chat input field
 - FIX: List of users empty in SOC interface after a sort on a column `#15249 <https://github.com/Security-Onion-Solutions/securityonion/issues/15249>`_
