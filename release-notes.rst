@@ -16,6 +16,8 @@ Release Notes
 Known Issues
 ~~~~~~~~~~~~
 
+If you haven't viewed cases in a while, then escalating from Onion AI to an existing case will fail.
+
 For all known issues, please see https://github.com/Security-Onion-Solutions/securityonion/issues.
 
 Release History
