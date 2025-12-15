@@ -130,7 +130,7 @@ Modify Override
 The modify override allows you to change the content of a Suricata rule using regular expression pattern matching. This is useful for tuning rules without creating custom copies.
 
 How It Works
-------------
+~~~~~~~~~~~~
 
 The modify override applies a regex find-and-replace to the rule content at sync time. The original rule in the database is unchanged; the modification is applied when writing the rules file that Suricata reads.
 
@@ -142,7 +142,7 @@ The modify override applies a regex find-and-replace to the rule content at sync
    The replacement string is treated as literal text. Backreferences (``\1``, ``\2``, etc.) are not supported. If you need to capture part of the match, use multiple specific overrides instead.
 
 Examples
---------
+~~~~~~~~
 
 Exclude IP Range from Variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,7 +205,7 @@ To change a specific content match value:
    alert tls any any -> any any (msg:"SSL Cert"; content:"88:98:30:81:90"; sid:1001;)
 
 Limitations
------------
+~~~~~~~~~~~
 
 - **No backreferences**: Python-style backreferences (``\1``, ``\2``) in the replacement string are not supported. The sync will fail with an error if these are detected.
 - **PCRE exception**: Backslash sequences inside ``pcre:"..."`` sections are allowed, as these are valid PCRE syntax.
@@ -313,7 +313,7 @@ When using ``url`` as the Source Type, additional options are available:
 - **Proxy URL**: HTTP/HTTPS proxy URL for downloading the ruleset. (e.g., ``http://192.168.1.50:3128``)
 - **Proxy Username**: Proxy authentication username.
 - **Proxy Password**: Proxy authentication password.
-- **Proxy CA Path**: Path to CA certificate file for MITM proxy verification.  (e.g., ``/opt/so/saltstack/local/salt/suricata/files/ruleset_ca.crt ``)
+- **Proxy CA Path**: Path to CA certificate file for MITM proxy verification (e.g., ``/opt/so/saltstack/local/salt/suricata/files/ruleset_ca.crt``)
 
 
 Default Rulesets
@@ -437,14 +437,14 @@ Flowbit Dependency Handling
 ---------------------------
 
 Overview
---------
+~~~~~~~~
 
 Suricata rules can use **flowbits** to share state between rules. A common pattern is for one rule to detect an initial condition and "set" a flowbit, while other rules check if that flowbit is set before alerting. This creates a dependency between rules.
 
 Security Onion automatically manages these dependencies to ensure your enabled rules function correctly, even when you disable related rules.
 
 How Flowbits Work
------------------
+~~~~~~~~~~~~~~~~~
 
 Flowbits allow rules to communicate within a single network flow:
 
@@ -459,7 +459,7 @@ For example, a malware detection might work like this:
 Rule B will only alert if Rule A has already matched on the same flow. If Rule A is disabled, Rule B can never trigger.
 
 Automatic Dependency Resolution
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you disable a rule that sets a flowbit needed by other enabled rules, Security Onion automatically handles this:
 
@@ -506,7 +506,7 @@ In the rules file, you will see a comment explaining the automatic inclusion:
    alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"x0Proto Init"; ... noalert; sid:2012236; ...)
 
 When Disabled Rules Are Excluded
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 A disabled setter rule is only auto-enabled if at least one getter rule depends on it. If you disable **all** rules that check a particular flowbit, the setter rule will be excluded from the active ruleset entirely.
 
@@ -566,7 +566,7 @@ To resolve this block, use the following procedure:
    **For ETPRO configurations - Airgap:**
 
     Following the procedure outlined here: `ETPRO in Airgap Environments`_
-    During this migration, it is imporant to use the builtin ``Emerging Threats`` Airgap config profile.
+    During this migration, it is important to use the builtin ``Emerging Threats`` Airgap config profile.
 
    **For proxy configurations:**
 
