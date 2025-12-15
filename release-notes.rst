@@ -5,7 +5,7 @@ Release Notes
 
 .. warning::
 
-        Security Onion 2.4.200 changed the way Suricata detections are synchronized. Grids with custom Suricata rulesets will pause all Suricata detection syncing. For more information and required steps, see the :ref:`sync-block` section.
+        Security Onion 2.4.200 changed the way Suricata detections are synchronized. Grids with custom Suricata rulesets will pause all Suricata detection syncing. For more information and required steps, see the :ref:`syncblock` section.
 
 .. warning::
 

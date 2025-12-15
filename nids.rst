@@ -514,6 +514,7 @@ A disabled setter rule is only auto-enabled if at least one getter rule depends 
 
 Using the example above, if you disable all three rules (2012236, 2012237, and 2012238), then rule 2012236 will not be included in the rules file since no enabled rules need its flowbit.
 
+.. _syncblock:
 
 Sync Block
 ----------
