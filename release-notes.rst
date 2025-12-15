@@ -55,7 +55,7 @@ Release History
 - FIX: Reduce Sensoroni pcapMaxCount default setting `#15208 <https://github.com/Security-Onion-Solutions/securityonion/issues/15208>`_
 - FIX: Refactor Playbooks variable substitution
 - FIX: Remove newline that appears for "&nbsp;" tool responses
-- FIX: Rename Foward to Sensor `#15172 <https://github.com/Security-Onion-Solutions/securityonion/issues/15172>`_
+- FIX: Rename Forward to Sensor `#15172 <https://github.com/Security-Onion-Solutions/securityonion/issues/15172>`_
 - FIX: Reserve group IDs to prevent collisions `#15288 <https://github.com/Security-Onion-Solutions/securityonion/issues/15288>`_
 - FIX: Show message when Onion AI is experiencing an outage
 - FIX: Stop collecting PCAP packets if filter covers multiple stream paths `#15226 <https://github.com/Security-Onion-Solutions/securityonion/issues/15226>`_
