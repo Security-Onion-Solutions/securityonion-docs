@@ -299,10 +299,10 @@ For **url** Source Type:
 
 For **directory** Source Type:
 
-- Directory containing multiple ``.rules`` files (e.g., ``/nsm/rules/custom-local-repos/my-rules/``)
+- Directory containing multiple ``.rules`` files (e.g., ``/nsm/rules/custom-local-repos/local-suricata-import/``)
 - Directory containing a single ``.rules`` file
-- Direct path to a ``.rules`` file (e.g., ``/nsm/rules/custom/myrules.rules``)
-- Direct path to a ``.tar.gz`` archive (e.g., ``/nsm/rules/custom/myrules.tar.gz``)
+- Direct path to a ``.rules`` file (e.g., ``/nsm/rules/custom-local-repos/local-suricata-import/import.rule``)
+- Direct path to a ``.tar.gz`` archive (e.g., ``/nsm/rules/custom-local-repos/local-suricata-import/import.tar.gz``)
 
 URL Source Options
 ~~~~~~~~~~~~~~~~~~
@@ -351,7 +351,7 @@ SO_FILTERS
 
 
 Common Ruleset Configurations
-=============================
+-----------------------------
 
 This section provides configuration examples for common deployment scenarios.
 
@@ -396,9 +396,11 @@ For airgap deployments using ET PRO (commercial) rules, you must manually transf
    Navigate to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources.
 
    Modify the existing ``Emerging-Threats`` ruleset (recommended):
+
    - **License Key**: ``YOUR_LICENSE_KEY``
-      
+
    You can also create a new ruleset source (make sure to disable the existing Emerging-Threats ruleset):
+
    - **Ruleset Name**: ``ETPRO-Airgap``
    - **Source Type**: ``directory``
    - **Source Path**: ``/nsm/rules/custom-local-repos/local-etpro-suricata/etpro.rules.tar.gz``
@@ -530,7 +532,7 @@ To resolve this block, use the following procedure:
 
    .. code-block:: bash
 
-      cat /opt/so/conf/soc/fingerprints/suricataengine.syncBlock
+      sudo cat /opt/so/conf/soc/fingerprints/suricataengine.syncBlock
 
    Example output showing ETPRO was detected:
 
@@ -566,6 +568,7 @@ To resolve this block, use the following procedure:
    **For ETPRO configurations - Airgap:**
 
     Following the procedure outlined here: `ETPRO in Airgap Environments`_
+
     During this migration, it is important to use the builtin ``Emerging Threats`` Airgap config profile.
 
    **For proxy configurations:**
