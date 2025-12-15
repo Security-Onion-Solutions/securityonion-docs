@@ -29,7 +29,7 @@ If your network traffic has VLAN tags, then Suricata will log them. :ref:`dashbo
 
 If your network traffic has mixed VLAN tags (VLAN tags in one direction but not the other), then you may need to do the following:
 
-- Navigate to :ref:`administration` > Configuration.
+- Navigate to :ref:`administration` --> Configuration.
 - At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 - Navigate to suricata > config > vlan > use-for-tracking and set it to ``false``.
 
