@@ -103,7 +103,7 @@ Please refer to the :ref:`architecture` section for detailed deployment scenario
 Manager node with local log storage and search
 ----------------------------------------------
 
-In an enterprise distributed deployment, a manager node will store logs from itself and forward nodes. It can also act as a syslog destination for other log sources to be indexed into :ref:`elasticsearch`. An enterprise manager node should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
+In an enterprise distributed deployment, a manager node will store logs from itself and sensor nodes. It can also act as a syslog destination for other log sources to be indexed into :ref:`elasticsearch`. An enterprise manager node should have 8 CPU cores at a minimum, 16-128GB RAM, and enough disk space (multiple terabytes recommended) to meet your retention requirements.
 
 - CPU: Used to parse incoming events, index incoming events, and search metadata. As consumption of data and events increases, more CPU will be required.
 - RAM: Used for :ref:`logstash`, :ref:`elasticsearch`, and disk cache for Lucene. The amount of available RAM will directly impact search speeds and reliability.
@@ -133,10 +133,10 @@ Search nodes increase search and retention capacity with regard to :ref:`elastic
 
 Please refer to the :ref:`architecture` section for detailed deployment scenarios.
 
-Forward Node (Sensor)
+Sensor Node
 ---------------------
 
-A forward node runs sensor components only, and forwards metadata to the manager node. All PCAP stays local to the sensor, and is accessed through use of an agent.
+A sensor node runs sensor components only, and forwards metadata to the manager node. All PCAP stays local to the sensor, and is accessed through use of an agent.
 
 - CPU: Used for analyzing and storing network traffic. As monitored bandwidth increases, a greater amount of CPU will be required. See below.
 - RAM: Used for write cache and processing traffic.

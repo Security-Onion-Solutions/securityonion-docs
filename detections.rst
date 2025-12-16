@@ -30,7 +30,8 @@ Here is the list of possible status messages and what they mean:
 - **Migration Failed**: A failure occurred during the migration. The migration will stop on the first error and will not attempt to migrate to newer versions until the issue is resolved.
 - **Synchronizing**: A rule synchronization is in progress. This occurs daily, to ensure the Security Onion grid has the latest rules. 
 - **Sync Failed**: A failure occurred during the synchronization procedure. The next sync will retry within a few minutes.
-- **Rule Mismatch**: An integrity check process detected a mismatch between the deployed rules and the enabled rules. The SOC log will note the specific mismatched rules. One possible reason for this is if you had previously added custom rules to /opt/so/saltstack/local/salt/idstools/rules/local.rules and, if this is the case, then you can remove the rules from that file and re-add them using the Detections interface. Another possible reason is that :ref:`elasticsearch` has reached its disk watermark setting and is no longer allowing updates to the Detections indices.
+- **Sync Blocked**: Rule synchronization is currently blocked.
+- **Rule Mismatch**: An integrity check process detected a mismatch between the deployed rules and the enabled rules. The SOC log will note the specific mismatched rules. One possible reason is that :ref:`elasticsearch` has reached its disk watermark setting and is no longer allowing updates to the Detections indices.
 - **OK**: No known issues with the rule engine.
 
 .. tip::
@@ -147,8 +148,8 @@ Elastalert/Sigma
   - Immediate change in the UI and on disk
 
 Suricata/NIDS
-  - UI Bulk and Individual: Immediate change in the UI, disk change once the `idstools` state runs again
-  - Regex: UI and disk change once the `soc` state runs again and the :ref:`suricata` engine syncs
+  - UI Bulk and Individual: Immediate change in the UI and on disk
+  - Regex: UI and disk change once the :ref:`suricata` engine syncs
 
 Strelka/YARA
   - Immediate change in the UI, disk change once the `strelka` state runs again
@@ -160,7 +161,7 @@ Elastalert/Sigma
   - Immediate change in the UI and on disk
 
 Suricata/NIDS
-  - Immediate change in the UI, disk change once the `idstools` state runs again
+  - Immediate change in the UI and on disk
 
 Strelka/YARA
   - N/A
@@ -173,9 +174,7 @@ Elastalert/Sigma
   - Git repo (https or disk): UI and disk change once the `soc` state runs again and the :ref:`elastalert` engine syncs
 
 Suricata/NIDS
-  - ETOPEN/ETPRO: UI and disk change once the `soc` and  `idstools` states run again and the :ref:`suricata` engine syncs
-  - Custom URL: UI and disk change once the `soc` and `idstools` states run again and the :ref:`suricata` engine syncs
-  - Custom Local File: UI and disk change once the `soc` and `idstools` states run again and the :ref:`suricata` engine syncs
+  - All ruleset sources (ETOPEN, ETPRO, custom URL, local directory): UI and disk change once the :ref:`suricata` engine syncs
 
 Strelka/YARA
   - Git repo (https or disk): UI and disk change once the `soc` state runs again and the :ref:`strelka` engine syncs

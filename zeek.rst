@@ -137,7 +137,7 @@ If your network traffic has VLAN tags, then Zeek will log them in conn.log. :ref
 Intel
 -----
 
-You can add your own intel to ``/opt/so/saltstack/local/salt/zeek/policy/intel/intel.dat`` on the manager and it will automatically replicate to all forward nodes. If the ``/opt/so/saltstack/local/salt/zeek/policy/intel/`` directory is empty, you can copy the default files (both ``intel.dat`` and ``__load__.zeek``) from ``/opt/so/saltstack/default/salt/zeek/policy/intel/`` as follows:
+You can add your own intel to ``/opt/so/saltstack/local/salt/zeek/policy/intel/intel.dat`` on the manager and it will automatically replicate to all sensor nodes. If the ``/opt/so/saltstack/local/salt/zeek/policy/intel/`` directory is empty, you can copy the default files (both ``intel.dat`` and ``__load__.zeek``) from ``/opt/so/saltstack/default/salt/zeek/policy/intel/`` as follows:
 
 ::
 
@@ -151,7 +151,7 @@ Please note that Zeek is very strict about the format of ``intel.dat``. When edi
 
 The default ``intel.dat`` file follows these guidelines so you can reference it as an example of the proper format.
 
-When finished editing ``intel.dat``, run ``sudo salt $SENSORNAME_$ROLE state.highstate`` to sync ``/opt/so/saltstack/local/salt/zeek/policy/intel/`` to ``/opt/so/conf/zeek/policy/intel/``. If you have a distributed deployment with separate forward nodes, it may take up to 15 minutes for intel to sync to the forward nodes.
+When finished editing ``intel.dat``, run ``sudo salt $SENSORNAME_$ROLE state.highstate`` to sync ``/opt/so/saltstack/local/salt/zeek/policy/intel/`` to ``/opt/so/conf/zeek/policy/intel/``. If you have a distributed deployment with separate sensor nodes, it may take up to 15 minutes for intel to sync to the sensor nodes.
 
 If you experience an error, or do not notice ``/nsm/zeek/logs/current/intel.log`` being generated, try having a look in ``/nsm/zeek/logs/current/reporter.log`` for clues. You may also want to restart Zeek after making changes by running ``sudo so-zeek-restart``.
 

@@ -257,16 +257,17 @@ components:
       type: object
     model.AssistantParameters:
       properties:
-        contextLimitLarge:
-          type: integer
-        contextLimitSmall:
-          type: integer
+        availableModels:
+          items:
+            $ref: '#/components/schemas/model.ModelParameters'
+          type: array
+          uniqueItems: false
+        compressContextPrompt:
+          type: string
         enabled:
           type: boolean
         investigationPrompt:
           type: string
-        lowBalanceColorAlert:
-          type: integer
         thresholdColorRatioLow:
           type: number
         thresholdColorRatioMax:
@@ -676,19 +677,6 @@ components:
       required:
       - caseId
       - description
-      type: object
-    model.ConvertedQuery:
-      properties:
-        fields:
-          description: Fields that the query will return that should be made visible
-            in the UI.
-          items:
-            type: string
-          type: array
-          uniqueItems: false
-        query:
-          description: The OQL result of the converted Sigma query.
-          type: string
       type: object
     model.Detection:
       properties:
@@ -1634,6 +1622,21 @@ components:
         usage:
           $ref: '#/components/schemas/model.Usage'
       type: object
+    model.ModelParameters:
+      properties:
+        contextLimitLarge:
+          type: integer
+        contextLimitSmall:
+          type: integer
+        displayName:
+          type: string
+        enabled:
+          type: boolean
+        id:
+          type: string
+        lowBalanceColorAlert:
+          type: integer
+      type: object
     model.Node:
       properties:
         address:
@@ -1741,6 +1744,10 @@ components:
           description: Indicates whether disk encryption is enabled on this node
           example: 1
           type: integer
+        load15m:
+          description: The node's 15-minute load metric
+          example: 1.09
+          type: number
         load1m:
           description: The node's 1-minute load metric
           example: 0.43
@@ -1748,10 +1755,6 @@ components:
         load5m:
           description: The node's 5-minute load metric
           example: 0.96
-          type: number
-        load15m:
-          description: The node's 15-minute load metric
-          example: 1.09
           type: number
         memoryTotalGB:
           description: Total size, in gigabytes, of the system memory, or RAM
@@ -2190,8 +2193,17 @@ components:
           example: Knowing if the attack comes from inside or outside the network
             can help determine if this is a false positive or a real attack.
           type: string
+        fields:
+          description: not returned by the API, only used internally
+          items:
+            type: string
+          type: array
+          uniqueItems: false
         filledQuery:
           description: The query after variable substitution has been performed.
+          type: string
+        oqlQuery:
+          description: The event-specific query in OQL format
           type: string
         query:
           description: A raw YAML Sigma query that can be used to find the answer
@@ -2842,7 +2854,7 @@ info:
     url: https://securityonion.net/terms/
   termsOfService: https://securityonion.net/terms/
   title: Security Onion Connect API
-  version: 2.4.190
+  version: 2.4.200
 openapi: 3.1.0
 paths:
   /api/assistant/admin/{userId}/sessions:
@@ -5498,37 +5510,6 @@ paths:
       summary: Get Playbook by ID
       tags:
       - Playbooks
-  /connect/playbook/convert:
-    post:
-      description: Converts the questions of a playbook from Sigma to OQL.
-      requestBody:
-        content:
-          application/json:
-            schema:
-              items:
-                type: string
-              type: array
-        description: The variable substituted Sigma queries to convert
-        required: true
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                items:
-                  $ref: '#/components/schemas/model.ConvertedQuery'
-                type: array
-          description: The queries were successfully converted
-        "401":
-          description: Request was not properly authenticated
-        "500":
-          description: Internal SOC error; review SOC logs
-      security:
-      - bearer:
-        - playbooks/read
-      summary: Convert Playbook Questions
-      tags:
-      - Playbooks
   /connect/playbook/detection/{id}:
     get:
       description: Retrieves playbooks that apply to the indicated detection.
@@ -5569,6 +5550,41 @@ paths:
         - detections/read
         - events/read
       summary: Get Playbook For Detection
+      tags:
+      - Playbooks
+  /connect/playbook/event/{id}:
+    get:
+      description: Fetches the playbook for a specific event.
+      parameters:
+      - description: The SOC Id for the alert
+        in: path
+        name: id
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/model.Playbook'
+                type: array
+          description: The playbook was successfully retrieved
+        "400":
+          description: Malformed request
+        "401":
+          description: Request was not properly authenticated
+        "404":
+          description: Event not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - playbooks/read
+        - detections/read
+        - events/read
+      summary: Get Event-Specific Playbook
       tags:
       - Playbooks
   /connect/query/{operation}:

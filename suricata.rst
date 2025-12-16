@@ -29,7 +29,7 @@ If your network traffic has VLAN tags, then Suricata will log them. :ref:`dashbo
 
 If your network traffic has mixed VLAN tags (VLAN tags in one direction but not the other), then you may need to do the following:
 
-- Navigate to :ref:`administration` > Configuration.
+- Navigate to :ref:`administration` --> Configuration.
 - At the top of the page, click the ``Options`` menu and then enable the ``Show advanced settings`` option.
 - Navigate to suricata > config > vlan > use-for-tracking and set it to ``false``.
 
@@ -93,7 +93,7 @@ By default, Security Onion uses :ref:`zeek` to record protocol metadata. If you 
 -  HTTP
 -  SSL
 
-If you later find that some of that metadata is unnecessary, you can filter out the unnecessary metadata by writing rules. We have included some examples at https://raw.githubusercontent.com/Security-Onion-Solutions/securityonion/2.4/main/salt/idstools/rules/filters.rules.
+If you later find that some of that metadata is unnecessary, you can enable the SO_FILTERS ruleset to filter out unnecessary metadata. Navigate to :ref:`administration` --> Configuration --> soc --> config --> server --> modules --> suricataengine --> rulesetSources and enable the SO_FILTERS ruleset.
 
 To change your grid's metadata engine from :ref:`zeek` to Suricata, go to :ref:`administration` --> Configuration --> global --> mdengine and change the value from ``ZEEK`` to ``SURICATA``:
 
@@ -103,7 +103,7 @@ To change your grid's metadata engine from :ref:`zeek` to Suricata, go to :ref:`
 File Extraction
 ---------------
 
-If you choose Suricata for metadata, it will extract files from network traffic and :ref:`strelka` will then analyze those extracted files. If you would like to extract additional file types, then you can add file types as shown at https://raw.githubusercontent.com/Security-Onion-Solutions/securityonion/2.4/main/salt/idstools/rules/extraction.rules.
+If you choose Suricata for metadata, it will extract files from network traffic and :ref:`strelka` will then analyze those extracted files. The SO_EXTRACTIONS ruleset controls which file types are extracted and is enabled by default when Suricata is the metadata engine. You can customize file extraction by modifying rules in this ruleset.
 
 PCAP
 ----
@@ -207,7 +207,7 @@ If you're not seeing the Suricata alerts that you expect to see, here are some t
 Testing Rules
 -------------
 
-To test a new rule, use the following utility on a node that runs Suricata (ie Forward or Import).
+To test a new rule, use the following utility on a node that runs Suricata (ie Sensor or Import).
 
 ::
 

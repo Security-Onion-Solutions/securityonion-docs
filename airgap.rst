@@ -25,8 +25,10 @@ Airgap mode works as follows:
 Rule Updates
 ------------
 
-Our ISO image includes the Emerging Threats (ET) ruleset. When :ref:`soup` updates an airgap system via ISO, it automatically installs the latest ET rules as well. If you would like to switch to a different ruleset like Emerging Threats Pro (ETPRO), then you can manually copy the ETPRO rules to ``/nsm/rules/suricata/emerging-all.rules`` using a command like:
+Our ISO image includes the latest version of various rulesets and will automatically install them when an airgap system is SOUP'ed via ISO:
 
-::
+- :ref:`nids`: Emerging Threats (ETOPEN). If you would like to switch to a different ruleset like Emerging Threats Pro (ETPRO), refer to our Ruleset config documentation :ref:`nids`
 
-  cat /path/to/ETPRO_rules/*.rules > /nsm/rules/suricata/emerging-all.rules
+- :ref:`yara`: Most recent rules from our repo
+
+- :ref:`sigma`: Most recent rule packages from the SigmaHQ repo

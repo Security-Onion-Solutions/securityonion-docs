@@ -62,7 +62,7 @@ Cases
 Session Timeout
 ---------------
 
-The default timeout for user login sessions is 24 hours. This is a fixed timespan and will expire regardless of whether the user is active or idle in SOC. You can configure this by going to :ref:`administration` --> Configuration --> kratos --> sessiontimeout.
+The default timeout for user login sessions is 24 hours. This is a fixed timespan and will expire regardless of whether the user is active or idle in SOC. You can configure this by going to :ref:`administration` --> Configuration --> kratos --> config --> session --> lifespan.
 
 Custom Queries
 --------------
