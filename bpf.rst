@@ -10,7 +10,7 @@ BPF stands for Berkeley Packet Filter. From https://en.wikipedia.org/wiki/Berkel
 Configuration
 -------------
 
-You can modify your BPF configuration by going to :ref:`administration` --> Configuration --> bpf. You can apply BPF configuration to :ref:`stenographer`, :ref:`suricata`, or :ref:`zeek`.
+You can modify your BPF configuration by going to :ref:`administration` --> Configuration --> bpf. You can apply BPF configuration to the PCAP engine (either :ref:`stenographer` or :ref:`suricata`), :ref:`suricata`, or :ref:`zeek`. If you configure a BPF for the PCAP engine and your PCAP engine is :ref:`suricata`, then it will only apply to the PCAP and NOT alerts or metadata.
 
 .. image:: images/config-item-bpf.png
   :target: _images/config-item-bpf.png
