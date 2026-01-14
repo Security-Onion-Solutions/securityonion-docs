@@ -23,6 +23,14 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.201 [20260114] Changes
+--------------------------
+
+- FIX: Update OnionAI video `#15380 <https://github.com/Security-Onion-Solutions/securityonion/issues/15380>`_
+- FIX: Validate Suricata Overrides `#15372 <https://github.com/Security-Onion-Solutions/securityonion/issues/15372>`_
+- UPGRADE: Suricata to 8.0.3 `#15377 <https://github.com/Security-Onion-Solutions/securityonion/issues/15377>`_
+- UPGRADE: Zeek to 8.0.5 `#15378 <https://github.com/Security-Onion-Solutions/securityonion/issues/15378>`_
+
 2.4.200 [20251215] Changes
 --------------------------
 
