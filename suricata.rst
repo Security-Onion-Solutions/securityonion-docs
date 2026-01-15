@@ -127,7 +127,6 @@ Differences between Suricata and Stenographer for PCAP
 - Suricata can optionally compress PCAP using lz4 compression.
 - Suricata supports conditional PCAP if you only want to write PCAP when certain conditions are met.
 - Suricata has the ability to stop capturing PCAP once a flow reaches a specific stream depth. Security Onion sets this stream depth to 1MB by default. This means that once the PCAP flow reaches 1MB, Suricata will stop recording packets for that flow.
-- Currently, there is NO SUPPORT for a PCAP specific :ref:`bpf` for Suricata. If you apply a :ref:`bpf` to Suricata, it will apply to not only PCAP but also standard :ref:`nids` alerts and metadata if enabled.
 
 Conditional PCAP
 ~~~~~~~~~~~~~~~~
