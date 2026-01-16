@@ -214,6 +214,48 @@ To test a new rule, use the following utility on a node that runs Suricata (ie S
 
 The file should contain the new rule that you would like to test. The pcap should contain network data that will trigger the rule.
 
+Variables
+---------
+
+To add or modify Suricata Variables, navigate to **suricata > config > vars > address-groups** or **port-groups**.
+
+You can assign a list of hosts, networks, or other customizations to a Suricata variable. The variable can then be re-used within Suricata rules and/or Overrides. This allows for a single adjustment to the variable that will affect all rules referencing it.
+
+### Address Groups
+
+Address groups define IP addresses or network ranges. Suricata comes with a number of common address groups already defined.
+
+#### Address Group Syntax
+
+Values can be specified using the following formats (single or multi-line):
+
+- Single IP: `192.168.1.100`
+- CIDR notation: `192.168.1.0/24`
+- IP range: `192.168.1.1-192.168.1.50`
+- Multiple values: `192.168.1.0/24,10.0.0.0/8`
+- Negation: `!192.168.1.100` or `!$OTHER_VAR`
+- Variable reference: `$HOME_NET`
+
+### Port Groups
+
+Port groups define TCP/UDP ports for specific services. Suricata comes with a number of common port groups already defined. 
+
+#### Port Group Syntax
+
+Values can be specified using the following formats (single or multi-line):
+
+- Single port: `80`
+- Port range: `1024:65535`
+- Multiple ports: `80,443,8080`
+- Negation: `!80`
+- Any port: `any`
+
+### Custom Variables                                                                                                                                                                            
+
+Create custom variables by selecting an existing Address Group or Port Group and clicking "Duplicate". Enter a name using uppercase naming convention, then click "Create Setting".  
+
+**Note:** The new variable is not saved until you modify its value and click the green "Save Changes" checkmark.         
+
 Disabling
 ---------
 
