@@ -59,16 +59,16 @@ When configuring network firewalls for distributed deployments, you'll want to e
  Source (SRC)              Destination (DST)       Destination Port(s) (TCP)                             Description
 ========================= ======================= ===================================================== =============
 Security Onion grid nodes  Manager                 443, 4505, 4506, 5000, 5055, 8086, 8220, 8443         Management, Registry, Salt, Updates
-Security Onion grid nodes  Fleet                   5055, 8220                                            Elastic Agent data and management
-Security Onion grid nodes  Receiver                5055                                                  Elastic Agent data
+Security Onion grid nodes  Fleet node              5055, 8220                                            Elastic Agent data and management
+Security Onion grid nodes  Receiver node           5055                                                  Elastic Agent data
 Search nodes               Manager                 443, 4505, 4506, 5000, 5055, 8086, 8220, 8443, 9696   Management, Registry, Salt, Updates, Redis
 Elastic cluster nodes      Elastic cluster nodes   9200, 9300                                            Logstash to Elasticsearch and Elasticsearch node-to-node
 Endpoint Elastic Agents    Manager                 8220, 8443, 5055                                      Elastic Agent management, binary updates, data
-Endpoint Elastic Agents    Fleet                   5055, 8220                                            Elastic Agent management and data
-Endpoint Elastic Agents    Receiver                5055                                                  Elastic Agent data
-Fleet                      Receiver                5056                                                  Logstash-to-Logstash
-Fleet                      Manager                 5056, 9200                                            Logstash-to-Logstash and Elasticsearch node-to-node
-Manager                    IDH                     2222                                                  SSH for management
+Endpoint Elastic Agents    Fleet node              5055, 8220                                            Elastic Agent management and data
+Endpoint Elastic Agents    Receiver node           5055                                                  Elastic Agent data
+Fleet node                 Receiver node           5056                                                  Logstash-to-Logstash
+Fleet node                 Manager                 5056, 9200                                            Logstash-to-Logstash and Elasticsearch node-to-node
+Manager                    IDH node                2222                                                  SSH for management
 ========================= ======================= ===================================================== =============
 
 
