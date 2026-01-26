@@ -50,10 +50,10 @@ Node Communication
 
 When configuring network firewalls for distributed deployments, you'll want to ensure that nodes can connect as shown in the table below. Please note that some of the sources and destinations listed in the table have specific definitions:
 
-- Security Onion grid nodes includes any node joined to your manager. This includes search nodes, sensors, fleet nodes, receiver nodes, and IDH nodes.
-- Search nodes are grid nodes that run Elasticsearch and join to the manager to enlarge its Elastic cluster.
-- Elastic cluster nodes include the search nodes and the manager itself.
-- Endpoint Elastic Agents includes any endpoint where you have deployed the Elastic Agent and want to send the data to your Security Onion grid.
+- ``Security Onion grid nodes`` includes any node joined to your manager. This includes search nodes, sensors, fleet nodes, receiver nodes, and IDH nodes.
+- ``Search nodes`` are grid nodes that run Elasticsearch and join to the manager to enlarge its Elastic cluster.
+- ``Elastic cluster nodes`` include the search nodes and the manager itself.
+- ``Endpoint Elastic Agents`` includes any endpoint where you have deployed the Elastic Agent and want to send the data to your Security Onion grid.
 
 ========================= ======================= ===================================================== =============
  Source (SRC)              Destination (DST)       Destination Port(s) (TCP)                             Description
@@ -69,6 +69,8 @@ Endpoint Elastic Agents    Receiver                5055                         
 Fleet                      Receiver                5056                                                  Logstash-to-Logstash
 Fleet                      Manager                 5056, 9200                                            Logstash-to-Logstash and Elasticsearch node-to-node
 Manager                    IDH                     2222                                                  SSH for management
+========================= ======================= ===================================================== =============
+
 
 Host Firewall
 -------------
