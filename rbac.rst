@@ -9,8 +9,8 @@ The ability to restrict or grant specific privileges to a subset of users is cov
 
 RBAC in Security Onion covers both Security Onion privileges and Elastic stack privileges. Security Onion privileges are only involved with functionality specifically provided by the components developed by Security Onion, while Elastic stack privileges are only involved with the :ref:`elasticsearch`, :ref:`kibana`, and related Elastic stack. For example, Security Onion will check if a user has permission to create a PCAP request, while Elastic will check if the same user has permission to view a particular index or document stored in :ref:`elasticsearch`. 
 
-Default Roles
--------------
+System Roles
+------------
 
 Security Onion ships with the following user roles: ``superuser``, ``analyst``, ``limited-analyst``, ``auditor``, and ``limited-auditor``.
 
@@ -232,6 +232,16 @@ Modifying User Roles
 
 In the :ref:`administration` interface, navigate to the Users screen and click the > icon to the left of the email address needing adjusting. Check or uncheck the desired roles. 
 
+.. _default_system_role:
+
+Default Role Assignment
+-----------------------
+
+When a user is created, they can optionally be automatically assigned to a specific role. To enable this automatic assignment, locate the ``defaultRole`` configuration setting and specify the desired default role name. This automatic assignment will occur when the user logs into SOC for the first time. 
+
+.. note::
+
+  If an administrator removes all role assignments from a user and the user logs back in that user will again be automatically assigned the default role. Always lock inactive users instead of removing role assignments from a user.
 
 Creating Custom Roles
 ---------------------
@@ -343,7 +353,7 @@ Defining Security Onion Roles
 
 There are two ways to define a custom Security Onion role: 
 
-1) Building it from scratch using the built-in permissions and default roles available as outlined later in this document, or 
+1) Building it from scratch using the built-in permissions and system roles available as outlined later in this document, or 
 
 2) Inheriting the permissions of another role, and optionally adding more permissions to the new custom role.
 
@@ -376,8 +386,8 @@ The common syntax for either method of defining a role is as such:
         limited-analyst:eastcoast-analyst
 
 
-Security Onion Privileges and Default Roles
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Security Onion Privileges and Intermediate Roles
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The available low-level Security Onion privileges are listed in the table below:
 

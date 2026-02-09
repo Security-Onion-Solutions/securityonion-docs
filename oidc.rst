@@ -198,9 +198,9 @@ Upon the first login via OIDC the user will likely be returned back to the login
 Roles
 -----
 
-When a new OIDC user logs into SOC, that user will not be assigned any roles. This greatly limits what functions the user will be capable of performing within SOC. For example, new users will be unable to see any alerts, hunt for events, view dashboard data, view or create cases, manage the grid, or view other users. Attempting to view those role-protected screens will result in an error message.
+When a new OIDC user logs into SOC, that user will not be assigned any roles, unless a :ref:`default_system_role` has been configured. This greatly limits what functions the user will be capable of performing within SOC. For example, new users will be unable to see any alerts, hunt for events, view dashboard data, view or create cases, manage the grid, or view other users. Attempting to view those role-protected screens will result in an error message.
 
-An administrator will need to login to SOC and assign roles to OIDC users via the Adminstration -> Users screen. This is a one time operation, per user. 
+If a default system role is not configured, an administrator will need to login to SOC and assign roles to OIDC users via the Adminstration -> Users screen. This is a one time operation, per user. 
 
 Managing OIDC Users
 -------------------
