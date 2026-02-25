@@ -14,17 +14,17 @@ Adapters
 
 There are a variety of adapters available to connect to different LLM providers. When configuring an adapter, you're instructing SOC how to connect to an LLM provider. You configure the models seperately in :ref:`available-models` and tell each model which adapter to use. This allows you to connect to multiple providers at the same time and choose which models you want to use from each provider. The available adapters are:
 
- - **SOAI**: The SecurityOnion AI adapter connects to our own hosted gateway and provides access to a variety of models.
- - **Gemini**: Google's Gemini models can be accessed through this adapter. You can connect through either the Gemini Developer API or the Vertex API.
- - **OpenAI Responses**: This adapter can connect to the newest OpenAI compatible APIs that support the Responses protocol.
- - **OpenAI Chat**: This adapter can connect to any OpenAI Chat compatible APIs, an older protocol still supported by many AI providers.
+ - **SOAI**: The SecurityOnion AI adapter connects to our own hosted gateway and provides access to a variety of models. The adapter connects to an AI gateway hosted by Security Onion Solutions, LLC. This is the default adapter, and is hosted in the cloud with an allotted number of credits per Security Onion Pro licensed grids.
+ - **Gemini**: Google's Gemini models can be accessed through this adapter. You can connect through either the Gemini Developer API or the Vertex API. These models are hosted in Google's cloud and require the use of your own Google Cloud key, or Gemini API key.
+ - **OpenAI Responses**: This adapter can connect to the newest OpenAI compatible APIs that support the Responses protocol. This adapter allows Security Onion grids to connect to locally-hosted LLMs.
+ - **OpenAI Chat**: This adapter can connect to any OpenAI Chat compatible APIs, an older protocol still supported by many AI providers. This adapter allows Security Onion grids to connect to locally-hosted LLMs.
 
-All features are supported across all adapters, but capabilities may change depending on the model or provider you connect to. Multiple adapters can be configured at the same time.
+Most features are supported across all adapters, but capabilities may change depending on the model or provider you connect to. Credits are unique to SOAI, it's the only adapter that responds with a credit balance. Multiple adapters can be configured at the same time.
 
 Configuration
 ~~~~~~~~~~~~~
 
-A fresh install should come with the SOAI adapter pre-configured and ready to use. To connect to other providers or modify the SOAI adapter, go to Administration --> Configuration page, be sure "Show advanced settings" is turned on in the Options at the top of the page, and check under soc --> config --> server --> modules --> assistant --> adapters. Here you can add as many adapters as you need. Each adapter defines how to connect to a provider. Different adapters have different configuration requirements. Every adapter needs a unique name, the protocol it uses, and a Health Timeout measured in Seconds. Below is a table of which fields are required for which adapters:
+A fresh install should come with the SOAI adapter pre-configured and ready to use. To connect to other providers or modify the SOAI adapter, go to Administration --> Configuration page, be sure "Show advanced settings" is turned on in the Options at the top of the page, and check under soc --> config --> server --> modules --> assistant --> adapters. Here you can add as many adapters as you need. Each adapter defines how to connect to a provider. Different adapters have different configuration requirements. Every adapter needs a unique name, the protocol it uses, and a Health Timeout measured in seconds. Below is a table of which fields are required for which adapters:
 
 .. list-table::
     :header-rows: 1
@@ -75,7 +75,7 @@ R = Required, O = Optional, -- = Not Used
 SOAI
 ~~~~
 
-Unless instructed by support to change something, this adapter should not require any configuration. The API Url should be set to https://onionai.securityonion.net/.
+This adapter should not require any configuration, aside from the API Url, which will be different for Security Onion Pro customers located in different regions. If your license is setup to use an alternate cloud region this information will be included with the Security Onion license key. If it is not specified then use the default API url.
 
 Any additionally supplied fields are ignored. Generally at most one instance of this adapter should be configured at a time.
 
@@ -86,21 +86,21 @@ Gemini
 
 We support connecting to Google's Gemini models through either the Gemini Developer API or the Vertex API.
 
-To connect over the Gemini Developer API, you will need to generate an API Key in the Google Cloud Console and provide it in the API Key field. To connect over the Vertex API, you will need to create a Service Account with the appropriate permissions for the models you would like to access, generate a JSON key for that account, paste the JSON into the Service Account JSON field, and you must also specify the Service Account Location. Some Gemini models may only be available in certain locations, such as ``global``. The API Url field is not used for Gemini connections.
+To connect over the Gemini Developer API, you will need to generate an API Key in the Google Cloud Console or Google AI Studio, and provide it in the API Key field. To connect over the Vertex API, you will need to create a Service Account with the appropriate permissions for the models you would like to access, generate a JSON key for that account, paste the JSON into the Service Account JSON field, and you must also specify the Service Account Location. Some Gemini models may only be available in certain locations, such as ``global``. The API Url field is not used for Gemini connections.
 
 If an API Key and Service Account JSON + Service Account Location are both provided, SOC will attempt to connect using the Service Account and the API Key will be ignored.
 
-This adapter will not use any credits from your Security Onion Pro license, but Google will charge you based on their pricing. Contact Gemini support for more information.
+This adapter will not use any credits from your Security Onion Pro license, but Google will charge you based on their pricing. Security Onion Solutions, LLC does not provide support for Google Gemini, aside from assisting with the adapter configuration referenced on this page.
 
 OpenAI Responses
 ~~~~~~~~~~~~~~~~
 
-The OpenAI Responses adapter can connect to the newest OpenAI compatible APIs that support the Responses protocol. To connect, you will need to provide an API Url. The API Url should be the base url for the provider you are connecting to, for example https://api.openai.com/v1/. An API Key may or may not be required depending on the provider you are connecting to. If you're unsure if your provider supports the Responses protocol, check with their support or try connecting with this adapter. If it doesn't work, you can try the OpenAI Chat adapter which supports an older protocol that is still widely used.
+The *OpenAI Responses* adapter can connect to the newest OpenAI compatible APIs that support the Responses protocol. To connect, you will need to provide an API Url. The API Url should be the base url for the provider you are connecting to, for example ``https://api.openai.com/v1/``. An API Key may or may not be required depending on the provider you are connecting to. If you're unsure if your provider supports the Responses protocol, check with their support or try connecting with this adapter. If it doesn't work, you can try the *OpenAI Chat* adapter which supports an older protocol that is still widely used.
 
 OpenAI Chat
 ~~~~~~~~~~~
 
-The OpenAI Chat adapter can connect to any OpenAI compatible API that supports the Chat protocol. To connect, you will need to provide an API Url. The API Url should be the base url for the provider you are connecting to, for example https://api.openai.com/v1/. An API Key may or may not be required depending on the provider you are connecting to.
+The *OpenAI Chat* adapter can connect to any OpenAI compatible API that supports the Chat protocol. To connect, you will need to provide an API Url. The API Url should be the base url for the provider you are connecting to, for example ``https://api.openai.com/v1/``. An API Key may or may not be required depending on the provider you are connecting to.
 
 .. _available-models:
 Available Models
