@@ -24,7 +24,7 @@ Most features are supported across all adapters, but capabilities may change dep
 Configuration
 ~~~~~~~~~~~~~
 
-A fresh install should come with the SOAI adapter pre-configured and ready to use. To connect to other providers or modify the SOAI adapter, go to Administration --> Configuration page, be sure "Show advanced settings" is turned on in the Options at the top of the page, and check under soc --> config --> server --> modules --> assistant --> adapters. Here you can add as many adapters as you need. Each adapter defines how to connect to a provider. Different adapters have different configuration requirements. Every adapter needs a unique name, the protocol it uses, and a Health Timeout measured in seconds. Below is a table of which fields are required for which adapters:
+A fresh install will come with the SOAI adapter pre-configured and ready to use. To connect to other providers or modify the SOAI adapter, go to Administration --> Configuration page, be sure "Show advanced settings" is turned on in the Options at the top of the page, and check under soc --> config --> server --> modules --> assistant --> adapters. Here you can add as many adapters as you need. Each adapter defines how to connect to a provider. Different adapters have different configuration requirements. Every adapter needs a unique name, the protocol it uses, and a Health Timeout measured in seconds. Below is a table of which fields are required for which adapters:
 
 .. list-table::
     :header-rows: 1
@@ -84,7 +84,7 @@ Using models over this adapter will cost credits. Contact your account represent
 Gemini
 ~~~~~~~
 
-We support connecting to Google's Gemini models through either the Gemini Developer API or the Vertex API.
+Security Onion supports connecting to Google's Gemini models through either the Gemini Developer API or the Vertex API.
 
 To connect over the Gemini Developer API, you will need to generate an API Key in the Google Cloud Console or Google AI Studio, and provide it in the API Key field. To connect over the Vertex API, you will need to create a Service Account with the appropriate permissions for the models you would like to access, generate a JSON key for that account, paste the JSON into the Service Account JSON field, and you must also specify the Service Account Location. Some Gemini models may only be available in certain locations, such as ``global``. The API Url field is not used for Gemini connections.
 
