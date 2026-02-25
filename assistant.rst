@@ -14,7 +14,7 @@ Adapters
 
 There are a variety of adapters available to connect to different LLM providers. When configuring an adapter, you're instructing SOC how to connect to an LLM provider. You configure the models seperately in :ref:`available-models` and tell each model which adapter to use. This allows you to connect to multiple providers at the same time and choose which models you want to use from each provider. The available adapters are:
 
- - **SOAI**: The SecurityOnion AI adapter connects to our own hosted gateway and provides access to a variety of models. The adapter connects to an AI gateway hosted by Security Onion Solutions, LLC. This is the default adapter, and is hosted in the cloud with an allotted number of credits per Security Onion Pro licensed grids.
+ - **SOAI**: The SecurityOnion AI adapter connects to our own hosted gateway and provides access to a variety of models. This is the default adapter, and is hosted in the cloud with an allotted number of credits per Security Onion Pro licensed grids.
  - **Gemini**: Google's Gemini models can be accessed through this adapter. You can connect through either the Gemini Developer API or the Vertex API. These models are hosted in Google's cloud and require the use of your own Google Cloud key, or Gemini API key.
  - **OpenAI Responses**: This adapter can connect to the newest OpenAI compatible APIs that support the Responses protocol. This adapter allows Security Onion grids to connect to locally-hosted LLMs.
  - **OpenAI Chat**: This adapter can connect to any OpenAI Chat compatible APIs, an older protocol still supported by many AI providers. This adapter allows Security Onion grids to connect to locally-hosted LLMs.
