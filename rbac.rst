@@ -465,6 +465,8 @@ The available low-level Security Onion privileges are listed in the table below:
       - Chat with Onion AI
     * - *assistant/delete_authored*
       - Delete own Onion AI conversation history
+    * - *assistant/read_shared*
+      - View shared Onion AI conversation history
     * - *assistant/read_all*
       - View all Onion AI conversation history
     * - *assistant/write_all*
@@ -527,8 +529,10 @@ These discrete privileges are then collected into privilege groups as defined be
     * - playbook-admin
       - *playbooks/read*, *playbooks/write*, *playbooks/delete*
     * - assistant-user
-      - *assistant/read_authored*, *assistant/write_authored*, *assistant/delete_authored*
+      - *assistant/read_authored*, *assistant/write_authored*, *assistant/delete_authored*, *assistant/read_shared*
     * - assistant-admin
-      - *assistant/read_authored*, *assistant/write_authored*, *assistant/delete_authored*, *assistant/read_all*, *assistant/write_all*, *assistant/delete_all*
+      - *assistant/read_authored*, *assistant/write_authored*, *assistant/delete_authored*, *assistant/read_shared*, *assistant/read_all*, *assistant/write_all*, *assistant/delete_all*
+    * - assistant-monitor
+      - *assistant/read_authored*, *assistant/read_shared*, *assistant/read_all*
 
 † intended for use by Sensoroni agents only
