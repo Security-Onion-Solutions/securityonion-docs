@@ -122,10 +122,10 @@ Local Model Considerations
 
 Security Onion now supports local models through any OpenAI-compatible endpoint. Because the assistant relies on large context windows, the minimum recommended context length is 128k tokens. The following open-source models have been tested with OnionAI:
 
-- **GPT OSS 120B** -- Fast inference but limited to a 128k context window. Accuracy is fair.
-- **Kimi 2.5** -- A capable model with average accuracy and a 256k context window sufficient for most tasks. Note that this model requires significant VRAM to maintain performance.
-- **GLM 5** -- Average accuracy with a 200k context window.
-- **Qwen 3.5** -- Average accuracy with a 200k context window.
+- **GPT OSS 120B** -- (US) Fast inference but limited to a 128k context window. Accuracy is fair.
+- **Kimi 2.5** -- (China) A capable model with average accuracy and a 256k context window sufficient for most tasks. Note that this model requires significant VRAM to maintain performance.
+- **GLM 5** -- (China) Average accuracy with a 200k context window.
+- **Qwen 3.5** -- (China) Average accuracy with a 200k context window.
 
 .. note::
 
