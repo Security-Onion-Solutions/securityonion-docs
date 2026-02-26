@@ -5,6 +5,24 @@ Release Notes
 
 .. warning::
 
+  Security Onion 2.4.210 upgrades Salt to version 3006.19. This version of Salt has a configuration option minimum_auth_version for the Salt master. By default, this value is set to 3 and only minions on version 3006.12 or later support that version and are able to authenticate with the salt-master service. For this reason, during the soup to 2.4.210, we set the minimum_auth_version to 0. Since minions automatically update every 15 minutes, this allows older minion versions to authenticate, run a highstate, and upgrade to 3006.19.
+  
+  After seven days, a background process will change the minimum_auth_version from 0 to 3 and restart the salt-master service. Once this is done, any minions in the environment that have not upgraded to a version greater than 3006.12 will be unable to authenticate with the salt-master. The likely cause of this would be a minion that is offline. Additionally, if a user attempts to install a new node, using a version less than 2.4.200 (salt-minion 3006.16), the install will fail since the salt-minion will not be able to authenticate with the salt-master.
+  
+  If one of your nodes was unable to update by the time the minimum_auth_version was changed, then you may notice that the SOC Grid screen shows that you have a node running an older version of Security Onion that never updates. You can verify the issue by checking the following logs:
+
+  In /opt/so/log/salt/minion on the remote node:
+  2026-02-20 14:36:43,479 [salt.crypt       :884 ][ERROR   ][2215] Sign-in attempt failed: bad load
+  2026-02-20 14:36:43,480 [salt.minion      :1155][ERROR   ][2215] Error while bringing up minion for multi-master. Is master at soman1 responding? The error message was Unable to sign_in to master: Attempt to authenticate with the salt master failed
+
+  In /opt/so/log/salt/master on the Security Onion manager:
+  2026-02-20 14:37:13,515 [salt.channel.server:147 ][WARNING ][2313166] Rejected authentication attempt using protocol version 2 (minimum required: 3)
+
+  To force the node to update salt, connect to the remote node and run the following:
+   sudo dnf versionlock delete salt-* ; sudo yum clean all ; sudo sh /usr/sbin/bootstrap-salt.sh -X -r stable 3006.19
+ 
+.. warning::
+
         Security Onion 2.4.200 changed the way Suricata detections are synchronized. Grids with custom Suricata rulesets will pause all Suricata detection syncing. For more information and required steps, see the :ref:`syncblock` section.
 
 .. warning::
