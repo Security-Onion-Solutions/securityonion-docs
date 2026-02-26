@@ -18,7 +18,7 @@ Release Notes
     2026-02-20 14:36:43,479 [salt.crypt       :884 ][ERROR   ][2215] Sign-in attempt failed: bad load
     2026-02-20 14:36:43,480 [salt.minion      :1155][ERROR   ][2215] Error while bringing up minion for multi-master. Is master at soman1 responding? The error message was Unable to sign_in to master: Attempt to authenticate with the salt master failed
 
-  In ``/opt/so/log/salt/master on the Security Onion manager:
+  In ``/opt/so/log/salt/master`` on the Security Onion manager:
 
   ::
 
