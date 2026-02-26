@@ -117,6 +117,19 @@ Credits
 
 The Security Onion Pro license includes an initial amount of credits to get started. For long term usage planning contact your Security Onion account representative. They will assist with estimating credit usage rates as well as the provisioning of additional credits. Credits are consumed based on the number of tokens used in the conversation including user input, assistant output, and tool usage. Your organization's balance can be viewed at the top right of the assistant page or on the management page under Administration --> AI Metrics.
 
+Local Model Considerations
+--------------------------
+
+Security Onion now supports local models through any OpenAI-compatible endpoint. Because the assistant relies on large context windows, the minimum recommended context length is 128k tokens. The following open-source models have been tested with OnionAI:
+
+- **GPT OSS 120B** -- Fast inference but limited to a 128k context window. Accuracy is fair.
+- **Kimi 2.5** -- A capable model with average accuracy and a 256k context window sufficient for most tasks. Note that this model requires significant VRAM to maintain performance.
+- **GLM 5** -- Average accuracy with a 200k context window.
+- **Qwen 3.5** -- Average accuracy with a 200k context window.
+
+.. note::
+
+    Local models will not match the performance of proprietary foundational models such as those from Anthropic, Google, or OpenAI.
 Available Tools
 ---------------
 
