@@ -11,15 +11,24 @@ Release Notes
   
   If one of your nodes was unable to update by the time the minimum_auth_version was changed, then you may notice that the SOC Grid screen shows that you have a node running an older version of Security Onion that never updates. You can verify the issue by checking the following logs:
 
-  In /opt/so/log/salt/minion on the remote node:
-  2026-02-20 14:36:43,479 [salt.crypt       :884 ][ERROR   ][2215] Sign-in attempt failed: bad load
-  2026-02-20 14:36:43,480 [salt.minion      :1155][ERROR   ][2215] Error while bringing up minion for multi-master. Is master at soman1 responding? The error message was Unable to sign_in to master: Attempt to authenticate with the salt master failed
+  In ``/opt/so/log/salt/minion`` on the remote node:
 
-  In /opt/so/log/salt/master on the Security Onion manager:
-  2026-02-20 14:37:13,515 [salt.channel.server:147 ][WARNING ][2313166] Rejected authentication attempt using protocol version 2 (minimum required: 3)
+  ::
+  
+    2026-02-20 14:36:43,479 [salt.crypt       :884 ][ERROR   ][2215] Sign-in attempt failed: bad load
+    2026-02-20 14:36:43,480 [salt.minion      :1155][ERROR   ][2215] Error while bringing up minion for multi-master. Is master at soman1 responding? The error message was Unable to sign_in to master: Attempt to authenticate with the salt master failed
 
-  To force the node to update salt, connect to the remote node and run the following:
-   sudo dnf versionlock delete salt-* ; sudo yum clean all ; sudo sh /usr/sbin/bootstrap-salt.sh -X -r stable 3006.19
+  In ``/opt/so/log/salt/master on the Security Onion manager:
+
+  ::
+
+    2026-02-20 14:37:13,515 [salt.channel.server:147 ][WARNING ][2313166] Rejected authentication attempt using protocol version 2 (minimum required: 3)
+
+  To force the node to update salt, you can connect to the remote node via ssh and then run the following:
+
+  ::
+
+    sudo dnf versionlock delete salt-* ; sudo yum clean all ; sudo sh /usr/sbin/bootstrap-salt.sh -X -r stable 3006.19
  
 .. warning::
 
