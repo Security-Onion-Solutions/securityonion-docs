@@ -50,6 +50,61 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.210 [20260303] Changes
+--------------------------
+
+- FEATURE: Add graphs/charts to AI Metrics page
+- FEATURE: Add support for default user roles `#15471 <https://github.com/Security-Onion-Solutions/securityonion/issues/15471>`_
+- FEATURE: allow non-airgap soup to use ISO for all large files `#15467 <https://github.com/Security-Onion-Solutions/securityonion/issues/15467>`_
+- FEATURE: Gemini Adapter
+- FEATURE: Model Thoughts
+- FEATURE: multi-step ES upgrades smoother for airgap
+- FEATURE: Onion AI model metrics
+- FEATURE: OpenAI Chat Adapter
+- FEATURE: OpenAI Responses Adapter
+- FEATURE: Record user that acks and/or escalates events `#15373 <https://github.com/Security-Onion-Solutions/securityonion/issues/15373>`_
+- FEATURE: Show context used on each request/response pair
+- FEATURE: Use new suricata.capture_file to improve PCAP lookups `#15398 <https://github.com/Security-Onion-Solutions/securityonion/issues/15398>`_
+- FEATURE: When crossing the 75% context threshold show options to user
+- FIX: Appliance kickstart
+- FIX: Change context indicator to m/k format
+- FIX: Cleanup remaining idstools code `#15477 <https://github.com/Security-Onion-Solutions/securityonion/issues/15477>`_
+- FIX: Collection-backed config fields don't respect forcedType
+- FIX: Disable redis on heavynodes `#15422 <https://github.com/Security-Onion-Solutions/securityonion/issues/15422>`_
+- FIX: Expanding alert with long unbreaking message content causes extra wide table `#15437 <https://github.com/Security-Onion-Solutions/securityonion/issues/15437>`_
+- FIX: Give message field focus when user navigates to Onion AI page
+- FIX: Grid node elastic agent install state
+- FIX: Hide Grid/Client menu links when unavailable to non-superusers `#15446 <https://github.com/Security-Onion-Solutions/securityonion/issues/15446>`_
+- FIX: Hypervisor not running first highstate `#14947 <https://github.com/Security-Onion-Solutions/securityonion/issues/14947>`_
+- FIX: If you haven't viewed cases in a while, then escalating from Onion AI to an existing case will fail
+- FIX: Improve alert icon severity colors `#15450 <https://github.com/Security-Onion-Solutions/securityonion/issues/15450>`_
+- FIX: Kratos field mappings include unnecessary templates `#15354 <https://github.com/Security-Onion-Solutions/securityonion/issues/15354>`_
+- FIX: managed soc annotations migration
+- FIX: Migrate off logs integration to filestream integration `#15364 <https://github.com/Security-Onion-Solutions/securityonion/issues/15364>`_
+- FIX: MoM subgrid showing Detection status pending `#15305 <https://github.com/Security-Onion-Solutions/securityonion/issues/15305>`_
+- FIX: Multiple lines of consecutive comments causes the BPF compile to error `#14908 <https://github.com/Security-Onion-Solutions/securityonion/issues/14908>`_
+- FIX: Pending status should not show crosshairs `#15376 <https://github.com/Security-Onion-Solutions/securityonion/issues/15376>`_
+- FIX: Rename to remaining "Forward" references to "Sensor" nodes `#15403 <https://github.com/Security-Onion-Solutions/securityonion/issues/15403>`_
+- FIX: Review Kratos field parsing `#7567 <https://github.com/Security-Onion-Solutions/securityonion/issues/7567>`_
+- FIX: Sensor and Heavynode Fail to install `#15441 <https://github.com/Security-Onion-Solutions/securityonion/issues/15441>`_
+- FIX: SOC Config - Apply Changes to the correct node `#15395 <https://github.com/Security-Onion-Solutions/securityonion/issues/15395>`_
+- FIX: SOC login form expiring without notifying user `#15346 <https://github.com/Security-Onion-Solutions/securityonion/issues/15346>`_
+- FIX: so-elastic-agent-grid-upgrade upgrade heavynode agents `#15434 <https://github.com/Security-Onion-Solutions/securityonion/issues/15434>`_
+- FIX: Soup fails if salt-relay.sh isn't running `#15518 <https://github.com/Security-Onion-Solutions/securityonion/issues/15518>`_
+- FIX: Successful logins sometimes would show a 403 error banner `#15527 <https://github.com/Security-Onion-Solutions/securityonion/issues/15527>`_
+- FIX: Telegraf logstash metrics `#15423 <https://github.com/Security-Onion-Solutions/securityonion/issues/15423>`_
+- FIX: Update redis-logs integration file path `#15425 <https://github.com/Security-Onion-Solutions/securityonion/issues/15425>`_
+- FIX: url_base annotation description `#15483 <https://github.com/Security-Onion-Solutions/securityonion/issues/15483>`_
+- FIX: Zeek excluded_files `#15439 <https://github.com/Security-Onion-Solutions/securityonion/issues/15439>`_
+- UPGRADE: Analyzer dependencies `#15512 <https://github.com/Security-Onion-Solutions/securityonion/issues/15512>`_
+- UPGRADE: Docker to 29.2.1 `#15495 <https://github.com/Security-Onion-Solutions/securityonion/issues/15495>`_
+- UPGRADE: Elasticsearch to 9.0.8
+- UPGRADE: Go dependencies to latest versions `#15474 <https://github.com/Security-Onion-Solutions/securityonion/issues/15474>`_
+- UPGRADE: ISO base image to Oracle 9.7 `#15352 <https://github.com/Security-Onion-Solutions/securityonion/issues/15352>`_
+- UPGRADE: Pcapfix to 1.1.7 `#15421 <https://github.com/Security-Onion-Solutions/securityonion/issues/15421>`_
+- UPGRADE: Salt to 3006.19 `#15490 <https://github.com/Security-Onion-Solutions/securityonion/issues/15490>`_
+- UPGRADE: Zeek to 8.0.6 `#15445 <https://github.com/Security-Onion-Solutions/securityonion/issues/15445>`_
+
 2.4.201 [20260114] Changes
 --------------------------
 
