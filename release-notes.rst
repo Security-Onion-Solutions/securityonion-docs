@@ -55,7 +55,7 @@ Release History
 
 - FEATURE: Add graphs/charts to AI Metrics page
 - FEATURE: Add support for default user roles `#15471 <https://github.com/Security-Onion-Solutions/securityonion/issues/15471>`_
-- FEATURE: allow non-airgap soup to use ISO for all large files `#15467 <https://github.com/Security-Onion-Solutions/securityonion/issues/15467>`_
+- FEATURE: Allow non-airgap soup to use ISO for all large files `#15467 <https://github.com/Security-Onion-Solutions/securityonion/issues/15467>`_
 - FEATURE: Gemini Adapter
 - FEATURE: Model Thoughts
 - FEATURE: multi-step ES upgrades smoother for airgap
@@ -65,7 +65,6 @@ Release History
 - FEATURE: Record user that acks and/or escalates events `#15373 <https://github.com/Security-Onion-Solutions/securityonion/issues/15373>`_
 - FEATURE: Show context used on each request/response pair
 - FEATURE: Use new suricata.capture_file to improve PCAP lookups `#15398 <https://github.com/Security-Onion-Solutions/securityonion/issues/15398>`_
-- FEATURE: When crossing the 75% context threshold show options to user
 - FIX: Appliance kickstart
 - FIX: Change context indicator to m/k format
 - FIX: Cleanup remaining idstools code `#15477 <https://github.com/Security-Onion-Solutions/securityonion/issues/15477>`_
@@ -75,7 +74,6 @@ Release History
 - FIX: Give message field focus when user navigates to Onion AI page
 - FIX: Grid node elastic agent install state
 - FIX: Hide Grid/Client menu links when unavailable to non-superusers `#15446 <https://github.com/Security-Onion-Solutions/securityonion/issues/15446>`_
-- FIX: Hypervisor not running first highstate `#14947 <https://github.com/Security-Onion-Solutions/securityonion/issues/14947>`_
 - FIX: If you haven't viewed cases in a while, then escalating from Onion AI to an existing case will fail
 - FIX: Improve alert icon severity colors `#15450 <https://github.com/Security-Onion-Solutions/securityonion/issues/15450>`_
 - FIX: Kratos field mappings include unnecessary templates `#15354 <https://github.com/Security-Onion-Solutions/securityonion/issues/15354>`_

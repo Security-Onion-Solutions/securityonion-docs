@@ -1670,6 +1670,25 @@ components:
         origin:
           type: string
       type: object
+    model.ModelUsageStats:
+      properties:
+        modelCredits:
+          description: The total credits used for this model.
+          example: 2
+          type: integer
+        modelInputTokens:
+          description: The total input tokens used for this model.
+          example: 500
+          type: integer
+        modelMessages:
+          description: The total messages sent using this model.
+          example: 10
+          type: integer
+        modelOutputTokens:
+          description: The total output tokens used for this model.
+          example: 1000
+          type: integer
+      type: object
     model.Node:
       properties:
         address:
@@ -2329,6 +2348,11 @@ components:
     model.SessionUsage:
       description: Usage statistics for the session.
       properties:
+        modelUsage:
+          additionalProperties:
+            $ref: '#/components/schemas/model.ModelUsageStats'
+          description: Usage statistics per model@adapter combination.
+          type: object
         totalCredits:
           description: The total credits used during the session.
           example: 5
@@ -2553,6 +2577,10 @@ components:
           type: string
         message:
           $ref: '#/components/schemas/model.Message'
+        model:
+          description: The model used for this message.
+          example: sonnet-4.5@SOAI
+          type: string
         operation:
           description: The operation that was applied to the object. This is a read-only
             field.
@@ -2793,6 +2821,11 @@ components:
       type: object
     model.UserUsage:
       properties:
+        modelUsage:
+          additionalProperties:
+            $ref: '#/components/schemas/model.ModelUsageStats'
+          description: Usage statistics per model@adapter combination.
+          type: object
         totalCredits:
           description: The total credits used by the user in the date range.
           example: 5
@@ -3061,9 +3094,18 @@ paths:
       summary: Get Usage Statistics
       tags:
       - Assistant
-  /api/assistant/balance:
+  /api/assistant/balance/{modelAndAdapter}:
     get:
       description: Retrieve the current balance/usage information for the AI assistant.
+      parameters:
+      - description: Model Id (including slashes) and Adapter Name to get balance
+          for
+        example: qwen/qwen2.5-small@MyOpenAIChatAdapter
+        in: path
+        name: modelAndAdapter
+        required: true
+        schema:
+          type: string
       responses:
         "200":
           content:
