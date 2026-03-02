@@ -59,7 +59,12 @@ If you're going to run something using sudo, remember to use the ``-i`` option t
 
 ::
 
-    sudo -i so-rule-update
+    sudo -i so-suricata-restart
 
 .. warning::
     Using ``sudo su -`` will ignore ``/etc/environment``, instead use ``sudo su`` if you need to operate as root.
+
+NIDS Rules
+----------
+
+If you are using a proxy and need to download NIDS rulesets, you will also need to configure proxy settings for the NIDS ruleset downloads. These settings are separate from the system-wide proxy configuration above. See the :ref:`nids` documentation for details on configuring the Proxy URL, Proxy Username, Proxy Password, and Proxy CA Path for ruleset downloads.

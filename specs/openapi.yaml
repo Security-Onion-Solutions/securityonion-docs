@@ -276,7 +276,7 @@ components:
           type: number
       type: object
     model.AssistantSession:
-      description: A session for a user chatting with the Assistant.
+      description: Meta information about the session.
       properties:
         createTime:
           description: The date and time that this object was created. This is a read-only
@@ -286,6 +286,10 @@ components:
         deleteTime:
           description: The time the session was deleted.
           example: "2025-09-05T15:33:00.000Z"
+          type: string
+        entityId:
+          description: The entity ID associated with this session (e.g., alert soc_id).
+          example: WKhCuTw4GPvrQA-9ksmn
           type: string
         id:
           description: The ID assigned to this object by the server. This is a read-only
@@ -318,6 +322,10 @@ components:
             the user.
           example: Can you write a suricata rule for me?
           type: string
+        type:
+          description: The type of session (e.g., "alert_investigation").
+          example: alert_investigation
+          type: string
         updateTime:
           description: The date and time that this object was last modified. This
             is a read-only field.
@@ -330,6 +338,19 @@ components:
             is a read-only field.
           example: socl_my_new_client
           type: string
+      type: object
+    model.AssistantSessionDetails:
+      description: Detailed information about an Assistant session, including its
+        messages.
+      properties:
+        history:
+          description: The messages in the session.
+          items:
+            $ref: '#/components/schemas/model.StoredMessage'
+          type: array
+          uniqueItems: false
+        session:
+          $ref: '#/components/schemas/model.AssistantSession'
       type: object
     model.AttachEventCriteria:
       properties:
@@ -963,6 +984,11 @@ components:
     model.EngineState:
       description: The state of the Strelka detection engine
       properties:
+        blocked:
+          description: True if sync operations are currently blocked (e.g., during
+            migrations).
+          example: false
+          type: boolean
         importing:
           description: True if new detections are currently being imported into the
             engine.
@@ -1619,11 +1645,16 @@ components:
           description: The sequence in which the message was stopped.
           example: end_turn
           type: string
+        thoughts:
+          description: The plain text thoughts from the model's response
+          type: string
         usage:
           $ref: '#/components/schemas/model.Usage'
       type: object
     model.ModelParameters:
       properties:
+        adapter:
+          type: string
         contextLimitLarge:
           type: integer
         contextLimitSmall:
@@ -1635,6 +1666,27 @@ components:
         id:
           type: string
         lowBalanceColorAlert:
+          type: integer
+        origin:
+          type: string
+      type: object
+    model.ModelUsageStats:
+      properties:
+        modelCredits:
+          description: The total credits used for this model.
+          example: 2
+          type: integer
+        modelInputTokens:
+          description: The total input tokens used for this model.
+          example: 500
+          type: integer
+        modelMessages:
+          description: The total messages sent using this model.
+          example: 10
+          type: integer
+        modelOutputTokens:
+          description: The total output tokens used for this model.
+          example: 1000
           type: integer
       type: object
     model.Node:
@@ -1844,6 +1896,25 @@ components:
             if applicable to this node
           example: 1.1345
           type: number
+        suriRulesFailed:
+          description: The number of Suricata rules that failed to load, if applicable
+            to this node
+          example: 0
+          type: integer
+        suriRulesLoaded:
+          description: The number of Suricata rules currently loaded, if applicable
+            to this node
+          example: 45879
+          type: integer
+        suriRulesReloadTime:
+          description: The timestamp of the last Suricata rule reload, if applicable
+            to this node
+          example: 2025-12-04T01:04:07.994734+0000
+          type: string
+        suriRulesStatus:
+          description: 'The status of Suricata rule loading: ok, unknown'
+          example: ok
+          type: string
         swapTotalGB:
           description: Total size, in gigabytes, of the system swap memory
           example: 8.589930496000001
@@ -2277,6 +2348,11 @@ components:
     model.SessionUsage:
       description: Usage statistics for the session.
       properties:
+        modelUsage:
+          additionalProperties:
+            $ref: '#/components/schemas/model.ModelUsageStats'
+          description: Usage statistics per model@adapter combination.
+          type: object
         totalCredits:
           description: The total credits used during the session.
           example: 5
@@ -2501,6 +2577,10 @@ components:
           type: string
         message:
           $ref: '#/components/schemas/model.Message'
+        model:
+          description: The model used for this message.
+          example: sonnet-4.5@SOAI
+          type: string
         operation:
           description: The operation that was applied to the object. This is a read-only
             field.
@@ -2639,6 +2719,15 @@ components:
             user before it can be saved
           type: boolean
       type: object
+    model.UpdateSessionRequest:
+      properties:
+        action:
+          example: add
+          type: string
+        tag:
+          example: shared
+          type: string
+      type: object
     model.Usage:
       description: Usage statistics after deducting the costs of the message.
       properties:
@@ -2732,6 +2821,11 @@ components:
       type: object
     model.UserUsage:
       properties:
+        modelUsage:
+          additionalProperties:
+            $ref: '#/components/schemas/model.ModelUsageStats'
+          description: Usage statistics per model@adapter combination.
+          type: object
         totalCredits:
           description: The total credits used by the user in the date range.
           example: 5
@@ -2854,7 +2948,7 @@ info:
     url: https://securityonion.net/terms/
   termsOfService: https://securityonion.net/terms/
   title: Security Onion Connect API
-  version: 2.4.200
+  version: 2.4.210
 openapi: 3.1.0
 paths:
   /api/assistant/admin/{userId}/sessions:
@@ -3000,9 +3094,18 @@ paths:
       summary: Get Usage Statistics
       tags:
       - Assistant
-  /api/assistant/balance:
+  /api/assistant/balance/{modelAndAdapter}:
     get:
       description: Retrieve the current balance/usage information for the AI assistant.
+      parameters:
+      - description: Model Id (including slashes) and Adapter Name to get balance
+          for
+        example: qwen/qwen2.5-small@MyOpenAIChatAdapter
+        in: path
+        name: modelAndAdapter
+        required: true
+        schema:
+          type: string
       responses:
         "200":
           content:
@@ -3028,6 +3131,18 @@ paths:
     post:
       description: Send a message to the AI assistant and receive a response. Supports
         both streaming (SSE) and non-streaming responses.
+      parameters:
+      - description: Type of entity associated with this session (e.g., 'alert_investigation')
+        in: query
+        name: entityType
+        schema:
+          type: string
+      - description: ID of the entity associated with this session (e.g., alert's
+          soc_id)
+        in: query
+        name: entityId
+        schema:
+          type: string
       requestBody:
         content:
           application/json:
@@ -3119,7 +3234,8 @@ paths:
       tags:
       - Assistant
     get:
-      description: Retrieve the complete chat history for a specific session.
+      description: Retrieve the complete chat history and usage for a specific session.
+        Can lookup deleted sessions.
       parameters:
       - description: Session ID to retrieve history for
         in: path
@@ -3132,10 +3248,8 @@ paths:
           content:
             application/json:
               schema:
-                items:
-                  $ref: '#/components/schemas/model.StoredMessage'
-                type: array
-          description: Complete chat history for the session
+                $ref: '#/components/schemas/model.AssistantSessionDetails'
+          description: Complete chat history and session details
         "400":
           description: The provided session ID is invalid or missing
         "401":
@@ -3147,7 +3261,48 @@ paths:
       security:
       - bearer:
         - assistant/read_authored
-      summary: Get Session History
+      - bearer:
+        - assistant/read_shared
+      summary: Get Session Details
+      tags:
+      - Assistant
+    put:
+      description: Allow a user to modify their own session tags.
+      parameters:
+      - description: Session ID to modify
+        in: path
+        name: sessionId
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/model.UpdateSessionRequest'
+        description: Indicate what field we're doing what operation with.
+        required: true
+      responses:
+        "206":
+          content:
+            application/json:
+              schema:
+                type: object
+          description: No content
+        "400":
+          description: The provided session ID is invalid or missing
+        "401":
+          description: Request was not properly authenticated
+        "403":
+          description: Insufficient permissions for this request
+        "404":
+          description: Session not found
+        "500":
+          description: Internal SOC error; review SOC logs
+      security:
+      - bearer:
+        - assistant/write_authored
+      summary: Update metadata for a Session
       tags:
       - Assistant
   /api/assistant/tool/{name}:
@@ -4229,6 +4384,8 @@ paths:
           description: Insufficient permissions for this request
         "409":
           description: Public ID conflicts with existing detection
+        "423":
+          description: Rule synchronization is currently blocked
         "500":
           description: Internal SOC error; review SOC logs
       security:
@@ -4282,6 +4439,8 @@ paths:
           description: Detection not found
         "409":
           description: Public ID conflicts with existing detection
+        "423":
+          description: Rule synchronization is currently blocked
         "500":
           description: Internal SOC error; review SOC logs
       security:
@@ -4350,6 +4509,8 @@ paths:
           description: Insufficient permissions for this request
         "404":
           description: Detection not found
+        "423":
+          description: Sync operation is blocked
         "500":
           description: Internal SOC error; review SOC logs
       security:

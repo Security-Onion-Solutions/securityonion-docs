@@ -48,39 +48,29 @@ If you choose to enable the Snort Talos ruleset, you will also need access to th
 Node Communication
 ~~~~~~~~~~~~~~~~~~
 
-When configuring network firewalls for distributed deployments, you'll want to ensure that nodes can connect as shown below. Please read through this entire list because your deployment may need firewall rules from multiple sections. For example, please note that grid nodes will need all ports in the ``All nodes to Manager`` and ``Elastic Agent`` sections and may also need ports from other sections as well.
+When configuring network firewalls for distributed deployments, you'll want to ensure that nodes can connect as shown in the table below. Please note that some of the sources and destinations listed in the table have specific definitions:
 
-All nodes to Manager:
+- ``Security Onion grid nodes`` includes any node joined to your manager. This includes search nodes, sensors, fleet nodes, receiver nodes, and IDH nodes.
+- ``Search nodes`` are grid nodes that run Elasticsearch and join to the manager to enlarge its Elastic cluster.
+- ``Elastic cluster nodes`` include the search nodes and the manager itself.
+- ``Endpoint Elastic Agents`` includes any endpoint where you have deployed the Elastic Agent and want to send the data to your Security Onion grid.
 
-- TCP/443 - Sensoroni
-- TCP/5000 - Docker registry
-- TCP/8086 - influxdb
-- TCP/4505 - Salt
-- TCP/4506 - Salt
+========================= ======================= ===================================================== =============
+ Source (SRC)              Destination (DST)       Destination Port(s) (TCP)                             Description
+========================= ======================= ===================================================== =============
+Security Onion grid nodes  Manager                 443, 4505, 4506, 5000, 5055, 8086, 8220, 8443         Management, Registry, Salt, Updates
+Security Onion grid nodes  Fleet node              5055, 8220                                            Elastic Agent data and management
+Security Onion grid nodes  Receiver node           5055                                                  Elastic Agent data
+Search nodes               Manager                 443, 4505, 4506, 5000, 5055, 8086, 8220, 8443, 9696   Management, Registry, Salt, Updates, Redis
+Elastic cluster nodes      Elastic cluster nodes   9200, 9300                                            Logstash to Elasticsearch and Elasticsearch node-to-node
+Endpoint Elastic Agents    Manager                 8220, 8443, 5055                                      Elastic Agent management, binary updates, data
+Endpoint Elastic Agents    Fleet node              5055, 8220                                            Elastic Agent management and data
+Endpoint Elastic Agents    Receiver node           5055                                                  Elastic Agent data
+Fleet node                 Receiver node           5056                                                  Logstash-to-Logstash
+Fleet node                 Manager                 5056, 9200                                            Logstash-to-Logstash and Elasticsearch node-to-node
+Manager                    IDH node                2222                                                  SSH for management
+========================= ======================= ===================================================== =============
 
-Elastic Agent:
-
-- TCP/8220 (All nodes to Manager, Fleet nodes) - Elastic Agent management
-- TCP/8443 (All nodes to Manager) - Elastic Agent binary updates
-- TCP/5055 (All nodes to Manager, Fleet nodes, Receiver nodes) - Elastic Agent data
-
-Elastic cluster nodes (manager and all search nodes) to all other Elastic cluster nodes (manager and all search nodes):
-
-- TCP/9200 - Logstash connecting to :ref:`elasticsearch`
-- TCP/9300 - Node-to-node for :ref:`elasticsearch`
-
-Search nodes to Manager:
-
-- TCP/9696 - :ref:`redis`
-
-Elastic Fleet nodes to Manager:
-
-- TCP/9200 - Node-to-node for :ref:`elasticsearch`
-- TCP/5056 - Logstash-to-Logstash for Elastic Agent data ingest
-
-Elastic Fleet nodes to Receiver nodes:
-
-- TCP/5056 - Logstash-to-Logstash for Elastic Agent data ingest
 
 Host Firewall
 -------------

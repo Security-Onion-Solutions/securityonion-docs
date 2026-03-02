@@ -33,7 +33,7 @@ Listed below are the minimum suggested single-node instance quantities, sizes, a
 Standalone:
 
 - Quantity: 1
-- Type: t3a.xlarge
+- Type: t3a.2xlarge
 - Storage: 256GB EBS (Optimized) gp3
 
 Evaluation
@@ -59,13 +59,13 @@ VPN Node
 Manager
 
 - Quantity: 1
-- Type: m5a.xlarge
+- Type: m5a.2xlarge
 - Storage: 300GB EBS (Optimized) gp3
   
 Search Nodes
 
 - Quantity: 2 or more
-- Type: m5ad.xlarge
+- Type: m5ad.2xlarge
 - Storage: 200GB EBS (Optimized) gp3
 - Storage: 150GB Instance Storage (SSD/NVMe)
   

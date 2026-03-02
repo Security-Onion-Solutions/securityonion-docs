@@ -34,7 +34,7 @@ Listed below are the minimum suggested single-node instance quantities, sizes, a
 Standalone:
 
 - Quantity: 1
-- Type: n2-standard-4
+- Type: n2-standard-8
 - Storage: 256GB Balanced Persistent Disk
 
 Evaluation*:
@@ -61,13 +61,13 @@ VPN Node
 Manager
 
 - Quantity: 1
-- Type: n2-standard-4
+- Type: n2-standard-8
 - Storage: 300GB Balanced Persistent Disk
 
 Search Nodes
 
 - Quantity: 2 or more
-- Type: n2-standard-4
+- Type: n2-standard-8
 - Storage: 256GB Balanced Persistent Disk
 - Storage: 375GB Local Disk (NVMe) [optional]
   

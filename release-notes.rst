@@ -5,6 +5,33 @@ Release Notes
 
 .. warning::
 
+  Security Onion 2.4.210 upgrades Salt to version 3006.19. This version of Salt has a configuration option minimum_auth_version for the Salt master. By default, this value is set to 3 and only minions on version 3006.12 or later support that version and are able to authenticate with the salt-master service. For this reason, during the soup to 2.4.210, we set the minimum_auth_version to 0. Since minions automatically update every 15 minutes, this allows older minion versions to authenticate, run a highstate, and upgrade to 3006.19.
+  
+  After seven days, a background process will change the minimum_auth_version from 0 to 3 and restart the salt-master service. Once this is done, any minions in the environment that have not upgraded to a version greater than 3006.12 will be unable to authenticate with the salt-master. The likely cause of this would be a minion that is offline. Additionally, if a user attempts to install a new node, using a version less than 2.4.200 (salt-minion 3006.16), the install will fail since the salt-minion will not be able to authenticate with the salt-master.
+  
+  If one of your nodes was unable to update by the time the minimum_auth_version was changed, then you may notice that the SOC Grid screen shows that you have a node running an older version of Security Onion that never updates. You can verify the issue by checking the following logs:
+
+  In ``/opt/so/log/salt/minion`` on the remote node:
+
+  ::
+  
+    2026-02-20 14:36:43,479 [salt.crypt       :884 ][ERROR   ][2215] Sign-in attempt failed: bad load
+    2026-02-20 14:36:43,480 [salt.minion      :1155][ERROR   ][2215] Error while bringing up minion for multi-master. Is master at soman1 responding? The error message was Unable to sign_in to master: Attempt to authenticate with the salt master failed
+
+  In ``/opt/so/log/salt/master`` on the Security Onion manager:
+
+  ::
+
+    2026-02-20 14:37:13,515 [salt.channel.server:147 ][WARNING ][2313166] Rejected authentication attempt using protocol version 2 (minimum required: 3)
+
+  To force the node to update salt, you can connect to the remote node via ssh and then run the following:
+
+  ::
+
+    sudo dnf versionlock delete salt-* ; sudo yum clean all ; sudo sh /usr/sbin/bootstrap-salt.sh -X -r stable 3006.19
+ 
+.. warning::
+
         Security Onion 2.4.200 changed the way Suricata detections are synchronized. Grids with custom Suricata rulesets will pause all Suricata detection syncing. For more information and required steps, see the :ref:`syncblock` section.
 
 .. warning::
@@ -16,12 +43,63 @@ Release Notes
 Known Issues
 ~~~~~~~~~~~~
 
-If you haven't viewed cases in a while, then escalating from Onion AI to an existing case will fail.
-
 For all known issues, please see https://github.com/Security-Onion-Solutions/securityonion/issues.
 
 Release History
 ~~~~~~~~~~~~~~~
+
+2.4.210 [20260302] Changes
+--------------------------
+
+- FEATURE: Add graphs/charts to AI Metrics page
+- FEATURE: Add support for default user roles `#15471 <https://github.com/Security-Onion-Solutions/securityonion/issues/15471>`_
+- FEATURE: Allow non-airgap soup to use ISO for all large files `#15467 <https://github.com/Security-Onion-Solutions/securityonion/issues/15467>`_
+- FEATURE: Gemini Adapter
+- FEATURE: Model Thoughts
+- FEATURE: multi-step ES upgrades smoother for airgap
+- FEATURE: Onion AI model metrics
+- FEATURE: OpenAI Chat Adapter
+- FEATURE: OpenAI Responses Adapter
+- FEATURE: Record user that acks and/or escalates events `#15373 <https://github.com/Security-Onion-Solutions/securityonion/issues/15373>`_
+- FEATURE: Show context used on each request/response pair
+- FEATURE: Use new suricata.capture_file to improve PCAP lookups `#15398 <https://github.com/Security-Onion-Solutions/securityonion/issues/15398>`_
+- FIX: Appliance kickstart
+- FIX: Change context indicator to m/k format
+- FIX: Cleanup remaining idstools code `#15477 <https://github.com/Security-Onion-Solutions/securityonion/issues/15477>`_
+- FIX: Collection-backed config fields don't respect forcedType
+- FIX: Disable redis on heavynodes `#15422 <https://github.com/Security-Onion-Solutions/securityonion/issues/15422>`_
+- FIX: Expanding alert with long unbreaking message content causes extra wide table `#15437 <https://github.com/Security-Onion-Solutions/securityonion/issues/15437>`_
+- FIX: Give message field focus when user navigates to Onion AI page
+- FIX: Grid node elastic agent install state
+- FIX: Hide Grid/Client menu links when unavailable to non-superusers `#15446 <https://github.com/Security-Onion-Solutions/securityonion/issues/15446>`_
+- FIX: If you haven't viewed cases in a while, then escalating from Onion AI to an existing case will fail
+- FIX: Improve alert icon severity colors `#15450 <https://github.com/Security-Onion-Solutions/securityonion/issues/15450>`_
+- FIX: Kratos field mappings include unnecessary templates `#15354 <https://github.com/Security-Onion-Solutions/securityonion/issues/15354>`_
+- FIX: managed soc annotations migration
+- FIX: Migrate off logs integration to filestream integration `#15364 <https://github.com/Security-Onion-Solutions/securityonion/issues/15364>`_
+- FIX: MoM subgrid showing Detection status pending `#15305 <https://github.com/Security-Onion-Solutions/securityonion/issues/15305>`_
+- FIX: Multiple lines of consecutive comments causes the BPF compile to error `#14908 <https://github.com/Security-Onion-Solutions/securityonion/issues/14908>`_
+- FIX: Pending status should not show crosshairs `#15376 <https://github.com/Security-Onion-Solutions/securityonion/issues/15376>`_
+- FIX: Rename to remaining "Forward" references to "Sensor" nodes `#15403 <https://github.com/Security-Onion-Solutions/securityonion/issues/15403>`_
+- FIX: Review Kratos field parsing `#7567 <https://github.com/Security-Onion-Solutions/securityonion/issues/7567>`_
+- FIX: Sensor and Heavynode Fail to install `#15441 <https://github.com/Security-Onion-Solutions/securityonion/issues/15441>`_
+- FIX: SOC Config - Apply Changes to the correct node `#15395 <https://github.com/Security-Onion-Solutions/securityonion/issues/15395>`_
+- FIX: SOC login form expiring without notifying user `#15346 <https://github.com/Security-Onion-Solutions/securityonion/issues/15346>`_
+- FIX: so-elastic-agent-grid-upgrade upgrade heavynode agents `#15434 <https://github.com/Security-Onion-Solutions/securityonion/issues/15434>`_
+- FIX: Soup fails if salt-relay.sh isn't running `#15518 <https://github.com/Security-Onion-Solutions/securityonion/issues/15518>`_
+- FIX: Successful logins sometimes would show a 403 error banner `#15527 <https://github.com/Security-Onion-Solutions/securityonion/issues/15527>`_
+- FIX: Telegraf logstash metrics `#15423 <https://github.com/Security-Onion-Solutions/securityonion/issues/15423>`_
+- FIX: Update redis-logs integration file path `#15425 <https://github.com/Security-Onion-Solutions/securityonion/issues/15425>`_
+- FIX: url_base annotation description `#15483 <https://github.com/Security-Onion-Solutions/securityonion/issues/15483>`_
+- FIX: Zeek excluded_files `#15439 <https://github.com/Security-Onion-Solutions/securityonion/issues/15439>`_
+- UPGRADE: Analyzer dependencies `#15512 <https://github.com/Security-Onion-Solutions/securityonion/issues/15512>`_
+- UPGRADE: Docker to 29.2.1 `#15495 <https://github.com/Security-Onion-Solutions/securityonion/issues/15495>`_
+- UPGRADE: Elasticsearch to 9.0.8
+- UPGRADE: Go dependencies to latest versions `#15474 <https://github.com/Security-Onion-Solutions/securityonion/issues/15474>`_
+- UPGRADE: ISO base image to Oracle 9.7 `#15352 <https://github.com/Security-Onion-Solutions/securityonion/issues/15352>`_
+- UPGRADE: Pcapfix to 1.1.7 `#15421 <https://github.com/Security-Onion-Solutions/securityonion/issues/15421>`_
+- UPGRADE: Salt to 3006.19 `#15490 <https://github.com/Security-Onion-Solutions/securityonion/issues/15490>`_
+- UPGRADE: Zeek to 8.0.6 `#15445 <https://github.com/Security-Onion-Solutions/securityonion/issues/15445>`_
 
 2.4.201 [20260114] Changes
 --------------------------

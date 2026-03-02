@@ -58,7 +58,7 @@ To find integrations that have upgrades available:
 Managing Third Party Integration Index Templates
 ------------------------------------------------
 
-Index templates for third party integrations can be managed as described in the :ref:`elasticsearch` section, but first ``managed_integrations`` must be updated by navigating to :ref:`administration-advanced-settings` --> Configuration --> elasticsearch --> managed_integrations.
+Index templates for third party integrations can be managed as described in the :ref:`elasticsearch` section, but first ``managed_integrations`` must be updated by navigating to :ref:`administration-advanced-settings` --> Configuration --> manager --> managed_integrations.
 
 Supported Integrations
 ----------------------
