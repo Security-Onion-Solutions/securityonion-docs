@@ -50,7 +50,7 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
-2.4.210 [20260303] Changes
+2.4.210 [20260302] Changes
 --------------------------
 
 - FEATURE: Add graphs/charts to AI Metrics page
