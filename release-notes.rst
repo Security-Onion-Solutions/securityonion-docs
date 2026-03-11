@@ -48,6 +48,14 @@ For all known issues, please see https://github.com/Security-Onion-Solutions/sec
 Release History
 ~~~~~~~~~~~~~~~
 
+2.4.211 [20260312] Changes
+--------------------------
+
+- FIX: 10TB limit on VM virtual disks `#15589 <https://github.com/Security-Onion-Solutions/securityonion/issues/15589>`_
+- FIX: Add URL_BASE to /etc/hosts for VMs `#15590 <https://github.com/Security-Onion-Solutions/securityonion/issues/15590>`_
+- FIX: Enable local models on airgap `#15585 <https://github.com/Security-Onion-Solutions/securityonion/issues/15585>`_
+- FIX: Suricata Hardcoded to Record PCAP on all nodes `#15587 <https://github.com/Security-Onion-Solutions/securityonion/issues/15587>`_
+
 2.4.210 [20260302] Changes
 --------------------------
 
