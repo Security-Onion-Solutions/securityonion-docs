@@ -108,25 +108,7 @@ If you choose Suricata for metadata, it will extract files from network traffic 
 PCAP
 ----
 
-For new installations in either ``Eval`` or ``Standalone`` mode, full packet capture is written to ``/nsm/suripcap/`` by Suricata. For other deployments, full packet capture is written to disk by :ref:`stenographer` but you can optionally switch this to Suricata.
-
-Switching PCAP from Stenographer to Suricata
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. warning::
-
-        If you are considering switching your existing deployment from :ref:`stenographer` to Suricata PCAP, then we recommend that you test this feature thoroughly in a test environment first.
-
-To switch from Stenographer to Suricata for PCAP, go to :ref:`administration` --> Configuration --> Global and select the ``pcapengine`` setting. That setting should default to ``STENO`` but you can change it to either ``TRANSITION`` or ``SURICATA``. If you don't need your old :ref:`stenographer` PCAP at all, then you can immediately set ``pcapengine`` to ``SURICATA`` and manually delete the contents of the :ref:`stenographer` PCAP and index directories. However, most folks will probably want to use the ``TRANSITION`` option as it will keep :ref:`stenographer` running but not capturing traffic so that you can retrieve older :ref:`stenographer` PCAP as well as new Suricata PCAP. :ref:`stenographer` will then start purging its old PCAP as Suricata uses more space. Once your old :ref:`stenographer` PCAP has fully aged off, you can change the ``pcapengine`` setting to ``SURICATA`` to fully disable :ref:`stenographer`. 
-
-Differences between Suricata and Stenographer for PCAP
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- :ref:`stenographer` indexes PCAP which allows instant retrieval of PCAP sessions from disk. When a Suricata PCAP is requested, a process searches the PCAP files and retrieves the appropriate packets for the flow.
-- Since :ref:`stenographer` indexes PCAP, it stores the PCAP in a special format. Suricata writes standard PCAP files which can be copied off to another system and then opened with any standard libpcap tool.
-- Suricata can optionally compress PCAP using lz4 compression.
-- Suricata supports conditional PCAP if you only want to write PCAP when certain conditions are met.
-- Suricata has the ability to stop capturing PCAP once a flow reaches a specific stream depth. Security Onion sets this stream depth to 1MB by default. This means that once the PCAP flow reaches 1MB, Suricata will stop recording packets for that flow.
+Full packet capture is written to ``/nsm/suripcap/`` by :ref:`suricata`.
 
 Conditional PCAP
 ~~~~~~~~~~~~~~~~
@@ -142,6 +124,7 @@ PCAP Configuration Options
 
 Here are some other PCAP configuration options that can be found at :ref:`administration` --> Configuration --> Suricata -> pcap. Some settings are considered advanced settings so you will only see them if you enable the ``Show advanced settings`` option.
 
+- enabled: Click the slider to enable or disable Suricata packet capture.
 - compression: Set to ``none`` to disable compression. Set to ``lz4`` to enable lz4 compression but note that this requires more CPU cycles.
 - lz4-level: lz4 compression level of PCAP files. Set to ``0`` for no compression. Set to ``16`` for maximum compression.
 - maxsize: Maximum size in GB for total disk usage of all PCAP files written by Suricata. If you originally installed version 2.4.60 or newer, then this value should have been set based on a percentage of your disk space. If you originally installed a version older than 2.4.60, then this value should have been set to ``25`` by default. You may need to adjust this value based on your disk space and desired pcap retention.

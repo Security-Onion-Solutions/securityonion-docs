@@ -5,7 +5,7 @@ Introduction
 
 Security Onion is a free and open platform built by defenders for defenders. It includes :ref:`network visibility<network>`, :ref:`host visibility<host>`, :ref:`intrusion detection honeypots<idh>`, :ref:`log management<elasticsearch>`, and :ref:`case management<cases>`. 
 
-For network visibility, we offer signature based detection via :ref:`suricata`, rich protocol metadata and file extraction using either :ref:`zeek` or :ref:`suricata`, full packet capture using either :ref:`stenographer` or :ref:`suricata`, and file analysis. For host visibility, we offer the :ref:`elastic-agent` which provides data collection, live queries via :ref:`osquery<osquery-manager>`, and centralized management using :ref:`elastic-fleet`. :ref:`Intrusion detection honeypots<idh>` based on OpenCanary can be added to your deployment for even more enterprise visibility. All of these logs flow into :ref:`elasticsearch` and we've built our own user interfaces for :ref:`alerts<alerts>`, :ref:`dashboards<dashboards>`, :ref:`threat hunting<hunt>`, :ref:`case management<cases>`, and :ref:`grid management<grid>`. 
+For network visibility, we offer signature based detection via :ref:`suricata`, rich protocol metadata and file extraction using either :ref:`zeek` or :ref:`suricata`, full packet capture using :ref:`suricata`, and file analysis. For host visibility, we offer the :ref:`elastic-agent` which provides data collection, live queries via :ref:`osquery<osquery-manager>`, and centralized management using :ref:`elastic-fleet`. :ref:`Intrusion detection honeypots<idh>` based on OpenCanary can be added to your deployment for even more enterprise visibility. All of these logs flow into :ref:`elasticsearch` and we've built our own user interfaces for :ref:`alerts<alerts>`, :ref:`dashboards<dashboards>`, :ref:`threat hunting<hunt>`, :ref:`case management<cases>`, and :ref:`grid management<grid>`.
 
 .. note::
 
@@ -34,7 +34,7 @@ Unlike signature-based intrusion detection that looks for specific needles in th
 Full Packet Capture
 ~~~~~~~~~~~~~~~~~~~
 
-Full packet capture is like a video camera for your network, but better because not only can it tell us who came and went, but also exactly where they went and what they brought or took with them (exploit payloads, phishing emails, file exfiltration). It’s a crime scene recorder that can tell us a lot about the victim and the white chalk outline of a compromised host on the ground. There is certainly valuable evidence to be found on the victim’s body, but evidence at the host can be destroyed or manipulated; the camera doesn't lie, is hard to deceive, and can capture a bullet in transit. Full packet capture can be written to disk using either :ref:`stenographer` or :ref:`suricata`.
+Full packet capture is like a video camera for your network, but better because not only can it tell us who came and went, but also exactly where they went and what they brought or took with them (exploit payloads, phishing emails, file exfiltration). It’s a crime scene recorder that can tell us a lot about the victim and the white chalk outline of a compromised host on the ground. There is certainly valuable evidence to be found on the victim’s body, but evidence at the host can be destroyed or manipulated; the camera doesn't lie, is hard to deceive, and can capture a bullet in transit. Full packet capture can be written to disk using :ref:`suricata`.
 
 File Analysis
 ~~~~~~~~~~~~~

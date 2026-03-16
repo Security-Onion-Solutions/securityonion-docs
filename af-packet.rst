@@ -11,19 +11,9 @@ Security Onion uses AF-PACKET to collect traffic from network interfaces. AF-PAC
 
 The following processes use AF-PACKET for traffic collection:
 
-- :ref:`stenographer`
-
 - :ref:`suricata`
 
 - :ref:`zeek`
-
-VLAN tags
----------
-
-.. warning::
-
-   | Please note that :ref:`stenographer` should correctly log traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
-   | https://github.com/google/stenographer/issues/211
 
 More Information
 ----------------

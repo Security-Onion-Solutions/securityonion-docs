@@ -3,7 +3,7 @@
 PCAP
 ====
 
-:ref:`soc` includes a PCAP interface which allows you to access your full packet capture that was written to disk by :ref:`stenographer` or :ref:`suricata`. 
+:ref:`soc` includes a PCAP interface which allows you to access your full packet capture that was written to disk by :ref:`suricata`.
 
 You can access PCAP in two different ways. The first and most common option is to pivot to PCAP from a particular event in :ref:`alerts`, :ref:`dashboards`, or :ref:`hunt` by choosing the PCAP action on the action menu. 
 
@@ -43,8 +43,8 @@ Troubleshooting
 
 If you have trouble retrieving PCAP, here are some things to check:
 
-- Verify that full packet capture is enabled via either :ref:`stenographer` or :ref:`suricata`.
-- Check to see if you have any :ref:`bpf` configuration that may cause :ref:`stenographer` or :ref:`suricata` to ignore the traffic.
+- Verify that full packet capture is enabled via :ref:`suricata`.
+- Check to see if you have any :ref:`bpf` configuration that may cause :ref:`suricata` to ignore the traffic.
 - Check :ref:`grid` and verify that all services are running properly.
 - Check :ref:`influxdb` and verify that PCAP Retention is long enough to include the stream you're looking for.
 - Make sure that there is plenty of free space on ``/nsm`` to carve the stream and write the output to disk.

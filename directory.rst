@@ -38,11 +38,6 @@ The vast majority of data is stored in ``/nsm/``.
 
 :ref:`elasticsearch` stores its data in ``/nsm/elasticsearch/``.
 
-/nsm/pcap
----------
-
-:ref:`stenographer` stores full packet capture in ``/nsm/pcap/``.
-
 /nsm/suripcap
 -------------
 

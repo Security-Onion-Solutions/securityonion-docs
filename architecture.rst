@@ -105,13 +105,12 @@ A manager search node runs the following components:
 Sensor Node
 ~~~~~~~~~~~~
 
-A ``sensor node`` forwards alerts and logs from :ref:`suricata` and :ref:`zeek` via :ref:`elastic-agent` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). Full packet capture recorded by :ref:`stenographer` or :ref:`suricata` remains on the sensor node itself.
+A ``sensor node`` forwards alerts and logs from :ref:`suricata` and :ref:`zeek` via :ref:`elastic-agent` to :ref:`logstash` on the manager node, where they are stored in :ref:`elasticsearch` on the manager node or a search node (if the manager node has been configured to use a search node). Full packet capture recorded by :ref:`suricata` remains on the sensor node itself.
 
 Sensor nodes run the following components:
 
 -  :ref:`zeek`
 -  :ref:`suricata`
--  :ref:`stenographer`
 
 Elastic Fleet Standalone Node
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -183,7 +182,6 @@ Heavy Nodes run the following components:
 -  :ref:`elasticsearch`
 -  :ref:`zeek`
 -  :ref:`suricata`
--  :ref:`stenographer`
 
 There are two instances of Elastic Agent that run on a Heavy Node:  
 

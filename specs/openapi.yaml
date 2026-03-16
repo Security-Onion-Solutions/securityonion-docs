@@ -1886,11 +1886,6 @@ components:
             restart'
           example: ok
           type: string
-        stenoLossPct:
-          description: The current percentage packet loss experienced by Stenographer,
-            if applicable to this node
-          example: 0
-          type: number
         suriLossPct:
           description: The current percentage packet loss experienced by Suricata,
             if applicable to this node

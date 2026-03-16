@@ -48,7 +48,7 @@ Eval
 
 An Eval installation runs the minimal processes required for a single machine to sniff live network traffic from a TAP or SPAN port and view the results. Therefore, its hardware requirements are higher than Import as shown in the table above. Eval is designed for temporary installations or homelab installations on a budget. Unlike a full Standalone installation, Evaluation is NOT designed for production usage.
 
-In order to minimize RAM usage, Eval does not run :ref:`logstash` or :ref:`redis` at all. Also, Eval defaults to using :ref:`suricata` for writing full packet capture to disk (instead of :ref:`stenographer`).
+In order to minimize RAM usage, Eval does not run :ref:`logstash` or :ref:`redis` at all.
 
 Production Deployments
 ----------------------
@@ -178,7 +178,7 @@ We recommend dedicated physical hardware (especially if you're monitoring lots o
 CPU
 ~~~
 
-:ref:`suricata` and :ref:`zeek` are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per :ref:`suricata` worker or :ref:`zeek` worker. So if you have a fully saturated 1Gbps link and are running :ref:`suricata` for :ref:`nids` alerts and :ref:`zeek` for metadata, then you'll want at least 5 :ref:`suricata` workers and 5 :ref:`zeek` workers. This means you'll need at least 10 CPU cores for :ref:`suricata` and :ref:`zeek` with additional CPU cores for :ref:`stenographer` and/or other services. If you are monitoring a high amount of traffic and/or have a small number of CPU cores, you might consider using :ref:`suricata` for both alerts and metadata. This eliminates the need for :ref:`zeek` and allows for more efficient CPU usage.
+:ref:`suricata` and :ref:`zeek` are very CPU intensive. The more traffic you are monitoring, the more CPU cores you'll need. A very rough ballpark estimate would be 200Mbps per :ref:`suricata` worker or :ref:`zeek` worker. So if you have a fully saturated 1Gbps link and are running :ref:`suricata` for :ref:`nids` alerts and :ref:`zeek` for metadata, then you'll want at least 5 :ref:`suricata` workers and 5 :ref:`zeek` workers. This means you'll need at least 10 CPU cores for :ref:`suricata` and :ref:`zeek` with additional CPU cores for other services. If you are monitoring a high amount of traffic and/or have a small number of CPU cores, you might consider using :ref:`suricata` for both alerts and metadata. This eliminates the need for :ref:`zeek` and allows for more efficient CPU usage.
 
 RAM
 ~~~
@@ -192,7 +192,7 @@ RAM usage is highly dependent on several variables:
 
 For best performance, over provision RAM so that you can fully disable swap.
 
-The following RAM estimates are a rough guideline and assume that you're going to be running :ref:`suricata`, :ref:`zeek`, and :ref:`stenographer` (full packet capture) and want to minimize/eliminate packet loss. Your mileage may vary!
+The following RAM estimates are a rough guideline and assume that you're going to be running :ref:`suricata` with full packet capture and :ref:`zeek` and want to minimize/eliminate packet loss. Your mileage may vary!
 
 - If you just want to quickly evaluate Security Onion in a VM, the bare minimum amount of RAM needed is 12GB. More is obviously better!
 - If you're deploying Security Onion in production on a small network (100Mbps or less), you should plan on 16GB RAM or more. Again, more is obviously better!

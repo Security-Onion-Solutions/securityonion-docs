@@ -46,7 +46,7 @@ Data
 
 -  Review the :ref:`elasticsearch` section to see if you need to change any of the default settings. In particular, if you have a multi-node deployment with one or more search nodes, we HIGHLY recommend configuring ILM to delete indices before Elasticsearch reaches its watermark setting and stops ingesting new data.
 
--  Review the :ref:`stenographer` and :ref:`suricata` sections to see if you need to change the PCAP retention settings.
+-  Review the :ref:`suricata` sections to see if you need to change the PCAP retention settings.
 
 Other
 -----

@@ -152,11 +152,6 @@ Suricata Loss
 
 The ``Suricata Loss`` field shows the percentage of dropped packets due to :ref:`suricata` being unable to keep up with the flow of network data.
 
-Stenographer Loss
-~~~~~~~~~~~~~~~~~
-
-The ``Stenographer Loss`` field shows the percentage of dropped packets due to :ref:`stenographer` being unable to keep up with the flow of network data. :ref:`stenographer` is responsible for writing down all packets to disk, as well as indexing these packets.
-
 Root Partition Usage
 ~~~~~~~~~~~~~~~~~~~~
 

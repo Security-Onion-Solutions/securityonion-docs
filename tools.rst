@@ -18,7 +18,6 @@ Security Onion would like to thank the following projects for their contribution
 - :ref:`logstash`
 - :ref:`redis`
 - :ref:`salt`
-- :ref:`stenographer`
 - :ref:`strelka`
 - :ref:`suricata`
 - :ref:`zeek`

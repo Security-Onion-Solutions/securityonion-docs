@@ -10,7 +10,7 @@ BPF stands for Berkeley Packet Filter. From https://en.wikipedia.org/wiki/Berkel
 Configuration
 -------------
 
-You can modify your BPF configuration by going to :ref:`administration` --> Configuration --> bpf. You can apply BPF configuration to the PCAP engine (either :ref:`stenographer` or :ref:`suricata`), :ref:`suricata`, or :ref:`zeek`. If you configure a BPF for the PCAP engine and your PCAP engine is :ref:`suricata`, then it will only apply to the PCAP and NOT alerts or metadata.
+You can modify your BPF configuration by going to :ref:`administration` --> Configuration --> bpf. You can apply BPF configuration to the PCAP from :ref:`suricata`, alerts/metadata from :ref:`suricata`, or metadata from :ref:`zeek`. If you configure a BPF for the PCAP engine, then it will only apply to the PCAP and NOT alerts or metadata from :ref:`suricata`.
 
 .. image:: images/config-item-bpf.png
   :target: _images/config-item-bpf.png
@@ -48,11 +48,6 @@ For example:
 ::
 
     (not (host 192.168.1.2 or host 192.168.1.3 or host 192.168.1.4)) or (vlan and (not (host 192.168.1.2 or host 192.168.1.3 or host 192.168.1.4)))
-
-.. warning::
-
-   | Please note that :ref:`stenographer` should correctly record traffic on a VLAN but won't log the actual VLAN tags due to the way that :ref:`af-packet` works:
-   | https://github.com/google/stenographer/issues/211
 
 Adding Comments
 ~~~~~~~~~~~~~~~
